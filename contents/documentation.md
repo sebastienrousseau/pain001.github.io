@@ -114,3 +114,4 @@ works with macOS, Linux and Windows and requires Python 3.9.0 and above.
       </div>
     </div>
   </div>
+</div>
