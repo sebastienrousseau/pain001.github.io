@@ -18,7 +18,7 @@ permalink: "https://pain001.com/payments/index.html"
 robots: "all"
 short_name: "payments"
 subtitle: "A modern, open source solution for generating ISO 20022 compliant payments"
-theme_color: "#0092a5"
+theme_color: "#00838f"
 title: "Automate Payments Generation with Pain001"
 url: "https://pain001.com"
 
@@ -28,17 +28,17 @@ generator: "Shokunin Static Site Generator (v0.0.13)"
 item_description: "Streamline your payments with Pain001, a Python library that automates the creation of ISO 20022 payment messages."
 item_guid: https://pain001.com/payments/index.html
 item_link: https://pain001.com/payments/rss.xml
-item_pub_date: "Fri, 09 June 2023 19:19:19 BST"
+item_pub_date: "Sat, 17 June 2023 09:19:19 BST"
 item_title: "Payments"
-last_build_date: "Fri, 09 June 2023 19:19:19 BST"
-pub_date: "Fri, 09 June 2023 19:19:19 BST"
+last_build_date: "Sat, 17 June 2023 09:19:19 BST"
+pub_date: "Sat, 17 June 2023 09:19:19 BST"
 
 # MS Application - The MS Application front matter (YAML).
 
 ## msapplication_tap_highlight - The MS Application tap highlight of the page.
 msapplication_tap_highlight: no
 ## msapplication - The MS Application tile color of the page.
-msapplication_tile_color: "#7ce846"
+msapplication_tile_color: "#00838f"
 ## msapplication_tile_image - The MS Application tile image of the page.
 msapplication_tile_image: https://kura.pro/pain001/images/logos/pain001.svg
 

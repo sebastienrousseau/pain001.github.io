@@ -137,7 +137,7 @@
     id="page-top"
     itemscope
     itemtype="http://schema.org/WebPage"
-    class="bg-transparent text-white text-center"
+    class="bg-transparent text-dark text-center"
   >
     <!-- Responsive navbar-->
     <nav
@@ -176,10 +176,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a
-                class="text-white text-uppercase nav-link nav-link active"
-                aria-current="page"
-                href="/index.html"
+              <a class="text-uppercase nav-link nav-link" href="/index.html"
                 >Home</a
               >
             </li>
@@ -188,9 +185,10 @@
                 >Payments</a
               >
             </li>
-            <li class="text-uppercase nav-item dropdown">
+            <li class="text-uppercase nav-item dropdown active">
               <a
-                class="nav-link dropdown-toggle"
+                class="text-white nav-link dropdown-toggle"
+                aria-current="page"
                 id="navbarDropdown"
                 href="#"
                 role="button"
@@ -235,17 +233,15 @@
         "
       >
         <div class="position-relative overflow-hidden top-50 text-center">
-          <strong class="display-4 fw-normal">{{title}}</strong>
-          <p class="lead fw-normal">{{subtitle}}</p>
+          <strong class="text-white display-4 fw-normal">{{title}}</strong>
+          <p class="text-white lead fw-normal">{{subtitle}}</p>
         </div>
       </div>
     </header>
 
     <!-- Main content-->
     <main id="main" class="bd-masthead fs-5 p-5" aria-label="main">
-      <div class="px-5 text-dark text-start justify-content-between">
-        {{content}}
-      </div>
+      <div class="px-5 text-start justify-content-between">{{content}}</div>
     </main>
 
     <!-- Footer-->

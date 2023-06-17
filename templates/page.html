@@ -106,17 +106,13 @@
     <!-- # End Apple -->
 
     <!-- # Start Content Security Policy -->
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="
-    default-src 'self';
-    connect-src 'self' https://*.google-analytics.com;
-    script-src 'self' 'nonce-randomString1' 'nonce-randomString2' 'nonce-randomString3' 'nonce-randomString4' https://www.googletagmanager.com https://www.clarity.ms https://cdn.jsdelivr.net;
-    style-src 'self' 'unsafe-inline' https://kura.pro https://unpkg.com/ https://cdn.jsdelivr.net;
-    img-src 'self' https://kura.pro https://unpkg.com/ data:;
-    media-src 'self';
-"
-    />
+    <meta http-equiv="Content-Security-Policy" default-src 'self'; connect-src
+    'self' https://x.clarity.ms/collect https://*.google-analytics.com;
+    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com
+    https://www.clarity.ms https://cdn.jsdelivr.net; style-src 'self'
+    'unsafe-inline' https://kura.pro https://unpkg.com/
+    https://cdn.jsdelivr.net; img-src 'self' https://kura.pro https://unpkg.com/
+    data:; media-src 'self'; " />
     <!-- # End Content Security Policy -->
 
     <!-- # Start Microsoft -->
@@ -180,15 +176,15 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a
-                class="text-uppercase nav-link nav-link active"
-                aria-current="page"
-                href="/index.html"
+              <a class="text-uppercase nav-link nav-link" href="/index.html"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="text-uppercase nav-link" href="/payments/index.html"
+              <a
+                class="text-white text-uppercase nav-link active"
+                aria-current="page"
+                href="/payments/index.html"
                 >Payments</a
               >
             </li>
@@ -207,7 +203,7 @@
                 aria-labelledby="navbarDropdown"
               >
                 <li>
-                  <a class="dropdown-item" href="https://docs.rs/crate/ssg/"
+                  <a class="dropdown-item" href="/documentation/index.html"
                     >Documentation</a
                   >
                 </li>
@@ -215,7 +211,7 @@
                   <a
                     class="dropdown-item"
                     href="https://github.com/sebastienrousseau/pain001"
-                    >GitHub</a
+                    >GitHub ⧉</a
                   >
                 </li>
               </ul>
@@ -272,7 +268,7 @@
     ></script>
     <script
       async="true"
-      src="https://www.googletagmanager.com/gtag/js?id=G-8MGBE9BCZC"
+      src="https://www.googletagmanager.com/gtag/js?id=G-167B274ZWJ"
     ></script>
     <script nonce="randomString2">
       function gtag() {
@@ -280,21 +276,23 @@
       }
       (window.dataLayer = window.dataLayer || []),
         gtag("js", new Date()),
-        gtag("config", "G-8MGBE9BCZC", {
+        gtag("config", "G-167B274ZWJ", {
           anonymize_ip: !0,
         });
     </script>
-    <script nonce="randomString1">
-      !(function (f, h, k, j, g, b, d) {
-        (f[k] =
-          f[k] ||
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
           function () {
-            (f[k].q = f[k].q || []).push(arguments);
-          }),
-          ((b = h.createElement(j)).async = 1),
-          (b.src = "https://www.clarity.ms/tag/hbynubbdiw?ref=bwt"),
-          (d = h.getElementsByTagName(j)[0]).parentNode.insertBefore(b, d);
-      })(window, document, "clarity", "script");
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "hl79exnc53");
     </script>
   </body>
 </html>

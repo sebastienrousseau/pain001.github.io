@@ -1,0 +1,19 @@
+{
+  "background_color": "#ffffff",
+  "description": "Pain001 has an easy setup process to help you get started quickly. This guide will walk you through the steps to install Pain001 on your system.",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any maskable",
+      "sizes": "512x512",
+      "src": "https://kura.pro/pain001/images/favicon.ico",
+      "type": "image/png"
+    }
+  ],
+  "name": "Pain001 installation",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "installation",
+  "start_url": ".",
+  "theme_color": "#d53f00"
+}

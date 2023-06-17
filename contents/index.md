@@ -29,10 +29,10 @@ generator: "Shokunin Static Site Generator (v0.0.13)"
 item_description: "Pain001 is a powerful Python library that enables you to create ISO 20022-compliant payment files directly from CSV or SQLite Data Files."
 item_guid: "https://pain001.com/index.html"
 item_link: "https://pain001.com/rss.xml"
-item_pub_date: "Fri, 09 June 2023 19:19:19 BST"
+item_pub_date: "Sat, 17 June 2023 09:19:19 BST"
 item_title: "Pain001: Automate ISO 20022-Compliant Payment File Creation"
-last_build_date: "Fri, 09 June 2023 19:19:19 BST"
-pub_date: "Fri, 09 June 2023 19:19:19 BST"
+last_build_date: "Sat, 17 June 2023 09:19:19 BST"
+pub_date: "Sat, 17 June 2023 09:19:19 BST"
 
 # MS Application - The MS Application front matter (YAML).
 
@@ -69,17 +69,24 @@ twitter_url: "https://pain001.com"
 
 Today, the payment industry is experiencing a rapid evolution and
 transformation as it moves towards adopting **[ISO 20022][1]** as the new norm.
-ISO 20022 is a global standard for sharing financial information across
+**ISO 20022** is a global standard for sharing financial information across
 organisations. It provides a harmonised protocol used by banks, corporations,
 and financial institutions to automate and standardise payment transactions.
 
 Here are some of the benefits of using ISO 20022:
 
-- **Improved data quality**: ISO 20022 messages are more structured and detailed than traditional payment messages, reducing errors and improving efficiency.
-- **Increased transparency**: ISO 20022 messages provide more information about the payment transaction, which can help to improve the visibility and traceability of payments.
-- **Enhanced compliance**: ISO 20022 messages can help organisations follow AML/CFT and PSD2 regulations.
+- **Improved data quality**: ISO 20022 messages are more structured and
+  detailed than traditional payment messages, reducing errors and improving
+  efficiency.
+- **Increased transparency**: ISO 20022 messages provide more information about
+  the payment transaction, which can help to improve the visibility and
+  traceability of payments.
+- **Enhanced compliance**: ISO 20022 messages can help organisations follow
+  AML/CFT and PSD2 regulations.
 
-Overall, ISO 20022 is a significant improvement over traditional payment messaging standards. It provides a more efficient, transparent, and compliant way to process payments.
+Overall, ISO 20022 is a significant improvement over traditional payment
+messaging standards. It provides a more efficient, transparent, and compliant
+way to process payments.
 
 ## Pain001 in action
 
