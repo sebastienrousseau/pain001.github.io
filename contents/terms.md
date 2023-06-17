@@ -28,10 +28,10 @@ generator: "Shokunin Static Site Generator (v0.0.13)"
 item_description: "This Terms of Use page provides the rules for using http://pain001.com."
 item_guid: https://pain001.com/terms/index.html
 item_link: https://pain001.com/terms/rss.xml
-item_pub_date: "Sat, 17 June 2023 09:19:19 BST"
+item_pub_date: "Sat, 17 June 2023 23:39:19 BST"
 item_title: "Pain001 Terms of Use"
-last_build_date: "Sat, 17 June 2023 09:19:19 BST"
-pub_date: "Sat, 17 June 2023 09:19:19 BST"
+last_build_date: "Sat, 17 June 2023 23:39:19 BST"
+pub_date: "Sat, 17 June 2023 23:39:19 BST"
 
 # MS Application - The MS Application front matter (YAML).
 

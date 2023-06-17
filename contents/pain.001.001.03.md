@@ -28,10 +28,10 @@ generator: "Shokunin Static Site Generator (v0.0.13)"
 item_description: "pain.001.001.03, is an XML-based message format under the ISO 20022 standard designed to streamline cross-border and domestic payment processes."
 item_guid: "https://pain001.com/pain.001.001.03/index.html"
 item_link: "https://pain001.com/pain.001.001.03/rss.xml"
-item_pub_date: "Sat, 17 June 2023 09:19:19 BST"
+item_pub_date: "Sat, 17 June 2023 23:39:19 BST"
 item_title: "Customer Credit Transfer Initiation V3 (pain.001.001.03)"
-last_build_date: "Sat, 17 June 2023 09:19:19 BST"
-pub_date: "Sat, 17 June 2023 09:19:19 BST"
+last_build_date: "Sat, 17 June 2023 23:39:19 BST"
+pub_date: "Sat, 17 June 2023 23:39:19 BST"
 
 # MS Application - The MS Application front matter (YAML).
 
