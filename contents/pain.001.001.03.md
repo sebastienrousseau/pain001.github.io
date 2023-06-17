@@ -19,7 +19,7 @@ short_name: "pain.001.001.03"
 subtitle: "pain.001.001.03: A standardized XML message format for initiating credit transfers."
 theme_color: "#462232"
 title: "Customer Credit Transfer Initiation V3 (pain.001.001.03)"
-url: "https://pain001.com/pain.001.001.03/index.html"
+url: "https://www.pain001.com/pain.001.001.03/index.html"
 
 # RSS - The RSS feed front matter (YAML).
 

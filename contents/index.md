@@ -20,7 +20,7 @@ short_name: "Pain001"
 subtitle: "Simplify payment processing with Pain001, a Python library automating ISO 20022-compliant file creation"
 theme_color: "#0092a5"
 title: "Pain001: Automate ISO 20022-Compliant Payment File Creation"
-url: "https://pain001.com"
+url: "https://www.pain001.com/index.html"
 
 # RSS - The RSS feed front matter (YAML).
 

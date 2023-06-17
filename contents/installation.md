@@ -21,7 +21,7 @@ short_name: "installation"
 subtitle: "Whether you’re just getting started or want to make sure you have the basics set up, you’re in the right place."
 theme_color: "#d53f00"
 title: "Pain001 installation"
-url: "https://pain001.com"
+url: "https://www.pain001.com/installation/index.html"
 
 # RSS - The RSS feed front matter (YAML).
 
@@ -37,11 +37,9 @@ pub_date: "Sat, 17 June 2023 09:19:19 BST"
 
 # MS Application - The MS Application front matter (YAML).
 
-## msapplication_tap_highlight - The MS Application tap highlight of the page.
-msapplication_tap_highlight: no
-## msapplication - The MS Application tile color of the page.
+msapplication_config: "https://pain001.com/browserconfig.xml"
+msapplication_tap_highlight: "no"
 msapplication_tile_color: "#d53f00"
-## msapplication_tile_image - The MS Application tile image of the page.
 msapplication_tile_image: https://kura.pro/pain001/images/logos/pain001.svg
 
 # Open Graph - The Open Graph front matter (YAML).
@@ -63,6 +61,17 @@ og_title: Payments
 og_type: website
 ## og - The Open Graph url of the page.
 og_url: https://pain001.com
+
+# Twitter Card - The Twitter Card front matter (YAML).
+
+twitter_card: "summary_large_image"
+twitter_creator: "wwdseb"
+twitter_description: "Pain001 is a powerful Python library that enables you to create ISO 20022-compliant payment files directly from CSV or SQLite Data Files."
+twitter_image: "https://kura.pro/pain001/images/banners/banner-pain001.png"
+twitter_image_alt: "Simplify payment processing with Pain001, a Python library automating ISO 20022-compliant file creation"
+twitter_site: "wwdseb"
+twitter_title: "Pain001: Automate ISO 20022-Compliant Payment File Creation."
+twitter_url: "https://pain001.com"
 
 ---
 

@@ -20,7 +20,7 @@ short_name: "payments"
 subtitle: "A modern, open source solution for generating ISO 20022 compliant payments"
 theme_color: "#00838f"
 title: "Automate Payments Generation with Pain001"
-url: "https://pain001.com"
+url: "https://www.pain001.com/payments/index.html"
 
 # RSS - The RSS feed front matter (YAML).
 
@@ -59,7 +59,7 @@ og_title: Payments
 ## og - The Open Graph type of the page.
 og_type: website
 ## og - The Open Graph url of the page.
-og_url: https://pain001.com
+og_url: https://www.pain001.com/
 
 ---
 
