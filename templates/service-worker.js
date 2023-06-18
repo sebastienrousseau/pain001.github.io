@@ -1,5 +1,7 @@
 "use strict";
 
+"use strict";
+
 function clearOldCaches() {
     return debug("Clean old caches"), caches.keys().then(e => Promise.all(e.filter(e => 0 !== e.indexOf(offlineCache)).map(e => caches.delete(e))))
 }
@@ -17,14 +19,19 @@ const cacheVersion = 1623496433,
     offlineCache = "offline-" + cacheVersion,
     offlinePage = "/offline/index.html",
     debugMode = !1;
+
 self.addEventListener("install", e => {
     debug("Installing Service Worker"), e.waitUntil(cacheOfflinePage().then(() => self.skipWaiting()))
-}), self.addEventListener("activate", e => {
+})
+
+self.addEventListener("activate", e => {
     debug("Activating Service Worker"), e.waitUntil(clearOldCaches().then(() => self.clients.claim()))
-}), self.addEventListener("fetch", e => {
-    let n = e.request;
-    if (n.url.startsWith(self.location.origin)) { // Added this check to avoid caching chrome-extension requests
-        if ("GET" === n.method) {
+})
+
+self.addEventListener("fetch", e => {
+    const n = e.request;
+    if (n.url.startsWith(self.location.origin) && n.url.startsWith("http")) { // Exclude chrome-extension requests
+        if (n.method === "GET") {
             e.respondWith(
                 caches.match(n).then(cachedResponse => {
                     if (cachedResponse) {
@@ -37,8 +44,11 @@ self.addEventListener("install", e => {
                     return fetch(n).then(response => {
                         if (response && response.ok) {
                             debug("Saving in cache: " + n.url);
-                            let clonedResponse = response.clone();
-                            caches.open(offlineCache).then(cache => cache.put(n, clonedResponse));
+                            const clonedResponse = response.clone();
+                            return caches.open(offlineCache).then(cache => {
+                                cache.put(n, clonedResponse);
+                                return response;
+                            });
                         }
                         return response;
                     }).catch(error => {
@@ -64,3 +74,4 @@ self.addEventListener("install", e => {
         }
     }
 });
+
