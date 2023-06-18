@@ -13,7 +13,7 @@
   "name": "Contact Us",
   "orientation": "portrait-primary",
   "scope": "/",
-  "short_name": "privacy",
+  "short_name": "contact",
   "start_url": ".",
   "theme_color": "#5d7a7f"
 }
