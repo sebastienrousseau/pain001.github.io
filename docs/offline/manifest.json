@@ -1,0 +1,19 @@
+{
+  "background_color": "#ffffff",
+  "description": "It looks like you’re offline. Check your connection and try again.",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any maskable",
+      "sizes": "512x512",
+      "src": "https://kura.pro/pain001/images/favicon.ico",
+      "type": "image/png"
+    }
+  ],
+  "name": "No Internet Connection",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "offline",
+  "start_url": ".",
+  "theme_color": "#ef0000"
+}

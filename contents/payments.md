@@ -28,10 +28,10 @@ generator: "Shokunin Static Site Generator (v0.0.13)"
 item_description: "Streamline your payments with Pain001, a Python library that automates the creation of ISO 20022 payment messages."
 item_guid: https://pain001.com/payments/index.html
 item_link: https://pain001.com/payments/rss.xml
-item_pub_date: "Sat, 17 June 2023 23:39:19 BST"
+item_pub_date: "Sun, 18 June 2023 10:33:10 BST"
 item_title: "Payments"
-last_build_date: "Sat, 17 June 2023 23:39:19 BST"
-pub_date: "Sat, 17 June 2023 23:39:19 BST"
+last_build_date: "Sun, 18 June 2023 10:33:10 BST"
+pub_date: "Sun, 18 June 2023 10:33:10 BST"
 
 # MS Application - The MS Application front matter (YAML).
 

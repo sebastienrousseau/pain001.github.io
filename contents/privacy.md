@@ -28,10 +28,10 @@ generator: "Shokunin Static Site Generator (v0.0.13)"
 item_description: "This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Website and the choices you have associated with that data."
 item_guid: https://pain001.com/privacy/index.html
 item_link: https://pain001.com/privacy/rss.xml
-item_pub_date: "Sat, 17 June 2023 23:39:19 BST"
+item_pub_date: "Sun, 18 June 2023 10:33:10 BST"
 item_title: "Pain001 Privacy Statement"
-last_build_date: "Sat, 17 June 2023 23:39:19 BST"
-pub_date: "Sat, 17 June 2023 23:39:19 BST"
+last_build_date: "Sun, 18 June 2023 10:33:10 BST"
+pub_date: "Sun, 18 June 2023 10:33:10 BST"
 
 # MS Application - The MS Application front matter (YAML).
 
