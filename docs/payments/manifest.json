@@ -1,6 +1,6 @@
 {
   "background_color": "#ffffff",
-  "description": "Streamline your payments with Pain001, a Python library that automates the creation of ISO 20022 payment messages.",
+  "description": "Pain001 is a Python library that automates the creation of ISO 20022 payment messages. It simplifies payment processing by creating ISO 20022-compliant payment files, thus delivering faster payments automation.",
   "display": "standalone",
   "icons": [
     {
@@ -10,10 +10,10 @@
       "type": "image/png"
     }
   ],
-  "name": "Automate Payments Generation with Pain001",
+  "name": "ISO 20022 Payments",
   "orientation": "portrait-primary",
   "scope": "/",
   "short_name": "payments",
   "start_url": ".",
-  "theme_color": "#00838f"
+  "theme_color": "142, 65, 74"
 }

@@ -18,7 +18,7 @@ permalink: "https://pain001.com/"
 robots: "index,follow"
 short_name: "Pain001"
 subtitle: "Simplify payment processing with Pain001, a Python library automating ISO 20022-compliant file creation"
-theme_color: "#0092a5"
+theme_color: "0, 146, 165"
 title: "Pain001: Automate ISO 20022-Compliant Payment File Creation"
 url: "https://www.pain001.com/index.html"
 
@@ -29,16 +29,16 @@ generator: "Shokunin Static Site Generator (v0.0.13)"
 item_description: "Pain001 is a powerful Python library that enables you to create ISO 20022-compliant payment files directly from CSV or SQLite Data Files."
 item_guid: "https://pain001.com/index.html"
 item_link: "https://pain001.com/rss.xml"
-item_pub_date: "Sun, 18 June 2023 10:33:10 BST"
+item_pub_date: "Tue, 20 June 2023 18:18:18 BST"
 item_title: "Pain001: Automate ISO 20022-Compliant Payment File Creation"
-last_build_date: "Sun, 18 June 2023 10:33:10 BST"
-pub_date: "Sun, 18 June 2023 10:33:10 BST"
+last_build_date: "Tue, 20 June 2023 18:18:18 BST"
+pub_date: "Tue, 20 June 2023 18:18:18 BST"
 
 # MS Application - The MS Application front matter (YAML).
 
 msapplication_config: "https://pain001.com/browserconfig.xml"
 msapplication_tap_highlight: "no"
-msapplication_tile_color: "#0092a5"
+msapplication_tile_color: "0, 146, 165"
 msapplication_tile_image: "https://kura.pro/pain001/images/logos/pain001.webp"
 
 # Open Graph - The Open Graph front matter (YAML).
@@ -91,13 +91,14 @@ way to process payments.
 ## Pain001 in action
 
 The Python library **Pain001** focuses specifically on payment initiation and
-advice messages, commonly known as **pain**. Payments usually start with a
-**pain.001 payment initiation message**. The payer sends it to the payee (or
-the payee's bank) via a secure network. This network could be **SWIFT** or
-**SEPA (Single Euro Payments Area)** network, or other payment networks such
-as **CHAPS**, **BACS**, **Faster Payments**, etc. The message contains the
-payer's and payee's bank account details, payment amount, and other information
-required to process the payment.
+advice messages, commonly known as **PAIN (PAyment INitiation)**.
+
+Payments usually start with a **pain.001 payment initiation message**. The
+payer sends it to the payee (or the payee's bank) via a secure network. This
+network could be **SWIFT** or **SEPA (Single Euro Payments Area)** network, or
+other payment networks such as **CHAPS**, **BACS**, **Faster Payments**, etc.
+The message contains the payer's and payee's bank account details, payment
+amount, and other information required to process the payment.
 
 **Pain001** can reduce payment processing complexity and costs by generating
 ISO 20022-compliant payment files. These files automatically remove the need to
@@ -142,4 +143,8 @@ leveraging the capabilities of **Pain001**.
 - **Reduce costs** by removing manual data entry and file generation, reducing
   payment processing time, and reducing errors.
 
+Find out about [delivering faster payments automation][2], and learn about
+**Pain001** payments generation capabilities.
+
 [1]: https://www.iso20022.org/
+[2]: /payments/index.html

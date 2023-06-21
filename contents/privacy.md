@@ -18,7 +18,7 @@ permalink: "https://pain001.com/privacy/index.html"
 robots: "all"
 short_name: "privacy"
 subtitle: "Your privacy is important to us."
-theme_color: "#3A4A5A"
+theme_color: "58, 74, 90"
 title: "Pain001 Privacy Statement"
 url: "https://www.pain001.com/privacy/index.html"
 
@@ -28,16 +28,16 @@ generator: "Shokunin Static Site Generator (v0.0.13)"
 item_description: "This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Website and the choices you have associated with that data."
 item_guid: https://pain001.com/privacy/index.html
 item_link: https://pain001.com/privacy/rss.xml
-item_pub_date: "Sun, 18 June 2023 10:33:10 BST"
+item_pub_date: "Tue, 20 June 2023 18:18:18 BST"
 item_title: "Pain001 Privacy Statement"
-last_build_date: "Sun, 18 June 2023 10:33:10 BST"
-pub_date: "Sun, 18 June 2023 10:33:10 BST"
+last_build_date: "Tue, 20 June 2023 18:18:18 BST"
+pub_date: "Tue, 20 June 2023 18:18:18 BST"
 
 # MS Application - The MS Application front matter (YAML).
 
 msapplication_config: "https://pain001.com/browserconfig.xml"
 msapplication_tap_highlight: "no"
-msapplication_tile_color: "#3A4A5A"
+msapplication_tile_color: "58, 74, 90"
 msapplication_tile_image: https://kura.pro/pain001/images/logos/pain001.svg
 
 # Open Graph - The Open Graph front matter (YAML).

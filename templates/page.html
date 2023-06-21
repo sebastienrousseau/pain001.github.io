@@ -17,7 +17,7 @@
     <meta name="language" content="English" />
     <meta name="revisit-after" content="8 days" />
     <meta name="robots" content="{{robots}}" />
-    <meta name="theme-color" content="{{theme_color}}" />
+    <meta name="theme-color" content="rgb({{theme_color}})" />
     <meta name="title" content="{{title}}" />
     <!-- # End Primary Meta Tags -->
 
@@ -58,17 +58,22 @@
     <!-- # Start Styles -->
     <style>
       a {
-        color: {{theme_color}};
+        color: rgb({{theme_color}});
         text-decoration: none;
       }
 
-      h1, h2, h3, h4, h5, h6 {
-        color: {{theme_color}};
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: rgb({{theme_color}});
         text-decoration: none;
       }
 
       a:hover {
-        color: {{theme_color}};
+        color: rgb({{theme_color}});
         text-decoration: underline;
       }
     </style>
@@ -99,7 +104,10 @@
 
     <!-- # Start Apple -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="rgb({{theme_color}})"
+    />
     <meta name="apple-mobile-web-app-title" content="{{title}}" />
     <meta name="application-name" content="{{name}}" />
     <meta name="author" content="{{author}}" />
@@ -118,7 +126,7 @@
     <!-- # Start Microsoft -->
     <meta name="msapplication-config" content="{{msapplication_config}}" />
     <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="msapplication-TileColor" content="{{theme_color}}" />
+    <meta name="msapplication-TileColor" content="rgb({{theme_color}})" />
     <meta name="msapplication-TileImage" content="{{image}}" />
     <!-- # End Microsoft -->
 
@@ -142,9 +150,8 @@
     <!-- Responsive navbar-->
     <nav
       class="navbar navbar-expand-lg navbar-dark fixed-top"
-      style="background-color: {{theme_color}};"
+      style="background-color: rgba({{theme_color}}, .618033988749894)"
       id="mainNav"
-      role="navigation"
       itemscope
       itemtype="http://schema.org/SiteNavigationElement"
     >
@@ -161,6 +168,7 @@
               title="Logo of {{name}}"
             />
           </a>
+          <figcaption class="visually-hidden">Logo of {{name}}</figcaption>
         </figure>
         <button
           class="navbar-toggler"
@@ -180,17 +188,46 @@
                 >Home</a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item dropdown">
               <a
-                class="text-white text-uppercase nav-link active"
-                aria-current="page"
-                href="/payments/index.html"
+                class="text-uppercase nav-link dropdown-toggle active"
+                id="paymentsDropdown"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                aria-label="Payments"
                 >Payments</a
               >
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="paymentsDropdown"
+              >
+                <li>
+                  <a class="dropdown-item" href="/payments/index.html"
+                    >ISO 20022 Payments</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/pain.001.001.03/index.html"
+                    >pain.001.001.03</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/pain.001.001.04/index.html"
+                    >pain.001.001.04</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/pain.001.001.09/index.html"
+                    >pain.001.001.09</a
+                  >
+                </li>
+              </ul>
             </li>
-            <li class="text-uppercase nav-item dropdown">
+            <li class="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                class="text-uppercase nav-link dropdown-toggle"
                 id="navbarDropdown"
                 href="#"
                 role="button"
@@ -200,19 +237,36 @@
               >
               <ul
                 class="dropdown-menu dropdown-menu-end"
-                aria-labelledby="navbarDropdown"
+                aria-labelledby="supportDropdown"
               >
                 <li>
-                  <a class="dropdown-item" href="/documentation/index.html"
-                    >Documentation</a
-                  >
+                  <a class="dropdown-item" href="/contact/index.html">
+                    Contact us
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="/documentation/index.html">
+                    Documentation
+                  </a>
                 </li>
                 <li>
                   <a
                     class="dropdown-item"
                     href="https://github.com/sebastienrousseau/pain001"
-                    >GitHub ⧉</a
                   >
+                    Source Code ⧉
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/privacy/index.html">
+                    Privacy policy
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/terms/index.html">
+                    Terms of service
+                  </a>
                 </li>
               </ul>
             </li>
@@ -233,6 +287,9 @@
           height: 100vh;
           width: 100vh;
         "
+        role="img"
+        title="Banner of {{name}}"
+        aria-label="Banner of {{name}}"
       >
         <div class="position-relative overflow-hidden top-50 text-center">
           <strong class="text-white display-4 fw-normal">{{title}}</strong>

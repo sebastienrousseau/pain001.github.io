@@ -18,7 +18,7 @@ permalink: "https://pain001.com/contact/index.html"
 robots: "all"
 short_name: "contact"
 subtitle: "How can we help you today?"
-theme_color: "#5d7a7f"
+theme_color: "93, 122, 127"
 title: "Contact Us"
 url: "https://www.pain001.com/contact/index.html"
 
@@ -28,16 +28,16 @@ generator: "Shokunin Static Site Generator (v0.0.13)"
 item_description: "You can contact us using the contact form below."
 item_guid: https://pain001.com/contact/index.html
 item_link: https://pain001.com/contact/rss.xml
-item_pub_date: "Sun, 18 June 2023 10:33:10 BST"
+item_pub_date: "Tue, 20 June 2023 18:18:18 BST"
 item_title: "Contact Us"
-last_build_date: "Sun, 18 June 2023 10:33:10 BST"
-pub_date: "Sun, 18 June 2023 10:33:10 BST"
+last_build_date: "Tue, 20 June 2023 18:18:18 BST"
+pub_date: "Tue, 20 June 2023 18:18:18 BST"
 
 # MS Application - The MS Application front matter (YAML).
 
 msapplication_config: "https://pain001.com/browserconfig.xml"
 msapplication_tap_highlight: "no"
-msapplication_tile_color: "#5d7a7f"
+msapplication_tile_color: "93, 122, 127"
 msapplication_tile_image: https://kura.pro/pain001/images/logos/pain001.svg
 
 # Open Graph - The Open Graph front matter (YAML).

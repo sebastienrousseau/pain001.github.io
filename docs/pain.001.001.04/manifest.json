@@ -1,6 +1,6 @@
 {
   "background_color": "#ffffff",
-  "description": "pain.001.001.03, is an XML-based message format under the ISO 20022 standard designed to streamline cross-border and domestic payment processes.",
+  "description": "pain.001.001.04, is an XML-based message format under the ISO 20022 standard designed to streamline cross-border and domestic payment processes.",
   "display": "standalone",
   "icons": [
     {
@@ -10,10 +10,10 @@
       "type": "image/png"
     }
   ],
-  "name": "Customer Credit Transfer Initiation V3 (pain.001.001.03)",
+  "name": "Customer Credit Transfer Initiation V4 (pain.001.001.04)",
   "orientation": "portrait-primary",
   "scope": "/",
-  "short_name": "pain.001.001.03",
+  "short_name": "pain.001.001.04",
   "start_url": ".",
-  "theme_color": "0, 131, 143"
+  "theme_color": "70, 34, 50"
 }

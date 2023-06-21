@@ -15,5 +15,5 @@
   "scope": "/",
   "short_name": "offline",
   "start_url": ".",
-  "theme_color": "#ef0000"
+  "theme_color": "239, 0, 0"
 }

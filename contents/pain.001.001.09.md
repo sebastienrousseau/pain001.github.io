@@ -17,7 +17,7 @@ permalink: "https://pain001.com/pain.001.001.09/index.html"
 robots: "index,follow"
 short_name: "pain.001.001.09"
 subtitle: "pain.001.001.09: A standardized XML message format that streamlines cross-border and domestic payments."
-theme_color: "#004957"
+theme_color: "0, 73, 87"
 title: "Customer Credit Transfer Initiation V9 (pain.001.001.09)"
 url: "https://www.pain001.com/pain.001.001.09/index.html"
 
@@ -28,16 +28,16 @@ generator: "Shokunin Static Site Generator (v0.0.13)"
 item_description: "pain.001.001.09, is an XML-based message format under the ISO 20022 standard designed to streamline cross-border and domestic payment processes."
 item_guid: "https://pain001.com/pain.001.001.09/index.html"
 item_link: "https://pain001.com/pain.001.001.09/rss.xml"
-item_pub_date: "Sun, 18 June 2023 10:33:10 BST"
+item_pub_date: "Tue, 20 June 2023 18:18:18 BST"
 item_title: "Customer Credit Transfer Initiation V9 (pain.001.001.09)"
-last_build_date: "Sun, 18 June 2023 10:33:10 BST"
-pub_date: "Sun, 18 June 2023 10:33:10 BST"
+last_build_date: "Tue, 20 June 2023 18:18:18 BST"
+pub_date: "Tue, 20 June 2023 18:18:18 BST"
 
 # MS Application - The MS Application front matter (YAML).
 
 msapplication_config: "https://pain001.com/browserconfig.xml"
 msapplication_tap_highlight: "no"
-msapplication_tile_color: "#004957"
+msapplication_tile_color: "0, 73, 87"
 msapplication_tile_image: "https://kura.pro/pain001/images/logos/pain001.webp"
 
 

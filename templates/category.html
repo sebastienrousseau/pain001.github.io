@@ -17,7 +17,7 @@
     <meta name="language" content="English" />
     <meta name="revisit-after" content="8 days" />
     <meta name="robots" content="{{robots}}" />
-    <meta name="theme-color" content="{{theme_color}}" />
+    <meta name="theme-color" content="rgb({{theme_color}})" />
     <meta name="title" content="{{title}}" />
     <!-- # End Primary Meta Tags -->
 
@@ -58,17 +58,22 @@
     <!-- # Start Styles -->
     <style>
       a {
-        color: {{theme_color}};
+        color: rgb({{theme_color}});
         text-decoration: none;
       }
 
-      h1, h2, h3, h4, h5, h6 {
-        color: {{theme_color}};
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: rgb({{theme_color}});
         text-decoration: none;
       }
 
       a:hover {
-        color: {{theme_color}};
+        color: rgb({{theme_color}});
         text-decoration: underline;
       }
     </style>
@@ -118,7 +123,7 @@
     <!-- # Start Microsoft -->
     <meta name="msapplication-config" content="{{msapplication_config}}" />
     <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="msapplication-TileColor" content="{{theme_color}}" />
+    <meta name="msapplication-TileColor" content="rgb({{theme_color}})" />
     <meta name="msapplication-TileImage" content="{{image}}" />
     <!-- # End Microsoft -->
 
@@ -142,9 +147,8 @@
     <!-- Responsive navbar-->
     <nav
       class="navbar navbar-expand-lg navbar-dark fixed-top"
-      style="background-color: {{theme_color}};"
+      style="background-color: rgba({{theme_color}}, .618033988749894)"
       id="mainNav"
-      role="navigation"
       itemscope
       itemtype="http://schema.org/SiteNavigationElement"
     >
@@ -160,6 +164,7 @@
               height="24"
               title="Logo of {{name}}"
             />
+            <figcaption class="visually-hidden">Logo of {{name}}</figcaption>
           </a>
         </figure>
         <button
@@ -180,37 +185,87 @@
                 >Home</a
               >
             </li>
-            <li class="nav-item">
-              <a class="text-uppercase nav-link" href="/payments/index.html"
-                >Payments</a
-              >
-            </li>
-            <li class="text-uppercase nav-item dropdown active">
+            <li class="nav-item dropdown">
               <a
-                class="text-white nav-link dropdown-toggle"
-                aria-current="page"
-                id="navbarDropdown"
+                class="text-uppercase nav-link dropdown-toggle"
+                id="paymentsDropdown"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-                >Resources</a
+                aria-label="Payments"
+                >Payments</a
               >
               <ul
                 class="dropdown-menu dropdown-menu-end"
-                aria-labelledby="navbarDropdown"
+                aria-labelledby="paymentsDropdown"
               >
                 <li>
-                  <a class="dropdown-item" href="/documentation/index.html"
-                    >Documentation</a
+                  <a class="dropdown-item" href="/payments/index.html"
+                    >ISO 20022 Payments</a
                   >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/pain.001.001.03/index.html"
+                    >pain.001.001.03</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/pain.001.001.04/index.html"
+                    >pain.001.001.04</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/pain.001.001.09/index.html"
+                    >pain.001.001.09</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                class="text-uppercase text-white nav-link dropdown-toggle"
+                aria-current="page"
+                id="supportDropdown"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                aria-label="Support"
+                >Support</a
+              >
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="supportDropdown"
+              >
+                <li>
+                  <a class="dropdown-item" href="/contact/index.html">
+                    Contact us
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="/documentation/index.html">
+                    Documentation
+                  </a>
                 </li>
                 <li>
                   <a
                     class="dropdown-item"
                     href="https://github.com/sebastienrousseau/pain001"
-                    >GitHub ⧉</a
                   >
+                    Source Code ⧉
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/privacy/index.html">
+                    Privacy policy
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/terms/index.html">
+                    Terms of service
+                  </a>
                 </li>
               </ul>
             </li>
@@ -231,6 +286,9 @@
           height: 100vh;
           width: 100vh;
         "
+        role="img"
+        title="Banner of {{name}}"
+        aria-label="Banner of {{name}}"
       >
         <div class="position-relative overflow-hidden top-50 text-center">
           <strong class="text-white display-4 fw-normal">{{title}}</strong>

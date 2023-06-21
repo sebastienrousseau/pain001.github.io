@@ -18,7 +18,7 @@ permalink: "https://pain001.com/documentation/index.html"
 robots: "all"
 short_name: "documentation"
 subtitle: "A modern, open source solution for generating ISO 20022 compliant payments"
-theme_color: "#c35600"
+theme_color: "5, 12, 15"
 title: "Pain001 documentation"
 url: "https://www.pain001.com/documentation/index.html"
 
@@ -28,16 +28,16 @@ generator: "Shokunin Static Site Generator (v0.0.13)"
 item_description: "Pain001 is a powerful Python library that enables you to create ISO 20022-compliant payment files directly from CSV or SQLite Data Files."
 item_guid: https://pain001.com/documentation/index.html
 item_link: https://pain001.com/documentation/rss.xml
-item_pub_date: "Sun, 18 June 2023 10:33:10 BST"
+item_pub_date: "Tue, 20 June 2023 18:18:18 BST"
 item_title: "Payments"
-last_build_date: "Sun, 18 June 2023 10:33:10 BST"
-pub_date: "Sun, 18 June 2023 10:33:10 BST"
+last_build_date: "Tue, 20 June 2023 18:18:18 BST"
+pub_date: "Tue, 20 June 2023 18:18:18 BST"
 
 # MS Application - The MS Application front matter (YAML).
 
 msapplication_config: "https://pain001.com/browserconfig.xml"
 msapplication_tap_highlight: "no"
-msapplication_tile_color: "#7ce846"
+msapplication_tile_color: "5, 12, 15"
 msapplication_tile_image: https://kura.pro/pain001/images/logos/pain001.svg
 
 # Open Graph - The Open Graph front matter (YAML).

@@ -30,10 +30,10 @@ item_description: "Pain001 has an easy setup process to help you get started qui
 guide will walk you through the steps to install Pain001 on your system."
 item_guid: https://pain001.com/installation/index.html
 item_link: https://pain001.com/installation/rss.xml
-item_pub_date: "Sun, 18 June 2023 10:33:10 BST"
+item_pub_date: "Tue, 20 June 2023 18:18:18 BST"
 item_title: "Payments"
-last_build_date: "Sun, 18 June 2023 10:33:10 BST"
-pub_date: "Sun, 18 June 2023 10:33:10 BST"
+last_build_date: "Tue, 20 June 2023 18:18:18 BST"
+pub_date: "Tue, 20 June 2023 18:18:18 BST"
 
 # MS Application - The MS Application front matter (YAML).
 
@@ -124,6 +124,7 @@ When running **Pain001**, you will need to specify four arguments:
 
   The currently supported types are:
   - pain.001.001.03
+  - pain.001.001.04
   - pain.001.001.09
 - An `xml_template_file_path`: This is the path to the XML template file you
   are using that contains variables that will be replaced by the values in your
