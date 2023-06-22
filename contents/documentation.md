@@ -28,10 +28,10 @@ generator: "Shokunin Static Site Generator (v0.0.13)"
 item_description: "Pain001 is a powerful Python library that enables you to create ISO 20022-compliant payment files directly from CSV or SQLite Data Files."
 item_guid: https://pain001.com/documentation/index.html
 item_link: https://pain001.com/documentation/rss.xml
-item_pub_date: "Wed, 21 June 2023 21:21:21 BST"
+item_pub_date: "Thu, 22 June 2023 09:09:09 BST"
 item_title: "Payments"
-last_build_date: "Wed, 21 June 2023 21:21:21 BST"
-pub_date: "Wed, 21 June 2023 21:21:21 BST"
+last_build_date: "Thu, 22 June 2023 09:09:09 BST"
+pub_date: "Thu, 22 June 2023 09:09:09 BST"
 
 # MS Application - The MS Application front matter (YAML).
 

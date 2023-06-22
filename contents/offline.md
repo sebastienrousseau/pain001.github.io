@@ -27,10 +27,10 @@ generator: "Shokunin Static Site Generator (v0.0.13)"
 item_description: "It looks like you’re offline. Check your connection and try again."
 item_guid: https://pain001.com/offline/index.html
 item_link: https://pain001.com/offline/rss.xml
-item_pub_date: "Wed, 21 June 2023 21:21:21 BST"
+item_pub_date: "Thu, 22 June 2023 09:09:09 BST"
 item_title: "No Internet Connection"
-last_build_date: "Wed, 21 June 2023 21:21:21 BST"
-pub_date: "Wed, 21 June 2023 21:21:21 BST"
+last_build_date: "Thu, 22 June 2023 09:09:09 BST"
+pub_date: "Thu, 22 June 2023 09:09:09 BST"
 
 # MS Application - The MS Application front matter (YAML).
 

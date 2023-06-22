@@ -30,10 +30,10 @@ item_description: "Pain001 has an easy setup process to help you get started qui
 guide will walk you through the steps to install Pain001 on your system."
 item_guid: https://pain001.com/installation/index.html
 item_link: https://pain001.com/installation/rss.xml
-item_pub_date: "Wed, 21 June 2023 21:21:21 BST"
+item_pub_date: "Thu, 22 June 2023 09:09:09 BST"
 item_title: "Payments"
-last_build_date: "Wed, 21 June 2023 21:21:21 BST"
-pub_date: "Wed, 21 June 2023 21:21:21 BST"
+last_build_date: "Thu, 22 June 2023 09:09:09 BST"
+pub_date: "Thu, 22 June 2023 09:09:09 BST"
 
 # MS Application - The MS Application front matter (YAML).
 
