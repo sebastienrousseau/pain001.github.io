@@ -1,1 +1,14 @@
-Pain001 - A Python Library for Automating ISO 20022-Compliant Payment Files Using CSV Data.
+/* TEAM */
+	Name: Sebastien Rousseau
+	Website: https://sebastienrousseau.co.uk
+	Twitter: @wwdseb
+	Location: London, UK
+
+/* THANKS */
+	Thanks: Thanks for reading!
+
+/* SITE */
+	Last update: 2023-09-20
+	Standards: HTML5, CSS3, RSS, Atom, CSV, JSON, XML, YAML, Markdown, TOML, SQLite
+	Components: Kaishi, Kaishi Templates, Kaishi Themes
+	Software: Shokunin, SSG, Rust, Cargo, Git, GitHub, Bootstrap, SQLite, VS Code

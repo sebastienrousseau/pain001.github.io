@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://pain001.com//sitemap.xml
+Sitemap: https://pain001.com/sitemap.xml
