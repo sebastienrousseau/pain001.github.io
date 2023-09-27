@@ -23,14 +23,7 @@
     <!-- # End Apple Meta Tags -->
 
     <!-- # Start Content Security Policy Meta Tags -->
-    <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self';
-      script-src 'self' 'unsafe-inline' *.google-analytics.com https://cdn.jsdelivr.net unpkg.com www.googletagmanager.com x.clarity.ms;
-      connect-src 'self' collect;
-      img-src 'self' data: https: kura.pro;
-      style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
-      font-src 'self' https://fonts.gstatic.com;
-      media-src 'self';" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' *.google-analytics.com https://cdn.jsdelivr.net unpkg.com www.googletagmanager.com x.clarity.ms; connect-src 'self' collect; img-src 'self' data: https: kura.pro; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com; media-src 'self';" />
     <!-- # End Content Security Policy Meta Tags -->
 
 
@@ -70,95 +63,7 @@
     <!-- # End Links -->
 
     <!-- # Start Styles -->
-    <style type="text/css">
-      :root {
-  --theme-color: {{theme_color}};
-}
-
-* {
-  font-weight: 300;
-}
-
-h1, h2, h3, h4, h5, h6, strong, .active {
-  color: var(--theme-color);
-  font-weight: 400;
-}
-
-a {
-  color: var(--theme-color);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.fade-in, .drop-down {
-  animation-fill-mode: forwards;
-}
-
-.fade-in {
-  animation: fadeIn 3s ease;
-}
-
-.drop-down {
-  animation: dropDown 1.618s ease;
-}
-
-pre {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-left: 3px solid var(--theme-color);
-    color: #666;
-    page-break-inside: avoid;
-    font-family: monospace;
-    font-size: 15px;
-    line-height: 1.618;
-    margin-bottom: 1.618em;
-    max-width: 100%;
-    overflow: auto;
-    padding: 1em 1.618em;
-    display: block;
-    word-wrap: break-word;
-}
-
-.zoom-in {
-  transition: transform 0.618s cubic-bezier(0.618, 1, 0.618, 1);
-}
-
-.zoom-in:hover {
-  transform: scale(1.0618);
-}
-
-.card {
-  overflow: hidden;
-}
-
-.blur-light {
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
-  background-color: rgba(255, 255, 255, 0.618);
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes dropDown {
-  from {
-    transform: translateY(-0.618rem);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-    </style>
+    <style>:root{--theme-color: {{theme-color}};}a{color:var(--theme-color);text-decoration:none;}a:hover{color:var(--theme-color);opacity:.618;text-decoration:underline;}h1,h2,h3,h4,h5,h6{color:var(--theme-color);text-decoration:none;}table{border:1px solid black;border-collapse:collapse;border-spacing:0;empty-cells:show;margin-bottom:25px;width:100%;}td,th,thead{vertical-align:top;}thead{background-color:#f1f1f1;text-align:left;border-bottom:1px solid black;}td,th{background-color:transparent;border-left:1px solid black;border-width:0 0 0 1px;margin:0;overflow:visible;padding:6px 12px;}body{background-color:black;}</style>
     <!-- # End Styles -->
   </head>
   <body
@@ -169,7 +74,7 @@ pre {
   >
     <!-- # Start Responsive navbar -->
     <nav
-      class="navbar navbar-expand-lg bd-navbar sticky-top shadow-small border-bottom blur-light"
+      class="bg-white navbar navbar-expand-lg bd-navbar sticky-top shadow-small border-bottom blur-light"
       id="mainNav"
       itemscope
       itemtype="http://schema.org/SiteNavigationElement"
@@ -427,39 +332,9 @@ pre {
     >
     </script>
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org/",
-        "@type": "WebPage",
-        "author": {
-          "@type": "Person",
-          "@id": "{{author}}"
-        },
-        "copyrightHolder": {
-          "@type": "Person",
-          "@id": "{{author}}"
-        },
-        "copyrightYear": "{{copyright}}",
-        "creator": {
-          "@type": "Person",
-          "@id": "{{author}}"
-        },
-        "dateModified": "{{last_build_date}}",
-        "datePublished": "{{item_pub_date}}",
-        "description": "{{description}}",
-        "headline": "{{subtitle}}",
-        "image": {
-          "@type": "ImageObject",
-          "url": "{{image}}"
-        },
-        "inLanguage": "{{language}}",
-        "mainEntityOfPage": "{{permalink}}",
-        "name": "{{name}}",
-        "publisher": {
-          "@type": "Person",
-          "@id": "{{author}}"
-        }
-      }
-    </script>
+      {"@context":"https://schema.org/","@type":"WebPage","author":{"@type":"Person","@id":"{{author}}"},"copyrightHolder":{"@type":"Person","@id":"{{author}}"},"copyrightYear":"{{copyright}}","creator":{"@type":"Person","@id":"{{author}}"},"dateModified":"{{last_build_date}}","datePublished":"{{item_pub_date}}","description":"{{description}}","headline":"{{subtitle}}","image":{"@type":"ImageObject","url":"{{image}}"},"inLanguage":"{{language}}","mainEntityOfPage":"{{permalink}}","name":"{{name}}","publisher":{"@type":"Person","@id":"{{author}}"}}
+      </script>
+
     <script>
       // This is an Immediately Invoked Function Expression (IIFE) which helps
       // to avoid declaring any globals.
