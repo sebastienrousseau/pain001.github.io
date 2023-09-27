@@ -41,7 +41,7 @@ theme_color: "rgba(0, 153, 172, 0.618033988749894)"
 tags: "ISO 20022, pain001, payments, automation, python, library, cross-border, compliance, efficiency, accuracy, cost reduction"
 title: "Pain001: Automate ISO 20022-Compliant Payment File Creation"
 type_: "website"
-url: "https://www.pain001.com/index.html"
+url: "https://pain001.com/index.html"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 
 # RSS - The RSS feed front matter (YAML).

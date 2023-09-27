@@ -39,7 +39,7 @@ theme_color: "rgba(3, 102, 118, 0.618033988749894)"
 tags: "pain.001.001.09, ISO 20022, pain001, version 9, credit transfer, XML, message format, standardization, automation, cross-border, domestic, payments"
 title: "Customer Credit Transfer Initiation V9 (pain.001.001.09)"
 type_: "website"
-url: "https://www.pain001.com/pain.001.001.09/index.html"
+url: "https://pain001.com/pain.001.001.09/index.html"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 
 # RSS - The RSS feed front matter (YAML).

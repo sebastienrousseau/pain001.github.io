@@ -40,7 +40,7 @@ theme_color: "rgba(3, 93, 147, 0.618033988749894)"
 tags: ""
 title: "No Internet Connection"
 type_: "website"
-url: "https://www.pain001.com/offline/index.html"
+url: "https://pain001.com/offline/index.html"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 
 # RSS - The RSS feed front matter (YAML).

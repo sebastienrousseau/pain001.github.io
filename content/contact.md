@@ -41,7 +41,7 @@ theme_color: "rgba(93, 122, 127, 0.618033988749894)"
 tags: "contact,help,support"
 title: "Contact us"
 type_: "website"
-url: "https://www.pain001.com/contact/index.html"
+url: "https://pain001.com/contact/index.html"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 
 # RSS - The RSS feed front matter (YAML).

@@ -41,7 +41,7 @@ theme_color: "rgba(3, 93, 147, 0.618033988749894)"
 tags: "privacy, personal data, tracking tools, Google Analytics, Microsoft Clarity, user behaviour analytics, mouse movements, clicks, scrolls, rights, contact"
 title: "Pain001 Privacy Statement"
 type_: "website"
-url: "https://www.pain001.com/privacy/index.html"
+url: "https://pain001.com/privacy/index.html"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 
 # RSS - The RSS feed front matter (YAML).

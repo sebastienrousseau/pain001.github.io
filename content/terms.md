@@ -40,7 +40,7 @@ theme_color: "rgba(107, 94, 137, 0.618033988749894)"
 tags: "agreement, copyright, intellectual property, liability, limitation, links, privacy, terms, trademark, use, website"
 title: "Pain001 Terms of Use"
 type_: "website"
-url: "https://www.pain001.com/terms/index.html"
+url: "https://pain001.com/terms/index.html"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 
 # RSS - The RSS feed front matter (YAML).

@@ -40,7 +40,7 @@ theme_color: "rgba(213,63,0, 0.618033988749894)"
 tags: "installation, Python, ISO 20022, pain001, payments, CSV, SQLite, XML, XSD, template, command-line"
 title: "Pain001 installation"
 type_: "website"
-url: "https://www.pain001.com/installation/index.html"
+url: "https://pain001.com/installation/index.html"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 
 # RSS - The RSS feed front matter (YAML).

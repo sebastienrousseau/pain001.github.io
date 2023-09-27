@@ -41,7 +41,7 @@ theme_color: "rgba(54, 70, 104, 0.618033988749894)"
 tags: ""
 title: "Explore our tags"
 type_: "website"
-url: "https://www.pain001.com/tags/index.html"
+url: "https://pain001.com/tags/index.html"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 
 # RSS - The RSS feed front matter (YAML).
