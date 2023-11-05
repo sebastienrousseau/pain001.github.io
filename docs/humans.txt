@@ -8,7 +8,7 @@
 	Thanks: Thanks for reading!
 
 /* SITE */
-	Last update: 2023-09-20
+	Last update: 2023-11-05
 	Standards: HTML5, CSS3, RSS, Atom, CSV, JSON, XML, YAML, Markdown, TOML, SQLite
 	Components: Kaishi, Kaishi Templates, Kaishi Themes
 	Software: Shokunin, SSG, Rust, Cargo, Git, GitHub, Bootstrap, SQLite, VS Code
