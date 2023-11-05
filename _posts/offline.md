@@ -2,27 +2,26 @@
 
 # Front Matter (YAML)
 author: "Sebastien Rousseau"
-banner_alt: "Silhouette photography of mountain near body of water"
+banner_alt: "Landscape photo of mountain during nighttime"
 banner_height: "398"
 banner_width: "1440"
-banner: "https://kura.pro/stock/images/banners/tersius-van-rhyn-xcQWMPm9fG8.webp"
+banner: "https://kura.pro/stock/images/banners/alexandr-podvalny-n_Jb_d8O43Q.webp"
 cdn: "https://kura.pro"
 changefreq: "weekly"
 charset: "utf-8"
 copyright: "© 2023 Pain001. All rights reserved."
-date: "Wednesday, 20 Sep 2023 20:20:20 GMT"
-description: "The page may have been removed or renamed. Please visit our homepage for more information."
+date: "Nov 05, 2023"
+description: "It looks like you’re offline. Check your connection and try again."
 download: ""
 format-detection: "telephone=no"
 hreflang: "en"
 icon: "https://kura.pro/pain001/images/favicon.ico"
-id: "https://pain001.com/404/index.html"
+id: "https://pain001.com/offline/index.html"
 image_alt: "Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation"
-image_height: "630"
-image_width: "1200"
+image_height: "100vh"
+image_width: "100vw"
 image: "https://kura.pro/pain001/images/banners/banner-pain001.webp"
-form-id: "meqwylbe"
-keywords: "404, page not found, not available, 404 error, 404 page, bad link, broken link, page does not exist, page not found, page removed"
+keywords: "offline, connection, error, unable to connect"
 language: "en-GB"
 layout: "page"
 locale: "en_GB"
@@ -30,34 +29,35 @@ logo_alt: "Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation"
 logo_height: "25"
 logo_width: "100"
 logo: "https://kura.pro/pain001/images/titles/title-pain001.webp"
+menu: "active"
 name: "pain001"
-permalink: "https://pain001.com/404/index.html"
+permalink: "https://pain001.com/offline/index.html"
 rating: "general"
 referrer: "no-referrer"
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: "pain001"
-subtitle: "Sorry we can't find that page."
-theme-color: "rgba(61, 70, 83, 0.618033988749894)"
+subtitle: "Check your connection and try again."
+theme-color: "rgba(3, 93, 147, 0.618033988749894)"
 tags: ""
-title: "404 - Page not found"
+title: "No Internet Connection"
 type_: "website"
-url: "https://pain001.com/404/index.html"
+url: "https://pain001.com/offline/index.html"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 
 # RSS - The RSS feed front matter (YAML).
-atom_link: "https://pain001.com/404/rss.xml"
+atom_link: "https://pain001.com/offline/rss.xml"
 category: "Technology"
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Shokunin (SSG) 🦀 (version 0.0.18)"
-item_description: "The page may have been removed or renamed. Please visit our homepage for more information."
-item_guid: "https://pain001.com/404/rss.xml"
-item_link: "https://pain001.com/404/rss.xml"
-item_pub_date: "Wednesday, 20 Sep 2023 20:20:20 GMT"
-item_title: "404 - Page not found"
+generator: "Shokunin (SSG) 🦀 (version 0.0.20)"
+item_description: "It looks like you’re offline. Check your connection and try again."
+item_guid: "https://pain001.com/offline/rss.xml"
+item_link: "https://pain001.com/offline/rss.xml"
+item_pub_date: "Nov 05, 2023"
+item_title: "No Internet Connection"
 last_build_date: "Wednesday, 27 Sep 2023 27:27:27 GMT"
 managing_editor: "contact@pain001.com"
-pub_date: "Wednesday, 20 Sep 2023 20:20:20 GMT"
+pub_date: "Nov 05, 2023"
 ttl: "60"
 type: "website"
 webmaster: "contact@pain001.com"
@@ -68,21 +68,21 @@ apple_touch_icon_sizes: "192x192"
 apple-mobile-web-app-capable: "yes"
 apple-mobile-web-app-status-bar-inset: "black"
 apple-mobile-web-app-status-bar-style: "black-translucent"
-apple-mobile-web-app-title: "404 - Page not found"
+apple-mobile-web-app-title: "No Internet Connection"
 apple-touch-fullscreen: "yes"
 
 # MS Application - The MS Application front matter (YAML).
-msapplication-navbutton-color: "rgb(61, 70, 83)"
+msapplication-navbutton-color: "rgb(3, 93, 147)"
 
 # Twitter Card - The Twitter Card front matter (YAML).
 twitter_card: "summary"
 twitter_creator: "@wwdseb"
-twitter_description: "The page may have been removed or renamed. Please visit our homepage for more information."
+twitter_description: "It looks like you’re offline. Check your connection and try again."
 twitter_image: "https://kura.pro/pain001/images/logos/pain001.svg"
 twitter_image_alt: "Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation"
 twitter_site: "@wwdseb"
-twitter_title: "404 - Page not found"
-twitter_url: "https://pain001.com"
+twitter_title: "No Internet Connection"
+twitter_url: "https://pain001.com/offline/index.html"
 
 # Humans.txt - The Humans.txt front matter (YAML).
 author_website: "https://sebastienrousseau.co.uk"
@@ -96,8 +96,17 @@ site_software: "Shokunin, SSG, Rust, Cargo, Git, GitHub, Bootstrap, SQLite, VS C
 
 ---
 
-## Overview
+## We are unable to find the page you have requested
 
-This page is a 404 error, which means you have clicked on a bad link or you have asked for a page that does not exist. Please find some helpful links below to get you back on track.
+If you got to this page through a bookmark, use the following resources to find a similar page, and update your bookmark.
 
-- [Homepage](/) - The homepage of this website.
+Try:
+
+- Turning off airplane mode.
+- Turning on Wi-Fi, mobile data, or cellular data.
+- Checking the signal in your area.
+- Checking the cables and connections.
+- Restarting your router.
+
+We apologise for the inconvenience. Thank you for visiting Pain001. We hope to
+see you again soon.
