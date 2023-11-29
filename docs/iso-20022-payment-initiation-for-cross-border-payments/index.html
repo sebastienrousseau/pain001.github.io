@@ -2,12 +2,12 @@
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
-    <meta itemprop="datePublished" content="Nov 05, 2023" id="date">
-    <meta itemprop="dateModified" content="2023-11-05T07:00:00+00:00" id="last-modified">
+    <meta itemprop="datePublished" content="2023-11-28T15:51+01:00" id="date">
+    <meta itemprop="dateModified" content="2023-11-28T15:51+01:00" id="last-modified">
     <title>ISO 20022 Payment Initiation for Cross-Border Payments</title>
 
     <!-- # Start Primary Meta Tags -->
-    <meta content="Sebastien Rousseau" name="author"><meta content="ISO 20022 Payment Initiation Messages are a set of XML-based messages enabling fast, efficient, transparent cross-border payments between financial institutions" name="description"><meta content="telephone=no" name="format-detection"><meta content="Shokunin (SSG) 🦀 (version 0.0.20)" name="generator"><meta content="pain.001.001.03, pain.001.001.04, pain.001.001.05, pain.001.001.09, ISO 20022 message format, SEPA Credit Transfers, international credit transfers, Customer Credit Transfer Initiation, Python library, payment processing automation" name="keywords"><meta content="en-GB" name="language"><meta content="https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/index.html" name="permalink"><meta content="general" name="rating"><meta content="no-referrer" name="referrer"><meta content="7 days" name="revisit-after"><meta content="index, follow" name="robots"><meta content="rgba(170, 70, 115, 0.618033988749894)" name="theme-color"><meta content="ISO 20022 Payment Initiation for Cross-Border Payments" name="title"><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="Sebastien Rousseau" name="author"><meta content="ISO 20022 Payment Initiation Messages are a set of XML-based messages enabling fast, efficient, transparent cross-border payments between financial institutions" name="description"><meta content="telephone=no" name="format-detection"><meta content="Shokunin (SSG) 🦀 (version 0.0.20)" name="generator"><meta content="pain.001.001.03, pain.001.001.04, pain.001.001.05, pain.001.001.09, ISO 20022 message format, SEPA Credit Transfers, international credit transfers, Customer Credit Transfer Initiation, Python library, payment processing automation" name="keywords"><meta content="en-GB" name="language"><meta content="https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/index.html" name="permalink"><meta content="general" name="rating"><meta content="no-referrer" name="referrer"><meta content="7 days" name="revisit-after"><meta content="index, follow" name="robots"><meta content="" name="theme-color"><meta content="ISO 20022 Payment Initiation for Cross-Border Payments" name="title"><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <!-- # End Primary Meta Tags -->
 
     <!-- # Start Open Graph / Facebook Meta Tags -->
@@ -80,7 +80,38 @@
     <!-- # End Links -->
 
     <!-- # Start Styles -->
-    <style>:root{--theme-color: rgba(170, 70, 115, 0.618033988749894);}a{color:var(--theme-color);text-decoration:none;}a:hover{color:var(--theme-color);opacity:.618;text-decoration:underline;}h1,h2,h3,h4,h5,h6{color:var(--theme-color);text-decoration:none;}table{border:1px solid black;border-collapse:collapse;border-spacing:0;empty-cells:show;margin-bottom:25px;width:100%;}td,th,thead{vertical-align:top;}thead{background-color:#f1f1f1;text-align:left;border-bottom:1px solid black;}td,th{background-color:transparent;border-left:1px solid black;border-width:0 0 0 1px;margin:0;overflow:visible;padding:6px 12px;}body{background-color:black;}</style>
+    <style>
+      @keyframes dropDown{from{transform:translateY(-.618rem)}to{transform:translateY(0)}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.active,h1,h2,h3,h4,h5,h6,strong{font-weight:400}.article-info{color:var(--theme-color);font-weight:400}.blur-light{backdrop-filter:saturate(180%) blur(20px);background-color:rgba(255,255,255,.618)}.card{overflow:hidden}.drop-down,.fade-in{animation-fill-mode:forwards}.drop-down{animation:dropDown 1.618s ease}.fade-in{animation:fadeIn 3s ease}h1,h2,h3,h4,h5,h6{color:var(--theme-color)}:root{--theme-color:rgba(170, 70, 115, 0.618033988749894)}*{font-weight:300}a{color:var(--theme-color);text-decoration:none}a:hover{text-decoration:underline}pre{background:#f9f9f9;border:1px solid #ddd;border-left:3px solid var(--theme-color);color:#666;display:block;font-family:monospace;font-size:15px;line-height:1.618;margin-bottom:1.618em;max-width:100%;overflow:auto;padding:1em 1.618em;page-break-inside:avoid;word-wrap:break-word}.zoom-in{transition:transform .618s cubic-bezier(.618,1,.618,1)}.zoom-in:hover{transform:scale(1.0618)}.zoom-out{transition:transform .618s cubic-bezier(.618,1,.618,1)}.btn-info{background-color:var(--theme-color) !important;border-color:var(--theme-color) !important;}.text-info{color:var(--theme-color) !important}.zoom-out:hover{transform:scale(.618)}table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    margin-bottom: 26.18px;
+    width: 100%
+}
+
+td,
+th,
+thead {
+    vertical-align: top
+}
+
+thead {
+    background-color: #f1f1f1;
+    text-align: left;
+    border-bottom: 1px solid black
+}
+
+td,
+th {
+    background-color: transparent;
+    border-left: 1px solid black;
+    border-width: 0 0 0 1px;
+    margin: 0;
+    overflow: visible;
+    padding: 6.18px 12px
+}
+    </style>
     <!-- # End Styles -->
   </head>
   <body
@@ -97,6 +128,17 @@
       itemtype="http://schema.org/SiteNavigationElement"
     >
     <div class="container-xxl p-3">
+      <a class="navbar-brand p-0 me-0 me-lg-2" href="/" aria-label="logo">
+        <img
+          class="d-inline-block align-top"
+          width="44"
+          height="44"
+          src="https://kura.pro/pain001/images/logos/pain001.webp"
+          alt="Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation"
+          title="Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation"
+          loading="lazy"
+        />
+      </a>
       <span class="fs-4" itemprop="name"><a href="/" itemprop="url" title="pain001" class="text-decoration-none text-dark">pain001</a></span>
       <button
           aria-controls="navbarSupportedContent"
@@ -157,6 +199,21 @@
                       </a>
                     </li>
                     <li>
+                      <a class="dropdown-item" href="/pain.001.001.06/index.html">
+                        pain.001.001.06
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/pain.001.001.07/index.html">
+                        pain.001.001.07
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/pain.001.001.08/index.html">
+                        pain.001.001.08
+                      </a>
+                    </li>
+                    <li>
                       <a class="dropdown-item" href="/pain.001.001.09/index.html">
                         pain.001.001.09
                       </a>
@@ -182,6 +239,11 @@
                 <li>
                   <a class="dropdown-item" href="/documentation/index.html">
                     Documentation
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/made-with-shokunin/index.html">
+                    Made with Shokunin (SSG)
                   </a>
                 </li>
                 <li>
@@ -252,23 +314,10 @@ its power to automate and standardise payment transactions.</p>
 <strong>ISO 20022 Payment messages</strong> that can integrate seamlessly into your payment
 system, reducing payments creation and processing costs and improving
 efficiency.</p>
-<!-- markdownlint-disable MD033 MD041 -->
-<div class="row g-0">
-  <div
-    aria-hidden="false"
-    class="fade-in col-lg-6 order-lg-1 text-white"
-    data-has-animated="true"
-    data-show-type="fade-in"
-    style="
-      background-size: inherit;
-      background: url(
-        'https://kura.pro/stock/images/banners/christopher-burns-Kj2SaNHG-hg.webp'
-      ) no-repeat;
-    ">
-  </div>
-  <div class="col-lg-6 order-lg-1 text-left">
-    <div class="container-fluid px-5 py-5">
-<!-- markdownlint-enable MD033 MD041 -->
+<p><strong>ISO 20022</strong>, the brainchild of the
+<a href="https://www.iso20022.org/" title="ISO 20022">International Organization for Standardization (ISO)</a>, serves as the unified
+platform for crafting financial messages and defines the ISO standard for
+electronic data interchange between financial institutions.</p>
 <h2 id="h2-what" tabindex="0" itemprop="subheadline" class="what">What are ISO 20022 payment initiation messages?</h2>
 <p><strong>ISO 20022 payment initiation messages</strong> are a set of XML-based messages that
 are used to enable payments between financial institutions. These messages are
@@ -283,14 +332,58 @@ They also provide more detailed information about the payment.</p>
 payment, and the date and time of the payment. They also contain additional
 information, such as the purpose of the payment and the reference number.</p>
 <p>A wide range of financial institutions, including banks, payment service
-providers, and clearinghouses, use <strong>ISO 20022 payment initiation messages</strong>.</p>
-<p><strong>Pain001</strong> supports the following ISO 20022 Payment Initiation message types:</p>
-<ul>
-<li><strong><a href="/pain.001.001.03/index.html" title="Find out about the Customer Credit Transfer Initiation V3 (pain.001.001.03)">Customer Credit Transfer Initiation V3 (pain.001.001.03) ❯</a></strong></li>
-<li><strong><a href="/pain.001.001.04/index.html" title="Find out about the Customer Credit Transfer Initiation V4 (pain.001.001.04)">Customer Credit Transfer Initiation V4 (pain.001.001.04) ❯</a></strong></li>
-<li><strong><a href="/pain.001.001.05/index.html" title="Find out about the Customer Credit Transfer Initiation V5 (pain.001.001.05)">Customer Credit Transfer Initiation V5 (pain.001.001.05) ❯</a></strong></li>
-<li><strong><a href="/pain.001.001.09/index.html" title="Find out about the Customer Credit Transfer Initiation V9 (pain.001.001.09)">Customer Credit Transfer Initiation V9 (pain.001.001.09) ❯</a></strong></li>
-</ul>
+providers, and clearing-houses, use <strong>ISO 20022 payment initiation messages</strong>.</p>
+<h2 id="h2-payments" tabindex="0" itemprop="subheadline" class="payments">Payments Initiation list of supported messages</h2>
+<p>The table shows the supported Payments Initiation messages in <strong>Pain001</strong>, and
+their original release dates of the messages. The <strong>Pain001</strong> library supports
+the following versions of the ISO 20022 Customer Credit Transfer Initiation
+messages:</p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Release Date</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/pain.001.001.03/index.html" title="Find out about the Customer Credit Transfer Initiation V3 (pain.001.001.03)">pain.001.001.03</a></td>
+<td>2009</td>
+<td>Customer Credit Transfer Initiation V3, the most popular version</td>
+</tr>
+<tr>
+<td><a href="/pain.001.001.04/index.html" title="Find out about the Customer Credit Transfer Initiation V4 (pain.001.001.04)">pain.001.001.04</a></td>
+<td>2012</td>
+<td>Customer Credit Transfer Initiation V4</td>
+</tr>
+<tr>
+<td><a href="/pain.001.001.05/index.html" title="Find out about the Customer Credit Transfer Initiation V5 (pain.001.001.05)">pain.001.001.05</a></td>
+<td>2013</td>
+<td>Customer Credit Transfer Initiation V5</td>
+</tr>
+<tr>
+<td><a href="/pain.001.001.06/index.html" title="Find out about the Customer Credit Transfer Initiation V6 (pain.001.001.06)">pain.001.001.06</a></td>
+<td>2015</td>
+<td>Customer Credit Transfer Initiation V6</td>
+</tr>
+<tr>
+<td><a href="/pain.001.001.07/index.html" title="Find out about the Customer Credit Transfer Initiation V7 (pain.001.001.07)">pain.001.001.07</a></td>
+<td>2016</td>
+<td>Customer Credit Transfer Initiation V7</td>
+</tr>
+<tr>
+<td><a href="/pain.001.001.08/index.html" title="Find out about the Customer Credit Transfer Initiation V8 (pain.001.001.08)">pain.001.001.08</a></td>
+<td>2018</td>
+<td>Customer Credit Transfer Initiation V8</td>
+</tr>
+<tr>
+<td><a href="/pain.001.001.09/index.html" title="Find out about the Customer Credit Transfer Initiation V9 (pain.001.001.09)">pain.001.001.09</a></td>
+<td>2019</td>
+<td>Customer Credit Transfer Initiation V9</td>
+</tr>
+</tbody>
+</table>
 <p>All of these are part of the ISO 20022 standard. V3 is common for SEPA Credit
 Transfers, and V4 for international credit transfers outside the Single Euro
 Payments Area (SEPA).</p>
@@ -305,10 +398,12 @@ payments separately.</p>
 <h2 id="h2-benefits" tabindex="0" itemprop="subheadline" class="benefits">Benefits</h2>
 <p><strong>Pain001</strong> offers many benefits, including:</p>
 <ul>
-<li>Simplicity: Pain001 is a simple and easy-to-use library that can be quickly and easily integrated into your existing payment processing systems.</li>
-<li>Accuracy: Pain001 helps to mitigate human errors by automating the creation of ISO 20022 payment messages.</li>
-<li>Efficiency: Pain001 can reduce payment processing time and costs by creating ISO 20022 payment messages quickly.</li>
-<li>Compliance: Pain001 helps you comply with the latest regulatory requirements for payment processing.</li>
+<li><strong>Accuracy</strong>: Pain001 helps to mitigate human errors by automating the creation of ISO 20022 payment messages.</li>
+<li><strong>Compliance</strong>: Pain001 helps you comply with the latest regulatory requirements for payment processing.</li>
+<li><strong>Efficiency</strong>: Pain001 can reduce payment processing time and costs by creating ISO 20022 payment messages quickly.</li>
+<li><strong>Flexibility</strong>: Pain001 can be used to create ISO 20022 payment messages for a wide range of payment types, including SEPA Credit Transfers and international credit transfers.</li>
+<li><strong>Security</strong>: Pain001 helps you protect your customers’ data by creating ISO 20022 payment messages that are compliant with the latest security standards.</li>
+<li><strong>Simplicity</strong>: Pain001 is a simple and easy-to-use library that can be quickly and easily integrated into your existing payment processing systems.</li>
 </ul>
 <h2 id="h2-resources" tabindex="0" itemprop="subheadline" class="resources">Resources</h2>
 <ul>
@@ -345,36 +440,21 @@ payment processing operations, <strong>Pain001</strong> is a great option.</p>
 <p>Find out about the
 <a href="/pain.001.001.03/index.html" title="Find out about the Customer Credit Transfer Initiation V3 (pain.001.001.03)">Customer Credit Transfer Initiation V3 (pain.001.001.03)</a>, and learn about
 this version of the ISO 20022 Customer Credit Transfer Initiation message.</p>
-<!-- markdownlint-disable MD033 MD041 -->
-  </div>
-  </div>
-</div>
-<!-- markdownlint-enable MD033 MD041 -->
 
       </div>
     </main>
 
     <!-- Footer-->
     <footer id="footer" aria-label="footer" class="footer border-top mt-auto py-3">
-      <img
-        alt="Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation"
-        height="32"
-        data-show-type="fade-in";
-        src="https://kura.pro/pain001/images/logos/pain001.webp"
-        title="Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation"
-        width="32"
-      />
-      <span class="px-2">© 2023 Pain001. All rights reserved.</span>
-      <span class="px-2">
-        <a href="/contact/index.html">Contact</a>
-      </span>
-      <span class="px-2">
-        <a href="/privacy/index.html">Privacy & Cookie Policy</a>
-      </span>
-      <span class="px-2">
-        <a href="/terms/index.html">Terms of Use</a>
-      </span>
+            <span class="px-2">© 2023 Pain001. All rights reserved.</span>
+      <p class="mb-0">
+        <span class="px-2"><a href="/contact/index.html">Contact</a></span>
+        <span class="px-2"><a href="/privacy/index.html">Privacy & Cookie Policy</a></span>
+        <span class="px-2"><a href="/terms/index.html">Terms of Use</a></span>
+      </p>
     </footer>
+    <!-- # End Footer -->
+
     <script
       async
       crossorigin="anonymous"
@@ -384,7 +464,7 @@ this version of the ISO 20022 Customer Credit Transfer Initiation message.</p>
     >
     </script>
     <script type="application/ld+json">
-      {"@context":"https://schema.org/","@type":"WebPage","author":{"@type":"Person","@id":"Sebastien Rousseau"},"copyrightHolder":{"@type":"Person","@id":"Sebastien Rousseau"},"copyrightYear":"© 2023 Pain001. All rights reserved.","creator":{"@type":"Person","@id":"Sebastien Rousseau"},"dateModified":"2023-11-05T07:00:00+00:00","datePublished":"Nov 05, 2023","description":"ISO 20022 Payment Initiation Messages are a set of XML-based messages enabling fast, efficient, transparent cross-border payments between financial institutions","headline":"Pain001: Delivering Faster Payments Automation","image":{"@type":"ImageObject","url":"https://kura.pro/pain001/images/banners/banner-pain001.webp"},"inLanguage":"en-GB","mainEntityOfPage":"https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/index.html","name":"ISO 20022 Payment Initiation for Cross-Border Payments","publisher":{"@type":"Person","@id":"Sebastien Rousseau"}}
+      {"@context":"https://schema.org/","@type":"WebPage","author":{"@type":"Person","@id":"Sebastien Rousseau"},"copyrightHolder":{"@type":"Person","@id":"Sebastien Rousseau"},"copyrightYear":"© 2023 Pain001. All rights reserved.","creator":{"@type":"Person","@id":"Sebastien Rousseau"},"dateModified":"2023-11-28T15:51+01:00","datePublished":"2023-11-28T15:51+01:00","description":"ISO 20022 Payment Initiation Messages are a set of XML-based messages enabling fast, efficient, transparent cross-border payments between financial institutions","headline":"Pain001: Delivering Faster Payments Automation","image":{"@type":"ImageObject","url":"https://kura.pro/pain001/images/banners/banner-pain001.webp"},"inLanguage":"en-GB","mainEntityOfPage":"https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/index.html","name":"ISO 20022 Payment Initiation for Cross-Border Payments","publisher":{"@type":"Person","@id":"Sebastien Rousseau"}}
       </script>
 
     <script>

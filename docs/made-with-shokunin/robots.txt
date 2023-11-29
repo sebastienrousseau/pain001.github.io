@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://pain001.com/made-with-shokunin/index.html/sitemap.xml

@@ -10,7 +10,7 @@ cdn: "https://kura.pro"
 changefreq: "weekly"
 charset: "utf-8"
 copyright: "© 2023 Pain001. All rights reserved."
-date: "Nov 05, 2023"
+date: "Nov 28, 2023"
 description: "ISO 20022 Payment Initiation Messages are a set of XML-based messages enabling fast, efficient, transparent cross-border payments between financial institutions"
 download: "https://pypi.org/project/pain001/"
 format-detection: "telephone=no"
@@ -26,10 +26,11 @@ language: "en-GB"
 layout: "page"
 locale: "en_GB"
 logo_alt: "Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation"
-logo_height: "25"
-logo_width: "100"
-logo: "https://kura.pro/pain001/images/titles/title-pain001.webp"
+logo_height: "44"
+logo_width: "44"
+logo: "https://kura.pro/pain001/images/logos/pain001.webp"
 menu: "active"
+measurementID: "G-167B274ZWJ"
 name: "ISO 20022 Payment Initiation for Cross-Border Payments"
 permalink: "https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/index.html"
 rating: "general"
@@ -38,10 +39,9 @@ revisit-after: "7 days"
 robots: "index, follow"
 short_name: "pain001"
 subtitle: "Pain001: Delivering Faster Payments Automation"
-theme-color: "rgba(170, 70, 115, 0.618033988749894)"
+theme_color: "rgba(170, 70, 115, 0.618033988749894)"
 tags: "ISO 20022, Pain001, cross-border payments, payment initiation, XML, messages, financial institutions, efficiency, security, automation, compliance"
 title: "ISO 20022 Payment Initiation for Cross-Border Payments"
-type_: "website"
 url: "https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/index.html"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 
@@ -53,11 +53,11 @@ generator: "Shokunin (SSG) 🦀 (version 0.0.20)"
 item_description: "ISO 20022 Payment Initiation Messages are a set of XML-based messages enabling fast, efficient, transparent cross-border payments between financial institutions"
 item_guid: "https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/rss.xml"
 item_link: "https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/rss.xml"
-item_pub_date: "Nov 05, 2023"
+item_pub_date: "2023-11-28T15:51+01:00"
 item_title: "ISO 20022 Payment Initiation for Cross-Border Payments"
-last_build_date: "2023-11-05T07:00:00+00:00"
+last_build_date: "2023-11-28T15:51+01:00"
 managing_editor: "contact@pain001.com"
-pub_date: "Nov 05, 2023"
+pub_date: "2023-11-28T15:51+01:00"
 ttl: "60"
 type: "website"
 webmaster: "contact@pain001.com"
@@ -85,11 +85,11 @@ twitter_title: "ISO 20022 Payment Initiation for Cross-Border Payments"
 twitter_url: "https://pain001.com"
 
 # Humans.txt - The Humans.txt front matter (YAML).
-author_website: "https://sebastienrousseau.co.uk"
+author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thanks for reading!"
-site_last_updated: "2023-11-05"
+site_last_updated: "2023-11-28"
 site_standards: "HTML5, CSS3, RSS, Atom, CSV, JSON, XML, YAML, Markdown, TOML, SQLite"
 site_components: "Kaishi, Kaishi Templates, Kaishi Themes"
 site_software: "Shokunin, SSG, Rust, Cargo, Git, GitHub, Bootstrap, SQLite, VS Code"
@@ -107,25 +107,10 @@ The **Pain001** Python Finance Library generates fully compliant and valid
 system, reducing payments creation and processing costs and improving
 efficiency.
 
-<!-- markdownlint-disable MD033 MD041 -->
-
-<div class="row g-0">
-  <div
-    aria-hidden="false"
-    class="fade-in col-lg-6 order-lg-1 text-white"
-    data-has-animated="true"
-    data-show-type="fade-in"
-    style="
-      background-size: inherit;
-      background: url(
-        'https://kura.pro/stock/images/banners/christopher-burns-Kj2SaNHG-hg.webp'
-      ) no-repeat;
-    ">
-  </div>
-  <div class="col-lg-6 order-lg-1 text-left">
-    <div class="container-fluid px-5 py-5">
-
-<!-- markdownlint-enable MD033 MD041 -->
+**ISO 20022**, the brainchild of the
+[International Organization for Standardization (ISO)][0], serves as the unified
+platform for crafting financial messages and defines the ISO standard for
+electronic data interchange between financial institutions.
 
 ## What are ISO 20022 payment initiation messages?
 
@@ -144,14 +129,24 @@ payment, and the date and time of the payment. They also contain additional
 information, such as the purpose of the payment and the reference number.
 
 A wide range of financial institutions, including banks, payment service
-providers, and clearinghouses, use **ISO 20022 payment initiation messages**.
+providers, and clearing-houses, use **ISO 20022 payment initiation messages**.
 
-**Pain001** supports the following ISO 20022 Payment Initiation message types:
+## Payments Initiation list of supported messages
 
-- **[Customer Credit Transfer Initiation V3 (pain.001.001.03) ❯][3]**
-- **[Customer Credit Transfer Initiation V4 (pain.001.001.04) ❯][4]**
-- **[Customer Credit Transfer Initiation V5 (pain.001.001.05) ❯][5]**
-- **[Customer Credit Transfer Initiation V9 (pain.001.001.09) ❯][9]**
+The table shows the supported Payments Initiation messages in **Pain001**, and
+their original release dates of the messages. The **Pain001** library supports
+the following versions of the ISO 20022 Customer Credit Transfer Initiation
+messages:
+
+| Version | Release Date | Description |
+|---------|--------------|-------------|
+| [pain.001.001.03][3] | 2009 | Customer Credit Transfer Initiation V3, the most popular version |
+| [pain.001.001.04][4] | 2012 | Customer Credit Transfer Initiation V4 |
+| [pain.001.001.05][5] | 2013 | Customer Credit Transfer Initiation V5 |
+| [pain.001.001.06][6] | 2015 | Customer Credit Transfer Initiation V6 |
+| [pain.001.001.07][7] | 2016 | Customer Credit Transfer Initiation V7 |
+| [pain.001.001.08][8] | 2018 | Customer Credit Transfer Initiation V8 |
+| [pain.001.001.09][9] | 2019 | Customer Credit Transfer Initiation V9 |
 
 All of these are part of the ISO 20022 standard. V3 is common for SEPA Credit
 Transfers, and V4 for international credit transfers outside the Single Euro
@@ -171,11 +166,12 @@ payments separately.
 
 **Pain001** offers many benefits, including:
 
-- Simplicity: Pain001 is a simple and easy-to-use library that can be quickly and easily integrated into your existing payment processing systems.
-- Accuracy: Pain001 helps to mitigate human errors by automating the creation of ISO 20022 payment messages.
-- Efficiency: Pain001 can reduce payment processing time and costs by creating ISO 20022 payment messages quickly.
-- Compliance: Pain001 helps you comply with the latest regulatory requirements for payment processing.
-
+- **Accuracy**: Pain001 helps to mitigate human errors by automating the creation of ISO 20022 payment messages.
+- **Compliance**: Pain001 helps you comply with the latest regulatory requirements for payment processing.
+- **Efficiency**: Pain001 can reduce payment processing time and costs by creating ISO 20022 payment messages quickly.
+- **Flexibility**: Pain001 can be used to create ISO 20022 payment messages for a wide range of payment types, including SEPA Credit Transfers and international credit transfers.
+- **Security**: Pain001 helps you protect your customers' data by creating ISO 20022 payment messages that are compliant with the latest security standards.
+- **Simplicity**: Pain001 is a simple and easy-to-use library that can be quickly and easily integrated into your existing payment processing systems.
 
 ## Resources
 
@@ -214,13 +210,6 @@ Find out about the
 [Customer Credit Transfer Initiation V3 (pain.001.001.03)][3], and learn about
 this version of the ISO 20022 Customer Credit Transfer Initiation message.
 
-<!-- markdownlint-disable MD033 MD041 -->
-
-  </div>
-  </div>
-</div>
-
-<!-- markdownlint-enable MD033 MD041 -->
 
 [0]: https://www.iso20022.org/ "ISO 20022"
 [1]: https://github.com/sebastienrousseau/pain001
@@ -228,4 +217,7 @@ this version of the ISO 20022 Customer Credit Transfer Initiation message.
 [3]: /pain.001.001.03/index.html "Find out about the Customer Credit Transfer Initiation V3 (pain.001.001.03)"
 [4]: /pain.001.001.04/index.html "Find out about the Customer Credit Transfer Initiation V4 (pain.001.001.04)"
 [5]: /pain.001.001.05/index.html "Find out about the Customer Credit Transfer Initiation V5 (pain.001.001.05)"
+[6]: /pain.001.001.06/index.html "Find out about the Customer Credit Transfer Initiation V6 (pain.001.001.06)"
+[7]: /pain.001.001.07/index.html "Find out about the Customer Credit Transfer Initiation V7 (pain.001.001.07)"
+[8]: /pain.001.001.08/index.html "Find out about the Customer Credit Transfer Initiation V8 (pain.001.001.08)"
 [9]: /pain.001.001.09/index.html "Find out about the Customer Credit Transfer Initiation V9 (pain.001.001.09)"

@@ -63,7 +63,38 @@
     <!-- # End Links -->
 
     <!-- # Start Styles -->
-    <style>:root{--theme-color: {{theme-color}};}a{color:var(--theme-color);text-decoration:none;}a:hover{color:var(--theme-color);opacity:.618;text-decoration:underline;}h1,h2,h3,h4,h5,h6{color:var(--theme-color);text-decoration:none;}table{border:1px solid black;border-collapse:collapse;border-spacing:0;empty-cells:show;margin-bottom:25px;width:100%;}td,th,thead{vertical-align:top;}thead{background-color:#f1f1f1;text-align:left;border-bottom:1px solid black;}td,th{background-color:transparent;border-left:1px solid black;border-width:0 0 0 1px;margin:0;overflow:visible;padding:6px 12px;}body{background-color:black;}</style>
+    <style>
+      @keyframes dropDown{from{transform:translateY(-.618rem)}to{transform:translateY(0)}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.active,h1,h2,h3,h4,h5,h6,strong{font-weight:400}.article-info{color:var(--theme-color);font-weight:400}.blur-light{backdrop-filter:saturate(180%) blur(20px);background-color:rgba(255,255,255,.618)}.card{overflow:hidden}.drop-down,.fade-in{animation-fill-mode:forwards}.drop-down{animation:dropDown 1.618s ease}.fade-in{animation:fadeIn 3s ease}h1,h2,h3,h4,h5,h6{color:var(--theme-color)}:root{--theme-color:{{theme_color}}}*{font-weight:300}a{color:var(--theme-color);text-decoration:none}a:hover{text-decoration:underline}pre{background:#f9f9f9;border:1px solid #ddd;border-left:3px solid var(--theme-color);color:#666;display:block;font-family:monospace;font-size:15px;line-height:1.618;margin-bottom:1.618em;max-width:100%;overflow:auto;padding:1em 1.618em;page-break-inside:avoid;word-wrap:break-word}.zoom-in{transition:transform .618s cubic-bezier(.618,1,.618,1)}.zoom-in:hover{transform:scale(1.0618)}.zoom-out{transition:transform .618s cubic-bezier(.618,1,.618,1)}.btn-info{background-color:var(--theme-color) !important;border-color:var(--theme-color) !important;}.text-info{color:var(--theme-color) !important}.zoom-out:hover{transform:scale(.618)}table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    margin-bottom: 26.18px;
+    width: 100%
+}
+
+td,
+th,
+thead {
+    vertical-align: top
+}
+
+thead {
+    background-color: #f1f1f1;
+    text-align: left;
+    border-bottom: 1px solid black
+}
+
+td,
+th {
+    background-color: transparent;
+    border-left: 1px solid black;
+    border-width: 0 0 0 1px;
+    margin: 0;
+    overflow: visible;
+    padding: 6.18px 12px
+}
+    </style>
     <!-- # End Styles -->
   </head>
   <body
@@ -80,6 +111,17 @@
       itemtype="http://schema.org/SiteNavigationElement"
     >
     <div class="container-xxl p-3">
+      <a class="navbar-brand p-0 me-0 me-lg-2" href="/" aria-label="logo">
+        <img
+          class="d-inline-block align-top"
+          width="{{logo_width}}"
+          height="{{logo_height}}"
+          src="{{logo}}"
+          alt="{{logo_alt}}"
+          title="{{logo_alt}}"
+          loading="lazy"
+        />
+      </a>
       <span class="fs-4" itemprop="name"><a href="/" itemprop="url" title="{{short_name}}" class="text-decoration-none text-dark">{{short_name}}</a></span>
       <button
           aria-controls="navbarSupportedContent"
@@ -102,7 +144,7 @@
             </li>
             <li class="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle active"
+                class="nav-link dropdown-toggle {{menu}}"
                 id="navbarDropdown"
                 href="#"
                 role="button"
@@ -140,6 +182,21 @@
                       </a>
                     </li>
                     <li>
+                      <a class="dropdown-item" href="/pain.001.001.06/index.html">
+                        pain.001.001.06
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/pain.001.001.07/index.html">
+                        pain.001.001.07
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/pain.001.001.08/index.html">
+                        pain.001.001.08
+                      </a>
+                    </li>
+                    <li>
                       <a class="dropdown-item" href="/pain.001.001.09/index.html">
                         pain.001.001.09
                       </a>
@@ -165,6 +222,11 @@
                 <li>
                   <a class="dropdown-item" href="/documentation/index.html">
                     Documentation
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/made-with-shokunin/index.html">
+                    Made with Shokunin (SSG)
                   </a>
                 </li>
                 <li>
@@ -233,25 +295,15 @@
 
     <!-- Footer-->
     <footer id="footer" aria-label="footer" class="footer border-top mt-auto py-3">
-      <img
-        alt="{{logo_alt}}"
-        height="32"
-        data-show-type="fade-in";
-        src="{{cdn}}/{{short_name}}/images/logos/{{short_name}}.webp"
-        title="{{logo_alt}}"
-        width="32"
-      />
-      <span class="px-2">{{copyright}}</span>
-      <span class="px-2">
-        <a href="/contact/index.html">Contact</a>
-      </span>
-      <span class="px-2">
-        <a href="/privacy/index.html">Privacy & Cookie Policy</a>
-      </span>
-      <span class="px-2">
-        <a href="/terms/index.html">Terms of Use</a>
-      </span>
+            <span class="px-2">{{copyright}}</span>
+      <p class="mb-0">
+        <span class="px-2"><a href="/contact/index.html">Contact</a></span>
+        <span class="px-2"><a href="/privacy/index.html">Privacy & Cookie Policy</a></span>
+        <span class="px-2"><a href="/terms/index.html">Terms of Use</a></span>
+      </p>
     </footer>
+    <!-- # End Footer -->
+
     <script
       async
       crossorigin="anonymous"

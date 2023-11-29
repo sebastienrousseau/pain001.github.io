@@ -10,12 +10,12 @@ cdn: "https://kura.pro"
 changefreq: "weekly"
 charset: "utf-8"
 copyright: "© 2023 Pain001. All rights reserved."
-date: "Nov 05, 2023"
+date: "Nov 28, 2023"
 description: "pain.001.001.09, is an XML-based message format under the ISO 20022 standard designed to streamline cross-border and domestic payment processes."
 format-detection: "telephone=no"
 hreflang: "en"
 icon: "https://kura.pro/pain001/images/favicon.ico"
-id: "https://pain001.com"
+id: "https://pain001.com/pain.001.001.09/index.html"
 image_alt: "Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation"
 image_height: "100vh"
 image_width: "100vw"
@@ -25,10 +25,11 @@ language: "en-GB"
 layout: "page"
 locale: "en_GB"
 logo_alt: "Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation"
-logo_height: "25"
-logo_width: "100"
-logo: "https://kura.pro/pain001/images/titles/title-pain001.webp"
+logo_height: "44"
+logo_width: "44"
+logo: "https://kura.pro/pain001/images/logos/pain001.webp"
 menu: "active"
+measurementID: "G-167B274ZWJ"
 name: "Customer Credit Transfer Initiation V9 (pain.001.001.09)"
 permalink: "https://pain001.com/pain.001.001.09/index.html"
 rating: "general"
@@ -37,10 +38,9 @@ revisit-after: "7 days"
 robots: "index, follow"
 short_name: "pain001"
 subtitle: "pain.001 version 9: A standardized XML message format for initiating credit transfers."
-theme-color: "rgba(3, 102, 118, 0.618033988749894)"
+theme_color: "rgba(3, 102, 118, 0.618033988749894)"
 tags: "pain.001.001.09, ISO 20022, pain001, version 9, credit transfer, XML, message format, standardization, automation, cross-border, domestic, payments"
 title: "Customer Credit Transfer Initiation V9 (pain.001.001.09)"
-type_: "website"
 url: "https://pain001.com/pain.001.001.09/index.html"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 
@@ -52,11 +52,11 @@ generator: "Shokunin (SSG) 🦀 (version 0.0.20)"
 item_description: "pain.001.001.09, is an XML-based message format under the ISO 20022 standard designed to streamline cross-border and domestic payment processes."
 item_guid: "https://pain001.com/pain.001.001.09/rss.xml"
 item_link: "https://pain001.com/pain.001.001.09/rss.xml"
-item_pub_date: "Nov 05, 2023"
+item_pub_date: "2023-11-28T15:51+01:00"
 item_title: "Customer Credit Transfer Initiation V9 (pain.001.001.09)"
-last_build_date: "2023-11-05T07:00:00+00:00"
+last_build_date: "2023-11-28T15:51+01:00"
 managing_editor: "contact@pain001.com"
-pub_date: "Nov 05, 2023"
+pub_date: "2023-11-28T15:51+01:00"
 ttl: "60"
 type: "website"
 webmaster: "contact@pain001.com"
@@ -84,11 +84,11 @@ twitter_title: "Customer Credit Transfer Initiation V9 (pain.001.001.09)"
 twitter_url: "https://pain001.com/pain.001.001.09/index.html"
 
 # Humans.txt - The Humans.txt front matter (YAML).
-author_website: "https://sebastienrousseau.co.uk"
+author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thanks for reading!"
-site_last_updated: "2023-11-05"
+site_last_updated: "2023-11-28"
 site_standards: "HTML5, CSS3, RSS, Atom, CSV, JSON, XML, YAML, Markdown, TOML, SQLite"
 site_components: "Kaishi, Kaishi Templates, Kaishi Themes"
 site_software: "Shokunin, SSG, Rust, Cargo, Git, GitHub, Bootstrap, SQLite, VS Code"
@@ -96,28 +96,9 @@ site_software: "Shokunin, SSG, Rust, Cargo, Git, GitHub, Bootstrap, SQLite, VS C
 ---
 
 
-<!-- markdownlint-disable MD033 MD041 -->
-
-<div class="row g-0">
-    <div
-      aria-hidden="false"
-      class="fade-in col-lg-6 order-lg-1 text-white"
-      data-has-animated="true"
-      data-show-type="fade-in"
-      style="
-        background-position: center !important;
-        background-size: 100vh 100vw !important;
-        background: url('https://kura.pro/stock/images/banners/simone-hutsch--PIykcOhG-o.webp') no-repeat;
-    ">
-</div>
-<div class="col-lg-6 order-lg-1 text-left">
-  <div class="container-fluid px-5 py-5">
-
-<!-- markdownlint-enable MD033 MD041 -->
-
 ## Overview
 
-The Customer Credit Transfer Initiation V9 (`pain.001.001.09`) is an
+The [Customer Credit Transfer Initiation V9 (`pain.001.001.09`) ⧉][00] is an
 XML-based message format under the ISO 20022 standard, designed to
 streamline cross-border and domestic payment processes. It is the
 successor to the Customer Credit Transfer Initiation V9
@@ -125,7 +106,7 @@ successor to the Customer Credit Transfer Initiation V9
 enhancements that improve the efficiency, security, and flexibility of
 payment processing.
 
-## Features/Benefits
+## Features
 
 The `pain.001 version 9` message format offers a number of features and
 benefits over the previous version, including:
@@ -149,7 +130,7 @@ benefits over the previous version, including:
 
 The adoption of the `pain.001 version 9` presents a significant market
 opportunity for financial institutions. By implementing this message
-format, organizations can:
+format, organisations can:
 
 - Enhance customer experience by offering faster and more transparent payments
 - Improve operational efficiency and reduce costs associated with manual processing
@@ -157,10 +138,4 @@ format, organizations can:
 - Leverage the ISO 20022 standard to explore new business opportunities and partnerships
 - Ensure compliance with evolving regulatory requirements and stay ahead of the competition
 
-<!-- markdownlint-disable MD033 MD041 -->
-
-  </div>
-  </div>
-</div>
-
-<!-- markdownlint-enable MD033 MD041 -->
+[00]: https://www.iso20022.org/catalogue-messages/iso-20022-messages-archive?search=pain.001.001.09 "ISO 20022 Customer Credit Transfer Initiation V9 (pain.001.001.09)"
