@@ -49,6 +49,9 @@ jobs:
         with:
           node-version: 22
 
+      - name: Unit tests (demo validation rules)
+        run: node --test tests/
+
       - name: Accessibility scan (pa11y-ci, WCAG2AAA)
         run: |
           (cd docs && python3 -m http.server 8899 &)

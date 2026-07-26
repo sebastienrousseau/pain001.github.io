@@ -34,7 +34,7 @@
 
     <script src="/_csp/6ccbbfb0b824e5f3.js" integrity="sha384-vD2D/DeQ7ybfwKVwsRoDzF6OdQbjm+gayKdOWKcqfqM76DP9CwfWMGtYvdpKSVJF" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/7020e2453387fbc4.css" integrity="sha384-Yo7cyzFaqjOIODKjXhxRzbj/fdmZ8OC3ctx+GB8hMicqSQoF167yu8FeFlLHqlnB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/2ba5479d82b4accb.css" integrity="sha384-GkfI1y4jYUxB1O8nvE7DKf6apBoHL//viyhSZLEfejjITo+wRGVIYJhpuVAMGNKV" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -86,30 +86,48 @@
             <ul class="info-list">
               <li><strong>Nothing is uploaded.</strong> Your file is read by your own browser and never leaves your machine — there is no server, no storage, no telemetry. Safe for real data, though masked test data is always good practice.</li>
               <li><strong>Testing tool only.</strong> Files are never submitted for processing and no payments can result from anything you do here.</li>
-              <li><strong>Expected columns:</strong> <code>payment_id</code>, <code>payment_amount</code>, <code>currency</code>, debtor and creditor name / IBAN / BIC, <code>requested_execution_date</code> — start from the sample to see the exact header row.</li>
+              <li><strong>Expected columns:</strong> <code>payment_id</code>, <code>payment_amount</code>, <code>currency</code>, debtor and creditor name / IBAN / BIC, <code>requested_execution_date</code> — comma, semicolon, and tab delimiters are auto-detected. Start from a sample to see the exact header row.</li>
               <li><strong>No charges.</strong> This tool, and the <a href="/installation/">full toolchain</a> behind it, are free and open source.</li>
             </ul>
+          </div>
+          <div class="guide-block">
+            <h2>Verify it yourself</h2>
+            <p class="verify-lede">"Nothing is uploaded" is a claim you can falsify in two minutes:</p>
+            <ol class="verify-steps">
+              <li>Open DevTools&nbsp;&rarr;&nbsp;Network, then use the demo. The only requests are same-origin GETs for this page's assets, the WASM engine, and the schema — none carries your data.</li>
+              <li>Run the XSD gate once, then switch DevTools to <em>Offline</em> (or turn off Wi-Fi). The whole demo — including the official schema gate — still works: a service worker caches everything after first use.</li>
+              <li><a href="https://github.com/sebastienrousseau/pain001.github.io" rel="external">This page is open source too</a> — the demo logic is one dependency-free module you can read in full.</li>
+            </ol>
+            <p class="verify-lede">There is no analytics script, no error-reporting service, no third-party font, and no CSP report endpoint — reporting would itself be an outbound connection.</p>
           </div>
         </aside>
 
         <div class="tool-col">
           <section class="demo-panel" aria-labelledby="input-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">1</span><h2 id="input-heading">Add your payment data</h2></div>
-            <div class="dropzone" id="dropzone">
-              <p><strong>Drag a CSV file here</strong></p>
+            <div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="Drag a CSV file here, or press Enter to browse your files">
+              <p><strong>Drag a CSV file here</strong> — or click to browse</p>
               <p class="hint">Maximum 2&nbsp;MB · read locally by your browser, never uploaded</p>
-              <div class="demo-actions">
-                <button type="button" id="browse-btn" class="pill pill-ghost">Browse your files</button>
-                <button type="button" id="sample-btn" class="pill pill-ghost">Use the sample batch</button>
-              </div>
             </div>
-            <input type="file" id="file-input" class="visually-hidden" accept=".csv,text/csv,text/plain" aria-label="Choose a CSV file of payment records" />
+            <input type="file" id="file-input" class="visually-hidden" accept=".csv,text/csv,text/plain" aria-label="Choose a CSV file of payment records" tabindex="-1" />
+            <div class="demo-actions">
+              <label class="visually-hidden" for="sample-select">Load a sample batch</label>
+              <select id="sample-select" class="pill-select">
+                <option value="">Load a sample&hellip;</option>
+              </select>
+              <label class="visually-hidden" for="scenario-select">Introduce an error scenario</label>
+              <select id="scenario-select" class="pill-select">
+                <option value="">Introduce an error&hellip;</option>
+              </select>
+              <button type="button" id="paste-btn" class="pill pill-ghost">Paste records</button>
+            </div>
             <div class="editor-block" id="editor-block" hidden>
               <label class="editor-label" for="csv-input">Review and edit your records</label>
-              <textarea id="csv-input" spellcheck="false" aria-describedby="demo-fineprint"></textarea>
+              <textarea id="csv-input" spellcheck="false" aria-describedby="dialect-note demo-fineprint"></textarea>
+              <p class="dialect-note" id="dialect-note"></p>
               <div class="demo-actions">
                 <button type="button" id="run-btn" class="pill pill-primary">Validate &amp; generate&nbsp;&rsaquo;</button>
-                <button type="button" id="break-btn" class="pill pill-ghost">Introduce an error</button>
+                <button type="button" id="fix-btn" class="pill pill-ghost" hidden>Fix it</button>
               </div>
             </div>
           </section>
@@ -117,11 +135,21 @@
           <section class="demo-panel" aria-labelledby="output-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">2</span><h2 id="output-heading">Validation result &amp; generated XML</h2></div>
             <p class="status" id="status" role="status">Add data in step 1 — validation runs automatically.</p>
-            <ul class="error-list" id="errors"></ul>
-            <div class="xml-out" id="xml-out" tabindex="0" aria-label="Generated XML output">—</div>
+            <div class="error-table-wrap" id="error-table-wrap" hidden>
+              <table class="error-table">
+                <caption class="visually-hidden">Validation findings by row and column</caption>
+                <thead>
+                  <tr><th scope="col">Row</th><th scope="col">Column</th><th scope="col">Rule</th><th scope="col">Value</th><th scope="col">Problem</th></tr>
+                </thead>
+                <tbody id="error-tbody"></tbody>
+              </table>
+              <p class="dialect-note" id="error-overflow" hidden></p>
+            </div>
+            <div class="xml-out" id="xml-out" tabindex="0" aria-label="Generated XML output"><span class="xml-placeholder">The validated pain.001.001.09 document will appear here — add data in step 1.</span></div>
             <div class="demo-actions">
-              <button type="button" id="copy-btn" class="pill pill-ghost" disabled>Copy XML</button>
-              <button type="button" id="download-btn" class="pill pill-ghost" disabled>Download .xml</button>
+              <button type="button" id="copy-btn" class="pill pill-ghost" disabled title="Add valid data in step 1 first">Copy XML</button>
+              <button type="button" id="download-btn" class="pill pill-ghost" disabled title="Add valid data in step 1 first">Download .xml</button>
+              <button type="button" id="report-btn" class="pill pill-ghost" hidden>Download error report (.csv)</button>
             </div>
           </section>
 
@@ -132,13 +160,18 @@
               runtime (via WebAssembly) executing <code style="font-family: var(--type-mono);">xmlschema</code>
               against the official <code style="font-family: var(--type-mono);">pain.001.001.09</code> schema —
               the same class of validation the CLI performs. The ~13&nbsp;MB engine is served from this
-              site and downloaded once, when you ask for it.
+              site and downloaded once, when you ask for it (it starts downloading quietly as soon as
+              step 2 produces valid XML).
             </p>
             <div class="demo-actions">
-              <button type="button" id="xsd-btn" class="pill pill-primary" disabled>Run the official XSD gate&nbsp;&rsaquo;</button>
+              <button type="button" id="xsd-btn" class="pill pill-primary" disabled title="Generate XML in step 2 first">Run the official XSD gate&nbsp;&rsaquo;</button>
             </div>
             <p class="status" id="xsd-status" role="status">Generate XML in step 2 first — the XSD gate validates that output.</p>
+            <div class="xsd-progress" id="xsd-progress" hidden>
+              <div class="xsd-progress-bar" id="xsd-progress-bar"></div>
+            </div>
             <ul class="error-list" id="xsd-errors"></ul>
+            <p class="dialect-note" id="xsd-hash"></p>
           </section>
         </div>
       </div>
@@ -156,13 +189,10 @@
       <div class="wrap content-note">
         <article>
           <div lang="en"><h2>What this demo shows — and what the real pipeline adds</h2>
-<p>The demo above implements the <em>fail-fast</em> layer of the Pain001 pipeline: required-field checks, ISO 13616 mod-97 IBAN checksums, ISO 9362 BIC structure, amount and date formats, and control totals (<code>NbOfTxs</code>, <code>CtrlSum</code>) recomputed from the records rather than trusted. Try the "Introduce an error" button — a single flipped IBAN digit is exactly the class of mistake that otherwise surfaces as a bank rejection days later.</p>
+<p>The demo above implements the <em>fail-fast</em> layer of the Pain001 pipeline: required-field checks, ISO 13616 mod-97 IBAN checksums, ISO 9362 BIC structure, amount and date formats, and control totals (<code>NbOfTxs</code>, <code>CtrlSum</code>) recomputed from the records rather than trusted. Try the "Introduce an error…" menu — each scenario plants exactly one realistic flaw (a flipped IBAN digit, a malformed BIC, a missing column, a European comma-decimal amount, an impossible date) and shows you the row-level finding a bank's gateway would otherwise report days later.</p>
 <p>The installed toolchain runs a much deeper gate: JSON Schema validation per record with field-alias normalisation, five scheme rulebooks (SEPA SCT, Instant, SDD Core, B2B, cross-border) with rule-by-rule <code>--explain</code> output, and final validation of the rendered document against the official ISO 20022 XSD before a single byte is written. Ten <code>pain.001</code> versions and <code>pain.008.001.02</code> are supported.</p>
-<pre><code class="language-bash"><pre style="background-color:#2b303b;">
-<span style="color:#8fa1b3;">pip</span><span style="color:#c0c5ce;"> install pain001
-</span><span style="color:#8fa1b3;">pain001</span><span style="color:#bf616a;"> -t</span><span style="color:#c0c5ce;"> pain.001.001.09</span><span style="color:#bf616a;"> -d</span><span style="color:#c0c5ce;"> payments.csv</span><span style="color:#bf616a;"> -o</span><span style="color:#c0c5ce;"> out/</span><span style="color:#bf616a;"> --scheme</span><span style="color:#c0c5ce;"> sepa-sct</span><span style="color:#bf616a;"> --dry-run
-</span></pre>
-</code></pre>
+<pre><code class="language-bash">pip install pain001
+pain001 -t pain.001.001.09 -d payments.csv -o out/ --scheme sepa-sct --dry-run</code></pre>
 <p>Step 3 above is not a simulation: it boots a Python runtime in WebAssembly and runs <a href="https://pypi.org/project/xmlschema/">xmlschema</a> against the official <code>pain.001.001.09</code> schema, served from this site — the same class of XSD gate the CLI applies. What remains CLI-only is the rest of the pipeline: JSON Schema normalisation, the five scheme rulebooks with <code>--explain</code>, and the other ten message definitions.</p>
 </div>
         </article>
@@ -191,7 +221,7 @@
     }
     </script>
 
-    <script src="/_csp/c694ec4ad1958bfb.js" integrity="sha384-vYFz+XMzunEiybOWg0DQlEyprgu49+uJYsWT6p8zPsEIM7CWGJqrqXgRQ7fFdYHt" crossorigin="anonymous"></script>
+    <script type="module" src="/js/try-page.js"></script>
   
 <!-- SSG Search Widget -->
 <div id="ssg-search-widget">

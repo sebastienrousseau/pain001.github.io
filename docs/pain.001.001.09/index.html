@@ -126,18 +126,12 @@
 <li><strong><code><CdtTrfTxInf></code> Credit Transfer Transaction</strong> — amount and currency, creditor, creditor account and agent, remittance information, end-to-end reference.</li>
 </ul>
 <h2 id="generate-and-inspect">Generate and inspect<a class="heading-anchor" href="#generate-and-inspect" aria-label="Link to section: Generate and inspect">#</a></h2>
-<pre><code class="language-bash"><pre style="background-color:#2b303b;">
-<span style="color:#8fa1b3;">pain001</span><span style="color:#c0c5ce;"> init pain.001.001.09</span><span style="color:#bf616a;"> -o</span><span style="color:#c0c5ce;"> work/         </span><span style="color:#65737e;"># scaffold a starter CSV
-</span><span style="color:#8fa1b3;">pain001</span><span style="color:#c0c5ce;"> inspect pain.001.001.09               </span><span style="color:#65737e;"># list required + optional fields
-</span><span style="color:#8fa1b3;">pain001</span><span style="color:#bf616a;"> -t</span><span style="color:#c0c5ce;"> pain.001.001.09</span><span style="color:#bf616a;"> -d</span><span style="color:#c0c5ce;"> payments.csv</span><span style="color:#bf616a;"> -o</span><span style="color:#c0c5ce;"> out/</span><span style="color:#bf616a;"> --dry-run
-</span></pre>
-</code></pre>
+<pre><code class="language-bash">pain001 init pain.001.001.09 -o work/         # scaffold a starter CSV
+pain001 inspect pain.001.001.09               # list required + optional fields
+pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run</code></pre>
 <p>Records migrate losslessly between supported versions:</p>
-<pre><code class="language-python"><pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">from </span><span style="color:#c0c5ce;">pain001.migration </span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">VersionMapper
-</span><span style="color:#c0c5ce;">records_v9 = </span><span style="color:#8fa1b3;">VersionMapper</span><span style="color:#c0c5ce;">("</span><span style="color:#a3be8c;">pain.001.001.09</span><span style="color:#c0c5ce;">", "</span><span style="color:#a3be8c;">pain.001.001.09</span><span style="color:#c0c5ce;">").</span><span style="color:#8fa1b3;">migrate</span><span style="color:#c0c5ce;">(records)
-</span></pre>
-</code></pre>
+<pre><code class="language-python">from pain001.migration import VersionMapper
+records_v9 = VersionMapper("pain.001.001.09", "pain.001.001.09").migrate(records)</code></pre>
 <p>See the full <a href="/documentation/">version catalogue</a>, or the <a href="/glossary/">glossary</a> for the vocabulary used here.</p>
 </div>
         </article>

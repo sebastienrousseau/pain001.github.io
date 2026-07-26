@@ -124,10 +124,7 @@
 <li><strong>Character set.</strong> The ISO 20022 Latin subset only; Pain001 transliterates before rendering so a <code>ß</code> or <code>ø</code> in a beneficiary name never becomes a NAK.</li>
 </ul>
 <h2 id="03-a-worked-example">03. A worked example<a class="heading-anchor" href="#03-a-worked-example" aria-label="Link to section: 03. A worked example">#</a></h2>
-<pre><code class="language-bash"><pre style="background-color:#2b303b;">
-<span style="color:#8fa1b3;">pain001</span><span style="color:#bf616a;"> -t</span><span style="color:#c0c5ce;"> pain.001.001.09</span><span style="color:#bf616a;"> -d</span><span style="color:#c0c5ce;"> suppliers.csv</span><span style="color:#bf616a;"> -o</span><span style="color:#c0c5ce;"> out/</span><span style="color:#bf616a;"> --scheme</span><span style="color:#c0c5ce;"> xborder-ct</span><span style="color:#bf616a;"> --explain
-</span></pre>
-</code></pre>
+<pre><code class="language-bash">pain001 -t pain.001.001.09 -d suppliers.csv -o out/ --scheme xborder-ct --explain</code></pre>
 <p>The <code>--explain</code> report lists every cross-border rule evaluated — currency/BIC consistency, identifier validity, amount bounds — before the XSD gate renders the final verdict. Exit <code>0</code> means the file is structurally ready for your bank's channel; what remains (sanctions, funding, cut-offs) is banking, not formatting.</p>
 <hr />
 <h2 id="faq">FAQ<a class="heading-anchor" href="#faq" aria-label="Link to section: FAQ">#</a></h2>

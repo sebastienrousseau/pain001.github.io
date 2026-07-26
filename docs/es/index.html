@@ -117,11 +117,8 @@
 <h2 id="la-fecha-l-mite-del-14-de-noviembre-de-2026">La fecha límite del 14 de noviembre de 2026<a class="heading-anchor" href="#la-fecha-l-mite-del-14-de-noviembre-de-2026" aria-label="Link to section: La fecha límite del 14 de noviembre de 2026">#</a></h2>
 <p>Desde el fin de la coexistencia MT–MX el 22 de noviembre de 2025, la próxima fecha clave es el <strong>14 de noviembre de 2026</strong>: las direcciones postales totalmente no estructuradas serán rechazadas en los pagos CBPR+, y el relé interbancario MT101 será sustituido por <code>pain.001</code> versión 9. Pain001 genera direcciones estructuradas e híbridas hoy mismo — y convierte MT101 con un solo comando.</p>
 <h2 id="empezar">Empezar<a class="heading-anchor" href="#empezar" aria-label="Link to section: Empezar">#</a></h2>
-<pre><code class="language-bash"><pre style="background-color:#2b303b;">
-<span style="color:#8fa1b3;">pip</span><span style="color:#c0c5ce;"> install pain001
-</span><span style="color:#8fa1b3;">pain001</span><span style="color:#bf616a;"> -t</span><span style="color:#c0c5ce;"> pain.001.001.09</span><span style="color:#bf616a;"> -d</span><span style="color:#c0c5ce;"> pagos.csv</span><span style="color:#bf616a;"> -o</span><span style="color:#c0c5ce;"> salida/</span><span style="color:#bf616a;"> --dry-run
-</span></pre>
-</code></pre>
+<pre><code class="language-bash">pip install pain001
+pain001 -t pain.001.001.09 -d pagos.csv -o salida/ --dry-run</code></pre>
 <p>La documentación completa está en inglés: <a href="/installation/">guía de instalación</a>, <a href="/documentation/">referencia técnica</a>, <a href="/try/">demo en el navegador</a> y <a href="/2026-iso20022-migration-trends/">briefing 2026 sobre ISO 20022</a>. El núcleo tiene doble licencia Apache-2.0 / MIT — uso comercial libre a cualquier escala.</p>
 </div>
         </article>

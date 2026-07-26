@@ -196,26 +196,17 @@
 <p>The server also publishes a <code>pain001://schema/{message_type}</code> resource and a <code>build_payment_batch</code> prompt. Shorthand aliases resolve sensibly: <code>pain.001</code> → <code>pain.001.001.09</code>, <code>pain.008</code> → <code>pain.008.001.02</code>.</p>
 <hr />
 <h2 id="02-registration">02. Registration<a class="heading-anchor" href="#02-registration" aria-label="Link to section: 02. Registration">#</a></h2>
-<pre><code class="language-bash"><pre style="background-color:#2b303b;">
-<span style="color:#8fa1b3;">pip</span><span style="color:#c0c5ce;"> install pain001-mcp
-</span></pre>
-</code></pre>
+<pre><code class="language-bash">pip install pain001-mcp</code></pre>
 <p><strong>Claude Desktop</strong> (<code>claude_desktop_config.json</code>):</p>
-<pre><code class="language-json"><pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">{
-</span><span style="color:#c0c5ce;">  "</span><span style="color:#a3be8c;">mcpServers</span><span style="color:#c0c5ce;">": {
-</span><span style="color:#c0c5ce;">    "</span><span style="color:#a3be8c;">pain001</span><span style="color:#c0c5ce;">": {
-</span><span style="color:#c0c5ce;">      "</span><span style="color:#a3be8c;">command</span><span style="color:#c0c5ce;">": "</span><span style="color:#a3be8c;">pain001-mcp</span><span style="color:#c0c5ce;">"
-</span><span style="color:#c0c5ce;">    }
-</span><span style="color:#c0c5ce;">  }
-</span><span style="color:#c0c5ce;">}
-</span></pre>
-</code></pre>
+<pre><code class="language-json">{
+  "mcpServers": {
+    "pain001": {
+      "command": "pain001-mcp"
+    }
+  }
+}</code></pre>
 <p><strong>Claude Code:</strong></p>
-<pre><code class="language-bash"><pre style="background-color:#2b303b;">
-<span style="color:#8fa1b3;">claude</span><span style="color:#c0c5ce;"> mcp add pain001 -- pain001-mcp
-</span></pre>
-</code></pre>
+<pre><code class="language-bash">claude mcp add pain001 -- pain001-mcp</code></pre>
 <p>A Docker image is published as <code>ghcr.io/sebastienrousseau/pain001-mcp</code> with build provenance attestation, and the server is listed in the MCP registry as <code>io.github.sebastienrousseau/pain001-mcp</code>.</p>
 <hr />
 <h2 id="03-design-decisions-that-matter-in-a-payments-context">03. Design decisions that matter in a payments context<a class="heading-anchor" href="#03-design-decisions-that-matter-in-a-payments-context" aria-label="Link to section: 03. Design decisions that matter in a payments context">#</a></h2>

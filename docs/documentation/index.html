@@ -212,19 +212,16 @@
 <p>Exit codes are CI-friendly: <code>0</code> success, <code>1</code> validation failure, <code>2</code> usage error.</p>
 <hr />
 <h2 id="2-python-api">2. Python API<a class="heading-anchor" href="#2-python-api" aria-label="Link to section: 2. Python API">#</a></h2>
-<pre><code class="language-python"><pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">from </span><span style="color:#c0c5ce;">pain001.core.core </span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">process_files
-</span><span style="color:#c0c5ce;">
-</span><span style="color:#65737e;"># Generate a validated pain.001.001.09 file from CSV
-</span><span style="color:#8fa1b3;">process_files</span><span style="color:#c0c5ce;">(
-</span><span style="color:#c0c5ce;">    </span><span style="color:#bf616a;">xml_message_type</span><span style="color:#c0c5ce;">="</span><span style="color:#a3be8c;">pain.001.001.09</span><span style="color:#c0c5ce;">",
-</span><span style="color:#c0c5ce;">    </span><span style="color:#bf616a;">xml_template_file_path</span><span style="color:#c0c5ce;">="</span><span style="color:#a3be8c;">template.xml</span><span style="color:#c0c5ce;">",
-</span><span style="color:#c0c5ce;">    </span><span style="color:#bf616a;">xsd_schema_file_path</span><span style="color:#c0c5ce;">="</span><span style="color:#a3be8c;">schema.xsd</span><span style="color:#c0c5ce;">",
-</span><span style="color:#c0c5ce;">    </span><span style="color:#bf616a;">data_file_path</span><span style="color:#c0c5ce;">="</span><span style="color:#a3be8c;">payments.csv</span><span style="color:#c0c5ce;">",
-</span><span style="color:#c0c5ce;">    </span><span style="color:#bf616a;">output_dir</span><span style="color:#c0c5ce;">="</span><span style="color:#a3be8c;">out</span><span style="color:#c0c5ce;">",
-</span><span style="color:#c0c5ce;">)
-</span></pre>
-</code></pre>
+<pre><code class="language-python">from pain001.core.core import process_files
+
+# Generate a validated pain.001.001.09 file from CSV
+process_files(
+    xml_message_type="pain.001.001.09",
+    xml_template_file_path="template.xml",
+    xsd_schema_file_path="schema.xsd",
+    data_file_path="payments.csv",
+    output_dir="out",
+)</code></pre>
 <p>Every generated document passes three layers before it is written:</p>
 <ol>
 <li><strong>Input validation</strong> — each record is checked against the message type's JSON Schema, with field-alias normalisation and IBAN/BIC syntax checks.</li>
@@ -235,11 +232,8 @@
 <p>Beyond pain.001 generation, the core library also ships a <strong>pain.002 status-report parser and generator</strong> (so you can read the bank's accept/reject response) and a <strong>camt.053 statement parser and generator</strong> for end-of-day reconciliation, plus a <code>VersionMapper</code> that migrates records between message versions.</p>
 <hr />
 <h2 id="3-rest-microservice">3. REST Microservice<a class="heading-anchor" href="#3-rest-microservice" aria-label="Link to section: 3. REST Microservice">#</a></h2>
-<pre><code class="language-bash"><pre style="background-color:#2b303b;">
-<span style="color:#8fa1b3;">pip</span><span style="color:#c0c5ce;"> install "</span><span style="color:#a3be8c;">pain001[api]</span><span style="color:#c0c5ce;">"
-</span><span style="color:#8fa1b3;">pain001</span><span style="color:#c0c5ce;"> serve</span><span style="color:#bf616a;"> --host</span><span style="color:#c0c5ce;"> 0.0.0.0</span><span style="color:#bf616a;"> --port</span><span style="color:#c0c5ce;"> 8000
-</span></pre>
-</code></pre>
+<pre><code class="language-bash">pip install "pain001[api]"
+pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <p>All endpoints are mounted under <code>/api/v1</code> (with an unversioned <code>/api</code> alias):</p>
 <table>
 <thead>

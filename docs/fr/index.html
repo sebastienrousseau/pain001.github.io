@@ -117,11 +117,8 @@
 <h2 id="l-ch-ance-du-14-novembre-2026">L'échéance du 14 novembre 2026<a class="heading-anchor" href="#l-ch-ance-du-14-novembre-2026" aria-label="Link to section: L'échéance du 14 novembre 2026">#</a></h2>
 <p>Depuis la fin de la coexistence MT–MX le 22 novembre 2025, l'échéance suivante est le <strong>14 novembre 2026</strong> : les adresses postales entièrement non structurées seront rejetées dans les paiements CBPR+, et le relais interbancaire MT101 sera remplacé par <code>pain.001</code> version 9. Pain001 gère dès aujourd'hui les adresses structurées et hybrides, et convertit vos MT101 en une commande.</p>
 <h2 id="d-marrer">Démarrer<a class="heading-anchor" href="#d-marrer" aria-label="Link to section: Démarrer">#</a></h2>
-<pre><code class="language-bash"><pre style="background-color:#2b303b;">
-<span style="color:#8fa1b3;">pip</span><span style="color:#c0c5ce;"> install pain001
-</span><span style="color:#8fa1b3;">pain001</span><span style="color:#bf616a;"> -t</span><span style="color:#c0c5ce;"> pain.001.001.09</span><span style="color:#bf616a;"> -d</span><span style="color:#c0c5ce;"> paiements.csv</span><span style="color:#bf616a;"> -o</span><span style="color:#c0c5ce;"> sortie/</span><span style="color:#bf616a;"> --dry-run
-</span></pre>
-</code></pre>
+<pre><code class="language-bash">pip install pain001
+pain001 -t pain.001.001.09 -d paiements.csv -o sortie/ --dry-run</code></pre>
 <p>La documentation détaillée est en anglais : <a href="/installation/">guide d'installation</a>, <a href="/documentation/">référence technique</a>, <a href="/try/">essai dans le navigateur</a>, et <a href="/2026-iso20022-migration-trends/">briefing 2026 sur ISO 20022</a>. Le cœur est sous double licence Apache-2.0 / MIT — utilisation commerciale libre, à toute échelle.</p>
 </div>
         </article>

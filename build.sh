@@ -35,10 +35,11 @@ touch Pain001/.nojekyll
 # the sitemap. See scripts/postbuild_fix.py for the why of each pass.
 python3 scripts/postbuild_fix.py Pain001
 
-# Self-hosted WASM engine for /try/ (Pyodide + xmlschema + official XSD).
-# Served same-origin so the strict CSP needs no third-party carve-outs;
-# downloaded by the browser only when the visitor asks for the XSD gate.
-rsync -a static/pyodide/ Pain001/pyodide/
+# Static assets that mirror the site root: the self-hosted WASM engine
+# for /try/ (Pyodide + xmlschema + official XSD, same-origin so the CSP
+# needs no third-party carve-outs), the demo's ES module (/js/), and the
+# demo-scoped service worker (/sw.js) that makes /try/ work offline.
+rsync -a static/ Pain001/
 
 # Carry the previous deploy's fingerprinted assets forward. Browsers and
 # CDN edges cache HTML for up to ~10 minutes; if a rebuild deleted the old

@@ -117,11 +117,8 @@
 <h2 id="der-stichtag-14-november-2026">Der Stichtag 14. November 2026<a class="heading-anchor" href="#der-stichtag-14-november-2026" aria-label="Link to section: Der Stichtag 14. November 2026">#</a></h2>
 <p>Seit dem Ende der MT–MX-Koexistenz am 22. November 2025 ist der nächste Stichtag der <strong>14. November 2026</strong>: Vollständig unstrukturierte Postadressen werden in CBPR+-Zahlungen abgelehnt, und das Interbanken-MT101-Relay wird durch <code>pain.001</code> Version 9 ersetzt. Pain001 unterstützt strukturierte und hybride Adressen bereits heute — und konvertiert MT101 mit einem Befehl.</p>
 <h2 id="loslegen">Loslegen<a class="heading-anchor" href="#loslegen" aria-label="Link to section: Loslegen">#</a></h2>
-<pre><code class="language-bash"><pre style="background-color:#2b303b;">
-<span style="color:#8fa1b3;">pip</span><span style="color:#c0c5ce;"> install pain001
-</span><span style="color:#8fa1b3;">pain001</span><span style="color:#bf616a;"> -t</span><span style="color:#c0c5ce;"> pain.001.001.09</span><span style="color:#bf616a;"> -d</span><span style="color:#c0c5ce;"> zahlungen.csv</span><span style="color:#bf616a;"> -o</span><span style="color:#c0c5ce;"> ausgabe/</span><span style="color:#bf616a;"> --dry-run
-</span></pre>
-</code></pre>
+<pre><code class="language-bash">pip install pain001
+pain001 -t pain.001.001.09 -d zahlungen.csv -o ausgabe/ --dry-run</code></pre>
 <p>Die ausführliche Dokumentation ist auf Englisch: <a href="/installation/">Installationsanleitung</a>, <a href="/documentation/">Technische Referenz</a>, <a href="/try/">Browser-Demo</a> und <a href="/2026-iso20022-migration-trends/">ISO-20022-Briefing 2026</a>. Der Kern steht unter dualer Apache-2.0-/MIT-Lizenz — freie kommerzielle Nutzung in jedem Umfang.</p>
 </div>
         </article>

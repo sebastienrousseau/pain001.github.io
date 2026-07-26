@@ -127,20 +127,14 @@
 <p>The default message type is <code>pain.001.001.09</code>; all 11 supported definitions (<code>pain.001.001.03</code>–<code>.12</code>, <code>pain.008.001.02</code>) can be selected per workspace via <code>initializationOptions</code> or live via <code>workspace/didChangeConfiguration</code>.</p>
 <hr />
 <h2 id="02-setup">02. Setup<a class="heading-anchor" href="#02-setup" aria-label="Link to section: 02. Setup">#</a></h2>
-<pre><code class="language-bash"><pre style="background-color:#2b303b;">
-<span style="color:#8fa1b3;">pip</span><span style="color:#c0c5ce;"> install pain001-lsp
-</span></pre>
-</code></pre>
+<pre><code class="language-bash">pip install pain001-lsp</code></pre>
 <p><strong>Neovim (0.11+):</strong></p>
-<pre><code class="language-lua"><pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">vim.lsp.config("</span><span style="color:#a3be8c;">pain001</span><span style="color:#c0c5ce;">", {
-</span><span style="color:#c0c5ce;">  cmd = { "</span><span style="color:#a3be8c;">pain001-lsp</span><span style="color:#c0c5ce;">" },
-</span><span style="color:#c0c5ce;">  filetypes = { "</span><span style="color:#a3be8c;">json</span><span style="color:#c0c5ce;">" },
-</span><span style="color:#c0c5ce;">  init_options = { messageType = "</span><span style="color:#a3be8c;">pain.001.001.09</span><span style="color:#c0c5ce;">" },
-</span><span style="color:#c0c5ce;">})
-</span><span style="color:#c0c5ce;">vim.lsp.enable("</span><span style="color:#a3be8c;">pain001</span><span style="color:#c0c5ce;">")
-</span></pre>
-</code></pre>
+<pre><code class="language-lua">vim.lsp.config("pain001", {
+  cmd = { "pain001-lsp" },
+  filetypes = { "json" },
+  init_options = { messageType = "pain.001.001.09" },
+})
+vim.lsp.enable("pain001")</code></pre>
 <p><strong>VS Code:</strong> a launchable extension scaffold ships in the repository's <code>editors/vscode/</code> directory. <strong>Helix, Emacs (eglot), and generic clients:</strong> point the language server command at <code>pain001-lsp</code> (stdio).</p>
 <hr />
 <h2 id="03-built-on-pygls-verified-to-100">03. Built on pygls, verified to 100%<a class="heading-anchor" href="#03-built-on-pygls-verified-to-100" aria-label="Link to section: 03. Built on pygls, verified to 100%">#</a></h2>

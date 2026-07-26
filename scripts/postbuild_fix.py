@@ -227,6 +227,25 @@ def stamp_table_labels(html: str) -> str:
     return _TABLE_RE.sub(process, html)
 
 
+# ssg's syntax highlighter nests a second <pre style="background..."> with
+# inline-styled spans INSIDE the markdown <pre><code> block. The inline
+# styles are blocked by the strict CSP (style-src 'self'), leaving broken
+# box artifacts around every fenced code sample. Unwrap: drop the inner
+# pre and all span wrappers, keeping the text; the layouts style code
+# blocks with theme tokens.
+_CODE_BLOCK_RE = re.compile(r"(<pre><code[^>]*>)(.*?)(</code></pre>)", re.DOTALL)
+_INNER_PRE_RE = re.compile(r"</?pre[^>]*>")
+_SPAN_RE = re.compile(r"</?span[^>]*>")
+
+
+def fix_code_blocks(html: str) -> str:
+    def unwrap(m: re.Match) -> str:
+        inner = _SPAN_RE.sub("", _INNER_PRE_RE.sub("", m.group(2)))
+        return m.group(1) + inner.strip("\n") + m.group(3)
+
+    return _CODE_BLOCK_RE.sub(unwrap, html)
+
+
 # ssg's markdown renderer emits presentational align attributes on table
 # cells, which fail WCAG H49 (163 AAA errors across the site). CSS handles
 # alignment; strip the attribute.
@@ -316,10 +335,12 @@ def main() -> None:
     for page in site.rglob("*.html"):
         html = page.read_text(encoding="utf-8")
         fixed = relocate_body_stylesheets(
-            strip_align_attrs(
-                stamp_table_labels(
-                    add_article_furniture(
-                        fix_body(dedupe_head_metas(fix_head(html)))
+            fix_code_blocks(
+                strip_align_attrs(
+                    stamp_table_labels(
+                        add_article_furniture(
+                            fix_body(dedupe_head_metas(fix_head(html)))
+                        )
                     )
                 )
             )

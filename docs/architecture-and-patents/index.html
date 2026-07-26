@@ -135,22 +135,19 @@
 <p>Academic work is converging on the same problem from the open side — including structural mapping frameworks for MT101 → <code>pain.001</code> transformation (<a href="https://www.researchgate.net/publication/403546971_Bridging_Legacy_SWIFT_MT_and_ISO_20022_MX_Standards_A_Structural_Mapping_Framework_for_MT101_to_pain001_Transformation" title="MT101 to pain.001 structural mapping framework">ResearchGate</a>).</p>
 <p>Pain001's position is deliberate: implement the <strong>published, open ISO 20022 standard</strong> — schemas, market-practice rulebooks, documented MT field mappings — as liberally licensed open source. Pain001 claims no patents and depends on none. The standard is public; tooling for it should be too.</p>
 <h2 id="05-architectural-shape">05. Architectural shape<a class="heading-anchor" href="#05-architectural-shape" aria-label="Link to section: 05. Architectural shape">#</a></h2>
-<pre><code class="language-text"><pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">   CSV / JSON / JSONL / SQLite / Parquet / GPG      Excel (.xlsx/.xlsm)      SWIFT MT101
-</span><span style="color:#c0c5ce;">                    │                                      │                     │
-</span><span style="color:#c0c5ce;">                    ▼                                      ▼                     ▼
-</span><span style="color:#c0c5ce;">              bundled loaders                    pain001-loader-xlsx    pain001-loader-mt101
-</span><span style="color:#c0c5ce;">                    └──────────────────┬───────────────────┘                     │
-</span><span style="color:#c0c5ce;">                                       ▼                                        │
-</span><span style="color:#c0c5ce;">                        normalisation & field aliases  ◄────────────────────────┘
-</span><span style="color:#c0c5ce;">                                       ▼
-</span><span style="color:#c0c5ce;">                 JSON Schema validation → scheme rulebook → Jinja2 render
-</span><span style="color:#c0c5ce;">                                       ▼
-</span><span style="color:#c0c5ce;">                        XSD validation (official ISO 20022 schema)
-</span><span style="color:#c0c5ce;">                                       ▼
-</span><span style="color:#c0c5ce;">              pain.001.001.03 – .12  /  pain.008.001.02 XML
-</span></pre>
-</code></pre>
+<pre><code class="language-text">   CSV / JSON / JSONL / SQLite / Parquet / GPG      Excel (.xlsx/.xlsm)      SWIFT MT101
+                    │                                      │                     │
+                    ▼                                      ▼                     ▼
+              bundled loaders                    pain001-loader-xlsx    pain001-loader-mt101
+                    └──────────────────┬───────────────────┘                     │
+                                       ▼                                        │
+                        normalisation & field aliases  ◄────────────────────────┘
+                                       ▼
+                 JSON Schema validation → scheme rulebook → Jinja2 render
+                                       ▼
+                        XSD validation (official ISO 20022 schema)
+                                       ▼
+              pain.001.001.03 – .12  /  pain.008.001.02 XML</code></pre>
 <p>One pipeline, four entry surfaces (CLI, library, REST, MCP), four plugin extension points (<code>loaders</code>, <code>validators</code>, <code>schemes</code>, <code>writers</code>). The <a href="/documentation/">Technical Reference</a> documents every stage.</p>
 <hr />
 <h2 id="faq">FAQ<a class="heading-anchor" href="#faq" aria-label="Link to section: FAQ">#</a></h2>

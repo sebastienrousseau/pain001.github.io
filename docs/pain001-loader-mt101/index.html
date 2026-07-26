@@ -115,12 +115,9 @@
 <p>SWIFT retired the MT category 1, 2 and 9 payment messages on the FIN network for cross-border payment instructions in November 2025. Treasury systems, however, still hold years of MT101 templates, archives, and file-based bank integrations. This loader is the bridge: parse the MT, regenerate as MX, validate against the official XSD, move on.</p>
 <hr />
 <h2 id="01-one-function">01. One function<a class="heading-anchor" href="#01-one-function" aria-label="Link to section: 01. One function">#</a></h2>
-<pre><code class="language-python"><pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">from </span><span style="color:#c0c5ce;">pain001_loader_mt101 </span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">parse_mt101
-</span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">records = </span><span style="color:#8fa1b3;">parse_mt101</span><span style="color:#c0c5ce;">(mt101_text)   </span><span style="color:#65737e;"># one dict per Sequence B transaction
-</span></pre>
-</code></pre>
+<pre><code class="language-python">from pain001_loader_mt101 import parse_mt101
+
+records = parse_mt101(mt101_text)   # one dict per Sequence B transaction</code></pre>
 <p>The output is shaped for <code>pain.001.001.09</code> and passes the core library's <code>SchemaValidator</code> unchanged. The MCP server exposes the same capability to AI agents as the <code>convert_mt101</code> tool.</p>
 <hr />
 <h2 id="02-field-mapping-reference">02. Field mapping reference<a class="heading-anchor" href="#02-field-mapping-reference" aria-label="Link to section: 02. Field mapping reference">#</a></h2>
@@ -197,10 +194,7 @@
 <p><strong>Why records instead of direct XML?</strong></p>
 <p>Because conversion without validation is how malformed files reach banks. Records flow through the same JSON Schema → scheme rulebook → XSD pipeline as every other Pain001 input. The XML you get is provably valid, not merely translated.</p>
 <p><strong>Install:</strong></p>
-<pre><code class="language-bash"><pre style="background-color:#2b303b;">
-<span style="color:#8fa1b3;">pip</span><span style="color:#c0c5ce;"> install pain001 pain001-loader-mt101
-</span></pre>
-</code></pre>
+<pre><code class="language-bash">pip install pain001 pain001-loader-mt101</code></pre>
 </div>
         </article>
       </div>

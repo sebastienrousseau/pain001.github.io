@@ -153,35 +153,26 @@
 </tbody>
 </table></div>
 <p>Companion packages install separately and are versioned independently:</p>
-<pre><code class="language-bash"><pre style="background-color:#2b303b;">
-<span style="color:#8fa1b3;">pip</span><span style="color:#c0c5ce;"> install pain001-loader-xlsx    </span><span style="color:#65737e;"># Excel ingestion (auto-discovered plugin)
-</span><span style="color:#8fa1b3;">pip</span><span style="color:#c0c5ce;"> install pain001-loader-mt101   </span><span style="color:#65737e;"># SWIFT MT101 parsing library
-</span><span style="color:#8fa1b3;">pip</span><span style="color:#c0c5ce;"> install pain001-mcp            </span><span style="color:#65737e;"># Full 17-tool MCP server for AI agents
-</span><span style="color:#8fa1b3;">pip</span><span style="color:#c0c5ce;"> install pain001-lsp            </span><span style="color:#65737e;"># Full six-feature editor language server
-</span></pre>
-</code></pre>
+<pre><code class="language-bash">pip install pain001-loader-xlsx    # Excel ingestion (auto-discovered plugin)
+pip install pain001-loader-mt101   # SWIFT MT101 parsing library
+pip install pain001-mcp            # Full 17-tool MCP server for AI agents
+pip install pain001-lsp            # Full six-feature editor language server</code></pre>
 <p>Verify the install and explore the message catalogue:</p>
-<pre><code class="language-bash"><pre style="background-color:#2b303b;">
-<span style="color:#8fa1b3;">pain001</span><span style="color:#bf616a;"> --version
-</span><span style="color:#8fa1b3;">pain001</span><span style="color:#c0c5ce;"> versions          </span><span style="color:#65737e;"># list all 11 supported message definitions
-</span><span style="color:#8fa1b3;">pain001</span><span style="color:#c0c5ce;"> init pain.001.001.09   </span><span style="color:#65737e;"># scaffold a starter CSV template
-</span></pre>
-</code></pre>
+<pre><code class="language-bash">pain001 --version
+pain001 versions          # list all 11 supported message definitions
+pain001 init pain.001.001.09   # scaffold a starter CSV template</code></pre>
 <hr />
 <h2 id="02-docker">02. Docker<a class="heading-anchor" href="#02-docker" aria-label="Link to section: 02. Docker">#</a></h2>
 <p>Multi-architecture images (<code>linux/amd64</code>, <code>linux/arm64</code>) are published to GitHub Container Registry. The container runs as a dedicated non-root user.</p>
-<pre><code class="language-bash"><pre style="background-color:#2b303b;">
-<span style="color:#65737e;"># Generate XML from a local CSV
-</span><span style="color:#8fa1b3;">docker</span><span style="color:#c0c5ce;"> run</span><span style="color:#bf616a;"> --rm -v </span><span style="color:#c0c5ce;">"$</span><span style="color:#bf616a;">PWD</span><span style="color:#a3be8c;">:/data</span><span style="color:#c0c5ce;">"</span><span style="color:#bf616a;"> -w</span><span style="color:#c0c5ce;"> /data \
-</span><span style="color:#c0c5ce;">  ghcr.io/sebastienrousseau/pain001:latest \
-</span><span style="color:#c0c5ce;">  generate</span><span style="color:#bf616a;"> -t</span><span style="color:#c0c5ce;"> pain.001.001.09</span><span style="color:#bf616a;"> -d</span><span style="color:#c0c5ce;"> payments.csv</span><span style="color:#bf616a;"> -o</span><span style="color:#c0c5ce;"> out/
-</span><span style="color:#c0c5ce;">
-</span><span style="color:#65737e;"># Launch the REST API
-</span><span style="color:#8fa1b3;">docker</span><span style="color:#c0c5ce;"> run</span><span style="color:#bf616a;"> --rm -p</span><span style="color:#c0c5ce;"> 8000:8000 \
-</span><span style="color:#c0c5ce;">  ghcr.io/sebastienrousseau/pain001:latest \
-</span><span style="color:#c0c5ce;">  serve</span><span style="color:#bf616a;"> --host</span><span style="color:#c0c5ce;"> 0.0.0.0</span><span style="color:#bf616a;"> --port</span><span style="color:#c0c5ce;"> 8000
-</span></pre>
-</code></pre>
+<pre><code class="language-bash"># Generate XML from a local CSV
+docker run --rm -v "$PWD:/data" -w /data \
+  ghcr.io/sebastienrousseau/pain001:latest \
+  generate -t pain.001.001.09 -d payments.csv -o out/
+
+# Launch the REST API
+docker run --rm -p 8000:8000 \
+  ghcr.io/sebastienrousseau/pain001:latest \
+  serve --host 0.0.0.0 --port 8000</code></pre>
 <hr />
 <h2 id="03-locked-down-environments">03. Locked-down environments<a class="heading-anchor" href="#03-locked-down-environments" aria-label="Link to section: 03. Locked-down environments">#</a></h2>
 <p>Bank and treasury environments often prohibit dynamic plugin loading. Two controls exist for exactly that case:</p>
@@ -192,12 +183,9 @@
 <p>Everything executes locally. No package in the suite phones home, calls a SaaS API, or moves payment data off the host.</p>
 <hr />
 <h2 id="04-first-file-in-three-commands">04. First file in three commands<a class="heading-anchor" href="#04-first-file-in-three-commands" aria-label="Link to section: 04. First file in three commands">#</a></h2>
-<pre><code class="language-bash"><pre style="background-color:#2b303b;">
-<span style="color:#8fa1b3;">pip</span><span style="color:#c0c5ce;"> install pain001
-</span><span style="color:#8fa1b3;">pain001</span><span style="color:#c0c5ce;"> init pain.001.001.09</span><span style="color:#bf616a;"> -o</span><span style="color:#c0c5ce;"> work/
-</span><span style="color:#8fa1b3;">pain001</span><span style="color:#bf616a;"> -t</span><span style="color:#c0c5ce;"> pain.001.001.09</span><span style="color:#bf616a;"> -d</span><span style="color:#c0c5ce;"> work/template.csv</span><span style="color:#bf616a;"> -o</span><span style="color:#c0c5ce;"> work/</span><span style="color:#bf616a;"> --dry-run
-</span></pre>
-</code></pre>
+<pre><code class="language-bash">pip install pain001
+pain001 init pain.001.001.09 -o work/
+pain001 -t pain.001.001.09 -d work/template.csv -o work/ --dry-run</code></pre>
 <p><code>--dry-run</code> validates against the JSON Schema, the XSD, and (with <code>--scheme</code>) a SEPA or cross-border rulebook without writing output — exit code <code>0</code> means your bank will not reject the file for schema reasons. Drop <code>--dry-run</code> to write the XML.</p>
 <p>Continue to the <a href="/documentation/">Technical Reference</a> for every flag and endpoint, or the <a href="/faqs/">Quickstart FAQ</a> for operational questions.</p>
 </div>
