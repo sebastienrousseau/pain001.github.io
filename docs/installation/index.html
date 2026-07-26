@@ -1,514 +1,206 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en-GB" data-theme="light">
   <head>
     <meta charset="utf-8" />
-    <meta itemprop="datePublished" content="2023-11-28T15:51+01:00" id="date">
-    <meta itemprop="dateModified" content="2023-11-28T15:51+01:00" id="last-modified">
-    <title>Pain001 installation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta itemprop="datePublished" content="Sun, 26 Jul 2026 08:00:00 +0000" id="date" />
+    <meta itemprop="dateModified" content="Sun, 26 Jul 2026 08:00:00 +0000" id="last-modified" />
+    <title>Pain001 Installation Guide: PyPI, Extras, Docker &amp; Kubernetes</title>
 
-    <!-- # Start Primary Meta Tags -->
-    <meta content="Sebastien Rousseau" name="author"><meta content="Pain001 is a powerful Python library that enables you to create ISO 20022-compliant payment files directly from CSV or SQLite Data Files." name="description"><meta content="telephone=no" name="format-detection"><meta content="Shokunin (SSG) 🦀 (version 0.0.20)" name="generator"><meta content="pain001, iso 20022, ISO 20022 Standard, payment messages, payments, SEPA, SWIFT, automation, banks, corporation" name="keywords"><meta content="en-GB" name="language"><meta content="https://pain001.com/installation/index.html" name="permalink"><meta content="general" name="rating"><meta content="no-referrer" name="referrer"><meta content="7 days" name="revisit-after"><meta content="index, follow" name="robots"><meta content="" name="theme-color"><meta content="Pain001 installation" name="title"><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-    <!-- # End Primary Meta Tags -->
-
-    <!-- # Start Open Graph / Facebook Meta Tags -->
-    <meta name="og:description" content="Pain001 is a powerful Python library that enables you to create ISO 20022-compliant payment files directly from CSV or SQLite Data Files.">
-<meta name="og:image" content="https://kura.pro/pain001/images/banners/banner-pain001.webp">
-<meta name="og:image:alt" content="Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation">
-<meta name="og:image:height" content="100vh">
-<meta name="og:image:width" content="100vw">
-<meta name="og:locale" content="en_GB">
-<meta name="og:title" content="Pain001 installation">
-<meta name="og:type" content="website">
-<meta name="og:url" content="https://pain001.com/installation/index.html">
-    <!-- # End Open Graph / Facebook Meta Tags -->
-
-    <!-- # Start Accessibility Meta Tags -->
+    &lt;meta name=&quot;author&quot; content=&quot;contact@pain001.com (Sebastien Rousseau)&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;Complete installation options for Pain001 suite including PyPI, optional extras, companion loaders, Docker, and Kubernetes.&quot;&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;pain001, ISO 20022, payments, SWIFT, SEPA, banking, Python, MCP, LSP&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;
+    
     <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
-    <!-- # End Accessibility Meta Tags -->
+    &lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot;&gt;
+&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black-translucent&quot;&gt;
+&lt;meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;Pain001 Installation Guide: PyPI, Extras, Docker &amp; Kubernetes&quot;&gt;
 
-    <!-- # Start Apple Meta Tags -->
-    <meta content="portrait" name="apple_mobile_web_app_orientations"><meta content="192x192" name="apple_touch_icon_sizes"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-inset"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="Pain001 installation" name="apple-mobile-web-app-title"><meta content="yes" name="apple-touch-fullscreen">
-    <!-- # End Apple Meta Tags -->
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-    <!-- # Start Content Security Policy Meta Tags -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' *.google-analytics.com https://cdn.jsdelivr.net unpkg.com www.googletagmanager.com x.clarity.ms; connect-src 'self' collect; img-src 'self' data: https: kura.pro; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com; media-src 'self';" />
-    <!-- # End Content Security Policy Meta Tags -->
+    
+    
 
-
-    <!-- # Start Microsoft Meta Tags -->
-    <meta content="rgb(213,63,0)" name="msapplication-navbutton-color">
-    <!-- # End Microsoft Meta Tags -->
-
-    <!-- # Start Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary">
-<meta name="twitter:creator" content="@wwdseb">
-<meta name="twitter:description" content="Pain001 is a powerful Python library that enables you to create ISO 20022-compliant payment files directly from CSV or SQLite Data Files.">
-<meta name="twitter:image" content="https://kura.pro/pain001/images/banners/banner-pain001.webp">
-<meta name="twitter:image:alt" content="Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation">
-<meta name="twitter:image:height" content="100vh">
-<meta name="twitter:image:width" content="100vw">
-<meta name="twitter:site" content="https://pain001.com/installation/index.html">
-<meta name="twitter:title" content="Pain001 installation">
-<meta name="twitter:url" content="https://pain001.com/installation/index.html">
-    <!-- # End Twitter Meta Tags -->
-
-    <!-- # Start Links -->
-    <link rel="alternate" href="https://pain001.com/installation/index.html" hreflang="en" />
-    <link rel="preload" as="image" href="https://kura.pro/stock/images/banners/joe-gardner-4xv3lqnanYc.webp">
-    <link rel="canonical" href="https://pain001.com/installation/index.html" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="https://kura.pro/pain001/images/favicon.ico"
-      sizes="16x16 32x32"
-    />
-    <link
-      as="style"
-      crossorigin="anonymous"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-      onload="this.onload=null;this.rel='stylesheet'"
-      rel="preload"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="https://kura.pro/pain001/images/icons/192x192.png"
-      sizes="192x192"
-    />
+    <link rel="alternate" href="https://pain001.com/installation/" hreflang="en" />
+    
+    <link rel="icon" type="image/x-icon" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" sizes="16x16 32x32" />
+    <link rel="apple-touch-icon" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />
     <link rel="manifest" href="/manifest.json" />
     <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
-    <!-- # End Links -->
+    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light dark" />
 
-    <!-- # Start Styles -->
-    <style>
-      @keyframes dropDown{from{transform:translateY(-.618rem)}to{transform:translateY(0)}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.active,h1,h2,h3,h4,h5,h6,strong{font-weight:400}.article-info{color:var(--theme-color);font-weight:400}.blur-light{backdrop-filter:saturate(180%) blur(20px);background-color:rgba(255,255,255,.618)}.card{overflow:hidden}.drop-down,.fade-in{animation-fill-mode:forwards}.drop-down{animation:dropDown 1.618s ease}.fade-in{animation:fadeIn 3s ease}h1,h2,h3,h4,h5,h6{color:var(--theme-color)}:root{--theme-color:rgba(213,63,0, 0.618033988749894)}*{font-weight:300}a{color:var(--theme-color);text-decoration:none}a:hover{text-decoration:underline}pre{background:#f9f9f9;border:1px solid #ddd;border-left:3px solid var(--theme-color);color:#666;display:block;font-family:monospace;font-size:15px;line-height:1.618;margin-bottom:1.618em;max-width:100%;overflow:auto;padding:1em 1.618em;page-break-inside:avoid;word-wrap:break-word}.zoom-in{transition:transform .618s cubic-bezier(.618,1,.618,1)}.zoom-in:hover{transform:scale(1.0618)}.zoom-out{transition:transform .618s cubic-bezier(.618,1,.618,1)}.btn-info{background-color:var(--theme-color) !important;border-color:var(--theme-color) !important;}.text-info{color:var(--theme-color) !important}.zoom-out:hover{transform:scale(.618)}table {
-    border: 1px solid black;
-    border-collapse: collapse;
-    border-spacing: 0;
-    empty-cells: show;
-    margin-bottom: 26.18px;
-    width: 100%
-}
+    <link rel="stylesheet" href="/_csp/f9d071912a009078.css" integrity="sha384-2rcJ5U6YxohhegmZuMg9Lo9vm5Y8hrkI13z5Qjl9W7oIreuoBzuryagHhOPHuwtZ" crossorigin="anonymous">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="http://127.0.0.1:8000/atom.xml"/>
+  <link rel="alternate" type="application/feed+json" title="JSON Feed" href="http://127.0.0.1:8000/feed.json"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="mobile-web-app-capable" content="yes"><meta name="description" content="Home &amp;rsaquo; Documentation Pain001 Installation Guide: PyPI, Extras, Docker &amp;amp; Kubernetes Complete installation options for Pain001 suite including PyPI,">
+<meta property="og:title" content="Pain001 Installation Guide: PyPI, Extras, Docker &amp;amp; Kubernetes">
+<meta property="og:description" content="Home &amp;rsaquo; Documentation Pain001 Installation Guide: PyPI, Extras, Docker &amp;amp; Kubernetes Complete installation options for Pain001 suite including PyPI,">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pain001.com/installation/">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pain001 Installation Guide: PyPI, Extras, Docker &amp;amp; Kubernetes">
+<meta name="twitter:description" content="Home &amp;rsaquo; Documentation Pain001 Installation Guide: PyPI, Extras, Docker &amp;amp; Kubernetes Complete installation options for Pain001 suite including PyPI,">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","description":"Home &rsaquo; Documentation Pain001 Installation Guide: PyPI, Extras, Docker &amp; Kubernetes Complete installation options for Pain001 suite including PyPI,","headline":"Pain001 Installation Guide: PyPI, Extras, Docker &amp; Kubernetes","inLanguage":"en-GB","mainEntityOfPage":{"@id":"http://127.0.0.1:8000/installation/index.html","@type":"WebPage"},"publisher":{"@type":"Organization","name":"MySsgSite"},"url":"http://127.0.0.1:8000/installation/index.html"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://127.0.0.1:8000/","name":"Home","position":1},{"@type":"ListItem","item":"http://127.0.0.1:8000/installation","name":"installation","position":2}]}</script>
+<link rel="canonical" href="http://127.0.0.1:8000/installation/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
+</head>
 
-td,
-th,
-thead {
-    vertical-align: top
-}
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-thead {
-    background-color: #f1f1f1;
-    text-align: left;
-    border-bottom: 1px solid black
-}
+    <header class="navbar" role="banner">
+      <div class="container nav-inner">
+        <a href="/" class="brand">
+          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="Pain001 Logo" width="36" height="36" />
+          <span>Pain001</span>
+        </a>
 
-td,
-th {
-    background-color: transparent;
-    border-left: 1px solid black;
-    border-width: 0 0 0 1px;
-    margin: 0;
-    overflow: visible;
-    padding: 6.18px 12px
-}
-    </style>
-    <!-- # End Styles -->
-  </head>
-  <body
-    id="page-top"
-    itemscope
-    itemtype="http://schema.org/WebPage"
-    class="fw-light text-center bg-white text-start fs-6"
-  >
-    <!-- # Start Responsive navbar -->
-    <nav
-      class="bg-white navbar navbar-expand-lg bd-navbar sticky-top shadow-small border-bottom blur-light"
-      id="mainNav"
-      itemscope
-      itemtype="http://schema.org/SiteNavigationElement"
-    >
-    <div class="container-xxl p-3">
-      <a class="navbar-brand p-0 me-0 me-lg-2" href="/" aria-label="logo">
-        <img
-          class="d-inline-block align-top"
-          width="50vw"
-          height="50vh"
-          src="https://kura.pro/pain001/images/logos/pain001.webp"
-          alt="Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation"
-          title="Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation"
-          loading="lazy"
-        />
-      </a>
-      <span class="fs-4" itemprop="name"><a href="/" itemprop="url" title="pain001" class="text-decoration-none text-dark">pain001</a></span>
-      <button
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#navbarSupportedContent"
-          data-bs-toggle="collapse"
-          type="button"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                aria-current="page"
-                href="/index.html">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle active"
-                id="navbarDropdown"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                >Payments</a
-              >
-              <ul
-                class="dropdown-menu dropdown-menu-end"
-                aria-labelledby="supportDropdown"
-              >
-                <li>
-                  <a class="dropdown-item" href="/payments/index.html">
-                    About ISO 20022
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/iso-20022-payment-initiation-for-cross-border-payments/index.html">
-                    Payment Initiation Messages
-                  </a>
-                  <ul>
-                    <li>
-                      <a class="dropdown-item" href="/pain.001.001.03/index.html">
-                        pain.001.001.03
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/pain.001.001.04/index.html">
-                        pain.001.001.04
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/pain.001.001.05/index.html">
-                        pain.001.001.05
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/pain.001.001.06/index.html">
-                        pain.001.001.06
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/pain.001.001.07/index.html">
-                        pain.001.001.07
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/pain.001.001.08/index.html">
-                        pain.001.001.08
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/pain.001.001.09/index.html">
-                        pain.001.001.09
-                      </a>
-                    </li>
-                    </ul>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                id="navbarDropdown"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                >Support</a
-              >
-              <ul
-                class="dropdown-menu dropdown-menu-end"
-                aria-labelledby="documentationDropdown"
-              >
-                <li>
-                  <a class="dropdown-item" href="/documentation/index.html">
-                    Documentation
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/made-with-shokunin/index.html">
-                    Made with Shokunin (SSG)
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/privacy/index.html">
-                    Privacy policy
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="https://github.com/sebastienrousseau/pain001">
-                    Source Code ⧉
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/tags/index.html">
-                    Tags
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/terms/index.html">
-                    Terms of service
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a
-                aria-pressed="false"
-                class="btn btn-dark rounded-pill px-3"
-                href="/contact/index.html"
-                >Contact us
-              </a>
-            </li>
+        <nav role="navigation" aria-label="Primary Navigation">
+          <ul class="nav-links">
+            <li><a href="/documentation">Documentation</a></li>
+            <li><a href="/installation">Installation</a></li>
+            <li><a href="/pain001-mcp">MCP Server</a></li>
+            <li><a href="/pain001-lsp">LSP Server</a></li>
+            <li><a href="/2026-iso20022-migration-trends">2026 Trends</a></li>
+            <li><a href="/competitors-comparison">Competitors</a></li>
+            <li><a href="/faqs">FAQs</a></li>
           </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- # End Responsive navbar -->
+        </nav>
 
-    <!-- Header-->
-    <header class="w-100 py-5 position-relative">
-      <img
-        alt="Antelope Canyon"
-        aria-hidden="false"
-        class="fade-in position-absolute top-0 start-0 w-100 h-100"
-        data-has-animated="true"
-        data-show-type="fade-in"
-        height="100vh"
-        loading="lazy"
-        src="https://kura.pro/stock/images/banners/joe-gardner-4xv3lqnanYc.webp"
-        style="object-fit: cover; z-index: -1;"
-        title="Antelope Canyon"
-        width="100vw"
-      />
-        <div class="text-center text-white center mx-auto rounded rounded-3 p-5">
-          <p class="display-3">Pain001 installation</p>
-          <p class="fs-3">Whether you’re just getting started or want to make sure you have the basics set up, you’re in the right place.</p>
-        </div>
+        <button id="themeToggle" class="theme-btn" aria-label="Toggle color theme">🌙 Dark</button>
+      </div>
     </header>
 
-    <!-- Main content-->
-    <main id="main" class="bd-masthead fs-5 p-5" aria-label="main">
-      <div class="container text-start justify-content-between">
-        <h1 id="h1-pain001" tabindex="0" itemprop="headline" id="" tabindex="0" itemprop="headline" class="pain001">Pain001 installation</h1><p>Pain001 is a powerful Python library that enables you to create ISO 20022-compliant payment files directly from CSV or SQLite Data Files.</p><p></p><h2 id="h2-get" tabindex="0" itemprop="subheadline" class="get">Get started</h2>
-<p>It takes just a few seconds to get up and running with <strong>Pain001</strong>. If you use
-pip, open your terminal and run the following command:</p>
-<pre lang="sh"><code>pip install pain001
-</code></pre>
-<p>Add the -U switch to update to the current version, if <code>pain001</code> is already
-installed. For example:</p>
-<pre lang="sh"><code>pip install -U pain001
-</code></pre>
-<p>If you do not have pip installed, you can download and install it from this
-page: <a href="https://pypi.org/project/pip/">https://pypi.org/project/pip/</a>. Alternatively, you can use
-<a href="https://www.anaconda.com/products/individual">Anaconda</a> to install pip.</p>
-<h2 id="h2-how" tabindex="0" itemprop="subheadline" class="how">How do I use Pain001?</h2>
-<p>It’s easy to use <strong>Pain001</strong> to generate a payment initiation message from a
-CSV or SQLite Data file. After installation, you can run <strong>Pain001</strong> directly
-from the command line.</p>
-<p>Simply call the main module pain001 with the paths of your:</p>
-<ul>
-<li><strong>XML template file</strong> containing the various parameters you want to pass from
-your Data file,</li>
-<li><strong>XSD schema file</strong> to validate the generated XML file, and</li>
-<li><strong>Data file (CSV or SQLite)</strong> containing the payment instructions that you
-want to submit.</li>
-</ul>
-<p>Here’s how you would do that:</p>
-<pre lang="sh"><code>python3 -m pain001 \
-    &lt;xml_message_type&gt; \
-    &lt;xml_template_file_path&gt; \
-    &lt;xsd_schema_file_path&gt; \
-    &lt;data_file_path&gt;
-</code></pre>
-<h3 id="h3-arguments" tabindex="0" itemprop="subheadline" class="arguments">Arguments</h3>
-<p>When running <strong>Pain001</strong>, you will need to specify four arguments:</p>
-<ul>
-<li>
-<p>An <code>xml_message_type</code>: This is the type of XML message you want to generate.</p>
-<p>The currently supported types are:</p>
-<ul>
-<li>pain.001.001.03</li>
-<li>pain.001.001.04</li>
-<li>pain.001.001.09</li>
-</ul>
-</li>
-<li>
-<p>An <code>xml_template_file_path</code>: This is the path to the XML template file you
-are using that contains variables that will be replaced by the values in your
-Data file.</p>
-</li>
-<li>
-<p>An <code>xsd_schema_file_path</code>: This is the path to the XSD schema file you are
-using to validate the generated XML file.</p>
-</li>
-<li>
-<p>A <code>data_file_path</code>: This is the path to the CSV or SQLite Data file you want
-to convert to XML format.</p>
-</li>
-</ul>
-<h2 id="h2-examples" tabindex="0" itemprop="subheadline" class="examples">Examples</h2>
-<p>The following examples demonstrate how to use <strong>Pain001</strong> to generate a payment
-initiation message from a CSV file and a SQLite Data file.</p>
-<h3 id="h3-using" tabindex="0" itemprop="subheadline" class="using">Using a CSV Data File as the source</h3>
-<pre lang="sh"><code>python3 -m pain001 \
-    pain.001.001.03 \
-    /path/to/your/template.xml \
-    /path/to/your/pain.001.001.03.xsd \
-    /path/to/your/template.csv
-</code></pre>
-<h3 id="h3-using" tabindex="0" itemprop="subheadline" class="using">Using a SQLite Data File as the source</h3>
-<pre lang="sh"><code>python3 -m pain001 \
-    pain.001.001.03 \
-    /path/to/your/template.xml \
-    /path/to/your/pain.001.001.03.xsd \
-    /path/to/your/template.db
-</code></pre>
-<h3 id="h3-using" tabindex="0" itemprop="subheadline" class="using">Using the Source code</h3>
-<p>You can clone the source code and run the example code in your
-terminal/command-line. To check out the source code, clone the repository from
-GitHub:</p>
-<pre lang="sh"><code>git clone https://github.com/sebastienrousseau/pain001.git
-</code></pre>
-<p>Then, navigate to the <code>pain001</code> directory and run the following command:</p>
-<pre lang="sh"><code>python3 -m pain001 \
-    pain.001.001.03 \
-    templates/pain.001.001.03/template.xml \
-    templates/pain.001.001.03/pain.001.001.03.xsd \
-    templates/pain.001.001.03/template.csv
-</code></pre>
-<p>This will generate a payment initiation message from the sample CSV Data file.</p>
-<p>You can do the same with the sample SQLite Data file:</p>
-<pre lang="sh"><code>python3 -m pain001 \
-    pain.001.001.03 \
-    templates/pain.001.001.03/template.xml \
-    templates/pain.001.001.03/pain.001.001.03.xsd \
-    templates/pain.001.001.03/template.db
-</code></pre>
-<blockquote>
-<p><strong>Note:</strong> The XML file that <strong>Pain001</strong> generates will automatically be
-validated against the XSD template file before the new XML file is saved. If
-the validation fails, <strong>Pain001</strong> will stop running and display an error
-message in your terminal.</p>
-</blockquote>
-<h3 id="h3-embedded" tabindex="0" itemprop="subheadline" class="embedded">Embedded in an Application</h3>
-<p>To embed <strong>Pain001</strong> in a new or existing application, import the main function
-and use it in your code.</p>
-<p>Here’s an example:</p>
-<pre lang="python"><code>from pain001 import main
+    <main id="main-content" role="main" class="container">
+      <header class="page-header">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a> &rsaquo; <span>Documentation</span>
+        </nav>
+        <h1 class="page-title">Pain001 Installation Guide: PyPI, Extras, Docker &amp; Kubernetes</h1>
+        <p class="page-description">Complete installation options for Pain001 suite including PyPI, optional extras, companion loaders, Docker, and Kubernetes.</p>
+      </header>
 
-if __name__ == '__main__':
-  xml_message_type = 'pain.001.001.03'
-  xml_template_file_path = 'template.xml'
-  xsd_schema_file_path = 'schema.xsd'
-  data_file_path = 'data.csv'
-  main(
-    xml_message_type,
-    xml_template_file_path,
-    xsd_schema_file_path,
-    data_file_path
-  )
-</code></pre>
-<h3 id="h3-validation" tabindex="0" itemprop="subheadline" class="validation">Validation</h3>
-<p>To validate the generated XML file against a given xsd schema, use the
-following method:</p>
-<pre lang="python"><code>from pain001.core import validate_xml_against_xsd
-
-xml_message_type = 'pain.001.001.03'
-xml_file = 'generated.xml'
-xsd_file = 'schema.xsd'
-
-is_valid = validate_xml_against_xsd(
-  xml_message_type,
-  xml_file,
-  xsd_file
-)
-print(f&quot;XML validation result: {is_valid}&quot;)
-</code></pre>
-
-      </div>
+      <article class="content-body">
+        &lt;div lang=&quot;en&quot;&gt;&lt;h1&gt;Pain001 Installation &amp; Deployment Guide&lt;/h1&gt;
+&lt;p&gt;Pain001 requires &lt;strong&gt;Python 3.10 or later&lt;/strong&gt; and runs natively on macOS, Linux, and Windows.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;1. PyPI Installation Channels&lt;/h2&gt;
+&lt;div class=&quot;table-responsive&quot;&gt;&lt;table class=&quot;table&quot;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;Channel&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;Command&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;Use Case&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;&lt;strong&gt;Core CLI &amp; Library&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;&lt;code&gt;pip install pain001&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;Standard command-line and Python API&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;&lt;strong&gt;REST API Server&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;&lt;code&gt;pip install &quot;pain001[api]&quot;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;Includes FastAPI + Uvicorn microservice&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;&lt;strong&gt;Parquet Support&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;&lt;code&gt;pip install &quot;pain001[parquet]&quot;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;Ingest PyArrow Parquet analytical datasets&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;&lt;strong&gt;Redis Job Queue&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;&lt;code&gt;pip install &quot;pain001[redis]&quot;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;Distributed background job processing&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;&lt;strong&gt;MCP AI Server&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;&lt;code&gt;pip install &quot;pain001[mcp]&quot;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;In-tree Model Context Protocol server&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;&lt;strong&gt;LSP Language Server&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;&lt;code&gt;pip install &quot;pain001[lsp]&quot;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;In-tree Language Server Protocol backend&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2&gt;2. Installing Companion Loaders&lt;/h2&gt;
+&lt;p&gt;To enable Excel and legacy SWIFT MT101 file support, install the official companion loaders:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;span style=&quot;color:#65737e;&quot;&gt;# Direct Excel (.xlsx / .xlsm) loader with IBAN safety protection
+&lt;/span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;pip&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; install pain001-loader-xlsx
+&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;/span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Legacy SWIFT MT101 to pain.001 converter loader
+&lt;/span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;pip&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; install pain001-loader-mt101
+&lt;/span&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h2&gt;3. Docker Deployment (GHCR)&lt;/h2&gt;
+&lt;p&gt;Pre-built multi-architecture Docker images (&lt;code&gt;linux/amd64&lt;/code&gt;, &lt;code&gt;linux/arm64&lt;/code&gt;) are published to GitHub Container Registry.&lt;/p&gt;
+&lt;h3&gt;Execute CLI via Docker&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;span style=&quot;color:#8fa1b3;&quot;&gt;docker&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; run&lt;/span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --rm -v &lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&quot;$&lt;/span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;PWD&lt;/span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;:/data&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -w&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; /data   ghcr.io/sebastienrousseau/pain001:latest   generate&lt;/span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -t&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; pain.001.001.09&lt;/span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -d&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; payments.csv&lt;/span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -o&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; output.xml
+&lt;/span&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Launch REST API via Docker&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;span style=&quot;color:#8fa1b3;&quot;&gt;docker&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; run&lt;/span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --rm -p&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; 8000:8000   ghcr.io/sebastienrousseau/pain001:latest   serve&lt;/span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --host&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; 0.0.0.0&lt;/span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --port&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; 8000
+&lt;/span&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Security Posture&lt;/strong&gt;: The Docker container executes under a dedicated non-root &lt;code&gt;pain001&lt;/code&gt; user account (UID 10001).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+      </article>
     </main>
 
-    <!-- Footer-->
-    <footer id="footer" aria-label="footer" class="footer border-top mt-auto py-3">
-            <span class="px-2">© 2023 Pain001. All rights reserved.</span>
-      <p class="mb-0">
-        <span class="px-2"><a href="/contact/index.html">Contact</a></span>
-        <span class="px-2"><a href="/privacy/index.html">Privacy & Cookie Policy</a></span>
-        <span class="px-2"><a href="/terms/index.html">Terms of Use</a></span>
-      </p>
+    <footer class="footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div>
+          &copy; 2023 - 2026 Sebastien Rousseau. Dual-licensed under Apache-2.0 / MIT.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="/privacy" style="color: var(--text-faint);">Privacy</a>
+          <a href="/terms" style="color: var(--text-faint);">Terms</a>
+          <a href="/contact" style="color: var(--text-faint);">Contact</a>
+        </div>
+      </div>
     </footer>
-    <!-- # End Footer -->
 
-    <script
-      async
-      crossorigin="anonymous"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      defer
-    >
-    </script>
-    <script type="application/ld+json">
-      {"@context":"https://schema.org/","@type":"WebPage","author":{"@type":"Person","@id":"Sebastien Rousseau"},"copyrightHolder":{"@type":"Person","@id":"Sebastien Rousseau"},"copyrightYear":"© 2023 Pain001. All rights reserved.","creator":{"@type":"Person","@id":"Sebastien Rousseau"},"dateModified":"2023-11-28T15:51+01:00","datePublished":"2023-11-28T15:51+01:00","description":"Pain001 is a powerful Python library that enables you to create ISO 20022-compliant payment files directly from CSV or SQLite Data Files.","headline":"Whether you’re just getting started or want to make sure you have the basics set up, you’re in the right place.","image":{"@type":"ImageObject","url":"https://kura.pro/pain001/images/banners/banner-pain001.webp"},"inLanguage":"en-GB","mainEntityOfPage":"https://pain001.com/installation/index.html","name":"pain001","publisher":{"@type":"Person","@id":"Sebastien Rousseau"}}
-      </script>
-
-    <script>
-      // This is an Immediately Invoked Function Expression (IIFE) which helps
-      // to avoid declaring any globals.
-      (function () {
-        // Create a new script element
-        var script = document.createElement("script");
-
-        // Set the source of the script element to "/main.js".
-        // A timestamp is appended as a query string to ensure the browser
-        // always fetches the latest version of the script, bypassing the
-        // cache.
-        script.src = "/main.js";
-
-        // The script is of type "text/javascript"
-        script.type = "text/javascript";
-
-        // The script is set to execute asynchronously as soon as it's
-        //available
-        script.async = true;
-
-        // Append the script element to the head of the document
-        document.head.appendChild(script);
-      })(); // The function is immediately invoked
-    </script>
-    <script>
-      // JavaScript code
-      var dropDownElements = document.querySelectorAll('.drop-down');
-      dropDownElements.forEach(function(element) {
-        element.classList.add('animate');
-      });
-
-      window.addEventListener('scroll', function() {
-        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        dropDownElements.forEach(function(element) {
-          if (scrollTop === 0) {
-            element.classList.add('animate');
-          } else {
-            element.classList.remove('animate');
-          }
-        });
-      });
-    </script>
-  </body>
+    <script src="/_csp/a3c8a86f4e549ac9.js" integrity="sha384-L14NXDyxXDE8AKmRkzKiiP/FSgEJJjhTCToY7JbosvqxqC4ld54O9YHziIcy/9Wq" crossorigin="anonymous"></script>
+  
+<!-- SSG Search Widget -->
+<div id="ssg-search-widget">
+<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous">
+<!-- Search trigger button -->
+<button id="ssg-search-btn" type="button" aria-label="Search">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<span>Search</span>
+<kbd>K</kbd>
+</button>
+<!-- Search modal -->
+<div id="ssg-search-overlay" role="dialog" aria-label="Search">
+<div id="ssg-search-box">
+<div id="ssg-search-header">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<input id="ssg-search-input" type="search" placeholder="Search documentation..." autocomplete="off" aria-label="Search"/>
+</div>
+<div id="ssg-search-results" aria-live="polite"></div>
+<div id="ssg-sr-status" role="status" aria-live="polite" aria-atomic="true"></div>
+<div class="ssg-search-footer"><span><kbd>Esc</kbd> close</span><span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span><span><kbd>Enter</kbd> open</span></div>
+</div>
+</div>
+<script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
+</div>
+</body>
 </html>

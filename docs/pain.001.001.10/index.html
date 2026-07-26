@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta itemprop="datePublished" content="Sun, 26 Jul 2026 08:00:00 +0000" id="date" />
+    <meta itemprop="dateModified" content="Sun, 26 Jul 2026 08:00:00 +0000" id="last-modified" />
+    <title>pain.001.001.10 ISO 20022 Message Reference</title>
+
+    &lt;meta name=&quot;author&quot; content=&quot;contact@pain001.com (Sebastien Rousseau)&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.10 Customer Credit Transfer Initiation.&quot;&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;pain001, ISO 20022, payments, SWIFT, SEPA, banking, Python, MCP, LSP&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;
+    
+    <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
+    &lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot;&gt;
+&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black-translucent&quot;&gt;
+&lt;meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;pain.001.001.10 ISO 20022 Message Reference&quot;&gt;
+
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    
+    
+
+    <link rel="alternate" href="https://pain001.com/pain.001.001.10/" hreflang="en" />
+    
+    <link rel="icon" type="image/x-icon" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" sizes="16x16 32x32" />
+    <link rel="apple-touch-icon" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <link rel="stylesheet" href="/_csp/f9d071912a009078.css" integrity="sha384-2rcJ5U6YxohhegmZuMg9Lo9vm5Y8hrkI13z5Qjl9W7oIreuoBzuryagHhOPHuwtZ" crossorigin="anonymous">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="http://127.0.0.1:8000/atom.xml"/>
+  <link rel="alternate" type="application/feed+json" title="JSON Feed" href="http://127.0.0.1:8000/feed.json"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="mobile-web-app-capable" content="yes"><meta name="description" content="Home &amp;rsaquo; Documentation pain.001.001.10 ISO 20022 Message Reference Technical specification, XSD schema rules, and element definitions for ISO 20022">
+<meta property="og:title" content="pain.001.001.10 ISO 20022 Message Reference">
+<meta property="og:description" content="Home &amp;rsaquo; Documentation pain.001.001.10 ISO 20022 Message Reference Technical specification, XSD schema rules, and element definitions for ISO 20022">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pain001.com/pain.001.001.10/">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="pain.001.001.10 ISO 20022 Message Reference">
+<meta name="twitter:description" content="Home &amp;rsaquo; Documentation pain.001.001.10 ISO 20022 Message Reference Technical specification, XSD schema rules, and element definitions for ISO 20022">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","description":"Home &rsaquo; Documentation pain.001.001.10 ISO 20022 Message Reference Technical specification, XSD schema rules, and element definitions for ISO 20022","headline":"pain.001.001.10 ISO 20022 Message Reference","inLanguage":"en-GB","mainEntityOfPage":{"@id":"http://127.0.0.1:8000/pain.001.001.10/index.html","@type":"WebPage"},"publisher":{"@type":"Organization","name":"MySsgSite"},"url":"http://127.0.0.1:8000/pain.001.001.10/index.html"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://127.0.0.1:8000/","name":"Home","position":1},{"@type":"ListItem","item":"http://127.0.0.1:8000/pain.001.001.10","name":"pain.001.001.10","position":2}]}</script>
+<link rel="canonical" href="http://127.0.0.1:8000/pain.001.001.10/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
+</head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="navbar" role="banner">
+      <div class="container nav-inner">
+        <a href="/" class="brand">
+          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="Pain001 Logo" width="36" height="36" />
+          <span>Pain001</span>
+        </a>
+
+        <nav role="navigation" aria-label="Primary Navigation">
+          <ul class="nav-links">
+            <li><a href="/documentation">Documentation</a></li>
+            <li><a href="/installation">Installation</a></li>
+            <li><a href="/pain001-mcp">MCP Server</a></li>
+            <li><a href="/pain001-lsp">LSP Server</a></li>
+            <li><a href="/2026-iso20022-migration-trends">2026 Trends</a></li>
+            <li><a href="/competitors-comparison">Competitors</a></li>
+            <li><a href="/faqs">FAQs</a></li>
+          </ul>
+        </nav>
+
+        <button id="themeToggle" class="theme-btn" aria-label="Toggle color theme">🌙 Dark</button>
+      </div>
+    </header>
+
+    <main id="main-content" role="main" class="container">
+      <header class="page-header">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a> &rsaquo; <span>Documentation</span>
+        </nav>
+        <h1 class="page-title">pain.001.001.10 ISO 20022 Message Reference</h1>
+        <p class="page-description">Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.10 Customer Credit Transfer Initiation.</p>
+      </header>
+
+      <article class="content-body">
+        &lt;div lang=&quot;en&quot;&gt;&lt;h1&gt;pain.001.001.10 ISO 20022 Message Reference&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;pain.001.001.10&lt;/code&gt; is the Customer Credit Transfer Initiation version specification.&lt;/p&gt;
+&lt;h2&gt;Key Element Tree&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&lt;GrpHdr&gt;&lt;/code&gt; (Group Header): Control information, message identifier, creation date/time, number of transactions (&lt;code&gt;NbOfTxs&lt;/code&gt;), and control sum (&lt;code&gt;CtrlSum&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&lt;PmtInf&gt;&lt;/code&gt; (Payment Information): Debtor details, execution date, payment method, charge bearer, and debtor account/agent.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&lt;CdtTrfTxInf&gt;&lt;/code&gt; (Credit Transfer Transaction Information): Creditor details, instructed amount, currency, creditor account (IBAN), creditor agent (BIC), and remittance information.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Usage with Pain001&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;span style=&quot;color:#8fa1b3;&quot;&gt;pain001&lt;/span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -t&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; pain.001.001.10&lt;/span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -d&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; payments.csv&lt;/span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -o&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; output_10.xml
+&lt;/span&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+      </article>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div>
+          &copy; 2023 - 2026 Sebastien Rousseau. Dual-licensed under Apache-2.0 / MIT.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="/privacy" style="color: var(--text-faint);">Privacy</a>
+          <a href="/terms" style="color: var(--text-faint);">Terms</a>
+          <a href="/contact" style="color: var(--text-faint);">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/_csp/a3c8a86f4e549ac9.js" integrity="sha384-L14NXDyxXDE8AKmRkzKiiP/FSgEJJjhTCToY7JbosvqxqC4ld54O9YHziIcy/9Wq" crossorigin="anonymous"></script>
+  
+<!-- SSG Search Widget -->
+<div id="ssg-search-widget">
+<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous">
+<!-- Search trigger button -->
+<button id="ssg-search-btn" type="button" aria-label="Search">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<span>Search</span>
+<kbd>K</kbd>
+</button>
+<!-- Search modal -->
+<div id="ssg-search-overlay" role="dialog" aria-label="Search">
+<div id="ssg-search-box">
+<div id="ssg-search-header">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<input id="ssg-search-input" type="search" placeholder="Search documentation..." autocomplete="off" aria-label="Search"/>
+</div>
+<div id="ssg-search-results" aria-live="polite"></div>
+<div id="ssg-sr-status" role="status" aria-live="polite" aria-atomic="true"></div>
+<div class="ssg-search-footer"><span><kbd>Esc</kbd> close</span><span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span><span><kbd>Enter</kbd> open</span></div>
+</div>
+</div>
+<script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>

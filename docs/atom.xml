@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>MySsgSite</title>
+  <link href="http://127.0.0.1:8000/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="http://127.0.0.1:8000"/>
+  <id>http://127.0.0.1:8000</id>
+  <updated>2026-07-26T08:00:00+00:00</updated>
+  <entry>
+    <title>2026 Payment Trends &amp; ISO 20022 Mandates Research Paper</title>
+    <link href="http://127.0.0.1:8000/2026-iso20022-migration-trends/"/>
+    <id>http://127.0.0.1:8000/2026-iso20022-migration-trends/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Deep-dive research on 2026 global payment trends, SWIFT CBPR+ MT-MX transition, Structured Address mandate, and FedNow.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>404 Page Not Found</title>
+    <link href="http://127.0.0.1:8000/404/"/>
+    <id>http://127.0.0.1:8000/404/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Page not found.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Enterprise Architecture &amp; Open Protocols White Paper</title>
+    <link href="http://127.0.0.1:8000/architecture-and-patents/"/>
+    <id>http://127.0.0.1:8000/architecture-and-patents/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Architectural white paper covering Pain001 zero-trust XML security, monetary precision, streaming performance, and open standards.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Enterprise Comparative Analysis: Pain001 vs Market Solutions</title>
+    <link href="http://127.0.0.1:8000/competitors-comparison/"/>
+    <id>http://127.0.0.1:8000/competitors-comparison/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Detailed comparison of Pain001 Suite against enterprise payment gateways, proprietary translators, and middleware.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Contact Security &amp; Support</title>
+    <link href="http://127.0.0.1:8000/contact/"/>
+    <id>http://127.0.0.1:8000/contact/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Contact Pain001 team.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Pain001 Documentation &amp; Comprehensive API Reference</title>
+    <link href="http://127.0.0.1:8000/documentation/"/>
+    <id>http://127.0.0.1:8000/documentation/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Complete API reference for Pain001 CLI, Python library, REST API, scheme validators, streaming mode, and input normalization.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Pain001 Enterprise &amp; Technical FAQs</title>
+    <link href="http://127.0.0.1:8000/faqs/"/>
+    <id>http://127.0.0.1:8000/faqs/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Comprehensive questions and answers for Treasurers, CFOs, Enterprise Architects, Compliance Officers, and Engineers.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Pain001 Installation Guide: PyPI, Extras, Docker &amp; Kubernetes</title>
+    <link href="http://127.0.0.1:8000/installation/"/>
+    <id>http://127.0.0.1:8000/installation/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Complete installation options for Pain001 suite including PyPI, optional extras, companion loaders, Docker, and Kubernetes.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>ISO 20022 Cross-Border Payments &amp; SWIFT CBPR+</title>
+    <link href="http://127.0.0.1:8000/iso-20022-payment-initiation-for-cross-border-payments/"/>
+    <id>http://127.0.0.1:8000/iso-20022-payment-initiation-for-cross-border-payments/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Guide to SWIFT CBPR+ cross-border credit transfer initiation with Pain001.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Made with Static Site Generator</title>
+    <link href="http://127.0.0.1:8000/made-with-shokunin/"/>
+    <id>http://127.0.0.1:8000/made-with-shokunin/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Built with SSG Rust static site generator.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Offline</title>
+    <link href="http://127.0.0.1:8000/offline/"/>
+    <id>http://127.0.0.1:8000/offline/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Offline page.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain.001.001.03 ISO 20022 Message Reference</title>
+    <link href="http://127.0.0.1:8000/pain.001.001.03/"/>
+    <id>http://127.0.0.1:8000/pain.001.001.03/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.03 Customer Credit Transfer Initiation.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain.001.001.04 ISO 20022 Message Reference</title>
+    <link href="http://127.0.0.1:8000/pain.001.001.04/"/>
+    <id>http://127.0.0.1:8000/pain.001.001.04/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.04 Customer Credit Transfer Initiation.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain.001.001.05 ISO 20022 Message Reference</title>
+    <link href="http://127.0.0.1:8000/pain.001.001.05/"/>
+    <id>http://127.0.0.1:8000/pain.001.001.05/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.05 Customer Credit Transfer Initiation.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain.001.001.06 ISO 20022 Message Reference</title>
+    <link href="http://127.0.0.1:8000/pain.001.001.06/"/>
+    <id>http://127.0.0.1:8000/pain.001.001.06/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.06 Customer Credit Transfer Initiation.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain.001.001.07 ISO 20022 Message Reference</title>
+    <link href="http://127.0.0.1:8000/pain.001.001.07/"/>
+    <id>http://127.0.0.1:8000/pain.001.001.07/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.07 Customer Credit Transfer Initiation.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain.001.001.08 ISO 20022 Message Reference</title>
+    <link href="http://127.0.0.1:8000/pain.001.001.08/"/>
+    <id>http://127.0.0.1:8000/pain.001.001.08/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.08 Customer Credit Transfer Initiation.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain.001.001.09 ISO 20022 Message Reference</title>
+    <link href="http://127.0.0.1:8000/pain.001.001.09/"/>
+    <id>http://127.0.0.1:8000/pain.001.001.09/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.09 Customer Credit Transfer Initiation.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain.001.001.10 ISO 20022 Message Reference</title>
+    <link href="http://127.0.0.1:8000/pain.001.001.10/"/>
+    <id>http://127.0.0.1:8000/pain.001.001.10/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.10 Customer Credit Transfer Initiation.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain.001.001.11 ISO 20022 Message Reference</title>
+    <link href="http://127.0.0.1:8000/pain.001.001.11/"/>
+    <id>http://127.0.0.1:8000/pain.001.001.11/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.11 Customer Credit Transfer Initiation.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain.001.001.12 ISO 20022 Message Reference</title>
+    <link href="http://127.0.0.1:8000/pain.001.001.12/"/>
+    <id>http://127.0.0.1:8000/pain.001.001.12/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.12 Customer Credit Transfer Initiation.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain001-loader-mt101: SWIFT MT101 to pain.001 Bridge</title>
+    <link href="http://127.0.0.1:8000/pain001-loader-mt101/"/>
+    <id>http://127.0.0.1:8000/pain001-loader-mt101/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Convert legacy SWIFT MT101 Request for Transfer messages into schema-validated pain.001.001.09 ISO 20022 payment files.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain001-loader-xlsx: Excel Ingestion with IBAN Protection</title>
+    <link href="http://127.0.0.1:8000/pain001-loader-xlsx/"/>
+    <id>http://127.0.0.1:8000/pain001-loader-xlsx/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Direct Excel (.xlsx / .xlsm) loader plugin for Pain001 featuring numeric IBAN leading-zero safety guard and streaming.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain001-lsp: Language Server Protocol for Payment Authoring</title>
+    <link href="http://127.0.0.1:8000/pain001-lsp/"/>
+    <id>http://127.0.0.1:8000/pain001-lsp/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Language Server Protocol server providing real-time diagnostics, schema validation, and autocomplete for payment JSON authoring in IDEs.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain001-mcp: Model Context Protocol Server for AI Payment Tools</title>
+    <link href="http://127.0.0.1:8000/pain001-mcp/"/>
+    <id>http://127.0.0.1:8000/pain001-mcp/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Exposing the Pain001 payment library as 17 first-class Model Context Protocol (MCP) agent tools for Claude Desktop, Cursor, and LLMs.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>ISO 20022 Payment Processing Architecture</title>
+    <link href="http://127.0.0.1:8000/payments/"/>
+    <id>http://127.0.0.1:8000/payments/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Guide to automated payment initiation, validation, and processing using Pain001.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Pain001 Privacy Policy</title>
+    <link href="http://127.0.0.1:8000/privacy/"/>
+    <id>http://127.0.0.1:8000/privacy/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Privacy policy for Pain001 website and services.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Tags</title>
+    <link href="http://127.0.0.1:8000/tags/"/>
+    <id>http://127.0.0.1:8000/tags/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Topic tags.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Pain001 Terms of Service</title>
+    <link href="http://127.0.0.1:8000/terms/"/>
+    <id>http://127.0.0.1:8000/terms/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Terms of service for Pain001 software and website.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Thank You</title>
+    <link href="http://127.0.0.1:8000/thanks/"/>
+    <id>http://127.0.0.1:8000/thanks/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Thank you for visiting Pain001.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+</feed>

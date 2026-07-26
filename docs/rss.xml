@@ -1,1 +1,522 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pain001: Automate ISO 20022-Compliant Payment File Creation</title><link>https://pain001.com</link><description>Pain001 Is a Powerful Python Library for ISO 20022 Compliant Payment File Creation from CSV or SQLite Data Files, simplifying Payment Automation and Processing</description><language>en-GB</language><pubDate>2023-11-28T15:51+01:00</pubDate><lastBuildDate>2023-11-28T15:51+01:00</lastBuildDate><docs>https://validator.w3.org/feed/docs/rss2.html</docs><generator>Shokunin (SSG) 🦀 (version 0.0.20)</generator><managingEditor>contact@pain001.com</managingEditor><category>Technology</category><ttl>60</ttl><image><url>https://kura.pro/pain001/images/banners/banner-pain001.webp</url><title>Pain001: Automate ISO 20022-Compliant Payment File Creation</title><link>https://pain001.com</link></image><atom:link href="https://pain001.com/rss.xml" rel="self" type="application/rss+xml"/><item><author>Sebastien Rousseau</author><description>Pain001 Is a Powerful Python Library for ISO 20022 Compliant Payment File Creation from CSV or SQLite Data Files, simplifying Payment Automation and Processing</description><guid>https://pain001.com/rss.xml</guid><link>https://pain001.com/rss.xml</link><pubDate>2023-11-28T15:51+01:00</pubDate><title>RSS</title></item></channel></rss>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pain001: ISO 20022 Payment Initiation &amp; AI Transaction Suite</title>
+    <link>https://pain001.com/</link>
+    <description>Automate ISO 20022 Customer Credit Transfer &amp; Direct Debit initiation file generation from CSV, Excel, SQLite, JSON, Parquet, and SWIFT MT101.</description>
+    <atom:link href="http://127.0.0.1:8000/rss.xml" rel="self" type="application/rss+xml"/>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Jul 2026 08:00:00 +0000</lastBuildDate>
+    <copyright>© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT.</copyright>
+    <item>
+      <title>2026 Payment Trends & ISO 20022 Mandates Research Paper</title>
+      <link>http://127.0.0.1:8000/2026-iso20022-migration-trends/</link>
+      <description>Deep-dive research on 2026 global payment trends, SWIFT CBPR+ MT-MX transition, Structured Address mandate, and FedNow.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/2026-iso20022-migration-trends/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>404 Page Not Found</title>
+      <link>http://127.0.0.1:8000/404/</link>
+      <description>Page not found.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/404/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>Contact Security & Support</title>
+      <link>http://127.0.0.1:8000/contact/</link>
+      <description>Contact Pain001 team.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/contact/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>Enterprise Architecture & Open Protocols White Paper</title>
+      <link>http://127.0.0.1:8000/architecture-and-patents/</link>
+      <description>Architectural white paper covering Pain001 zero-trust XML security, monetary precision, streaming performance, and open standards.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/architecture-and-patents/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>Enterprise Comparative Analysis: Pain001 vs Market Solutions</title>
+      <link>http://127.0.0.1:8000/competitors-comparison/</link>
+      <description>Detailed comparison of Pain001 Suite against enterprise payment gateways, proprietary translators, and middleware.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/competitors-comparison/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>ISO 20022 Cross-Border Payments & SWIFT CBPR+</title>
+      <link>http://127.0.0.1:8000/iso-20022-payment-initiation-for-cross-border-payments/</link>
+      <description>Guide to SWIFT CBPR+ cross-border credit transfer initiation with Pain001.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/iso-20022-payment-initiation-for-cross-border-payments/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>ISO 20022 Payment Processing Architecture</title>
+      <link>http://127.0.0.1:8000/payments/</link>
+      <description>Guide to automated payment initiation, validation, and processing using Pain001.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/payments/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>Made with Static Site Generator</title>
+      <link>http://127.0.0.1:8000/made-with-shokunin/</link>
+      <description>Built with SSG Rust static site generator.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/made-with-shokunin/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>Offline</title>
+      <link>http://127.0.0.1:8000/offline/</link>
+      <description>Offline page.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/offline/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>Pain001 Documentation & Comprehensive API Reference</title>
+      <link>http://127.0.0.1:8000/documentation/</link>
+      <description>Complete API reference for Pain001 CLI, Python library, REST API, scheme validators, streaming mode, and input normalization.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/documentation/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>Pain001 Enterprise & Technical FAQs</title>
+      <link>http://127.0.0.1:8000/faqs/</link>
+      <description>Comprehensive questions and answers for Treasurers, CFOs, Enterprise Architects, Compliance Officers, and Engineers.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/faqs/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>Pain001 Installation Guide: PyPI, Extras, Docker & Kubernetes</title>
+      <link>http://127.0.0.1:8000/installation/</link>
+      <description>Complete installation options for Pain001 suite including PyPI, optional extras, companion loaders, Docker, and Kubernetes.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/installation/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>Pain001 Privacy Policy</title>
+      <link>http://127.0.0.1:8000/privacy/</link>
+      <description>Privacy policy for Pain001 website and services.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/privacy/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>Pain001 Terms of Service</title>
+      <link>http://127.0.0.1:8000/terms/</link>
+      <description>Terms of service for Pain001 software and website.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/terms/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>Tags</title>
+      <link>http://127.0.0.1:8000/tags/</link>
+      <description>Topic tags.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/tags/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>Thank You</title>
+      <link>http://127.0.0.1:8000/thanks/</link>
+      <description>Thank you for visiting Pain001.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/thanks/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>pain.001.001.03 ISO 20022 Message Reference</title>
+      <link>http://127.0.0.1:8000/pain.001.001.03/</link>
+      <description>Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.03 Customer Credit Transfer Initiation.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/pain.001.001.03/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>pain.001.001.04 ISO 20022 Message Reference</title>
+      <link>http://127.0.0.1:8000/pain.001.001.04/</link>
+      <description>Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.04 Customer Credit Transfer Initiation.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/pain.001.001.04/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>pain.001.001.05 ISO 20022 Message Reference</title>
+      <link>http://127.0.0.1:8000/pain.001.001.05/</link>
+      <description>Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.05 Customer Credit Transfer Initiation.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/pain.001.001.05/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>pain.001.001.06 ISO 20022 Message Reference</title>
+      <link>http://127.0.0.1:8000/pain.001.001.06/</link>
+      <description>Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.06 Customer Credit Transfer Initiation.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/pain.001.001.06/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>pain.001.001.07 ISO 20022 Message Reference</title>
+      <link>http://127.0.0.1:8000/pain.001.001.07/</link>
+      <description>Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.07 Customer Credit Transfer Initiation.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/pain.001.001.07/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>pain.001.001.08 ISO 20022 Message Reference</title>
+      <link>http://127.0.0.1:8000/pain.001.001.08/</link>
+      <description>Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.08 Customer Credit Transfer Initiation.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/pain.001.001.08/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>pain.001.001.09 ISO 20022 Message Reference</title>
+      <link>http://127.0.0.1:8000/pain.001.001.09/</link>
+      <description>Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.09 Customer Credit Transfer Initiation.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/pain.001.001.09/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>pain.001.001.10 ISO 20022 Message Reference</title>
+      <link>http://127.0.0.1:8000/pain.001.001.10/</link>
+      <description>Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.10 Customer Credit Transfer Initiation.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/pain.001.001.10/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>pain.001.001.11 ISO 20022 Message Reference</title>
+      <link>http://127.0.0.1:8000/pain.001.001.11/</link>
+      <description>Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.11 Customer Credit Transfer Initiation.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/pain.001.001.11/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>pain.001.001.12 ISO 20022 Message Reference</title>
+      <link>http://127.0.0.1:8000/pain.001.001.12/</link>
+      <description>Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.12 Customer Credit Transfer Initiation.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/pain.001.001.12/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>pain001-loader-mt101: SWIFT MT101 to pain.001 Bridge</title>
+      <link>http://127.0.0.1:8000/pain001-loader-mt101/</link>
+      <description>Convert legacy SWIFT MT101 Request for Transfer messages into schema-validated pain.001.001.09 ISO 20022 payment files.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/pain001-loader-mt101/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>pain001-loader-xlsx: Excel Ingestion with IBAN Protection</title>
+      <link>http://127.0.0.1:8000/pain001-loader-xlsx/</link>
+      <description>Direct Excel (.xlsx / .xlsm) loader plugin for Pain001 featuring numeric IBAN leading-zero safety guard and streaming.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/pain001-loader-xlsx/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>pain001-lsp: Language Server Protocol for Payment Authoring</title>
+      <link>http://127.0.0.1:8000/pain001-lsp/</link>
+      <description>Language Server Protocol server providing real-time diagnostics, schema validation, and autocomplete for payment JSON authoring in IDEs.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/pain001-lsp/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>pain001-mcp: Model Context Protocol Server for AI Payment Tools</title>
+      <link>http://127.0.0.1:8000/pain001-mcp/</link>
+      <description>Exposing the Pain001 payment library as 17 first-class Model Context Protocol (MCP) agent tools for Claude Desktop, Cursor, and LLMs.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/pain001-mcp/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+  </channel>
+</rss>

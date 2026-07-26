@@ -1,20 +1,235 @@
-<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"><url><changefreq>weekly</changefreq><lastmod>2023-11-28T15:51+01:00</lastmod><loc>https://pain001.com/installation/index.html/documentation/index.html</loc></url>
-<url><changefreq>weekly</changefreq><lastmod>2023-11-28T15:51+01:00</lastmod><loc>https://pain001.com/installation/index.html/payments/index.html</loc></url>
-<url><changefreq>weekly</changefreq><lastmod>2023-11-28T15:51+01:00</lastmod><loc>https://pain001.com/installation/index.html/contact/index.html</loc></url>
-<url><changefreq>weekly</changefreq><lastmod>2023-11-28T15:51+01:00</lastmod><loc>https://pain001.com/installation/index.html/index.html</loc></url>
-<url><changefreq>weekly</changefreq><lastmod>2023-11-28T15:51+01:00</lastmod><loc>https://pain001.com/installation/index.html/privacy/index.html</loc></url>
-<url><changefreq>weekly</changefreq><lastmod>2023-11-28T15:51+01:00</lastmod><loc>https://pain001.com/installation/index.html/terms/index.html</loc></url>
-<url><changefreq>weekly</changefreq><lastmod>2023-11-28T15:51+01:00</lastmod><loc>https://pain001.com/installation/index.html/iso-20022-payment-initiation-for-cross-border-payments/index.html</loc></url>
-<url><changefreq>weekly</changefreq><lastmod>2023-11-28T15:51+01:00</lastmod><loc>https://pain001.com/installation/index.html/pain.001.001.04/index.html</loc></url>
-<url><changefreq>weekly</changefreq><lastmod>2023-11-28T15:51+01:00</lastmod><loc>https://pain001.com/installation/index.html/pain.001.001.03/index.html</loc></url>
-<url><changefreq>weekly</changefreq><lastmod>2023-11-28T15:51+01:00</lastmod><loc>https://pain001.com/installation/index.html/installation/index.html</loc></url>
-<url><changefreq>weekly</changefreq><lastmod>2023-11-28T15:51+01:00</lastmod><loc>https://pain001.com/installation/index.html/pain.001.001.05/index.html</loc></url>
-<url><changefreq>weekly</changefreq><lastmod>2023-11-28T15:51+01:00</lastmod><loc>https://pain001.com/installation/index.html/tags/index.html</loc></url>
-<url><changefreq>weekly</changefreq><lastmod>2023-11-28T15:51+01:00</lastmod><loc>https://pain001.com/installation/index.html/made-with-shokunin/index.html</loc></url>
-<url><changefreq>weekly</changefreq><lastmod>2023-11-28T15:51+01:00</lastmod><loc>https://pain001.com/installation/index.html/thanks/index.html</loc></url>
-<url><changefreq>weekly</changefreq><lastmod>2023-11-28T15:51+01:00</lastmod><loc>https://pain001.com/installation/index.html/404/index.html</loc></url>
-<url><changefreq>weekly</changefreq><lastmod>2023-11-28T15:51+01:00</lastmod><loc>https://pain001.com/installation/index.html/pain.001.001.09/index.html</loc></url>
-<url><changefreq>weekly</changefreq><lastmod>2023-11-28T15:51+01:00</lastmod><loc>https://pain001.com/installation/index.html/pain.001.001.07/index.html</loc></url>
-<url><changefreq>weekly</changefreq><lastmod>2023-11-28T15:51+01:00</lastmod><loc>https://pain001.com/installation/index.html/offline/index.html</loc></url>
-<url><changefreq>weekly</changefreq><lastmod>2023-11-28T15:51+01:00</lastmod><loc>https://pain001.com/installation/index.html/pain.001.001.06/index.html</loc></url>
-<url><changefreq>weekly</changefreq><lastmod>2023-11-28T15:51+01:00</lastmod><loc>https://pain001.com/installation/index.html/pain.001.001.08/index.html</loc></url></urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    <?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//pain.001.001.08/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//pain.001.001.06/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//offline/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//pain.001.001.07/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//pain.001.001.09/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//404/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//2026-iso20022-migration-trends/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//thanks/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//made-with-shokunin/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//pain001-lsp/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//architecture-and-patents/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//faqs/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//pain001-mcp/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//tags/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//tags/sepa/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//tags/pain001/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//tags/banking/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//tags/iso-20022/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//tags/python/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//tags/payments/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//tags/cbpr/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//pain.001.001.12/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//pain001-loader-xlsx/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//pain.001.001.05/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//installation/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//pain.001.001.03/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//pain.001.001.04/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//iso-20022-payment-initiation-for-cross-border-payments/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//terms/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//competitors-comparison/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//privacy/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//pain.001.001.10/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//contact/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//payments/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//documentation/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//pain.001.001.11/index.html</loc>
+</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+  <changefreq>weekly</changefreq>
+  <lastmod>2026-07-26</lastmod>
+  <loc>https://pain001.com/installation//pain001-loader-mt101/index.html</loc>
+</url></urlset>
