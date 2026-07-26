@@ -333,6 +333,13 @@
       }
       .terminal-dots { display: flex; gap: 6px; }
       .terminal-dots span { width: 11px; height: 11px; border-radius: 50%; background: rgb(255 255 255 / 0.22); }
+      .terminal-caption {
+        margin-top: 0.9rem;
+        font-size: 0.9rem;
+        color: var(--ink-mute);
+        max-width: 60ch;
+      }
+      .terminal-caption a { color: var(--link); }
       .terminal pre {
         margin: 0; padding: 1.5rem 1.6rem;
         background: var(--code-bg); color: var(--code-text);
@@ -382,6 +389,30 @@
       }
       .section-sub { color: var(--ink-soft); font-size: 1.12rem; max-width: 58ch; }
       .section-sub a { color: var(--link); }
+
+      /* ==== Persona cards ==== */
+      .persona-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.4rem;
+      }
+      .persona-card {
+        display: flex; flex-direction: column; gap: 0.6rem;
+        background: var(--bg-card);
+        border: 1px solid var(--rule);
+        border-radius: var(--radius-md);
+        padding: 1.8rem 1.7rem;
+        text-decoration: none;
+        box-shadow: var(--shadow-sm);
+      }
+      .persona-card:hover { border-color: var(--rule-strong); box-shadow: var(--shadow-md); }
+      .persona-card h3 { color: var(--ink); font-size: 1.08rem; letter-spacing: -0.005em; }
+      .persona-card p { color: var(--ink-soft); font-size: 0.95rem; flex-grow: 1; }
+      .persona-card code {
+        font-family: var(--type-mono); font-size: 0.86em;
+        background: var(--bg-alt); border: 1px solid var(--rule);
+        border-radius: 6px; padding: 0.1rem 0.35rem;
+      }
 
       /* ==== Offer cards ==== */
       .offer-grid {
@@ -633,6 +664,7 @@ pain001 -t pain.001.001.09 -d payments.xlsx -o out/
 # Prove it clean before the bank sees it  (exit 0 = valid)
 pain001 -t pain.001.001.09 -d payments.csv --scheme sepa-sct --dry-run</code></pre>
           </div>
+          <p class="terminal-caption">Runs entirely on your machine — no upload, no SaaS, no telemetry. <a href="/privacy/">Read the privacy position</a>.</p>
         </div>
       </section>
 
@@ -654,6 +686,38 @@ pain001 -t pain.001.001.09 -d payments.csv --scheme sepa-sct --dry-run</code></p
           <div class="kpi">
             <div class="kpi-value">0</div>
             <p class="kpi-label">bytes of payment data leave your machine</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Personas -->
+      <section class="section" aria-labelledby="persona-heading">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="section-eyebrow">Start where you work</p>
+            <h2 id="persona-heading" class="section-title">Built for the people who sign off on payments.</h2>
+          </div>
+          <div class="persona-grid">
+            <a class="persona-card" href="/payments/">
+              <h3>Treasury &amp; finance</h3>
+              <p>Files that pass the bank gate first time, and the vocabulary to brief your board — deadlines included.</p>
+              <span class="offer-link">Payment lifecycle guide&nbsp;&rsaquo;</span>
+            </a>
+            <a class="persona-card" href="/faqs/">
+              <h3>Payment operations</h3>
+              <p><code>--dry-run</code> gates with exit codes, scheme rulebooks explained rule by rule, and pain.002 answers parsed for you.</p>
+              <span class="offer-link">Operational FAQs&nbsp;&rsaquo;</span>
+            </a>
+            <a class="persona-card" href="/documentation/">
+              <h3>Engineering</h3>
+              <p>A typed Python API, REST microservice, plugins, and 100% branch-covered code you can actually read.</p>
+              <span class="offer-link">Technical reference&nbsp;&rsaquo;</span>
+            </a>
+            <a class="persona-card" href="/pain001-mcp/">
+              <h3>AI &amp; automation</h3>
+              <p>The only MCP server in the category — seventeen read-only tools your agents can call locally.</p>
+              <span class="offer-link">MCP server&nbsp;&rsaquo;</span>
+            </a>
           </div>
         </div>
       </section>

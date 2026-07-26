@@ -94,11 +94,4 @@ The ISO 20022 cutover is done: MT–MX coexistence on SWIFT ended on 22 November
 
 Pain001 ships both requirements today: structured and hybrid address elements in generated XML, and one-command MT101 conversion. The [2026 migration briefing](/2026-iso20022-migration-trends/) maps every deadline with primary sources — no vendor fog, just dates and citations.
 
-## Built for more than developers
-
-- **Treasury and finance teams** get files that pass the bank gate first time, a [plain-English glossary](/glossary/), and [FAQs](/faqs/) that answer the questions auditors ask.
-- **Payment operations** get `--dry-run` validation with exit codes, scheme rulebooks with `--explain`, and [pain.002 / camt.053 parsing](/payments/) to close the loop after submission.
-- **Engineers** get a typed Python API, a REST microservice, [editor diagnostics](/pain001-lsp/), plugins, and 100% branch-covered code they can actually read.
-- **AI-forward teams** get the only [MCP server](/pain001-mcp/) in the ISO 20022 payment-initiation category — local, read-only, seventeen tools.
-
 Start with the [Installation Guide](/installation/), browse the [Technical Reference](/documentation/), or see [how Pain001 compares](/competitors-comparison/) — including where commercial platforms genuinely win.
