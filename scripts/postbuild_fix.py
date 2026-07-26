@@ -268,6 +268,23 @@ def fix_tag_pages(site: Path) -> None:
             print(f"[postbuild] patched CSP/og:image: {page}")
 
 
+def fix_manifest(site: Path) -> None:
+    """ssg emits "theme_color": null (it only understands the legacy RGB
+    triple), which Chrome logs as an invalid-type warning. Pin valid hexes."""
+    import json
+
+    path = site / "manifest.json"
+    if not path.exists():
+        return
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(data.get("theme_color"), str) or not data["theme_color"].startswith("#"):
+        data["theme_color"] = "#0b0e14"
+    if not isinstance(data.get("background_color"), str):
+        data["background_color"] = "#ffffff"
+    path.write_text(json.dumps(data, indent=2), encoding="utf-8")
+    print("[postbuild] manifest.json theme_color fixed")
+
+
 def regen_sitemap(site: Path) -> None:
     today = date.today().isoformat()
     urls = []
@@ -312,6 +329,7 @@ def main() -> None:
             repaired += 1
     print(f"[postbuild] unescaped head/body markup on {repaired} page(s)")
     fix_tag_pages(site)
+    fix_manifest(site)
     regen_sitemap(site)
 
 

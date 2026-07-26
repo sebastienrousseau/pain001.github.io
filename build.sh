@@ -40,6 +40,14 @@ python3 scripts/postbuild_fix.py Pain001
 # downloaded by the browser only when the visitor asks for the XSD gate.
 rsync -a static/pyodide/ Pain001/pyodide/
 
+# Carry the previous deploy's fingerprinted assets forward. Browsers and
+# CDN edges cache HTML for up to ~10 minutes; if a rebuild deleted the old
+# /_csp/<hash> files, every cached page 404'd its CSS/JS during that
+# window on each deploy. Old hashes are tiny; keep them alongside the new.
+if [ -d docs/_csp ]; then
+  rsync -a --ignore-existing docs/_csp/ Pain001/_csp/
+fi
+
 # Publish: replace docs/ content with the fresh build (keep the dir itself).
 rsync -a --delete --exclude '.ssg-cache' Pain001/ docs/
 
