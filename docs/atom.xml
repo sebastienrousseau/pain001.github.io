@@ -24,6 +24,15 @@
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
+    <title>Accessibility Statement</title>
+    <link href="https://pain001.com/accessibility/"/>
+    <id>https://pain001.com/accessibility/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>pain001.com targets WCAG 2.2 AAA, enforced as a build gate: measured 7:1 contrast in both themes, pa11y-verified pages, keyboard-first interaction, and an open channel for reports.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
     <title>Architecture, Security and the Patent Landscape</title>
     <link href="https://pain001.com/architecture-and-patents/"/>
     <id>https://pain001.com/architecture-and-patents/</id>

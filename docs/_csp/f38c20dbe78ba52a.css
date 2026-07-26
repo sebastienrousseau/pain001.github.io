@@ -1,0 +1,108 @@
+
+      /* Tokens match page.html; ratios measured, AAA (7:1) throughout. */
+      :root {
+        --type-display: "Iowan Old Style", "Palatino Nova", Palatino, "New York", ui-serif, Georgia, serif;
+        --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        --bg-page: #ffffff;
+        --bg-alt: #f7f5f1;
+        --text-main: #1d1d1f;   /* 16.7:1 — AAA */
+        --text-muted: #3a3a3c;  /* 11.3:1 — AAA */
+        --border-color: #c9c5bb;
+        --link: #004caf;        /* 7.9:1 — AAA */
+        --btn-bg: #1d1d1f;
+        --btn-text: #ffffff;
+        --focus-ring: #004caf;
+        --radius-sm: 8px;
+        --radius-md: 14px;
+        --radius-pill: 999px;
+      }
+      [data-theme="dark"] {
+        --bg-page: #0b0e14;
+        --bg-alt: #10141c;
+        --text-main: #f5f5f7;
+        --text-muted: #d6d9e0;
+        --border-color: #3a4252;
+        --link: #8cc0ff;
+        --btn-bg: #f5f5f7;
+        --btn-text: #16181d;
+        --focus-ring: #8cc0ff;
+      }
+      @media (prefers-color-scheme: dark) {
+        html:not([data-theme="light"]) {
+          --bg-page: #0b0e14;
+          --bg-alt: #10141c;
+          --text-main: #f5f5f7;
+          --text-muted: #d6d9e0;
+          --border-color: #3a4252;
+          --link: #8cc0ff;
+          --btn-bg: #f5f5f7;
+          --btn-text: #16181d;
+          --focus-ring: #8cc0ff;
+        }
+      }
+
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.65; }
+
+      :focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 2px; border-radius: 2px; }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+      }
+
+      .skip-link {
+        position: absolute; top: -100px; left: 1rem;
+        background: var(--btn-bg); color: var(--btn-text);
+        padding: 0.75rem 1.5rem; z-index: 10000;
+        border-radius: var(--radius-pill); font-weight: 600;
+      }
+      .skip-link:focus { top: 1rem; }
+
+      .container { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+      .back-link { color: var(--link); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; min-height: 44px; }
+      .back-link:hover { text-decoration: underline; }
+      h1 { font-family: var(--type-display); font-size: 2.5rem; letter-spacing: -0.015em; line-height: 1.15; margin: 1.5rem 0 1rem; }
+      .lede { color: var(--text-muted); margin-bottom: 2rem; max-width: 60ch; }
+
+      .form-group { margin-bottom: 1.5rem; }
+      label { display: block; font-weight: 600; margin-bottom: 0.5rem; }
+      .hint { display: block; font-weight: 400; font-size: 0.9rem; color: var(--text-muted); margin-top: 0.25rem; }
+      input, textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border-color);
+        background: var(--bg-page);
+        color: var(--text-main);
+        font-size: 1rem;
+        font-family: inherit;
+      }
+      button {
+        background: var(--btn-bg);
+        color: var(--btn-text);
+        min-height: 50px;
+        padding: 0.85rem 2rem;
+        border: none;
+        border-radius: var(--radius-pill);
+        font-weight: 700;
+        font-size: 1rem;
+        font-family: inherit;
+        cursor: pointer;
+      }
+      .alt-channels { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.95rem; }
+      .alt-channels a { color: var(--link); }
+
+      article { margin-top: 2rem; color: var(--text-muted); }
+      article h1 { display: none; } /* the layout renders the page H1 */
+      article a { color: var(--link); }
+      article p, article li { margin-bottom: 0.75rem; }
+      article ul { padding-left: 1.5rem; }
+
+      /* AAA overrides for ssg's injected search widget: its own stylesheet
+         ships 6.3-6.9:1 labels; force token colours (>= 7:1 both themes). */
+      #ssg-search-btn, #ssg-search-btn span { color: var(--text-muted) !important; }
+      #ssg-search-btn kbd {
+        color: var(--text-main) !important;
+        background: var(--bg-page) !important;
+        border-color: var(--border-color) !important;
+      }
+    

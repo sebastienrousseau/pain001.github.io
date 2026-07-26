@@ -14,7 +14,7 @@
     <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
     {{apple}}
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
@@ -196,6 +196,15 @@
       }
       .footer a { color: var(--ink-mute); }
       .footer a:hover { color: var(--link); }
+
+      /* AAA overrides for ssg's injected search widget: its own stylesheet
+         ships 6.3-6.9:1 labels; force token colours (>= 7:1 both themes). */
+      #ssg-search-btn, #ssg-search-btn span { color: var(--ink-soft) !important; }
+      #ssg-search-btn kbd {
+        color: var(--ink) !important;
+        background: var(--bg-page) !important;
+        border-color: var(--rule-strong) !important;
+      }
     </style>
   </head>
   <body>
@@ -245,12 +254,28 @@
       </div>
 
       <div class="wrap">
+        <section class="demo-panel" aria-labelledby="xsd-heading" style="margin-bottom: 1.5rem;">
+          <h2 id="xsd-heading">3 · The real gate: validate against the official ISO 20022 XSD</h2>
+          <p class="fineprint" style="margin: 0;">
+            Steps 1–2 run fast, hand-written checks. This step runs the genuine article: a Python
+            runtime (via WebAssembly) executing <code style="font-family: var(--type-mono);">xmlschema</code>
+            against the official <code style="font-family: var(--type-mono);">pain.001.001.09</code> schema —
+            the same class of validation the CLI performs. Everything is served from this site and runs
+            locally; the engine is ~13&nbsp;MB, downloaded once when you ask for it.
+          </p>
+          <div class="demo-actions">
+            <button type="button" id="xsd-btn" class="pill pill-primary" disabled>Run the official XSD gate&nbsp;&rsaquo;</button>
+          </div>
+          <p class="status" id="xsd-status" role="status">Generate XML in step 2 first — the XSD gate validates that output.</p>
+          <ul class="error-list" id="xsd-errors"></ul>
+        </section>
+
         <p class="fineprint" id="demo-fineprint">
           Everything on this page runs in your browser — nothing is uploaded, stored, or sent anywhere.
           This demo implements a subset of the pipeline (required fields, IBAN mod-97, BIC structure, amount
-          and date formats, recomputed <code style="font-family: inherit;">NbOfTxs</code>/<code style="font-family: inherit;">CtrlSum</code> control totals). The full toolchain adds JSON Schema
-          validation, five scheme rulebooks, and validation against the official ISO 20022 XSD —
-          <a href="/installation/">install the CLI</a> to run that gate for real.
+          and date formats, recomputed <code style="font-family: inherit;">NbOfTxs</code>/<code style="font-family: inherit;">CtrlSum</code> control totals). Step 3 runs the official XSD gate right here via WebAssembly. The installed toolchain
+          adds JSON Schema validation and five scheme rulebooks on top —
+          <a href="/installation/">install the CLI</a> for the complete pipeline.
         </p>
       </div>
 
@@ -383,6 +408,7 @@
             "  <CstmrCdtTrfInitn>",
             "    <GrpHdr>",
             "      <MsgId>" + msgId + "</MsgId>",
+            "      <CreDtTm>" + new Date().toISOString().slice(0, 19) + "</CreDtTm>",
             "      <NbOfTxs>" + rows.length + "</NbOfTxs>",
             "      <CtrlSum>" + ctrl + "</CtrlSum>",
             "      <InitgPty><Nm>" + esc(first.debtor_name) + "</Nm></InitgPty>",
@@ -448,6 +474,81 @@
           navigator.clipboard.writeText(xmlOut.textContent).then(function () {
             copyBtn.textContent = "Copied ✓";
             setTimeout(function () { copyBtn.textContent = "Copy XML"; }, 1600);
+          });
+        });
+
+        /* ==== Step 3: official XSD validation via Pyodide + xmlschema. ==== */
+        var xsdBtn = document.getElementById("xsd-btn");
+        var xsdStatus = document.getElementById("xsd-status");
+        var xsdErrors = document.getElementById("xsd-errors");
+        var pyodideReady = null;
+
+        function xmlAvailable() {
+          return xmlOut.textContent.indexOf("<?xml") === 0;
+        }
+        function refreshXsdBtn() { xsdBtn.disabled = !xmlAvailable(); }
+        new MutationObserver(refreshXsdBtn).observe(xmlOut, { childList: true, characterData: true, subtree: true });
+        refreshXsdBtn();
+
+        function loadEngine() {
+          if (pyodideReady) return pyodideReady;
+          pyodideReady = new Promise(function (resolve, reject) {
+            var s = document.createElement("script");
+            s.src = "/pyodide/pyodide.js";
+            s.onload = resolve;
+            s.onerror = function () { reject(new Error("engine script failed to load")); };
+            document.head.appendChild(s);
+          }).then(function () {
+            xsdStatus.textContent = "Starting Python runtime…";
+            return loadPyodide({ indexURL: "/pyodide/" });
+          }).then(function (py) {
+            xsdStatus.textContent = "Loading xmlschema…";
+            return py.loadPackage(["/pyodide/elementpath-5.1.3-py3-none-any.whl",
+                                   "/pyodide/xmlschema-4.3.2-py3-none-any.whl"])
+              .then(function () { return fetch("/pyodide/pain.001.001.09.xsd"); })
+              .then(function (r) { return r.text(); })
+              .then(function (xsd) {
+                py.FS.writeFile("/pain.001.001.09.xsd", xsd);
+                py.runPython("import xmlschema\nschema = xmlschema.XMLSchema('/pain.001.001.09.xsd')");
+                return py;
+              });
+          });
+          return pyodideReady;
+        }
+
+        xsdBtn.addEventListener("click", function () {
+          if (!xmlAvailable()) return;
+          xsdErrors.innerHTML = "";
+          xsdStatus.className = "status";
+          xsdStatus.textContent = "Downloading the engine (~13 MB, first run only)…";
+          xsdBtn.disabled = true;
+          loadEngine().then(function (py) {
+            xsdStatus.textContent = "Validating against the official schema…";
+            py.globals.set("xml_text", xmlOut.textContent);
+            var result = py.runPython(
+              "import json\n" +
+              "errs = [str(e.reason or e) for e in schema.iter_errors(xml_text)]\n" +
+              "json.dumps(errs[:10])"
+            );
+            var errs = JSON.parse(result);
+            if (errs.length === 0) {
+              xsdStatus.className = "status pass";
+              xsdStatus.textContent = "✓ Valid against the official ISO 20022 pain.001.001.09 XSD.";
+            } else {
+              xsdStatus.className = "status fail";
+              xsdStatus.textContent = "✗ Official schema rejected the document — " + errs.length + " error(s).";
+              errs.forEach(function (e) {
+                var li = document.createElement("li");
+                li.textContent = e;
+                xsdErrors.appendChild(li);
+              });
+            }
+            xsdBtn.disabled = false;
+          }).catch(function (err) {
+            pyodideReady = null;
+            xsdStatus.className = "status fail";
+            xsdStatus.textContent = "✗ Engine failed to load: " + err.message + ". Check your connection and try again.";
+            xsdBtn.disabled = false;
           });
         });
       })();

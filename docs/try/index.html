@@ -17,7 +17,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Try Pain001 in Your Browser">
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self' ; script-src 'self' ; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self' ; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
@@ -34,7 +34,7 @@
 
     <script src="/_csp/6ccbbfb0b824e5f3.js" integrity="sha384-vD2D/DeQ7ybfwKVwsRoDzF6OdQbjm+gayKdOWKcqfqM76DP9CwfWMGtYvdpKSVJF" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/5a70225f5de71c6f.css" integrity="sha384-oGlhXgmlsAbfGZsQQtTMx5QB1vuq8EbBnwlLKZUbCOhg/jLRsFYb9F4xNLkGA+Dc" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/53fd357afa3e0231.css" integrity="sha384-qE5Dp/LIo9eXbLveHnf0orKh2hX3Eus4N5CVlHSHQxQLk6Mvwwue4h9RpECW8W8d" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -48,7 +48,7 @@
 <meta name="twitter:description" content="Interactive demo Try Pain001 in Your Browser Paste a payment batch, press validate, and watch rejection-class errors get caught before any XML exists — right">
 <meta name="twitter:image" content="https://cloudcdn.pro/pain001/v1/logos/pain001.svg">
 <link rel="canonical" href="https://pain001.com/try/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
-</head>
+<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"></head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -96,12 +96,28 @@
       </div>
 
       <div class="wrap">
+        <section class="demo-panel" aria-labelledby="xsd-heading" style="margin-bottom: 1.5rem;">
+          <h2 id="xsd-heading">3 · The real gate: validate against the official ISO 20022 XSD</h2>
+          <p class="fineprint" style="margin: 0;">
+            Steps 1–2 run fast, hand-written checks. This step runs the genuine article: a Python
+            runtime (via WebAssembly) executing <code style="font-family: var(--type-mono);">xmlschema</code>
+            against the official <code style="font-family: var(--type-mono);">pain.001.001.09</code> schema —
+            the same class of validation the CLI performs. Everything is served from this site and runs
+            locally; the engine is ~13&nbsp;MB, downloaded once when you ask for it.
+          </p>
+          <div class="demo-actions">
+            <button type="button" id="xsd-btn" class="pill pill-primary" disabled>Run the official XSD gate&nbsp;&rsaquo;</button>
+          </div>
+          <p class="status" id="xsd-status" role="status">Generate XML in step 2 first — the XSD gate validates that output.</p>
+          <ul class="error-list" id="xsd-errors"></ul>
+        </section>
+
         <p class="fineprint" id="demo-fineprint">
           Everything on this page runs in your browser — nothing is uploaded, stored, or sent anywhere.
           This demo implements a subset of the pipeline (required fields, IBAN mod-97, BIC structure, amount
-          and date formats, recomputed <code style="font-family: inherit;">NbOfTxs</code>/<code style="font-family: inherit;">CtrlSum</code> control totals). The full toolchain adds JSON Schema
-          validation, five scheme rulebooks, and validation against the official ISO 20022 XSD —
-          <a href="/installation/">install the CLI</a> to run that gate for real.
+          and date formats, recomputed <code style="font-family: inherit;">NbOfTxs</code>/<code style="font-family: inherit;">CtrlSum</code> control totals). Step 3 runs the official XSD gate right here via WebAssembly. The installed toolchain
+          adds JSON Schema validation and five scheme rulebooks on top —
+          <a href="/installation/">install the CLI</a> for the complete pipeline.
         </p>
       </div>
 
@@ -115,7 +131,7 @@
 </span><span style="color:#8fa1b3;">pain001</span><span style="color:#bf616a;"> -t</span><span style="color:#c0c5ce;"> pain.001.001.09</span><span style="color:#bf616a;"> -d</span><span style="color:#c0c5ce;"> payments.csv</span><span style="color:#bf616a;"> -o</span><span style="color:#c0c5ce;"> out/</span><span style="color:#bf616a;"> --scheme</span><span style="color:#c0c5ce;"> sepa-sct</span><span style="color:#bf616a;"> --dry-run
 </span></pre>
 </code></pre>
-<p>A fully in-browser build of the real engine (via WebAssembly) is on the roadmap; today the honest split is: this page proves the concept, <a href="/installation/">the CLI</a> proves your files.</p>
+<p>Step 3 above is not a simulation: it boots a Python runtime in WebAssembly and runs <a href="https://pypi.org/project/xmlschema/">xmlschema</a> against the official <code>pain.001.001.09</code> schema, served from this site — the same class of XSD gate the CLI applies. What remains CLI-only is the rest of the pipeline: JSON Schema normalisation, the five scheme rulebooks with <code>--explain</code>, and the other ten message definitions.</p>
 </div>
         </article>
       </div>
@@ -143,11 +159,11 @@
     }
     </script>
 
-    <script src="/_csp/2020b76d31896d86.js" integrity="sha384-N+Cwa3e91QWBRJD+QrLcTB7FGrhWwhdXTrA8wtIuQpCPItRZyeS7cLrg5FaIhZCP" crossorigin="anonymous"></script>
+    <script src="/_csp/7fb158c834cc817d.js" integrity="sha384-91p9UD2XvHREoptHdMgaHErybpNDXoqs6+NoPgHBuPL+CIh/06wjHQeydCv0DAJ+" crossorigin="anonymous"></script>
   
 <!-- SSG Search Widget -->
 <div id="ssg-search-widget">
-<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous">
+
 <!-- Search trigger button -->
 <button id="ssg-search-btn" type="button" aria-label="Search">
 <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>

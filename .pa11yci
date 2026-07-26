@@ -1,0 +1,24 @@
+{
+  "defaults": {
+    "standard": "WCAG2AAA",
+    "timeout": 30000,
+    "wait": 500,
+    "chromeLaunchConfig": {
+      "args": ["--no-sandbox", "--disable-dev-shm-usage"]
+    }
+  },
+  "urls": [
+    "http://127.0.0.1:8899/",
+    "http://127.0.0.1:8899/documentation/",
+    "http://127.0.0.1:8899/installation/",
+    "http://127.0.0.1:8899/try/",
+    "http://127.0.0.1:8899/pain001-mcp/",
+    "http://127.0.0.1:8899/2026-iso20022-migration-trends/",
+    "http://127.0.0.1:8899/faqs/",
+    "http://127.0.0.1:8899/glossary/",
+    "http://127.0.0.1:8899/competitors-comparison/",
+    "http://127.0.0.1:8899/contact/",
+    "http://127.0.0.1:8899/fr/",
+    "http://127.0.0.1:8899/404/"
+  ]
+}

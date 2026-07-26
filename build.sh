@@ -35,6 +35,11 @@ touch Pain001/.nojekyll
 # the sitemap. See scripts/postbuild_fix.py for the why of each pass.
 python3 scripts/postbuild_fix.py Pain001
 
+# Self-hosted WASM engine for /try/ (Pyodide + xmlschema + official XSD).
+# Served same-origin so the strict CSP needs no third-party carve-outs;
+# downloaded by the browser only when the visitor asks for the XSD gate.
+rsync -a static/pyodide/ Pain001/pyodide/
+
 # Publish: replace docs/ content with the fresh build (keep the dir itself).
 rsync -a --delete --exclude '.ssg-cache' Pain001/ docs/
 

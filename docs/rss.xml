@@ -9,6 +9,23 @@
     <lastBuildDate>Sun, 26 Jul 2026 08:00:00 +0000</lastBuildDate>
     <copyright>© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT.</copyright>
     <item>
+      <title>Accessibility Statement</title>
+      <link>https://pain001.com/accessibility/</link>
+      <description>pain001.com targets WCAG 2.2 AAA, enforced as a build gate: measured 7:1 contrast in both themes, pa11y-verified pages, keyboard-first interaction, and an open channel for reports.</description>
+      <guid isPermaLink="true">https://pain001.com/accessibility/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
       <title>Architecture, Security and the Patent Landscape</title>
       <link>https://pain001.com/architecture-and-patents/</link>
       <description>Zero-trust XML parsing, decimal-exact arithmetic, validation as a hard gate, 100% branch coverage — and where Pain001 sits amid patented MT–MX transformation services.</description>

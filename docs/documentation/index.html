@@ -17,7 +17,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Pain001 Technical Reference: CLI, Python API and REST">
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self' ; script-src 'self' ; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self' ; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
     <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -37,7 +37,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/20a2366bc58a1197.css" integrity="sha384-AMr9vELhHsmdVVr5QedG1CQQxPLlYRE5rMmO54ogw/iMaV6Cdpu0506FtqNU5WtF" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8dbe0c0a5fc3fc89.css" integrity="sha384-z0ftlitySP0oG+y6oB21iIKDkI4UEYSNYGarvDwXbkj/eb9fSrpmHH8Z0P/IZmsQ" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -51,7 +51,7 @@
 <meta name="twitter:description" content="Home Pain001 Technical Reference: CLI, Python API and REST Reference Pain001 Technical Reference: CLI, Python API and REST Every flag, endpoint, and behaviour">
 <meta name="twitter:image" content="https://cloudcdn.pro/pain001/v1/logos/pain001.svg">
 <link rel="canonical" href="https://pain001.com/documentation/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
-</head>
+<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"></head>
 
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -119,42 +119,42 @@
 <div class="table-responsive"><table class="table">
 <thead>
 <tr>
-<th align="left">Subcommand</th>
-<th align="left">Purpose</th>
+<th>Subcommand</th>
+<th>Purpose</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td data-label="Subcommand" align="left" class="text-left"><code>generate</code></td>
-<td data-label="Purpose" align="left" class="text-left">Convert a data file into schema-validated ISO 20022 XML (default command).</td>
+<td data-label="Subcommand" class="text-left"><code>generate</code></td>
+<td data-label="Purpose" class="text-left">Convert a data file into schema-validated ISO 20022 XML (default command).</td>
 </tr>
 <tr>
-<td data-label="Subcommand" align="left" class="text-left"><code>validate</code></td>
-<td data-label="Purpose" align="left" class="text-left">Validate input data without writing XML.</td>
+<td data-label="Subcommand" class="text-left"><code>validate</code></td>
+<td data-label="Purpose" class="text-left">Validate input data without writing XML.</td>
 </tr>
 <tr>
-<td data-label="Subcommand" align="left" class="text-left"><code>versions [--json]</code></td>
-<td data-label="Purpose" align="left" class="text-left">List all 11 supported message definitions.</td>
+<td data-label="Subcommand" class="text-left"><code>versions [--json]</code></td>
+<td data-label="Purpose" class="text-left">List all 11 supported message definitions.</td>
 </tr>
 <tr>
-<td data-label="Subcommand" align="left" class="text-left"><code>inspect <type> [--json]</code></td>
-<td data-label="Purpose" align="left" class="text-left">Show the required and optional fields for a message type.</td>
+<td data-label="Subcommand" class="text-left"><code>inspect <type> [--json]</code></td>
+<td data-label="Purpose" class="text-left">Show the required and optional fields for a message type.</td>
 </tr>
 <tr>
-<td data-label="Subcommand" align="left" class="text-left"><code>init <type> [-o DIR]</code></td>
-<td data-label="Purpose" align="left" class="text-left">Scaffold a starter CSV template for a message type.</td>
+<td data-label="Subcommand" class="text-left"><code>init <type> [-o DIR]</code></td>
+<td data-label="Purpose" class="text-left">Scaffold a starter CSV template for a message type.</td>
 </tr>
 <tr>
-<td data-label="Subcommand" align="left" class="text-left"><code>serve [--host] [--port] [--reload]</code></td>
-<td data-label="Purpose" align="left" class="text-left">Launch the FastAPI REST microservice (requires the <code>api</code> extra).</td>
+<td data-label="Subcommand" class="text-left"><code>serve [--host] [--port] [--reload]</code></td>
+<td data-label="Purpose" class="text-left">Launch the FastAPI REST microservice (requires the <code>api</code> extra).</td>
 </tr>
 <tr>
-<td data-label="Subcommand" align="left" class="text-left"><code>mcp</code></td>
-<td data-label="Purpose" align="left" class="text-left">Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href="/pain001-mcp/"><code>pain001-mcp</code></a>).</td>
+<td data-label="Subcommand" class="text-left"><code>mcp</code></td>
+<td data-label="Purpose" class="text-left">Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href="/pain001-mcp/"><code>pain001-mcp</code></a>).</td>
 </tr>
 <tr>
-<td data-label="Subcommand" align="left" class="text-left"><code>plugins list / show / disable</code></td>
-<td data-label="Purpose" align="left" class="text-left">Inspect and manage discovered loader, validator, scheme, and writer plugins.</td>
+<td data-label="Subcommand" class="text-left"><code>plugins list / show / disable</code></td>
+<td data-label="Purpose" class="text-left">Inspect and manage discovered loader, validator, scheme, and writer plugins.</td>
 </tr>
 </tbody>
 </table></div>
@@ -162,50 +162,50 @@
 <table>
 <thead>
 <tr>
-<th align="left">Flag</th>
-<th align="left">Description</th>
+<th>Flag</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td data-label="Flag" align="left" class="text-left"><code>-t, --xml-message-type <TYPE></code></td>
-<td data-label="Description" align="left" class="text-left">Message definition, e.g. <code>pain.001.001.09</code>.</td>
+<td data-label="Flag" class="text-left"><code>-t, --xml-message-type <TYPE></code></td>
+<td data-label="Description" class="text-left">Message definition, e.g. <code>pain.001.001.09</code>.</td>
 </tr>
 <tr>
-<td data-label="Flag" align="left" class="text-left"><code>-d, --data <FILE></code></td>
-<td data-label="Description" align="left" class="text-left">Input data: <code>.csv</code>, <code>.json</code>, <code>.jsonl</code>, <code>.db</code> / <code>.sqlite</code>, <code>.parquet</code>, or PGP-encrypted <code>.gpg</code> / <code>.asc</code>.</td>
+<td data-label="Flag" class="text-left"><code>-d, --data <FILE></code></td>
+<td data-label="Description" class="text-left">Input data: <code>.csv</code>, <code>.json</code>, <code>.jsonl</code>, <code>.db</code> / <code>.sqlite</code>, <code>.parquet</code>, or PGP-encrypted <code>.gpg</code> / <code>.asc</code>.</td>
 </tr>
 <tr>
-<td data-label="Flag" align="left" class="text-left"><code>-o, --output-dir <DIR></code></td>
-<td data-label="Description" align="left" class="text-left">Directory that receives the generated XML.</td>
+<td data-label="Flag" class="text-left"><code>-o, --output-dir <DIR></code></td>
+<td data-label="Description" class="text-left">Directory that receives the generated XML.</td>
 </tr>
 <tr>
-<td data-label="Flag" align="left" class="text-left"><code>-m, --template <FILE></code> / <code>-s, --schema <FILE></code></td>
-<td data-label="Description" align="left" class="text-left">Override the bundled Jinja2 template or XSD schema.</td>
+<td data-label="Flag" class="text-left"><code>-m, --template <FILE></code> / <code>-s, --schema <FILE></code></td>
+<td data-label="Description" class="text-left">Override the bundled Jinja2 template or XSD schema.</td>
 </tr>
 <tr>
-<td data-label="Flag" align="left" class="text-left"><code>-c, --config <FILE></code></td>
-<td data-label="Description" align="left" class="text-left">Load defaults from a configuration profile (<code>--profile</code>, <code>--show-config</code>).</td>
+<td data-label="Flag" class="text-left"><code>-c, --config <FILE></code></td>
+<td data-label="Description" class="text-left">Load defaults from a configuration profile (<code>--profile</code>, <code>--show-config</code>).</td>
 </tr>
 <tr>
-<td data-label="Flag" align="left" class="text-left"><code>--dry-run</code> (alias <code>--validate-only</code>)</td>
-<td data-label="Description" align="left" class="text-left">Validate input against the JSON Schema, XSD, and scheme rulebook without writing output.</td>
+<td data-label="Flag" class="text-left"><code>--dry-run</code> (alias <code>--validate-only</code>)</td>
+<td data-label="Description" class="text-left">Validate input against the JSON Schema, XSD, and scheme rulebook without writing output.</td>
 </tr>
 <tr>
-<td data-label="Flag" align="left" class="text-left"><code>--scheme <NAME></code></td>
-<td data-label="Description" align="left" class="text-left">Enforce a scheme rulebook: <code>sepa-sct</code>, <code>sepa-inst</code>, <code>sepa-sdd</code>, <code>sepa-b2b</code>, or <code>xborder-ct</code>.</td>
+<td data-label="Flag" class="text-left"><code>--scheme <NAME></code></td>
+<td data-label="Description" class="text-left">Enforce a scheme rulebook: <code>sepa-sct</code>, <code>sepa-inst</code>, <code>sepa-sdd</code>, <code>sepa-b2b</code>, or <code>xborder-ct</code>.</td>
 </tr>
 <tr>
-<td data-label="Flag" align="left" class="text-left"><code>--explain --scheme-format {text,json}</code></td>
-<td data-label="Description" align="left" class="text-left">Report each scheme rule that passed or failed, human- or machine-readable.</td>
+<td data-label="Flag" class="text-left"><code>--explain --scheme-format {text,json}</code></td>
+<td data-label="Description" class="text-left">Report each scheme rule that passed or failed, human- or machine-readable.</td>
 </tr>
 <tr>
-<td data-label="Flag" align="left" class="text-left"><code>--streaming</code> / <code>--chunk-size <N></code></td>
-<td data-label="Description" align="left" class="text-left">Memory-bounded chunked processing for large batches (default 1,000 transactions per chunk; each chunk becomes its own XML file with recomputed <code>NbOfTxs</code> and <code>CtrlSum</code>).</td>
+<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size <N></code></td>
+<td data-label="Description" class="text-left">Memory-bounded chunked processing for large batches (default 1,000 transactions per chunk; each chunk becomes its own XML file with recomputed <code>NbOfTxs</code> and <code>CtrlSum</code>).</td>
 </tr>
 <tr>
-<td data-label="Flag" align="left" class="text-left"><code>--emit-metrics</code></td>
-<td data-label="Description" align="left" class="text-left">Emit machine-readable run metrics for observability pipelines.</td>
+<td data-label="Flag" class="text-left"><code>--emit-metrics</code></td>
+<td data-label="Description" class="text-left">Emit machine-readable run metrics for observability pipelines.</td>
 </tr>
 </tbody>
 </table>
@@ -244,42 +244,42 @@
 <table>
 <thead>
 <tr>
-<th align="left">Method & Path</th>
-<th align="left">Purpose</th>
+<th>Method & Path</th>
+<th>Purpose</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td data-label="Method & Path" align="left" class="text-left"><code>GET /api/v1/health</code></td>
-<td data-label="Purpose" align="left" class="text-left">Liveness probe.</td>
+<td data-label="Method & Path" class="text-left"><code>GET /api/v1/health</code></td>
+<td data-label="Purpose" class="text-left">Liveness probe.</td>
 </tr>
 <tr>
-<td data-label="Method & Path" align="left" class="text-left"><code>POST /api/v1/validate</code></td>
-<td data-label="Purpose" align="left" class="text-left">Validate records; returns field-level errors.</td>
+<td data-label="Method & Path" class="text-left"><code>POST /api/v1/validate</code></td>
+<td data-label="Purpose" class="text-left">Validate records; returns field-level errors.</td>
 </tr>
 <tr>
-<td data-label="Method & Path" align="left" class="text-left"><code>POST /api/v1/generate</code></td>
-<td data-label="Purpose" align="left" class="text-left">Synchronous XML generation.</td>
+<td data-label="Method & Path" class="text-left"><code>POST /api/v1/generate</code></td>
+<td data-label="Purpose" class="text-left">Synchronous XML generation.</td>
 </tr>
 <tr>
-<td data-label="Method & Path" align="left" class="text-left"><code>POST /api/v1/generate/async</code></td>
-<td data-label="Purpose" align="left" class="text-left">Queue a large batch for background generation.</td>
+<td data-label="Method & Path" class="text-left"><code>POST /api/v1/generate/async</code></td>
+<td data-label="Purpose" class="text-left">Queue a large batch for background generation.</td>
 </tr>
 <tr>
-<td data-label="Method & Path" align="left" class="text-left"><code>GET /api/v1/status/{job_id}</code></td>
-<td data-label="Purpose" align="left" class="text-left">Poll an async job.</td>
+<td data-label="Method & Path" class="text-left"><code>GET /api/v1/status/{job_id}</code></td>
+<td data-label="Purpose" class="text-left">Poll an async job.</td>
 </tr>
 <tr>
-<td data-label="Method & Path" align="left" class="text-left"><code>GET /api/v1/download/{job_id}</code></td>
-<td data-label="Purpose" align="left" class="text-left">Download the finished XML.</td>
+<td data-label="Method & Path" class="text-left"><code>GET /api/v1/download/{job_id}</code></td>
+<td data-label="Purpose" class="text-left">Download the finished XML.</td>
 </tr>
 <tr>
-<td data-label="Method & Path" align="left" class="text-left"><code>DELETE /api/v1/jobs/{job_id}</code></td>
-<td data-label="Purpose" align="left" class="text-left">Clean up a completed job.</td>
+<td data-label="Method & Path" class="text-left"><code>DELETE /api/v1/jobs/{job_id}</code></td>
+<td data-label="Purpose" class="text-left">Clean up a completed job.</td>
 </tr>
 <tr>
-<td data-label="Method & Path" align="left" class="text-left"><code>GET /metrics</code></td>
-<td data-label="Purpose" align="left" class="text-left">Prometheus metrics.</td>
+<td data-label="Method & Path" class="text-left"><code>GET /metrics</code></td>
+<td data-label="Purpose" class="text-left">Prometheus metrics.</td>
 </tr>
 </tbody>
 </table>
@@ -355,6 +355,7 @@
             <li><a href="/es/" hreflang="es" lang="es">Español</a></li>
           </ul>
           <ul>
+            <li><a href="/accessibility/">Accessibility</a></li>
             <li><a href="/privacy/">Privacy</a></li>
             <li><a href="/terms/">Terms</a></li>
             <li><a href="/contact/">Contact</a></li>
@@ -412,7 +413,7 @@
   
 <!-- SSG Search Widget -->
 <div id="ssg-search-widget">
-<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous">
+
 <!-- Search trigger button -->
 <button id="ssg-search-btn" type="button" aria-label="Search">
 <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>

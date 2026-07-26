@@ -100,4 +100,4 @@ pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --scheme sepa-sct --dry-run
 ```
 
-A fully in-browser build of the real engine (via WebAssembly) is on the roadmap; today the honest split is: this page proves the concept, [the CLI](/installation/) proves your files.
+Step 3 above is not a simulation: it boots a Python runtime in WebAssembly and runs [xmlschema](https://pypi.org/project/xmlschema/) against the official `pain.001.001.09` schema, served from this site — the same class of XSD gate the CLI applies. What remains CLI-only is the rest of the pipeline: JSON Schema normalisation, the five scheme rulebooks with `--explain`, and the other ten message definitions.

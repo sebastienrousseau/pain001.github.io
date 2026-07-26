@@ -1,0 +1,56 @@
+name: CI
+
+# Every push and PR rebuilds the site and enforces the full quality bar:
+#   1. ssg's 15 audit gates (WCAG, JSON-LD, CSP/SRI, links, metadata,
+#      performance, feeds, AI discovery, ...) — failing on warnings.
+#   2. pa11y-ci at WCAG2AAA across 12 representative pages.
+# The deployed docs/ is regenerated in-job, so a source change that breaks
+# a gate can never merge green.
+
+on:
+  push:
+    branches: [main, "feat/**"]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache ssg binary
+        id: cache-ssg
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo/bin/ssg
+          key: ssg-0.0.47-${{ runner.os }}
+
+      - name: Install ssg 0.0.47
+        if: steps.cache-ssg.outputs.cache-hit != 'true'
+        run: cargo install ssg --locked --version 0.0.47
+
+      - name: Build site
+        run: ./build.sh
+
+      - name: Audit gates (fail on warnings)
+        run: ssg audit -f ssg.toml -o docs --severity warn --fail-on warn
+
+      - name: Set up Node for pa11y
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Accessibility scan (pa11y-ci, WCAG2AAA)
+        run: |
+          (cd docs && python3 -m http.server 8899 &)
+          sleep 2
+          npx -y pa11y-ci@4.1.1

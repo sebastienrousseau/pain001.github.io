@@ -50,8 +50,9 @@ _CONTAINERS = [
 CSP_META = (
     "<meta content=\"default-src 'self'; base-uri 'self'; "
     "object-src 'none'; img-src 'self' https://cloudcdn.pro data:; "
-    "style-src 'self' ; script-src 'self' ; connect-src 'self'; "
-    "font-src 'self'; form-action 'self' https://formspree.io\" "
+    "style-src 'self' ; script-src 'self'  'wasm-unsafe-eval'; "
+    "connect-src 'self'; font-src 'self'; "
+    "form-action 'self' https://formspree.io\" "
     "http-equiv=Content-Security-Policy>"
 )
 OG_IMAGE_META = (
@@ -226,6 +227,34 @@ def stamp_table_labels(html: str) -> str:
     return _TABLE_RE.sub(process, html)
 
 
+# ssg's markdown renderer emits presentational align attributes on table
+# cells, which fail WCAG H49 (163 AAA errors across the site). CSS handles
+# alignment; strip the attribute.
+_ALIGN_ATTR_RE = re.compile(r"(<t[dhr]\b[^>]*?)\s+align=\"?[a-z]+\"?")
+
+
+def strip_align_attrs(html: str) -> str:
+    return _ALIGN_ATTR_RE.sub(r"\1", html)
+
+
+_BODY_LINK_RE = re.compile(r"<link rel=\"stylesheet\"[^>]*>")
+
+
+def relocate_body_stylesheets(html: str) -> str:
+    """ssg's search widget injects its <link rel=stylesheet> inside <body>,
+    which fails WCAG H59 (link elements belong in <head>). Move any
+    body-level stylesheet links into the head, preserving SRI attributes."""
+    head_end = html.find("</head>")
+    if head_end == -1:
+        return html
+    body = html[head_end:]
+    moved = _BODY_LINK_RE.findall(body)
+    if not moved:
+        return html
+    body = _BODY_LINK_RE.sub("", body)
+    return html[:head_end] + "".join(moved) + body
+
+
 def fix_tag_pages(site: Path) -> None:
     for page in site.glob("tags/*/index.html"):
         html = page.read_text(encoding="utf-8")
@@ -269,8 +298,14 @@ def main() -> None:
     repaired = 0
     for page in site.rglob("*.html"):
         html = page.read_text(encoding="utf-8")
-        fixed = stamp_table_labels(
-            add_article_furniture(fix_body(dedupe_head_metas(fix_head(html))))
+        fixed = relocate_body_stylesheets(
+            strip_align_attrs(
+                stamp_table_labels(
+                    add_article_furniture(
+                        fix_body(dedupe_head_metas(fix_head(html)))
+                    )
+                )
+            )
         )
         if fixed != html:
             page.write_text(fixed, encoding="utf-8")

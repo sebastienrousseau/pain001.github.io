@@ -17,7 +17,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="MT101 to pain.001 Conversion: pain001-loader-mt101">
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self' ; script-src 'self' ; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self' ; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
     <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -37,7 +37,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/20a2366bc58a1197.css" integrity="sha384-AMr9vELhHsmdVVr5QedG1CQQxPLlYRE5rMmO54ogw/iMaV6Cdpu0506FtqNU5WtF" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8dbe0c0a5fc3fc89.css" integrity="sha384-z0ftlitySP0oG+y6oB21iIKDkI4UEYSNYGarvDwXbkj/eb9fSrpmHH8Z0P/IZmsQ" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -51,7 +51,7 @@
 <meta name="twitter:description" content="Home MT101 to pain.001 Conversion: pain001-loader-mt101 Legacy migration MT101 to pain.001 Conversion: pain001-loader-mt101 One function that parses legacy">
 <meta name="twitter:image" content="https://cloudcdn.pro/pain001/v1/logos/pain001.svg">
 <link rel="canonical" href="https://pain001.com/pain001-loader-mt101/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
-</head>
+<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"></head>
 
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -127,61 +127,61 @@
 <div class="table-responsive"><table class="table">
 <thead>
 <tr>
-<th align="left">MT101 tag</th>
-<th align="left">Meaning</th>
-<th align="left">pain.001 field</th>
+<th>MT101 tag</th>
+<th>Meaning</th>
+<th>pain.001 field</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td data-label="MT101 tag" align="left" class="text-left"><code>:20:</code> (Seq A)</td>
-<td data-label="Meaning" align="left" class="text-left">Sender's reference</td>
-<td data-label="pain.001 field" align="left" class="text-left"><code>id</code>, <code>payment_information_id</code></td>
+<td data-label="MT101 tag" class="text-left"><code>:20:</code> (Seq A)</td>
+<td data-label="Meaning" class="text-left">Sender's reference</td>
+<td data-label="pain.001 field" class="text-left"><code>id</code>, <code>payment_information_id</code></td>
 </tr>
 <tr>
-<td data-label="MT101 tag" align="left" class="text-left"><code>:30:</code> (Seq A)</td>
-<td data-label="Meaning" align="left" class="text-left">Requested execution date (YYMMDD)</td>
-<td data-label="pain.001 field" align="left" class="text-left"><code>date</code>, <code>requested_execution_date</code></td>
+<td data-label="MT101 tag" class="text-left"><code>:30:</code> (Seq A)</td>
+<td data-label="Meaning" class="text-left">Requested execution date (YYMMDD)</td>
+<td data-label="pain.001 field" class="text-left"><code>date</code>, <code>requested_execution_date</code></td>
 </tr>
 <tr>
-<td data-label="MT101 tag" align="left" class="text-left"><code>:21:</code> (Seq B)</td>
-<td data-label="Meaning" align="left" class="text-left">Transaction reference</td>
-<td data-label="pain.001 field" align="left" class="text-left"><code>payment_id</code></td>
+<td data-label="MT101 tag" class="text-left"><code>:21:</code> (Seq B)</td>
+<td data-label="Meaning" class="text-left">Transaction reference</td>
+<td data-label="pain.001 field" class="text-left"><code>payment_id</code></td>
 </tr>
 <tr>
-<td data-label="MT101 tag" align="left" class="text-left"><code>:32B:</code></td>
-<td data-label="Meaning" align="left" class="text-left">Currency + amount</td>
-<td data-label="pain.001 field" align="left" class="text-left"><code>currency</code>, <code>payment_amount</code></td>
+<td data-label="MT101 tag" class="text-left"><code>:32B:</code></td>
+<td data-label="Meaning" class="text-left">Currency + amount</td>
+<td data-label="pain.001 field" class="text-left"><code>currency</code>, <code>payment_amount</code></td>
 </tr>
 <tr>
-<td data-label="MT101 tag" align="left" class="text-left"><code>:50H:</code> <code>:50G:</code> <code>:50F:</code> <code>:50K:</code> <code>:50A:</code> <code>:50:</code></td>
-<td data-label="Meaning" align="left" class="text-left">Ordering customer</td>
-<td data-label="pain.001 field" align="left" class="text-left"><code>debtor_name</code>, <code>debtor_account_IBAN</code>, <code>initiator_name</code></td>
+<td data-label="MT101 tag" class="text-left"><code>:50H:</code> <code>:50G:</code> <code>:50F:</code> <code>:50K:</code> <code>:50A:</code> <code>:50:</code></td>
+<td data-label="Meaning" class="text-left">Ordering customer</td>
+<td data-label="pain.001 field" class="text-left"><code>debtor_name</code>, <code>debtor_account_IBAN</code>, <code>initiator_name</code></td>
 </tr>
 <tr>
-<td data-label="MT101 tag" align="left" class="text-left"><code>:52A:</code> <code>:52C:</code> <code>:52D:</code></td>
-<td data-label="Meaning" align="left" class="text-left">Account servicing institution</td>
-<td data-label="pain.001 field" align="left" class="text-left"><code>debtor_agent_BIC</code></td>
+<td data-label="MT101 tag" class="text-left"><code>:52A:</code> <code>:52C:</code> <code>:52D:</code></td>
+<td data-label="Meaning" class="text-left">Account servicing institution</td>
+<td data-label="pain.001 field" class="text-left"><code>debtor_agent_BIC</code></td>
 </tr>
 <tr>
-<td data-label="MT101 tag" align="left" class="text-left"><code>:57A:</code> <code>:57C:</code> <code>:57D:</code> (Seq B)</td>
-<td data-label="Meaning" align="left" class="text-left">Account with institution</td>
-<td data-label="pain.001 field" align="left" class="text-left"><code>creditor_agent_BIC</code></td>
+<td data-label="MT101 tag" class="text-left"><code>:57A:</code> <code>:57C:</code> <code>:57D:</code> (Seq B)</td>
+<td data-label="Meaning" class="text-left">Account with institution</td>
+<td data-label="pain.001 field" class="text-left"><code>creditor_agent_BIC</code></td>
 </tr>
 <tr>
-<td data-label="MT101 tag" align="left" class="text-left"><code>:59:</code> <code>:59A:</code> <code>:59F:</code> (Seq B)</td>
-<td data-label="Meaning" align="left" class="text-left">Beneficiary</td>
-<td data-label="pain.001 field" align="left" class="text-left"><code>creditor_name</code>, <code>creditor_account_IBAN</code></td>
+<td data-label="MT101 tag" class="text-left"><code>:59:</code> <code>:59A:</code> <code>:59F:</code> (Seq B)</td>
+<td data-label="Meaning" class="text-left">Beneficiary</td>
+<td data-label="pain.001 field" class="text-left"><code>creditor_name</code>, <code>creditor_account_IBAN</code></td>
 </tr>
 <tr>
-<td data-label="MT101 tag" align="left" class="text-left"><code>:70:</code></td>
-<td data-label="Meaning" align="left" class="text-left">Remittance information</td>
-<td data-label="pain.001 field" align="left" class="text-left"><code>remittance_information</code> (truncated to 140 chars)</td>
+<td data-label="MT101 tag" class="text-left"><code>:70:</code></td>
+<td data-label="Meaning" class="text-left">Remittance information</td>
+<td data-label="pain.001 field" class="text-left"><code>remittance_information</code> (truncated to 140 chars)</td>
 </tr>
 <tr>
-<td data-label="MT101 tag" align="left" class="text-left"><code>:71A:</code></td>
-<td data-label="Meaning" align="left" class="text-left">Details of charges</td>
-<td data-label="pain.001 field" align="left" class="text-left"><code>charge_bearer</code> (<code>OUR</code>→<code>DEBT</code>, <code>BEN</code>→<code>CRED</code>, <code>SHA</code>→<code>SHAR</code>)</td>
+<td data-label="MT101 tag" class="text-left"><code>:71A:</code></td>
+<td data-label="Meaning" class="text-left">Details of charges</td>
+<td data-label="pain.001 field" class="text-left"><code>charge_bearer</code> (<code>OUR</code>→<code>DEBT</code>, <code>BEN</code>→<code>CRED</code>, <code>SHA</code>→<code>SHAR</code>)</td>
 </tr>
 </tbody>
 </table></div>
@@ -255,6 +255,7 @@
             <li><a href="/es/" hreflang="es" lang="es">Español</a></li>
           </ul>
           <ul>
+            <li><a href="/accessibility/">Accessibility</a></li>
             <li><a href="/privacy/">Privacy</a></li>
             <li><a href="/terms/">Terms</a></li>
             <li><a href="/contact/">Contact</a></li>
@@ -312,7 +313,7 @@
   
 <!-- SSG Search Widget -->
 <div id="ssg-search-widget">
-<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous">
+
 <!-- Search trigger button -->
 <button id="ssg-search-btn" type="button" aria-label="Search">
 <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>

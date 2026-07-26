@@ -17,7 +17,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="pain001-mcp: The MCP Server for ISO 20022 Payments">
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self' ; script-src 'self' ; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self' ; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
     <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -37,7 +37,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/20a2366bc58a1197.css" integrity="sha384-AMr9vELhHsmdVVr5QedG1CQQxPLlYRE5rMmO54ogw/iMaV6Cdpu0506FtqNU5WtF" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8dbe0c0a5fc3fc89.css" integrity="sha384-z0ftlitySP0oG+y6oB21iIKDkI4UEYSNYGarvDwXbkj/eb9fSrpmHH8Z0P/IZmsQ" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -51,7 +51,7 @@
 <meta name="twitter:description" content="Home pain001-mcp: The MCP Server for ISO 20022 Payments AI agents pain001-mcp: The MCP Server for ISO 20022 Payments Seventeen read-only tools that let AI">
 <meta name="twitter:image" content="https://cloudcdn.pro/pain001/v1/logos/pain001.svg">
 <link rel="canonical" href="https://pain001.com/pain001-mcp/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
-</head>
+<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"></head>
 
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -118,78 +118,78 @@
 <div class="table-responsive"><table class="table">
 <thead>
 <tr>
-<th align="left">Tool</th>
-<th align="left">What it does</th>
+<th>Tool</th>
+<th>What it does</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td data-label="Tool" align="left" class="text-left"><code>list_message_types</code></td>
-<td data-label="What it does" align="left" class="text-left">List the 11 supported message definitions with human-readable names.</td>
+<td data-label="Tool" class="text-left"><code>list_message_types</code></td>
+<td data-label="What it does" class="text-left">List the 11 supported message definitions with human-readable names.</td>
 </tr>
 <tr>
-<td data-label="Tool" align="left" class="text-left"><code>get_required_fields</code></td>
-<td data-label="What it does" align="left" class="text-left">Return the required input fields for a message type.</td>
+<td data-label="Tool" class="text-left"><code>get_required_fields</code></td>
+<td data-label="What it does" class="text-left">Return the required input fields for a message type.</td>
 </tr>
 <tr>
-<td data-label="Tool" align="left" class="text-left"><code>get_input_schema</code></td>
-<td data-label="What it does" align="left" class="text-left">Return the full JSON Schema for a message type.</td>
+<td data-label="Tool" class="text-left"><code>get_input_schema</code></td>
+<td data-label="What it does" class="text-left">Return the full JSON Schema for a message type.</td>
 </tr>
 <tr>
-<td data-label="Tool" align="left" class="text-left"><code>validate_records</code></td>
-<td data-label="What it does" align="left" class="text-left">Validate flat payment records against the input schema.</td>
+<td data-label="Tool" class="text-left"><code>validate_records</code></td>
+<td data-label="What it does" class="text-left">Validate flat payment records against the input schema.</td>
 </tr>
 <tr>
-<td data-label="Tool" align="left" class="text-left"><code>validate_identifier</code></td>
-<td data-label="What it does" align="left" class="text-left">Check a single IBAN (ISO 13616 mod-97) or BIC (ISO 9362).</td>
+<td data-label="Tool" class="text-left"><code>validate_identifier</code></td>
+<td data-label="What it does" class="text-left">Check a single IBAN (ISO 13616 mod-97) or BIC (ISO 9362).</td>
 </tr>
 <tr>
-<td data-label="Tool" align="left" class="text-left"><code>generate_message</code></td>
-<td data-label="What it does" align="left" class="text-left">Generate XSD-validated pain XML from in-memory records.</td>
+<td data-label="Tool" class="text-left"><code>generate_message</code></td>
+<td data-label="What it does" class="text-left">Generate XSD-validated pain XML from in-memory records.</td>
 </tr>
 <tr>
-<td data-label="Tool" align="left" class="text-left"><code>generate_message_async</code></td>
-<td data-label="What it does" align="left" class="text-left">Off-event-loop generation for large batches.</td>
+<td data-label="Tool" class="text-left"><code>generate_message_async</code></td>
+<td data-label="What it does" class="text-left">Off-event-loop generation for large batches.</td>
 </tr>
 <tr>
-<td data-label="Tool" align="left" class="text-left"><code>generate_message_from_file</code></td>
-<td data-label="What it does" align="left" class="text-left">Generate XML from a CSV file on disk.</td>
+<td data-label="Tool" class="text-left"><code>generate_message_from_file</code></td>
+<td data-label="What it does" class="text-left">Generate XML from a CSV file on disk.</td>
 </tr>
 <tr>
-<td data-label="Tool" align="left" class="text-left"><code>list_supported_formats</code></td>
-<td data-label="What it does" align="left" class="text-left">List loadable on-disk formats (CSV, SQLite, JSON, JSONL, Parquet).</td>
+<td data-label="Tool" class="text-left"><code>list_supported_formats</code></td>
+<td data-label="What it does" class="text-left">List loadable on-disk formats (CSV, SQLite, JSON, JSONL, Parquet).</td>
 </tr>
 <tr>
-<td data-label="Tool" align="left" class="text-left"><code>parse_camt053</code></td>
-<td data-label="What it does" align="left" class="text-left">Parse a camt.053 bank statement XML file.</td>
+<td data-label="Tool" class="text-left"><code>parse_camt053</code></td>
+<td data-label="What it does" class="text-left">Parse a camt.053 bank statement XML file.</td>
 </tr>
 <tr>
-<td data-label="Tool" align="left" class="text-left"><code>parse_pain002</code></td>
-<td data-label="What it does" align="left" class="text-left">Parse a pain.002 payment status report.</td>
+<td data-label="Tool" class="text-left"><code>parse_pain002</code></td>
+<td data-label="What it does" class="text-left">Parse a pain.002 payment status report.</td>
 </tr>
 <tr>
-<td data-label="Tool" align="left" class="text-left"><code>inspect_template</code></td>
-<td data-label="What it does" align="left" class="text-left">Show the CSV column headers of a bundled template.</td>
+<td data-label="Tool" class="text-left"><code>inspect_template</code></td>
+<td data-label="What it does" class="text-left">Show the CSV column headers of a bundled template.</td>
 </tr>
 <tr>
-<td data-label="Tool" align="left" class="text-left"><code>validate_payment_scheme</code></td>
-<td data-label="What it does" align="left" class="text-left">Enforce a scheme rulebook: SEPA SCT, Instant, SDD Core, B2B, or cross-border.</td>
+<td data-label="Tool" class="text-left"><code>validate_payment_scheme</code></td>
+<td data-label="What it does" class="text-left">Enforce a scheme rulebook: SEPA SCT, Instant, SDD Core, B2B, or cross-border.</td>
 </tr>
 <tr>
-<td data-label="Tool" align="left" class="text-left"><code>migrate_records</code></td>
-<td data-label="What it does" align="left" class="text-left">Migrate records between pain.001 versions (e.g. <code>.03</code> → <code>.09</code>).</td>
+<td data-label="Tool" class="text-left"><code>migrate_records</code></td>
+<td data-label="What it does" class="text-left">Migrate records between pain.001 versions (e.g. <code>.03</code> → <code>.09</code>).</td>
 </tr>
 <tr>
-<td data-label="Tool" align="left" class="text-left"><code>validate_xml_against_schema</code></td>
-<td data-label="What it does" align="left" class="text-left">Validate raw XML against the bundled official XSD.</td>
+<td data-label="Tool" class="text-left"><code>validate_xml_against_schema</code></td>
+<td data-label="What it does" class="text-left">Validate raw XML against the bundled official XSD.</td>
 </tr>
 <tr>
-<td data-label="Tool" align="left" class="text-left"><code>sanitize_to_iso20022_charset</code></td>
-<td data-label="What it does" align="left" class="text-left">Transliterate text to the ISO 20022 Latin character set.</td>
+<td data-label="Tool" class="text-left"><code>sanitize_to_iso20022_charset</code></td>
+<td data-label="What it does" class="text-left">Transliterate text to the ISO 20022 Latin character set.</td>
 </tr>
 <tr>
-<td data-label="Tool" align="left" class="text-left"><code>convert_mt101</code></td>
-<td data-label="What it does" align="left" class="text-left">Convert a legacy SWIFT MT101 message into pain.001 records.</td>
+<td data-label="Tool" class="text-left"><code>convert_mt101</code></td>
+<td data-label="What it does" class="text-left">Convert a legacy SWIFT MT101 message into pain.001 records.</td>
 </tr>
 </tbody>
 </table></div>
@@ -288,6 +288,7 @@
             <li><a href="/es/" hreflang="es" lang="es">Español</a></li>
           </ul>
           <ul>
+            <li><a href="/accessibility/">Accessibility</a></li>
             <li><a href="/privacy/">Privacy</a></li>
             <li><a href="/terms/">Terms</a></li>
             <li><a href="/contact/">Contact</a></li>
@@ -345,7 +346,7 @@
   
 <!-- SSG Search Widget -->
 <div id="ssg-search-widget">
-<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous">
+
 <!-- Search trigger button -->
 <button id="ssg-search-btn" type="button" aria-label="Search">
 <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>

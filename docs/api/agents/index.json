@@ -1,7 +1,7 @@
 {
   "api": "ssg-agent-api",
   "counts": {
-    "posts": 35,
+    "posts": 36,
     "topics": 7
   },
   "links": {
@@ -17,5 +17,5 @@
     "title": "Pain001 — ISO 20022 Payment Initiation Suite",
     "url": "https://pain001.com"
   },
-  "version": "0.0.47"
+  "version": "0.0.48"
 }

@@ -17,7 +17,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Install Pain001: pip, Docker and First Validated File">
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self' ; script-src 'self' ; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self' ; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
     <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -37,7 +37,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/20a2366bc58a1197.css" integrity="sha384-AMr9vELhHsmdVVr5QedG1CQQxPLlYRE5rMmO54ogw/iMaV6Cdpu0506FtqNU5WtF" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8dbe0c0a5fc3fc89.css" integrity="sha384-z0ftlitySP0oG+y6oB21iIKDkI4UEYSNYGarvDwXbkj/eb9fSrpmHH8Z0P/IZmsQ" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -51,7 +51,7 @@
 <meta name="twitter:description" content="Home Install Pain001: pip, Docker and First Validated File Get started Install Pain001: pip, Docker and First Validated File Python 3.10–3.12, pip or Docker,">
 <meta name="twitter:image" content="https://cloudcdn.pro/pain001/v1/logos/pain001.svg">
 <link rel="canonical" href="https://pain001.com/installation/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
-</head>
+<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"></head>
 
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -117,38 +117,38 @@
 <div class="table-responsive"><table class="table">
 <thead>
 <tr>
-<th align="left">What you need</th>
-<th align="left">Command</th>
+<th>What you need</th>
+<th>Command</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td data-label="What you need" align="left" class="text-left">Core CLI & Python library</td>
-<td data-label="Command" align="left" class="text-left"><code>pip install pain001</code></td>
+<td data-label="What you need" class="text-left">Core CLI & Python library</td>
+<td data-label="Command" class="text-left"><code>pip install pain001</code></td>
 </tr>
 <tr>
-<td data-label="What you need" align="left" class="text-left">REST API microservice (FastAPI + Uvicorn)</td>
-<td data-label="Command" align="left" class="text-left"><code>pip install "pain001[api]"</code></td>
+<td data-label="What you need" class="text-left">REST API microservice (FastAPI + Uvicorn)</td>
+<td data-label="Command" class="text-left"><code>pip install "pain001[api]"</code></td>
 </tr>
 <tr>
-<td data-label="What you need" align="left" class="text-left">Parquet ingestion (PyArrow)</td>
-<td data-label="Command" align="left" class="text-left"><code>pip install "pain001[parquet]"</code></td>
+<td data-label="What you need" class="text-left">Parquet ingestion (PyArrow)</td>
+<td data-label="Command" class="text-left"><code>pip install "pain001[parquet]"</code></td>
 </tr>
 <tr>
-<td data-label="What you need" align="left" class="text-left">PGP-encrypted input files (<code>.gpg</code> / <code>.asc</code>)</td>
-<td data-label="Command" align="left" class="text-left"><code>pip install "pain001[gpg]"</code></td>
+<td data-label="What you need" class="text-left">PGP-encrypted input files (<code>.gpg</code> / <code>.asc</code>)</td>
+<td data-label="Command" class="text-left"><code>pip install "pain001[gpg]"</code></td>
 </tr>
 <tr>
-<td data-label="What you need" align="left" class="text-left">Redis-backed async job queue for the API</td>
-<td data-label="Command" align="left" class="text-left"><code>pip install "pain001[redis]"</code></td>
+<td data-label="What you need" class="text-left">Redis-backed async job queue for the API</td>
+<td data-label="Command" class="text-left"><code>pip install "pain001[redis]"</code></td>
 </tr>
 <tr>
-<td data-label="What you need" align="left" class="text-left">OpenTelemetry tracing</td>
-<td data-label="Command" align="left" class="text-left"><code>pip install "pain001[otel]"</code></td>
+<td data-label="What you need" class="text-left">OpenTelemetry tracing</td>
+<td data-label="Command" class="text-left"><code>pip install "pain001[otel]"</code></td>
 </tr>
 <tr>
-<td data-label="What you need" align="left" class="text-left">Built-in minimal MCP / LSP servers</td>
-<td data-label="Command" align="left" class="text-left"><code>pip install "pain001[mcp]"</code> / <code>"pain001[lsp]"</code></td>
+<td data-label="What you need" class="text-left">Built-in minimal MCP / LSP servers</td>
+<td data-label="Command" class="text-left"><code>pip install "pain001[mcp]"</code> / <code>"pain001[lsp]"</code></td>
 </tr>
 </tbody>
 </table></div>
@@ -254,6 +254,7 @@
             <li><a href="/es/" hreflang="es" lang="es">Español</a></li>
           </ul>
           <ul>
+            <li><a href="/accessibility/">Accessibility</a></li>
             <li><a href="/privacy/">Privacy</a></li>
             <li><a href="/terms/">Terms</a></li>
             <li><a href="/contact/">Contact</a></li>
@@ -311,7 +312,7 @@
   
 <!-- SSG Search Widget -->
 <div id="ssg-search-widget">
-<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous">
+
 <!-- Search trigger button -->
 <button id="ssg-search-btn" type="button" aria-label="Search">
 <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>

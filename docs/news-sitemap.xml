@@ -26,6 +26,18 @@
   </news:news>
 </url>
 <url>
+  <loc>https://pain001.com/accessibility/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Accessibility Statement</news:title>
+    <news:keywords>accessibility statement, WCAG 2.2 AAA, pa11y, contrast ratio, keyboard navigation, inclusive design, a11y</news:keywords>
+  </news:news>
+</url>
+<url>
   <loc>https://pain001.com/architecture-and-patents/</loc>
   <news:news>
     <news:publication>

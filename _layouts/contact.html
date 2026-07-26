@@ -13,7 +13,7 @@
     <meta property="og:image:alt" content="Pain001 logo" />
     {{twitter}}
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
@@ -132,6 +132,15 @@
       article a { color: var(--link); }
       article p, article li { margin-bottom: 0.75rem; }
       article ul { padding-left: 1.5rem; }
+
+      /* AAA overrides for ssg's injected search widget: its own stylesheet
+         ships 6.3-6.9:1 labels; force token colours (>= 7:1 both themes). */
+      #ssg-search-btn, #ssg-search-btn span { color: var(--text-muted) !important; }
+      #ssg-search-btn kbd {
+        color: var(--text-main) !important;
+        background: var(--bg-page) !important;
+        border-color: var(--border-color) !important;
+      }
     </style>
   </head>
   <body>
