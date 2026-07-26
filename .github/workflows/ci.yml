@@ -50,7 +50,7 @@ jobs:
           node-version: 22
 
       - name: Unit tests (demo validation rules)
-        run: node --test tests/
+        run: node --test tests/*.test.mjs
 
       - name: Accessibility scan (pa11y-ci, WCAG2AAA)
         run: |
