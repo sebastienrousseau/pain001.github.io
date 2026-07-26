@@ -170,6 +170,18 @@
   </news:news>
 </url>
 <url>
+  <loc>https://pain001.com/iso20022-roadmap/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>ISO 20022 Roadmap: Every Deadline Through 2028</news:title>
+    <news:keywords>ISO 20022 roadmap, ISO 20022 deadlines, CHAPS purpose codes 2027, camt.110 investigations, MT104 MT107 phase out 2028, MT940 retirement, structured address 2026, verification of payee 2027, SWIFT standards release</news:keywords>
+  </news:news>
+</url>
+<url>
   <loc>https://pain001.com/made-with-shokunin/</loc>
   <news:news>
     <news:publication>
@@ -359,6 +371,18 @@
     <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
     <news:title>pain001-mcp: The MCP Server for ISO 20022 Payments</news:title>
     <news:keywords>pain001-mcp, MCP server payments, ISO 20022 AI agent, Model Context Protocol finance, Claude payment tools, agentic payments, pain.001 generation AI</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/pain002-reason-codes/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.002 Reason Codes: Why Banks Reject Payment Files</news:title>
+    <news:keywords>pain.002 reason codes, pain.002 reject codes, RJCT reason, AC01, AC04, AM04, AM10, FF01, MS03, payment rejected bank, SEPA reject codes, ExternalStatusReason, ISO 20022 status codes</news:keywords>
   </news:news>
 </url>
 <url>

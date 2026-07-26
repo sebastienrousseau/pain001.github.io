@@ -3,7 +3,7 @@ author: "contact@pain001.com (Sebastien Rousseau)"
 banner_alt: "A question-and-answer session on ISO 20022 payment file generation — the questions treasury, operations, engineering, and audit teams actually ask."
 banner_height: 500
 banner_width: 1200
-banner: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+banner: "https://pain001.com/og/pain001-card.jpg"
 cdn: "https://cloudcdn.pro"
 changefreq: weekly
 charset: utf-8
@@ -69,7 +69,7 @@ msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: @wwdseb
 twitter_description: "Why banks reject payment files, pain.001 vs pain.008, the November 2026 deadlines, streaming large batches, security posture, and audit reproducibility — answered plainly."
-twitter_image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: @wwdseb
 twitter_title: "Pain001 FAQs for Treasury, Ops, Engineering and Audit"

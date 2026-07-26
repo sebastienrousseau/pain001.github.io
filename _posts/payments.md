@@ -3,7 +3,7 @@ author: "contact@pain001.com (Sebastien Rousseau)"
 banner_alt: "A payment batch moving through origination, validation, bank submission, acknowledgement, and statement reconciliation — the lifecycle Pain001 instruments end to end."
 banner_height: 500
 banner_width: 1200
-banner: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+banner: "https://pain001.com/og/pain001-card.jpg"
 cdn: "https://cloudcdn.pro"
 changefreq: weekly
 charset: utf-8
@@ -69,7 +69,7 @@ msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: @wwdseb
 twitter_description: "From ERP export to pain.002 acknowledgement to camt.053 reconciliation — designing batch, streaming, and API payment pipelines around validation gates that stop rejections."
-twitter_image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: @wwdseb
 twitter_title: "Payment Initiation End to End with Pain001"
@@ -97,7 +97,7 @@ Where Pain001 sits in a corporate payment flow, and how to design the pipeline a
 1. **Origination.** Accounts payable, payroll, or treasury produces a batch — usually an ERP export, a spreadsheet, or rows in a database.
 2. **Generation.** Pain001 ingests the batch (CSV, Excel, SQLite, JSON, JSONL, Parquet, or MT101), normalises fields, validates every record, and renders `pain.001` XML that passes the official XSD.
 3. **Submission.** The file goes to the bank over your existing channel — host-to-host SFTP, EBICS, SWIFT FileAct, or a bank portal. Pain001 deliberately stops at the file boundary; connectivity is your bank relationship, not your toolchain.
-4. **Acknowledgement.** The bank answers with `pain.002` status reports — accepted, partially accepted, or rejected with reason codes. Pain001's built-in **pain.002 parser** turns those into structured data your systems can route.
+4. **Acknowledgement.** The bank answers with `pain.002` status reports (decoded code-by-code in the [reason-code reference](/pain002-reason-codes/)) — accepted, partially accepted, or rejected with reason codes. Pain001's built-in **pain.002 parser** turns those into structured data your systems can route.
 5. **Reconciliation.** End-of-day `camt.053` statements confirm what actually settled. Pain001 parses those too, closing the loop from instruction to statement.
 
 Initiate, acknowledge, reconcile. One toolchain covers all three message legs.

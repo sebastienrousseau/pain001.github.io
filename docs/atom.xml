@@ -132,6 +132,15 @@
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
+    <title>ISO 20022 Roadmap: Every Deadline Through 2028</title>
+    <link href="https://pain001.com/iso20022-roadmap/"/>
+    <id>https://pain001.com/iso20022-roadmap/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>The living schedule of ISO 20022 mandates: 14 Nov 2026 structured addresses and MT101 retirement, 2027 CHAPS purpose codes and camt investigations, 2028 statement and direct-debit migration — primary-sourced and dated.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
     <title>Made with Shokunin: How This Site Is Built</title>
     <link href="https://pain001.com/made-with-shokunin/"/>
     <id>https://pain001.com/made-with-shokunin/</id>
@@ -273,6 +282,15 @@
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
     <summary>17 Model Context Protocol tools for AI agents — validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain.002 Reason Codes: Why Banks Reject Payment Files</title>
+    <link href="https://pain001.com/pain002-reason-codes/"/>
+    <id>https://pain001.com/pain002-reason-codes/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Every pain.002 status code (RJCT, ACWC, PART…) and the ISO reason codes behind rejections — AC01, AM10, FF01, DU01, RR01 — with the typical cause and the practical fix for each.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>

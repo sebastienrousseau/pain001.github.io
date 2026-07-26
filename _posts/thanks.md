@@ -3,7 +3,7 @@ author: "contact@pain001.com (Sebastien Rousseau)"
 banner_alt: "A confirmation page acknowledging a message sent to the Pain001 project."
 banner_height: 500
 banner_width: 1200
-banner: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+banner: "https://pain001.com/og/pain001-card.jpg"
 cdn: "https://cloudcdn.pro"
 changefreq: weekly
 charset: utf-8
@@ -69,7 +69,7 @@ msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: @wwdseb
 twitter_description: "Your message is on its way. Meanwhile: install Pain001, read the 2026 ISO 20022 briefing, or star the project on GitHub."
-twitter_image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: @wwdseb
 twitter_title: "Thank You — Message Received"

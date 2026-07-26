@@ -330,6 +330,29 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
+      "content_html": "The living schedule of ISO 20022 mandates: 14 Nov 2026 structured addresses and MT101 retirement, 2027 CHAPS purpose codes and camt investigations, 2028 statement and direct-debit migration — primary-sourced and dated.",
+      "date_modified": "2026-07-26T08:00:00+00:00",
+      "date_published": "2026-07-26T08:00:00+00:00",
+      "id": "https://pain001.com/iso20022-roadmap/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "ISO 20022 Roadmap: Every Deadline Through 2028",
+      "url": "https://pain001.com/iso20022-roadmap/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
       "content_html": "A Rust static site generator with security-first defaults, Markdown content, no JavaScript framework, and machine-readable surfaces from llms.txt to a CycloneDX SBOM.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
@@ -691,6 +714,29 @@
       ],
       "title": "pain001-mcp: The MCP Server for ISO 20022 Payments",
       "url": "https://pain001.com/pain001-mcp/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Every pain.002 status code (RJCT, ACWC, PART…) and the ISO reason codes behind rejections — AC01, AM10, FF01, DU01, RR01 — with the typical cause and the practical fix for each.",
+      "date_modified": "2026-07-26T08:00:00+00:00",
+      "date_published": "2026-07-26T08:00:00+00:00",
+      "id": "https://pain001.com/pain002-reason-codes/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "pain.002 Reason Codes: Why Banks Reject Payment Files",
+      "url": "https://pain001.com/pain002-reason-codes/"
     },
     {
       "authors": [

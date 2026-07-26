@@ -57,8 +57,8 @@ CSP_META = (
 )
 OG_IMAGE_META = (
     '<meta property="og:image" '
-    'content="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />'
-    '<meta property="og:image:alt" content="Pain001 logo" />'
+    'content="https://pain001.com/og/pain001-card.jpg" />'
+    '<meta property="og:image:alt" content="Pain001 — payment files your bank will not reject" />'
 )
 
 

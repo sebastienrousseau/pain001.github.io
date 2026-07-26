@@ -3,7 +3,7 @@ author: "contact@pain001.com (Sebastien Rousseau)"
 banner_alt: "Open-Source-Python-Suite zur Erzeugung XSD-validierter pain.001- und pain.008-Dateien aus CSV, Excel, SQLite, JSON, Parquet oder SWIFT MT101 — mit MCP-Tools für KI-Agenten und LSP-Server."
 banner_height: 500
 banner_width: 1200
-banner: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+banner: "https://pain001.com/og/pain001-card.jpg"
 cdn: "https://cloudcdn.pro"
 changefreq: "monthly"
 charset: utf-8
@@ -69,7 +69,7 @@ msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: @wwdseb
 twitter_description: "Open-Source-Python-Suite zur Erzeugung XSD-validierter pain.001- und pain.008-Dateien aus CSV, Excel, SQLite, JSON, Parquet oder SWIFT MT101 — mit MCP-Tools für KI-Agenten und LSP-Server."
-twitter_image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: @wwdseb
 twitter_title: "Pain001 — Open-Source-Zahlungsinitiierung nach ISO 20022"

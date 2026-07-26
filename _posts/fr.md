@@ -3,7 +3,7 @@ author: "contact@pain001.com (Sebastien Rousseau)"
 banner_alt: "Suite Python open source pour générer des fichiers pain.001 et pain.008 validés par XSD à partir de CSV, Excel, SQLite, JSON, Parquet ou SWIFT MT101 — avec outils MCP pour agents IA et serveur LSP."
 banner_height: 500
 banner_width: 1200
-banner: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+banner: "https://pain001.com/og/pain001-card.jpg"
 cdn: "https://cloudcdn.pro"
 changefreq: "monthly"
 charset: utf-8
@@ -69,7 +69,7 @@ msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: @wwdseb
 twitter_description: "Suite Python open source pour générer des fichiers pain.001 et pain.008 validés par XSD à partir de CSV, Excel, SQLite, JSON, Parquet ou SWIFT MT101 — avec outils MCP pour agents IA et serveur LSP."
-twitter_image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: @wwdseb
 twitter_title: "Pain001 — Initiation de paiements ISO 20022 en open source"

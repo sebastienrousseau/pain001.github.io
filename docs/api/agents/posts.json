@@ -201,7 +201,7 @@
     ],
     "title": "Pain001: Open-Source ISO 20022 Payment Initiation Suite",
     "url": "https://pain001.com/index.html",
-    "wordCount": 127
+    "wordCount": 147
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -236,6 +236,23 @@
     "title": "Cross-Border pain.001 Under CBPR+: a Field Guide",
     "url": "https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/",
     "wordCount": 485
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "The living schedule of ISO 20022 mandates: 14 Nov 2026 structured addresses and MT101 retirement, 2027 CHAPS purpose codes and camt investigations, 2028 statement and direct-debit migration — primary-sourced and dated.",
+    "locale": "en_GB",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "ISO 20022 Roadmap: Every Deadline Through 2028",
+    "url": "https://pain001.com/iso20022-roadmap/",
+    "wordCount": 737
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -511,6 +528,23 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
+    "description": "Every pain.002 status code (RJCT, ACWC, PART…) and the ISO reason codes behind rejections — AC01, AM10, FF01, DU01, RR01 — with the typical cause and the practical fix for each.",
+    "locale": "en_GB",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "pain.002 Reason Codes: Why Banks Reject Payment Files",
+    "url": "https://pain001.com/pain002-reason-codes/",
+    "wordCount": 1056
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
     "description": "From ERP export to pain.002 acknowledgement to camt.053 reconciliation — designing batch, streaming, and API payment pipelines around validation gates that stop rejections.",
     "locale": "en_GB",
     "tags": [
@@ -524,7 +558,7 @@
     ],
     "title": "Payment Initiation End to End with Pain001",
     "url": "https://pain001.com/payments/",
-    "wordCount": 520
+    "wordCount": 526
   },
   {
     "date": "2026-07-26T08:00:00+00:00",

@@ -10,7 +10,9 @@
     <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
 <meta name="description" content="From ERP export to pain.002 acknowledgement to camt.053 reconciliation — designing batch, streaming, and API payment pipelines around validation gates that stop rejections.">
 <meta name="keywords" content="payment initiation pipeline, pain.002 status report, camt.053 reconciliation, payment batch processing, payment file automation, rejection handling">
-<meta property="og:image" content="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />
+<meta property="og:image" content="https://pain001.com/og/pain001-card.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="A payment batch moving through origination, validation, bank submission, acknowledgement, and statement reconciliation — the lifecycle Pain001 instruments end to end." />
     <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -49,7 +51,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Payment Initiation End to End with Pain001">
 <meta name="twitter:description" content="Home Payment Initiation End to End with Pain001 Guide Payment Initiation End to End with Pain001 From ERP export to pain.002 acknowledgement to camt.053">
-<meta name="twitter:image" content="https://cloudcdn.pro/pain001/v1/logos/pain001.svg">
+<meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg">
 <link rel="canonical" href="https://pain001.com/payments/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
 <link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"></head>
 
@@ -77,7 +79,8 @@
             <li><a href="/pain001-lsp/">LSP</a></li>
             <li><a href="/2026-iso20022-migration-trends/">2026 Briefing</a></li>
             <li><a href="/try/">Try it</a></li>
-            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/pain002-reason-codes/">pain.002 reason codes</a></li>
+              <li><a href="/glossary/">Glossary</a></li>
             <li><a href="/faqs/">FAQs</a></li>
           </ul>
         </nav>
@@ -118,7 +121,7 @@
 <li><strong>Origination.</strong> Accounts payable, payroll, or treasury produces a batch — usually an ERP export, a spreadsheet, or rows in a database.</li>
 <li><strong>Generation.</strong> Pain001 ingests the batch (CSV, Excel, SQLite, JSON, JSONL, Parquet, or MT101), normalises fields, validates every record, and renders <code>pain.001</code> XML that passes the official XSD.</li>
 <li><strong>Submission.</strong> The file goes to the bank over your existing channel — host-to-host SFTP, EBICS, SWIFT FileAct, or a bank portal. Pain001 deliberately stops at the file boundary; connectivity is your bank relationship, not your toolchain.</li>
-<li><strong>Acknowledgement.</strong> The bank answers with <code>pain.002</code> status reports — accepted, partially accepted, or rejected with reason codes. Pain001's built-in <strong>pain.002 parser</strong> turns those into structured data your systems can route.</li>
+<li><strong>Acknowledgement.</strong> The bank answers with <code>pain.002</code> status reports (decoded code-by-code in the <a href="/pain002-reason-codes/">reason-code reference</a>) — accepted, partially accepted, or rejected with reason codes. Pain001's built-in <strong>pain.002 parser</strong> turns those into structured data your systems can route.</li>
 <li><strong>Reconciliation.</strong> End-of-day <code>camt.053</code> statements confirm what actually settled. Pain001 parses those too, closing the loop from instruction to statement.</li>
 </ol>
 <p>Initiate, acknowledge, reconcile. One toolchain covers all three message legs.</p>
@@ -198,6 +201,7 @@
           <div>
             <h2 class="footer-heading">Research &amp; trust</h2>
             <ul class="footer-links">
+              <li><a href="/iso20022-roadmap/">ISO 20022 roadmap</a></li>
               <li><a href="/2026-iso20022-migration-trends/">2026 briefing</a></li>
               <li><a href="/competitors-comparison/">Comparison</a></li>
               <li><a href="/architecture-and-patents/">Architecture &amp; patents</a></li>

@@ -3,7 +3,7 @@ author: "contact@pain001.com (Sebastien Rousseau)"
 banner_alt: "A terminal rendering a validated ISO 20022 pain.001 payment file — the Pain001 suite turning everyday spreadsheets and exports into bank-ready XML."
 banner_height: 500
 banner_width: 1200
-banner: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+banner: "https://pain001.com/og/pain001-card.jpg"
 cdn: "https://cloudcdn.pro"
 changefreq: weekly
 charset: utf-8
@@ -69,7 +69,7 @@ msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: @wwdseb
 twitter_description: "Generate schema-validated ISO 20022 pain.001 and pain.008 XML from CSV, Excel, SQLite, JSON, Parquet, or SWIFT MT101 — with AI-agent MCP tools and editor LSP support."
-twitter_image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: @wwdseb
 twitter_title: "Pain001: Open-Source ISO 20022 Payment Initiation Suite"
@@ -92,6 +92,6 @@ last_reviewed: "2026-07-26"
 
 The ISO 20022 cutover is done: MT–MX coexistence on SWIFT ended on 22 November 2025, and roughly 97% of cross-border payment instructions now travel as ISO 20022. What remains is data quality, and the clock runs to **14 November 2026** — the day fully unstructured postal addresses stop being accepted in CBPR+ payments, and the interbank MT101 relay is replaced by `pain.001` version 9.
 
-Pain001 ships both requirements today: structured and hybrid address elements in generated XML, and one-command MT101 conversion. The [2026 migration briefing](/2026-iso20022-migration-trends/) maps every deadline with primary sources — no vendor fog, just dates and citations.
+Pain001 ships both requirements today: structured and hybrid address elements in generated XML, and one-command MT101 conversion. The [2026 migration briefing](/2026-iso20022-migration-trends/) maps this year's deadlines with primary sources, and the [living ISO 20022 roadmap](/iso20022-roadmap/) carries the schedule through 2028 — purpose codes, camt investigations, statement migration. The deadline is a milestone, not the finish line.
 
 Start with the [Installation Guide](/installation/), browse the [Technical Reference](/documentation/), or see [how Pain001 compares](/competitors-comparison/) — including where commercial platforms genuinely win.
