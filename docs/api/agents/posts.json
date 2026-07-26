@@ -35,6 +35,23 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
+    "description": "حزمة Python مفتوحة المصدر تُنتج ملفات pain.001 و pain.008 موثَّقة بمخططات XSD من CSV أو Excel أو SQLite أو JSON أو Parquet أو SWIFT MT101 — مع أدوات MCP لوكلاء الذكاء الاصطناعي وخادم LSP.",
+    "locale": "ar",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — بدء المدفوعات ISO 20022 مفتوح المصدر",
+    "url": "https://pain001.com/ar/",
+    "wordCount": 195
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
     "description": "Zero-trust XML parsing, decimal-exact arithmetic, validation as a hard gate, 100% branch coverage — and where Pain001 sits amid patented MT–MX transformation services.",
     "locale": "en_GB",
     "tags": [
@@ -49,6 +66,23 @@
     "title": "Architecture, Security and the Patent Landscape",
     "url": "https://pain001.com/architecture-and-patents/",
     "wordCount": 692
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "ওপেন-সোর্স Python স্যুট যা CSV, Excel, SQLite, JSON, Parquet বা SWIFT MT101 থেকে XSD-যাচাইকৃত pain.001 ও pain.008 ফাইল তৈরি করে — AI এজেন্টের জন্য MCP টুল ও LSP সার্ভারসহ।",
+    "locale": "bn_BD",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — ওপেন-সোর্স ISO 20022 পেমেন্ট সূচনা",
+    "url": "https://pain001.com/bn/",
+    "wordCount": 194
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -86,6 +120,23 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
+    "description": "Open-source sada v Pythonu generující XSD-validované soubory pain.001 a pain.008 z CSV, Excelu, SQLite, JSON, Parquet nebo SWIFT MT101 — s nástroji MCP pro AI agenty a LSP serverem.",
+    "locale": "cs_CZ",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — open-source iniciace plateb ISO 20022",
+    "url": "https://pain001.com/cs/",
+    "wordCount": 185
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
     "description": "Open-Source-Python-Suite zur Erzeugung XSD-validierter pain.001- und pain.008-Dateien aus CSV, Excel, SQLite, JSON, Parquet oder SWIFT MT101 — mit MCP-Tools für KI-Agenten und LSP-Server.",
     "locale": "de_DE",
     "tags": [
@@ -120,6 +171,23 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
+    "description": "Σουίτα Python ανοικτού κώδικα που παράγει αρχεία pain.001 και pain.008 επικυρωμένα με XSD από CSV, Excel, SQLite, JSON, Parquet ή SWIFT MT101 — με εργαλεία MCP για πράκτορες AI και διακομιστή LSP.",
+    "locale": "el_GR",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — Έναρξη πληρωμών ISO 20022 ανοικτού κώδικα",
+    "url": "https://pain001.com/el/",
+    "wordCount": 215
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
     "description": "Suite Python de código abierto para generar ficheros pain.001 y pain.008 validados por XSD desde CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101 — con herramientas MCP para agentes de IA y servidor LSP.",
     "locale": "es_ES",
     "tags": [
@@ -137,6 +205,23 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
+    "description": "مجموعهٔ متن‌باز Python برای تولید فایل‌های pain.001 و pain.008 اعتبارسنجی‌شده با XSD از CSV، Excel، SQLite، JSON، Parquet یا SWIFT MT101 — با ابزارهای MCP برای عامل‌های هوش مصنوعی و سرور LSP.",
+    "locale": "fa_IR",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — آغاز پرداخت ISO 20022 متن‌باز",
+    "url": "https://pain001.com/fa/",
+    "wordCount": 219
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
     "description": "Why banks reject payment files, pain.001 vs pain.008, the November 2026 deadlines, streaming large batches, security posture, and audit reproducibility — answered plainly.",
     "locale": "en_GB",
     "tags": [
@@ -151,6 +236,23 @@
     "title": "Pain001 FAQs for Treasury, Ops, Engineering and Audit",
     "url": "https://pain001.com/faqs/",
     "wordCount": 924
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "Open-source na Python suite na gumagawa ng XSD-validated na pain.001 at pain.008 na file mula sa CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101 — may MCP tools para sa AI agents at LSP server.",
+    "locale": "fil_PH",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — Open-source na pagsisimula ng bayad sa ISO 20022",
+    "url": "https://pain001.com/fil/",
+    "wordCount": 242
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -185,6 +287,91 @@
     "title": "ISO 20022 Payments Glossary in Plain English",
     "url": "https://pain001.com/glossary/",
     "wordCount": 698
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "Kunshin Python na buɗaɗɗen tushe da ke samar da fayilolin pain.001 da pain.008 da aka tabbatar da XSD daga CSV, Excel, SQLite, JSON, Parquet ko SWIFT MT101 — tare da kayan aikin MCP don wakilan AI da uwar garken LSP.",
+    "locale": "ha_NG",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — Fara biyan kuɗi na ISO 20022 a buɗaɗɗen tushe",
+    "url": "https://pain001.com/ha/",
+    "wordCount": 260
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "חבילת Python בקוד פתוח המפיקה קובצי pain.001 ו-pain.008 מאומתי XSD מ-CSV, Excel, SQLite, JSON, Parquet או SWIFT MT101 — עם כלי MCP לסוכני AI ושרת LSP.",
+    "locale": "he_IL",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — ייזום תשלומים ISO 20022 בקוד פתוח",
+    "url": "https://pain001.com/he/",
+    "wordCount": 182
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "ओपन-सोर्स Python सुइट जो CSV, Excel, SQLite, JSON, Parquet या SWIFT MT101 से XSD-सत्यापित pain.001 और pain.008 फ़ाइलें बनाती है — AI एजेंटों के लिए MCP टूल और LSP सर्वर के साथ।",
+    "locale": "hi_IN",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — ओपन-सोर्स ISO 20022 भुगतान आरंभ",
+    "url": "https://pain001.com/hi/",
+    "wordCount": 227
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "Nyílt forráskódú Python-csomag, amely XSD-validált pain.001 és pain.008 fájlokat készít CSV, Excel, SQLite, JSON, Parquet vagy SWIFT MT101 forrásból — MCP-eszközökkel AI-ügynökökhöz és LSP-szerverrel.",
+    "locale": "hu_HU",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — Nyílt forráskódú ISO 20022 fizetésindítás",
+    "url": "https://pain001.com/hu/",
+    "wordCount": 180
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "Suite Python sumber terbuka yang menghasilkan berkas pain.001 dan pain.008 tervalidasi XSD dari CSV, Excel, SQLite, JSON, Parquet, atau SWIFT MT101 — dengan perkakas MCP untuk agen AI dan server LSP.",
+    "locale": "id_ID",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — Inisiasi pembayaran ISO 20022 sumber terbuka",
+    "url": "https://pain001.com/id/",
+    "wordCount": 202
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -256,6 +443,74 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
+    "description": "Suite Python open source per generare file pain.001 e pain.008 validati XSD da CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101 — con strumenti MCP per agenti IA e server LSP.",
+    "locale": "it_IT",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — Iniziazione di pagamenti ISO 20022 open source",
+    "url": "https://pain001.com/it/",
+    "wordCount": 221
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "CSV・Excel・SQLite・JSON・Parquet・SWIFT MT101 から XSD 検証済みの pain.001 / pain.008 ファイルを生成するオープンソース Python スイート。AI エージェント向け MCP ツールと LSP サーバーを同梱。",
+    "locale": "ja_JP",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — オープンソースの ISO 20022 送金指図",
+    "url": "https://pain001.com/ja/",
+    "wordCount": 92
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "CSV, Excel, SQLite, JSON, Parquet 또는 SWIFT MT101에서 XSD 검증을 마친 pain.001 및 pain.008 파일을 생성하는 오픈소스 Python 스위트 — AI 에이전트용 MCP 도구와 LSP 서버 포함.",
+    "locale": "ko_KR",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — 오픈소스 ISO 20022 지급 지시",
+    "url": "https://pain001.com/ko/",
+    "wordCount": 164
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "The Pain001 overview — validation pipeline, the 14 November 2026 deadline, quickstart — translated into 34 languages, from Deutsch and 日本語 to العربية and Yorùbá, with correct hreflang and RTL support.",
+    "locale": "en_GB",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 in 34 Languages",
+    "url": "https://pain001.com/languages/",
+    "wordCount": 250
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
     "description": "A Rust static site generator with security-first defaults, Markdown content, no JavaScript framework, and machine-readable surfaces from llms.txt to a CycloneDX SBOM.",
     "locale": "en_GB",
     "tags": [
@@ -270,6 +525,57 @@
     "title": "Made with Shokunin: How This Site Is Built",
     "url": "https://pain001.com/made-with-shokunin/",
     "wordCount": 123
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "CSV, Excel, SQLite, JSON, Parquet किंवा SWIFT MT101 मधून XSD-पडताळलेल्या pain.001 आणि pain.008 फाइल्स तयार करणारे ओपन-सोर्स Python सूट — AI एजंटसाठी MCP साधने आणि LSP सर्व्हरसह.",
+    "locale": "mr_IN",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — ओपन-सोर्स ISO 20022 पेमेंट आरंभ",
+    "url": "https://pain001.com/mr/",
+    "wordCount": 193
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "Suite Python sumber terbuka yang menjana fail pain.001 dan pain.008 disahkan XSD daripada CSV, Excel, SQLite, JSON, Parquet atau SWIFT MT101 — dengan alat MCP untuk ejen AI dan pelayan LSP.",
+    "locale": "ms_MY",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — Pemulaan pembayaran ISO 20022 sumber terbuka",
+    "url": "https://pain001.com/ms/",
+    "wordCount": 205
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "Open-source Python-suite voor XSD-gevalideerde pain.001- en pain.008-bestanden uit CSV, Excel, SQLite, JSON, Parquet of SWIFT MT101 — met MCP-tools voor AI-agenten en een LSP-server.",
+    "locale": "nl_NL",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — Open-source ISO 20022-betalingsinitiatie",
+    "url": "https://pain001.com/nl/",
+    "wordCount": 188
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -562,6 +868,23 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
+    "description": "Otwartoźródłowy pakiet Python generujący pliki pain.001 i pain.008 zwalidowane XSD z CSV, Excel, SQLite, JSON, Parquet lub SWIFT MT101 — z narzędziami MCP dla agentów AI i serwerem LSP.",
+    "locale": "pl_PL",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — inicjowanie płatności ISO 20022 w open source",
+    "url": "https://pain001.com/pl/",
+    "wordCount": 188
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
     "description": "No cookies, no analytics, no tracking. The website stores only your theme choice locally, and the Pain001 software processes all payment data on your own infrastructure.",
     "locale": "en_GB",
     "tags": [
@@ -576,6 +899,91 @@
     "title": "Privacy: This Site Collects Nothing",
     "url": "https://pain001.com/privacy/",
     "wordCount": 145
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "Suíte Python de código aberto para gerar arquivos pain.001 e pain.008 validados por XSD a partir de CSV, Excel, SQLite, JSON, Parquet ou SWIFT MT101 — com ferramentas MCP para agentes de IA e servidor LSP.",
+    "locale": "pt_BR",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — Iniciação de pagamentos ISO 20022 em código aberto",
+    "url": "https://pain001.com/pt-br/",
+    "wordCount": 231
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "Suită Python open source care generează fișiere pain.001 și pain.008 validate XSD din CSV, Excel, SQLite, JSON, Parquet sau SWIFT MT101 — cu instrumente MCP pentru agenți AI și server LSP.",
+    "locale": "ro_RO",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — Inițierea plăților ISO 20022 în open source",
+    "url": "https://pain001.com/ro/",
+    "wordCount": 207
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "Python-пакет с открытым кодом: файлы pain.001 и pain.008 с XSD-валидацией из CSV, Excel, SQLite, JSON, Parquet или SWIFT MT101 — с инструментами MCP для ИИ-агентов и LSP-сервером.",
+    "locale": "ru_RU",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — инициирование платежей ISO 20022 с открытым кодом",
+    "url": "https://pain001.com/ru/",
+    "wordCount": 194
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "Python-svit med öppen källkod som genererar XSD-validerade pain.001- och pain.008-filer från CSV, Excel, SQLite, JSON, Parquet eller SWIFT MT101 — med MCP-verktyg för AI-agenter och LSP-server.",
+    "locale": "sv_SE",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — ISO 20022-betalningsinitiering med öppen källkod",
+    "url": "https://pain001.com/sv/",
+    "wordCount": 175
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "CSV, Excel, SQLite, JSON, Parquet அல்லது SWIFT MT101 இலிருந்து XSD-சரிபார்க்கப்பட்ட pain.001 மற்றும் pain.008 கோப்புகளை உருவாக்கும் திறந்த மூல Python தொகுப்பு — AI முகவர்களுக்கான MCP கருவிகள் மற்றும் LSP சேவையகத்துடன்.",
+    "locale": "ta_IN",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — திறந்த மூல ISO 20022 கட்டணத் தொடக்கம்",
+    "url": "https://pain001.com/ta/",
+    "wordCount": 178
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -596,6 +1004,23 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
+    "description": "CSV, Excel, SQLite, JSON, Parquet లేదా SWIFT MT101 నుండి XSD-ధృవీకరించిన pain.001 మరియు pain.008 ఫైళ్లను రూపొందించే ఓపెన్-సోర్స్ Python సూట్ — AI ఏజెంట్ల కోసం MCP సాధనాలు మరియు LSP సర్వర్‌తో.",
+    "locale": "te_IN",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — ఓపెన్-సోర్స్ ISO 20022 చెల్లింపు ప్రారంభం",
+    "url": "https://pain001.com/te/",
+    "wordCount": 178
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
     "description": "Apache-2.0/MIT licensing for the suite, the as-is warranty disclaimer, content reuse rules, and why nothing here is financial or regulatory advice.",
     "locale": "en_GB",
     "tags": [
@@ -610,6 +1035,23 @@
     "title": "Terms: Licences, Warranty and Fair Use",
     "url": "https://pain001.com/terms/",
     "wordCount": 175
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "ชุดเครื่องมือ Python โอเพนซอร์สที่สร้างไฟล์ pain.001 และ pain.008 ที่ผ่านการตรวจสอบ XSD จาก CSV, Excel, SQLite, JSON, Parquet หรือ SWIFT MT101 — พร้อมเครื่องมือ MCP สำหรับ AI เอเจนต์และเซิร์ฟเวอร์ LSP",
+    "locale": "th_TH",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — การเริ่มต้นการชำระเงิน ISO 20022 แบบโอเพนซอร์ส",
+    "url": "https://pain001.com/th/",
+    "wordCount": 113
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -630,6 +1072,23 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
+    "description": "CSV, Excel, SQLite, JSON, Parquet veya SWIFT MT101'den XSD ile doğrulanmış pain.001 ve pain.008 dosyaları üreten açık kaynaklı Python paketi — AI ajanları için MCP araçları ve LSP sunucusuyla.",
+    "locale": "tr_TR",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — Açık kaynaklı ISO 20022 ödeme başlatma",
+    "url": "https://pain001.com/tr/",
+    "wordCount": 177
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
     "description": "Upload or paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, recomputed control totals, and the official XSD — all in your browser.",
     "locale": "en_GB",
     "tags": [
@@ -644,5 +1103,90 @@
     "title": "Try Pain001 in Your Browser",
     "url": "https://pain001.com/try/",
     "wordCount": 255
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "Python-пакет з відкритим кодом: файли pain.001 і pain.008 з XSD-валідацією з CSV, Excel, SQLite, JSON, Parquet або SWIFT MT101 — з інструментами MCP для ШІ-агентів і LSP-сервером.",
+    "locale": "uk_UA",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — ініціювання платежів ISO 20022 з відкритим кодом",
+    "url": "https://pain001.com/uk/",
+    "wordCount": 190
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "Bộ công cụ Python mã nguồn mở tạo tệp pain.001 và pain.008 được xác thực XSD từ CSV, Excel, SQLite, JSON, Parquet hoặc SWIFT MT101 — kèm công cụ MCP cho tác tử AI và máy chủ LSP.",
+    "locale": "vi_VN",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — Khởi tạo thanh toán ISO 20022 mã nguồn mở",
+    "url": "https://pain001.com/vi/",
+    "wordCount": 284
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "Àkójọpọ̀ Python orísun-ìmọ̀ tí ó ń ṣe àwọn fáìlì pain.001 àti pain.008 tí a fọwọ́sí pẹ̀lú XSD láti CSV, Excel, SQLite, JSON, Parquet tàbí SWIFT MT101 — pẹ̀lú àwọn irinṣẹ́ MCP fún àwọn aṣojú AI àti olupin LSP.",
+    "locale": "yo_NG",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — Ìbẹ̀rẹ̀ ìsanwó ISO 20022 orísun-ìmọ̀",
+    "url": "https://pain001.com/yo/",
+    "wordCount": 254
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "开源 Python 套件,可从 CSV、Excel、SQLite、JSON、Parquet 或 SWIFT MT101 生成经 XSD 校验的 pain.001 和 pain.008 文件——附带面向 AI 代理的 MCP 工具和 LSP 服务器。",
+    "locale": "zh_CN",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — 开源 ISO 20022 支付发起",
+    "url": "https://pain001.com/zh-hans/",
+    "wordCount": 86
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "開源 Python 套件,可從 CSV、Excel、SQLite、JSON、Parquet 或 SWIFT MT101 產生經 XSD 驗證的 pain.001 與 pain.008 檔案——附有供 AI 代理使用的 MCP 工具與 LSP 伺服器。",
+    "locale": "zh_TW",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — 開源 ISO 20022 付款發起",
+    "url": "https://pain001.com/zh-hant/",
+    "wordCount": 86
   }
 ]

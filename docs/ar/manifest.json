@@ -1,0 +1,19 @@
+{
+  "background_color": "#ffffff",
+  "description": "حزمة Python مفتوحة المصدر تُنتج ملفات pain.001 و pain.008 موثَّقة بمخططات XSD من CSV أو Excel أو SQLite أو JSON أو Parqu",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any maskable",
+      "sizes": "512x512",
+      "src": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+      "type": "image/svg+xml"
+    }
+  ],
+  "name": "Pain001",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "pain001",
+  "start_url": ".",
+  "theme_color": null
+}

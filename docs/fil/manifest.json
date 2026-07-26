@@ -1,0 +1,19 @@
+{
+  "background_color": "#ffffff",
+  "description": "Open-source na Python suite na gumagawa ng XSD-validated na pain.001 at pain.008 na file mula sa CSV, Excel, SQLite, JSO",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any maskable",
+      "sizes": "512x512",
+      "src": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+      "type": "image/svg+xml"
+    }
+  ],
+  "name": "Pain001",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "pain001",
+  "start_url": ".",
+  "theme_color": null
+}

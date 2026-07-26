@@ -1,0 +1,19 @@
+{
+  "background_color": "#ffffff",
+  "description": "开源 Python 套件,可从 CSV、Excel、SQLite、JSON、Parquet 或 SWIFT MT101 生成经 XSD 校验的 pain.001 和 pain.008 文件——附带面向 AI 代理的 MCP 工具和 LSP ",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any maskable",
+      "sizes": "512x512",
+      "src": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+      "type": "image/svg+xml"
+    }
+  ],
+  "name": "Pain001",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "pain001",
+  "start_url": ".",
+  "theme_color": null
+}

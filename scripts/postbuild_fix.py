@@ -274,6 +274,68 @@ def relocate_body_stylesheets(html: str) -> str:
     return html[:head_end] + "".join(moved) + body
 
 
+# ---- Localization -------------------------------------------------------
+# Locale landing pages (slug -> hreflang code). English is the x-default.
+LOCALES = {
+    "ar": "ar", "bn": "bn", "cs": "cs", "de": "de", "el": "el", "es": "es",
+    "fa": "fa", "fil": "fil", "fr": "fr", "ha": "ha", "he": "he", "hi": "hi",
+    "hu": "hu", "id": "id", "it": "it", "ja": "ja", "ko": "ko", "mr": "mr",
+    "ms": "ms", "nl": "nl", "pl": "pl", "pt-br": "pt-BR", "ro": "ro",
+    "ru": "ru", "sv": "sv", "ta": "ta", "te": "te", "th": "th", "tr": "tr",
+    "uk": "uk", "vi": "vi", "yo": "yo", "zh-hans": "zh-Hans",
+    "zh-hant": "zh-Hant",
+}
+RTL_LANGS = {"ar", "fa", "he"}
+
+_HTML_TAG_RE = re.compile(r"<html\b([^>]*)>")
+
+
+def add_rtl_dir(html: str, slug: str) -> str:
+    """Right-to-left languages need dir=rtl on the root element."""
+    if slug not in RTL_LANGS:
+        return html
+    return _HTML_TAG_RE.sub(
+        lambda m: "<html" + m.group(1) + ' dir="rtl">'
+        if "dir=" not in m.group(1) else m.group(0),
+        html, count=1)
+
+
+def hreflang_cluster(self_lang: str) -> str:
+    """Reciprocal alternate links for the locale cluster + x-default.
+
+    Google honours hreflang only when every page in the cluster links
+    every other page; partial clusters are ignored."""
+    links = ['<link rel="alternate" hreflang="en" href="%s/" />' % BASE_URL,
+             '<link rel="alternate" hreflang="x-default" href="%s/" />' % BASE_URL]
+    for slug, code in sorted(LOCALES.items()):
+        links.append('<link rel="alternate" hreflang="%s" href="%s/%s/" />'
+                     % (code, BASE_URL, slug))
+    return "".join(l for l in links if 'hreflang="%s"' % self_lang not in l)
+
+
+def localise_pages(site: Path) -> None:
+    n = 0
+    for slug in LOCALES:
+        page = site / slug / "index.html"
+        if not page.exists():
+            continue
+        html = page.read_text(encoding="utf-8")
+        if "x-default" not in html:
+            html = html.replace("</head>",
+                                hreflang_cluster(LOCALES[slug]) + "</head>", 1)
+        html = add_rtl_dir(html, slug)
+        page.write_text(html, encoding="utf-8")
+        n += 1
+    home = site / "index.html"
+    if home.exists():
+        html = home.read_text(encoding="utf-8")
+        if "x-default" not in html:
+            html = html.replace("</head>", hreflang_cluster("en") + "</head>", 1)
+            home.write_text(html, encoding="utf-8")
+    print(f"[postbuild] hreflang cluster on {n} locale page(s) + home; "
+          f"RTL dir on {len(RTL_LANGS & set(LOCALES))}")
+
+
 def fix_tag_pages(site: Path) -> None:
     for page in site.glob("tags/*/index.html"):
         html = page.read_text(encoding="utf-8")
@@ -351,6 +413,7 @@ def main() -> None:
     print(f"[postbuild] unescaped head/body markup on {repaired} page(s)")
     fix_tag_pages(site)
     fix_manifest(site)
+    localise_pages(site)
     regen_sitemap(site)
 
 

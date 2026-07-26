@@ -38,6 +38,18 @@
   </news:news>
 </url>
 <url>
+  <loc>https://pain001.com/ar/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>ar</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — بدء المدفوعات ISO 20022 مفتوح المصدر</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, العربية</news:keywords>
+  </news:news>
+</url>
+<url>
   <loc>https://pain001.com/architecture-and-patents/</loc>
   <news:news>
     <news:publication>
@@ -47,6 +59,18 @@
     <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
     <news:title>Architecture, Security and the Patent Landscape</news:title>
     <news:keywords>pain001 architecture, defusedxml XXE, payment file security, ISO 20022 patents, MT MX transformation patent, decimal precision payments, CycloneDX SBOM</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/bn/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>bn</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — ওপেন-সোর্স ISO 20022 পেমেন্ট সূচনা</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, বাংলা</news:keywords>
   </news:news>
 </url>
 <url>
@@ -74,6 +98,18 @@
   </news:news>
 </url>
 <url>
+  <loc>https://pain001.com/cs/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>cs</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — open-source iniciace plateb ISO 20022</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, Čeština</news:keywords>
+  </news:news>
+</url>
+<url>
   <loc>https://pain001.com/de/</loc>
   <news:news>
     <news:publication>
@@ -98,6 +134,18 @@
   </news:news>
 </url>
 <url>
+  <loc>https://pain001.com/el/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>el</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — Έναρξη πληρωμών ISO 20022 ανοικτού κώδικα</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, Ελληνικά</news:keywords>
+  </news:news>
+</url>
+<url>
   <loc>https://pain001.com/es/</loc>
   <news:news>
     <news:publication>
@@ -110,6 +158,18 @@
   </news:news>
 </url>
 <url>
+  <loc>https://pain001.com/fa/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fa</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — آغاز پرداخت ISO 20022 متن‌باز</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, فارسی</news:keywords>
+  </news:news>
+</url>
+<url>
   <loc>https://pain001.com/faqs/</loc>
   <news:news>
     <news:publication>
@@ -119,6 +179,18 @@
     <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
     <news:title>Pain001 FAQs for Treasury, Ops, Engineering and Audit</news:title>
     <news:keywords>pain.001 FAQ, pain.001 vs pain.008, why bank rejects payment file, SEPA validation questions, ISO 20022 FAQ, payment file audit</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fil/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fil</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — Open-source na pagsisimula ng bayad sa ISO 20022</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, Filipino</news:keywords>
   </news:news>
 </url>
 <url>
@@ -143,6 +215,66 @@
     <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
     <news:title>ISO 20022 Payments Glossary in Plain English</news:title>
     <news:keywords>ISO 20022 glossary, pain.001 meaning, pacs.008 vs pain.001, camt.053 definition, CBPR+ meaning, UETR, verification of payee, payments terminology</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/ha/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>ha</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — Fara biyan kuɗi na ISO 20022 a buɗaɗɗen tushe</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, Hausa</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/he/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>he</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — ייזום תשלומים ISO 20022 בקוד פתוח</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, עברית</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/hi/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>hi</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — ओपन-सोर्स ISO 20022 भुगतान आरंभ</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, हिन्दी</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/hu/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>hu</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — Nyílt forráskódú ISO 20022 fizetésindítás</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, Magyar</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/id/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>id</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — Inisiasi pembayaran ISO 20022 sumber terbuka</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, Bahasa Indonesia</news:keywords>
   </news:news>
 </url>
 <url>
@@ -182,6 +314,54 @@
   </news:news>
 </url>
 <url>
+  <loc>https://pain001.com/it/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — Iniziazione di pagamenti ISO 20022 open source</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, Italiano</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/ja/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>ja</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — オープンソースの ISO 20022 送金指図</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, 日本語</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/ko/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>ko</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — 오픈소스 ISO 20022 지급 지시</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, 한국어</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/languages/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 in 34 Languages</news:title>
+    <news:keywords>pain001 languages, ISO 20022 deutsch, ISO 20022 français, ISO 20022 español, ISO 20022 日本語, ISO 20022 中文, pain.001 translation</news:keywords>
+  </news:news>
+</url>
+<url>
   <loc>https://pain001.com/made-with-shokunin/</loc>
   <news:news>
     <news:publication>
@@ -191,6 +371,42 @@
     <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
     <news:title>Made with Shokunin: How This Site Is Built</news:title>
     <news:keywords>shokunin, static site generator rust, ssg, llms.txt, static site security</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/mr/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>mr</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — ओपन-सोर्स ISO 20022 पेमेंट आरंभ</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, मराठी</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/ms/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>ms</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — Pemulaan pembayaran ISO 20022 sumber terbuka</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, Bahasa Melayu</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — Open-source ISO 20022-betalingsinitiatie</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, Nederlands</news:keywords>
   </news:news>
 </url>
 <url>
@@ -398,6 +614,18 @@
   </news:news>
 </url>
 <url>
+  <loc>https://pain001.com/pl/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>pl</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — inicjowanie płatności ISO 20022 w open source</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, Polski</news:keywords>
+  </news:news>
+</url>
+<url>
   <loc>https://pain001.com/privacy/</loc>
   <news:news>
     <news:publication>
@@ -407,6 +635,66 @@
     <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
     <news:title>Privacy: This Site Collects Nothing</news:title>
     <news:keywords>pain001 privacy policy, no tracking, local processing, payment data privacy</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/pt-br/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>pt-BR</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — Iniciação de pagamentos ISO 20022 em código aberto</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, Português (Brasil)</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/ro/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>ro</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — Inițierea plăților ISO 20022 în open source</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, Română</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/ru/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>ru</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — инициирование платежей ISO 20022 с открытым кодом</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, Русский</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/sv/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>sv</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — ISO 20022-betalningsinitiering med öppen källkod</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, Svenska</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/ta/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>ta</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — திறந்த மூல ISO 20022 கட்டணத் தொடக்கம்</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, தமிழ்</news:keywords>
   </news:news>
 </url>
 <url>
@@ -422,6 +710,18 @@
   </news:news>
 </url>
 <url>
+  <loc>https://pain001.com/te/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>te</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — ఓపెన్-సోర్స్ ISO 20022 చెల్లింపు ప్రారంభం</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, తెలుగు</news:keywords>
+  </news:news>
+</url>
+<url>
   <loc>https://pain001.com/terms/</loc>
   <news:news>
     <news:publication>
@@ -431,6 +731,18 @@
     <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
     <news:title>Terms: Licences, Warranty and Fair Use</news:title>
     <news:keywords>pain001 license, Apache-2.0, MIT license, open source terms, ISO 20022 software license</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/th/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>th</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — การเริ่มต้นการชำระเงิน ISO 20022 แบบโอเพนซอร์ส</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, ไทย</news:keywords>
   </news:news>
 </url>
 <url>
@@ -446,6 +758,18 @@
   </news:news>
 </url>
 <url>
+  <loc>https://pain001.com/tr/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>tr</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — Açık kaynaklı ISO 20022 ödeme başlatma</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, Türkçe</news:keywords>
+  </news:news>
+</url>
+<url>
   <loc>https://pain001.com/try/</loc>
   <news:news>
     <news:publication>
@@ -455,6 +779,66 @@
     <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
     <news:title>Try Pain001 in Your Browser</news:title>
     <news:keywords>pain.001 validator online, try pain001, SEPA XML generator online, IBAN checker, pain.001 example, ISO 20022 demo, payment file validator</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/uk/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>uk</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — ініціювання платежів ISO 20022 з відкритим кодом</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, Українська</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/vi/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>vi</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — Khởi tạo thanh toán ISO 20022 mã nguồn mở</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, Tiếng Việt</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/yo/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>yo</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — Ìbẹ̀rẹ̀ ìsanwó ISO 20022 orísun-ìmọ̀</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, Yorùbá</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/zh-hans/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>zh-Hans</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — 开源 ISO 20022 支付发起</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, 简体中文</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/zh-hant/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>zh-Hant</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — 開源 ISO 20022 付款發起</news:title>
+    <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, 繁體中文</news:keywords>
   </news:news>
 </url>
 </urlset>

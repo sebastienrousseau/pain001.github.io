@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta itemprop="datePublished" content="Sun, 26 Jul 2026 08:00:00 +0000" id="date" />
+    <meta itemprop="dateModified" content="Sun, 26 Jul 2026 08:00:00 +0000" id="last-modified" />
+    <title>Pain001 — ওপেন-সোর্স ISO 20022 পেমেন্ট সূচনা</title>
+
+    <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
+<meta name="description" content="ওপেন-সোর্স Python স্যুট যা CSV, Excel, SQLite, JSON, Parquet বা SWIFT MT101 থেকে XSD-যাচাইকৃত pain.001 ও pain.008 ফাইল তৈরি করে — AI এজেন্টের জন্য MCP টুল ও LSP সার্ভারসহ।">
+<meta name="keywords" content="pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, বাংলা">
+<meta property="og:image" content="https://pain001.com/og/pain001-card.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="ওপেন-সোর্স Python স্যুট যা CSV, Excel, SQLite, JSON, Parquet বা SWIFT MT101 থেকে XSD-যাচাইকৃত pain.001 ও pain.008 ফাইল তৈরি করে — AI এজেন্টের জন্য MCP টুল ও LSP সার্ভারসহ।" />
+    <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Pain001 — ওপেন-সোর্স ISO 20022 পেমেন্ট সূচনা">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self' ; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    
+    
+
+    <link rel="alternate" href="https://pain001.com/bn/" hreflang="bn" />
+    
+    <link rel="icon" type="image/svg+xml" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/_csp/8dbe0c0a5fc3fc89.css" integrity="sha384-z0ftlitySP0oG+y6oB21iIKDkI4UEYSNYGarvDwXbkj/eb9fSrpmHH8Z0P/IZmsQ" crossorigin="anonymous">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
+  <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="Pain001 — ওপেন-সোর্স ISO 20022 পেমেন্ট সূচনা">
+<meta property="og:description" content="Home Pain001 — ওপেন-সোর্স ISO 20022 পেমেন্ট সূচনা বাংলায় Pain001 Pain001 —">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pain001.com/bn/">
+<meta property="og:locale" content="bn">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pain001 — ওপেন-সোর্স ISO 20022 পেমেন্ট সূচনা">
+<meta name="twitter:description" content="Home Pain001 — ওপেন-সোর্স ISO 20022 পেমেন্ট সূচনা বাংলায় Pain001 Pain001 —">
+<meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg">
+<link rel="canonical" href="https://pain001.com/bn/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
+<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"><link rel="alternate" hreflang="en" href="https://pain001.com/" /><link rel="alternate" hreflang="x-default" href="https://pain001.com/" /><link rel="alternate" hreflang="ar" href="https://pain001.com/ar/" /><link rel="alternate" hreflang="cs" href="https://pain001.com/cs/" /><link rel="alternate" hreflang="de" href="https://pain001.com/de/" /><link rel="alternate" hreflang="el" href="https://pain001.com/el/" /><link rel="alternate" hreflang="es" href="https://pain001.com/es/" /><link rel="alternate" hreflang="fa" href="https://pain001.com/fa/" /><link rel="alternate" hreflang="fil" href="https://pain001.com/fil/" /><link rel="alternate" hreflang="fr" href="https://pain001.com/fr/" /><link rel="alternate" hreflang="ha" href="https://pain001.com/ha/" /><link rel="alternate" hreflang="he" href="https://pain001.com/he/" /><link rel="alternate" hreflang="hi" href="https://pain001.com/hi/" /><link rel="alternate" hreflang="hu" href="https://pain001.com/hu/" /><link rel="alternate" hreflang="id" href="https://pain001.com/id/" /><link rel="alternate" hreflang="it" href="https://pain001.com/it/" /><link rel="alternate" hreflang="ja" href="https://pain001.com/ja/" /><link rel="alternate" hreflang="ko" href="https://pain001.com/ko/" /><link rel="alternate" hreflang="mr" href="https://pain001.com/mr/" /><link rel="alternate" hreflang="ms" href="https://pain001.com/ms/" /><link rel="alternate" hreflang="nl" href="https://pain001.com/nl/" /><link rel="alternate" hreflang="pl" href="https://pain001.com/pl/" /><link rel="alternate" hreflang="pt-BR" href="https://pain001.com/pt-br/" /><link rel="alternate" hreflang="ro" href="https://pain001.com/ro/" /><link rel="alternate" hreflang="ru" href="https://pain001.com/ru/" /><link rel="alternate" hreflang="sv" href="https://pain001.com/sv/" /><link rel="alternate" hreflang="ta" href="https://pain001.com/ta/" /><link rel="alternate" hreflang="te" href="https://pain001.com/te/" /><link rel="alternate" hreflang="th" href="https://pain001.com/th/" /><link rel="alternate" hreflang="tr" href="https://pain001.com/tr/" /><link rel="alternate" hreflang="uk" href="https://pain001.com/uk/" /><link rel="alternate" hreflang="vi" href="https://pain001.com/vi/" /><link rel="alternate" hreflang="yo" href="https://pain001.com/yo/" /><link rel="alternate" hreflang="zh-Hans" href="https://pain001.com/zh-hans/" /><link rel="alternate" hreflang="zh-Hant" href="https://pain001.com/zh-hant/" /></head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="navbar">
+      <div class="wrap nav-inner">
+        <a href="/" class="brand">
+          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="Pain001 logo" width="30" height="30" />
+          <span>Pain001</span>
+        </a>
+
+        <nav aria-label="Primary">
+          <input type="checkbox" id="nav-toggle" class="nav-toggle-input" />
+          <label for="nav-toggle" class="nav-toggle-label">
+            <span aria-hidden="true">&#9776;</span>
+            <span class="visually-hidden">Menu</span>
+          </label>
+          <ul class="nav-links" id="primary-menu">
+            <li><a href="/documentation/">Docs</a></li>
+            <li><a href="/installation/">Install</a></li>
+            <li><a href="/pain001-mcp/">MCP</a></li>
+            <li><a href="/pain001-lsp/">LSP</a></li>
+            <li><a href="/2026-iso20022-migration-trends/">2026 Briefing</a></li>
+            <li><a href="/try/">Try it</a></li>
+            <li><a href="/pain002-reason-codes/">pain.002 reason codes</a></li>
+              <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/faqs/">FAQs</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-right">
+          <button id="themeToggle" class="theme-btn" type="button" aria-pressed="false" aria-label="Switch to dark theme">
+            <span aria-hidden="true" id="themeIcon">◐</span> <span id="themeLabel">Dark</span>
+          </button>
+          <a href="/installation/" class="nav-cta">Get started&nbsp;&rsaquo;</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <header class="page-header">
+        <div class="wrap">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li aria-current="page">Pain001 — ওপেন-সোর্স ISO 20022 পেমেন্ট সূচনা</li>
+            </ol>
+          </nav>
+          <p class="eyebrow">বাংলায় Pain001</p>
+          <h1 class="page-title">Pain001 — ওপেন-সোর্স ISO 20022 পেমেন্ট সূচনা</h1>
+          <p class="deck">ওপেন-সোর্স স্যুট যা আপনার পেমেন্ট ডেটাকে যাচাইকৃত ISO 20022 XML-এ রূপান্তরিত করে — ব্যাংকে পৌঁছানোর আগেই সঠিক প্রমাণিত।</p>
+          <div class="article-meta"><span>1 min read</span>
+            <span>Last reviewed <time datetime="2026-07-26">26 July 2026</time></span>
+          </div>
+        </div>
+      </header>
+
+      <div class="wrap content-shell">
+        <article class="content-body">
+          <div lang="en"><h2 id="section">এমন পেমেন্ট ফাইল যা আপনার ব্যাংক প্রত্যাখ্যান করবে না<a class="heading-anchor" href="#section" aria-label="Link to section: এমন পেমেন্ট ফাইল যা আপনার ব্যাংক প্রত্যাখ্যান করবে না">#</a></h2>
+<p><strong>Pain001</strong> হল ISO 20022 পেমেন্ট সূচনার জন্য একটি ওপেন-সোর্স Python স্যুট। এটি আপনার বিদ্যমান ডেটা — CSV, Excel, SQLite, JSON, Parquet বা পুরনো SWIFT MT101 বার্তা — অফিসিয়াল XSD স্কিমা দিয়ে যাচাইকৃত <code>pain.001</code> (ক্রেডিট ট্রান্সফার) ও <code>pain.008</code> (ডাইরেক্ট ডেবিট) XML-এ রূপান্তরিত করে।</p>
+<p>প্রতিটি ফাইল লেখার আগে তিন স্তরের যাচাই পার হয়: প্রতি রেকর্ডে JSON স্কিমা (IBAN-এর mod-97 পরীক্ষা ও BIC কাঠামোসহ), scheme নিয়ম (SEPA ও আন্তঃসীমান্ত CBPR+) এবং চূড়ান্ত XSD যাচাই। নিয়ন্ত্রণ যোগফল সর্বদা পুনরায় গণনা করা হয়, কখনও কপি নয়। সবকিছু স্থানীয়ভাবে চলে: কোনো পেমেন্ট ডেটা আপনার অবকাঠামোর বাইরে যায় না।</p>
+<h2 id="section-2">১৪ নভেম্বর ২০২৬-এর সময়সীমা<a class="heading-anchor" href="#section-2" aria-label="Link to section: ১৪ নভেম্বর ২০২৬-এর সময়সীমা">#</a></h2>
+<p>২২ নভেম্বর ২০২৫-এ MT–MX সহাবস্থান শেষ হওয়ার পর পরবর্তী সময়সীমা <strong>১৪ নভেম্বর ২০২৬</strong>: সম্পূর্ণ অসংগঠিত ডাক ঠিকানা CBPR+ পেমেন্টে প্রত্যাখ্যাত হবে এবং আন্তঃব্যাংক MT101 রিলের জায়গা নেবে <code>pain.001</code> সংস্করণ ৯। Pain001 আজই সংগঠিত ও হাইব্রিড ঠিকানা তৈরি করে — এবং এক কমান্ডে MT101 রূপান্তর করে।</p>
+<h2 id="section-3">শুরু করুন<a class="heading-anchor" href="#section-3" aria-label="Link to section: শুরু করুন">#</a></h2>
+<pre><code class="language-bash">pip install pain001
+pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run</code></pre>
+<p>সম্পূর্ণ ডকুমেন্টেশন ইংরেজিতে: <a href="/installation/">ইনস্টলেশন গাইড</a>, <a href="/documentation/">প্রযুক্তিগত রেফারেন্স</a>, <a href="/try/">ব্রাউজার ডেমো</a> এবং <a href="/2026-iso20022-migration-trends/">২০২৬ ISO 20022 ব্রিফিং</a>। কোরের ডুয়াল লাইসেন্স Apache-2.0 / MIT — যেকোনো মাত্রায় বিনামূল্যে বাণিজ্যিক ব্যবহার।</p>
+</div>
+        </article>
+      </div>
+    </main>
+
+    <button class="totop" id="toTop" type="button" hidden aria-label="Back to top">&uarr;</button>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-brand">Pain001</p>
+            <p class="footer-tagline">Open-source ISO 20022 payment initiation. Validated files, local processing, no lock-in.</p>
+          </div>
+          <div>
+            <h2 class="footer-heading">Documentation</h2>
+            <ul class="footer-links">
+              <li><a href="/try/">Try it in your browser</a></li>
+              <li><a href="/documentation/">Technical reference</a></li>
+              <li><a href="/installation/">Installation &amp; Docker</a></li>
+              <li><a href="/payments/">Payment pipelines</a></li>
+              <li><a href="/glossary/">Glossary</a></li>
+              <li><a href="/faqs/">FAQs</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Ecosystem</h2>
+            <ul class="footer-links">
+              <li><a href="/pain001-mcp/">pain001-mcp · AI agents</a></li>
+              <li><a href="/pain001-lsp/">pain001-lsp · editors</a></li>
+              <li><a href="/pain001-loader-mt101/">MT101 loader</a></li>
+              <li><a href="/pain001-loader-xlsx/">Excel loader</a></li>
+              <li><a href="https://github.com/sebastienrousseau/pain001" rel="external">GitHub</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Research &amp; trust</h2>
+            <ul class="footer-links">
+              <li><a href="/iso20022-roadmap/">ISO 20022 roadmap</a></li>
+              <li><a href="/2026-iso20022-migration-trends/">2026 briefing</a></li>
+              <li><a href="/competitors-comparison/">Comparison</a></li>
+              <li><a href="/architecture-and-patents/">Architecture &amp; patents</a></li>
+              <li><a href="/security.txt">security.txt</a></li>
+              <li><a href="/sbom.cdx.json">SBOM</a> · <a href="/llms.txt">llms.txt</a> · <a href="/rss.xml">RSS</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; 2023&ndash;2026 Sebastien Rousseau. Core dual-licensed Apache-2.0 / MIT; companion packages Apache-2.0.</p>
+          <ul aria-label="This overview in other languages">
+            <li><a href="/languages/">This overview in 34 languages</a></li>
+          </ul>
+          <ul>
+            <li><a href="/accessibility/">Accessibility</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://pain001.com/bn/",
+          "url": "https://pain001.com/bn/",
+          "name": "Pain001 — ওপেন-সোর্স ISO 20022 পেমেন্ট সূচনা",
+          "description": "ওপেন-সোর্স Python স্যুট যা CSV, Excel, SQLite, JSON, Parquet বা SWIFT MT101 থেকে XSD-যাচাইকৃত pain.001 ও pain.008 ফাইল তৈরি করে — AI এজেন্টের জন্য MCP টুল ও LSP সার্ভারসহ।",
+          "inLanguage": "bn",
+          "dateModified": "2026-07-26",
+          "isPartOf": { "@id": "https://pain001.com/#website" },
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pain001.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Pain001 — ওপেন-সোর্স ISO 20022 পেমেন্ট সূচনা" }
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pain001.com/#organization",
+          "name": "Pain001",
+          "url": "https://pain001.com/",
+          "logo": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+          "founder": { "@type": "Person", "name": "Sebastien Rousseau", "url": "https://sebastienrousseau.com" },
+          "sameAs": [
+            "https://github.com/sebastienrousseau/pain001",
+            "https://pypi.org/project/pain001/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pain001.com/#website",
+          "url": "https://pain001.com/",
+          "name": "Pain001",
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        }
+      ]
+    }
+    </script>
+
+    <script src="/_csp/f2c95fcc31deaf76.js" integrity="sha384-iWQJOupnVuxIa/IlcB7Pnddhpt0eKfiwGaXyMJD0gha8sb1NQBab2d2PNDIt0WJj" crossorigin="anonymous"></script>
+  
+<!-- SSG Search Widget -->
+<div id="ssg-search-widget">
+
+<!-- Search trigger button -->
+<button id="ssg-search-btn" type="button" aria-label="Search">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<span>Search</span>
+<kbd>K</kbd>
+</button>
+<!-- Search modal -->
+<div id="ssg-search-overlay" role="dialog" aria-label="Search">
+<div id="ssg-search-box">
+<div id="ssg-search-header">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<input id="ssg-search-input" type="search" placeholder="Search documentation..." autocomplete="off" aria-label="Search"/>
+</div>
+<div id="ssg-search-results" aria-live="polite"></div>
+<div id="ssg-sr-status" role="status" aria-live="polite" aria-atomic="true"></div>
+<div class="ssg-search-footer"><span><kbd>Esc</kbd> close</span><span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span><span><kbd>Enter</kbd> open</span></div>
+</div>
+</div>
+<script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>
