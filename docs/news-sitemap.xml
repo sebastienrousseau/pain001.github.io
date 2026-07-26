@@ -62,6 +62,18 @@
   </news:news>
 </url>
 <url>
+  <loc>https://pain001.com/de/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — Open-Source-Zahlungsinitiierung nach ISO 20022</news:title>
+    <news:keywords>pain001, ISO 20022, SEPA Überweisung, pain.001 Datei, SEPA XML Generator, Zahlungsverkehr, Python, Deutschland</news:keywords>
+  </news:news>
+</url>
+<url>
   <loc>https://pain001.com/documentation/</loc>
   <news:news>
     <news:publication>
@@ -74,6 +86,18 @@
   </news:news>
 </url>
 <url>
+  <loc>https://pain001.com/es/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — Iniciación de pagos ISO 20022 en código abierto</news:title>
+    <news:keywords>pain001, ISO 20022, transferencia SEPA, fichero pain.001, generador XML SEPA, pagos, Python, España</news:keywords>
+  </news:news>
+</url>
+<url>
   <loc>https://pain001.com/faqs/</loc>
   <news:news>
     <news:publication>
@@ -83,6 +107,18 @@
     <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
     <news:title>Pain001 FAQs for Treasury, Ops, Engineering and Audit</news:title>
     <news:keywords>pain.001 FAQ, pain.001 vs pain.008, why bank rejects payment file, SEPA validation questions, ISO 20022 FAQ, payment file audit</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — Initiation de paiements ISO 20022 en open source</news:title>
+    <news:keywords>pain001, ISO 20022, virement SEPA, fichier pain.001, générateur XML SEPA, paiements, Python, France</news:keywords>
   </news:news>
 </url>
 <url>
@@ -371,6 +407,18 @@
     <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
     <news:title>Thank You — Message Received</news:title>
     <news:keywords>pain001 thank you, contact confirmation</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/try/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Try Pain001 in Your Browser</news:title>
+    <news:keywords>pain.001 validator online, try pain001, SEPA XML generator online, IBAN checker, pain.001 example, ISO 20022 demo, payment file validator</news:keywords>
   </news:news>
 </url>
 </urlset>

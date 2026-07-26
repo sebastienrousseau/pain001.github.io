@@ -69,6 +69,23 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
+    "description": "Open-Source-Python-Suite zur Erzeugung XSD-validierter pain.001- und pain.008-Dateien aus CSV, Excel, SQLite, JSON, Parquet oder SWIFT MT101 — mit MCP-Tools für KI-Agenten und LSP-Server.",
+    "locale": "de_DE",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — Open-Source-Zahlungsinitiierung nach ISO 20022",
+    "url": "https://pain001.com/de/",
+    "wordCount": 187
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
     "description": "Complete reference for pain001 v0.0.56 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.",
     "locale": "en_GB",
     "tags": [
@@ -86,6 +103,23 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
+    "description": "Suite Python de código abierto para generar ficheros pain.001 y pain.008 validados por XSD desde CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101 — con herramientas MCP para agentes de IA y servidor LSP.",
+    "locale": "es_ES",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — Iniciación de pagos ISO 20022 en código abierto",
+    "url": "https://pain001.com/es/",
+    "wordCount": 251
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
     "description": "Why banks reject payment files, pain.001 vs pain.008, the November 2026 deadlines, streaming large batches, security posture, and audit reproducibility — answered plainly.",
     "locale": "en_GB",
     "tags": [
@@ -100,6 +134,23 @@
     "title": "Pain001 FAQs for Treasury, Ops, Engineering and Audit",
     "url": "https://pain001.com/faqs/",
     "wordCount": 924
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "Suite Python open source pour générer des fichiers pain.001 et pain.008 validés par XSD à partir de CSV, Excel, SQLite, JSON, Parquet ou SWIFT MT101 — avec outils MCP pour agents IA et serveur LSP.",
+    "locale": "fr_FR",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 — Initiation de paiements ISO 20022 en open source",
+    "url": "https://pain001.com/fr/",
+    "wordCount": 244
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -525,5 +576,22 @@
     "title": "Thank You — Message Received",
     "url": "https://pain001.com/thanks/",
     "wordCount": 67
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "Paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, and recomputed control totals — then get pain.001.001.09 XML. Nothing leaves your browser.",
+    "locale": "en_GB",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Try Pain001 in Your Browser",
+    "url": "https://pain001.com/try/",
+    "wordCount": 177
   }
 ]

@@ -21,12 +21,27 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
+  <loc>https://pain001.com/de/</loc>
+  <lastmod>2026-07-26</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
   <loc>https://pain001.com/documentation/</loc>
   <lastmod>2026-07-26</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
+  <loc>https://pain001.com/es/</loc>
+  <lastmod>2026-07-26</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
   <loc>https://pain001.com/faqs/</loc>
+  <lastmod>2026-07-26</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://pain001.com/fr/</loc>
   <lastmod>2026-07-26</lastmod>
   <changefreq>weekly</changefreq>
 </url>
@@ -177,6 +192,11 @@
 </url>
 <url>
   <loc>https://pain001.com/thanks/</loc>
+  <lastmod>2026-07-26</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://pain001.com/try/</loc>
   <lastmod>2026-07-26</lastmod>
   <changefreq>weekly</changefreq>
 </url>

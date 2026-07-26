@@ -264,6 +264,57 @@
       <category>SEPA</category>
     </item>
     <item>
+      <title>Pain001 — Iniciación de pagos ISO 20022 en código abierto</title>
+      <link>https://pain001.com/es/</link>
+      <description>Suite Python de código abierto para generar ficheros pain.001 y pain.008 validados por XSD desde CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101 — con herramientas MCP para agentes de IA y servidor LSP.</description>
+      <guid isPermaLink="true">https://pain001.com/es/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>Pain001 — Initiation de paiements ISO 20022 en open source</title>
+      <link>https://pain001.com/fr/</link>
+      <description>Suite Python open source pour générer des fichiers pain.001 et pain.008 validés par XSD à partir de CSV, Excel, SQLite, JSON, Parquet ou SWIFT MT101 — avec outils MCP pour agents IA et serveur LSP.</description>
+      <guid isPermaLink="true">https://pain001.com/fr/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>Pain001 — Open-Source-Zahlungsinitiierung nach ISO 20022</title>
+      <link>https://pain001.com/de/</link>
+      <description>Open-Source-Python-Suite zur Erzeugung XSD-validierter pain.001- und pain.008-Dateien aus CSV, Excel, SQLite, JSON, Parquet oder SWIFT MT101 — mit MCP-Tools für KI-Agenten und LSP-Server.</description>
+      <guid isPermaLink="true">https://pain001.com/de/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
       <title>Payment Initiation End to End with Pain001</title>
       <link>https://pain001.com/payments/</link>
       <description>From ERP export to pain.002 acknowledgement to camt.053 reconciliation — designing batch, streaming, and API payment pipelines around validation gates that stop rejections.</description>
@@ -319,6 +370,23 @@
       <link>https://pain001.com/thanks/</link>
       <description>Your message is on its way. Meanwhile: install Pain001, read the 2026 ISO 20022 briefing, or star the project on GitHub.</description>
       <guid isPermaLink="true">https://pain001.com/thanks/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>Try Pain001 in Your Browser</title>
+      <link>https://pain001.com/try/</link>
+      <description>Paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, and recomputed control totals — then get pain.001.001.09 XML. Nothing leaves your browser.</description>
+      <guid isPermaLink="true">https://pain001.com/try/</guid>
       <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
       <author>contact@pain001.com (Sebastien Rousseau)</author>
       <enclosure url="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" type="image/jpeg" length="0"/>

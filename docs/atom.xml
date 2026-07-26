@@ -51,6 +51,15 @@
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
+    <title>Pain001 — Open-Source-Zahlungsinitiierung nach ISO 20022</title>
+    <link href="https://pain001.com/de/"/>
+    <id>https://pain001.com/de/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Open-Source-Python-Suite zur Erzeugung XSD-validierter pain.001- und pain.008-Dateien aus CSV, Excel, SQLite, JSON, Parquet oder SWIFT MT101 — mit MCP-Tools für KI-Agenten und LSP-Server.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
     <title>Pain001 Technical Reference: CLI, Python API and REST</title>
     <link href="https://pain001.com/documentation/"/>
     <id>https://pain001.com/documentation/</id>
@@ -60,12 +69,30 @@
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
+    <title>Pain001 — Iniciación de pagos ISO 20022 en código abierto</title>
+    <link href="https://pain001.com/es/"/>
+    <id>https://pain001.com/es/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Suite Python de código abierto para generar ficheros pain.001 y pain.008 validados por XSD desde CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101 — con herramientas MCP para agentes de IA y servidor LSP.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
     <title>Pain001 FAQs for Treasury, Ops, Engineering and Audit</title>
     <link href="https://pain001.com/faqs/"/>
     <id>https://pain001.com/faqs/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
     <summary>Why banks reject payment files, pain.001 vs pain.008, the November 2026 deadlines, streaming large batches, security posture, and audit reproducibility — answered plainly.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Pain001 — Initiation de paiements ISO 20022 en open source</title>
+    <link href="https://pain001.com/fr/"/>
+    <id>https://pain001.com/fr/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Suite Python open source pour générer des fichiers pain.001 et pain.008 validés par XSD à partir de CSV, Excel, SQLite, JSON, Parquet ou SWIFT MT101 — avec outils MCP pour agents IA et serveur LSP.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
@@ -282,6 +309,15 @@
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
     <summary>Your message is on its way. Meanwhile: install Pain001, read the 2026 ISO 20022 briefing, or star the project on GitHub.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Try Pain001 in Your Browser</title>
+    <link href="https://pain001.com/try/"/>
+    <id>https://pain001.com/try/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, and recomputed control totals — then get pain.001.001.09 XML. Nothing leaves your browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
 </feed>

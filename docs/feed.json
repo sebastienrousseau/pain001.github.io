@@ -123,6 +123,29 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
+      "content_html": "Open-Source-Python-Suite zur Erzeugung XSD-validierter pain.001- und pain.008-Dateien aus CSV, Excel, SQLite, JSON, Parquet oder SWIFT MT101 — mit MCP-Tools für KI-Agenten und LSP-Server.",
+      "date_modified": "2026-07-26T08:00:00+00:00",
+      "date_published": "2026-07-26T08:00:00+00:00",
+      "id": "https://pain001.com/de/",
+      "language": "de",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "Pain001 — Open-Source-Zahlungsinitiierung nach ISO 20022",
+      "url": "https://pain001.com/de/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
       "content_html": "Complete reference for pain001 v0.0.56 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
@@ -146,6 +169,29 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
+      "content_html": "Suite Python de código abierto para generar ficheros pain.001 y pain.008 validados por XSD desde CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101 — con herramientas MCP para agentes de IA y servidor LSP.",
+      "date_modified": "2026-07-26T08:00:00+00:00",
+      "date_published": "2026-07-26T08:00:00+00:00",
+      "id": "https://pain001.com/es/",
+      "language": "es",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "Pain001 — Iniciación de pagos ISO 20022 en código abierto",
+      "url": "https://pain001.com/es/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
       "content_html": "Why banks reject payment files, pain.001 vs pain.008, the November 2026 deadlines, streaming large batches, security posture, and audit reproducibility — answered plainly.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
@@ -162,6 +208,29 @@
       ],
       "title": "Pain001 FAQs for Treasury, Ops, Engineering and Audit",
       "url": "https://pain001.com/faqs/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Suite Python open source pour générer des fichiers pain.001 et pain.008 validés par XSD à partir de CSV, Excel, SQLite, JSON, Parquet ou SWIFT MT101 — avec outils MCP pour agents IA et serveur LSP.",
+      "date_modified": "2026-07-26T08:00:00+00:00",
+      "date_published": "2026-07-26T08:00:00+00:00",
+      "id": "https://pain001.com/fr/",
+      "language": "fr",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "Pain001 — Initiation de paiements ISO 20022 en open source",
+      "url": "https://pain001.com/fr/"
     },
     {
       "authors": [
@@ -714,6 +783,29 @@
       ],
       "title": "Thank You — Message Received",
       "url": "https://pain001.com/thanks/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, and recomputed control totals — then get pain.001.001.09 XML. Nothing leaves your browser.",
+      "date_modified": "2026-07-26T08:00:00+00:00",
+      "date_published": "2026-07-26T08:00:00+00:00",
+      "id": "https://pain001.com/try/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "Try Pain001 in Your Browser",
+      "url": "https://pain001.com/try/"
     }
   ],
   "language": "en-GB",

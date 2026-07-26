@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta itemprop="datePublished" content="Sun, 26 Jul 2026 08:00:00 +0000" id="date" />
+    <meta itemprop="dateModified" content="Sun, 26 Jul 2026 08:00:00 +0000" id="last-modified" />
+    <title>Try Pain001 in Your Browser</title>
+
+    <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
+<meta name="description" content="Paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, and recomputed control totals — then get pain.001.001.09 XML. Nothing leaves your browser.">
+<meta name="keywords" content="pain.001 validator online, try pain001, SEPA XML generator online, IBAN checker, pain.001 example, ISO 20022 demo, payment file validator">
+<meta property="og:image" content="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />
+    <meta property="og:image:alt" content="An interactive browser demo validating payment records and generating ISO 20022 pain.001 XML entirely client-side." />
+    <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Try Pain001 in Your Browser">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self' ; script-src 'self' ; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    
+    
+
+    <link rel="alternate" href="https://pain001.com/try/" hreflang="en" />
+    
+    <link rel="icon" type="image/svg+xml" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" sizes="any" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <script src="/_csp/6ccbbfb0b824e5f3.js" integrity="sha384-vD2D/DeQ7ybfwKVwsRoDzF6OdQbjm+gayKdOWKcqfqM76DP9CwfWMGtYvdpKSVJF" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/_csp/5a70225f5de71c6f.css" integrity="sha384-oGlhXgmlsAbfGZsQQtTMx5QB1vuq8EbBnwlLKZUbCOhg/jLRsFYb9F4xNLkGA+Dc" crossorigin="anonymous">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
+  <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="Try Pain001 in Your Browser">
+<meta property="og:description" content="Interactive demo Try Pain001 in Your Browser Paste a payment batch, press validate, and watch rejection-class errors get caught before any XML exists — right">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pain001.com/try/">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Try Pain001 in Your Browser">
+<meta name="twitter:description" content="Interactive demo Try Pain001 in Your Browser Paste a payment batch, press validate, and watch rejection-class errors get caught before any XML exists — right">
+<meta name="twitter:image" content="https://cloudcdn.pro/pain001/v1/logos/pain001.svg">
+<link rel="canonical" href="https://pain001.com/try/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
+</head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="navbar">
+      <div class="wrap nav-inner">
+        <a href="/" class="brand">
+          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="Pain001 logo" width="30" height="30" />
+          <span>Pain001</span>
+        </a>
+        <nav aria-label="Breadcrumb"><a class="back-link" href="/">&larr; Back to Pain001</a></nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <header class="page-header">
+        <div class="wrap">
+          <p class="eyebrow">Interactive demo</p>
+          <h1>Try Pain001 in Your Browser</h1>
+          <p class="deck">Paste a payment batch, press validate, and watch rejection-class errors get caught before any XML exists — right here, with nothing uploaded.</p>
+        </div>
+      </header>
+
+      <div class="wrap demo-grid">
+        <section class="demo-panel" aria-labelledby="input-heading">
+          <h2 id="input-heading">1 · Your payment data (CSV)</h2>
+          <label class="visually-hidden" for="csv-input">Payment CSV data</label>
+          <textarea id="csv-input" spellcheck="false" aria-describedby="demo-fineprint">id,payment_id,requested_execution_date,payment_amount,currency,debtor_name,debtor_account_IBAN,debtor_agent_BIC,creditor_name,creditor_account_IBAN,creditor_agent_BIC,remittance_information
+1,TXN-001,2026-08-03,1250.00,EUR,Acme Global Corp,DE89370400440532013000,DEUTDEFFXXX,Supplier SARL,FR1420041010050500013M02606,BNPAFRPPXXX,INVOICE-2026-4411
+2,TXN-002,2026-08-03,890.50,EUR,Acme Global Corp,DE89370400440532013000,DEUTDEFFXXX,Northwind Ltd,GB29NWBK60161331926819,NWBKGB2LXXX,INVOICE-2026-4412</textarea>
+          <div class="demo-actions">
+            <button type="button" id="run-btn" class="pill pill-primary">Validate &amp; generate&nbsp;&rsaquo;</button>
+            <button type="button" id="break-btn" class="pill pill-ghost">Introduce an error</button>
+          </div>
+        </section>
+
+        <section class="demo-panel" aria-labelledby="output-heading">
+          <h2 id="output-heading">2 · Validation result &amp; pain.001.001.09 XML</h2>
+          <p class="status" id="status" role="status">Press “Validate &amp; generate” to run the checks.</p>
+          <ul class="error-list" id="errors"></ul>
+          <div class="xml-out" id="xml-out" tabindex="0" aria-label="Generated XML output">—</div>
+          <div class="demo-actions">
+            <button type="button" id="copy-btn" class="pill pill-ghost" disabled>Copy XML</button>
+          </div>
+        </section>
+      </div>
+
+      <div class="wrap">
+        <p class="fineprint" id="demo-fineprint">
+          Everything on this page runs in your browser — nothing is uploaded, stored, or sent anywhere.
+          This demo implements a subset of the pipeline (required fields, IBAN mod-97, BIC structure, amount
+          and date formats, recomputed <code style="font-family: inherit;">NbOfTxs</code>/<code style="font-family: inherit;">CtrlSum</code> control totals). The full toolchain adds JSON Schema
+          validation, five scheme rulebooks, and validation against the official ISO 20022 XSD —
+          <a href="/installation/">install the CLI</a> to run that gate for real.
+        </p>
+      </div>
+
+      <div class="wrap content-note">
+        <article>
+          <div lang="en"><h2>What this demo shows — and what the real pipeline adds</h2>
+<p>The demo above implements the <em>fail-fast</em> layer of the Pain001 pipeline: required-field checks, ISO 13616 mod-97 IBAN checksums, ISO 9362 BIC structure, amount and date formats, and control totals (<code>NbOfTxs</code>, <code>CtrlSum</code>) recomputed from the records rather than trusted. Try the "Introduce an error" button — a single flipped IBAN digit is exactly the class of mistake that otherwise surfaces as a bank rejection days later.</p>
+<p>The installed toolchain runs a much deeper gate: JSON Schema validation per record with field-alias normalisation, five scheme rulebooks (SEPA SCT, Instant, SDD Core, B2B, cross-border) with rule-by-rule <code>--explain</code> output, and final validation of the rendered document against the official ISO 20022 XSD before a single byte is written. Ten <code>pain.001</code> versions and <code>pain.008.001.02</code> are supported.</p>
+<pre><code class="language-bash"><pre style="background-color:#2b303b;">
+<span style="color:#8fa1b3;">pip</span><span style="color:#c0c5ce;"> install pain001
+</span><span style="color:#8fa1b3;">pain001</span><span style="color:#bf616a;"> -t</span><span style="color:#c0c5ce;"> pain.001.001.09</span><span style="color:#bf616a;"> -d</span><span style="color:#c0c5ce;"> payments.csv</span><span style="color:#bf616a;"> -o</span><span style="color:#c0c5ce;"> out/</span><span style="color:#bf616a;"> --scheme</span><span style="color:#c0c5ce;"> sepa-sct</span><span style="color:#bf616a;"> --dry-run
+</span></pre>
+</code></pre>
+<p>A fully in-browser build of the real engine (via WebAssembly) is on the roadmap; today the honest split is: this page proves the concept, <a href="/installation/">the CLI</a> proves your files.</p>
+</div>
+        </article>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">
+        <p>&copy; 2023&ndash;2026 Sebastien Rousseau &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a> &middot; <a href="/">pain001.com</a></p>
+      </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "@id": "https://pain001.com/try/",
+      "url": "https://pain001.com/try/",
+      "name": "Try Pain001 in Your Browser",
+      "description": "Paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, and recomputed control totals — then get pain.001.001.09 XML. Nothing leaves your browser.",
+      "applicationCategory": "FinanceApplication",
+      "browserRequirements": "Requires JavaScript. Runs entirely client-side.",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "publisher": { "@type": "Organization", "@id": "https://pain001.com/#organization", "name": "Pain001", "url": "https://pain001.com/" }
+    }
+    </script>
+
+    <script src="/_csp/2020b76d31896d86.js" integrity="sha384-N+Cwa3e91QWBRJD+QrLcTB7FGrhWwhdXTrA8wtIuQpCPItRZyeS7cLrg5FaIhZCP" crossorigin="anonymous"></script>
+  
+<!-- SSG Search Widget -->
+<div id="ssg-search-widget">
+<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous">
+<!-- Search trigger button -->
+<button id="ssg-search-btn" type="button" aria-label="Search">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<span>Search</span>
+<kbd>K</kbd>
+</button>
+<!-- Search modal -->
+<div id="ssg-search-overlay" role="dialog" aria-label="Search">
+<div id="ssg-search-box">
+<div id="ssg-search-header">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<input id="ssg-search-input" type="search" placeholder="Search documentation..." autocomplete="off" aria-label="Search"/>
+</div>
+<div id="ssg-search-results" aria-live="polite"></div>
+<div id="ssg-sr-status" role="status" aria-live="polite" aria-atomic="true"></div>
+<div class="ssg-search-footer"><span><kbd>Esc</kbd> close</span><span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span><span><kbd>Enter</kbd> open</span></div>
+</div>
+</div>
+<script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>
