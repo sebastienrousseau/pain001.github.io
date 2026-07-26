@@ -314,7 +314,55 @@ def hreflang_cluster(self_lang: str) -> str:
     return "".join(l for l in links if 'hreflang="%s"' % self_lang not in l)
 
 
+def translate_chrome(html: str, s: list) -> str:
+    """Localise the layout chrome around a translated body: nav labels,
+    controls, breadcrumb, article meta, footer. Replacements are anchored
+    to exact chrome markup so translated body text is never touched."""
+    (home, skip, minread, lastrev, contents, trydemo, why, see, docs,
+     suite, research, tagline, fres, privacy, terms, contact, langline,
+     tognav, swdark, swlight, srch, chlang) = s
+    pairs = [
+        ('>Skip to main content<', '>%s<' % skip),
+        ('aria-label="Toggle navigation"', 'aria-label="%s"' % tognav),
+        ('>Why Pain001</a>', '>%s</a>' % why),
+        ('>See it live</a>', '>%s</a>' % see),
+        ('>Docs</a>', '>%s</a>' % docs),
+        ('>Suite</a>', '>%s</a>' % suite),
+        ('>Research</a>', '>%s</a>' % research),
+        ('aria-label="Switch to dark theme"',
+         'aria-label="%s" data-label-dark="%s" data-label-light="%s"'
+         % (swdark, swdark, swlight)),
+        ('title="Switch theme"', 'title="%s"' % swdark),
+        ('aria-label="Search (Cmd or Ctrl + K)"', 'aria-label="%s (Cmd/Ctrl + K)"' % srch),
+        ('title="Search (⌘K)"', 'title="%s (⌘K)"' % srch),
+        ('aria-label="Change language"', 'aria-label="%s"' % chlang),
+        ('title="Change language"', 'title="%s"' % chlang),
+        ('>Try the demo&nbsp;&rsaquo;<', '>%s&nbsp;&rsaquo;<' % trydemo),
+        ('>Try the demo ›<', '>%s ›<' % trydemo),
+        ('>Home</a>', '>%s</a>' % home),
+        ('"name": "Home"', '"name": "%s"' % home),
+        (' min read<', ' %s<' % minread),
+        ('>Last reviewed <', '>%s <' % lastrev),
+        ('>Contents</h2>', '>%s</h2>' % contents),
+        ('>26 July 2026<', '>2026-07-26<'),
+        ('Open-source ISO 20022 payment initiation. Validated files, local processing, no lock-in.', tagline),
+        ('>Research &amp; trust</h2>', '>%s</h2>' % fres),
+        ('>Privacy</a>', '>%s</a>' % privacy),
+        ('>Terms</a>', '>%s</a>' % terms),
+        ('>Contact</a>', '>%s</a>' % contact),
+        ('>This overview in 34 languages<', '>%s<' % langline),
+    ]
+    for old, new in pairs:
+        html = html.replace(old, new)
+    return html
+
+
 def localise_pages(site: Path) -> None:
+    try:
+        from locale_strings import STRINGS
+    except ImportError:
+        sys.path.insert(0, str(Path(__file__).parent))
+        from locale_strings import STRINGS
     n = 0
     for slug in LOCALES:
         page = site / slug / "index.html"
@@ -325,6 +373,8 @@ def localise_pages(site: Path) -> None:
             html = html.replace("</head>",
                                 hreflang_cluster(LOCALES[slug]) + "</head>", 1)
         html = add_rtl_dir(html, slug)
+        if slug in STRINGS:
+            html = translate_chrome(html, STRINGS[slug])
         page.write_text(html, encoding="utf-8")
         n += 1
     home = site / "index.html"

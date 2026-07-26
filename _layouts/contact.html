@@ -353,7 +353,31 @@
         .ap-menu > li > a[aria-current="page"]::after { display: none; }
       }
       @media (max-width: 720px) { .ap-cta-mini { display: none; } .ap-search-kbd { display: none; } }
-      @media (max-width: 480px) { .ap-lang { display: none; } .ap-nav-wrap { gap: 0.5rem; } }
+      @media (max-width: 480px) {
+        .ap-nav-wrap { gap: 0.5rem; }
+        .ap-lang-toggle { padding: 0 0.55rem; }
+        .ap-lang-current { display: none; } /* globe alone at watch-strap widths */
+      }
+      @media (max-width: 380px) {
+        /* Watch-strap widths: logo-only brand (aria-label keeps the name),
+           tighter padding — every target stays 44px. */
+        .ap-nav-wrap { padding: 0 0.75rem; }
+        .ap-brand span { display: none; }
+        .ap-nav-right { gap: 0.15rem; }
+      }
+      /* Mobile locale menu: a fixed, viewport-fitted panel instead of an
+         anchored dropdown (the 4-column grid overflowed small screens). */
+      @media (max-width: 1180px) {
+        .ap-lang { position: static; }
+        .ap-lang-menu {
+          position: fixed; left: 0.75rem; right: 0.75rem; top: 72px;
+          margin-top: 0; max-height: min(75dvh, 560px);
+        }
+        .ap-lang-menu-grid {
+          grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+          min-width: 0;
+        }
+      }
 
       /* ssg's injected floating search trigger duplicates the in-nav
          search button; hide the trigger, keep the overlay it opens. */
@@ -539,7 +563,9 @@
         function paintTheme(theme) {
           document.querySelectorAll(".theme-toggle").forEach(function (btn) {
             btn.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
-            btn.setAttribute("aria-label", theme === "dark" ? "Switch to light theme" : "Switch to dark theme");
+            var light = btn.getAttribute("data-label-light") || "Switch to light theme";
+            var dark = btn.getAttribute("data-label-dark") || "Switch to dark theme";
+            btn.setAttribute("aria-label", theme === "dark" ? light : dark);
           });
         }
         paintTheme(currentTheme());
