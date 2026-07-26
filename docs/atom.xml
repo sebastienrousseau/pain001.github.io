@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Pain001</title>
+  <link href="https://pain001.com/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://pain001.com"/>
+  <id>https://pain001.com</id>
+  <updated>2026-07-26T08:00:00+00:00</updated>
+  <entry>
+    <title>ISO 20022 in 2026: Deadlines, Data and What Comes Next</title>
+    <link href="https://pain001.com/2026-iso20022-migration-trends/"/>
+    <id>https://pain001.com/2026-iso20022-migration-trends/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>The post-migration landscape with primary sources: the 14 Nov 2026 structured address and MT101-relay deadlines, Fedwire and FedNow status, IPR and VoP, LEIs, and agentic AI.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Page Not Found (404)</title>
+    <link href="https://pain001.com/404/"/>
+    <id>https://pain001.com/404/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>That address does not exist. Jump to the documentation, installation guide, FAQs, or glossary — or report the broken link on GitHub.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Architecture, Security and the Patent Landscape</title>
+    <link href="https://pain001.com/architecture-and-patents/"/>
+    <id>https://pain001.com/architecture-and-patents/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Zero-trust XML parsing, decimal-exact arithmetic, validation as a hard gate, 100% branch coverage — and where Pain001 sits amid patented MT–MX transformation services.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Pain001 vs Alternatives: an Honest Comparison</title>
+    <link href="https://pain001.com/competitors-comparison/"/>
+    <id>https://pain001.com/competitors-comparison/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Pain001 against Prowide, python-sepaxml, SWIFT Translator, XMLdation, Volante and the rest — what each does well, what it costs, and where the gaps are. Sources dated.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Contact Pain001: Support, Security and Enquiries</title>
+    <link href="https://pain001.com/contact/"/>
+    <id>https://pain001.com/contact/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Where to report bugs, disclose security issues privately, and reach the maintainer — with what to include for the fastest possible fix.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Pain001 Technical Reference: CLI, Python API and REST</title>
+    <link href="https://pain001.com/documentation/"/>
+    <id>https://pain001.com/documentation/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Complete reference for pain001 v0.0.56 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Pain001 FAQs for Treasury, Ops, Engineering and Audit</title>
+    <link href="https://pain001.com/faqs/"/>
+    <id>https://pain001.com/faqs/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Why banks reject payment files, pain.001 vs pain.008, the November 2026 deadlines, streaming large batches, security posture, and audit reproducibility — answered plainly.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>ISO 20022 Payments Glossary in Plain English</title>
+    <link href="https://pain001.com/glossary/"/>
+    <id>https://pain001.com/glossary/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, hybrid addresses, control sums — the payments vocabulary defined for treasurers and operations teams, not just developers.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Install Pain001: pip, Docker and First Validated File</title>
+    <link href="https://pain001.com/installation/"/>
+    <id>https://pain001.com/installation/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Install the Pain001 suite on Python 3.10–3.12 via pip or Docker, add Excel and MT101 loaders, and produce your first bank-ready pain.001 file in three commands.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Cross-Border pain.001 Under CBPR+: a Field Guide</title>
+    <link href="https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/"/>
+    <id>https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>What CBPR+ requires of your pain.001: BICFI agents, structured or hybrid addresses from 14 Nov 2026, charge bearers, purpose codes — with a worked xborder-ct example.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Made with Shokunin: How This Site Is Built</title>
+    <link href="https://pain001.com/made-with-shokunin/"/>
+    <id>https://pain001.com/made-with-shokunin/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>A Rust static site generator with security-first defaults, Markdown content, no JavaScript framework, and machine-readable surfaces from llms.txt to a CycloneDX SBOM.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Offline — Cached Copy Shown</title>
+    <link href="https://pain001.com/offline/"/>
+    <id>https://pain001.com/offline/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>The network is unreachable, so this page is served from cache. Previously visited pages may still work; everything returns with your connection.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain.001.001.03 Reference: Generate and Validate</title>
+    <link href="https://pain001.com/pain.001.001.03/"/>
+    <id>https://pain001.com/pain.001.001.03/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>pain.001.001.03 — the SEPA &amp; CGI workhorse version. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain.001.001.04 Reference: Generate and Validate</title>
+    <link href="https://pain001.com/pain.001.001.04/"/>
+    <id>https://pain001.com/pain.001.001.04/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>pain.001.001.04 — early maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain.001.001.05 Reference: Generate and Validate</title>
+    <link href="https://pain001.com/pain.001.001.05/"/>
+    <id>https://pain001.com/pain.001.001.05/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>pain.001.001.05 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain.001.001.06 Reference: Generate and Validate</title>
+    <link href="https://pain001.com/pain.001.001.06/"/>
+    <id>https://pain001.com/pain.001.001.06/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>pain.001.001.06 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain.001.001.07 Reference: Generate and Validate</title>
+    <link href="https://pain001.com/pain.001.001.07/"/>
+    <id>https://pain001.com/pain.001.001.07/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>pain.001.001.07 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain.001.001.08 Reference: Generate and Validate</title>
+    <link href="https://pain001.com/pain.001.001.08/"/>
+    <id>https://pain001.com/pain.001.001.08/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>pain.001.001.08 — the last pre-2019 version. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain.001.001.09 Reference: Generate and Validate</title>
+    <link href="https://pain001.com/pain.001.001.09/"/>
+    <id>https://pain001.com/pain.001.001.09/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>pain.001.001.09 — the CBPR+ cross-border version. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain.001.001.10 Reference: Generate and Validate</title>
+    <link href="https://pain001.com/pain.001.001.10/"/>
+    <id>https://pain001.com/pain.001.001.10/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>pain.001.001.10 — post-2019 refinement. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain.001.001.11 Reference: Generate and Validate</title>
+    <link href="https://pain001.com/pain.001.001.11/"/>
+    <id>https://pain001.com/pain.001.001.11/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>pain.001.001.11 — recent maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain.001.001.12 Reference: Generate and Validate</title>
+    <link href="https://pain001.com/pain.001.001.12/"/>
+    <id>https://pain001.com/pain.001.001.12/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>pain.001.001.12 — the newest supported version. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>MT101 to pain.001 Conversion: pain001-loader-mt101</title>
+    <link href="https://pain001.com/pain001-loader-mt101/"/>
+    <id>https://pain001.com/pain001-loader-mt101/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict error handling, ready for the 14 Nov 2026 relay cutover.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Excel to pain.001: pain001-loader-xlsx</title>
+    <link href="https://pain001.com/pain001-loader-xlsx/"/>
+    <id>https://pain001.com/pain001-loader-xlsx/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Read payment batches straight from .xlsx/.xlsm with an IBAN safety guard that stops Excel&apos;s numeric coercion corrupting account numbers before the bank ever sees them.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain001-lsp: ISO 20022 Diagnostics in Your Editor</title>
+    <link href="https://pain001.com/pain001-lsp/"/>
+    <id>https://pain001.com/pain001-lsp/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Language Server Protocol support for payment JSON: live schema validation, IBAN/BIC diagnostics, completion, hover docs, and quick fixes in VS Code, Neovim, Helix, Emacs.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>pain001-mcp: The MCP Server for ISO 20022 Payments</title>
+    <link href="https://pain001.com/pain001-mcp/"/>
+    <id>https://pain001.com/pain001-mcp/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>17 Model Context Protocol tools for AI agents — validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Payment Initiation End to End with Pain001</title>
+    <link href="https://pain001.com/payments/"/>
+    <id>https://pain001.com/payments/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>From ERP export to pain.002 acknowledgement to camt.053 reconciliation — designing batch, streaming, and API payment pipelines around validation gates that stop rejections.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Privacy: This Site Collects Nothing</title>
+    <link href="https://pain001.com/privacy/"/>
+    <id>https://pain001.com/privacy/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>No cookies, no analytics, no tracking. The website stores only your theme choice locally, and the Pain001 software processes all payment data on your own infrastructure.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Browse Pain001 Topics</title>
+    <link href="https://pain001.com/tags/"/>
+    <id>https://pain001.com/tags/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Every page tagged and grouped — ISO 20022 versions, SEPA rulebooks, SWIFT migration, AI tooling. Pick a topic and follow the thread.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Terms: Licences, Warranty and Fair Use</title>
+    <link href="https://pain001.com/terms/"/>
+    <id>https://pain001.com/terms/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Apache-2.0/MIT licensing for the suite, the as-is warranty disclaimer, content reuse rules, and why nothing here is financial or regulatory advice.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Thank You — Message Received</title>
+    <link href="https://pain001.com/thanks/"/>
+    <id>https://pain001.com/thanks/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Your message is on its way. Meanwhile: install Pain001, read the 2026 ISO 20022 briefing, or star the project on GitHub.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+</feed>

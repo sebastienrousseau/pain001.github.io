@@ -1,0 +1,21 @@
+{
+  "api": "ssg-agent-api",
+  "counts": {
+    "posts": 31,
+    "topics": 7
+  },
+  "links": {
+    "index": "https://pain001.com/api/agents/index.json",
+    "person": "https://pain001.com/api/agents/person.json",
+    "posts": "https://pain001.com/api/agents/posts.json",
+    "topics": "https://pain001.com/api/agents/topics.json"
+  },
+  "site": {
+    "description": "Open-source ISO 20022 pain.001 payment initiation suite: Python library, CLI, REST API, MCP server for AI agents, LSP server, and SWIFT MT101 / Excel loaders.",
+    "language": "en-GB",
+    "name": "Pain001",
+    "title": "Pain001 — ISO 20022 Payment Initiation Suite",
+    "url": "https://pain001.com"
+  },
+  "version": "0.0.47"
+}

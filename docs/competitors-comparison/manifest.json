@@ -1,0 +1,19 @@
+{
+  "background_color": "#ffffff",
+  "description": "Pain001 against Prowide, python-sepaxml, SWIFT Translator, XMLdation, Volante and the rest — what each does well, what i",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any maskable",
+      "sizes": "512x512",
+      "src": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+      "type": "image/svg+xml"
+    }
+  ],
+  "name": "Pain001",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "pain001",
+  "start_url": ".",
+  "theme_color": null
+}

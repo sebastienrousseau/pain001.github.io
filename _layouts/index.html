@@ -2,372 +2,1027 @@
 <html lang="{{language}}">
   <head>
     <meta charset="{{charset}}" />
-    <meta itemprop="datePublished" content="{{item_pub_date}}" id="date">
-    <meta itemprop="dateModified" content="{{last_build_date}}" id="last-modified">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta itemprop="datePublished" content="{{item_pub_date}}" id="date" />
+    <meta itemprop="dateModified" content="{{last_build_date}}" id="last-modified" />
     <title>{{title}}</title>
 
-    <!-- # Start Primary Meta Tags -->
     {{primary}}
-    <!-- # End Primary Meta Tags -->
-
-    <!-- # Start Open Graph / Facebook Meta Tags -->
     {{opengraph}}
-    <!-- # End Open Graph / Facebook Meta Tags -->
-
-    <!-- # Start Accessibility Meta Tags -->
+    <meta property="og:image" content="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />
+    <meta property="og:image:alt" content="{{banner_alt}}" />
     <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
-    <!-- # End Accessibility Meta Tags -->
-
-    <!-- # Start Apple Meta Tags -->
     {{apple}}
-    <!-- # End Apple Meta Tags -->
 
-    <!-- # Start Content Security Policy Meta Tags -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' *.google-analytics.com https://cdn.jsdelivr.net unpkg.com www.googletagmanager.com x.clarity.ms; connect-src 'self' collect; img-src 'self' data: https: kura.pro; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com; media-src 'self';" />
-    <!-- # End Content Security Policy Meta Tags -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-
-    <!-- # Start Microsoft Meta Tags -->
     {{microsoft}}
-    <!-- # End Microsoft Meta Tags -->
-
-    <!-- # Start Twitter Meta Tags -->
     {{twitter}}
-    <!-- # End Twitter Meta Tags -->
 
-    <!-- # Start Links -->
     <link rel="alternate" href="{{url}}" hreflang="{{hreflang}}" />
-    <link rel="preload" as="image" href="{{banner}}">
     <link rel="canonical" href="{{url}}" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="{{cdn}}/{{short_name}}/images/favicon.ico"
-      sizes="16x16 32x32"
-    />
-    <link
-      as="style"
-      crossorigin="anonymous"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-      onload="this.onload=null;this.rel='stylesheet'"
-      rel="preload"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="{{cdn}}/{{short_name}}/images/icons/{{apple_touch_icon_sizes}}.png"
-      sizes="{{apple_touch_icon_sizes}}"
-    />
+    <link rel="icon" type="image/svg+xml" href="{{cdn}}/pain001/v1/logos/pain001.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="{{cdn}}/pain001/v1/logos/pain001.svg" />
     <link rel="manifest" href="/manifest.json" />
     <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
-    <!-- # End Links -->
+    <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light dark" />
 
-    <!-- # Start Styles -->
+    <script>
+      /* Pre-paint theme init: honour saved choice, else OS preference. */
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t === "dark" || t === "light") {
+            document.documentElement.setAttribute("data-theme", t);
+          }
+        } catch (e) {}
+      })();
+    </script>
+
     <style>
-      @keyframes dropDown{from{transform:translateY(-.618rem)}to{transform:translateY(0)}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.active,h1,h2,h3,h4,h5,h6,strong{font-weight:400}.article-info{color:var(--theme-color);font-weight:400}.blur-light{backdrop-filter:saturate(180%) blur(20px);background-color:rgba(255,255,255,.618)}.card{overflow:hidden}.drop-down,.fade-in{animation-fill-mode:forwards}.drop-down{animation:dropDown 1.618s ease}.fade-in{animation:fadeIn 3s ease}h1,h2,h3,h4,h5,h6{color:var(--theme-color)}:root{--theme-color:{{theme_color}}}*{font-weight:300}a{color:var(--theme-color);text-decoration:none}a:hover{text-decoration:underline}pre{background:#f9f9f9;border:1px solid #ddd;border-left:3px solid var(--theme-color);color:#666;display:block;font-family:monospace;font-size:15px;line-height:1.618;margin-bottom:1.618em;max-width:100%;overflow:auto;padding:1em 1.618em;page-break-inside:avoid;word-wrap:break-word}.zoom-in{transition:transform .618s cubic-bezier(.618,1,.618,1)}.zoom-in:hover{transform:scale(1.0618)}.zoom-out{transition:transform .618s cubic-bezier(.618,1,.618,1)}.btn-info{background-color:var(--theme-color) !important;border-color:var(--theme-color) !important;}.text-info{color:var(--theme-color) !important}.zoom-out:hover{transform:scale(.618)}
+      @charset "UTF-8";
+      /* Tokens: identical to page.html — one design system, two layouts.
+         Contrast ratios annotated; target WCAG 2.2 AAA (7:1). */
+      :root {
+        --type-display: "Iowan Old Style", "Palatino Nova", Palatino, "New York", ui-serif, Georgia, serif;
+        --type-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        --type-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+
+        --bg-page: #ffffff;
+        --bg-alt: #f7f5f1;
+        --bg-card: #fdfcfa;
+        --ink: #1d1d1f;         /* 16.7:1 on #fff — AAA */
+        --ink-soft: #3a3a3c;    /* 11.3:1 — AAA */
+        --ink-mute: #4d4d55;    /*  8.4:1 on #fff, 7.8:1 on --bg-alt — AAA */
+        --rule: #e4e1da;
+        --rule-strong: #c9c5bb;
+
+        --link: #004caf;        /*  7.9:1 on #fff — AAA */
+        --link-hover: #003a86;
+        --eyebrow: #684d00;     /*  8.0:1 on #fff — AAA */
+        --btn-bg: #1d1d1f;
+        --btn-text: #ffffff;
+        --focus-ring: #004caf;
+
+        --ok: #14532d;          /*  9.7:1 — AAA */
+        --bad: #7f1d1d;         /*  9.9:1 — AAA */
+
+        --code-bg: #14161c;
+        --code-text: #f2f3f5;
+
+        --finale-bg: #101319;
+        --finale-ink: #f5f5f7;  /* 16.2:1 on #101319 — AAA */
+        --finale-mute: #b9c0cc; /*  9.4:1 on #101319 — AAA */
+
+        --shadow-sm: 0 1px 2px rgb(29 29 31 / 0.06);
+        --shadow-md: 0 12px 32px -12px rgb(29 29 31 / 0.18);
+        --radius-sm: 8px;
+        --radius-md: 14px;
+        --radius-pill: 999px;
+      }
+
+      [data-theme="dark"] {
+        --bg-page: #0b0e14;
+        --bg-alt: #10141c;
+        --bg-card: #171b24;
+        --ink: #f5f5f7;
+        --ink-soft: #d6d9e0;
+        --ink-mute: #b3bac7;
+        --rule: #262c38;
+        --rule-strong: #3a4252;
+        --link: #8cc0ff;
+        --link-hover: #b8d8ff;
+        --eyebrow: #e3c878;
+        --btn-bg: #f5f5f7;
+        --btn-text: #16181d;
+        --focus-ring: #8cc0ff;
+        --ok: #86efac;
+        --bad: #fca5a5;
+        --code-bg: #05070b;
+        --code-text: #eef0f4;
+        --finale-bg: #05070b;
+        --finale-ink: #f5f5f7;
+        --finale-mute: #b9c0cc;
+        --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.6);
+        --shadow-md: 0 12px 32px -12px rgb(0 0 0 / 0.7);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        html:not([data-theme="light"]) {
+          --bg-page: #0b0e14;
+          --bg-alt: #10141c;
+          --bg-card: #171b24;
+          --ink: #f5f5f7;
+          --ink-soft: #d6d9e0;
+          --ink-mute: #b3bac7;
+          --rule: #262c38;
+          --rule-strong: #3a4252;
+          --link: #8cc0ff;
+          --link-hover: #b8d8ff;
+          --eyebrow: #e3c878;
+          --btn-bg: #f5f5f7;
+          --btn-text: #16181d;
+          --focus-ring: #8cc0ff;
+          --ok: #86efac;
+          --bad: #fca5a5;
+          --code-bg: #05070b;
+          --code-text: #eef0f4;
+          --finale-bg: #05070b;
+          --finale-ink: #f5f5f7;
+          --finale-mute: #b9c0cc;
+          --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.6);
+          --shadow-md: 0 12px 32px -12px rgb(0 0 0 / 0.7);
+        }
+      }
+
+      @view-transition { navigation: auto; }
+
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      html {
+        font-family: var(--type-body);
+        font-size: 16px;
+        line-height: 1.65;
+        color: var(--ink);
+        background-color: var(--bg-page);
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+        text-rendering: optimizeLegibility;
+      }
+      body { min-height: 100vh; display: flex; flex-direction: column; }
+      ::selection { background: var(--link); color: var(--bg-page); }
+      :focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 3px; border-radius: 2px; }
+
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+      @media (prefers-contrast: more) {
+        :root, [data-theme="dark"] {
+          --ink-soft: var(--ink);
+          --ink-mute: var(--ink);
+          --rule: var(--rule-strong);
+        }
+      }
+
+      .progress {
+        position: fixed; top: 0; left: 0;
+        height: 3px; width: 100%;
+        background: var(--link);
+        transform-origin: 0 50%;
+        transform: scaleX(0);
+        z-index: 2000;
+      }
+      @supports (animation-timeline: scroll()) {
+        .progress { animation: grow linear both; animation-timeline: scroll(root); }
+        @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+      }
+
+      .skip-link {
+        position: absolute; top: -120px; left: 1rem;
+        background: var(--btn-bg); color: var(--btn-text);
+        padding: 0.8rem 1.6rem; z-index: 10000;
+        border-radius: var(--radius-pill); font-weight: 600;
+        transition: top 0.2s ease;
+      }
+      .skip-link:focus { top: 1rem; }
+
+      .wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 1.75rem; }
+
+      /* ==== Navigation (identical to page.html) ==== */
+      .navbar {
+        position: sticky; top: 0; z-index: 1000;
+        background: color-mix(in srgb, var(--bg-page) 88%, transparent);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--rule);
+      }
+      .nav-inner {
+        display: flex; align-items: center; justify-content: space-between;
+        gap: 1rem; min-height: 64px; flex-wrap: wrap;
+      }
+      .brand {
+        display: inline-flex; align-items: center; gap: 0.6rem;
+        font-family: var(--type-display);
+        font-size: 1.3rem; font-weight: 700; letter-spacing: -0.01em;
+        color: var(--ink); text-decoration: none; min-height: 44px;
+      }
+      .brand img { height: 30px; width: 30px; }
+      .nav-toggle-input { position: absolute; opacity: 0; }
+      .nav-toggle-label {
+        display: none;
+        min-width: 44px; min-height: 44px;
+        align-items: center; justify-content: center;
+        border: 1px solid var(--rule-strong); border-radius: var(--radius-sm);
+        cursor: pointer; font-size: 1.25rem; color: var(--ink);
+      }
+      .nav-links { display: flex; align-items: center; gap: 0.1rem; list-style: none; flex-wrap: wrap; }
+      .nav-links a {
+        display: inline-flex; align-items: center;
+        min-height: 44px; padding: 0 0.7rem;
+        color: var(--ink-soft);
+        font-weight: 500; font-size: 0.88rem; letter-spacing: 0.01em;
+        text-decoration: none; border-radius: var(--radius-sm);
+      }
+      .nav-links a:hover { color: var(--ink); background: var(--bg-alt); }
+      .nav-links a[aria-current="page"] {
+        color: var(--ink); font-weight: 700;
+        text-decoration: underline; text-underline-offset: 8px;
+        text-decoration-color: var(--link); text-decoration-thickness: 2px;
+      }
+      .nav-right { display: flex; align-items: center; gap: 0.6rem; }
+      .nav-cta {
+        display: inline-flex; align-items: center;
+        min-height: 40px; padding: 0 1.1rem;
+        background: var(--btn-bg); color: var(--btn-text);
+        border-radius: var(--radius-pill);
+        font-size: 0.88rem; font-weight: 600; text-decoration: none;
+        white-space: nowrap;
+      }
+      .nav-cta:hover { opacity: 0.85; }
+      .theme-btn {
+        background: transparent;
+        border: 1px solid var(--rule-strong);
+        color: var(--ink);
+        min-height: 40px; min-width: 44px;
+        padding: 0 0.8rem;
+        border-radius: var(--radius-pill);
+        cursor: pointer; font-size: 0.85rem; font-weight: 600;
+        font-family: inherit;
+      }
+      .theme-btn:hover { background: var(--bg-alt); }
+
+      @media (max-width: 1120px) {
+        .nav-toggle-label { display: inline-flex; }
+        .nav-links {
+          display: none; flex-direction: column; align-items: stretch;
+          width: 100%; padding: 0.5rem 0 1rem;
+          border-top: 1px solid var(--rule); margin-top: 0.25rem;
+        }
+        .nav-toggle-input:checked ~ .nav-links { display: flex; }
+        .nav-toggle-input:focus-visible ~ .nav-toggle-label {
+          outline: 3px solid var(--focus-ring); outline-offset: 3px;
+        }
+        .nav-cta { display: none; }
+      }
+
+      /* ==== Hero ==== */
+      .hero { padding: 6rem 0 4rem; }
+      .hero-eyebrow {
+        font-size: 0.8rem; font-weight: 700;
+        letter-spacing: 0.14em; text-transform: uppercase;
+        color: var(--eyebrow);
+        margin-bottom: 1.4rem;
+      }
+      .hero-title {
+        font-family: var(--type-display);
+        font-size: clamp(2.8rem, 6vw, 4.6rem);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        line-height: 1.06;
+        max-width: 17ch;
+        margin-bottom: 1.6rem;
+        text-wrap: balance;
+      }
+      .hero-sub {
+        font-size: 1.3rem; line-height: 1.55;
+        color: var(--ink-soft);
+        max-width: 56ch;
+        margin-bottom: 2.4rem;
+      }
+      .hero-cta { display: flex; gap: 0.9rem; flex-wrap: wrap; margin-bottom: 3.5rem; }
+      .pill {
+        display: inline-flex; align-items: center; justify-content: center;
+        min-height: 50px; padding: 0 1.8rem;
+        border-radius: var(--radius-pill);
+        font-size: 1rem; font-weight: 600; text-decoration: none;
+        border: 1px solid transparent;
+      }
+      .pill-primary { background: var(--btn-bg); color: var(--btn-text); }
+      .pill-primary:hover { opacity: 0.85; }
+      .pill-ghost { background: transparent; color: var(--ink); border-color: var(--rule-strong); }
+      .pill-ghost:hover { border-color: var(--ink); }
+
+      .terminal {
+        max-width: 780px;
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        border: 1px solid var(--rule);
+      }
+      .terminal-bar {
+        display: flex; align-items: center; gap: 0.8rem;
+        background: var(--code-bg); color: var(--code-text);
+        padding: 0.7rem 1.3rem;
+        font-family: var(--type-mono); font-size: 0.8rem;
+        border-bottom: 1px solid rgb(255 255 255 / 0.08);
+      }
+      .terminal-dots { display: flex; gap: 6px; }
+      .terminal-dots span { width: 11px; height: 11px; border-radius: 50%; background: rgb(255 255 255 / 0.22); }
+      .terminal pre {
+        margin: 0; padding: 1.5rem 1.6rem;
+        background: var(--code-bg); color: var(--code-text);
+        overflow-x: auto;
+        font-family: var(--type-mono);
+        font-size: 0.93rem; line-height: 1.75;
+      }
+
+      /* ==== Proof rail ==== */
+      .proof { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+      .proof-rail {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+      .kpi {
+        padding: 2.4rem 2rem;
+        border-left: 1px solid var(--rule);
+      }
+      .kpi:first-child { border-left: none; }
+      .kpi-value {
+        font-family: var(--type-display);
+        font-size: 2.6rem; font-weight: 700; letter-spacing: -0.02em;
+        line-height: 1.1;
+      }
+      .kpi-label { color: var(--ink-mute); font-size: 0.92rem; margin-top: 0.4rem; max-width: 24ch; }
+      @media (max-width: 720px) {
+        .kpi { border-left: none; border-top: 1px solid var(--rule); }
+        .kpi:first-child { border-top: none; }
+      }
+
+      /* ==== Sections ==== */
+      .section { padding: 5rem 0; }
+      .section-alt { background: var(--bg-alt); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+      .section-head { max-width: 62ch; margin-bottom: 3rem; }
+      .section-eyebrow {
+        font-size: 0.8rem; font-weight: 700;
+        letter-spacing: 0.14em; text-transform: uppercase;
+        color: var(--eyebrow);
+        margin-bottom: 0.9rem;
+      }
+      .section-title {
+        font-family: var(--type-display);
+        font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+        font-weight: 700; letter-spacing: -0.015em; line-height: 1.15;
+        margin-bottom: 0.9rem;
+        text-wrap: balance;
+      }
+      .section-sub { color: var(--ink-soft); font-size: 1.12rem; max-width: 58ch; }
+      .section-sub a { color: var(--link); }
+
+      /* ==== Offer cards ==== */
+      .offer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+        gap: 1.4rem;
+      }
+      .offer-card {
+        background: var(--bg-card);
+        border: 1px solid var(--rule);
+        border-radius: var(--radius-md);
+        padding: 2rem 1.9rem 1.6rem;
+        display: flex; flex-direction: column;
+        box-shadow: var(--shadow-sm);
+      }
+      .offer-icon { color: var(--link); margin-bottom: 1.1rem; }
+      .offer-icon svg { display: block; }
+      .offer-title { font-size: 1.12rem; font-weight: 700; margin-bottom: 0.7rem; letter-spacing: -0.005em; }
+      .offer-text { color: var(--ink-soft); font-size: 0.98rem; flex-grow: 1; margin-bottom: 1.1rem; }
+      .offer-link {
+        color: var(--link); font-weight: 650; text-decoration: none;
+        min-height: 44px; display: inline-flex; align-items: center;
+      }
+      .offer-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+      /* ==== Markdown content ==== */
+      .content-body { font-size: 1.06rem; line-height: 1.75; max-width: 68ch; }
+      .content-body h1 { display: none; } /* hero carries the H1 */
+      .content-body h2 {
+        font-family: var(--type-display);
+        font-size: 1.8rem; font-weight: 700; letter-spacing: -0.01em;
+        margin: 2.75rem 0 1rem;
+      }
+      .content-body h2:first-of-type { margin-top: 0; }
+      .content-body p { margin-bottom: 1.4rem; color: var(--ink-soft); }
+      .content-body ul, .content-body ol { margin: 0 0 1.4rem 1.6rem; color: var(--ink-soft); }
+      .content-body li { margin-bottom: 0.55rem; }
+      .content-body a { color: var(--link); text-decoration: underline; text-underline-offset: 3px; }
+      .content-body strong { color: var(--ink); font-weight: 650; }
+      .content-body code {
+        font-family: var(--type-mono); font-size: 0.86em;
+        background: var(--bg-alt); border: 1px solid var(--rule);
+        border-radius: 6px; padding: 0.15rem 0.45rem;
+        overflow-wrap: break-word;
+      }
+      .content-body pre {
+        background: var(--code-bg); color: var(--code-text);
+        padding: 1.4rem 1.6rem; border-radius: var(--radius-md);
+        overflow-x: auto; margin-bottom: 1.75rem;
+        font-size: 0.92rem; line-height: 1.7;
+      }
+      .content-body pre code { background: transparent; border: none; color: inherit; padding: 0; }
+      .content-body hr { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
+
+      /* ==== Comparison table ==== */
+      .matrix-wrap { overflow-x: auto; }
+      .matrix-table { width: 100%; border-collapse: collapse; font-size: 0.97rem; }
+      .matrix-table th, .matrix-table td {
+        padding: 1rem 1.1rem;
+        border-bottom: 1px solid var(--rule);
+        text-align: left; vertical-align: top;
+      }
+      .matrix-table thead th {
+        font-size: 0.78rem; font-weight: 700;
+        letter-spacing: 0.1em; text-transform: uppercase;
+        color: var(--ink-mute);
+        border-bottom: 2px solid var(--rule-strong);
+      }
+      .matrix-table tbody th { font-weight: 650; color: var(--ink); }
+      .matrix-table td { color: var(--ink-soft); }
+      .matrix-table caption {
+        caption-side: bottom; text-align: left;
+        color: var(--ink-mute); font-size: 0.85rem;
+        padding-top: 0.9rem;
+      }
+      .check-yes { color: var(--ok); font-weight: 650; }
+      .check-no { color: var(--bad); font-weight: 600; }
+
+      /* ==== FAQ ==== */
+      .qa-head {
+        font-family: var(--type-display);
+        font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+        font-weight: 700; letter-spacing: -0.015em;
+        margin-bottom: 0.9rem;
+      }
+      .qa-head .soft { color: var(--ink-mute); }
+      .faq-list { max-width: 820px; margin-top: 2.5rem; }
+      .faq-item { border-top: 1px solid var(--rule); }
+      .faq-item:last-of-type { border-bottom: 1px solid var(--rule); }
+      .faq-item summary {
+        cursor: pointer;
+        font-weight: 650; font-size: 1.06rem;
+        padding: 1.35rem 0.25rem;
+        min-height: 44px;
+        list-style: none;
+        display: flex; justify-content: space-between; align-items: center; gap: 1.25rem;
+      }
+      .faq-item summary::-webkit-details-marker { display: none; }
+      .faq-item summary::after {
+        content: "+";
+        font-family: var(--type-display);
+        font-size: 1.5rem; color: var(--ink-mute);
+        flex-shrink: 0; line-height: 1;
+      }
+      .faq-item[open] summary::after { content: "\2212"; }
+      .faq-answer { padding: 0 0.25rem 1.5rem; color: var(--ink-soft); max-width: 65ch; }
+      .faq-answer p { margin-bottom: 0.8rem; }
+      .faq-more { margin-top: 2rem; }
+
+      /* ==== Finale ==== */
+      .finale {
+        background: var(--finale-bg);
+        color: var(--finale-ink);
+        padding: 6rem 0;
+        text-align: center;
+      }
+      .finale-title {
+        font-family: var(--type-display);
+        font-size: clamp(2.1rem, 4.4vw, 3.2rem);
+        font-weight: 700; letter-spacing: -0.015em; line-height: 1.12;
+        max-width: 22ch; margin: 0 auto 1.2rem;
+        text-wrap: balance;
+      }
+      .finale-sub { color: var(--finale-mute); font-size: 1.15rem; max-width: 52ch; margin: 0 auto 2.4rem; }
+      .finale .pill-primary { background: #f5f5f7; color: #16181d; }
+      .finale .pill-ghost { color: var(--finale-ink); border-color: #4a5261; }
+      .finale .pill-ghost:hover { border-color: var(--finale-ink); }
+      .finale-cta { display: flex; gap: 0.9rem; justify-content: center; flex-wrap: wrap; }
+
+      /* Back to top */
+      .totop {
+        position: fixed; right: 1.4rem; bottom: 1.4rem;
+        min-width: 44px; min-height: 44px;
+        display: inline-flex; align-items: center; justify-content: center;
+        background: var(--btn-bg); color: var(--btn-text);
+        border: none; border-radius: var(--radius-pill);
+        font-size: 1.1rem; cursor: pointer;
+        box-shadow: var(--shadow-md);
+        z-index: 900;
+      }
+      .totop[hidden] { display: none; }
+
+      /* ==== Footer (identical to page.html) ==== */
+      .footer {
+        border-top: 1px solid var(--rule);
+        background: var(--bg-alt);
+        padding: 3.5rem 0 2rem;
+        font-size: 0.93rem;
+      }
+      .footer-brand { font-family: var(--type-display); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.6rem; }
+      .footer-tagline { color: var(--ink-mute); max-width: 34ch; }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.4fr repeat(3, 1fr);
+        gap: 2.5rem;
+        padding-bottom: 2.5rem;
+      }
+      @media (max-width: 860px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 520px) { .footer-grid { grid-template-columns: 1fr; } }
+      .footer-heading {
+        font-size: 0.76rem; font-weight: 700;
+        letter-spacing: 0.14em; text-transform: uppercase;
+        color: var(--ink-mute);
+        margin-bottom: 0.9rem;
+      }
+      .footer-links { list-style: none; }
+      .footer-links a {
+        display: inline-flex; align-items: center;
+        min-height: 34px;
+        color: var(--ink-soft); text-decoration: none;
+      }
+      .footer-links a:hover { color: var(--link); text-decoration: underline; }
+      .footer-legal {
+        border-top: 1px solid var(--rule);
+        padding-top: 1.5rem;
+        display: flex; align-items: center; justify-content: space-between;
+        flex-wrap: wrap; gap: 1rem;
+        color: var(--ink-mute); font-size: 0.85rem;
+      }
+      .footer-legal ul { list-style: none; display: flex; flex-wrap: wrap; gap: 1.25rem; }
+      .footer-legal a { color: var(--ink-mute); }
+      .footer-legal a:hover { color: var(--link); }
     </style>
-    <!-- # End Styles -->
   </head>
-  <body
-    id="page-top"
-    itemscope
-    itemtype="http://schema.org/WebPage"
-    class="fw-light text-center bg-white text-start fs-6"
-  >
-    <!-- # Start Responsive navbar -->
-    <nav
-      class="bg-white navbar navbar-expand-lg bd-navbar sticky-top shadow-small border-bottom blur-light"
-      id="mainNav"
-      itemscope
-      itemtype="http://schema.org/SiteNavigationElement"
-    >
-    <div class="container-xxl p-3">
-      <a class="navbar-brand p-0 me-0 me-lg-2" href="/" aria-label="logo">
-        <img
-          class="d-inline-block align-top"
-          width="{{logo_width}}"
-          height="{{logo_height}}"
-          src="{{logo}}"
-          alt="{{logo_alt}}"
-          title="{{logo_alt}}"
-          loading="lazy"
-        />
-      </a>
-      <span class="fs-4" itemprop="name"><a href="/" itemprop="url" title="{{short_name}}" class="text-decoration-none text-dark">{{short_name}}</a></span>
-      <button
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#navbarSupportedContent"
-          data-bs-toggle="collapse"
-          type="button"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a
-                class="nav-link {{menu}}"
-                aria-current="page"
-                href="/index.html">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                id="navbarDropdown"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                >Payments</a
-              >
-              <ul
-                class="dropdown-menu dropdown-menu-end"
-                aria-labelledby="supportDropdown"
-              >
-                <li>
-                  <a class="dropdown-item" href="/payments/index.html">
-                    About ISO 20022
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/iso-20022-payment-initiation-for-cross-border-payments/index.html">
-                    Payment Initiation Messages
-                  </a>
-                  <ul>
-                    <li>
-                      <a class="dropdown-item" href="/pain.001.001.03/index.html">
-                        pain.001.001.03
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/pain.001.001.04/index.html">
-                        pain.001.001.04
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/pain.001.001.05/index.html">
-                        pain.001.001.05
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/pain.001.001.06/index.html">
-                        pain.001.001.06
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/pain.001.001.07/index.html">
-                        pain.001.001.07
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/pain.001.001.08/index.html">
-                        pain.001.001.08
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/pain.001.001.09/index.html">
-                        pain.001.001.09
-                      </a>
-                    </li>
-                    </ul>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                id="navbarDropdown"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                >Support</a
-              >
-              <ul
-                class="dropdown-menu dropdown-menu-end"
-                aria-labelledby="documentationDropdown"
-              >
-                <li>
-                  <a class="dropdown-item" href="/documentation/index.html">
-                    Documentation
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/made-with-shokunin/index.html">
-                    Made with Shokunin (SSG)
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/privacy/index.html">
-                    Privacy policy
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="https://github.com/sebastienrousseau/pain001">
-                    Source Code ⧉
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/tags/index.html">
-                    Tags
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/terms/index.html">
-                    Terms of service
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a
-                aria-pressed="false"
-                class="btn btn-dark rounded-pill px-3"
-                href="/contact/index.html"
-                >Contact us
-              </a>
-            </li>
+
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="navbar">
+      <div class="wrap nav-inner">
+        <a href="/" class="brand">
+          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="Pain001 logo" width="30" height="30" />
+          <span>Pain001</span>
+        </a>
+
+        <nav aria-label="Primary">
+          <input type="checkbox" id="nav-toggle" class="nav-toggle-input" />
+          <label for="nav-toggle" class="nav-toggle-label">
+            <span aria-hidden="true">&#9776;</span>
+            <span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">Menu</span>
+          </label>
+          <ul class="nav-links" id="primary-menu">
+            <li><a href="/documentation/">Docs</a></li>
+            <li><a href="/installation/">Install</a></li>
+            <li><a href="/pain001-mcp/">MCP</a></li>
+            <li><a href="/pain001-lsp/">LSP</a></li>
+            <li><a href="/2026-iso20022-migration-trends/">2026 Briefing</a></li>
+            <li><a href="/competitors-comparison/">Compare</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/faqs/">FAQs</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-right">
+          <button id="themeToggle" class="theme-btn" type="button" aria-pressed="false" aria-label="Switch to dark theme">
+            <span aria-hidden="true" id="themeIcon">◐</span> <span id="themeLabel">Dark</span>
+          </button>
+          <a href="/installation/" class="nav-cta">Get started&nbsp;&rsaquo;</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- Hero -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="wrap">
+          <p class="hero-eyebrow">Open source · ISO 20022 · CBPR+ ready</p>
+          <h1 id="hero-heading" class="hero-title">Payment files your bank will not reject.</h1>
+          <p class="hero-sub">
+            Pain001 turns the data you already have — CSV, Excel, SQLite, JSON, Parquet, legacy SWIFT MT101 — into schema-validated <code style="font-family: var(--type-mono); font-size: 0.9em;">pain.001</code> and <code style="font-family: var(--type-mono); font-size: 0.9em;">pain.008</code> XML, and proves it clean before submission. AI-agent tools and editor diagnostics included.
+          </p>
+          <div class="hero-cta">
+            <a href="/installation/" class="pill pill-primary">Get started&nbsp;&rsaquo;</a>
+            <a href="/2026-iso20022-migration-trends/" class="pill pill-ghost">Read the 2026 briefing</a>
+          </div>
+
+          <div class="terminal">
+            <div class="terminal-bar">
+              <div class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              <span>terminal — 60 seconds to a validated file</span>
+            </div>
+            <pre><code># Install the suite
+pip install pain001 pain001-loader-xlsx pain001-loader-mt101
+
+# Excel in, validated pain.001.001.09 out
+pain001 -t pain.001.001.09 -d payments.xlsx -o out/
+
+# Prove it clean before the bank sees it  (exit 0 = valid)
+pain001 -t pain.001.001.09 -d payments.csv --scheme sepa-sct --dry-run</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Proof rail -->
+      <section class="proof" aria-label="Verifiable project facts">
+        <div class="wrap proof-rail">
+          <div class="kpi">
+            <div class="kpi-value">11</div>
+            <p class="kpi-label">message definitions — pain.001 v03–v12 and pain.008</p>
+          </div>
+          <div class="kpi">
+            <div class="kpi-value">17</div>
+            <p class="kpi-label">MCP tools for AI agents, every one read-only</p>
+          </div>
+          <div class="kpi">
+            <div class="kpi-value">100%</div>
+            <p class="kpi-label">line and branch coverage, enforced as a CI gate</p>
+          </div>
+          <div class="kpi">
+            <div class="kpi-value">0</div>
+            <p class="kpi-label">bytes of payment data leave your machine</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Suite -->
+      <section class="section" aria-labelledby="suite-heading">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="section-eyebrow">The suite</p>
+            <h2 id="suite-heading" class="section-title">Five packages. One validation pipeline.</h2>
+            <p class="section-sub">Every surface — CLI, library, REST, AI agent, editor — runs the same gate: JSON Schema per record, scheme rulebook, then the official XSD. Results never diverge, because there is one pipeline.</p>
+          </div>
+
+          <div class="offer-grid">
+            <article class="offer-card">
+              <div class="offer-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"/><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+              </div>
+              <h3 class="offer-title">pain001 — core library, CLI &amp; REST</h3>
+              <p class="offer-text">Ten <code>pain.001</code> versions plus <code>pain.008.001.02</code>, five scheme rulebooks, exact <code>decimal.Decimal</code> arithmetic, recomputed control totals, streaming for large batches, and a FastAPI microservice.</p>
+              <a href="/documentation/" class="offer-link">Technical reference&nbsp;&rsaquo;</a>
+            </article>
+
+            <article class="offer-card">
+              <div class="offer-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M8 21h8M12 18v3"/><rect x="4" y="6" width="16" height="12" rx="3"/><path d="M9 11v2M15 11v2"/></svg>
+              </div>
+              <h3 class="offer-title">pain001-mcp — 17 tools for AI agents</h3>
+              <p class="offer-text">The MCP server for ISO 20022 payment initiation. Agents validate identifiers, migrate versions, convert MT101, and generate validated XML — locally, over stdio, read-only by contract.</p>
+              <a href="/pain001-mcp/" class="offer-link">Meet the MCP server&nbsp;&rsaquo;</a>
+            </article>
+
+            <article class="offer-card">
+              <div class="offer-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 9-3 3 3 3M16 9l3 3-3 3M13 5l-2 14"/></svg>
+              </div>
+              <h3 class="offer-title">pain001-lsp — diagnostics as you type</h3>
+              <p class="offer-text">Live schema validation, IBAN checksum and BIC diagnostics, completion, hover documentation, quick fixes, and formatting for payment JSON in VS Code, Neovim, Helix, and Emacs.</p>
+              <a href="/pain001-lsp/" class="offer-link">Editor integration&nbsp;&rsaquo;</a>
+            </article>
+
+            <article class="offer-card">
+              <div class="offer-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4M4 7h16M16 21l4-4-4-4M20 17H4"/></svg>
+              </div>
+              <h3 class="offer-title">pain001-loader-mt101 — the MT bridge</h3>
+              <p class="offer-text">Parse legacy SWIFT MT101 into records that pass <code>pain.001.001.09</code> validation — the version mandated when the interbank relay retires on 14 November 2026. Field mapping published in full.</p>
+              <a href="/pain001-loader-mt101/" class="offer-link">MT101 conversion&nbsp;&rsaquo;</a>
+            </article>
+
+            <article class="offer-card">
+              <div class="offer-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg>
+              </div>
+              <h3 class="offer-title">pain001-loader-xlsx — Excel, safely</h3>
+              <p class="offer-text">Direct <code>.xlsx</code>/<code>.xlsm</code> ingestion with an IBAN safety guard: numeric cells in account columns stop the load before Excel's silent coercion corrupts a single account number.</p>
+              <a href="/pain001-loader-xlsx/" class="offer-link">Excel plugin guide&nbsp;&rsaquo;</a>
+            </article>
+
+            <article class="offer-card">
+              <div class="offer-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.4 3.4 8.4 8 9 4.6-.6 8-4.6 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <h3 class="offer-title">Security &amp; architecture</h3>
+              <p class="offer-text">Zero-trust XML via <code>defusedxml</code>, path-traversal guards, a plugin kill switch, non-root containers, a CycloneDX SBOM — and where an open implementation sits in a patented market.</p>
+              <a href="/architecture-and-patents/" class="offer-link">Architecture paper&nbsp;&rsaquo;</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Markdown content -->
+      <section class="section section-alt">
+        <div class="wrap">
+          <article class="content-body">
+            {{content}}
+          </article>
+        </div>
+      </section>
+
+      <!-- Comparison -->
+      <section class="section" aria-labelledby="comp-heading">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="section-eyebrow">The field</p>
+            <h2 id="comp-heading" class="section-title">Open source against the market.</h2>
+            <p class="section-sub">The full, sourced analysis — including what commercial platforms genuinely do better — is on the <a href="/competitors-comparison/">comparison page</a>.</p>
+          </div>
+
+          <div class="matrix-wrap">
+            <table class="matrix-table">
+              <caption>Verified July 2026. “Commercial translators” covers SWIFT Translator, XMLdation, and peers; “open-source generators” covers python-sepaxml, php-sepa-xml, and peers.</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Capability</th>
+                  <th scope="col">Pain001 suite</th>
+                  <th scope="col">Commercial translators</th>
+                  <th scope="col">Open-source generators</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Licence &amp; auditability</th>
+                  <td><span class="check-yes">✓ Apache-2.0 / MIT, full source</span></td>
+                  <td><span class="check-no">✗ Closed; SWIFT SDK lists €10–30k/yr</span></td>
+                  <td><span class="check-yes">✓ Open source</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">pain.001 version coverage</th>
+                  <td><span class="check-yes">✓ v03–v12 + pain.008.001.02</span></td>
+                  <td>Broad, vendor-dependent</td>
+                  <td><span class="check-no">Mostly SEPA v03-era</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Data ingestion</th>
+                  <td><span class="check-yes">✓ CSV, Excel, SQLite, JSON, Parquet, MT101, GPG</span></td>
+                  <td>Via integration projects</td>
+                  <td><span class="check-no">✗ Code-level dicts only</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Validation as a hard gate</th>
+                  <td><span class="check-yes">✓ JSON Schema + rulebooks + official XSD</span></td>
+                  <td><span class="check-yes">✓ Core product</span></td>
+                  <td><span class="check-no">Minimal / optional</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">AI-agent interface (MCP)</th>
+                  <td><span class="check-yes">✓ 17 tools, local, read-only</span></td>
+                  <td><span class="check-no">✗ None shipped</span></td>
+                  <td><span class="check-no">✗ None</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Editor language server</th>
+                  <td><span class="check-yes">✓ pain001-lsp</span></td>
+                  <td><span class="check-no">✗ None</span></td>
+                  <td><span class="check-no">✗ None</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Bank connectivity &amp; support SLAs</th>
+                  <td><span class="check-no">✗ Out of scope by design</span></td>
+                  <td><span class="check-yes">✓ Their core value</span></td>
+                  <td><span class="check-no">✗ None</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section section-alt" aria-labelledby="faq-heading">
+        <div class="wrap">
+          <p class="section-eyebrow">Questions</p>
+          <h2 id="faq-heading" class="qa-head">Questions? <span class="soft">Answers.</span></h2>
+          <p class="section-sub">The five most common — the <a href="/faqs/">full FAQ</a> covers treasury, operations, engineering, and audit.</p>
+
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>What problem does Pain001 actually solve?</summary>
+              <div class="faq-answer">
+                <p>Banks reject malformed payment files, and each rejection costs a repair cycle and sometimes a settlement day. Pain001 converts the data you already have — CSV, Excel, SQLite, JSON, Parquet, or legacy MT101 — into ISO 20022 XML that has already passed JSON Schema checks, IBAN/BIC validation, scheme rulebooks, and the official XSD before submission.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Is it ready for the November 2026 deadlines?</summary>
+              <div class="faq-answer">
+                <p>Yes, both of them. Pain001 emits the structured and hybrid postal addresses CBPR+ requires from 14 November 2026, and the MT101 loader converts legacy request-for-transfer flows to <code>pain.001.001.09</code> — the version that replaces the interbank MT101 relay on the same date. Sources for every deadline are in the <a href="/2026-iso20022-migration-trends/">2026 briefing</a>.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>What can AI agents do with the MCP server?</summary>
+              <div class="faq-answer">
+                <p><code>pain001-mcp</code> exposes 17 tools: identifier validation, schema inspection, record validation, version migration, MT101 conversion, camt.053 and pain.002 parsing, charset sanitisation, and XML generation. Every tool is read-only and idempotent, transport is local stdio, and no tool can submit a payment — generation and validation only.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Is it safe for production banking environments?</summary>
+              <div class="faq-answer">
+                <p>Amounts are <code>decimal.Decimal</code> throughout generation, control totals are recomputed rather than trusted, XML parsing routes through <code>defusedxml</code>, containers run non-root, plugin discovery has a kill switch, and the core holds 100% line and branch coverage as a hard CI gate. Nothing phones home; all processing is local.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>What does it cost?</summary>
+              <div class="faq-answer">
+                <p>Nothing, at any scale. The core is dual-licensed Apache-2.0 / MIT; companions are Apache-2.0. The nearest commercial reference point — SWIFT's translation SDK — is publicly listed at €10,000–30,000 per year before integration costs.</p>
+              </div>
+            </details>
+          </div>
+
+          <p class="faq-more"><a href="/faqs/" class="pill pill-ghost">All questions, answered&nbsp;&rsaquo;</a></p>
+        </div>
+      </section>
+
+      <!-- Finale -->
+      <section class="finale" aria-labelledby="finale-heading">
+        <div class="wrap">
+          <h2 id="finale-heading" class="finale-title">Ship bank-ready files today.</h2>
+          <p class="finale-sub">Three commands from install to a validated ISO 20022 payment file. Free at any scale, processed entirely on your infrastructure.</p>
+          <div class="finale-cta">
+            <a href="/installation/" class="pill pill-primary">Install Pain001&nbsp;&rsaquo;</a>
+            <a href="https://github.com/sebastienrousseau/pain001" class="pill pill-ghost" rel="external">Star on GitHub</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <button class="totop" id="toTop" type="button" hidden aria-label="Back to top">&uarr;</button>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-brand">Pain001</p>
+            <p class="footer-tagline">Open-source ISO 20022 payment initiation. Validated files, local processing, no lock-in.</p>
+          </div>
+          <div>
+            <h2 class="footer-heading">Documentation</h2>
+            <ul class="footer-links">
+              <li><a href="/documentation/">Technical reference</a></li>
+              <li><a href="/installation/">Installation &amp; Docker</a></li>
+              <li><a href="/payments/">Payment pipelines</a></li>
+              <li><a href="/glossary/">Glossary</a></li>
+              <li><a href="/faqs/">FAQs</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Ecosystem</h2>
+            <ul class="footer-links">
+              <li><a href="/pain001-mcp/">pain001-mcp · AI agents</a></li>
+              <li><a href="/pain001-lsp/">pain001-lsp · editors</a></li>
+              <li><a href="/pain001-loader-mt101/">MT101 loader</a></li>
+              <li><a href="/pain001-loader-xlsx/">Excel loader</a></li>
+              <li><a href="https://github.com/sebastienrousseau/pain001" rel="external">GitHub</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Research &amp; trust</h2>
+            <ul class="footer-links">
+              <li><a href="/2026-iso20022-migration-trends/">2026 briefing</a></li>
+              <li><a href="/competitors-comparison/">Comparison</a></li>
+              <li><a href="/architecture-and-patents/">Architecture &amp; patents</a></li>
+              <li><a href="/security.txt">security.txt</a></li>
+              <li><a href="/sbom.cdx.json">SBOM</a> · <a href="/llms.txt">llms.txt</a> · <a href="/rss.xml">RSS</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; 2023&ndash;2026 Sebastien Rousseau. Core dual-licensed Apache-2.0 / MIT; companion packages Apache-2.0.</p>
+          <ul>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+            <li><a href="/contact/">Contact</a></li>
           </ul>
         </div>
       </div>
-    </nav>
-    <!-- # End Responsive navbar -->
+    </footer>
 
-    <!-- Header-->
-    <header class="w-100 py-5 position-relative">
-      <img
-        alt="{{banner_alt}}"
-        aria-hidden="false"
-        class="fade-in position-absolute top-0 start-0 w-100 h-100"
-        data-has-animated="true"
-        data-show-type="fade-in"
-        height="{{banner_height}}"
-        loading="lazy"
-        src="{{banner}}"
-        style="object-fit: cover; z-index: -1;"
-        title="{{banner_alt}}"
-        width="{{banner_width}}"
-      />
-        <div class="text-center text-white center mx-auto rounded rounded-3 p-5"
-        style="
-          background-color: rgba({{theme_color}}, 0.618);
-          width: 97vw;
-          height: auto;
-          z-index: 1;">
-          <p class="display-3">{{title}}</p>
-          <p class="fs-3">{{subtitle}}</p>
-          <p><a class="btn btn-dark mx-3 fs-5" href="{{download}}">Download {{name}} on PyPi ⧉</a></p>
-        </div>
-    </header>
-
-    <!-- Main content-->
-    <main id="main" class="bd-masthead fs-5 p-5" aria-label="main">
-      <div class="text-start justify-content-between">{{content}}</div>
-    </main>
-
-        <!-- Footer-->
-        <footer id="footer" aria-label="footer" class="footer border-top mt-auto py-3">
-          <span class="px-2">{{copyright}}</span>
-          <p class="mb-0">
-            <span class="px-2"><a href="/contact/index.html">Contact</a></span>
-            <span class="px-2"><a href="/privacy/index.html">Privacy & Cookie Policy</a></span>
-            <span class="px-2"><a href="/terms/index.html">Terms of Use</a></span>
-          </p>
-        </footer>
-        <!-- # End Footer -->
-
-        <script
-          async
-          crossorigin="anonymous"
-          integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-          defer
-        ></script>
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org/",
-            "@type": "WebPage",
-            "author": {
-              "@type": "Person",
-              "@id": "{{author}}"
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://pain001.com/#organization",
+          "name": "Pain001",
+          "url": "https://pain001.com/",
+          "logo": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+          "founder": { "@type": "Person", "name": "Sebastien Rousseau", "url": "https://sebastienrousseau.com" },
+          "sameAs": [
+            "https://github.com/sebastienrousseau/pain001",
+            "https://pypi.org/project/pain001/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pain001.com/#website",
+          "url": "https://pain001.com/",
+          "name": "Pain001",
+          "description": "Open-source ISO 20022 payment initiation suite",
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://pain001.com/#software",
+          "name": "Pain001",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "macOS, Linux, Windows",
+          "softwareVersion": "0.0.56",
+          "programmingLanguage": "Python",
+          "license": ["https://www.apache.org/licenses/LICENSE-2.0", "https://opensource.org/license/mit"],
+          "url": "https://pain001.com/",
+          "downloadUrl": "https://pypi.org/project/pain001/",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What problem does Pain001 actually solve?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Banks reject malformed payment files, and each rejection costs a repair cycle and sometimes a settlement day. Pain001 converts the data you already have — CSV, Excel, SQLite, JSON, Parquet, or legacy MT101 — into ISO 20022 XML that has already passed JSON Schema checks, IBAN/BIC validation, scheme rulebooks, and the official XSD before submission." }
             },
-            "copyrightHolder": {
-              "@type": "Person",
-              "@id": "{{author}}"
+            {
+              "@type": "Question",
+              "name": "Is it ready for the November 2026 deadlines?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes, both of them. Pain001 emits the structured and hybrid postal addresses CBPR+ requires from 14 November 2026, and the MT101 loader converts legacy request-for-transfer flows to pain.001.001.09 — the version that replaces the interbank MT101 relay on the same date." }
             },
-            "copyrightYear": "{{copyright}}",
-            "creator": {
-              "@type": "Person",
-              "@id": "{{author}}"
+            {
+              "@type": "Question",
+              "name": "What can AI agents do with the MCP server?",
+              "acceptedAnswer": { "@type": "Answer", "text": "pain001-mcp exposes 17 tools: identifier validation, schema inspection, record validation, version migration, MT101 conversion, camt.053 and pain.002 parsing, charset sanitisation, and XML generation. Every tool is read-only and idempotent, transport is local stdio, and no tool can submit a payment." }
             },
-            "dateModified": "{{last_build_date}}",
-            "datePublished": "{{item_pub_date}}",
-            "description": "{{description}}",
-            "headline": "{{subtitle}}",
-            "image": {
-              "@type": "ImageObject",
-              "url": "{{image}}"
+            {
+              "@type": "Question",
+              "name": "Is it safe for production banking environments?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Amounts are decimal.Decimal throughout generation, control totals are recomputed rather than trusted, XML parsing routes through defusedxml, containers run non-root, plugin discovery has a kill switch, and the core holds 100% line and branch coverage as a hard CI gate. Nothing phones home; all processing is local." }
             },
-            "inLanguage": "{{language}}",
-            "mainEntityOfPage": "{{permalink}}",
-            "name": "{{name}}",
-            "publisher": {
-              "@type": "Person",
-              "@id": "{{author}}"
+            {
+              "@type": "Question",
+              "name": "What does it cost?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Nothing, at any scale. The core is dual-licensed Apache-2.0 / MIT; companions are Apache-2.0. The nearest commercial reference point — SWIFT's translation SDK — is publicly listed at €10,000–30,000 per year before integration costs." }
             }
-          }
-        </script>
-        <script type="module" defer>
-          // This is an Immediately Invoked Function Expression (IIFE) which helps
-          // to avoid declaring any globals.
-          (function () {
-            // Create a new script element
-            var script = document.createElement("script");
+          ]
+        }
+      ]
+    }
+    </script>
 
-            // Set the source of the script element to "/main.js".
-            // A timestamp is appended as a query string to ensure the browser
-            // always fetches the latest version of the script, bypassing the
-            // cache.
-            script.src = "/main.js";
+    <script>
+      (function () {
+        var themeToggle = document.getElementById("themeToggle");
+        var themeIcon = document.getElementById("themeIcon");
+        var themeLabel = document.getElementById("themeLabel");
 
-            // The script is of type "text/javascript"
+        function current() {
+          var explicit = document.documentElement.getAttribute("data-theme");
+          if (explicit) return explicit;
+          return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        function paint(theme) {
+          var dark = theme === "dark";
+          themeIcon.textContent = dark ? "◑" : "◐";
+          themeLabel.textContent = dark ? "Light" : "Dark";
+          themeToggle.setAttribute("aria-pressed", dark ? "true" : "false");
+          themeToggle.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
+        }
+        function setTheme(theme) {
+          document.documentElement.setAttribute("data-theme", theme);
+          try { localStorage.setItem("theme", theme); } catch (e) {}
+          paint(theme);
+        }
+        paint(current());
+        themeToggle.addEventListener("click", function () {
+          setTheme(current() === "dark" ? "light" : "dark");
+        });
 
-            // The script is set to execute asynchronously as soon as it's
-            //available
+        var here = window.location.pathname.replace(/\/+$/, "") + "/";
+        document.querySelectorAll(".nav-links a").forEach(function (a) {
+          if (a.getAttribute("href") === here) a.setAttribute("aria-current", "page");
+        });
 
-            // Append the script element to the head of the document
-            document.head.appendChild(script);
-          })(); // The function is immediately invoked
-        </script>
-        <script>
-          // JavaScript code
-          var dropDownElements = document.querySelectorAll('.drop-down');
-          dropDownElements.forEach(function(element) {
-            element.classList.add('animate');
-          });
-
-          window.addEventListener('scroll', function() {
-            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-            dropDownElements.forEach(function(element) {
-              if (scrollTop === 0) {
-                element.classList.add('animate');
-              } else {
-                element.classList.remove('animate');
-              }
-            });
-          });
-        </script>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id={{measurementID}}"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', '{{measurementID}}');
-        </script>
+        var toTop = document.getElementById("toTop");
+        function onScroll() { toTop.hidden = window.scrollY < 900; }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+        toTop.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+        });
+      })();
+    </script>
   </body>
 </html>

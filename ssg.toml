@@ -1,0 +1,13 @@
+# ssg (Shokunin Static Site Generator) configuration — pain001.com
+# Fixes the "MySsgSite" / http://127.0.0.1:8000 defaults that leaked into
+# generated artifacts (llms.txt, JSON-LD, robots.txt) when no config existed.
+
+site_name = "Pain001"
+site_description = "Open-source ISO 20022 pain.001 payment initiation suite: Python library, CLI, REST API, MCP server for AI agents, LSP server, and SWIFT MT101 / Excel loaders."
+language = "en-GB"
+site_title = "Pain001 — ISO 20022 Payment Initiation Suite"
+base_url = "https://pain001.com"
+content_dir = "_posts"
+template_dir = "_layouts"
+output_dir = "output"
+serve_dir = "Pain001"

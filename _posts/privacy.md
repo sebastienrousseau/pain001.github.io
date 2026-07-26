@@ -1,144 +1,104 @@
 ---
-
-# Front Matter (YAML)
-author: "Sebastien Rousseau"
-banner_alt: "Canary wharf passage"
-banner_height: "100vh"
-banner_width: "100vw"
-banner: "https://kura.pro/stock/images/banners/jez-timms-4xLteCXh6X0.webp"
-cdn: "https://kura.pro"
-changefreq: "weekly"
-charset: "utf-8"
-copyright: "© 2023 Pain001. All rights reserved."
-date: "Nov 28, 2023"
-description: "This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Website"
-download: ""
-format-detection: "telephone=no"
-hreflang: "en"
-icon: "https://kura.pro/pain001/images/favicon.ico"
-id: "https://pain001.com/privacy/index.html"
-image_alt: "Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation"
-image_height: "100vh"
-image_width: "100vw"
-image: "https://kura.pro/pain001/images/banners/banner-pain001.webp"
-form-id: "meqwylbe"
-keywords: "Pain001 Privacy Statement, personal data protection, no cookies policy, no personal information collection, use of Google Analytics, use of Microsoft Clarity, user behaviour analytics, website traffic monitoring, user data rights, privacy policy updates."
-language: "en-GB"
-layout: "page"
-locale: "en_GB"
-logo_alt: "Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation"
-logo_height: "50vh"
-logo_width: "50vw"
-logo: "https://kura.pro/pain001/images/logos/pain001.webp"
-menu: "active"
-measurementID: "G-167B274ZWJ"
-name: "pain001"
-permalink: "https://pain001.com/privacy/index.html"
-rating: "general"
-referrer: "no-referrer"
+author: "contact@pain001.com (Sebastien Rousseau)"
+banner_alt: "A privacy statement page for pain001.com — a static site that collects nothing, documenting software that processes everything locally."
+banner_height: 500
+banner_width: 1200
+banner: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+cdn: "https://cloudcdn.pro"
+changefreq: weekly
+charset: utf-8
+cname: pain001.com
+copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
+date: "2026-07-26T08:00:00+00:00"
+description: "No cookies, no analytics, no tracking. The website stores only your theme choice locally, and the Pain001 software processes all payment data on your own infrastructure."
+download: "https://pypi.org/project/pain001/"
+format-detection: telephone=no
+hreflang: en
+icon: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+id: "https://pain001.com/privacy/"
+image_alt: "A privacy statement page for pain001.com — a static site that collects nothing, documenting software that processes everything locally."
+image_height: 120
+image_width: 120
+image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+keywords: "pain001 privacy policy, no tracking, local processing, payment data privacy"
+language: en-GB
+layout: page
+locale: en_GB
+logo_alt: "Pain001 Logo"
+logo_height: 36
+logo_width: 36
+logo: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+menu: active
+measurementID: G-167B274ZWJ
+name: Pain001
+permalink: "https://pain001.com/privacy/"
+rating: general
+referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
-short_name: "pain001"
-subtitle: "Your privacy is important to us."
-theme_color: "rgba(3, 93, 147, 0.618033988749894)"
-tags: "privacy, personal data, tracking tools, Google Analytics, Microsoft Clarity, user behaviour analytics, mouse movements, clicks, scrolls, rights, contact"
-title: "Pain001 Privacy Statement"
-url: "https://pain001.com/privacy/index.html"
+short_name: pain001
+subtitle: "No cookies, no analytics, no tracking. Your theme choice stays in your browser; your payment data stays on your machines."
+tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
+theme_color: "0, 132, 199"
+title: "Privacy: This Site Collects Nothing"
+url: "https://pain001.com/privacy/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
-
-# RSS - The RSS feed front matter (YAML).
 atom_link: "https://pain001.com/privacy/rss.xml"
-category: "Technology"
+category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Shokunin (SSG) 🦀 (version 0.0.20)"
-item_description: "This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Website"
+generator: "Static Site Generator (SSG) (version 0.0.47)"
+item_description: "No cookies, no analytics, no tracking. The website stores only your theme choice locally, and the Pain001 software processes all payment data on your own infrastructure."
 item_guid: "https://pain001.com/privacy/rss.xml"
 item_link: "https://pain001.com/privacy/rss.xml"
-item_pub_date: "2023-11-28T15:51+01:00"
-item_title: "Pain001 Privacy Statement"
-last_build_date: "2023-11-28T15:51+01:00"
-managing_editor: "contact@pain001.com"
-pub_date: "2023-11-28T15:51+01:00"
-ttl: "60"
-type: "website"
-webmaster: "contact@pain001.com"
-
-# Apple - The Apple front matter (YAML).
-apple_mobile_web_app_orientations: "portrait"
-apple_touch_icon_sizes: "192x192"
-apple-mobile-web-app-capable: "yes"
-apple-mobile-web-app-status-bar-inset: "black"
-apple-mobile-web-app-status-bar-style: "black-translucent"
-apple-mobile-web-app-title: "Pain001 Privacy Statement"
-apple-touch-fullscreen: "yes"
-
-# MS Application - The MS Application front matter (YAML).
-msapplication-navbutton-color: "rgb(3, 93, 147)"
-
-# Twitter Card - The Twitter Card front matter (YAML).
-twitter_card: "summary"
-twitter_creator: "@wwdseb"
-twitter_description: "This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Website"
-twitter_image: "https://kura.pro/pain001/images/logos/pain001.svg"
-twitter_image_alt: "Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation"
-twitter_site: "@wwdseb"
-twitter_title: "Pain001 Privacy Statement"
-twitter_url: "https://pain001.com/privacy/index.html"
-
-# Humans.txt - The Humans.txt front matter (YAML).
+item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
+item_title: "Privacy: This Site Collects Nothing"
+last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
+managing_editor: "contact@pain001.com (Sebastien Rousseau)"
+pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
+ttl: 60
+type: website
+webmaster: contact@pain001.com
+apple_mobile_web_app_orientations: portrait
+apple_touch_icon_sizes: 192x192
+apple-mobile-web-app-capable: yes
+apple-mobile-web-app-status-bar-inset: black
+apple-mobile-web-app-status-bar-style: black-translucent
+apple-mobile-web-app-title: "Privacy: This Site Collects Nothing"
+apple-touch-fullscreen: yes
+msapplication-navbutton-color: "rgb(2, 132, 199)"
+twitter_card: summary_large_image
+twitter_creator: @wwdseb
+twitter_description: "No cookies, no analytics, no tracking. The website stores only your theme choice locally, and the Pain001 software processes all payment data on your own infrastructure."
+twitter_image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+twitter_image_alt: "Pain001 Logo"
+twitter_site: @wwdseb
+twitter_title: "Privacy: This Site Collects Nothing"
+twitter_url: "https://pain001.com/privacy/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: "@wwdseb"
+author_twitter: @wwdseb
 author_location: "London, UK"
-thanks: "Thanks for reading!"
-site_last_updated: "2023-11-28"
-site_standards: "HTML5, CSS3, RSS, Atom, CSV, JSON, XML, YAML, Markdown, TOML, SQLite"
-site_components: "Kaishi, Kaishi Templates, Kaishi Themes"
-site_software: "Shokunin, SSG, Rust, Cargo, Git, GitHub, Bootstrap, SQLite, VS Code"
+thanks: "Thank you for using Pain001 Suite!"
+site_last_updated: 2026-07-26
+site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Atom, JSON-LD"
+site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
+site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
+eyebrow: "Legal"
+excerpt: "The privacy position of pain001.com and the Pain001 software, in full: the website sets no cookies and runs no analytics; GitHub Pages serves the static files; the software processes every payment record locally with no telemetry, no SaaS callback, and no data transmission of any kind."
+last_reviewed: "2026-07-26"
 
 ---
 
-## Information Collection and Use
+The short version: this site collects nothing, and the software processes everything locally.
 
-We do not directly collect any personal data from you while you navigate our
-website. We do not use cookies for logic or save any personal information from a
-user.
+## This website
 
-## Use of Tracking Tools
+- **No cookies, no analytics scripts, no tracking pixels.** The only state stored in your browser is your light/dark theme choice, kept in `localStorage` and never transmitted.
+- **Hosting.** The site is served as static files by GitHub Pages, which may log standard request metadata (IP address, user agent) under [GitHub's privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement).
+- **Assets.** The site logo loads from the `cloudcdn.pro` CDN; no other third-party requests are made.
 
-We use two third-party services to monitor and analyze web traffic: Google
-Analytics and Microsoft Clarity.
+## The Pain001 software
 
-### Google Analytics
+- Every component — CLI, library, REST API, MCP server, LSP server — runs **entirely on your infrastructure**. There is no telemetry, no phone-home, no SaaS dependency.
+- Payment data you process with Pain001 is read from your files and written to your output directory. It is never transmitted anywhere by the software.
 
-Google Analytics is a web analytics service offered by Google that tracks and
-reports website traffic. Google uses the data collected to track and monitor the
-use of our Website. This data is shared with other Google services. For more
-information on the privacy practices of Google, please visit the Google Privacy
-& Terms web page: [Google Privacy & Terms](https://policies.google.com/privacy)
-
-### Microsoft Clarity
-
-Microsoft Clarity is a user behavior analytics tool that helps us understand how
-users interact with our website. The data collected includes information such as
-mouse movements, clicks, and scrolls. For more information on the privacy
-practices of Microsoft, please visit the Microsoft Privacy Statement web page:
-[Microsoft Privacy Statement](https://privacy.microsoft.com/en-us/privacystatement)
-
-## Your Rights
-
-Depending on where you reside, you may have certain rights with respect to your
-personal data, such as the right to request access, correction, or deletion of
-your data, or to object to our use of your data.
-
-## Changes to This Privacy Policy
-
-We may update our Privacy Policy from time to time. We will notify you of any
-changes by posting the new Privacy Policy on this page.
-
-We advise you to review this Privacy Policy periodically for any changes.
-Changes to this Privacy Policy are effective when they are posted on this page.
-
-## Contact Us
-
-If you have any questions about this Privacy Policy, please
-[contact us](/contact/index.html).
+Questions? [Contact us](/contact/).

@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://pain001.com/pain001-loader-mt101/sitemap.xml

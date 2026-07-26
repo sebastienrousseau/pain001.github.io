@@ -1,1 +1,19 @@
-{"background_color":"#ffffff","description":"ISO 20022 Payment Initiation Messages are a set of XML-based messages enabling fast, efficient, transparent cross-border payments between financial institutions","display":"standalone","icons":[{"purpose":"any maskable","sizes":"512x512","src":"https://kura.pro/pain001/images/favicon.ico","icon_type":"image/svg+xml"}],"name":"ISO 20022 Payment Initiation for Cross-Border Payments","orientation":"portrait-primary","scope":"/","short_name":"pain001","start_url":".","theme_color":""}
+{
+  "background_color": "#ffffff",
+  "description": "What CBPR+ requires of your pain.001: BICFI agents, structured or hybrid addresses from 14 Nov 2026, charge bearers, pur",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any maskable",
+      "sizes": "512x512",
+      "src": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+      "type": "image/svg+xml"
+    }
+  ],
+  "name": "Pain001",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "pain001",
+  "start_url": ".",
+  "theme_color": null
+}

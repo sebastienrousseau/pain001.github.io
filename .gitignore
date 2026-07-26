@@ -8,3 +8,7 @@ build
 Icon?
 src/.DS_Store
 tarpaulin-report.html
+.ssg-cache/
+.ssg-plugin-cache.json
+docs/.ssg-cache/
+docs/.ssg-plugin-cache.json

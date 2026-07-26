@@ -1,1 +1,19 @@
-{"background_color":"#ffffff","description":"pain.001.001.03, is an XML-based message format under the ISO 20022 standard designed to streamline cross-border and domestic payment processes.","display":"standalone","icons":[{"purpose":"any maskable","sizes":"512x512","src":"https://kura.pro/pain001/images/favicon.ico","icon_type":"image/svg+xml"}],"name":"Customer Credit Transfer Initiation V3 (pain.001.001.03)","orientation":"portrait-primary","scope":"/","short_name":"pain001","start_url":".","theme_color":""}
+{
+  "background_color": "#ffffff",
+  "description": "pain.001.001.03 — the SEPA & CGI workhorse version. Element structure, version-specific notes, generation and inspection",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any maskable",
+      "sizes": "512x512",
+      "src": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+      "type": "image/svg+xml"
+    }
+  ],
+  "name": "Pain001",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "pain001",
+  "start_url": ".",
+  "theme_color": null
+}

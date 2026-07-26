@@ -1,264 +1,165 @@
 ---
-
-# Front Matter (YAML)
-author: "Sebastien Rousseau"
-banner_alt: "Antelope Canyon"
-banner_height: "100vh"
-banner_width: "100vw"
-banner: "https://kura.pro/stock/images/banners/joe-gardner-4xv3lqnanYc.webp"
-cdn: "https://kura.pro"
-changefreq: "weekly"
-charset: "utf-8"
-copyright: "© 2023 Pain001. All rights reserved."
-date: "Nov 28, 2023"
-description: "Pain001 is a powerful Python library that enables you to create ISO 20022-compliant payment files directly from CSV or SQLite Data Files."
-download: ""
-format-detection: "telephone=no"
-hreflang: "en"
-icon: "https://kura.pro/pain001/images/favicon.ico"
-id: "https://pain001.com/installation/index.html"
-image_alt: "Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation"
-image_height: "100vh"
-image_width: "100vw"
-image: "https://kura.pro/pain001/images/banners/banner-pain001.webp"
-keywords: "pain001, iso 20022, ISO 20022 Standard, payment messages, payments, SEPA, SWIFT, automation, banks, corporation"
-language: "en-GB"
-layout: "page"
-locale: "en_GB"
-logo_alt: "Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation"
-logo_height: "50vh"
-logo_width: "50vw"
-logo: "https://kura.pro/pain001/images/logos/pain001.webp"
-menu: "active"
-measurementID: "G-167B274ZWJ"
-name: "pain001"
-permalink: "https://pain001.com/installation/index.html"
-rating: "general"
-referrer: "no-referrer"
+author: "contact@pain001.com (Sebastien Rousseau)"
+banner_alt: "A clean terminal session installing Pain001 from PyPI and generating a first validated pain.001 file — three commands from zero to bank-ready."
+banner_height: 500
+banner_width: 1200
+banner: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+cdn: "https://cloudcdn.pro"
+changefreq: weekly
+charset: utf-8
+cname: pain001.com
+copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
+date: "2026-07-26T08:00:00+00:00"
+description: "Install the Pain001 suite on Python 3.10–3.12 via pip or Docker, add Excel and MT101 loaders, and produce your first bank-ready pain.001 file in three commands."
+download: "https://pypi.org/project/pain001/"
+format-detection: telephone=no
+hreflang: en
+icon: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+id: "https://pain001.com/installation/"
+image_alt: "A clean terminal session installing Pain001 from PyPI and generating a first validated pain.001 file — three commands from zero to bank-ready."
+image_height: 120
+image_width: 120
+image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+keywords: "install pain001, pip install pain001, pain001 docker, ISO 20022 file generator setup, pain001 extras, PAIN001_DISABLE_PLUGINS"
+language: en-GB
+layout: page
+locale: en_GB
+logo_alt: "Pain001 Logo"
+logo_height: 36
+logo_width: 36
+logo: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+menu: active
+measurementID: G-167B274ZWJ
+name: Pain001
+permalink: "https://pain001.com/installation/"
+rating: general
+referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
-short_name: "pain001"
-subtitle: "Whether you’re just getting started or want to make sure you have the basics set up, you’re in the right place."
-theme_color: "rgba(213,63,0, 0.618033988749894)"
-tags: "installation, Python, ISO 20022, pain001, payments, CSV, SQLite, XML, XSD, template, command-line"
-title: "Pain001 installation"
-url: "https://pain001.com/installation/index.html"
+short_name: pain001
+subtitle: "Python 3.10–3.12, pip or Docker, and a validated payment file in three commands."
+tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
+theme_color: "0, 132, 199"
+title: "Install Pain001: pip, Docker and First Validated File"
+url: "https://pain001.com/installation/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
-
-# RSS - The RSS feed front matter (YAML).
 atom_link: "https://pain001.com/installation/rss.xml"
-category: "Technology"
+category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Shokunin (SSG) 🦀 (version 0.0.20)"
-item_description: "Pain001 is a powerful Python library that enables you to create ISO 20022-compliant payment files directly from CSV or SQLite Data Files."
+generator: "Static Site Generator (SSG) (version 0.0.47)"
+item_description: "Install the Pain001 suite on Python 3.10–3.12 via pip or Docker, add Excel and MT101 loaders, and produce your first bank-ready pain.001 file in three commands."
 item_guid: "https://pain001.com/installation/rss.xml"
 item_link: "https://pain001.com/installation/rss.xml"
-item_pub_date: "2023-11-28T15:51+01:00"
-item_title: "Pain001 installation"
-last_build_date: "2023-11-28T15:51+01:00"
-managing_editor: "contact@pain001.com"
-pub_date: "2023-11-28T15:51+01:00"
-ttl: "60"
-type: "website"
-webmaster: "contact@pain001.com"
-
-# Apple - The Apple front matter (YAML).
-apple_mobile_web_app_orientations: "portrait"
-apple_touch_icon_sizes: "192x192"
-apple-mobile-web-app-capable: "yes"
-apple-mobile-web-app-status-bar-inset: "black"
-apple-mobile-web-app-status-bar-style: "black-translucent"
-apple-mobile-web-app-title: "Pain001 installation"
-apple-touch-fullscreen: "yes"
-
-# MS Application - The MS Application front matter (YAML).
-msapplication-navbutton-color: "rgb(213,63,0)"
-
-# Twitter Card - The Twitter Card front matter (YAML).
-twitter_card: "summary"
-twitter_creator: "@wwdseb"
-twitter_description: "Pain001 is a powerful Python library that enables you to create ISO 20022-compliant payment files directly from CSV or SQLite Data Files."
-twitter_image: "https://kura.pro/pain001/images/logos/pain001.svg"
-twitter_image_alt: "Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation"
-twitter_site: "@wwdseb"
-twitter_title: "Pain001 installation"
-twitter_url: "https://pain001.com"
-
-# Humans.txt - The Humans.txt front matter (YAML).
+item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
+item_title: "Install Pain001: pip, Docker and First Validated File"
+last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
+managing_editor: "contact@pain001.com (Sebastien Rousseau)"
+pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
+ttl: 60
+type: website
+webmaster: contact@pain001.com
+apple_mobile_web_app_orientations: portrait
+apple_touch_icon_sizes: 192x192
+apple-mobile-web-app-capable: yes
+apple-mobile-web-app-status-bar-inset: black
+apple-mobile-web-app-status-bar-style: black-translucent
+apple-mobile-web-app-title: "Install Pain001: pip, Docker and First Validated File"
+apple-touch-fullscreen: yes
+msapplication-navbutton-color: "rgb(2, 132, 199)"
+twitter_card: summary_large_image
+twitter_creator: @wwdseb
+twitter_description: "Install the Pain001 suite on Python 3.10–3.12 via pip or Docker, add Excel and MT101 loaders, and produce your first bank-ready pain.001 file in three commands."
+twitter_image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+twitter_image_alt: "Pain001 Logo"
+twitter_site: @wwdseb
+twitter_title: "Install Pain001: pip, Docker and First Validated File"
+twitter_url: "https://pain001.com/installation/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: "@wwdseb"
+author_twitter: @wwdseb
 author_location: "London, UK"
-thanks: "Thanks for reading!"
-site_last_updated: "2023-11-28"
-site_standards: "HTML5, CSS3, RSS, Atom, CSV, JSON, XML, YAML, Markdown, TOML, SQLite"
-site_components: "Kaishi, Kaishi Templates, Kaishi Themes"
-site_software: "Shokunin, SSG, Rust, Cargo, Git, GitHub, Bootstrap, SQLite, VS Code"
+thanks: "Thank you for using Pain001 Suite!"
+site_last_updated: 2026-07-26
+site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Atom, JSON-LD"
+site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
+site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
+eyebrow: "Get started"
+excerpt: "Install the Pain001 suite from PyPI with exactly the extras you need — REST API, Parquet, GPG, Redis, OpenTelemetry — or run the multi-architecture Docker image as a non-root user. Companion loaders for Excel and SWIFT MT101 install separately, and locked-down environments get a plugin kill switch and auditable plugin listing."
+last_reviewed: "2026-07-26"
 
 ---
 
-## Get started
+Pain001 runs on **Python 3.10, 3.11, and 3.12** (each version tested in CI) on macOS, Linux, and Windows. Install what you need; every optional capability is an extra, so the base install stays lean.
 
-It takes just a few seconds to get up and running with **Pain001**. If you use
-pip, open your terminal and run the following command:
+---
 
-```sh
+## 01. PyPI
+
+| What you need | Command |
+| :--- | :--- |
+| Core CLI & Python library | `pip install pain001` |
+| REST API microservice (FastAPI + Uvicorn) | `pip install "pain001[api]"` |
+| Parquet ingestion (PyArrow) | `pip install "pain001[parquet]"` |
+| PGP-encrypted input files (`.gpg` / `.asc`) | `pip install "pain001[gpg]"` |
+| Redis-backed async job queue for the API | `pip install "pain001[redis]"` |
+| OpenTelemetry tracing | `pip install "pain001[otel]"` |
+| Built-in minimal MCP / LSP servers | `pip install "pain001[mcp]"` / `"pain001[lsp]"` |
+
+Companion packages install separately and are versioned independently:
+
+```bash
+pip install pain001-loader-xlsx    # Excel ingestion (auto-discovered plugin)
+pip install pain001-loader-mt101   # SWIFT MT101 parsing library
+pip install pain001-mcp            # Full 17-tool MCP server for AI agents
+pip install pain001-lsp            # Full six-feature editor language server
+```
+
+Verify the install and explore the message catalogue:
+
+```bash
+pain001 --version
+pain001 versions          # list all 11 supported message definitions
+pain001 init pain.001.001.09   # scaffold a starter CSV template
+```
+
+---
+
+## 02. Docker
+
+Multi-architecture images (`linux/amd64`, `linux/arm64`) are published to GitHub Container Registry. The container runs as a dedicated non-root user.
+
+```bash
+# Generate XML from a local CSV
+docker run --rm -v "$PWD:/data" -w /data \
+  ghcr.io/sebastienrousseau/pain001:latest \
+  generate -t pain.001.001.09 -d payments.csv -o out/
+
+# Launch the REST API
+docker run --rm -p 8000:8000 \
+  ghcr.io/sebastienrousseau/pain001:latest \
+  serve --host 0.0.0.0 --port 8000
+```
+
+---
+
+## 03. Locked-down environments
+
+Bank and treasury environments often prohibit dynamic plugin loading. Two controls exist for exactly that case:
+
+- `PAIN001_DISABLE_PLUGINS=1` disables all third-party plugin discovery; only bundled loaders run.
+- `pain001 plugins list` / `pain001 plugins show <name>` make every discovered plugin auditable before first use.
+
+Everything executes locally. No package in the suite phones home, calls a SaaS API, or moves payment data off the host.
+
+---
+
+## 04. First file in three commands
+
+```bash
 pip install pain001
+pain001 init pain.001.001.09 -o work/
+pain001 -t pain.001.001.09 -d work/template.csv -o work/ --dry-run
 ```
 
-Add the -U switch to update to the current version, if `pain001` is already
-installed. For example:
+`--dry-run` validates against the JSON Schema, the XSD, and (with `--scheme`) a SEPA or cross-border rulebook without writing output — exit code `0` means your bank will not reject the file for schema reasons. Drop `--dry-run` to write the XML.
 
-```sh
-pip install -U pain001
-```
-
-If you do not have pip installed, you can download and install it from this
-page: <https://pypi.org/project/pip/>. Alternatively, you can use
-[Anaconda](https://www.anaconda.com/products/individual) to install pip.
-
-## How do I use Pain001?
-
-It’s easy to use **Pain001** to generate a payment initiation message from a
-CSV or SQLite Data file. After installation, you can run **Pain001** directly
-from the command line.
-
-Simply call the main module pain001 with the paths of your:
-
-- **XML template file** containing the various parameters you want to pass from
-  your Data file,
-- **XSD schema file** to validate the generated XML file, and
-- **Data file (CSV or SQLite)** containing the payment instructions that you
-  want to submit.
-
-Here’s how you would do that:
-
-```sh
-python3 -m pain001 \
-    <xml_message_type> \
-    <xml_template_file_path> \
-    <xsd_schema_file_path> \
-    <data_file_path>
-```
-
-### Arguments
-
-When running **Pain001**, you will need to specify four arguments:
-
-- An `xml_message_type`: This is the type of XML message you want to generate.
-
-  The currently supported types are:
-  - pain.001.001.03
-  - pain.001.001.04
-  - pain.001.001.09
-- An `xml_template_file_path`: This is the path to the XML template file you
-  are using that contains variables that will be replaced by the values in your
-  Data file.
-- An `xsd_schema_file_path`: This is the path to the XSD schema file you are
-  using to validate the generated XML file.
-- A `data_file_path`: This is the path to the CSV or SQLite Data file you want
-  to convert to XML format.
-
-## Examples
-
-The following examples demonstrate how to use **Pain001** to generate a payment
-initiation message from a CSV file and a SQLite Data file.
-
-### Using a CSV Data File as the source
-
-```sh
-python3 -m pain001 \
-    pain.001.001.03 \
-    /path/to/your/template.xml \
-    /path/to/your/pain.001.001.03.xsd \
-    /path/to/your/template.csv
-```
-
-### Using a SQLite Data File as the source
-
-```sh
-python3 -m pain001 \
-    pain.001.001.03 \
-    /path/to/your/template.xml \
-    /path/to/your/pain.001.001.03.xsd \
-    /path/to/your/template.db
-```
-
-### Using the Source code
-
-You can clone the source code and run the example code in your
-terminal/command-line. To check out the source code, clone the repository from
-GitHub:
-
-```sh
-git clone https://github.com/sebastienrousseau/pain001.git
-```
-
-  Then, navigate to the `pain001` directory and run the following command:
-
-  ```sh
-  python3 -m pain001 \
-      pain.001.001.03 \
-      templates/pain.001.001.03/template.xml \
-      templates/pain.001.001.03/pain.001.001.03.xsd \
-      templates/pain.001.001.03/template.csv
-  ```
-
-This will generate a payment initiation message from the sample CSV Data file.
-
-You can do the same with the sample SQLite Data file:
-
-```sh
-python3 -m pain001 \
-    pain.001.001.03 \
-    templates/pain.001.001.03/template.xml \
-    templates/pain.001.001.03/pain.001.001.03.xsd \
-    templates/pain.001.001.03/template.db
-```
-
-> **Note:** The XML file that **Pain001** generates will automatically be
-validated against the XSD template file before the new XML file is saved. If
-the validation fails, **Pain001** will stop running and display an error
-message in your terminal.
-
-### Embedded in an Application
-
-To embed **Pain001** in a new or existing application, import the main function
-and use it in your code.
-
-Here's an example:
-
-```python
-from pain001 import main
-
-if __name__ == '__main__':
-  xml_message_type = 'pain.001.001.03'
-  xml_template_file_path = 'template.xml'
-  xsd_schema_file_path = 'schema.xsd'
-  data_file_path = 'data.csv'
-  main(
-    xml_message_type,
-    xml_template_file_path,
-    xsd_schema_file_path,
-    data_file_path
-  )
-```
-
-### Validation
-
-To validate the generated XML file against a given xsd schema, use the
-following method:
-
-```python
-from pain001.core import validate_xml_against_xsd
-
-xml_message_type = 'pain.001.001.03'
-xml_file = 'generated.xml'
-xsd_file = 'schema.xsd'
-
-is_valid = validate_xml_against_xsd(
-  xml_message_type,
-  xml_file,
-  xsd_file
-)
-print(f"XML validation result: {is_valid}")
-```
+Continue to the [Technical Reference](/documentation/) for every flag and endpoint, or the [Quickstart FAQ](/faqs/) for operational questions.

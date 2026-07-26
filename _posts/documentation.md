@@ -1,150 +1,204 @@
 ---
-
-# Front Matter (YAML)
-author: "Sebastien Rousseau"
-banner_alt: "Photo of mountains and sky"
-banner_height: "100vh"
-banner_width: "100vw"
-banner: "https://kura.pro/stock/images/banners/arto-marttinen-K2K1Ec_51SA.webp"
-cdn: "https://kura.pro"
-changefreq: "weekly"
-charset: "utf-8"
-copyright: "© 2023 Pain001. All rights reserved."
-date: "Nov 28, 2023"
-description: "Access information about the Pain001 library, including release notes, installation and configuration instructions, and more."
-download: ""
-format-detection: "telephone=no"
-hreflang: "en"
-icon: "https://kura.pro/pain001/images/favicon.ico"
-id: "https://pain001.com/documentation/index.html"
-image_alt: "Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation"
-image_height: "100vh"
-image_width: "100vw"
-image: "https://kura.pro/pain001/images/banners/banner-pain001.webp"
-keywords: "documentation, pain001, python, library, payments, ISO 20022, release notes, installation, configuration, CSV, SQLite"
-language: "en-GB"
-layout: "page"
-locale: "en_GB"
-logo_alt: "Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation"
-logo_height: "50vh"
-logo_width: "50vw"
-logo: "https://kura.pro/pain001/images/logos/pain001.webp"
-menu: "active"
-measurementID: "G-167B274ZWJ"
-name: "pain001"
-permalink: "https://pain001.com/documentation/index.html"
-rating: "general"
-referrer: "no-referrer"
+author: "contact@pain001.com (Sebastien Rousseau)"
+banner_alt: "Documentation pages for the Pain001 command-line interface and REST API — the working reference for teams generating ISO 20022 payment files."
+banner_height: 500
+banner_width: 1200
+banner: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+cdn: "https://cloudcdn.pro"
+changefreq: weekly
+charset: utf-8
+cname: pain001.com
+copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
+date: "2026-07-26T08:00:00+00:00"
+description: "Complete reference for pain001 v0.0.56 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture."
+download: "https://pypi.org/project/pain001/"
+format-detection: telephone=no
+hreflang: en
+icon: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+id: "https://pain001.com/documentation/"
+image_alt: "Documentation pages for the Pain001 command-line interface and REST API — the working reference for teams generating ISO 20022 payment files."
+image_height: 120
+image_width: 120
+image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+keywords: "pain001 documentation, pain.001 CLI, ISO 20022 Python library, pain001 REST API, XSD validation, SEPA scheme validation, pain.002 parser, camt.053 parser"
+language: en-GB
+layout: page
+locale: en_GB
+logo_alt: "Pain001 Logo"
+logo_height: 36
+logo_width: 36
+logo: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+menu: active
+measurementID: G-167B274ZWJ
+name: Pain001
+permalink: "https://pain001.com/documentation/"
+rating: general
+referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
-short_name: "pain001"
-subtitle: "A modern, open source solution for generating ISO 20022 compliant payments"
-theme_color: "rgba(84,41,22, 0.618033988749894)"
-tags: "documentation, pain001, python, library, payments, ISO 20022, release notes, installation, configuration, CSV, SQLite"
-title: "Product Documentation for Pain001"
-url: "https://pain001.com/documentation/index.html"
+short_name: pain001
+subtitle: "Every flag, endpoint, and behaviour of pain001 v0.0.56 — taken from the shipped code, not from aspiration."
+tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
+theme_color: "0, 132, 199"
+title: "Pain001 Technical Reference: CLI, Python API and REST"
+url: "https://pain001.com/documentation/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
-
-# RSS - The RSS feed front matter (YAML).
 atom_link: "https://pain001.com/documentation/rss.xml"
-category: "Technology"
+category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Shokunin (SSG) 🦀 (version 0.0.20)"
-item_description: "Access information about the Pain001 library, including release notes, installation and configuration instructions, and more."
+generator: "Static Site Generator (SSG) (version 0.0.47)"
+item_description: "Complete reference for pain001 v0.0.56 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture."
 item_guid: "https://pain001.com/documentation/rss.xml"
 item_link: "https://pain001.com/documentation/rss.xml"
-item_pub_date: "2023-11-28T15:51+01:00"
-item_title: "Product Documentation for Pain001"
-last_build_date: "2023-11-28T15:51+01:00"
-managing_editor: "contact@pain001.com"
-pub_date: "2023-11-28T15:51+01:00"
-ttl: "60"
-type: "website"
-webmaster: "contact@pain001.com"
-
-# Apple - The Apple front matter (YAML).
-apple_mobile_web_app_orientations: "portrait"
-apple_touch_icon_sizes: "192x192"
-apple-mobile-web-app-capable: "yes"
-apple-mobile-web-app-status-bar-inset: "black"
-apple-mobile-web-app-status-bar-style: "black-translucent"
-apple-mobile-web-app-title: "Product Documentation for Pain001"
-apple-touch-fullscreen: "yes"
-
-# MS Application - The MS Application front matter (YAML).
-msapplication-navbutton-color: "rgb(84,41,22)"
-
-# Twitter Card - The Twitter Card front matter (YAML).
-twitter_card: "summary"
-twitter_creator: "@wwdseb"
-twitter_description: "Access information about the Pain001 library, including release notes, installation and configuration instructions, and more."
-twitter_image: "https://kura.pro/pain001/images/logos/pain001.svg"
-twitter_image_alt: "Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation"
-twitter_site: "@wwdseb"
-twitter_title: "Product Documentation for Pain001"
-twitter_url: "https://pain001.com"
-
-# Humans.txt - The Humans.txt front matter (YAML).
+item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
+item_title: "Pain001 Technical Reference: CLI, Python API and REST"
+last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
+managing_editor: "contact@pain001.com (Sebastien Rousseau)"
+pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
+ttl: 60
+type: website
+webmaster: contact@pain001.com
+apple_mobile_web_app_orientations: portrait
+apple_touch_icon_sizes: 192x192
+apple-mobile-web-app-capable: yes
+apple-mobile-web-app-status-bar-inset: black
+apple-mobile-web-app-status-bar-style: black-translucent
+apple-mobile-web-app-title: "Pain001 Technical Reference: CLI, Python API and REST"
+apple-touch-fullscreen: yes
+msapplication-navbutton-color: "rgb(2, 132, 199)"
+twitter_card: summary_large_image
+twitter_creator: @wwdseb
+twitter_description: "Complete reference for pain001 v0.0.56 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture."
+twitter_image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+twitter_image_alt: "Pain001 Logo"
+twitter_site: @wwdseb
+twitter_title: "Pain001 Technical Reference: CLI, Python API and REST"
+twitter_url: "https://pain001.com/documentation/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: "@wwdseb"
+author_twitter: @wwdseb
 author_location: "London, UK"
-thanks: "Thanks for reading!"
-site_last_updated: "2023-11-28"
-site_standards: "HTML5, CSS3, RSS, Atom, CSV, JSON, XML, YAML, Markdown, TOML, SQLite"
-site_components: "Kaishi, Kaishi Templates, Kaishi Themes"
-site_software: "Shokunin, SSG, Rust, Cargo, Git, GitHub, Bootstrap, SQLite, VS Code"
+thanks: "Thank you for using Pain001 Suite!"
+site_last_updated: 2026-07-26
+site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Atom, JSON-LD"
+site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
+site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
+eyebrow: "Reference"
+excerpt: "The complete technical reference for the Pain001 core: CLI subcommands and generate flags, the Python API and its three-layer validation pipeline, REST endpoints under /api/v1 including async jobs and Prometheus metrics, input normalisation rules, the plugin architecture, and the quality gates the project holds itself to."
+last_reviewed: "2026-07-26"
 
 ---
 
-**Version:** 0.0.23
+This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for **pain001 v0.0.56**. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.
 
-**Useful links:** [Installation](/installation/index.html) | [Source Repository](https://github.com/sebastienrousseau/pain001) | [Issue Tracker](https://github.com/sebastienrousseau/pain001/issues) | [PyPI](https://pypi.org/project/pain001/)
+Pain001 supports **11 ISO 20022 message definitions**: `pain.001.001.03` through `pain.001.001.12` (Customer Credit Transfer Initiation, ten versions) and `pain.008.001.02` (Customer Direct Debit Initiation).
 
-## What is Pain001?
+---
 
-**Pain001** is an open-source Python Library that you can use to create
-**ISO 20022-Compliant Payment Files** directly from your **CSV** or **SQLite**
-Data Files.
+## 1. Command-Line Interface
 
-The Python library focuses specifically on
-**Payment Initiation and Advice Messages**, commonly known as **Pain**. In a
-very simplified way, a **pain.001** is a message that initiates the customer
-payment.
+The `pain001` executable groups its functionality into subcommands. Running it with only generation flags invokes `generate` implicitly, so existing automation keeps working.
 
-As of today the library is designed to be compatible with the
-**pain.001.001.03** and **pain.001.001.09** message types and will support more
-message types in the future.
+| Subcommand | Purpose |
+| :--- | :--- |
+| `generate` | Convert a data file into schema-validated ISO 20022 XML (default command). |
+| `validate` | Validate input data without writing XML. |
+| `versions [--json]` | List all 11 supported message definitions. |
+| `inspect <type> [--json]` | Show the required and optional fields for a message type. |
+| `init <type> [-o DIR]` | Scaffold a starter CSV template for a message type. |
+| `serve [--host] [--port] [--reload]` | Launch the FastAPI REST microservice (requires the `api` extra). |
+| `mcp` | Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as [`pain001-mcp`](/pain001-mcp/)). |
+| `plugins list / show / disable` | Inspect and manage discovered loader, validator, scheme, and writer plugins. |
 
-Payments usually start with a **pain.001 payment initiation message**. The
-payer sends it to the payee (or the payee’s bank) via a secure network. This
-network could be **SWIFT** or **SEPA (Single Euro Payments Area) network**, or
-other payment networks such as **CHAPS**, **BACS**, **Faster Payments**, etc.
-The message contains the payer’s and payee’s bank account details, payment
-amount, and other information required to process the payment.
+### `generate` options
 
-The **Pain001** library can reduce payment processing complexity and costs by
-generating ISO 20022-compliant payment files. These files automatically remove
-the need to create and validate them manually, making the payment process more
-efficient and cost-effective. It will save you time and resources and minimises
-the risk of errors, making sure accurate and seamless payment processing.
+| Flag | Description |
+| :--- | :--- |
+| `-t, --xml-message-type <TYPE>` | Message definition, e.g. `pain.001.001.09`. |
+| `-d, --data <FILE>` | Input data: `.csv`, `.json`, `.jsonl`, `.db` / `.sqlite`, `.parquet`, or PGP-encrypted `.gpg` / `.asc`. |
+| `-o, --output-dir <DIR>` | Directory that receives the generated XML. |
+| `-m, --template <FILE>` / `-s, --schema <FILE>` | Override the bundled Jinja2 template or XSD schema. |
+| `-c, --config <FILE>` | Load defaults from a configuration profile (`--profile`, `--show-config`). |
+| `--dry-run` (alias `--validate-only`) | Validate input against the JSON Schema, XSD, and scheme rulebook without writing output. |
+| `--scheme <NAME>` | Enforce a scheme rulebook: `sepa-sct`, `sepa-inst`, `sepa-sdd`, `sepa-b2b`, or `xborder-ct`. |
+| `--explain --scheme-format {text,json}` | Report each scheme rule that passed or failed, human- or machine-readable. |
+| `--streaming` / `--chunk-size <N>` | Memory-bounded chunked processing for large batches (default 1,000 transactions per chunk; each chunk becomes its own XML file with recomputed `NbOfTxs` and `CtrlSum`). |
+| `--emit-metrics` | Emit machine-readable run metrics for observability pipelines. |
 
-Use the **Pain001** library to simplify, accelerate and automate your payment
-processing.
+Exit codes are CI-friendly: `0` success, `1` validation failure, `2` usage error.
 
-## System requirements
+---
 
-The only prerequisite for installing **Pain001** is Python itself. **Pain001**
-works with macOS, Linux and Windows and requires Python 3.9.0 and above.
+## 2. Python API
 
-<div class="container px-4 py-5 bg-dark" id="featured-3">
-    <div class="row g-4 row-cols-1 row-cols-lg-3">
-      <div class="feature col text-white">
-        <h2 class="text-white">Get started</h2>
-        <p>Set up a few basic features before you start using Pain001.</p>
-        <a href="/installation/index.html" class="icon-link text-white">
-          Setup basics ❯
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
+```python
+from pain001.core.core import process_files
+
+# Generate a validated pain.001.001.09 file from CSV
+process_files(
+    xml_message_type="pain.001.001.09",
+    xml_template_file_path="template.xml",
+    xsd_schema_file_path="schema.xsd",
+    data_file_path="payments.csv",
+    output_dir="out",
+)
+```
+
+Every generated document passes three layers before it is written:
+
+1. **Input validation** — each record is checked against the message type's JSON Schema, with field-alias normalisation and IBAN/BIC syntax checks.
+2. **Scheme rulebook** (optional) — SEPA SCT, SEPA Instant, SEPA SDD Core, SEPA B2B, or cross-border credit transfer rules.
+3. **XSD validation** — the rendered XML is validated against the official ISO 20022 schema via `xmlschema` before a single byte is written to disk.
+
+Monetary amounts are handled as `decimal.Decimal` during XML generation and scheme validation — never IEEE 754 floats — and `NbOfTxs` / `CtrlSum` control totals are recomputed from the validated records rather than trusted from input.
+
+Beyond pain.001 generation, the core library also ships a **pain.002 status-report parser and generator** (so you can read the bank's accept/reject response) and a **camt.053 statement parser and generator** for end-of-day reconciliation, plus a `VersionMapper` that migrates records between message versions.
+
+---
+
+## 3. REST Microservice
+
+```bash
+pip install "pain001[api]"
+pain001 serve --host 0.0.0.0 --port 8000
+```
+
+All endpoints are mounted under `/api/v1` (with an unversioned `/api` alias):
+
+| Method & Path | Purpose |
+| :--- | :--- |
+| `GET /api/v1/health` | Liveness probe. |
+| `POST /api/v1/validate` | Validate records; returns field-level errors. |
+| `POST /api/v1/generate` | Synchronous XML generation. |
+| `POST /api/v1/generate/async` | Queue a large batch for background generation. |
+| `GET /api/v1/status/{job_id}` | Poll an async job. |
+| `GET /api/v1/download/{job_id}` | Download the finished XML. |
+| `DELETE /api/v1/jobs/{job_id}` | Clean up a completed job. |
+| `GET /metrics` | Prometheus metrics. |
+
+Interactive documentation is served at `/api/docs` (Swagger UI), `/api/redoc`, and `/api/reference` (Scalar), with the OpenAPI document at `/openapi.json`.
+
+---
+
+## 4. Input Normalisation
+
+Pain001 coerces real-world exports into valid records before validation:
+
+- **Field aliases** — common ERP column names map onto canonical fields (for example `amount` → `payment_amount`).
+- **IBAN / BIC normalisation** — whitespace stripped, case folded, then checked (ISO 13616 mod-97 for IBANs, ISO 9362 structure for BICs).
+- **Dates** — ISO 8601 `YYYY-MM-DD` parsing for execution dates.
+- **Amounts** — routed through `decimal.Decimal`; malformed amounts fail validation instead of silently rounding.
+- **Character set** — transliteration helpers reduce content to the ISO 20022 Latin character set accepted by SWIFT and SEPA.
+
+---
+
+## 5. Plugin Architecture
+
+The suite is extensible through four entry-point groups: `pain001.loaders`, `pain001.validators`, `pain001.schemes`, and `pain001.writers`. [`pain001-loader-xlsx`](/pain001-loader-xlsx/) registers through this mechanism and is auto-discovered on install; [`pain001-loader-mt101`](/pain001-loader-mt101/) is a standalone parsing library consumed directly (and by the MCP server's `convert_mt101` tool). A kill switch — `PAIN001_DISABLE_PLUGINS=1` — disables third-party plugin discovery entirely in locked-down environments.
+
+---
+
+## 6. Quality Gates
+
+The core library is developed against strict, verifiable gates: 100% line **and** branch coverage enforced in CI (`--cov-fail-under=100`), strict mypy typing, 100% docstring coverage, and security linting (Bandit, pip-audit). A CycloneDX SBOM is generated for every release build.
+
+Continue with the [Installation Guide](/installation/), the [MCP server for AI agents](/pain001-mcp/), or the [payments glossary](/glossary/).

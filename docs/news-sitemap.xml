@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+<url>
+  <loc>https://pain001.com/2026-iso20022-migration-trends/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>ISO 20022 in 2026: Deadlines, Data and What Comes Next</news:title>
+    <news:keywords>ISO 20022 2026, structured address November 2026, MT101 decommission, CBPR+ deadline, hybrid postal address, Fedwire ISO 20022, FedNow, verification of payee, instant payments regulation</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/404/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Page Not Found (404)</news:title>
+    <news:keywords>404, page not found, pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/architecture-and-patents/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Architecture, Security and the Patent Landscape</news:title>
+    <news:keywords>pain001 architecture, defusedxml XXE, payment file security, ISO 20022 patents, MT MX transformation patent, decimal precision payments, CycloneDX SBOM</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/competitors-comparison/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 vs Alternatives: an Honest Comparison</news:title>
+    <news:keywords>pain001 vs sepaxml, prowide alternative, SWIFT translator price, ISO 20022 open source, pain.001 validator comparison, XMLdation alternative, payment file software comparison</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/contact/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Contact Pain001: Support, Security and Enquiries</news:title>
+    <news:keywords>pain001 contact, pain001 support, security disclosure, report bug pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/documentation/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 Technical Reference: CLI, Python API and REST</news:title>
+    <news:keywords>pain001 documentation, pain.001 CLI, ISO 20022 Python library, pain001 REST API, XSD validation, SEPA scheme validation, pain.002 parser, camt.053 parser</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/faqs/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 FAQs for Treasury, Ops, Engineering and Audit</news:title>
+    <news:keywords>pain.001 FAQ, pain.001 vs pain.008, why bank rejects payment file, SEPA validation questions, ISO 20022 FAQ, payment file audit</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/glossary/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>ISO 20022 Payments Glossary in Plain English</news:title>
+    <news:keywords>ISO 20022 glossary, pain.001 meaning, pacs.008 vs pain.001, camt.053 definition, CBPR+ meaning, UETR, verification of payee, payments terminology</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/installation/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Install Pain001: pip, Docker and First Validated File</news:title>
+    <news:keywords>install pain001, pip install pain001, pain001 docker, ISO 20022 file generator setup, pain001 extras, PAIN001_DISABLE_PLUGINS</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Cross-Border pain.001 Under CBPR+: a Field Guide</news:title>
+    <news:keywords>CBPR+ pain.001, cross-border payment initiation, pain.001 v9 CBPR+, BICFI, structured address CBPR+, correspondent banking ISO 20022, pacs.008 vs pain.001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/made-with-shokunin/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Made with Shokunin: How This Site Is Built</news:title>
+    <news:keywords>shokunin, static site generator rust, ssg, llms.txt, static site security</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/offline/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Offline — Cached Copy Shown</news:title>
+    <news:keywords>offline page, PWA offline</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/pain.001.001.03/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.03 Reference: Generate and Validate</news:title>
+    <news:keywords>pain.001.001.03, pain.001.001.03 XSD, pain.001.001.03 example, customer credit transfer initiation, pain.001 versions, ISO 20022 message version</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/pain.001.001.04/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.04 Reference: Generate and Validate</news:title>
+    <news:keywords>pain.001.001.04, pain.001.001.04 XSD, pain.001.001.04 example, customer credit transfer initiation, pain.001 versions, ISO 20022 message version</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/pain.001.001.05/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.05 Reference: Generate and Validate</news:title>
+    <news:keywords>pain.001.001.05, pain.001.001.05 XSD, pain.001.001.05 example, customer credit transfer initiation, pain.001 versions, ISO 20022 message version</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/pain.001.001.06/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.06 Reference: Generate and Validate</news:title>
+    <news:keywords>pain.001.001.06, pain.001.001.06 XSD, pain.001.001.06 example, customer credit transfer initiation, pain.001 versions, ISO 20022 message version</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/pain.001.001.07/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.07 Reference: Generate and Validate</news:title>
+    <news:keywords>pain.001.001.07, pain.001.001.07 XSD, pain.001.001.07 example, customer credit transfer initiation, pain.001 versions, ISO 20022 message version</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/pain.001.001.08/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.08 Reference: Generate and Validate</news:title>
+    <news:keywords>pain.001.001.08, pain.001.001.08 XSD, pain.001.001.08 example, customer credit transfer initiation, pain.001 versions, ISO 20022 message version</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/pain.001.001.09/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.09 Reference: Generate and Validate</news:title>
+    <news:keywords>pain.001.001.09, pain.001.001.09 XSD, pain.001.001.09 example, customer credit transfer initiation, pain.001 versions, ISO 20022 message version</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/pain.001.001.10/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.10 Reference: Generate and Validate</news:title>
+    <news:keywords>pain.001.001.10, pain.001.001.10 XSD, pain.001.001.10 example, customer credit transfer initiation, pain.001 versions, ISO 20022 message version</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/pain.001.001.11/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.11 Reference: Generate and Validate</news:title>
+    <news:keywords>pain.001.001.11, pain.001.001.11 XSD, pain.001.001.11 example, customer credit transfer initiation, pain.001 versions, ISO 20022 message version</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/pain.001.001.12/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.12 Reference: Generate and Validate</news:title>
+    <news:keywords>pain.001.001.12, pain.001.001.12 XSD, pain.001.001.12 example, customer credit transfer initiation, pain.001 versions, ISO 20022 message version</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/pain001-loader-mt101/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>MT101 to pain.001 Conversion: pain001-loader-mt101</news:title>
+    <news:keywords>MT101 to pain.001, MT101 mapping, SWIFT MT101 converter, MT101 decommission 2026, request for transfer, MT-MX migration, pain.001.001.09</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/pain001-loader-xlsx/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Excel to pain.001: pain001-loader-xlsx</news:title>
+    <news:keywords>Excel to pain.001, xlsx payment file, Excel SEPA XML, IBAN leading zero Excel, exceltopain001 alternative, payment batch spreadsheet</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/pain001-lsp/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain001-lsp: ISO 20022 Diagnostics in Your Editor</news:title>
+    <news:keywords>pain001-lsp, payment file validation editor, LSP language server, pain.001 JSON validation, IBAN checksum editor, pygls</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/pain001-mcp/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain001-mcp: The MCP Server for ISO 20022 Payments</news:title>
+    <news:keywords>pain001-mcp, MCP server payments, ISO 20022 AI agent, Model Context Protocol finance, Claude payment tools, agentic payments, pain.001 generation AI</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/payments/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Payment Initiation End to End with Pain001</news:title>
+    <news:keywords>payment initiation pipeline, pain.002 status report, camt.053 reconciliation, payment batch processing, payment file automation, rejection handling</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/privacy/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Privacy: This Site Collects Nothing</news:title>
+    <news:keywords>pain001 privacy policy, no tracking, local processing, payment data privacy</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/tags/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Browse Pain001 Topics</news:title>
+    <news:keywords>pain001 topics, ISO 20022 tags, browse documentation</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/terms/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Terms: Licences, Warranty and Fair Use</news:title>
+    <news:keywords>pain001 license, Apache-2.0, MIT license, open source terms, ISO 20022 software license</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/thanks/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Thank You — Message Received</news:title>
+    <news:keywords>pain001 thank you, contact confirmation</news:keywords>
+  </news:news>
+</url>
+</urlset>

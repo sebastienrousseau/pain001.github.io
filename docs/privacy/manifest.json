@@ -1,1 +1,19 @@
-{"background_color":"#ffffff","description":"This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Website","display":"standalone","icons":[{"purpose":"any maskable","sizes":"512x512","src":"https://kura.pro/pain001/images/favicon.ico","icon_type":"image/svg+xml"}],"name":"pain001","orientation":"portrait-primary","scope":"/","short_name":"pain001","start_url":".","theme_color":""}
+{
+  "background_color": "#ffffff",
+  "description": "No cookies, no analytics, no tracking. The website stores only your theme choice locally, and the Pain001 software proce",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any maskable",
+      "sizes": "512x512",
+      "src": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+      "type": "image/svg+xml"
+    }
+  ],
+  "name": "Pain001",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "pain001",
+  "start_url": ".",
+  "theme_color": null
+}

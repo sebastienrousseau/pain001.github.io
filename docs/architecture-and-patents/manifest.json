@@ -1,0 +1,19 @@
+{
+  "background_color": "#ffffff",
+  "description": "Zero-trust XML parsing, decimal-exact arithmetic, validation as a hard gate, 100% branch coverage — and where Pain001 si",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any maskable",
+      "sizes": "512x512",
+      "src": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+      "type": "image/svg+xml"
+    }
+  ],
+  "name": "Pain001",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "pain001",
+  "start_url": ".",
+  "theme_color": null
+}

@@ -1,139 +1,119 @@
 ---
-
-# Front Matter (YAML)
-author: "Sebastien Rousseau"
-banner_alt: "Aerial photography of mountain under clear blue sky"
-banner_height: "100vh"
-banner_width: "100vw"
-banner: "https://kura.pro/stock/images/banners/brady-bellini-WEQbe2jBg40.webp"
-cdn: "https://kura.pro"
-changefreq: "weekly"
-charset: "utf-8"
-copyright: "© 2023 Pain001. All rights reserved."
-date: "Nov 28, 2023"
-description: "pain.001.001.04, is an XML-based message format under the ISO 20022 standard designed to streamline cross-border and domestic payment processes."
-format-detection: "telephone=no"
-hreflang: "en"
-icon: "https://kura.pro/pain001/images/favicon.ico"
-id: "https://pain001.com/pain.001.001.04/index.html"
-image_alt: "Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation"
-image_height: "100vh"
-image_width: "100vw"
-image: "https://kura.pro/pain001/images/titles/title-pain001.webp"
-keywords: "pain.001.001.04, customer credit transfer initiation, XML, ISO 20022, cross-border payments, domestic payments, efficiency, speed, cost, compliance, market opportunity"
-language: "en-GB"
-layout: "page"
-locale: "en_GB"
-logo_alt: "Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation"
-logo_height: "50vh"
-logo_width: "50vw"
-logo: "https://kura.pro/pain001/images/logos/pain001.webp"
-menu: "active"
-measurementID: "G-167B274ZWJ"
-name: "Customer Credit Transfer Initiation V4 (pain.001.001.04)"
-permalink: "https://pain001.com/pain.001.001.04/index.html"
-rating: "general"
-referrer: "no-referrer"
+author: "contact@pain001.com (Sebastien Rousseau)"
+banner_alt: "The ISO 20022 pain.001.001.04 message structure — group header, payment information, and credit transfer transaction blocks rendered as validated XML."
+banner_height: 500
+banner_width: 1200
+banner: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+cdn: "https://cloudcdn.pro"
+changefreq: weekly
+charset: utf-8
+cname: pain001.com
+copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
+date: "2026-07-26T08:00:00+00:00"
+description: "pain.001.001.04 — early maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001."
+download: "https://pypi.org/project/pain001/"
+format-detection: telephone=no
+hreflang: en
+icon: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+id: "https://pain001.com/pain.001.001.04/"
+image_alt: "The ISO 20022 pain.001.001.04 message structure — group header, payment information, and credit transfer transaction blocks rendered as validated XML."
+image_height: 120
+image_width: 120
+image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+keywords: "pain.001.001.04, pain.001.001.04 XSD, pain.001.001.04 example, customer credit transfer initiation, pain.001 versions, ISO 20022 message version"
+language: en-GB
+layout: page
+locale: en_GB
+logo_alt: "Pain001 Logo"
+logo_height: 36
+logo_width: 36
+logo: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+menu: active
+measurementID: G-167B274ZWJ
+name: Pain001
+permalink: "https://pain001.com/pain.001.001.04/"
+rating: general
+referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
-short_name: "pain001"
-subtitle: "pain.001 version 4: A standardized XML message format for initiating credit transfers."
-theme_color: "rgba(2, 66, 145, 0.618033988749894)"
-tags: "pain.001.001.04, ISO 20022, pain001, version 4, credit transfer, XML, message format, standardization, automation, cross-border, domestic, payments"
-title: "Customer Credit Transfer Initiation V4 (pain.001.001.04)"
-url: "https://pain001.com/pain.001.001.04/index.html"
+short_name: pain001
+subtitle: "pain.001.001.04 — an early maintenance release. Element structure, version notes, and lossless migration."
+tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
+theme_color: "0, 132, 199"
+title: "pain.001.001.04 Reference: Generate and Validate"
+url: "https://pain001.com/pain.001.001.04/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
-
-# RSS - The RSS feed front matter (YAML).
 atom_link: "https://pain001.com/pain.001.001.04/rss.xml"
-category: "Technology"
+category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Shokunin (SSG) 🦀 (version 0.0.20)"
-item_description: "pain.001.001.04, is an XML-based message format under the ISO 20022 standard designed to streamline cross-border and domestic payment processes."
+generator: "Static Site Generator (SSG) (version 0.0.47)"
+item_description: "pain.001.001.04 — early maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001."
 item_guid: "https://pain001.com/pain.001.001.04/rss.xml"
 item_link: "https://pain001.com/pain.001.001.04/rss.xml"
-item_pub_date: "2023-11-28T15:51+01:00"
-item_title: "Customer Credit Transfer Initiation V4 (pain.001.001.04)"
-last_build_date: "2023-11-28T15:51+01:00"
-managing_editor: "contact@pain001.com"
-pub_date: "2023-11-28T15:51+01:00"
-ttl: "60"
-type: "website"
-webmaster: "contact@pain001.com"
-
-# Apple - The Apple front matter (YAML).
-apple_mobile_web_app_orientations: "portrait"
-apple_touch_icon_sizes: "192x192"
-apple-mobile-web-app-capable: "yes"
-apple-mobile-web-app-status-bar-inset: "black"
-apple-mobile-web-app-status-bar-style: "black-translucent"
-apple-mobile-web-app-title: "Customer Credit Transfer Initiation V4 (pain.001.001.04)"
-apple-touch-fullscreen: "yes"
-
-# MS Application - The MS Application front matter (YAML).
-msapplication-navbutton-color: "rgb(2, 66, 145)"
-
-# Twitter Card - The Twitter Card front matter (YAML).
-twitter_card: "summary"
-twitter_creator: "@wwdseb"
-twitter_description: "pain.001.001.04, is an XML-based message format under the ISO 20022 standard designed to streamline cross-border and domestic payment processes."
-twitter_image: "https://kura.pro/pain001/images/logos/pain001.svg"
-twitter_image_alt: "Logo of Pain001: Automate ISO 20022-Compliant Payment File Creation"
-twitter_site: "@wwdseb"
-twitter_title: "Customer Credit Transfer Initiation V4 (pain.001.001.04)"
-twitter_url: "https://pain001.com/pain.001.001.04/index.html"
-
-# Humans.txt - The Humans.txt front matter (YAML).
+item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
+item_title: "pain.001.001.04 Reference: Generate and Validate"
+last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
+managing_editor: "contact@pain001.com (Sebastien Rousseau)"
+pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
+ttl: 60
+type: website
+webmaster: contact@pain001.com
+apple_mobile_web_app_orientations: portrait
+apple_touch_icon_sizes: 192x192
+apple-mobile-web-app-capable: yes
+apple-mobile-web-app-status-bar-inset: black
+apple-mobile-web-app-status-bar-style: black-translucent
+apple-mobile-web-app-title: "pain.001.001.04 Reference: Generate and Validate"
+apple-touch-fullscreen: yes
+msapplication-navbutton-color: "rgb(2, 132, 199)"
+twitter_card: summary_large_image
+twitter_creator: @wwdseb
+twitter_description: "pain.001.001.04 — early maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001."
+twitter_image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+twitter_image_alt: "Pain001 Logo"
+twitter_site: @wwdseb
+twitter_title: "pain.001.001.04 Reference: Generate and Validate"
+twitter_url: "https://pain001.com/pain.001.001.04/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: "@wwdseb"
+author_twitter: @wwdseb
 author_location: "London, UK"
-thanks: "Thanks for reading!"
-site_last_updated: "2023-11-28"
-site_standards: "HTML5, CSS3, RSS, Atom, CSV, JSON, XML, YAML, Markdown, TOML, SQLite"
-site_components: "Kaishi, Kaishi Templates, Kaishi Themes"
-site_software: "Shokunin, SSG, Rust, Cargo, Git, GitHub, Bootstrap, SQLite, VS Code"
+thanks: "Thank you for using Pain001 Suite!"
+site_last_updated: 2026-07-26
+site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Atom, JSON-LD"
+site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
+site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
+eyebrow: "Message reference"
+excerpt: "The reference page for pain.001.001.04, an early maintenance release: what distinguishes this Customer Credit Transfer Initiation version, the shared GrpHdr/PmtInf/CdtTrfTxInf element skeleton, generation and inspection commands, and how Pain001's VersionMapper migrates records to and from any of the ten supported pain.001 versions."
+last_reviewed: "2026-07-26"
 
 ---
 
-## Overview
+`pain.001.001.04` is the first maintenance update of the 2009 baseline. It saw limited standalone adoption — most implementations either stayed on version 3 or jumped ahead — but it appears in some bank channels and archives, and Pain001 supports it fully for exactly that reason.
 
-The [Customer Credit Transfer Initiation V4 (`pain.001.001.04` ⧉)][00] is an XML-based message format under the ISO 20022 standard, primarily used for initiating a movement of funds from a debtor's account to a creditor's account. This message format is a crucial component of financial transaction processing, enabling efficient fund transfers in both domestic and cross-border contexts.
+## What to know about this version
 
-## Features
+- Functionally close to version 3; the differences are element-cardinality refinements rather than headline features.
+- If you are choosing a version today, prefer `.03` (bank compatibility) or `.09` (CBPR+); use `.04` only when a channel mandates it.
 
-The `pain.001.001.04` message format provides a number of features and benefits
-that can help financial institutions and their customers, including:
+## Element structure (all versions share this skeleton)
 
-- **Fund Transfer Request**: The primary function of the pain.001.001.04 message is to facilitate the transfer of funds from a debtor to a creditor.
-- **Multiple Transfer Instructions**: It can contain one or more customer credit transfer instructions, making it versatile for different transaction requirements.
-- **Scope of Transactions**: The message covers a range of transactions, including book transfers at the debtor agent, payments to other financial institutions, electronic cash transfers to creditor accounts, and cheque issuances.
-- **Direct and Relay Scenarios**: It supports both direct scenarios (message sent directly to the debtor agent) and relay scenarios (message sent to a forwarding agent who then forwards it to the debtor agent).
-- **Usage by Initiating Party**: An initiating party with the authority can use this message to send on behalf of the debtor. This is particularly useful in scenarios like a payments factory managing transactions for a large corporate.
-- **Domestic and Cross-Border Applicability**: Suitable for both local and international fund transfers.
-- **Restriction on Debtor Agents**: The message is not intended for debtor agents to execute credit transfer instructions; for this purpose, the FIToFICustomerCreditTransfer message is used instead.
-- **Structured Format**: Composed of two key building blocks:
-  - **Group Header**: A mandatory section that includes elements like MessageIdentification, CreationDateAndTime, and a Grouping indicator.
-  - **Payment Information**: Another mandatory and repetitive section containing elements related to both debit (e.g., Debtor, PaymentTypeInformation) and credit (e.g., Creditor, RemittanceInformation) aspects of the transaction​​.
+- **`<GrpHdr>` Group Header** — message id, creation timestamp, `NbOfTxs`, `CtrlSum`, initiating party. Pain001 recomputes the control totals from validated records.
+- **`<PmtInf>` Payment Information** — debtor, debtor account and agent, requested execution date, payment method, charge bearer; one block can carry many transactions.
+- **`<CdtTrfTxInf>` Credit Transfer Transaction** — amount and currency, creditor, creditor account and agent, remittance information, end-to-end reference.
 
-## Market Opportunity
+## Generate and inspect
 
-The adoption of `pain.001.001.04` presents a significant market opportunity for
-financial institutions. By implementing this message format, organisations can:
+```bash
+pain001 init pain.001.001.04 -o work/         # scaffold a starter CSV
+pain001 inspect pain.001.001.04               # list required + optional fields
+pain001 -t pain.001.001.04 -d payments.csv -o out/ --dry-run
+```
 
-- **Enhance customer experience** by offering faster and more transparent
-  transactions
-- **Improve operational efficiency** and reduce costs associated with manual
-  processing
-- Position themselves as **industry leaders** in adopting global standards for
-  payment processing
-- Leverage the ISO 20022 standard to
-  **explore new business opportunities and partnerships**
-- **Ensure compliance** with evolving regulatory requirements and stay ahead of
-  the competition
+Records migrate losslessly between supported versions:
 
-Find out about the
-[Customer Credit Transfer Initiation V5 (pain.001.001.05)][01], and learn about
-this version of the ISO 20022 Customer Credit Transfer Initiation message.
+```python
+from pain001.migration import VersionMapper
+records_v9 = VersionMapper("pain.001.001.04", "pain.001.001.09").migrate(records)
+```
 
-[00]: https://www.iso20022.org/catalogue-messages/iso-20022-messages-archive?search=pain.001.001.04 "ISO 20022 Customer Credit Transfer Initiation V4 (pain.001.001.04)"
-[01]: /pain.001.001.05/index.html "Customer Credit Transfer Initiation V5 (pain.001.001.05)"
+See the full [version catalogue](/documentation/), or the [glossary](/glossary/) for the vocabulary used here.
