@@ -1,6 +1,6 @@
 {
   "background_color": "#ffffff",
-  "description": "Paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, and recomputed c",
+  "description": "Upload or paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, recomp",
   "display": "standalone",
   "icons": [
     {

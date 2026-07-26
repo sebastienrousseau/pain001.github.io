@@ -197,6 +197,51 @@
       .footer a { color: var(--ink-mute); }
       .footer a:hover { color: var(--link); }
 
+      /* ==== Guided layout: guidance rail + stepped tool column ==== */
+      .guide-grid {
+        display: grid; grid-template-columns: minmax(280px, 1fr) 2fr;
+        gap: 2rem; padding: 2.5rem 0 1.5rem;
+        align-items: start;
+      }
+      @media (max-width: 980px) { .guide-grid { grid-template-columns: 1fr; } }
+      .guide-rail { display: flex; flex-direction: column; gap: 2rem; }
+      .guide-block h2 {
+        font-family: var(--type-display);
+        font-size: 1.35rem; font-weight: 700; letter-spacing: -0.01em;
+        margin-bottom: 1rem;
+      }
+      .check-list, .info-list { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; }
+      .check-list li {
+        display: flex; gap: 0.7rem; color: var(--ink-soft); line-height: 1.55;
+      }
+      .check-list .tick { color: var(--ok); font-weight: 700; flex-shrink: 0; }
+      .info-list li { color: var(--ink-soft); line-height: 1.55; padding-left: 1.1rem; position: relative; }
+      .info-list li::before { content: "•"; position: absolute; left: 0; color: var(--ink-mute); }
+      .info-list strong { color: var(--ink); }
+
+      .tool-col { display: flex; flex-direction: column; gap: 1.5rem; }
+      .step-head { display: flex; align-items: center; gap: 0.8rem; }
+      .step-num {
+        display: inline-flex; align-items: center; justify-content: center;
+        width: 32px; height: 32px; flex-shrink: 0;
+        border-radius: 50%;
+        background: var(--btn-bg); color: var(--btn-text);
+        font-weight: 700; font-size: 0.95rem;
+      }
+      .dropzone {
+        border: 2px dashed var(--rule-strong);
+        border-radius: var(--radius-md);
+        padding: 2rem 1.5rem;
+        text-align: center;
+        display: flex; flex-direction: column; align-items: center; gap: 0.9rem;
+        background: var(--bg-page);
+      }
+      .dropzone.dragover { border-color: var(--link); background: var(--bg-alt); }
+      .dropzone p { color: var(--ink-soft); margin: 0; }
+      .dropzone .hint { color: var(--ink-mute); font-size: 0.88rem; }
+      .editor-block[hidden] { display: none; }
+      .editor-label { font-weight: 600; color: var(--ink); }
+
       /* AAA overrides for ssg's injected search widget: its own stylesheet
          ships 6.3-6.9:1 labels; force token colours (>= 7:1 both themes). */
       #ssg-search-btn, #ssg-search-btn span { color: var(--ink-soft) !important; }
@@ -229,47 +274,79 @@
         </div>
       </header>
 
-      <div class="wrap demo-grid">
-        <section class="demo-panel" aria-labelledby="input-heading">
-          <h2 id="input-heading">1 · Your payment data (CSV)</h2>
-          <label class="visually-hidden" for="csv-input">Payment CSV data</label>
-          <textarea id="csv-input" spellcheck="false" aria-describedby="demo-fineprint">id,payment_id,requested_execution_date,payment_amount,currency,debtor_name,debtor_account_IBAN,debtor_agent_BIC,creditor_name,creditor_account_IBAN,creditor_agent_BIC,remittance_information
-1,TXN-001,2026-08-03,1250.00,EUR,Acme Global Corp,DE89370400440532013000,DEUTDEFFXXX,Supplier SARL,FR1420041010050500013M02606,BNPAFRPPXXX,INVOICE-2026-4411
-2,TXN-002,2026-08-03,890.50,EUR,Acme Global Corp,DE89370400440532013000,DEUTDEFFXXX,Northwind Ltd,GB29NWBK60161331926819,NWBKGB2LXXX,INVOICE-2026-4412</textarea>
-          <div class="demo-actions">
-            <button type="button" id="run-btn" class="pill pill-primary">Validate &amp; generate&nbsp;&rsaquo;</button>
-            <button type="button" id="break-btn" class="pill pill-ghost">Introduce an error</button>
+      <div class="wrap guide-grid">
+        <aside class="guide-rail">
+          <div class="guide-block">
+            <h2>How this validator helps you</h2>
+            <ul class="check-list">
+              <li><span class="tick" aria-hidden="true">✓</span><span>Test payment data against the checks banks apply — required fields, IBAN checksums, BIC structure, control totals</span></li>
+              <li><span class="tick" aria-hidden="true">✓</span><span>Generate a working <code>pain.001.001.09</code> credit-transfer file you can inspect, copy, or download</span></li>
+              <li><span class="tick" aria-hidden="true">✓</span><span>Prove the result against the official ISO 20022 schema — the genuine XSD, validated in your browser</span></li>
+            </ul>
           </div>
-        </section>
+          <div class="guide-block">
+            <h2>Important information</h2>
+            <ul class="info-list">
+              <li><strong>Nothing is uploaded.</strong> Your file is read by your own browser and never leaves your machine — there is no server, no storage, no telemetry. Safe for real data, though masked test data is always good practice.</li>
+              <li><strong>Testing tool only.</strong> Files are never submitted for processing and no payments can result from anything you do here.</li>
+              <li><strong>Expected columns:</strong> <code>payment_id</code>, <code>payment_amount</code>, <code>currency</code>, debtor and creditor name / IBAN / BIC, <code>requested_execution_date</code> — start from the sample to see the exact header row.</li>
+              <li><strong>No charges.</strong> This tool, and the <a href="/installation/">full toolchain</a> behind it, are free and open source.</li>
+            </ul>
+          </div>
+        </aside>
 
-        <section class="demo-panel" aria-labelledby="output-heading">
-          <h2 id="output-heading">2 · Validation result &amp; pain.001.001.09 XML</h2>
-          <p class="status" id="status" role="status">Press “Validate &amp; generate” to run the checks.</p>
-          <ul class="error-list" id="errors"></ul>
-          <div class="xml-out" id="xml-out" tabindex="0" aria-label="Generated XML output">—</div>
-          <div class="demo-actions">
-            <button type="button" id="copy-btn" class="pill pill-ghost" disabled>Copy XML</button>
-          </div>
-        </section>
+        <div class="tool-col">
+          <section class="demo-panel" aria-labelledby="input-heading">
+            <div class="step-head"><span class="step-num" aria-hidden="true">1</span><h2 id="input-heading">Add your payment data</h2></div>
+            <div class="dropzone" id="dropzone">
+              <p><strong>Drag a CSV file here</strong></p>
+              <p class="hint">Maximum 2&nbsp;MB · read locally by your browser, never uploaded</p>
+              <div class="demo-actions">
+                <button type="button" id="browse-btn" class="pill pill-ghost">Browse your files</button>
+                <button type="button" id="sample-btn" class="pill pill-ghost">Use the sample batch</button>
+              </div>
+            </div>
+            <input type="file" id="file-input" class="visually-hidden" accept=".csv,text/csv,text/plain" aria-label="Choose a CSV file of payment records" />
+            <div class="editor-block" id="editor-block" hidden>
+              <label class="editor-label" for="csv-input">Review and edit your records</label>
+              <textarea id="csv-input" spellcheck="false" aria-describedby="demo-fineprint"></textarea>
+              <div class="demo-actions">
+                <button type="button" id="run-btn" class="pill pill-primary">Validate &amp; generate&nbsp;&rsaquo;</button>
+                <button type="button" id="break-btn" class="pill pill-ghost">Introduce an error</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="demo-panel" aria-labelledby="output-heading">
+            <div class="step-head"><span class="step-num" aria-hidden="true">2</span><h2 id="output-heading">Validation result &amp; generated XML</h2></div>
+            <p class="status" id="status" role="status">Add data in step 1 — validation runs automatically.</p>
+            <ul class="error-list" id="errors"></ul>
+            <div class="xml-out" id="xml-out" tabindex="0" aria-label="Generated XML output">—</div>
+            <div class="demo-actions">
+              <button type="button" id="copy-btn" class="pill pill-ghost" disabled>Copy XML</button>
+              <button type="button" id="download-btn" class="pill pill-ghost" disabled>Download .xml</button>
+            </div>
+          </section>
+
+          <section class="demo-panel" aria-labelledby="xsd-heading">
+            <div class="step-head"><span class="step-num" aria-hidden="true">3</span><h2 id="xsd-heading">Prove it against the official ISO 20022 XSD</h2></div>
+            <p class="fineprint" style="margin: 0;">
+              Steps 1–2 run fast, hand-written checks. This step runs the genuine article: a Python
+              runtime (via WebAssembly) executing <code style="font-family: var(--type-mono);">xmlschema</code>
+              against the official <code style="font-family: var(--type-mono);">pain.001.001.09</code> schema —
+              the same class of validation the CLI performs. The ~13&nbsp;MB engine is served from this
+              site and downloaded once, when you ask for it.
+            </p>
+            <div class="demo-actions">
+              <button type="button" id="xsd-btn" class="pill pill-primary" disabled>Run the official XSD gate&nbsp;&rsaquo;</button>
+            </div>
+            <p class="status" id="xsd-status" role="status">Generate XML in step 2 first — the XSD gate validates that output.</p>
+            <ul class="error-list" id="xsd-errors"></ul>
+          </section>
+        </div>
       </div>
 
       <div class="wrap">
-        <section class="demo-panel" aria-labelledby="xsd-heading" style="margin-bottom: 1.5rem;">
-          <h2 id="xsd-heading">3 · The real gate: validate against the official ISO 20022 XSD</h2>
-          <p class="fineprint" style="margin: 0;">
-            Steps 1–2 run fast, hand-written checks. This step runs the genuine article: a Python
-            runtime (via WebAssembly) executing <code style="font-family: var(--type-mono);">xmlschema</code>
-            against the official <code style="font-family: var(--type-mono);">pain.001.001.09</code> schema —
-            the same class of validation the CLI performs. Everything is served from this site and runs
-            locally; the engine is ~13&nbsp;MB, downloaded once when you ask for it.
-          </p>
-          <div class="demo-actions">
-            <button type="button" id="xsd-btn" class="pill pill-primary" disabled>Run the official XSD gate&nbsp;&rsaquo;</button>
-          </div>
-          <p class="status" id="xsd-status" role="status">Generate XML in step 2 first — the XSD gate validates that output.</p>
-          <ul class="error-list" id="xsd-errors"></ul>
-        </section>
-
         <p class="fineprint" id="demo-fineprint">
           Everything on this page runs in your browser — nothing is uploaded, stored, or sent anywhere.
           This demo implements a subset of the pipeline (required fields, IBAN mod-97, BIC structure, amount
@@ -428,13 +505,21 @@
             "</Document>"].join("\n");
         }
 
+        var SAMPLE = "id,payment_id,requested_execution_date,payment_amount,currency,debtor_name,debtor_account_IBAN,debtor_agent_BIC,creditor_name,creditor_account_IBAN,creditor_agent_BIC,remittance_information\n" +
+          "1,TXN-001,2026-08-03,1250.00,EUR,Acme Global Corp,DE89370400440532013000,DEUTDEFFXXX,Supplier SARL,FR1420041010050500013M02606,BNPAFRPPXXX,INVOICE-2026-4411\n" +
+          "2,TXN-002,2026-08-03,890.50,EUR,Acme Global Corp,DE89370400440532013000,DEUTDEFFXXX,Northwind Ltd,GB29NWBK60161331926819,NWBKGB2LXXX,INVOICE-2026-4412";
+
         var input = document.getElementById("csv-input");
         var status = document.getElementById("status");
         var errList = document.getElementById("errors");
         var xmlOut = document.getElementById("xml-out");
         var copyBtn = document.getElementById("copy-btn");
+        var downloadBtn = document.getElementById("download-btn");
+        var editorBlock = document.getElementById("editor-block");
+        var dropzone = document.getElementById("dropzone");
+        var fileInput = document.getElementById("file-input");
 
-        document.getElementById("run-btn").addEventListener("click", function () {
+        function runValidation() {
           errList.innerHTML = "";
           var parsed = parseCsv(input.value);
           if (parsed.error) {
@@ -442,6 +527,7 @@
             status.className = "status fail";
             xmlOut.textContent = "—";
             copyBtn.disabled = true;
+            downloadBtn.disabled = true;
             return;
           }
           var errors = validate(parsed.rows);
@@ -455,19 +541,65 @@
             });
             xmlOut.textContent = "— no XML generated: validation is a hard gate —";
             copyBtn.disabled = true;
+            downloadBtn.disabled = true;
           } else {
             status.textContent = "✓ " + parsed.rows.length + " record(s) valid — control totals recomputed. Exit code 0.";
             status.className = "status pass";
             xmlOut.textContent = toXml(parsed.rows);
             copyBtn.disabled = false;
+            downloadBtn.disabled = false;
           }
+        }
+
+        function loadData(text) {
+          input.value = text.trim();
+          editorBlock.hidden = false;
+          runValidation();
+          status.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center" });
+        }
+
+        function readFile(file) {
+          if (!file) return;
+          if (file.size > 2 * 1024 * 1024) {
+            status.textContent = "✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.";
+            status.className = "status fail";
+            return;
+          }
+          var reader = new FileReader();
+          reader.onload = function () { loadData(String(reader.result)); };
+          reader.onerror = function () {
+            status.textContent = "✗ Could not read that file.";
+            status.className = "status fail";
+          };
+          reader.readAsText(file);
+        }
+
+        document.getElementById("browse-btn").addEventListener("click", function () { fileInput.click(); });
+        fileInput.addEventListener("change", function () { readFile(fileInput.files[0]); fileInput.value = ""; });
+        document.getElementById("sample-btn").addEventListener("click", function () { loadData(SAMPLE); });
+
+        ["dragover", "dragenter"].forEach(function (ev) {
+          dropzone.addEventListener(ev, function (e) { e.preventDefault(); dropzone.classList.add("dragover"); });
+        });
+        ["dragleave", "drop"].forEach(function (ev) {
+          dropzone.addEventListener(ev, function (e) { e.preventDefault(); dropzone.classList.remove("dragover"); });
+        });
+        dropzone.addEventListener("drop", function (e) {
+          readFile(e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0]);
         });
 
+        document.getElementById("run-btn").addEventListener("click", runValidation);
+
         document.getElementById("break-btn").addEventListener("click", function () {
-          /* Flip one digit in the first IBAN so the mod-97 check fails. */
-          input.value = input.value.replace("DE89370400440532013000", "DE88370400440532013000");
-          status.textContent = "One IBAN digit changed — run validation to see it caught.";
-          status.className = "status";
+          /* Bump the first IBAN's check digit so the mod-97 test fails. */
+          var m = input.value.match(/[A-Z]{2}\d{2}[A-Z0-9]{10,30}/);
+          if (m) {
+            var iban = m[0];
+            var flipped = iban.slice(0, 2) + ((parseInt(iban[2], 10) + 1) % 10) + iban.slice(3);
+            input.value = input.value.replace(iban, flipped);
+            status.textContent = "One IBAN check digit changed — press “Validate & generate” to see it caught.";
+            status.className = "status";
+          }
         });
 
         copyBtn.addEventListener("click", function () {
@@ -475,6 +607,17 @@
             copyBtn.textContent = "Copied ✓";
             setTimeout(function () { copyBtn.textContent = "Copy XML"; }, 1600);
           });
+        });
+
+        downloadBtn.addEventListener("click", function () {
+          var blob = new Blob([xmlOut.textContent], { type: "application/xml" });
+          var a = document.createElement("a");
+          a.href = URL.createObjectURL(blob);
+          a.download = "pain001-demo.xml";
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+          URL.revokeObjectURL(a.href);
         });
 
         /* ==== Step 3: official XSD validation via Pyodide + xmlschema. ==== */

@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, and recomputed control totals — then get pain.001.001.09 XML. Nothing leaves your browser."
+description: "Upload or paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, recomputed control totals, and the official XSD — all in your browser."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "en"
@@ -37,7 +37,7 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "Paste a payment batch, press validate, and watch rejection-class errors get caught before any XML exists — right here, with nothing uploaded."
+subtitle: "Drop in a CSV, use the sample, or paste your own records — validation runs instantly, entirely in your browser, and nothing ever leaves your machine."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
 title: "Try Pain001 in Your Browser"
@@ -47,7 +47,7 @@ atom_link: "https://pain001.com/try/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.47)"
-item_description: "Paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, and recomputed control totals — then get pain.001.001.09 XML. Nothing leaves your browser."
+item_description: "Upload or paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, recomputed control totals, and the official XSD — all in your browser."
 item_guid: "https://pain001.com/try/rss.xml"
 item_link: "https://pain001.com/try/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -68,7 +68,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: @wwdseb
-twitter_description: "Paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, and recomputed control totals — then get pain.001.001.09 XML. Nothing leaves your browser."
+twitter_description: "Upload or paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, recomputed control totals, and the official XSD — all in your browser."
 twitter_image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: @wwdseb

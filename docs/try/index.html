@@ -8,7 +8,7 @@
     <title>Try Pain001 in Your Browser</title>
 
     <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
-<meta name="description" content="Paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, and recomputed control totals — then get pain.001.001.09 XML. Nothing leaves your browser.">
+<meta name="description" content="Upload or paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, recomputed control totals, and the official XSD — all in your browser.">
 <meta name="keywords" content="pain.001 validator online, try pain001, SEPA XML generator online, IBAN checker, pain.001 example, ISO 20022 demo, payment file validator">
 <meta property="og:image" content="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />
     <meta property="og:image:alt" content="An interactive browser demo validating payment records and generating ISO 20022 pain.001 XML entirely client-side." />
@@ -34,18 +34,18 @@
 
     <script src="/_csp/6ccbbfb0b824e5f3.js" integrity="sha384-vD2D/DeQ7ybfwKVwsRoDzF6OdQbjm+gayKdOWKcqfqM76DP9CwfWMGtYvdpKSVJF" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/53fd357afa3e0231.css" integrity="sha384-qE5Dp/LIo9eXbLveHnf0orKh2hX3Eus4N5CVlHSHQxQLk6Mvwwue4h9RpECW8W8d" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/7020e2453387fbc4.css" integrity="sha384-Yo7cyzFaqjOIODKjXhxRzbj/fdmZ8OC3ctx+GB8hMicqSQoF167yu8FeFlLHqlnB" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="Try Pain001 in Your Browser">
-<meta property="og:description" content="Interactive demo Try Pain001 in Your Browser Paste a payment batch, press validate, and watch rejection-class errors get caught before any XML exists — right">
+<meta property="og:description" content="Interactive demo Try Pain001 in Your Browser Drop in a CSV, use the sample, or paste your own records — validation runs instantly, entirely in your browser,">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://pain001.com/try/">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Try Pain001 in Your Browser">
-<meta name="twitter:description" content="Interactive demo Try Pain001 in Your Browser Paste a payment batch, press validate, and watch rejection-class errors get caught before any XML exists — right">
+<meta name="twitter:description" content="Interactive demo Try Pain001 in Your Browser Drop in a CSV, use the sample, or paste your own records — validation runs instantly, entirely in your browser,">
 <meta name="twitter:image" content="https://cloudcdn.pro/pain001/v1/logos/pain001.svg">
 <link rel="canonical" href="https://pain001.com/try/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
 <link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"></head>
@@ -67,51 +67,83 @@
         <div class="wrap">
           <p class="eyebrow">Interactive demo</p>
           <h1>Try Pain001 in Your Browser</h1>
-          <p class="deck">Paste a payment batch, press validate, and watch rejection-class errors get caught before any XML exists — right here, with nothing uploaded.</p>
+          <p class="deck">Drop in a CSV, use the sample, or paste your own records — validation runs instantly, entirely in your browser, and nothing ever leaves your machine.</p>
         </div>
       </header>
 
-      <div class="wrap demo-grid">
-        <section class="demo-panel" aria-labelledby="input-heading">
-          <h2 id="input-heading">1 · Your payment data (CSV)</h2>
-          <label class="visually-hidden" for="csv-input">Payment CSV data</label>
-          <textarea id="csv-input" spellcheck="false" aria-describedby="demo-fineprint">id,payment_id,requested_execution_date,payment_amount,currency,debtor_name,debtor_account_IBAN,debtor_agent_BIC,creditor_name,creditor_account_IBAN,creditor_agent_BIC,remittance_information
-1,TXN-001,2026-08-03,1250.00,EUR,Acme Global Corp,DE89370400440532013000,DEUTDEFFXXX,Supplier SARL,FR1420041010050500013M02606,BNPAFRPPXXX,INVOICE-2026-4411
-2,TXN-002,2026-08-03,890.50,EUR,Acme Global Corp,DE89370400440532013000,DEUTDEFFXXX,Northwind Ltd,GB29NWBK60161331926819,NWBKGB2LXXX,INVOICE-2026-4412</textarea>
-          <div class="demo-actions">
-            <button type="button" id="run-btn" class="pill pill-primary">Validate &amp; generate&nbsp;&rsaquo;</button>
-            <button type="button" id="break-btn" class="pill pill-ghost">Introduce an error</button>
+      <div class="wrap guide-grid">
+        <aside class="guide-rail">
+          <div class="guide-block">
+            <h2>How this validator helps you</h2>
+            <ul class="check-list">
+              <li><span class="tick" aria-hidden="true">✓</span><span>Test payment data against the checks banks apply — required fields, IBAN checksums, BIC structure, control totals</span></li>
+              <li><span class="tick" aria-hidden="true">✓</span><span>Generate a working <code>pain.001.001.09</code> credit-transfer file you can inspect, copy, or download</span></li>
+              <li><span class="tick" aria-hidden="true">✓</span><span>Prove the result against the official ISO 20022 schema — the genuine XSD, validated in your browser</span></li>
+            </ul>
           </div>
-        </section>
+          <div class="guide-block">
+            <h2>Important information</h2>
+            <ul class="info-list">
+              <li><strong>Nothing is uploaded.</strong> Your file is read by your own browser and never leaves your machine — there is no server, no storage, no telemetry. Safe for real data, though masked test data is always good practice.</li>
+              <li><strong>Testing tool only.</strong> Files are never submitted for processing and no payments can result from anything you do here.</li>
+              <li><strong>Expected columns:</strong> <code>payment_id</code>, <code>payment_amount</code>, <code>currency</code>, debtor and creditor name / IBAN / BIC, <code>requested_execution_date</code> — start from the sample to see the exact header row.</li>
+              <li><strong>No charges.</strong> This tool, and the <a href="/installation/">full toolchain</a> behind it, are free and open source.</li>
+            </ul>
+          </div>
+        </aside>
 
-        <section class="demo-panel" aria-labelledby="output-heading">
-          <h2 id="output-heading">2 · Validation result &amp; pain.001.001.09 XML</h2>
-          <p class="status" id="status" role="status">Press “Validate &amp; generate” to run the checks.</p>
-          <ul class="error-list" id="errors"></ul>
-          <div class="xml-out" id="xml-out" tabindex="0" aria-label="Generated XML output">—</div>
-          <div class="demo-actions">
-            <button type="button" id="copy-btn" class="pill pill-ghost" disabled>Copy XML</button>
-          </div>
-        </section>
+        <div class="tool-col">
+          <section class="demo-panel" aria-labelledby="input-heading">
+            <div class="step-head"><span class="step-num" aria-hidden="true">1</span><h2 id="input-heading">Add your payment data</h2></div>
+            <div class="dropzone" id="dropzone">
+              <p><strong>Drag a CSV file here</strong></p>
+              <p class="hint">Maximum 2&nbsp;MB · read locally by your browser, never uploaded</p>
+              <div class="demo-actions">
+                <button type="button" id="browse-btn" class="pill pill-ghost">Browse your files</button>
+                <button type="button" id="sample-btn" class="pill pill-ghost">Use the sample batch</button>
+              </div>
+            </div>
+            <input type="file" id="file-input" class="visually-hidden" accept=".csv,text/csv,text/plain" aria-label="Choose a CSV file of payment records" />
+            <div class="editor-block" id="editor-block" hidden>
+              <label class="editor-label" for="csv-input">Review and edit your records</label>
+              <textarea id="csv-input" spellcheck="false" aria-describedby="demo-fineprint"></textarea>
+              <div class="demo-actions">
+                <button type="button" id="run-btn" class="pill pill-primary">Validate &amp; generate&nbsp;&rsaquo;</button>
+                <button type="button" id="break-btn" class="pill pill-ghost">Introduce an error</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="demo-panel" aria-labelledby="output-heading">
+            <div class="step-head"><span class="step-num" aria-hidden="true">2</span><h2 id="output-heading">Validation result &amp; generated XML</h2></div>
+            <p class="status" id="status" role="status">Add data in step 1 — validation runs automatically.</p>
+            <ul class="error-list" id="errors"></ul>
+            <div class="xml-out" id="xml-out" tabindex="0" aria-label="Generated XML output">—</div>
+            <div class="demo-actions">
+              <button type="button" id="copy-btn" class="pill pill-ghost" disabled>Copy XML</button>
+              <button type="button" id="download-btn" class="pill pill-ghost" disabled>Download .xml</button>
+            </div>
+          </section>
+
+          <section class="demo-panel" aria-labelledby="xsd-heading">
+            <div class="step-head"><span class="step-num" aria-hidden="true">3</span><h2 id="xsd-heading">Prove it against the official ISO 20022 XSD</h2></div>
+            <p class="fineprint" style="margin: 0;">
+              Steps 1–2 run fast, hand-written checks. This step runs the genuine article: a Python
+              runtime (via WebAssembly) executing <code style="font-family: var(--type-mono);">xmlschema</code>
+              against the official <code style="font-family: var(--type-mono);">pain.001.001.09</code> schema —
+              the same class of validation the CLI performs. The ~13&nbsp;MB engine is served from this
+              site and downloaded once, when you ask for it.
+            </p>
+            <div class="demo-actions">
+              <button type="button" id="xsd-btn" class="pill pill-primary" disabled>Run the official XSD gate&nbsp;&rsaquo;</button>
+            </div>
+            <p class="status" id="xsd-status" role="status">Generate XML in step 2 first — the XSD gate validates that output.</p>
+            <ul class="error-list" id="xsd-errors"></ul>
+          </section>
+        </div>
       </div>
 
       <div class="wrap">
-        <section class="demo-panel" aria-labelledby="xsd-heading" style="margin-bottom: 1.5rem;">
-          <h2 id="xsd-heading">3 · The real gate: validate against the official ISO 20022 XSD</h2>
-          <p class="fineprint" style="margin: 0;">
-            Steps 1–2 run fast, hand-written checks. This step runs the genuine article: a Python
-            runtime (via WebAssembly) executing <code style="font-family: var(--type-mono);">xmlschema</code>
-            against the official <code style="font-family: var(--type-mono);">pain.001.001.09</code> schema —
-            the same class of validation the CLI performs. Everything is served from this site and runs
-            locally; the engine is ~13&nbsp;MB, downloaded once when you ask for it.
-          </p>
-          <div class="demo-actions">
-            <button type="button" id="xsd-btn" class="pill pill-primary" disabled>Run the official XSD gate&nbsp;&rsaquo;</button>
-          </div>
-          <p class="status" id="xsd-status" role="status">Generate XML in step 2 first — the XSD gate validates that output.</p>
-          <ul class="error-list" id="xsd-errors"></ul>
-        </section>
-
         <p class="fineprint" id="demo-fineprint">
           Everything on this page runs in your browser — nothing is uploaded, stored, or sent anywhere.
           This demo implements a subset of the pipeline (required fields, IBAN mod-97, BIC structure, amount
@@ -150,7 +182,7 @@
       "@id": "https://pain001.com/try/",
       "url": "https://pain001.com/try/",
       "name": "Try Pain001 in Your Browser",
-      "description": "Paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, and recomputed control totals — then get pain.001.001.09 XML. Nothing leaves your browser.",
+      "description": "Upload or paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, recomputed control totals, and the official XSD — all in your browser.",
       "applicationCategory": "FinanceApplication",
       "browserRequirements": "Requires JavaScript. Runs entirely client-side.",
       "operatingSystem": "Any",
@@ -159,7 +191,7 @@
     }
     </script>
 
-    <script src="/_csp/7fb158c834cc817d.js" integrity="sha384-91p9UD2XvHREoptHdMgaHErybpNDXoqs6+NoPgHBuPL+CIh/06wjHQeydCv0DAJ+" crossorigin="anonymous"></script>
+    <script src="/_csp/c694ec4ad1958bfb.js" integrity="sha384-vYFz+XMzunEiybOWg0DQlEyprgu49+uJYsWT6p8zPsEIM7CWGJqrqXgRQ7fFdYHt" crossorigin="anonymous"></script>
   
 <!-- SSG Search Widget -->
 <div id="ssg-search-widget">

@@ -402,7 +402,7 @@
     <item>
       <title>Try Pain001 in Your Browser</title>
       <link>https://pain001.com/try/</link>
-      <description>Paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, and recomputed control totals — then get pain.001.001.09 XML. Nothing leaves your browser.</description>
+      <description>Upload or paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, recomputed control totals, and the official XSD — all in your browser.</description>
       <guid isPermaLink="true">https://pain001.com/try/</guid>
       <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
       <author>contact@pain001.com (Sebastien Rousseau)</author>
