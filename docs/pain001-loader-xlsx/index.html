@@ -19,7 +19,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Excel to pain.001: pain001-loader-xlsx">
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self' ; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
     <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/7a37ceeca4919e9b.css" integrity="sha384-Qc5kIjtad9MTvYliixwXj7FEK1DMTqvKwSQFfI1+w0J9FVQeNrllNhmfYyMEkfD0" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/354bc7d51def2375.css" integrity="sha384-HAuaeai/syoRzy/JYWXTHIoZQgrbNJXturGMedTXJK+Kp/9HUadZy2tJ/LEjWJGG" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -60,71 +60,110 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <div class="progress" aria-hidden="true"></div>
 
-    <header class="navbar">
-      <div class="wrap nav-inner">
-        <a href="/" class="brand">
-          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="Pain001 logo" width="30" height="30" />
+    <header class="ap-nav">
+      <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Toggle navigation" />
+      <div class="wrap ap-nav-wrap">
+        <a class="ap-brand" href="/" aria-label="Pain001 home">
+          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="" width="26" height="26" />
           <span>Pain001</span>
         </a>
-
-        <nav aria-label="Primary">
-          <input type="checkbox" id="nav-toggle" class="nav-toggle-input" />
-          <label for="nav-toggle" class="nav-toggle-label">
-            <span aria-hidden="true">&#9776;</span>
-            <span class="visually-hidden">Menu</span>
-          </label>
-          <ul class="nav-links" id="primary-menu">
-            <li><a href="/why/">Why Pain001</a></li>
+        <nav aria-label="Primary navigation" id="ap-primary-nav">
+          <ul class="ap-menu">
+            <li class="has-sub"><a href="/why/">Why Pain001</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-why" aria-label="Toggle Why Pain001 submenu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-why" class="ap-sub">
+                <li><a href="/solutions/">Who it&rsquo;s for</a></li>
+                <li><a href="/executive-brief/">Executive brief</a></li>
+                <li><a href="/competitors-comparison/">Comparison vs commercial tools</a></li>
+              </ul>
+            </li>
             <li><a href="/try/">See it live</a></li>
-            <li><a href="/solutions/">Who it's for</a></li>
-            <li><a href="/2026-iso20022-migration-trends/">2026 deadlines</a></li>
-            <li class="nav-res">
-              <button type="button" class="nav-res-btn" id="resToggle" aria-expanded="false" aria-controls="resPanel">Resources <span aria-hidden="true" class="nav-res-caret">▾</span></button>
-              <div class="nav-res-panel" id="resPanel" hidden>
-                <div class="nav-res-group">
-                  <p class="nav-res-heading">Get started</p>
-                  <ul>
-                    <li><a href="/installation/">Installation &amp; Docker</a></li>
-                    <li><a href="/documentation/">Technical reference (docs)</a></li>
-                  </ul>
-                </div>
-                <div class="nav-res-group">
-                  <p class="nav-res-heading">Extend</p>
-                  <ul>
-                    <li><a href="/pain001-mcp/">AI agent tools (MCP)</a></li>
-                    <li><a href="/pain001-lsp/">Editor integration (LSP)</a></li>
-                    <li><a href="/pain001-loader-mt101/">MT101 loader</a></li>
-                    <li><a href="/pain001-loader-xlsx/">Excel loader</a></li>
-                  </ul>
-                </div>
-                <div class="nav-res-group">
-                  <p class="nav-res-heading">Understand</p>
-                  <ul>
-                    <li><a href="/glossary/">Glossary</a></li>
-                    <li><a href="/faqs/">FAQs</a></li>
-                    <li><a href="/pain002-reason-codes/">pain.002 reason codes</a></li>
-                    <li><a href="/competitors-comparison/">Comparison vs commercial tools</a></li>
-                    <li><a href="/architecture-and-patents/">Architecture &amp; security</a></li>
-                  </ul>
-                </div>
-                <div class="nav-res-group">
-                  <p class="nav-res-heading">Decide</p>
-                  <ul>
-                    <li><a href="/executive-brief/">Executive brief</a></li>
-                    <li><a href="/iso20022-roadmap/">ISO 20022 roadmap</a></li>
-                    <li><a href="/languages/">In 34 languages</a></li>
-                  </ul>
-                </div>
-              </div>
+            <li class="has-sub"><a href="/documentation/">Docs</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="Toggle Docs submenu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-docs" class="ap-sub">
+                <li><a href="/installation/">Installation &amp; Docker</a></li>
+                <li><a href="/glossary/">Glossary</a></li>
+                <li><a href="/faqs/">FAQs</a></li>
+                <li><a href="/pain002-reason-codes/">pain.002 reason codes</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/#suite-heading">Suite</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-suite" aria-label="Toggle Suite submenu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-suite" class="ap-sub">
+                <li><a href="/pain001-mcp/">AI agent tools (MCP)</a></li>
+                <li><a href="/pain001-lsp/">Editor integration (LSP)</a></li>
+                <li><a href="/pain001-loader-mt101/">MT101 loader</a></li>
+                <li><a href="/pain001-loader-xlsx/">Excel loader</a></li>
+                <li><a href="/architecture-and-patents/">Architecture &amp; security</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/2026-iso20022-migration-trends/">Research</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-research" aria-label="Toggle Research submenu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-research" class="ap-sub">
+                <li><a href="/2026-iso20022-migration-trends/">2026 briefing</a></li>
+                <li><a href="/iso20022-roadmap/">ISO 20022 roadmap</a></li>
+                <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/">Cross-border guide</a></li>
+                <li><a href="/languages/">In 34 languages</a></li>
+              </ul>
             </li>
           </ul>
         </nav>
-
-        <div class="nav-right">
-          <button id="themeToggle" class="theme-btn" type="button" aria-pressed="false" aria-label="Switch to dark theme">
-            <span aria-hidden="true" id="themeIcon">◐</span> <span id="themeLabel">Dark</span>
+        <div class="ap-nav-right">
+          <button type="button" class="theme-toggle" aria-label="Switch to dark theme" aria-pressed="false" title="Switch theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
           </button>
-          <a href="/try/" class="nav-cta">Try the demo&nbsp;&rsaquo;</a>
+          <button type="button" class="ap-search-btn" aria-label="Search (Cmd or Ctrl + K)" title="Search (⌘K)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <kbd class="ap-search-kbd" aria-hidden="true">⌘K</kbd>
+          </button>
+          <div class="ap-lang" role="group" aria-label="Language">
+            <button type="button" class="ap-lang-toggle" aria-label="Change language" aria-expanded="false" aria-haspopup="menu" title="Change language">
+              <span class="ap-lang-globe" aria-hidden="true">🌐</span>
+              <span class="ap-lang-current">EN</span>
+            </button>
+            <div class="ap-lang-menu" role="menu" hidden>
+              <div class="ap-lang-menu-grid">
+                <a class="ap-lang-item" href="/" hreflang="en" lang="en" role="menuitem"><span aria-hidden="true">🇬🇧</span> English</a>
+                <a class="ap-lang-item" href="/fr/" hreflang="fr" lang="fr" role="menuitem"><span aria-hidden="true">🇫🇷</span> Français</a>
+                <a class="ap-lang-item" href="/de/" hreflang="de" lang="de" role="menuitem"><span aria-hidden="true">🇩🇪</span> Deutsch</a>
+                <a class="ap-lang-item" href="/es/" hreflang="es" lang="es" role="menuitem"><span aria-hidden="true">🇪🇸</span> Español</a>
+                <a class="ap-lang-item" href="/it/" hreflang="it" lang="it" role="menuitem"><span aria-hidden="true">🇮🇹</span> Italiano</a>
+                <a class="ap-lang-item" href="/pt-br/" hreflang="pt-BR" lang="pt-BR" role="menuitem"><span aria-hidden="true">🇧🇷</span> Português</a>
+                <a class="ap-lang-item" href="/nl/" hreflang="nl" lang="nl" role="menuitem"><span aria-hidden="true">🇳🇱</span> Nederlands</a>
+                <a class="ap-lang-item" href="/pl/" hreflang="pl" lang="pl" role="menuitem"><span aria-hidden="true">🇵🇱</span> Polski</a>
+                <a class="ap-lang-item" href="/sv/" hreflang="sv" lang="sv" role="menuitem"><span aria-hidden="true">🇸🇪</span> Svenska</a>
+                <a class="ap-lang-item" href="/cs/" hreflang="cs" lang="cs" role="menuitem"><span aria-hidden="true">🇨🇿</span> Čeština</a>
+                <a class="ap-lang-item" href="/ro/" hreflang="ro" lang="ro" role="menuitem"><span aria-hidden="true">🇷🇴</span> Română</a>
+                <a class="ap-lang-item" href="/hu/" hreflang="hu" lang="hu" role="menuitem"><span aria-hidden="true">🇭🇺</span> Magyar</a>
+                <a class="ap-lang-item" href="/el/" hreflang="el" lang="el" role="menuitem"><span aria-hidden="true">🇬🇷</span> Ελληνικά</a>
+                <a class="ap-lang-item" href="/tr/" hreflang="tr" lang="tr" role="menuitem"><span aria-hidden="true">🇹🇷</span> Türkçe</a>
+                <a class="ap-lang-item" href="/ru/" hreflang="ru" lang="ru" role="menuitem"><span aria-hidden="true">🇷🇺</span> Русский</a>
+                <a class="ap-lang-item" href="/uk/" hreflang="uk" lang="uk" role="menuitem"><span aria-hidden="true">🇺🇦</span> Українська</a>
+                <a class="ap-lang-item" href="/ar/" hreflang="ar" lang="ar" role="menuitem"><span aria-hidden="true">🇸🇦</span> العربية</a>
+                <a class="ap-lang-item" href="/he/" hreflang="he" lang="he" role="menuitem"><span aria-hidden="true">🇮🇱</span> עברית</a>
+                <a class="ap-lang-item" href="/fa/" hreflang="fa" lang="fa" role="menuitem"><span aria-hidden="true">🇮🇷</span> فارسی</a>
+                <a class="ap-lang-item" href="/hi/" hreflang="hi" lang="hi" role="menuitem"><span aria-hidden="true">🇮🇳</span> हिन्दी</a>
+                <a class="ap-lang-item" href="/bn/" hreflang="bn" lang="bn" role="menuitem"><span aria-hidden="true">🇧🇩</span> বাংলা</a>
+                <a class="ap-lang-item" href="/ta/" hreflang="ta" lang="ta" role="menuitem"><span aria-hidden="true">🇮🇳</span> தமிழ்</a>
+                <a class="ap-lang-item" href="/te/" hreflang="te" lang="te" role="menuitem"><span aria-hidden="true">🇮🇳</span> తెలుగు</a>
+                <a class="ap-lang-item" href="/mr/" hreflang="mr" lang="mr" role="menuitem"><span aria-hidden="true">🇮🇳</span> मराठी</a>
+                <a class="ap-lang-item" href="/th/" hreflang="th" lang="th" role="menuitem"><span aria-hidden="true">🇹🇭</span> ไทย</a>
+                <a class="ap-lang-item" href="/vi/" hreflang="vi" lang="vi" role="menuitem"><span aria-hidden="true">🇻🇳</span> Tiếng Việt</a>
+                <a class="ap-lang-item" href="/id/" hreflang="id" lang="id" role="menuitem"><span aria-hidden="true">🇮🇩</span> Indonesia</a>
+                <a class="ap-lang-item" href="/ms/" hreflang="ms" lang="ms" role="menuitem"><span aria-hidden="true">🇲🇾</span> Melayu</a>
+                <a class="ap-lang-item" href="/fil/" hreflang="fil" lang="fil" role="menuitem"><span aria-hidden="true">🇵🇭</span> Filipino</a>
+                <a class="ap-lang-item" href="/ja/" hreflang="ja" lang="ja" role="menuitem"><span aria-hidden="true">🇯🇵</span> 日本語</a>
+                <a class="ap-lang-item" href="/ko/" hreflang="ko" lang="ko" role="menuitem"><span aria-hidden="true">🇰🇷</span> 한국어</a>
+                <a class="ap-lang-item" href="/zh-hans/" hreflang="zh-Hans" lang="zh-Hans" role="menuitem"><span aria-hidden="true">🇨🇳</span> 简体中文</a>
+                <a class="ap-lang-item" href="/zh-hant/" hreflang="zh-Hant" lang="zh-Hant" role="menuitem"><span aria-hidden="true">🇹🇼</span> 繁體中文</a>
+                <a class="ap-lang-item" href="/ha/" hreflang="ha" lang="ha" role="menuitem"><span aria-hidden="true">🇳🇬</span> Hausa</a>
+                <a class="ap-lang-item" href="/yo/" hreflang="yo" lang="yo" role="menuitem"><span aria-hidden="true">🇳🇬</span> Yorùbá</a>
+              </div>
+            </div>
+          </div>
+          <a class="ap-cta-mini" href="/try/">Try the demo&nbsp;&rsaquo;</a>
+          <label class="ap-burger" for="ap-menu-toggle" aria-hidden="true"><span class="ap-burger-icon">☰</span></label>
         </div>
       </div>
     </header>
@@ -286,7 +325,7 @@
     }
     </script>
 
-    <script src="/_csp/d49af7d298c66ab9.js" integrity="sha384-Eb8AfSAsHN4Ek+07W9OwT/G98tdgEVh3SmkNJ/0FTKfVPHtOfwEpU8Mp53hDsOt2" crossorigin="anonymous"></script>
+    <script src="/_csp/b2d697e497b16728.js" integrity="sha384-gx5lGkXJ/eO3GK2auCtxNZLp+Ykh7ykfbI+R8+WZzuDeeT+dZzlwzF2iFrw4LEog" crossorigin="anonymous"></script>
   
 <!-- SSG Search Widget -->
 <div id="ssg-search-widget">

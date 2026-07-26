@@ -15,7 +15,7 @@
     <meta property="og:image:alt" content="Pain001 — payment files your bank will not reject" />
     {{twitter}}
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self' 'unsafe-inline' 'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
@@ -93,6 +93,14 @@
         --radius-sm: 8px;
         --radius-md: 14px;
         --radius-pill: 999px;
+        --ink: var(--text-main);
+        --ink-soft: var(--text-muted);
+        --ink-mute: var(--text-muted);
+        --rule: var(--border-color);
+        --rule-strong: var(--border-color);
+        --bg-card: var(--bg-page);
+        --shadow-md: 0 12px 32px -12px rgb(0 0 0 / 0.25);
+        --type-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
       }
       [data-theme="dark"] {
         --bg-page: #0b0e14;
@@ -135,6 +143,7 @@
       }
       .skip-link:focus { top: 1rem; }
 
+      .wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 1.75rem; }
       .container { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
       .back-link { color: var(--link); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; min-height: 44px; }
       .back-link:hover { text-decoration: underline; }
@@ -175,6 +184,180 @@
       article p, article li { margin-bottom: 0.75rem; }
       article ul { padding-left: 1.5rem; }
 
+      /* ==== Header (ported from sebastienrousseau.com): 3-column grid,
+         disclosure submenus, sun/moon toggle, cmd-K search, globe locale
+         menu, CTA pill, checkbox-burger mobile sheet. ==== */
+      .ap-nav {
+        position: sticky; top: 0; z-index: 1000;
+        background: color-mix(in srgb, var(--bg-page) 92%, transparent);
+        backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--rule);
+      }
+      .ap-nav-wrap {
+        display: grid; grid-template-columns: auto 1fr auto;
+        align-items: center; gap: 1rem; min-height: 64px;
+      }
+      .ap-toggle { position: absolute; opacity: 0; height: 0; width: 0; }
+      .ap-brand {
+        justify-self: start; display: inline-flex; align-items: center; gap: 0.55rem;
+        font-family: var(--type-display); font-size: 1.2rem; font-weight: 700;
+        color: var(--ink); text-decoration: none; min-height: 44px; white-space: nowrap;
+      }
+      .ap-brand img { width: 26px; height: 26px; }
+      .ap-menu {
+        justify-self: center; display: flex; align-items: center;
+        list-style: none; margin: 0; padding: 0; gap: 0.35rem;
+      }
+      .ap-menu > li { position: relative; display: inline-flex; align-items: center; }
+      .ap-menu a {
+        display: inline-flex; align-items: center; min-height: 44px;
+        padding: 0 0.55rem; color: var(--ink-soft); text-decoration: none;
+        font-size: 0.9rem; font-weight: 500; white-space: nowrap;
+        border-radius: var(--radius-sm);
+      }
+      .ap-menu a:hover { color: var(--ink); background: var(--bg-alt); }
+      .ap-menu a[aria-current="page"] {
+        color: var(--link); font-weight: 700; position: relative;
+      }
+      .ap-menu > li > a[aria-current="page"]::after {
+        content: ""; position: absolute; left: 0.55rem; right: 0.55rem; bottom: 4px;
+        height: 2px; background: var(--link); border-radius: 1px;
+      }
+      .ap-sub-toggle {
+        display: inline-flex; align-items: center; justify-content: center;
+        width: 44px; height: 44px; margin-inline-start: -6px;
+        padding: 0; background: transparent; border: 0; border-radius: 50%;
+        color: var(--ink-soft); cursor: pointer;
+      }
+      .ap-sub-toggle:hover { color: var(--ink); background: var(--bg-alt); }
+      .ap-sub-toggle svg {
+        width: 12px; height: 12px; stroke: currentColor; fill: none;
+        stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+        transition: transform 0.18s ease;
+      }
+      .ap-sub-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+      .ap-sub {
+        position: absolute; top: calc(100% + 8px); left: 50%;
+        transform: translateX(-50%);
+        min-width: 240px; margin: 0; padding: 0.6rem 0; list-style: none;
+        background: var(--bg-card); border: 1px solid var(--rule);
+        border-radius: var(--radius-md); box-shadow: var(--shadow-md);
+        display: none; z-index: 1100;
+      }
+      .has-sub:hover > .ap-sub,
+      .ap-sub-toggle[aria-expanded="true"] + .ap-sub { display: block; }
+      html:not(.has-js) .has-sub:focus-within > .ap-sub { display: block; }
+      .ap-sub li { display: block; }
+      .ap-sub a { display: flex; padding: 0 1.1rem; font-size: 0.9rem; border-radius: 0; }
+      .ap-nav-right {
+        justify-self: end; display: inline-flex; align-items: center; gap: 0.35rem;
+      }
+      .theme-toggle, .ap-search-btn {
+        display: inline-flex; align-items: center; justify-content: center;
+        gap: 0.4rem; min-width: 44px; min-height: 44px; padding: 0 0.5rem;
+        background: transparent; border: 1px solid transparent; border-radius: 999px;
+        color: var(--ink); cursor: pointer; font-family: inherit;
+      }
+      .theme-toggle { width: 44px; padding: 0; }
+      .theme-toggle:hover, .ap-search-btn:hover { background: var(--bg-alt); }
+      .theme-toggle svg, .ap-search-btn svg {
+        width: 16px; height: 16px; stroke: currentColor; fill: none;
+        stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+      }
+      .theme-toggle .icon-sun { display: none; }
+      .theme-toggle .icon-moon { display: inline; }
+      [data-theme="dark"] .theme-toggle .icon-sun { display: inline; }
+      [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+      @media (prefers-color-scheme: dark) {
+        html:not([data-theme="light"]) .theme-toggle .icon-sun { display: inline; }
+        html:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
+      }
+      .ap-search-kbd {
+        display: inline-flex; align-items: center; padding: 2px 6px;
+        font-family: var(--type-mono); font-size: 0.72rem;
+        color: var(--ink-mute); background: var(--bg-alt);
+        border: 1px solid var(--rule); border-radius: 5px;
+      }
+      .ap-lang { position: relative; }
+      .ap-lang-toggle {
+        display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+        padding: 0 0.8rem; min-height: 44px; background: transparent;
+        border: 1px solid var(--rule-strong); border-radius: 999px;
+        color: var(--ink); cursor: pointer; font-family: inherit;
+        font-size: 0.8rem; font-weight: 600;
+      }
+      .ap-lang-toggle:hover { background: var(--bg-alt); }
+      .ap-lang-globe { font-size: 1rem; line-height: 1; }
+      .ap-lang-menu {
+        position: absolute; top: 100%; right: 0; margin-top: 0.4rem; padding: 0.5rem;
+        background: var(--bg-card); border: 1px solid var(--rule);
+        border-radius: var(--radius-md); box-shadow: var(--shadow-md);
+        z-index: 1100; max-height: min(70vh, 480px); overflow: auto;
+      }
+      .ap-lang-menu[hidden] { display: none; }
+      .ap-lang-menu-grid { display: grid; grid-template-columns: repeat(4, minmax(120px, 1fr)); }
+      .ap-lang-item {
+        display: flex; align-items: center; gap: 0.4rem;
+        padding: 0.45rem 0.6rem; min-height: 40px; border-radius: 6px;
+        font-size: 0.82rem; color: var(--ink-soft); text-decoration: none; white-space: nowrap;
+      }
+      .ap-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
+      .ap-lang-item[aria-current="true"] { color: var(--link); font-weight: 700; }
+      .ap-cta-mini {
+        display: inline-flex; align-items: center; gap: 0.2rem;
+        min-height: 44px; padding: 0 1.1rem;
+        background: var(--btn-bg); color: var(--btn-text);
+        border-radius: 999px; font-size: 0.85rem; font-weight: 600;
+        text-decoration: none; white-space: nowrap;
+      }
+      .ap-cta-mini:hover { opacity: 0.85; }
+      .ap-burger {
+        display: none; align-items: center; justify-content: center;
+        width: 44px; height: 44px; cursor: pointer;
+        font-size: 1.2rem; color: var(--ink); border-radius: var(--radius-sm);
+        border: 1px solid var(--rule-strong); user-select: none;
+      }
+      .ap-toggle:focus-visible ~ .ap-nav-wrap .ap-burger {
+        outline: 3px solid var(--focus-ring); outline-offset: 2px;
+      }
+      .ap-toggle:checked ~ .ap-nav-wrap .ap-burger { color: var(--link); border-color: var(--link); }
+
+      @media (max-width: 1180px) {
+        .ap-nav-wrap { grid-template-columns: auto auto; }
+        .ap-brand { grid-row: 1; grid-column: 1; }
+        .ap-nav-right { grid-row: 1; grid-column: 2; }
+        .ap-burger { display: inline-flex; }
+        .ap-nav nav { display: none; grid-row: 2; grid-column: 1 / -1; }
+        .ap-toggle:checked ~ .ap-nav-wrap nav { display: block; }
+        .ap-menu {
+          display: block; width: 100%; justify-self: stretch;
+          padding: 0.25rem 0 1rem;
+          max-height: calc(100dvh - 76px); overflow: auto;
+        }
+        .ap-menu > li { display: block; position: static; }
+        .ap-menu > li + li { border-top: 1px solid var(--rule); }
+        .ap-menu > li > a {
+          display: flex; justify-content: center; min-height: 48px;
+          font-size: 1rem; font-weight: 600;
+        }
+        .ap-sub-toggle { display: none; }
+        .ap-sub {
+          position: static; transform: none; display: block !important;
+          min-width: 0; border: 0; border-radius: 0; box-shadow: none;
+          background: transparent; padding: 0 0 0.5rem;
+        }
+        .ap-sub a {
+          justify-content: center; min-height: 44px;
+          padding: 0; color: var(--ink-mute);
+        }
+        .ap-menu > li > a[aria-current="page"]::after { display: none; }
+      }
+      @media (max-width: 720px) { .ap-cta-mini { display: none; } .ap-search-kbd { display: none; } }
+      @media (max-width: 480px) { .ap-lang { display: none; } .ap-nav-wrap { gap: 0.5rem; } }
+
+      /* ssg's injected floating search trigger duplicates the in-nav
+         search button; hide the trigger, keep the overlay it opens. */
+      #ssg-search-btn { display: none !important; }
       /* AAA overrides for ssg's injected search widget: its own stylesheet
          ships 6.3-6.9:1 labels; force token colours (>= 7:1 both themes). */
       #ssg-search-btn, #ssg-search-btn span { color: var(--text-muted) !important; }
@@ -187,8 +370,115 @@
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="ap-nav">
+      <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Toggle navigation" />
+      <div class="wrap ap-nav-wrap">
+        <a class="ap-brand" href="/" aria-label="Pain001 home">
+          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="" width="26" height="26" />
+          <span>Pain001</span>
+        </a>
+        <nav aria-label="Primary navigation" id="ap-primary-nav">
+          <ul class="ap-menu">
+            <li class="has-sub"><a href="/why/">Why Pain001</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-why" aria-label="Toggle Why Pain001 submenu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-why" class="ap-sub">
+                <li><a href="/solutions/">Who it&rsquo;s for</a></li>
+                <li><a href="/executive-brief/">Executive brief</a></li>
+                <li><a href="/competitors-comparison/">Comparison vs commercial tools</a></li>
+              </ul>
+            </li>
+            <li><a href="/try/">See it live</a></li>
+            <li class="has-sub"><a href="/documentation/">Docs</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="Toggle Docs submenu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-docs" class="ap-sub">
+                <li><a href="/installation/">Installation &amp; Docker</a></li>
+                <li><a href="/glossary/">Glossary</a></li>
+                <li><a href="/faqs/">FAQs</a></li>
+                <li><a href="/pain002-reason-codes/">pain.002 reason codes</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/#suite-heading">Suite</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-suite" aria-label="Toggle Suite submenu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-suite" class="ap-sub">
+                <li><a href="/pain001-mcp/">AI agent tools (MCP)</a></li>
+                <li><a href="/pain001-lsp/">Editor integration (LSP)</a></li>
+                <li><a href="/pain001-loader-mt101/">MT101 loader</a></li>
+                <li><a href="/pain001-loader-xlsx/">Excel loader</a></li>
+                <li><a href="/architecture-and-patents/">Architecture &amp; security</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/2026-iso20022-migration-trends/">Research</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-research" aria-label="Toggle Research submenu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-research" class="ap-sub">
+                <li><a href="/2026-iso20022-migration-trends/">2026 briefing</a></li>
+                <li><a href="/iso20022-roadmap/">ISO 20022 roadmap</a></li>
+                <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/">Cross-border guide</a></li>
+                <li><a href="/languages/">In 34 languages</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="ap-nav-right">
+          <button type="button" class="theme-toggle" aria-label="Switch to dark theme" aria-pressed="false" title="Switch theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+          <button type="button" class="ap-search-btn" aria-label="Search (Cmd or Ctrl + K)" title="Search (⌘K)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <kbd class="ap-search-kbd" aria-hidden="true">⌘K</kbd>
+          </button>
+          <div class="ap-lang" role="group" aria-label="Language">
+            <button type="button" class="ap-lang-toggle" aria-label="Change language" aria-expanded="false" aria-haspopup="menu" title="Change language">
+              <span class="ap-lang-globe" aria-hidden="true">🌐</span>
+              <span class="ap-lang-current">EN</span>
+            </button>
+            <div class="ap-lang-menu" role="menu" hidden>
+              <div class="ap-lang-menu-grid">
+                <a class="ap-lang-item" href="/" hreflang="en" lang="en" role="menuitem"><span aria-hidden="true">🇬🇧</span> English</a>
+                <a class="ap-lang-item" href="/fr/" hreflang="fr" lang="fr" role="menuitem"><span aria-hidden="true">🇫🇷</span> Français</a>
+                <a class="ap-lang-item" href="/de/" hreflang="de" lang="de" role="menuitem"><span aria-hidden="true">🇩🇪</span> Deutsch</a>
+                <a class="ap-lang-item" href="/es/" hreflang="es" lang="es" role="menuitem"><span aria-hidden="true">🇪🇸</span> Español</a>
+                <a class="ap-lang-item" href="/it/" hreflang="it" lang="it" role="menuitem"><span aria-hidden="true">🇮🇹</span> Italiano</a>
+                <a class="ap-lang-item" href="/pt-br/" hreflang="pt-BR" lang="pt-BR" role="menuitem"><span aria-hidden="true">🇧🇷</span> Português</a>
+                <a class="ap-lang-item" href="/nl/" hreflang="nl" lang="nl" role="menuitem"><span aria-hidden="true">🇳🇱</span> Nederlands</a>
+                <a class="ap-lang-item" href="/pl/" hreflang="pl" lang="pl" role="menuitem"><span aria-hidden="true">🇵🇱</span> Polski</a>
+                <a class="ap-lang-item" href="/sv/" hreflang="sv" lang="sv" role="menuitem"><span aria-hidden="true">🇸🇪</span> Svenska</a>
+                <a class="ap-lang-item" href="/cs/" hreflang="cs" lang="cs" role="menuitem"><span aria-hidden="true">🇨🇿</span> Čeština</a>
+                <a class="ap-lang-item" href="/ro/" hreflang="ro" lang="ro" role="menuitem"><span aria-hidden="true">🇷🇴</span> Română</a>
+                <a class="ap-lang-item" href="/hu/" hreflang="hu" lang="hu" role="menuitem"><span aria-hidden="true">🇭🇺</span> Magyar</a>
+                <a class="ap-lang-item" href="/el/" hreflang="el" lang="el" role="menuitem"><span aria-hidden="true">🇬🇷</span> Ελληνικά</a>
+                <a class="ap-lang-item" href="/tr/" hreflang="tr" lang="tr" role="menuitem"><span aria-hidden="true">🇹🇷</span> Türkçe</a>
+                <a class="ap-lang-item" href="/ru/" hreflang="ru" lang="ru" role="menuitem"><span aria-hidden="true">🇷🇺</span> Русский</a>
+                <a class="ap-lang-item" href="/uk/" hreflang="uk" lang="uk" role="menuitem"><span aria-hidden="true">🇺🇦</span> Українська</a>
+                <a class="ap-lang-item" href="/ar/" hreflang="ar" lang="ar" role="menuitem"><span aria-hidden="true">🇸🇦</span> العربية</a>
+                <a class="ap-lang-item" href="/he/" hreflang="he" lang="he" role="menuitem"><span aria-hidden="true">🇮🇱</span> עברית</a>
+                <a class="ap-lang-item" href="/fa/" hreflang="fa" lang="fa" role="menuitem"><span aria-hidden="true">🇮🇷</span> فارسی</a>
+                <a class="ap-lang-item" href="/hi/" hreflang="hi" lang="hi" role="menuitem"><span aria-hidden="true">🇮🇳</span> हिन्दी</a>
+                <a class="ap-lang-item" href="/bn/" hreflang="bn" lang="bn" role="menuitem"><span aria-hidden="true">🇧🇩</span> বাংলা</a>
+                <a class="ap-lang-item" href="/ta/" hreflang="ta" lang="ta" role="menuitem"><span aria-hidden="true">🇮🇳</span> தமிழ்</a>
+                <a class="ap-lang-item" href="/te/" hreflang="te" lang="te" role="menuitem"><span aria-hidden="true">🇮🇳</span> తెలుగు</a>
+                <a class="ap-lang-item" href="/mr/" hreflang="mr" lang="mr" role="menuitem"><span aria-hidden="true">🇮🇳</span> मराठी</a>
+                <a class="ap-lang-item" href="/th/" hreflang="th" lang="th" role="menuitem"><span aria-hidden="true">🇹🇭</span> ไทย</a>
+                <a class="ap-lang-item" href="/vi/" hreflang="vi" lang="vi" role="menuitem"><span aria-hidden="true">🇻🇳</span> Tiếng Việt</a>
+                <a class="ap-lang-item" href="/id/" hreflang="id" lang="id" role="menuitem"><span aria-hidden="true">🇮🇩</span> Indonesia</a>
+                <a class="ap-lang-item" href="/ms/" hreflang="ms" lang="ms" role="menuitem"><span aria-hidden="true">🇲🇾</span> Melayu</a>
+                <a class="ap-lang-item" href="/fil/" hreflang="fil" lang="fil" role="menuitem"><span aria-hidden="true">🇵🇭</span> Filipino</a>
+                <a class="ap-lang-item" href="/ja/" hreflang="ja" lang="ja" role="menuitem"><span aria-hidden="true">🇯🇵</span> 日本語</a>
+                <a class="ap-lang-item" href="/ko/" hreflang="ko" lang="ko" role="menuitem"><span aria-hidden="true">🇰🇷</span> 한국어</a>
+                <a class="ap-lang-item" href="/zh-hans/" hreflang="zh-Hans" lang="zh-Hans" role="menuitem"><span aria-hidden="true">🇨🇳</span> 简体中文</a>
+                <a class="ap-lang-item" href="/zh-hant/" hreflang="zh-Hant" lang="zh-Hant" role="menuitem"><span aria-hidden="true">🇹🇼</span> 繁體中文</a>
+                <a class="ap-lang-item" href="/ha/" hreflang="ha" lang="ha" role="menuitem"><span aria-hidden="true">🇳🇬</span> Hausa</a>
+                <a class="ap-lang-item" href="/yo/" hreflang="yo" lang="yo" role="menuitem"><span aria-hidden="true">🇳🇬</span> Yorùbá</a>
+              </div>
+            </div>
+          </div>
+          <a class="ap-cta-mini" href="/try/">Try the demo&nbsp;&rsaquo;</a>
+          <label class="ap-burger" for="ap-menu-toggle" aria-hidden="true"><span class="ap-burger-icon">☰</span></label>
+        </div>
+      </div>
+    </header>
     <main id="main-content" class="container">
-      <nav aria-label="Breadcrumb"><a class="back-link" href="/">&larr; Back to Pain001</a></nav>
       <h1>{{title}}</h1>
       <p class="lede">{{description}}</p>
 
@@ -234,6 +524,130 @@
         "url": "https://pain001.com/"
       }
     }
+    </script>
+    <script>
+      document.documentElement.classList.add("has-js");
+      (function () {
+        "use strict";
+
+        /* Theme: sun/moon toggle, aria-pressed, meta theme-color. */
+        function currentTheme() {
+          var t = document.documentElement.getAttribute("data-theme");
+          if (t) return t;
+          return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        function paintTheme(theme) {
+          document.querySelectorAll(".theme-toggle").forEach(function (btn) {
+            btn.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+            btn.setAttribute("aria-label", theme === "dark" ? "Switch to light theme" : "Switch to dark theme");
+          });
+        }
+        paintTheme(currentTheme());
+        document.addEventListener("click", function (e) {
+          var btn = e.target.closest(".theme-toggle");
+          if (!btn) return;
+          var next = currentTheme() === "dark" ? "light" : "dark";
+          document.documentElement.setAttribute("data-theme", next);
+          try { localStorage.setItem("theme", next); } catch (err) {}
+          paintTheme(next);
+        });
+
+        /* Search: the in-nav button opens ssg's search overlay. */
+        document.querySelectorAll(".ap-search-btn").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var trigger = document.getElementById("ssg-search-btn");
+            if (trigger) trigger.click();
+          });
+        });
+
+        /* Submenu disclosures: click toggles; Esc closes and refocuses;
+           outside click/focus closes all. Hover stays pure CSS. */
+        var subToggles = Array.prototype.slice.call(document.querySelectorAll(".ap-sub-toggle"));
+        function closeAllSubs(except) {
+          subToggles.forEach(function (t) {
+            if (t !== except) t.setAttribute("aria-expanded", "false");
+          });
+        }
+        subToggles.forEach(function (t) {
+          t.addEventListener("click", function () {
+            var open = t.getAttribute("aria-expanded") === "true";
+            closeAllSubs(t);
+            t.setAttribute("aria-expanded", open ? "false" : "true");
+          });
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key !== "Escape") return;
+          var open = subToggles.filter(function (t) { return t.getAttribute("aria-expanded") === "true"; })[0];
+          if (open) { open.setAttribute("aria-expanded", "false"); open.focus(); return; }
+          var langMenu = document.querySelector(".ap-lang-menu");
+          if (langMenu && !langMenu.hidden) {
+            langMenu.hidden = true;
+            var lt = document.querySelector(".ap-lang-toggle");
+            lt.setAttribute("aria-expanded", "false");
+            lt.focus();
+            return;
+          }
+          var burger = document.getElementById("ap-menu-toggle");
+          if (burger && burger.checked) {
+            burger.checked = false;
+            burger.dispatchEvent(new Event("change"));
+            var burgerLabel = document.querySelector(".ap-burger");
+            if (burgerLabel) burgerLabel.focus();
+          }
+        });
+        document.addEventListener("click", function (e) {
+          if (!e.target.closest(".has-sub")) closeAllSubs(null);
+          var lang = document.querySelector(".ap-lang");
+          var menu = document.querySelector(".ap-lang-menu");
+          if (menu && !menu.hidden && lang && !lang.contains(e.target)) {
+            menu.hidden = true;
+            document.querySelector(".ap-lang-toggle").setAttribute("aria-expanded", "false");
+          }
+        });
+
+        /* Language selector: toggle, current marking. */
+        var langToggle = document.querySelector(".ap-lang-toggle");
+        var langMenu = document.querySelector(".ap-lang-menu");
+        if (langToggle && langMenu) {
+          var currentLang = (document.documentElement.getAttribute("lang") || "en").toLowerCase();
+          var short = currentLang.split("-")[0].toUpperCase();
+          langToggle.querySelector(".ap-lang-current").textContent = short;
+          langMenu.querySelectorAll(".ap-lang-item").forEach(function (a) {
+            if ((a.getAttribute("lang") || "").toLowerCase() === currentLang) {
+              a.setAttribute("aria-current", "true");
+            }
+          });
+          langToggle.addEventListener("click", function () {
+            var open = !langMenu.hidden;
+            langMenu.hidden = open;
+            langToggle.setAttribute("aria-expanded", open ? "false" : "true");
+          });
+        }
+
+        /* Burger: reflect state for AT; focus first item on open. */
+        var burger = document.getElementById("ap-menu-toggle");
+        if (burger) {
+          burger.setAttribute("aria-controls", "ap-primary-nav");
+          var syncBurger = function () {
+            burger.setAttribute("aria-expanded", burger.checked ? "true" : "false");
+            if (burger.checked) {
+              var first = document.querySelector(".ap-menu a");
+              if (first) first.focus();
+            }
+          };
+          burger.setAttribute("aria-expanded", "false");
+          burger.addEventListener("change", syncBurger);
+        }
+
+        /* aria-current on the matching menu link. */
+        var here = window.location.pathname.replace(/\/+$/, "") + "/";
+        document.querySelectorAll(".ap-menu a").forEach(function (a) {
+          var href = a.getAttribute("href");
+          if (href === here || (href === "/" && here === "/")) {
+            a.setAttribute("aria-current", "page");
+          }
+        });
+      })();
     </script>
   </body>
 </html>

@@ -1,6 +1,777 @@
 {
   "pages_scanned": 77,
-  "total_issues": 0,
+  "total_issues": 77,
   "wcag_version": "2.2",
-  "pages": []
+  "pages": [
+    {
+      "path": "2026-iso20022-migration-trends/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "404/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "accessibility/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "ar/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "architecture-and-patents/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "bn/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "competitors-comparison/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "contact/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "cs/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "de/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "documentation/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "el/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "es/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "executive-brief/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "executive-brief-de/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "executive-brief-es/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "executive-brief-fr/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "fa/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "faqs/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "fil/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "fr/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "glossary/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "ha/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "he/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "hi/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "hu/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "id/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "installation/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "iso-20022-payment-initiation-for-cross-border-payments/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "iso20022-roadmap/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "it/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "ja/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "ko/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "languages/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "made-with-shokunin/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "mr/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "ms/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "nl/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "offline/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "pain.001.001.03/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "pain.001.001.04/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "pain.001.001.05/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "pain.001.001.06/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "pain.001.001.07/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "pain.001.001.08/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "pain.001.001.09/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "pain.001.001.10/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "pain.001.001.11/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "pain.001.001.12/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "pain001-loader-mt101/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "pain001-loader-xlsx/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "pain001-lsp/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "pain001-mcp/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "pain002-reason-codes/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "payments/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "pl/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "privacy/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "pt-br/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "ro/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "ru/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "solutions/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "sv/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "ta/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "tags/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "te/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "terms/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "th/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "thanks/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "tr/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "try/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "uk/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "vi/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "why/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "yo/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "zh-hans/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "zh-hant/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+        }
+      ]
+    }
+  ]
 }

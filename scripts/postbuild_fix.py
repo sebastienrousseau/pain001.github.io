@@ -50,7 +50,8 @@ _CONTAINERS = [
 CSP_META = (
     "<meta content=\"default-src 'self'; base-uri 'self'; "
     "object-src 'none'; img-src 'self' https://cloudcdn.pro data:; "
-    "style-src 'self' ; script-src 'self'  'wasm-unsafe-eval'; "
+    "style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; "
+    "script-src 'self'  'wasm-unsafe-eval'; "
     "connect-src 'self'; font-src 'self'; "
     "form-action 'self' https://formspree.io\" "
     "http-equiv=Content-Security-Policy>"
