@@ -38,16 +38,16 @@ jobs:
         if: steps.cache-ssg.outputs.cache-hit != 'true'
         run: cargo install ssg --locked --version 0.0.47
 
+      - name: Set up Node (build samples, tests, pa11y)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
       - name: Build site
         run: ./build.sh
 
       - name: Audit gates (fail on warnings)
         run: ssg audit -f ssg.toml -o docs --severity warn --fail-on warn
-
-      - name: Set up Node for pa11y
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
 
       - name: Unit tests (demo validation rules)
         run: node --test tests/*.test.mjs

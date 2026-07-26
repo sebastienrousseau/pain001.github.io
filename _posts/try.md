@@ -91,6 +91,8 @@ last_reviewed: "2026-07-26"
 
 ## What this demo shows — and what the real pipeline adds
 
+Each sample batch is also [downloadable as a CSV file](/samples/pain001-sample-sepa-sct.csv) to use as the template for your own ERP or spreadsheet export — the header row is the contract.
+
 The demo above implements the *fail-fast* layer of the Pain001 pipeline: required-field checks, ISO 13616 mod-97 IBAN checksums, ISO 9362 BIC structure, amount and date formats, and control totals (`NbOfTxs`, `CtrlSum`) recomputed from the records rather than trusted. Try the "Introduce an error…" menu — each scenario plants exactly one realistic flaw (a flipped IBAN digit, a malformed BIC, a missing column, a European comma-decimal amount, an impossible date) and shows you the row-level finding a bank's gateway would otherwise report days later.
 
 The installed toolchain runs a much deeper gate: JSON Schema validation per record with field-alias normalisation, five scheme rulebooks (SEPA SCT, Instant, SDD Core, B2B, cross-border) with rule-by-rule `--explain` output, and final validation of the rendered document against the official ISO 20022 XSD before a single byte is written. Ten `pain.001` versions and `pain.008.001.02` are supported.

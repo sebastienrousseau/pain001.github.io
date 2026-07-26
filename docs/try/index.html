@@ -34,7 +34,7 @@
 
     <script src="/_csp/6ccbbfb0b824e5f3.js" integrity="sha384-vD2D/DeQ7ybfwKVwsRoDzF6OdQbjm+gayKdOWKcqfqM76DP9CwfWMGtYvdpKSVJF" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/2ba5479d82b4accb.css" integrity="sha384-GkfI1y4jYUxB1O8nvE7DKf6apBoHL//viyhSZLEfejjITo+wRGVIYJhpuVAMGNKV" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/a9120b8c13d4406b.css" integrity="sha384-YPdQ05tOYiu5JKbXiNBwUA/JzmtiLNx/GZLD/Oizbn+dLMMr5UywbEoT8TpaKqz6" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -86,7 +86,7 @@
             <ul class="info-list">
               <li><strong>Nothing is uploaded.</strong> Your file is read by your own browser and never leaves your machine — there is no server, no storage, no telemetry. Safe for real data, though masked test data is always good practice.</li>
               <li><strong>Testing tool only.</strong> Files are never submitted for processing and no payments can result from anything you do here.</li>
-              <li><strong>Expected columns:</strong> <code>payment_id</code>, <code>payment_amount</code>, <code>currency</code>, debtor and creditor name / IBAN / BIC, <code>requested_execution_date</code> — comma, semicolon, and tab delimiters are auto-detected. Start from a sample to see the exact header row.</li>
+              <li><strong>Expected columns:</strong> <code>payment_id</code>, <code>payment_amount</code>, <code>currency</code>, debtor and creditor name / IBAN / BIC, <code>requested_execution_date</code> — comma, semicolon, and tab delimiters are auto-detected. Download a sample below to use as a template for your own export.</li>
               <li><strong>No charges.</strong> This tool, and the <a href="/installation/">full toolchain</a> behind it, are free and open source.</li>
             </ul>
           </div>
@@ -121,6 +121,12 @@
               </select>
               <button type="button" id="paste-btn" class="pill pill-ghost">Paste records</button>
             </div>
+            <p class="dialect-note">
+              Download a sample to use as your own template:
+              <a href="/samples/pain001-sample-sepa-sct.csv" download>SEPA credit transfer</a> ·
+              <a href="/samples/pain001-sample-cross-border.csv" download>cross-border</a> ·
+              <a href="/samples/pain001-sample-batch-20.csv" download>20-row batch</a>
+            </p>
             <div class="editor-block" id="editor-block" hidden>
               <label class="editor-label" for="csv-input">Review and edit your records</label>
               <textarea id="csv-input" spellcheck="false" aria-describedby="dialect-note demo-fineprint"></textarea>
@@ -189,6 +195,7 @@
       <div class="wrap content-note">
         <article>
           <div lang="en"><h2>What this demo shows — and what the real pipeline adds</h2>
+<p>Each sample batch is also <a href="/samples/pain001-sample-sepa-sct.csv">downloadable as a CSV file</a> to use as the template for your own ERP or spreadsheet export — the header row is the contract.</p>
 <p>The demo above implements the <em>fail-fast</em> layer of the Pain001 pipeline: required-field checks, ISO 13616 mod-97 IBAN checksums, ISO 9362 BIC structure, amount and date formats, and control totals (<code>NbOfTxs</code>, <code>CtrlSum</code>) recomputed from the records rather than trusted. Try the "Introduce an error…" menu — each scenario plants exactly one realistic flaw (a flipped IBAN digit, a malformed BIC, a missing column, a European comma-decimal amount, an impossible date) and shows you the row-level finding a bank's gateway would otherwise report days later.</p>
 <p>The installed toolchain runs a much deeper gate: JSON Schema validation per record with field-alias normalisation, five scheme rulebooks (SEPA SCT, Instant, SDD Core, B2B, cross-border) with rule-by-rule <code>--explain</code> output, and final validation of the rendered document against the official ISO 20022 XSD before a single byte is written. Ten <code>pain.001</code> versions and <code>pain.008.001.02</code> are supported.</p>
 <pre><code class="language-bash">pip install pain001

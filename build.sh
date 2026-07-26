@@ -41,6 +41,11 @@ python3 scripts/postbuild_fix.py Pain001
 # demo-scoped service worker (/sw.js) that makes /try/ work offline.
 rsync -a static/ Pain001/
 
+# Downloadable sample CSVs, generated from the demo module's SAMPLES so
+# the files users download are byte-identical to what "Load a sample"
+# loads — one source of truth, no drift.
+node scripts/gen_samples.mjs Pain001/samples
+
 # Carry the previous deploy's fingerprinted assets forward. Browsers and
 # CDN edges cache HTML for up to ~10 minutes; if a rebuild deleted the old
 # /_csp/<hash> files, every cached page 404'd its CSS/JS during that

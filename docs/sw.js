@@ -12,7 +12,7 @@
  * would not have made itself.
  */
 
-const CACHE = "pain001-try-v1";
+const CACHE = "pain001-try-v2";
 
 const CACHEABLE = [
   "/try/",
@@ -24,6 +24,7 @@ function cacheable(url) {
   if (u.origin !== self.location.origin) return false;
   if (u.pathname.startsWith("/pyodide/")) return true;
   if (u.pathname.startsWith("/js/")) return true;
+  if (u.pathname.startsWith("/samples/")) return true;
   if (u.pathname.startsWith("/_csp/")) return true;
   return CACHEABLE.includes(u.pathname);
 }

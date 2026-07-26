@@ -1,0 +1,2 @@
+id,payment_id,requested_execution_date,payment_amount,currency,debtor_name,debtor_account_IBAN,debtor_agent_BIC,creditor_name,creditor_account_IBAN,creditor_agent_BIC,remittance_information
+1,XB-001,2026-08-05,4500.00,GBP,Acme Global Corp,DE89370400440532013000,DEUTDEFFXXX,"Smith & Sons <Holdings> Ltd",GB29NWBK60161331926819,NWBKGB2LXXX,PO-2026-889 R&D
