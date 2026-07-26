@@ -39,7 +39,7 @@ robots: "index, follow"
 short_name: pain001
 subtitle: "Message received — a reply is on its way to the address you provided."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
-theme_color: "0, 132, 199"
+theme_color: "#0b0e14"
 title: "Thank You — Message Received"
 url: "https://pain001.com/thanks/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"

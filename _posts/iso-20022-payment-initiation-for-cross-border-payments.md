@@ -39,7 +39,7 @@ robots: "index, follow"
 short_name: pain001
 subtitle: "What CBPR+ requires of your pain.001 — the fields cross-border payments live or die on."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
-theme_color: "0, 132, 199"
+theme_color: "#0b0e14"
 title: "Cross-Border pain.001 Under CBPR+: a Field Guide"
 url: "https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"

@@ -39,7 +39,7 @@ robots: "index, follow"
 short_name: pain001
 subtitle: "Markdown in, hardened static HTML out — the toolchain behind this site."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
-theme_color: "0, 132, 199"
+theme_color: "#0b0e14"
 title: "Made with Shokunin: How This Site Is Built"
 url: "https://pain001.com/made-with-shokunin/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"

@@ -39,7 +39,7 @@ robots: "index, follow"
 short_name: pain001
 subtitle: "From ERP export to pain.002 acknowledgement to camt.053 reconciliation — the full lifecycle, with validation gates at every step."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
-theme_color: "0, 132, 199"
+theme_color: "#0b0e14"
 title: "Payment Initiation End to End with Pain001"
 url: "https://pain001.com/payments/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"

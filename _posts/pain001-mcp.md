@@ -39,7 +39,7 @@ robots: "index, follow"
 short_name: pain001
 subtitle: "Seventeen read-only tools that let AI agents validate, migrate, convert, and generate ISO 20022 payment files — locally, over stdio."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
-theme_color: "0, 132, 199"
+theme_color: "#0b0e14"
 title: "pain001-mcp: The MCP Server for ISO 20022 Payments"
 url: "https://pain001.com/pain001-mcp/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"

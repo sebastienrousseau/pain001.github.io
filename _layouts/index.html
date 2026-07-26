@@ -195,6 +195,10 @@
         transition: top 0.2s ease;
       }
       .skip-link:focus { top: 1rem; }
+      .visually-hidden {
+        position: absolute; width: 1px; height: 1px;
+        overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+      }
 
       .wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 1.75rem; }
 
@@ -293,6 +297,7 @@
         margin-bottom: 1.6rem;
         text-wrap: balance;
       }
+      .hero-sub code { font-family: var(--type-mono); font-size: 0.9em; }
       .hero-sub {
         font-size: 1.3rem; line-height: 1.55;
         color: var(--ink-soft);
@@ -577,7 +582,7 @@
           <input type="checkbox" id="nav-toggle" class="nav-toggle-input" />
           <label for="nav-toggle" class="nav-toggle-label">
             <span aria-hidden="true">&#9776;</span>
-            <span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">Menu</span>
+            <span class="visually-hidden">Menu</span>
           </label>
           <ul class="nav-links" id="primary-menu">
             <li><a href="/documentation/">Docs</a></li>
@@ -607,7 +612,7 @@
           <p class="hero-eyebrow">Open source · ISO 20022 · CBPR+ ready</p>
           <h1 id="hero-heading" class="hero-title">Payment files your bank will not reject.</h1>
           <p class="hero-sub">
-            Pain001 turns the data you already have — CSV, Excel, SQLite, JSON, Parquet, legacy SWIFT MT101 — into schema-validated <code style="font-family: var(--type-mono); font-size: 0.9em;">pain.001</code> and <code style="font-family: var(--type-mono); font-size: 0.9em;">pain.008</code> XML, and proves it clean before submission. AI-agent tools and editor diagnostics included.
+            Pain001 turns the data you already have — CSV, Excel, SQLite, JSON, Parquet, legacy SWIFT MT101 — into schema-validated <code>pain.001</code> and <code>pain.008</code> XML, and proves it clean before submission. AI-agent tools and editor diagnostics included.
           </p>
           <div class="hero-cta">
             <a href="/installation/" class="pill pill-primary">Get started&nbsp;&rsaquo;</a>

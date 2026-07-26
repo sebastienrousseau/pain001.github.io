@@ -39,7 +39,7 @@ robots: "index, follow"
 short_name: pain001
 subtitle: "Payment-file mistakes caught at the keystroke: live ISO 20022 diagnostics in VS Code, Neovim, Helix, and Emacs."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
-theme_color: "0, 132, 199"
+theme_color: "#0b0e14"
 title: "pain001-lsp: ISO 20022 Diagnostics in Your Editor"
 url: "https://pain001.com/pain001-lsp/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"

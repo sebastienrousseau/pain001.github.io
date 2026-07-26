@@ -39,7 +39,7 @@ robots: "index, follow"
 short_name: pain001
 subtitle: "No cookies, no analytics, no tracking. Your theme choice stays in your browser; your payment data stays on your machines."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
-theme_color: "0, 132, 199"
+theme_color: "#0b0e14"
 title: "Privacy: This Site Collects Nothing"
 url: "https://pain001.com/privacy/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"

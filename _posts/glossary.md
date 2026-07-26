@@ -39,7 +39,7 @@ robots: "index, follow"
 short_name: pain001
 subtitle: "The payments vocabulary in plain English — for the people who sign off on files, not just the people who generate them."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
-theme_color: "0, 132, 199"
+theme_color: "#0b0e14"
 title: "ISO 20022 Payments Glossary in Plain English"
 url: "https://pain001.com/glossary/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"

@@ -39,7 +39,7 @@ robots: "index, follow"
 short_name: pain001
 subtitle: "An honest, sourced map of the field — including what the commercial platforms genuinely do better."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
-theme_color: "0, 132, 199"
+theme_color: "#0b0e14"
 title: "Pain001 vs Alternatives: an Honest Comparison"
 url: "https://pain001.com/competitors-comparison/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"

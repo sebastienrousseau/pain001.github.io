@@ -39,7 +39,7 @@ robots: "index, follow"
 short_name: pain001
 subtitle: "Zero-trust XML, exact decimal arithmetic, validation as a hard gate — and where an open implementation sits in a patented market."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
-theme_color: "0, 132, 199"
+theme_color: "#0b0e14"
 title: "Architecture, Security and the Patent Landscape"
 url: "https://pain001.com/architecture-and-patents/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"

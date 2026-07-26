@@ -39,7 +39,7 @@ robots: "index, follow"
 short_name: pain001
 subtitle: "The network is unreachable — this page is served from your device's cache."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
-theme_color: "0, 132, 199"
+theme_color: "#0b0e14"
 title: "Offline — Cached Copy Shown"
 url: "https://pain001.com/offline/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"

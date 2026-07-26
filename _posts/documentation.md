@@ -39,7 +39,7 @@ robots: "index, follow"
 short_name: pain001
 subtitle: "Every flag, endpoint, and behaviour of pain001 v0.0.56 — taken from the shipped code, not from aspiration."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
-theme_color: "0, 132, 199"
+theme_color: "#0b0e14"
 title: "Pain001 Technical Reference: CLI, Python API and REST"
 url: "https://pain001.com/documentation/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"

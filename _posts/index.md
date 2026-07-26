@@ -39,7 +39,7 @@ robots: "index, follow"
 short_name: pain001
 subtitle: "The open-source suite that turns the payment data you already have into schema-validated ISO 20022 XML — proven clean before your bank ever sees it."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
-theme_color: "0, 132, 199"
+theme_color: "#0b0e14"
 title: "Pain001: Open-Source ISO 20022 Payment Initiation Suite"
 url: "https://pain001.com/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"

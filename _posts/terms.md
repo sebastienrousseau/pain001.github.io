@@ -39,7 +39,7 @@ robots: "index, follow"
 short_name: pain001
 subtitle: "Apache-2.0 or MIT for the core, Apache-2.0 for the companions, and no warranty — the terms in plain sight."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
-theme_color: "0, 132, 199"
+theme_color: "#0b0e14"
 title: "Terms: Licences, Warranty and Fair Use"
 url: "https://pain001.com/terms/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"

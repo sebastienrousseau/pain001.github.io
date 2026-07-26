@@ -39,7 +39,7 @@ robots: "index, follow"
 short_name: pain001
 subtitle: "pain.001.001.07 — a maintenance release refining party data. Element structure, version notes, and lossless migration."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
-theme_color: "0, 132, 199"
+theme_color: "#0b0e14"
 title: "pain.001.001.07 Reference: Generate and Validate"
 url: "https://pain001.com/pain.001.001.07/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"

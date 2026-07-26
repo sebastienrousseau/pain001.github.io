@@ -39,7 +39,7 @@ robots: "index, follow"
 short_name: pain001
 subtitle: "Read payment batches straight from .xlsx and .xlsm — with a safety guard that stops Excel corrupting account numbers."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
-theme_color: "0, 132, 199"
+theme_color: "#0b0e14"
 title: "Excel to pain.001: pain001-loader-xlsx"
 url: "https://pain001.com/pain001-loader-xlsx/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"

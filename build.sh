@@ -26,6 +26,10 @@ ssg build -f ssg.toml
 # GitHub Pages custom-domain file must contain exactly the apex domain.
 printf 'pain001.com\n' > Pain001/CNAME
 
+# GitHub Pages runs Jekyll by default, and Jekyll drops underscore-prefixed
+# paths — which 404s every fingerprinted /_csp/* asset. Opt out entirely.
+touch Pain001/.nojekyll
+
 # Repair the ssg output: unescape entity-escaped head metas and content
 # bodies, patch CSP/og:image into the generated tag pages, and regenerate
 # the sitemap. See scripts/postbuild_fix.py for the why of each pass.

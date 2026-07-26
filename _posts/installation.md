@@ -39,7 +39,7 @@ robots: "index, follow"
 short_name: pain001
 subtitle: "Python 3.10–3.12, pip or Docker, and a validated payment file in three commands."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
-theme_color: "0, 132, 199"
+theme_color: "#0b0e14"
 title: "Install Pain001: pip, Docker and First Validated File"
 url: "https://pain001.com/installation/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"

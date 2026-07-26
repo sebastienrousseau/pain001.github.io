@@ -39,7 +39,7 @@ robots: "index, follow"
 short_name: pain001
 subtitle: "Bugs to the issue tracker, vulnerabilities to private reporting, everything else to a human."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
-theme_color: "0, 132, 199"
+theme_color: "#0b0e14"
 title: "Contact Pain001: Support, Security and Enquiries"
 url: "https://pain001.com/contact/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"

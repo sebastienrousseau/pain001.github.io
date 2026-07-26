@@ -208,6 +208,10 @@
         transition: top 0.2s ease;
       }
       .skip-link:focus { top: 1rem; }
+      .visually-hidden {
+        position: absolute; width: 1px; height: 1px;
+        overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+      }
 
       .wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 1.75rem; }
 
@@ -519,7 +523,7 @@
           <input type="checkbox" id="nav-toggle" class="nav-toggle-input" />
           <label for="nav-toggle" class="nav-toggle-label">
             <span aria-hidden="true">&#9776;</span>
-            <span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">Menu</span>
+            <span class="visually-hidden">Menu</span>
           </label>
           <ul class="nav-links" id="primary-menu">
             <li><a href="/documentation/">Docs</a></li>
