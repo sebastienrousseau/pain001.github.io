@@ -158,6 +158,54 @@
   </news:news>
 </url>
 <url>
+  <loc>https://pain001.com/executive-brief/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 Executive Brief</news:title>
+    <news:keywords>pain001 executive brief, ISO 20022 executive summary, payments compliance brief, CFO briefing ISO 20022, 2026 deadline briefing</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/executive-brief-de/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — Kurzdossier für Entscheider</news:title>
+    <news:keywords>pain001 Kurzdossier, ISO 20022 Zusammenfassung, Stichtag 2026 Zahlungsverkehr, CFO ISO 20022</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/executive-brief-es/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — Resumen ejecutivo</news:title>
+    <news:keywords>pain001 resumen ejecutivo, ISO 20022 resumen, fecha límite 2026 pagos, CFO ISO 20022</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/executive-brief-fr/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 — Synthèse pour dirigeants</news:title>
+    <news:keywords>pain001 synthèse dirigeants, ISO 20022 résumé exécutif, échéance 2026 paiements, DAF ISO 20022</news:keywords>
+  </news:news>
+</url>
+<url>
   <loc>https://pain001.com/fa/</loc>
   <news:news>
     <news:publication>
@@ -674,6 +722,18 @@
   </news:news>
 </url>
 <url>
+  <loc>https://pain001.com/solutions/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Who Pain001 Is For</news:title>
+    <news:keywords>ISO 20022 for treasury, payment operations tools, CFO payments compliance, pain.001 for developers, AI agents payments, corporate treasury software</news:keywords>
+  </news:news>
+</url>
+<url>
   <loc>https://pain001.com/sv/</loc>
   <news:news>
     <news:publication>
@@ -803,6 +863,18 @@
     <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
     <news:title>Pain001 — Khởi tạo thanh toán ISO 20022 mã nguồn mở</news:title>
     <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, Tiếng Việt</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/why/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Why Pain001: the Business Case in Five Questions</news:title>
+    <news:keywords>why pain001, ISO 20022 business case, payment file rejected cost, ISO 20022 migration deadline 2026, CBPR+ structured address requirement, pain.001 vs MT101, open source payment software</news:keywords>
   </news:news>
 </url>
 <url>

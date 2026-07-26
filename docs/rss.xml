@@ -247,6 +247,23 @@
       <category>SEPA</category>
     </item>
     <item>
+      <title>Pain001 Executive Brief</title>
+      <link>https://pain001.com/executive-brief/</link>
+      <description>One page for decision-makers: the rejected-file problem, the fixed 14 November 2026 deadline, what Pain001 does, what it costs, the safety evidence, and the one ask — print-ready.</description>
+      <guid isPermaLink="true">https://pain001.com/executive-brief/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
       <title>Pain001 FAQs for Treasury, Ops, Engineering and Audit</title>
       <link>https://pain001.com/faqs/</link>
       <description>Why banks reject payment files, pain.001 vs pain.008, the November 2026 deadlines, streaming large batches, security posture, and audit reproducibility — answered plainly.</description>
@@ -485,6 +502,23 @@
       <category>SEPA</category>
     </item>
     <item>
+      <title>Pain001 — Kurzdossier für Entscheider</title>
+      <link>https://pain001.com/executive-brief-de/</link>
+      <description>Eine Seite für Entscheider: Kosten abgelehnter Dateien, der Stichtag 14. November 2026, was Pain001 leistet, die Kosten (null), die Sicherheitsnachweise — druckfertig.</description>
+      <guid isPermaLink="true">https://pain001.com/executive-brief-de/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
       <title>Pain001 — Nyílt forráskódú ISO 20022 fizetésindítás</title>
       <link>https://pain001.com/hu/</link>
       <description>Nyílt forráskódú Python-csomag, amely XSD-validált pain.001 és pain.008 fájlokat készít CSV, Excel, SQLite, JSON, Parquet vagy SWIFT MT101 forrásból — MCP-eszközökkel AI-ügynökökhöz és LSP-szerverrel.</description>
@@ -557,6 +591,40 @@
       <link>https://pain001.com/ms/</link>
       <description>Suite Python sumber terbuka yang menjana fail pain.001 dan pain.008 disahkan XSD daripada CSV, Excel, SQLite, JSON, Parquet atau SWIFT MT101 — dengan alat MCP untuk ejen AI dan pelayan LSP.</description>
       <guid isPermaLink="true">https://pain001.com/ms/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>Pain001 — Resumen ejecutivo</title>
+      <link>https://pain001.com/executive-brief-es/</link>
+      <description>Una página para directivos: el coste de los ficheros rechazados, la fecha límite del 14 de noviembre de 2026, qué hace Pain001, su coste nulo y las pruebas de seguridad — lista para imprimir.</description>
+      <guid isPermaLink="true">https://pain001.com/executive-brief-es/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>Pain001 — Synthèse pour dirigeants</title>
+      <link>https://pain001.com/executive-brief-fr/</link>
+      <description>Une page pour décideurs : le coût des fichiers rejetés, l&apos;échéance du 14 novembre 2026, ce que fait Pain001, son coût nul, les preuves de sécurité — prête à imprimer.</description>
+      <guid isPermaLink="true">https://pain001.com/executive-brief-fr/</guid>
       <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
       <author>contact@pain001.com (Sebastien Rousseau)</author>
       <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>
@@ -778,74 +846,6 @@
       <link>https://pain001.com/ta/</link>
       <description>CSV, Excel, SQLite, JSON, Parquet அல்லது SWIFT MT101 இலிருந்து XSD-சரிபார்க்கப்பட்ட pain.001 மற்றும் pain.008 கோப்புகளை உருவாக்கும் திறந்த மூல Python தொகுப்பு — AI முகவர்களுக்கான MCP கருவிகள் மற்றும் LSP சேவையகத்துடன்.</description>
       <guid isPermaLink="true">https://pain001.com/ta/</guid>
-      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
-      <author>contact@pain001.com (Sebastien Rousseau)</author>
-      <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>
-      <category>Technology</category>
-      <category>ISO 20022</category>
-      <category>pain001</category>
-      <category>payments</category>
-      <category>python</category>
-      <category>banking</category>
-      <category>CBPR+</category>
-      <category>SEPA</category>
-    </item>
-    <item>
-      <title>Pain001 — ఓపెన్-సోర్స్ ISO 20022 చెల్లింపు ప్రారంభం</title>
-      <link>https://pain001.com/te/</link>
-      <description>CSV, Excel, SQLite, JSON, Parquet లేదా SWIFT MT101 నుండి XSD-ధృవీకరించిన pain.001 మరియు pain.008 ఫైళ్లను రూపొందించే ఓపెన్-సోర్స్ Python సూట్ — AI ఏజెంట్ల కోసం MCP సాధనాలు మరియు LSP సర్వర్‌తో.</description>
-      <guid isPermaLink="true">https://pain001.com/te/</guid>
-      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
-      <author>contact@pain001.com (Sebastien Rousseau)</author>
-      <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>
-      <category>Technology</category>
-      <category>ISO 20022</category>
-      <category>pain001</category>
-      <category>payments</category>
-      <category>python</category>
-      <category>banking</category>
-      <category>CBPR+</category>
-      <category>SEPA</category>
-    </item>
-    <item>
-      <title>Pain001 — การเริ่มต้นการชำระเงิน ISO 20022 แบบโอเพนซอร์ส</title>
-      <link>https://pain001.com/th/</link>
-      <description>ชุดเครื่องมือ Python โอเพนซอร์สที่สร้างไฟล์ pain.001 และ pain.008 ที่ผ่านการตรวจสอบ XSD จาก CSV, Excel, SQLite, JSON, Parquet หรือ SWIFT MT101 — พร้อมเครื่องมือ MCP สำหรับ AI เอเจนต์และเซิร์ฟเวอร์ LSP</description>
-      <guid isPermaLink="true">https://pain001.com/th/</guid>
-      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
-      <author>contact@pain001.com (Sebastien Rousseau)</author>
-      <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>
-      <category>Technology</category>
-      <category>ISO 20022</category>
-      <category>pain001</category>
-      <category>payments</category>
-      <category>python</category>
-      <category>banking</category>
-      <category>CBPR+</category>
-      <category>SEPA</category>
-    </item>
-    <item>
-      <title>Pain001 — オープンソースの ISO 20022 送金指図</title>
-      <link>https://pain001.com/ja/</link>
-      <description>CSV・Excel・SQLite・JSON・Parquet・SWIFT MT101 から XSD 検証済みの pain.001 / pain.008 ファイルを生成するオープンソース Python スイート。AI エージェント向け MCP ツールと LSP サーバーを同梱。</description>
-      <guid isPermaLink="true">https://pain001.com/ja/</guid>
-      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
-      <author>contact@pain001.com (Sebastien Rousseau)</author>
-      <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>
-      <category>Technology</category>
-      <category>ISO 20022</category>
-      <category>pain001</category>
-      <category>payments</category>
-      <category>python</category>
-      <category>banking</category>
-      <category>CBPR+</category>
-      <category>SEPA</category>
-    </item>
-    <item>
-      <title>Pain001 — 开源 ISO 20022 支付发起</title>
-      <link>https://pain001.com/zh-hans/</link>
-      <description>开源 Python 套件,可从 CSV、Excel、SQLite、JSON、Parquet 或 SWIFT MT101 生成经 XSD 校验的 pain.001 和 pain.008 文件——附带面向 AI 代理的 MCP 工具和 LSP 服务器。</description>
-      <guid isPermaLink="true">https://pain001.com/zh-hans/</guid>
       <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
       <author>contact@pain001.com (Sebastien Rousseau)</author>
       <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>

@@ -31,6 +31,7 @@
     
     <link rel="icon" type="image/svg+xml" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" sizes="any" />
     <link rel="apple-touch-icon" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />
+    <link rel="preload" href="/fonts/source-serif-4-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="manifest" href="/manifest.json" />
     <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
     <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)" />
@@ -39,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/8dbe0c0a5fc3fc89.css" integrity="sha384-z0ftlitySP0oG+y6oB21iIKDkI4UEYSNYGarvDwXbkj/eb9fSrpmHH8Z0P/IZmsQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/7a37ceeca4919e9b.css" integrity="sha384-Qc5kIjtad9MTvYliixwXj7FEK1DMTqvKwSQFfI1+w0J9FVQeNrllNhmfYyMEkfD0" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -73,15 +74,49 @@
             <span class="visually-hidden">Menu</span>
           </label>
           <ul class="nav-links" id="primary-menu">
-            <li><a href="/documentation/">Docs</a></li>
-            <li><a href="/installation/">Install</a></li>
-            <li><a href="/pain001-mcp/">MCP</a></li>
-            <li><a href="/pain001-lsp/">LSP</a></li>
-            <li><a href="/2026-iso20022-migration-trends/">2026 Briefing</a></li>
-            <li><a href="/try/">Try it</a></li>
-            <li><a href="/pain002-reason-codes/">pain.002 reason codes</a></li>
-              <li><a href="/glossary/">Glossary</a></li>
-            <li><a href="/faqs/">FAQs</a></li>
+            <li><a href="/why/">Why Pain001</a></li>
+            <li><a href="/try/">See it live</a></li>
+            <li><a href="/solutions/">Who it's for</a></li>
+            <li><a href="/2026-iso20022-migration-trends/">2026 deadlines</a></li>
+            <li class="nav-res">
+              <button type="button" class="nav-res-btn" id="resToggle" aria-expanded="false" aria-controls="resPanel">Resources <span aria-hidden="true" class="nav-res-caret">▾</span></button>
+              <div class="nav-res-panel" id="resPanel" hidden>
+                <div class="nav-res-group">
+                  <p class="nav-res-heading">Get started</p>
+                  <ul>
+                    <li><a href="/installation/">Installation &amp; Docker</a></li>
+                    <li><a href="/documentation/">Technical reference (docs)</a></li>
+                  </ul>
+                </div>
+                <div class="nav-res-group">
+                  <p class="nav-res-heading">Extend</p>
+                  <ul>
+                    <li><a href="/pain001-mcp/">AI agent tools (MCP)</a></li>
+                    <li><a href="/pain001-lsp/">Editor integration (LSP)</a></li>
+                    <li><a href="/pain001-loader-mt101/">MT101 loader</a></li>
+                    <li><a href="/pain001-loader-xlsx/">Excel loader</a></li>
+                  </ul>
+                </div>
+                <div class="nav-res-group">
+                  <p class="nav-res-heading">Understand</p>
+                  <ul>
+                    <li><a href="/glossary/">Glossary</a></li>
+                    <li><a href="/faqs/">FAQs</a></li>
+                    <li><a href="/pain002-reason-codes/">pain.002 reason codes</a></li>
+                    <li><a href="/competitors-comparison/">Comparison vs commercial tools</a></li>
+                    <li><a href="/architecture-and-patents/">Architecture &amp; security</a></li>
+                  </ul>
+                </div>
+                <div class="nav-res-group">
+                  <p class="nav-res-heading">Decide</p>
+                  <ul>
+                    <li><a href="/executive-brief/">Executive brief</a></li>
+                    <li><a href="/iso20022-roadmap/">ISO 20022 roadmap</a></li>
+                    <li><a href="/languages/">In 34 languages</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
           </ul>
         </nav>
 
@@ -89,7 +124,7 @@
           <button id="themeToggle" class="theme-btn" type="button" aria-pressed="false" aria-label="Switch to dark theme">
             <span aria-hidden="true" id="themeIcon">◐</span> <span id="themeLabel">Dark</span>
           </button>
-          <a href="/installation/" class="nav-cta">Get started&nbsp;&rsaquo;</a>
+          <a href="/try/" class="nav-cta">Try the demo&nbsp;&rsaquo;</a>
         </div>
       </div>
     </header>
@@ -204,12 +239,15 @@
           <div>
             <h2 class="footer-heading">Research &amp; trust</h2>
             <ul class="footer-links">
+              <li><a href="/why/">Why Pain001</a></li>
+              <li><a href="/executive-brief/">Executive brief</a></li>
               <li><a href="/iso20022-roadmap/">ISO 20022 roadmap</a></li>
               <li><a href="/2026-iso20022-migration-trends/">2026 briefing</a></li>
-              <li><a href="/competitors-comparison/">Comparison</a></li>
+              <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/">Cross-Border Guide</a></li>
+              <li><a href="/competitors-comparison/">Comparison vs commercial tools</a></li>
               <li><a href="/architecture-and-patents/">Architecture &amp; patents</a></li>
               <li><a href="/security.txt">security.txt</a></li>
-              <li><a href="/sbom.cdx.json">SBOM</a> · <a href="/llms.txt">llms.txt</a> · <a href="/rss.xml">RSS</a></li>
+              <li><a href="/sbom.cdx.json">SBOM</a> · <a href="/llms.txt">llms.txt</a> · <a href="/rss.xml">RSS feed</a></li>
             </ul>
           </div>
         </div>
@@ -273,7 +311,7 @@
     }
     </script>
 
-    <script src="/_csp/f2c95fcc31deaf76.js" integrity="sha384-iWQJOupnVuxIa/IlcB7Pnddhpt0eKfiwGaXyMJD0gha8sb1NQBab2d2PNDIt0WJj" crossorigin="anonymous"></script>
+    <script src="/_csp/d49af7d298c66ab9.js" integrity="sha384-Eb8AfSAsHN4Ek+07W9OwT/G98tdgEVh3SmkNJ/0FTKfVPHtOfwEpU8Mp53hDsOt2" crossorigin="anonymous"></script>
   
 <!-- SSG Search Widget -->
 <div id="ssg-search-widget">

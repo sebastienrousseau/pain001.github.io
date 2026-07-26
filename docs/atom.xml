@@ -123,6 +123,42 @@
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
+    <title>Pain001 — Kurzdossier für Entscheider</title>
+    <link href="https://pain001.com/executive-brief-de/"/>
+    <id>https://pain001.com/executive-brief-de/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Eine Seite für Entscheider: Kosten abgelehnter Dateien, der Stichtag 14. November 2026, was Pain001 leistet, die Kosten (null), die Sicherheitsnachweise — druckfertig.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Pain001 — Resumen ejecutivo</title>
+    <link href="https://pain001.com/executive-brief-es/"/>
+    <id>https://pain001.com/executive-brief-es/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Una página para directivos: el coste de los ficheros rechazados, la fecha límite del 14 de noviembre de 2026, qué hace Pain001, su coste nulo y las pruebas de seguridad — lista para imprimir.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Pain001 — Synthèse pour dirigeants</title>
+    <link href="https://pain001.com/executive-brief-fr/"/>
+    <id>https://pain001.com/executive-brief-fr/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>Une page pour décideurs : le coût des fichiers rejetés, l&apos;échéance du 14 novembre 2026, ce que fait Pain001, son coût nul, les preuves de sécurité — prête à imprimer.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>Pain001 Executive Brief</title>
+    <link href="https://pain001.com/executive-brief/"/>
+    <id>https://pain001.com/executive-brief/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>One page for decision-makers: the rejected-file problem, the fixed 14 November 2026 deadline, what Pain001 does, what it costs, the safety evidence, and the one ask — print-ready.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
     <title>Pain001 — آغاز پرداخت ISO 20022 متن‌باز</title>
     <link href="https://pain001.com/fa/"/>
     <id>https://pain001.com/fa/</id>
@@ -417,42 +453,6 @@
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
     <summary>Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict error handling, ready for the 14 Nov 2026 relay cutover.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Excel to pain.001: pain001-loader-xlsx</title>
-    <link href="https://pain001.com/pain001-loader-xlsx/"/>
-    <id>https://pain001.com/pain001-loader-xlsx/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Read payment batches straight from .xlsx/.xlsm with an IBAN safety guard that stops Excel&apos;s numeric coercion corrupting account numbers before the bank ever sees them.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>pain001-lsp: ISO 20022 Diagnostics in Your Editor</title>
-    <link href="https://pain001.com/pain001-lsp/"/>
-    <id>https://pain001.com/pain001-lsp/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Language Server Protocol support for payment JSON: live schema validation, IBAN/BIC diagnostics, completion, hover docs, and quick fixes in VS Code, Neovim, Helix, Emacs.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>pain001-mcp: The MCP Server for ISO 20022 Payments</title>
-    <link href="https://pain001.com/pain001-mcp/"/>
-    <id>https://pain001.com/pain001-mcp/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>17 Model Context Protocol tools for AI agents — validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>pain.002 Reason Codes: Why Banks Reject Payment Files</title>
-    <link href="https://pain001.com/pain002-reason-codes/"/>
-    <id>https://pain001.com/pain002-reason-codes/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Every pain.002 status code (RJCT, ACWC, PART…) and the ISO reason codes behind rejections — AC01, AM10, FF01, DU01, RR01 — with the typical cause and the practical fix for each.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
 </feed>

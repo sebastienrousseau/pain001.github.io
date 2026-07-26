@@ -26,6 +26,7 @@
     <link rel="alternate" href="{{url}}" hreflang="{{hreflang}}" />
     <link rel="canonical" href="{{url}}" />
     <link rel="icon" type="image/svg+xml" href="{{cdn}}/pain001/v1/logos/pain001.svg" sizes="any" />
+    <link rel="preload" href="/fonts/source-serif-4-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)" />
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
@@ -43,16 +44,55 @@
     </script>
 
     <style>
+      /* Source Serif 4 — self-hosted (no third-party requests), display use
+         only. latin + latin-ext subsets; system serif fallback below keeps
+         CLS negligible via metric-similar Iowan/Georgia. */
+      @font-face {
+        font-family: "Source Serif 4";
+        font-style: normal; font-weight: 400; font-display: swap;
+        src: url("/fonts/source-serif-4-latin-400-normal.woff2") format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Source Serif 4";
+        font-style: normal; font-weight: 600; font-display: swap;
+        src: url("/fonts/source-serif-4-latin-600-normal.woff2") format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Source Serif 4";
+        font-style: normal; font-weight: 700; font-display: swap;
+        src: url("/fonts/source-serif-4-latin-700-normal.woff2") format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Source Serif 4";
+        font-style: normal; font-weight: 400; font-display: swap;
+        src: url("/fonts/source-serif-4-latin-ext-400-normal.woff2") format("woff2");
+        unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Source Serif 4";
+        font-style: normal; font-weight: 600; font-display: swap;
+        src: url("/fonts/source-serif-4-latin-ext-600-normal.woff2") format("woff2");
+        unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Source Serif 4";
+        font-style: normal; font-weight: 700; font-display: swap;
+        src: url("/fonts/source-serif-4-latin-ext-700-normal.woff2") format("woff2");
+        unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
       /* Tokens: identical to page.html — contrast ratios ≥ 7:1 (AAA). */
       :root {
-        --type-display: "Iowan Old Style", "Palatino Nova", Palatino, "New York", ui-serif, Georgia, serif;
+        --type-display: "Source Serif 4", "Iowan Old Style", Palatino, "New York", ui-serif, Georgia, serif;
         --type-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
         --type-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
         --bg-page: #ffffff; --bg-alt: #f7f5f1; --bg-card: #fdfcfa;
         --ink: #1d1d1f; --ink-soft: #3a3a3c; --ink-mute: #4d4d55;
         --rule: #e4e1da; --rule-strong: #c9c5bb;
-        --link: #004caf; --link-hover: #003a86; --eyebrow: #684d00;
-        --btn-bg: #1d1d1f; --btn-text: #ffffff; --focus-ring: #004caf;
+        --link: #0a5566; --link-hover: #073f4c; --eyebrow: #684d00;
+        --btn-bg: #1d1d1f; --btn-text: #ffffff; --focus-ring: #0a5566;
         --ok: #14532d; --bad: #7f1d1d;
         --code-bg: #14161c; --code-text: #f2f3f5;
         --shadow-sm: 0 1px 2px rgb(29 29 31 / 0.06);
@@ -63,8 +103,8 @@
         --bg-page: #0b0e14; --bg-alt: #10141c; --bg-card: #171b24;
         --ink: #f5f5f7; --ink-soft: #d6d9e0; --ink-mute: #b3bac7;
         --rule: #262c38; --rule-strong: #3a4252;
-        --link: #8cc0ff; --link-hover: #b8d8ff; --eyebrow: #e3c878;
-        --btn-bg: #f5f5f7; --btn-text: #16181d; --focus-ring: #8cc0ff;
+        --link: #7fd4e8; --link-hover: #b5e6f2; --eyebrow: #e3c878;
+        --btn-bg: #f5f5f7; --btn-text: #16181d; --focus-ring: #7fd4e8;
         --ok: #86efac; --bad: #fca5a5;
         --code-bg: #05070b; --code-text: #eef0f4;
         --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.6);
@@ -75,8 +115,8 @@
           --bg-page: #0b0e14; --bg-alt: #10141c; --bg-card: #171b24;
           --ink: #f5f5f7; --ink-soft: #d6d9e0; --ink-mute: #b3bac7;
           --rule: #262c38; --rule-strong: #3a4252;
-          --link: #8cc0ff; --link-hover: #b8d8ff; --eyebrow: #e3c878;
-          --btn-bg: #f5f5f7; --btn-text: #16181d; --focus-ring: #8cc0ff;
+          --link: #7fd4e8; --link-hover: #b5e6f2; --eyebrow: #e3c878;
+          --btn-bg: #f5f5f7; --btn-text: #16181d; --focus-ring: #7fd4e8;
           --ok: #86efac; --bad: #fca5a5;
           --code-bg: #05070b; --code-text: #eef0f4;
           --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.6);
