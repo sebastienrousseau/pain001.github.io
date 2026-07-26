@@ -1,5 +1,5 @@
-# MySsgSite
+# Pain001
 
-> A site built with SSG
+> Open-source ISO 20022 pain.001 payment initiation suite: Python library, CLI, REST API, MCP server for AI agents, LSP server, and SWIFT MT101 / Excel loaders.
 
 Language: en-GB

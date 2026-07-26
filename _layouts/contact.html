@@ -1,55 +1,188 @@
 <!DOCTYPE html>
-<html lang="{{language}}" data-theme="light">
+<html lang="{{language}}">
   <head>
     <meta charset="{{charset}}" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta itemprop="datePublished" content="{{item_pub_date}}" id="date" />
+    <meta itemprop="dateModified" content="{{last_build_date}}" id="last-modified" />
     <title>{{title}}</title>
+
     {{primary}}
     {{opengraph}}
+    <meta property="og:image" content="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />
+    <meta property="og:image:alt" content="Pain001 logo" />
     {{twitter}}
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
     <link rel="canonical" href="{{url}}" />
-    <link rel="icon" type="image/x-icon" href="{{cdn}}/pain001/v1/logos/pain001.svg" />
+    <link rel="icon" type="image/svg+xml" href="{{cdn}}/pain001/v1/logos/pain001.svg" sizes="any" />
+    <meta name="theme-color" content="#090d16" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t === "dark" || t === "light") {
+            document.documentElement.setAttribute("data-theme", t);
+          }
+        } catch (e) {}
+      })();
+    </script>
+
     <style>
+      /* Tokens match page.html; ratios measured, AAA (7:1) throughout. */
       :root {
-        --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        --bg-page: #ffffff; --text-main: #0f172a; --text-muted: #475569; --border-color: #e2e8f0;
-        --primary: #0284c7; --radius-md: 12px;
+        --type-display: "Iowan Old Style", "Palatino Nova", Palatino, "New York", ui-serif, Georgia, serif;
+        --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        --bg-page: #ffffff;
+        --bg-alt: #f7f5f1;
+        --text-main: #1d1d1f;   /* 16.7:1 — AAA */
+        --text-muted: #3a3a3c;  /* 11.3:1 — AAA */
+        --border-color: #c9c5bb;
+        --link: #004caf;        /* 7.9:1 — AAA */
+        --btn-bg: #1d1d1f;
+        --btn-text: #ffffff;
+        --focus-ring: #004caf;
+        --radius-sm: 8px;
+        --radius-md: 14px;
+        --radius-pill: 999px;
       }
       [data-theme="dark"] {
-        --bg-page: #090d16; --text-main: #f8fafc; --text-muted: #cbd5e1; --border-color: #334155;
-        --primary: #38bdf8;
+        --bg-page: #0b0e14;
+        --bg-alt: #10141c;
+        --text-main: #f5f5f7;
+        --text-muted: #d6d9e0;
+        --border-color: #3a4252;
+        --link: #8cc0ff;
+        --btn-bg: #f5f5f7;
+        --btn-text: #16181d;
+        --focus-ring: #8cc0ff;
       }
-      body { font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.6; margin: 0; }
-      .container { max-width: 800px; margin: 0 auto; padding: 4rem 1.5rem; }
-      h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+      @media (prefers-color-scheme: dark) {
+        html:not([data-theme="light"]) {
+          --bg-page: #0b0e14;
+          --bg-alt: #10141c;
+          --text-main: #f5f5f7;
+          --text-muted: #d6d9e0;
+          --border-color: #3a4252;
+          --link: #8cc0ff;
+          --btn-bg: #f5f5f7;
+          --btn-text: #16181d;
+          --focus-ring: #8cc0ff;
+        }
+      }
+
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.65; }
+
+      :focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 2px; border-radius: 2px; }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+      }
+
+      .skip-link {
+        position: absolute; top: -100px; left: 1rem;
+        background: var(--btn-bg); color: var(--btn-text);
+        padding: 0.75rem 1.5rem; z-index: 10000;
+        border-radius: var(--radius-pill); font-weight: 600;
+      }
+      .skip-link:focus { top: 1rem; }
+
+      .container { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+      .back-link { color: var(--link); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; min-height: 44px; }
+      .back-link:hover { text-decoration: underline; }
+      h1 { font-family: var(--type-display); font-size: 2.5rem; letter-spacing: -0.015em; line-height: 1.15; margin: 1.5rem 0 1rem; }
+      .lede { color: var(--text-muted); margin-bottom: 2rem; max-width: 60ch; }
+
       .form-group { margin-bottom: 1.5rem; }
       label { display: block; font-weight: 600; margin-bottom: 0.5rem; }
-      input, textarea { width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-page); color: var(--text-main); font-size: 1rem; }
-      button { background: var(--primary); color: #fff; padding: 0.85rem 2rem; border: none; border-radius: 8px; font-weight: 600; font-size: 1rem; cursor: pointer; }
-      nav a { color: var(--primary); text-decoration: none; font-weight: 600; }
+      .hint { display: block; font-weight: 400; font-size: 0.9rem; color: var(--text-muted); margin-top: 0.25rem; }
+      input, textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border-color);
+        background: var(--bg-page);
+        color: var(--text-main);
+        font-size: 1rem;
+        font-family: inherit;
+      }
+      button {
+        background: var(--btn-bg);
+        color: var(--btn-text);
+        min-height: 50px;
+        padding: 0.85rem 2rem;
+        border: none;
+        border-radius: var(--radius-pill);
+        font-weight: 700;
+        font-size: 1rem;
+        font-family: inherit;
+        cursor: pointer;
+      }
+      .alt-channels { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.95rem; }
+      .alt-channels a { color: var(--link); }
+
+      article { margin-top: 2rem; color: var(--text-muted); }
+      article h1 { display: none; } /* the layout renders the page H1 */
+      article a { color: var(--link); }
+      article p, article li { margin-bottom: 0.75rem; }
+      article ul { padding-left: 1.5rem; }
     </style>
   </head>
   <body>
-    <main id="main-content" role="main" class="container">
-      <nav aria-label="Contact Navigation"><a href="/">&larr; Back to Pain001 Home</a></nav>
-      <h1 style="margin-top: 2rem;">Contact Pain001 Security &amp; Enterprise Support</h1>
-      <p style="color: var(--text-muted); margin-bottom: 2rem;">Have questions regarding enterprise deployments, security audits, or 2026 ISO 20022 compliance?</p>
-      
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <main id="main-content" class="container">
+      <nav aria-label="Breadcrumb"><a class="back-link" href="/">&larr; Back to Pain001</a></nav>
+      <h1>{{title}}</h1>
+      <p class="lede">{{description}}</p>
+
       <form action="https://formspree.io/f/xknlqrqz" method="POST">
+        <input type="hidden" name="_next" value="https://pain001.com/thanks/" />
         <div class="form-group">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" required placeholder="Jane Doe" />
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name" />
         </div>
         <div class="form-group">
-          <label for="email">Work Email</label>
-          <input type="email" id="email" name="email" required placeholder="jane@institution.com" />
+          <label for="email">Email <span class="hint" id="email-hint">Replies go to this address.</span></label>
+          <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="email-hint" />
         </div>
         <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="6" required placeholder="Details regarding your deployment or inquiry..."></textarea>
+          <label for="message">Message <span class="hint" id="msg-hint">Please remove real account numbers and payment data before sending.</span></label>
+          <textarea id="message" name="message" rows="6" required aria-describedby="msg-hint"></textarea>
         </div>
-        <button type="submit">Send Inquiry</button>
+        <button type="submit">Send message</button>
       </form>
+
+      <div class="alt-channels">
+        <p>Prefer another channel? Bugs and features: <a href="https://github.com/sebastienrousseau/pain001/issues" rel="external">GitHub issues</a>. Security: <a href="https://github.com/sebastienrousseau/pain001/security" rel="external">private vulnerability reporting</a> (see <a href="/security.txt">security.txt</a>). Email: <a href="mailto:contact@pain001.com">contact@pain001.com</a>.</p>
+      </div>
+
+      <article>
+        {{content}}
+      </article>
     </main>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "@id": "{{permalink}}",
+      "url": "{{permalink}}",
+      "name": "{{title}}",
+      "description": "{{description}}",
+      "inLanguage": "en-GB",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://pain001.com/#organization",
+        "name": "Pain001",
+        "url": "https://pain001.com/"
+      }
+    }
+    </script>
   </body>
 </html>

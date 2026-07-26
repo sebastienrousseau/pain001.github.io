@@ -10,45 +10,45 @@
 
 <!-- markdownlint-enable MD033 MD041 -->
 
-# pain001.com - Official Website 🌏
+# pain001.com — Official Website 🌏
 
-A unique toolkit to support ISO 20022 Adoption and Migration for Cross-Border Payments.
+The website for the [Pain001](https://github.com/sebastienrousseau/pain001)
+open-source ISO 20022 payment initiation suite: core library, MCP server for
+AI agents, LSP server, and the MT101 / Excel loaders.
 
-## Quick Start Guide
+Built with the [Shokunin Static Site Generator (ssg)][00] and published to
+GitHub Pages from `docs/`.
 
-Setting up and running the website locally is easy and quick with the
-[Shokunin Static Site Generator (SSG)][00].
+## Repository layout
 
-### Prerequisites
+| Path | Purpose |
+| :--- | :--- |
+| `_posts/` | Page content (Markdown + frontmatter) — the source of truth |
+| `_layouts/` | HTML templates: `index`, `page`, `contact` |
+| `ssg.toml` | ssg configuration (site name, base URL, directories) |
+| `scripts/postbuild_fix.py` | Post-build repairs (see script docstring) |
+| `build.sh` | Build + repair + publish to `docs/` |
+| `docs/` | Built site served by GitHub Pages — never edit by hand |
 
-Ensure you have the **Rust toolchain** installed. If not, follow the guide on
-the [Rust website][01] to set it up.
+## Build
 
-### Installation & Usage
-
-1. Install Shokunin SSG:
-
-```shell
-cargo install ssg
-```
-
-2. Clone the repository
-
-```shell
-git clone https://github.com/sebastienrousseau/pain001.github.io.git
-```
-
-3. Change into the repository directory:
+Prerequisites: the Rust toolchain and ssg 0.0.47+ (`cargo install ssg`),
+plus Python 3 for the post-build pass.
 
 ```shell
-cd pain001.github.io
+./build.sh          # build, repair, publish to docs/
+./build.sh --audit  # same, then run ssg's 15 audit gates
 ```
 
-1. Generate the static site:
+The audit gates cover WCAG, JSON-LD, hreflang, CSP/SRI, HTML5, broken
+links, metadata, performance budgets, AI discovery files, feeds, images,
+and the search index. The site targets WCAG 2.2 AAA; design-token contrast
+ratios are documented inline in the layouts.
 
-```shell
-ssg -n=docs -c=_posts -t=_layouts -o=output -s=public
-```
+## Editing content
+
+Edit the Markdown in `_posts/`, keep frontmatter `title` / `description` /
+`keywords` unique per page, then run `./build.sh --audit` and commit both
+the source and the regenerated `docs/`.
 
 [00]: https://shokunin.one "Shokunin Static Site Generator (SSG)"
-[01]: https://www.rust-lang.org/learn/get-started "Rust Getting started guide"

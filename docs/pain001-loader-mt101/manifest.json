@@ -1,6 +1,6 @@
 {
   "background_color": "#ffffff",
-  "description": "Convert legacy SWIFT MT101 Request for Transfer messages into schema-validated pain.001.001.09 ISO 20022 payment files.",
+  "description": "Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict e",
   "display": "standalone",
   "icons": [
     {

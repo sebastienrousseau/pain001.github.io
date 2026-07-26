@@ -1,6 +1,6 @@
 {
-  "feed_url": "http://127.0.0.1:8000/feed.json",
-  "home_page_url": "http://127.0.0.1:8000/",
+  "feed_url": "https://pain001.com/feed.json",
+  "home_page_url": "https://pain001.com/",
   "items": [
     {
       "authors": [
@@ -8,10 +8,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Deep-dive research on 2026 global payment trends, SWIFT CBPR+ MT-MX transition, Structured Address mandate, and FedNow.",
+      "content_html": "The post-migration landscape with primary sources: the 14 Nov 2026 structured address and MT101-relay deadlines, Fedwire and FedNow status, IPR and VoP, LEIs, and agentic AI.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/2026-iso20022-migration-trends/",
+      "id": "https://pain001.com/2026-iso20022-migration-trends/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -22,8 +22,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "2026 Payment Trends & ISO 20022 Mandates Research Paper",
-      "url": "http://127.0.0.1:8000/2026-iso20022-migration-trends/"
+      "title": "ISO 20022 in 2026: Deadlines, Data and What Comes Next",
+      "url": "https://pain001.com/2026-iso20022-migration-trends/"
     },
     {
       "authors": [
@@ -31,10 +31,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Page not found.",
+      "content_html": "That address does not exist. Jump to the documentation, installation guide, FAQs, or glossary — or report the broken link on GitHub.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/404/",
+      "id": "https://pain001.com/404/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -45,8 +45,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "404 Page Not Found",
-      "url": "http://127.0.0.1:8000/404/"
+      "title": "Page Not Found (404)",
+      "url": "https://pain001.com/404/"
     },
     {
       "authors": [
@@ -54,10 +54,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Architectural white paper covering Pain001 zero-trust XML security, monetary precision, streaming performance, and open standards.",
+      "content_html": "Zero-trust XML parsing, decimal-exact arithmetic, validation as a hard gate, 100% branch coverage — and where Pain001 sits amid patented MT–MX transformation services.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/architecture-and-patents/",
+      "id": "https://pain001.com/architecture-and-patents/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -68,8 +68,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "Enterprise Architecture & Open Protocols White Paper",
-      "url": "http://127.0.0.1:8000/architecture-and-patents/"
+      "title": "Architecture, Security and the Patent Landscape",
+      "url": "https://pain001.com/architecture-and-patents/"
     },
     {
       "authors": [
@@ -77,10 +77,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Detailed comparison of Pain001 Suite against enterprise payment gateways, proprietary translators, and middleware.",
+      "content_html": "Pain001 against Prowide, python-sepaxml, SWIFT Translator, XMLdation, Volante and the rest — what each does well, what it costs, and where the gaps are. Sources dated.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/competitors-comparison/",
+      "id": "https://pain001.com/competitors-comparison/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -91,8 +91,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "Enterprise Comparative Analysis: Pain001 vs Market Solutions",
-      "url": "http://127.0.0.1:8000/competitors-comparison/"
+      "title": "Pain001 vs Alternatives: an Honest Comparison",
+      "url": "https://pain001.com/competitors-comparison/"
     },
     {
       "authors": [
@@ -100,10 +100,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Contact Pain001 team.",
+      "content_html": "Where to report bugs, disclose security issues privately, and reach the maintainer — with what to include for the fastest possible fix.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/contact/",
+      "id": "https://pain001.com/contact/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -114,8 +114,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "Contact Security & Support",
-      "url": "http://127.0.0.1:8000/contact/"
+      "title": "Contact Pain001: Support, Security and Enquiries",
+      "url": "https://pain001.com/contact/"
     },
     {
       "authors": [
@@ -123,10 +123,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Complete API reference for Pain001 CLI, Python library, REST API, scheme validators, streaming mode, and input normalization.",
+      "content_html": "Complete reference for pain001 v0.0.56 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/documentation/",
+      "id": "https://pain001.com/documentation/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -137,8 +137,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "Pain001 Documentation & Comprehensive API Reference",
-      "url": "http://127.0.0.1:8000/documentation/"
+      "title": "Pain001 Technical Reference: CLI, Python API and REST",
+      "url": "https://pain001.com/documentation/"
     },
     {
       "authors": [
@@ -146,10 +146,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Comprehensive questions and answers for Treasurers, CFOs, Enterprise Architects, Compliance Officers, and Engineers.",
+      "content_html": "Why banks reject payment files, pain.001 vs pain.008, the November 2026 deadlines, streaming large batches, security posture, and audit reproducibility — answered plainly.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/faqs/",
+      "id": "https://pain001.com/faqs/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -160,8 +160,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "Pain001 Enterprise & Technical FAQs",
-      "url": "http://127.0.0.1:8000/faqs/"
+      "title": "Pain001 FAQs for Treasury, Ops, Engineering and Audit",
+      "url": "https://pain001.com/faqs/"
     },
     {
       "authors": [
@@ -169,10 +169,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Complete installation options for Pain001 suite including PyPI, optional extras, companion loaders, Docker, and Kubernetes.",
+      "content_html": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, hybrid addresses, control sums — the payments vocabulary defined for treasurers and operations teams, not just developers.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/installation/",
+      "id": "https://pain001.com/glossary/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -183,8 +183,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "Pain001 Installation Guide: PyPI, Extras, Docker & Kubernetes",
-      "url": "http://127.0.0.1:8000/installation/"
+      "title": "ISO 20022 Payments Glossary in Plain English",
+      "url": "https://pain001.com/glossary/"
     },
     {
       "authors": [
@@ -192,10 +192,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Guide to SWIFT CBPR+ cross-border credit transfer initiation with Pain001.",
+      "content_html": "Install the Pain001 suite on Python 3.10–3.12 via pip or Docker, add Excel and MT101 loaders, and produce your first bank-ready pain.001 file in three commands.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/iso-20022-payment-initiation-for-cross-border-payments/",
+      "id": "https://pain001.com/installation/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -206,8 +206,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "ISO 20022 Cross-Border Payments & SWIFT CBPR+",
-      "url": "http://127.0.0.1:8000/iso-20022-payment-initiation-for-cross-border-payments/"
+      "title": "Install Pain001: pip, Docker and First Validated File",
+      "url": "https://pain001.com/installation/"
     },
     {
       "authors": [
@@ -215,10 +215,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Built with SSG Rust static site generator.",
+      "content_html": "What CBPR+ requires of your pain.001: BICFI agents, structured or hybrid addresses from 14 Nov 2026, charge bearers, purpose codes — with a worked xborder-ct example.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/made-with-shokunin/",
+      "id": "https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -229,8 +229,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "Made with Static Site Generator",
-      "url": "http://127.0.0.1:8000/made-with-shokunin/"
+      "title": "Cross-Border pain.001 Under CBPR+: a Field Guide",
+      "url": "https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/"
     },
     {
       "authors": [
@@ -238,10 +238,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Offline page.",
+      "content_html": "A Rust static site generator with security-first defaults, Markdown content, no JavaScript framework, and machine-readable surfaces from llms.txt to a CycloneDX SBOM.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/offline/",
+      "id": "https://pain001.com/made-with-shokunin/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -252,8 +252,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "Offline",
-      "url": "http://127.0.0.1:8000/offline/"
+      "title": "Made with Shokunin: How This Site Is Built",
+      "url": "https://pain001.com/made-with-shokunin/"
     },
     {
       "authors": [
@@ -261,10 +261,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.03 Customer Credit Transfer Initiation.",
+      "content_html": "The network is unreachable, so this page is served from cache. Previously visited pages may still work; everything returns with your connection.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/pain.001.001.03/",
+      "id": "https://pain001.com/offline/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -275,8 +275,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "pain.001.001.03 ISO 20022 Message Reference",
-      "url": "http://127.0.0.1:8000/pain.001.001.03/"
+      "title": "Offline — Cached Copy Shown",
+      "url": "https://pain001.com/offline/"
     },
     {
       "authors": [
@@ -284,10 +284,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.04 Customer Credit Transfer Initiation.",
+      "content_html": "pain.001.001.03 — the SEPA & CGI workhorse version. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/pain.001.001.04/",
+      "id": "https://pain001.com/pain.001.001.03/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -298,8 +298,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "pain.001.001.04 ISO 20022 Message Reference",
-      "url": "http://127.0.0.1:8000/pain.001.001.04/"
+      "title": "pain.001.001.03 Reference: Generate and Validate",
+      "url": "https://pain001.com/pain.001.001.03/"
     },
     {
       "authors": [
@@ -307,10 +307,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.05 Customer Credit Transfer Initiation.",
+      "content_html": "pain.001.001.04 — early maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/pain.001.001.05/",
+      "id": "https://pain001.com/pain.001.001.04/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -321,8 +321,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "pain.001.001.05 ISO 20022 Message Reference",
-      "url": "http://127.0.0.1:8000/pain.001.001.05/"
+      "title": "pain.001.001.04 Reference: Generate and Validate",
+      "url": "https://pain001.com/pain.001.001.04/"
     },
     {
       "authors": [
@@ -330,10 +330,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.06 Customer Credit Transfer Initiation.",
+      "content_html": "pain.001.001.05 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/pain.001.001.06/",
+      "id": "https://pain001.com/pain.001.001.05/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -344,8 +344,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "pain.001.001.06 ISO 20022 Message Reference",
-      "url": "http://127.0.0.1:8000/pain.001.001.06/"
+      "title": "pain.001.001.05 Reference: Generate and Validate",
+      "url": "https://pain001.com/pain.001.001.05/"
     },
     {
       "authors": [
@@ -353,10 +353,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.07 Customer Credit Transfer Initiation.",
+      "content_html": "pain.001.001.06 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/pain.001.001.07/",
+      "id": "https://pain001.com/pain.001.001.06/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -367,8 +367,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "pain.001.001.07 ISO 20022 Message Reference",
-      "url": "http://127.0.0.1:8000/pain.001.001.07/"
+      "title": "pain.001.001.06 Reference: Generate and Validate",
+      "url": "https://pain001.com/pain.001.001.06/"
     },
     {
       "authors": [
@@ -376,10 +376,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.08 Customer Credit Transfer Initiation.",
+      "content_html": "pain.001.001.07 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/pain.001.001.08/",
+      "id": "https://pain001.com/pain.001.001.07/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -390,8 +390,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "pain.001.001.08 ISO 20022 Message Reference",
-      "url": "http://127.0.0.1:8000/pain.001.001.08/"
+      "title": "pain.001.001.07 Reference: Generate and Validate",
+      "url": "https://pain001.com/pain.001.001.07/"
     },
     {
       "authors": [
@@ -399,10 +399,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.09 Customer Credit Transfer Initiation.",
+      "content_html": "pain.001.001.08 — the last pre-2019 version. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/pain.001.001.09/",
+      "id": "https://pain001.com/pain.001.001.08/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -413,8 +413,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "pain.001.001.09 ISO 20022 Message Reference",
-      "url": "http://127.0.0.1:8000/pain.001.001.09/"
+      "title": "pain.001.001.08 Reference: Generate and Validate",
+      "url": "https://pain001.com/pain.001.001.08/"
     },
     {
       "authors": [
@@ -422,10 +422,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.10 Customer Credit Transfer Initiation.",
+      "content_html": "pain.001.001.09 — the CBPR+ cross-border version. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/pain.001.001.10/",
+      "id": "https://pain001.com/pain.001.001.09/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -436,8 +436,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "pain.001.001.10 ISO 20022 Message Reference",
-      "url": "http://127.0.0.1:8000/pain.001.001.10/"
+      "title": "pain.001.001.09 Reference: Generate and Validate",
+      "url": "https://pain001.com/pain.001.001.09/"
     },
     {
       "authors": [
@@ -445,10 +445,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.11 Customer Credit Transfer Initiation.",
+      "content_html": "pain.001.001.10 — post-2019 refinement. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/pain.001.001.11/",
+      "id": "https://pain001.com/pain.001.001.10/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -459,8 +459,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "pain.001.001.11 ISO 20022 Message Reference",
-      "url": "http://127.0.0.1:8000/pain.001.001.11/"
+      "title": "pain.001.001.10 Reference: Generate and Validate",
+      "url": "https://pain001.com/pain.001.001.10/"
     },
     {
       "authors": [
@@ -468,10 +468,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.12 Customer Credit Transfer Initiation.",
+      "content_html": "pain.001.001.11 — recent maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/pain.001.001.12/",
+      "id": "https://pain001.com/pain.001.001.11/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -482,8 +482,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "pain.001.001.12 ISO 20022 Message Reference",
-      "url": "http://127.0.0.1:8000/pain.001.001.12/"
+      "title": "pain.001.001.11 Reference: Generate and Validate",
+      "url": "https://pain001.com/pain.001.001.11/"
     },
     {
       "authors": [
@@ -491,10 +491,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Convert legacy SWIFT MT101 Request for Transfer messages into schema-validated pain.001.001.09 ISO 20022 payment files.",
+      "content_html": "pain.001.001.12 — the newest supported version. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/pain001-loader-mt101/",
+      "id": "https://pain001.com/pain.001.001.12/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -505,8 +505,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "pain001-loader-mt101: SWIFT MT101 to pain.001 Bridge",
-      "url": "http://127.0.0.1:8000/pain001-loader-mt101/"
+      "title": "pain.001.001.12 Reference: Generate and Validate",
+      "url": "https://pain001.com/pain.001.001.12/"
     },
     {
       "authors": [
@@ -514,10 +514,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Direct Excel (.xlsx / .xlsm) loader plugin for Pain001 featuring numeric IBAN leading-zero safety guard and streaming.",
+      "content_html": "Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict error handling, ready for the 14 Nov 2026 relay cutover.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/pain001-loader-xlsx/",
+      "id": "https://pain001.com/pain001-loader-mt101/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -528,8 +528,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "pain001-loader-xlsx: Excel Ingestion with IBAN Protection",
-      "url": "http://127.0.0.1:8000/pain001-loader-xlsx/"
+      "title": "MT101 to pain.001 Conversion: pain001-loader-mt101",
+      "url": "https://pain001.com/pain001-loader-mt101/"
     },
     {
       "authors": [
@@ -537,10 +537,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Language Server Protocol server providing real-time diagnostics, schema validation, and autocomplete for payment JSON authoring in IDEs.",
+      "content_html": "Read payment batches straight from .xlsx/.xlsm with an IBAN safety guard that stops Excel's numeric coercion corrupting account numbers before the bank ever sees them.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/pain001-lsp/",
+      "id": "https://pain001.com/pain001-loader-xlsx/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -551,8 +551,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "pain001-lsp: Language Server Protocol for Payment Authoring",
-      "url": "http://127.0.0.1:8000/pain001-lsp/"
+      "title": "Excel to pain.001: pain001-loader-xlsx",
+      "url": "https://pain001.com/pain001-loader-xlsx/"
     },
     {
       "authors": [
@@ -560,10 +560,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Exposing the Pain001 payment library as 17 first-class Model Context Protocol (MCP) agent tools for Claude Desktop, Cursor, and LLMs.",
+      "content_html": "Language Server Protocol support for payment JSON: live schema validation, IBAN/BIC diagnostics, completion, hover docs, and quick fixes in VS Code, Neovim, Helix, Emacs.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/pain001-mcp/",
+      "id": "https://pain001.com/pain001-lsp/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -574,8 +574,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "pain001-mcp: Model Context Protocol Server for AI Payment Tools",
-      "url": "http://127.0.0.1:8000/pain001-mcp/"
+      "title": "pain001-lsp: ISO 20022 Diagnostics in Your Editor",
+      "url": "https://pain001.com/pain001-lsp/"
     },
     {
       "authors": [
@@ -583,10 +583,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Guide to automated payment initiation, validation, and processing using Pain001.",
+      "content_html": "17 Model Context Protocol tools for AI agents — validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/payments/",
+      "id": "https://pain001.com/pain001-mcp/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -597,8 +597,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "ISO 20022 Payment Processing Architecture",
-      "url": "http://127.0.0.1:8000/payments/"
+      "title": "pain001-mcp: The MCP Server for ISO 20022 Payments",
+      "url": "https://pain001.com/pain001-mcp/"
     },
     {
       "authors": [
@@ -606,10 +606,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Privacy policy for Pain001 website and services.",
+      "content_html": "From ERP export to pain.002 acknowledgement to camt.053 reconciliation — designing batch, streaming, and API payment pipelines around validation gates that stop rejections.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/privacy/",
+      "id": "https://pain001.com/payments/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -620,8 +620,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "Pain001 Privacy Policy",
-      "url": "http://127.0.0.1:8000/privacy/"
+      "title": "Payment Initiation End to End with Pain001",
+      "url": "https://pain001.com/payments/"
     },
     {
       "authors": [
@@ -629,10 +629,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Topic tags.",
+      "content_html": "No cookies, no analytics, no tracking. The website stores only your theme choice locally, and the Pain001 software processes all payment data on your own infrastructure.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/tags/",
+      "id": "https://pain001.com/privacy/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -643,8 +643,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "Tags",
-      "url": "http://127.0.0.1:8000/tags/"
+      "title": "Privacy: This Site Collects Nothing",
+      "url": "https://pain001.com/privacy/"
     },
     {
       "authors": [
@@ -652,10 +652,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Terms of service for Pain001 software and website.",
+      "content_html": "Every page tagged and grouped — ISO 20022 versions, SEPA rulebooks, SWIFT migration, AI tooling. Pick a topic and follow the thread.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/terms/",
+      "id": "https://pain001.com/tags/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -666,8 +666,8 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "Pain001 Terms of Service",
-      "url": "http://127.0.0.1:8000/terms/"
+      "title": "Browse Pain001 Topics",
+      "url": "https://pain001.com/tags/"
     },
     {
       "authors": [
@@ -675,10 +675,10 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Thank you for visiting Pain001.",
+      "content_html": "Apache-2.0/MIT licensing for the suite, the as-is warranty disclaimer, content reuse rules, and why nothing here is financial or regulatory advice.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "http://127.0.0.1:8000/thanks/",
+      "id": "https://pain001.com/terms/",
       "language": "en-GB",
       "tags": [
         "ISO 20022",
@@ -689,11 +689,34 @@
         "CBPR+",
         "SEPA"
       ],
-      "title": "Thank You",
-      "url": "http://127.0.0.1:8000/thanks/"
+      "title": "Terms: Licences, Warranty and Fair Use",
+      "url": "https://pain001.com/terms/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Your message is on its way. Meanwhile: install Pain001, read the 2026 ISO 20022 briefing, or star the project on GitHub.",
+      "date_modified": "2026-07-26T08:00:00+00:00",
+      "date_published": "2026-07-26T08:00:00+00:00",
+      "id": "https://pain001.com/thanks/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "Thank You — Message Received",
+      "url": "https://pain001.com/thanks/"
     }
   ],
   "language": "en-GB",
-  "title": "MySsgSite",
+  "title": "Pain001",
   "version": "https://jsonfeed.org/version/1.1"
 }

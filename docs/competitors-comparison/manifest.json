@@ -1,6 +1,6 @@
 {
   "background_color": "#ffffff",
-  "description": "Detailed comparison of Pain001 Suite against enterprise payment gateways, proprietary translators, and middleware.",
+  "description": "Pain001 against Prowide, python-sepaxml, SWIFT Translator, XMLdation, Volante and the rest — what each does well, what i",
   "display": "standalone",
   "icons": [
     {

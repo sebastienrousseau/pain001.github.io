@@ -1,6 +1,6 @@
 {
   "background_color": "#ffffff",
-  "description": "Offline page.",
+  "description": "The network is unreachable, so this page is served from cache. Previously visited pages may still work; everything retur",
   "display": "standalone",
   "icons": [
     {

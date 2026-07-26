@@ -1,6 +1,6 @@
 {
   "background_color": "#ffffff",
-  "description": "Built with SSG Rust static site generator.",
+  "description": "A Rust static site generator with security-first defaults, Markdown content, no JavaScript framework, and machine-readab",
   "display": "standalone",
   "icons": [
     {

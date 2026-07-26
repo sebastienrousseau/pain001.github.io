@@ -1,7 +1,7 @@
 [
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Deep-dive research on 2026 global payment trends, SWIFT CBPR+ MT-MX transition, Structured Address mandate, and FedNow.",
+    "description": "The post-migration landscape with primary sources: the 14 Nov 2026 structured address and MT101-relay deadlines, Fedwire and FedNow status, IPR and VoP, LEIs, and agentic AI.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -12,13 +12,13 @@
       "payments",
       "python"
     ],
-    "title": "2026 Payment Trends & ISO 20022 Mandates Research Paper",
-    "url": "http://127.0.0.1:8000/2026-iso20022-migration-trends/",
-    "wordCount": 155
+    "title": "ISO 20022 in 2026: Deadlines, Data and What Comes Next",
+    "url": "https://pain001.com/2026-iso20022-migration-trends/",
+    "wordCount": 1257
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Architectural white paper covering Pain001 zero-trust XML security, monetary precision, streaming performance, and open standards.",
+    "description": "Zero-trust XML parsing, decimal-exact arithmetic, validation as a hard gate, 100% branch coverage — and where Pain001 sits amid patented MT–MX transformation services.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -29,13 +29,13 @@
       "payments",
       "python"
     ],
-    "title": "Enterprise Architecture & Open Protocols White Paper",
-    "url": "http://127.0.0.1:8000/architecture-and-patents/",
-    "wordCount": 122
+    "title": "Architecture, Security and the Patent Landscape",
+    "url": "https://pain001.com/architecture-and-patents/",
+    "wordCount": 692
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Detailed comparison of Pain001 Suite against enterprise payment gateways, proprietary translators, and middleware.",
+    "description": "Pain001 against Prowide, python-sepaxml, SWIFT Translator, XMLdation, Volante and the rest — what each does well, what it costs, and where the gaps are. Sources dated.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -46,13 +46,13 @@
       "payments",
       "python"
     ],
-    "title": "Enterprise Comparative Analysis: Pain001 vs Market Solutions",
-    "url": "http://127.0.0.1:8000/competitors-comparison/",
-    "wordCount": 207
+    "title": "Pain001 vs Alternatives: an Honest Comparison",
+    "url": "https://pain001.com/competitors-comparison/",
+    "wordCount": 765
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Contact Pain001 team.",
+    "description": "Where to report bugs, disclose security issues privately, and reach the maintainer — with what to include for the fastest possible fix.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -63,13 +63,13 @@
       "payments",
       "python"
     ],
-    "title": "Contact Security & Support",
-    "url": "http://127.0.0.1:8000/contact/",
-    "wordCount": 11
+    "title": "Contact Pain001: Support, Security and Enquiries",
+    "url": "https://pain001.com/contact/",
+    "wordCount": 100
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Complete API reference for Pain001 CLI, Python library, REST API, scheme validators, streaming mode, and input normalization.",
+    "description": "Complete reference for pain001 v0.0.56 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -80,13 +80,13 @@
       "payments",
       "python"
     ],
-    "title": "Pain001 Documentation & Comprehensive API Reference",
-    "url": "http://127.0.0.1:8000/documentation/",
-    "wordCount": 382
+    "title": "Pain001 Technical Reference: CLI, Python API and REST",
+    "url": "https://pain001.com/documentation/",
+    "wordCount": 923
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Comprehensive questions and answers for Treasurers, CFOs, Enterprise Architects, Compliance Officers, and Engineers.",
+    "description": "Why banks reject payment files, pain.001 vs pain.008, the November 2026 deadlines, streaming large batches, security posture, and audit reproducibility — answered plainly.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -97,13 +97,13 @@
       "payments",
       "python"
     ],
-    "title": "Pain001 Enterprise & Technical FAQs",
-    "url": "http://127.0.0.1:8000/faqs/",
-    "wordCount": 101
+    "title": "Pain001 FAQs for Treasury, Ops, Engineering and Audit",
+    "url": "https://pain001.com/faqs/",
+    "wordCount": 924
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Automate ISO 20022 Customer Credit Transfer & Direct Debit initiation file generation from CSV, Excel, SQLite, JSON, Parquet, and SWIFT MT101.",
+    "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, hybrid addresses, control sums — the payments vocabulary defined for treasurers and operations teams, not just developers.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -114,13 +114,13 @@
       "payments",
       "python"
     ],
-    "title": "Pain001: ISO 20022 Payment Initiation & AI Transaction Suite",
-    "url": "http://127.0.0.1:8000/index.html",
-    "wordCount": 378
+    "title": "ISO 20022 Payments Glossary in Plain English",
+    "url": "https://pain001.com/glossary/",
+    "wordCount": 698
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Complete installation options for Pain001 suite including PyPI, optional extras, companion loaders, Docker, and Kubernetes.",
+    "description": "Generate schema-validated ISO 20022 pain.001 and pain.008 XML from CSV, Excel, SQLite, JSON, Parquet, or SWIFT MT101 — with AI-agent MCP tools and editor LSP support.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -131,13 +131,13 @@
       "payments",
       "python"
     ],
-    "title": "Pain001 Installation Guide: PyPI, Extras, Docker & Kubernetes",
-    "url": "http://127.0.0.1:8000/installation/",
-    "wordCount": 252
+    "title": "Pain001: Open-Source ISO 20022 Payment Initiation Suite",
+    "url": "https://pain001.com/index.html",
+    "wordCount": 222
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Guide to SWIFT CBPR+ cross-border credit transfer initiation with Pain001.",
+    "description": "Install the Pain001 suite on Python 3.10–3.12 via pip or Docker, add Excel and MT101 loaders, and produce your first bank-ready pain.001 file in three commands.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -148,13 +148,13 @@
       "payments",
       "python"
     ],
-    "title": "ISO 20022 Cross-Border Payments & SWIFT CBPR+",
-    "url": "http://127.0.0.1:8000/iso-20022-payment-initiation-for-cross-border-payments/",
-    "wordCount": 16
+    "title": "Install Pain001: pip, Docker and First Validated File",
+    "url": "https://pain001.com/installation/",
+    "wordCount": 424
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Built with SSG Rust static site generator.",
+    "description": "What CBPR+ requires of your pain.001: BICFI agents, structured or hybrid addresses from 14 Nov 2026, charge bearers, purpose codes — with a worked xborder-ct example.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -165,13 +165,13 @@
       "payments",
       "python"
     ],
-    "title": "Made with Static Site Generator",
-    "url": "http://127.0.0.1:8000/made-with-shokunin/",
-    "wordCount": 15
+    "title": "Cross-Border pain.001 Under CBPR+: a Field Guide",
+    "url": "https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/",
+    "wordCount": 485
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Offline page.",
+    "description": "A Rust static site generator with security-first defaults, Markdown content, no JavaScript framework, and machine-readable surfaces from llms.txt to a CycloneDX SBOM.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -182,13 +182,13 @@
       "payments",
       "python"
     ],
-    "title": "Offline",
-    "url": "http://127.0.0.1:8000/offline/",
-    "wordCount": 9
+    "title": "Made with Shokunin: How This Site Is Built",
+    "url": "https://pain001.com/made-with-shokunin/",
+    "wordCount": 123
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.03 Customer Credit Transfer Initiation.",
+    "description": "The network is unreachable, so this page is served from cache. Previously visited pages may still work; everything returns with your connection.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -199,13 +199,13 @@
       "payments",
       "python"
     ],
-    "title": "pain.001.001.03 ISO 20022 Message Reference",
-    "url": "http://127.0.0.1:8000/pain.001.001.03/",
-    "wordCount": 85
+    "title": "Offline — Cached Copy Shown",
+    "url": "https://pain001.com/offline/",
+    "wordCount": 57
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.04 Customer Credit Transfer Initiation.",
+    "description": "pain.001.001.03 — the SEPA & CGI workhorse version. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -216,13 +216,13 @@
       "payments",
       "python"
     ],
-    "title": "pain.001.001.04 ISO 20022 Message Reference",
-    "url": "http://127.0.0.1:8000/pain.001.001.04/",
-    "wordCount": 85
+    "title": "pain.001.001.03 Reference: Generate and Validate",
+    "url": "https://pain001.com/pain.001.001.03/",
+    "wordCount": 255
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.05 Customer Credit Transfer Initiation.",
+    "description": "pain.001.001.04 — early maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -233,13 +233,13 @@
       "payments",
       "python"
     ],
-    "title": "pain.001.001.05 ISO 20022 Message Reference",
-    "url": "http://127.0.0.1:8000/pain.001.001.05/",
-    "wordCount": 85
+    "title": "pain.001.001.04 Reference: Generate and Validate",
+    "url": "https://pain001.com/pain.001.001.04/",
+    "wordCount": 222
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.06 Customer Credit Transfer Initiation.",
+    "description": "pain.001.001.05 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -250,13 +250,13 @@
       "payments",
       "python"
     ],
-    "title": "pain.001.001.06 ISO 20022 Message Reference",
-    "url": "http://127.0.0.1:8000/pain.001.001.06/",
-    "wordCount": 85
+    "title": "pain.001.001.05 Reference: Generate and Validate",
+    "url": "https://pain001.com/pain.001.001.05/",
+    "wordCount": 208
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.07 Customer Credit Transfer Initiation.",
+    "description": "pain.001.001.06 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -267,13 +267,13 @@
       "payments",
       "python"
     ],
-    "title": "pain.001.001.07 ISO 20022 Message Reference",
-    "url": "http://127.0.0.1:8000/pain.001.001.07/",
-    "wordCount": 85
+    "title": "pain.001.001.06 Reference: Generate and Validate",
+    "url": "https://pain001.com/pain.001.001.06/",
+    "wordCount": 189
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.08 Customer Credit Transfer Initiation.",
+    "description": "pain.001.001.07 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -284,13 +284,13 @@
       "payments",
       "python"
     ],
-    "title": "pain.001.001.08 ISO 20022 Message Reference",
-    "url": "http://127.0.0.1:8000/pain.001.001.08/",
-    "wordCount": 85
+    "title": "pain.001.001.07 Reference: Generate and Validate",
+    "url": "https://pain001.com/pain.001.001.07/",
+    "wordCount": 183
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.09 Customer Credit Transfer Initiation.",
+    "description": "pain.001.001.08 — the last pre-2019 version. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -301,13 +301,13 @@
       "payments",
       "python"
     ],
-    "title": "pain.001.001.09 ISO 20022 Message Reference",
-    "url": "http://127.0.0.1:8000/pain.001.001.09/",
-    "wordCount": 85
+    "title": "pain.001.001.08 Reference: Generate and Validate",
+    "url": "https://pain001.com/pain.001.001.08/",
+    "wordCount": 198
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.10 Customer Credit Transfer Initiation.",
+    "description": "pain.001.001.09 — the CBPR+ cross-border version. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -318,13 +318,13 @@
       "payments",
       "python"
     ],
-    "title": "pain.001.001.10 ISO 20022 Message Reference",
-    "url": "http://127.0.0.1:8000/pain.001.001.10/",
-    "wordCount": 85
+    "title": "pain.001.001.09 Reference: Generate and Validate",
+    "url": "https://pain001.com/pain.001.001.09/",
+    "wordCount": 242
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.11 Customer Credit Transfer Initiation.",
+    "description": "pain.001.001.10 — post-2019 refinement. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -335,13 +335,13 @@
       "payments",
       "python"
     ],
-    "title": "pain.001.001.11 ISO 20022 Message Reference",
-    "url": "http://127.0.0.1:8000/pain.001.001.11/",
-    "wordCount": 85
+    "title": "pain.001.001.10 Reference: Generate and Validate",
+    "url": "https://pain001.com/pain.001.001.10/",
+    "wordCount": 192
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.12 Customer Credit Transfer Initiation.",
+    "description": "pain.001.001.11 — recent maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -352,13 +352,13 @@
       "payments",
       "python"
     ],
-    "title": "pain.001.001.12 ISO 20022 Message Reference",
-    "url": "http://127.0.0.1:8000/pain.001.001.12/",
-    "wordCount": 85
+    "title": "pain.001.001.11 Reference: Generate and Validate",
+    "url": "https://pain001.com/pain.001.001.11/",
+    "wordCount": 188
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Convert legacy SWIFT MT101 Request for Transfer messages into schema-validated pain.001.001.09 ISO 20022 payment files.",
+    "description": "pain.001.001.12 — the newest supported version. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -369,13 +369,13 @@
       "payments",
       "python"
     ],
-    "title": "pain001-loader-mt101: SWIFT MT101 to pain.001 Bridge",
-    "url": "http://127.0.0.1:8000/pain001-loader-mt101/",
-    "wordCount": 110
+    "title": "pain.001.001.12 Reference: Generate and Validate",
+    "url": "https://pain001.com/pain.001.001.12/",
+    "wordCount": 205
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Direct Excel (.xlsx / .xlsm) loader plugin for Pain001 featuring numeric IBAN leading-zero safety guard and streaming.",
+    "description": "Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict error handling, ready for the 14 Nov 2026 relay cutover.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -386,13 +386,13 @@
       "payments",
       "python"
     ],
-    "title": "pain001-loader-xlsx: Excel Ingestion with IBAN Protection",
-    "url": "http://127.0.0.1:8000/pain001-loader-xlsx/",
-    "wordCount": 103
+    "title": "MT101 to pain.001 Conversion: pain001-loader-mt101",
+    "url": "https://pain001.com/pain001-loader-mt101/",
+    "wordCount": 522
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Language Server Protocol server providing real-time diagnostics, schema validation, and autocomplete for payment JSON authoring in IDEs.",
+    "description": "Read payment batches straight from .xlsx/.xlsm with an IBAN safety guard that stops Excel's numeric coercion corrupting account numbers before the bank ever sees them.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -403,13 +403,13 @@
       "payments",
       "python"
     ],
-    "title": "pain001-lsp: Language Server Protocol for Payment Authoring",
-    "url": "http://127.0.0.1:8000/pain001-lsp/",
-    "wordCount": 128
+    "title": "Excel to pain.001: pain001-loader-xlsx",
+    "url": "https://pain001.com/pain001-loader-xlsx/",
+    "wordCount": 434
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Exposing the Pain001 payment library as 17 first-class Model Context Protocol (MCP) agent tools for Claude Desktop, Cursor, and LLMs.",
+    "description": "Language Server Protocol support for payment JSON: live schema validation, IBAN/BIC diagnostics, completion, hover docs, and quick fixes in VS Code, Neovim, Helix, Emacs.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -420,13 +420,13 @@
       "payments",
       "python"
     ],
-    "title": "pain001-mcp: Model Context Protocol Server for AI Payment Tools",
-    "url": "http://127.0.0.1:8000/pain001-mcp/",
-    "wordCount": 228
+    "title": "pain001-lsp: ISO 20022 Diagnostics in Your Editor",
+    "url": "https://pain001.com/pain001-lsp/",
+    "wordCount": 464
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Guide to automated payment initiation, validation, and processing using Pain001.",
+    "description": "17 Model Context Protocol tools for AI agents — validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -437,13 +437,13 @@
       "payments",
       "python"
     ],
-    "title": "ISO 20022 Payment Processing Architecture",
-    "url": "http://127.0.0.1:8000/payments/",
-    "wordCount": 11
+    "title": "pain001-mcp: The MCP Server for ISO 20022 Payments",
+    "url": "https://pain001.com/pain001-mcp/",
+    "wordCount": 655
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Privacy policy for Pain001 website and services.",
+    "description": "From ERP export to pain.002 acknowledgement to camt.053 reconciliation — designing batch, streaming, and API payment pipelines around validation gates that stop rejections.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -454,13 +454,13 @@
       "payments",
       "python"
     ],
-    "title": "Pain001 Privacy Policy",
-    "url": "http://127.0.0.1:8000/privacy/",
-    "wordCount": 10
+    "title": "Payment Initiation End to End with Pain001",
+    "url": "https://pain001.com/payments/",
+    "wordCount": 520
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Topic tags.",
+    "description": "No cookies, no analytics, no tracking. The website stores only your theme choice locally, and the Pain001 software processes all payment data on your own infrastructure.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -471,13 +471,13 @@
       "payments",
       "python"
     ],
-    "title": "Tags",
-    "url": "http://127.0.0.1:8000/tags/",
-    "wordCount": 8
+    "title": "Privacy: This Site Collects Nothing",
+    "url": "https://pain001.com/privacy/",
+    "wordCount": 145
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Terms of service for Pain001 software and website.",
+    "description": "Every page tagged and grouped — ISO 20022 versions, SEPA rulebooks, SWIFT migration, AI tooling. Pick a topic and follow the thread.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -488,13 +488,13 @@
       "payments",
       "python"
     ],
-    "title": "Pain001 Terms of Service",
-    "url": "http://127.0.0.1:8000/terms/",
-    "wordCount": 11
+    "title": "Browse Pain001 Topics",
+    "url": "https://pain001.com/tags/",
+    "wordCount": 29
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Thank you for visiting Pain001.",
+    "description": "Apache-2.0/MIT licensing for the suite, the as-is warranty disclaimer, content reuse rules, and why nothing here is financial or regulatory advice.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -505,8 +505,25 @@
       "payments",
       "python"
     ],
-    "title": "Thank You",
-    "url": "http://127.0.0.1:8000/thanks/",
-    "wordCount": 9
+    "title": "Terms: Licences, Warranty and Fair Use",
+    "url": "https://pain001.com/terms/",
+    "wordCount": 175
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "Your message is on its way. Meanwhile: install Pain001, read the 2026 ISO 20022 briefing, or star the project on GitHub.",
+    "locale": "en_GB",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Thank You — Message Received",
+    "url": "https://pain001.com/thanks/",
+    "wordCount": 67
   }
 ]

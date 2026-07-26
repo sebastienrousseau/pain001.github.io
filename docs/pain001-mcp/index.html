@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="en-GB" data-theme="light">
+<html lang="en-GB">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta itemprop="datePublished" content="Sun, 26 Jul 2026 08:00:00 +0000" id="date" />
     <meta itemprop="dateModified" content="Sun, 26 Jul 2026 08:00:00 +0000" id="last-modified" />
-    <title>pain001-mcp: Model Context Protocol Server for AI Payment Tools</title>
+    <title>pain001-mcp: The MCP Server for ISO 20022 Payments</title>
 
-    &lt;meta name=&quot;author&quot; content=&quot;contact@pain001.com (Sebastien Rousseau)&quot;&gt;
-&lt;meta name=&quot;description&quot; content=&quot;Exposing the Pain001 payment library as 17 first-class Model Context Protocol (MCP) agent tools for Claude Desktop, Cursor, and LLMs.&quot;&gt;
-&lt;meta name=&quot;keywords&quot; content=&quot;pain001, ISO 20022, payments, SWIFT, SEPA, banking, Python, MCP, LSP&quot;&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;
-    
+    <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
+<meta name="description" content="17 Model Context Protocol tools for AI agents — validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio.">
+<meta name="keywords" content="pain001-mcp, MCP server payments, ISO 20022 AI agent, Model Context Protocol finance, Claude payment tools, agentic payments, pain.001 generation AI">
+<meta property="og:image" content="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />
+    <meta property="og:image:alt" content="An AI assistant conversation generating a validated ISO 20022 payment file through the pain001-mcp Model Context Protocol server, entirely on the user&#x27;s own machine." />
     <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
-    &lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot;&gt;
-&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black-translucent&quot;&gt;
-&lt;meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;pain001-mcp: Model Context Protocol Server for AI Payment Tools&quot;&gt;
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="pain001-mcp: The MCP Server for ISO 20022 Payments">
 
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self' ; script-src 'self' ; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
     <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -26,149 +27,315 @@
 
     <link rel="alternate" href="https://pain001.com/pain001-mcp/" hreflang="en" />
     
-    <link rel="icon" type="image/x-icon" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" sizes="16x16 32x32" />
+    <link rel="icon" type="image/svg+xml" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" sizes="any" />
     <link rel="apple-touch-icon" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />
     <link rel="manifest" href="/manifest.json" />
     <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
-    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)" />
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
     <meta name="color-scheme" content="light dark" />
 
-    <link rel="stylesheet" href="/_csp/f9d071912a009078.css" integrity="sha384-2rcJ5U6YxohhegmZuMg9Lo9vm5Y8hrkI13z5Qjl9W7oIreuoBzuryagHhOPHuwtZ" crossorigin="anonymous">
-    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="http://127.0.0.1:8000/atom.xml"/>
-  <link rel="alternate" type="application/feed+json" title="JSON Feed" href="http://127.0.0.1:8000/feed.json"/>
+    <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/_csp/0cb610432f0444f4.css" integrity="sha384-rjyd+HyLALbp7TzwDxylMYbhw2f9UTu+clqKZcQ+RmXj4YiguHlIUrd1Jww1XTsB" crossorigin="anonymous">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
+  <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<meta name="mobile-web-app-capable" content="yes"><meta name="description" content="Home &amp;rsaquo; Documentation pain001-mcp: Model Context Protocol Server for AI Payment Tools Exposing the Pain001 payment library as 17 first-class Model">
-<meta property="og:title" content="pain001-mcp: Model Context Protocol Server for AI Payment Tools">
-<meta property="og:description" content="Home &amp;rsaquo; Documentation pain001-mcp: Model Context Protocol Server for AI Payment Tools Exposing the Pain001 payment library as 17 first-class Model">
+<meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="pain001-mcp: The MCP Server for ISO 20022 Payments">
+<meta property="og:description" content="Home pain001-mcp: The MCP Server for ISO 20022 Payments AI agents pain001-mcp: The MCP Server for ISO 20022 Payments Seventeen read-only tools that let AI">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://pain001.com/pain001-mcp/">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="pain001-mcp: Model Context Protocol Server for AI Payment Tools">
-<meta name="twitter:description" content="Home &amp;rsaquo; Documentation pain001-mcp: Model Context Protocol Server for AI Payment Tools Exposing the Pain001 payment library as 17 first-class Model">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","description":"Home &rsaquo; Documentation pain001-mcp: Model Context Protocol Server for AI Payment Tools Exposing the Pain001 payment library as 17 first-class Model","headline":"pain001-mcp: Model Context Protocol Server for AI Payment Tools","inLanguage":"en-GB","mainEntityOfPage":{"@id":"http://127.0.0.1:8000/pain001-mcp/index.html","@type":"WebPage"},"publisher":{"@type":"Organization","name":"MySsgSite"},"url":"http://127.0.0.1:8000/pain001-mcp/index.html"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://127.0.0.1:8000/","name":"Home","position":1},{"@type":"ListItem","item":"http://127.0.0.1:8000/pain001-mcp","name":"pain001 mcp","position":2}]}</script>
-<link rel="canonical" href="http://127.0.0.1:8000/pain001-mcp/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
+<meta name="twitter:title" content="pain001-mcp: The MCP Server for ISO 20022 Payments">
+<meta name="twitter:description" content="Home pain001-mcp: The MCP Server for ISO 20022 Payments AI agents pain001-mcp: The MCP Server for ISO 20022 Payments Seventeen read-only tools that let AI">
+<meta name="twitter:image" content="https://cloudcdn.pro/pain001/v1/logos/pain001.svg">
+<link rel="canonical" href="https://pain001.com/pain001-mcp/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
 </head>
 
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="progress" aria-hidden="true"></div>
 
-    <header class="navbar" role="banner">
-      <div class="container nav-inner">
+    <header class="navbar">
+      <div class="wrap nav-inner">
         <a href="/" class="brand">
-          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="Pain001 Logo" width="36" height="36" />
+          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="Pain001 logo" width="30" height="30" />
           <span>Pain001</span>
         </a>
 
-        <nav role="navigation" aria-label="Primary Navigation">
-          <ul class="nav-links">
-            <li><a href="/documentation">Documentation</a></li>
-            <li><a href="/installation">Installation</a></li>
-            <li><a href="/pain001-mcp">MCP Server</a></li>
-            <li><a href="/pain001-lsp">LSP Server</a></li>
-            <li><a href="/2026-iso20022-migration-trends">2026 Trends</a></li>
-            <li><a href="/competitors-comparison">Competitors</a></li>
-            <li><a href="/faqs">FAQs</a></li>
+        <nav aria-label="Primary">
+          <input type="checkbox" id="nav-toggle" class="nav-toggle-input" />
+          <label for="nav-toggle" class="nav-toggle-label">
+            <span aria-hidden="true">&#9776;</span>
+            <span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">Menu</span>
+          </label>
+          <ul class="nav-links" id="primary-menu">
+            <li><a href="/documentation/">Docs</a></li>
+            <li><a href="/installation/">Install</a></li>
+            <li><a href="/pain001-mcp/">MCP</a></li>
+            <li><a href="/pain001-lsp/">LSP</a></li>
+            <li><a href="/2026-iso20022-migration-trends/">2026 Briefing</a></li>
+            <li><a href="/competitors-comparison/">Compare</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/faqs/">FAQs</a></li>
           </ul>
         </nav>
 
-        <button id="themeToggle" class="theme-btn" aria-label="Toggle color theme">🌙 Dark</button>
+        <div class="nav-right">
+          <button id="themeToggle" class="theme-btn" type="button" aria-pressed="false" aria-label="Switch to dark theme">
+            <span aria-hidden="true" id="themeIcon">◐</span> <span id="themeLabel">Dark</span>
+          </button>
+          <a href="/installation/" class="nav-cta">Get started&nbsp;&rsaquo;</a>
+        </div>
       </div>
     </header>
 
-    <main id="main-content" role="main" class="container">
+    <main id="main-content">
       <header class="page-header">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a> &rsaquo; <span>Documentation</span>
-        </nav>
-        <h1 class="page-title">pain001-mcp: Model Context Protocol Server for AI Payment Tools</h1>
-        <p class="page-description">Exposing the Pain001 payment library as 17 first-class Model Context Protocol (MCP) agent tools for Claude Desktop, Cursor, and LLMs.</p>
+        <div class="wrap">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li aria-current="page">pain001-mcp: The MCP Server for ISO 20022 Payments</li>
+            </ol>
+          </nav>
+          <p class="eyebrow">AI agents</p>
+          <h1 class="page-title">pain001-mcp: The MCP Server for ISO 20022 Payments</h1>
+          <p class="deck">Seventeen read-only tools that let AI agents validate, migrate, convert, and generate ISO 20022 payment files — locally, over stdio.</p>
+          <div class="article-meta"><span>3 min read</span>
+            <span>Last reviewed <time datetime="2026-07-26">26 July 2026</time></span>
+          </div>
+        </div>
       </header>
 
-      <article class="content-body">
-        &lt;div lang=&quot;en&quot;&gt;&lt;h1&gt;pain001-mcp: Model Context Protocol Server&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;pain001-mcp&lt;/code&gt;&lt;/strong&gt; is an open-source Model Context Protocol (MCP) server that exposes the &lt;code&gt;pain001&lt;/code&gt; ISO 20022 payment library as &lt;strong&gt;17 first-class agent tools&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;AI assistants and autonomous agents (such as Claude Desktop, Cursor, and custom FastMCP clients) can discover and invoke payment validation, charset transliteration, schema migration, and XML file generation directly within conversational workflows.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h2&gt;Key Capabilities &amp; Tools&lt;/h2&gt;
-&lt;div class=&quot;table-responsive&quot;&gt;&lt;table class=&quot;table&quot;&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&quot;left&quot;&gt;Tool Name&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;&lt;code&gt;generate_xml_string&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;Converts payment records into XSD-validated ISO 20022 &lt;code&gt;pain.001&lt;/code&gt; or &lt;code&gt;pain.008&lt;/code&gt; XML string.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;&lt;code&gt;validate_identifier&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;Validates IBANs (ISO 13616 / mod-97 check) and BIC codes (ISO 9362).&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;&lt;code&gt;migrate_records&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;Round-trips and migrates payment records across schema versions (e.g. &lt;code&gt;pain.001.001.03&lt;/code&gt; -&gt; &lt;code&gt;pain.001.001.09&lt;/code&gt; -&gt; &lt;code&gt;.12&lt;/code&gt;).&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;&lt;code&gt;sanitize_to_iso20022_charset&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;Transliterates non-ISO 20022 Latin charset characters into valid SWIFT/SEPA character sets.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;&lt;code&gt;parse_file&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;Reads CSV, Excel, SQLite, or JSON files and returns structured payment dictionaries.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;&lt;code&gt;load_schema&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;Returns the official JSON Schema definition for any supported message type.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;&lt;code&gt;get_supported_messages&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot; class=&quot;text-left&quot;&gt;Lists all 20+ supported ISO 20022 &lt;code&gt;pain.001&lt;/code&gt; and &lt;code&gt;pain.008&lt;/code&gt; message versions.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;&lt;/div&gt;
-&lt;hr /&gt;
-&lt;h2&gt;Quick Start &amp; Registration&lt;/h2&gt;
-&lt;h3&gt;Installation&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#8fa1b3;&quot;&gt;pip&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; install pain001-mcp
-&lt;/span&gt;&lt;/pre&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Register with Claude Desktop&lt;/h3&gt;
-&lt;p&gt;Add the following snippet to your &lt;code&gt;claude_desktop_config.json&lt;/code&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;{
-&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &quot;&lt;/span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;mcpServers&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&quot;: {
-&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &quot;&lt;/span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;pain001&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&quot;: {
-&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;      &quot;&lt;/span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;command&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&quot;: &quot;&lt;/span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;python&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&quot;,
-&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;      &quot;&lt;/span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;args&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&quot;: [&quot;&lt;/span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;-m&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&quot;, &quot;&lt;/span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;pain001_mcp&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&quot;]
-&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    }
-&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  }
-&lt;/span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
-&lt;/span&gt;&lt;/pre&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-      </article>
+      <div class="wrap content-shell">
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>Contents</h2><ol><li><a href="#01-the-17-tools">The 17 tools</a></li><li><a href="#02-registration">Registration</a></li><li><a href="#03-design-decisions-that-matter-in-a-payments-context">Design decisions that matter in a payments context</a></li><li><a href="#faq">FAQ</a></li></ol></nav>
+          <div lang="en"><p><strong><code>pain001-mcp</code> v0.0.57</strong> exposes the Pain001 suite to AI agents as <strong>17 Model Context Protocol tools</strong>. Claude Desktop, Claude Code, Cursor, and any MCP-compatible orchestrator can validate IBANs, migrate message versions, convert SWIFT MT101, and generate schema-validated <code>pain.001</code> XML — inside a conversation, on your own machine.</p>
+<p>Card networks and PSPs have built agentic <em>checkout</em> rails. The corporate payment-file layer — where credit transfers are actually initiated — had no agent interface. This server fills that gap. Payment data never leaves your machine: the transport is stdio, and every tool is annotated read-only and idempotent, so an agent can explore safely without side effects.</p>
+<hr />
+<h2 id="01-the-17-tools">01. The 17 tools<a class="heading-anchor" href="#01-the-17-tools" aria-label="Link to section: 01. The 17 tools">#</a></h2>
+<div class="table-responsive"><table class="table">
+<thead>
+<tr>
+<th align="left">Tool</th>
+<th align="left">What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Tool" align="left" class="text-left"><code>list_message_types</code></td>
+<td data-label="What it does" align="left" class="text-left">List the 11 supported message definitions with human-readable names.</td>
+</tr>
+<tr>
+<td data-label="Tool" align="left" class="text-left"><code>get_required_fields</code></td>
+<td data-label="What it does" align="left" class="text-left">Return the required input fields for a message type.</td>
+</tr>
+<tr>
+<td data-label="Tool" align="left" class="text-left"><code>get_input_schema</code></td>
+<td data-label="What it does" align="left" class="text-left">Return the full JSON Schema for a message type.</td>
+</tr>
+<tr>
+<td data-label="Tool" align="left" class="text-left"><code>validate_records</code></td>
+<td data-label="What it does" align="left" class="text-left">Validate flat payment records against the input schema.</td>
+</tr>
+<tr>
+<td data-label="Tool" align="left" class="text-left"><code>validate_identifier</code></td>
+<td data-label="What it does" align="left" class="text-left">Check a single IBAN (ISO 13616 mod-97) or BIC (ISO 9362).</td>
+</tr>
+<tr>
+<td data-label="Tool" align="left" class="text-left"><code>generate_message</code></td>
+<td data-label="What it does" align="left" class="text-left">Generate XSD-validated pain XML from in-memory records.</td>
+</tr>
+<tr>
+<td data-label="Tool" align="left" class="text-left"><code>generate_message_async</code></td>
+<td data-label="What it does" align="left" class="text-left">Off-event-loop generation for large batches.</td>
+</tr>
+<tr>
+<td data-label="Tool" align="left" class="text-left"><code>generate_message_from_file</code></td>
+<td data-label="What it does" align="left" class="text-left">Generate XML from a CSV file on disk.</td>
+</tr>
+<tr>
+<td data-label="Tool" align="left" class="text-left"><code>list_supported_formats</code></td>
+<td data-label="What it does" align="left" class="text-left">List loadable on-disk formats (CSV, SQLite, JSON, JSONL, Parquet).</td>
+</tr>
+<tr>
+<td data-label="Tool" align="left" class="text-left"><code>parse_camt053</code></td>
+<td data-label="What it does" align="left" class="text-left">Parse a camt.053 bank statement XML file.</td>
+</tr>
+<tr>
+<td data-label="Tool" align="left" class="text-left"><code>parse_pain002</code></td>
+<td data-label="What it does" align="left" class="text-left">Parse a pain.002 payment status report.</td>
+</tr>
+<tr>
+<td data-label="Tool" align="left" class="text-left"><code>inspect_template</code></td>
+<td data-label="What it does" align="left" class="text-left">Show the CSV column headers of a bundled template.</td>
+</tr>
+<tr>
+<td data-label="Tool" align="left" class="text-left"><code>validate_payment_scheme</code></td>
+<td data-label="What it does" align="left" class="text-left">Enforce a scheme rulebook: SEPA SCT, Instant, SDD Core, B2B, or cross-border.</td>
+</tr>
+<tr>
+<td data-label="Tool" align="left" class="text-left"><code>migrate_records</code></td>
+<td data-label="What it does" align="left" class="text-left">Migrate records between pain.001 versions (e.g. <code>.03</code> → <code>.09</code>).</td>
+</tr>
+<tr>
+<td data-label="Tool" align="left" class="text-left"><code>validate_xml_against_schema</code></td>
+<td data-label="What it does" align="left" class="text-left">Validate raw XML against the bundled official XSD.</td>
+</tr>
+<tr>
+<td data-label="Tool" align="left" class="text-left"><code>sanitize_to_iso20022_charset</code></td>
+<td data-label="What it does" align="left" class="text-left">Transliterate text to the ISO 20022 Latin character set.</td>
+</tr>
+<tr>
+<td data-label="Tool" align="left" class="text-left"><code>convert_mt101</code></td>
+<td data-label="What it does" align="left" class="text-left">Convert a legacy SWIFT MT101 message into pain.001 records.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The server also publishes a <code>pain001://schema/{message_type}</code> resource and a <code>build_payment_batch</code> prompt. Shorthand aliases resolve sensibly: <code>pain.001</code> → <code>pain.001.001.09</code>, <code>pain.008</code> → <code>pain.008.001.02</code>.</p>
+<hr />
+<h2 id="02-registration">02. Registration<a class="heading-anchor" href="#02-registration" aria-label="Link to section: 02. Registration">#</a></h2>
+<pre><code class="language-bash"><pre style="background-color:#2b303b;">
+<span style="color:#8fa1b3;">pip</span><span style="color:#c0c5ce;"> install pain001-mcp
+</span></pre>
+</code></pre>
+<p><strong>Claude Desktop</strong> (<code>claude_desktop_config.json</code>):</p>
+<pre><code class="language-json"><pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">{
+</span><span style="color:#c0c5ce;">  "</span><span style="color:#a3be8c;">mcpServers</span><span style="color:#c0c5ce;">": {
+</span><span style="color:#c0c5ce;">    "</span><span style="color:#a3be8c;">pain001</span><span style="color:#c0c5ce;">": {
+</span><span style="color:#c0c5ce;">      "</span><span style="color:#a3be8c;">command</span><span style="color:#c0c5ce;">": "</span><span style="color:#a3be8c;">pain001-mcp</span><span style="color:#c0c5ce;">"
+</span><span style="color:#c0c5ce;">    }
+</span><span style="color:#c0c5ce;">  }
+</span><span style="color:#c0c5ce;">}
+</span></pre>
+</code></pre>
+<p><strong>Claude Code:</strong></p>
+<pre><code class="language-bash"><pre style="background-color:#2b303b;">
+<span style="color:#8fa1b3;">claude</span><span style="color:#c0c5ce;"> mcp add pain001 -- pain001-mcp
+</span></pre>
+</code></pre>
+<p>A Docker image is published as <code>ghcr.io/sebastienrousseau/pain001-mcp</code> with build provenance attestation, and the server is listed in the MCP registry as <code>io.github.sebastienrousseau/pain001-mcp</code>.</p>
+<hr />
+<h2 id="03-design-decisions-that-matter-in-a-payments-context">03. Design decisions that matter in a payments context<a class="heading-anchor" href="#03-design-decisions-that-matter-in-a-payments-context" aria-label="Link to section: 03. Design decisions that matter in a payments context">#</a></h2>
+<ul>
+<li><strong>Read-only by contract.</strong> All 17 tools carry MCP <code>ToolAnnotations</code> with <code>readOnlyHint=true</code>, <code>destructiveHint=false</code>, and <code>idempotentHint=true</code>. The server never writes to your filesystem.</li>
+<li><strong>Errors are data, not crashes.</strong> Tools return structured <code>{"error": ...}</code> payloads instead of raising, so agent loops degrade gracefully.</li>
+<li><strong>Local-only transport.</strong> stdio only — no network listener, no credentials, no payment data leaving the host.</li>
+<li><strong>Validated output or nothing.</strong> <code>generate_message</code> runs the same JSON Schema → scheme rulebook → XSD pipeline as the CLI; an agent cannot produce a malformed file.</li>
+</ul>
+<p>Note the distinction: <code>pain001 mcp</code> (the core library's built-in server) exposes a minimal 5-tool surface. The full 17-tool surface documented here is the standalone <code>pain001-mcp</code> package.</p>
+<hr />
+<h2 id="faq">FAQ<a class="heading-anchor" href="#faq" aria-label="Link to section: FAQ">#</a></h2>
+<p><strong>Can an AI agent actually submit payments with this?</strong></p>
+<p>No. The server generates and validates payment <em>files</em>; it has no bank connectivity and no tool with side effects beyond returning XML as text. Submission to your bank channel remains a human-controlled step — by design.</p>
+<p><strong>Does it work with agentic-payment protocols like AP2?</strong></p>
+<p>It complements them. AP2 and similar protocols handle mandates and authorisation for agent-initiated commerce; <code>pain001-mcp</code> handles the ISO 20022 file layer that corporate banking channels actually consume. The related <a href="https://github.com/sebastienrousseau/ap2-iso20022">ap2-iso20022</a> project bridges the two.</p>
+<p><strong>Which clients are tested?</strong></p>
+<p>Any MCP client speaking stdio works. Claude Desktop, Claude Code, and Cursor configurations are documented in the <a href="https://github.com/sebastienrousseau/pain001-mcp">repository</a>, and CI runs the official MCP Inspector against every release.</p>
+</div>
+        </article>
+      </div>
     </main>
 
-    <footer class="footer" role="contentinfo">
-      <div class="container footer-inner">
-        <div>
-          &copy; 2023 - 2026 Sebastien Rousseau. Dual-licensed under Apache-2.0 / MIT.
+    <button class="totop" id="toTop" type="button" hidden aria-label="Back to top">&uarr;</button>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-brand">Pain001</p>
+            <p class="footer-tagline">Open-source ISO 20022 payment initiation. Validated files, local processing, no lock-in.</p>
+          </div>
+          <div>
+            <h2 class="footer-heading">Documentation</h2>
+            <ul class="footer-links">
+              <li><a href="/documentation/">Technical reference</a></li>
+              <li><a href="/installation/">Installation &amp; Docker</a></li>
+              <li><a href="/payments/">Payment pipelines</a></li>
+              <li><a href="/glossary/">Glossary</a></li>
+              <li><a href="/faqs/">FAQs</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Ecosystem</h2>
+            <ul class="footer-links">
+              <li><a href="/pain001-mcp/">pain001-mcp · AI agents</a></li>
+              <li><a href="/pain001-lsp/">pain001-lsp · editors</a></li>
+              <li><a href="/pain001-loader-mt101/">MT101 loader</a></li>
+              <li><a href="/pain001-loader-xlsx/">Excel loader</a></li>
+              <li><a href="https://github.com/sebastienrousseau/pain001" rel="external">GitHub</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Research &amp; trust</h2>
+            <ul class="footer-links">
+              <li><a href="/2026-iso20022-migration-trends/">2026 briefing</a></li>
+              <li><a href="/competitors-comparison/">Comparison</a></li>
+              <li><a href="/architecture-and-patents/">Architecture &amp; patents</a></li>
+              <li><a href="/security.txt">security.txt</a></li>
+              <li><a href="/sbom.cdx.json">SBOM</a> · <a href="/llms.txt">llms.txt</a> · <a href="/rss.xml">RSS</a></li>
+            </ul>
+          </div>
         </div>
-        <div style="display: flex; gap: 1.5rem;">
-          <a href="/privacy" style="color: var(--text-faint);">Privacy</a>
-          <a href="/terms" style="color: var(--text-faint);">Terms</a>
-          <a href="/contact" style="color: var(--text-faint);">Contact</a>
+        <div class="footer-legal">
+          <p>&copy; 2023&ndash;2026 Sebastien Rousseau. Core dual-licensed Apache-2.0 / MIT; companion packages Apache-2.0.</p>
+          <ul>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
         </div>
       </div>
     </footer>
 
-    <script src="/_csp/a3c8a86f4e549ac9.js" integrity="sha384-L14NXDyxXDE8AKmRkzKiiP/FSgEJJjhTCToY7JbosvqxqC4ld54O9YHziIcy/9Wq" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://pain001.com/pain001-mcp/",
+          "url": "https://pain001.com/pain001-mcp/",
+          "name": "pain001-mcp: The MCP Server for ISO 20022 Payments",
+          "description": "17 Model Context Protocol tools for AI agents — validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio.",
+          "inLanguage": "en-GB",
+          "dateModified": "2026-07-26",
+          "isPartOf": { "@id": "https://pain001.com/#website" },
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pain001.com/" },
+            { "@type": "ListItem", "position": 2, "name": "pain001-mcp: The MCP Server for ISO 20022 Payments" }
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pain001.com/#organization",
+          "name": "Pain001",
+          "url": "https://pain001.com/",
+          "logo": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+          "founder": { "@type": "Person", "name": "Sebastien Rousseau", "url": "https://sebastienrousseau.com" },
+          "sameAs": [
+            "https://github.com/sebastienrousseau/pain001",
+            "https://pypi.org/project/pain001/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pain001.com/#website",
+          "url": "https://pain001.com/",
+          "name": "Pain001",
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        }
+      ]
+    }
+    </script>
+
+    <script src="/_csp/f2c95fcc31deaf76.js" integrity="sha384-iWQJOupnVuxIa/IlcB7Pnddhpt0eKfiwGaXyMJD0gha8sb1NQBab2d2PNDIt0WJj" crossorigin="anonymous"></script>
   
 <!-- SSG Search Widget -->
 <div id="ssg-search-widget">

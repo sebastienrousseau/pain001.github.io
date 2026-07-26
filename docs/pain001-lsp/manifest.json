@@ -1,6 +1,6 @@
 {
   "background_color": "#ffffff",
-  "description": "Language Server Protocol server providing real-time diagnostics, schema validation, and autocomplete for payment JSON au",
+  "description": "Language Server Protocol support for payment JSON: live schema validation, IBAN/BIC diagnostics, completion, hover docs,",
   "display": "standalone",
   "icons": [
     {

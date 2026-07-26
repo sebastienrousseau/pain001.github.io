@@ -1,6 +1,6 @@
 {
   "background_color": "#ffffff",
-  "description": "Direct Excel (.xlsx / .xlsm) loader plugin for Pain001 featuring numeric IBAN leading-zero safety guard and streaming.",
+  "description": "Read payment batches straight from .xlsx/.xlsm with an IBAN safety guard that stops Excel's numeric coercion corrupting ",
   "display": "standalone",
   "icons": [
     {

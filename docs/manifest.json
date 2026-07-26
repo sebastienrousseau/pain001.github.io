@@ -1,6 +1,6 @@
 {
   "background_color": "#ffffff",
-  "description": "Automate ISO 20022 Customer Credit Transfer & Direct Debit initiation file generation from CSV, Excel, SQLite, JSON, Parquet, and SWIFT MT101.",
+  "description": "Generate schema-validated ISO 20022 pain.001 and pain.008 XML from CSV, Excel, SQLite, JSON, Parquet, or SWIFT MT101 — with AI-agent MCP tools and editor LSP support.",
   "display": "standalone",
   "icons": [
     {

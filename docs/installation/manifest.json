@@ -1,6 +1,6 @@
 {
   "background_color": "#ffffff",
-  "description": "Complete installation options for Pain001 suite including PyPI, optional extras, companion loaders, Docker, and Kubernet",
+  "description": "Install the Pain001 suite on Python 3.10–3.12 via pip or Docker, add Excel and MT101 loaders, and produce your first ban",
   "display": "standalone",
   "icons": [
     {

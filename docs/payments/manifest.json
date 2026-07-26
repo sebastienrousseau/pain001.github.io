@@ -1,6 +1,6 @@
 {
   "background_color": "#ffffff",
-  "description": "Guide to automated payment initiation, validation, and processing using Pain001.",
+  "description": "From ERP export to pain.002 acknowledgement to camt.053 reconciliation — designing batch, streaming, and API payment pip",
   "display": "standalone",
   "icons": [
     {

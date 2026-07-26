@@ -1,6 +1,6 @@
 {
   "background_color": "#ffffff",
-  "description": "Complete API reference for Pain001 CLI, Python library, REST API, scheme validators, streaming mode, and input normaliza",
+  "description": "Complete reference for pain001 v0.0.56 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rul",
   "display": "standalone",
   "icons": [
     {

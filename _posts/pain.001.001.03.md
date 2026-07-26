@@ -1,7 +1,6 @@
 ---
-
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "Pain001 ISO 20022 Payment Initiation Suite"
+banner_alt: "The ISO 20022 pain.001.001.03 message structure — group header, payment information, and credit transfer transaction blocks rendered as validated XML."
 banner_height: 500
 banner_width: 1200
 banner: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
@@ -11,17 +10,17 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.03 Customer Credit Transfer Initiation."
+description: "pain.001.001.03 — the SEPA & CGI workhorse version. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
 icon: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
 id: "https://pain001.com/pain.001.001.03/"
-image_alt: "Logo of Pain001 Suite"
+image_alt: "The ISO 20022 pain.001.001.03 message structure — group header, payment information, and credit transfer transaction blocks rendered as validated XML."
 image_height: 120
 image_width: 120
 image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
-keywords: "pain001, ISO 20022, payments, SWIFT, SEPA, banking, Python, MCP, LSP"
+keywords: "pain.001.001.03, pain.001.001.03 XSD, pain.001.001.03 example, customer credit transfer initiation, pain.001 versions, ISO 20022 message version"
 language: en-GB
 layout: page
 locale: en_GB
@@ -38,21 +37,21 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "ISO 20022 Payment Initiation & Transaction Orchestration Suite"
+subtitle: "pain.001.001.03 — the version SEPA and CGI standardised on. Element structure, version notes, and lossless migration."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "0, 132, 199"
-title: "pain.001.001.03 ISO 20022 Message Reference"
+title: "pain.001.001.03 Reference: Generate and Validate"
 url: "https://pain001.com/pain.001.001.03/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/pain.001.001.03/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.47)"
-item_description: "Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.03 Customer Credit Transfer Initiation."
+item_description: "pain.001.001.03 — the SEPA & CGI workhorse version. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001."
 item_guid: "https://pain001.com/pain.001.001.03/rss.xml"
 item_link: "https://pain001.com/pain.001.001.03/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "pain.001.001.03 ISO 20022 Message Reference"
+item_title: "pain.001.001.03 Reference: Generate and Validate"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -64,16 +63,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "pain.001.001.03 ISO 20022 Message Reference"
+apple-mobile-web-app-title: "pain.001.001.03 Reference: Generate and Validate"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: @wwdseb
-twitter_description: "Technical specification, XSD schema rules, and element definitions for ISO 20022 pain.001.001.03 Customer Credit Transfer Initiation."
+twitter_description: "pain.001.001.03 — the SEPA & CGI workhorse version. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001."
 twitter_image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: @wwdseb
-twitter_title: "pain.001.001.03 ISO 20022 Message Reference"
+twitter_title: "pain.001.001.03 Reference: Generate and Validate"
 twitter_url: "https://pain001.com/pain.001.001.03/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: @wwdseb
@@ -83,20 +82,39 @@ site_last_updated: 2026-07-26
 site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Atom, JSON-LD"
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
+eyebrow: "Message reference"
+excerpt: "The reference page for pain.001.001.03, the version SEPA and CGI standardised on: what distinguishes this Customer Credit Transfer Initiation version, the shared GrpHdr/PmtInf/CdtTrfTxInf element skeleton, generation and inspection commands, and how Pain001's VersionMapper migrates records to and from any of the ten supported pain.001 versions."
+last_reviewed: "2026-07-26"
 
 ---
 
-# pain.001.001.03 ISO 20022 Message Reference
+`pain.001.001.03` (2009) is the version the world standardised on. The SEPA credit transfer implementation guidelines and the CGI-MP corporate templates were built against it, SAP and Oracle ERP payment formats target it, and most bank corporate channels still accept it today. If your bank documentation says simply “pain.001”, it usually means this.
 
-`pain.001.001.03` is the Customer Credit Transfer Initiation version specification.
+## What to know about this version
 
-## Key Element Tree
-- `<GrpHdr>` (Group Header): Control information, message identifier, creation date/time, number of transactions (`NbOfTxs`), and control sum (`CtrlSum`).
-- `<PmtInf>` (Payment Information): Debtor details, execution date, payment method, charge bearer, and debtor account/agent.
-- `<CdtTrfTxInf>` (Credit Transfer Transaction Information): Creditor details, instructed amount, currency, creditor account (IBAN), creditor agent (BIC), and remittance information.
+- Financial institutions are identified with `<BIC>` — note that from version 9 the element is renamed `<BICFI>`, a frequent cause of rejection when upgrading.
+- Postal addresses are commonly supplied unstructured here; when regenerating for CBPR+ flows, migrate to a structured or hybrid address in a later version.
+- The natural migration target is `pain.001.001.09`; Pain001's `migrate_records` handles the element renames for you.
 
-## Usage with Pain001
+## Element structure (all versions share this skeleton)
+
+- **`<GrpHdr>` Group Header** — message id, creation timestamp, `NbOfTxs`, `CtrlSum`, initiating party. Pain001 recomputes the control totals from validated records.
+- **`<PmtInf>` Payment Information** — debtor, debtor account and agent, requested execution date, payment method, charge bearer; one block can carry many transactions.
+- **`<CdtTrfTxInf>` Credit Transfer Transaction** — amount and currency, creditor, creditor account and agent, remittance information, end-to-end reference.
+
+## Generate and inspect
 
 ```bash
-pain001 -t pain.001.001.03 -d payments.csv -o output_03.xml
+pain001 init pain.001.001.03 -o work/         # scaffold a starter CSV
+pain001 inspect pain.001.001.03               # list required + optional fields
+pain001 -t pain.001.001.03 -d payments.csv -o out/ --dry-run
 ```
+
+Records migrate losslessly between supported versions:
+
+```python
+from pain001.migration import VersionMapper
+records_v9 = VersionMapper("pain.001.001.03", "pain.001.001.09").migrate(records)
+```
+
+See the full [version catalogue](/documentation/), or the [glossary](/glossary/) for the vocabulary used here.

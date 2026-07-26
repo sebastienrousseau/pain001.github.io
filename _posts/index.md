@@ -1,7 +1,6 @@
 ---
-
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "Pain001 ISO 20022 Payment Initiation Suite"
+banner_alt: "A terminal rendering a validated ISO 20022 pain.001 payment file — the Pain001 suite turning everyday spreadsheets and exports into bank-ready XML."
 banner_height: 500
 banner_width: 1200
 banner: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
@@ -11,17 +10,17 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Automate ISO 20022 Customer Credit Transfer & Direct Debit initiation file generation from CSV, Excel, SQLite, JSON, Parquet, and SWIFT MT101."
+description: "Generate schema-validated ISO 20022 pain.001 and pain.008 XML from CSV, Excel, SQLite, JSON, Parquet, or SWIFT MT101 — with AI-agent MCP tools and editor LSP support."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
 icon: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
 id: "https://pain001.com/"
-image_alt: "Logo of Pain001 Suite"
+image_alt: "A terminal rendering a validated ISO 20022 pain.001 payment file — the Pain001 suite turning everyday spreadsheets and exports into bank-ready XML."
 image_height: 120
 image_width: 120
 image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
-keywords: "pain001, ISO 20022, payments, SWIFT, SEPA, banking, Python, MCP, LSP"
+keywords: "pain001, ISO 20022, pain.001, payment initiation, SEPA XML generator, credit transfer, pain.008, Python, MCP server, LSP, SWIFT MT101, CBPR+, XSD validation"
 language: en-GB
 layout: index
 locale: en_GB
@@ -38,21 +37,21 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "ISO 20022 Payment Initiation & Transaction Orchestration Suite"
+subtitle: "The open-source suite that turns the payment data you already have into schema-validated ISO 20022 XML — proven clean before your bank ever sees it."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "0, 132, 199"
-title: "Pain001: ISO 20022 Payment Initiation & AI Transaction Suite"
+title: "Pain001: Open-Source ISO 20022 Payment Initiation Suite"
 url: "https://pain001.com/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.47)"
-item_description: "Automate ISO 20022 Customer Credit Transfer & Direct Debit initiation file generation from CSV, Excel, SQLite, JSON, Parquet, and SWIFT MT101."
+item_description: "Generate schema-validated ISO 20022 pain.001 and pain.008 XML from CSV, Excel, SQLite, JSON, Parquet, or SWIFT MT101 — with AI-agent MCP tools and editor LSP support."
 item_guid: "https://pain001.com/rss.xml"
 item_link: "https://pain001.com/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: ISO 20022 Payment Initiation & AI Transaction Suite"
+item_title: "Pain001: Open-Source ISO 20022 Payment Initiation Suite"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -64,16 +63,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: ISO 20022 Payment Initiation & AI Transaction Suite"
+apple-mobile-web-app-title: "Pain001: Open-Source ISO 20022 Payment Initiation Suite"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: @wwdseb
-twitter_description: "Automate ISO 20022 Customer Credit Transfer & Direct Debit initiation file generation from CSV, Excel, SQLite, JSON, Parquet, and SWIFT MT101."
+twitter_description: "Generate schema-validated ISO 20022 pain.001 and pain.008 XML from CSV, Excel, SQLite, JSON, Parquet, or SWIFT MT101 — with AI-agent MCP tools and editor LSP support."
 twitter_image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: @wwdseb
-twitter_title: "Pain001: ISO 20022 Payment Initiation & AI Transaction Suite"
+twitter_title: "Pain001: Open-Source ISO 20022 Payment Initiation Suite"
 twitter_url: "https://pain001.com/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: @wwdseb
@@ -83,44 +82,23 @@ site_last_updated: 2026-07-26
 site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Atom, JSON-LD"
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
+eyebrow: "Open source · ISO 20022"
+excerpt: "Pain001 converts CSV, Excel, SQLite, JSON, Parquet, and legacy SWIFT MT101 into validated pain.001 credit transfer and pain.008 direct debit XML. Five packages share one validation pipeline: JSON Schema per record, IBAN and BIC checks, SEPA and cross-border rulebooks, recomputed control totals, and final XSD validation — with AI-agent MCP tools and editor LSP diagnostics built in."
+last_reviewed: "2026-07-26"
 
 ---
 
-# Welcome to the Pain001 Open Ecosystem
+## The 2026 deadlines are data deadlines
 
-**Pain001** is the enterprise-grade Python suite for ISO 20022 **Customer Credit Transfer Initiation (`pain.001`)** and **Customer Direct Debit Initiation (`pain.008`)** message creation, schema validation, legacy translation, and AI agent transaction orchestration.
+The ISO 20022 cutover is done: MT–MX coexistence on SWIFT ended on 22 November 2025, and roughly 97% of cross-border payment instructions now travel as ISO 20022. What remains is data quality, and the clock runs to **14 November 2026** — the day fully unstructured postal addresses stop being accepted in CBPR+ payments, and the interbank MT101 relay is replaced by `pain.001` version 9.
 
-Banks and clearing networks reject malformed payment files. Pain001 ingests your operational payment data—whether exported from ERPs as CSV, Excel, SQLite, JSON, Parquet, or emitted as legacy SWIFT MT101 files—and converts it into 100% XSD-validated XML that adheres strictly to SWIFT CBPR+, SEPA, TARGET2, and FedNow rulebooks.
+Pain001 ships both requirements today: structured and hybrid address elements in generated XML, and one-command MT101 conversion. The [2026 migration briefing](/2026-iso20022-migration-trends/) maps every deadline with primary sources — no vendor fog, just dates and citations.
 
----
+## Built for more than developers
 
-## The 5 Pillars of the Pain001 Suite
+- **Treasury and finance teams** get files that pass the bank gate first time, a [plain-English glossary](/glossary/), and [FAQs](/faqs/) that answer the questions auditors ask.
+- **Payment operations** get `--dry-run` validation with exit codes, scheme rulebooks with `--explain`, and [pain.002 / camt.053 parsing](/payments/) to close the loop after submission.
+- **Engineers** get a typed Python API, a REST microservice, [editor diagnostics](/pain001-lsp/), plugins, and 100% branch-covered code they can actually read.
+- **AI-forward teams** get the only [MCP server](/pain001-mcp/) in the ISO 20022 payment-initiation category — local, read-only, seventeen tools.
 
-1. **`pain001` (Core Library & REST API)**: Python generator, CLI suite, and FastAPI REST microservice supporting monetary precision (`decimal.Decimal`), XXE zero-trust parsing (`defusedxml`), automatic control total calculations (`NbOfTxs`, `CtrlSum`), and streaming execution.
-2. **`pain001-mcp` (Model Context Protocol Server)**: Exposes 17 agent tools for autonomous AI agents (Claude Desktop, Cursor, AI orchestrators) to validate IBAN/BICs, sanitize charsets, migrate schema versions, and generate payments within conversational workflows.
-3. **`pain001-lsp` (Language Server Protocol)**: Editor diagnostics server providing real-time schema validation, autocomplete, hover docs, and quick-fix code actions for payment JSON authoring in VS Code, Neovim, Helix, and Emacs.
-4. **`pain001-loader-mt101` (SWIFT MT101 Bridge)**: Parses legacy MT101 (Request for Transfer) sequence A/B messages into structured records that pass `pain.001.001.09` schema validation, solving the 2025/2026 SWIFT MT-MX coexistence migration requirement.
-5. **`pain001-loader-xlsx` (Direct Excel Ingestion)**: Native Excel (`.xlsx` / `.xlsm`) loader plugin featuring an IBAN Safety Guard that rejects cell type `General` (preventing leading zero truncation) and resolves cached formulas (`data_only=True`).
-
----
-
-## 2026 Mandatory ISO 20022 Migration Readiness
-
-The global financial infrastructure is completing its migration to ISO 20022 messaging:
-- **SWIFT CBPR+ MT-MX Coexistence Deadline**: Legacy MT101 and MT103 formats are decommissioned; financial institutions enforce strict XML schema compliance.
-- **November 2026 Mandatory Structured Postal Address Rule**: Unstructured address lines are phased out in favor of discrete elements (`StrtNm`, `BldgNb`, `PstCd`, `TwnNm`, `Ctry`).
-- **Instant Settlement Networks**: Seamless integration with FedNow (US), TIPS (Eurosystem), SEPA Instant Credit Transfer (`sepa-inst`), and UAE IPP.
-
----
-
-## Quick Start Command
-
-```bash
-# Install core library and companion loaders
-pip install pain001 pain001-loader-xlsx pain001-loader-mt101
-
-# Generate a validated pain.001.001.09 payment file from Excel
-pain001 -t pain.001.001.09 -d payments.xlsx -o output.xml
-```
-
-Explore our complete [Documentation](/documentation), [Installation Guide](/installation), and [2026 Trends Paper](/2026-iso20022-migration-trends).
+Start with the [Installation Guide](/installation/), browse the [Technical Reference](/documentation/), or see [how Pain001 compares](/competitors-comparison/) — including where commercial platforms genuinely win.

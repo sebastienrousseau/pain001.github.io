@@ -1,6 +1,6 @@
 {
   "background_color": "#ffffff",
-  "description": "Exposing the Pain001 payment library as 17 first-class Model Context Protocol (MCP) agent tools for Claude Desktop, Curs",
+  "description": "17 Model Context Protocol tools for AI agents — validate IBANs, migrate pain.001 versions, convert MT101, and generate X",
   "display": "standalone",
   "icons": [
     {
