@@ -330,75 +330,6 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Eine Seite für Entscheider: Kosten abgelehnter Dateien, der Stichtag 14. November 2026, was Pain001 leistet, die Kosten (null), die Sicherheitsnachweise — druckfertig.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/executive-brief-de/",
-      "language": "de",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Pain001 — Kurzdossier für Entscheider",
-      "url": "https://pain001.com/executive-brief-de/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Una página para directivos: el coste de los ficheros rechazados, la fecha límite del 14 de noviembre de 2026, qué hace Pain001, su coste nulo y las pruebas de seguridad — lista para imprimir.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/executive-brief-es/",
-      "language": "es",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Pain001 — Resumen ejecutivo",
-      "url": "https://pain001.com/executive-brief-es/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Une page pour décideurs : le coût des fichiers rejetés, l'échéance du 14 novembre 2026, ce que fait Pain001, son coût nul, les preuves de sécurité — prête à imprimer.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/executive-brief-fr/",
-      "language": "fr",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Pain001 — Synthèse pour dirigeants",
-      "url": "https://pain001.com/executive-brief-fr/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
       "content_html": "One page for decision-makers: the rejected-file problem, the fixed 14 November 2026 deadline, what Pain001 does, what it costs, the safety evidence, and the one ask — print-ready.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
@@ -1151,6 +1082,75 @@
       ],
       "title": "pain.001.001.11 Reference: Generate and Validate",
       "url": "https://pain001.com/pain.001.001.11/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "pain.001.001.12 — the newest supported version. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
+      "date_modified": "2026-07-26T08:00:00+00:00",
+      "date_published": "2026-07-26T08:00:00+00:00",
+      "id": "https://pain001.com/pain.001.001.12/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "pain.001.001.12 Reference: Generate and Validate",
+      "url": "https://pain001.com/pain.001.001.12/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict error handling, ready for the 14 Nov 2026 relay cutover.",
+      "date_modified": "2026-07-26T08:00:00+00:00",
+      "date_published": "2026-07-26T08:00:00+00:00",
+      "id": "https://pain001.com/pain001-loader-mt101/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "MT101 to pain.001 Conversion: pain001-loader-mt101",
+      "url": "https://pain001.com/pain001-loader-mt101/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Read payment batches straight from .xlsx/.xlsm with an IBAN safety guard that stops Excel's numeric coercion corrupting account numbers before the bank ever sees them.",
+      "date_modified": "2026-07-26T08:00:00+00:00",
+      "date_published": "2026-07-26T08:00:00+00:00",
+      "id": "https://pain001.com/pain001-loader-xlsx/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "Excel to pain.001: pain001-loader-xlsx",
+      "url": "https://pain001.com/pain001-loader-xlsx/"
     }
   ],
   "language": "en-GB",

@@ -110,4 +110,4 @@ pip install pain001
 pain001 -t pain.001.001.09 -d paiements.csv -o sortie/ --dry-run
 ```
 
-Pour aller plus loin : [guide d'installation](/installation/), [référence technique](/documentation/), [feuille de route ISO 20022 jusqu'en 2028](/iso20022-roadmap/), [codes de rejet pain.002](/pain002-reason-codes/), [centre de confiance](/trust/) — et la [synthèse d'une page pour dirigeants](/executive-brief-fr/), en français. La documentation détaillée est en anglais. Le cœur est sous double licence Apache-2.0 / MIT — utilisation commerciale libre à toute échelle.
+Pour aller plus loin : [guide d'installation](/installation/), [référence technique](/documentation/), [feuille de route ISO 20022 jusqu'en 2028](/iso20022-roadmap/), [codes de rejet pain.002](/pain002-reason-codes/), [centre de confiance](/trust/) — et la [synthèse d'une page pour dirigeants](/fr/executive-brief/), en français. La documentation détaillée est en anglais. Le cœur est sous double licence Apache-2.0 / MIT — utilisation commerciale libre à toute échelle.

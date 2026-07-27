@@ -222,57 +222,6 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Eine Seite für Entscheider: Kosten abgelehnter Dateien, der Stichtag 14. November 2026, was Pain001 leistet, die Kosten (null), die Sicherheitsnachweise — druckfertig.",
-    "locale": "de_DE",
-    "tags": [
-      "CBPR+",
-      "ISO 20022",
-      "SEPA",
-      "banking",
-      "pain001",
-      "payments",
-      "python"
-    ],
-    "title": "Pain001 — Kurzdossier für Entscheider",
-    "url": "https://pain001.com/executive-brief-de/",
-    "wordCount": 247
-  },
-  {
-    "date": "2026-07-26T08:00:00+00:00",
-    "description": "Una página para directivos: el coste de los ficheros rechazados, la fecha límite del 14 de noviembre de 2026, qué hace Pain001, su coste nulo y las pruebas de seguridad — lista para imprimir.",
-    "locale": "es_ES",
-    "tags": [
-      "CBPR+",
-      "ISO 20022",
-      "SEPA",
-      "banking",
-      "pain001",
-      "payments",
-      "python"
-    ],
-    "title": "Pain001 — Resumen ejecutivo",
-    "url": "https://pain001.com/executive-brief-es/",
-    "wordCount": 323
-  },
-  {
-    "date": "2026-07-26T08:00:00+00:00",
-    "description": "Une page pour décideurs : le coût des fichiers rejetés, l'échéance du 14 novembre 2026, ce que fait Pain001, son coût nul, les preuves de sécurité — prête à imprimer.",
-    "locale": "fr_FR",
-    "tags": [
-      "CBPR+",
-      "ISO 20022",
-      "SEPA",
-      "banking",
-      "pain001",
-      "payments",
-      "python"
-    ],
-    "title": "Pain001 — Synthèse pour dirigeants",
-    "url": "https://pain001.com/executive-brief-fr/",
-    "wordCount": 321
-  },
-  {
-    "date": "2026-07-26T08:00:00+00:00",
     "description": "One page for decision-makers: the rejected-file problem, the fixed 14 November 2026 deadline, what Pain001 does, what it costs, the safety evidence, and the one ask — print-ready.",
     "locale": "en_GB",
     "tags": [

@@ -422,9 +422,18 @@ def fix_try_strip(site: Path) -> None:
 
 def load_try_i18n(slug: str) -> dict | None:
     """Per-locale translation table (scripts/try_i18n/<slug>.json)."""
+    return _load_i18n("try_i18n", slug)
+
+
+def load_pages_i18n(slug: str) -> dict | None:
+    """Per-locale journey-page table (scripts/pages_i18n/<slug>.json)."""
+    return _load_i18n("pages_i18n", slug)
+
+
+def _load_i18n(dirname: str, slug: str) -> dict | None:
     import json
 
-    path = Path(__file__).parent / "try_i18n" / f"{slug}.json"
+    path = Path(__file__).parent / dirname / f"{slug}.json"
     if not path.exists():
         return None
     try:
@@ -469,25 +478,73 @@ def translate_status_strip(html: str, s: list) -> str:
     return html
 
 
-def try_hreflang_cluster(self_lang: str) -> str:
-    links = ['<link rel="alternate" hreflang="en" href="%s/try/" />' % BASE_URL,
-             '<link rel="alternate" hreflang="x-default" href="%s/try/" />'
-             % BASE_URL]
+def path_hreflang_cluster(path: str, self_lang: str) -> str:
+    """Reciprocal alternates for a localized page cluster at /<path>."""
+    links = ['<link rel="alternate" hreflang="en" href="%s/%s" />'
+             % (BASE_URL, path),
+             '<link rel="alternate" hreflang="x-default" href="%s/%s" />'
+             % (BASE_URL, path)]
     for slug, code in sorted(LOCALES.items()):
-        links.append('<link rel="alternate" hreflang="%s" href="%s/%s/try/" />'
-                     % (code, BASE_URL, slug))
+        links.append('<link rel="alternate" hreflang="%s" href="%s/%s/%s" />'
+                     % (code, BASE_URL, slug, path))
     return "".join(l for l in links if 'hreflang="%s"' % self_lang not in l)
 
 
-def retarget_lang_menu_to_try(html: str) -> str:
-    """On /try/ pages the language menu switches between try variants."""
+def try_hreflang_cluster(self_lang: str) -> str:
+    return path_hreflang_cluster("try/", self_lang)
+
+
+def retarget_lang_menu(html: str, path: str) -> str:
+    """On localized pages the language menu switches between the
+    same page's locale variants (path e.g. "try/" or "why/")."""
     html = html.replace('class="ap-lang-item" href="/" hreflang="en"',
-                        'class="ap-lang-item" href="/try/" hreflang="en"')
+                        'class="ap-lang-item" href="/%s" hreflang="en"' % path)
     for slug in LOCALES:
         html = html.replace(
             'class="ap-lang-item" href="/%s/" hreflang=' % slug,
-            'class="ap-lang-item" href="/%s/try/" hreflang=' % slug)
+            'class="ap-lang-item" href="/%s/%s" hreflang=' % (slug, path))
     return html
+
+
+def retarget_lang_menu_to_try(html: str) -> str:
+    return retarget_lang_menu(html, "try/")
+
+
+JOURNEY_PAGES = ("why", "solutions", "executive-brief")
+
+# Submenu targets that exist only in English get a visible cue on
+# localized pages, so the language jump is expected instead of surprising.
+EN_ONLY_SUB = (
+    "/competitors-comparison/", "/installation/", "/glossary/", "/faqs/",
+    "/pain002-reason-codes/", "/pain001-mcp/", "/pain001-lsp/",
+    "/pain001-loader-mt101/", "/pain001-loader-xlsx/",
+    "/architecture-and-patents/", "/2026-iso20022-migration-trends/",
+    "/iso20022-roadmap/",
+    "/iso-20022-payment-initiation-for-cross-border-payments/", "/languages/",
+)
+
+
+def retarget_journey_nav(html: str, slug: str) -> str:
+    """Nav/footer/body links to localized journey pages stay in-locale."""
+    for p in JOURNEY_PAGES:
+        html = html.replace('href="/%s/"' % p, 'href="/%s/%s/"' % (slug, p))
+    return html
+
+
+def mark_english_submenu(html: str) -> str:
+    """Tag English-only submenu items with hreflang and an (EN) suffix."""
+    def tag_region(m):
+        region = m.group(0)
+        for t in EN_ONLY_SUB:
+            region = re.sub(
+                r'(<a href="%s")(>)([^<]*?)(</a>)' % re.escape(t),
+                lambda mm: mm.group(0) if mm.group(3).endswith("(EN)")
+                else mm.group(1) + ' hreflang="en"' + mm.group(2)
+                + mm.group(3) + " (EN)" + mm.group(4),
+                region)
+        return region
+    return re.sub(r'<ul id="sub-[a-z]+" class="ap-sub">.*?</ul>',
+                  tag_region, html, flags=re.S)
 
 
 def gen_try_locales(site: Path) -> None:
@@ -551,12 +608,94 @@ def gen_try_locales(site: Path) -> None:
         # menu's English entry (href="/try/" hreflang="en") is untouched
         # because its href is not followed directly by ">".
         html = html.replace('href="/try/">', 'href="/%s/try/">' % slug)
+        html = retarget_journey_nav(html, slug)
+        html = mark_english_submenu(html)
         html = lang_badge(html, slug)
         dest = site / slug / "try"
         dest.mkdir(parents=True, exist_ok=True)
         (dest / "index.html").write_text(html, encoding="utf-8")
         n += 1
     print(f"[postbuild] generated {n} locale /try/ page(s)")
+
+
+def gen_journey_locales(site: Path) -> None:
+    """Generate /<slug>/{why,solutions,executive-brief}/ for every locale
+    with a pages_i18n table — same mechanics as the /try/ variants."""
+    try:
+        from locale_strings import STRINGS
+    except ImportError:
+        sys.path.insert(0, str(Path(__file__).parent))
+        from locale_strings import STRINGS
+    en_all = load_pages_i18n("en") or {}
+    for page_name in JOURNEY_PAGES:
+        src = site / page_name / "index.html"
+        if not src.exists():
+            continue
+        base = src.read_text(encoding="utf-8")
+        en = base
+        if ('hreflang="x-default" href="%s/%s/"' % (BASE_URL, page_name)
+                not in en):
+            en = en.replace("</head>",
+                            path_hreflang_cluster(page_name + "/", "en")
+                            + "</head>", 1)
+        en = retarget_lang_menu(en, page_name + "/")
+        src.write_text(en, encoding="utf-8")
+
+        en_meta = en_all.get(page_name, {}).get("meta", {})
+        n = 0
+        for slug, code in LOCALES.items():
+            d = load_pages_i18n(slug)
+            if not d or page_name not in d or slug not in STRINGS:
+                continue
+            pd = d[page_name]
+            html = base
+            dir_attr = ' dir="rtl"' if slug in RTL_LANGS else ""
+            html = html.replace('<html lang="en-GB">',
+                                '<html lang="%s"%s>' % (code, dir_attr), 1)
+            html = html.replace('"inLanguage": "en-GB"',
+                                '"inLanguage": "%s"' % code)
+            # anchored meta swaps only — a raw global replace of the
+            # short eyebrow once corrupted og:image:alt mid-string
+            meta = pd.get("meta", {})
+            for key in sorted(en_meta, key=lambda k: -len(en_meta[k] or "")):
+                ev, tv = en_meta.get(key), meta.get(key)
+                if not (ev and tv):
+                    continue
+                for pat in ("<title>%s</title>", 'content="%s"',
+                            ">%s<", '": "%s"'):
+                    html = html.replace(pat % ev, pat % tv)
+            html = html.replace("https://pain001.com/%s/" % page_name,
+                                "https://pain001.com/%s/%s/" % (slug, page_name))
+            html = html.replace("</head>",
+                                path_hreflang_cluster(page_name + "/", code)
+                                + "</head>", 1)
+            for k in sorted(pd.get("text", {}), key=len, reverse=True):
+                v = pd["text"][k]
+                if ">%s<" % k in html:
+                    html = html.replace(">%s<" % k, ">%s<" % v)
+                elif len(k) >= 30:
+                    html = html.replace(k, v)
+            for k, v in pd.get("aria", {}).items():
+                html = html.replace('aria-label="%s"' % k,
+                                    'aria-label="%s"' % v)
+            td = load_try_i18n(slug)
+            if td:
+                html = apply_chrome_extra(html, td)
+            html = translate_chrome(html, STRINGS[slug])
+            html = retarget_lang_menu(html, page_name + "/")
+            html = retarget_journey_nav(html, slug)
+            html = html.replace('href="/try/">', 'href="/%s/try/">' % slug)
+            html = mark_english_submenu(html)
+            html = lang_badge(html, slug)
+            # legacy localized-brief URLs map onto the new scheme
+            for old in ("fr", "de", "es"):
+                html = html.replace("/executive-brief-%s/" % old,
+                                    "/%s/executive-brief/" % old)
+            dest = site / slug / page_name
+            dest.mkdir(parents=True, exist_ok=True)
+            (dest / "index.html").write_text(html, encoding="utf-8")
+            n += 1
+        print(f"[postbuild] generated {n} locale /{page_name}/ page(s)")
 
 
 def localise_pages(site: Path) -> None:
@@ -588,6 +727,9 @@ def localise_pages(site: Path) -> None:
             html = apply_chrome_extra(html, d)
             html = lang_badge(html, slug)
             html = html.replace('href="/try/"', 'href="/%s/try/"' % slug)
+        if load_pages_i18n(slug):
+            html = retarget_journey_nav(html, slug)
+            html = mark_english_submenu(html)
         page.write_text(html, encoding="utf-8")
         n += 1
     home = site / "index.html"
@@ -680,6 +822,7 @@ def main() -> None:
     fix_try_strip(site)
     localise_pages(site)
     gen_try_locales(site)
+    gen_journey_locales(site)
     regen_sitemap(site)
 
 

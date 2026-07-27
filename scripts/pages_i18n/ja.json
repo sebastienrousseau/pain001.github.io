@@ -1,0 +1,115 @@
+{
+ "why": {
+  "meta": {
+   "title": "Pain001を選ぶ理由:5つの質問で分かるビジネスケース",
+   "description": "却下された支払ファイルのコスト、2026年11月14日が動かせない理由、Pain001の役割、費用(無料)、そして安全性——各回答に根拠へのリンク付き。",
+   "eyebrow": "ビジネスケース",
+   "deck": "CFOが実際に尋ねる5つの質問に、平易な言葉でお答えします。すべての主張に根拠へのリンクを付けています。"
+  },
+  "text": {
+   "<a href=\"/\">Home</a>": "<a href=\"/\">ホーム</a>",
+   "Contents": "目次",
+   "<a href=\"#what-does-a-rejected-payment-file-cost\">What does a rejected payment file cost?</a>": "<a href=\"#what-does-a-rejected-payment-file-cost\">却下された支払ファイルのコストはいくらですか?</a>",
+   "<a href=\"#why-is-14-november-2026-non-negotiable\">Why is 14 November 2026 non-negotiable?</a>": "<a href=\"#why-is-14-november-2026-non-negotiable\">なぜ2026年11月14日は動かせないのですか?</a>",
+   "<a href=\"#what-does-pain001-do-about-it\">What does Pain001 do about it?</a>": "<a href=\"#what-does-pain001-do-about-it\">Pain001は何をしてくれるのですか?</a>",
+   "<a href=\"#what-does-it-cost\">What does it cost?</a>": "<a href=\"#what-does-it-cost\">費用はいくらですか?</a>",
+   "<a href=\"#is-it-safe\">Is it safe?</a>": "<a href=\"#is-it-safe\">安全ですか?</a>",
+   "<a href=\"#what-is-the-next-step\">What is the next step?</a>": "<a href=\"#what-is-the-next-step\">次のステップは何ですか?</a>",
+   "What does a rejected payment file cost?<a class=\"heading-anchor\" href=\"#what-does-a-rejected-payment-file-cost\" aria-label=\"Link to section: What does a rejected payment file cost?\">#</a>": "却下された支払ファイルのコストはいくらですか?<a class=\"heading-anchor\" href=\"#what-does-a-rejected-payment-file-cost\" aria-label=\"Link to section: What does a rejected payment file cost?\">#</a>",
+   "A file the bank bounces does not fail quietly. Someone diagnoses the reason code, repairs the source data, regenerates, resubmits — and if the repair misses the day's cut-off, settlement slips. For payroll or supplier runs, a slipped day is a phone call you do not want to make. The <a href=\"/pain002-reason-codes/\">reason-code reference</a> lists what banks actually send back; almost every format-class entry on it is preventable before submission.": "銀行に差し戻されたファイルは、静かに失敗するわけではありません。誰かが理由コードを診断し、元データを修正し、再生成して再提出します——修正がその日のカットオフに間に合わなければ、決済は翌日にずれ込みます。給与や仕入先への支払では、1日の遅れは誰もかけたくない電話を意味します。<a href=\"/pain002-reason-codes/\">理由コードリファレンス</a>には銀行が実際に返してくる内容が掲載されており、そのうちフォーマット起因の項目はほぼすべて提出前に防止できます。",
+   "Why is 14 November 2026 non-negotiable?<a class=\"heading-anchor\" href=\"#why-is-14-november-2026-non-negotiable\" aria-label=\"Link to section: Why is 14 November 2026 non-negotiable?\">#</a>": "なぜ2026年11月14日は動かせないのですか?<a class=\"heading-anchor\" href=\"#why-is-14-november-2026-non-negotiable\" aria-label=\"Link to section: Why is 14 November 2026 non-negotiable?\">#</a>",
+   "Because it is enforced at network level, not by policy. From that date, cross-border payments (CBPR+) carrying fully unstructured postal addresses are rejected, and the interbank MT101 relay retires in favour of <code>pain.001</code> version 9. The dates come from SWIFT, not from us — every one is cited in the <a href=\"/2026-iso20022-migration-trends/\">2026 briefing</a>, and the schedule continues to 2028 on the <a href=\"/iso20022-roadmap/\">living roadmap</a>.": "ポリシーではなく、ネットワークレベルで強制されるためです。この日以降、完全に非構造化された住所を含むクロスボーダー決済(CBPR+)は却下され、銀行間のMT101リレーは<code>pain.001</code>バージョン9に置き換えられて廃止されます。これらの期日は当方ではなくSWIFTが定めたものです——すべて<a href=\"/2026-iso20022-migration-trends/\">2026年ブリーフィング</a>に出典付きで記載されており、スケジュールは<a href=\"/iso20022-roadmap/\">随時更新のロードマップ</a>で2028年まで続きます。",
+   "What does Pain001 do about it?<a class=\"heading-anchor\" href=\"#what-does-pain001-do-about-it\" aria-label=\"Link to section: What does Pain001 do about it?\">#</a>": "Pain001は何をしてくれるのですか?<a class=\"heading-anchor\" href=\"#what-does-pain001-do-about-it\" aria-label=\"Link to section: What does Pain001 do about it?\">#</a>",
+   "Three things. It turns the data you already have — spreadsheets, ERP exports, legacy SWIFT files — into bank-ready ISO 20022 payment files. It proves each file clean before submission: validation against the bank's official rulebook (ISO 20022 XSD), the account-number checksum your bank runs (ISO 13616 mod-97), and control totals recalculated from the records, never trusted. And it does all of this on your own infrastructure — nothing is uploaded anywhere.": "3つのことを行います。お手元にあるデータ——スプレッドシート、ERPエクスポート、レガシーのSWIFTファイル——を、銀行に提出できるISO 20022支払ファイルに変換します。提出前に各ファイルが正しいことを証明します:銀行の公式ルールブック(ISO 20022 XSD)に対する検証、銀行が実行する口座番号チェックサム(ISO 13616 mod-97)、そしてレコードから再計算されるコントロールトータル——信用ではなく検算です。そして、これらすべてをお客様自身のインフラ上で実行し、どこにも何もアップロードしません。",
+   "What does it cost?<a class=\"heading-anchor\" href=\"#what-does-it-cost\" aria-label=\"Link to section: What does it cost?\">#</a>": "費用はいくらですか?<a class=\"heading-anchor\" href=\"#what-does-it-cost\" aria-label=\"Link to section: What does it cost?\">#</a>",
+   "Nothing, at any scale, permanently. The core is dual-licensed (Apache-2.0 or MIT); companion packages are Apache-2.0. The nearest commercial reference point — SWIFT's translation SDK — is publicly listed at €10,000–30,000 per year before integration effort. The full landscape, including where commercial platforms genuinely win, is in the <a href=\"/competitors-comparison/\">comparison</a>.": "どの規模でも、恒久的に無料です。コアはデュアルライセンス(Apache-2.0またはMIT)、関連パッケージはApache-2.0です。最も近い商用の比較対象であるSWIFTのトランスレーションSDKは、統合作業を除いて年額€10,000–30,000と公表されています。商用プラットフォームが本当に優位な領域を含む全体像は、<a href=\"/competitors-comparison/\">比較ページ</a>をご覧ください。",
+   "Is it safe?<a class=\"heading-anchor\" href=\"#is-it-safe\" aria-label=\"Link to section: Is it safe?\">#</a>": "安全ですか?<a class=\"heading-anchor\" href=\"#is-it-safe\" aria-label=\"Link to section: Is it safe?\">#</a>",
+   "Check rather than trust: payment data <a href=\"/privacy/\">never leaves your machines</a>, the dependency inventory is a published <a href=\"/sbom.cdx.json\">SBOM</a>, the code holds <a href=\"/architecture-and-patents/\">100% branch coverage as a CI gate</a>, and the <a href=\"/try/\">browser demo</a> invites your security team to falsify the claims with DevTools open.": "信頼ではなく検証を:支払データは<a href=\"/privacy/\">お客様のマシンから一切外に出ません</a>。依存関係の一覧は公開済みの<a href=\"/sbom.cdx.json\">SBOM</a>であり、コードは<a href=\"/architecture-and-patents/\">ブランチカバレッジ100%をCIゲートとして維持</a>しています。さらに<a href=\"/try/\">ブラウザデモ</a>では、DevToolsを開いたまま、セキュリティチームがこれらの主張の反証を試せます。",
+   "What is the next step?<a class=\"heading-anchor\" href=\"#what-is-the-next-step\" aria-label=\"Link to section: What is the next step?\">#</a>": "次のステップは何ですか?<a class=\"heading-anchor\" href=\"#what-is-the-next-step\" aria-label=\"Link to section: What is the next step?\">#</a>",
+   "Watch it work: the <a href=\"/try/\">60-second demo</a> validates a payment batch and proves it against the official schema, in your browser. Then hand your team the <a href=\"/executive-brief/\">executive brief</a> — one page, print-ready, available in <a href=\"/executive-brief-fr/\">French</a>, <a href=\"/executive-brief-de/\">German</a>, and <a href=\"/executive-brief-es/\">Spanish</a>.": "まず動作をご覧ください。<a href=\"/try/\">60秒デモ</a>は、ブラウザ内で支払バッチを検証し、公式スキーマに照らして証明します。その後、<a href=\"/executive-brief/\">エグゼクティブブリーフ</a>をチームにお渡しください——1ページ、印刷対応で、<a href=\"/executive-brief-fr/\">フランス語</a>、<a href=\"/executive-brief-de/\">ドイツ語</a>、<a href=\"/executive-brief-es/\">スペイン語</a>でもご利用いただけます。"
+  },
+  "aria": {
+   "Breadcrumb": "パンくずリスト",
+   "Contents": "目次",
+   "Link to section: What does a rejected payment file cost?": "セクションへのリンク:却下された支払ファイルのコストはいくらですか?",
+   "Link to section: Why is 14 November 2026 non-negotiable?": "セクションへのリンク:なぜ2026年11月14日は動かせないのですか?",
+   "Link to section: What does Pain001 do about it?": "セクションへのリンク:Pain001は何をしてくれるのですか?",
+   "Link to section: What does it cost?": "セクションへのリンク:費用はいくらですか?",
+   "Link to section: Is it safe?": "セクションへのリンク:安全ですか?",
+   "Link to section: What is the next step?": "セクションへのリンク:次のステップは何ですか?"
+  }
+ },
+ "solutions": {
+  "meta": {
+   "title": "Pain001の対象ユーザー",
+   "description": "トレジャリー、CFOと取締役会、ペイメントオペレーション、エンジニアリングとAI——各役割の言葉で語る課題、Pain001がもたらす変化、次のクリック先を役割ごとに150語で。",
+   "eyebrow": "対象ユーザー",
+   "deck": "4つの役割、4つの語彙、1つのパイプライン——ご自身の課題を見つけて、次のクリック先へ。"
+  },
+  "text": {
+   "<a href=\"/\">Home</a>": "<a href=\"/\">ホーム</a>",
+   "Contents": "目次",
+   "<a href=\"#treasury-finance\">Treasury & finance</a>": "<a href=\"#treasury-finance\">トレジャリー&財務</a>",
+   "<a href=\"#cfo-board\">CFO & board</a>": "<a href=\"#cfo-board\">CFO&取締役会</a>",
+   "<a href=\"#payment-operations\">Payment operations</a>": "<a href=\"#payment-operations\">ペイメントオペレーション</a>",
+   "<a href=\"#engineering-ai\">Engineering & AI</a>": "<a href=\"#engineering-ai\">エンジニアリング&AI</a>",
+   "Treasury & finance<a class=\"heading-anchor\" href=\"#treasury-finance\" aria-label=\"Link to section: Treasury & finance\">#</a>": "トレジャリー&財務<a class=\"heading-anchor\" href=\"#treasury-finance\" aria-label=\"Link to section: Treasury & finance\">#</a>",
+   "Your bank rejects files for reasons your ERP never warned you about: a transposed IBAN digit, a control total that no longer matches, an address format that stopped being acceptable. Pain001 makes those failures happen at your desk instead — every file is proven against the bank's official rulebook (ISO 20022 XSD) before submission, and the <a href=\"/payments/\">payment-lifecycle guide</a> shows where each check sits between origination and reconciliation. Start with the <a href=\"/glossary/\">glossary</a> if the vocabulary is new; the plain-English definitions were written for your side of the desk, not the engineers'.": "銀行は、ERPが警告してくれなかった理由でファイルを却下します。IBANの数字の入れ替わり、一致しなくなったコントロールトータル、許容されなくなった住所フォーマットなどです。Pain001は、こうした失敗を提出前、お手元の段階で顕在化させます——すべてのファイルは提出前に銀行の公式ルールブック(ISO 20022 XSD)に照らして証明され、<a href=\"/payments/\">ペイメントライフサイクルガイド</a>は、起票から照合までの間で各チェックがどこに位置するかを示します。用語に馴染みがなければ<a href=\"/glossary/\">用語集</a>からどうぞ。平易な定義は、エンジニアではなく業務側の視点で書かれています。",
+   "CFO & board<a class=\"heading-anchor\" href=\"#cfo-board\" aria-label=\"Link to section: CFO & board\">#</a>": "CFO&取締役会<a class=\"heading-anchor\" href=\"#cfo-board\" aria-label=\"Link to section: CFO & board\">#</a>",
+   "Two numbers frame the decision. <strong>14 November 2026</strong>: the date cross-border payments with unstructured addresses start bouncing at network level — exposure that lives in your customer master data, not your bank connection. <strong>€10,000–30,000 per year</strong>: the public list price of the nearest commercial translation SDK, against Pain001's permanent zero at any scale under open licences. The governance questions — auditability, data locality, supply-chain evidence — are answered with artefacts, not assurances: published <a href=\"/sbom.cdx.json\">SBOM</a>, <a href=\"/security.txt\">security policy</a>, and processing that never leaves your infrastructure. The <a href=\"/executive-brief/\">one-page executive brief</a> is written to be forwarded.": "2つの数字が判断の枠組みになります。<strong>2026年11月14日</strong>:非構造化住所を含むクロスボーダー決済がネットワークレベルで却下され始める日です——リスクは銀行接続ではなく、顧客マスターデータの中にあります。<strong>年額€10,000–30,000</strong>:最も近い商用トランスレーションSDKの公表価格であり、対するPain001はオープンライセンスの下、どの規模でも恒久的にゼロです。ガバナンス上の問い——監査可能性、データ所在、サプライチェーンの証拠——には、保証の言葉ではなく成果物でお答えします:公開済みの<a href=\"/sbom.cdx.json\">SBOM</a>、<a href=\"/security.txt\">セキュリティポリシー</a>、そしてお客様のインフラから一切出ない処理です。<a href=\"/executive-brief/\">1ページのエグゼクティブブリーフ</a>は、そのまま転送していただけるように書かれています。",
+   "Payment operations<a class=\"heading-anchor\" href=\"#payment-operations\" aria-label=\"Link to section: Payment operations\">#</a>": "ペイメントオペレーション<a class=\"heading-anchor\" href=\"#payment-operations\" aria-label=\"Link to section: Payment operations\">#</a>",
+   "You live in the response files. Pain001 closes the loop end to end: <code>--dry-run</code> pre-submission checks that pass or fail cleanly in CI, scheme rulebooks (SEPA and cross-border) explained rule by rule, the <a href=\"/pain002-reason-codes/\">pain.002 reason-code reference</a> for decoding what came back, and parsers that turn bank responses and camt.053 statements into structured data your pipeline can route. The <a href=\"/try/\">browser demo</a> is the fastest way to see the failure classes it eliminates — including the one-click \"introduce an error\" scenarios.": "皆様の日常はレスポンスファイルの中にあります。Pain001はループを端から端まで閉じます:CIで明確に合否が出る<code>--dry-run</code>の提出前チェック、ルールごとに解説されたスキームルールブック(SEPAおよびクロスボーダー)、返ってきた内容を読み解くための<a href=\"/pain002-reason-codes/\">pain.002理由コードリファレンス</a>、そして銀行のレスポンスやcamt.053ステートメントをパイプラインでルーティングできる構造化データに変換するパーサーです。<a href=\"/try/\">ブラウザデモ</a>は、Pain001が排除する失敗クラスを確認する最速の方法です——ワンクリックの「エラーを挿入」シナリオも含まれます。",
+   "Engineering & AI<a class=\"heading-anchor\" href=\"#engineering-ai\" aria-label=\"Link to section: Engineering & AI\">#</a>": "エンジニアリング&AI<a class=\"heading-anchor\" href=\"#engineering-ai\" aria-label=\"Link to section: Engineering & AI\">#</a>",
+   "A typed Python API, a CLI with meaningful exit codes, a REST microservice, and plugin points for loaders, validators, schemes, and writers — <a href=\"/documentation/\">the technical reference</a> covers every flag and endpoint, and the code carries 100% line-and-branch coverage as a hard CI gate. If you are building with agents: <a href=\"/pain001-mcp/\">pain001-mcp</a> is the category's only Model Context Protocol server — seventeen read-only tools your agents call locally, with editor diagnostics from <a href=\"/pain001-lsp/\">pain001-lsp</a> while humans stay in the loop.": "型付きのPython API、意味のある終了コードを返すCLI、RESTマイクロサービス、そしてローダー、バリデーター、スキーム、ライター向けのプラグインポイント——<a href=\"/documentation/\">技術リファレンス</a>がすべてのフラグとエンドポイントを網羅し、コードは行・ブランチカバレッジ100%を厳格なCIゲートとして維持しています。エージェントで構築される場合:<a href=\"/pain001-mcp/\">pain001-mcp</a>はこのカテゴリー唯一のModel Context Protocolサーバーで、エージェントがローカルに呼び出せる17個の読み取り専用ツールを備え、<a href=\"/pain001-lsp/\">pain001-lsp</a>によるエディター診断で人間がループに残ります。"
+  },
+  "aria": {
+   "Breadcrumb": "パンくずリスト",
+   "Contents": "目次",
+   "Link to section: Treasury & finance": "セクションへのリンク:トレジャリー&財務",
+   "Link to section: CFO & board": "セクションへのリンク:CFO&取締役会",
+   "Link to section: Payment operations": "セクションへのリンク:ペイメントオペレーション",
+   "Link to section: Engineering & AI": "セクションへのリンク:エンジニアリング&AI"
+  }
+ },
+ "executive-brief": {
+  "meta": {
+   "title": "Pain001 エグゼクティブブリーフ",
+   "description": "意思決定者のための1ページ:却下ファイルの問題、動かせない2026年11月14日の期限、Pain001の役割、費用、安全性の証拠、そして1つのお願い——印刷対応。",
+   "eyebrow": "エグゼクティブブリーフ",
+   "deck": "1ページ。5つの事実。1つのお願い。フランス語、ドイツ語、スペイン語でもご覧いただけます——ブラウザからそのまま印刷できます。"
+  },
+  "text": {
+   "<a href=\"/\">Home</a>": "<a href=\"/\">ホーム</a>",
+   "Contents": "目次",
+   "<a href=\"#the-problem\">The problem</a>": "<a href=\"#the-problem\">課題</a>",
+   "<a href=\"#the-deadline\">The deadline</a>": "<a href=\"#the-deadline\">期限</a>",
+   "<a href=\"#what-pain001-does\">What Pain001 does</a>": "<a href=\"#what-pain001-does\">Pain001の役割</a>",
+   "<a href=\"#what-it-costs\">What it costs</a>": "<a href=\"#what-it-costs\">費用</a>",
+   "<a href=\"#the-evidence\">The evidence</a>": "<a href=\"#the-evidence\">証拠</a>",
+   "<a href=\"#the-ask\">The ask</a>": "<a href=\"#the-ask\">お願い</a>",
+   "Read in: <a href=\"/executive-brief-fr/\">Français</a> · <a href=\"/executive-brief-de/\">Deutsch</a> · <a href=\"/executive-brief-es/\">Español</a>": "他の言語で読む:<a href=\"/executive-brief-fr/\">Français</a> · <a href=\"/executive-brief-de/\">Deutsch</a> · <a href=\"/executive-brief-es/\">Español</a>",
+   "The problem<a class=\"heading-anchor\" href=\"#the-problem\" aria-label=\"Link to section: The problem\">#</a>": "課題<a class=\"heading-anchor\" href=\"#the-problem\" aria-label=\"Link to section: The problem\">#</a>",
+   "Banks reject malformed payment files. Every rejection costs a repair cycle; a repair that misses the day's cut-off costs a settlement day. The rejection reasons are knowable in advance — and therefore preventable.": "銀行は不正な形式の支払ファイルを却下します。却下のたびに修正サイクルが発生し、修正がその日のカットオフに間に合わなければ決済が1日遅れます。却下理由は事前に知ることができ——したがって防止できます。",
+   "The deadline<a class=\"heading-anchor\" href=\"#the-deadline\" aria-label=\"Link to section: The deadline\">#</a>": "期限<a class=\"heading-anchor\" href=\"#the-deadline\" aria-label=\"Link to section: The deadline\">#</a>",
+   "<strong>14 November 2026</strong>, enforced at network level: cross-border payments (CBPR+) carrying fully unstructured addresses are rejected, and the legacy interbank MT101 channel retires in favour of ISO 20022 <code>pain.001</code> version 9. The exposure sits in customer master data. Sources: SWIFT, cited in full at pain001.com/2026-iso20022-migration-trends.": "<strong>2026年11月14日</strong>、ネットワークレベルで強制:完全に非構造化された住所を含むクロスボーダー決済(CBPR+)は却下され、レガシーの銀行間MT101チャネルはISO 20022 <code>pain.001</code>バージョン9に置き換えられて廃止されます。リスクは顧客マスターデータの中にあります。出典:SWIFT。pain001.com/2026-iso20022-migration-trendsに全文引用。",
+   "What Pain001 does<a class=\"heading-anchor\" href=\"#what-pain001-does\" aria-label=\"Link to section: What Pain001 does\">#</a>": "Pain001の役割<a class=\"heading-anchor\" href=\"#what-pain001-does\" aria-label=\"Link to section: What Pain001 does\">#</a>",
+   "An open-source suite that converts existing data — spreadsheets, ERP exports, legacy SWIFT files — into bank-ready ISO 20022 payment files, and proves each file against the bank's official rulebook (ISO 20022 XSD) <em>before</em> submission. It runs entirely on your own infrastructure: no upload, no vendor cloud, no telemetry.": "既存のデータ——スプレッドシート、ERPエクスポート、レガシーのSWIFTファイル——を銀行に提出できるISO 20022支払ファイルに変換し、提出<em>前</em>に各ファイルを銀行の公式ルールブック(ISO 20022 XSD)に照らして証明するオープンソーススイートです。すべてお客様自身のインフラ上で動作します:アップロードなし、ベンダークラウドなし、テレメトリーなし。",
+   "What it costs<a class=\"heading-anchor\" href=\"#what-it-costs\" aria-label=\"Link to section: What it costs\">#</a>": "費用<a class=\"heading-anchor\" href=\"#what-it-costs\" aria-label=\"Link to section: What it costs\">#</a>",
+   "Nothing, at any scale, under open licences (Apache-2.0 / MIT). Commercial reference point: SWIFT's translation SDK is publicly listed at €10,000–30,000 per year.": "どの規模でも無料、オープンライセンス(Apache-2.0 / MIT)の下で提供されます。商用の比較対象:SWIFTのトランスレーションSDKは年額€10,000–30,000と公表されています。",
+   "The evidence<a class=\"heading-anchor\" href=\"#the-evidence\" aria-label=\"Link to section: The evidence\">#</a>": "証拠<a class=\"heading-anchor\" href=\"#the-evidence\" aria-label=\"Link to section: The evidence\">#</a>",
+   "Published dependency inventory (SBOM) · 100% branch-covered code as a CI gate · independently scored supply chain (OpenSSF Scorecard) · WCAG 2.2 AAA accessible documentation · security policy with private disclosure. All verifiable at pain001.com.": "公開済みの依存関係一覧(SBOM) · CIゲートとしてのブランチカバレッジ100% · 第三者評価済みのサプライチェーン(OpenSSF Scorecard) · WCAG 2.2 AAA準拠のアクセシブルなドキュメント · 非公開報告に対応したセキュリティポリシー。すべてpain001.comで検証できます。",
+   "The ask<a class=\"heading-anchor\" href=\"#the-ask\" aria-label=\"Link to section: The ask\">#</a>": "お願い<a class=\"heading-anchor\" href=\"#the-ask\" aria-label=\"Link to section: The ask\">#</a>",
+   "Have your payments engineering team run the 60-second demo at <strong>pain001.com/try</strong> — it validates a sample batch and proves it against the official ISO 20022 schema, in the browser, with nothing uploaded. If it holds up, the installation guide takes minutes.": "貴社のペイメントエンジニアリングチームに<strong>pain001.com/try</strong>の60秒デモを実行してもらってください——ブラウザ内でサンプルバッチを検証し、公式のISO 20022スキーマに照らして証明します。何もアップロードされません。問題がなければ、インストールガイドは数分で完了します。"
+  },
+  "aria": {
+   "Breadcrumb": "パンくずリスト",
+   "Contents": "目次",
+   "Link to section: The problem": "セクションへのリンク:課題",
+   "Link to section: The deadline": "セクションへのリンク:期限",
+   "Link to section: What Pain001 does": "セクションへのリンク:Pain001の役割",
+   "Link to section: What it costs": "セクションへのリンク:費用",
+   "Link to section: The evidence": "セクションへのリンク:証拠",
+   "Link to section: The ask": "セクションへのリンク:お願い"
+  }
+ }
+}

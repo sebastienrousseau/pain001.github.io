@@ -110,4 +110,4 @@ pip install pain001
 pain001 -t pain.001.001.09 -d zahlungen.csv -o ausgabe/ --dry-run
 ```
 
-Weiterführend: [Installationsanleitung](/installation/), [Technische Referenz](/documentation/), [ISO-20022-Fahrplan bis 2028](/iso20022-roadmap/), [pain.002-Ablehnungscodes](/pain002-reason-codes/), [Trust Centre](/trust/) — und das einseitige [Kurzdossier für Entscheider](/executive-brief-de/) auf Deutsch. Die ausführliche Dokumentation ist englisch. Der Kern ist dual lizenziert (Apache-2.0 / MIT) — freie kommerzielle Nutzung in jedem Umfang.
+Weiterführend: [Installationsanleitung](/installation/), [Technische Referenz](/documentation/), [ISO-20022-Fahrplan bis 2028](/iso20022-roadmap/), [pain.002-Ablehnungscodes](/pain002-reason-codes/), [Trust Centre](/trust/) — und das einseitige [Kurzdossier für Entscheider](/de/executive-brief/) auf Deutsch. Die ausführliche Dokumentation ist englisch. Der Kern ist dual lizenziert (Apache-2.0 / MIT) — freie kommerzielle Nutzung in jedem Umfang.

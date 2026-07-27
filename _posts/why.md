@@ -111,4 +111,4 @@ Check rather than trust: payment data [never leaves your machines](/privacy/), t
 
 ## What is the next step?
 
-Watch it work: the [60-second demo](/try/) validates a payment batch and proves it against the official schema, in your browser. Then hand your team the [executive brief](/executive-brief/) — one page, print-ready, available in [French](/executive-brief-fr/), [German](/executive-brief-de/), and [Spanish](/executive-brief-es/).
+Watch it work: the [60-second demo](/try/) validates a payment batch and proves it against the official schema, in your browser. Then hand your team the [executive brief](/executive-brief/) — one page, print-ready, available in [French](/fr/executive-brief/), [German](/de/executive-brief/), and [Spanish](/es/executive-brief/).

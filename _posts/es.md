@@ -110,4 +110,4 @@ pip install pain001
 pain001 -t pain.001.001.09 -d pagos.csv -o salida/ --dry-run
 ```
 
-Para profundizar: [guía de instalación](/installation/), [referencia técnica](/documentation/), [hoja de ruta ISO 20022 hasta 2028](/iso20022-roadmap/), [códigos de rechazo pain.002](/pain002-reason-codes/), [centro de confianza](/trust/) — y el [resumen ejecutivo de una página](/executive-brief-es/), en español. La documentación completa está en inglés. El núcleo tiene doble licencia Apache-2.0 / MIT — uso comercial libre a cualquier escala.
+Para profundizar: [guía de instalación](/installation/), [referencia técnica](/documentation/), [hoja de ruta ISO 20022 hasta 2028](/iso20022-roadmap/), [códigos de rechazo pain.002](/pain002-reason-codes/), [centro de confianza](/trust/) — y el [resumen ejecutivo de una página](/es/executive-brief/), en español. La documentación completa está en inglés. El núcleo tiene doble licencia Apache-2.0 / MIT — uso comercial libre a cualquier escala.

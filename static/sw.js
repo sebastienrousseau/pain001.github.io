@@ -12,7 +12,7 @@
  * would not have made itself.
  */
 
-const CACHE = "pain001-try-v4";
+const CACHE = "pain001-try-v5";
 
 const CACHEABLE = [
   "/try/",

@@ -1,0 +1,115 @@
+{
+ "why": {
+  "meta": {
+   "title": "為什麼選擇 Pain001：五問商業效益",
+   "description": "付款檔案遭退回的代價、為什麼 2026 年 11 月 14 日無法更改、Pain001 如何因應、成本多少（零）、是否安全——每個答案均附證據連結。",
+   "eyebrow": "商業效益",
+   "deck": "CFO 真正在意的五個問題——以淺白語言作答，每項主張均附證據連結。"
+  },
+  "text": {
+   "<a href=\"/\">Home</a>": "<a href=\"/\">首頁</a>",
+   "Contents": "目錄",
+   "<a href=\"#what-does-a-rejected-payment-file-cost\">What does a rejected payment file cost?</a>": "<a href=\"#what-does-a-rejected-payment-file-cost\">付款檔案遭退回的代價是什麼？</a>",
+   "<a href=\"#why-is-14-november-2026-non-negotiable\">Why is 14 November 2026 non-negotiable?</a>": "<a href=\"#why-is-14-november-2026-non-negotiable\">為什麼 2026 年 11 月 14 日無法更改？</a>",
+   "<a href=\"#what-does-pain001-do-about-it\">What does Pain001 do about it?</a>": "<a href=\"#what-does-pain001-do-about-it\">Pain001 如何因應？</a>",
+   "<a href=\"#what-does-it-cost\">What does it cost?</a>": "<a href=\"#what-does-it-cost\">它的成本是多少？</a>",
+   "<a href=\"#is-it-safe\">Is it safe?</a>": "<a href=\"#is-it-safe\">它安全嗎？</a>",
+   "<a href=\"#what-is-the-next-step\">What is the next step?</a>": "<a href=\"#what-is-the-next-step\">下一步是什麼？</a>",
+   "What does a rejected payment file cost?<a class=\"heading-anchor\" href=\"#what-does-a-rejected-payment-file-cost\" aria-label=\"Link to section: What does a rejected payment file cost?\">#</a>": "付款檔案遭退回的代價是什麼？<a class=\"heading-anchor\" href=\"#what-does-a-rejected-payment-file-cost\" aria-label=\"Link to section: What does a rejected payment file cost?\">#</a>",
+   "A file the bank bounces does not fail quietly. Someone diagnoses the reason code, repairs the source data, regenerates, resubmits — and if the repair misses the day's cut-off, settlement slips. For payroll or supplier runs, a slipped day is a phone call you do not want to make. The <a href=\"/pain002-reason-codes/\">reason-code reference</a> lists what banks actually send back; almost every format-class entry on it is preventable before submission.": "遭銀行退回的檔案不會悄悄了事。總得有人診斷原因代碼、修復來源資料、重新產生並重新提交——若修復錯過當日截止時間，清算便會順延。對薪資或供應商付款批次而言，延誤一天就是一通您絕不想撥的電話。<a href=\"/pain002-reason-codes/\">原因代碼參考</a>列出銀行實際回傳的內容；其中幾乎所有格式類項目都能在提交前預先避免。",
+   "Why is 14 November 2026 non-negotiable?<a class=\"heading-anchor\" href=\"#why-is-14-november-2026-non-negotiable\" aria-label=\"Link to section: Why is 14 November 2026 non-negotiable?\">#</a>": "為什麼 2026 年 11 月 14 日無法更改？<a class=\"heading-anchor\" href=\"#why-is-14-november-2026-non-negotiable\" aria-label=\"Link to section: Why is 14 November 2026 non-negotiable?\">#</a>",
+   "Because it is enforced at network level, not by policy. From that date, cross-border payments (CBPR+) carrying fully unstructured postal addresses are rejected, and the interbank MT101 relay retires in favour of <code>pain.001</code> version 9. The dates come from SWIFT, not from us — every one is cited in the <a href=\"/2026-iso20022-migration-trends/\">2026 briefing</a>, and the schedule continues to 2028 on the <a href=\"/iso20022-roadmap/\">living roadmap</a>.": "因為它是在網路層級強制執行，而非出於政策。自該日起，攜帶完全非結構化郵政地址的跨境付款（CBPR+）將遭拒收，銀行間 MT101 中繼也將退場，由 <code>pain.001</code> 第 9 版取代。這些日期來自 SWIFT，而非我們——每一項皆於<a href=\"/2026-iso20022-migration-trends/\">2026 年簡報</a>中註明出處，時程表並在<a href=\"/iso20022-roadmap/\">持續更新的路線圖</a>上延續至 2028 年。",
+   "What does Pain001 do about it?<a class=\"heading-anchor\" href=\"#what-does-pain001-do-about-it\" aria-label=\"Link to section: What does Pain001 do about it?\">#</a>": "Pain001 如何因應？<a class=\"heading-anchor\" href=\"#what-does-pain001-do-about-it\" aria-label=\"Link to section: What does Pain001 do about it?\">#</a>",
+   "Three things. It turns the data you already have — spreadsheets, ERP exports, legacy SWIFT files — into bank-ready ISO 20022 payment files. It proves each file clean before submission: validation against the bank's official rulebook (ISO 20022 XSD), the account-number checksum your bank runs (ISO 13616 mod-97), and control totals recalculated from the records, never trusted. And it does all of this on your own infrastructure — nothing is uploaded anywhere.": "三件事。它將您既有的資料——試算表、ERP 匯出檔、傳統 SWIFT 檔案——轉換為銀行可直接受理的 ISO 20022 付款檔案。它在提交前證明每個檔案皆無瑕疵：依銀行官方規則手冊（ISO 20022 XSD）驗證，執行您的銀行所用的帳號檢核碼（ISO 13616 mod-97），並依紀錄重新計算控制總額，絕不逕行採信。而且這一切都在您自己的基礎設施上完成——任何資料都不會被上傳。",
+   "What does it cost?<a class=\"heading-anchor\" href=\"#what-does-it-cost\" aria-label=\"Link to section: What does it cost?\">#</a>": "它的成本是多少？<a class=\"heading-anchor\" href=\"#what-does-it-cost\" aria-label=\"Link to section: What does it cost?\">#</a>",
+   "Nothing, at any scale, permanently. The core is dual-licensed (Apache-2.0 or MIT); companion packages are Apache-2.0. The nearest commercial reference point — SWIFT's translation SDK — is publicly listed at €10,000–30,000 per year before integration effort. The full landscape, including where commercial platforms genuinely win, is in the <a href=\"/competitors-comparison/\">comparison</a>.": "零成本，任何規模，永久如此。核心採雙重授權（Apache-2.0 或 MIT）；週邊套件採 Apache-2.0。最接近的商業參照——SWIFT 的轉換 SDK——公開定價為每年 €10,000–30,000，尚不含整合成本。完整全貌，包括商業平台真正勝出之處，詳見<a href=\"/competitors-comparison/\">比較分析</a>。",
+   "Is it safe?<a class=\"heading-anchor\" href=\"#is-it-safe\" aria-label=\"Link to section: Is it safe?\">#</a>": "它安全嗎？<a class=\"heading-anchor\" href=\"#is-it-safe\" aria-label=\"Link to section: Is it safe?\">#</a>",
+   "Check rather than trust: payment data <a href=\"/privacy/\">never leaves your machines</a>, the dependency inventory is a published <a href=\"/sbom.cdx.json\">SBOM</a>, the code holds <a href=\"/architecture-and-patents/\">100% branch coverage as a CI gate</a>, and the <a href=\"/try/\">browser demo</a> invites your security team to falsify the claims with DevTools open.": "查證而非輕信：付款資料<a href=\"/privacy/\">絕不離開您的機器</a>，相依套件清單是公開發布的 <a href=\"/sbom.cdx.json\">SBOM</a>，程式碼以 <a href=\"/architecture-and-patents/\">100% 分支涵蓋率作為 CI 關卡</a>，<a href=\"/try/\">瀏覽器示範</a>更歡迎您的資安團隊開著 DevTools 來檢驗這些主張。",
+   "What is the next step?<a class=\"heading-anchor\" href=\"#what-is-the-next-step\" aria-label=\"Link to section: What is the next step?\">#</a>": "下一步是什麼？<a class=\"heading-anchor\" href=\"#what-is-the-next-step\" aria-label=\"Link to section: What is the next step?\">#</a>",
+   "Watch it work: the <a href=\"/try/\">60-second demo</a> validates a payment batch and proves it against the official schema, in your browser. Then hand your team the <a href=\"/executive-brief/\">executive brief</a> — one page, print-ready, available in <a href=\"/executive-brief-fr/\">French</a>, <a href=\"/executive-brief-de/\">German</a>, and <a href=\"/executive-brief-es/\">Spanish</a>.": "眼見為憑：<a href=\"/try/\">60 秒示範</a>在您的瀏覽器中驗證一個付款批次，並依官方結構描述加以證明。接著將<a href=\"/executive-brief/\">主管簡報</a>交給您的團隊——僅一頁，可直接列印，另有<a href=\"/executive-brief-fr/\">法文</a>、<a href=\"/executive-brief-de/\">德文</a>與<a href=\"/executive-brief-es/\">西班牙文</a>版本。"
+  },
+  "aria": {
+   "Breadcrumb": "麵包屑導覽",
+   "Contents": "目錄",
+   "Link to section: What does a rejected payment file cost?": "前往章節：付款檔案遭退回的代價是什麼？",
+   "Link to section: Why is 14 November 2026 non-negotiable?": "前往章節：為什麼 2026 年 11 月 14 日無法更改？",
+   "Link to section: What does Pain001 do about it?": "前往章節：Pain001 如何因應？",
+   "Link to section: What does it cost?": "前往章節：它的成本是多少？",
+   "Link to section: Is it safe?": "前往章節：它安全嗎？",
+   "Link to section: What is the next step?": "前往章節：下一步是什麼？"
+  }
+ },
+ "solutions": {
+  "meta": {
+   "title": "Pain001 適合哪些人",
+   "description": "資金管理、CFO 與董事會、付款作業、工程與 AI——以您的語彙描述問題、Pain001 帶來的改變，以及您的下一步，每個角色 150 字。",
+   "eyebrow": "適用對象",
+   "deck": "四種角色、四套語彙、一條管線——先找到您的問題，再找到下一步。"
+  },
+  "text": {
+   "<a href=\"/\">Home</a>": "<a href=\"/\">首頁</a>",
+   "Contents": "目錄",
+   "<a href=\"#treasury-finance\">Treasury & finance</a>": "<a href=\"#treasury-finance\">資金管理與財務</a>",
+   "<a href=\"#cfo-board\">CFO & board</a>": "<a href=\"#cfo-board\">CFO 與董事會</a>",
+   "<a href=\"#payment-operations\">Payment operations</a>": "<a href=\"#payment-operations\">付款作業</a>",
+   "<a href=\"#engineering-ai\">Engineering & AI</a>": "<a href=\"#engineering-ai\">工程與 AI</a>",
+   "Treasury & finance<a class=\"heading-anchor\" href=\"#treasury-finance\" aria-label=\"Link to section: Treasury & finance\">#</a>": "資金管理與財務<a class=\"heading-anchor\" href=\"#treasury-finance\" aria-label=\"Link to section: Treasury & finance\">#</a>",
+   "Your bank rejects files for reasons your ERP never warned you about: a transposed IBAN digit, a control total that no longer matches, an address format that stopped being acceptable. Pain001 makes those failures happen at your desk instead — every file is proven against the bank's official rulebook (ISO 20022 XSD) before submission, and the <a href=\"/payments/\">payment-lifecycle guide</a> shows where each check sits between origination and reconciliation. Start with the <a href=\"/glossary/\">glossary</a> if the vocabulary is new; the plain-English definitions were written for your side of the desk, not the engineers'.": "您的銀行退回檔案的理由，ERP 從未事先警告：IBAN 數字對調、控制總額不再相符、地址格式不再被接受。Pain001 讓這些失敗提前在您的桌面現形——每個檔案在提交前皆依銀行官方規則手冊（ISO 20022 XSD）獲得證明，<a href=\"/payments/\">付款生命週期指南</a>並展示每項檢查在發動與對帳之間的位置。若這些詞彙對您仍屬陌生，請從<a href=\"/glossary/\">詞彙表</a>入手；那些淺白的定義是為您這一側的辦公桌而寫，而非為工程師。",
+   "CFO & board<a class=\"heading-anchor\" href=\"#cfo-board\" aria-label=\"Link to section: CFO & board\">#</a>": "CFO 與董事會<a class=\"heading-anchor\" href=\"#cfo-board\" aria-label=\"Link to section: CFO & board\">#</a>",
+   "Two numbers frame the decision. <strong>14 November 2026</strong>: the date cross-border payments with unstructured addresses start bouncing at network level — exposure that lives in your customer master data, not your bank connection. <strong>€10,000–30,000 per year</strong>: the public list price of the nearest commercial translation SDK, against Pain001's permanent zero at any scale under open licences. The governance questions — auditability, data locality, supply-chain evidence — are answered with artefacts, not assurances: published <a href=\"/sbom.cdx.json\">SBOM</a>, <a href=\"/security.txt\">security policy</a>, and processing that never leaves your infrastructure. The <a href=\"/executive-brief/\">one-page executive brief</a> is written to be forwarded.": "兩個數字框定了這項決策。<strong>2026 年 11 月 14 日</strong>：攜帶非結構化地址的跨境付款開始在網路層級遭退回的日期——曝險存在於您的客戶主檔資料，而非您的銀行連線。<strong>每年 €10,000–30,000</strong>：最接近的商業轉換 SDK 之公開定價，相對於 Pain001 在開放授權下、任何規模皆永久免費。治理問題——可稽核性、資料在地性、供應鏈證據——以實證文件而非口頭保證作答：公開發布的 <a href=\"/sbom.cdx.json\">SBOM</a>、<a href=\"/security.txt\">資安政策</a>，以及絕不離開您基礎設施的處理流程。<a href=\"/executive-brief/\">一頁主管簡報</a>正是為轉寄而寫。",
+   "Payment operations<a class=\"heading-anchor\" href=\"#payment-operations\" aria-label=\"Link to section: Payment operations\">#</a>": "付款作業<a class=\"heading-anchor\" href=\"#payment-operations\" aria-label=\"Link to section: Payment operations\">#</a>",
+   "You live in the response files. Pain001 closes the loop end to end: <code>--dry-run</code> pre-submission checks that pass or fail cleanly in CI, scheme rulebooks (SEPA and cross-border) explained rule by rule, the <a href=\"/pain002-reason-codes/\">pain.002 reason-code reference</a> for decoding what came back, and parsers that turn bank responses and camt.053 statements into structured data your pipeline can route. The <a href=\"/try/\">browser demo</a> is the fastest way to see the failure classes it eliminates — including the one-click \"introduce an error\" scenarios.": "您的日常就在回應檔案裡。Pain001 端對端閉環：<code>--dry-run</code> 提交前檢查在 CI 中乾淨地通過或失敗，逐條解說的清算方案規則手冊（SEPA 與跨境），用於解讀回覆的 <a href=\"/pain002-reason-codes/\">pain.002 原因代碼參考</a>，以及將銀行回應與 camt.053 對帳單轉為您的管線可路由的結構化資料的剖析器。<a href=\"/try/\">瀏覽器示範</a>是了解它所消除的失敗類別最快的方式——包括一鍵「引入錯誤」情境。",
+   "Engineering & AI<a class=\"heading-anchor\" href=\"#engineering-ai\" aria-label=\"Link to section: Engineering & AI\">#</a>": "工程與 AI<a class=\"heading-anchor\" href=\"#engineering-ai\" aria-label=\"Link to section: Engineering & AI\">#</a>",
+   "A typed Python API, a CLI with meaningful exit codes, a REST microservice, and plugin points for loaders, validators, schemes, and writers — <a href=\"/documentation/\">the technical reference</a> covers every flag and endpoint, and the code carries 100% line-and-branch coverage as a hard CI gate. If you are building with agents: <a href=\"/pain001-mcp/\">pain001-mcp</a> is the category's only Model Context Protocol server — seventeen read-only tools your agents call locally, with editor diagnostics from <a href=\"/pain001-lsp/\">pain001-lsp</a> while humans stay in the loop.": "型別化的 Python API、具有明確結束碼的 CLI、REST 微服務，以及供載入器、驗證器、清算方案與寫入器使用的外掛點——<a href=\"/documentation/\">技術參考</a>涵蓋每個旗標與端點，程式碼並以 100% 行與分支涵蓋率作為硬性 CI 關卡。若您正以 AI 代理建置：<a href=\"/pain001-mcp/\">pain001-mcp</a> 是同類別中唯一的 Model Context Protocol 伺服器——十七個唯讀工具供您的代理在本機呼叫，並由 <a href=\"/pain001-lsp/\">pain001-lsp</a> 提供編輯器診斷，同時人員始終參與其中。"
+  },
+  "aria": {
+   "Breadcrumb": "麵包屑導覽",
+   "Contents": "目錄",
+   "Link to section: Treasury & finance": "前往章節：資金管理與財務",
+   "Link to section: CFO & board": "前往章節：CFO 與董事會",
+   "Link to section: Payment operations": "前往章節：付款作業",
+   "Link to section: Engineering & AI": "前往章節：工程與 AI"
+  }
+ },
+ "executive-brief": {
+  "meta": {
+   "title": "Pain001 主管簡報",
+   "description": "為決策者準備的一頁：檔案遭退回的問題、2026 年 11 月 14 日的既定期限、Pain001 的功能、成本、安全證據與唯一請求——可直接列印。",
+   "eyebrow": "主管簡報",
+   "deck": "一頁。五項事實。一項請求。另有法文、德文與西班牙文版本——可自瀏覽器直接列印。"
+  },
+  "text": {
+   "<a href=\"/\">Home</a>": "<a href=\"/\">首頁</a>",
+   "Contents": "目錄",
+   "<a href=\"#the-problem\">The problem</a>": "<a href=\"#the-problem\">問題</a>",
+   "<a href=\"#the-deadline\">The deadline</a>": "<a href=\"#the-deadline\">期限</a>",
+   "<a href=\"#what-pain001-does\">What Pain001 does</a>": "<a href=\"#what-pain001-does\">Pain001 的功能</a>",
+   "<a href=\"#what-it-costs\">What it costs</a>": "<a href=\"#what-it-costs\">成本</a>",
+   "<a href=\"#the-evidence\">The evidence</a>": "<a href=\"#the-evidence\">證據</a>",
+   "<a href=\"#the-ask\">The ask</a>": "<a href=\"#the-ask\">請求</a>",
+   "Read in: <a href=\"/executive-brief-fr/\">Français</a> · <a href=\"/executive-brief-de/\">Deutsch</a> · <a href=\"/executive-brief-es/\">Español</a>": "其他語言：<a href=\"/executive-brief-fr/\">Français</a> · <a href=\"/executive-brief-de/\">Deutsch</a> · <a href=\"/executive-brief-es/\">Español</a>",
+   "The problem<a class=\"heading-anchor\" href=\"#the-problem\" aria-label=\"Link to section: The problem\">#</a>": "問題<a class=\"heading-anchor\" href=\"#the-problem\" aria-label=\"Link to section: The problem\">#</a>",
+   "Banks reject malformed payment files. Every rejection costs a repair cycle; a repair that misses the day's cut-off costs a settlement day. The rejection reasons are knowable in advance — and therefore preventable.": "銀行會退回格式不符的付款檔案。每次退回都要付出一個修復週期；錯過當日截止時間的修復，則要付出一個清算日。退回原因可以事先掌握——因此可以預防。",
+   "The deadline<a class=\"heading-anchor\" href=\"#the-deadline\" aria-label=\"Link to section: The deadline\">#</a>": "期限<a class=\"heading-anchor\" href=\"#the-deadline\" aria-label=\"Link to section: The deadline\">#</a>",
+   "<strong>14 November 2026</strong>, enforced at network level: cross-border payments (CBPR+) carrying fully unstructured addresses are rejected, and the legacy interbank MT101 channel retires in favour of ISO 20022 <code>pain.001</code> version 9. The exposure sits in customer master data. Sources: SWIFT, cited in full at pain001.com/2026-iso20022-migration-trends.": "<strong>2026 年 11 月 14 日</strong>，於網路層級強制執行：攜帶完全非結構化地址的跨境付款（CBPR+）將遭拒收，傳統銀行間 MT101 通道退場，由 ISO 20022 <code>pain.001</code> 第 9 版取代。曝險位於客戶主檔資料之中。來源：SWIFT，完整引註見 pain001.com/2026-iso20022-migration-trends。",
+   "What Pain001 does<a class=\"heading-anchor\" href=\"#what-pain001-does\" aria-label=\"Link to section: What Pain001 does\">#</a>": "Pain001 的功能<a class=\"heading-anchor\" href=\"#what-pain001-does\" aria-label=\"Link to section: What Pain001 does\">#</a>",
+   "An open-source suite that converts existing data — spreadsheets, ERP exports, legacy SWIFT files — into bank-ready ISO 20022 payment files, and proves each file against the bank's official rulebook (ISO 20022 XSD) <em>before</em> submission. It runs entirely on your own infrastructure: no upload, no vendor cloud, no telemetry.": "一套開放原始碼套件，將既有資料——試算表、ERP 匯出檔、傳統 SWIFT 檔案——轉換為銀行可直接受理的 ISO 20022 付款檔案，並在提交<em>之前</em>依銀行官方規則手冊（ISO 20022 XSD）證明每個檔案。它完全在您自己的基礎設施上執行：不上傳、無供應商雲端、無遙測。",
+   "What it costs<a class=\"heading-anchor\" href=\"#what-it-costs\" aria-label=\"Link to section: What it costs\">#</a>": "成本<a class=\"heading-anchor\" href=\"#what-it-costs\" aria-label=\"Link to section: What it costs\">#</a>",
+   "Nothing, at any scale, under open licences (Apache-2.0 / MIT). Commercial reference point: SWIFT's translation SDK is publicly listed at €10,000–30,000 per year.": "零成本，任何規模，採開放授權（Apache-2.0 / MIT）。商業參照：SWIFT 的轉換 SDK 公開定價為每年 €10,000–30,000。",
+   "The evidence<a class=\"heading-anchor\" href=\"#the-evidence\" aria-label=\"Link to section: The evidence\">#</a>": "證據<a class=\"heading-anchor\" href=\"#the-evidence\" aria-label=\"Link to section: The evidence\">#</a>",
+   "Published dependency inventory (SBOM) · 100% branch-covered code as a CI gate · independently scored supply chain (OpenSSF Scorecard) · WCAG 2.2 AAA accessible documentation · security policy with private disclosure. All verifiable at pain001.com.": "公開發布的相依套件清單（SBOM）· 以 100% 分支涵蓋率作為 CI 關卡的程式碼 · 獨立評分的供應鏈（OpenSSF Scorecard）· 符合 WCAG 2.2 AAA 無障礙標準的文件 · 支援私密揭露的資安政策。皆可於 pain001.com 查證。",
+   "The ask<a class=\"heading-anchor\" href=\"#the-ask\" aria-label=\"Link to section: The ask\">#</a>": "請求<a class=\"heading-anchor\" href=\"#the-ask\" aria-label=\"Link to section: The ask\">#</a>",
+   "Have your payments engineering team run the 60-second demo at <strong>pain001.com/try</strong> — it validates a sample batch and proves it against the official ISO 20022 schema, in the browser, with nothing uploaded. If it holds up, the installation guide takes minutes.": "請您的付款工程團隊在 <strong>pain001.com/try</strong> 執行 60 秒示範——它在瀏覽器中驗證一個範例批次，並依官方 ISO 20022 結構描述加以證明，任何資料都不會被上傳。若通過檢驗，安裝指南只需數分鐘。"
+  },
+  "aria": {
+   "Breadcrumb": "麵包屑導覽",
+   "Contents": "目錄",
+   "Link to section: The problem": "前往章節：問題",
+   "Link to section: The deadline": "前往章節：期限",
+   "Link to section: What Pain001 does": "前往章節：Pain001 的功能",
+   "Link to section: What it costs": "前往章節：成本",
+   "Link to section: The evidence": "前往章節：證據",
+   "Link to section: The ask": "前往章節：請求"
+  }
+ }
+}

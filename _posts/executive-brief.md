@@ -91,7 +91,7 @@ last_reviewed: "2026-07-26"
 
 > **To print or save as PDF:** use your browser's print function (⌘P / Ctrl+P). This page carries a print stylesheet that produces a clean single page — no navigation, no footer, links written out in full.
 
-Read in: [Français](/executive-brief-fr/) · [Deutsch](/executive-brief-de/) · [Español](/executive-brief-es/)
+Read in: [Français](/fr/executive-brief/) · [Deutsch](/de/executive-brief/) · [Español](/es/executive-brief/)
 
 ## The problem
 

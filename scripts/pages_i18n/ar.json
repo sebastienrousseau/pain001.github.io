@@ -1,0 +1,115 @@
+{
+ "why": {
+  "meta": {
+   "title": "لماذا Pain001: دراسة الجدوى في خمسة أسئلة",
+   "description": "ماذا يكلّف ملف الدفع المرفوض، ولماذا 14 نوفمبر 2026 موعد ثابت، وما الذي يفعله Pain001 حياله، وما تكلفته (لا شيء)، وهل هو آمن — كل إجابة مرتبطة بدليلها.",
+   "eyebrow": "دراسة الجدوى",
+   "deck": "الأسئلة الخمسة التي يطرحها المدير المالي فعلاً — إجابات بلغة واضحة، وكل ادعاء مرتبط بدليله."
+  },
+  "text": {
+   "<a href=\"/\">Home</a>": "<a href=\"/\">الرئيسية</a>",
+   "Contents": "المحتويات",
+   "<a href=\"#what-does-a-rejected-payment-file-cost\">What does a rejected payment file cost?</a>": "<a href=\"#what-does-a-rejected-payment-file-cost\">ماذا يكلّف ملف الدفع المرفوض؟</a>",
+   "<a href=\"#why-is-14-november-2026-non-negotiable\">Why is 14 November 2026 non-negotiable?</a>": "<a href=\"#why-is-14-november-2026-non-negotiable\">لماذا 14 نوفمبر 2026 موعد غير قابل للتفاوض؟</a>",
+   "<a href=\"#what-does-pain001-do-about-it\">What does Pain001 do about it?</a>": "<a href=\"#what-does-pain001-do-about-it\">ما الذي يفعله Pain001 حيال ذلك؟</a>",
+   "<a href=\"#what-does-it-cost\">What does it cost?</a>": "<a href=\"#what-does-it-cost\">ما تكلفته؟</a>",
+   "<a href=\"#is-it-safe\">Is it safe?</a>": "<a href=\"#is-it-safe\">هل هو آمن؟</a>",
+   "<a href=\"#what-is-the-next-step\">What is the next step?</a>": "<a href=\"#what-is-the-next-step\">ما الخطوة التالية؟</a>",
+   "What does a rejected payment file cost?<a class=\"heading-anchor\" href=\"#what-does-a-rejected-payment-file-cost\" aria-label=\"Link to section: What does a rejected payment file cost?\">#</a>": "ماذا يكلّف ملف الدفع المرفوض؟<a class=\"heading-anchor\" href=\"#what-does-a-rejected-payment-file-cost\" aria-label=\"Link to section: What does a rejected payment file cost?\">#</a>",
+   "A file the bank bounces does not fail quietly. Someone diagnoses the reason code, repairs the source data, regenerates, resubmits — and if the repair misses the day's cut-off, settlement slips. For payroll or supplier runs, a slipped day is a phone call you do not want to make. The <a href=\"/pain002-reason-codes/\">reason-code reference</a> lists what banks actually send back; almost every format-class entry on it is preventable before submission.": "الملف الذي يرفضه البنك لا يفشل بصمت. فعلى أحدهم تشخيص رمز السبب، وإصلاح البيانات المصدرية، وإعادة التوليد وإعادة التقديم — وإذا فات الإصلاح موعد الإقفال اليومي، تأخّرت التسوية. وفي مدفوعات الرواتب أو الموردين، يوم تأخير واحد يعني مكالمة هاتفية لا تودّ إجراءها. يسرد <a href=\"/pain002-reason-codes/\">مرجع رموز الأسباب</a> ما ترسله البنوك فعلاً؛ وكل إدخال من فئة التنسيق فيه تقريباً يمكن منعه قبل التقديم.",
+   "Why is 14 November 2026 non-negotiable?<a class=\"heading-anchor\" href=\"#why-is-14-november-2026-non-negotiable\" aria-label=\"Link to section: Why is 14 November 2026 non-negotiable?\">#</a>": "لماذا 14 نوفمبر 2026 موعد غير قابل للتفاوض؟<a class=\"heading-anchor\" href=\"#why-is-14-november-2026-non-negotiable\" aria-label=\"Link to section: Why is 14 November 2026 non-negotiable?\">#</a>",
+   "Because it is enforced at network level, not by policy. From that date, cross-border payments (CBPR+) carrying fully unstructured postal addresses are rejected, and the interbank MT101 relay retires in favour of <code>pain.001</code> version 9. The dates come from SWIFT, not from us — every one is cited in the <a href=\"/2026-iso20022-migration-trends/\">2026 briefing</a>, and the schedule continues to 2028 on the <a href=\"/iso20022-roadmap/\">living roadmap</a>.": "لأنه يُفرض على مستوى الشبكة، لا بقرار داخلي. فاعتباراً من ذلك التاريخ، تُرفض المدفوعات العابرة للحدود (CBPR+) التي تحمل عناوين بريدية غير مهيكلة بالكامل، وتُحال قناة MT101 بين البنوك إلى التقاعد لصالح الإصدار 9 من <code>pain.001</code>. التواريخ صادرة عن SWIFT لا عنّا — وكل تاريخ موثّق في <a href=\"/2026-iso20022-migration-trends/\">إحاطة 2026</a>، ويستمر الجدول حتى 2028 على <a href=\"/iso20022-roadmap/\">خارطة الطريق الحيّة</a>.",
+   "What does Pain001 do about it?<a class=\"heading-anchor\" href=\"#what-does-pain001-do-about-it\" aria-label=\"Link to section: What does Pain001 do about it?\">#</a>": "ما الذي يفعله Pain001 حيال ذلك؟<a class=\"heading-anchor\" href=\"#what-does-pain001-do-about-it\" aria-label=\"Link to section: What does Pain001 do about it?\">#</a>",
+   "Three things. It turns the data you already have — spreadsheets, ERP exports, legacy SWIFT files — into bank-ready ISO 20022 payment files. It proves each file clean before submission: validation against the bank's official rulebook (ISO 20022 XSD), the account-number checksum your bank runs (ISO 13616 mod-97), and control totals recalculated from the records, never trusted. And it does all of this on your own infrastructure — nothing is uploaded anywhere.": "ثلاثة أشياء. فهو يحوّل البيانات التي لديك بالفعل — جداول البيانات وتصديرات ERP وملفات SWIFT القديمة — إلى ملفات دفع ISO 20022 جاهزة للبنك. ويثبت سلامة كل ملف قبل التقديم: تحقّق وفق دليل قواعد البنك الرسمي (ISO 20022 XSD)، وفحص المجموع الاختباري لرقم الحساب الذي يجريه بنكك (ISO 13616 mod-97)، ومجاميع رقابية يُعاد حسابها من السجلات ولا تُؤخذ على الثقة أبداً. ويقوم بكل ذلك على بنيتك التحتية الخاصة — لا يُرفع أي شيء إلى أي مكان.",
+   "What does it cost?<a class=\"heading-anchor\" href=\"#what-does-it-cost\" aria-label=\"Link to section: What does it cost?\">#</a>": "ما تكلفته؟<a class=\"heading-anchor\" href=\"#what-does-it-cost\" aria-label=\"Link to section: What does it cost?\">#</a>",
+   "Nothing, at any scale, permanently. The core is dual-licensed (Apache-2.0 or MIT); companion packages are Apache-2.0. The nearest commercial reference point — SWIFT's translation SDK — is publicly listed at €10,000–30,000 per year before integration effort. The full landscape, including where commercial platforms genuinely win, is in the <a href=\"/competitors-comparison/\">comparison</a>.": "لا شيء، على أي نطاق، وبشكل دائم. النواة مرخّصة ترخيصاً مزدوجاً (Apache-2.0 أو MIT)؛ والحزم المرافقة مرخّصة بـApache-2.0. أقرب مرجع تجاري — عدة SWIFT للترجمة — معلن عنه علناً بسعر €10,000–30,000 سنوياً قبل جهد التكامل. المشهد الكامل، بما فيه المواضع التي تتفوق فيها المنصات التجارية فعلاً، موجود في <a href=\"/competitors-comparison/\">المقارنة</a>.",
+   "Is it safe?<a class=\"heading-anchor\" href=\"#is-it-safe\" aria-label=\"Link to section: Is it safe?\">#</a>": "هل هو آمن؟<a class=\"heading-anchor\" href=\"#is-it-safe\" aria-label=\"Link to section: Is it safe?\">#</a>",
+   "Check rather than trust: payment data <a href=\"/privacy/\">never leaves your machines</a>, the dependency inventory is a published <a href=\"/sbom.cdx.json\">SBOM</a>, the code holds <a href=\"/architecture-and-patents/\">100% branch coverage as a CI gate</a>, and the <a href=\"/try/\">browser demo</a> invites your security team to falsify the claims with DevTools open.": "تحقّق بدل أن تثق: بيانات الدفع <a href=\"/privacy/\">لا تغادر أجهزتك أبداً</a>، وجرد التبعيات منشور في <a href=\"/sbom.cdx.json\">SBOM</a>، والشيفرة تحافظ على <a href=\"/architecture-and-patents/\">تغطية فروع بنسبة 100% كبوابة CI</a>، و<a href=\"/try/\">العرض التجريبي في المتصفح</a> يدعو فريق الأمن لديك إلى محاولة دحض الادعاءات وأدوات DevTools مفتوحة.",
+   "What is the next step?<a class=\"heading-anchor\" href=\"#what-is-the-next-step\" aria-label=\"Link to section: What is the next step?\">#</a>": "ما الخطوة التالية؟<a class=\"heading-anchor\" href=\"#what-is-the-next-step\" aria-label=\"Link to section: What is the next step?\">#</a>",
+   "Watch it work: the <a href=\"/try/\">60-second demo</a> validates a payment batch and proves it against the official schema, in your browser. Then hand your team the <a href=\"/executive-brief/\">executive brief</a> — one page, print-ready, available in <a href=\"/executive-brief-fr/\">French</a>, <a href=\"/executive-brief-de/\">German</a>, and <a href=\"/executive-brief-es/\">Spanish</a>.": "شاهده يعمل: <a href=\"/try/\">العرض التجريبي لمدة 60 ثانية</a> يتحقق من دفعة مدفوعات ويثبتها وفق المخطط الرسمي، داخل متصفحك. ثم سلّم فريقك <a href=\"/executive-brief/\">الموجز التنفيذي</a> — صفحة واحدة جاهزة للطباعة، متاحة بـ<a href=\"/executive-brief-fr/\">الفرنسية</a> و<a href=\"/executive-brief-de/\">الألمانية</a> و<a href=\"/executive-brief-es/\">الإسبانية</a>."
+  },
+  "aria": {
+   "Breadcrumb": "مسار التنقّل",
+   "Contents": "المحتويات",
+   "Link to section: What does a rejected payment file cost?": "رابط إلى القسم: ماذا يكلّف ملف الدفع المرفوض؟",
+   "Link to section: Why is 14 November 2026 non-negotiable?": "رابط إلى القسم: لماذا 14 نوفمبر 2026 موعد غير قابل للتفاوض؟",
+   "Link to section: What does Pain001 do about it?": "رابط إلى القسم: ما الذي يفعله Pain001 حيال ذلك؟",
+   "Link to section: What does it cost?": "رابط إلى القسم: ما تكلفته؟",
+   "Link to section: Is it safe?": "رابط إلى القسم: هل هو آمن؟",
+   "Link to section: What is the next step?": "رابط إلى القسم: ما الخطوة التالية؟"
+  }
+ },
+ "solutions": {
+  "meta": {
+   "title": "لمن صُمّم Pain001",
+   "description": "الخزانة، والمدير المالي ومجلس الإدارة، وعمليات الدفع، والهندسة والذكاء الاصطناعي — المشكلة بمفرداتك، وما يغيّره Pain001، ونقرتك التالية، في 150 كلمة لكل دور.",
+   "eyebrow": "لمن هذا الحل",
+   "deck": "أربعة أدوار، وأربع مفردات، وخط معالجة واحد — اعثر على مشكلتك أولاً، ثم على نقرتك التالية."
+  },
+  "text": {
+   "<a href=\"/\">Home</a>": "<a href=\"/\">الرئيسية</a>",
+   "Contents": "المحتويات",
+   "<a href=\"#treasury-finance\">Treasury & finance</a>": "<a href=\"#treasury-finance\">الخزانة والمالية</a>",
+   "<a href=\"#cfo-board\">CFO & board</a>": "<a href=\"#cfo-board\">المدير المالي ومجلس الإدارة</a>",
+   "<a href=\"#payment-operations\">Payment operations</a>": "<a href=\"#payment-operations\">عمليات الدفع</a>",
+   "<a href=\"#engineering-ai\">Engineering & AI</a>": "<a href=\"#engineering-ai\">الهندسة والذكاء الاصطناعي</a>",
+   "Treasury & finance<a class=\"heading-anchor\" href=\"#treasury-finance\" aria-label=\"Link to section: Treasury & finance\">#</a>": "الخزانة والمالية<a class=\"heading-anchor\" href=\"#treasury-finance\" aria-label=\"Link to section: Treasury & finance\">#</a>",
+   "Your bank rejects files for reasons your ERP never warned you about: a transposed IBAN digit, a control total that no longer matches, an address format that stopped being acceptable. Pain001 makes those failures happen at your desk instead — every file is proven against the bank's official rulebook (ISO 20022 XSD) before submission, and the <a href=\"/payments/\">payment-lifecycle guide</a> shows where each check sits between origination and reconciliation. Start with the <a href=\"/glossary/\">glossary</a> if the vocabulary is new; the plain-English definitions were written for your side of the desk, not the engineers'.": "يرفض بنكك الملفات لأسباب لم يحذّرك منها نظام ERP لديك قط: رقم متبادل الموضع في IBAN، أو مجموع رقابي لم يعد مطابقاً، أو تنسيق عنوان لم يعد مقبولاً. يجعل Pain001 هذه الإخفاقات تحدث على مكتبك بدلاً من ذلك — فكل ملف يُثبت وفق دليل قواعد البنك الرسمي (ISO 20022 XSD) قبل التقديم، ويبيّن <a href=\"/payments/\">دليل دورة حياة الدفع</a> موضع كل فحص بين الإنشاء والتسوية. ابدأ بـ<a href=\"/glossary/\">المسرد</a> إذا كانت المفردات جديدة عليك؛ فالتعريفات المكتوبة بلغة واضحة وُضعت لجانبك من المكتب، لا للمهندسين.",
+   "CFO & board<a class=\"heading-anchor\" href=\"#cfo-board\" aria-label=\"Link to section: CFO & board\">#</a>": "المدير المالي ومجلس الإدارة<a class=\"heading-anchor\" href=\"#cfo-board\" aria-label=\"Link to section: CFO & board\">#</a>",
+   "Two numbers frame the decision. <strong>14 November 2026</strong>: the date cross-border payments with unstructured addresses start bouncing at network level — exposure that lives in your customer master data, not your bank connection. <strong>€10,000–30,000 per year</strong>: the public list price of the nearest commercial translation SDK, against Pain001's permanent zero at any scale under open licences. The governance questions — auditability, data locality, supply-chain evidence — are answered with artefacts, not assurances: published <a href=\"/sbom.cdx.json\">SBOM</a>, <a href=\"/security.txt\">security policy</a>, and processing that never leaves your infrastructure. The <a href=\"/executive-brief/\">one-page executive brief</a> is written to be forwarded.": "رقمان يؤطّران القرار. <strong>14 نوفمبر 2026</strong>: التاريخ الذي تبدأ فيه المدفوعات العابرة للحدود ذات العناوين غير المهيكلة بالارتداد على مستوى الشبكة — انكشاف يكمن في بياناتك الرئيسية للعملاء، لا في اتصالك المصرفي. <strong>€10,000–30,000 سنوياً</strong>: السعر المعلن لأقرب عدة ترجمة تجارية، مقابل صفر دائم لـPain001 على أي نطاق بموجب تراخيص مفتوحة. أسئلة الحوكمة — قابلية التدقيق، ومحلية البيانات، وأدلة سلسلة التوريد — تُجاب بمخرجات ملموسة لا بتطمينات: <a href=\"/sbom.cdx.json\">SBOM</a> منشور، و<a href=\"/security.txt\">سياسة أمنية</a>، ومعالجة لا تغادر بنيتك التحتية أبداً. <a href=\"/executive-brief/\">الموجز التنفيذي من صفحة واحدة</a> كُتب ليُعاد توجيهه.",
+   "Payment operations<a class=\"heading-anchor\" href=\"#payment-operations\" aria-label=\"Link to section: Payment operations\">#</a>": "عمليات الدفع<a class=\"heading-anchor\" href=\"#payment-operations\" aria-label=\"Link to section: Payment operations\">#</a>",
+   "You live in the response files. Pain001 closes the loop end to end: <code>--dry-run</code> pre-submission checks that pass or fail cleanly in CI, scheme rulebooks (SEPA and cross-border) explained rule by rule, the <a href=\"/pain002-reason-codes/\">pain.002 reason-code reference</a> for decoding what came back, and parsers that turn bank responses and camt.053 statements into structured data your pipeline can route. The <a href=\"/try/\">browser demo</a> is the fastest way to see the failure classes it eliminates — including the one-click \"introduce an error\" scenarios.": "أنت تعيش في ملفات الاستجابة. يغلق Pain001 الحلقة من طرف إلى طرف: فحوصات <code>--dry-run</code> السابقة للتقديم التي تنجح أو تفشل بوضوح في CI، ودلائل قواعد الأنظمة (SEPA والعابرة للحدود) مشروحة قاعدةً قاعدة، و<a href=\"/pain002-reason-codes/\">مرجع رموز أسباب pain.002</a> لفكّ شفرة ما عاد إليك، ومحلّلات تحوّل استجابات البنوك وكشوف camt.053 إلى بيانات مهيكلة يمكن لخط المعالجة لديك توجيهها. <a href=\"/try/\">العرض التجريبي في المتصفح</a> هو أسرع طريقة لرؤية فئات الفشل التي يقضي عليها — بما فيها سيناريوهات \"أدخل خطأ\" بنقرة واحدة.",
+   "Engineering & AI<a class=\"heading-anchor\" href=\"#engineering-ai\" aria-label=\"Link to section: Engineering & AI\">#</a>": "الهندسة والذكاء الاصطناعي<a class=\"heading-anchor\" href=\"#engineering-ai\" aria-label=\"Link to section: Engineering & AI\">#</a>",
+   "A typed Python API, a CLI with meaningful exit codes, a REST microservice, and plugin points for loaders, validators, schemes, and writers — <a href=\"/documentation/\">the technical reference</a> covers every flag and endpoint, and the code carries 100% line-and-branch coverage as a hard CI gate. If you are building with agents: <a href=\"/pain001-mcp/\">pain001-mcp</a> is the category's only Model Context Protocol server — seventeen read-only tools your agents call locally, with editor diagnostics from <a href=\"/pain001-lsp/\">pain001-lsp</a> while humans stay in the loop.": "واجهة برمجة Python منمّطة، وواجهة سطر أوامر برموز خروج ذات معنى، وخدمة REST مصغّرة، ونقاط إضافات للمحمّلات والمدقّقات والأنظمة والكُتّاب — يغطي <a href=\"/documentation/\">المرجع التقني</a> كل خيار ونقطة نهاية، وتحمل الشيفرة تغطية أسطر وفروع بنسبة 100% كبوابة CI صارمة. وإذا كنت تبني مع الوكلاء: <a href=\"/pain001-mcp/\">pain001-mcp</a> هو خادم Model Context Protocol الوحيد في فئته — سبع عشرة أداة للقراءة فقط يستدعيها وكلاؤك محلياً، مع تشخيصات المحرّر من <a href=\"/pain001-lsp/\">pain001-lsp</a> بينما يبقى البشر في الحلقة."
+  },
+  "aria": {
+   "Breadcrumb": "مسار التنقّل",
+   "Contents": "المحتويات",
+   "Link to section: Treasury & finance": "رابط إلى القسم: الخزانة والمالية",
+   "Link to section: CFO & board": "رابط إلى القسم: المدير المالي ومجلس الإدارة",
+   "Link to section: Payment operations": "رابط إلى القسم: عمليات الدفع",
+   "Link to section: Engineering & AI": "رابط إلى القسم: الهندسة والذكاء الاصطناعي"
+  }
+ },
+ "executive-brief": {
+  "meta": {
+   "title": "الموجز التنفيذي لـ Pain001",
+   "description": "صفحة واحدة لصنّاع القرار: مشكلة الملفات المرفوضة، والموعد الثابت 14 نوفمبر 2026، وما يفعله Pain001، وتكلفته، وأدلة الأمان، والطلب الوحيد — جاهزة للطباعة.",
+   "eyebrow": "الموجز التنفيذي",
+   "deck": "صفحة واحدة. خمس حقائق. طلب واحد. متاح أيضاً بالفرنسية والألمانية والإسبانية — جاهز للطباعة من متصفحك."
+  },
+  "text": {
+   "<a href=\"/\">Home</a>": "<a href=\"/\">الرئيسية</a>",
+   "Contents": "المحتويات",
+   "<a href=\"#the-problem\">The problem</a>": "<a href=\"#the-problem\">المشكلة</a>",
+   "<a href=\"#the-deadline\">The deadline</a>": "<a href=\"#the-deadline\">الموعد النهائي</a>",
+   "<a href=\"#what-pain001-does\">What Pain001 does</a>": "<a href=\"#what-pain001-does\">ما يفعله Pain001</a>",
+   "<a href=\"#what-it-costs\">What it costs</a>": "<a href=\"#what-it-costs\">التكلفة</a>",
+   "<a href=\"#the-evidence\">The evidence</a>": "<a href=\"#the-evidence\">الأدلة</a>",
+   "<a href=\"#the-ask\">The ask</a>": "<a href=\"#the-ask\">الطلب</a>",
+   "Read in: <a href=\"/executive-brief-fr/\">Français</a> · <a href=\"/executive-brief-de/\">Deutsch</a> · <a href=\"/executive-brief-es/\">Español</a>": "اقرأه بلغات أخرى: <a href=\"/executive-brief-fr/\">Français</a> · <a href=\"/executive-brief-de/\">Deutsch</a> · <a href=\"/executive-brief-es/\">Español</a>",
+   "The problem<a class=\"heading-anchor\" href=\"#the-problem\" aria-label=\"Link to section: The problem\">#</a>": "المشكلة<a class=\"heading-anchor\" href=\"#the-problem\" aria-label=\"Link to section: The problem\">#</a>",
+   "Banks reject malformed payment files. Every rejection costs a repair cycle; a repair that misses the day's cut-off costs a settlement day. The rejection reasons are knowable in advance — and therefore preventable.": "ترفض البنوك ملفات الدفع المشوّهة. كل رفض يكلّف دورة إصلاح؛ والإصلاح الذي يفوّت موعد الإقفال اليومي يكلّف يوم تسوية. أسباب الرفض يمكن معرفتها سلفاً — وبالتالي يمكن منعها.",
+   "The deadline<a class=\"heading-anchor\" href=\"#the-deadline\" aria-label=\"Link to section: The deadline\">#</a>": "الموعد النهائي<a class=\"heading-anchor\" href=\"#the-deadline\" aria-label=\"Link to section: The deadline\">#</a>",
+   "<strong>14 November 2026</strong>, enforced at network level: cross-border payments (CBPR+) carrying fully unstructured addresses are rejected, and the legacy interbank MT101 channel retires in favour of ISO 20022 <code>pain.001</code> version 9. The exposure sits in customer master data. Sources: SWIFT, cited in full at pain001.com/2026-iso20022-migration-trends.": "<strong>14 نوفمبر 2026</strong>، يُفرض على مستوى الشبكة: تُرفض المدفوعات العابرة للحدود (CBPR+) التي تحمل عناوين غير مهيكلة بالكامل، وتُحال قناة MT101 القديمة بين البنوك إلى التقاعد لصالح الإصدار 9 من <code>pain.001</code> في ISO 20022. يكمن الانكشاف في البيانات الرئيسية للعملاء. المصادر: SWIFT، موثّقة بالكامل في pain001.com/2026-iso20022-migration-trends.",
+   "What Pain001 does<a class=\"heading-anchor\" href=\"#what-pain001-does\" aria-label=\"Link to section: What Pain001 does\">#</a>": "ما يفعله Pain001<a class=\"heading-anchor\" href=\"#what-pain001-does\" aria-label=\"Link to section: What Pain001 does\">#</a>",
+   "An open-source suite that converts existing data — spreadsheets, ERP exports, legacy SWIFT files — into bank-ready ISO 20022 payment files, and proves each file against the bank's official rulebook (ISO 20022 XSD) <em>before</em> submission. It runs entirely on your own infrastructure: no upload, no vendor cloud, no telemetry.": "حزمة مفتوحة المصدر تحوّل البيانات الموجودة — جداول البيانات وتصديرات ERP وملفات SWIFT القديمة — إلى ملفات دفع ISO 20022 جاهزة للبنك، وتثبت كل ملف وفق دليل قواعد البنك الرسمي (ISO 20022 XSD) <em>قبل</em> التقديم. تعمل بالكامل على بنيتك التحتية الخاصة: لا رفع للبيانات، ولا سحابة مورّد، ولا قياس عن بُعد.",
+   "What it costs<a class=\"heading-anchor\" href=\"#what-it-costs\" aria-label=\"Link to section: What it costs\">#</a>": "التكلفة<a class=\"heading-anchor\" href=\"#what-it-costs\" aria-label=\"Link to section: What it costs\">#</a>",
+   "Nothing, at any scale, under open licences (Apache-2.0 / MIT). Commercial reference point: SWIFT's translation SDK is publicly listed at €10,000–30,000 per year.": "لا شيء، على أي نطاق، بموجب تراخيص مفتوحة (Apache-2.0 / MIT). المرجع التجاري: عدة SWIFT للترجمة معلن عنها علناً بسعر €10,000–30,000 سنوياً.",
+   "The evidence<a class=\"heading-anchor\" href=\"#the-evidence\" aria-label=\"Link to section: The evidence\">#</a>": "الأدلة<a class=\"heading-anchor\" href=\"#the-evidence\" aria-label=\"Link to section: The evidence\">#</a>",
+   "Published dependency inventory (SBOM) · 100% branch-covered code as a CI gate · independently scored supply chain (OpenSSF Scorecard) · WCAG 2.2 AAA accessible documentation · security policy with private disclosure. All verifiable at pain001.com.": "جرد تبعيات منشور (SBOM) · شيفرة بتغطية فروع 100% كبوابة CI · سلسلة توريد مقيّمة باستقلالية (OpenSSF Scorecard) · توثيق متاح وفق WCAG 2.2 AAA · سياسة أمنية مع إفصاح خاص. كل ذلك قابل للتحقق على pain001.com.",
+   "The ask<a class=\"heading-anchor\" href=\"#the-ask\" aria-label=\"Link to section: The ask\">#</a>": "الطلب<a class=\"heading-anchor\" href=\"#the-ask\" aria-label=\"Link to section: The ask\">#</a>",
+   "Have your payments engineering team run the 60-second demo at <strong>pain001.com/try</strong> — it validates a sample batch and proves it against the official ISO 20022 schema, in the browser, with nothing uploaded. If it holds up, the installation guide takes minutes.": "اطلب من فريق هندسة المدفوعات لديك تشغيل العرض التجريبي لمدة 60 ثانية على <strong>pain001.com/try</strong> — فهو يتحقق من دفعة نموذجية ويثبتها وفق مخطط ISO 20022 الرسمي، في المتصفح، دون رفع أي شيء. وإذا صمد، فدليل التثبيت يستغرق دقائق."
+  },
+  "aria": {
+   "Breadcrumb": "مسار التنقّل",
+   "Contents": "المحتويات",
+   "Link to section: The problem": "رابط إلى القسم: المشكلة",
+   "Link to section: The deadline": "رابط إلى القسم: الموعد النهائي",
+   "Link to section: What Pain001 does": "رابط إلى القسم: ما يفعله Pain001",
+   "Link to section: What it costs": "رابط إلى القسم: التكلفة",
+   "Link to section: The evidence": "رابط إلى القسم: الأدلة",
+   "Link to section: The ask": "رابط إلى القسم: الطلب"
+  }
+ }
+}

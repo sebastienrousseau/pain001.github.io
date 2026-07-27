@@ -1,0 +1,115 @@
+{
+ "why": {
+  "meta": {
+   "title": "কেন Pain001: পাঁচটি প্রশ্নে ব্যবসায়িক যুক্তি",
+   "description": "প্রত্যাখ্যাত পেমেন্ট ফাইলের খরচ, 14 নভেম্বর 2026 কেন নির্ধারিত, Pain001 কী করে, খরচ কত (কিছুই না) এবং এটি নিরাপদ কি না — প্রতিটি উত্তর প্রমাণে যুক্ত।",
+   "eyebrow": "ব্যবসায়িক যুক্তি",
+   "deck": "একজন CFO সত্যিই যে পাঁচটি প্রশ্ন করেন — সহজ ভাষায় উত্তর, প্রতিটি দাবি তার প্রমাণে যুক্ত।"
+  },
+  "text": {
+   "<a href=\"/\">Home</a>": "<a href=\"/\">হোম</a>",
+   "Contents": "সূচিপত্র",
+   "<a href=\"#what-does-a-rejected-payment-file-cost\">What does a rejected payment file cost?</a>": "<a href=\"#what-does-a-rejected-payment-file-cost\">প্রত্যাখ্যাত পেমেন্ট ফাইলের খরচ কত?</a>",
+   "<a href=\"#why-is-14-november-2026-non-negotiable\">Why is 14 November 2026 non-negotiable?</a>": "<a href=\"#why-is-14-november-2026-non-negotiable\">14 নভেম্বর 2026 নিয়ে দর-কষাকষির সুযোগ নেই কেন?</a>",
+   "<a href=\"#what-does-pain001-do-about-it\">What does Pain001 do about it?</a>": "<a href=\"#what-does-pain001-do-about-it\">Pain001 এ বিষয়ে কী করে?</a>",
+   "<a href=\"#what-does-it-cost\">What does it cost?</a>": "<a href=\"#what-does-it-cost\">খরচ কত?</a>",
+   "<a href=\"#is-it-safe\">Is it safe?</a>": "<a href=\"#is-it-safe\">এটি কি নিরাপদ?</a>",
+   "<a href=\"#what-is-the-next-step\">What is the next step?</a>": "<a href=\"#what-is-the-next-step\">পরবর্তী পদক্ষেপ কী?</a>",
+   "What does a rejected payment file cost?<a class=\"heading-anchor\" href=\"#what-does-a-rejected-payment-file-cost\" aria-label=\"Link to section: What does a rejected payment file cost?\">#</a>": "প্রত্যাখ্যাত পেমেন্ট ফাইলের খরচ কত?<a class=\"heading-anchor\" href=\"#what-does-a-rejected-payment-file-cost\" aria-label=\"Link to section: What does a rejected payment file cost?\">#</a>",
+   "A file the bank bounces does not fail quietly. Someone diagnoses the reason code, repairs the source data, regenerates, resubmits — and if the repair misses the day's cut-off, settlement slips. For payroll or supplier runs, a slipped day is a phone call you do not want to make. The <a href=\"/pain002-reason-codes/\">reason-code reference</a> lists what banks actually send back; almost every format-class entry on it is preventable before submission.": "ব্যাংক যে ফাইল ফেরত পাঠায়, তা নিঃশব্দে ব্যর্থ হয় না। কাউকে কারণ কোড শনাক্ত করতে হয়, উৎস ডেটা মেরামত করতে হয়, ফাইল আবার তৈরি করে আবার জমা দিতে হয় — আর মেরামত সেদিনের কাট-অফ পেরিয়ে গেলে নিষ্পত্তি পিছিয়ে যায়। বেতন বা সরবরাহকারীর পেমেন্টের ক্ষেত্রে, এক দিনের বিলম্ব মানে এমন একটি ফোন কল যা আপনি করতে চান না। <a href=\"/pain002-reason-codes/\">কারণ-কোড রেফারেন্স</a> তালিকাভুক্ত করে ব্যাংকগুলি আসলে কী ফেরত পাঠায়; সেখানে ফরম্যাট-শ্রেণির প্রায় প্রতিটি এন্ট্রি জমা দেওয়ার আগেই প্রতিরোধযোগ্য।",
+   "Why is 14 November 2026 non-negotiable?<a class=\"heading-anchor\" href=\"#why-is-14-november-2026-non-negotiable\" aria-label=\"Link to section: Why is 14 November 2026 non-negotiable?\">#</a>": "14 নভেম্বর 2026 নিয়ে দর-কষাকষির সুযোগ নেই কেন?<a class=\"heading-anchor\" href=\"#why-is-14-november-2026-non-negotiable\" aria-label=\"Link to section: Why is 14 November 2026 non-negotiable?\">#</a>",
+   "Because it is enforced at network level, not by policy. From that date, cross-border payments (CBPR+) carrying fully unstructured postal addresses are rejected, and the interbank MT101 relay retires in favour of <code>pain.001</code> version 9. The dates come from SWIFT, not from us — every one is cited in the <a href=\"/2026-iso20022-migration-trends/\">2026 briefing</a>, and the schedule continues to 2028 on the <a href=\"/iso20022-roadmap/\">living roadmap</a>.": "কারণ এটি নীতির মাধ্যমে নয়, নেটওয়ার্ক স্তরে প্রয়োগ করা হয়। ওই তারিখ থেকে, সম্পূর্ণ অসংগঠিত ডাক ঠিকানাযুক্ত আন্তঃসীমান্ত পেমেন্ট (CBPR+) প্রত্যাখ্যাত হয়, এবং আন্তঃব্যাংক MT101 রিলে <code>pain.001</code> সংস্করণ 9-এর পক্ষে অবসর নেয়। তারিখগুলি SWIFT থেকে এসেছে, আমাদের কাছ থেকে নয় — প্রতিটি <a href=\"/2026-iso20022-migration-trends/\">2026 ব্রিফিং</a>-এ উদ্ধৃত, এবং সময়সূচি 2028 পর্যন্ত <a href=\"/iso20022-roadmap/\">জীবন্ত রোডম্যাপ</a>-এ চলমান।",
+   "What does Pain001 do about it?<a class=\"heading-anchor\" href=\"#what-does-pain001-do-about-it\" aria-label=\"Link to section: What does Pain001 do about it?\">#</a>": "Pain001 এ বিষয়ে কী করে?<a class=\"heading-anchor\" href=\"#what-does-pain001-do-about-it\" aria-label=\"Link to section: What does Pain001 do about it?\">#</a>",
+   "Three things. It turns the data you already have — spreadsheets, ERP exports, legacy SWIFT files — into bank-ready ISO 20022 payment files. It proves each file clean before submission: validation against the bank's official rulebook (ISO 20022 XSD), the account-number checksum your bank runs (ISO 13616 mod-97), and control totals recalculated from the records, never trusted. And it does all of this on your own infrastructure — nothing is uploaded anywhere.": "তিনটি কাজ। এটি আপনার হাতে থাকা ডেটা — স্প্রেডশিট, ERP রপ্তানি, পুরোনো SWIFT ফাইল — ব্যাংক-প্রস্তুত ISO 20022 পেমেন্ট ফাইলে রূপান্তর করে। জমা দেওয়ার আগে প্রতিটি ফাইল ত্রুটিমুক্ত বলে প্রমাণ করে: ব্যাংকের সরকারি নিয়মপুস্তিকা (ISO 20022 XSD)-এর বিপরীতে যাচাই, আপনার ব্যাংক যে অ্যাকাউন্ট-নম্বর চেকসাম চালায় সেটি (ISO 13616 mod-97), এবং নিয়ন্ত্রণ যোগফল যা রেকর্ড থেকে পুনরায় গণনা করা হয়, কখনও বিশ্বাসে নেওয়া হয় না। আর এই সবকিছু আপনার নিজস্ব অবকাঠামোয় ঘটে — কোথাও কিছুই আপলোড হয় না।",
+   "What does it cost?<a class=\"heading-anchor\" href=\"#what-does-it-cost\" aria-label=\"Link to section: What does it cost?\">#</a>": "খরচ কত?<a class=\"heading-anchor\" href=\"#what-does-it-cost\" aria-label=\"Link to section: What does it cost?\">#</a>",
+   "Nothing, at any scale, permanently. The core is dual-licensed (Apache-2.0 or MIT); companion packages are Apache-2.0. The nearest commercial reference point — SWIFT's translation SDK — is publicly listed at €10,000–30,000 per year before integration effort. The full landscape, including where commercial platforms genuinely win, is in the <a href=\"/competitors-comparison/\">comparison</a>.": "কিছুই না, যেকোনো মাত্রায়, স্থায়ীভাবে। কোরটি দ্বৈত লাইসেন্সের অধীন (Apache-2.0 বা MIT); সহযোগী প্যাকেজগুলি Apache-2.0। নিকটতম বাণিজ্যিক তুলনা — SWIFT-এর অনুবাদ SDK — ইন্টিগ্রেশনের খরচের আগেই প্রকাশ্যে বছরে €10,000–30,000 মূল্যে তালিকাভুক্ত। বাণিজ্যিক প্ল্যাটফর্মগুলি যেখানে সত্যিই এগিয়ে, তা-সহ সম্পূর্ণ চিত্র <a href=\"/competitors-comparison/\">তুলনা</a>-য় রয়েছে।",
+   "Is it safe?<a class=\"heading-anchor\" href=\"#is-it-safe\" aria-label=\"Link to section: Is it safe?\">#</a>": "এটি কি নিরাপদ?<a class=\"heading-anchor\" href=\"#is-it-safe\" aria-label=\"Link to section: Is it safe?\">#</a>",
+   "Check rather than trust: payment data <a href=\"/privacy/\">never leaves your machines</a>, the dependency inventory is a published <a href=\"/sbom.cdx.json\">SBOM</a>, the code holds <a href=\"/architecture-and-patents/\">100% branch coverage as a CI gate</a>, and the <a href=\"/try/\">browser demo</a> invites your security team to falsify the claims with DevTools open.": "বিশ্বাস নয়, যাচাই করুন: পেমেন্ট ডেটা <a href=\"/privacy/\">কখনও আপনার মেশিন ছেড়ে যায় না</a>, নির্ভরতার তালিকা একটি প্রকাশিত <a href=\"/sbom.cdx.json\">SBOM</a>, কোডটি <a href=\"/architecture-and-patents/\">CI গেট হিসেবে 100% ব্রাঞ্চ কভারেজ</a> বজায় রাখে, এবং <a href=\"/try/\">ব্রাউজার ডেমো</a> আপনার নিরাপত্তা দলকে DevTools খোলা রেখে দাবিগুলি যাচাই করে দেখার আমন্ত্রণ জানায়।",
+   "What is the next step?<a class=\"heading-anchor\" href=\"#what-is-the-next-step\" aria-label=\"Link to section: What is the next step?\">#</a>": "পরবর্তী পদক্ষেপ কী?<a class=\"heading-anchor\" href=\"#what-is-the-next-step\" aria-label=\"Link to section: What is the next step?\">#</a>",
+   "Watch it work: the <a href=\"/try/\">60-second demo</a> validates a payment batch and proves it against the official schema, in your browser. Then hand your team the <a href=\"/executive-brief/\">executive brief</a> — one page, print-ready, available in <a href=\"/executive-brief-fr/\">French</a>, <a href=\"/executive-brief-de/\">German</a>, and <a href=\"/executive-brief-es/\">Spanish</a>.": "এটি কাজ করতে দেখুন: <a href=\"/try/\">60-সেকেন্ডের ডেমো</a> আপনার ব্রাউজারেই একটি পেমেন্ট ব্যাচ যাচাই করে এবং সরকারি স্কিমার বিপরীতে প্রমাণ করে। তারপর আপনার দলকে দিন <a href=\"/executive-brief/\">নির্বাহী সারসংক্ষেপ</a> — এক পৃষ্ঠার, ছাপার জন্য প্রস্তুত, <a href=\"/executive-brief-fr/\">ফরাসি</a>, <a href=\"/executive-brief-de/\">জার্মান</a> ও <a href=\"/executive-brief-es/\">স্প্যানিশ</a> ভাষায়ও উপলব্ধ।"
+  },
+  "aria": {
+   "Breadcrumb": "ব্রেডক্রাম্ব",
+   "Contents": "সূচিপত্র",
+   "Link to section: What does a rejected payment file cost?": "বিভাগের লিংক: প্রত্যাখ্যাত পেমেন্ট ফাইলের খরচ কত?",
+   "Link to section: Why is 14 November 2026 non-negotiable?": "বিভাগের লিংক: 14 নভেম্বর 2026 নিয়ে দর-কষাকষির সুযোগ নেই কেন?",
+   "Link to section: What does Pain001 do about it?": "বিভাগের লিংক: Pain001 এ বিষয়ে কী করে?",
+   "Link to section: What does it cost?": "বিভাগের লিংক: খরচ কত?",
+   "Link to section: Is it safe?": "বিভাগের লিংক: এটি কি নিরাপদ?",
+   "Link to section: What is the next step?": "বিভাগের লিংক: পরবর্তী পদক্ষেপ কী?"
+  }
+ },
+ "solutions": {
+  "meta": {
+   "title": "Pain001 কাদের জন্য",
+   "description": "ট্রেজারি, CFO ও বোর্ড, পেমেন্ট অপারেশনস, প্রকৌশল ও AI — আপনার ভাষায় সমস্যা, Pain001 কী বদলায়, এবং আপনার পরবর্তী ক্লিক — প্রতিটি ভূমিকার জন্য 150 শব্দে।",
+   "eyebrow": "কাদের জন্য",
+   "deck": "চারটি ভূমিকা, চার রকম পরিভাষা, একটি পাইপলাইন — আগে আপনার সমস্যা খুঁজুন, তারপর পরবর্তী ক্লিক।"
+  },
+  "text": {
+   "<a href=\"/\">Home</a>": "<a href=\"/\">হোম</a>",
+   "Contents": "সূচিপত্র",
+   "<a href=\"#treasury-finance\">Treasury & finance</a>": "<a href=\"#treasury-finance\">ট্রেজারি ও অর্থ</a>",
+   "<a href=\"#cfo-board\">CFO & board</a>": "<a href=\"#cfo-board\">CFO ও বোর্ড</a>",
+   "<a href=\"#payment-operations\">Payment operations</a>": "<a href=\"#payment-operations\">পেমেন্ট অপারেশনস</a>",
+   "<a href=\"#engineering-ai\">Engineering & AI</a>": "<a href=\"#engineering-ai\">প্রকৌশল ও AI</a>",
+   "Treasury & finance<a class=\"heading-anchor\" href=\"#treasury-finance\" aria-label=\"Link to section: Treasury & finance\">#</a>": "ট্রেজারি ও অর্থ<a class=\"heading-anchor\" href=\"#treasury-finance\" aria-label=\"Link to section: Treasury & finance\">#</a>",
+   "Your bank rejects files for reasons your ERP never warned you about: a transposed IBAN digit, a control total that no longer matches, an address format that stopped being acceptable. Pain001 makes those failures happen at your desk instead — every file is proven against the bank's official rulebook (ISO 20022 XSD) before submission, and the <a href=\"/payments/\">payment-lifecycle guide</a> shows where each check sits between origination and reconciliation. Start with the <a href=\"/glossary/\">glossary</a> if the vocabulary is new; the plain-English definitions were written for your side of the desk, not the engineers'.": "আপনার ব্যাংক এমন সব কারণে ফাইল প্রত্যাখ্যান করে যেগুলি সম্পর্কে আপনার ERP কখনও সতর্ক করেনি: IBAN-এর একটি স্থান-বদল হওয়া অঙ্ক, একটি নিয়ন্ত্রণ যোগফল যা আর মেলে না, একটি ঠিকানার ফরম্যাট যা আর গ্রহণযোগ্য নয়। Pain001 এই ব্যর্থতাগুলিকে বরং আপনার ডেস্কেই ঘটায় — প্রতিটি ফাইল জমা দেওয়ার আগে ব্যাংকের সরকারি নিয়মপুস্তিকা (ISO 20022 XSD)-এর বিপরীতে প্রমাণিত হয়, এবং <a href=\"/payments/\">পেমেন্ট-জীবনচক্র নির্দেশিকা</a> দেখায় সূচনা থেকে সমন্বয় পর্যন্ত প্রতিটি পরীক্ষা কোথায় বসে। পরিভাষা নতুন হলে <a href=\"/glossary/\">পরিভাষাকোষ</a> দিয়ে শুরু করুন; সহজ ভাষার সংজ্ঞাগুলি প্রকৌশলীদের জন্য নয়, আপনার দিকের জন্যই লেখা।",
+   "CFO & board<a class=\"heading-anchor\" href=\"#cfo-board\" aria-label=\"Link to section: CFO & board\">#</a>": "CFO ও বোর্ড<a class=\"heading-anchor\" href=\"#cfo-board\" aria-label=\"Link to section: CFO & board\">#</a>",
+   "Two numbers frame the decision. <strong>14 November 2026</strong>: the date cross-border payments with unstructured addresses start bouncing at network level — exposure that lives in your customer master data, not your bank connection. <strong>€10,000–30,000 per year</strong>: the public list price of the nearest commercial translation SDK, against Pain001's permanent zero at any scale under open licences. The governance questions — auditability, data locality, supply-chain evidence — are answered with artefacts, not assurances: published <a href=\"/sbom.cdx.json\">SBOM</a>, <a href=\"/security.txt\">security policy</a>, and processing that never leaves your infrastructure. The <a href=\"/executive-brief/\">one-page executive brief</a> is written to be forwarded.": "দুটি সংখ্যা সিদ্ধান্তের কাঠামো গড়ে। <strong>14 নভেম্বর 2026</strong>: যে তারিখ থেকে অসংগঠিত ঠিকানাযুক্ত আন্তঃসীমান্ত পেমেন্ট নেটওয়ার্ক স্তরে ফেরত আসতে শুরু করে — এই ঝুঁকি আপনার গ্রাহক মাস্টার ডেটায় থাকে, ব্যাংক সংযোগে নয়। <strong>বছরে €10,000–30,000</strong>: নিকটতম বাণিজ্যিক অনুবাদ SDK-এর প্রকাশ্য তালিকা মূল্য, যেখানে খোলা লাইসেন্সের অধীনে Pain001 যেকোনো মাত্রায় স্থায়ীভাবে শূন্য। সুশাসনের প্রশ্নগুলির — নিরীক্ষাযোগ্যতা, ডেটার স্থানীয়তা, সরবরাহ-শৃঙ্খলের প্রমাণ — উত্তর দেওয়া হয় আশ্বাসে নয়, নথিতে: প্রকাশিত <a href=\"/sbom.cdx.json\">SBOM</a>, <a href=\"/security.txt\">নিরাপত্তা নীতি</a>, এবং এমন প্রক্রিয়াকরণ যা কখনও আপনার অবকাঠামো ছেড়ে যায় না। <a href=\"/executive-brief/\">এক পৃষ্ঠার নির্বাহী সারসংক্ষেপ</a> ফরওয়ার্ড করার জন্যই লেখা।",
+   "Payment operations<a class=\"heading-anchor\" href=\"#payment-operations\" aria-label=\"Link to section: Payment operations\">#</a>": "পেমেন্ট অপারেশনস<a class=\"heading-anchor\" href=\"#payment-operations\" aria-label=\"Link to section: Payment operations\">#</a>",
+   "You live in the response files. Pain001 closes the loop end to end: <code>--dry-run</code> pre-submission checks that pass or fail cleanly in CI, scheme rulebooks (SEPA and cross-border) explained rule by rule, the <a href=\"/pain002-reason-codes/\">pain.002 reason-code reference</a> for decoding what came back, and parsers that turn bank responses and camt.053 statements into structured data your pipeline can route. The <a href=\"/try/\">browser demo</a> is the fastest way to see the failure classes it eliminates — including the one-click \"introduce an error\" scenarios.": "আপনার দিন কাটে রেসপন্স ফাইলে। Pain001 চক্রটি প্রান্ত থেকে প্রান্ত পর্যন্ত বন্ধ করে: <code>--dry-run</code> জমা-পূর্ব পরীক্ষা যা CI-তে পরিষ্কারভাবে পাস বা ফেল করে, স্কিম নিয়মপুস্তিকা (SEPA ও আন্তঃসীমান্ত) নিয়ম ধরে ধরে ব্যাখ্যা করা, ফেরত আসা বার্তা বোঝার জন্য <a href=\"/pain002-reason-codes/\">pain.002 কারণ-কোড রেফারেন্স</a>, এবং পার্সার যা ব্যাংকের প্রতিক্রিয়া ও camt.053 বিবরণীকে এমন কাঠামোবদ্ধ ডেটায় রূপান্তর করে যা আপনার পাইপলাইন রুট করতে পারে। <a href=\"/try/\">ব্রাউজার ডেমো</a> হল এটি যে ব্যর্থতার শ্রেণিগুলি দূর করে তা দেখার দ্রুততম উপায় — এক-ক্লিকে \"একটি ত্রুটি ঢোকান\" দৃশ্যপটসহ।",
+   "Engineering & AI<a class=\"heading-anchor\" href=\"#engineering-ai\" aria-label=\"Link to section: Engineering & AI\">#</a>": "প্রকৌশল ও AI<a class=\"heading-anchor\" href=\"#engineering-ai\" aria-label=\"Link to section: Engineering & AI\">#</a>",
+   "A typed Python API, a CLI with meaningful exit codes, a REST microservice, and plugin points for loaders, validators, schemes, and writers — <a href=\"/documentation/\">the technical reference</a> covers every flag and endpoint, and the code carries 100% line-and-branch coverage as a hard CI gate. If you are building with agents: <a href=\"/pain001-mcp/\">pain001-mcp</a> is the category's only Model Context Protocol server — seventeen read-only tools your agents call locally, with editor diagnostics from <a href=\"/pain001-lsp/\">pain001-lsp</a> while humans stay in the loop.": "টাইপযুক্ত Python API, অর্থবহ এক্সিট কোডসহ একটি CLI, একটি REST মাইক্রোসার্ভিস, এবং লোডার, ভ্যালিডেটর, স্কিম ও রাইটারের জন্য প্লাগইন পয়েন্ট — <a href=\"/documentation/\">প্রযুক্তিগত রেফারেন্স</a> প্রতিটি ফ্ল্যাগ ও এন্ডপয়েন্ট কভার করে, এবং কোডটি কঠোর CI গেট হিসেবে 100% লাইন-ও-ব্রাঞ্চ কভারেজ বহন করে। আপনি যদি এজেন্ট নিয়ে নির্মাণ করেন: <a href=\"/pain001-mcp/\">pain001-mcp</a> এই শ্রেণির একমাত্র Model Context Protocol সার্ভার — সতেরোটি কেবল-পঠন টুল যা আপনার এজেন্টরা স্থানীয়ভাবে কল করে, সঙ্গে <a href=\"/pain001-lsp/\">pain001-lsp</a> থেকে এডিটর ডায়াগনস্টিকস, আর মানুষ থাকে সিদ্ধান্তের চক্রে।"
+  },
+  "aria": {
+   "Breadcrumb": "ব্রেডক্রাম্ব",
+   "Contents": "সূচিপত্র",
+   "Link to section: Treasury & finance": "বিভাগের লিংক: ট্রেজারি ও অর্থ",
+   "Link to section: CFO & board": "বিভাগের লিংক: CFO ও বোর্ড",
+   "Link to section: Payment operations": "বিভাগের লিংক: পেমেন্ট অপারেশনস",
+   "Link to section: Engineering & AI": "বিভাগের লিংক: প্রকৌশল ও AI"
+  }
+ },
+ "executive-brief": {
+  "meta": {
+   "title": "Pain001 নির্বাহী সারসংক্ষেপ",
+   "description": "সিদ্ধান্তগ্রহণকারীদের জন্য এক পৃষ্ঠা: প্রত্যাখ্যাত ফাইলের সমস্যা, 14 নভেম্বর 2026-এর নির্ধারিত সময়সীমা, Pain001 কী করে, খরচ, নিরাপত্তার প্রমাণ ও একটিমাত্র অনুরোধ — ছাপার জন্য প্রস্তুত।",
+   "eyebrow": "নির্বাহী সারসংক্ষেপ",
+   "deck": "এক পৃষ্ঠা। পাঁচটি তথ্য। একটি অনুরোধ। ফরাসি, জার্মান ও স্প্যানিশ ভাষায়ও উপলব্ধ — ব্রাউজার থেকেই ছাপার জন্য প্রস্তুত।"
+  },
+  "text": {
+   "<a href=\"/\">Home</a>": "<a href=\"/\">হোম</a>",
+   "Contents": "সূচিপত্র",
+   "<a href=\"#the-problem\">The problem</a>": "<a href=\"#the-problem\">সমস্যা</a>",
+   "<a href=\"#the-deadline\">The deadline</a>": "<a href=\"#the-deadline\">সময়সীমা</a>",
+   "<a href=\"#what-pain001-does\">What Pain001 does</a>": "<a href=\"#what-pain001-does\">Pain001 কী করে</a>",
+   "<a href=\"#what-it-costs\">What it costs</a>": "<a href=\"#what-it-costs\">খরচ কত</a>",
+   "<a href=\"#the-evidence\">The evidence</a>": "<a href=\"#the-evidence\">প্রমাণ</a>",
+   "<a href=\"#the-ask\">The ask</a>": "<a href=\"#the-ask\">অনুরোধ</a>",
+   "Read in: <a href=\"/executive-brief-fr/\">Français</a> · <a href=\"/executive-brief-de/\">Deutsch</a> · <a href=\"/executive-brief-es/\">Español</a>": "অন্য ভাষায় পড়ুন: <a href=\"/executive-brief-fr/\">Français</a> · <a href=\"/executive-brief-de/\">Deutsch</a> · <a href=\"/executive-brief-es/\">Español</a>",
+   "The problem<a class=\"heading-anchor\" href=\"#the-problem\" aria-label=\"Link to section: The problem\">#</a>": "সমস্যা<a class=\"heading-anchor\" href=\"#the-problem\" aria-label=\"Link to section: The problem\">#</a>",
+   "Banks reject malformed payment files. Every rejection costs a repair cycle; a repair that misses the day's cut-off costs a settlement day. The rejection reasons are knowable in advance — and therefore preventable.": "ব্যাংক ত্রুটিপূর্ণ পেমেন্ট ফাইল প্রত্যাখ্যান করে। প্রতিটি প্রত্যাখ্যানের মূল্য একটি মেরামত চক্র; কাট-অফ পেরিয়ে যাওয়া মেরামতের মূল্য একটি নিষ্পত্তির দিন। প্রত্যাখ্যানের কারণগুলি আগে থেকেই জানা সম্ভব — সুতরাং প্রতিরোধযোগ্য।",
+   "The deadline<a class=\"heading-anchor\" href=\"#the-deadline\" aria-label=\"Link to section: The deadline\">#</a>": "সময়সীমা<a class=\"heading-anchor\" href=\"#the-deadline\" aria-label=\"Link to section: The deadline\">#</a>",
+   "<strong>14 November 2026</strong>, enforced at network level: cross-border payments (CBPR+) carrying fully unstructured addresses are rejected, and the legacy interbank MT101 channel retires in favour of ISO 20022 <code>pain.001</code> version 9. The exposure sits in customer master data. Sources: SWIFT, cited in full at pain001.com/2026-iso20022-migration-trends.": "<strong>14 নভেম্বর 2026</strong>, নেটওয়ার্ক স্তরে প্রযোজ্য: সম্পূর্ণ অসংগঠিত ঠিকানাযুক্ত আন্তঃসীমান্ত পেমেন্ট (CBPR+) প্রত্যাখ্যাত হয়, এবং পুরোনো আন্তঃব্যাংক MT101 চ্যানেল ISO 20022 <code>pain.001</code> সংস্করণ 9-এর পক্ষে অবসর নেয়। ঝুঁকি থাকে গ্রাহক মাস্টার ডেটায়। সূত্র: SWIFT, সম্পূর্ণ উদ্ধৃতিসহ pain001.com/2026-iso20022-migration-trends-এ।",
+   "What Pain001 does<a class=\"heading-anchor\" href=\"#what-pain001-does\" aria-label=\"Link to section: What Pain001 does\">#</a>": "Pain001 কী করে<a class=\"heading-anchor\" href=\"#what-pain001-does\" aria-label=\"Link to section: What Pain001 does\">#</a>",
+   "An open-source suite that converts existing data — spreadsheets, ERP exports, legacy SWIFT files — into bank-ready ISO 20022 payment files, and proves each file against the bank's official rulebook (ISO 20022 XSD) <em>before</em> submission. It runs entirely on your own infrastructure: no upload, no vendor cloud, no telemetry.": "একটি ওপেন-সোর্স স্যুট যা বিদ্যমান ডেটা — স্প্রেডশিট, ERP রপ্তানি, পুরোনো SWIFT ফাইল — ব্যাংক-প্রস্তুত ISO 20022 পেমেন্ট ফাইলে রূপান্তর করে, এবং প্রতিটি ফাইল জমা দেওয়ার <em>আগে</em> ব্যাংকের সরকারি নিয়মপুস্তিকা (ISO 20022 XSD)-এর বিপরীতে প্রমাণ করে। এটি সম্পূর্ণ আপনার নিজস্ব অবকাঠামোয় চলে: কোনো আপলোড নেই, কোনো ভেন্ডর ক্লাউড নেই, কোনো টেলিমেট্রি নেই।",
+   "What it costs<a class=\"heading-anchor\" href=\"#what-it-costs\" aria-label=\"Link to section: What it costs\">#</a>": "খরচ কত<a class=\"heading-anchor\" href=\"#what-it-costs\" aria-label=\"Link to section: What it costs\">#</a>",
+   "Nothing, at any scale, under open licences (Apache-2.0 / MIT). Commercial reference point: SWIFT's translation SDK is publicly listed at €10,000–30,000 per year.": "কিছুই না, যেকোনো মাত্রায়, খোলা লাইসেন্সের অধীনে (Apache-2.0 / MIT)। বাণিজ্যিক তুলনা: SWIFT-এর অনুবাদ SDK প্রকাশ্যে বছরে €10,000–30,000 মূল্যে তালিকাভুক্ত।",
+   "The evidence<a class=\"heading-anchor\" href=\"#the-evidence\" aria-label=\"Link to section: The evidence\">#</a>": "প্রমাণ<a class=\"heading-anchor\" href=\"#the-evidence\" aria-label=\"Link to section: The evidence\">#</a>",
+   "Published dependency inventory (SBOM) · 100% branch-covered code as a CI gate · independently scored supply chain (OpenSSF Scorecard) · WCAG 2.2 AAA accessible documentation · security policy with private disclosure. All verifiable at pain001.com.": "প্রকাশিত নির্ভরতার তালিকা (SBOM) · CI গেট হিসেবে 100% ব্রাঞ্চ-কভারড কোড · স্বাধীনভাবে স্কোরকৃত সরবরাহ শৃঙ্খল (OpenSSF Scorecard) · WCAG 2.2 AAA প্রবেশগম্য ডকুমেন্টেশন · গোপনীয় প্রকাশসহ নিরাপত্তা নীতি। সবই pain001.com-এ যাচাইযোগ্য।",
+   "The ask<a class=\"heading-anchor\" href=\"#the-ask\" aria-label=\"Link to section: The ask\">#</a>": "অনুরোধ<a class=\"heading-anchor\" href=\"#the-ask\" aria-label=\"Link to section: The ask\">#</a>",
+   "Have your payments engineering team run the 60-second demo at <strong>pain001.com/try</strong> — it validates a sample batch and proves it against the official ISO 20022 schema, in the browser, with nothing uploaded. If it holds up, the installation guide takes minutes.": "আপনার পেমেন্ট প্রকৌশল দলকে <strong>pain001.com/try</strong>-এ 60-সেকেন্ডের ডেমোটি চালাতে বলুন — এটি ব্রাউজারে, কিছুই আপলোড না করে, একটি নমুনা ব্যাচ যাচাই করে এবং সরকারি ISO 20022 স্কিমার বিপরীতে প্রমাণ করে। টিকে গেলে, ইনস্টলেশন নির্দেশিকায় লাগে মাত্র কয়েক মিনিট।"
+  },
+  "aria": {
+   "Breadcrumb": "ব্রেডক্রাম্ব",
+   "Contents": "সূচিপত্র",
+   "Link to section: The problem": "বিভাগের লিংক: সমস্যা",
+   "Link to section: The deadline": "বিভাগের লিংক: সময়সীমা",
+   "Link to section: What Pain001 does": "বিভাগের লিংক: Pain001 কী করে",
+   "Link to section: What it costs": "বিভাগের লিংক: খরচ কত",
+   "Link to section: The evidence": "বিভাগের লিংক: প্রমাণ",
+   "Link to section: The ask": "বিভাগের লিংক: অনুরোধ"
+  }
+ }
+}
