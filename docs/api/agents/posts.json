@@ -86,6 +86,23 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
+    "description": "Exactly what Pain001 supports: every message definition with generate/validate/migrate coverage, input formats, scheme rulebooks, address models, and the known limitations — verified against the shipped code.",
+    "locale": "en_GB",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Compatibility Matrix",
+    "url": "https://pain001.com/compatibility/",
+    "wordCount": 477
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
     "description": "Pain001 against Prowide, python-sepaxml, SWIFT Translator, XMLdation, Volante and the rest — what each does well, what it costs, and where the gaps are. Sources dated.",
     "locale": "en_GB",
     "tags": [
@@ -355,6 +372,23 @@
     "title": "ISO 20022 Payments Glossary in Plain English",
     "url": "https://pain001.com/glossary/",
     "wordCount": 698
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "Who maintains Pain001, how decisions are made, how it is funded, what mitigates single-maintainer risk, and the editorial and corrections policy — stated plainly, limitations included.",
+    "locale": "en_GB",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Governance & Continuity",
+    "url": "https://pain001.com/governance/",
+    "wordCount": 437
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -987,6 +1021,23 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
+    "description": "How Pain001 versions, what 'supported' means before 1.0, how security fixes ship, how releases are signed and attested, and how to roll back safely.",
+    "locale": "en_GB",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Release & Support Policy",
+    "url": "https://pain001.com/release-policy/",
+    "wordCount": 316
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
     "description": "Suită Python open source care generează fișiere pain.001 și pain.008 validate XSD din CSV, Excel, SQLite, JSON, Parquet sau SWIFT MT101 — cu instrumente MCP pentru agenți AI și server LSP.",
     "locale": "ro_RO",
     "tags": [
@@ -1171,6 +1222,23 @@
     "title": "Pain001 — Açık kaynaklı ISO 20022 ödeme başlatma",
     "url": "https://pain001.com/tr/",
     "wordCount": 177
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "Everything a vendor-risk, security, or audit reviewer needs in one place: security posture, supply-chain evidence, data flows, accessibility conformance, governance, and release policy — each claim linked to its artefact.",
+    "locale": "en_GB",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Trust Centre",
+    "url": "https://pain001.com/trust/",
+    "wordCount": 612
   },
   {
     "date": "2026-07-26T08:00:00+00:00",

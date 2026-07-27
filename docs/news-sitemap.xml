@@ -74,6 +74,18 @@
   </news:news>
 </url>
 <url>
+  <loc>https://pain001.com/compatibility/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Compatibility Matrix</news:title>
+    <news:keywords>pain001 compatibility, pain.001 versions supported, pain.008 support, input formats, SEPA schemes, MT101 fields, supported message definitions</news:keywords>
+  </news:news>
+</url>
+<url>
   <loc>https://pain001.com/competitors-comparison/</loc>
   <news:news>
     <news:publication>
@@ -263,6 +275,18 @@
     <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
     <news:title>ISO 20022 Payments Glossary in Plain English</news:title>
     <news:keywords>ISO 20022 glossary, pain.001 meaning, pacs.008 vs pain.001, camt.053 definition, CBPR+ meaning, UETR, verification of payee, payments terminology</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/governance/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Governance & Continuity</news:title>
+    <news:keywords>pain001 governance, open source maintainer, bus factor, project continuity, funding disclosure, corrections policy, open source risk</news:keywords>
   </news:news>
 </url>
 <url>
@@ -698,6 +722,18 @@
   </news:news>
 </url>
 <url>
+  <loc>https://pain001.com/release-policy/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Release & Support Policy</news:title>
+    <news:keywords>pain001 release policy, supported versions, semantic versioning, security fixes, SLSA provenance, rollback, version pinning</news:keywords>
+  </news:news>
+</url>
+<url>
   <loc>https://pain001.com/ro/</loc>
   <news:news>
     <news:publication>
@@ -827,6 +863,18 @@
     <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
     <news:title>Pain001 — Açık kaynaklı ISO 20022 ödeme başlatma</news:title>
     <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, Türkçe</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/trust/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>Trust Centre</news:title>
+    <news:keywords>pain001 trust centre, vendor risk assessment open source, SBOM, OpenSSF scorecard, SLSA provenance, security review ISO 20022, third-party risk</news:keywords>
   </news:news>
 </url>
 <url>

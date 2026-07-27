@@ -359,6 +359,64 @@
       .section-sub { color: var(--ink-soft); font-size: 1.12rem; max-width: 58ch; }
       .section-sub a { color: var(--link); }
 
+      .status-strip {
+        background: var(--bg-alt);
+        border-bottom: 1px solid var(--rule);
+        font-size: 0.82rem;
+      }
+      .status-strip-inner {
+        display: flex; flex-wrap: wrap; gap: 0.25rem 1.75rem;
+        padding-top: 0.55rem; padding-bottom: 0.55rem;
+      }
+      .status-strip a {
+        color: var(--ink-mute); text-decoration: none;
+        display: inline-flex; align-items: center; min-height: 32px;
+        white-space: nowrap;
+      }
+      .status-strip a:hover { color: var(--link); text-decoration: underline; }
+      .status-strip strong { color: var(--ink-soft); font-weight: 650; margin-right: 0.3rem; }
+      @media (max-width: 720px) { .status-strip { display: none; } }
+
+      /* Workflow: the five-stage lifecycle, before any package talk. */
+      .flow {
+        display: grid; grid-template-columns: repeat(5, 1fr);
+        gap: 0; counter-reset: stage;
+        border: 1px solid var(--rule); border-radius: var(--radius-md);
+        overflow: hidden; background: var(--bg-card);
+      }
+      .flow-step { padding: 1.6rem 1.4rem; border-left: 1px solid var(--rule); position: relative; }
+      .flow-step:first-child { border-left: none; }
+      .flow-step::before {
+        counter-increment: stage; content: counter(stage, decimal-leading-zero);
+        display: block; font-family: var(--type-display);
+        font-size: 0.85rem; font-weight: 700; color: var(--eyebrow);
+        margin-bottom: 0.5rem;
+      }
+      .flow-step h3 { font-size: 1.02rem; margin-bottom: 0.4rem; }
+      .flow-step p { color: var(--ink-mute); font-size: 0.88rem; line-height: 1.5; }
+      @media (max-width: 980px) {
+        .flow { grid-template-columns: 1fr; }
+        .flow-step { border-left: none; border-top: 1px solid var(--rule); }
+        .flow-step:first-child { border-top: none; }
+      }
+
+      /* Task cards: what the visitor came to do. */
+      .task-grid {
+        display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+        gap: 1rem;
+      }
+      .task-card {
+        display: flex; align-items: center; justify-content: space-between; gap: 0.75rem;
+        min-height: 64px; padding: 1rem 1.3rem;
+        background: var(--bg-card); border: 1px solid var(--rule);
+        border-radius: var(--radius-md);
+        color: var(--ink); font-weight: 600; font-size: 0.98rem;
+        text-decoration: none;
+      }
+      .task-card:hover { border-color: var(--rule-strong); box-shadow: var(--shadow-md); color: var(--link); }
+      .task-card .arrow { color: var(--ink-mute); flex-shrink: 0; }
+      .stat-link { text-decoration: none; color: inherit; display: block; border-radius: var(--radius-md); }
+      .stat-link:hover .stat-value { color: var(--link); }
       /* ==== Persona cards ==== */
       .persona-grid {
         display: grid;
@@ -907,6 +965,19 @@
     </header>
 
     <main id="main-content">
+      <!-- Standards status strip: current decision-relevant facts,
+           each linking to its evidence (Bank-of-England pattern). -->
+      <section class="status-strip" aria-label="Current standards and project status">
+        <div class="wrap status-strip-inner">
+          <a href="/iso20022-roadmap/"><strong>Next CBPR+ milestone:</strong> 14 Nov 2026</a>
+          <a href="/2026-iso20022-migration-trends/"><strong>Address rule:</strong> structured or hybrid</a>
+          <a href="/pain.001.001.09/"><strong>Relay version:</strong> pain.001 v9</a>
+          <a href="https://pypi.org/project/pain001/" rel="external"><strong>Latest release:</strong> v0.0.56</a>
+          <a href="/compatibility/"><strong>Message definitions:</strong> 11</a>
+          <a href="/iso20022-roadmap/"><strong>Reviewed:</strong> 2026-07-27</a>
+        </div>
+      </section>
+
       <!-- Hero -->
       <section class="hero" aria-labelledby="hero-heading">
         <div class="wrap">
@@ -943,21 +1014,59 @@ pain001 -t pain.001.001.09 -d payments.csv --scheme sepa-sct --dry-run</code></p
       <!-- Proof rail -->
       <section class="proof" aria-label="Verifiable project facts">
         <div class="wrap proof-rail">
-          <div class="kpi">
+          <a class="kpi stat-link" href="/compatibility/">
             <div class="kpi-value">11</div>
-            <p class="kpi-label">message definitions — pain.001 v03–v12 and pain.008</p>
-          </div>
-          <div class="kpi">
+            <p class="kpi-label">message definitions — the full compatibility matrix</p>
+          </a>
+          <a class="kpi stat-link" href="/pain001-mcp/">
             <div class="kpi-value">17</div>
             <p class="kpi-label">MCP tools for AI agents, every one read-only</p>
-          </div>
-          <div class="kpi">
+          </a>
+          <a class="kpi stat-link" href="/architecture-and-patents/">
             <div class="kpi-value">100%</div>
             <p class="kpi-label">line and branch coverage, enforced as a CI gate</p>
-          </div>
-          <div class="kpi">
+          </a>
+          <a class="kpi stat-link" href="/privacy/">
             <div class="kpi-value">0</div>
             <p class="kpi-label">bytes of payment data leave your machine</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Workflow: lifecycle before packages -->
+      <section class="section" aria-labelledby="flow-heading">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="section-eyebrow">How it works</p>
+            <h2 id="flow-heading" class="section-title">One pipeline, five stages.</h2>
+            <p class="section-sub">Pain001 is the control layer between your source data and your bank channel — it begins at import and ends with the bank's answer, explained.</p>
+          </div>
+          <div class="flow">
+            <div class="flow-step"><h3>Import</h3><p>CSV, Excel, SQLite, JSON, Parquet, or legacy SWIFT MT101 — <a href="/compatibility/" style="color: var(--link);">every format and gate</a>.</p></div>
+            <div class="flow-step"><h3>Normalise</h3><p>Field aliases mapped, IBANs and BICs checked, amounts made exact decimals, charset contained.</p></div>
+            <div class="flow-step"><h3>Validate</h3><p>JSON Schema per record, scheme rulebooks, then the official ISO 20022 XSD — a hard gate, not an option.</p></div>
+            <div class="flow-step"><h3>Generate</h3><p>Bank-ready <code>pain.001</code> / <code>pain.008</code> XML with recomputed control totals.</p></div>
+            <div class="flow-step"><h3>Explain</h3><p>The bank's <code>pain.002</code> answer parsed, <a href="/pain002-reason-codes/" style="color: var(--link);">reason codes decoded</a>, camt.053 reconciled.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Task entry points -->
+      <section class="section section-alt" aria-labelledby="task-heading">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="section-eyebrow">Start with your task</p>
+            <h2 id="task-heading" class="section-title">What do you need to do today?</h2>
+          </div>
+          <div class="task-grid">
+            <a class="task-card" href="/2026-iso20022-migration-trends/">Prepare for November 2026 <span class="arrow" aria-hidden="true">&rsaquo;</span></a>
+            <a class="task-card" href="/documentation/">Generate a pain.001 file <span class="arrow" aria-hidden="true">&rsaquo;</span></a>
+            <a class="task-card" href="/try/">Validate a file right now <span class="arrow" aria-hidden="true">&rsaquo;</span></a>
+            <a class="task-card" href="/pain001-loader-mt101/">Convert MT101 <span class="arrow" aria-hidden="true">&rsaquo;</span></a>
+            <a class="task-card" href="/pain002-reason-codes/">Fix a bank rejection <span class="arrow" aria-hidden="true">&rsaquo;</span></a>
+            <a class="task-card" href="/payments/">Integrate an ERP pipeline <span class="arrow" aria-hidden="true">&rsaquo;</span></a>
+            <a class="task-card" href="/trust/">Review security &amp; governance <span class="arrow" aria-hidden="true">&rsaquo;</span></a>
+            <a class="task-card" href="/competitors-comparison/">Compare the alternatives <span class="arrow" aria-hidden="true">&rsaquo;</span></a>
           </div>
         </div>
       </section>
@@ -1256,6 +1365,8 @@ pain001 -t pain.001.001.09 -d payments.csv --scheme sepa-sct --dry-run</code></p
               <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/">Cross-Border Guide</a></li>
               <li><a href="/competitors-comparison/">Comparison vs commercial tools</a></li>
               <li><a href="/architecture-and-patents/">Architecture &amp; patents</a></li>
+              <li><a href="/trust/">Trust Centre</a></li>
+              <li><a href="/compatibility/">Compatibility matrix</a></li>
               <li><a href="/security.txt">security.txt</a></li>
               <li><a href="/sbom.cdx.json">SBOM</a> · <a href="/llms.txt">llms.txt</a> · <a href="/rss.xml">RSS feed</a></li>
             </ul>
