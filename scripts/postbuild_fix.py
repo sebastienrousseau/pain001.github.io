@@ -824,6 +824,34 @@ def main() -> None:
     gen_try_locales(site)
     gen_journey_locales(site)
     regen_sitemap(site)
+    gen_legacy_redirects(site)  # after sitemap so stubs stay unindexed
+
+
+LEGACY_REDIRECTS = {
+    "executive-brief-fr": "/fr/executive-brief/",
+    "executive-brief-de": "/de/executive-brief/",
+    "executive-brief-es": "/es/executive-brief/",
+}
+
+
+def gen_legacy_redirects(site: Path) -> None:
+    """Meta-refresh stubs for retired URLs (GitHub Pages has no server
+    redirects). noindex + canonical point crawlers at the new location."""
+    stub = ('<!DOCTYPE html>\n<html lang="en">\n<head>\n'
+            '<meta charset="utf-8" />\n'
+            '<meta name="robots" content="noindex" />\n'
+            '<meta http-equiv="refresh" content="0; url=%(new)s" />\n'
+            '<link rel="canonical" href="%(base)s%(new)s" />\n'
+            "<title>Moved</title>\n</head>\n<body>\n"
+            '<main id="main-content">\n'
+            '<p>This page has moved to <a href="%(new)s">%(base)s%(new)s</a>.</p>\n'
+            "</main>\n</body>\n</html>\n")
+    for old, new in LEGACY_REDIRECTS.items():
+        dest = site / old
+        dest.mkdir(parents=True, exist_ok=True)
+        (dest / "index.html").write_text(
+            stub % {"new": new, "base": BASE_URL}, encoding="utf-8")
+    print(f"[postbuild] {len(LEGACY_REDIRECTS)} legacy redirect stub(s)")
 
 
 if __name__ == "__main__":
