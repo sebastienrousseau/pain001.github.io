@@ -95,6 +95,10 @@ last_reviewed: "2026-07-26"
 
 Cada arquivo passa por três camadas de validação antes de ser gravado: esquema JSON por registro (com verificação mod-97 do IBAN e estrutura do BIC), regras de scheme (SEPA e CBPR+ internacional) e validação XSD final. Os totais de controle são recalculados, nunca copiados. Tudo roda localmente: nenhum dado de pagamento sai da sua infraestrutura.
 
+## Teste no navegador
+
+Valide um lote de exemplo diretamente no navegador — nada é enviado — e prove o resultado contra o esquema XSD oficial: [testar o Pain001](/try/). Arquivos CSV de exemplo podem ser baixados como modelos para suas exportações.
+
 ## O prazo de 14 de novembro de 2026
 
 Com o fim da coexistência MT–MX em 22 de novembro de 2025, o próximo prazo é **14 de novembro de 2026**: endereços postais totalmente não estruturados serão rejeitados nos pagamentos CBPR+ e o relay interbancário MT101 será substituído pelo `pain.001` versão 9. O Pain001 já gera endereços estruturados e híbridos — e converte MT101 com um único comando.
@@ -106,4 +110,4 @@ pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run
 ```
 
-A documentação completa está em inglês: [guia de instalação](/installation/), [referência técnica](/documentation/), [demo no navegador](/try/) e [briefing 2026 sobre ISO 20022](/2026-iso20022-migration-trends/). O núcleo tem licença dupla Apache-2.0 / MIT — uso comercial livre em qualquer escala.
+Para aprofundar: [guia de instalação](/installation/), [referência técnica](/documentation/), [roteiro ISO 20022 até 2028](/iso20022-roadmap/), [códigos de rejeição pain.002](/pain002-reason-codes/), [central de confiança](/trust/) e [resumo executivo](/executive-brief/). A documentação completa está em inglês. Licença dupla Apache-2.0 / MIT — uso comercial livre em qualquer escala.

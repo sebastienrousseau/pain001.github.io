@@ -187,16 +187,18 @@
       </header>
 
       <div class="wrap content-shell">
-        <article class="content-body">
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>విషయసూచిక</h2><ol><li><a href="#section">మీ బ్యాంకు తిరస్కరించని చెల్లింపు ఫైళ్లు</a></li><li><a href="#section-2">బ్రౌజర్‌లో ప్రయత్నించండి</a></li><li><a href="#14-2026">14 నవంబర్ 2026 గడువు</a></li><li><a href="#section-3">ప్రారంభించండి</a></li></ol></nav>
           <div lang="en"><h2 id="section">మీ బ్యాంకు తిరస్కరించని చెల్లింపు ఫైళ్లు<a class="heading-anchor" href="#section" aria-label="Link to section: మీ బ్యాంకు తిరస్కరించని చెల్లింపు ఫైళ్లు">#</a></h2>
 <p><strong>Pain001</strong> అనేది ISO 20022 చెల్లింపు ప్రారంభం కోసం ఓపెన్-సోర్స్ Python సూట్. మీ వద్ద ఇప్పటికే ఉన్న డేటాను — CSV, Excel, SQLite, JSON, Parquet లేదా పాత SWIFT MT101 సందేశాలు — అధికారిక XSD స్కీమాలతో ధృవీకరించిన <code>pain.001</code> (క్రెడిట్ బదిలీలు) మరియు <code>pain.008</code> (డైరెక్ట్ డెబిట్) XMLగా మారుస్తుంది.</p>
 <p>ప్రతి ఫైల్ వ్రాయబడే ముందు మూడు ధృవీకరణ దశలను దాటుతుంది: ప్రతి రికార్డుకు JSON స్కీమా (IBAN mod-97 తనిఖీ మరియు BIC నిర్మాణంతో సహా), scheme నియమాలు (SEPA మరియు సరిహద్దు దాటిన CBPR+), చివరి XSD ధృవీకరణ. నియంత్రణ మొత్తాలు తిరిగి లెక్కించబడతాయి, ఎప్పుడూ కాపీ చేయబడవు. అంతా స్థానికంగా నడుస్తుంది: ఏ చెల్లింపు డేటా మీ మౌలిక సదుపాయాన్ని వదిలి వెళ్లదు.</p>
+<h2 id="section-2">బ్రౌజర్‌లో ప్రయత్నించండి<a class="heading-anchor" href="#section-2" aria-label="Link to section: బ్రౌజర్‌లో ప్రయత్నించండి">#</a></h2>
+<p>ఒక నమూనా బ్యాచ్‌ను నేరుగా మీ బ్రౌజర్‌లో ధృవీకరించండి — ఏదీ అప్‌లోడ్ కాదు — ఫలితాన్ని అధికారిక XSD స్కీమాతో నిరూపించండి: <a href="/try/">Pain001 ప్రయత్నించండి</a>. నమూనా CSV ఫైళ్లు మీ ఎగుమతులకు టెంప్లేట్లుగా డౌన్‌లోడ్ చేసుకోవచ్చు.</p>
 <h2 id="14-2026">14 నవంబర్ 2026 గడువు<a class="heading-anchor" href="#14-2026" aria-label="Link to section: 14 నవంబర్ 2026 గడువు">#</a></h2>
 <p>22 నవంబర్ 2025న MT–MX సహజీవనం ముగిసిన తర్వాత, తదుపరి గడువు <strong>14 నవంబర్ 2026</strong>: పూర్తిగా నిర్మాణరహిత చిరునామాలు CBPR+ చెల్లింపులలో తిరస్కరించబడతాయి; అంతర్-బ్యాంకు MT101 రిలే స్థానంలో <code>pain.001</code> వెర్షన్ 9 వస్తుంది. Pain001 ఈరోజే నిర్మాణాత్మక మరియు హైబ్రిడ్ చిరునామాలను రూపొందిస్తుంది — ఒకే కమాండ్‌తో MT101ను మారుస్తుంది.</p>
-<h2 id="section-2">ప్రారంభించండి<a class="heading-anchor" href="#section-2" aria-label="Link to section: ప్రారంభించండి">#</a></h2>
+<h2 id="section-3">ప్రారంభించండి<a class="heading-anchor" href="#section-3" aria-label="Link to section: ప్రారంభించండి">#</a></h2>
 <pre><code class="language-bash">pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run</code></pre>
-<p>పూర్తి డాక్యుమెంటేషన్ ఆంగ్లంలో ఉంది: <a href="/installation/">ఇన్‌స్టాలేషన్ గైడ్</a>, <a href="/documentation/">సాంకేతిక సూచన</a>, <a href="/try/">బ్రౌజర్ డెమో</a> మరియు <a href="/2026-iso20022-migration-trends/">2026 ISO 20022 బ్రీఫింగ్</a>. కోర్ Apache-2.0 / MIT ద్వంద్వ లైసెన్స్ — ఏ స్థాయిలోనైనా ఉచిత వాణిజ్య వినియోగం.</p>
+<p>మరింత: <a href="/installation/">ఇన్‌స్టాలేషన్ గైడ్</a>, <a href="/documentation/">సాంకేతిక సూచన</a>, <a href="/iso20022-roadmap/">2028 వరకు ISO 20022 రోడ్‌మ్యాప్</a>, <a href="/pain002-reason-codes/">pain.002 తిరస్కరణ కోడ్‌లు</a>, <a href="/trust/">ట్రస్ట్ సెంటర్</a> మరియు <a href="/executive-brief/">ఎగ్జిక్యూటివ్ సారాంశం</a>. పూర్తి డాక్యుమెంటేషన్ ఆంగ్లంలో. ద్వంద్వ లైసెన్స్ Apache-2.0 / MIT — ఏ స్థాయిలోనైనా ఉచిత వాణిజ్య వినియోగం.</p>
 </div>
         </article>
       </div>

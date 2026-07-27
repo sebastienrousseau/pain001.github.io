@@ -95,6 +95,10 @@ last_reviewed: "2026-07-26"
 
 Chaque fichier passe trois niveaux de validation avant d'être écrit : schéma JSON par enregistrement (avec contrôle mod-97 des IBAN et structure des BIC), règles de scheme (SEPA SCT, SEPA Instantané, prélèvement Core et B2B, virements transfrontaliers CBPR+), puis validation XSD du document final. Les totaux de contrôle (`NbOfTxs`, `CtrlSum`) sont recalculés — jamais copiés de la source. Tout s'exécute localement : aucune donnée de paiement ne quitte votre infrastructure.
 
+## Essayez-le dans votre navigateur
+
+Validez un lot d'exemple directement dans votre navigateur — rien n'est téléversé — puis prouvez le résultat avec le schéma XSD officiel : [essayer Pain001](/try/). Des fichiers CSV d'exemple sont téléchargeables comme modèles pour vos propres exports.
+
 ## L'échéance du 14 novembre 2026
 
 Depuis la fin de la coexistence MT–MX le 22 novembre 2025, l'échéance suivante est le **14 novembre 2026** : les adresses postales entièrement non structurées seront rejetées dans les paiements CBPR+, et le relais interbancaire MT101 sera remplacé par `pain.001` version 9. Pain001 gère dès aujourd'hui les adresses structurées et hybrides, et convertit vos MT101 en une commande.
@@ -106,4 +110,4 @@ pip install pain001
 pain001 -t pain.001.001.09 -d paiements.csv -o sortie/ --dry-run
 ```
 
-La documentation détaillée est en anglais : [guide d'installation](/installation/), [référence technique](/documentation/), [essai dans le navigateur](/try/), et [briefing 2026 sur ISO 20022](/2026-iso20022-migration-trends/). Le cœur est sous double licence Apache-2.0 / MIT — utilisation commerciale libre, à toute échelle.
+Pour aller plus loin : [guide d'installation](/installation/), [référence technique](/documentation/), [feuille de route ISO 20022 jusqu'en 2028](/iso20022-roadmap/), [codes de rejet pain.002](/pain002-reason-codes/), [centre de confiance](/trust/) — et la [synthèse d'une page pour dirigeants](/executive-brief-fr/), en français. La documentation détaillée est en anglais. Le cœur est sous double licence Apache-2.0 / MIT — utilisation commerciale libre à toute échelle.

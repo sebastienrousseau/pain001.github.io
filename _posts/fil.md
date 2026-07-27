@@ -95,6 +95,10 @@ Ang **Pain001** ay open-source na Python suite para sa pagsisimula ng bayad sa I
 
 Bawat file ay dumadaan sa tatlong antas ng validation bago isulat: JSON schema kada record (kasama ang mod-97 check ng IBAN at istruktura ng BIC), mga panuntunan ng scheme (SEPA at cross-border CBPR+), at panghuling XSD validation. Laging muling kinakalkula ang control totals, hindi kailanman kinokopya. Lahat ay tumatakbo nang lokal: walang payment data na lumalabas sa inyong imprastraktura.
 
+## Subukan sa browser
+
+I-validate ang isang sample na batch nang direkta sa inyong browser — walang ina-upload — at patunayan ang resulta laban sa opisyal na XSD schema: [subukan ang Pain001](/try/). May mga sample na CSV file na maida-download bilang template para sa sarili ninyong mga export.
+
 ## Ang deadline na 14 Nobyembre 2026
 
 Matapos magtapos ang MT–MX coexistence noong 22 Nobyembre 2025, ang susunod na deadline ay **14 Nobyembre 2026**: tatanggihan sa mga CBPR+ na bayad ang ganap na unstructured na postal address, at papalitan ng `pain.001` bersyon 9 ang interbank na MT101 relay. Gumagawa na ngayon ang Pain001 ng structured at hybrid na address — at kinokonberte ang MT101 sa isang utos.
@@ -106,4 +110,4 @@ pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run
 ```
 
-Ang buong dokumentasyon ay nasa Ingles: [gabay sa pag-install](/installation/), [teknikal na sanggunian](/documentation/), [demo sa browser](/try/) at [2026 ISO 20022 briefing](/2026-iso20022-migration-trends/). Ang core ay may dalawahang lisensya na Apache-2.0 / MIT — libreng komersyal na paggamit sa anumang sukat.
+Susunod: [gabay sa pag-install](/installation/), [teknikal na sanggunian](/documentation/), [ISO 20022 roadmap hanggang 2028](/iso20022-roadmap/), [mga pain.002 rejection code](/pain002-reason-codes/), [trust centre](/trust/) at [executive summary](/executive-brief/). Ang buong dokumentasyon ay nasa Ingles. Dalawahang lisensya Apache-2.0 / MIT — libreng komersyal na paggamit sa anumang sukat.

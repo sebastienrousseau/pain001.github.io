@@ -95,6 +95,10 @@ last_reviewed: "2026-07-26"
 
 Setiap fail melalui tiga lapisan pengesahan sebelum ditulis: skema JSON bagi setiap rekod (termasuk semakan mod-97 IBAN dan struktur BIC), peraturan scheme (SEPA dan CBPR+ rentas sempadan) serta pengesahan XSD akhir. Jumlah kawalan sentiasa dikira semula, tidak pernah disalin. Semuanya berjalan secara setempat: tiada data pembayaran meninggalkan infrastruktur anda.
 
+## Cuba dalam pelayar
+
+Sahkan kelompok contoh terus dalam pelayar anda — tiada apa yang dimuat naik — dan buktikan hasilnya dengan skema XSD rasmi: [cuba Pain001](/try/). Fail CSV contoh boleh dimuat turun sebagai templat untuk eksport anda sendiri.
+
 ## Tarikh akhir 14 November 2026
 
 Selepas koeksistensi MT–MX berakhir pada 22 November 2025, tarikh akhir seterusnya ialah **14 November 2026**: alamat pos yang tidak berstruktur sepenuhnya akan ditolak dalam pembayaran CBPR+, dan geganti MT101 antara bank digantikan oleh `pain.001` versi 9. Pain001 sudah menjana alamat berstruktur dan hibrid hari ini — dan menukar MT101 dengan satu arahan.
@@ -106,4 +110,4 @@ pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run
 ```
 
-Dokumentasi penuh dalam bahasa Inggeris: [panduan pemasangan](/installation/), [rujukan teknikal](/documentation/), [demo pelayar](/try/) dan [taklimat ISO 20022 tahun 2026](/2026-iso20022-migration-trends/). Teras berlesen dwi Apache-2.0 / MIT — penggunaan komersial percuma pada sebarang skala.
+Seterusnya: [panduan pemasangan](/installation/), [rujukan teknikal](/documentation/), [pelan hala tuju ISO 20022 hingga 2028](/iso20022-roadmap/), [kod penolakan pain.002](/pain002-reason-codes/), [pusat kepercayaan](/trust/) dan [ringkasan eksekutif](/executive-brief/). Dokumentasi penuh dalam bahasa Inggeris. Lesen dwi Apache-2.0 / MIT — penggunaan komersial percuma pada sebarang skala.

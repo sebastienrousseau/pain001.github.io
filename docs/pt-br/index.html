@@ -187,16 +187,18 @@
       </header>
 
       <div class="wrap content-shell">
-        <article class="content-body">
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>Sumário</h2><ol><li><a href="#arquivos-de-pagamento-que-seu-banco-n-o-vai-rejeitar">Arquivos de pagamento que seu banco não vai rejeitar</a></li><li><a href="#teste-no-navegador">Teste no navegador</a></li><li><a href="#o-prazo-de-14-de-novembro-de-2026">O prazo de 14 de novembro de 2026</a></li><li><a href="#como-come-ar">Como começar</a></li></ol></nav>
           <div lang="en"><h2 id="arquivos-de-pagamento-que-seu-banco-n-o-vai-rejeitar">Arquivos de pagamento que seu banco não vai rejeitar<a class="heading-anchor" href="#arquivos-de-pagamento-que-seu-banco-n-o-vai-rejeitar" aria-label="Link to section: Arquivos de pagamento que seu banco não vai rejeitar">#</a></h2>
 <p><strong>Pain001</strong> é uma suíte Python de código aberto para iniciação de pagamentos ISO 20022. Ela converte os dados que você já tem — CSV, Excel, SQLite, JSON, Parquet ou mensagens SWIFT MT101 legadas — em XML <code>pain.001</code> (transferências) e <code>pain.008</code> (débitos diretos), validados contra os esquemas XSD oficiais.</p>
 <p>Cada arquivo passa por três camadas de validação antes de ser gravado: esquema JSON por registro (com verificação mod-97 do IBAN e estrutura do BIC), regras de scheme (SEPA e CBPR+ internacional) e validação XSD final. Os totais de controle são recalculados, nunca copiados. Tudo roda localmente: nenhum dado de pagamento sai da sua infraestrutura.</p>
+<h2 id="teste-no-navegador">Teste no navegador<a class="heading-anchor" href="#teste-no-navegador" aria-label="Link to section: Teste no navegador">#</a></h2>
+<p>Valide um lote de exemplo diretamente no navegador — nada é enviado — e prove o resultado contra o esquema XSD oficial: <a href="/try/">testar o Pain001</a>. Arquivos CSV de exemplo podem ser baixados como modelos para suas exportações.</p>
 <h2 id="o-prazo-de-14-de-novembro-de-2026">O prazo de 14 de novembro de 2026<a class="heading-anchor" href="#o-prazo-de-14-de-novembro-de-2026" aria-label="Link to section: O prazo de 14 de novembro de 2026">#</a></h2>
 <p>Com o fim da coexistência MT–MX em 22 de novembro de 2025, o próximo prazo é <strong>14 de novembro de 2026</strong>: endereços postais totalmente não estruturados serão rejeitados nos pagamentos CBPR+ e o relay interbancário MT101 será substituído pelo <code>pain.001</code> versão 9. O Pain001 já gera endereços estruturados e híbridos — e converte MT101 com um único comando.</p>
 <h2 id="como-come-ar">Como começar<a class="heading-anchor" href="#como-come-ar" aria-label="Link to section: Como começar">#</a></h2>
 <pre><code class="language-bash">pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run</code></pre>
-<p>A documentação completa está em inglês: <a href="/installation/">guia de instalação</a>, <a href="/documentation/">referência técnica</a>, <a href="/try/">demo no navegador</a> e <a href="/2026-iso20022-migration-trends/">briefing 2026 sobre ISO 20022</a>. O núcleo tem licença dupla Apache-2.0 / MIT — uso comercial livre em qualquer escala.</p>
+<p>Para aprofundar: <a href="/installation/">guia de instalação</a>, <a href="/documentation/">referência técnica</a>, <a href="/iso20022-roadmap/">roteiro ISO 20022 até 2028</a>, <a href="/pain002-reason-codes/">códigos de rejeição pain.002</a>, <a href="/trust/">central de confiança</a> e <a href="/executive-brief/">resumo executivo</a>. A documentação completa está em inglês. Licença dupla Apache-2.0 / MIT — uso comercial livre em qualquer escala.</p>
 </div>
         </article>
       </div>

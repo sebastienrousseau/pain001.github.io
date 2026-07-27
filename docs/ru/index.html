@@ -187,16 +187,18 @@
       </header>
 
       <div class="wrap content-shell">
-        <article class="content-body">
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>Содержание</h2><ol><li><a href="#section">Платёжные файлы, которые банк не отклонит</a></li><li><a href="#section-2">Попробуйте в браузере</a></li><li><a href="#14-2026">Срок — 14 ноября 2026 года</a></li><li><a href="#section-3">Начало работы</a></li></ol></nav>
           <div lang="en"><h2 id="section">Платёжные файлы, которые банк не отклонит<a class="heading-anchor" href="#section" aria-label="Link to section: Платёжные файлы, которые банк не отклонит">#</a></h2>
 <p><strong>Pain001</strong> — Python-пакет с открытым исходным кодом для инициирования платежей ISO 20022. Он преобразует данные, которые у вас уже есть — CSV, Excel, SQLite, JSON, Parquet или устаревшие сообщения SWIFT MT101 — в XML <code>pain.001</code> (переводы) и <code>pain.008</code> (прямые дебеты), валидированный официальными XSD-схемами.</p>
 <p>Каждый файл проходит три уровня проверки: JSON-схема для каждой записи (включая контроль mod-97 для IBAN и структуру BIC), правила scheme (SEPA и трансграничный CBPR+) и итоговую XSD-валидацию. Контрольные суммы пересчитываются, а не копируются. Всё работает локально: платёжные данные не покидают вашу инфраструктуру.</p>
+<h2 id="section-2">Попробуйте в браузере<a class="heading-anchor" href="#section-2" aria-label="Link to section: Попробуйте в браузере">#</a></h2>
+<p>Проверьте пример пакета прямо в браузере — ничего не загружается на сервер — и подтвердите результат официальной XSD-схемой: <a href="/try/">попробовать Pain001</a>. Примеры CSV-файлов можно скачать как шаблоны для собственных выгрузок.</p>
 <h2 id="14-2026">Срок — 14 ноября 2026 года<a class="heading-anchor" href="#14-2026" aria-label="Link to section: Срок — 14 ноября 2026 года">#</a></h2>
 <p>После завершения сосуществования MT–MX 22 ноября 2025 года следующий срок — <strong>14 ноября 2026 года</strong>: полностью неструктурированные почтовые адреса будут отклоняться в платежах CBPR+, а межбанковская трансляция MT101 будет заменена <code>pain.001</code> версии 9. Pain001 уже генерирует структурированные и гибридные адреса — и конвертирует MT101 одной командой.</p>
-<h2 id="section-2">Начало работы<a class="heading-anchor" href="#section-2" aria-label="Link to section: Начало работы">#</a></h2>
+<h2 id="section-3">Начало работы<a class="heading-anchor" href="#section-3" aria-label="Link to section: Начало работы">#</a></h2>
 <pre><code class="language-bash">pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run</code></pre>
-<p>Полная документация на английском: <a href="/installation/">руководство по установке</a>, <a href="/documentation/">технический справочник</a>, <a href="/try/">демо в браузере</a> и <a href="/2026-iso20022-migration-trends/">обзор ISO 20022 на 2026 год</a>. Ядро имеет двойную лицензию Apache-2.0 / MIT — свободное коммерческое использование в любом масштабе.</p>
+<p>Далее: <a href="/installation/">руководство по установке</a>, <a href="/documentation/">технический справочник</a>, <a href="/iso20022-roadmap/">дорожная карта ISO 20022 до 2028 года</a>, <a href="/pain002-reason-codes/">коды отклонения pain.002</a>, <a href="/trust/">центр доверия</a> и <a href="/executive-brief/">резюме для руководства</a>. Полная документация на английском. Двойная лицензия Apache-2.0 / MIT — свободное коммерческое использование в любом масштабе.</p>
 </div>
         </article>
       </div>

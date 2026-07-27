@@ -180,23 +180,25 @@
           <p class="eyebrow">Pain001 en français</p>
           <h1 class="page-title">Pain001 — Initiation de paiements ISO 20022 en open source</h1>
           <p class="deck">La suite open source qui transforme vos données de paiement en XML ISO 20022 validé — prouvé conforme avant même d&#x27;atteindre votre banque.</p>
-          <div class="article-meta"><span>1 min de lecture</span>
+          <div class="article-meta"><span>2 min de lecture</span>
             <span>Dernière révision <time datetime="2026-07-26">2026-07-26</time></span>
           </div>
         </div>
       </header>
 
       <div class="wrap content-shell">
-        <article class="content-body">
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>Sommaire</h2><ol><li><a href="#des-fichiers-de-paiement-que-votre-banque-n-aura-pas-rejeter">Des fichiers de paiement que votre banque n'aura pas à rejeter</a></li><li><a href="#essayez-le-dans-votre-navigateur">Essayez-le dans votre navigateur</a></li><li><a href="#l-ch-ance-du-14-novembre-2026">L'échéance du 14 novembre 2026</a></li><li><a href="#d-marrer">Démarrer</a></li></ol></nav>
           <div lang="en"><h2 id="des-fichiers-de-paiement-que-votre-banque-n-aura-pas-rejeter">Des fichiers de paiement que votre banque n'aura pas à rejeter<a class="heading-anchor" href="#des-fichiers-de-paiement-que-votre-banque-n-aura-pas-rejeter" aria-label="Link to section: Des fichiers de paiement que votre banque n'aura pas à rejeter">#</a></h2>
 <p><strong>Pain001</strong> est une suite Python open source pour l'initiation de paiements ISO 20022. Elle convertit les données que vous avez déjà — CSV, Excel, SQLite, JSON, Parquet, ou messages SWIFT MT101 hérités — en XML <code>pain.001</code> (virements) et <code>pain.008</code> (prélèvements) validés par les schémas XSD officiels.</p>
 <p>Chaque fichier passe trois niveaux de validation avant d'être écrit : schéma JSON par enregistrement (avec contrôle mod-97 des IBAN et structure des BIC), règles de scheme (SEPA SCT, SEPA Instantané, prélèvement Core et B2B, virements transfrontaliers CBPR+), puis validation XSD du document final. Les totaux de contrôle (<code>NbOfTxs</code>, <code>CtrlSum</code>) sont recalculés — jamais copiés de la source. Tout s'exécute localement : aucune donnée de paiement ne quitte votre infrastructure.</p>
+<h2 id="essayez-le-dans-votre-navigateur">Essayez-le dans votre navigateur<a class="heading-anchor" href="#essayez-le-dans-votre-navigateur" aria-label="Link to section: Essayez-le dans votre navigateur">#</a></h2>
+<p>Validez un lot d'exemple directement dans votre navigateur — rien n'est téléversé — puis prouvez le résultat avec le schéma XSD officiel : <a href="/try/">essayer Pain001</a>. Des fichiers CSV d'exemple sont téléchargeables comme modèles pour vos propres exports.</p>
 <h2 id="l-ch-ance-du-14-novembre-2026">L'échéance du 14 novembre 2026<a class="heading-anchor" href="#l-ch-ance-du-14-novembre-2026" aria-label="Link to section: L'échéance du 14 novembre 2026">#</a></h2>
 <p>Depuis la fin de la coexistence MT–MX le 22 novembre 2025, l'échéance suivante est le <strong>14 novembre 2026</strong> : les adresses postales entièrement non structurées seront rejetées dans les paiements CBPR+, et le relais interbancaire MT101 sera remplacé par <code>pain.001</code> version 9. Pain001 gère dès aujourd'hui les adresses structurées et hybrides, et convertit vos MT101 en une commande.</p>
 <h2 id="d-marrer">Démarrer<a class="heading-anchor" href="#d-marrer" aria-label="Link to section: Démarrer">#</a></h2>
 <pre><code class="language-bash">pip install pain001
 pain001 -t pain.001.001.09 -d paiements.csv -o sortie/ --dry-run</code></pre>
-<p>La documentation détaillée est en anglais : <a href="/installation/">guide d'installation</a>, <a href="/documentation/">référence technique</a>, <a href="/try/">essai dans le navigateur</a>, et <a href="/2026-iso20022-migration-trends/">briefing 2026 sur ISO 20022</a>. Le cœur est sous double licence Apache-2.0 / MIT — utilisation commerciale libre, à toute échelle.</p>
+<p>Pour aller plus loin : <a href="/installation/">guide d'installation</a>, <a href="/documentation/">référence technique</a>, <a href="/iso20022-roadmap/">feuille de route ISO 20022 jusqu'en 2028</a>, <a href="/pain002-reason-codes/">codes de rejet pain.002</a>, <a href="/trust/">centre de confiance</a> — et la <a href="/executive-brief-fr/">synthèse d'une page pour dirigeants</a>, en français. La documentation détaillée est en anglais. Le cœur est sous double licence Apache-2.0 / MIT — utilisation commerciale libre à toute échelle.</p>
 </div>
         </article>
       </div>

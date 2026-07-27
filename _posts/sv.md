@@ -95,6 +95,10 @@ last_reviewed: "2026-07-26"
 
 Varje fil passerar tre valideringsnivåer innan den skrivs: JSON-schema per post (med mod-97-kontroll av IBAN och BIC-struktur), scheme-regler (SEPA och gränsöverskridande CBPR+) samt slutlig XSD-validering. Kontrollsummor räknas om, kopieras aldrig. Allt körs lokalt: inga betalningsdata lämnar din infrastruktur.
 
+## Prova i webbläsaren
+
+Validera en exempelbatch direkt i webbläsaren — inget laddas upp — och bevisa resultatet mot det officiella XSD-schemat: [prova Pain001](/try/). Exempel-CSV-filer kan laddas ner som mallar för egna exporter.
+
 ## Deadline 14 november 2026
 
 Sedan MT–MX-samexistensen upphörde den 22 november 2025 är nästa deadline **14 november 2026**: helt ostrukturerade postadresser avvisas i CBPR+-betalningar och det interbankära MT101-reläet ersätts av `pain.001` version 9. Pain001 stödjer strukturerade och hybrida adresser redan i dag — och konverterar MT101 med ett kommando.
@@ -106,4 +110,4 @@ pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run
 ```
 
-Den fullständiga dokumentationen är på engelska: [installationsguide](/installation/), [teknisk referens](/documentation/), [webbläsardemo](/try/) och [ISO 20022-briefing 2026](/2026-iso20022-migration-trends/). Kärnan är dubbellicensierad Apache-2.0 / MIT — fri kommersiell användning i valfri skala.
+Vidare: [installationsguide](/installation/), [teknisk referens](/documentation/), [ISO 20022-färdplan till 2028](/iso20022-roadmap/), [pain.002-avvisningskoder](/pain002-reason-codes/), [förtroendecenter](/trust/) och [ledningssammanfattning](/executive-brief/). Fullständig dokumentation på engelska. Dubbellicens Apache-2.0 / MIT — fri kommersiell användning i valfri skala.

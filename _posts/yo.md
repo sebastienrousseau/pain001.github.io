@@ -95,6 +95,10 @@ last_reviewed: "2026-07-26"
 
 Fáìlì kọ̀ọ̀kan ń kọjá àwọn ìpele ìfọwọ́sí mẹ́ta kí a tó kọ ọ́: àgbékalẹ̀ JSON fún àkọsílẹ̀ kọ̀ọ̀kan (pẹ̀lú àyẹ̀wò mod-97 fún IBAN àti ìgbékalẹ̀ BIC), àwọn òfin scheme (SEPA àti CBPR+ ti ìkọjá ààlà) àti ìfọwọ́sí XSD ìkẹyìn. A máa ń tún àpapọ̀ ìdarí ṣírò, a kì í ṣe àdàkọ wọn láé. Gbogbo rẹ̀ ń ṣiṣẹ́ ní ibi yín: kò sí dátà ìsanwó tí ó ń kúrò ní ètò yín.
 
+## Gbìyànjú nínú aṣàwákiri
+
+Ṣàyẹ̀wò àkójọpọ̀ àpẹẹrẹ tààrà nínú aṣàwákiri yín — kò sí ohun tí a gbé sókè — kí ẹ sì fi àgbékalẹ̀ XSD aláṣẹ ṣe ìdánilójú àbájáde: [gbìyànjú Pain001](/try/). Àwọn fáìlì CSV àpẹẹrẹ wà fún gbígbà sílẹ̀ gẹ́gẹ́ bí àwòṣe fún àwọn ìgbésílẹ̀ yín.
+
 ## Àkókò ìparí: 14 Oṣù Kọkànlá 2026
 
 Lẹ́yìn tí àjọgbé MT–MX parí ní 22 Oṣù Kọkànlá 2025, àkókò tí ó kàn ni **14 Oṣù Kọkànlá 2026**: àwọn àdírẹ́sì ìfìwéránṣẹ́ tí kò ní ìgbékalẹ̀ rárá ni a ó kọ̀ nínú àwọn ìsanwó CBPR+, àti pé `pain.001` ẹ̀yà 9 ni yóò rọ́pò ìfiránṣẹ́ MT101 láàrin àwọn báńkì. Pain001 ń ṣe àwọn àdírẹ́sì onígbékalẹ̀ àti alápapọ̀ lónìí — ó sì ń yí MT101 padà pẹ̀lú àṣẹ kan ṣoṣo.
@@ -106,4 +110,4 @@ pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run
 ```
 
-Gbogbo ìwé ìtọ́nisọ́nà wà ní èdè Gẹ̀ẹ́sì: [ìtọ́nisọ́nà ìfisípò](/installation/), [ìtọ́kasí ìmọ̀-ẹ̀rọ](/documentation/), [àfihàn nínú aṣàwákiri](/try/) àti [àlàyé ISO 20022 fún 2026](/2026-iso20022-migration-trends/). Ìpìlẹ̀ ní ìwé-àṣẹ méjì Apache-2.0 / MIT — ìlò oníṣòwò ọ̀fẹ́ ní ìwọ̀n èyíkéyìí.
+Síwájú: [ìtọ́nisọ́nà ìfisípò](/installation/), [ìtọ́kasí ìmọ̀-ẹ̀rọ](/documentation/), [àtẹ̀jáde ìlànà ISO 20022 títí di 2028](/iso20022-roadmap/), [àwọn kóòdù ìkọ̀sílẹ̀ pain.002](/pain002-reason-codes/), [ilé-iṣẹ́ ìgbẹ́kẹ̀lé](/trust/) àti [àkópọ̀ fún àwọn olùdarí](/executive-brief/). Gbogbo ìwé ìtọ́nisọ́nà wà ní èdè Gẹ̀ẹ́sì. Ìwé-àṣẹ méjì Apache-2.0 / MIT — ìlò oníṣòwò ọ̀fẹ́ ní ìwọ̀n èyíkéyìí.

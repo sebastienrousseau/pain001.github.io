@@ -187,16 +187,18 @@
       </header>
 
       <div class="wrap content-shell">
-        <article class="content-body">
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>Περιεχόμενα</h2><ol><li><a href="#section">Αρχεία πληρωμών που η τράπεζά σας δεν θα απορρίψει</a></li><li><a href="#browser">Δοκιμάστε το στον browser</a></li><li><a href="#14-2026">Η προθεσμία της 14ης Νοεμβρίου 2026</a></li><li><a href="#section-2">Ξεκινήστε</a></li></ol></nav>
           <div lang="en"><h2 id="section">Αρχεία πληρωμών που η τράπεζά σας δεν θα απορρίψει<a class="heading-anchor" href="#section" aria-label="Link to section: Αρχεία πληρωμών που η τράπεζά σας δεν θα απορρίψει">#</a></h2>
 <p>Το <strong>Pain001</strong> είναι σουίτα Python ανοικτού κώδικα για έναρξη πληρωμών ISO 20022. Μετατρέπει τα δεδομένα που ήδη έχετε — CSV, Excel, SQLite, JSON, Parquet ή παλαιά μηνύματα SWIFT MT101 — σε XML <code>pain.001</code> (μεταφορές πίστωσης) και <code>pain.008</code> (άμεσες χρεώσεις), επικυρωμένο με τα επίσημα σχήματα XSD.</p>
 <p>Κάθε αρχείο περνά τρία επίπεδα επικύρωσης: σχήμα JSON ανά εγγραφή (με έλεγχο mod-97 του IBAN και δομή BIC), κανόνες scheme (SEPA και διασυνοριακό CBPR+) και τελική επικύρωση XSD. Τα σύνολα ελέγχου επανυπολογίζονται, ποτέ δεν αντιγράφονται. Όλα εκτελούνται τοπικά: κανένα δεδομένο πληρωμής δεν φεύγει από την υποδομή σας.</p>
+<h2 id="browser">Δοκιμάστε το στον browser<a class="heading-anchor" href="#browser" aria-label="Link to section: Δοκιμάστε το στον browser">#</a></h2>
+<p>Επικυρώστε μια παρτίδα-δείγμα απευθείας στον browser — τίποτα δεν ανεβαίνει — και αποδείξτε το αποτέλεσμα με το επίσημο σχήμα XSD: <a href="/try/">δοκιμάστε το Pain001</a>. Δείγματα CSV διατίθενται για λήψη ως πρότυπα για τις δικές σας εξαγωγές.</p>
 <h2 id="14-2026">Η προθεσμία της 14ης Νοεμβρίου 2026<a class="heading-anchor" href="#14-2026" aria-label="Link to section: Η προθεσμία της 14ης Νοεμβρίου 2026">#</a></h2>
 <p>Μετά τη λήξη της συνύπαρξης MT–MX στις 22 Νοεμβρίου 2025, η επόμενη προθεσμία είναι η <strong>14η Νοεμβρίου 2026</strong>: οι πλήρως μη δομημένες ταχυδρομικές διευθύνσεις θα απορρίπτονται στις πληρωμές CBPR+ και ο διατραπεζικός αναμεταδότης MT101 θα αντικατασταθεί από το <code>pain.001</code> έκδοση 9. Το Pain001 παράγει ήδη δομημένες και υβριδικές διευθύνσεις — και μετατρέπει MT101 με μία εντολή.</p>
 <h2 id="section-2">Ξεκινήστε<a class="heading-anchor" href="#section-2" aria-label="Link to section: Ξεκινήστε">#</a></h2>
 <pre><code class="language-bash">pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run</code></pre>
-<p>Η πλήρης τεκμηρίωση είναι στα αγγλικά: <a href="/installation/">οδηγός εγκατάστασης</a>, <a href="/documentation/">τεχνική αναφορά</a>, <a href="/try/">demo στον browser</a> και <a href="/2026-iso20022-migration-trends/">ενημέρωση ISO 20022 για το 2026</a>. Ο πυρήνας έχει διπλή άδεια Apache-2.0 / MIT — ελεύθερη εμπορική χρήση σε οποιαδήποτε κλίμακα.</p>
+<p>Περαιτέρω: <a href="/installation/">οδηγός εγκατάστασης</a>, <a href="/documentation/">τεχνική αναφορά</a>, <a href="/iso20022-roadmap/">οδικός χάρτης ISO 20022 έως το 2028</a>, <a href="/pain002-reason-codes/">κωδικοί απόρριψης pain.002</a>, <a href="/trust/">κέντρο εμπιστοσύνης</a> και <a href="/executive-brief/">περίληψη για στελέχη</a>. Η πλήρης τεκμηρίωση είναι στα αγγλικά. Διπλή άδεια Apache-2.0 / MIT — ελεύθερη εμπορική χρήση σε κάθε κλίμακα.</p>
 </div>
         </article>
       </div>

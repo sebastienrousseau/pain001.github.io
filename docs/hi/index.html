@@ -187,16 +187,18 @@
       </header>
 
       <div class="wrap content-shell">
-        <article class="content-body">
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>विषय-सूची</h2><ol><li><a href="#section">ऐसी भुगतान फ़ाइलें जिन्हें आपका बैंक अस्वीकार नहीं करेगा</a></li><li><a href="#section-2">ब्राउज़र में आज़माएँ</a></li><li><a href="#14-2026">14 नवंबर 2026 की समय-सीमा</a></li><li><a href="#section-3">शुरू करें</a></li></ol></nav>
           <div lang="en"><h2 id="section">ऐसी भुगतान फ़ाइलें जिन्हें आपका बैंक अस्वीकार नहीं करेगा<a class="heading-anchor" href="#section" aria-label="Link to section: ऐसी भुगतान फ़ाइलें जिन्हें आपका बैंक अस्वीकार नहीं करेगा">#</a></h2>
 <p><strong>Pain001</strong> ISO 20022 भुगतान आरंभ के लिए एक ओपन-सोर्स Python सुइट है। यह आपके मौजूदा डेटा — CSV, Excel, SQLite, JSON, Parquet या पुराने SWIFT MT101 संदेश — को आधिकारिक XSD स्कीमा से सत्यापित <code>pain.001</code> (क्रेडिट ट्रांसफ़र) और <code>pain.008</code> (डायरेक्ट डेबिट) XML में बदलती है।</p>
 <p>हर फ़ाइल लिखे जाने से पहले तीन स्तरों के सत्यापन से गुज़रती है: प्रति रिकॉर्ड JSON स्कीमा (IBAN की mod-97 जाँच और BIC संरचना सहित), scheme नियम (SEPA और सीमा-पार CBPR+) और अंतिम XSD सत्यापन। नियंत्रण योग हमेशा फिर से गिने जाते हैं, कभी कॉपी नहीं किए जाते। सब कुछ स्थानीय रूप से चलता है: कोई भुगतान डेटा आपकी अवसंरचना से बाहर नहीं जाता।</p>
+<h2 id="section-2">ब्राउज़र में आज़माएँ<a class="heading-anchor" href="#section-2" aria-label="Link to section: ब्राउज़र में आज़माएँ">#</a></h2>
+<p>एक नमूना बैच सीधे अपने ब्राउज़र में सत्यापित करें — कुछ भी अपलोड नहीं होता — और परिणाम को आधिकारिक XSD स्कीमा से सिद्ध करें: <a href="/try/">Pain001 आज़माएँ</a>। नमूना CSV फ़ाइलें अपने निर्यात के टेम्पलेट के रूप में डाउनलोड की जा सकती हैं।</p>
 <h2 id="14-2026">14 नवंबर 2026 की समय-सीमा<a class="heading-anchor" href="#14-2026" aria-label="Link to section: 14 नवंबर 2026 की समय-सीमा">#</a></h2>
 <p>22 नवंबर 2025 को MT–MX सह-अस्तित्व समाप्त होने के बाद अगली समय-सीमा <strong>14 नवंबर 2026</strong> है: पूरी तरह असंरचित डाक पते CBPR+ भुगतानों में अस्वीकार होंगे और अंतर-बैंक MT101 रिले की जगह <code>pain.001</code> संस्करण 9 लेगा। Pain001 आज ही संरचित और हाइब्रिड पते बनाता है — और एक कमांड से MT101 बदल देता है।</p>
-<h2 id="section-2">शुरू करें<a class="heading-anchor" href="#section-2" aria-label="Link to section: शुरू करें">#</a></h2>
+<h2 id="section-3">शुरू करें<a class="heading-anchor" href="#section-3" aria-label="Link to section: शुरू करें">#</a></h2>
 <pre><code class="language-bash">pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run</code></pre>
-<p>पूर्ण दस्तावेज़ीकरण अंग्रेज़ी में है: <a href="/installation/">इंस्टॉलेशन गाइड</a>, <a href="/documentation/">तकनीकी संदर्भ</a>, <a href="/try/">ब्राउज़र डेमो</a> और <a href="/2026-iso20022-migration-trends/">2026 ISO 20022 ब्रीफ़िंग</a>। कोर की Apache-2.0 / MIT दोहरी लाइसेंसिंग है — किसी भी पैमाने पर मुफ़्त व्यावसायिक उपयोग।</p>
+<p>आगे: <a href="/installation/">इंस्टॉलेशन गाइड</a>, <a href="/documentation/">तकनीकी संदर्भ</a>, <a href="/iso20022-roadmap/">2028 तक ISO 20022 रोडमैप</a>, <a href="/pain002-reason-codes/">pain.002 अस्वीकृति कोड</a>, <a href="/trust/">ट्रस्ट सेंटर</a> और <a href="/executive-brief/">कार्यकारी सारांश</a>। पूर्ण दस्तावेज़ीकरण अंग्रेज़ी में। दोहरी लाइसेंसिंग Apache-2.0 / MIT — किसी भी पैमाने पर मुफ़्त व्यावसायिक उपयोग।</p>
 </div>
         </article>
       </div>

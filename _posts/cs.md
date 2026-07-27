@@ -95,6 +95,10 @@ last_reviewed: "2026-07-26"
 
 Každý soubor projde třemi vrstvami validace: JSON schéma pro každý záznam (včetně kontroly mod-97 IBAN a struktury BIC), pravidla scheme (SEPA a přeshraniční CBPR+) a závěrečná validace XSD. Kontrolní součty se přepočítávají, nikdy nekopírují. Vše běží lokálně: žádná platební data neopouštějí vaši infrastrukturu.
 
+## Vyzkoušejte v prohlížeči
+
+Zvalidujte ukázkovou dávku přímo v prohlížeči — nic se nenahrává — a ověřte výsledek oficiálním schématem XSD: [vyzkoušet Pain001](/try/). Ukázkové soubory CSV lze stáhnout jako šablony vlastních exportů.
+
 ## Termín 14. listopadu 2026
 
 Po konci koexistence MT–MX 22. listopadu 2025 je dalším termínem **14. listopad 2026**: zcela nestrukturované poštovní adresy budou v platbách CBPR+ odmítány a mezibankovní přenos MT101 nahradí `pain.001` verze 9. Pain001 už dnes generuje strukturované i hybridní adresy — a MT101 převede jedním příkazem.
@@ -106,4 +110,4 @@ pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run
 ```
 
-Kompletní dokumentace je v angličtině: [instalační příručka](/installation/), [technická reference](/documentation/), [demo v prohlížeči](/try/) a [briefing ISO 20022 pro rok 2026](/2026-iso20022-migration-trends/). Jádro má dvojí licenci Apache-2.0 / MIT — volné komerční použití v jakémkoli měřítku.
+Dále: [instalační příručka](/installation/), [technická reference](/documentation/), [plán ISO 20022 do roku 2028](/iso20022-roadmap/), [kódy zamítnutí pain.002](/pain002-reason-codes/), [centrum důvěry](/trust/) a [shrnutí pro vedení](/executive-brief/). Kompletní dokumentace anglicky. Dvojí licence Apache-2.0 / MIT — volné komerční použití v jakémkoli měřítku.

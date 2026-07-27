@@ -95,6 +95,10 @@ last_reviewed: "2026-07-26"
 
 Her dosya yazılmadan önce üç doğrulama katmanından geçer: kayıt başına JSON şeması (IBAN mod-97 kontrolü ve BIC yapısı dahil), scheme kuralları (SEPA ve sınır ötesi CBPR+) ve son XSD doğrulaması. Kontrol toplamları yeniden hesaplanır, asla kopyalanmaz. Her şey yerelde çalışır: hiçbir ödeme verisi altyapınızdan çıkmaz.
 
+## Tarayıcıda deneyin
+
+Örnek bir partiyi doğrudan tarayıcıda doğrulayın — hiçbir şey yüklenmez — ve sonucu resmi XSD şemasıyla kanıtlayın: [Pain001'i deneyin](/try/). Örnek CSV dosyaları kendi dışa aktarımlarınız için şablon olarak indirilebilir.
+
 ## 14 Kasım 2026 son tarihi
 
 MT–MX birlikteliğinin 22 Kasım 2025'te sona ermesinin ardından bir sonraki tarih **14 Kasım 2026**: tamamen yapılandırılmamış posta adresleri CBPR+ ödemelerinde reddedilecek ve bankalar arası MT101 aktarımı yerini `pain.001` sürüm 9'a bırakacak. Pain001 bugün yapılandırılmış ve hibrit adresler üretiyor — MT101'i tek komutla dönüştürüyor.
@@ -106,4 +110,4 @@ pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run
 ```
 
-Tam dokümantasyon İngilizcedir: [kurulum kılavuzu](/installation/), [teknik referans](/documentation/), [tarayıcı demosu](/try/) ve [2026 ISO 20022 brifingi](/2026-iso20022-migration-trends/). Çekirdek, Apache-2.0 / MIT çifte lisanslıdır — her ölçekte ücretsiz ticari kullanım.
+Devamı: [kurulum kılavuzu](/installation/), [teknik referans](/documentation/), [2028'e kadar ISO 20022 yol haritası](/iso20022-roadmap/), [pain.002 ret kodları](/pain002-reason-codes/), [güven merkezi](/trust/) ve [yönetici özeti](/executive-brief/). Tam dokümantasyon İngilizcedir. Çift lisans Apache-2.0 / MIT — her ölçekte ücretsiz ticari kullanım.

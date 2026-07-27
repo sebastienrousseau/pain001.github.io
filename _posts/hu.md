@@ -95,6 +95,10 @@ A **Pain001** nyílt forráskódú Python-csomag ISO 20022 fizetésindításhoz.
 
 Minden fájl három validációs szinten megy át: rekordonkénti JSON-séma (IBAN mod-97 ellenőrzéssel és BIC-struktúrával), scheme-szabályok (SEPA és határon átnyúló CBPR+), végül XSD-validáció. Az ellenőrző összegek újraszámolódnak, sosem másolódnak. Minden helyben fut: fizetési adat nem hagyja el az infrastruktúrát.
 
+## Próbálja ki a böngészőben
+
+Validáljon egy mintaköteget közvetlenül a böngészőben — semmi sem kerül feltöltésre —, és igazolja az eredményt a hivatalos XSD-sémával: [Pain001 kipróbálása](/try/). Minta-CSV-fájlok sablonként letölthetők saját exportokhoz.
+
 ## A 2026. november 14-i határidő
 
 Az MT–MX együttélés 2025. november 22-i lezárulta után a következő határidő **2026. november 14.**: a teljesen strukturálatlan postai címeket elutasítják a CBPR+ fizetésekben, a bankközi MT101-továbbítást pedig a `pain.001` 9-es verziója váltja. A Pain001 már ma strukturált és hibrid címeket generál — az MT101-et pedig egyetlen paranccsal konvertálja.
@@ -106,4 +110,4 @@ pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run
 ```
 
-A teljes dokumentáció angol nyelvű: [telepítési útmutató](/installation/), [technikai referencia](/documentation/), [böngészős demó](/try/) és [2026-os ISO 20022 áttekintés](/2026-iso20022-migration-trends/). A mag kettős licencű, Apache-2.0 / MIT — szabad kereskedelmi használat bármilyen léptékben.
+Tovább: [telepítési útmutató](/installation/), [technikai referencia](/documentation/), [ISO 20022 ütemterv 2028-ig](/iso20022-roadmap/), [pain.002 elutasítási kódok](/pain002-reason-codes/), [bizalmi központ](/trust/) és [vezetői összefoglaló](/executive-brief/). A teljes dokumentáció angol. Kettős licenc: Apache-2.0 / MIT — szabad kereskedelmi használat bármilyen léptékben.

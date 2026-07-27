@@ -95,6 +95,10 @@ last_reviewed: "2026-07-26"
 
 Mỗi tệp phải qua ba lớp xác thực trước khi được ghi: lược đồ JSON cho từng bản ghi (gồm kiểm tra mod-97 của IBAN và cấu trúc BIC), quy tắc scheme (SEPA và CBPR+ xuyên biên giới) và xác thực XSD cuối cùng. Tổng kiểm soát luôn được tính lại, không bao giờ sao chép. Mọi thứ chạy cục bộ: không dữ liệu thanh toán nào rời khỏi hạ tầng của bạn.
 
+## Dùng thử trong trình duyệt
+
+Xác thực một lô mẫu ngay trong trình duyệt — không có gì được tải lên — và chứng minh kết quả với lược đồ XSD chính thức: [dùng thử Pain001](/try/). Các tệp CSV mẫu có thể tải xuống làm mẫu cho dữ liệu xuất của bạn.
+
 ## Hạn chót 14 tháng 11 năm 2026
 
 Sau khi giai đoạn song song MT–MX kết thúc ngày 22/11/2025, hạn tiếp theo là **14/11/2026**: địa chỉ bưu chính hoàn toàn phi cấu trúc sẽ bị từ chối trong thanh toán CBPR+ và kênh chuyển tiếp MT101 liên ngân hàng được thay bằng `pain.001` phiên bản 9. Pain001 đã hỗ trợ địa chỉ có cấu trúc và lai từ hôm nay — và chuyển đổi MT101 chỉ với một lệnh.
@@ -106,4 +110,4 @@ pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run
 ```
 
-Tài liệu đầy đủ bằng tiếng Anh: [hướng dẫn cài đặt](/installation/), [tài liệu kỹ thuật](/documentation/), [bản demo trên trình duyệt](/try/) và [báo cáo ISO 20022 năm 2026](/2026-iso20022-migration-trends/). Lõi được cấp phép kép Apache-2.0 / MIT — sử dụng thương mại tự do ở mọi quy mô.
+Tiếp theo: [hướng dẫn cài đặt](/installation/), [tài liệu kỹ thuật](/documentation/), [lộ trình ISO 20022 đến 2028](/iso20022-roadmap/), [mã từ chối pain.002](/pain002-reason-codes/), [trung tâm tin cậy](/trust/) và [tóm tắt điều hành](/executive-brief/). Tài liệu đầy đủ bằng tiếng Anh. Giấy phép kép Apache-2.0 / MIT — sử dụng thương mại tự do ở mọi quy mô.

@@ -187,16 +187,18 @@
       </header>
 
       <div class="wrap content-shell">
-        <article class="content-body">
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>Inhoud</h2><ol><li><a href="#betaalbestanden-die-uw-bank-niet-zal-weigeren">Betaalbestanden die uw bank niet zal weigeren</a></li><li><a href="#probeer-het-in-uw-browser">Probeer het in uw browser</a></li><li><a href="#de-deadline-van-14-november-2026">De deadline van 14 november 2026</a></li><li><a href="#aan-de-slag">Aan de slag</a></li></ol></nav>
           <div lang="en"><h2 id="betaalbestanden-die-uw-bank-niet-zal-weigeren">Betaalbestanden die uw bank niet zal weigeren<a class="heading-anchor" href="#betaalbestanden-die-uw-bank-niet-zal-weigeren" aria-label="Link to section: Betaalbestanden die uw bank niet zal weigeren">#</a></h2>
 <p><strong>Pain001</strong> is een open-source Python-suite voor ISO 20022-betalingsinitiatie. Ze zet de gegevens die u al heeft — CSV, Excel, SQLite, JSON, Parquet of oude SWIFT MT101-berichten — om in <code>pain.001</code>- (overboekingen) en <code>pain.008</code>-XML (incasso's), gevalideerd tegen de officiële XSD-schema's.</p>
 <p>Elk bestand doorloopt drie validatielagen vóór het wordt weggeschreven: JSON-schema per record (met mod-97-controle van het IBAN en BIC-structuur), scheme-regels (SEPA en grensoverschrijdend CBPR+) en XSD-eindvalidatie. Controletotalen worden herberekend, nooit overgenomen. Alles draait lokaal: geen betaalgegevens verlaten uw infrastructuur.</p>
+<h2 id="probeer-het-in-uw-browser">Probeer het in uw browser<a class="heading-anchor" href="#probeer-het-in-uw-browser" aria-label="Link to section: Probeer het in uw browser">#</a></h2>
+<p>Valideer een voorbeeldbatch rechtstreeks in uw browser — er wordt niets geüpload — en bewijs het resultaat tegen het officiële XSD-schema: <a href="/try/">Pain001 proberen</a>. Voorbeeld-CSV-bestanden zijn te downloaden als sjablonen voor uw eigen exports.</p>
 <h2 id="de-deadline-van-14-november-2026">De deadline van 14 november 2026<a class="heading-anchor" href="#de-deadline-van-14-november-2026" aria-label="Link to section: De deadline van 14 november 2026">#</a></h2>
 <p>Sinds het einde van de MT–MX-coëxistentie op 22 november 2025 is de volgende deadline <strong>14 november 2026</strong>: volledig ongestructureerde adressen worden in CBPR+-betalingen geweigerd en de interbancaire MT101-relay wordt vervangen door <code>pain.001</code> versie 9. Pain001 ondersteunt gestructureerde en hybride adressen vandaag al — en converteert MT101 met één commando.</p>
 <h2 id="aan-de-slag">Aan de slag<a class="heading-anchor" href="#aan-de-slag" aria-label="Link to section: Aan de slag">#</a></h2>
 <pre><code class="language-bash">pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run</code></pre>
-<p>De volledige documentatie is Engelstalig: <a href="/installation/">installatiegids</a>, <a href="/documentation/">technische referentie</a>, <a href="/try/">browserdemo</a> en <a href="/2026-iso20022-migration-trends/">ISO 20022-briefing 2026</a>. De kern is dubbel gelicentieerd onder Apache-2.0 / MIT — vrij commercieel gebruik op elke schaal.</p>
+<p>Verder lezen: <a href="/installation/">installatiegids</a>, <a href="/documentation/">technische referentie</a>, <a href="/iso20022-roadmap/">ISO 20022-routekaart tot 2028</a>, <a href="/pain002-reason-codes/">pain.002-afwijzingscodes</a>, <a href="/trust/">Trust Centre</a> en <a href="/executive-brief/">managementsamenvatting</a>. De volledige documentatie is Engels. Dubbele licentie Apache-2.0 / MIT — vrij commercieel gebruik op elke schaal.</p>
 </div>
         </article>
       </div>

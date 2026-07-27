@@ -187,16 +187,18 @@
       </header>
 
       <div class="wrap content-shell">
-        <article class="content-body">
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>Tartalom</h2><ol><li><a href="#fizet-si-f-jlok-amelyeket-a-bank-nem-utas-t-el">Fizetési fájlok, amelyeket a bank nem utasít el</a></li><li><a href="#pr-b-lja-ki-a-b-ng-sz-ben">Próbálja ki a böngészőben</a></li><li><a href="#a-2026-november-14-i-hat-rid">A 2026. november 14-i határidő</a></li><li><a href="#els-l-p-sek">Első lépések</a></li></ol></nav>
           <div lang="en"><h2 id="fizet-si-f-jlok-amelyeket-a-bank-nem-utas-t-el">Fizetési fájlok, amelyeket a bank nem utasít el<a class="heading-anchor" href="#fizet-si-f-jlok-amelyeket-a-bank-nem-utas-t-el" aria-label="Link to section: Fizetési fájlok, amelyeket a bank nem utasít el">#</a></h2>
 <p>A <strong>Pain001</strong> nyílt forráskódú Python-csomag ISO 20022 fizetésindításhoz. A meglévő adatokat — CSV, Excel, SQLite, JSON, Parquet vagy régi SWIFT MT101 üzenetek — <code>pain.001</code> (átutalás) és <code>pain.008</code> (beszedés) XML-lé alakítja, a hivatalos XSD-sémákkal validálva.</p>
 <p>Minden fájl három validációs szinten megy át: rekordonkénti JSON-séma (IBAN mod-97 ellenőrzéssel és BIC-struktúrával), scheme-szabályok (SEPA és határon átnyúló CBPR+), végül XSD-validáció. Az ellenőrző összegek újraszámolódnak, sosem másolódnak. Minden helyben fut: fizetési adat nem hagyja el az infrastruktúrát.</p>
+<h2 id="pr-b-lja-ki-a-b-ng-sz-ben">Próbálja ki a böngészőben<a class="heading-anchor" href="#pr-b-lja-ki-a-b-ng-sz-ben" aria-label="Link to section: Próbálja ki a böngészőben">#</a></h2>
+<p>Validáljon egy mintaköteget közvetlenül a böngészőben — semmi sem kerül feltöltésre —, és igazolja az eredményt a hivatalos XSD-sémával: <a href="/try/">Pain001 kipróbálása</a>. Minta-CSV-fájlok sablonként letölthetők saját exportokhoz.</p>
 <h2 id="a-2026-november-14-i-hat-rid">A 2026. november 14-i határidő<a class="heading-anchor" href="#a-2026-november-14-i-hat-rid" aria-label="Link to section: A 2026. november 14-i határidő">#</a></h2>
 <p>Az MT–MX együttélés 2025. november 22-i lezárulta után a következő határidő <strong>2026. november 14.</strong>: a teljesen strukturálatlan postai címeket elutasítják a CBPR+ fizetésekben, a bankközi MT101-továbbítást pedig a <code>pain.001</code> 9-es verziója váltja. A Pain001 már ma strukturált és hibrid címeket generál — az MT101-et pedig egyetlen paranccsal konvertálja.</p>
 <h2 id="els-l-p-sek">Első lépések<a class="heading-anchor" href="#els-l-p-sek" aria-label="Link to section: Első lépések">#</a></h2>
 <pre><code class="language-bash">pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run</code></pre>
-<p>A teljes dokumentáció angol nyelvű: <a href="/installation/">telepítési útmutató</a>, <a href="/documentation/">technikai referencia</a>, <a href="/try/">böngészős demó</a> és <a href="/2026-iso20022-migration-trends/">2026-os ISO 20022 áttekintés</a>. A mag kettős licencű, Apache-2.0 / MIT — szabad kereskedelmi használat bármilyen léptékben.</p>
+<p>Tovább: <a href="/installation/">telepítési útmutató</a>, <a href="/documentation/">technikai referencia</a>, <a href="/iso20022-roadmap/">ISO 20022 ütemterv 2028-ig</a>, <a href="/pain002-reason-codes/">pain.002 elutasítási kódok</a>, <a href="/trust/">bizalmi központ</a> és <a href="/executive-brief/">vezetői összefoglaló</a>. A teljes dokumentáció angol. Kettős licenc: Apache-2.0 / MIT — szabad kereskedelmi használat bármilyen léptékben.</p>
 </div>
         </article>
       </div>

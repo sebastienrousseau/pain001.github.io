@@ -187,16 +187,18 @@
       </header>
 
       <div class="wrap content-shell">
-        <article class="content-body">
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>Innehåll</h2><ol><li><a href="#betalfiler-som-din-bank-inte-avvisar">Betalfiler som din bank inte avvisar</a></li><li><a href="#prova-i-webbl-saren">Prova i webbläsaren</a></li><li><a href="#deadline-14-november-2026">Deadline 14 november 2026</a></li><li><a href="#kom-ig-ng">Kom igång</a></li></ol></nav>
           <div lang="en"><h2 id="betalfiler-som-din-bank-inte-avvisar">Betalfiler som din bank inte avvisar<a class="heading-anchor" href="#betalfiler-som-din-bank-inte-avvisar" aria-label="Link to section: Betalfiler som din bank inte avvisar">#</a></h2>
 <p><strong>Pain001</strong> är en Python-svit med öppen källkod för ISO 20022-betalningsinitiering. Den omvandlar data du redan har — CSV, Excel, SQLite, JSON, Parquet eller äldre SWIFT MT101-meddelanden — till <code>pain.001</code>- (betalningar) och <code>pain.008</code>-XML (autogiro), validerad mot de officiella XSD-schemana.</p>
 <p>Varje fil passerar tre valideringsnivåer innan den skrivs: JSON-schema per post (med mod-97-kontroll av IBAN och BIC-struktur), scheme-regler (SEPA och gränsöverskridande CBPR+) samt slutlig XSD-validering. Kontrollsummor räknas om, kopieras aldrig. Allt körs lokalt: inga betalningsdata lämnar din infrastruktur.</p>
+<h2 id="prova-i-webbl-saren">Prova i webbläsaren<a class="heading-anchor" href="#prova-i-webbl-saren" aria-label="Link to section: Prova i webbläsaren">#</a></h2>
+<p>Validera en exempelbatch direkt i webbläsaren — inget laddas upp — och bevisa resultatet mot det officiella XSD-schemat: <a href="/try/">prova Pain001</a>. Exempel-CSV-filer kan laddas ner som mallar för egna exporter.</p>
 <h2 id="deadline-14-november-2026">Deadline 14 november 2026<a class="heading-anchor" href="#deadline-14-november-2026" aria-label="Link to section: Deadline 14 november 2026">#</a></h2>
 <p>Sedan MT–MX-samexistensen upphörde den 22 november 2025 är nästa deadline <strong>14 november 2026</strong>: helt ostrukturerade postadresser avvisas i CBPR+-betalningar och det interbankära MT101-reläet ersätts av <code>pain.001</code> version 9. Pain001 stödjer strukturerade och hybrida adresser redan i dag — och konverterar MT101 med ett kommando.</p>
 <h2 id="kom-ig-ng">Kom igång<a class="heading-anchor" href="#kom-ig-ng" aria-label="Link to section: Kom igång">#</a></h2>
 <pre><code class="language-bash">pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run</code></pre>
-<p>Den fullständiga dokumentationen är på engelska: <a href="/installation/">installationsguide</a>, <a href="/documentation/">teknisk referens</a>, <a href="/try/">webbläsardemo</a> och <a href="/2026-iso20022-migration-trends/">ISO 20022-briefing 2026</a>. Kärnan är dubbellicensierad Apache-2.0 / MIT — fri kommersiell användning i valfri skala.</p>
+<p>Vidare: <a href="/installation/">installationsguide</a>, <a href="/documentation/">teknisk referens</a>, <a href="/iso20022-roadmap/">ISO 20022-färdplan till 2028</a>, <a href="/pain002-reason-codes/">pain.002-avvisningskoder</a>, <a href="/trust/">förtroendecenter</a> och <a href="/executive-brief/">ledningssammanfattning</a>. Fullständig dokumentation på engelska. Dubbellicens Apache-2.0 / MIT — fri kommersiell användning i valfri skala.</p>
 </div>
         </article>
       </div>

@@ -187,16 +187,18 @@
       </header>
 
       <div class="wrap content-shell">
-        <article class="content-body">
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>Spis treści</h2><ol><li><a href="#pliki-p-atno-ci-kt-rych-bank-nie-odrzuci">Pliki płatności, których bank nie odrzuci</a></li><li><a href="#wypr-buj-w-przegl-darce">Wypróbuj w przeglądarce</a></li><li><a href="#termin-14-listopada-2026">Termin 14 listopada 2026</a></li><li><a href="#jak-zacz">Jak zacząć</a></li></ol></nav>
           <div lang="en"><h2 id="pliki-p-atno-ci-kt-rych-bank-nie-odrzuci">Pliki płatności, których bank nie odrzuci<a class="heading-anchor" href="#pliki-p-atno-ci-kt-rych-bank-nie-odrzuci" aria-label="Link to section: Pliki płatności, których bank nie odrzuci">#</a></h2>
 <p><strong>Pain001</strong> to otwartoźródłowy pakiet Python do inicjowania płatności ISO 20022. Przekształca dane, które już masz — CSV, Excel, SQLite, JSON, Parquet lub komunikaty SWIFT MT101 — w XML <code>pain.001</code> (przelewy) i <code>pain.008</code> (polecenia zapłaty), walidowany oficjalnymi schematami XSD.</p>
 <p>Każdy plik przechodzi trzy poziomy walidacji: schemat JSON dla każdego rekordu (z kontrolą mod-97 IBAN i strukturą BIC), reguły scheme (SEPA i transgraniczne CBPR+) oraz końcową walidację XSD. Sumy kontrolne są przeliczane, nigdy kopiowane. Wszystko działa lokalnie: żadne dane płatnicze nie opuszczają Twojej infrastruktury.</p>
+<h2 id="wypr-buj-w-przegl-darce">Wypróbuj w przeglądarce<a class="heading-anchor" href="#wypr-buj-w-przegl-darce" aria-label="Link to section: Wypróbuj w przeglądarce">#</a></h2>
+<p>Zwaliduj przykładową partię bezpośrednio w przeglądarce — nic nie jest przesyłane — i potwierdź wynik oficjalnym schematem XSD: <a href="/try/">wypróbuj Pain001</a>. Przykładowe pliki CSV można pobrać jako szablony własnych eksportów.</p>
 <h2 id="termin-14-listopada-2026">Termin 14 listopada 2026<a class="heading-anchor" href="#termin-14-listopada-2026" aria-label="Link to section: Termin 14 listopada 2026">#</a></h2>
 <p>Po zakończeniu koegzystencji MT–MX 22 listopada 2025 następny termin to <strong>14 listopada 2026</strong>: całkowicie nieustrukturyzowane adresy pocztowe będą odrzucane w płatnościach CBPR+, a międzybankowy przekaz MT101 zostanie zastąpiony przez <code>pain.001</code> w wersji 9. Pain001 już dziś generuje adresy ustrukturyzowane i hybrydowe — i konwertuje MT101 jednym poleceniem.</p>
 <h2 id="jak-zacz">Jak zacząć<a class="heading-anchor" href="#jak-zacz" aria-label="Link to section: Jak zacząć">#</a></h2>
 <pre><code class="language-bash">pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run</code></pre>
-<p>Pełna dokumentacja jest po angielsku: <a href="/installation/">instalacja</a>, <a href="/documentation/">dokumentacja techniczna</a>, <a href="/try/">demo w przeglądarce</a> i <a href="/2026-iso20022-migration-trends/">briefing ISO 20022 na 2026</a>. Rdzeń ma podwójną licencję Apache-2.0 / MIT — darmowe użycie komercyjne w dowolnej skali.</p>
+<p>Dalej: <a href="/installation/">instalacja</a>, <a href="/documentation/">dokumentacja techniczna</a>, <a href="/iso20022-roadmap/">mapa drogowa ISO 20022 do 2028</a>, <a href="/pain002-reason-codes/">kody odrzuceń pain.002</a>, <a href="/trust/">centrum zaufania</a> i <a href="/executive-brief/">streszczenie dla zarządu</a>. Pełna dokumentacja po angielsku. Podwójna licencja Apache-2.0 / MIT — darmowe użycie komercyjne w dowolnej skali.</p>
 </div>
         </article>
       </div>

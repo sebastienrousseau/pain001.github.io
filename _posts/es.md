@@ -95,6 +95,10 @@ last_reviewed: "2026-07-26"
 
 Cada fichero pasa tres niveles de validación antes de escribirse: esquema JSON por registro (con verificación mod-97 del IBAN y estructura del BIC), reglamentos de scheme (SEPA SCT, SEPA Inmediato, adeudos Core y B2B, transferencias transfronterizas CBPR+) y validación XSD del documento final. Los totales de control (`NbOfTxs`, `CtrlSum`) se recalculan — nunca se copian de la fuente. Todo se ejecuta en local: ningún dato de pago sale de su infraestructura.
 
+## Pruébelo en su navegador
+
+Valide un lote de ejemplo directamente en su navegador — no se sube nada — y pruebe el resultado contra el esquema XSD oficial: [probar Pain001](/try/). Hay ficheros CSV de ejemplo descargables como plantillas para sus propias exportaciones.
+
 ## La fecha límite del 14 de noviembre de 2026
 
 Desde el fin de la coexistencia MT–MX el 22 de noviembre de 2025, la próxima fecha clave es el **14 de noviembre de 2026**: las direcciones postales totalmente no estructuradas serán rechazadas en los pagos CBPR+, y el relé interbancario MT101 será sustituido por `pain.001` versión 9. Pain001 genera direcciones estructuradas e híbridas hoy mismo — y convierte MT101 con un solo comando.
@@ -106,4 +110,4 @@ pip install pain001
 pain001 -t pain.001.001.09 -d pagos.csv -o salida/ --dry-run
 ```
 
-La documentación completa está en inglés: [guía de instalación](/installation/), [referencia técnica](/documentation/), [demo en el navegador](/try/) y [briefing 2026 sobre ISO 20022](/2026-iso20022-migration-trends/). El núcleo tiene doble licencia Apache-2.0 / MIT — uso comercial libre a cualquier escala.
+Para profundizar: [guía de instalación](/installation/), [referencia técnica](/documentation/), [hoja de ruta ISO 20022 hasta 2028](/iso20022-roadmap/), [códigos de rechazo pain.002](/pain002-reason-codes/), [centro de confianza](/trust/) — y el [resumen ejecutivo de una página](/executive-brief-es/), en español. La documentación completa está en inglés. El núcleo tiene doble licencia Apache-2.0 / MIT — uso comercial libre a cualquier escala.

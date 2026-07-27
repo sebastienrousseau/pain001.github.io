@@ -187,16 +187,18 @@
       </header>
 
       <div class="wrap content-shell">
-        <article class="content-body">
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>目錄</h2><ol><li><a href="#section">銀行不會退回的付款檔案</a></li><li><a href="#section-2">在瀏覽器中試用</a></li><li><a href="#2026-11-14">2026 年 11 月 14 日期限</a></li><li><a href="#section-3">快速開始</a></li></ol></nav>
           <div lang="en"><h2 id="section">銀行不會退回的付款檔案<a class="heading-anchor" href="#section" aria-label="Link to section: 銀行不會退回的付款檔案">#</a></h2>
 <p><strong>Pain001</strong> 是用於 ISO 20022 付款發起的開源 Python 套件。它將您既有的資料——CSV、Excel、SQLite、JSON、Parquet 或舊式 SWIFT MT101 報文——轉換為經官方 XSD 結構描述驗證的 <code>pain.001</code>(信用轉帳)與 <code>pain.008</code>(直接扣款)XML。</p>
 <p>每個檔案在寫出前都須通過三層驗證:逐筆記錄的 JSON 結構描述(含 IBAN 的 mod-97 檢查與 BIC 結構)、清算規則(SEPA 與跨境 CBPR+),以及最終的 XSD 驗證。控制總數一律重新計算,絕不複製。一切皆在本機執行:任何付款資料都不會離開您的基礎設施。</p>
+<h2 id="section-2">在瀏覽器中試用<a class="heading-anchor" href="#section-2" aria-label="Link to section: 在瀏覽器中試用">#</a></h2>
+<p>直接在瀏覽器中驗證示範批次——不會上傳任何內容——並以官方 XSD 結構描述證明結果:<a href="/try/">試用 Pain001</a>。示範 CSV 檔案可下載,作為您自己匯出資料的範本。</p>
 <h2 id="2026-11-14">2026 年 11 月 14 日期限<a class="heading-anchor" href="#2026-11-14" aria-label="Link to section: 2026 年 11 月 14 日期限">#</a></h2>
 <p>MT–MX 並存期已於 2025 年 11 月 22 日結束,下一個期限是 <strong>2026 年 11 月 14 日</strong>:完全非結構化的郵政地址將在 CBPR+ 付款中遭拒,銀行間 MT101 中繼將由 <code>pain.001</code> 第 9 版取代。Pain001 今天即可產生結構化與混合地址——並以一道指令轉換 MT101。</p>
-<h2 id="section-2">快速開始<a class="heading-anchor" href="#section-2" aria-label="Link to section: 快速開始">#</a></h2>
+<h2 id="section-3">快速開始<a class="heading-anchor" href="#section-3" aria-label="Link to section: 快速開始">#</a></h2>
 <pre><code class="language-bash">pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run</code></pre>
-<p>完整文件為英文:<a href="/installation/">安裝指南</a>、<a href="/documentation/">技術參考</a>、<a href="/try/">瀏覽器示範</a>與 <a href="/2026-iso20022-migration-trends/">2026 年 ISO 20022 簡報</a>。核心採 Apache-2.0 / MIT 雙授權——任何規模皆可免費商用。</p>
+<p>更多:<a href="/installation/">安裝指南</a>、<a href="/documentation/">技術參考</a>、<a href="/iso20022-roadmap/">至 2028 年的 ISO 20022 路線圖</a>、<a href="/pain002-reason-codes/">pain.002 拒絕代碼</a>、<a href="/trust/">信任中心</a>與<a href="/executive-brief/">高階主管摘要</a>。完整文件為英文。Apache-2.0 / MIT 雙授權——任何規模皆可免費商用。</p>
 </div>
         </article>
       </div>

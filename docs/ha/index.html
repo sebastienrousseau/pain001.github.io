@@ -180,23 +180,25 @@
           <p class="eyebrow">Pain001 a Hausa</p>
           <h1 class="page-title">Pain001 — Fara biyan kuɗi na ISO 20022 a buɗaɗɗen tushe</h1>
           <p class="deck">Kunshin buɗaɗɗen tushe da ke mai da bayanan biyanku zuwa XML na ISO 20022 da aka tabbatar — an tabbatar da daidai kafin ya isa banki.</p>
-          <div class="article-meta"><span>1 mintuna na karatu</span>
+          <div class="article-meta"><span>2 mintuna na karatu</span>
             <span>Bita ta ƙarshe <time datetime="2026-07-26">2026-07-26</time></span>
           </div>
         </div>
       </header>
 
       <div class="wrap content-shell">
-        <article class="content-body">
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>Abubuwan ciki</h2><ol><li><a href="#fayilolin-biyan-ku-i-da-bankinku-ba-zai-i-ba">Fayilolin biyan kuɗi da bankinku ba zai ƙi ba</a></li><li><a href="#gwada-a-cikin-browser">Gwada a cikin browser</a></li><li><a href="#ranar-arshe-14-ga-nuwamba-2026">Ranar ƙarshe: 14 ga Nuwamba 2026</a></li><li><a href="#fara">Fara</a></li></ol></nav>
           <div lang="en"><h2 id="fayilolin-biyan-ku-i-da-bankinku-ba-zai-i-ba">Fayilolin biyan kuɗi da bankinku ba zai ƙi ba<a class="heading-anchor" href="#fayilolin-biyan-ku-i-da-bankinku-ba-zai-i-ba" aria-label="Link to section: Fayilolin biyan kuɗi da bankinku ba zai ƙi ba">#</a></h2>
 <p><strong>Pain001</strong> kunshin Python ne na buɗaɗɗen tushe don fara biyan kuɗi bisa ISO 20022. Yana mai da bayanan da kuke da su — CSV, Excel, SQLite, JSON, Parquet ko tsofaffin saƙonnin SWIFT MT101 — zuwa XML na <code>pain.001</code> (canja wurin kuɗi) da <code>pain.008</code> (cire kuɗi kai tsaye), waɗanda aka tabbatar da su da tsare-tsaren XSD na hukuma.</p>
 <p>Kowane fayil yana wuce matakan tabbatarwa uku kafin a rubuta shi: tsarin JSON ga kowane rikodi (har da bincika mod-97 na IBAN da tsarin BIC), dokokin scheme (SEPA da CBPR+ na ƙetare) da tabbatarwar XSD ta ƙarshe. Ana sake lissafa jimillar sarrafawa koyaushe, ba a taɓa kwafa su ba. Komai yana gudana a cikin na'urarku: babu bayanan biyan kuɗi da ke fita daga kayan aikinku.</p>
+<h2 id="gwada-a-cikin-browser">Gwada a cikin browser<a class="heading-anchor" href="#gwada-a-cikin-browser" aria-label="Link to section: Gwada a cikin browser">#</a></h2>
+<p>Tabbatar da rukunin misali kai tsaye a cikin browser ɗinku — ba a loda komai ba — kuma ku tabbatar da sakamakon da tsarin XSD na hukuma: <a href="/try/">gwada Pain001</a>. Ana iya sauke fayilolin CSV na misali a matsayin samfura don fitarwar ku.</p>
 <h2 id="ranar-arshe-14-ga-nuwamba-2026">Ranar ƙarshe: 14 ga Nuwamba 2026<a class="heading-anchor" href="#ranar-arshe-14-ga-nuwamba-2026" aria-label="Link to section: Ranar ƙarshe: 14 ga Nuwamba 2026">#</a></h2>
 <p>Bayan zaman tare na MT–MX ya ƙare a ranar 22 ga Nuwamba 2025, rana ta gaba ita ce <strong>14 ga Nuwamba 2026</strong>: za a ƙi adiresoshin gidan waya marasa tsari gaba ɗaya a cikin biyan kuɗi na CBPR+, kuma <code>pain.001</code> sigar 9 za ta maye gurbin MT101 tsakanin bankuna. Pain001 yana samar da adiresoshin da aka tsara da na gauraye tun yau — kuma yana mai da MT101 da umarni ɗaya.</p>
 <h2 id="fara">Fara<a class="heading-anchor" href="#fara" aria-label="Link to section: Fara">#</a></h2>
 <pre><code class="language-bash">pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run</code></pre>
-<p>Cikakken bayani yana cikin Turanci: <a href="/installation/">jagorar shigarwa</a>, <a href="/documentation/">bayanin fasaha</a>, <a href="/try/">gwaji a browser</a> da <a href="/2026-iso20022-migration-trends/">taƙaitaccen bayanin ISO 20022 na 2026</a>. Cibiyar tana da lasisi biyu Apache-2.0 / MIT — amfani na kasuwanci kyauta a kowane girma.</p>
+<p>Gaba: <a href="/installation/">jagorar shigarwa</a>, <a href="/documentation/">bayanin fasaha</a>, <a href="/iso20022-roadmap/">taswirar ISO 20022 zuwa 2028</a>, <a href="/pain002-reason-codes/">lambobin ƙi na pain.002</a>, <a href="/trust/">cibiyar aminci</a> da <a href="/executive-brief/">taƙaitawa ga shugabanni</a>. Cikakken bayani yana Turanci. Lasisi biyu Apache-2.0 / MIT — amfani na kasuwanci kyauta a kowane girma.</p>
 </div>
         </article>
       </div>

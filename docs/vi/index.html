@@ -180,23 +180,25 @@
           <p class="eyebrow">Pain001 tiếng Việt</p>
           <h1 class="page-title">Pain001 — Khởi tạo thanh toán ISO 20022 mã nguồn mở</h1>
           <p class="deck">Bộ công cụ mã nguồn mở biến dữ liệu thanh toán của bạn thành XML ISO 20022 đã xác thực — được chứng minh đúng trước khi đến ngân hàng.</p>
-          <div class="article-meta"><span>1 phút đọc</span>
+          <div class="article-meta"><span>2 phút đọc</span>
             <span>Kiểm tra lần cuối <time datetime="2026-07-26">2026-07-26</time></span>
           </div>
         </div>
       </header>
 
       <div class="wrap content-shell">
-        <article class="content-body">
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>Mục lục</h2><ol><li><a href="#t-p-thanh-to-n-m-ng-n-h-ng-c-a-b-n-s-kh-ng-t-ch-i">Tệp thanh toán mà ngân hàng của bạn sẽ không từ chối</a></li><li><a href="#d-ng-th-trong-tr-nh-duy-t">Dùng thử trong trình duyệt</a></li><li><a href="#h-n-ch-t-14-th-ng-11-n-m-2026">Hạn chót 14 tháng 11 năm 2026</a></li><li><a href="#b-t-u">Bắt đầu</a></li></ol></nav>
           <div lang="en"><h2 id="t-p-thanh-to-n-m-ng-n-h-ng-c-a-b-n-s-kh-ng-t-ch-i">Tệp thanh toán mà ngân hàng của bạn sẽ không từ chối<a class="heading-anchor" href="#t-p-thanh-to-n-m-ng-n-h-ng-c-a-b-n-s-kh-ng-t-ch-i" aria-label="Link to section: Tệp thanh toán mà ngân hàng của bạn sẽ không từ chối">#</a></h2>
 <p><strong>Pain001</strong> là bộ công cụ Python mã nguồn mở cho khởi tạo thanh toán ISO 20022. Nó chuyển dữ liệu bạn đang có — CSV, Excel, SQLite, JSON, Parquet hoặc thông điệp SWIFT MT101 cũ — thành XML <code>pain.001</code> (chuyển khoản) và <code>pain.008</code> (ghi nợ trực tiếp), được xác thực bằng các lược đồ XSD chính thức.</p>
 <p>Mỗi tệp phải qua ba lớp xác thực trước khi được ghi: lược đồ JSON cho từng bản ghi (gồm kiểm tra mod-97 của IBAN và cấu trúc BIC), quy tắc scheme (SEPA và CBPR+ xuyên biên giới) và xác thực XSD cuối cùng. Tổng kiểm soát luôn được tính lại, không bao giờ sao chép. Mọi thứ chạy cục bộ: không dữ liệu thanh toán nào rời khỏi hạ tầng của bạn.</p>
+<h2 id="d-ng-th-trong-tr-nh-duy-t">Dùng thử trong trình duyệt<a class="heading-anchor" href="#d-ng-th-trong-tr-nh-duy-t" aria-label="Link to section: Dùng thử trong trình duyệt">#</a></h2>
+<p>Xác thực một lô mẫu ngay trong trình duyệt — không có gì được tải lên — và chứng minh kết quả với lược đồ XSD chính thức: <a href="/try/">dùng thử Pain001</a>. Các tệp CSV mẫu có thể tải xuống làm mẫu cho dữ liệu xuất của bạn.</p>
 <h2 id="h-n-ch-t-14-th-ng-11-n-m-2026">Hạn chót 14 tháng 11 năm 2026<a class="heading-anchor" href="#h-n-ch-t-14-th-ng-11-n-m-2026" aria-label="Link to section: Hạn chót 14 tháng 11 năm 2026">#</a></h2>
 <p>Sau khi giai đoạn song song MT–MX kết thúc ngày 22/11/2025, hạn tiếp theo là <strong>14/11/2026</strong>: địa chỉ bưu chính hoàn toàn phi cấu trúc sẽ bị từ chối trong thanh toán CBPR+ và kênh chuyển tiếp MT101 liên ngân hàng được thay bằng <code>pain.001</code> phiên bản 9. Pain001 đã hỗ trợ địa chỉ có cấu trúc và lai từ hôm nay — và chuyển đổi MT101 chỉ với một lệnh.</p>
 <h2 id="b-t-u">Bắt đầu<a class="heading-anchor" href="#b-t-u" aria-label="Link to section: Bắt đầu">#</a></h2>
 <pre><code class="language-bash">pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run</code></pre>
-<p>Tài liệu đầy đủ bằng tiếng Anh: <a href="/installation/">hướng dẫn cài đặt</a>, <a href="/documentation/">tài liệu kỹ thuật</a>, <a href="/try/">bản demo trên trình duyệt</a> và <a href="/2026-iso20022-migration-trends/">báo cáo ISO 20022 năm 2026</a>. Lõi được cấp phép kép Apache-2.0 / MIT — sử dụng thương mại tự do ở mọi quy mô.</p>
+<p>Tiếp theo: <a href="/installation/">hướng dẫn cài đặt</a>, <a href="/documentation/">tài liệu kỹ thuật</a>, <a href="/iso20022-roadmap/">lộ trình ISO 20022 đến 2028</a>, <a href="/pain002-reason-codes/">mã từ chối pain.002</a>, <a href="/trust/">trung tâm tin cậy</a> và <a href="/executive-brief/">tóm tắt điều hành</a>. Tài liệu đầy đủ bằng tiếng Anh. Giấy phép kép Apache-2.0 / MIT — sử dụng thương mại tự do ở mọi quy mô.</p>
 </div>
         </article>
       </div>

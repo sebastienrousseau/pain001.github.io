@@ -187,16 +187,18 @@
       </header>
 
       <div class="wrap content-shell">
-        <article class="content-body">
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>สารบัญ</h2><ol><li><a href="#section">ไฟล์การชำระเงินที่ธนาคารของคุณจะไม่ปฏิเสธ</a></li><li><a href="#section-2">ลองใช้ในเบราว์เซอร์</a></li><li><a href="#14-2026">กำหนดเส้นตาย 14 พฤศจิกายน 2026</a></li><li><a href="#section-3">เริ่มต้นใช้งาน</a></li></ol></nav>
           <div lang="en"><h2 id="section">ไฟล์การชำระเงินที่ธนาคารของคุณจะไม่ปฏิเสธ<a class="heading-anchor" href="#section" aria-label="Link to section: ไฟล์การชำระเงินที่ธนาคารของคุณจะไม่ปฏิเสธ">#</a></h2>
 <p><strong>Pain001</strong> คือชุดเครื่องมือ Python โอเพนซอร์สสำหรับการเริ่มต้นการชำระเงินตามมาตรฐาน ISO 20022 แปลงข้อมูลที่คุณมีอยู่แล้ว — CSV, Excel, SQLite, JSON, Parquet หรือข้อความ SWIFT MT101 แบบเดิม — เป็น XML <code>pain.001</code> (โอนเงิน) และ <code>pain.008</code> (หักบัญชีอัตโนมัติ) ที่ตรวจสอบด้วยสคีมา XSD อย่างเป็นทางการ</p>
 <p>ทุกไฟล์ผ่านการตรวจสอบสามชั้นก่อนถูกเขียน: สคีมา JSON ต่อระเบียน (รวมการตรวจ mod-97 ของ IBAN และโครงสร้าง BIC) กฎ scheme (SEPA และ CBPR+ ข้ามพรมแดน) และการตรวจสอบ XSD ขั้นสุดท้าย ยอดรวมควบคุมถูกคำนวณใหม่เสมอ ไม่เคยคัดลอก ทุกอย่างทำงานในเครื่องของคุณ: ไม่มีข้อมูลการชำระเงินใดออกจากโครงสร้างพื้นฐานของคุณ</p>
+<h2 id="section-2">ลองใช้ในเบราว์เซอร์<a class="heading-anchor" href="#section-2" aria-label="Link to section: ลองใช้ในเบราว์เซอร์">#</a></h2>
+<p>ตรวจสอบชุดตัวอย่างได้โดยตรงในเบราว์เซอร์ — ไม่มีการอัปโหลดใด ๆ — และพิสูจน์ผลลัพธ์กับสคีมา XSD อย่างเป็นทางการ: <a href="/try/">ลองใช้ Pain001</a> ไฟล์ CSV ตัวอย่างดาวน์โหลดได้เพื่อใช้เป็นเทมเพลตสำหรับการส่งออกของคุณ</p>
 <h2 id="14-2026">กำหนดเส้นตาย 14 พฤศจิกายน 2026<a class="heading-anchor" href="#14-2026" aria-label="Link to section: กำหนดเส้นตาย 14 พฤศจิกายน 2026">#</a></h2>
 <p>หลังการอยู่ร่วมกันของ MT–MX สิ้นสุดเมื่อ 22 พฤศจิกายน 2025 กำหนดถัดไปคือ <strong>14 พฤศจิกายน 2026</strong>: ที่อยู่ไปรษณีย์ที่ไม่มีโครงสร้างทั้งหมดจะถูกปฏิเสธในการชำระเงิน CBPR+ และรีเลย์ MT101 ระหว่างธนาคารจะถูกแทนที่ด้วย <code>pain.001</code> เวอร์ชัน 9 Pain001 สร้างที่อยู่แบบมีโครงสร้างและแบบไฮบริดได้แล้ววันนี้ — และแปลง MT101 ด้วยคำสั่งเดียว</p>
-<h2 id="section-2">เริ่มต้นใช้งาน<a class="heading-anchor" href="#section-2" aria-label="Link to section: เริ่มต้นใช้งาน">#</a></h2>
+<h2 id="section-3">เริ่มต้นใช้งาน<a class="heading-anchor" href="#section-3" aria-label="Link to section: เริ่มต้นใช้งาน">#</a></h2>
 <pre><code class="language-bash">pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run</code></pre>
-<p>เอกสารฉบับเต็มเป็นภาษาอังกฤษ: <a href="/installation/">คู่มือติดตั้ง</a>, <a href="/documentation/">เอกสารอ้างอิงทางเทคนิค</a>, <a href="/try/">เดโมในเบราว์เซอร์</a> และ <a href="/2026-iso20022-migration-trends/">สรุป ISO 20022 ปี 2026</a> แกนหลักมีสัญญาอนุญาตคู่ Apache-2.0 / MIT — ใช้เชิงพาณิชย์ได้ฟรีทุกขนาด</p>
+<p>เพิ่มเติม: <a href="/installation/">คู่มือติดตั้ง</a>, <a href="/documentation/">เอกสารอ้างอิงทางเทคนิค</a>, <a href="/iso20022-roadmap/">แผนงาน ISO 20022 ถึงปี 2028</a>, <a href="/pain002-reason-codes/">รหัสการปฏิเสธ pain.002</a>, <a href="/trust/">ศูนย์ความเชื่อถือ</a> และ<a href="/executive-brief/">บทสรุปผู้บริหาร</a> เอกสารฉบับเต็มเป็นภาษาอังกฤษ สัญญาอนุญาตคู่ Apache-2.0 / MIT — ใช้เชิงพาณิชย์ได้ฟรีทุกขนาด</p>
 </div>
         </article>
       </div>

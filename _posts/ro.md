@@ -95,6 +95,10 @@ last_reviewed: "2026-07-26"
 
 Fiecare fișier trece prin trei niveluri de validare: schema JSON per înregistrare (cu verificarea mod-97 a IBAN-ului și structura BIC), regulile de scheme (SEPA și CBPR+ transfrontalier) și validarea XSD finală. Totalurile de control sunt recalculate, niciodată copiate. Totul rulează local: nicio dată de plată nu părăsește infrastructura dumneavoastră.
 
+## Încercați în browser
+
+Validați un lot de exemplu direct în browser — nimic nu este încărcat — și dovediți rezultatul cu schema XSD oficială: [încercați Pain001](/try/). Fișiere CSV de exemplu pot fi descărcate ca șabloane pentru exporturile proprii.
+
 ## Termenul-limită: 14 noiembrie 2026
 
 După încheierea coexistenței MT–MX la 22 noiembrie 2025, următorul termen este **14 noiembrie 2026**: adresele poștale complet nestructurate vor fi respinse în plățile CBPR+, iar releul interbancar MT101 va fi înlocuit de `pain.001` versiunea 9. Pain001 generează deja adrese structurate și hibride — și convertește MT101 cu o singură comandă.
@@ -106,4 +110,4 @@ pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run
 ```
 
-Documentația completă este în engleză: [ghid de instalare](/installation/), [referință tehnică](/documentation/), [demo în browser](/try/) și [briefingul ISO 20022 pentru 2026](/2026-iso20022-migration-trends/). Nucleul are licență dublă Apache-2.0 / MIT — utilizare comercială liberă la orice scară.
+Mai departe: [ghid de instalare](/installation/), [referință tehnică](/documentation/), [foaia de parcurs ISO 20022 până în 2028](/iso20022-roadmap/), [coduri de respingere pain.002](/pain002-reason-codes/), [centrul de încredere](/trust/) și [rezumatul executiv](/executive-brief/). Documentația completă este în engleză. Licență dublă Apache-2.0 / MIT — utilizare comercială liberă la orice scară.

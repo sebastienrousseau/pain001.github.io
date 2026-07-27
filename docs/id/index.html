@@ -187,16 +187,18 @@
       </header>
 
       <div class="wrap content-shell">
-        <article class="content-body">
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>Daftar isi</h2><ol><li><a href="#berkas-pembayaran-yang-tidak-akan-ditolak-bank-anda">Berkas pembayaran yang tidak akan ditolak bank Anda</a></li><li><a href="#coba-di-peramban">Coba di peramban</a></li><li><a href="#tenggat-14-november-2026">Tenggat 14 November 2026</a></li><li><a href="#mulai">Mulai</a></li></ol></nav>
           <div lang="en"><h2 id="berkas-pembayaran-yang-tidak-akan-ditolak-bank-anda">Berkas pembayaran yang tidak akan ditolak bank Anda<a class="heading-anchor" href="#berkas-pembayaran-yang-tidak-akan-ditolak-bank-anda" aria-label="Link to section: Berkas pembayaran yang tidak akan ditolak bank Anda">#</a></h2>
 <p><strong>Pain001</strong> adalah suite Python sumber terbuka untuk inisiasi pembayaran ISO 20022. Ia mengubah data yang sudah Anda miliki — CSV, Excel, SQLite, JSON, Parquet, atau pesan SWIFT MT101 lama — menjadi XML <code>pain.001</code> (transfer kredit) dan <code>pain.008</code> (debit langsung), tervalidasi dengan skema XSD resmi.</p>
 <p>Setiap berkas melewati tiga lapis validasi sebelum ditulis: skema JSON per rekaman (termasuk pemeriksaan mod-97 IBAN dan struktur BIC), aturan scheme (SEPA dan CBPR+ lintas batas), serta validasi XSD akhir. Total kontrol selalu dihitung ulang, tidak pernah disalin. Semuanya berjalan lokal: tidak ada data pembayaran yang keluar dari infrastruktur Anda.</p>
+<h2 id="coba-di-peramban">Coba di peramban<a class="heading-anchor" href="#coba-di-peramban" aria-label="Link to section: Coba di peramban">#</a></h2>
+<p>Validasi batch contoh langsung di peramban Anda — tidak ada yang diunggah — dan buktikan hasilnya dengan skema XSD resmi: <a href="/try/">coba Pain001</a>. Berkas CSV contoh dapat diunduh sebagai templat untuk ekspor Anda sendiri.</p>
 <h2 id="tenggat-14-november-2026">Tenggat 14 November 2026<a class="heading-anchor" href="#tenggat-14-november-2026" aria-label="Link to section: Tenggat 14 November 2026">#</a></h2>
 <p>Setelah koeksistensi MT–MX berakhir pada 22 November 2025, tenggat berikutnya adalah <strong>14 November 2026</strong>: alamat pos yang sepenuhnya tidak terstruktur akan ditolak dalam pembayaran CBPR+, dan relai antar-bank MT101 digantikan <code>pain.001</code> versi 9. Pain001 sudah menghasilkan alamat terstruktur dan hibrida hari ini — dan mengonversi MT101 dengan satu perintah.</p>
 <h2 id="mulai">Mulai<a class="heading-anchor" href="#mulai" aria-label="Link to section: Mulai">#</a></h2>
 <pre><code class="language-bash">pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run</code></pre>
-<p>Dokumentasi lengkap berbahasa Inggris: <a href="/installation/">panduan instalasi</a>, <a href="/documentation/">referensi teknis</a>, <a href="/try/">demo peramban</a>, dan <a href="/2026-iso20022-migration-trends/">briefing ISO 20022 tahun 2026</a>. Inti berlisensi ganda Apache-2.0 / MIT — penggunaan komersial bebas pada skala apa pun.</p>
+<p>Selanjutnya: <a href="/installation/">panduan instalasi</a>, <a href="/documentation/">referensi teknis</a>, <a href="/iso20022-roadmap/">peta jalan ISO 20022 hingga 2028</a>, <a href="/pain002-reason-codes/">kode penolakan pain.002</a>, <a href="/trust/">pusat kepercayaan</a> dan <a href="/executive-brief/">ringkasan eksekutif</a>. Dokumentasi lengkap berbahasa Inggris. Lisensi ganda Apache-2.0 / MIT — penggunaan komersial bebas pada skala apa pun.</p>
 </div>
         </article>
       </div>

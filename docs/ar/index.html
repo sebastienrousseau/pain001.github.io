@@ -187,16 +187,18 @@
       </header>
 
       <div class="wrap content-shell">
-        <article class="content-body">
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>المحتويات</h2><ol><li><a href="#section">ملفات دفع لن يرفضها بنكك</a></li><li><a href="#section-2">جرّبه في المتصفح</a></li><li><a href="#14-2026">الموعد النهائي: 14 نوفمبر 2026</a></li><li><a href="#section-3">ابدأ الآن</a></li></ol></nav>
           <div lang="en"><h2 id="section">ملفات دفع لن يرفضها بنكك<a class="heading-anchor" href="#section" aria-label="Link to section: ملفات دفع لن يرفضها بنكك">#</a></h2>
 <p><strong>Pain001</strong> حزمة Python مفتوحة المصدر لبدء المدفوعات وفق ISO 20022. تحوِّل البيانات الموجودة لديك — CSV أو Excel أو SQLite أو JSON أو Parquet أو رسائل SWIFT MT101 القديمة — إلى XML من نوع <code>pain.001</code> (التحويلات) و <code>pain.008</code> (الخصم المباشر)، موثَّقة بمخططات XSD الرسمية.</p>
 <p>يمر كل ملف بثلاث طبقات تحقق قبل كتابته: مخطط JSON لكل سجل (مع فحص mod-97 لرقم IBAN وبنية BIC)، وقواعد النظام (SEPA و CBPR+ العابر للحدود)، ثم التحقق النهائي بمخطط XSD. تُعاد حساب المجاميع الرقابية ولا تُنسخ أبداً. كل شيء يعمل محلياً: لا تغادر أي بيانات دفع بنيتك التحتية.</p>
+<h2 id="section-2">جرّبه في المتصفح<a class="heading-anchor" href="#section-2" aria-label="Link to section: جرّبه في المتصفح">#</a></h2>
+<p>تحقّق من دفعة نموذجية مباشرة في متصفحك — لا يُرفع أي شيء — وأثبت النتيجة بمخطط XSD الرسمي: <a href="/try/">جرّب Pain001</a>. ملفات CSV نموذجية متاحة للتنزيل كقوالب لتصديراتك الخاصة.</p>
 <h2 id="14-2026">الموعد النهائي: 14 نوفمبر 2026<a class="heading-anchor" href="#14-2026" aria-label="Link to section: الموعد النهائي: 14 نوفمبر 2026">#</a></h2>
 <p>بعد انتهاء التعايش بين MT وMX في 22 نوفمبر 2025، الموعد التالي هو <strong>14 نوفمبر 2026</strong>: سترفض المدفوعات عبر CBPR+ العناوين البريدية غير المهيكلة بالكامل، وسيحل <code>pain.001</code> الإصدار 9 محل ترحيل MT101 بين البنوك. يدعم Pain001 اليوم العناوين المهيكلة والهجينة — ويحوِّل MT101 بأمر واحد.</p>
-<h2 id="section-2">ابدأ الآن<a class="heading-anchor" href="#section-2" aria-label="Link to section: ابدأ الآن">#</a></h2>
+<h2 id="section-3">ابدأ الآن<a class="heading-anchor" href="#section-3" aria-label="Link to section: ابدأ الآن">#</a></h2>
 <pre><code class="language-bash">pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run</code></pre>
-<p>التوثيق الكامل بالإنجليزية: <a href="/installation/">دليل التثبيت</a>، <a href="/documentation/">المرجع التقني</a>، <a href="/try/">العرض التجريبي في المتصفح</a> و<a href="/2026-iso20022-migration-trends/">إحاطة ISO 20022 لعام 2026</a>. النواة مرخصة ترخيصاً مزدوجاً Apache-2.0 / MIT — استخدام تجاري حر بأي نطاق.</p>
+<p>للاستزادة: <a href="/installation/">دليل التثبيت</a>، <a href="/documentation/">المرجع التقني</a>، <a href="/iso20022-roadmap/">خارطة طريق ISO 20022 حتى 2028</a>، <a href="/pain002-reason-codes/">رموز رفض pain.002</a>، <a href="/trust/">مركز الثقة</a> و<a href="/executive-brief/">الملخص التنفيذي</a>. التوثيق الكامل بالإنجليزية. ترخيص مزدوج Apache-2.0 / MIT — استخدام تجاري حر بأي نطاق.</p>
 </div>
         </article>
       </div>

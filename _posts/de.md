@@ -95,6 +95,10 @@ last_reviewed: "2026-07-26"
 
 Jede Datei durchläuft drei Prüfebenen, bevor sie geschrieben wird: JSON-Schema je Datensatz (inklusive IBAN-Prüfziffern nach mod-97 und BIC-Struktur), Scheme-Regelwerke (SEPA SCT, SEPA Instant, Lastschrift Core und B2B, grenzüberschreitende CBPR+-Überweisungen) und abschließende XSD-Validierung. Kontrollsummen (`NbOfTxs`, `CtrlSum`) werden neu berechnet — nie aus der Quelle übernommen. Alles läuft lokal: Keine Zahlungsdaten verlassen Ihre Infrastruktur.
 
+## Im Browser ausprobieren
+
+Validieren Sie einen Beispielstapel direkt im Browser — nichts wird hochgeladen — und prüfen Sie das Ergebnis gegen das offizielle XSD-Schema: [Pain001 ausprobieren](/try/). Beispiel-CSV-Dateien stehen als Vorlagen für eigene Exporte zum Download bereit.
+
 ## Der Stichtag 14. November 2026
 
 Seit dem Ende der MT–MX-Koexistenz am 22. November 2025 ist der nächste Stichtag der **14. November 2026**: Vollständig unstrukturierte Postadressen werden in CBPR+-Zahlungen abgelehnt, und das Interbanken-MT101-Relay wird durch `pain.001` Version 9 ersetzt. Pain001 unterstützt strukturierte und hybride Adressen bereits heute — und konvertiert MT101 mit einem Befehl.
@@ -106,4 +110,4 @@ pip install pain001
 pain001 -t pain.001.001.09 -d zahlungen.csv -o ausgabe/ --dry-run
 ```
 
-Die ausführliche Dokumentation ist auf Englisch: [Installationsanleitung](/installation/), [Technische Referenz](/documentation/), [Browser-Demo](/try/) und [ISO-20022-Briefing 2026](/2026-iso20022-migration-trends/). Der Kern steht unter dualer Apache-2.0-/MIT-Lizenz — freie kommerzielle Nutzung in jedem Umfang.
+Weiterführend: [Installationsanleitung](/installation/), [Technische Referenz](/documentation/), [ISO-20022-Fahrplan bis 2028](/iso20022-roadmap/), [pain.002-Ablehnungscodes](/pain002-reason-codes/), [Trust Centre](/trust/) — und das einseitige [Kurzdossier für Entscheider](/executive-brief-de/) auf Deutsch. Die ausführliche Dokumentation ist englisch. Der Kern ist dual lizenziert (Apache-2.0 / MIT) — freie kommerzielle Nutzung in jedem Umfang.

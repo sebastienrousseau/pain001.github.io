@@ -187,16 +187,18 @@
       </header>
 
       <div class="wrap content-shell">
-        <article class="content-body">
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>உள்ளடக்கம்</h2><ol><li><a href="#section">உங்கள் வங்கி நிராகரிக்காத கட்டணக் கோப்புகள்</a></li><li><a href="#section-2">உலாவியில் முயற்சிக்கவும்</a></li><li><a href="#14-2026">14 நவம்பர் 2026 காலக்கெடு</a></li><li><a href="#section-3">தொடங்குங்கள்</a></li></ol></nav>
           <div lang="en"><h2 id="section">உங்கள் வங்கி நிராகரிக்காத கட்டணக் கோப்புகள்<a class="heading-anchor" href="#section" aria-label="Link to section: உங்கள் வங்கி நிராகரிக்காத கட்டணக் கோப்புகள்">#</a></h2>
 <p><strong>Pain001</strong> என்பது ISO 20022 கட்டணத் தொடக்கத்திற்கான திறந்த மூல Python தொகுப்பு. உங்களிடம் ஏற்கனவே உள்ள தரவை — CSV, Excel, SQLite, JSON, Parquet அல்லது பழைய SWIFT MT101 செய்திகள் — அதிகாரப்பூர்வ XSD ஸ்கீமாக்களால் சரிபார்க்கப்பட்ட <code>pain.001</code> (கடன் பரிமாற்றம்) மற்றும் <code>pain.008</code> (நேரடி பற்று) XML ஆக மாற்றுகிறது.</p>
 <p>ஒவ்வொரு கோப்பும் எழுதப்படும் முன் மூன்று சரிபார்ப்பு அடுக்குகளைக் கடக்கிறது: ஒவ்வொரு பதிவுக்கும் JSON ஸ்கீமா (IBAN mod-97 சோதனை மற்றும் BIC அமைப்பு உட்பட), scheme விதிகள் (SEPA மற்றும் எல்லை கடந்த CBPR+), இறுதி XSD சரிபார்ப்பு. கட்டுப்பாட்டு மொத்தங்கள் மீண்டும் கணக்கிடப்படுகின்றன, ஒருபோதும் நகலெடுக்கப்படுவதில்லை. அனைத்தும் உள்ளூரில் இயங்கும்: எந்தக் கட்டணத் தரவும் உங்கள் உள்கட்டமைப்பை விட்டு வெளியேறாது.</p>
+<h2 id="section-2">உலாவியில் முயற்சிக்கவும்<a class="heading-anchor" href="#section-2" aria-label="Link to section: உலாவியில் முயற்சிக்கவும்">#</a></h2>
+<p>ஒரு மாதிரித் தொகுப்பை உங்கள் உலாவியிலேயே சரிபார்க்கவும் — எதுவும் பதிவேற்றப்படாது — முடிவை அதிகாரப்பூர்வ XSD ஸ்கீமாவால் நிரூபிக்கவும்: <a href="/try/">Pain001 ஐ முயற்சிக்கவும்</a>. மாதிரி CSV கோப்புகள் உங்கள் ஏற்றுமதிகளுக்கான வார்ப்புருக்களாக பதிவிறக்கம் செய்யலாம்.</p>
 <h2 id="14-2026">14 நவம்பர் 2026 காலக்கெடு<a class="heading-anchor" href="#14-2026" aria-label="Link to section: 14 நவம்பர் 2026 காலக்கெடு">#</a></h2>
 <p>22 நவம்பர் 2025 இல் MT–MX இணைவாழ்வு முடிந்த பின், அடுத்த காலக்கெடு <strong>14 நவம்பர் 2026</strong>: முழுமையாக கட்டமைக்கப்படாத அஞ்சல் முகவரிகள் CBPR+ கட்டணங்களில் நிராகரிக்கப்படும்; வங்கிகளிடையேயான MT101 ரிலேவுக்குப் பதிலாக <code>pain.001</code> பதிப்பு 9 வரும். Pain001 இன்றே கட்டமைக்கப்பட்ட மற்றும் கலப்பு முகவரிகளை உருவாக்குகிறது — ஒரே கட்டளையில் MT101 ஐ மாற்றுகிறது.</p>
-<h2 id="section-2">தொடங்குங்கள்<a class="heading-anchor" href="#section-2" aria-label="Link to section: தொடங்குங்கள்">#</a></h2>
+<h2 id="section-3">தொடங்குங்கள்<a class="heading-anchor" href="#section-3" aria-label="Link to section: தொடங்குங்கள்">#</a></h2>
 <pre><code class="language-bash">pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run</code></pre>
-<p>முழு ஆவணங்கள் ஆங்கிலத்தில்: <a href="/installation/">நிறுவல் வழிகாட்டி</a>, <a href="/documentation/">தொழில்நுட்பக் குறிப்பு</a>, <a href="/try/">உலாவி டெமோ</a> மற்றும் <a href="/2026-iso20022-migration-trends/">2026 ISO 20022 விளக்கம்</a>. மையம் Apache-2.0 / MIT இரட்டை உரிமத்தில் — எந்த அளவிலும் இலவச வணிகப் பயன்பாடு.</p>
+<p>மேலும்: <a href="/installation/">நிறுவல் வழிகாட்டி</a>, <a href="/documentation/">தொழில்நுட்பக் குறிப்பு</a>, <a href="/iso20022-roadmap/">2028 வரை ISO 20022 சாலைவரைபடம்</a>, <a href="/pain002-reason-codes/">pain.002 நிராகரிப்புக் குறியீடுகள்</a>, <a href="/trust/">நம்பிக்கை மையம்</a> மற்றும் <a href="/executive-brief/">நிர்வாகச் சுருக்கம்</a>. முழு ஆவணங்கள் ஆங்கிலத்தில். இரட்டை உரிமம் Apache-2.0 / MIT — எந்த அளவிலும் இலவச வணிகப் பயன்பாடு.</p>
 </div>
         </article>
       </div>

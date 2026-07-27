@@ -180,23 +180,25 @@
           <p class="eyebrow">Pain001 en español</p>
           <h1 class="page-title">Pain001 — Iniciación de pagos ISO 20022 en código abierto</h1>
           <p class="deck">La suite de código abierto que convierte sus datos de pago en XML ISO 20022 validado — probado antes de llegar al banco.</p>
-          <div class="article-meta"><span>1 min de lectura</span>
+          <div class="article-meta"><span>2 min de lectura</span>
             <span>Última revisión <time datetime="2026-07-26">2026-07-26</time></span>
           </div>
         </div>
       </header>
 
       <div class="wrap content-shell">
-        <article class="content-body">
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>Contenido</h2><ol><li><a href="#ficheros-de-pago-que-su-banco-no-rechazar">Ficheros de pago que su banco no rechazará</a></li><li><a href="#pru-belo-en-su-navegador">Pruébelo en su navegador</a></li><li><a href="#la-fecha-l-mite-del-14-de-noviembre-de-2026">La fecha límite del 14 de noviembre de 2026</a></li><li><a href="#empezar">Empezar</a></li></ol></nav>
           <div lang="en"><h2 id="ficheros-de-pago-que-su-banco-no-rechazar">Ficheros de pago que su banco no rechazará<a class="heading-anchor" href="#ficheros-de-pago-que-su-banco-no-rechazar" aria-label="Link to section: Ficheros de pago que su banco no rechazará">#</a></h2>
 <p><strong>Pain001</strong> es una suite Python de código abierto para la iniciación de pagos ISO 20022. Convierte los datos que ya tiene — CSV, Excel, SQLite, JSON, Parquet o mensajes SWIFT MT101 heredados — en XML <code>pain.001</code> (transferencias) y <code>pain.008</code> (adeudos domiciliados) validados contra los esquemas XSD oficiales.</p>
 <p>Cada fichero pasa tres niveles de validación antes de escribirse: esquema JSON por registro (con verificación mod-97 del IBAN y estructura del BIC), reglamentos de scheme (SEPA SCT, SEPA Inmediato, adeudos Core y B2B, transferencias transfronterizas CBPR+) y validación XSD del documento final. Los totales de control (<code>NbOfTxs</code>, <code>CtrlSum</code>) se recalculan — nunca se copian de la fuente. Todo se ejecuta en local: ningún dato de pago sale de su infraestructura.</p>
+<h2 id="pru-belo-en-su-navegador">Pruébelo en su navegador<a class="heading-anchor" href="#pru-belo-en-su-navegador" aria-label="Link to section: Pruébelo en su navegador">#</a></h2>
+<p>Valide un lote de ejemplo directamente en su navegador — no se sube nada — y pruebe el resultado contra el esquema XSD oficial: <a href="/try/">probar Pain001</a>. Hay ficheros CSV de ejemplo descargables como plantillas para sus propias exportaciones.</p>
 <h2 id="la-fecha-l-mite-del-14-de-noviembre-de-2026">La fecha límite del 14 de noviembre de 2026<a class="heading-anchor" href="#la-fecha-l-mite-del-14-de-noviembre-de-2026" aria-label="Link to section: La fecha límite del 14 de noviembre de 2026">#</a></h2>
 <p>Desde el fin de la coexistencia MT–MX el 22 de noviembre de 2025, la próxima fecha clave es el <strong>14 de noviembre de 2026</strong>: las direcciones postales totalmente no estructuradas serán rechazadas en los pagos CBPR+, y el relé interbancario MT101 será sustituido por <code>pain.001</code> versión 9. Pain001 genera direcciones estructuradas e híbridas hoy mismo — y convierte MT101 con un solo comando.</p>
 <h2 id="empezar">Empezar<a class="heading-anchor" href="#empezar" aria-label="Link to section: Empezar">#</a></h2>
 <pre><code class="language-bash">pip install pain001
 pain001 -t pain.001.001.09 -d pagos.csv -o salida/ --dry-run</code></pre>
-<p>La documentación completa está en inglés: <a href="/installation/">guía de instalación</a>, <a href="/documentation/">referencia técnica</a>, <a href="/try/">demo en el navegador</a> y <a href="/2026-iso20022-migration-trends/">briefing 2026 sobre ISO 20022</a>. El núcleo tiene doble licencia Apache-2.0 / MIT — uso comercial libre a cualquier escala.</p>
+<p>Para profundizar: <a href="/installation/">guía de instalación</a>, <a href="/documentation/">referencia técnica</a>, <a href="/iso20022-roadmap/">hoja de ruta ISO 20022 hasta 2028</a>, <a href="/pain002-reason-codes/">códigos de rechazo pain.002</a>, <a href="/trust/">centro de confianza</a> — y el <a href="/executive-brief-es/">resumen ejecutivo de una página</a>, en español. La documentación completa está en inglés. El núcleo tiene doble licencia Apache-2.0 / MIT — uso comercial libre a cualquier escala.</p>
 </div>
         </article>
       </div>

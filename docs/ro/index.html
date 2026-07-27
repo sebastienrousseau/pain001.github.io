@@ -187,16 +187,18 @@
       </header>
 
       <div class="wrap content-shell">
-        <article class="content-body">
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>Cuprins</h2><ol><li><a href="#fi-iere-de-plat-pe-care-banca-nu-le-va-respinge">Fișiere de plată pe care banca nu le va respinge</a></li><li><a href="#ncerca-i-n-browser">Încercați în browser</a></li><li><a href="#termenul-limit-14-noiembrie-2026">Termenul-limită: 14 noiembrie 2026</a></li><li><a href="#primii-pa-i">Primii pași</a></li></ol></nav>
           <div lang="en"><h2 id="fi-iere-de-plat-pe-care-banca-nu-le-va-respinge">Fișiere de plată pe care banca nu le va respinge<a class="heading-anchor" href="#fi-iere-de-plat-pe-care-banca-nu-le-va-respinge" aria-label="Link to section: Fișiere de plată pe care banca nu le va respinge">#</a></h2>
 <p><strong>Pain001</strong> este o suită Python open source pentru inițierea plăților ISO 20022. Convertește datele pe care le aveți deja — CSV, Excel, SQLite, JSON, Parquet sau mesaje SWIFT MT101 — în XML <code>pain.001</code> (transferuri) și <code>pain.008</code> (debitări directe), validate cu schemele XSD oficiale.</p>
 <p>Fiecare fișier trece prin trei niveluri de validare: schema JSON per înregistrare (cu verificarea mod-97 a IBAN-ului și structura BIC), regulile de scheme (SEPA și CBPR+ transfrontalier) și validarea XSD finală. Totalurile de control sunt recalculate, niciodată copiate. Totul rulează local: nicio dată de plată nu părăsește infrastructura dumneavoastră.</p>
+<h2 id="ncerca-i-n-browser">Încercați în browser<a class="heading-anchor" href="#ncerca-i-n-browser" aria-label="Link to section: Încercați în browser">#</a></h2>
+<p>Validați un lot de exemplu direct în browser — nimic nu este încărcat — și dovediți rezultatul cu schema XSD oficială: <a href="/try/">încercați Pain001</a>. Fișiere CSV de exemplu pot fi descărcate ca șabloane pentru exporturile proprii.</p>
 <h2 id="termenul-limit-14-noiembrie-2026">Termenul-limită: 14 noiembrie 2026<a class="heading-anchor" href="#termenul-limit-14-noiembrie-2026" aria-label="Link to section: Termenul-limită: 14 noiembrie 2026">#</a></h2>
 <p>După încheierea coexistenței MT–MX la 22 noiembrie 2025, următorul termen este <strong>14 noiembrie 2026</strong>: adresele poștale complet nestructurate vor fi respinse în plățile CBPR+, iar releul interbancar MT101 va fi înlocuit de <code>pain.001</code> versiunea 9. Pain001 generează deja adrese structurate și hibride — și convertește MT101 cu o singură comandă.</p>
 <h2 id="primii-pa-i">Primii pași<a class="heading-anchor" href="#primii-pa-i" aria-label="Link to section: Primii pași">#</a></h2>
 <pre><code class="language-bash">pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run</code></pre>
-<p>Documentația completă este în engleză: <a href="/installation/">ghid de instalare</a>, <a href="/documentation/">referință tehnică</a>, <a href="/try/">demo în browser</a> și <a href="/2026-iso20022-migration-trends/">briefingul ISO 20022 pentru 2026</a>. Nucleul are licență dublă Apache-2.0 / MIT — utilizare comercială liberă la orice scară.</p>
+<p>Mai departe: <a href="/installation/">ghid de instalare</a>, <a href="/documentation/">referință tehnică</a>, <a href="/iso20022-roadmap/">foaia de parcurs ISO 20022 până în 2028</a>, <a href="/pain002-reason-codes/">coduri de respingere pain.002</a>, <a href="/trust/">centrul de încredere</a> și <a href="/executive-brief/">rezumatul executiv</a>. Documentația completă este în engleză. Licență dublă Apache-2.0 / MIT — utilizare comercială liberă la orice scară.</p>
 </div>
         </article>
       </div>

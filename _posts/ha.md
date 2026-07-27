@@ -95,6 +95,10 @@ last_reviewed: "2026-07-26"
 
 Kowane fayil yana wuce matakan tabbatarwa uku kafin a rubuta shi: tsarin JSON ga kowane rikodi (har da bincika mod-97 na IBAN da tsarin BIC), dokokin scheme (SEPA da CBPR+ na ƙetare) da tabbatarwar XSD ta ƙarshe. Ana sake lissafa jimillar sarrafawa koyaushe, ba a taɓa kwafa su ba. Komai yana gudana a cikin na'urarku: babu bayanan biyan kuɗi da ke fita daga kayan aikinku.
 
+## Gwada a cikin browser
+
+Tabbatar da rukunin misali kai tsaye a cikin browser ɗinku — ba a loda komai ba — kuma ku tabbatar da sakamakon da tsarin XSD na hukuma: [gwada Pain001](/try/). Ana iya sauke fayilolin CSV na misali a matsayin samfura don fitarwar ku.
+
 ## Ranar ƙarshe: 14 ga Nuwamba 2026
 
 Bayan zaman tare na MT–MX ya ƙare a ranar 22 ga Nuwamba 2025, rana ta gaba ita ce **14 ga Nuwamba 2026**: za a ƙi adiresoshin gidan waya marasa tsari gaba ɗaya a cikin biyan kuɗi na CBPR+, kuma `pain.001` sigar 9 za ta maye gurbin MT101 tsakanin bankuna. Pain001 yana samar da adiresoshin da aka tsara da na gauraye tun yau — kuma yana mai da MT101 da umarni ɗaya.
@@ -106,4 +110,4 @@ pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run
 ```
 
-Cikakken bayani yana cikin Turanci: [jagorar shigarwa](/installation/), [bayanin fasaha](/documentation/), [gwaji a browser](/try/) da [taƙaitaccen bayanin ISO 20022 na 2026](/2026-iso20022-migration-trends/). Cibiyar tana da lasisi biyu Apache-2.0 / MIT — amfani na kasuwanci kyauta a kowane girma.
+Gaba: [jagorar shigarwa](/installation/), [bayanin fasaha](/documentation/), [taswirar ISO 20022 zuwa 2028](/iso20022-roadmap/), [lambobin ƙi na pain.002](/pain002-reason-codes/), [cibiyar aminci](/trust/) da [taƙaitawa ga shugabanni](/executive-brief/). Cikakken bayani yana Turanci. Lasisi biyu Apache-2.0 / MIT — amfani na kasuwanci kyauta a kowane girma.

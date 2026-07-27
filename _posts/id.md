@@ -95,6 +95,10 @@ last_reviewed: "2026-07-26"
 
 Setiap berkas melewati tiga lapis validasi sebelum ditulis: skema JSON per rekaman (termasuk pemeriksaan mod-97 IBAN dan struktur BIC), aturan scheme (SEPA dan CBPR+ lintas batas), serta validasi XSD akhir. Total kontrol selalu dihitung ulang, tidak pernah disalin. Semuanya berjalan lokal: tidak ada data pembayaran yang keluar dari infrastruktur Anda.
 
+## Coba di peramban
+
+Validasi batch contoh langsung di peramban Anda — tidak ada yang diunggah — dan buktikan hasilnya dengan skema XSD resmi: [coba Pain001](/try/). Berkas CSV contoh dapat diunduh sebagai templat untuk ekspor Anda sendiri.
+
 ## Tenggat 14 November 2026
 
 Setelah koeksistensi MT–MX berakhir pada 22 November 2025, tenggat berikutnya adalah **14 November 2026**: alamat pos yang sepenuhnya tidak terstruktur akan ditolak dalam pembayaran CBPR+, dan relai antar-bank MT101 digantikan `pain.001` versi 9. Pain001 sudah menghasilkan alamat terstruktur dan hibrida hari ini — dan mengonversi MT101 dengan satu perintah.
@@ -106,4 +110,4 @@ pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run
 ```
 
-Dokumentasi lengkap berbahasa Inggris: [panduan instalasi](/installation/), [referensi teknis](/documentation/), [demo peramban](/try/), dan [briefing ISO 20022 tahun 2026](/2026-iso20022-migration-trends/). Inti berlisensi ganda Apache-2.0 / MIT — penggunaan komersial bebas pada skala apa pun.
+Selanjutnya: [panduan instalasi](/installation/), [referensi teknis](/documentation/), [peta jalan ISO 20022 hingga 2028](/iso20022-roadmap/), [kode penolakan pain.002](/pain002-reason-codes/), [pusat kepercayaan](/trust/) dan [ringkasan eksekutif](/executive-brief/). Dokumentasi lengkap berbahasa Inggris. Lisensi ganda Apache-2.0 / MIT — penggunaan komersial bebas pada skala apa pun.
