@@ -376,6 +376,141 @@ def fix_try_strip(site: Path) -> None:
     print("[postbuild] status strip mirrored onto /try/")
 
 
+def load_try_i18n(slug: str) -> dict | None:
+    """Per-locale translation table (scripts/try_i18n/<slug>.json)."""
+    import json
+
+    path = Path(__file__).parent / "try_i18n" / f"{slug}.json"
+    if not path.exists():
+        return None
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except ValueError:
+        print(f"[postbuild] WARNING: invalid JSON in {path}", file=sys.stderr)
+        return None
+
+
+def apply_chrome_extra(html: str, d: dict) -> str:
+    """Submenu, footer and toggle-aria labels from the i18n table."""
+    for k in sorted(d.get("chrome", {}), key=len, reverse=True):
+        html = html.replace(">%s<" % k, ">%s<" % d["chrome"][k])
+    for k, v in d.get("chrome_aria", {}).items():
+        html = html.replace('aria-label="%s"' % k, 'aria-label="%s"' % v)
+    return html
+
+
+def lang_badge(html: str, slug: str) -> str:
+    """The globe button shows the current language code, not EN."""
+    return html.replace('class="ap-lang-current">EN<',
+                        'class="ap-lang-current">%s<'
+                        % slug.split("-")[0].upper())
+
+
+def translate_status_strip(html: str, s: list) -> str:
+    aria, milestone, addr, addr_v, relay, release, msgdefs, reviewed = s
+    pairs = [
+        ('aria-label="Current standards and project status"',
+         'aria-label="%s"' % aria),
+        (">Next CBPR+ milestone:<", ">%s<" % milestone),
+        (">Address rule:<", ">%s<" % addr),
+        ("</strong> structured or hybrid<", "</strong> %s<" % addr_v),
+        (">Relay version:<", ">%s<" % relay),
+        (">Latest release:<", ">%s<" % release),
+        (">Message definitions:<", ">%s<" % msgdefs),
+        (">Reviewed:<", ">%s<" % reviewed),
+        ("</strong> 14 Nov 2026<", "</strong> 2026-11-14<"),
+    ]
+    for old, new in pairs:
+        html = html.replace(old, new)
+    return html
+
+
+def try_hreflang_cluster(self_lang: str) -> str:
+    links = ['<link rel="alternate" hreflang="en" href="%s/try/" />' % BASE_URL,
+             '<link rel="alternate" hreflang="x-default" href="%s/try/" />'
+             % BASE_URL]
+    for slug, code in sorted(LOCALES.items()):
+        links.append('<link rel="alternate" hreflang="%s" href="%s/%s/try/" />'
+                     % (code, BASE_URL, slug))
+    return "".join(l for l in links if 'hreflang="%s"' % self_lang not in l)
+
+
+def retarget_lang_menu_to_try(html: str) -> str:
+    """On /try/ pages the language menu switches between try variants."""
+    html = html.replace('class="ap-lang-item" href="/" hreflang="en"',
+                        'class="ap-lang-item" href="/try/" hreflang="en"')
+    for slug in LOCALES:
+        html = html.replace(
+            'class="ap-lang-item" href="/%s/" hreflang=' % slug,
+            'class="ap-lang-item" href="/%s/try/" hreflang=' % slug)
+    return html
+
+
+def gen_try_locales(site: Path) -> None:
+    """Generate /<slug>/try/ for every locale with a translation table:
+    translated chrome + demo copy, correct lang/dir, self-canonical URLs
+    and a reciprocal hreflang cluster across all try variants."""
+    try:
+        from locale_strings import STRINGS, STATUS_STRIP
+    except ImportError:
+        sys.path.insert(0, str(Path(__file__).parent))
+        from locale_strings import STRINGS, STATUS_STRIP
+    src = site / "try" / "index.html"
+    if not src.exists():
+        return
+    base = src.read_text(encoding="utf-8")
+
+    # The English page joins the cluster and its language menu switches
+    # between try variants.
+    en = base
+    if 'hreflang="x-default" href="%s/try/"' % BASE_URL not in en:
+        en = en.replace("</head>", try_hreflang_cluster("en") + "</head>", 1)
+    en = retarget_lang_menu_to_try(en)
+    src.write_text(en, encoding="utf-8")
+
+    en_meta = (load_try_i18n("en") or {}).get("meta", {})
+    n = 0
+    for slug, code in LOCALES.items():
+        d = load_try_i18n(slug)
+        if not d or slug not in STRINGS:
+            continue
+        html = base
+        # lang + direction
+        dir_attr = ' dir="rtl"' if slug in RTL_LANGS else ""
+        html = html.replace('<html lang="en-GB">',
+                            '<html lang="%s"%s>' % (code, dir_attr), 1)
+        # metadata: title/description everywhere they appear, then URLs
+        meta = d.get("meta", {})
+        for key in ("title", "description"):
+            if en_meta.get(key) and meta.get(key):
+                html = html.replace(en_meta[key], meta[key])
+        html = html.replace("https://pain001.com/try/",
+                            "https://pain001.com/%s/try/" % slug)
+        html = html.replace("</head>",
+                            try_hreflang_cluster(code) + "</head>", 1)
+        # demo copy, longest fragment first so substrings cannot clash;
+        # fragments padded by whitespace inside their tag miss the >k<
+        # anchor, so long keys fall back to raw substring replacement
+        for k in sorted(d.get("text", {}), key=len, reverse=True):
+            v = d["text"][k]
+            if ">%s<" % k in html:
+                html = html.replace(">%s<" % k, ">%s<" % v)
+            elif len(k) >= 30:
+                html = html.replace(k, v)
+        for k, v in d.get("aria", {}).items():
+            html = html.replace('aria-label="%s"' % k, 'aria-label="%s"' % v)
+        html = apply_chrome_extra(html, d)
+        html = translate_chrome(html, STRINGS[slug])
+        html = translate_status_strip(html, STATUS_STRIP[slug])
+        html = retarget_lang_menu_to_try(html)
+        html = lang_badge(html, slug)
+        dest = site / slug / "try"
+        dest.mkdir(parents=True, exist_ok=True)
+        (dest / "index.html").write_text(html, encoding="utf-8")
+        n += 1
+    print(f"[postbuild] generated {n} locale /try/ page(s)")
+
+
 def localise_pages(site: Path) -> None:
     try:
         from locale_strings import STRINGS
@@ -394,6 +529,11 @@ def localise_pages(site: Path) -> None:
         html = add_rtl_dir(html, slug)
         if slug in STRINGS:
             html = translate_chrome(html, STRINGS[slug])
+        d = load_try_i18n(slug)
+        if d:
+            html = apply_chrome_extra(html, d)
+            html = lang_badge(html, slug)
+            html = html.replace('href="/try/"', 'href="/%s/try/"' % slug)
         page.write_text(html, encoding="utf-8")
         n += 1
     home = site / "index.html"
@@ -485,6 +625,7 @@ def main() -> None:
     fix_manifest(site)
     fix_try_strip(site)
     localise_pages(site)
+    gen_try_locales(site)
     regen_sitemap(site)
 
 

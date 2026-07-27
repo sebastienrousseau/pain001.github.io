@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta itemprop="datePublished" content="Sun, 26 Jul 2026 08:00:00 +0000" id="date" />
+    <meta itemprop="dateModified" content="Sun, 26 Jul 2026 08:00:00 +0000" id="last-modified" />
+    <title>Experimente o Pain001 no seu navegador</title>
+
+    <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
+<meta name="description" content="Carregue ou cole dados de pagamento em CSV e veja a validação: IBAN mod-97, estrutura BIC, campos obrigatórios, totais de controle e o XSD oficial — tudo no navegador.">
+<meta name="keywords" content="pain.001 validator online, try pain001, SEPA XML generator online, IBAN checker, pain.001 example, ISO 20022 demo, payment file validator">
+<meta property="og:image" content="https://pain001.com/og/pain001-card.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="An interactive browser demo validating payment records and generating ISO 20022 pain.001 XML entirely client-side." />
+    <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Experimente o Pain001 no seu navegador">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    
+    
+
+    <link rel="alternate" href="https://pain001.com/pt-br/try/" hreflang="en" />
+    
+    <link rel="icon" type="image/svg+xml" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" sizes="any" />
+    <link rel="preload" href="/fonts/source-serif-4-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <script src="/_csp/6ccbbfb0b824e5f3.js" integrity="sha384-vD2D/DeQ7ybfwKVwsRoDzF6OdQbjm+gayKdOWKcqfqM76DP9CwfWMGtYvdpKSVJF" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/_csp/19c9c802d43b60ab.css" integrity="sha384-LE79CtvvAy1USVppSF1b0Cg0kYwjHdXJ2wRvebsocsfspqnHGy2i7bkgDUXl5KcY" crossorigin="anonymous">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
+  <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="Experimente o Pain001 no seu navegador">
+<meta property="og:description" content="Interactive demo Experimente o Pain001 no seu navegador Drop in a CSV, use the sample, or paste your own records — validation runs instantly, entirely in your browser,">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pain001.com/pt-br/try/">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Experimente o Pain001 no seu navegador">
+<meta name="twitter:description" content="Interactive demo Experimente o Pain001 no seu navegador Drop in a CSV, use the sample, or paste your own records — validation runs instantly, entirely in your browser,">
+<meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg">
+<link rel="canonical" href="https://pain001.com/pt-br/try/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
+<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"><link rel="alternate" hreflang="en" href="https://pain001.com/try/" /><link rel="alternate" hreflang="x-default" href="https://pain001.com/try/" /><link rel="alternate" hreflang="ar" href="https://pain001.com/ar/try/" /><link rel="alternate" hreflang="bn" href="https://pain001.com/bn/try/" /><link rel="alternate" hreflang="cs" href="https://pain001.com/cs/try/" /><link rel="alternate" hreflang="de" href="https://pain001.com/de/try/" /><link rel="alternate" hreflang="el" href="https://pain001.com/el/try/" /><link rel="alternate" hreflang="es" href="https://pain001.com/es/try/" /><link rel="alternate" hreflang="fa" href="https://pain001.com/fa/try/" /><link rel="alternate" hreflang="fil" href="https://pain001.com/fil/try/" /><link rel="alternate" hreflang="fr" href="https://pain001.com/fr/try/" /><link rel="alternate" hreflang="ha" href="https://pain001.com/ha/try/" /><link rel="alternate" hreflang="he" href="https://pain001.com/he/try/" /><link rel="alternate" hreflang="hi" href="https://pain001.com/hi/try/" /><link rel="alternate" hreflang="hu" href="https://pain001.com/hu/try/" /><link rel="alternate" hreflang="id" href="https://pain001.com/id/try/" /><link rel="alternate" hreflang="it" href="https://pain001.com/it/try/" /><link rel="alternate" hreflang="ja" href="https://pain001.com/ja/try/" /><link rel="alternate" hreflang="ko" href="https://pain001.com/ko/try/" /><link rel="alternate" hreflang="mr" href="https://pain001.com/mr/try/" /><link rel="alternate" hreflang="ms" href="https://pain001.com/ms/try/" /><link rel="alternate" hreflang="nl" href="https://pain001.com/nl/try/" /><link rel="alternate" hreflang="pl" href="https://pain001.com/pl/try/" /><link rel="alternate" hreflang="ro" href="https://pain001.com/ro/try/" /><link rel="alternate" hreflang="ru" href="https://pain001.com/ru/try/" /><link rel="alternate" hreflang="sv" href="https://pain001.com/sv/try/" /><link rel="alternate" hreflang="ta" href="https://pain001.com/ta/try/" /><link rel="alternate" hreflang="te" href="https://pain001.com/te/try/" /><link rel="alternate" hreflang="th" href="https://pain001.com/th/try/" /><link rel="alternate" hreflang="tr" href="https://pain001.com/tr/try/" /><link rel="alternate" hreflang="uk" href="https://pain001.com/uk/try/" /><link rel="alternate" hreflang="vi" href="https://pain001.com/vi/try/" /><link rel="alternate" hreflang="yo" href="https://pain001.com/yo/try/" /><link rel="alternate" hreflang="zh-Hans" href="https://pain001.com/zh-hans/try/" /><link rel="alternate" hreflang="zh-Hant" href="https://pain001.com/zh-hant/try/" /></head>
+  <body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <header class="ap-nav">
+      <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Alternar navegação" />
+      <div class="wrap ap-nav-wrap">
+        <a class="ap-brand" href="/" aria-label="Pain001 home">
+          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="" width="26" height="26" />
+          <span>Pain001</span>
+        </a>
+        <nav aria-label="Primary navigation" id="ap-primary-nav">
+          <ul class="ap-menu">
+            <li class="has-sub"><a href="/why/">Por que Pain001</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-why" aria-label="Alternar o submenu Por que Pain001"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-why" class="ap-sub">
+                <li><a href="/solutions/">Para quem é</a></li>
+                <li><a href="/executive-brief/">Resumo executivo</a></li>
+                <li><a href="/competitors-comparison/">Comparação com ferramentas comerciais</a></li>
+              </ul>
+            </li>
+            <li><a href="/try/">Veja ao vivo</a></li>
+            <li class="has-sub"><a href="/documentation/">Docs</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="Alternar o submenu Documentação"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-docs" class="ap-sub">
+                <li><a href="/installation/">Instalação &amp; Docker</a></li>
+                <li><a href="/glossary/">Glossário</a></li>
+                <li><a href="/faqs/">Perguntas frequentes</a></li>
+                <li><a href="/pain002-reason-codes/">Códigos de motivo pain.002</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/#suite-heading">Suíte</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-suite" aria-label="Alternar o submenu Suíte"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-suite" class="ap-sub">
+                <li><a href="/pain001-mcp/">Ferramentas para agentes de IA (MCP)</a></li>
+                <li><a href="/pain001-lsp/">Integração com editores (LSP)</a></li>
+                <li><a href="/pain001-loader-mt101/">Carregador MT101</a></li>
+                <li><a href="/pain001-loader-xlsx/">Carregador Excel</a></li>
+                <li><a href="/architecture-and-patents/">Arquitetura &amp; segurança</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/2026-iso20022-migration-trends/">Pesquisa</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-research" aria-label="Alternar o submenu Pesquisa"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-research" class="ap-sub">
+                <li><a href="/2026-iso20022-migration-trends/">Briefing 2026</a></li>
+                <li><a href="/iso20022-roadmap/">Roteiro ISO 20022</a></li>
+                <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/">Guia de pagamentos internacionais</a></li>
+                <li><a href="/languages/">Em 34 idiomas</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="ap-nav-right">
+          <button type="button" class="theme-toggle" aria-label="Mudar para tema escuro" data-label-dark="Mudar para tema escuro" data-label-light="Mudar para tema claro" aria-pressed="false" title="Mudar para tema escuro">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+          <button type="button" class="ap-search-btn" aria-label="Pesquisar (Cmd/Ctrl + K)" title="Pesquisar (⌘K)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <kbd class="ap-search-kbd" aria-hidden="true">⌘K</kbd>
+          </button>
+          <div class="ap-lang" role="group" aria-label="Language">
+            <button type="button" class="ap-lang-toggle" aria-label="Mudar idioma" aria-expanded="false" aria-haspopup="menu" title="Mudar idioma">
+              <span class="ap-lang-globe" aria-hidden="true">🌐</span>
+              <span class="ap-lang-current">PT</span>
+            </button>
+            <div class="ap-lang-menu" role="menu" hidden>
+              <div class="ap-lang-menu-grid">
+                <a class="ap-lang-item" href="/try/" hreflang="en" lang="en" role="menuitem"><span aria-hidden="true">🇬🇧</span> English</a>
+                <a class="ap-lang-item" href="/fr/try/" hreflang="fr" lang="fr" role="menuitem"><span aria-hidden="true">🇫🇷</span> Français</a>
+                <a class="ap-lang-item" href="/de/try/" hreflang="de" lang="de" role="menuitem"><span aria-hidden="true">🇩🇪</span> Deutsch</a>
+                <a class="ap-lang-item" href="/es/try/" hreflang="es" lang="es" role="menuitem"><span aria-hidden="true">🇪🇸</span> Español</a>
+                <a class="ap-lang-item" href="/it/try/" hreflang="it" lang="it" role="menuitem"><span aria-hidden="true">🇮🇹</span> Italiano</a>
+                <a class="ap-lang-item" href="/pt-br/try/" hreflang="pt-BR" lang="pt-BR" role="menuitem"><span aria-hidden="true">🇧🇷</span> Português</a>
+                <a class="ap-lang-item" href="/nl/try/" hreflang="nl" lang="nl" role="menuitem"><span aria-hidden="true">🇳🇱</span> Nederlands</a>
+                <a class="ap-lang-item" href="/pl/try/" hreflang="pl" lang="pl" role="menuitem"><span aria-hidden="true">🇵🇱</span> Polski</a>
+                <a class="ap-lang-item" href="/sv/try/" hreflang="sv" lang="sv" role="menuitem"><span aria-hidden="true">🇸🇪</span> Svenska</a>
+                <a class="ap-lang-item" href="/cs/try/" hreflang="cs" lang="cs" role="menuitem"><span aria-hidden="true">🇨🇿</span> Čeština</a>
+                <a class="ap-lang-item" href="/ro/try/" hreflang="ro" lang="ro" role="menuitem"><span aria-hidden="true">🇷🇴</span> Română</a>
+                <a class="ap-lang-item" href="/hu/try/" hreflang="hu" lang="hu" role="menuitem"><span aria-hidden="true">🇭🇺</span> Magyar</a>
+                <a class="ap-lang-item" href="/el/try/" hreflang="el" lang="el" role="menuitem"><span aria-hidden="true">🇬🇷</span> Ελληνικά</a>
+                <a class="ap-lang-item" href="/tr/try/" hreflang="tr" lang="tr" role="menuitem"><span aria-hidden="true">🇹🇷</span> Türkçe</a>
+                <a class="ap-lang-item" href="/ru/try/" hreflang="ru" lang="ru" role="menuitem"><span aria-hidden="true">🇷🇺</span> Русский</a>
+                <a class="ap-lang-item" href="/uk/try/" hreflang="uk" lang="uk" role="menuitem"><span aria-hidden="true">🇺🇦</span> Українська</a>
+                <a class="ap-lang-item" href="/ar/try/" hreflang="ar" lang="ar" role="menuitem"><span aria-hidden="true">🇸🇦</span> العربية</a>
+                <a class="ap-lang-item" href="/he/try/" hreflang="he" lang="he" role="menuitem"><span aria-hidden="true">🇮🇱</span> עברית</a>
+                <a class="ap-lang-item" href="/fa/try/" hreflang="fa" lang="fa" role="menuitem"><span aria-hidden="true">🇮🇷</span> فارسی</a>
+                <a class="ap-lang-item" href="/hi/try/" hreflang="hi" lang="hi" role="menuitem"><span aria-hidden="true">🇮🇳</span> हिन्दी</a>
+                <a class="ap-lang-item" href="/bn/try/" hreflang="bn" lang="bn" role="menuitem"><span aria-hidden="true">🇧🇩</span> বাংলা</a>
+                <a class="ap-lang-item" href="/ta/try/" hreflang="ta" lang="ta" role="menuitem"><span aria-hidden="true">🇮🇳</span> தமிழ்</a>
+                <a class="ap-lang-item" href="/te/try/" hreflang="te" lang="te" role="menuitem"><span aria-hidden="true">🇮🇳</span> తెలుగు</a>
+                <a class="ap-lang-item" href="/mr/try/" hreflang="mr" lang="mr" role="menuitem"><span aria-hidden="true">🇮🇳</span> मराठी</a>
+                <a class="ap-lang-item" href="/th/try/" hreflang="th" lang="th" role="menuitem"><span aria-hidden="true">🇹🇭</span> ไทย</a>
+                <a class="ap-lang-item" href="/vi/try/" hreflang="vi" lang="vi" role="menuitem"><span aria-hidden="true">🇻🇳</span> Tiếng Việt</a>
+                <a class="ap-lang-item" href="/id/try/" hreflang="id" lang="id" role="menuitem"><span aria-hidden="true">🇮🇩</span> Indonesia</a>
+                <a class="ap-lang-item" href="/ms/try/" hreflang="ms" lang="ms" role="menuitem"><span aria-hidden="true">🇲🇾</span> Melayu</a>
+                <a class="ap-lang-item" href="/fil/try/" hreflang="fil" lang="fil" role="menuitem"><span aria-hidden="true">🇵🇭</span> Filipino</a>
+                <a class="ap-lang-item" href="/ja/try/" hreflang="ja" lang="ja" role="menuitem"><span aria-hidden="true">🇯🇵</span> 日本語</a>
+                <a class="ap-lang-item" href="/ko/try/" hreflang="ko" lang="ko" role="menuitem"><span aria-hidden="true">🇰🇷</span> 한국어</a>
+                <a class="ap-lang-item" href="/zh-hans/try/" hreflang="zh-Hans" lang="zh-Hans" role="menuitem"><span aria-hidden="true">🇨🇳</span> 简体中文</a>
+                <a class="ap-lang-item" href="/zh-hant/try/" hreflang="zh-Hant" lang="zh-Hant" role="menuitem"><span aria-hidden="true">🇹🇼</span> 繁體中文</a>
+                <a class="ap-lang-item" href="/ha/try/" hreflang="ha" lang="ha" role="menuitem"><span aria-hidden="true">🇳🇬</span> Hausa</a>
+                <a class="ap-lang-item" href="/yo/try/" hreflang="yo" lang="yo" role="menuitem"><span aria-hidden="true">🇳🇬</span> Yorùbá</a>
+              </div>
+            </div>
+          </div>
+          <a class="ap-cta-mini" href="/try/">Testar a demo&nbsp;&rsaquo;</a>
+          <label class="ap-burger" for="ap-menu-toggle" aria-hidden="true"><span class="ap-burger-icon">☰</span></label>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content"><section aria-label="Normas atuais e status do projeto" class=status-strip><div class="wrap status-strip-inner"><a href=/iso20022-roadmap/><strong>Próximo marco CBPR+:</strong> 2026-11-14</a><a href=/2026-iso20022-migration-trends/><strong>Regra de endereço:</strong> estruturado ou híbrido</a><a href=/pain.001.001.09/><strong>Versão do relay:</strong> pain.001 v9</a><a href=https://pypi.org/project/pain001/ rel=external><strong>Última versão:</strong> v0.0.56</a><a href=/compatibility/><strong>Definições de mensagens:</strong> 11</a><a href=/iso20022-roadmap/><strong>Revisado:</strong> 2026-07-27</a></div></section>
+      <header class="page-header">
+        <div class="wrap">
+          <p class="eyebrow">Demonstração interativa</p>
+          <h1>Experimente o Pain001 no seu navegador</h1>
+          <p class="deck">Arraste um CSV, use o exemplo ou cole seus próprios registros — a validação é executada na hora, inteiramente no seu navegador, e nada sai da sua máquina.</p>
+        </div>
+      </header>
+
+      <div class="wrap guide-grid">
+        <aside class="guide-rail">
+          <div class="guide-block">
+            <h2>Como este validador ajuda você</h2>
+            <ul class="check-list">
+              <li><span class="tick" aria-hidden="true">✓</span><span>Teste os dados de pagamento com as verificações que os bancos aplicam — campos obrigatórios, dígitos verificadores do IBAN, estrutura do BIC, totais de controle</span></li>
+              <li><span class="tick" aria-hidden="true">✓</span><span>Gere um arquivo de transferência <code>pain.001.001.09</code> funcional que você pode inspecionar, copiar ou baixar</span></li>
+              <li><span class="tick" aria-hidden="true">✓</span><span>Comprove o resultado contra o esquema oficial ISO 20022 — o XSD genuíno, validado no seu navegador</span></li>
+            </ul>
+          </div>
+          <div class="guide-block">
+            <h2>Informações importantes</h2>
+            <ul class="info-list">
+              <li><strong>Nada é enviado.</strong> Seu arquivo é lido pelo seu próprio navegador e nunca sai da sua máquina — não há servidor, armazenamento nem telemetria. Seguro para dados reais, embora usar dados de teste mascarados seja sempre uma boa prática.</li>
+              <li><strong>Ferramenta apenas para testes.</strong> Os arquivos nunca são submetidos a processamento e nenhum pagamento pode resultar do que você fizer aqui.</li>
+              <li><strong>Colunas esperadas:</strong> <code>payment_id</code>, <code>payment_amount</code>, <code>currency</code>, nome / IBAN / BIC do devedor e do credor, <code>requested_execution_date</code> — os delimitadores vírgula, ponto e vírgula e tabulação são detectados automaticamente. Baixe um exemplo abaixo para usar como modelo da sua própria exportação.</li>
+              <li><strong>Sem custos.</strong> Esta ferramenta, e o <a href="/installation/">conjunto completo de ferramentas</a> por trás dela, são gratuitos e de código aberto.</li>
+            </ul>
+          </div>
+          <div class="guide-block">
+            <h2>Verifique você mesmo</h2>
+            <p class="verify-lede">“Nada é enviado” é uma afirmação que você pode comprovar em dois minutos:</p>
+            <ol class="verify-steps">
+              <li>Abra o DevTools&nbsp;&rarr;&nbsp;Network e use a demonstração. As únicas requisições são GETs de mesma origem para os recursos desta página, o motor WASM e o esquema — nenhuma delas transporta seus dados.</li>
+              <li>Execute a validação XSD uma vez e depois coloque o DevTools em <em>Offline</em> (ou desligue o Wi-Fi). Toda a demonstração — incluindo a validação com o esquema oficial — continua funcionando: um service worker armazena tudo em cache após o primeiro uso.</li>
+              <li><a href="https://github.com/sebastienrousseau/pain001.github.io" rel="external">Esta página também é de código aberto</a> — a lógica da demonstração é um único módulo sem dependências que você pode ler por completo.</li>
+            </ol>
+            <p class="verify-lede">Não há script de analytics, serviço de relatório de erros, fonte de terceiros nem endpoint de relatórios CSP — o próprio relatório seria uma conexão de saída.</p>
+          </div>
+        </aside>
+
+        <div class="tool-col">
+          <section class="demo-panel" aria-labelledby="input-heading">
+            <div class="step-head"><span class="step-num" aria-hidden="true">1</span><h2 id="input-heading">Adicione seus dados de pagamento</h2></div>
+            <div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="Arraste um arquivo CSV para cá ou pressione Enter para procurar seus arquivos">
+              <p><strong>Arraste um arquivo CSV para cá</strong> — ou clique para procurar</p>
+              <p class="hint">Máximo de 2&nbsp;MB · lido localmente pelo seu navegador, nunca enviado</p>
+            </div>
+            <input type="file" id="file-input" class="visually-hidden" accept=".csv,text/csv,text/plain" aria-label="Escolha um arquivo CSV com registros de pagamento" tabindex="-1" />
+            <div class="demo-actions">
+              <label class="visually-hidden" for="sample-select">Carregar um lote de exemplo</label>
+              <select id="sample-select" class="pill-select">
+                <option value="">Carregar um exemplo&hellip;</option>
+              </select>
+              <label class="visually-hidden" for="scenario-select">Introduzir um cenário de erro</label>
+              <select id="scenario-select" class="pill-select">
+                <option value="">Introduzir um erro&hellip;</option>
+              </select>
+              <button type="button" id="paste-btn" class="pill pill-ghost">Colar registros</button>
+            </div>
+            <p class="dialect-note">
+              Baixe um exemplo para usar como modelo:
+              <a href="/samples/pain001-sample-sepa-sct.csv" download>transferência SEPA</a> ·
+              <a href="/samples/pain001-sample-cross-border.csv" download>internacional</a> ·
+              <a href="/samples/pain001-sample-batch-20.csv" download>lote de 20 linhas</a>
+            </p>
+            <div class="editor-block" id="editor-block" hidden>
+              <label class="editor-label" for="csv-input">Revise e edite seus registros</label>
+              <textarea id="csv-input" spellcheck="false" aria-describedby="dialect-note demo-fineprint"></textarea>
+              <p class="dialect-note" id="dialect-note"></p>
+              <div class="demo-actions">
+                <button type="button" id="run-btn" class="pill pill-primary">Validar &amp; gerar&nbsp;&rsaquo;</button>
+                <button type="button" id="fix-btn" class="pill pill-ghost" hidden>Corrigir</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="demo-panel" aria-labelledby="output-heading">
+            <div class="step-head"><span class="step-num" aria-hidden="true">2</span><h2 id="output-heading">Resultado da validação &amp; XML gerado</h2></div>
+            <p class="status" id="status" role="status">Adicione dados na etapa 1 — a validação é executada automaticamente.</p>
+            <div class="error-table-wrap" id="error-table-wrap" hidden>
+              <table class="error-table">
+                <caption class="visually-hidden">Apontamentos da validação por linha e coluna</caption>
+                <thead>
+                  <tr><th scope="col">Linha</th><th scope="col">Coluna</th><th scope="col">Regra</th><th scope="col">Valor</th><th scope="col">Problema</th></tr>
+                </thead>
+                <tbody id="error-tbody"></tbody>
+              </table>
+              <p class="dialect-note" id="error-overflow" hidden></p>
+            </div>
+            <div class="xml-out" id="xml-out" tabindex="0" aria-label="Saída XML gerada"><span class="xml-placeholder">The validated pain.001.001.09 document will appear here — add data in step 1.</span></div>
+            <div class="demo-actions">
+              <button type="button" id="copy-btn" class="pill pill-ghost" disabled title="Add valid data in step 1 first">Copiar XML</button>
+              <button type="button" id="download-btn" class="pill pill-ghost" disabled title="Add valid data in step 1 first">Baixar .xml</button>
+              <button type="button" id="report-btn" class="pill pill-ghost" hidden>Baixar relatório de erros (.csv)</button>
+            </div>
+          </section>
+
+          <section class="demo-panel" aria-labelledby="xsd-heading">
+            <div class="step-head"><span class="step-num" aria-hidden="true">3</span><h2 id="xsd-heading">Comprove contra o XSD oficial da ISO 20022</h2></div>
+            <p class="fineprint" style="margin: 0;">
+              As etapas 1–2 executam verificações rápidas, escritas à mão. Esta etapa executa o artigo genuíno: um runtime
+              Python (via WebAssembly) executando <code style="font-family: var(--type-mono);">xmlschema</code>
+              contra o esquema oficial <code style="font-family: var(--type-mono);">pain.001.001.09</code> —
+              a mesma classe de validação que a CLI realiza. O motor de ~13&nbsp;MB é servido por este
+              site e baixado uma única vez, quando você solicita (o download começa discretamente assim que
+              a etapa 2 produz XML válido).
+            </p>
+            <div class="demo-actions">
+              <button type="button" id="xsd-btn" class="pill pill-primary" disabled title="Generate XML in step 2 first">Executar a validação XSD oficial&nbsp;&rsaquo;</button>
+            </div>
+            <p class="status" id="xsd-status" role="status">Gere o XML na etapa 2 primeiro — a validação XSD verifica essa saída.</p>
+            <div class="xsd-progress" id="xsd-progress" hidden>
+              <div class="xsd-progress-bar" id="xsd-progress-bar"></div>
+            </div>
+            <ul class="error-list" id="xsd-errors"></ul>
+            <p class="dialect-note" id="xsd-hash"></p>
+          </section>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <p class="fineprint" id="demo-fineprint">
+          Tudo nesta página é executado no seu navegador — nada é enviado, armazenado ou transmitido a lugar algum.
+          Esta demonstração implementa um subconjunto do pipeline (campos obrigatórios, IBAN mod-97, estrutura BIC, formatos
+          de valor e data, totais de controle <code style="font-family: inherit;">NbOfTxs</code>/<code style="font-family: inherit;">CtrlSum</code> recalculados). A etapa 3 executa a validação XSD oficial aqui mesmo via WebAssembly. O conjunto de ferramentas instalado
+          acrescenta validação com JSON Schema e cinco conjuntos de regras de esquema —
+          <a href="/installation/">instale a CLI</a> para o pipeline completo.
+        </p>
+      </div>
+
+      <div class="wrap content-note">
+        <article>
+          <div lang="en"><h2>O que esta demonstração mostra — e o que o pipeline real acrescenta</h2>
+<p>Cada lote de exemplo também pode ser <a href="/samples/pain001-sample-sepa-sct.csv">baixado como arquivo CSV</a> para servir de modelo à exportação do seu próprio ERP ou planilha — a linha de cabeçalho é o contrato.</p>
+<p>A demonstração acima implementa a camada <em>fail-fast</em> do pipeline do Pain001: verificação de campos obrigatórios, dígitos verificadores IBAN mod-97 conforme a ISO 13616, estrutura BIC conforme a ISO 9362, formatos de valor e data, e totais de controle (<code>NbOfTxs</code>, <code>CtrlSum</code>) recalculados a partir dos registros em vez de aceitos como estão. Experimente o menu “Introduzir um erro…” — cada cenário insere exatamente uma falha realista (um dígito de IBAN trocado, um BIC malformado, uma coluna ausente, um valor europeu com vírgula decimal, uma data impossível) e mostra o apontamento no nível da linha que o gateway de um banco só reportaria dias depois.</p>
+<p>O conjunto de ferramentas instalado executa uma verificação muito mais profunda: validação com JSON Schema por registro com normalização de aliases de campos, cinco conjuntos de regras de esquema (SEPA SCT, Instant, SDD Core, B2B, internacional) com saída <code>--explain</code> regra a regra, e validação final do documento gerado contra o XSD oficial da ISO 20022 antes que um único byte seja gravado. Dez versões de <code>pain.001</code> e <code>pain.008.001.02</code> são suportadas.</p>
+<pre><code class="language-bash">pip install pain001
+pain001 -t pain.001.001.09 -d payments.csv -o out/ --scheme sepa-sct --dry-run</code></pre>
+<p>A etapa 3 acima não é uma simulação: ela inicia um runtime Python em WebAssembly e executa o <a href="https://pypi.org/project/xmlschema/">xmlschema</a> contra o esquema oficial <code>pain.001.001.09</code>, servido por este site — a mesma classe de validação XSD que a CLI aplica. O que permanece exclusivo da CLI é o restante do pipeline: a normalização com JSON Schema, os cinco conjuntos de regras com <code>--explain</code>, e as outras dez definições de mensagem.</p>
+</div>
+        </article>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">
+        <p>&copy; 2023&ndash;2026 Sebastien Rousseau &middot; <a href="/privacy/">Privacidade</a> &middot; <a href="/terms/">Termos</a> &middot; <a href="/">pain001.com</a></p>
+      </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "@id": "https://pain001.com/pt-br/try/",
+      "url": "https://pain001.com/pt-br/try/",
+      "name": "Experimente o Pain001 no seu navegador",
+      "description": "Carregue ou cole dados de pagamento em CSV e veja a validação: IBAN mod-97, estrutura BIC, campos obrigatórios, totais de controle e o XSD oficial — tudo no navegador.",
+      "applicationCategory": "FinanceApplication",
+      "browserRequirements": "Requires JavaScript. Runs entirely client-side.",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "publisher": { "@type": "Organization", "@id": "https://pain001.com/#organization", "name": "Pain001", "url": "https://pain001.com/" }
+    }
+    </script>
+
+    <script type="module" src="/js/try-page.js"></script>
+    <script src="/_csp/e38b5491bba0b876.js" integrity="sha384-BlLPha0BXYJmWraYH1Vh4HLn2tIWX6yT5oEcrtzxCs9Q/Z5nn517KuWsjByvrN0v" crossorigin="anonymous"></script>
+  
+<!-- SSG Search Widget -->
+<div id="ssg-search-widget">
+
+<!-- Search trigger button -->
+<button id="ssg-search-btn" type="button" aria-label="Search">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<span>Search</span>
+<kbd>K</kbd>
+</button>
+<!-- Search modal -->
+<div id="ssg-search-overlay" role="dialog" aria-label="Search">
+<div id="ssg-search-box">
+<div id="ssg-search-header">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<input id="ssg-search-input" type="search" placeholder="Search documentation..." autocomplete="off" aria-label="Search"/>
+</div>
+<div id="ssg-search-results" aria-live="polite"></div>
+<div id="ssg-sr-status" role="status" aria-live="polite" aria-atomic="true"></div>
+<div class="ssg-search-footer"><span><kbd>Esc</kbd> close</span><span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span><span><kbd>Enter</kbd> open</span></div>
+</div>
+</div>
+<script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>

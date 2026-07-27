@@ -12,7 +12,7 @@
  * would not have made itself.
  */
 
-const CACHE = "pain001-try-v3";
+const CACHE = "pain001-try-v4";
 
 const CACHEABLE = [
   "/try/",
@@ -26,6 +26,7 @@ function cacheable(url) {
   if (u.pathname.startsWith("/js/")) return true;
   if (u.pathname.startsWith("/samples/")) return true;
   if (u.pathname.startsWith("/_csp/")) return true;
+  if (/^\/[a-z-]+\/try\/$/.test(u.pathname)) return true; // locale demos
   return CACHEABLE.includes(u.pathname);
 }
 
