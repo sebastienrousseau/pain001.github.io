@@ -536,6 +536,26 @@
         background: var(--bg-page) !important;
         border-color: var(--rule-strong) !important;
       }
+
+      /* Status strip — same facts bar as the homepage; HTML is injected
+         by postbuild from the homepage strip so values cannot drift. */
+      .status-strip {
+        background: var(--bg-alt);
+        border-bottom: 1px solid var(--rule);
+        font-size: 0.82rem;
+      }
+      .status-strip-inner {
+        display: flex; flex-wrap: wrap; gap: 0.25rem 1.75rem;
+        padding-top: 0.55rem; padding-bottom: 0.55rem;
+      }
+      .status-strip a {
+        color: var(--ink-mute); text-decoration: none;
+        display: inline-flex; align-items: center; min-height: 32px;
+        white-space: nowrap;
+      }
+      .status-strip a:hover { color: var(--link); text-decoration: underline; }
+      .status-strip strong { color: var(--ink-soft); font-weight: 650; margin-inline-end: 0.3rem; }
+      @media (max-width: 720px) { .status-strip { display: none; } }
     </style>
   </head>
   <body>

@@ -357,57 +357,31 @@ def translate_chrome(html: str, s: list) -> str:
     return html
 
 
-def status_strip_values(site: Path) -> dict | None:
-    """Parse the homepage status strip so locale strips share its values
-    and cannot drift when a release or review date changes."""
-    home = site / "index.html"
-    if not home.exists():
-        return None
-    html = home.read_text(encoding="utf-8")
-    vals = {}
-    for key, label in (("milestone", "Next CBPR+ milestone:"),
-                       ("relay", "Relay version:"),
-                       ("release", "Latest release:"),
-                       ("msgdefs", "Message definitions:"),
-                       ("reviewed", "Reviewed:")):
-        m = re.search(re.escape(label) + r"</strong>\s*([^<]+?)</a>", html)
-        if not m:
-            return None
-        vals[key] = m.group(1).strip()
-    # Locale chrome uses ISO dates ("14 Nov 2026" -> "2026-11-14").
-    months = {m: i for i, m in enumerate(
-        "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(), 1)}
-    m = re.fullmatch(r"(\d{1,2}) (\w{3}) (\d{4})", vals["milestone"])
-    if m and m.group(2) in months:
-        vals["milestone"] = "%s-%02d-%02d" % (
-            m.group(3), months[m.group(2)], int(m.group(1)))
-    return vals
-
-
-def status_strip_html(s: list, vals: dict) -> str:
-    aria, milestone, addr, addr_v, relay, release, msgdefs, reviewed = s
-    row = '<a href="%s"%s><strong>%s</strong> %s</a>'
-    items = [
-        row % ("/iso20022-roadmap/", "", milestone, vals["milestone"]),
-        row % ("/2026-iso20022-migration-trends/", "", addr, addr_v),
-        row % ("/pain.001.001.09/", "", relay, vals["relay"]),
-        row % ("https://pypi.org/project/pain001/", ' rel="external"',
-               release, vals["release"]),
-        row % ("/compatibility/", "", msgdefs, vals["msgdefs"]),
-        row % ("/iso20022-roadmap/", "", reviewed, vals["reviewed"]),
-    ]
-    return ('<section class="status-strip" aria-label="%s">'
-            '<div class="wrap status-strip-inner">%s</div></section>'
-            % (aria, "".join(items)))
+def fix_try_strip(site: Path) -> None:
+    """Mirror the homepage status strip onto /try/, copying the section
+    verbatim so a release bump can never drift between the two pages."""
+    home, page = site / "index.html", site / "try" / "index.html"
+    if not (home.exists() and page.exists()):
+        return
+    m = re.search(r"<section[^>]*\bstatus-strip\b[^>]*>.*?</section>",
+                  home.read_text(encoding="utf-8"), re.S)
+    if not m:
+        return
+    html = page.read_text(encoding="utf-8")
+    if "status-strip" in html:
+        return
+    html = re.sub(r'<main id="?main-content"?>',
+                  lambda mm: mm.group(0) + m.group(0), html, count=1)
+    page.write_text(html, encoding="utf-8")
+    print("[postbuild] status strip mirrored onto /try/")
 
 
 def localise_pages(site: Path) -> None:
     try:
-        from locale_strings import STRINGS, STATUS_STRIP
+        from locale_strings import STRINGS
     except ImportError:
         sys.path.insert(0, str(Path(__file__).parent))
-        from locale_strings import STRINGS, STATUS_STRIP
-    strip_vals = status_strip_values(site)
+        from locale_strings import STRINGS
     n = 0
     for slug in LOCALES:
         page = site / slug / "index.html"
@@ -420,11 +394,6 @@ def localise_pages(site: Path) -> None:
         html = add_rtl_dir(html, slug)
         if slug in STRINGS:
             html = translate_chrome(html, STRINGS[slug])
-        if (strip_vals and slug in STATUS_STRIP
-                and "status-strip" not in html):
-            strip = status_strip_html(STATUS_STRIP[slug], strip_vals)
-            html = re.sub(r'<main id="?main-content"?>',
-                          lambda m: m.group(0) + strip, html, count=1)
         page.write_text(html, encoding="utf-8")
         n += 1
     home = site / "index.html"
@@ -514,6 +483,7 @@ def main() -> None:
     print(f"[postbuild] unescaped head/body markup on {repaired} page(s)")
     fix_tag_pages(site)
     fix_manifest(site)
+    fix_try_strip(site)
     localise_pages(site)
     regen_sitemap(site)
 
