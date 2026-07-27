@@ -839,18 +839,28 @@ def gen_legacy_redirects(site: Path) -> None:
     redirects). noindex + canonical point crawlers at the new location."""
     stub = ('<!DOCTYPE html>\n<html lang="en">\n<head>\n'
             '<meta charset="utf-8" />\n'
+            '<meta name="viewport" content="width=device-width, initial-scale=1" />\n'
             '<meta name="robots" content="noindex" />\n'
+            "%(csp)s\n"
             '<meta http-equiv="refresh" content="0; url=%(new)s" />\n'
+            '<meta name="description" content="This page has moved to %(base)s%(new)s." />\n'
+            '<meta property="og:title" content="Moved — Pain001" />\n'
+            '<meta property="og:type" content="website" />\n'
+            '<meta property="og:url" content="%(base)s%(new)s" />\n'
+            '<meta property="og:image" content="%(base)s/og/pain001-card.jpg" />\n'
+            '<meta name="twitter:card" content="summary" />\n'
             '<link rel="canonical" href="%(base)s%(new)s" />\n'
-            "<title>Moved</title>\n</head>\n<body>\n"
+            "<title>Moved — Pain001</title>\n</head>\n<body>\n"
             '<main id="main-content">\n'
-            '<p>This page has moved to <a href="%(new)s">%(base)s%(new)s</a>.</p>\n'
+            "<h1>This page has moved</h1>\n"
+            '<p>Continue to <a href="%(new)s">%(base)s%(new)s</a>.</p>\n'
             "</main>\n</body>\n</html>\n")
     for old, new in LEGACY_REDIRECTS.items():
         dest = site / old
         dest.mkdir(parents=True, exist_ok=True)
         (dest / "index.html").write_text(
-            stub % {"new": new, "base": BASE_URL}, encoding="utf-8")
+            stub % {"new": new, "base": BASE_URL, "csp": CSP_META},
+            encoding="utf-8")
     print(f"[postbuild] {len(LEGACY_REDIRECTS)} legacy redirect stub(s)")
 
 
