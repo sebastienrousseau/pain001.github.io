@@ -244,6 +244,11 @@
         border-radius: var(--radius-md); box-shadow: var(--shadow-md);
         display: none; z-index: 1100;
       }
+      /* Invisible bridge across the 8px offset so :hover survives the
+         pointer's travel from the trigger into the panel. */
+      .ap-sub::before {
+        content: ""; position: absolute; top: -9px; left: 0; right: 0; height: 9px;
+      }
       .has-sub:hover > .ap-sub,
       .ap-sub-toggle[aria-expanded="true"] + .ap-sub { display: block; }
       html:not(.has-js) .has-sub:focus-within > .ap-sub { display: block; }

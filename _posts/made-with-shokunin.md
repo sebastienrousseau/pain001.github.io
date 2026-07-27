@@ -88,7 +88,7 @@ last_reviewed: "2026-07-26"
 
 ---
 
-This site is compiled by [Shokunin (ssg)](https://shokunin.one), a static site generator written in Rust with a security-first default posture: WCAG validation, CSP metadata, SBOM generation, and AI-discovery files (`llms.txt`) built into the toolchain.
+This site is compiled by [Shokunin (ssg)](https://github.com/sebastienrousseau/shokunin), a static site generator written in Rust with a security-first default posture: WCAG validation, CSP metadata, SBOM generation, and AI-discovery files (`llms.txt`) built into the toolchain.
 
 The full stack, for the curious:
 

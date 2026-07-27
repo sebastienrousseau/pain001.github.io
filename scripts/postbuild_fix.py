@@ -503,6 +503,10 @@ def gen_try_locales(site: Path) -> None:
         html = translate_chrome(html, STRINGS[slug])
         html = translate_status_strip(html, STATUS_STRIP[slug])
         html = retarget_lang_menu_to_try(html)
+        # nav/CTA/footer demo links stay in this locale; the language
+        # menu's English entry (href="/try/" hreflang="en") is untouched
+        # because its href is not followed directly by ">".
+        html = html.replace('href="/try/">', 'href="/%s/try/">' % slug)
         html = lang_badge(html, slug)
         dest = site / slug / "try"
         dest.mkdir(parents=True, exist_ok=True)
