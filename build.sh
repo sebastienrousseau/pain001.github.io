@@ -46,6 +46,14 @@ rsync -a static/ Pain001/
 # loads — one source of truth, no drift.
 node scripts/gen_samples.mjs Pain001/samples
 
+# Derive the service worker's cache name from the bytes it caches,
+# so a change to /try/ can never be invisible to a returning visitor.
+# Runs here because everything the worker caches — sw.js and /js/ and
+# /pyodide/ from the rsync, /samples/ from the line above — only
+# exists in the output by this point. The main postbuild pass is too
+# early: it would find no sw.js and silently stamp nothing.
+python3 scripts/postbuild_fix.py Pain001 --stamp-sw
+
 # Carry the previous deploy's fingerprinted assets forward. Browsers and
 # CDN edges cache HTML for up to ~10 minutes; if a rebuild deleted the old
 # /_csp/<hash> files, every cached page 404'd its CSS/JS during that

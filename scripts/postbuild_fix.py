@@ -25,6 +25,7 @@ Idempotent: every pass is a no-op when its artifact is absent.
 
 from __future__ import annotations
 
+import hashlib
 import html as _html
 import re
 import sys
@@ -822,6 +823,51 @@ def fix_social_descriptions(site: Path) -> None:
     print(f"[postbuild] social descriptions aligned on {fixed} page(s)")
 
 
+def stamp_sw_cache_version(site: Path) -> str | None:
+    """Derive the service worker's cache name from what it caches.
+
+    sw.js is cache-first for /try/ and every /<locale>/try/, so a
+    returning visitor keeps the old page until the CACHE constant
+    changes. Bumping it by hand has been forgotten three times — most
+    recently the layer-summary translations, which shipped to all 34
+    locales while returning visitors kept the English original. CI was
+    green every time, because nothing was wrong with the build.
+
+    Hashing the cached content removes the human step: the constant
+    changes exactly when the cached bytes change, and never otherwise
+    (so a no-op rebuild does not evict everyone's Pyodide download).
+    Large binaries contribute name+size rather than content — they are
+    versioned wheels, and rewriting one without changing its size is
+    not a case worth paying 30 MB per build to catch.
+    """
+    sw = site / "sw.js"
+    if not sw.exists():
+        return None
+    h = hashlib.sha256()
+    for page in sorted(site.glob("*/try/index.html")) + [
+            site / "try" / "index.html"]:
+        if page.exists():
+            h.update(page.read_bytes())
+    for js in sorted((site / "js").glob("try-*.js")):
+        h.update(js.read_bytes())
+    for sample in sorted((site / "samples").glob("*")):
+        h.update(sample.read_bytes())
+    for asset in sorted((site / "pyodide").glob("*")):
+        h.update(asset.name.encode())
+        h.update(str(asset.stat().st_size).encode())
+    digest = h.hexdigest()[:12]
+    text = sw.read_text(encoding="utf-8")
+    new, n = re.subn(r'const CACHE = "pain001-try-[^"]+";',
+                     'const CACHE = "pain001-try-%s";' % digest, text, count=1)
+    if not n:
+        print("[postbuild] WARNING: sw.js CACHE constant not found")
+        return None
+    if new != text:
+        sw.write_text(new, encoding="utf-8")
+    print(f"[postbuild] sw.js cache version pain001-try-{digest}")
+    return digest
+
+
 def add_version_requirements(site: Path) -> None:
     """Render a visible "needs version X" note on pages that document an
     API newer than the current PyPI release.
@@ -933,7 +979,16 @@ def regen_sitemap(site: Path) -> None:
 
 
 def main() -> None:
-    site = Path(sys.argv[1] if len(sys.argv) > 1 else "Pain001")
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    site = Path(args[0] if args else "Pain001")
+    # build.sh rsyncs static/ (sw.js, js/, pyodide/) into the output
+    # AFTER this script's main pass, so the cache-version stamp has to
+    # run in a second invocation once those files are actually there.
+    # Called during the main pass it found no sw.js and silently did
+    # nothing, which is the failure mode it exists to prevent.
+    if "--stamp-sw" in sys.argv:
+        stamp_sw_cache_version(site)
+        return
     repaired = 0
     for page in site.rglob("*.html"):
         html = page.read_text(encoding="utf-8")

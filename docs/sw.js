@@ -12,7 +12,14 @@
  * would not have made itself.
  */
 
-const CACHE = "pain001-try-v7";
+/* Bump this on ANY change to /try/, /<locale>/try/, or the assets
+ * matched by cacheable() below. The worker is cache-first, so a
+ * returning visitor is served the old page forever until the constant
+ * changes — the update ships, CI is green, and nobody sees it. This
+ * has been missed three times now: v8 is the layer-summary
+ * translations, which reached all 34 locales while returning visitors
+ * kept the English original. */
+const CACHE = "pain001-try-e0aa245d6b12";
 
 const CACHEABLE = [
   "/try/",
