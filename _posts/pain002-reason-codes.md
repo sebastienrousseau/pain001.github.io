@@ -168,6 +168,18 @@ for tx in report["payment_statuses"]:
         print(tx["original_end_to_end_id"], tx["status_reason"])
 ```
 
+### Validating the response before you trust it
+
+The parser reads whichever pain.002 version your bank sends — it detects the namespace rather than assuming one. If you want the response checked against the official ISO schema first, pass `validate=True`:
+
+```python
+from pain001.pain002 import bundled_schema_versions, parse_pain002_report
+
+report = parse_pain002_report("bank-response.xml", validate=True)
+```
+
+Pain001 bundles the ISO schemas for `pain.002.001.12` and `pain.002.001.15`; `bundled_schema_versions()` returns the current list. **If your bank replies in a version that is not bundled — SEPA commonly uses `pain.002.001.03` — `validate=True` raises rather than parsing unvalidated.** That is deliberate: silently skipping the check would report a validation that never happened. Either supply the schema yourself with `xsd_file_path=`, or omit `validate` and parse without schema validation.
+
 The [MCP server](/pain001-mcp/) exposes the same parser to AI agents as `parse_pain002`, and the [payment-lifecycle guide](/payments/) shows where status handling sits in the full pipeline.
 
 > **Canonical source.** Code definitions live in the ISO 20022 External Code Sets, maintained at [iso20022.org/catalogue-messages/additional-content-messages/external-code-sets](https://www.iso20022.org/catalogue-messages/additional-content-messages/external-code-sets "ISO 20022 External Code Sets registry") and revised quarterly. Bank implementation guides may narrow — but not contradict — these meanings. Spot an inaccuracy? [Report it](https://github.com/sebastienrousseau/pain001.github.io/issues).
