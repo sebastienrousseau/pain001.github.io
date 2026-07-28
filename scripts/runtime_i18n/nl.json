@@ -47,5 +47,11 @@
  "wrong length for country {cc} (expected {len} characters)": "verkeerde lengte voor land {cc} ({len} tekens verwacht)",
  "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "voldoet niet aan de ISO 13616 mod-97-controlesom — waarschijnlijk een verkeerd getypt cijfer",
  "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "geen geldige ISO 9362 BIC (8 of 11 tekens, AAAAAA00[XXX])",
- "row {row} has {cells} field(s), header has {header}": "rij {row} heeft {cells} veld(en), de koprij heeft {header}"
+ "row {row} has {cells} field(s), header has {header}": "rij {row} heeft {cells} veld(en), de koprij heeft {header}",
+ "Passed the official XSD": "Voldoet aan de officiële XSD",
+ "Rejected by the official XSD": "Afgewezen door de officiële XSD",
+ "{n} issue(s) the schema would reject": "{n} probleem(en) die het schema zou afwijzen",
+ "Pre-checks passed — run the XSD gate below to prove it": "Voorcontroles geslaagd — voer hieronder de XSD-controle uit als bewijs",
+ "{n} issue(s) a schema would accept but a bank would not": "{n} probleem(en) die een schema zou accepteren maar een bank niet",
+ "No identifier or format problems found": "Geen problemen met identificatiegegevens of formaat gevonden"
 }

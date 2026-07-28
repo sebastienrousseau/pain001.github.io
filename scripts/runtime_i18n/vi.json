@@ -47,5 +47,11 @@
  "wrong length for country {cc} (expected {len} characters)": "sai độ dài cho quốc gia {cc} (cần {len} ký tự)",
  "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "không đạt tổng kiểm tra mod-97 theo ISO 13616 — có thể do gõ nhầm một chữ số",
  "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "không phải BIC hợp lệ theo ISO 9362 (8 hoặc 11 ký tự, AAAAAA00[XXX])",
- "row {row} has {cells} field(s), header has {header}": "hàng {row} có {cells} trường, tiêu đề có {header}"
+ "row {row} has {cells} field(s), header has {header}": "hàng {row} có {cells} trường, tiêu đề có {header}",
+ "Passed the official XSD": "Đạt XSD chính thức",
+ "Rejected by the official XSD": "Bị XSD chính thức từ chối",
+ "{n} issue(s) the schema would reject": "{n} vấn đề mà lược đồ sẽ từ chối",
+ "Pre-checks passed — run the XSD gate below to prove it": "Đã qua các kiểm tra sơ bộ — chạy cổng XSD bên dưới để chứng minh",
+ "{n} issue(s) a schema would accept but a bank would not": "{n} vấn đề mà lược đồ chấp nhận nhưng ngân hàng thì không",
+ "No identifier or format problems found": "Không phát hiện vấn đề nào về định danh hay định dạng"
 }

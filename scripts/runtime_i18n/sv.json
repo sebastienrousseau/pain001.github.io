@@ -47,5 +47,11 @@
  "wrong length for country {cc} (expected {len} characters)": "fel längd för landet {cc} ({len} tecken förväntas)",
  "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "klarar inte ISO 13616 mod-97-kontrollsumman — troligen en felskriven siffra",
  "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "inte en giltig ISO 9362 BIC (8 eller 11 tecken, AAAAAA00[XXX])",
- "row {row} has {cells} field(s), header has {header}": "rad {row} har {cells} fält, rubrikraden har {header}"
+ "row {row} has {cells} field(s), header has {header}": "rad {row} har {cells} fält, rubrikraden har {header}",
+ "Passed the official XSD": "Godkänd av den officiella XSD:n",
+ "Rejected by the official XSD": "Avvisad av den officiella XSD:n",
+ "{n} issue(s) the schema would reject": "{n} problem som schemat skulle avvisa",
+ "Pre-checks passed — run the XSD gate below to prove it": "Förkontrollerna godkända — kör XSD-grinden nedan för att bevisa det",
+ "{n} issue(s) a schema would accept but a bank would not": "{n} problem som ett schema skulle godta men inte en bank",
+ "No identifier or format problems found": "Inga problem med identifierare eller format hittades"
 }

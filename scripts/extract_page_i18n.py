@@ -39,9 +39,15 @@ for page in PAGES:
         meta[key] = m.group(1).strip() if m else ""
 
     text, aria = {}, {}
+    # blockquote is deliberately absent: re.finditer yields
+    # non-overlapping matches, so matching the blockquote swallows the
+    # <p> inside it, and that <p> is then dropped by the container
+    # filter below — the fragment vanishes from the table entirely
+    # rather than failing loudly. Markdown always wraps blockquote
+    # content in <p>, so letting the <p> match on its own loses nothing.
     for m in re.finditer(
             r"<(h[123]|p|li|th|td|button|label|strong|summary|option|"
-            r"figcaption|caption|blockquote|dt|dd)\b[^>]*>(.*?)</\1>",
+            r"figcaption|caption|dt|dd)\b[^>]*>(.*?)</\1>",
             main, re.S):
         inner = m.group(2).strip()
         if not inner or re.search(r"<(h[123]|p|li|div|section)\b", inner):
@@ -51,7 +57,15 @@ for page in PAGES:
             continue
         if plain in (meta["title"], meta["eyebrow"], meta["deck"]):
             continue
-        if plain.startswith(("pip ", "pain001 ", "v0.")):
+        # skip fragments that are only a command, but judge that on the
+        # prose left after removing <code>: a list item may open with a
+        # command and continue in prose, and testing the raw text drops
+        # the whole sentence along with the command that introduced it.
+        prose = re.sub(r"<code\b[^>]*>.*?</code>", " ", inner, flags=re.S)
+        prose = " ".join(re.sub(r"<[^>]+>", " ", prose).split())
+        if not re.search(r"[A-Za-z]{2,}", prose):
+            continue
+        if prose.startswith(("pip ", "pain001 ", "v0.")):
             continue
         text[inner] = inner
     for m in re.finditer(r'aria-label="([^"]{3,120})"', main):

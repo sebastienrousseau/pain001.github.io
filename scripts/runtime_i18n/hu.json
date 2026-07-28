@@ -47,5 +47,11 @@
  "wrong length for country {cc} (expected {len} characters)": "hibás hossz a(z) {cc} országhoz (elvárt: {len} karakter)",
  "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "nem felel meg az ISO 13616 mod-97 ellenőrzőösszegnek — valószínűleg elütött számjegy",
  "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "nem érvényes ISO 9362 BIC (8 vagy 11 karakter, AAAAAA00[XXX])",
- "row {row} has {cells} field(s), header has {header}": "a(z) {row}. sor {cells} mezőt tartalmaz, a fejléc {header} mezőt"
+ "row {row} has {cells} field(s), header has {header}": "a(z) {row}. sor {cells} mezőt tartalmaz, a fejléc {header} mezőt",
+ "Passed the official XSD": "Megfelelt a hivatalos XSD-nek",
+ "Rejected by the official XSD": "A hivatalos XSD elutasította",
+ "{n} issue(s) the schema would reject": "{n} probléma, amelyet a séma elutasítana",
+ "Pre-checks passed — run the XSD gate below to prove it": "Az előellenőrzések rendben — futtassa az alábbi XSD-kaput a bizonyításhoz",
+ "{n} issue(s) a schema would accept but a bank would not": "{n} probléma, amelyet egy séma elfogadna, de egy bank nem",
+ "No identifier or format problems found": "Nem található azonosító- vagy formátumhiba"
 }

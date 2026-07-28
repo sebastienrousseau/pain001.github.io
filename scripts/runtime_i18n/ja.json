@@ -47,5 +47,11 @@
  "wrong length for country {cc} (expected {len} characters)": "国{cc}に対して長さが不正です({len}文字が必要です)",
  "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "ISO 13616のmod-97チェックサムに失敗しました — 数字の入力ミスの可能性があります",
  "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "有効なISO 9362 BICではありません(8文字または11文字、AAAAAA00[XXX])",
- "row {row} has {cells} field(s), header has {header}": "行{row}のフィールド数は{cells}、ヘッダーは{header}です"
+ "row {row} has {cells} field(s), header has {header}": "行{row}のフィールド数は{cells}、ヘッダーは{header}です",
+ "Passed the official XSD": "公式 XSD に合格しました",
+ "Rejected by the official XSD": "公式 XSD に拒否されました",
+ "{n} issue(s) the schema would reject": "スキーマが拒否する問題 {n}件",
+ "Pre-checks passed — run the XSD gate below to prove it": "事前チェックに合格しました — 下の XSD ゲートを実行して証明してください",
+ "{n} issue(s) a schema would accept but a bank would not": "スキーマは受け入れても銀行は受け入れない問題 {n}件",
+ "No identifier or format problems found": "識別子や形式の問題は見つかりませんでした"
 }

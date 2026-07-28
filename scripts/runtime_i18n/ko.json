@@ -47,5 +47,11 @@
  "wrong length for country {cc} (expected {len} characters)": "국가 {cc}에 대한 길이가 잘못되었습니다({len}자여야 합니다)",
  "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "ISO 13616 mod-97 체크섬 검사에 실패했습니다 — 숫자 오타일 가능성이 있습니다",
  "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "유효한 ISO 9362 BIC가 아닙니다(8자 또는 11자, AAAAAA00[XXX])",
- "row {row} has {cells} field(s), header has {header}": "{row}행의 필드는 {cells}개, 헤더는 {header}개입니다"
+ "row {row} has {cells} field(s), header has {header}": "{row}행의 필드는 {cells}개, 헤더는 {header}개입니다",
+ "Passed the official XSD": "공식 XSD를 통과했습니다",
+ "Rejected by the official XSD": "공식 XSD가 거부했습니다",
+ "{n} issue(s) the schema would reject": "스키마가 거부할 문제 {n}건",
+ "Pre-checks passed — run the XSD gate below to prove it": "사전 검사 통과 — 아래의 XSD 게이트를 실행해 증명하세요",
+ "{n} issue(s) a schema would accept but a bank would not": "스키마는 허용해도 은행은 거부할 문제 {n}건",
+ "No identifier or format problems found": "식별자나 형식 문제가 발견되지 않았습니다"
 }

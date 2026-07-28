@@ -47,5 +47,11 @@
  "wrong length for country {cc} (expected {len} characters)": "неверная длина для страны {cc} (ожидается {len} символов)",
  "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "не проходит проверку mod-97 по ISO 13616 — вероятно, опечатка в цифре",
  "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "недопустимый BIC по ISO 9362 (8 или 11 символов, AAAAAA00[XXX])",
- "row {row} has {cells} field(s), header has {header}": "в строке {row} полей: {cells}, в заголовке: {header}"
+ "row {row} has {cells} field(s), header has {header}": "в строке {row} полей: {cells}, в заголовке: {header}",
+ "Passed the official XSD": "Прошло проверку официальной XSD",
+ "Rejected by the official XSD": "Отклонено официальной XSD",
+ "{n} issue(s) the schema would reject": "Проблем, которые схема отклонила бы: {n}",
+ "Pre-checks passed — run the XSD gate below to prove it": "Предварительные проверки пройдены — запустите проверку XSD ниже, чтобы это доказать",
+ "{n} issue(s) a schema would accept but a bank would not": "Проблем, которые схема приняла бы, а банк — нет: {n}",
+ "No identifier or format problems found": "Проблем с идентификаторами и форматами не найдено"
 }

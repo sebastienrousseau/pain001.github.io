@@ -47,5 +47,11 @@
  "wrong length for country {cc} (expected {len} characters)": "lungime greșită pentru țara {cc} (se așteptau {len} caractere)",
  "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "nu trece suma de control mod-97 conform ISO 13616 — probabil o cifră tastată greșit",
  "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "nu este un BIC ISO 9362 valid (8 sau 11 caractere, AAAAAA00[XXX])",
- "row {row} has {cells} field(s), header has {header}": "rândul {row} are {cells} câmpuri, antetul are {header}"
+ "row {row} has {cells} field(s), header has {header}": "rândul {row} are {cells} câmpuri, antetul are {header}",
+ "Passed the official XSD": "A trecut de XSD-ul oficial",
+ "Rejected by the official XSD": "Respins de XSD-ul oficial",
+ "{n} issue(s) the schema would reject": "{n} probleme pe care schema le-ar respinge",
+ "Pre-checks passed — run the XSD gate below to prove it": "Verificările preliminare au trecut — rulați poarta XSD de mai jos pentru a o dovedi",
+ "{n} issue(s) a schema would accept but a bank would not": "{n} probleme pe care o schemă le-ar accepta, dar o bancă nu",
+ "No identifier or format problems found": "Nu s-au găsit probleme de identificator sau de format"
 }

@@ -47,5 +47,11 @@
  "wrong length for country {cc} (expected {len} characters)": "{cc} நாட்டிற்கான தவறான நீளம் ({len} எழுத்துகள் எதிர்பார்க்கப்பட்டன)",
  "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "ISO 13616 mod-97 சரிபார்ப்புத் தொகையில் தோல்வி — இலக்கம் தவறாகத் தட்டச்சு செய்யப்பட்டிருக்கலாம்",
  "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "செல்லுபடியான ISO 9362 BIC அல்ல (8 அல்லது 11 எழுத்துகள், AAAAAA00[XXX])",
- "row {row} has {cells} field(s), header has {header}": "வரிசை {row}-இல் {cells} புலம்(கள்) உள்ளன, தலைப்பில் {header} உள்ளன"
+ "row {row} has {cells} field(s), header has {header}": "வரிசை {row}-இல் {cells} புலம்(கள்) உள்ளன, தலைப்பில் {header} உள்ளன",
+ "Passed the official XSD": "அதிகாரப்பூர்வ XSD-இல் தேர்ச்சி",
+ "Rejected by the official XSD": "அதிகாரப்பூர்வ XSD-ஆல் நிராகரிக்கப்பட்டது",
+ "{n} issue(s) the schema would reject": "ஸ்கீமா நிராகரிக்கும் {n} சிக்கல்(கள்)",
+ "Pre-checks passed — run the XSD gate below to prove it": "முன்சோதனைகள் தேர்ச்சி — அதை நிரூபிக்க கீழே உள்ள XSD சரிபார்ப்பை இயக்கவும்",
+ "{n} issue(s) a schema would accept but a bank would not": "ஸ்கீமா ஏற்கும், ஆனால் வங்கி ஏற்காத {n} சிக்கல்(கள்)",
+ "No identifier or format problems found": "அடையாளங்காட்டி அல்லது வடிவ சிக்கல்கள் எதுவும் இல்லை"
 }

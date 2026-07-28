@@ -21,7 +21,7 @@ main = re.sub(r"<(pre|script|style)\b[^>]*>.*?</\1>", "", main, flags=re.S)
 
 text, aria = {}, {}
 for m in re.finditer(
-        r"<(h[123]|p|li|button|label|th|strong|summary|option|figcaption|caption|dt|dd)\b[^>]*>(.*?)</\1>",
+        r"<(h[123]|p|li|button|label|th|td|strong|summary|option|figcaption|caption|dt|dd)\b[^>]*>(.*?)</\1>",
         main, re.S):
     inner = m.group(2).strip()
     if not inner or "<h" in inner or "<p" in inner or "<li" in inner:
@@ -30,6 +30,19 @@ for m in re.finditer(
     if not plain or not re.search(r"[A-Za-z]{3}", plain):
         continue
     if plain.startswith(("pip ", "pain001 ", "v0.")):
+        continue
+    text[inner] = inner
+
+# Prose carried by a <span> rather than a block element. The demo's
+# empty-state placeholder lived in one and so shipped in English on all
+# 34 locales; a blanket `span` in the loop above would instead sweep in
+# every inline badge and icon wrapper. Require a class and real prose,
+# and skip anything already inside a captured fragment.
+for m in re.finditer(r'<span class="[^"]+">([^<]{20,})</span>', main):
+    inner = m.group(1).strip()
+    if len(inner.split()) < 5 or not re.search(r"[A-Za-z]{3}", inner):
+        continue
+    if any(inner in k for k in text):
         continue
     text[inner] = inner
 

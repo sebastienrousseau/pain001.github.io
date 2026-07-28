@@ -47,5 +47,11 @@
  "wrong length for country {cc} (expected {len} characters)": "nesprávná délka pro zemi {cc} (očekává se {len} znaků)",
  "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "neprošel kontrolním součtem mod-97 dle ISO 13616 — pravděpodobně překlep v číslici",
  "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "neplatný BIC dle ISO 9362 (8 nebo 11 znaků, AAAAAA00[XXX])",
- "row {row} has {cells} field(s), header has {header}": "řádek {row} má {cells} polí, záhlaví má {header}"
+ "row {row} has {cells} field(s), header has {header}": "řádek {row} má {cells} polí, záhlaví má {header}",
+ "Passed the official XSD": "Prošlo oficiálním XSD",
+ "Rejected by the official XSD": "Odmítnuto oficiálním XSD",
+ "{n} issue(s) the schema would reject": "{n} problém(ů), které by schéma odmítlo",
+ "Pre-checks passed — run the XSD gate below to prove it": "Předběžné kontroly prošly — spuštěním XSD brány níže to prokážete",
+ "{n} issue(s) a schema would accept but a bank would not": "{n} problém(ů), které by schéma přijalo, ale banka ne",
+ "No identifier or format problems found": "Nenalezeny žádné problémy s identifikátory ani formáty"
 }

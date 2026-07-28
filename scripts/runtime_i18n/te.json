@@ -47,5 +47,11 @@
  "wrong length for country {cc} (expected {len} characters)": "{cc} దేశానికి తప్పు పొడవు ({len} అక్షరాలు అవసరం)",
  "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "ISO 13616 mod-97 చెక్‌సమ్‌లో విఫలం — అంకె తప్పుగా టైప్ చేసి ఉండవచ్చు",
  "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "చెల్లుబాటు అయ్యే ISO 9362 BIC కాదు (8 లేదా 11 అక్షరాలు, AAAAAA00[XXX])",
- "row {row} has {cells} field(s), header has {header}": "వరుస {row}లో {cells} ఫీల్డ్(లు) ఉన్నాయి, హెడర్‌లో {header} ఉన్నాయి"
+ "row {row} has {cells} field(s), header has {header}": "వరుస {row}లో {cells} ఫీల్డ్(లు) ఉన్నాయి, హెడర్‌లో {header} ఉన్నాయి",
+ "Passed the official XSD": "అధికారిక XSD-లో ఉత్తీర్ణమైంది",
+ "Rejected by the official XSD": "అధికారిక XSD తిరస్కరించింది",
+ "{n} issue(s) the schema would reject": "స్కీమా తిరస్కరించే {n} సమస్య(లు)",
+ "Pre-checks passed — run the XSD gate below to prove it": "ముందస్తు తనిఖీలు ఉత్తీర్ణం — దీన్ని నిరూపించడానికి క్రింద XSD గేట్‌ను నడపండి",
+ "{n} issue(s) a schema would accept but a bank would not": "స్కీమా అంగీకరించే కానీ బ్యాంక్ అంగీకరించని {n} సమస్య(లు)",
+ "No identifier or format problems found": "ఏ ఐడెంటిఫైయర్ లేదా ఫార్మాట్ సమస్యలూ కనుగొనబడలేదు"
 }

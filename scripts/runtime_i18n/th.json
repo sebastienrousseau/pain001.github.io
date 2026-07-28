@@ -47,5 +47,11 @@
  "wrong length for country {cc} (expected {len} characters)": "ความยาวไม่ถูกต้องสำหรับประเทศ {cc} (ต้องมี {len} อักขระ)",
  "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "ไม่ผ่านเช็กซัม mod-97 ตาม ISO 13616 — อาจพิมพ์ตัวเลขผิด",
  "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "ไม่ใช่ BIC ตาม ISO 9362 ที่ถูกต้อง (8 หรือ 11 อักขระ, AAAAAA00[XXX])",
- "row {row} has {cells} field(s), header has {header}": "แถว {row} มี {cells} ฟิลด์ แต่ส่วนหัวมี {header}"
+ "row {row} has {cells} field(s), header has {header}": "แถว {row} มี {cells} ฟิลด์ แต่ส่วนหัวมี {header}",
+ "Passed the official XSD": "ผ่าน XSD ทางการ",
+ "Rejected by the official XSD": "ถูกปฏิเสธโดย XSD ทางการ",
+ "{n} issue(s) the schema would reject": "{n} ปัญหาที่สคีมาจะปฏิเสธ",
+ "Pre-checks passed — run the XSD gate below to prove it": "ผ่านการตรวจเบื้องต้น — รันเกต XSD ด้านล่างเพื่อพิสูจน์",
+ "{n} issue(s) a schema would accept but a bank would not": "{n} ปัญหาที่สคีมายอมรับแต่ธนาคารจะไม่ยอมรับ",
+ "No identifier or format problems found": "ไม่พบปัญหาด้านตัวระบุหรือรูปแบบ"
 }

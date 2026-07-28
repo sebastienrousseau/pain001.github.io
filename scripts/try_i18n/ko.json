@@ -36,6 +36,15 @@
   "Fix it": "수정하기",
   "Validation result &amp; generated XML": "검증 결과 &amp; 생성된 XML",
   "Add data in step 1 — validation runs automatically.": "1단계에서 데이터를 추가하세요 — 검증이 자동으로 실행됩니다.",
+  "What was checked": "확인한 항목",
+  "ISO 20022 schema": "ISO 20022 스키마",
+  "Data quality <span class=\"layer-hint\">(beyond the schema)</span>": "데이터 품질 <span class=\"layer-hint\">(스키마 범위를 넘어서는 부분)</span>",
+  "Scheme rulebook": "스킴 룰북",
+  "Not run in the browser — the CLI checks this with <code class=\"tt-mono\">--scheme</code>": "브라우저에서는 실행되지 않습니다 — CLI가 <code class=\"tt-mono\">--scheme</code>으로 확인합니다",
+  "Your bank&rsquo;s profile": "거래 은행의 프로필",
+  "Not evaluated — Pain001 ships no bank profiles": "평가하지 않았습니다 — Pain001은 은행 프로필을 제공하지 않습니다",
+  "Channel and eligibility": "채널과 이용 자격",
+  "Not evaluated — decided by your bank, not the file": "평가하지 않았습니다 — 파일이 아니라 거래 은행이 결정합니다",
   "Validation findings by row and column": "행과 열별 검증 결과",
   "Row": "행",
   "Column": "열",
@@ -54,7 +63,8 @@
   "Each sample batch is also <a href=\"/samples/pain001-sample-sepa-sct.csv\">downloadable as a CSV file</a> to use as the template for your own ERP or spreadsheet export — the header row is the contract.": "각 샘플 배치는 <a href=\"/samples/pain001-sample-sepa-sct.csv\">CSV 파일로도 다운로드</a>하여 자체 ERP 또는 스프레드시트 내보내기의 템플릿으로 사용할 수 있습니다 — 헤더 행이 곧 계약입니다.",
   "The demo above implements the <em>fail-fast</em> layer of the Pain001 pipeline: required-field checks, ISO 13616 mod-97 IBAN checksums, ISO 9362 BIC structure, amount and date formats, and control totals (<code>NbOfTxs</code>, <code>CtrlSum</code>) recomputed from the records rather than trusted. Try the \"Introduce an error…\" menu — each scenario plants exactly one realistic flaw (a flipped IBAN digit, a malformed BIC, a missing column, a European comma-decimal amount, an impossible date) and shows you the row-level finding a bank's gateway would otherwise report days later.": "위 데모는 Pain001 파이프라인의 <em>fail-fast</em> 계층을 구현합니다: 필수 필드 검사, ISO 13616 mod-97 IBAN 체크섬, ISO 9362 BIC 구조, 금액 및 날짜 형식, 그리고 레코드로부터 재계산되는(그대로 신뢰하지 않는) 컨트롤 합계 (<code>NbOfTxs</code>, <code>CtrlSum</code>) 입니다. \"오류 삽입…\" 메뉴를 사용해 보세요 — 각 시나리오는 현실적인 결함을 정확히 하나씩(뒤바뀐 IBAN 숫자, 잘못된 형식의 BIC, 누락된 열, 유럽식 쉼표 소수점 금액, 불가능한 날짜) 심어 두고, 그대로 두면 은행 게이트웨이가 며칠 뒤에야 보고했을 행 단위 결과를 바로 보여 줍니다.",
   "The installed toolchain runs a much deeper gate: JSON Schema validation per record with field-alias normalisation, five scheme rulebooks (SEPA SCT, Instant, SDD Core, B2B, cross-border) with rule-by-rule <code>--explain</code> output, and final validation of the rendered document against the official ISO 20022 XSD before a single byte is written. Ten <code>pain.001</code> versions and <code>pain.008.001.02</code> are supported.": "설치된 툴체인은 훨씬 더 깊은 게이트를 실행합니다: 필드 별칭 정규화를 포함한 레코드별 JSON Schema 검증, 규칙별 <code>--explain</code> 출력을 제공하는 다섯 가지 스킴 룰북(SEPA SCT, Instant, SDD Core, B2B, 국가 간 송금), 그리고 단 1바이트를 기록하기 전에 렌더링된 문서를 공식 ISO 20022 XSD로 최종 검증합니다. 열 개의 <code>pain.001</code> 버전과 <code>pain.008.001.02</code> 이 지원됩니다.",
-  "Step 3 above is not a simulation: it boots a Python runtime in WebAssembly and runs <a href=\"https://pypi.org/project/xmlschema/\">xmlschema</a> against the official <code>pain.001.001.09</code> schema, served from this site — the same class of XSD gate the CLI applies. What remains CLI-only is the rest of the pipeline: JSON Schema normalisation, the five scheme rulebooks with <code>--explain</code>, and the other ten message definitions.": "위의 3단계는 시뮬레이션이 아닙니다: WebAssembly에서 Python 런타임을 부팅하고, 이 사이트에서 제공되는 공식 <code>pain.001.001.09</code> 스키마에 대해 <a href=\"https://pypi.org/project/xmlschema/\">xmlschema</a> 를 실행합니다 — CLI가 적용하는 것과 같은 등급의 XSD 게이트입니다. CLI에만 남아 있는 것은 파이프라인의 나머지 부분입니다: JSON Schema 정규화, <code>--explain</code> 을 포함한 다섯 가지 스킴 룰북, 그리고 나머지 열 가지 메시지 정의입니다."
+  "Step 3 above is not a simulation: it boots a Python runtime in WebAssembly and runs <a href=\"https://pypi.org/project/xmlschema/\">xmlschema</a> against the official <code>pain.001.001.09</code> schema, served from this site — the same class of XSD gate the CLI applies. What remains CLI-only is the rest of the pipeline: JSON Schema normalisation, the five scheme rulebooks with <code>--explain</code>, and the other ten message definitions.": "위의 3단계는 시뮬레이션이 아닙니다: WebAssembly에서 Python 런타임을 부팅하고, 이 사이트에서 제공되는 공식 <code>pain.001.001.09</code> 스키마에 대해 <a href=\"https://pypi.org/project/xmlschema/\">xmlschema</a> 를 실행합니다 — CLI가 적용하는 것과 같은 등급의 XSD 게이트입니다. CLI에만 남아 있는 것은 파이프라인의 나머지 부분입니다: JSON Schema 정규화, <code>--explain</code> 을 포함한 다섯 가지 스킴 룰북, 그리고 나머지 열 가지 메시지 정의입니다.",
+  "The validated pain.001.001.09 document will appear here — add data in step 1.": "검증된 pain.001.001.09 문서가 여기에 표시됩니다 — 1단계에서 데이터를 추가하십시오."
  },
  "aria": {
   "Drag a CSV file here, or press Enter to browse your files": "여기에 CSV 파일을 끌어다 놓거나 Enter 키를 눌러 파일을 찾아보세요",

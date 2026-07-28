@@ -47,5 +47,11 @@
  "wrong length for country {cc} (expected {len} characters)": "{cc} ülkesi için yanlış uzunluk (beklenen {len} karakter)",
  "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "ISO 13616 mod-97 sağlama toplamını geçemiyor — büyük olasılıkla yanlış girilmiş bir rakam",
  "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "geçerli bir ISO 9362 BIC değil (8 veya 11 karakter, AAAAAA00[XXX])",
- "row {row} has {cells} field(s), header has {header}": "{row}. satırda {cells} alan var, başlıkta {header}"
+ "row {row} has {cells} field(s), header has {header}": "{row}. satırda {cells} alan var, başlıkta {header}",
+ "Passed the official XSD": "Resmi XSD'den geçti",
+ "Rejected by the official XSD": "Resmi XSD tarafından reddedildi",
+ "{n} issue(s) the schema would reject": "Şemanın reddedeceği {n} sorun",
+ "Pre-checks passed — run the XSD gate below to prove it": "Ön kontroller geçildi — kanıtlamak için aşağıdaki XSD kapısını çalıştırın",
+ "{n} issue(s) a schema would accept but a bank would not": "Bir şemanın kabul edeceği ama bir bankanın etmeyeceği {n} sorun",
+ "No identifier or format problems found": "Tanımlayıcı veya biçim sorunu bulunamadı"
 }

@@ -47,5 +47,11 @@
  "wrong length for country {cc} (expected {len} characters)": "gígùn rẹ̀ kò tọ́ fún orílẹ̀-èdè {cc} (ó yẹ kó jẹ́ àmì {len})",
  "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "ó kùnà àyẹ̀wò mod-97 ti ISO 13616 — ó ṣeé ṣe kí wọ́n ti kọ nọ́mbà kan ṣìnà",
  "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "kì í ṣe BIC ISO 9362 tó tọ́ (àmì 8 tàbí 11, AAAAAA00[XXX])",
- "row {row} has {cells} field(s), header has {header}": "ìlà {row} ní pápá {cells}, àkọlé ní {header}"
+ "row {row} has {cells} field(s), header has {header}": "ìlà {row} ní pápá {cells}, àkọlé ní {header}",
+ "Passed the official XSD": "Ó kọjá XSD aláṣẹ",
+ "Rejected by the official XSD": "XSD aláṣẹ kọ ọ́ sílẹ̀",
+ "{n} issue(s) the schema would reject": "Ìṣòro {n} tí schema yóò kọ sílẹ̀",
+ "Pre-checks passed — run the XSD gate below to prove it": "Àwọn àyẹ̀wò àkọ́kọ́ kọjá — ẹ ṣiṣẹ́ ẹnu-bodè XSD tó wà nísàlẹ̀ láti fi ìdí rẹ̀ múlẹ̀",
+ "{n} issue(s) a schema would accept but a bank would not": "Ìṣòro {n} tí schema yóò gbà ṣùgbọ́n tí báńkì kò ní gbà",
+ "No identifier or format problems found": "A kò rí ìṣòro kankan nínú àwọn ìdámọ̀ tàbí ìgbékalẹ̀"
 }

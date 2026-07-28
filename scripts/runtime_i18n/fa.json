@@ -47,5 +47,11 @@
  "wrong length for country {cc} (expected {len} characters)": "طول نادرست برای کشور {cc} ({len} نویسه انتظار می‌رود)",
  "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "در جمع کنترلی mod-97 استاندارد ISO 13616 مردود است — احتمالاً رقمی اشتباه وارد شده است",
  "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "یک BIC معتبر ISO 9362 نیست (8 یا 11 نویسه، AAAAAA00[XXX])",
- "row {row} has {cells} field(s), header has {header}": "ردیف {row} دارای {cells} فیلد است اما سرستون {header} فیلد دارد"
+ "row {row} has {cells} field(s), header has {header}": "ردیف {row} دارای {cells} فیلد است اما سرستون {header} فیلد دارد",
+ "Passed the official XSD": "XSD رسمی را با موفقیت گذراند",
+ "Rejected by the official XSD": "توسط XSD رسمی رد شد",
+ "{n} issue(s) the schema would reject": "{n} مشکل که طرح‌واره آن را رد می‌کند",
+ "Pre-checks passed — run the XSD gate below to prove it": "بررسی‌های اولیه موفق بود — برای اثبات آن، دروازهٔ XSD پایین را اجرا کنید",
+ "{n} issue(s) a schema would accept but a bank would not": "{n} مشکل که طرح‌واره می‌پذیرد اما بانک نمی‌پذیرد",
+ "No identifier or format problems found": "هیچ مشکلی در شناسه‌ها یا قالب‌ها یافت نشد"
 }

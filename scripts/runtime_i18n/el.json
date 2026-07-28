@@ -47,5 +47,11 @@
  "wrong length for country {cc} (expected {len} characters)": "λανθασμένο μήκος για τη χώρα {cc} (αναμένονται {len} χαρακτήρες)",
  "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "αποτυγχάνει στο άθροισμα ελέγχου ISO 13616 mod-97 — πιθανόν λάθος πληκτρολογημένο ψηφίο",
  "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "μη έγκυρο BIC ISO 9362 (8 ή 11 χαρακτήρες, AAAAAA00[XXX])",
- "row {row} has {cells} field(s), header has {header}": "η γραμμή {row} έχει {cells} πεδίο(-α), η κεφαλίδα έχει {header}"
+ "row {row} has {cells} field(s), header has {header}": "η γραμμή {row} έχει {cells} πεδίο(-α), η κεφαλίδα έχει {header}",
+ "Passed the official XSD": "Πέρασε το επίσημο XSD",
+ "Rejected by the official XSD": "Απορρίφθηκε από το επίσημο XSD",
+ "{n} issue(s) the schema would reject": "{n} πρόβλημα(-τα) που θα απέρριπτε το σχήμα",
+ "Pre-checks passed — run the XSD gate below to prove it": "Οι προκαταρκτικοί έλεγχοι πέρασαν — εκτελέστε τον έλεγχο XSD παρακάτω για να το αποδείξετε",
+ "{n} issue(s) a schema would accept but a bank would not": "{n} πρόβλημα(-τα) που ένα σχήμα θα δεχόταν αλλά μια τράπεζα όχι",
+ "No identifier or format problems found": "Δεν βρέθηκαν προβλήματα αναγνωριστικών ή μορφής"
 }

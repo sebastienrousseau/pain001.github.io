@@ -47,5 +47,11 @@
  "wrong length for country {cc} (expected {len} characters)": "maling haba para sa bansang {cc} (inaasahan ang {len} character)",
  "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "bagsak sa ISO 13616 mod-97 checksum — malamang may maling na-type na digit",
  "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "hindi valid na ISO 9362 BIC (8 o 11 character, AAAAAA00[XXX])",
- "row {row} has {cells} field(s), header has {header}": "may {cells} field ang row {row}, may {header} ang header"
+ "row {row} has {cells} field(s), header has {header}": "may {cells} field ang row {row}, may {header} ang header",
+ "Passed the official XSD": "Pumasa sa opisyal na XSD",
+ "Rejected by the official XSD": "Tinanggihan ng opisyal na XSD",
+ "{n} issue(s) the schema would reject": "{n} isyu na tatanggihan ng schema",
+ "Pre-checks passed — run the XSD gate below to prove it": "Pumasa ang mga paunang check — patakbuhin ang XSD gate sa ibaba upang patunayan ito",
+ "{n} issue(s) a schema would accept but a bank would not": "{n} isyu na tatanggapin ng schema ngunit hindi ng bangko",
+ "No identifier or format problems found": "Walang natagpuang problema sa identifier o format"
 }

@@ -464,6 +464,25 @@ def lang_badge(html: str, slug: str) -> str:
                         % slug.split("-")[0].upper())
 
 
+def retag_body_lang(html: str, code: str) -> str:
+    """Point the body wrapper's lang at the locale it now contains.
+
+    ssg wraps every page body in ``<div lang="…">`` taken from the
+    source front matter, which is always ``en``. Locale pages are made
+    by translating that English build in place, so the wrapper kept
+    claiming English around Arabic or Japanese text — a WCAG 3.1.2
+    (Language of Parts) failure, and one a screen reader makes audible:
+    it reads the whole page in an English voice. ``<html lang>`` was
+    already correct, so the inner wrapper was overriding it.
+
+    Only ``<div lang="en">`` is touched. The language menu carries
+    ``lang="en"`` on its English <a>, and that one is genuinely English.
+    No ``dir`` is set here: ``<html dir="rtl">`` already covers the RTL
+    locales and direction inherits.
+    """
+    return html.replace('<div lang="en">', '<div lang="%s">' % code)
+
+
 def translate_status_strip(html: str, s: list) -> str:
     aria, milestone, addr, addr_v, relay, release, msgdefs, reviewed = s
     pairs = [
@@ -617,6 +636,7 @@ def gen_try_locales(site: Path) -> None:
         html = retarget_journey_nav(html, slug)
         html = mark_english_submenu(html)
         html = lang_badge(html, slug)
+        html = retag_body_lang(html, code)
         rd = _load_i18n("runtime_i18n", slug)
         if rd:
             import json as _json
@@ -709,6 +729,7 @@ def _gen_localized_pages(site: Path, pages: tuple, table_dir: str) -> None:
             html = html.replace('href="/try/">', 'href="/%s/try/">' % slug)
             html = mark_english_submenu(html)
             html = lang_badge(html, slug)
+            html = retag_body_lang(html, code)
             # legacy localized-brief URLs map onto the new scheme
             for old in ("fr", "de", "es"):
                 html = html.replace("/executive-brief-%s/" % old,
@@ -748,6 +769,7 @@ def localise_pages(site: Path) -> None:
         if d:
             html = apply_chrome_extra(html, d)
             html = lang_badge(html, slug)
+            html = retag_body_lang(html, LOCALES[slug])
             html = html.replace('href="/try/"', 'href="/%s/try/"' % slug)
         if load_pages_i18n(slug):
             html = retarget_journey_nav(html, slug)

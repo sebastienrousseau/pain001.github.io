@@ -47,5 +47,11 @@
  "wrong length for country {cc} (expected {len} characters)": "неправильна довжина для країни {cc} (очікується {len} символів)",
  "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "не проходить перевірку mod-97 за ISO 13616 — імовірно, помилково введена цифра",
  "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "недійсний BIC за ISO 9362 (8 або 11 символів, AAAAAA00[XXX])",
- "row {row} has {cells} field(s), header has {header}": "у рядку {row} полів: {cells}, у заголовку: {header}"
+ "row {row} has {cells} field(s), header has {header}": "у рядку {row} полів: {cells}, у заголовку: {header}",
+ "Passed the official XSD": "Пройдено офіційну XSD",
+ "Rejected by the official XSD": "Відхилено офіційною XSD",
+ "{n} issue(s) the schema would reject": "проблем, які відхилила б схема: {n}",
+ "Pre-checks passed — run the XSD gate below to prove it": "Попередні перевірки пройдено — запустіть перевірку XSD нижче, щоб це підтвердити",
+ "{n} issue(s) a schema would accept but a bank would not": "проблем, які схема прийняла б, а банк — ні: {n}",
+ "No identifier or format problems found": "Проблем з ідентифікаторами чи форматами не виявлено"
 }

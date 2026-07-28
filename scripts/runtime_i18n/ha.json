@@ -47,5 +47,11 @@
  "wrong length for country {cc} (expected {len} characters)": "tsawon bai dace da ƙasar {cc} ba (ana buƙatar haruffa {len})",
  "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "ya gaza binciken mod-97 na ISO 13616 — mai yiwuwa an rubuta lamba kuskure",
  "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "ba BIC mai inganci na ISO 9362 ba (haruffa 8 ko 11, AAAAAA00[XXX])",
- "row {row} has {cells} field(s), header has {header}": "layi {row} yana da filaye {cells}, kanun bayanai yana da {header}"
+ "row {row} has {cells} field(s), header has {header}": "layi {row} yana da filaye {cells}, kanun bayanai yana da {header}",
+ "Passed the official XSD": "Ya wuce XSD na hukuma",
+ "Rejected by the official XSD": "XSD na hukuma ya ƙi shi",
+ "{n} issue(s) the schema would reject": "Matsala {n} da schema zai ƙi",
+ "Pre-checks passed — run the XSD gate below to prove it": "Gwaje-gwajen farko sun wuce — ku gudanar da ƙofar XSD da ke ƙasa don tabbatar da hakan",
+ "{n} issue(s) a schema would accept but a bank would not": "Matsala {n} da schema zai karɓa amma banki ba zai karɓa ba",
+ "No identifier or format problems found": "Ba a sami wata matsala a lambobin shaida ko tsari ba"
 }

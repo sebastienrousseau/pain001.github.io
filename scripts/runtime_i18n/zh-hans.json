@@ -47,5 +47,11 @@
  "wrong length for country {cc} (expected {len} characters)": "长度与国家/地区 {cc} 不符（应为 {len} 个字符）",
  "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "未通过 ISO 13616 mod-97 校验——可能有数字输错",
  "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "不是有效的 ISO 9362 BIC（8 或 11 个字符，AAAAAA00[XXX]）",
- "row {row} has {cells} field(s), header has {header}": "第 {row} 行有 {cells} 个字段，表头有 {header} 个"
+ "row {row} has {cells} field(s), header has {header}": "第 {row} 行有 {cells} 个字段，表头有 {header} 个",
+ "Passed the official XSD": "已通过官方 XSD",
+ "Rejected by the official XSD": "被官方 XSD 拒绝",
+ "{n} issue(s) the schema would reject": "{n} 个架构会拒绝的问题",
+ "Pre-checks passed — run the XSD gate below to prove it": "预检查通过——请运行下方的 XSD 关卡加以证明",
+ "{n} issue(s) a schema would accept but a bank would not": "{n} 个架构会接受但银行不会接受的问题",
+ "No identifier or format problems found": "未发现标识符或格式问题"
 }

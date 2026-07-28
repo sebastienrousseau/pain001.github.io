@@ -47,5 +47,11 @@
  "wrong length for country {cc} (expected {len} characters)": "falsche Länge für Land {cc} ({len} Zeichen erwartet)",
  "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "besteht die mod-97-Prüfsumme nach ISO 13616 nicht — vermutlich eine falsch eingegebene Ziffer",
  "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "kein gültiger ISO 9362 BIC (8 oder 11 Zeichen, AAAAAA00[XXX])",
- "row {row} has {cells} field(s), header has {header}": "Zeile {row} hat {cells} Feld(er), die Kopfzeile hat {header}"
+ "row {row} has {cells} field(s), header has {header}": "Zeile {row} hat {cells} Feld(er), die Kopfzeile hat {header}",
+ "Passed the official XSD": "Vom offiziellen XSD akzeptiert",
+ "Rejected by the official XSD": "Vom offiziellen XSD abgelehnt",
+ "{n} issue(s) the schema would reject": "{n} Problem(e), die das Schema ablehnen würde",
+ "Pre-checks passed — run the XSD gate below to prove it": "Vorprüfungen bestanden — führen Sie unten die XSD-Prüfung aus, um es zu belegen",
+ "{n} issue(s) a schema would accept but a bank would not": "{n} Problem(e), die ein Schema akzeptieren würde, eine Bank aber nicht",
+ "No identifier or format problems found": "Keine Probleme mit Kennungen oder Formaten gefunden"
 }

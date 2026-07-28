@@ -47,5 +47,11 @@
  "wrong length for country {cc} (expected {len} characters)": "אורך שגוי עבור המדינה {cc} (צפויים {len} תווים)",
  "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "נכשל בבדיקת mod-97 של ISO 13616 — ככל הנראה ספרה שהוקלדה שגוי",
  "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "אינו BIC תקין לפי ISO 9362 (8 או 11 תווים, AAAAAA00[XXX])",
- "row {row} has {cells} field(s), header has {header}": "בשורה {row} יש {cells} שדות, בכותרת יש {header}"
+ "row {row} has {cells} field(s), header has {header}": "בשורה {row} יש {cells} שדות, בכותרת יש {header}",
+ "Passed the official XSD": "עבר את ה-XSD הרשמי",
+ "Rejected by the official XSD": "נדחה על ידי ה-XSD הרשמי",
+ "{n} issue(s) the schema would reject": "{n} בעיות שהסכימה הייתה דוחה",
+ "Pre-checks passed — run the XSD gate below to prove it": "הבדיקות המקדימות עברו — הריצו את שער ה-XSD למטה כדי להוכיח זאת",
+ "{n} issue(s) a schema would accept but a bank would not": "{n} בעיות שסכימה הייתה מקבלת אבל בנק לא",
+ "No identifier or format problems found": "לא נמצאו בעיות במזהים או בפורמטים"
 }

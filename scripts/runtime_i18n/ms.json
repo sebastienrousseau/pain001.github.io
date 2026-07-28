@@ -47,5 +47,11 @@
  "wrong length for country {cc} (expected {len} characters)": "panjang salah untuk negara {cc} ({len} aksara dijangka)",
  "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "gagal checksum mod-97 ISO 13616 — kemungkinan digit tersilap taip",
  "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "bukan BIC ISO 9362 yang sah (8 atau 11 aksara, AAAAAA00[XXX])",
- "row {row} has {cells} field(s), header has {header}": "baris {row} mempunyai {cells} medan, pengepala mempunyai {header}"
+ "row {row} has {cells} field(s), header has {header}": "baris {row} mempunyai {cells} medan, pengepala mempunyai {header}",
+ "Passed the official XSD": "Lulus XSD rasmi",
+ "Rejected by the official XSD": "Ditolak oleh XSD rasmi",
+ "{n} issue(s) the schema would reject": "{n} isu yang akan ditolak oleh skema",
+ "Pre-checks passed — run the XSD gate below to prove it": "Semakan awal lulus — jalankan gerbang XSD di bawah untuk membuktikannya",
+ "{n} issue(s) a schema would accept but a bank would not": "{n} isu yang diterima skema tetapi ditolak bank",
+ "No identifier or format problems found": "Tiada masalah pengecam atau format ditemui"
 }

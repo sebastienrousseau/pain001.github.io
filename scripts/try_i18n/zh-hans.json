@@ -36,6 +36,15 @@
   "Fix it": "修复",
   "Validation result &amp; generated XML": "验证结果 &amp; 生成的 XML",
   "Add data in step 1 — validation runs automatically.": "在第 1 步添加数据——验证将自动运行。",
+  "What was checked": "已检查的内容",
+  "ISO 20022 schema": "ISO 20022 架构",
+  "Data quality <span class=\"layer-hint\">(beyond the schema)</span>": "数据质量 <span class=\"layer-hint\">（架构之外）</span>",
+  "Scheme rulebook": "方案规则手册",
+  "Not run in the browser — the CLI checks this with <code class=\"tt-mono\">--scheme</code>": "浏览器中不运行——由 CLI 通过 <code class=\"tt-mono\">--scheme</code> 检查",
+  "Your bank&rsquo;s profile": "您银行的配置规范",
+  "Not evaluated — Pain001 ships no bank profiles": "未评估——Pain001 不附带任何银行配置规范",
+  "Channel and eligibility": "通道与准入资格",
+  "Not evaluated — decided by your bank, not the file": "未评估——由您的银行决定，而非文件本身",
   "Validation findings by row and column": "按行与列列出的验证发现",
   "Row": "行",
   "Column": "列",
@@ -54,7 +63,8 @@
   "Each sample batch is also <a href=\"/samples/pain001-sample-sepa-sct.csv\">downloadable as a CSV file</a> to use as the template for your own ERP or spreadsheet export — the header row is the contract.": "每个示例批次也<a href=\"/samples/pain001-sample-sepa-sct.csv\">可作为 CSV 文件下载</a>，用作您自己 ERP 或电子表格导出的模板——表头行即是契约。",
   "The demo above implements the <em>fail-fast</em> layer of the Pain001 pipeline: required-field checks, ISO 13616 mod-97 IBAN checksums, ISO 9362 BIC structure, amount and date formats, and control totals (<code>NbOfTxs</code>, <code>CtrlSum</code>) recomputed from the records rather than trusted. Try the \"Introduce an error…\" menu — each scenario plants exactly one realistic flaw (a flipped IBAN digit, a malformed BIC, a missing column, a European comma-decimal amount, an impossible date) and shows you the row-level finding a bank's gateway would otherwise report days later.": "上方演示实现的是 Pain001 流水线的<em>快速失败</em>层：必填字段检查、ISO 13616 mod-97 IBAN 校验和、ISO 9362 BIC 结构、金额与日期格式，以及从记录重新计算而非直接信任的控制总额 (<code>NbOfTxs</code>, <code>CtrlSum</code>)。试试“引入错误…”菜单——每个场景都会植入恰好一个真实缺陷（IBAN 数字颠倒、BIC 格式错误、缺失列、欧式逗号小数金额、不可能的日期），并向您展示银行网关原本要在数日后才会报告的行级发现。",
   "The installed toolchain runs a much deeper gate: JSON Schema validation per record with field-alias normalisation, five scheme rulebooks (SEPA SCT, Instant, SDD Core, B2B, cross-border) with rule-by-rule <code>--explain</code> output, and final validation of the rendered document against the official ISO 20022 XSD before a single byte is written. Ten <code>pain.001</code> versions and <code>pain.008.001.02</code> are supported.": "安装版工具链运行的关卡则深入得多：对每条记录进行带字段别名归一化的 JSON Schema 验证、五套方案规则手册（SEPA SCT、Instant、SDD Core、B2B、跨境）并逐条规则输出 <code>--explain</code>，以及在写出任何一个字节之前依据官方 ISO 20022 XSD 对渲染后文档的最终验证。支持十个 <code>pain.001</code> 版本及 <code>pain.008.001.02</code>。",
-  "Step 3 above is not a simulation: it boots a Python runtime in WebAssembly and runs <a href=\"https://pypi.org/project/xmlschema/\">xmlschema</a> against the official <code>pain.001.001.09</code> schema, served from this site — the same class of XSD gate the CLI applies. What remains CLI-only is the rest of the pipeline: JSON Schema normalisation, the five scheme rulebooks with <code>--explain</code>, and the other ten message definitions.": "上方第 3 步并非模拟：它在 WebAssembly 中启动一个 Python 运行时，并依据由本站点提供的官方 <code>pain.001.001.09</code> Schema 运行 <a href=\"https://pypi.org/project/xmlschema/\">xmlschema</a>——与 CLI 应用的 XSD 关卡属于同一级别。仍仅限 CLI 的是流水线的其余部分：JSON Schema 归一化、带 <code>--explain</code> 的五套方案规则手册，以及其余十种报文定义。"
+  "Step 3 above is not a simulation: it boots a Python runtime in WebAssembly and runs <a href=\"https://pypi.org/project/xmlschema/\">xmlschema</a> against the official <code>pain.001.001.09</code> schema, served from this site — the same class of XSD gate the CLI applies. What remains CLI-only is the rest of the pipeline: JSON Schema normalisation, the five scheme rulebooks with <code>--explain</code>, and the other ten message definitions.": "上方第 3 步并非模拟：它在 WebAssembly 中启动一个 Python 运行时，并依据由本站点提供的官方 <code>pain.001.001.09</code> Schema 运行 <a href=\"https://pypi.org/project/xmlschema/\">xmlschema</a>——与 CLI 应用的 XSD 关卡属于同一级别。仍仅限 CLI 的是流水线的其余部分：JSON Schema 归一化、带 <code>--explain</code> 的五套方案规则手册，以及其余十种报文定义。",
+  "The validated pain.001.001.09 document will appear here — add data in step 1.": "经验证的 pain.001.001.09 文档将显示在此处——请在步骤 1 中添加数据。"
  },
  "aria": {
   "Drag a CSV file here, or press Enter to browse your files": "将 CSV 文件拖到此处，或按 Enter 键浏览您的文件",
