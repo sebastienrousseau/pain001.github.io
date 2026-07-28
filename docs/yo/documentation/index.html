@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="yo">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta itemprop="datePublished" content="Sun, 26 Jul 2026 08:00:00 +0000" id="date" />
+    <meta itemprop="dateModified" content="Sun, 26 Jul 2026 08:00:00 +0000" id="last-modified" />
+    <title>Ìtọ́kasí Ìmọ̀-ẹ̀rọ Pain001: CLI, Python API àti REST</title>
+
+    <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
+<meta name="description" content="Ìtọ́kasí kíkún fún pain001 v0.0.56 — àwọn àṣẹ-abẹ́ àti àsíá CLI, Python API, àwọn endpoint REST lábẹ́ /api/v1, ìwé òfin ètò, ìmúdọ́gba dátà, àti ìkọ́lé plugin.">
+<meta name="keywords" content="pain001 documentation, pain.001 CLI, ISO 20022 Python library, pain001 REST API, XSD validation, SEPA scheme validation, pain.002 parser, camt.053 parser">
+<meta property="og:image" content="https://pain001.com/og/pain001-card.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Documentation pages for the Pain001 command-line interface and REST API — the working reference for teams generating ISO 20022 payment files." />
+    <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Ìtọ́kasí Ìmọ̀-ẹ̀rọ Pain001: CLI, Python API àti REST">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    
+    
+
+    <link rel="alternate" href="https://pain001.com/yo/documentation/" hreflang="en" />
+    
+    <link rel="icon" type="image/svg+xml" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />
+    <link rel="preload" href="/fonts/source-serif-4-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/_csp/e9d2f9e83d6b47b6.css" integrity="sha384-NgS1FgtNO/+O73jGnYQcFGXyKGAVkFu/W1I8bL4l2QSI+eMJfSMSQrUdf2zJxS34" crossorigin="anonymous">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
+  <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="Ìtọ́kasí Ìmọ̀-ẹ̀rọ Pain001: CLI, Python API àti REST">
+<meta property="og:description" content="Home Pain001 Technical Reference: CLI, Python API and REST Reference Pain001 Technical Reference: CLI, Python API and REST Every flag, endpoint, and behaviour">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pain001.com/yo/documentation/">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ìtọ́kasí Ìmọ̀-ẹ̀rọ Pain001: CLI, Python API àti REST">
+<meta name="twitter:description" content="Home Pain001 Technical Reference: CLI, Python API and REST Reference Pain001 Technical Reference: CLI, Python API and REST Every flag, endpoint, and behaviour">
+<meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg">
+<link rel="canonical" href="https://pain001.com/yo/documentation/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
+<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"><link rel="alternate" hreflang="en" href="https://pain001.com/documentation/" /><link rel="alternate" hreflang="x-default" href="https://pain001.com/documentation/" /><link rel="alternate" hreflang="ar" href="https://pain001.com/ar/documentation/" /><link rel="alternate" hreflang="bn" href="https://pain001.com/bn/documentation/" /><link rel="alternate" hreflang="cs" href="https://pain001.com/cs/documentation/" /><link rel="alternate" hreflang="de" href="https://pain001.com/de/documentation/" /><link rel="alternate" hreflang="el" href="https://pain001.com/el/documentation/" /><link rel="alternate" hreflang="es" href="https://pain001.com/es/documentation/" /><link rel="alternate" hreflang="fa" href="https://pain001.com/fa/documentation/" /><link rel="alternate" hreflang="fil" href="https://pain001.com/fil/documentation/" /><link rel="alternate" hreflang="fr" href="https://pain001.com/fr/documentation/" /><link rel="alternate" hreflang="ha" href="https://pain001.com/ha/documentation/" /><link rel="alternate" hreflang="he" href="https://pain001.com/he/documentation/" /><link rel="alternate" hreflang="hi" href="https://pain001.com/hi/documentation/" /><link rel="alternate" hreflang="hu" href="https://pain001.com/hu/documentation/" /><link rel="alternate" hreflang="id" href="https://pain001.com/id/documentation/" /><link rel="alternate" hreflang="it" href="https://pain001.com/it/documentation/" /><link rel="alternate" hreflang="ja" href="https://pain001.com/ja/documentation/" /><link rel="alternate" hreflang="ko" href="https://pain001.com/ko/documentation/" /><link rel="alternate" hreflang="mr" href="https://pain001.com/mr/documentation/" /><link rel="alternate" hreflang="ms" href="https://pain001.com/ms/documentation/" /><link rel="alternate" hreflang="nl" href="https://pain001.com/nl/documentation/" /><link rel="alternate" hreflang="pl" href="https://pain001.com/pl/documentation/" /><link rel="alternate" hreflang="pt-BR" href="https://pain001.com/pt-br/documentation/" /><link rel="alternate" hreflang="ro" href="https://pain001.com/ro/documentation/" /><link rel="alternate" hreflang="ru" href="https://pain001.com/ru/documentation/" /><link rel="alternate" hreflang="sv" href="https://pain001.com/sv/documentation/" /><link rel="alternate" hreflang="ta" href="https://pain001.com/ta/documentation/" /><link rel="alternate" hreflang="te" href="https://pain001.com/te/documentation/" /><link rel="alternate" hreflang="th" href="https://pain001.com/th/documentation/" /><link rel="alternate" hreflang="tr" href="https://pain001.com/tr/documentation/" /><link rel="alternate" hreflang="uk" href="https://pain001.com/uk/documentation/" /><link rel="alternate" hreflang="vi" href="https://pain001.com/vi/documentation/" /><link rel="alternate" hreflang="zh-Hans" href="https://pain001.com/zh-hans/documentation/" /><link rel="alternate" hreflang="zh-Hant" href="https://pain001.com/zh-hant/documentation/" /></head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Fo si àkóónú àkọ́kọ́</a>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="ap-nav">
+      <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Yí ìtọ́sọ́nà padà" />
+      <div class="wrap ap-nav-wrap">
+        <a class="ap-brand" href="/" aria-label="Pain001 home">
+          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="" width="26" height="26" />
+          <span>Pain001</span>
+        </a>
+        <nav aria-label="Primary navigation" id="ap-primary-nav">
+          <ul class="ap-menu">
+            <li class="has-sub"><a href="/yo/why/">Ìdí Pain001</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-why" aria-label="Ṣí tàbí ti àtòjọ-abẹ́ Ìdí Pain001"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-why" class="ap-sub">
+                <li><a href="/yo/solutions/">Àwọn tí ó wà fún</a></li>
+                <li><a href="/yo/executive-brief/">Ìsọníṣókí fún àwọn alákòóso</a></li>
+                <li><a href="/competitors-comparison/" hreflang="en">Ìfiwéra pẹ̀lú àwọn irinṣẹ́ oníṣòwò (EN)</a></li>
+              </ul>
+            </li>
+            <li><a href="/yo/try/">Wò ó láàyè</a></li>
+            <li class="has-sub"><a href="/yo/documentation/">Àkọsílẹ̀</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="Ṣí tàbí ti àtòjọ-abẹ́ Ìwé ìtọ́nisọ́nà"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-docs" class="ap-sub">
+                <li><a href="/yo/installation/">Ìfisórí-ẹ̀rọ &amp; Docker</a></li>
+                <li><a href="/yo/glossary/">Ìwé-ìtumọ̀ ọ̀rọ̀</a></li>
+                <li><a href="/yo/faqs/">Àwọn ìbéèrè léraléra</a></li>
+                <li><a href="/pain002-reason-codes/" hreflang="en">Àwọn kóòdù ìdí pain.002 (EN)</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/#suite-heading">Àkójọpọ̀</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-suite" aria-label="Ṣí tàbí ti àtòjọ-abẹ́ Àkójọ irinṣẹ́"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-suite" class="ap-sub">
+                <li><a href="/pain001-mcp/" hreflang="en">Irinṣẹ́ aṣojú AI (MCP) (EN)</a></li>
+                <li><a href="/pain001-lsp/" hreflang="en">Ìsopọ̀ olóòtú (LSP) (EN)</a></li>
+                <li><a href="/pain001-loader-mt101/" hreflang="en">Agbéwọlé MT101 (EN)</a></li>
+                <li><a href="/pain001-loader-xlsx/" hreflang="en">Agbéwọlé Excel (EN)</a></li>
+                <li><a href="/architecture-and-patents/" hreflang="en">Ìhun-ètò &amp; ààbò (EN)</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/2026-iso20022-migration-trends/">Ìwádìí</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-research" aria-label="Ṣí tàbí ti àtòjọ-abẹ́ Ìwádìí"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-research" class="ap-sub">
+                <li><a href="/2026-iso20022-migration-trends/" hreflang="en">Ìsọníṣókí 2026 (EN)</a></li>
+                <li><a href="/iso20022-roadmap/" hreflang="en">Àtẹ-ọ̀nà ISO 20022 (EN)</a></li>
+                <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/" hreflang="en">Ìtọ́sọ́nà ìkọjá-ààlà (EN)</a></li>
+                <li><a href="/languages/" hreflang="en">Ní èdè 34 (EN)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="ap-nav-right">
+          <button type="button" class="theme-toggle" aria-label="Yí sí àwòrán dúdú" data-label-dark="Yí sí àwòrán dúdú" data-label-light="Yí sí àwòrán funfun" aria-pressed="false" title="Yí sí àwòrán dúdú">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+          <button type="button" class="ap-search-btn" aria-label="Wá (Cmd/Ctrl + K)" title="Wá (⌘K)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <kbd class="ap-search-kbd" aria-hidden="true">⌘K</kbd>
+          </button>
+          <div class="ap-lang" role="group" aria-label="Language">
+            <button type="button" class="ap-lang-toggle" aria-label="Yí èdè padà" aria-expanded="false" aria-haspopup="menu" title="Yí èdè padà">
+              <span class="ap-lang-globe" aria-hidden="true">🌐</span>
+              <span class="ap-lang-current">YO</span>
+            </button>
+            <div class="ap-lang-menu" role="menu" hidden>
+              <div class="ap-lang-menu-grid">
+                <a class="ap-lang-item" href="/yo/documentation/" hreflang="en" lang="en" role="menuitem"><span aria-hidden="true">🇬🇧</span> English</a>
+                <a class="ap-lang-item" href="/fr/documentation/" hreflang="fr" lang="fr" role="menuitem"><span aria-hidden="true">🇫🇷</span> Français</a>
+                <a class="ap-lang-item" href="/de/documentation/" hreflang="de" lang="de" role="menuitem"><span aria-hidden="true">🇩🇪</span> Deutsch</a>
+                <a class="ap-lang-item" href="/es/documentation/" hreflang="es" lang="es" role="menuitem"><span aria-hidden="true">🇪🇸</span> Español</a>
+                <a class="ap-lang-item" href="/it/documentation/" hreflang="it" lang="it" role="menuitem"><span aria-hidden="true">🇮🇹</span> Italiano</a>
+                <a class="ap-lang-item" href="/pt-br/documentation/" hreflang="pt-BR" lang="pt-BR" role="menuitem"><span aria-hidden="true">🇧🇷</span> Português</a>
+                <a class="ap-lang-item" href="/nl/documentation/" hreflang="nl" lang="nl" role="menuitem"><span aria-hidden="true">🇳🇱</span> Nederlands</a>
+                <a class="ap-lang-item" href="/pl/documentation/" hreflang="pl" lang="pl" role="menuitem"><span aria-hidden="true">🇵🇱</span> Polski</a>
+                <a class="ap-lang-item" href="/sv/documentation/" hreflang="sv" lang="sv" role="menuitem"><span aria-hidden="true">🇸🇪</span> Svenska</a>
+                <a class="ap-lang-item" href="/cs/documentation/" hreflang="cs" lang="cs" role="menuitem"><span aria-hidden="true">🇨🇿</span> Čeština</a>
+                <a class="ap-lang-item" href="/ro/documentation/" hreflang="ro" lang="ro" role="menuitem"><span aria-hidden="true">🇷🇴</span> Română</a>
+                <a class="ap-lang-item" href="/hu/documentation/" hreflang="hu" lang="hu" role="menuitem"><span aria-hidden="true">🇭🇺</span> Magyar</a>
+                <a class="ap-lang-item" href="/el/documentation/" hreflang="el" lang="el" role="menuitem"><span aria-hidden="true">🇬🇷</span> Ελληνικά</a>
+                <a class="ap-lang-item" href="/tr/documentation/" hreflang="tr" lang="tr" role="menuitem"><span aria-hidden="true">🇹🇷</span> Türkçe</a>
+                <a class="ap-lang-item" href="/ru/documentation/" hreflang="ru" lang="ru" role="menuitem"><span aria-hidden="true">🇷🇺</span> Русский</a>
+                <a class="ap-lang-item" href="/uk/documentation/" hreflang="uk" lang="uk" role="menuitem"><span aria-hidden="true">🇺🇦</span> Українська</a>
+                <a class="ap-lang-item" href="/ar/documentation/" hreflang="ar" lang="ar" role="menuitem"><span aria-hidden="true">🇸🇦</span> العربية</a>
+                <a class="ap-lang-item" href="/he/documentation/" hreflang="he" lang="he" role="menuitem"><span aria-hidden="true">🇮🇱</span> עברית</a>
+                <a class="ap-lang-item" href="/fa/documentation/" hreflang="fa" lang="fa" role="menuitem"><span aria-hidden="true">🇮🇷</span> فارسی</a>
+                <a class="ap-lang-item" href="/hi/documentation/" hreflang="hi" lang="hi" role="menuitem"><span aria-hidden="true">🇮🇳</span> हिन्दी</a>
+                <a class="ap-lang-item" href="/bn/documentation/" hreflang="bn" lang="bn" role="menuitem"><span aria-hidden="true">🇧🇩</span> বাংলা</a>
+                <a class="ap-lang-item" href="/ta/documentation/" hreflang="ta" lang="ta" role="menuitem"><span aria-hidden="true">🇮🇳</span> தமிழ்</a>
+                <a class="ap-lang-item" href="/te/documentation/" hreflang="te" lang="te" role="menuitem"><span aria-hidden="true">🇮🇳</span> తెలుగు</a>
+                <a class="ap-lang-item" href="/mr/documentation/" hreflang="mr" lang="mr" role="menuitem"><span aria-hidden="true">🇮🇳</span> मराठी</a>
+                <a class="ap-lang-item" href="/th/documentation/" hreflang="th" lang="th" role="menuitem"><span aria-hidden="true">🇹🇭</span> ไทย</a>
+                <a class="ap-lang-item" href="/vi/documentation/" hreflang="vi" lang="vi" role="menuitem"><span aria-hidden="true">🇻🇳</span> Tiếng Việt</a>
+                <a class="ap-lang-item" href="/id/documentation/" hreflang="id" lang="id" role="menuitem"><span aria-hidden="true">🇮🇩</span> Indonesia</a>
+                <a class="ap-lang-item" href="/ms/documentation/" hreflang="ms" lang="ms" role="menuitem"><span aria-hidden="true">🇲🇾</span> Melayu</a>
+                <a class="ap-lang-item" href="/fil/documentation/" hreflang="fil" lang="fil" role="menuitem"><span aria-hidden="true">🇵🇭</span> Filipino</a>
+                <a class="ap-lang-item" href="/ja/documentation/" hreflang="ja" lang="ja" role="menuitem"><span aria-hidden="true">🇯🇵</span> 日本語</a>
+                <a class="ap-lang-item" href="/ko/documentation/" hreflang="ko" lang="ko" role="menuitem"><span aria-hidden="true">🇰🇷</span> 한국어</a>
+                <a class="ap-lang-item" href="/zh-hans/documentation/" hreflang="zh-Hans" lang="zh-Hans" role="menuitem"><span aria-hidden="true">🇨🇳</span> 简体中文</a>
+                <a class="ap-lang-item" href="/zh-hant/documentation/" hreflang="zh-Hant" lang="zh-Hant" role="menuitem"><span aria-hidden="true">🇹🇼</span> 繁體中文</a>
+                <a class="ap-lang-item" href="/ha/documentation/" hreflang="ha" lang="ha" role="menuitem"><span aria-hidden="true">🇳🇬</span> Hausa</a>
+                <a class="ap-lang-item" href="/yo/documentation/" hreflang="yo" lang="yo" role="menuitem"><span aria-hidden="true">🇳🇬</span> Yorùbá</a>
+              </div>
+            </div>
+          </div>
+          <a class="ap-cta-mini" href="/yo/try/">Gbìyànjú demo&nbsp;&rsaquo;</a>
+          <label class="ap-burger" for="ap-menu-toggle" aria-hidden="true"><span class="ap-burger-icon">☰</span></label>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <header class="page-header">
+        <div class="wrap">
+          <nav class="breadcrumb" aria-label="Ipa-ọ̀nà ìtọ́sọ́nà">
+            <ol>
+              <li><a href="/">Ilé</a></li>
+              <li aria-current="page">Ìtọ́kasí Ìmọ̀-ẹ̀rọ Pain001: CLI, Python API àti REST</li>
+            </ol>
+          </nav>
+          <p class="eyebrow">Ìtọ́kasí</p>
+          <h1 class="page-title">Ìtọ́kasí Ìmọ̀-ẹ̀rọ Pain001: CLI, Python API àti REST</h1>
+          <p class="deck">Gbogbo àsíá, endpoint, àti ìhùwàsí pain001 v0.0.56 — láti inú kóòdù tí a ti tú jáde, kì í ṣe láti inú ìfẹ́-ọkàn.</p>
+          <div class="article-meta"><span>4 ìṣẹ́jú kíkà</span>
+            <span>Àyẹ̀wò tó kẹ́yìn <time datetime="2026-07-26">2026-07-26</time></span>
+          </div>
+        </div>
+      </header>
+
+      <div class="wrap content-shell">
+        <article class="content-body"><nav class="article-toc" aria-label="Àkóónú"><h2>Àkóónú</h2><ol><li><a href="#1-command-line-interface">Ojú-ìbáṣepọ̀ Ìlà Àṣẹ</a></li><li><a href="#2-python-api">Python API</a></li><li><a href="#3-rest-microservice">Iṣẹ́ Kékeré REST</a></li><li><a href="#4-input-normalisation">Ìmúdọ́gba Dátà Ìtẹ̀wọlé</a></li><li><a href="#5-plugin-architecture">Ìkọ́lé Plugin</a></li><li><a href="#6-quality-gates">Àwọn Ẹnu-ọ̀nà Ìdára</a></li></ol></nav>
+          <div lang="en"><p>Ìtọ́kasí yìí ṣàlàyé ojú-ìbáṣepọ̀ ìlà àṣẹ, Python API, iṣẹ́ kékeré REST, àti ìlànà ìṣàyẹ̀wò fún <strong>pain001 v0.0.56</strong>. Gbogbo àsíá, endpoint, àti ìhùwàsí tí a kọ síbí wá láti inú kóòdù tí a ti tú jáde, kì í ṣe láti inú ìfẹ́-ọkàn.</p>
+<p>Pain001 ń ṣe àtìlẹ́yìn fún <strong>ìtumọ̀ ìránṣẹ́ ISO 20022 mọ́kànlá</strong>: láti <code>pain.001.001.03</code> dé <code>pain.001.001.12</code> (ìbẹ̀rẹ̀ ìfiránṣẹ́ owó ti oníbàárà, ẹ̀yà mẹ́wàá) àti <code>pain.008.001.02</code> (ìbẹ̀rẹ̀ ìgbà owó tààrà ti oníbàárà).</p>
+<hr />
+<h2 id="1-command-line-interface">1. Ojú-ìbáṣepọ̀ Ìlà Àṣẹ<a class="heading-anchor" href="#1-command-line-interface" aria-label="Ìjápọ̀ sí abala: 1. Ojú-ìbáṣepọ̀ Ìlà Àṣẹ">#</a></h2>
+<p>Fáìlì ìṣiṣẹ́ <code>pain001</code> pín àwọn iṣẹ́ rẹ̀ sí àwọn àṣẹ-abẹ́. Bí ẹ bá ń lò ó pẹ̀lú àwọn àsíá ìṣẹ̀dá nìkan, ó ń pe <code>generate</code> lọ́nà tí kò hàn, nítorí náà àwọn ètò aládàáṣiṣẹ́ tí ẹ ti ní yóò máa bá iṣẹ́ rẹ̀ lọ.</p>
+<div class="table-responsive"><table class="table">
+<thead>
+<tr>
+<th>Àṣẹ-abẹ́</th>
+<th>Ìdí</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>generate</code></td>
+<td data-label="Purpose" class="text-left">Yí fáìlì dátà padà sí XML ISO 20022 tí a ti ṣàyẹ̀wò pẹ̀lú schema (àṣẹ ìpìlẹ̀).</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>validate</code></td>
+<td data-label="Purpose" class="text-left">Ṣàyẹ̀wò dátà ìtẹ̀wọlé láìkọ XML.</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>versions [--json]</code></td>
+<td data-label="Purpose" class="text-left">Ṣe àkójọ gbogbo ìtumọ̀ ìránṣẹ́ mọ́kànlá tí a ń ṣe àtìlẹ́yìn fún.</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>inspect <type> [--json]</code></td>
+<td data-label="Purpose" class="text-left">Fi àwọn pápá tí ó pọn dandan àti àwọn tí ó jẹ́ àṣàyàn hàn fún irú ìránṣẹ́ kan.</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>init <type> [-o DIR]</code></td>
+<td data-label="Purpose" class="text-left">Ṣẹ̀dá àwòṣe CSV ìbẹ̀rẹ̀ fún irú ìránṣẹ́ kan.</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>serve [--host] [--port] [--reload]</code></td>
+<td data-label="Purpose" class="text-left">Tú iṣẹ́ kékeré REST FastAPI jáde (ó nílò àfikún <code>api</code>).</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>mcp</code></td>
+<td data-label="Purpose" class="text-left">Tú olùpèsè Model Context Protocol tí ó wà nínú kóòdù jáde (irinṣẹ́ 5; olùpèsè kíkún tí ó ní irinṣẹ́ 17 wà gẹ́gẹ́ bí <a href="/pain001-mcp/"><code>pain001-mcp</code></a>).</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>plugins list / show / disable</code></td>
+<td data-label="Purpose" class="text-left">Ṣàyẹ̀wò kí ẹ sì ṣàkóso àwọn plugin loader, validator, scheme, àti writer tí a ti ṣàwárí.</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Àwọn àṣàyàn <code>generate</code></h3>
+<table>
+<thead>
+<tr>
+<th>Àsíá</th>
+<th>Àpèjúwe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Flag" class="text-left"><code>-t, --xml-message-type <TYPE></code></td>
+<td data-label="Description" class="text-left">Ìtumọ̀ ìránṣẹ́, fún àpẹẹrẹ <code>pain.001.001.09</code>.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>-d, --data <FILE></code></td>
+<td data-label="Description" class="text-left">Dátà ìtẹ̀wọlé: <code>.csv</code>, <code>.json</code>, <code>.jsonl</code>, <code>.db</code> / <code>.sqlite</code>, <code>.parquet</code>, tàbí <code>.gpg</code> / <code>.asc</code> tí a fi PGP dí.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>-o, --output-dir <DIR></code></td>
+<td data-label="Description" class="text-left">Fódà tí ó ń gba XML tí a ṣẹ̀dá.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>-m, --template <FILE></code> / <code>-s, --schema <FILE></code></td>
+<td data-label="Description" class="text-left">Rọ́pò àwòṣe Jinja2 tàbí schema XSD tí a kó wọlé.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>-c, --config <FILE></code></td>
+<td data-label="Description" class="text-left">Kó àwọn iye ìpìlẹ̀ láti inú profáìlì ìṣètò (<code>--profile</code>, <code>--show-config</code>).</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--dry-run</code> (orúkọ mìíràn <code>--validate-only</code>)</td>
+<td data-label="Description" class="text-left">Ṣàyẹ̀wò dátà ìtẹ̀wọlé lòdì sí JSON Schema, XSD, àti ìwé òfin ètò láìkọ àbájáde jáde.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--scheme <NAME></code></td>
+<td data-label="Description" class="text-left">Fi ìwé òfin ètò kan lélẹ̀: <code>sepa-sct</code>, <code>sepa-inst</code>, <code>sepa-sdd</code>, <code>sepa-b2b</code>, tàbí <code>xborder-ct</code>.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--explain --scheme-format {text,json}</code></td>
+<td data-label="Description" class="text-left">Ròyìn gbogbo òfin ètò tí ó kọjá tàbí tí ó kùnà, ní ọ̀nà tí ènìyàn tàbí ẹ̀rọ lè kà.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size <N></code></td>
+<td data-label="Description" class="text-left">Ìṣiṣẹ́ ní àwọn ìdìpọ̀ pẹ̀lú ààlà ìrántí fún àwọn àkójọ ńlá (ìpìlẹ̀: ìdúnàádúrà 1,000 fún ìdìpọ̀ kọ̀ọ̀kan; ìdìpọ̀ kọ̀ọ̀kan yóò di fáìlì XML tirẹ̀ pẹ̀lú <code>NbOfTxs</code> àti <code>CtrlSum</code> tí a tún ṣírò).</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--emit-metrics</code></td>
+<td data-label="Description" class="text-left">Tú àwọn ìwọ̀n iṣẹ́ tí ẹ̀rọ lè kà jáde fún àwọn ìlànà àbójútó.</td>
+</tr>
+</tbody>
+</table>
+<p>Àwọn kóòdù ìjáde bá CI mu: <code>0</code> àṣeyọrí, <code>1</code> ìkùnà ìṣàyẹ̀wò, <code>2</code> àṣìṣe ìlò.</p>
+<hr />
+<h2 id="2-python-api">2. Python API<a class="heading-anchor" href="#2-python-api" aria-label="Ìjápọ̀ sí abala: 2. Python API">#</a></h2>
+<pre><code class="language-python">from pain001.core.core import process_files
+
+# Generate a validated pain.001.001.09 file from CSV
+process_files(
+    xml_message_type="pain.001.001.09",
+    xml_template_file_path="template.xml",
+    xsd_schema_file_path="schema.xsd",
+    data_file_path="payments.csv",
+    output_dir="out",
+)</code></pre>
+<p>Gbogbo àkọsílẹ̀ tí a ṣẹ̀dá ń gba ipele mẹ́ta kọjá kí a tó kọ ọ́:</p>
+<ol>
+<li><strong>Ìṣàyẹ̀wò dátà ìtẹ̀wọlé</strong> — a ń ṣàyẹ̀wò àkọsílẹ̀ kọ̀ọ̀kan lòdì sí JSON Schema ti irú ìránṣẹ́ náà, pẹ̀lú ìmúdọ́gba orúkọ pápá àti àyẹ̀wò ìlànà IBAN/BIC.</li>
+<li><strong>Ìwé òfin ètò</strong> (àṣàyàn) — àwọn òfin SEPA SCT, SEPA Instant, SEPA SDD Core, SEPA B2B, tàbí ti ìfiránṣẹ́ owó ààlà-kọjá.</li>
+<li><strong>Ìṣàyẹ̀wò XSD</strong> — a ń ṣàyẹ̀wò XML tí a ṣẹ̀dá lòdì sí schema ISO 20022 òṣìṣẹ́ nípasẹ̀ <code>xmlschema</code> kí a tó kọ báìtì kan sórí diskì.</li>
+</ol>
+<p>A ń ṣàkóso iye owó gẹ́gẹ́ bí <code>decimal.Decimal</code> nígbà ìṣẹ̀dá XML àti ìṣàyẹ̀wò ètò — kì í ṣe float IEEE 754 láé — a sì ń tún ṣírò àpapọ̀ ìdarí <code>NbOfTxs</code> / <code>CtrlSum</code> láti inú àwọn àkọsílẹ̀ tí a ti ṣàyẹ̀wò dípò gbígbẹ́kẹ̀lé dátà ìtẹ̀wọlé.</p>
+<p>Yàtọ̀ sí ìṣẹ̀dá pain.001, ilé-ìkàwé ìpìlẹ̀ tún ní <strong>olùkàwé àti olùṣẹ̀dá ìròyìn ipò pain.002</strong> (kí ẹ lè ka ìdáhùn ìtẹ́wọ́gbà tàbí ìkọ̀sílẹ̀ báńkì yín) àti <strong>olùkàwé àti olùṣẹ̀dá ìsọ̀rọ̀ àkọọ́lẹ̀ camt.053</strong> fún ìbáradọ́gba ní òpin ọjọ́, pẹ̀lú <code>VersionMapper</code> tí ó ń gbé àwọn àkọsílẹ̀ láàrin àwọn ẹ̀yà ìránṣẹ́.</p>
+<hr />
+<h2 id="3-rest-microservice">3. Iṣẹ́ Kékeré REST<a class="heading-anchor" href="#3-rest-microservice" aria-label="Ìjápọ̀ sí abala: 3. Iṣẹ́ Kékeré REST">#</a></h2>
+<pre><code class="language-bash">pip install "pain001[api]"
+pain001 serve --host 0.0.0.0 --port 8000</code></pre>
+<p>A gbé gbogbo endpoint kalẹ̀ lábẹ́ <code>/api/v1</code> (pẹ̀lú orúkọ mìíràn <code>/api</code> tí kò ní ẹ̀yà):</p>
+<table>
+<thead>
+<tr>
+<th>Ọ̀nà & Ipa-ọ̀nà</th>
+<th>Ìdí</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>GET /api/v1/health</code></td>
+<td data-label="Purpose" class="text-left">Àyẹ̀wò ìwàláàyè.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>POST /api/v1/validate</code></td>
+<td data-label="Purpose" class="text-left">Ṣàyẹ̀wò àwọn àkọsílẹ̀; ó ń dá àwọn àṣìṣe ní ipele pápá padà.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>POST /api/v1/generate</code></td>
+<td data-label="Purpose" class="text-left">Ìṣẹ̀dá XML lẹ́sẹ̀kẹsẹ̀.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>POST /api/v1/generate/async</code></td>
+<td data-label="Purpose" class="text-left">Fi àkójọ ńlá sí ìlà fún ìṣẹ̀dá lẹ́yìn ìran.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>GET /api/v1/status/{job_id}</code></td>
+<td data-label="Purpose" class="text-left">Ṣàyẹ̀wò ipò iṣẹ́ async.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>GET /api/v1/download/{job_id}</code></td>
+<td data-label="Purpose" class="text-left">Ṣe àgbàsílẹ̀ XML tí ó ti parí.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>DELETE /api/v1/jobs/{job_id}</code></td>
+<td data-label="Purpose" class="text-left">Nu iṣẹ́ tí ó ti parí kúrò.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>GET /metrics</code></td>
+<td data-label="Purpose" class="text-left">Àwọn ìwọ̀n Prometheus.</td>
+</tr>
+</tbody>
+</table>
+<p>A ń pèsè àkọsílẹ̀ ìbáṣepọ̀ ní <code>/api/docs</code> (Swagger UI), <code>/api/redoc</code>, àti <code>/api/reference</code> (Scalar), pẹ̀lú àkọsílẹ̀ OpenAPI ní <code>/openapi.json</code>.</p>
+<hr />
+<h2 id="4-input-normalisation">4. Ìmúdọ́gba Dátà Ìtẹ̀wọlé<a class="heading-anchor" href="#4-input-normalisation" aria-label="Ìjápọ̀ sí abala: 4. Ìmúdọ́gba Dátà Ìtẹ̀wọlé">#</a></h2>
+<p>Pain001 ń yí àwọn fáìlì tí a tú jáde láti inú ètò gidi padà sí àwọn àkọsílẹ̀ tí ó tọ́ kí ìṣàyẹ̀wò tó bẹ̀rẹ̀:</p>
+<ul>
+<li><strong>Orúkọ mìíràn fún pápá</strong> — àwọn orúkọ kọ́lọ́mù ERP tí ó wọ́pọ̀ bá àwọn pápá ìpìlẹ̀ mu (fún àpẹẹrẹ <code>amount</code> → <code>payment_amount</code>).</li>
+<li><strong>Ìmúdọ́gba IBAN / BIC</strong> — a ń yọ àyè kúrò, a ń mú ìwọ̀n lẹ́tà dọ́gba, lẹ́yìn náà a ń ṣàyẹ̀wò (ISO 13616 mod-97 fún IBAN, ìlànà ISO 9362 fún BIC).</li>
+<li><strong>Àwọn ọjọ́</strong> — a ń kà àwọn ọjọ́ ìṣiṣẹ́ ní ìlànà ISO 8601 <code>YYYY-MM-DD</code>.</li>
+<li><strong>Iye owó</strong> — wọ́n ń gba <code>decimal.Decimal</code> kọjá; iye owó tí kò ní ìlànà tó tọ́ yóò kùnà ìṣàyẹ̀wò dípò kí a yí i ká ní ìdákẹ́jẹ́ẹ́.</li>
+<li><strong>Àkójọ lẹ́tà</strong> — àwọn irinṣẹ́ ìyípadà lẹ́tà ń dín àkóónú kù sí àkójọ lẹ́tà Látìn ISO 20022 tí SWIFT àti SEPA gbà.</li>
+</ul>
+<hr />
+<h2 id="5-plugin-architecture">5. Ìkọ́lé Plugin<a class="heading-anchor" href="#5-plugin-architecture" aria-label="Ìjápọ̀ sí abala: 5. Ìkọ́lé Plugin">#</a></h2>
+<p>A lè fẹ̀ ètò yìí sí i nípasẹ̀ àwùjọ ojú-ọ̀nà mẹ́rin: <code>pain001.loaders</code>, <code>pain001.validators</code>, <code>pain001.schemes</code>, àti <code>pain001.writers</code>. <a href="/pain001-loader-xlsx/"><code>pain001-loader-xlsx</code></a> ń forúkọsílẹ̀ nípasẹ̀ ọ̀nà yìí, a sì ń ṣàwárí rẹ̀ fúnra rẹ̀ lẹ́yìn ìfìsínú; <a href="/pain001-loader-mt101/"><code>pain001-loader-mt101</code></a> jẹ́ ilé-ìkàwé ìtúpalẹ̀ tí ó dá dúró tí a ń lò tààrà (irinṣẹ́ <code>convert_mt101</code> ti olùpèsè MCP náà sì ń lò ó). Bọ́tìnì ìpakúpa kan — <code>PAIN001_DISABLE_PLUGINS=1</code> — ń pa ìṣàwárí plugin ẹnikẹta rẹ́ pátápátá nínú àwọn àyíká tí a ti dí mọ́lẹ̀.</p>
+<hr />
+<h2 id="6-quality-gates">6. Àwọn Ẹnu-ọ̀nà Ìdára<a class="heading-anchor" href="#6-quality-gates" aria-label="Ìjápọ̀ sí abala: 6. Àwọn Ẹnu-ọ̀nà Ìdára">#</a></h2>
+<p>A ń ṣe ìdàgbàsókè ilé-ìkàwé ìpìlẹ̀ lábẹ́ àwọn ẹnu-ọ̀nà líle tí a lè fẹ̀rí hàn: ìbòrí ìdánwò 100% fún ìlà <strong>àti</strong> ẹ̀ka tí a fi lélẹ̀ nínú CI (<code>--cov-fail-under=100</code>), ìtọ́kasí irú dátà mypy líle, ìbòrí docstring 100%, àti ìṣàyẹ̀wò ààbò (Bandit, pip-audit). A ń ṣẹ̀dá SBOM CycloneDX fún gbogbo ìtújáde.</p>
+<p>Ẹ tẹ̀síwájú pẹ̀lú <a href="/yo/installation/">Ìtọ́sọ́nà Ìfìsínú</a>, <a href="/pain001-mcp/">olùpèsè MCP fún àwọn aṣojú AI</a>, tàbí <a href="/yo/glossary/">àkójọ ìtumọ̀ ọ̀rọ̀ ìsanwó</a>.</p>
+</div>
+        </article>
+      </div>
+    </main>
+
+    <button class="totop" id="toTop" type="button" hidden aria-label="Back to top">&uarr;</button>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-brand">Pain001</p>
+            <p class="footer-tagline">Ìbẹ̀rẹ̀ ìsanwó ISO 20022 orísun-ìmọ̀. Àwọn fáìlì tí a fọwọ́sí, ìsèlò níbi yín, kò sí ìdè.</p>
+          </div>
+          <div>
+            <h2 class="footer-heading">Ìwé ìtọ́nisọ́nà</h2>
+            <ul class="footer-links">
+              <li><a href="/yo/try/">Ẹ gbìyànjú rẹ̀ nínú aṣàwákiri yín</a></li>
+              <li><a href="/yo/documentation/">Ìtọ́kasí ìmọ̀-ẹ̀rọ</a></li>
+              <li><a href="/yo/installation/">Ìfisórí-ẹ̀rọ &amp; Docker</a></li>
+              <li><a href="/payments/">Àwọn ọ̀nà-iṣẹ́ ìsanwó</a></li>
+              <li><a href="/yo/glossary/">Ìwé-ìtumọ̀ ọ̀rọ̀</a></li>
+              <li><a href="/yo/faqs/">Àwọn ìbéèrè léraléra</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Àyíká-iṣẹ́</h2>
+            <ul class="footer-links">
+              <li><a href="/pain001-mcp/">pain001-mcp · àwọn aṣojú AI</a></li>
+              <li><a href="/pain001-lsp/">pain001-lsp · àwọn olóòtú</a></li>
+              <li><a href="/pain001-loader-mt101/">Agbéwọlé MT101</a></li>
+              <li><a href="/pain001-loader-xlsx/">Agbéwọlé Excel</a></li>
+              <li><a href="https://github.com/sebastienrousseau/pain001" rel="external">GitHub</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Ìwádìí àti ìgbẹ́kẹ̀lé</h2>
+            <ul class="footer-links">
+              <li><a href="/yo/why/">Ìdí Pain001</a></li>
+              <li><a href="/yo/executive-brief/">Ìsọníṣókí fún àwọn alákòóso</a></li>
+              <li><a href="/iso20022-roadmap/">Àtẹ-ọ̀nà ISO 20022</a></li>
+              <li><a href="/2026-iso20022-migration-trends/">Ìsọníṣókí 2026</a></li>
+              <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/">Ìtọ́sọ́nà Ìkọjá-Ààlà</a></li>
+              <li><a href="/competitors-comparison/">Ìfiwéra pẹ̀lú àwọn irinṣẹ́ oníṣòwò</a></li>
+              <li><a href="/architecture-and-patents/">Ìhun-ètò &amp; pátẹ́ǹtì</a></li>
+              <li><a href="/trust/">Ibùdó Ìgbẹ́kẹ̀lé</a></li>
+              <li><a href="/compatibility/">Àtẹ ìbáramu</a></li>
+              <li><a href="/security.txt">security.txt</a></li>
+              <li><a href="/sbom.cdx.json">SBOM</a> · <a href="/llms.txt">llms.txt</a> · <a href="/rss.xml">Ìṣàn RSS</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; 2023&ndash;2026 Sebastien Rousseau. Core dual-licensed Apache-2.0 / MIT; companion packages Apache-2.0.</p>
+          <ul aria-label="This overview in other languages">
+            <li><a href="/languages/">Àkópọ̀ yìí ní èdè 34</a></li>
+          </ul>
+          <ul>
+            <li><a href="/accessibility/">Ìráyèsí</a></li>
+            <li><a href="/privacy/">Àṣírí</a></li>
+            <li><a href="/terms/">Àwọn òfin</a></li>
+            <li><a href="/contact/">Kàn sí wa</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://pain001.com/yo/documentation/",
+          "url": "https://pain001.com/yo/documentation/",
+          "name": "Ìtọ́kasí Ìmọ̀-ẹ̀rọ Pain001: CLI, Python API àti REST",
+          "description": "Ìtọ́kasí kíkún fún pain001 v0.0.56 — àwọn àṣẹ-abẹ́ àti àsíá CLI, Python API, àwọn endpoint REST lábẹ́ /api/v1, ìwé òfin ètò, ìmúdọ́gba dátà, àti ìkọ́lé plugin.",
+          "inLanguage": "yo",
+          "dateModified": "2026-07-26",
+          "isPartOf": { "@id": "https://pain001.com/#website" },
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Ilé", "item": "https://pain001.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Ìtọ́kasí Ìmọ̀-ẹ̀rọ Pain001: CLI, Python API àti REST" }
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pain001.com/#organization",
+          "name": "Pain001",
+          "url": "https://pain001.com/",
+          "logo": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+          "founder": { "@type": "Person", "name": "Sebastien Rousseau", "url": "https://sebastienrousseau.com" },
+          "sameAs": [
+            "https://github.com/sebastienrousseau/pain001",
+            "https://pypi.org/project/pain001/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pain001.com/#website",
+          "url": "https://pain001.com/",
+          "name": "Pain001",
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        }
+      ]
+    }
+    </script>
+
+    <script src="/_csp/197fcfccbee69bda.js" integrity="sha384-geygAAYoalTqpA6bIgsGUMRQupyTiF/rCnvMiGE5+G0s0ZOYAhHnkhzyMXN9yNxa" crossorigin="anonymous"></script>
+  
+<!-- SSG Search Widget -->
+<div id="ssg-search-widget">
+
+<!-- Search trigger button -->
+<button id="ssg-search-btn" type="button" aria-label="Search">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<span>Search</span>
+<kbd>K</kbd>
+</button>
+<!-- Search modal -->
+<div id="ssg-search-overlay" role="dialog" aria-label="Search">
+<div id="ssg-search-box">
+<div id="ssg-search-header">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<input id="ssg-search-input" type="search" placeholder="Search documentation..." autocomplete="off" aria-label="Search"/>
+</div>
+<div id="ssg-search-results" aria-live="polite"></div>
+<div id="ssg-sr-status" role="status" aria-live="polite" aria-atomic="true"></div>
+<div class="ssg-search-footer"><span><kbd>Esc</kbd> close</span><span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span><span><kbd>Enter</kbd> open</span></div>
+</div>
+</div>
+<script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>

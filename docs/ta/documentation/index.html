@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ta">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta itemprop="datePublished" content="Sun, 26 Jul 2026 08:00:00 +0000" id="date" />
+    <meta itemprop="dateModified" content="Sun, 26 Jul 2026 08:00:00 +0000" id="last-modified" />
+    <title>Pain001 தொழில்நுட்பக் குறிப்பு: CLI, Python API, REST</title>
+
+    <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
+<meta name="description" content="pain001 v0.0.56 முழுக் குறிப்பு — CLI கட்டளைகளும் ஃபிளாக்குகளும், Python API, /api/v1 REST எண்ட்பாயிண்ட்கள், திட்ட விதிநூல்கள், உள்ளீட்டு இயல்பாக்கம், செருகுநிரல் கட்டமைப்பு.">
+<meta name="keywords" content="pain001 documentation, pain.001 CLI, ISO 20022 Python library, pain001 REST API, XSD validation, SEPA scheme validation, pain.002 parser, camt.053 parser">
+<meta property="og:image" content="https://pain001.com/og/pain001-card.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Documentation pages for the Pain001 command-line interface and REST API — the working reference for teams generating ISO 20022 payment files." />
+    <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Pain001 தொழில்நுட்பக் குறிப்பு: CLI, Python API, REST">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    
+    
+
+    <link rel="alternate" href="https://pain001.com/ta/documentation/" hreflang="en" />
+    
+    <link rel="icon" type="image/svg+xml" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />
+    <link rel="preload" href="/fonts/source-serif-4-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/_csp/e9d2f9e83d6b47b6.css" integrity="sha384-NgS1FgtNO/+O73jGnYQcFGXyKGAVkFu/W1I8bL4l2QSI+eMJfSMSQrUdf2zJxS34" crossorigin="anonymous">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
+  <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="Pain001 தொழில்நுட்பக் குறிப்பு: CLI, Python API, REST">
+<meta property="og:description" content="Home Pain001 Technical Reference: CLI, Python API and REST Reference Pain001 Technical Reference: CLI, Python API and REST Every flag, endpoint, and behaviour">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pain001.com/ta/documentation/">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pain001 தொழில்நுட்பக் குறிப்பு: CLI, Python API, REST">
+<meta name="twitter:description" content="Home Pain001 Technical Reference: CLI, Python API and REST Reference Pain001 Technical Reference: CLI, Python API and REST Every flag, endpoint, and behaviour">
+<meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg">
+<link rel="canonical" href="https://pain001.com/ta/documentation/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
+<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"><link rel="alternate" hreflang="en" href="https://pain001.com/documentation/" /><link rel="alternate" hreflang="x-default" href="https://pain001.com/documentation/" /><link rel="alternate" hreflang="ar" href="https://pain001.com/ar/documentation/" /><link rel="alternate" hreflang="bn" href="https://pain001.com/bn/documentation/" /><link rel="alternate" hreflang="cs" href="https://pain001.com/cs/documentation/" /><link rel="alternate" hreflang="de" href="https://pain001.com/de/documentation/" /><link rel="alternate" hreflang="el" href="https://pain001.com/el/documentation/" /><link rel="alternate" hreflang="es" href="https://pain001.com/es/documentation/" /><link rel="alternate" hreflang="fa" href="https://pain001.com/fa/documentation/" /><link rel="alternate" hreflang="fil" href="https://pain001.com/fil/documentation/" /><link rel="alternate" hreflang="fr" href="https://pain001.com/fr/documentation/" /><link rel="alternate" hreflang="ha" href="https://pain001.com/ha/documentation/" /><link rel="alternate" hreflang="he" href="https://pain001.com/he/documentation/" /><link rel="alternate" hreflang="hi" href="https://pain001.com/hi/documentation/" /><link rel="alternate" hreflang="hu" href="https://pain001.com/hu/documentation/" /><link rel="alternate" hreflang="id" href="https://pain001.com/id/documentation/" /><link rel="alternate" hreflang="it" href="https://pain001.com/it/documentation/" /><link rel="alternate" hreflang="ja" href="https://pain001.com/ja/documentation/" /><link rel="alternate" hreflang="ko" href="https://pain001.com/ko/documentation/" /><link rel="alternate" hreflang="mr" href="https://pain001.com/mr/documentation/" /><link rel="alternate" hreflang="ms" href="https://pain001.com/ms/documentation/" /><link rel="alternate" hreflang="nl" href="https://pain001.com/nl/documentation/" /><link rel="alternate" hreflang="pl" href="https://pain001.com/pl/documentation/" /><link rel="alternate" hreflang="pt-BR" href="https://pain001.com/pt-br/documentation/" /><link rel="alternate" hreflang="ro" href="https://pain001.com/ro/documentation/" /><link rel="alternate" hreflang="ru" href="https://pain001.com/ru/documentation/" /><link rel="alternate" hreflang="sv" href="https://pain001.com/sv/documentation/" /><link rel="alternate" hreflang="te" href="https://pain001.com/te/documentation/" /><link rel="alternate" hreflang="th" href="https://pain001.com/th/documentation/" /><link rel="alternate" hreflang="tr" href="https://pain001.com/tr/documentation/" /><link rel="alternate" hreflang="uk" href="https://pain001.com/uk/documentation/" /><link rel="alternate" hreflang="vi" href="https://pain001.com/vi/documentation/" /><link rel="alternate" hreflang="yo" href="https://pain001.com/yo/documentation/" /><link rel="alternate" hreflang="zh-Hans" href="https://pain001.com/zh-hans/documentation/" /><link rel="alternate" hreflang="zh-Hant" href="https://pain001.com/zh-hant/documentation/" /></head>
+
+  <body>
+    <a href="#main-content" class="skip-link">முதன்மை உள்ளடக்கத்திற்குச் செல்</a>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="ap-nav">
+      <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="வழிசெலுத்தலை மாற்று" />
+      <div class="wrap ap-nav-wrap">
+        <a class="ap-brand" href="/" aria-label="Pain001 home">
+          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="" width="26" height="26" />
+          <span>Pain001</span>
+        </a>
+        <nav aria-label="Primary navigation" id="ap-primary-nav">
+          <ul class="ap-menu">
+            <li class="has-sub"><a href="/ta/why/">ஏன் Pain001</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-why" aria-label="ஏன் Pain001 துணைமெனுவை நிலைமாற்றவும்"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-why" class="ap-sub">
+                <li><a href="/ta/solutions/">இது யாருக்கானது</a></li>
+                <li><a href="/ta/executive-brief/">நிர்வாகச் சுருக்கம்</a></li>
+                <li><a href="/competitors-comparison/" hreflang="en">வணிகக் கருவிகளுடன் ஒப்பீடு (EN)</a></li>
+              </ul>
+            </li>
+            <li><a href="/ta/try/">நேரலையில் பார்க்கவும்</a></li>
+            <li class="has-sub"><a href="/ta/documentation/">ஆவணங்கள்</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="ஆவணங்கள் துணைமெனுவை நிலைமாற்றவும்"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-docs" class="ap-sub">
+                <li><a href="/ta/installation/">நிறுவல் &amp; Docker</a></li>
+                <li><a href="/ta/glossary/">கலைச்சொல் அகராதி</a></li>
+                <li><a href="/ta/faqs/">அடிக்கடி கேட்கப்படும் கேள்விகள்</a></li>
+                <li><a href="/pain002-reason-codes/" hreflang="en">pain.002 காரணக் குறியீடுகள் (EN)</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/#suite-heading">தொகுப்பு</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-suite" aria-label="தொகுப்பு துணைமெனுவை நிலைமாற்றவும்"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-suite" class="ap-sub">
+                <li><a href="/pain001-mcp/" hreflang="en">AI முகவர் கருவிகள் (MCP) (EN)</a></li>
+                <li><a href="/pain001-lsp/" hreflang="en">எடிட்டர் ஒருங்கிணைப்பு (LSP) (EN)</a></li>
+                <li><a href="/pain001-loader-mt101/" hreflang="en">MT101 ஏற்றி (EN)</a></li>
+                <li><a href="/pain001-loader-xlsx/" hreflang="en">Excel ஏற்றி (EN)</a></li>
+                <li><a href="/architecture-and-patents/" hreflang="en">கட்டமைப்பு &amp; பாதுகாப்பு (EN)</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/2026-iso20022-migration-trends/">ஆராய்ச்சி</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-research" aria-label="ஆராய்ச்சி துணைமெனுவை நிலைமாற்றவும்"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-research" class="ap-sub">
+                <li><a href="/2026-iso20022-migration-trends/" hreflang="en">2026 விளக்கவுரை (EN)</a></li>
+                <li><a href="/iso20022-roadmap/" hreflang="en">ISO 20022 வழித்திட்டம் (EN)</a></li>
+                <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/" hreflang="en">எல்லை கடந்த வழிகாட்டி (EN)</a></li>
+                <li><a href="/languages/" hreflang="en">34 மொழிகளில் (EN)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="ap-nav-right">
+          <button type="button" class="theme-toggle" aria-label="இருண்ட தீமுக்கு மாறு" data-label-dark="இருண்ட தீமுக்கு மாறு" data-label-light="வெளிர் தீமுக்கு மாறு" aria-pressed="false" title="இருண்ட தீமுக்கு மாறு">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+          <button type="button" class="ap-search-btn" aria-label="தேடு (Cmd/Ctrl + K)" title="தேடு (⌘K)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <kbd class="ap-search-kbd" aria-hidden="true">⌘K</kbd>
+          </button>
+          <div class="ap-lang" role="group" aria-label="Language">
+            <button type="button" class="ap-lang-toggle" aria-label="மொழியை மாற்று" aria-expanded="false" aria-haspopup="menu" title="மொழியை மாற்று">
+              <span class="ap-lang-globe" aria-hidden="true">🌐</span>
+              <span class="ap-lang-current">TA</span>
+            </button>
+            <div class="ap-lang-menu" role="menu" hidden>
+              <div class="ap-lang-menu-grid">
+                <a class="ap-lang-item" href="/ta/documentation/" hreflang="en" lang="en" role="menuitem"><span aria-hidden="true">🇬🇧</span> English</a>
+                <a class="ap-lang-item" href="/fr/documentation/" hreflang="fr" lang="fr" role="menuitem"><span aria-hidden="true">🇫🇷</span> Français</a>
+                <a class="ap-lang-item" href="/de/documentation/" hreflang="de" lang="de" role="menuitem"><span aria-hidden="true">🇩🇪</span> Deutsch</a>
+                <a class="ap-lang-item" href="/es/documentation/" hreflang="es" lang="es" role="menuitem"><span aria-hidden="true">🇪🇸</span> Español</a>
+                <a class="ap-lang-item" href="/it/documentation/" hreflang="it" lang="it" role="menuitem"><span aria-hidden="true">🇮🇹</span> Italiano</a>
+                <a class="ap-lang-item" href="/pt-br/documentation/" hreflang="pt-BR" lang="pt-BR" role="menuitem"><span aria-hidden="true">🇧🇷</span> Português</a>
+                <a class="ap-lang-item" href="/nl/documentation/" hreflang="nl" lang="nl" role="menuitem"><span aria-hidden="true">🇳🇱</span> Nederlands</a>
+                <a class="ap-lang-item" href="/pl/documentation/" hreflang="pl" lang="pl" role="menuitem"><span aria-hidden="true">🇵🇱</span> Polski</a>
+                <a class="ap-lang-item" href="/sv/documentation/" hreflang="sv" lang="sv" role="menuitem"><span aria-hidden="true">🇸🇪</span> Svenska</a>
+                <a class="ap-lang-item" href="/cs/documentation/" hreflang="cs" lang="cs" role="menuitem"><span aria-hidden="true">🇨🇿</span> Čeština</a>
+                <a class="ap-lang-item" href="/ro/documentation/" hreflang="ro" lang="ro" role="menuitem"><span aria-hidden="true">🇷🇴</span> Română</a>
+                <a class="ap-lang-item" href="/hu/documentation/" hreflang="hu" lang="hu" role="menuitem"><span aria-hidden="true">🇭🇺</span> Magyar</a>
+                <a class="ap-lang-item" href="/el/documentation/" hreflang="el" lang="el" role="menuitem"><span aria-hidden="true">🇬🇷</span> Ελληνικά</a>
+                <a class="ap-lang-item" href="/tr/documentation/" hreflang="tr" lang="tr" role="menuitem"><span aria-hidden="true">🇹🇷</span> Türkçe</a>
+                <a class="ap-lang-item" href="/ru/documentation/" hreflang="ru" lang="ru" role="menuitem"><span aria-hidden="true">🇷🇺</span> Русский</a>
+                <a class="ap-lang-item" href="/uk/documentation/" hreflang="uk" lang="uk" role="menuitem"><span aria-hidden="true">🇺🇦</span> Українська</a>
+                <a class="ap-lang-item" href="/ar/documentation/" hreflang="ar" lang="ar" role="menuitem"><span aria-hidden="true">🇸🇦</span> العربية</a>
+                <a class="ap-lang-item" href="/he/documentation/" hreflang="he" lang="he" role="menuitem"><span aria-hidden="true">🇮🇱</span> עברית</a>
+                <a class="ap-lang-item" href="/fa/documentation/" hreflang="fa" lang="fa" role="menuitem"><span aria-hidden="true">🇮🇷</span> فارسی</a>
+                <a class="ap-lang-item" href="/hi/documentation/" hreflang="hi" lang="hi" role="menuitem"><span aria-hidden="true">🇮🇳</span> हिन्दी</a>
+                <a class="ap-lang-item" href="/bn/documentation/" hreflang="bn" lang="bn" role="menuitem"><span aria-hidden="true">🇧🇩</span> বাংলা</a>
+                <a class="ap-lang-item" href="/ta/documentation/" hreflang="ta" lang="ta" role="menuitem"><span aria-hidden="true">🇮🇳</span> தமிழ்</a>
+                <a class="ap-lang-item" href="/te/documentation/" hreflang="te" lang="te" role="menuitem"><span aria-hidden="true">🇮🇳</span> తెలుగు</a>
+                <a class="ap-lang-item" href="/mr/documentation/" hreflang="mr" lang="mr" role="menuitem"><span aria-hidden="true">🇮🇳</span> मराठी</a>
+                <a class="ap-lang-item" href="/th/documentation/" hreflang="th" lang="th" role="menuitem"><span aria-hidden="true">🇹🇭</span> ไทย</a>
+                <a class="ap-lang-item" href="/vi/documentation/" hreflang="vi" lang="vi" role="menuitem"><span aria-hidden="true">🇻🇳</span> Tiếng Việt</a>
+                <a class="ap-lang-item" href="/id/documentation/" hreflang="id" lang="id" role="menuitem"><span aria-hidden="true">🇮🇩</span> Indonesia</a>
+                <a class="ap-lang-item" href="/ms/documentation/" hreflang="ms" lang="ms" role="menuitem"><span aria-hidden="true">🇲🇾</span> Melayu</a>
+                <a class="ap-lang-item" href="/fil/documentation/" hreflang="fil" lang="fil" role="menuitem"><span aria-hidden="true">🇵🇭</span> Filipino</a>
+                <a class="ap-lang-item" href="/ja/documentation/" hreflang="ja" lang="ja" role="menuitem"><span aria-hidden="true">🇯🇵</span> 日本語</a>
+                <a class="ap-lang-item" href="/ko/documentation/" hreflang="ko" lang="ko" role="menuitem"><span aria-hidden="true">🇰🇷</span> 한국어</a>
+                <a class="ap-lang-item" href="/zh-hans/documentation/" hreflang="zh-Hans" lang="zh-Hans" role="menuitem"><span aria-hidden="true">🇨🇳</span> 简体中文</a>
+                <a class="ap-lang-item" href="/zh-hant/documentation/" hreflang="zh-Hant" lang="zh-Hant" role="menuitem"><span aria-hidden="true">🇹🇼</span> 繁體中文</a>
+                <a class="ap-lang-item" href="/ha/documentation/" hreflang="ha" lang="ha" role="menuitem"><span aria-hidden="true">🇳🇬</span> Hausa</a>
+                <a class="ap-lang-item" href="/yo/documentation/" hreflang="yo" lang="yo" role="menuitem"><span aria-hidden="true">🇳🇬</span> Yorùbá</a>
+              </div>
+            </div>
+          </div>
+          <a class="ap-cta-mini" href="/ta/try/">டெமோவை முயற்சிக்கவும்&nbsp;&rsaquo;</a>
+          <label class="ap-burger" for="ap-menu-toggle" aria-hidden="true"><span class="ap-burger-icon">☰</span></label>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <header class="page-header">
+        <div class="wrap">
+          <nav class="breadcrumb" aria-label="வழிச்சுவடு">
+            <ol>
+              <li><a href="/">முகப்பு</a></li>
+              <li aria-current="page">Pain001 தொழில்நுட்பக் குறிப்பு: CLI, Python API, REST</li>
+            </ol>
+          </nav>
+          <p class="eyebrow">குறிப்பு</p>
+          <h1 class="page-title">Pain001 தொழில்நுட்பக் குறிப்பு: CLI, Python API, REST</h1>
+          <p class="deck">pain001 v0.0.56-ன் ஒவ்வொரு ஃபிளாக், எண்ட்பாயிண்ட், நடத்தை — வெளியிடப்பட்ட நிரலிலிருந்து எடுக்கப்பட்டவை, எதிர்பார்ப்புகளிலிருந்து அல்ல.</p>
+          <div class="article-meta"><span>4 நிமிட வாசிப்பு</span>
+            <span>கடைசி மதிப்பாய்வு <time datetime="2026-07-26">2026-07-26</time></span>
+          </div>
+        </div>
+      </header>
+
+      <div class="wrap content-shell">
+        <article class="content-body"><nav class="article-toc" aria-label="பொருளடக்கம்"><h2>பொருளடக்கம்</h2><ol><li><a href="#1-command-line-interface">கட்டளை-வரி இடைமுகம்</a></li><li><a href="#2-python-api">Python API</a></li><li><a href="#3-rest-microservice">REST நுண்சேவை</a></li><li><a href="#4-input-normalisation">உள்ளீட்டு இயல்பாக்கம்</a></li><li><a href="#5-plugin-architecture">செருகுநிரல் கட்டமைப்பு</a></li><li><a href="#6-quality-gates">தர நுழைவாயில்கள்</a></li></ol></nav>
+          <div lang="en"><p>இந்தக் குறிப்பு <strong>pain001 v0.0.56</strong>-ன் கட்டளை-வரி இடைமுகம், Python API, REST நுண்சேவை, சரிபார்ப்புத் தொடர்வரிசை ஆகியவற்றை ஆவணப்படுத்துகிறது. இங்கு பட்டியலிடப்பட்டுள்ள ஒவ்வொரு ஃபிளாக், எண்ட்பாயிண்ட், நடத்தையும் வெளியிடப்பட்ட நிரலிலிருந்து எடுக்கப்பட்டவை, எதிர்பார்ப்புகளிலிருந்து அல்ல.</p>
+<p>Pain001 <strong>11 ISO 20022 செய்தி வரையறைகளை</strong> ஆதரிக்கிறது: <code>pain.001.001.03</code> முதல் <code>pain.001.001.12</code> வரை (Customer Credit Transfer Initiation, பத்து பதிப்புகள்) மற்றும் <code>pain.008.001.02</code> (Customer Direct Debit Initiation).</p>
+<hr />
+<h2 id="1-command-line-interface">1. கட்டளை-வரி இடைமுகம்<a class="heading-anchor" href="#1-command-line-interface" aria-label="பிரிவுக்கான இணைப்பு: 1. கட்டளை-வரி இடைமுகம்">#</a></h2>
+<p><code>pain001</code> இயங்குகோப்பு தனது செயல்பாடுகளைத் துணைக்கட்டளைகளாகத் தொகுக்கிறது. உருவாக்க ஃபிளாக்குகளை மட்டும் கொடுத்து இயக்கினால் <code>generate</code> தானாகவே செயல்படுத்தப்படுகிறது; எனவே தற்போதைய தன்னியக்கமுறைகள் தொடர்ந்து இயங்கும்.</p>
+<div class="table-responsive"><table class="table">
+<thead>
+<tr>
+<th>துணைக்கட்டளை</th>
+<th>நோக்கம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>generate</code></td>
+<td data-label="Purpose" class="text-left">தரவுக் கோப்பை ஸ்கீமா-சரிபார்க்கப்பட்ட ISO 20022 XML ஆக மாற்றுகிறது (இயல்புநிலைக் கட்டளை).</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>validate</code></td>
+<td data-label="Purpose" class="text-left">XML எழுதாமலேயே உள்ளீட்டுத் தரவைச் சரிபார்க்கிறது.</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>versions [--json]</code></td>
+<td data-label="Purpose" class="text-left">ஆதரிக்கப்படும் 11 செய்தி வரையறைகளையும் பட்டியலிடுகிறது.</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>inspect <type> [--json]</code></td>
+<td data-label="Purpose" class="text-left">ஒரு செய்தி வகைக்கான கட்டாய மற்றும் விருப்பப் புலங்களைக் காட்டுகிறது.</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>init <type> [-o DIR]</code></td>
+<td data-label="Purpose" class="text-left">ஒரு செய்தி வகைக்கான தொடக்க CSV வார்ப்புருவை உருவாக்குகிறது.</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>serve [--host] [--port] [--reload]</code></td>
+<td data-label="Purpose" class="text-left">FastAPI REST நுண்சேவையைத் தொடங்குகிறது (<code>api</code> கூடுதல் தேவை).</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>mcp</code></td>
+<td data-label="Purpose" class="text-left">உள்ளமைந்த Model Context Protocol சேவையகத்தைத் தொடங்குகிறது (5 கருவிகள்; முழுமையான 17-கருவி சேவையகம் <a href="/pain001-mcp/"><code>pain001-mcp</code></a> ஆக வழங்கப்படுகிறது).</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>plugins list / show / disable</code></td>
+<td data-label="Purpose" class="text-left">கண்டறியப்பட்ட லோடர், சரிபார்ப்பான், திட்டம், ரைட்டர் செருகுநிரல்களை ஆய்வு செய்து நிர்வகிக்கிறது.</td>
+</tr>
+</tbody>
+</table></div>
+<h3><code>generate</code> விருப்பங்கள்</h3>
+<table>
+<thead>
+<tr>
+<th>ஃபிளாக்</th>
+<th>விவரம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Flag" class="text-left"><code>-t, --xml-message-type <TYPE></code></td>
+<td data-label="Description" class="text-left">செய்தி வரையறை, எடுத்துக்காட்டாக <code>pain.001.001.09</code>.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>-d, --data <FILE></code></td>
+<td data-label="Description" class="text-left">உள்ளீட்டுத் தரவு: <code>.csv</code>, <code>.json</code>, <code>.jsonl</code>, <code>.db</code> / <code>.sqlite</code>, <code>.parquet</code>, அல்லது PGP-குறியாக்கப்பட்ட <code>.gpg</code> / <code>.asc</code>.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>-o, --output-dir <DIR></code></td>
+<td data-label="Description" class="text-left">உருவாக்கப்பட்ட XML சேமிக்கப்படும் அடைவு.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>-m, --template <FILE></code> / <code>-s, --schema <FILE></code></td>
+<td data-label="Description" class="text-left">உள்ளடக்கப்பட்ட Jinja2 வார்ப்புரு அல்லது XSD ஸ்கீமாவை மேலெழுதுகிறது.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>-c, --config <FILE></code></td>
+<td data-label="Description" class="text-left">கட்டமைப்புச் சுயவிவரத்திலிருந்து இயல்புநிலை மதிப்புகளை ஏற்றுகிறது (<code>--profile</code>, <code>--show-config</code>).</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--dry-run</code> (மாற்றுப்பெயர் <code>--validate-only</code>)</td>
+<td data-label="Description" class="text-left">வெளியீட்டை எழுதாமல் JSON Schema, XSD, திட்ட விதிநூல் ஆகியவற்றுக்கு எதிராக உள்ளீட்டைச் சரிபார்க்கிறது.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--scheme <NAME></code></td>
+<td data-label="Description" class="text-left">ஒரு திட்ட விதிநூலைச் செயல்படுத்துகிறது: <code>sepa-sct</code>, <code>sepa-inst</code>, <code>sepa-sdd</code>, <code>sepa-b2b</code>, அல்லது <code>xborder-ct</code>.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--explain --scheme-format {text,json}</code></td>
+<td data-label="Description" class="text-left">தேர்ச்சி பெற்ற அல்லது தோல்வியடைந்த ஒவ்வொரு திட்ட விதியையும் மனிதர் அல்லது இயந்திரம் படிக்கும் வடிவில் அறிக்கையிடுகிறது.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size <N></code></td>
+<td data-label="Description" class="text-left">பெரிய தொகுதிகளுக்கான நினைவக-வரம்புடைய துண்டு வாரியான செயலாக்கம் (இயல்புநிலையாக ஒரு துண்டுக்கு 1,000 பரிவர்த்தனைகள்; ஒவ்வொரு துண்டும் மறுகணக்கிடப்பட்ட <code>NbOfTxs</code> மற்றும் <code>CtrlSum</code> உடன் தனித் XML கோப்பாக மாறுகிறது).</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--emit-metrics</code></td>
+<td data-label="Description" class="text-left">கண்காணிப்புத் தொடர்வரிசைகளுக்காக இயந்திரம் படிக்கக்கூடிய இயக்க அளவீடுகளை வெளியிடுகிறது.</td>
+</tr>
+</tbody>
+</table>
+<p>வெளியேற்றக் குறியீடுகள் CI-நட்பானவை: <code>0</code> வெற்றி, <code>1</code> சரிபார்ப்புத் தோல்வி, <code>2</code> பயன்பாட்டுப் பிழை.</p>
+<hr />
+<h2 id="2-python-api">2. Python API<a class="heading-anchor" href="#2-python-api" aria-label="பிரிவுக்கான இணைப்பு: 2. Python API">#</a></h2>
+<pre><code class="language-python">from pain001.core.core import process_files
+
+# Generate a validated pain.001.001.09 file from CSV
+process_files(
+    xml_message_type="pain.001.001.09",
+    xml_template_file_path="template.xml",
+    xsd_schema_file_path="schema.xsd",
+    data_file_path="payments.csv",
+    output_dir="out",
+)</code></pre>
+<p>உருவாக்கப்படும் ஒவ்வொரு ஆவணமும் எழுதப்படுவதற்கு முன் மூன்று அடுக்குகளைக் கடக்கிறது:</p>
+<ol>
+<li><strong>உள்ளீட்டுச் சரிபார்ப்பு</strong> — ஒவ்வொரு பதிவும் அந்தச் செய்தி வகையின் JSON Schema-க்கு எதிராகச் சோதிக்கப்படுகிறது; உடன் புல-மாற்றுப்பெயர் இயல்பாக்கமும் IBAN/BIC தொடரியல் சோதனைகளும் நடைபெறுகின்றன.</li>
+<li><strong>திட்ட விதிநூல்</strong> (விருப்பத் தேர்வு) — SEPA SCT, SEPA Instant, SEPA SDD Core, SEPA B2B, அல்லது எல்லை கடந்த வரவு பரிமாற்ற விதிகள்.</li>
+<li><strong>XSD சரிபார்ப்பு</strong> — வட்டில் ஒரு பைட் கூட எழுதப்படுவதற்கு முன், உருவாக்கப்பட்ட XML <code>xmlschema</code> வழியாக அதிகாரப்பூர்வ ISO 20022 ஸ்கீமாவுக்கு எதிராகச் சரிபார்க்கப்படுகிறது.</li>
+</ol>
+<p>XML உருவாக்கம் மற்றும் திட்டச் சரிபார்ப்பின் போது பணத் தொகைகள் <code>decimal.Decimal</code> ஆகவே கையாளப்படுகின்றன — ஒருபோதும் IEEE 754 ஃப்ளோட்டுகளாக அல்ல — மேலும் <code>NbOfTxs</code> / <code>CtrlSum</code> கட்டுப்பாட்டு மொத்தங்கள் உள்ளீட்டை நம்பாமல், சரிபார்க்கப்பட்ட பதிவுகளிலிருந்து மறுகணக்கிடப்படுகின்றன.</p>
+<p>pain.001 உருவாக்கத்தைத் தாண்டி, மைய நூலகம் ஒரு <strong>pain.002 நிலை-அறிக்கைப் பாகுபடுத்தியையும் உருவாக்கியையும்</strong> (வங்கியின் ஏற்பு/நிராகரிப்புப் பதிலை நீங்கள் படிக்கும் வகையில்) மற்றும் நாள் இறுதி ஒப்புரவுக்கான <strong>camt.053 அறிக்கைப் பாகுபடுத்தியையும் உருவாக்கியையும்</strong> வழங்குகிறது; உடன், செய்திப் பதிப்புகளுக்கு இடையே பதிவுகளை இடம்பெயர்க்கும் <code>VersionMapper</code>-ஐயும் வழங்குகிறது.</p>
+<hr />
+<h2 id="3-rest-microservice">3. REST நுண்சேவை<a class="heading-anchor" href="#3-rest-microservice" aria-label="பிரிவுக்கான இணைப்பு: 3. REST நுண்சேவை">#</a></h2>
+<pre><code class="language-bash">pip install "pain001[api]"
+pain001 serve --host 0.0.0.0 --port 8000</code></pre>
+<p>அனைத்து எண்ட்பாயிண்ட்களும் <code>/api/v1</code>-ன் கீழ் இணைக்கப்பட்டுள்ளன (பதிப்பு இல்லாத <code>/api</code> மாற்றுப்பெயருடன்):</p>
+<table>
+<thead>
+<tr>
+<th>முறை மற்றும் பாதை</th>
+<th>நோக்கம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>GET /api/v1/health</code></td>
+<td data-label="Purpose" class="text-left">இயங்குநிலைச் சோதனை.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>POST /api/v1/validate</code></td>
+<td data-label="Purpose" class="text-left">பதிவுகளைச் சரிபார்க்கிறது; புல அளவிலான பிழைகளைத் திருப்பி அளிக்கிறது.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>POST /api/v1/generate</code></td>
+<td data-label="Purpose" class="text-left">ஒத்திசைவான XML உருவாக்கம்.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>POST /api/v1/generate/async</code></td>
+<td data-label="Purpose" class="text-left">பின்னணி உருவாக்கத்திற்காக ஒரு பெரிய தொகுதியை வரிசையில் சேர்க்கிறது.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>GET /api/v1/status/{job_id}</code></td>
+<td data-label="Purpose" class="text-left">ஒத்திசைவற்ற பணியின் நிலையை வினவுகிறது.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>GET /api/v1/download/{job_id}</code></td>
+<td data-label="Purpose" class="text-left">முடிக்கப்பட்ட XML-ஐப் பதிவிறக்குகிறது.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>DELETE /api/v1/jobs/{job_id}</code></td>
+<td data-label="Purpose" class="text-left">முடிந்த பணியை அகற்றுகிறது.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>GET /metrics</code></td>
+<td data-label="Purpose" class="text-left">Prometheus அளவீடுகள்.</td>
+</tr>
+</tbody>
+</table>
+<p>ஊடாடும் ஆவணங்கள் <code>/api/docs</code> (Swagger UI), <code>/api/redoc</code>, <code>/api/reference</code> (Scalar) ஆகியவற்றில் வழங்கப்படுகின்றன; OpenAPI ஆவணம் <code>/openapi.json</code>-இல் உள்ளது.</p>
+<hr />
+<h2 id="4-input-normalisation">4. உள்ளீட்டு இயல்பாக்கம்<a class="heading-anchor" href="#4-input-normalisation" aria-label="பிரிவுக்கான இணைப்பு: 4. உள்ளீட்டு இயல்பாக்கம்">#</a></h2>
+<p>சரிபார்ப்புக்கு முன்பே Pain001 நிஜ உலக ஏற்றுமதிகளைச் செல்லுபடியாகும் பதிவுகளாக மாற்றுகிறது:</p>
+<ul>
+<li><strong>புல மாற்றுப்பெயர்கள்</strong> — வழக்கமான ERP நெடுவரிசைப் பெயர்கள் நியமப் புலங்களுடன் பொருத்தப்படுகின்றன (எடுத்துக்காட்டாக <code>amount</code> → <code>payment_amount</code>).</li>
+<li><strong>IBAN / BIC இயல்பாக்கம்</strong> — இடைவெளிகள் நீக்கப்பட்டு, எழுத்து வடிவம் ஒருங்கிணைக்கப்பட்டு, பின் சோதிக்கப்படுகிறது (IBAN-க்கு ISO 13616 mod-97, BIC-க்கு ISO 9362 அமைப்பு).</li>
+<li><strong>தேதிகள்</strong> — செயல்படுத்தும் தேதிகளுக்கு ISO 8601 <code>YYYY-MM-DD</code> பாகுபடுத்தல்.</li>
+<li><strong>தொகைகள்</strong> — <code>decimal.Decimal</code> வழியாகக் கையாளப்படுகின்றன; தவறான வடிவிலான தொகைகள் அமைதியாக வட்டமிடப்படாமல் சரிபார்ப்பில் தோல்வியடைகின்றன.</li>
+<li><strong>எழுத்துத் தொகுப்பு</strong> — ஒலிபெயர்ப்பு உதவிகள் உள்ளடக்கத்தை SWIFT மற்றும் SEPA ஏற்கும் ISO 20022 லத்தீன் எழுத்துத் தொகுப்புக்குள் சுருக்குகின்றன.</li>
+</ul>
+<hr />
+<h2 id="5-plugin-architecture">5. செருகுநிரல் கட்டமைப்பு<a class="heading-anchor" href="#5-plugin-architecture" aria-label="பிரிவுக்கான இணைப்பு: 5. செருகுநிரல் கட்டமைப்பு">#</a></h2>
+<p>நான்கு நுழைவுப்புள்ளிக் குழுக்கள் வழியாக இந்தத் தொகுப்பை விரிவாக்கலாம்: <code>pain001.loaders</code>, <code>pain001.validators</code>, <code>pain001.schemes</code>, <code>pain001.writers</code>. <a href="/pain001-loader-xlsx/"><code>pain001-loader-xlsx</code></a> இதே வழிமுறையில் பதிவு செய்யப்பட்டு, நிறுவும்போதே தானாகக் கண்டறியப்படுகிறது; <a href="/pain001-loader-mt101/"><code>pain001-loader-mt101</code></a> என்பது நேரடியாகப் பயன்படுத்தப்படும் தனித்த பாகுபடுத்தல் நூலகம் (MCP சேவையகத்தின் <code>convert_mt101</code> கருவியாலும் பயன்படுத்தப்படுகிறது). ஒரு நிறுத்த சுவிட்ச் — <code>PAIN001_DISABLE_PLUGINS=1</code> — கடுமையாகக் கட்டுப்படுத்தப்பட்ட சூழல்களில் மூன்றாம் தரப்புச் செருகுநிரல் கண்டறிதலை முற்றிலுமாக முடக்குகிறது.</p>
+<hr />
+<h2 id="6-quality-gates">6. தர நுழைவாயில்கள்<a class="heading-anchor" href="#6-quality-gates" aria-label="பிரிவுக்கான இணைப்பு: 6. தர நுழைவாயில்கள்">#</a></h2>
+<p>மைய நூலகம் கடுமையான, சரிபார்க்கக்கூடிய நுழைவாயில்களுக்கு எதிராக உருவாக்கப்படுகிறது: CI-இல் கட்டாயமாக்கப்பட்ட 100% வரி <strong>மற்றும்</strong> கிளை கவரேஜ் (<code>--cov-fail-under=100</code>), கடுமையான mypy வகைப்படுத்தல், 100% டாக்ஸ்ட்ரிங் கவரேஜ், பாதுகாப்பு லிண்டிங் (Bandit, pip-audit). ஒவ்வொரு வெளியீட்டு பில்டுக்கும் ஒரு CycloneDX SBOM உருவாக்கப்படுகிறது.</p>
+<p>அடுத்ததாக <a href="/ta/installation/">நிறுவல் வழிகாட்டி</a>, <a href="/pain001-mcp/">AI முகவர்களுக்கான MCP சேவையகம்</a>, அல்லது <a href="/ta/glossary/">பணப்பரிவர்த்தனை சொற்களஞ்சியம்</a> ஆகியவற்றைத் தொடரவும்.</p>
+</div>
+        </article>
+      </div>
+    </main>
+
+    <button class="totop" id="toTop" type="button" hidden aria-label="Back to top">&uarr;</button>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-brand">Pain001</p>
+            <p class="footer-tagline">திறந்த மூல ISO 20022 கட்டணத் தொடக்கம். சரிபார்க்கப்பட்ட கோப்புகள், உள்ளூர் செயலாக்கம், எந்தக் கட்டுப்பாடும் இல்லை.</p>
+          </div>
+          <div>
+            <h2 class="footer-heading">ஆவணங்கள்</h2>
+            <ul class="footer-links">
+              <li><a href="/ta/try/">உங்கள் உலாவியில் முயற்சிக்கவும்</a></li>
+              <li><a href="/ta/documentation/">தொழில்நுட்பக் குறிப்பேடு</a></li>
+              <li><a href="/ta/installation/">நிறுவல் &amp; Docker</a></li>
+              <li><a href="/payments/">பணப்பரிமாற்ற பைப்லைன்கள்</a></li>
+              <li><a href="/ta/glossary/">கலைச்சொல் அகராதி</a></li>
+              <li><a href="/ta/faqs/">அடிக்கடி கேட்கப்படும் கேள்விகள்</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">சூழல் அமைப்பு</h2>
+            <ul class="footer-links">
+              <li><a href="/pain001-mcp/">pain001-mcp · AI முகவர்கள்</a></li>
+              <li><a href="/pain001-lsp/">pain001-lsp · எடிட்டர்கள்</a></li>
+              <li><a href="/pain001-loader-mt101/">MT101 ஏற்றி</a></li>
+              <li><a href="/pain001-loader-xlsx/">Excel ஏற்றி</a></li>
+              <li><a href="https://github.com/sebastienrousseau/pain001" rel="external">GitHub</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">ஆராய்ச்சி & நம்பிக்கை</h2>
+            <ul class="footer-links">
+              <li><a href="/ta/why/">ஏன் Pain001</a></li>
+              <li><a href="/ta/executive-brief/">நிர்வாகச் சுருக்கம்</a></li>
+              <li><a href="/iso20022-roadmap/">ISO 20022 வழித்திட்டம்</a></li>
+              <li><a href="/2026-iso20022-migration-trends/">2026 விளக்கவுரை</a></li>
+              <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/">எல்லை கடந்த வழிகாட்டி</a></li>
+              <li><a href="/competitors-comparison/">வணிகக் கருவிகளுடன் ஒப்பீடு</a></li>
+              <li><a href="/architecture-and-patents/">கட்டமைப்பு &amp; காப்புரிமைகள்</a></li>
+              <li><a href="/trust/">நம்பிக்கை மையம்</a></li>
+              <li><a href="/compatibility/">இணக்கத்தன்மை அட்டவணை</a></li>
+              <li><a href="/security.txt">security.txt</a></li>
+              <li><a href="/sbom.cdx.json">SBOM</a> · <a href="/llms.txt">llms.txt</a> · <a href="/rss.xml">RSS ஊட்டம்</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; 2023&ndash;2026 Sebastien Rousseau. Core dual-licensed Apache-2.0 / MIT; companion packages Apache-2.0.</p>
+          <ul aria-label="This overview in other languages">
+            <li><a href="/languages/">இந்த மேலோட்டம் 34 மொழிகளில்</a></li>
+          </ul>
+          <ul>
+            <li><a href="/accessibility/">அணுகல்தன்மை</a></li>
+            <li><a href="/privacy/">தனியுரிமை</a></li>
+            <li><a href="/terms/">விதிமுறைகள்</a></li>
+            <li><a href="/contact/">தொடர்பு</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://pain001.com/ta/documentation/",
+          "url": "https://pain001.com/ta/documentation/",
+          "name": "Pain001 தொழில்நுட்பக் குறிப்பு: CLI, Python API, REST",
+          "description": "pain001 v0.0.56 முழுக் குறிப்பு — CLI கட்டளைகளும் ஃபிளாக்குகளும், Python API, /api/v1 REST எண்ட்பாயிண்ட்கள், திட்ட விதிநூல்கள், உள்ளீட்டு இயல்பாக்கம், செருகுநிரல் கட்டமைப்பு.",
+          "inLanguage": "ta",
+          "dateModified": "2026-07-26",
+          "isPartOf": { "@id": "https://pain001.com/#website" },
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "முகப்பு", "item": "https://pain001.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Pain001 தொழில்நுட்பக் குறிப்பு: CLI, Python API, REST" }
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pain001.com/#organization",
+          "name": "Pain001",
+          "url": "https://pain001.com/",
+          "logo": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+          "founder": { "@type": "Person", "name": "Sebastien Rousseau", "url": "https://sebastienrousseau.com" },
+          "sameAs": [
+            "https://github.com/sebastienrousseau/pain001",
+            "https://pypi.org/project/pain001/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pain001.com/#website",
+          "url": "https://pain001.com/",
+          "name": "Pain001",
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        }
+      ]
+    }
+    </script>
+
+    <script src="/_csp/197fcfccbee69bda.js" integrity="sha384-geygAAYoalTqpA6bIgsGUMRQupyTiF/rCnvMiGE5+G0s0ZOYAhHnkhzyMXN9yNxa" crossorigin="anonymous"></script>
+  
+<!-- SSG Search Widget -->
+<div id="ssg-search-widget">
+
+<!-- Search trigger button -->
+<button id="ssg-search-btn" type="button" aria-label="Search">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<span>Search</span>
+<kbd>K</kbd>
+</button>
+<!-- Search modal -->
+<div id="ssg-search-overlay" role="dialog" aria-label="Search">
+<div id="ssg-search-box">
+<div id="ssg-search-header">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<input id="ssg-search-input" type="search" placeholder="Search documentation..." autocomplete="off" aria-label="Search"/>
+</div>
+<div id="ssg-search-results" aria-live="polite"></div>
+<div id="ssg-sr-status" role="status" aria-live="polite" aria-atomic="true"></div>
+<div class="ssg-search-footer"><span><kbd>Esc</kbd> close</span><span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span><span><kbd>Enter</kbd> open</span></div>
+</div>
+</div>
+<script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>

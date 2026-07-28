@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta itemprop="datePublished" content="Sun, 26 Jul 2026 08:00:00 +0000" id="date" />
+    <meta itemprop="dateModified" content="Sun, 26 Jul 2026 08:00:00 +0000" id="last-modified" />
+    <title>Glossário de pagamentos ISO 20022 em linguagem clara</title>
+
+    <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
+<meta name="description" content="pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, endereços híbridos, somas de controle — o vocabulário de pagamentos para tesoureiros e equipes de operações, não só desenvolvedores.">
+<meta name="keywords" content="ISO 20022 glossary, pain.001 meaning, pacs.008 vs pain.001, camt.053 definition, CBPR+ meaning, UETR, verification of payee, payments terminology">
+<meta property="og:image" content="https://pain001.com/og/pain001-card.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="An open reference book of ISO 20022 payments terminology, from pain.001 to Verification of Payee, defined in plain English." />
+    <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Glossário de pagamentos ISO 20022 em linguagem clara">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    
+    
+
+    <link rel="alternate" href="https://pain001.com/pt-br/glossary/" hreflang="en" />
+    
+    <link rel="icon" type="image/svg+xml" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />
+    <link rel="preload" href="/fonts/source-serif-4-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/_csp/e9d2f9e83d6b47b6.css" integrity="sha384-NgS1FgtNO/+O73jGnYQcFGXyKGAVkFu/W1I8bL4l2QSI+eMJfSMSQrUdf2zJxS34" crossorigin="anonymous">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
+  <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="Glossário de pagamentos ISO 20022 em linguagem clara">
+<meta property="og:description" content="Home ISO 20022 Payments Glossary in Plain English Glossary ISO 20022 Payments Glossary in Plain English The payments vocabulary in plain English — for the">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pain001.com/pt-br/glossary/">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Glossário de pagamentos ISO 20022 em linguagem clara">
+<meta name="twitter:description" content="Home ISO 20022 Payments Glossary in Plain English Glossary ISO 20022 Payments Glossary in Plain English The payments vocabulary in plain English — for the">
+<meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg">
+<link rel="canonical" href="https://pain001.com/pt-br/glossary/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
+<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"><link rel="alternate" hreflang="en" href="https://pain001.com/glossary/" /><link rel="alternate" hreflang="x-default" href="https://pain001.com/glossary/" /><link rel="alternate" hreflang="ar" href="https://pain001.com/ar/glossary/" /><link rel="alternate" hreflang="bn" href="https://pain001.com/bn/glossary/" /><link rel="alternate" hreflang="cs" href="https://pain001.com/cs/glossary/" /><link rel="alternate" hreflang="de" href="https://pain001.com/de/glossary/" /><link rel="alternate" hreflang="el" href="https://pain001.com/el/glossary/" /><link rel="alternate" hreflang="es" href="https://pain001.com/es/glossary/" /><link rel="alternate" hreflang="fa" href="https://pain001.com/fa/glossary/" /><link rel="alternate" hreflang="fil" href="https://pain001.com/fil/glossary/" /><link rel="alternate" hreflang="fr" href="https://pain001.com/fr/glossary/" /><link rel="alternate" hreflang="ha" href="https://pain001.com/ha/glossary/" /><link rel="alternate" hreflang="he" href="https://pain001.com/he/glossary/" /><link rel="alternate" hreflang="hi" href="https://pain001.com/hi/glossary/" /><link rel="alternate" hreflang="hu" href="https://pain001.com/hu/glossary/" /><link rel="alternate" hreflang="id" href="https://pain001.com/id/glossary/" /><link rel="alternate" hreflang="it" href="https://pain001.com/it/glossary/" /><link rel="alternate" hreflang="ja" href="https://pain001.com/ja/glossary/" /><link rel="alternate" hreflang="ko" href="https://pain001.com/ko/glossary/" /><link rel="alternate" hreflang="mr" href="https://pain001.com/mr/glossary/" /><link rel="alternate" hreflang="ms" href="https://pain001.com/ms/glossary/" /><link rel="alternate" hreflang="nl" href="https://pain001.com/nl/glossary/" /><link rel="alternate" hreflang="pl" href="https://pain001.com/pl/glossary/" /><link rel="alternate" hreflang="ro" href="https://pain001.com/ro/glossary/" /><link rel="alternate" hreflang="ru" href="https://pain001.com/ru/glossary/" /><link rel="alternate" hreflang="sv" href="https://pain001.com/sv/glossary/" /><link rel="alternate" hreflang="ta" href="https://pain001.com/ta/glossary/" /><link rel="alternate" hreflang="te" href="https://pain001.com/te/glossary/" /><link rel="alternate" hreflang="th" href="https://pain001.com/th/glossary/" /><link rel="alternate" hreflang="tr" href="https://pain001.com/tr/glossary/" /><link rel="alternate" hreflang="uk" href="https://pain001.com/uk/glossary/" /><link rel="alternate" hreflang="vi" href="https://pain001.com/vi/glossary/" /><link rel="alternate" hreflang="yo" href="https://pain001.com/yo/glossary/" /><link rel="alternate" hreflang="zh-Hans" href="https://pain001.com/zh-hans/glossary/" /><link rel="alternate" hreflang="zh-Hant" href="https://pain001.com/zh-hant/glossary/" /></head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="ap-nav">
+      <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Alternar navegação" />
+      <div class="wrap ap-nav-wrap">
+        <a class="ap-brand" href="/" aria-label="Pain001 home">
+          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="" width="26" height="26" />
+          <span>Pain001</span>
+        </a>
+        <nav aria-label="Primary navigation" id="ap-primary-nav">
+          <ul class="ap-menu">
+            <li class="has-sub"><a href="/pt-br/why/">Por que Pain001</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-why" aria-label="Alternar o submenu Por que Pain001"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-why" class="ap-sub">
+                <li><a href="/pt-br/solutions/">Para quem é</a></li>
+                <li><a href="/pt-br/executive-brief/">Resumo executivo</a></li>
+                <li><a href="/competitors-comparison/" hreflang="en">Comparação com ferramentas comerciais (EN)</a></li>
+              </ul>
+            </li>
+            <li><a href="/pt-br/try/">Veja ao vivo</a></li>
+            <li class="has-sub"><a href="/pt-br/documentation/">Docs</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="Alternar o submenu Documentação"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-docs" class="ap-sub">
+                <li><a href="/pt-br/installation/">Instalação &amp; Docker</a></li>
+                <li><a href="/pt-br/glossary/">Glossário</a></li>
+                <li><a href="/pt-br/faqs/">Perguntas frequentes</a></li>
+                <li><a href="/pain002-reason-codes/" hreflang="en">Códigos de motivo pain.002 (EN)</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/#suite-heading">Suíte</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-suite" aria-label="Alternar o submenu Suíte"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-suite" class="ap-sub">
+                <li><a href="/pain001-mcp/" hreflang="en">Ferramentas para agentes de IA (MCP) (EN)</a></li>
+                <li><a href="/pain001-lsp/" hreflang="en">Integração com editores (LSP) (EN)</a></li>
+                <li><a href="/pain001-loader-mt101/" hreflang="en">Carregador MT101 (EN)</a></li>
+                <li><a href="/pain001-loader-xlsx/" hreflang="en">Carregador Excel (EN)</a></li>
+                <li><a href="/architecture-and-patents/" hreflang="en">Arquitetura &amp; segurança (EN)</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/2026-iso20022-migration-trends/">Pesquisa</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-research" aria-label="Alternar o submenu Pesquisa"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-research" class="ap-sub">
+                <li><a href="/2026-iso20022-migration-trends/" hreflang="en">Briefing 2026 (EN)</a></li>
+                <li><a href="/iso20022-roadmap/" hreflang="en">Roteiro ISO 20022 (EN)</a></li>
+                <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/" hreflang="en">Guia de pagamentos internacionais (EN)</a></li>
+                <li><a href="/languages/" hreflang="en">Em 34 idiomas (EN)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="ap-nav-right">
+          <button type="button" class="theme-toggle" aria-label="Mudar para tema escuro" data-label-dark="Mudar para tema escuro" data-label-light="Mudar para tema claro" aria-pressed="false" title="Mudar para tema escuro">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+          <button type="button" class="ap-search-btn" aria-label="Pesquisar (Cmd/Ctrl + K)" title="Pesquisar (⌘K)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <kbd class="ap-search-kbd" aria-hidden="true">⌘K</kbd>
+          </button>
+          <div class="ap-lang" role="group" aria-label="Language">
+            <button type="button" class="ap-lang-toggle" aria-label="Mudar idioma" aria-expanded="false" aria-haspopup="menu" title="Mudar idioma">
+              <span class="ap-lang-globe" aria-hidden="true">🌐</span>
+              <span class="ap-lang-current">PT</span>
+            </button>
+            <div class="ap-lang-menu" role="menu" hidden>
+              <div class="ap-lang-menu-grid">
+                <a class="ap-lang-item" href="/pt-br/glossary/" hreflang="en" lang="en" role="menuitem"><span aria-hidden="true">🇬🇧</span> English</a>
+                <a class="ap-lang-item" href="/fr/glossary/" hreflang="fr" lang="fr" role="menuitem"><span aria-hidden="true">🇫🇷</span> Français</a>
+                <a class="ap-lang-item" href="/de/glossary/" hreflang="de" lang="de" role="menuitem"><span aria-hidden="true">🇩🇪</span> Deutsch</a>
+                <a class="ap-lang-item" href="/es/glossary/" hreflang="es" lang="es" role="menuitem"><span aria-hidden="true">🇪🇸</span> Español</a>
+                <a class="ap-lang-item" href="/it/glossary/" hreflang="it" lang="it" role="menuitem"><span aria-hidden="true">🇮🇹</span> Italiano</a>
+                <a class="ap-lang-item" href="/pt-br/glossary/" hreflang="pt-BR" lang="pt-BR" role="menuitem"><span aria-hidden="true">🇧🇷</span> Português</a>
+                <a class="ap-lang-item" href="/nl/glossary/" hreflang="nl" lang="nl" role="menuitem"><span aria-hidden="true">🇳🇱</span> Nederlands</a>
+                <a class="ap-lang-item" href="/pl/glossary/" hreflang="pl" lang="pl" role="menuitem"><span aria-hidden="true">🇵🇱</span> Polski</a>
+                <a class="ap-lang-item" href="/sv/glossary/" hreflang="sv" lang="sv" role="menuitem"><span aria-hidden="true">🇸🇪</span> Svenska</a>
+                <a class="ap-lang-item" href="/cs/glossary/" hreflang="cs" lang="cs" role="menuitem"><span aria-hidden="true">🇨🇿</span> Čeština</a>
+                <a class="ap-lang-item" href="/ro/glossary/" hreflang="ro" lang="ro" role="menuitem"><span aria-hidden="true">🇷🇴</span> Română</a>
+                <a class="ap-lang-item" href="/hu/glossary/" hreflang="hu" lang="hu" role="menuitem"><span aria-hidden="true">🇭🇺</span> Magyar</a>
+                <a class="ap-lang-item" href="/el/glossary/" hreflang="el" lang="el" role="menuitem"><span aria-hidden="true">🇬🇷</span> Ελληνικά</a>
+                <a class="ap-lang-item" href="/tr/glossary/" hreflang="tr" lang="tr" role="menuitem"><span aria-hidden="true">🇹🇷</span> Türkçe</a>
+                <a class="ap-lang-item" href="/ru/glossary/" hreflang="ru" lang="ru" role="menuitem"><span aria-hidden="true">🇷🇺</span> Русский</a>
+                <a class="ap-lang-item" href="/uk/glossary/" hreflang="uk" lang="uk" role="menuitem"><span aria-hidden="true">🇺🇦</span> Українська</a>
+                <a class="ap-lang-item" href="/ar/glossary/" hreflang="ar" lang="ar" role="menuitem"><span aria-hidden="true">🇸🇦</span> العربية</a>
+                <a class="ap-lang-item" href="/he/glossary/" hreflang="he" lang="he" role="menuitem"><span aria-hidden="true">🇮🇱</span> עברית</a>
+                <a class="ap-lang-item" href="/fa/glossary/" hreflang="fa" lang="fa" role="menuitem"><span aria-hidden="true">🇮🇷</span> فارسی</a>
+                <a class="ap-lang-item" href="/hi/glossary/" hreflang="hi" lang="hi" role="menuitem"><span aria-hidden="true">🇮🇳</span> हिन्दी</a>
+                <a class="ap-lang-item" href="/bn/glossary/" hreflang="bn" lang="bn" role="menuitem"><span aria-hidden="true">🇧🇩</span> বাংলা</a>
+                <a class="ap-lang-item" href="/ta/glossary/" hreflang="ta" lang="ta" role="menuitem"><span aria-hidden="true">🇮🇳</span> தமிழ்</a>
+                <a class="ap-lang-item" href="/te/glossary/" hreflang="te" lang="te" role="menuitem"><span aria-hidden="true">🇮🇳</span> తెలుగు</a>
+                <a class="ap-lang-item" href="/mr/glossary/" hreflang="mr" lang="mr" role="menuitem"><span aria-hidden="true">🇮🇳</span> मराठी</a>
+                <a class="ap-lang-item" href="/th/glossary/" hreflang="th" lang="th" role="menuitem"><span aria-hidden="true">🇹🇭</span> ไทย</a>
+                <a class="ap-lang-item" href="/vi/glossary/" hreflang="vi" lang="vi" role="menuitem"><span aria-hidden="true">🇻🇳</span> Tiếng Việt</a>
+                <a class="ap-lang-item" href="/id/glossary/" hreflang="id" lang="id" role="menuitem"><span aria-hidden="true">🇮🇩</span> Indonesia</a>
+                <a class="ap-lang-item" href="/ms/glossary/" hreflang="ms" lang="ms" role="menuitem"><span aria-hidden="true">🇲🇾</span> Melayu</a>
+                <a class="ap-lang-item" href="/fil/glossary/" hreflang="fil" lang="fil" role="menuitem"><span aria-hidden="true">🇵🇭</span> Filipino</a>
+                <a class="ap-lang-item" href="/ja/glossary/" hreflang="ja" lang="ja" role="menuitem"><span aria-hidden="true">🇯🇵</span> 日本語</a>
+                <a class="ap-lang-item" href="/ko/glossary/" hreflang="ko" lang="ko" role="menuitem"><span aria-hidden="true">🇰🇷</span> 한국어</a>
+                <a class="ap-lang-item" href="/zh-hans/glossary/" hreflang="zh-Hans" lang="zh-Hans" role="menuitem"><span aria-hidden="true">🇨🇳</span> 简体中文</a>
+                <a class="ap-lang-item" href="/zh-hant/glossary/" hreflang="zh-Hant" lang="zh-Hant" role="menuitem"><span aria-hidden="true">🇹🇼</span> 繁體中文</a>
+                <a class="ap-lang-item" href="/ha/glossary/" hreflang="ha" lang="ha" role="menuitem"><span aria-hidden="true">🇳🇬</span> Hausa</a>
+                <a class="ap-lang-item" href="/yo/glossary/" hreflang="yo" lang="yo" role="menuitem"><span aria-hidden="true">🇳🇬</span> Yorùbá</a>
+              </div>
+            </div>
+          </div>
+          <a class="ap-cta-mini" href="/pt-br/try/">Testar a demo&nbsp;&rsaquo;</a>
+          <label class="ap-burger" for="ap-menu-toggle" aria-hidden="true"><span class="ap-burger-icon">☰</span></label>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <header class="page-header">
+        <div class="wrap">
+          <nav class="breadcrumb" aria-label="Trilha de navegação">
+            <ol>
+              <li><a href="/">Início</a></li>
+              <li aria-current="page">Glossário de pagamentos ISO 20022 em linguagem clara</li>
+            </ol>
+          </nav>
+          <p class="eyebrow">Glossário</p>
+          <h1 class="page-title">Glossário de pagamentos ISO 20022 em linguagem clara</h1>
+          <p class="deck">O vocabulário de pagamentos em linguagem clara — para quem aprova os arquivos, não só para quem os gera.</p>
+          <div class="article-meta"><span>3 min de leitura</span>
+            <span>Última revisão <time datetime="2026-07-26">2026-07-26</time></span>
+          </div>
+        </div>
+      </header>
+
+      <div class="wrap content-shell">
+        <article class="content-body"><nav class="article-toc" aria-label="Sumário"><h2>Sumário</h2><ol><li><a href="#messages">Mensagens</a></li><li><a href="#schemes-and-rulebooks">Esquemas e rulebooks</a></li><li><a href="#identifiers-and-data">Identificadores e dados</a></li><li><a href="#tooling-terms-used-on-this-site">Termos de ferramentas usados neste site</a></li></ol></nav>
+          <div lang="en"><p>Definições em linguagem clara dos termos que aparecem neste site e na documentação de canal do seu banco. Escritas primeiro para tesoureiros e equipes de operações, depois para engenheiros.</p>
+<hr />
+<h2 id="messages">Mensagens<a class="heading-anchor" href="#messages" aria-label="Link para a seção: Mensagens">#</a></h2>
+<p><strong>pain.001 — Customer Credit Transfer Initiation.</strong> A mensagem XML que um cliente envia ao banco para ordenar uma ou mais transferências de crédito. A família "pain" é a <em>payment initiation</em>; <code>.001</code> é o número da mensagem; a versão final (<code>.001.09</code>) fixa o esquema.</p>
+<p><strong>pain.002 — Customer Payment Status Report.</strong> A resposta do banco ao seu <code>pain.001</code> ou <code>pain.008</code>: aceito, parcialmente aceito ou rejeitado, com códigos de motivo ISO por transação.</p>
+<p><strong>pain.008 — Customer Direct Debit Initiation.</strong> O gêmeo de cobrança do <code>pain.001</code>: você puxa fundos que lhe são devidos sob um mandato, em vez de enviar fundos.</p>
+<p><strong>pacs.008 / pacs.009.</strong> As mensagens de liquidação interbancária em que sua instrução se transforma quando o banco a aceita. Empresas nunca as redigem; os bancos as trocam entre si.</p>
+<p><strong>camt.052 / camt.053 / camt.054.</strong> Relatórios de conta: relatório intradiário, extrato de fim de dia e notificação de débito/crédito, respectivamente. O <code>camt.053</code> é o que as equipes de conciliação consomem toda manhã.</p>
+<p><strong>MT101.</strong> A mensagem de texto legada da SWIFT "Request for Transfer" que o <code>pain.001</code> substitui. O relay interbancário do MT101 será descomissionado em 14 de novembro de 2026 em favor do <code>pain.001.001.09</code>; o MT101 empresa-banco persiste apenas a critério de cada banco.</p>
+<h2 id="schemes-and-rulebooks">Esquemas e rulebooks<a class="heading-anchor" href="#schemes-and-rulebooks" aria-label="Link para a seção: Esquemas e rulebooks">#</a></h2>
+<p><strong>SEPA SCT / SCT Inst.</strong> Os esquemas de transferência de crédito em euro (padrão e instantâneo) regidos pelos rulebooks do European Payments Council. As transferências instantâneas liquidam em segundos, 24 horas por dia.</p>
+<p><strong>SEPA SDD Core / B2B.</strong> Os esquemas de débito direto em euro — Core para consumidores (com direito a reembolso), B2B para empresas (sem direito a reembolso, verificações de mandato mais rígidas).</p>
+<p><strong>CBPR+.</strong> Cross-Border Payments and Reporting Plus: as diretrizes de uso que perfilam as mensagens ISO 20022 para o correspondent banking da SWIFT. Quando se fala em "migração da SWIFT para ISO 20022", trata-se do CBPR+.</p>
+<p><strong>HVPS+.</strong> O perfilamento equivalente para sistemas de pagamentos de alto valor (T2, CHAPS, Fedwire e pares).</p>
+<p><strong>CGI-MP.</strong> Common Global Implementation — Market Practice: o grupo que harmoniza como as empresas usam mensagens <code>pain</code> entre bancos, para que um único formato de arquivo atenda a muitos parceiros bancários.</p>
+<p><strong>Verification of Payee (VoP).</strong> A verificação de correspondência nome/IBAN exigida pela UE, aplicada a todas as transferências de crédito SEPA desde 9 de outubro de 2025. Feita pelo PSP no momento da execução; dados limpos do credor determinam se há correspondência.</p>
+<h2 id="identifiers-and-data">Identificadores e dados<a class="heading-anchor" href="#identifiers-and-data" aria-label="Link para a seção: Identificadores e dados">#</a></h2>
+<p><strong>IBAN.</strong> International Bank Account Number (ISO 13616), autoverificável por um checksum mod-97 — razão pela qual um único dígito transposto é detectável <em>antes</em> do envio.</p>
+<p><strong>BIC / BICFI.</strong> O Business Identifier Code ISO 9362 de uma instituição financeira. O elemento XML é <code><BIC></code> no <code>pain.001.001.03</code>, mas <code><BICFI></code> a partir da versão 9 — uma renomeação que causa rejeições reais durante upgrades de versão.</p>
+<p><strong>LEI.</strong> Legal Entity Identifier (ISO 17442) — o identificador global de empresas com 20 caracteres. Há mais de 3 milhões ativos, e os reguladores os exigem cada vez mais nos pagamentos.</p>
+<p><strong>UETR.</strong> Unique End-to-end Transaction Reference — o UUID que permite rastrear um pagamento por toda a cadeia de correspondentes (SWIFT gpi).</p>
+<p><strong>Endereço estruturado / híbrido.</strong> Endereços postais como elementos XML discretos (rua, cidade, código postal, país) em contraste com linhas de texto livre. A partir de 14 de novembro de 2026, o CBPR+ rejeita endereços totalmente não estruturados; o <em>híbrido</em> — cidade e país estruturados mais até duas linhas de endereço de 70 caracteres — permanece válido.</p>
+<p><strong>NbOfTxs / CtrlSum.</strong> Os totais de controle do cabeçalho de grupo: contagem de transações e soma dos valores. Os bancos os recalculam; se os seus divergirem, o arquivo volta. O Pain001 sempre os deriva dos registros validados.</p>
+<p><strong>Charge bearer.</strong> Quem paga as tarifas: <code>DEBT</code> (remetente), <code>CRED</code> (beneficiário), <code>SHAR</code> (compartilhadas), <code>SLEV</code> (conforme as regras do esquema). Os legados MT <code>OUR</code>/<code>BEN</code>/<code>SHA</code> mapeiam para os três primeiros.</p>
+<p><strong>Informações de remessa.</strong> O campo "para que serve este pagamento" — texto livre (140 caracteres) ou referências estruturadas. Aquilo que as equipes de conciliação gostariam que todos preenchessem direito.</p>
+<h2 id="tooling-terms-used-on-this-site">Termos de ferramentas usados neste site<a class="heading-anchor" href="#tooling-terms-used-on-this-site" aria-label="Link para a seção: Termos de ferramentas usados neste site">#</a></h2>
+<p><strong>Validação XSD.</strong> A verificação do XML contra a definição de esquema oficial ISO 20022. O Pain001 a trata como um portão rígido antes de qualquer arquivo ser gravado.</p>
+<p><strong>MCP — Model Context Protocol.</strong> O padrão aberto pelo qual assistentes de IA chamam ferramentas externas. O <a href="/pain001-mcp/"><code>pain001-mcp</code></a> expõe 17 ferramentas de pagamento a qualquer cliente MCP, localmente via stdio.</p>
+<p><strong>LSP — Language Server Protocol.</strong> O padrão de integração com editores por trás dos diagnósticos de IDE. O <a href="/pain001-lsp/"><code>pain001-lsp</code></a> o utiliza para validar arquivos de pagamento enquanto você digita.</p>
+<p><strong>SBOM.</strong> Software Bill of Materials — um inventário legível por máquina de cada dependência de uma release, gerado no formato CycloneDX para as releases do núcleo do Pain001.</p>
+<hr />
+<p>Faltou algo? <a href="https://github.com/sebastienrousseau/pain001/issues">Sugira um termo</a> — este glossário cresce com as perguntas que as pessoas realmente fazem.</p>
+</div>
+        </article>
+      </div>
+    </main>
+
+    <button class="totop" id="toTop" type="button" hidden aria-label="Back to top">&uarr;</button>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-brand">Pain001</p>
+            <p class="footer-tagline">Iniciação de pagamentos ISO 20022 em código aberto. Arquivos validados, processamento local, sem dependência.</p>
+          </div>
+          <div>
+            <h2 class="footer-heading">Documentação</h2>
+            <ul class="footer-links">
+              <li><a href="/pt-br/try/">Experimente no navegador</a></li>
+              <li><a href="/pt-br/documentation/">Referência técnica</a></li>
+              <li><a href="/pt-br/installation/">Instalação &amp; Docker</a></li>
+              <li><a href="/payments/">Pipelines de pagamento</a></li>
+              <li><a href="/pt-br/glossary/">Glossário</a></li>
+              <li><a href="/pt-br/faqs/">Perguntas frequentes</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Ecossistema</h2>
+            <ul class="footer-links">
+              <li><a href="/pain001-mcp/">pain001-mcp · agentes de IA</a></li>
+              <li><a href="/pain001-lsp/">pain001-lsp · editores</a></li>
+              <li><a href="/pain001-loader-mt101/">Carregador MT101</a></li>
+              <li><a href="/pain001-loader-xlsx/">Carregador Excel</a></li>
+              <li><a href="https://github.com/sebastienrousseau/pain001" rel="external">GitHub</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Pesquisa e confiança</h2>
+            <ul class="footer-links">
+              <li><a href="/pt-br/why/">Por que Pain001</a></li>
+              <li><a href="/pt-br/executive-brief/">Resumo executivo</a></li>
+              <li><a href="/iso20022-roadmap/">Roteiro ISO 20022</a></li>
+              <li><a href="/2026-iso20022-migration-trends/">Briefing 2026</a></li>
+              <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/">Guia de Pagamentos Internacionais</a></li>
+              <li><a href="/competitors-comparison/">Comparação com ferramentas comerciais</a></li>
+              <li><a href="/architecture-and-patents/">Arquitetura &amp; patentes</a></li>
+              <li><a href="/trust/">Central de Confiança</a></li>
+              <li><a href="/compatibility/">Matriz de compatibilidade</a></li>
+              <li><a href="/security.txt">security.txt</a></li>
+              <li><a href="/sbom.cdx.json">SBOM</a> · <a href="/llms.txt">llms.txt</a> · <a href="/rss.xml">Feed RSS</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; 2023&ndash;2026 Sebastien Rousseau. Core dual-licensed Apache-2.0 / MIT; companion packages Apache-2.0.</p>
+          <ul aria-label="This overview in other languages">
+            <li><a href="/languages/">Este resumo em 34 idiomas</a></li>
+          </ul>
+          <ul>
+            <li><a href="/accessibility/">Acessibilidade</a></li>
+            <li><a href="/privacy/">Privacidade</a></li>
+            <li><a href="/terms/">Termos</a></li>
+            <li><a href="/contact/">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://pain001.com/pt-br/glossary/",
+          "url": "https://pain001.com/pt-br/glossary/",
+          "name": "Glossário de pagamentos ISO 20022 em linguagem clara",
+          "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, endereços híbridos, somas de controle — o vocabulário de pagamentos para tesoureiros e equipes de operações, não só desenvolvedores.",
+          "inLanguage": "pt-BR",
+          "dateModified": "2026-07-26",
+          "isPartOf": { "@id": "https://pain001.com/#website" },
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://pain001.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Glossário de pagamentos ISO 20022 em linguagem clara" }
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pain001.com/#organization",
+          "name": "Pain001",
+          "url": "https://pain001.com/",
+          "logo": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+          "founder": { "@type": "Person", "name": "Sebastien Rousseau", "url": "https://sebastienrousseau.com" },
+          "sameAs": [
+            "https://github.com/sebastienrousseau/pain001",
+            "https://pypi.org/project/pain001/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pain001.com/#website",
+          "url": "https://pain001.com/",
+          "name": "Pain001",
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        }
+      ]
+    }
+    </script>
+
+    <script src="/_csp/197fcfccbee69bda.js" integrity="sha384-geygAAYoalTqpA6bIgsGUMRQupyTiF/rCnvMiGE5+G0s0ZOYAhHnkhzyMXN9yNxa" crossorigin="anonymous"></script>
+  
+<!-- SSG Search Widget -->
+<div id="ssg-search-widget">
+
+<!-- Search trigger button -->
+<button id="ssg-search-btn" type="button" aria-label="Search">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<span>Search</span>
+<kbd>K</kbd>
+</button>
+<!-- Search modal -->
+<div id="ssg-search-overlay" role="dialog" aria-label="Search">
+<div id="ssg-search-box">
+<div id="ssg-search-header">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<input id="ssg-search-input" type="search" placeholder="Search documentation..." autocomplete="off" aria-label="Search"/>
+</div>
+<div id="ssg-search-results" aria-live="polite"></div>
+<div id="ssg-sr-status" role="status" aria-live="polite" aria-atomic="true"></div>
+<div class="ssg-search-footer"><span><kbd>Esc</kbd> close</span><span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span><span><kbd>Enter</kbd> open</span></div>
+</div>
+</div>
+<script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>

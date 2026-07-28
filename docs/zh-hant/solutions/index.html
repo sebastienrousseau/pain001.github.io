@@ -78,12 +78,12 @@
               </ul>
             </li>
             <li><a href="/zh-hant/try/">線上體驗</a></li>
-            <li class="has-sub"><a href="/documentation/">文件</a>
+            <li class="has-sub"><a href="/zh-hant/documentation/">文件</a>
               <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="切換「文件」子選單"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
               <ul id="sub-docs" class="ap-sub">
-                <li><a href="/installation/" hreflang="en">安裝 &amp; Docker (EN)</a></li>
-                <li><a href="/glossary/" hreflang="en">詞彙表 (EN)</a></li>
-                <li><a href="/faqs/" hreflang="en">常見問題 (EN)</a></li>
+                <li><a href="/zh-hant/installation/">安裝 &amp; Docker</a></li>
+                <li><a href="/zh-hant/glossary/">詞彙表</a></li>
+                <li><a href="/zh-hant/faqs/">常見問題</a></li>
                 <li><a href="/pain002-reason-codes/" hreflang="en">pain.002 原因代碼 (EN)</a></li>
               </ul>
             </li>
@@ -189,13 +189,13 @@
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="目錄"><h2>目錄</h2><ol><li><a href="#treasury-finance">資金管理與財務</a></li><li><a href="#cfo-board">CFO 與董事會</a></li><li><a href="#payment-operations">付款作業</a></li><li><a href="#engineering-ai">工程與 AI</a></li></ol></nav>
           <div lang="en"><h2 id="treasury-finance">資金管理與財務<a class="heading-anchor" href="#treasury-finance" aria-label="前往章節：資金管理與財務">#</a></h2>
-<p>您的銀行退回檔案的理由，ERP 從未事先警告：IBAN 數字對調、控制總額不再相符、地址格式不再被接受。Pain001 讓這些失敗提前在您的桌面現形——每個檔案在提交前皆依銀行官方規則手冊（ISO 20022 XSD）獲得證明，<a href="/payments/">付款生命週期指南</a>並展示每項檢查在發動與對帳之間的位置。若這些詞彙對您仍屬陌生，請從<a href="/glossary/">詞彙表</a>入手；那些淺白的定義是為您這一側的辦公桌而寫，而非為工程師。</p>
+<p>您的銀行退回檔案的理由，ERP 從未事先警告：IBAN 數字對調、控制總額不再相符、地址格式不再被接受。Pain001 讓這些失敗提前在您的桌面現形——每個檔案在提交前皆依銀行官方規則手冊（ISO 20022 XSD）獲得證明，<a href="/payments/">付款生命週期指南</a>並展示每項檢查在發動與對帳之間的位置。若這些詞彙對您仍屬陌生，請從<a href="/zh-hant/glossary/">詞彙表</a>入手；那些淺白的定義是為您這一側的辦公桌而寫，而非為工程師。</p>
 <h2 id="cfo-board">CFO 與董事會<a class="heading-anchor" href="#cfo-board" aria-label="前往章節：CFO 與董事會">#</a></h2>
 <p>兩個數字框定了這項決策。<strong>2026 年 11 月 14 日</strong>：攜帶非結構化地址的跨境付款開始在網路層級遭退回的日期——曝險存在於您的客戶主檔資料，而非您的銀行連線。<strong>每年 €10,000–30,000</strong>：最接近的商業轉換 SDK 之公開定價，相對於 Pain001 在開放授權下、任何規模皆永久免費。治理問題——可稽核性、資料在地性、供應鏈證據——以實證文件而非口頭保證作答：公開發布的 <a href="/sbom.cdx.json">SBOM</a>、<a href="/security.txt">資安政策</a>，以及絕不離開您基礎設施的處理流程。<a href="/zh-hant/executive-brief/">一頁主管簡報</a>正是為轉寄而寫。</p>
 <h2 id="payment-operations">付款作業<a class="heading-anchor" href="#payment-operations" aria-label="前往章節：付款作業">#</a></h2>
 <p>您的日常就在回應檔案裡。Pain001 端對端閉環：<code>--dry-run</code> 提交前檢查在 CI 中乾淨地通過或失敗，逐條解說的清算方案規則手冊（SEPA 與跨境），用於解讀回覆的 <a href="/pain002-reason-codes/">pain.002 原因代碼參考</a>，以及將銀行回應與 camt.053 對帳單轉為您的管線可路由的結構化資料的剖析器。<a href="/zh-hant/try/">瀏覽器示範</a>是了解它所消除的失敗類別最快的方式——包括一鍵「引入錯誤」情境。</p>
 <h2 id="engineering-ai">工程與 AI<a class="heading-anchor" href="#engineering-ai" aria-label="前往章節：工程與 AI">#</a></h2>
-<p>型別化的 Python API、具有明確結束碼的 CLI、REST 微服務，以及供載入器、驗證器、清算方案與寫入器使用的外掛點——<a href="/documentation/">技術參考</a>涵蓋每個旗標與端點，程式碼並以 100% 行與分支涵蓋率作為硬性 CI 關卡。若您正以 AI 代理建置：<a href="/pain001-mcp/">pain001-mcp</a> 是同類別中唯一的 Model Context Protocol 伺服器——十七個唯讀工具供您的代理在本機呼叫，並由 <a href="/pain001-lsp/">pain001-lsp</a> 提供編輯器診斷，同時人員始終參與其中。</p>
+<p>型別化的 Python API、具有明確結束碼的 CLI、REST 微服務，以及供載入器、驗證器、清算方案與寫入器使用的外掛點——<a href="/zh-hant/documentation/">技術參考</a>涵蓋每個旗標與端點，程式碼並以 100% 行與分支涵蓋率作為硬性 CI 關卡。若您正以 AI 代理建置：<a href="/pain001-mcp/">pain001-mcp</a> 是同類別中唯一的 Model Context Protocol 伺服器——十七個唯讀工具供您的代理在本機呼叫，並由 <a href="/pain001-lsp/">pain001-lsp</a> 提供編輯器診斷，同時人員始終參與其中。</p>
 </div>
         </article>
       </div>
@@ -214,11 +214,11 @@
             <h2 class="footer-heading">文件</h2>
             <ul class="footer-links">
               <li><a href="/zh-hant/try/">在瀏覽器中試用</a></li>
-              <li><a href="/documentation/">技術參考</a></li>
-              <li><a href="/installation/">安裝 &amp; Docker</a></li>
+              <li><a href="/zh-hant/documentation/">技術參考</a></li>
+              <li><a href="/zh-hant/installation/">安裝 &amp; Docker</a></li>
               <li><a href="/payments/">支付管線</a></li>
-              <li><a href="/glossary/">詞彙表</a></li>
-              <li><a href="/faqs/">常見問題</a></li>
+              <li><a href="/zh-hant/glossary/">詞彙表</a></li>
+              <li><a href="/zh-hant/faqs/">常見問題</a></li>
             </ul>
           </div>
           <div>

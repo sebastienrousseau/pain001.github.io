@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta itemprop="datePublished" content="Sun, 26 Jul 2026 08:00:00 +0000" id="date" />
+    <meta itemprop="dateModified" content="Sun, 26 Jul 2026 08:00:00 +0000" id="last-modified" />
+    <title>Pain001 설치: pip, Docker, 그리고 첫 검증 파일</title>
+
+    <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
+<meta name="description" content="Python 3.10–3.12에서 pip 또는 Docker로 Pain001 제품군을 설치하고, Excel과 MT101 로더를 추가해 세 개의 명령으로 은행 제출용 pain.001 파일을 만드세요.">
+<meta name="keywords" content="install pain001, pip install pain001, pain001 docker, ISO 20022 file generator setup, pain001 extras, PAIN001_DISABLE_PLUGINS">
+<meta property="og:image" content="https://pain001.com/og/pain001-card.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A clean terminal session installing Pain001 from PyPI and generating a first validated pain.001 file — three commands from zero to bank-ready." />
+    <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Pain001 설치: pip, Docker, 그리고 첫 검증 파일">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    
+    
+
+    <link rel="alternate" href="https://pain001.com/ko/installation/" hreflang="en" />
+    
+    <link rel="icon" type="image/svg+xml" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />
+    <link rel="preload" href="/fonts/source-serif-4-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/_csp/e9d2f9e83d6b47b6.css" integrity="sha384-NgS1FgtNO/+O73jGnYQcFGXyKGAVkFu/W1I8bL4l2QSI+eMJfSMSQrUdf2zJxS34" crossorigin="anonymous">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
+  <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="Pain001 설치: pip, Docker, 그리고 첫 검증 파일">
+<meta property="og:description" content="Home Install Pain001: pip, Docker and First Validated File Get started Install Pain001: pip, Docker and First Validated File Python 3.10–3.12, pip or Docker,">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pain001.com/ko/installation/">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pain001 설치: pip, Docker, 그리고 첫 검증 파일">
+<meta name="twitter:description" content="Home Install Pain001: pip, Docker and First Validated File Get started Install Pain001: pip, Docker and First Validated File Python 3.10–3.12, pip or Docker,">
+<meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg">
+<link rel="canonical" href="https://pain001.com/ko/installation/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
+<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"><link rel="alternate" hreflang="en" href="https://pain001.com/installation/" /><link rel="alternate" hreflang="x-default" href="https://pain001.com/installation/" /><link rel="alternate" hreflang="ar" href="https://pain001.com/ar/installation/" /><link rel="alternate" hreflang="bn" href="https://pain001.com/bn/installation/" /><link rel="alternate" hreflang="cs" href="https://pain001.com/cs/installation/" /><link rel="alternate" hreflang="de" href="https://pain001.com/de/installation/" /><link rel="alternate" hreflang="el" href="https://pain001.com/el/installation/" /><link rel="alternate" hreflang="es" href="https://pain001.com/es/installation/" /><link rel="alternate" hreflang="fa" href="https://pain001.com/fa/installation/" /><link rel="alternate" hreflang="fil" href="https://pain001.com/fil/installation/" /><link rel="alternate" hreflang="fr" href="https://pain001.com/fr/installation/" /><link rel="alternate" hreflang="ha" href="https://pain001.com/ha/installation/" /><link rel="alternate" hreflang="he" href="https://pain001.com/he/installation/" /><link rel="alternate" hreflang="hi" href="https://pain001.com/hi/installation/" /><link rel="alternate" hreflang="hu" href="https://pain001.com/hu/installation/" /><link rel="alternate" hreflang="id" href="https://pain001.com/id/installation/" /><link rel="alternate" hreflang="it" href="https://pain001.com/it/installation/" /><link rel="alternate" hreflang="ja" href="https://pain001.com/ja/installation/" /><link rel="alternate" hreflang="mr" href="https://pain001.com/mr/installation/" /><link rel="alternate" hreflang="ms" href="https://pain001.com/ms/installation/" /><link rel="alternate" hreflang="nl" href="https://pain001.com/nl/installation/" /><link rel="alternate" hreflang="pl" href="https://pain001.com/pl/installation/" /><link rel="alternate" hreflang="pt-BR" href="https://pain001.com/pt-br/installation/" /><link rel="alternate" hreflang="ro" href="https://pain001.com/ro/installation/" /><link rel="alternate" hreflang="ru" href="https://pain001.com/ru/installation/" /><link rel="alternate" hreflang="sv" href="https://pain001.com/sv/installation/" /><link rel="alternate" hreflang="ta" href="https://pain001.com/ta/installation/" /><link rel="alternate" hreflang="te" href="https://pain001.com/te/installation/" /><link rel="alternate" hreflang="th" href="https://pain001.com/th/installation/" /><link rel="alternate" hreflang="tr" href="https://pain001.com/tr/installation/" /><link rel="alternate" hreflang="uk" href="https://pain001.com/uk/installation/" /><link rel="alternate" hreflang="vi" href="https://pain001.com/vi/installation/" /><link rel="alternate" hreflang="yo" href="https://pain001.com/yo/installation/" /><link rel="alternate" hreflang="zh-Hans" href="https://pain001.com/zh-hans/installation/" /><link rel="alternate" hreflang="zh-Hant" href="https://pain001.com/zh-hant/installation/" /></head>
+
+  <body>
+    <a href="#main-content" class="skip-link">본문으로 건너뛰기</a>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="ap-nav">
+      <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="내비게이션 전환" />
+      <div class="wrap ap-nav-wrap">
+        <a class="ap-brand" href="/" aria-label="Pain001 home">
+          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="" width="26" height="26" />
+          <span>Pain001</span>
+        </a>
+        <nav aria-label="Primary navigation" id="ap-primary-nav">
+          <ul class="ap-menu">
+            <li class="has-sub"><a href="/ko/why/">왜 Pain001인가</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-why" aria-label="Pain001을 선택하는 이유 하위 메뉴 열기/닫기"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-why" class="ap-sub">
+                <li><a href="/ko/solutions/">누구를 위한 도구인가</a></li>
+                <li><a href="/ko/executive-brief/">경영진 브리핑</a></li>
+                <li><a href="/competitors-comparison/" hreflang="en">상용 도구와의 비교 (EN)</a></li>
+              </ul>
+            </li>
+            <li><a href="/ko/try/">라이브로 보기</a></li>
+            <li class="has-sub"><a href="/ko/documentation/">문서</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="문서 하위 메뉴 열기/닫기"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-docs" class="ap-sub">
+                <li><a href="/ko/installation/">설치 &amp; Docker</a></li>
+                <li><a href="/ko/glossary/">용어집</a></li>
+                <li><a href="/ko/faqs/">자주 묻는 질문</a></li>
+                <li><a href="/pain002-reason-codes/" hreflang="en">pain.002 사유 코드 (EN)</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/#suite-heading">스위트</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-suite" aria-label="스위트 하위 메뉴 열기/닫기"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-suite" class="ap-sub">
+                <li><a href="/pain001-mcp/" hreflang="en">AI 에이전트 도구 (MCP) (EN)</a></li>
+                <li><a href="/pain001-lsp/" hreflang="en">에디터 통합 (LSP) (EN)</a></li>
+                <li><a href="/pain001-loader-mt101/" hreflang="en">MT101 로더 (EN)</a></li>
+                <li><a href="/pain001-loader-xlsx/" hreflang="en">Excel 로더 (EN)</a></li>
+                <li><a href="/architecture-and-patents/" hreflang="en">아키텍처 &amp; 보안 (EN)</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/2026-iso20022-migration-trends/">리서치</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-research" aria-label="리서치 하위 메뉴 열기/닫기"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-research" class="ap-sub">
+                <li><a href="/2026-iso20022-migration-trends/" hreflang="en">2026 브리핑 (EN)</a></li>
+                <li><a href="/iso20022-roadmap/" hreflang="en">ISO 20022 로드맵 (EN)</a></li>
+                <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/" hreflang="en">국가 간 송금 가이드 (EN)</a></li>
+                <li><a href="/languages/" hreflang="en">34개 언어 지원 (EN)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="ap-nav-right">
+          <button type="button" class="theme-toggle" aria-label="다크 테마로 전환" data-label-dark="다크 테마로 전환" data-label-light="라이트 테마로 전환" aria-pressed="false" title="다크 테마로 전환">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+          <button type="button" class="ap-search-btn" aria-label="검색 (Cmd/Ctrl + K)" title="검색 (⌘K)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <kbd class="ap-search-kbd" aria-hidden="true">⌘K</kbd>
+          </button>
+          <div class="ap-lang" role="group" aria-label="Language">
+            <button type="button" class="ap-lang-toggle" aria-label="언어 변경" aria-expanded="false" aria-haspopup="menu" title="언어 변경">
+              <span class="ap-lang-globe" aria-hidden="true">🌐</span>
+              <span class="ap-lang-current">KO</span>
+            </button>
+            <div class="ap-lang-menu" role="menu" hidden>
+              <div class="ap-lang-menu-grid">
+                <a class="ap-lang-item" href="/ko/installation/" hreflang="en" lang="en" role="menuitem"><span aria-hidden="true">🇬🇧</span> English</a>
+                <a class="ap-lang-item" href="/fr/installation/" hreflang="fr" lang="fr" role="menuitem"><span aria-hidden="true">🇫🇷</span> Français</a>
+                <a class="ap-lang-item" href="/de/installation/" hreflang="de" lang="de" role="menuitem"><span aria-hidden="true">🇩🇪</span> Deutsch</a>
+                <a class="ap-lang-item" href="/es/installation/" hreflang="es" lang="es" role="menuitem"><span aria-hidden="true">🇪🇸</span> Español</a>
+                <a class="ap-lang-item" href="/it/installation/" hreflang="it" lang="it" role="menuitem"><span aria-hidden="true">🇮🇹</span> Italiano</a>
+                <a class="ap-lang-item" href="/pt-br/installation/" hreflang="pt-BR" lang="pt-BR" role="menuitem"><span aria-hidden="true">🇧🇷</span> Português</a>
+                <a class="ap-lang-item" href="/nl/installation/" hreflang="nl" lang="nl" role="menuitem"><span aria-hidden="true">🇳🇱</span> Nederlands</a>
+                <a class="ap-lang-item" href="/pl/installation/" hreflang="pl" lang="pl" role="menuitem"><span aria-hidden="true">🇵🇱</span> Polski</a>
+                <a class="ap-lang-item" href="/sv/installation/" hreflang="sv" lang="sv" role="menuitem"><span aria-hidden="true">🇸🇪</span> Svenska</a>
+                <a class="ap-lang-item" href="/cs/installation/" hreflang="cs" lang="cs" role="menuitem"><span aria-hidden="true">🇨🇿</span> Čeština</a>
+                <a class="ap-lang-item" href="/ro/installation/" hreflang="ro" lang="ro" role="menuitem"><span aria-hidden="true">🇷🇴</span> Română</a>
+                <a class="ap-lang-item" href="/hu/installation/" hreflang="hu" lang="hu" role="menuitem"><span aria-hidden="true">🇭🇺</span> Magyar</a>
+                <a class="ap-lang-item" href="/el/installation/" hreflang="el" lang="el" role="menuitem"><span aria-hidden="true">🇬🇷</span> Ελληνικά</a>
+                <a class="ap-lang-item" href="/tr/installation/" hreflang="tr" lang="tr" role="menuitem"><span aria-hidden="true">🇹🇷</span> Türkçe</a>
+                <a class="ap-lang-item" href="/ru/installation/" hreflang="ru" lang="ru" role="menuitem"><span aria-hidden="true">🇷🇺</span> Русский</a>
+                <a class="ap-lang-item" href="/uk/installation/" hreflang="uk" lang="uk" role="menuitem"><span aria-hidden="true">🇺🇦</span> Українська</a>
+                <a class="ap-lang-item" href="/ar/installation/" hreflang="ar" lang="ar" role="menuitem"><span aria-hidden="true">🇸🇦</span> العربية</a>
+                <a class="ap-lang-item" href="/he/installation/" hreflang="he" lang="he" role="menuitem"><span aria-hidden="true">🇮🇱</span> עברית</a>
+                <a class="ap-lang-item" href="/fa/installation/" hreflang="fa" lang="fa" role="menuitem"><span aria-hidden="true">🇮🇷</span> فارسی</a>
+                <a class="ap-lang-item" href="/hi/installation/" hreflang="hi" lang="hi" role="menuitem"><span aria-hidden="true">🇮🇳</span> हिन्दी</a>
+                <a class="ap-lang-item" href="/bn/installation/" hreflang="bn" lang="bn" role="menuitem"><span aria-hidden="true">🇧🇩</span> বাংলা</a>
+                <a class="ap-lang-item" href="/ta/installation/" hreflang="ta" lang="ta" role="menuitem"><span aria-hidden="true">🇮🇳</span> தமிழ்</a>
+                <a class="ap-lang-item" href="/te/installation/" hreflang="te" lang="te" role="menuitem"><span aria-hidden="true">🇮🇳</span> తెలుగు</a>
+                <a class="ap-lang-item" href="/mr/installation/" hreflang="mr" lang="mr" role="menuitem"><span aria-hidden="true">🇮🇳</span> मराठी</a>
+                <a class="ap-lang-item" href="/th/installation/" hreflang="th" lang="th" role="menuitem"><span aria-hidden="true">🇹🇭</span> ไทย</a>
+                <a class="ap-lang-item" href="/vi/installation/" hreflang="vi" lang="vi" role="menuitem"><span aria-hidden="true">🇻🇳</span> Tiếng Việt</a>
+                <a class="ap-lang-item" href="/id/installation/" hreflang="id" lang="id" role="menuitem"><span aria-hidden="true">🇮🇩</span> Indonesia</a>
+                <a class="ap-lang-item" href="/ms/installation/" hreflang="ms" lang="ms" role="menuitem"><span aria-hidden="true">🇲🇾</span> Melayu</a>
+                <a class="ap-lang-item" href="/fil/installation/" hreflang="fil" lang="fil" role="menuitem"><span aria-hidden="true">🇵🇭</span> Filipino</a>
+                <a class="ap-lang-item" href="/ja/installation/" hreflang="ja" lang="ja" role="menuitem"><span aria-hidden="true">🇯🇵</span> 日本語</a>
+                <a class="ap-lang-item" href="/ko/installation/" hreflang="ko" lang="ko" role="menuitem"><span aria-hidden="true">🇰🇷</span> 한국어</a>
+                <a class="ap-lang-item" href="/zh-hans/installation/" hreflang="zh-Hans" lang="zh-Hans" role="menuitem"><span aria-hidden="true">🇨🇳</span> 简体中文</a>
+                <a class="ap-lang-item" href="/zh-hant/installation/" hreflang="zh-Hant" lang="zh-Hant" role="menuitem"><span aria-hidden="true">🇹🇼</span> 繁體中文</a>
+                <a class="ap-lang-item" href="/ha/installation/" hreflang="ha" lang="ha" role="menuitem"><span aria-hidden="true">🇳🇬</span> Hausa</a>
+                <a class="ap-lang-item" href="/yo/installation/" hreflang="yo" lang="yo" role="menuitem"><span aria-hidden="true">🇳🇬</span> Yorùbá</a>
+              </div>
+            </div>
+          </div>
+          <a class="ap-cta-mini" href="/ko/try/">데모 사용해 보기&nbsp;&rsaquo;</a>
+          <label class="ap-burger" for="ap-menu-toggle" aria-hidden="true"><span class="ap-burger-icon">☰</span></label>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <header class="page-header">
+        <div class="wrap">
+          <nav class="breadcrumb" aria-label="탐색 경로">
+            <ol>
+              <li><a href="/">홈</a></li>
+              <li aria-current="page">Pain001 설치: pip, Docker, 그리고 첫 검증 파일</li>
+            </ol>
+          </nav>
+          <p class="eyebrow">시작하기</p>
+          <h1 class="page-title">Pain001 설치: pip, Docker, 그리고 첫 검증 파일</h1>
+          <p class="deck">Python 3.10–3.12, pip 또는 Docker, 그리고 세 개의 명령으로 완성하는 검증된 지급 파일.</p>
+          <div class="article-meta"><span>2 분 소요</span>
+            <span>최종 검토 <time datetime="2026-07-26">2026-07-26</time></span>
+          </div>
+        </div>
+      </header>
+
+      <div class="wrap content-shell">
+        <article class="content-body"><nav class="article-toc" aria-label="목차"><h2>목차</h2><ol><li><a href="#01-pypi">PyPI</a></li><li><a href="#02-docker">Docker</a></li><li><a href="#03-locked-down-environments">통제된 환경</a></li><li><a href="#04-first-file-in-three-commands">명령 세 개로 만드는 첫 파일</a></li></ol></nav>
+          <div lang="en"><p>Pain001은 macOS, Linux, Windows에서 <strong>Python 3.10, 3.11, 3.12</strong>로 동작하며, 각 버전은 CI에서 테스트됩니다. 필요한 것만 설치하세요. 모든 선택 기능은 엑스트라로 제공되므로 기본 설치는 가볍게 유지됩니다.</p>
+<hr />
+<h2 id="01-pypi">01. PyPI<a class="heading-anchor" href="#01-pypi" aria-label="섹션 링크: 01. PyPI">#</a></h2>
+<div class="table-responsive"><table class="table">
+<thead>
+<tr>
+<th>필요한 것</th>
+<th>명령</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="What you need" class="text-left">코어 CLI 및 Python 라이브러리</td>
+<td data-label="Command" class="text-left"><code>pip install pain001</code></td>
+</tr>
+<tr>
+<td data-label="What you need" class="text-left">REST API 마이크로서비스(FastAPI + Uvicorn)</td>
+<td data-label="Command" class="text-left"><code>pip install "pain001[api]"</code></td>
+</tr>
+<tr>
+<td data-label="What you need" class="text-left">Parquet 수집(PyArrow)</td>
+<td data-label="Command" class="text-left"><code>pip install "pain001[parquet]"</code></td>
+</tr>
+<tr>
+<td data-label="What you need" class="text-left">PGP로 암호화된 입력 파일(<code>.gpg</code> / <code>.asc</code>)</td>
+<td data-label="Command" class="text-left"><code>pip install "pain001[gpg]"</code></td>
+</tr>
+<tr>
+<td data-label="What you need" class="text-left">API용 Redis 기반 비동기 작업 큐</td>
+<td data-label="Command" class="text-left"><code>pip install "pain001[redis]"</code></td>
+</tr>
+<tr>
+<td data-label="What you need" class="text-left">OpenTelemetry 추적</td>
+<td data-label="Command" class="text-left"><code>pip install "pain001[otel]"</code></td>
+</tr>
+<tr>
+<td data-label="What you need" class="text-left">내장된 최소 기능 MCP / LSP 서버</td>
+<td data-label="Command" class="text-left"><code>pip install "pain001[mcp]"</code> / <code>"pain001[lsp]"</code></td>
+</tr>
+</tbody>
+</table></div>
+<p>동반 패키지는 별도로 설치되며 버전도 독립적으로 관리됩니다:</p>
+<pre><code class="language-bash">pip install pain001-loader-xlsx    # Excel ingestion (auto-discovered plugin)
+pip install pain001-loader-mt101   # SWIFT MT101 parsing library
+pip install pain001-mcp            # Full 17-tool MCP server for AI agents
+pip install pain001-lsp            # Full six-feature editor language server</code></pre>
+<p>설치를 확인하고 메시지 카탈로그를 살펴보세요:</p>
+<pre><code class="language-bash">pain001 --version
+pain001 versions          # list all 11 supported message definitions
+pain001 init pain.001.001.09   # scaffold a starter CSV template</code></pre>
+<hr />
+<h2 id="02-docker">02. Docker<a class="heading-anchor" href="#02-docker" aria-label="섹션 링크: 02. Docker">#</a></h2>
+<p>멀티 아키텍처 이미지(<code>linux/amd64</code>, <code>linux/arm64</code>)가 GitHub Container Registry에 배포됩니다. 컨테이너는 전용 비루트 사용자로 실행됩니다.</p>
+<pre><code class="language-bash"># Generate XML from a local CSV
+docker run --rm -v "$PWD:/data" -w /data \
+  ghcr.io/sebastienrousseau/pain001:latest \
+  generate -t pain.001.001.09 -d payments.csv -o out/
+
+# Launch the REST API
+docker run --rm -p 8000:8000 \
+  ghcr.io/sebastienrousseau/pain001:latest \
+  serve --host 0.0.0.0 --port 8000</code></pre>
+<hr />
+<h2 id="03-locked-down-environments">03. 통제된 환경<a class="heading-anchor" href="#03-locked-down-environments" aria-label="섹션 링크: 03. 통제된 환경">#</a></h2>
+<p>은행과 재무 부서 환경에서는 동적 플러그인 로딩을 금지하는 경우가 많습니다. 바로 그런 상황을 위해 두 가지 통제 수단이 있습니다:</p>
+<ul>
+<li><code>PAIN001_DISABLE_PLUGINS=1</code>은 모든 서드파티 플러그인 탐지를 비활성화하며, 기본 번들 로더만 실행됩니다.</li>
+<li><code>pain001 plugins list</code> / <code>pain001 plugins show <name></code> make every discovered plugin auditable before first use.</li>
+</ul>
+<p>모든 것이 로컬에서 실행됩니다. 제품군의 어떤 패키지도 외부로 신호를 보내거나 SaaS API를 호출하거나 지급 데이터를 호스트 밖으로 옮기지 않습니다.</p>
+<hr />
+<h2 id="04-first-file-in-three-commands">04. 명령 세 개로 만드는 첫 파일<a class="heading-anchor" href="#04-first-file-in-three-commands" aria-label="섹션 링크: 04. 명령 세 개로 만드는 첫 파일">#</a></h2>
+<pre><code class="language-bash">pip install pain001
+pain001 init pain.001.001.09 -o work/
+pain001 -t pain.001.001.09 -d work/template.csv -o work/ --dry-run</code></pre>
+<p><code>--dry-run</code>은 출력을 작성하지 않고 JSON Schema, XSD, 그리고 (<code>--scheme</code>과 함께 사용하면) SEPA 또는 국경 간 룰북에 대해 검증합니다. 종료 코드 <code>0</code>은 은행이 스키마 문제로 파일을 거절하지 않는다는 뜻입니다. XML을 작성하려면 <code>--dry-run</code>을 빼세요.</p>
+<p>모든 플래그와 엔드포인트는 <a href="/ko/documentation/">기술 레퍼런스</a>에서, 운영 관련 질문은 <a href="/ko/faqs/">빠른 시작 FAQ</a>에서 이어서 확인하세요.</p>
+</div>
+        </article>
+      </div>
+    </main>
+
+    <button class="totop" id="toTop" type="button" hidden aria-label="Back to top">&uarr;</button>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-brand">Pain001</p>
+            <p class="footer-tagline">오픈소스 ISO 20022 지급 지시. 검증된 파일, 로컬 처리, 종속 없음.</p>
+          </div>
+          <div>
+            <h2 class="footer-heading">문서</h2>
+            <ul class="footer-links">
+              <li><a href="/ko/try/">브라우저에서 사용해 보기</a></li>
+              <li><a href="/ko/documentation/">기술 참조</a></li>
+              <li><a href="/ko/installation/">설치 &amp; Docker</a></li>
+              <li><a href="/payments/">결제 파이프라인</a></li>
+              <li><a href="/ko/glossary/">용어집</a></li>
+              <li><a href="/ko/faqs/">자주 묻는 질문</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">에코시스템</h2>
+            <ul class="footer-links">
+              <li><a href="/pain001-mcp/">pain001-mcp · AI 에이전트</a></li>
+              <li><a href="/pain001-lsp/">pain001-lsp · 에디터</a></li>
+              <li><a href="/pain001-loader-mt101/">MT101 로더</a></li>
+              <li><a href="/pain001-loader-xlsx/">Excel 로더</a></li>
+              <li><a href="https://github.com/sebastienrousseau/pain001" rel="external">GitHub</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">리서치 및 신뢰</h2>
+            <ul class="footer-links">
+              <li><a href="/ko/why/">왜 Pain001인가</a></li>
+              <li><a href="/ko/executive-brief/">경영진 브리핑</a></li>
+              <li><a href="/iso20022-roadmap/">ISO 20022 로드맵</a></li>
+              <li><a href="/2026-iso20022-migration-trends/">2026 브리핑</a></li>
+              <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/">국가 간 송금 가이드</a></li>
+              <li><a href="/competitors-comparison/">상용 도구와의 비교</a></li>
+              <li><a href="/architecture-and-patents/">아키텍처 &amp; 특허</a></li>
+              <li><a href="/trust/">트러스트 센터</a></li>
+              <li><a href="/compatibility/">호환성 매트릭스</a></li>
+              <li><a href="/security.txt">security.txt</a></li>
+              <li><a href="/sbom.cdx.json">SBOM</a> · <a href="/llms.txt">llms.txt</a> · <a href="/rss.xml">RSS 피드</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; 2023&ndash;2026 Sebastien Rousseau. Core dual-licensed Apache-2.0 / MIT; companion packages Apache-2.0.</p>
+          <ul aria-label="This overview in other languages">
+            <li><a href="/languages/">이 개요는 34개 언어로 제공됩니다</a></li>
+          </ul>
+          <ul>
+            <li><a href="/accessibility/">접근성</a></li>
+            <li><a href="/privacy/">개인정보</a></li>
+            <li><a href="/terms/">약관</a></li>
+            <li><a href="/contact/">문의</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://pain001.com/ko/installation/",
+          "url": "https://pain001.com/ko/installation/",
+          "name": "Pain001 설치: pip, Docker, 그리고 첫 검증 파일",
+          "description": "Python 3.10–3.12에서 pip 또는 Docker로 Pain001 제품군을 설치하고, Excel과 MT101 로더를 추가해 세 개의 명령으로 은행 제출용 pain.001 파일을 만드세요.",
+          "inLanguage": "ko",
+          "dateModified": "2026-07-26",
+          "isPartOf": { "@id": "https://pain001.com/#website" },
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://pain001.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Pain001 설치: pip, Docker, 그리고 첫 검증 파일" }
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pain001.com/#organization",
+          "name": "Pain001",
+          "url": "https://pain001.com/",
+          "logo": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+          "founder": { "@type": "Person", "name": "Sebastien Rousseau", "url": "https://sebastienrousseau.com" },
+          "sameAs": [
+            "https://github.com/sebastienrousseau/pain001",
+            "https://pypi.org/project/pain001/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pain001.com/#website",
+          "url": "https://pain001.com/",
+          "name": "Pain001",
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        }
+      ]
+    }
+    </script>
+
+    <script src="/_csp/197fcfccbee69bda.js" integrity="sha384-geygAAYoalTqpA6bIgsGUMRQupyTiF/rCnvMiGE5+G0s0ZOYAhHnkhzyMXN9yNxa" crossorigin="anonymous"></script>
+  
+<!-- SSG Search Widget -->
+<div id="ssg-search-widget">
+
+<!-- Search trigger button -->
+<button id="ssg-search-btn" type="button" aria-label="Search">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<span>Search</span>
+<kbd>K</kbd>
+</button>
+<!-- Search modal -->
+<div id="ssg-search-overlay" role="dialog" aria-label="Search">
+<div id="ssg-search-box">
+<div id="ssg-search-header">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<input id="ssg-search-input" type="search" placeholder="Search documentation..." autocomplete="off" aria-label="Search"/>
+</div>
+<div id="ssg-search-results" aria-live="polite"></div>
+<div id="ssg-sr-status" role="status" aria-live="polite" aria-atomic="true"></div>
+<div class="ssg-search-footer"><span><kbd>Esc</kbd> close</span><span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span><span><kbd>Enter</kbd> open</span></div>
+</div>
+</div>
+<script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ha">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta itemprop="datePublished" content="Sun, 26 Jul 2026 08:00:00 +0000" id="date" />
+    <meta itemprop="dateModified" content="Sun, 26 Jul 2026 08:00:00 +0000" id="last-modified" />
+    <title>Jagorar Fasaha ta Pain001: CLI, Python API da REST</title>
+
+    <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
+<meta name="description" content="Cikakken jagora ga pain001 v0.0.56 — umarnan CLI da tutoci, Python API, endpoints na REST a /api/v1, littattafan ƙa'ida, daidaita shigarwa da plugins.">
+<meta name="keywords" content="pain001 documentation, pain.001 CLI, ISO 20022 Python library, pain001 REST API, XSD validation, SEPA scheme validation, pain.002 parser, camt.053 parser">
+<meta property="og:image" content="https://pain001.com/og/pain001-card.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Documentation pages for the Pain001 command-line interface and REST API — the working reference for teams generating ISO 20022 payment files." />
+    <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Jagorar Fasaha ta Pain001: CLI, Python API da REST">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    
+    
+
+    <link rel="alternate" href="https://pain001.com/ha/documentation/" hreflang="en" />
+    
+    <link rel="icon" type="image/svg+xml" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />
+    <link rel="preload" href="/fonts/source-serif-4-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/_csp/e9d2f9e83d6b47b6.css" integrity="sha384-NgS1FgtNO/+O73jGnYQcFGXyKGAVkFu/W1I8bL4l2QSI+eMJfSMSQrUdf2zJxS34" crossorigin="anonymous">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
+  <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="Jagorar Fasaha ta Pain001: CLI, Python API da REST">
+<meta property="og:description" content="Home Pain001 Technical Reference: CLI, Python API and REST Reference Pain001 Technical Reference: CLI, Python API and REST Every flag, endpoint, and behaviour">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pain001.com/ha/documentation/">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jagorar Fasaha ta Pain001: CLI, Python API da REST">
+<meta name="twitter:description" content="Home Pain001 Technical Reference: CLI, Python API and REST Reference Pain001 Technical Reference: CLI, Python API and REST Every flag, endpoint, and behaviour">
+<meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg">
+<link rel="canonical" href="https://pain001.com/ha/documentation/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
+<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"><link rel="alternate" hreflang="en" href="https://pain001.com/documentation/" /><link rel="alternate" hreflang="x-default" href="https://pain001.com/documentation/" /><link rel="alternate" hreflang="ar" href="https://pain001.com/ar/documentation/" /><link rel="alternate" hreflang="bn" href="https://pain001.com/bn/documentation/" /><link rel="alternate" hreflang="cs" href="https://pain001.com/cs/documentation/" /><link rel="alternate" hreflang="de" href="https://pain001.com/de/documentation/" /><link rel="alternate" hreflang="el" href="https://pain001.com/el/documentation/" /><link rel="alternate" hreflang="es" href="https://pain001.com/es/documentation/" /><link rel="alternate" hreflang="fa" href="https://pain001.com/fa/documentation/" /><link rel="alternate" hreflang="fil" href="https://pain001.com/fil/documentation/" /><link rel="alternate" hreflang="fr" href="https://pain001.com/fr/documentation/" /><link rel="alternate" hreflang="he" href="https://pain001.com/he/documentation/" /><link rel="alternate" hreflang="hi" href="https://pain001.com/hi/documentation/" /><link rel="alternate" hreflang="hu" href="https://pain001.com/hu/documentation/" /><link rel="alternate" hreflang="id" href="https://pain001.com/id/documentation/" /><link rel="alternate" hreflang="it" href="https://pain001.com/it/documentation/" /><link rel="alternate" hreflang="ja" href="https://pain001.com/ja/documentation/" /><link rel="alternate" hreflang="ko" href="https://pain001.com/ko/documentation/" /><link rel="alternate" hreflang="mr" href="https://pain001.com/mr/documentation/" /><link rel="alternate" hreflang="ms" href="https://pain001.com/ms/documentation/" /><link rel="alternate" hreflang="nl" href="https://pain001.com/nl/documentation/" /><link rel="alternate" hreflang="pl" href="https://pain001.com/pl/documentation/" /><link rel="alternate" hreflang="pt-BR" href="https://pain001.com/pt-br/documentation/" /><link rel="alternate" hreflang="ro" href="https://pain001.com/ro/documentation/" /><link rel="alternate" hreflang="ru" href="https://pain001.com/ru/documentation/" /><link rel="alternate" hreflang="sv" href="https://pain001.com/sv/documentation/" /><link rel="alternate" hreflang="ta" href="https://pain001.com/ta/documentation/" /><link rel="alternate" hreflang="te" href="https://pain001.com/te/documentation/" /><link rel="alternate" hreflang="th" href="https://pain001.com/th/documentation/" /><link rel="alternate" hreflang="tr" href="https://pain001.com/tr/documentation/" /><link rel="alternate" hreflang="uk" href="https://pain001.com/uk/documentation/" /><link rel="alternate" hreflang="vi" href="https://pain001.com/vi/documentation/" /><link rel="alternate" hreflang="yo" href="https://pain001.com/yo/documentation/" /><link rel="alternate" hreflang="zh-Hans" href="https://pain001.com/zh-hans/documentation/" /><link rel="alternate" hreflang="zh-Hant" href="https://pain001.com/zh-hant/documentation/" /></head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Tsallake zuwa babban abun ciki</a>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="ap-nav">
+      <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Kunna/kashe kewayawa" />
+      <div class="wrap ap-nav-wrap">
+        <a class="ap-brand" href="/" aria-label="Pain001 home">
+          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="" width="26" height="26" />
+          <span>Pain001</span>
+        </a>
+        <nav aria-label="Primary navigation" id="ap-primary-nav">
+          <ul class="ap-menu">
+            <li class="has-sub"><a href="/ha/why/">Dalilin Pain001</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-why" aria-label="Buɗe ko rufe ƙaramin menu na Dalilin Pain001"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-why" class="ap-sub">
+                <li><a href="/ha/solutions/">Wanda aka yi wa</a></li>
+                <li><a href="/ha/executive-brief/">Taƙaitaccen bayani ga shugabanni</a></li>
+                <li><a href="/competitors-comparison/" hreflang="en">Kwatancen da kayan kasuwanci (EN)</a></li>
+              </ul>
+            </li>
+            <li><a href="/ha/try/">Kalli kai tsaye</a></li>
+            <li class="has-sub"><a href="/ha/documentation/">Takardu</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="Buɗe ko rufe ƙaramin menu na Takardu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-docs" class="ap-sub">
+                <li><a href="/ha/installation/">Shigarwa &amp; Docker</a></li>
+                <li><a href="/ha/glossary/">Ƙamus</a></li>
+                <li><a href="/ha/faqs/">Tambayoyin da aka fi yi</a></li>
+                <li><a href="/pain002-reason-codes/" hreflang="en">Lambobin dalili na pain.002 (EN)</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/#suite-heading">Kunshin</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-suite" aria-label="Buɗe ko rufe ƙaramin menu na Kayan aiki"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-suite" class="ap-sub">
+                <li><a href="/pain001-mcp/" hreflang="en">Kayan wakilan AI (MCP) (EN)</a></li>
+                <li><a href="/pain001-lsp/" hreflang="en">Haɗin edita (LSP) (EN)</a></li>
+                <li><a href="/pain001-loader-mt101/" hreflang="en">Mai lodi na MT101 (EN)</a></li>
+                <li><a href="/pain001-loader-xlsx/" hreflang="en">Mai lodi na Excel (EN)</a></li>
+                <li><a href="/architecture-and-patents/" hreflang="en">Gine-gine &amp; tsaro (EN)</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/2026-iso20022-migration-trends/">Bincike</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-research" aria-label="Buɗe ko rufe ƙaramin menu na Bincike"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-research" class="ap-sub">
+                <li><a href="/2026-iso20022-migration-trends/" hreflang="en">Bayanin 2026 (EN)</a></li>
+                <li><a href="/iso20022-roadmap/" hreflang="en">Taswirar ISO 20022 (EN)</a></li>
+                <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/" hreflang="en">Jagorar ƙetare (EN)</a></li>
+                <li><a href="/languages/" hreflang="en">A cikin harsuna 34 (EN)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="ap-nav-right">
+          <button type="button" class="theme-toggle" aria-label="Canza zuwa duhun yanayi" data-label-dark="Canza zuwa duhun yanayi" data-label-light="Canza zuwa haske" aria-pressed="false" title="Canza zuwa duhun yanayi">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+          <button type="button" class="ap-search-btn" aria-label="Nema (Cmd/Ctrl + K)" title="Nema (⌘K)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <kbd class="ap-search-kbd" aria-hidden="true">⌘K</kbd>
+          </button>
+          <div class="ap-lang" role="group" aria-label="Language">
+            <button type="button" class="ap-lang-toggle" aria-label="Canza harshe" aria-expanded="false" aria-haspopup="menu" title="Canza harshe">
+              <span class="ap-lang-globe" aria-hidden="true">🌐</span>
+              <span class="ap-lang-current">HA</span>
+            </button>
+            <div class="ap-lang-menu" role="menu" hidden>
+              <div class="ap-lang-menu-grid">
+                <a class="ap-lang-item" href="/ha/documentation/" hreflang="en" lang="en" role="menuitem"><span aria-hidden="true">🇬🇧</span> English</a>
+                <a class="ap-lang-item" href="/fr/documentation/" hreflang="fr" lang="fr" role="menuitem"><span aria-hidden="true">🇫🇷</span> Français</a>
+                <a class="ap-lang-item" href="/de/documentation/" hreflang="de" lang="de" role="menuitem"><span aria-hidden="true">🇩🇪</span> Deutsch</a>
+                <a class="ap-lang-item" href="/es/documentation/" hreflang="es" lang="es" role="menuitem"><span aria-hidden="true">🇪🇸</span> Español</a>
+                <a class="ap-lang-item" href="/it/documentation/" hreflang="it" lang="it" role="menuitem"><span aria-hidden="true">🇮🇹</span> Italiano</a>
+                <a class="ap-lang-item" href="/pt-br/documentation/" hreflang="pt-BR" lang="pt-BR" role="menuitem"><span aria-hidden="true">🇧🇷</span> Português</a>
+                <a class="ap-lang-item" href="/nl/documentation/" hreflang="nl" lang="nl" role="menuitem"><span aria-hidden="true">🇳🇱</span> Nederlands</a>
+                <a class="ap-lang-item" href="/pl/documentation/" hreflang="pl" lang="pl" role="menuitem"><span aria-hidden="true">🇵🇱</span> Polski</a>
+                <a class="ap-lang-item" href="/sv/documentation/" hreflang="sv" lang="sv" role="menuitem"><span aria-hidden="true">🇸🇪</span> Svenska</a>
+                <a class="ap-lang-item" href="/cs/documentation/" hreflang="cs" lang="cs" role="menuitem"><span aria-hidden="true">🇨🇿</span> Čeština</a>
+                <a class="ap-lang-item" href="/ro/documentation/" hreflang="ro" lang="ro" role="menuitem"><span aria-hidden="true">🇷🇴</span> Română</a>
+                <a class="ap-lang-item" href="/hu/documentation/" hreflang="hu" lang="hu" role="menuitem"><span aria-hidden="true">🇭🇺</span> Magyar</a>
+                <a class="ap-lang-item" href="/el/documentation/" hreflang="el" lang="el" role="menuitem"><span aria-hidden="true">🇬🇷</span> Ελληνικά</a>
+                <a class="ap-lang-item" href="/tr/documentation/" hreflang="tr" lang="tr" role="menuitem"><span aria-hidden="true">🇹🇷</span> Türkçe</a>
+                <a class="ap-lang-item" href="/ru/documentation/" hreflang="ru" lang="ru" role="menuitem"><span aria-hidden="true">🇷🇺</span> Русский</a>
+                <a class="ap-lang-item" href="/uk/documentation/" hreflang="uk" lang="uk" role="menuitem"><span aria-hidden="true">🇺🇦</span> Українська</a>
+                <a class="ap-lang-item" href="/ar/documentation/" hreflang="ar" lang="ar" role="menuitem"><span aria-hidden="true">🇸🇦</span> العربية</a>
+                <a class="ap-lang-item" href="/he/documentation/" hreflang="he" lang="he" role="menuitem"><span aria-hidden="true">🇮🇱</span> עברית</a>
+                <a class="ap-lang-item" href="/fa/documentation/" hreflang="fa" lang="fa" role="menuitem"><span aria-hidden="true">🇮🇷</span> فارسی</a>
+                <a class="ap-lang-item" href="/hi/documentation/" hreflang="hi" lang="hi" role="menuitem"><span aria-hidden="true">🇮🇳</span> हिन्दी</a>
+                <a class="ap-lang-item" href="/bn/documentation/" hreflang="bn" lang="bn" role="menuitem"><span aria-hidden="true">🇧🇩</span> বাংলা</a>
+                <a class="ap-lang-item" href="/ta/documentation/" hreflang="ta" lang="ta" role="menuitem"><span aria-hidden="true">🇮🇳</span> தமிழ்</a>
+                <a class="ap-lang-item" href="/te/documentation/" hreflang="te" lang="te" role="menuitem"><span aria-hidden="true">🇮🇳</span> తెలుగు</a>
+                <a class="ap-lang-item" href="/mr/documentation/" hreflang="mr" lang="mr" role="menuitem"><span aria-hidden="true">🇮🇳</span> मराठी</a>
+                <a class="ap-lang-item" href="/th/documentation/" hreflang="th" lang="th" role="menuitem"><span aria-hidden="true">🇹🇭</span> ไทย</a>
+                <a class="ap-lang-item" href="/vi/documentation/" hreflang="vi" lang="vi" role="menuitem"><span aria-hidden="true">🇻🇳</span> Tiếng Việt</a>
+                <a class="ap-lang-item" href="/id/documentation/" hreflang="id" lang="id" role="menuitem"><span aria-hidden="true">🇮🇩</span> Indonesia</a>
+                <a class="ap-lang-item" href="/ms/documentation/" hreflang="ms" lang="ms" role="menuitem"><span aria-hidden="true">🇲🇾</span> Melayu</a>
+                <a class="ap-lang-item" href="/fil/documentation/" hreflang="fil" lang="fil" role="menuitem"><span aria-hidden="true">🇵🇭</span> Filipino</a>
+                <a class="ap-lang-item" href="/ja/documentation/" hreflang="ja" lang="ja" role="menuitem"><span aria-hidden="true">🇯🇵</span> 日本語</a>
+                <a class="ap-lang-item" href="/ko/documentation/" hreflang="ko" lang="ko" role="menuitem"><span aria-hidden="true">🇰🇷</span> 한국어</a>
+                <a class="ap-lang-item" href="/zh-hans/documentation/" hreflang="zh-Hans" lang="zh-Hans" role="menuitem"><span aria-hidden="true">🇨🇳</span> 简体中文</a>
+                <a class="ap-lang-item" href="/zh-hant/documentation/" hreflang="zh-Hant" lang="zh-Hant" role="menuitem"><span aria-hidden="true">🇹🇼</span> 繁體中文</a>
+                <a class="ap-lang-item" href="/ha/documentation/" hreflang="ha" lang="ha" role="menuitem"><span aria-hidden="true">🇳🇬</span> Hausa</a>
+                <a class="ap-lang-item" href="/yo/documentation/" hreflang="yo" lang="yo" role="menuitem"><span aria-hidden="true">🇳🇬</span> Yorùbá</a>
+              </div>
+            </div>
+          </div>
+          <a class="ap-cta-mini" href="/ha/try/">Gwada demo&nbsp;&rsaquo;</a>
+          <label class="ap-burger" for="ap-menu-toggle" aria-hidden="true"><span class="ap-burger-icon">☰</span></label>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <header class="page-header">
+        <div class="wrap">
+          <nav class="breadcrumb" aria-label="Hanyar kewayawa">
+            <ol>
+              <li><a href="/">Gida</a></li>
+              <li aria-current="page">Jagorar Fasaha ta Pain001: CLI, Python API da REST</li>
+            </ol>
+          </nav>
+          <p class="eyebrow">Jagora</p>
+          <h1 class="page-title">Jagorar Fasaha ta Pain001: CLI, Python API da REST</h1>
+          <p class="deck">Kowace tuta, endpoint da hali na pain001 v0.0.56 — daga lambar da aka fitar, ba daga buri ba.</p>
+          <div class="article-meta"><span>4 mintuna na karatu</span>
+            <span>Bita ta ƙarshe <time datetime="2026-07-26">2026-07-26</time></span>
+          </div>
+        </div>
+      </header>
+
+      <div class="wrap content-shell">
+        <article class="content-body"><nav class="article-toc" aria-label="Abubuwan da ke ciki"><h2>Abubuwan da ke ciki</h2><ol><li><a href="#1-command-line-interface">Mahaɗar Layin Umarni</a></li><li><a href="#2-python-api">Python API</a></li><li><a href="#3-rest-microservice">Ƙaramar Hidimar REST</a></li><li><a href="#4-input-normalisation">Daidaita Bayanan Shigarwa</a></li><li><a href="#5-plugin-architecture">Gine-ginen Plugin</a></li><li><a href="#6-quality-gates">Ƙofofin Inganci</a></li></ol></nav>
+          <div lang="en"><p>Wannan jagorar tana bayyana mahaɗar layin umarni, Python API, ƙaramar hidimar REST, da kuma tsarin tantancewa na <strong>pain001 v0.0.56</strong>. Kowace tuta, endpoint da hali da aka lissafa a nan an ɗauko su ne daga lambar da aka fitar, ba daga buri ba.</p>
+<p>Pain001 tana goyon bayan <strong>ma'anonin saƙo 11 na ISO 20022</strong>: daga <code>pain.001.001.03</code> zuwa <code>pain.001.001.12</code> (fara tura kuɗi na abokin ciniki, sigogi goma) da kuma <code>pain.008.001.02</code> (fara cirar kuɗi kai tsaye na abokin ciniki).</p>
+<hr />
+<h2 id="1-command-line-interface">1. Mahaɗar Layin Umarni<a class="heading-anchor" href="#1-command-line-interface" aria-label="Haɗi zuwa sashe: 1. Mahaɗar Layin Umarni">#</a></h2>
+<p>Fayil ɗin aiwatarwa na <code>pain001</code> yana tara ayyukansa cikin ƙananan umarni. Idan ka gudanar da shi da tutocin ƙirƙira kaɗai, yana kiran <code>generate</code> a fakaice, don haka tsarin sarrafa kai da kake da shi zai ci gaba da aiki.</p>
+<div class="table-responsive"><table class="table">
+<thead>
+<tr>
+<th>Ƙaramin umarni</th>
+<th>Manufa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>generate</code></td>
+<td data-label="Purpose" class="text-left">Juya fayil ɗin bayanai zuwa XML na ISO 20022 wanda aka tantance da schema (umarnin tsoho).</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>validate</code></td>
+<td data-label="Purpose" class="text-left">Tantance bayanan shigarwa ba tare da rubuta XML ba.</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>versions [--json]</code></td>
+<td data-label="Purpose" class="text-left">Lissafa dukkan ma'anonin saƙo 11 da ake goyon baya.</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>inspect <type> [--json]</code></td>
+<td data-label="Purpose" class="text-left">Nuna filayen wajibi da na zaɓi ga wani nau'in saƙo.</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>init <type> [-o DIR]</code></td>
+<td data-label="Purpose" class="text-left">Ƙirƙiri samfurin CSV na farawa ga wani nau'in saƙo.</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>serve [--host] [--port] [--reload]</code></td>
+<td data-label="Purpose" class="text-left">Ƙaddamar da ƙaramar hidimar REST ta FastAPI (tana buƙatar ƙarin <code>api</code>).</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>mcp</code></td>
+<td data-label="Purpose" class="text-left">Ƙaddamar da sabar Model Context Protocol da ke cikin lambar (kayan aiki 5; cikakkiyar sabar mai kayan aiki 17 tana zuwa a matsayin <a href="/pain001-mcp/"><code>pain001-mcp</code></a>).</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>plugins list / show / disable</code></td>
+<td data-label="Purpose" class="text-left">Duba da sarrafa plugins na loader, validator, scheme da writer da aka gano.</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Zaɓuɓɓukan <code>generate</code></h3>
+<table>
+<thead>
+<tr>
+<th>Tuta</th>
+<th>Bayani</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Flag" class="text-left"><code>-t, --xml-message-type <TYPE></code></td>
+<td data-label="Description" class="text-left">Ma'anar saƙo, misali <code>pain.001.001.09</code>.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>-d, --data <FILE></code></td>
+<td data-label="Description" class="text-left">Bayanan shigarwa: <code>.csv</code>, <code>.json</code>, <code>.jsonl</code>, <code>.db</code> / <code>.sqlite</code>, <code>.parquet</code>, ko <code>.gpg</code> / <code>.asc</code> da aka ɓoye da PGP.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>-o, --output-dir <DIR></code></td>
+<td data-label="Description" class="text-left">Babban fayil ɗin da ke karɓar XML ɗin da aka ƙirƙira.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>-m, --template <FILE></code> / <code>-s, --schema <FILE></code></td>
+<td data-label="Description" class="text-left">Sauya samfurin Jinja2 ko schema na XSD da aka haɗa a ciki.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>-c, --config <FILE></code></td>
+<td data-label="Description" class="text-left">Ɗauko tsoffin ƙimomi daga bayanan sanyi (<code>--profile</code>, <code>--show-config</code>).</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--dry-run</code> (wani suna <code>--validate-only</code>)</td>
+<td data-label="Description" class="text-left">Tantance shigarwa bisa JSON Schema, XSD, da littafin ƙa'idar tsari ba tare da rubuta fitarwa ba.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--scheme <NAME></code></td>
+<td data-label="Description" class="text-left">Tilasta littafin ƙa'idar tsari: <code>sepa-sct</code>, <code>sepa-inst</code>, <code>sepa-sdd</code>, <code>sepa-b2b</code>, ko <code>xborder-ct</code>.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--explain --scheme-format {text,json}</code></td>
+<td data-label="Description" class="text-left">Bayar da rahoton kowace ƙa'idar tsari da ta ci nasara ko ta faɗi, a sigar da mutum ko na'ura za ta iya karantawa.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size <N></code></td>
+<td data-label="Description" class="text-left">Sarrafawa a gutsuttsura tare da iyakancewar ƙwaƙwalwa don manyan tarin bayanai (tsoho: mu'amala 1,000 a kowace gutsure; kowace gutsure tana zama fayil ɗin XML na kanta tare da <code>NbOfTxs</code> da <code>CtrlSum</code> da aka sake ƙidayawa).</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--emit-metrics</code></td>
+<td data-label="Description" class="text-left">Fitar da ma'aunan gudanarwa da na'ura za ta iya karantawa don tsarin sa ido.</td>
+</tr>
+</tbody>
+</table>
+<p>Lambobin fita suna dacewa da CI: <code>0</code> nasara, <code>1</code> faɗuwar tantancewa, <code>2</code> kuskuren amfani.</p>
+<hr />
+<h2 id="2-python-api">2. Python API<a class="heading-anchor" href="#2-python-api" aria-label="Haɗi zuwa sashe: 2. Python API">#</a></h2>
+<pre><code class="language-python">from pain001.core.core import process_files
+
+# Generate a validated pain.001.001.09 file from CSV
+process_files(
+    xml_message_type="pain.001.001.09",
+    xml_template_file_path="template.xml",
+    xsd_schema_file_path="schema.xsd",
+    data_file_path="payments.csv",
+    output_dir="out",
+)</code></pre>
+<p>Kowace takardar da aka ƙirƙira tana wucewa ta yadudduka uku kafin a rubuta ta:</p>
+<ol>
+<li><strong>Tantance shigarwa</strong> — ana duba kowane rikodi bisa JSON Schema na nau'in saƙon, tare da daidaita sunayen filaye da duba tsarin IBAN/BIC.</li>
+<li><strong>Littafin ƙa'idar tsari</strong> (na zaɓi) — ƙa'idojin SEPA SCT, SEPA Instant, SEPA SDD Core, SEPA B2B, ko na tura kuɗi tsakanin ƙasashe.</li>
+<li><strong>Tantancewar XSD</strong> — ana tantance XML ɗin da aka samar bisa schema na hukuma na ISO 20022 ta hanyar <code>xmlschema</code> kafin a rubuta ko baiti ɗaya a faifai.</li>
+</ol>
+<p>Ana sarrafa kuɗaɗe a matsayin <code>decimal.Decimal</code> yayin ƙirƙirar XML da tantance tsari — ba a taɓa amfani da floats na IEEE 754 ba — kuma ana sake ƙidaya jimillolin sarrafawa na <code>NbOfTxs</code> / <code>CtrlSum</code> daga rikodin da aka tantance maimakon dogara ga shigarwa.</p>
+<p>Baya ga ƙirƙirar pain.001, ɗakin karatu na tushe yana kuma zuwa da <strong>mai karantawa da ƙirƙirar rahoton matsayi na pain.002</strong> (don ka iya karanta amsar karɓa ko ƙi ta bankinka) da kuma <strong>mai karantawa da ƙirƙirar bayanin asusu na camt.053</strong> don daidaita asusu a ƙarshen rana, tare da <code>VersionMapper</code> da ke tura rikodi tsakanin sigogin saƙo.</p>
+<hr />
+<h2 id="3-rest-microservice">3. Ƙaramar Hidimar REST<a class="heading-anchor" href="#3-rest-microservice" aria-label="Haɗi zuwa sashe: 3. Ƙaramar Hidimar REST">#</a></h2>
+<pre><code class="language-bash">pip install "pain001[api]"
+pain001 serve --host 0.0.0.0 --port 8000</code></pre>
+<p>Ana ɗora dukkan endpoints a ƙarƙashin <code>/api/v1</code> (tare da wani suna maras siga <code>/api</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Hanya & Adireshi</th>
+<th>Manufa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>GET /api/v1/health</code></td>
+<td data-label="Purpose" class="text-left">Binciken lafiyar sabis.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>POST /api/v1/validate</code></td>
+<td data-label="Purpose" class="text-left">Tantance rikodi; yana mayar da kurakurai a matakin filaye.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>POST /api/v1/generate</code></td>
+<td data-label="Purpose" class="text-left">Ƙirƙirar XML kai tsaye.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>POST /api/v1/generate/async</code></td>
+<td data-label="Purpose" class="text-left">Sanya babban tari a jerin gwano don ƙirƙira a baya.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>GET /api/v1/status/{job_id}</code></td>
+<td data-label="Purpose" class="text-left">Duba matsayin aikin async.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>GET /api/v1/download/{job_id}</code></td>
+<td data-label="Purpose" class="text-left">Sauke XML ɗin da aka gama.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>DELETE /api/v1/jobs/{job_id}</code></td>
+<td data-label="Purpose" class="text-left">Share aikin da aka kammala.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>GET /metrics</code></td>
+<td data-label="Purpose" class="text-left">Ma'aunan Prometheus.</td>
+</tr>
+</tbody>
+</table>
+<p>Ana bayar da takardun hulɗa a <code>/api/docs</code> (Swagger UI), <code>/api/redoc</code>, da <code>/api/reference</code> (Scalar), yayin da takardar OpenAPI take a <code>/openapi.json</code>.</p>
+<hr />
+<h2 id="4-input-normalisation">4. Daidaita Bayanan Shigarwa<a class="heading-anchor" href="#4-input-normalisation" aria-label="Haɗi zuwa sashe: 4. Daidaita Bayanan Shigarwa">#</a></h2>
+<p>Pain001 tana mayar da bayanan da aka fitar daga tsarin aiki na hakika zuwa rikodi masu inganci kafin tantancewa:</p>
+<ul>
+<li><strong>Sunayen madadin filaye</strong> — sunayen ginshiƙai da suka zama ruwan dare a ERP suna daidaituwa da filayen asali (misali <code>amount</code> → <code>payment_amount</code>).</li>
+<li><strong>Daidaita IBAN / BIC</strong> — ana cire fanko, a daidaita manya da ƙanana haruffa, sannan a duba (ISO 13616 mod-97 don IBAN, tsarin ISO 9362 don BIC).</li>
+<li><strong>Kwanaki</strong> — ana karanta ranakun aiwatarwa a tsarin ISO 8601 <code>YYYY-MM-DD</code>.</li>
+<li><strong>Kuɗaɗe</strong> — suna wucewa ta <code>decimal.Decimal</code>; kuɗaɗen da ba su da tsari mai kyau suna faɗin tantancewa maimakon a zagaye su a shiru.</li>
+<li><strong>Tarin haruffa</strong> — kayan taimako na canza rubutu suna mayar da abun ciki zuwa tarin haruffan Latin na ISO 20022 da SWIFT da SEPA suke karɓa.</li>
+</ul>
+<hr />
+<h2 id="5-plugin-architecture">5. Gine-ginen Plugin<a class="heading-anchor" href="#5-plugin-architecture" aria-label="Haɗi zuwa sashe: 5. Gine-ginen Plugin">#</a></h2>
+<p>Ana iya faɗaɗa wannan tsarin ta ƙungiyoyin shiga huɗu: <code>pain001.loaders</code>, <code>pain001.validators</code>, <code>pain001.schemes</code>, da <code>pain001.writers</code>. <a href="/pain001-loader-xlsx/"><code>pain001-loader-xlsx</code></a> yana yin rijista ta wannan hanya kuma ana gano shi kai tsaye bayan shigarwa; <a href="/pain001-loader-mt101/"><code>pain001-loader-mt101</code></a> ɗakin karatu ne mai zaman kansa na karanta fayiloli da ake amfani da shi kai tsaye (haka kuma kayan aikin <code>convert_mt101</code> na sabar MCP yana amfani da shi). Wani maɓallin kashewa — <code>PAIN001_DISABLE_PLUGINS=1</code> — yana kashe gano plugins na waje gaba ɗaya a muhallai masu tsauraran ƙa'idoji.</p>
+<hr />
+<h2 id="6-quality-gates">6. Ƙofofin Inganci<a class="heading-anchor" href="#6-quality-gates" aria-label="Haɗi zuwa sashe: 6. Ƙofofin Inganci">#</a></h2>
+<p>Ana haɓaka ɗakin karatu na tushe bisa ƙofofi masu tsauri da ake iya tabbatarwa: rufin gwaji na kashi 100% na layuka <strong>da</strong> na rassa da ake tilastawa a CI (<code>--cov-fail-under=100</code>), tsauraran nau'ika na mypy, kashi 100% na docstring, da binciken tsaro (Bandit, pip-audit). Ana samar da SBOM na CycloneDX ga kowace fitarwa.</p>
+<p>Ci gaba da <a href="/ha/installation/">Jagorar Shigarwa</a>, <a href="/pain001-mcp/">sabar MCP don wakilan AI</a>, ko <a href="/ha/glossary/">ƙamus ɗin biyan kuɗi</a>.</p>
+</div>
+        </article>
+      </div>
+    </main>
+
+    <button class="totop" id="toTop" type="button" hidden aria-label="Back to top">&uarr;</button>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-brand">Pain001</p>
+            <p class="footer-tagline">Fara biyan kuɗi na ISO 20022 a buɗaɗɗen tushe. Fayiloli da aka tabbatar, sarrafawa a gida, babu ɗauri.</p>
+          </div>
+          <div>
+            <h2 class="footer-heading">Takardu</h2>
+            <ul class="footer-links">
+              <li><a href="/ha/try/">Gwada shi a burauzarku</a></li>
+              <li><a href="/ha/documentation/">Bayanin fasaha</a></li>
+              <li><a href="/ha/installation/">Shigarwa &amp; Docker</a></li>
+              <li><a href="/payments/">Jerin ayyukan biyan kuɗi</a></li>
+              <li><a href="/ha/glossary/">Ƙamus</a></li>
+              <li><a href="/ha/faqs/">Tambayoyin da aka fi yi</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Muhalli</h2>
+            <ul class="footer-links">
+              <li><a href="/pain001-mcp/">pain001-mcp · wakilan AI</a></li>
+              <li><a href="/pain001-lsp/">pain001-lsp · editoci</a></li>
+              <li><a href="/pain001-loader-mt101/">Mai lodi na MT101</a></li>
+              <li><a href="/pain001-loader-xlsx/">Mai lodi na Excel</a></li>
+              <li><a href="https://github.com/sebastienrousseau/pain001" rel="external">GitHub</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Bincike da aminci</h2>
+            <ul class="footer-links">
+              <li><a href="/ha/why/">Dalilin Pain001</a></li>
+              <li><a href="/ha/executive-brief/">Taƙaitaccen bayani ga shugabanni</a></li>
+              <li><a href="/iso20022-roadmap/">Taswirar ISO 20022</a></li>
+              <li><a href="/2026-iso20022-migration-trends/">Bayanin 2026</a></li>
+              <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/">Jagorar Ƙetare</a></li>
+              <li><a href="/competitors-comparison/">Kwatancen da kayan kasuwanci</a></li>
+              <li><a href="/architecture-and-patents/">Gine-gine &amp; haƙƙin mallaka</a></li>
+              <li><a href="/trust/">Cibiyar Amana</a></li>
+              <li><a href="/compatibility/">Jadawalin dacewa</a></li>
+              <li><a href="/security.txt">security.txt</a></li>
+              <li><a href="/sbom.cdx.json">SBOM</a> · <a href="/llms.txt">llms.txt</a> · <a href="/rss.xml">Ciyarwar RSS</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; 2023&ndash;2026 Sebastien Rousseau. Core dual-licensed Apache-2.0 / MIT; companion packages Apache-2.0.</p>
+          <ul aria-label="This overview in other languages">
+            <li><a href="/languages/">Wannan taƙaitawa cikin harsuna 34</a></li>
+          </ul>
+          <ul>
+            <li><a href="/accessibility/">Samun dama</a></li>
+            <li><a href="/privacy/">Sirri</a></li>
+            <li><a href="/terms/">Sharuɗɗa</a></li>
+            <li><a href="/contact/">Tuntuɓa</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://pain001.com/ha/documentation/",
+          "url": "https://pain001.com/ha/documentation/",
+          "name": "Jagorar Fasaha ta Pain001: CLI, Python API da REST",
+          "description": "Cikakken jagora ga pain001 v0.0.56 — umarnan CLI da tutoci, Python API, endpoints na REST a /api/v1, littattafan ƙa'ida, daidaita shigarwa da plugins.",
+          "inLanguage": "ha",
+          "dateModified": "2026-07-26",
+          "isPartOf": { "@id": "https://pain001.com/#website" },
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Gida", "item": "https://pain001.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Jagorar Fasaha ta Pain001: CLI, Python API da REST" }
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pain001.com/#organization",
+          "name": "Pain001",
+          "url": "https://pain001.com/",
+          "logo": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+          "founder": { "@type": "Person", "name": "Sebastien Rousseau", "url": "https://sebastienrousseau.com" },
+          "sameAs": [
+            "https://github.com/sebastienrousseau/pain001",
+            "https://pypi.org/project/pain001/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pain001.com/#website",
+          "url": "https://pain001.com/",
+          "name": "Pain001",
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        }
+      ]
+    }
+    </script>
+
+    <script src="/_csp/197fcfccbee69bda.js" integrity="sha384-geygAAYoalTqpA6bIgsGUMRQupyTiF/rCnvMiGE5+G0s0ZOYAhHnkhzyMXN9yNxa" crossorigin="anonymous"></script>
+  
+<!-- SSG Search Widget -->
+<div id="ssg-search-widget">
+
+<!-- Search trigger button -->
+<button id="ssg-search-btn" type="button" aria-label="Search">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<span>Search</span>
+<kbd>K</kbd>
+</button>
+<!-- Search modal -->
+<div id="ssg-search-overlay" role="dialog" aria-label="Search">
+<div id="ssg-search-box">
+<div id="ssg-search-header">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<input id="ssg-search-input" type="search" placeholder="Search documentation..." autocomplete="off" aria-label="Search"/>
+</div>
+<div id="ssg-search-results" aria-live="polite"></div>
+<div id="ssg-sr-status" role="status" aria-live="polite" aria-atomic="true"></div>
+<div class="ssg-search-footer"><span><kbd>Esc</kbd> close</span><span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span><span><kbd>Enter</kbd> open</span></div>
+</div>
+</div>
+<script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta itemprop="datePublished" content="Sun, 26 Jul 2026 08:00:00 +0000" id="date" />
+    <meta itemprop="dateModified" content="Sun, 26 Jul 2026 08:00:00 +0000" id="last-modified" />
+    <title>ট্রেজারি, অপারেশন, ইঞ্জিনিয়ারিং ও অডিটের জন্য Pain001 FAQ</title>
+
+    <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
+<meta name="description" content="ব্যাংক কেন পেমেন্ট ফাইল প্রত্যাখ্যান করে, pain.001 বনাম pain.008, নভেম্বর 2026-এর সময়সীমা, বড় ব্যাচ স্ট্রিমিং, নিরাপত্তা ও অডিট পুনরুৎপাদনযোগ্যতা — সরল ভাষায় উত্তর।">
+<meta name="keywords" content="pain.001 FAQ, pain.001 vs pain.008, why bank rejects payment file, SEPA validation questions, ISO 20022 FAQ, payment file audit">
+<meta property="og:image" content="https://pain001.com/og/pain001-card.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A question-and-answer session on ISO 20022 payment file generation — the questions treasury, operations, engineering, and audit teams actually ask." />
+    <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ট্রেজারি, অপারেশন, ইঞ্জিনিয়ারিং ও অডিটের জন্য Pain001 FAQ">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    
+    
+
+    <link rel="alternate" href="https://pain001.com/bn/faqs/" hreflang="en" />
+    
+    <link rel="icon" type="image/svg+xml" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />
+    <link rel="preload" href="/fonts/source-serif-4-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/_csp/e9d2f9e83d6b47b6.css" integrity="sha384-NgS1FgtNO/+O73jGnYQcFGXyKGAVkFu/W1I8bL4l2QSI+eMJfSMSQrUdf2zJxS34" crossorigin="anonymous">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
+  <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="ট্রেজারি, অপারেশন, ইঞ্জিনিয়ারিং ও অডিটের জন্য Pain001 FAQ">
+<meta property="og:description" content="Home Pain001 FAQs for Treasury, Ops, Engineering and Audit Questions Pain001 FAQs for Treasury, Ops, Engineering and Audit Straight answers for treasurers,">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pain001.com/bn/faqs/">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ট্রেজারি, অপারেশন, ইঞ্জিনিয়ারিং ও অডিটের জন্য Pain001 FAQ">
+<meta name="twitter:description" content="Home Pain001 FAQs for Treasury, Ops, Engineering and Audit Questions Pain001 FAQs for Treasury, Ops, Engineering and Audit Straight answers for treasurers,">
+<meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg">
+<link rel="canonical" href="https://pain001.com/bn/faqs/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
+<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"><link rel="alternate" hreflang="en" href="https://pain001.com/faqs/" /><link rel="alternate" hreflang="x-default" href="https://pain001.com/faqs/" /><link rel="alternate" hreflang="ar" href="https://pain001.com/ar/faqs/" /><link rel="alternate" hreflang="cs" href="https://pain001.com/cs/faqs/" /><link rel="alternate" hreflang="de" href="https://pain001.com/de/faqs/" /><link rel="alternate" hreflang="el" href="https://pain001.com/el/faqs/" /><link rel="alternate" hreflang="es" href="https://pain001.com/es/faqs/" /><link rel="alternate" hreflang="fa" href="https://pain001.com/fa/faqs/" /><link rel="alternate" hreflang="fil" href="https://pain001.com/fil/faqs/" /><link rel="alternate" hreflang="fr" href="https://pain001.com/fr/faqs/" /><link rel="alternate" hreflang="ha" href="https://pain001.com/ha/faqs/" /><link rel="alternate" hreflang="he" href="https://pain001.com/he/faqs/" /><link rel="alternate" hreflang="hi" href="https://pain001.com/hi/faqs/" /><link rel="alternate" hreflang="hu" href="https://pain001.com/hu/faqs/" /><link rel="alternate" hreflang="id" href="https://pain001.com/id/faqs/" /><link rel="alternate" hreflang="it" href="https://pain001.com/it/faqs/" /><link rel="alternate" hreflang="ja" href="https://pain001.com/ja/faqs/" /><link rel="alternate" hreflang="ko" href="https://pain001.com/ko/faqs/" /><link rel="alternate" hreflang="mr" href="https://pain001.com/mr/faqs/" /><link rel="alternate" hreflang="ms" href="https://pain001.com/ms/faqs/" /><link rel="alternate" hreflang="nl" href="https://pain001.com/nl/faqs/" /><link rel="alternate" hreflang="pl" href="https://pain001.com/pl/faqs/" /><link rel="alternate" hreflang="pt-BR" href="https://pain001.com/pt-br/faqs/" /><link rel="alternate" hreflang="ro" href="https://pain001.com/ro/faqs/" /><link rel="alternate" hreflang="ru" href="https://pain001.com/ru/faqs/" /><link rel="alternate" hreflang="sv" href="https://pain001.com/sv/faqs/" /><link rel="alternate" hreflang="ta" href="https://pain001.com/ta/faqs/" /><link rel="alternate" hreflang="te" href="https://pain001.com/te/faqs/" /><link rel="alternate" hreflang="th" href="https://pain001.com/th/faqs/" /><link rel="alternate" hreflang="tr" href="https://pain001.com/tr/faqs/" /><link rel="alternate" hreflang="uk" href="https://pain001.com/uk/faqs/" /><link rel="alternate" hreflang="vi" href="https://pain001.com/vi/faqs/" /><link rel="alternate" hreflang="yo" href="https://pain001.com/yo/faqs/" /><link rel="alternate" hreflang="zh-Hans" href="https://pain001.com/zh-hans/faqs/" /><link rel="alternate" hreflang="zh-Hant" href="https://pain001.com/zh-hant/faqs/" /></head>
+
+  <body>
+    <a href="#main-content" class="skip-link">মূল বিষয়বস্তুতে যান</a>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="ap-nav">
+      <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="নেভিগেশন টগল করুন" />
+      <div class="wrap ap-nav-wrap">
+        <a class="ap-brand" href="/" aria-label="Pain001 home">
+          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="" width="26" height="26" />
+          <span>Pain001</span>
+        </a>
+        <nav aria-label="Primary navigation" id="ap-primary-nav">
+          <ul class="ap-menu">
+            <li class="has-sub"><a href="/bn/why/">কেন Pain001</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-why" aria-label="কেন Pain001 সাবমেনু টগল করুন"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-why" class="ap-sub">
+                <li><a href="/bn/solutions/">কাদের জন্য</a></li>
+                <li><a href="/bn/executive-brief/">নির্বাহী সারসংক্ষেপ</a></li>
+                <li><a href="/competitors-comparison/" hreflang="en">বাণিজ্যিক সরঞ্জামের সাথে তুলনা (EN)</a></li>
+              </ul>
+            </li>
+            <li><a href="/bn/try/">সরাসরি দেখুন</a></li>
+            <li class="has-sub"><a href="/bn/documentation/">ডকুমেন্টেশন</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="ডক্স সাবমেনু টগল করুন"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-docs" class="ap-sub">
+                <li><a href="/bn/installation/">ইনস্টলেশন &amp; Docker</a></li>
+                <li><a href="/bn/glossary/">পরিভাষা</a></li>
+                <li><a href="/bn/faqs/">সচরাচর জিজ্ঞাসা</a></li>
+                <li><a href="/pain002-reason-codes/" hreflang="en">pain.002 কারণ কোড (EN)</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/#suite-heading">স্যুট</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-suite" aria-label="স্যুট সাবমেনু টগল করুন"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-suite" class="ap-sub">
+                <li><a href="/pain001-mcp/" hreflang="en">AI এজেন্ট সরঞ্জাম (MCP) (EN)</a></li>
+                <li><a href="/pain001-lsp/" hreflang="en">এডিটর ইন্টিগ্রেশন (LSP) (EN)</a></li>
+                <li><a href="/pain001-loader-mt101/" hreflang="en">MT101 লোডার (EN)</a></li>
+                <li><a href="/pain001-loader-xlsx/" hreflang="en">Excel লোডার (EN)</a></li>
+                <li><a href="/architecture-and-patents/" hreflang="en">আর্কিটেকচার &amp; নিরাপত্তা (EN)</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/2026-iso20022-migration-trends/">গবেষণা</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-research" aria-label="গবেষণা সাবমেনু টগল করুন"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-research" class="ap-sub">
+                <li><a href="/2026-iso20022-migration-trends/" hreflang="en">2026 ব্রিফিং (EN)</a></li>
+                <li><a href="/iso20022-roadmap/" hreflang="en">ISO 20022 রোডম্যাপ (EN)</a></li>
+                <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/" hreflang="en">আন্তঃসীমান্ত নির্দেশিকা (EN)</a></li>
+                <li><a href="/languages/" hreflang="en">34টি ভাষায় (EN)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="ap-nav-right">
+          <button type="button" class="theme-toggle" aria-label="ডার্ক থিমে যান" data-label-dark="ডার্ক থিমে যান" data-label-light="লাইট থিমে যান" aria-pressed="false" title="ডার্ক থিমে যান">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+          <button type="button" class="ap-search-btn" aria-label="অনুসন্ধান (Cmd/Ctrl + K)" title="অনুসন্ধান (⌘K)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <kbd class="ap-search-kbd" aria-hidden="true">⌘K</kbd>
+          </button>
+          <div class="ap-lang" role="group" aria-label="Language">
+            <button type="button" class="ap-lang-toggle" aria-label="ভাষা পরিবর্তন করুন" aria-expanded="false" aria-haspopup="menu" title="ভাষা পরিবর্তন করুন">
+              <span class="ap-lang-globe" aria-hidden="true">🌐</span>
+              <span class="ap-lang-current">BN</span>
+            </button>
+            <div class="ap-lang-menu" role="menu" hidden>
+              <div class="ap-lang-menu-grid">
+                <a class="ap-lang-item" href="/bn/faqs/" hreflang="en" lang="en" role="menuitem"><span aria-hidden="true">🇬🇧</span> English</a>
+                <a class="ap-lang-item" href="/fr/faqs/" hreflang="fr" lang="fr" role="menuitem"><span aria-hidden="true">🇫🇷</span> Français</a>
+                <a class="ap-lang-item" href="/de/faqs/" hreflang="de" lang="de" role="menuitem"><span aria-hidden="true">🇩🇪</span> Deutsch</a>
+                <a class="ap-lang-item" href="/es/faqs/" hreflang="es" lang="es" role="menuitem"><span aria-hidden="true">🇪🇸</span> Español</a>
+                <a class="ap-lang-item" href="/it/faqs/" hreflang="it" lang="it" role="menuitem"><span aria-hidden="true">🇮🇹</span> Italiano</a>
+                <a class="ap-lang-item" href="/pt-br/faqs/" hreflang="pt-BR" lang="pt-BR" role="menuitem"><span aria-hidden="true">🇧🇷</span> Português</a>
+                <a class="ap-lang-item" href="/nl/faqs/" hreflang="nl" lang="nl" role="menuitem"><span aria-hidden="true">🇳🇱</span> Nederlands</a>
+                <a class="ap-lang-item" href="/pl/faqs/" hreflang="pl" lang="pl" role="menuitem"><span aria-hidden="true">🇵🇱</span> Polski</a>
+                <a class="ap-lang-item" href="/sv/faqs/" hreflang="sv" lang="sv" role="menuitem"><span aria-hidden="true">🇸🇪</span> Svenska</a>
+                <a class="ap-lang-item" href="/cs/faqs/" hreflang="cs" lang="cs" role="menuitem"><span aria-hidden="true">🇨🇿</span> Čeština</a>
+                <a class="ap-lang-item" href="/ro/faqs/" hreflang="ro" lang="ro" role="menuitem"><span aria-hidden="true">🇷🇴</span> Română</a>
+                <a class="ap-lang-item" href="/hu/faqs/" hreflang="hu" lang="hu" role="menuitem"><span aria-hidden="true">🇭🇺</span> Magyar</a>
+                <a class="ap-lang-item" href="/el/faqs/" hreflang="el" lang="el" role="menuitem"><span aria-hidden="true">🇬🇷</span> Ελληνικά</a>
+                <a class="ap-lang-item" href="/tr/faqs/" hreflang="tr" lang="tr" role="menuitem"><span aria-hidden="true">🇹🇷</span> Türkçe</a>
+                <a class="ap-lang-item" href="/ru/faqs/" hreflang="ru" lang="ru" role="menuitem"><span aria-hidden="true">🇷🇺</span> Русский</a>
+                <a class="ap-lang-item" href="/uk/faqs/" hreflang="uk" lang="uk" role="menuitem"><span aria-hidden="true">🇺🇦</span> Українська</a>
+                <a class="ap-lang-item" href="/ar/faqs/" hreflang="ar" lang="ar" role="menuitem"><span aria-hidden="true">🇸🇦</span> العربية</a>
+                <a class="ap-lang-item" href="/he/faqs/" hreflang="he" lang="he" role="menuitem"><span aria-hidden="true">🇮🇱</span> עברית</a>
+                <a class="ap-lang-item" href="/fa/faqs/" hreflang="fa" lang="fa" role="menuitem"><span aria-hidden="true">🇮🇷</span> فارسی</a>
+                <a class="ap-lang-item" href="/hi/faqs/" hreflang="hi" lang="hi" role="menuitem"><span aria-hidden="true">🇮🇳</span> हिन्दी</a>
+                <a class="ap-lang-item" href="/bn/faqs/" hreflang="bn" lang="bn" role="menuitem"><span aria-hidden="true">🇧🇩</span> বাংলা</a>
+                <a class="ap-lang-item" href="/ta/faqs/" hreflang="ta" lang="ta" role="menuitem"><span aria-hidden="true">🇮🇳</span> தமிழ்</a>
+                <a class="ap-lang-item" href="/te/faqs/" hreflang="te" lang="te" role="menuitem"><span aria-hidden="true">🇮🇳</span> తెలుగు</a>
+                <a class="ap-lang-item" href="/mr/faqs/" hreflang="mr" lang="mr" role="menuitem"><span aria-hidden="true">🇮🇳</span> मराठी</a>
+                <a class="ap-lang-item" href="/th/faqs/" hreflang="th" lang="th" role="menuitem"><span aria-hidden="true">🇹🇭</span> ไทย</a>
+                <a class="ap-lang-item" href="/vi/faqs/" hreflang="vi" lang="vi" role="menuitem"><span aria-hidden="true">🇻🇳</span> Tiếng Việt</a>
+                <a class="ap-lang-item" href="/id/faqs/" hreflang="id" lang="id" role="menuitem"><span aria-hidden="true">🇮🇩</span> Indonesia</a>
+                <a class="ap-lang-item" href="/ms/faqs/" hreflang="ms" lang="ms" role="menuitem"><span aria-hidden="true">🇲🇾</span> Melayu</a>
+                <a class="ap-lang-item" href="/fil/faqs/" hreflang="fil" lang="fil" role="menuitem"><span aria-hidden="true">🇵🇭</span> Filipino</a>
+                <a class="ap-lang-item" href="/ja/faqs/" hreflang="ja" lang="ja" role="menuitem"><span aria-hidden="true">🇯🇵</span> 日本語</a>
+                <a class="ap-lang-item" href="/ko/faqs/" hreflang="ko" lang="ko" role="menuitem"><span aria-hidden="true">🇰🇷</span> 한국어</a>
+                <a class="ap-lang-item" href="/zh-hans/faqs/" hreflang="zh-Hans" lang="zh-Hans" role="menuitem"><span aria-hidden="true">🇨🇳</span> 简体中文</a>
+                <a class="ap-lang-item" href="/zh-hant/faqs/" hreflang="zh-Hant" lang="zh-Hant" role="menuitem"><span aria-hidden="true">🇹🇼</span> 繁體中文</a>
+                <a class="ap-lang-item" href="/ha/faqs/" hreflang="ha" lang="ha" role="menuitem"><span aria-hidden="true">🇳🇬</span> Hausa</a>
+                <a class="ap-lang-item" href="/yo/faqs/" hreflang="yo" lang="yo" role="menuitem"><span aria-hidden="true">🇳🇬</span> Yorùbá</a>
+              </div>
+            </div>
+          </div>
+          <a class="ap-cta-mini" href="/bn/try/">ডেমো চেষ্টা করুন&nbsp;&rsaquo;</a>
+          <label class="ap-burger" for="ap-menu-toggle" aria-hidden="true"><span class="ap-burger-icon">☰</span></label>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <header class="page-header">
+        <div class="wrap">
+          <nav class="breadcrumb" aria-label="ব্রেডক্রাম্ব">
+            <ol>
+              <li><a href="/">হোম</a></li>
+              <li aria-current="page">ট্রেজারি, অপারেশন, ইঞ্জিনিয়ারিং ও অডিটের জন্য Pain001 FAQ</li>
+            </ol>
+          </nav>
+          <p class="eyebrow">প্রশ্নাবলি</p>
+          <h1 class="page-title">ট্রেজারি, অপারেশন, ইঞ্জিনিয়ারিং ও অডিটের জন্য Pain001 FAQ</h1>
+          <p class="deck">ট্রেজারার, পেমেন্ট অপারেশন, ইঞ্জিনিয়ার ও অডিটরদের জন্য সরাসরি উত্তর — মানুষ যেভাবে আসলে প্রশ্ন করে ঠিক সেভাবেই।</p>
+          <div class="article-meta"><span>4 মিনিট পড়া</span>
+            <span>সর্বশেষ পর্যালোচনা <time datetime="2026-07-26">2026-07-26</time></span>
+          </div>
+        </div>
+      </header>
+
+      <div class="wrap content-shell">
+        <article class="content-body"><nav class="article-toc" aria-label="সূচিপত্র"><h2>সূচিপত্র</h2><ol><li><a href="#for-treasury-and-finance-leaders">ট্রেজারি ও ফিন্যান্স নেতৃত্বের জন্য</a></li><li><a href="#for-payment-operations">পেমেন্ট অপারেশনের জন্য</a></li><li><a href="#for-engineers-and-architects">ইঞ্জিনিয়ার ও আর্কিটেক্টদের জন্য</a></li><li><a href="#for-auditors-and-compliance">অডিটর ও কমপ্লায়েন্সের জন্য</a></li></ol></nav>
+          <div lang="en"><p>ট্রেজারার, পেমেন্ট অপারেশন, ইঞ্জিনিয়ার ও অডিটরদের জন্য সরাসরি উত্তর। প্রশ্নগুলি সেভাবেই সাজানো, মানুষ যেভাবে আসলে জিজ্ঞাসা করে। আরও গভীর প্রযুক্তিগত বিবরণের জন্য দেখুন <a href="/bn/documentation/">প্রযুক্তিগত রেফারেন্স</a>।</p>
+<hr />
+<h2 id="for-treasury-and-finance-leaders">ট্রেজারি ও ফিন্যান্স নেতৃত্বের জন্য<a class="heading-anchor" href="#for-treasury-and-finance-leaders" aria-label="বিভাগের লিংক: ট্রেজারি ও ফিন্যান্স নেতৃত্বের জন্য">#</a></h2>
+<p><strong>এক অনুচ্ছেদে pain.001 কী?</strong></p>
+<p><code>pain.001</code> হলো সেই ISO 20022 মেসেজ, যা একজন গ্রাহক ক্রেডিট ট্রান্সফার শুরু করতে তার ব্যাংকে পাঠায় — SWIFT MT101 ও দেশীয় ফ্ল্যাট ফাইলের মতো ফরম্যাটের XML উত্তরসূরি। আপনার ব্যাংক এটি গ্রহণ করার আগে একটি স্কিমা ও একটি স্কিম রুলবুকের বিপরীতে যাচাই করে। Pain001 (সফটওয়্যারটি) আপনার কাছে থাকা ডেটা থেকেই সেই ফাইলগুলি তৈরি করে এবং জমা দেওয়ার আগেই প্রমাণ করে যে সেগুলি বৈধ।</p>
+<p><strong>pain.001 ও pain.008-এর মধ্যে পার্থক্য কী?</strong></p>
+<p>অর্থপ্রবাহের দিক। <code>pain.001</code> ক্রেডিট ট্রান্সফার শুরু করে — আপনি অর্থ বাইরে পাঠান। <code>pain.008</code> ডাইরেক্ট ডেবিট শুরু করে — একটি ম্যান্ডেটের অধীনে আপনার প্রাপ্য অর্থ আপনি সংগ্রহ করেন। Pain001 দুটিই জেনারেট করে: <code>pain.001</code>-এর দশটি সংস্করণ (<code>.001.03</code> থেকে <code>.001.12</code>) এবং <code>pain.008.001.02</code>।</p>
+<p><strong>আমরা এখনও MT101 ফাইল পাঠাই। মাইগ্রেশন কতটা জরুরি?</strong></p>
+<p>জরুরি। ক্রস-বর্ডার আন্তঃব্যাংক পেমেন্ট নির্দেশনার জন্য SWIFT নভেম্বর 2025-এ MT ক্যাটাগরি 1, 2 ও 9 মেসেজ প্রত্যাহার করেছে; যেসব কর্পোরেট চ্যানেল এখনও MT গ্রহণ করে, তারা প্রতিটি ব্যাংকের নিজস্ব বিবেচনায় এবং ধার করা সময়ের উপর ভর করেই তা করে। <a href="/pain001-loader-mt101/">MT101 লোডার</a> কিছুই পুনরায় টাইপ না করে বিদ্যমান MT101 প্রবাহকে ভ্যালিডেটেড <code>pain.001</code>-এ রূপান্তর করে।</p>
+<p><strong>নভেম্বর 2026-এর স্ট্রাকচার্ড অ্যাড্রেস সময়সীমা আমাদের জন্য কী অর্থ বহন করে?</strong></p>
+<p>নভেম্বর 2026-এর শেষ থেকে CBPR+ ক্রস-বর্ডার পেমেন্টে সম্পূর্ণ অস্ট্রাকচার্ড ডাক ঠিকানা আর গ্রহণযোগ্য নয়; ঠিকানা অবশ্যই স্ট্রাকচার্ড বা হাইব্রিড হতে হবে — মুক্ত-পাঠ্য লাইনের বদলে শহর (<code><TwnNm></code>) ও দেশ (<code><Ctry></code>)-এর মতো পৃথক উপাদান। আপনার মাস্টার ডেটায় ঠিকানা যদি অখণ্ড টেক্সট হিসেবে থাকে, তবে কাজটি আপনার ডেটায়, ব্যাংক সংযোগে নয়। সেখান থেকেই শুরু করুন। <a href="/2026-iso20022-migration-trends/">2026 ব্রিফিং</a>-এ সময়রেখা বিস্তারিতভাবে রয়েছে।</p>
+<p><strong>Pain001-এর খরচ কত?</strong></p>
+<p>কিছুই না। কোরটি দ্বৈত-লাইসেন্সপ্রাপ্ত Apache-2.0 / MIT; সহযোগী প্যাকেজগুলি Apache-2.0। বাণিজ্যিক ব্যবহার, পরিমার্জন ও পুনর্বণ্টন সবই অনুমোদিত। মাত্রা বোঝাতে: SWIFT-এর ট্রান্সলেশন SDK-এর তালিকাভুক্ত মূল্যই বছরে €10,000–30,000।</p>
+<hr />
+<h2 id="for-payment-operations">পেমেন্ট অপারেশনের জন্য<a class="heading-anchor" href="#for-payment-operations" aria-label="বিভাগের লিংক: পেমেন্ট অপারেশনের জন্য">#</a></h2>
+<p><strong>ব্যাংক কেন পেমেন্ট ফাইল প্রত্যাখ্যান করে?</strong></p>
+<p>চারটি বারবার ঘটা কারণ: স্কিমা লঙ্ঘন (ভুল এলিমেন্ট, ভুল সংস্করণ, ভুল নেমস্পেস), ত্রুটিপূর্ণ শনাক্তকারী (IBAN চেকসাম ব্যর্থতা, ভুল গঠনের BIC), ভাঙা কন্ট্রোল টোটাল (<code>NbOfTxs</code> / <code>CtrlSum</code> লেনদেনের সঙ্গে না মেলা), এবং ISO 20022 ল্যাটিন সেটের বাইরের ক্যারেক্টার। ফাইলটি অস্তিত্বে আসার আগেই Pain001 চারটিই পরীক্ষা করে: প্রতি রেকর্ডে JSON Schema ভ্যালিডেশন, mod-97 IBAN ও ISO 9362 BIC পরীক্ষা, পুনর্গণিত কন্ট্রোল টোটাল, ক্যারেক্টার সেট ট্রান্সলিটারেশন এবং রেন্ডার করা XML-এর চূড়ান্ত XSD ভ্যালিডেশন।</p>
+<p><strong>কিছু জেনারেট না করেই কি আমরা একটি ফাইল ভ্যালিডেট করতে পারি?</strong></p>
+<p>হ্যাঁ — <code>pain001 --dry-run</code> (অথবা <code>validate</code> সাবকমান্ড, অথবা <code>POST /api/v1/validate</code>)। এক্সিট কোড <code>0</code> মানে বৈধ; <code>1</code> মানে ফিল্ড-স্তরের ত্রুটিসহ ভ্যালিডেশন ব্যর্থ হয়েছে। এটি CI-তে বা জমা দেওয়ার আগের চেকলিস্টে যুক্ত করুন।</p>
+<p><strong>কোন SEPA রুলবুকগুলি অন্তর্ভুক্ত?</strong></p>
+<p>পাঁচটি স্কিম রুলবুক অন্তর্নির্মিতভাবে আসে: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) এবং ক্রস-বর্ডার ক্রেডিট ট্রান্সফার (<code>xborder-ct</code>)। উত্তীর্ণ বা ব্যর্থ প্রতিটি নিয়ম দেখতে <code>--scheme <name> --explain</code> ব্যবহার করুন।</p>
+<p><strong>আমাদের ডেটা Excel-এ থাকে। সমস্যাটা কোথায়?</strong></p>
+<p>Excel নীরবে IBAN-সদৃশ স্ট্রিংকে সংখ্যায় রূপান্তরিত করে। <a href="/pain001-loader-xlsx/">Excel লোডার</a> সরাসরি <code>.xlsx</code>/<code>.xlsm</code> পড়ে এবং IBAN কলামে সাংখ্যিক সেল থাকলে সঙ্গে সঙ্গে থেমে যায় — বিকৃতিটি ব্যাংকে নয়, লোড করার সময়েই ধরা পড়ে।</p>
+<p><strong>500,000-সারির ব্যাচ এটি কীভাবে সামলায়?</strong></p>
+<p><code>--streaming</code> ইনপুটকে মেমরি-সীমাবদ্ধ চাঙ্কে প্রক্রিয়া করে (ডিফল্ট 1,000টি লেনদেন), প্রতিটি চাঙ্ক সঠিকভাবে পুনর্গণিত কন্ট্রোল টোটালসহ নিজস্ব XML ফাইল হিসেবে নির্গত হয়। একই কারণে REST API জব পোলিংসহ <code>POST /api/v1/generate/async</code> সরবরাহ করে।</p>
+<hr />
+<h2 id="for-engineers-and-architects">ইঞ্জিনিয়ার ও আর্কিটেক্টদের জন্য<a class="heading-anchor" href="#for-engineers-and-architects" aria-label="বিভাগের লিংক: ইঞ্জিনিয়ার ও আর্কিটেক্টদের জন্য">#</a></h2>
+<p><strong>আমরা এটি কীভাবে ইন্টিগ্রেট করব — লাইব্রেরি, CLI, নাকি API?</strong></p>
+<p>তিনটিই প্রথম-শ্রেণির সারফেস হিসেবে বিদ্যমান: একটি টাইপড Python API, CI-বান্ধব এক্সিট কোডসহ একটি CLI, এবং সিঙ্ক, অ্যাসিঙ্ক-জব, হেলথ ও Prometheus মেট্রিক এন্ডপয়েন্টসহ একটি FastAPI মাইক্রোসার্ভিস (<code>pain001 serve</code>)। নিচে একই ভ্যালিডেশন পাইপলাইন, তাই সারফেসভেদে ফলাফল কখনও ভিন্ন হয় না।</p>
+<p><strong>XML জেনারেশন কি সত্যিই ফ্লোট রাউন্ডিং থেকে নিরাপদ?</strong></p>
+<p>জেনারেশন ও স্কিম ভ্যালিডেশনে অঙ্কগুলি শুরু থেকে শেষ পর্যন্ত <code>decimal.Decimal</code> — যথাযথ দশমিক হিসেবে পার্স করা, যথাযথ দশমিক হিসেবে যোগ করা, ফ্লোট উপস্থাপনা ছাড়াই রেন্ডার করা। কন্ট্রোল টোটাল ভ্যালিডেটেড রেকর্ড থেকে পুনর্গণনা করা হয়, ইনপুট থেকে কখনও বিশ্বাস করে নেওয়া হয় না।</p>
+<p><strong>নিরাপত্তা অবস্থান কেমন?</strong></p>
+<p>সব XML পার্সিং <code>defusedxml</code>-এর মধ্য দিয়ে যায় (XXE ও এনটিটি-এক্সপ্যানশন আক্রমণ প্রতিহত করে); ডিপেন্ডেন্সি ট্রিতে কোনো <code>lxml</code> নেই। ইনপুট একটি পাথ-ট্রাভার্সাল ভ্যালিডেটর পার হয়। Docker ইমেজটি নন-রুট হিসেবে চলে। কোর রিলিজের জন্য একটি CycloneDX SBOM তৈরি করা হয়, এবং <code>PAIN001_DISABLE_PLUGINS=1</code> দিয়ে তৃতীয় পক্ষের প্লাগইন আবিষ্কার সম্পূর্ণভাবে বন্ধ করা যায়।</p>
+<p><strong>গুণমান কীভাবে নিশ্চিত করা হয়?</strong></p>
+<p>কোরে হার্ড CI গেট হিসেবে 100% লাইন ও ব্রাঞ্চ কভারেজ (যাচাইযোগ্যভাবে: 3,828 লাইন, 926 ব্রাঞ্চ 100%-এ), কঠোর mypy, 100% ডকস্ট্রিং কভারেজ, Bandit ও pip-audit সিকিউরিটি লিন্টিং এবং CodeQL স্ক্যানিং। সহযোগী প্যাকেজগুলিও একই 100% কভারেজ শৃঙ্খলা বজায় রাখে।</p>
+<p><strong>মালিকানাধীন কোনো ফরম্যাটের জন্য কি আমরা এটি সম্প্রসারণ করতে পারি?</strong></p>
+<p>হ্যাঁ — চারটি প্লাগইন এন্ট্রি-পয়েন্ট গ্রুপ (<code>pain001.loaders</code>, <code>pain001.validators</code>, <code>pain001.schemes</code>, <code>pain001.writers</code>)। Excel লোডার নিজেই পাবলিক প্রোটোকল ব্যবহার করা একটি প্লাগইন, তাই এটি রেফারেন্স ইমপ্লিমেন্টেশন হিসেবেও কাজ করে।</p>
+<hr />
+<h2 id="for-auditors-and-compliance">অডিটর ও কমপ্লায়েন্সের জন্য<a class="heading-anchor" href="#for-auditors-and-compliance" aria-label="বিভাগের লিংক: অডিটর ও কমপ্লায়েন্সের জন্য">#</a></h2>
+<p><strong>গত ত্রৈমাসিকে জেনারেট করা কোনো ফাইল কি আমরা পুনরুৎপাদন করতে পারি?</strong></p>
+<p>হ্যাঁ। প্যাকেজ সংস্করণ পিন করুন, একই ইনপুট পুনরায় চালান, আউটপুট ডিটারমিনিস্টিক। যেহেতু টুলচেইনটি ওপেন সোর্স, অডিট ট্রেইল কেবল বিক্রেতার প্রত্যয়নেই থেমে থাকে না — তা কোড পাথ পর্যন্ত বিস্তৃত।</p>
+<p><strong>পেমেন্ট ডেটা কি আমাদের পরিবেশ ছেড়ে যায়?</strong></p>
+<p>না। প্রতিটি উপাদান — CLI, লাইব্রেরি, REST API, MCP সার্ভার, LSP — স্থানীয়ভাবে চলে। কোনো টেলিমেট্রি নেই, কোনো SaaS কলব্যাক নেই, কোনো বাহ্যিক ভ্যালিডেশন সার্ভিস নেই। MCP সার্ভার কেবল stdio-তে কথা বলে এবং এর সব 17টি টুল রিড-অনলি ও আইডেমপোটেন্ট হিসেবে চিহ্নিত।</p>
+<p><strong>Pain001 কে রক্ষণাবেক্ষণ করেন?</strong></p>
+<p><a href="https://sebastienrousseau.com">Sebastien Rousseau</a>, লন্ডন-ভিত্তিক একজন ফিনটেক ইঞ্জিনিয়ারিং নেতা, সঙ্গে কমিউনিটি অবদানকারীরা। উন্নয়ন প্রকাশ্যে <a href="https://github.com/sebastienrousseau/pain001">GitHub</a>-এ হয়, রিলিজ <a href="https://pypi.org/project/pain001/">PyPI</a>-তে প্রকাশিত হয়, এবং প্রতিটি রিলিজের সঙ্গে চেঞ্জলগ সংস্করণায়িত হয়।</p>
+</div>
+        </article>
+      </div>
+    </main>
+
+    <button class="totop" id="toTop" type="button" hidden aria-label="Back to top">&uarr;</button>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-brand">Pain001</p>
+            <p class="footer-tagline">ওপেন-সোর্স ISO 20022 পেমেন্ট সূচনা। যাচাইকৃত ফাইল, স্থানীয় প্রক্রিয়াকরণ, কোনো নির্ভরতা নেই।</p>
+          </div>
+          <div>
+            <h2 class="footer-heading">ডকুমেন্টেশন</h2>
+            <ul class="footer-links">
+              <li><a href="/bn/try/">আপনার ব্রাউজারে ব্যবহার করে দেখুন</a></li>
+              <li><a href="/bn/documentation/">প্রযুক্তিগত রেফারেন্স</a></li>
+              <li><a href="/bn/installation/">ইনস্টলেশন &amp; Docker</a></li>
+              <li><a href="/payments/">পেমেন্ট পাইপলাইন</a></li>
+              <li><a href="/bn/glossary/">পরিভাষা</a></li>
+              <li><a href="/bn/faqs/">সচরাচর জিজ্ঞাসা</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">ইকোসিস্টেম</h2>
+            <ul class="footer-links">
+              <li><a href="/pain001-mcp/">pain001-mcp · AI এজেন্ট</a></li>
+              <li><a href="/pain001-lsp/">pain001-lsp · এডিটর</a></li>
+              <li><a href="/pain001-loader-mt101/">MT101 লোডার</a></li>
+              <li><a href="/pain001-loader-xlsx/">Excel লোডার</a></li>
+              <li><a href="https://github.com/sebastienrousseau/pain001" rel="external">GitHub</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">গবেষণা ও আস্থা</h2>
+            <ul class="footer-links">
+              <li><a href="/bn/why/">কেন Pain001</a></li>
+              <li><a href="/bn/executive-brief/">নির্বাহী সারসংক্ষেপ</a></li>
+              <li><a href="/iso20022-roadmap/">ISO 20022 রোডম্যাপ</a></li>
+              <li><a href="/2026-iso20022-migration-trends/">2026 ব্রিফিং</a></li>
+              <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/">আন্তঃসীমান্ত নির্দেশিকা</a></li>
+              <li><a href="/competitors-comparison/">বাণিজ্যিক সরঞ্জামের সাথে তুলনা</a></li>
+              <li><a href="/architecture-and-patents/">আর্কিটেকচার &amp; পেটেন্ট</a></li>
+              <li><a href="/trust/">ট্রাস্ট সেন্টার</a></li>
+              <li><a href="/compatibility/">সামঞ্জস্য ম্যাট্রিক্স</a></li>
+              <li><a href="/security.txt">security.txt</a></li>
+              <li><a href="/sbom.cdx.json">SBOM</a> · <a href="/llms.txt">llms.txt</a> · <a href="/rss.xml">RSS ফিড</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; 2023&ndash;2026 Sebastien Rousseau. Core dual-licensed Apache-2.0 / MIT; companion packages Apache-2.0.</p>
+          <ul aria-label="This overview in other languages">
+            <li><a href="/languages/">এই সারসংক্ষেপ ৩৪টি ভাষায়</a></li>
+          </ul>
+          <ul>
+            <li><a href="/accessibility/">প্রবেশগম্যতা</a></li>
+            <li><a href="/privacy/">গোপনীয়তা</a></li>
+            <li><a href="/terms/">শর্তাবলী</a></li>
+            <li><a href="/contact/">যোগাযোগ</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://pain001.com/bn/faqs/",
+          "url": "https://pain001.com/bn/faqs/",
+          "name": "ট্রেজারি, অপারেশন, ইঞ্জিনিয়ারিং ও অডিটের জন্য Pain001 FAQ",
+          "description": "ব্যাংক কেন পেমেন্ট ফাইল প্রত্যাখ্যান করে, pain.001 বনাম pain.008, নভেম্বর 2026-এর সময়সীমা, বড় ব্যাচ স্ট্রিমিং, নিরাপত্তা ও অডিট পুনরুৎপাদনযোগ্যতা — সরল ভাষায় উত্তর।",
+          "inLanguage": "bn",
+          "dateModified": "2026-07-26",
+          "isPartOf": { "@id": "https://pain001.com/#website" },
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "হোম", "item": "https://pain001.com/" },
+            { "@type": "ListItem", "position": 2, "name": "ট্রেজারি, অপারেশন, ইঞ্জিনিয়ারিং ও অডিটের জন্য Pain001 FAQ" }
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pain001.com/#organization",
+          "name": "Pain001",
+          "url": "https://pain001.com/",
+          "logo": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+          "founder": { "@type": "Person", "name": "Sebastien Rousseau", "url": "https://sebastienrousseau.com" },
+          "sameAs": [
+            "https://github.com/sebastienrousseau/pain001",
+            "https://pypi.org/project/pain001/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pain001.com/#website",
+          "url": "https://pain001.com/",
+          "name": "Pain001",
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        }
+      ]
+    }
+    </script>
+
+    <script src="/_csp/197fcfccbee69bda.js" integrity="sha384-geygAAYoalTqpA6bIgsGUMRQupyTiF/rCnvMiGE5+G0s0ZOYAhHnkhzyMXN9yNxa" crossorigin="anonymous"></script>
+  
+<!-- SSG Search Widget -->
+<div id="ssg-search-widget">
+
+<!-- Search trigger button -->
+<button id="ssg-search-btn" type="button" aria-label="Search">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<span>Search</span>
+<kbd>K</kbd>
+</button>
+<!-- Search modal -->
+<div id="ssg-search-overlay" role="dialog" aria-label="Search">
+<div id="ssg-search-box">
+<div id="ssg-search-header">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<input id="ssg-search-input" type="search" placeholder="Search documentation..." autocomplete="off" aria-label="Search"/>
+</div>
+<div id="ssg-search-results" aria-live="polite"></div>
+<div id="ssg-sr-status" role="status" aria-live="polite" aria-atomic="true"></div>
+<div class="ssg-search-footer"><span><kbd>Esc</kbd> close</span><span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span><span><kbd>Enter</kbd> open</span></div>
+</div>
+</div>
+<script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>

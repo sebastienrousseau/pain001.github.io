@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta itemprop="datePublished" content="Sun, 26 Jul 2026 08:00:00 +0000" id="date" />
+    <meta itemprop="dateModified" content="Sun, 26 Jul 2026 08:00:00 +0000" id="last-modified" />
+    <title>Pain001: المرجع التقني — CLI وواجهة Python وREST</title>
+
+    <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
+<meta name="description" content="مرجع كامل لـ pain001 v0.0.56 — أوامر CLI الفرعية وخياراتها، وواجهة Python البرمجية، ونقاط REST تحت /api/v1، وكتب قواعد الأنظمة، وتطبيع المدخلات، وبنية الإضافات.">
+<meta name="keywords" content="pain001 documentation, pain.001 CLI, ISO 20022 Python library, pain001 REST API, XSD validation, SEPA scheme validation, pain.002 parser, camt.053 parser">
+<meta property="og:image" content="https://pain001.com/og/pain001-card.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Documentation pages for the Pain001 command-line interface and REST API — the working reference for teams generating ISO 20022 payment files." />
+    <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Pain001: المرجع التقني — CLI وواجهة Python وREST">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    
+    
+
+    <link rel="alternate" href="https://pain001.com/ar/documentation/" hreflang="en" />
+    
+    <link rel="icon" type="image/svg+xml" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />
+    <link rel="preload" href="/fonts/source-serif-4-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/_csp/e9d2f9e83d6b47b6.css" integrity="sha384-NgS1FgtNO/+O73jGnYQcFGXyKGAVkFu/W1I8bL4l2QSI+eMJfSMSQrUdf2zJxS34" crossorigin="anonymous">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
+  <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="Pain001: المرجع التقني — CLI وواجهة Python وREST">
+<meta property="og:description" content="Home Pain001 Technical Reference: CLI, Python API and REST Reference Pain001 Technical Reference: CLI, Python API and REST Every flag, endpoint, and behaviour">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pain001.com/ar/documentation/">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pain001: المرجع التقني — CLI وواجهة Python وREST">
+<meta name="twitter:description" content="Home Pain001 Technical Reference: CLI, Python API and REST Reference Pain001 Technical Reference: CLI, Python API and REST Every flag, endpoint, and behaviour">
+<meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg">
+<link rel="canonical" href="https://pain001.com/ar/documentation/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
+<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"><link rel="alternate" hreflang="en" href="https://pain001.com/documentation/" /><link rel="alternate" hreflang="x-default" href="https://pain001.com/documentation/" /><link rel="alternate" hreflang="bn" href="https://pain001.com/bn/documentation/" /><link rel="alternate" hreflang="cs" href="https://pain001.com/cs/documentation/" /><link rel="alternate" hreflang="de" href="https://pain001.com/de/documentation/" /><link rel="alternate" hreflang="el" href="https://pain001.com/el/documentation/" /><link rel="alternate" hreflang="es" href="https://pain001.com/es/documentation/" /><link rel="alternate" hreflang="fa" href="https://pain001.com/fa/documentation/" /><link rel="alternate" hreflang="fil" href="https://pain001.com/fil/documentation/" /><link rel="alternate" hreflang="fr" href="https://pain001.com/fr/documentation/" /><link rel="alternate" hreflang="ha" href="https://pain001.com/ha/documentation/" /><link rel="alternate" hreflang="he" href="https://pain001.com/he/documentation/" /><link rel="alternate" hreflang="hi" href="https://pain001.com/hi/documentation/" /><link rel="alternate" hreflang="hu" href="https://pain001.com/hu/documentation/" /><link rel="alternate" hreflang="id" href="https://pain001.com/id/documentation/" /><link rel="alternate" hreflang="it" href="https://pain001.com/it/documentation/" /><link rel="alternate" hreflang="ja" href="https://pain001.com/ja/documentation/" /><link rel="alternate" hreflang="ko" href="https://pain001.com/ko/documentation/" /><link rel="alternate" hreflang="mr" href="https://pain001.com/mr/documentation/" /><link rel="alternate" hreflang="ms" href="https://pain001.com/ms/documentation/" /><link rel="alternate" hreflang="nl" href="https://pain001.com/nl/documentation/" /><link rel="alternate" hreflang="pl" href="https://pain001.com/pl/documentation/" /><link rel="alternate" hreflang="pt-BR" href="https://pain001.com/pt-br/documentation/" /><link rel="alternate" hreflang="ro" href="https://pain001.com/ro/documentation/" /><link rel="alternate" hreflang="ru" href="https://pain001.com/ru/documentation/" /><link rel="alternate" hreflang="sv" href="https://pain001.com/sv/documentation/" /><link rel="alternate" hreflang="ta" href="https://pain001.com/ta/documentation/" /><link rel="alternate" hreflang="te" href="https://pain001.com/te/documentation/" /><link rel="alternate" hreflang="th" href="https://pain001.com/th/documentation/" /><link rel="alternate" hreflang="tr" href="https://pain001.com/tr/documentation/" /><link rel="alternate" hreflang="uk" href="https://pain001.com/uk/documentation/" /><link rel="alternate" hreflang="vi" href="https://pain001.com/vi/documentation/" /><link rel="alternate" hreflang="yo" href="https://pain001.com/yo/documentation/" /><link rel="alternate" hreflang="zh-Hans" href="https://pain001.com/zh-hans/documentation/" /><link rel="alternate" hreflang="zh-Hant" href="https://pain001.com/zh-hant/documentation/" /></head>
+
+  <body>
+    <a href="#main-content" class="skip-link">تخطَّ إلى المحتوى الرئيسي</a>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="ap-nav">
+      <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="تبديل التنقل" />
+      <div class="wrap ap-nav-wrap">
+        <a class="ap-brand" href="/" aria-label="Pain001 home">
+          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="" width="26" height="26" />
+          <span>Pain001</span>
+        </a>
+        <nav aria-label="Primary navigation" id="ap-primary-nav">
+          <ul class="ap-menu">
+            <li class="has-sub"><a href="/ar/why/">لماذا Pain001</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-why" aria-label="تبديل القائمة الفرعية لماذا Pain001"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-why" class="ap-sub">
+                <li><a href="/ar/solutions/">لمن هذه الأداة</a></li>
+                <li><a href="/ar/executive-brief/">موجز تنفيذي</a></li>
+                <li><a href="/competitors-comparison/" hreflang="en">مقارنة بالأدوات التجارية (EN)</a></li>
+              </ul>
+            </li>
+            <li><a href="/ar/try/">شاهده مباشرة</a></li>
+            <li class="has-sub"><a href="/ar/documentation/">الوثائق</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="تبديل القائمة الفرعية للوثائق"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-docs" class="ap-sub">
+                <li><a href="/ar/installation/">التثبيت &amp; Docker</a></li>
+                <li><a href="/ar/glossary/">مسرد المصطلحات</a></li>
+                <li><a href="/ar/faqs/">الأسئلة الشائعة</a></li>
+                <li><a href="/pain002-reason-codes/" hreflang="en">رموز أسباب pain.002 (EN)</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/#suite-heading">الحزمة</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-suite" aria-label="تبديل القائمة الفرعية للحزمة"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-suite" class="ap-sub">
+                <li><a href="/pain001-mcp/" hreflang="en">أدوات وكلاء الذكاء الاصطناعي (MCP) (EN)</a></li>
+                <li><a href="/pain001-lsp/" hreflang="en">تكامل المحررات (LSP) (EN)</a></li>
+                <li><a href="/pain001-loader-mt101/" hreflang="en">محمّل MT101 (EN)</a></li>
+                <li><a href="/pain001-loader-xlsx/" hreflang="en">محمّل Excel (EN)</a></li>
+                <li><a href="/architecture-and-patents/" hreflang="en">البنية &amp; الأمان (EN)</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/2026-iso20022-migration-trends/">الأبحاث</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-research" aria-label="تبديل القائمة الفرعية للأبحاث"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-research" class="ap-sub">
+                <li><a href="/2026-iso20022-migration-trends/" hreflang="en">إحاطة 2026 (EN)</a></li>
+                <li><a href="/iso20022-roadmap/" hreflang="en">خارطة طريق ISO 20022 (EN)</a></li>
+                <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/" hreflang="en">دليل المدفوعات العابرة للحدود (EN)</a></li>
+                <li><a href="/languages/" hreflang="en">بـ 34 لغة (EN)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="ap-nav-right">
+          <button type="button" class="theme-toggle" aria-label="التبديل إلى الوضع الداكن" data-label-dark="التبديل إلى الوضع الداكن" data-label-light="التبديل إلى الوضع الفاتح" aria-pressed="false" title="التبديل إلى الوضع الداكن">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+          <button type="button" class="ap-search-btn" aria-label="بحث (Cmd/Ctrl + K)" title="بحث (⌘K)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <kbd class="ap-search-kbd" aria-hidden="true">⌘K</kbd>
+          </button>
+          <div class="ap-lang" role="group" aria-label="Language">
+            <button type="button" class="ap-lang-toggle" aria-label="تغيير اللغة" aria-expanded="false" aria-haspopup="menu" title="تغيير اللغة">
+              <span class="ap-lang-globe" aria-hidden="true">🌐</span>
+              <span class="ap-lang-current">AR</span>
+            </button>
+            <div class="ap-lang-menu" role="menu" hidden>
+              <div class="ap-lang-menu-grid">
+                <a class="ap-lang-item" href="/ar/documentation/" hreflang="en" lang="en" role="menuitem"><span aria-hidden="true">🇬🇧</span> English</a>
+                <a class="ap-lang-item" href="/fr/documentation/" hreflang="fr" lang="fr" role="menuitem"><span aria-hidden="true">🇫🇷</span> Français</a>
+                <a class="ap-lang-item" href="/de/documentation/" hreflang="de" lang="de" role="menuitem"><span aria-hidden="true">🇩🇪</span> Deutsch</a>
+                <a class="ap-lang-item" href="/es/documentation/" hreflang="es" lang="es" role="menuitem"><span aria-hidden="true">🇪🇸</span> Español</a>
+                <a class="ap-lang-item" href="/it/documentation/" hreflang="it" lang="it" role="menuitem"><span aria-hidden="true">🇮🇹</span> Italiano</a>
+                <a class="ap-lang-item" href="/pt-br/documentation/" hreflang="pt-BR" lang="pt-BR" role="menuitem"><span aria-hidden="true">🇧🇷</span> Português</a>
+                <a class="ap-lang-item" href="/nl/documentation/" hreflang="nl" lang="nl" role="menuitem"><span aria-hidden="true">🇳🇱</span> Nederlands</a>
+                <a class="ap-lang-item" href="/pl/documentation/" hreflang="pl" lang="pl" role="menuitem"><span aria-hidden="true">🇵🇱</span> Polski</a>
+                <a class="ap-lang-item" href="/sv/documentation/" hreflang="sv" lang="sv" role="menuitem"><span aria-hidden="true">🇸🇪</span> Svenska</a>
+                <a class="ap-lang-item" href="/cs/documentation/" hreflang="cs" lang="cs" role="menuitem"><span aria-hidden="true">🇨🇿</span> Čeština</a>
+                <a class="ap-lang-item" href="/ro/documentation/" hreflang="ro" lang="ro" role="menuitem"><span aria-hidden="true">🇷🇴</span> Română</a>
+                <a class="ap-lang-item" href="/hu/documentation/" hreflang="hu" lang="hu" role="menuitem"><span aria-hidden="true">🇭🇺</span> Magyar</a>
+                <a class="ap-lang-item" href="/el/documentation/" hreflang="el" lang="el" role="menuitem"><span aria-hidden="true">🇬🇷</span> Ελληνικά</a>
+                <a class="ap-lang-item" href="/tr/documentation/" hreflang="tr" lang="tr" role="menuitem"><span aria-hidden="true">🇹🇷</span> Türkçe</a>
+                <a class="ap-lang-item" href="/ru/documentation/" hreflang="ru" lang="ru" role="menuitem"><span aria-hidden="true">🇷🇺</span> Русский</a>
+                <a class="ap-lang-item" href="/uk/documentation/" hreflang="uk" lang="uk" role="menuitem"><span aria-hidden="true">🇺🇦</span> Українська</a>
+                <a class="ap-lang-item" href="/ar/documentation/" hreflang="ar" lang="ar" role="menuitem"><span aria-hidden="true">🇸🇦</span> العربية</a>
+                <a class="ap-lang-item" href="/he/documentation/" hreflang="he" lang="he" role="menuitem"><span aria-hidden="true">🇮🇱</span> עברית</a>
+                <a class="ap-lang-item" href="/fa/documentation/" hreflang="fa" lang="fa" role="menuitem"><span aria-hidden="true">🇮🇷</span> فارسی</a>
+                <a class="ap-lang-item" href="/hi/documentation/" hreflang="hi" lang="hi" role="menuitem"><span aria-hidden="true">🇮🇳</span> हिन्दी</a>
+                <a class="ap-lang-item" href="/bn/documentation/" hreflang="bn" lang="bn" role="menuitem"><span aria-hidden="true">🇧🇩</span> বাংলা</a>
+                <a class="ap-lang-item" href="/ta/documentation/" hreflang="ta" lang="ta" role="menuitem"><span aria-hidden="true">🇮🇳</span> தமிழ்</a>
+                <a class="ap-lang-item" href="/te/documentation/" hreflang="te" lang="te" role="menuitem"><span aria-hidden="true">🇮🇳</span> తెలుగు</a>
+                <a class="ap-lang-item" href="/mr/documentation/" hreflang="mr" lang="mr" role="menuitem"><span aria-hidden="true">🇮🇳</span> मराठी</a>
+                <a class="ap-lang-item" href="/th/documentation/" hreflang="th" lang="th" role="menuitem"><span aria-hidden="true">🇹🇭</span> ไทย</a>
+                <a class="ap-lang-item" href="/vi/documentation/" hreflang="vi" lang="vi" role="menuitem"><span aria-hidden="true">🇻🇳</span> Tiếng Việt</a>
+                <a class="ap-lang-item" href="/id/documentation/" hreflang="id" lang="id" role="menuitem"><span aria-hidden="true">🇮🇩</span> Indonesia</a>
+                <a class="ap-lang-item" href="/ms/documentation/" hreflang="ms" lang="ms" role="menuitem"><span aria-hidden="true">🇲🇾</span> Melayu</a>
+                <a class="ap-lang-item" href="/fil/documentation/" hreflang="fil" lang="fil" role="menuitem"><span aria-hidden="true">🇵🇭</span> Filipino</a>
+                <a class="ap-lang-item" href="/ja/documentation/" hreflang="ja" lang="ja" role="menuitem"><span aria-hidden="true">🇯🇵</span> 日本語</a>
+                <a class="ap-lang-item" href="/ko/documentation/" hreflang="ko" lang="ko" role="menuitem"><span aria-hidden="true">🇰🇷</span> 한국어</a>
+                <a class="ap-lang-item" href="/zh-hans/documentation/" hreflang="zh-Hans" lang="zh-Hans" role="menuitem"><span aria-hidden="true">🇨🇳</span> 简体中文</a>
+                <a class="ap-lang-item" href="/zh-hant/documentation/" hreflang="zh-Hant" lang="zh-Hant" role="menuitem"><span aria-hidden="true">🇹🇼</span> 繁體中文</a>
+                <a class="ap-lang-item" href="/ha/documentation/" hreflang="ha" lang="ha" role="menuitem"><span aria-hidden="true">🇳🇬</span> Hausa</a>
+                <a class="ap-lang-item" href="/yo/documentation/" hreflang="yo" lang="yo" role="menuitem"><span aria-hidden="true">🇳🇬</span> Yorùbá</a>
+              </div>
+            </div>
+          </div>
+          <a class="ap-cta-mini" href="/ar/try/">جرّب العرض&nbsp;&rsaquo;</a>
+          <label class="ap-burger" for="ap-menu-toggle" aria-hidden="true"><span class="ap-burger-icon">☰</span></label>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <header class="page-header">
+        <div class="wrap">
+          <nav class="breadcrumb" aria-label="مسار التنقل">
+            <ol>
+              <li><a href="/">الرئيسية</a></li>
+              <li aria-current="page">Pain001: المرجع التقني — CLI وواجهة Python وREST</li>
+            </ol>
+          </nav>
+          <p class="eyebrow">مرجع</p>
+          <h1 class="page-title">Pain001: المرجع التقني — CLI وواجهة Python وREST</h1>
+          <p class="deck">كل خيار ونقطة نهاية وسلوك في pain001 v0.0.56 — مأخوذ من الشيفرة المُصدرة، لا من الطموح.</p>
+          <div class="article-meta"><span>4 دقيقة قراءة</span>
+            <span>آخر مراجعة <time datetime="2026-07-26">2026-07-26</time></span>
+          </div>
+        </div>
+      </header>
+
+      <div class="wrap content-shell">
+        <article class="content-body"><nav class="article-toc" aria-label="المحتويات"><h2>المحتويات</h2><ol><li><a href="#1-command-line-interface">واجهة سطر الأوامر</a></li><li><a href="#2-python-api">واجهة Python البرمجية</a></li><li><a href="#3-rest-microservice">خدمة REST المصغّرة</a></li><li><a href="#4-input-normalisation">تطبيع المدخلات</a></li><li><a href="#5-plugin-architecture">بنية الإضافات</a></li><li><a href="#6-quality-gates">بوابات الجودة</a></li></ol></nav>
+          <div lang="en"><p>يوثّق هذا المرجع واجهة سطر الأوامر وواجهة Python البرمجية وخدمة REST المصغّرة ومسار التحقق في <strong>pain001 v0.0.56</strong>. كل خيار ونقطة نهاية وسلوك مذكور هنا مأخوذ من الشيفرة المُصدرة، لا من الطموح.</p>
+<p>يدعم Pain001 <strong>11 تعريفًا لرسائل ISO 20022</strong>: من <code>pain.001.001.03</code> إلى <code>pain.001.001.12</code> (بدء تحويل ائتماني للعميل، عشرة إصدارات) و<code>pain.008.001.02</code> (بدء خصم مباشر للعميل).</p>
+<hr />
+<h2 id="1-command-line-interface">1. واجهة سطر الأوامر<a class="heading-anchor" href="#1-command-line-interface" aria-label="رابط إلى القسم: 1. واجهة سطر الأوامر">#</a></h2>
+<p>يجمع الملف التنفيذي <code>pain001</code> وظائفه في أوامر فرعية. تشغيله بخيارات التوليد فقط يستدعي <code>generate</code> ضمنيًا، فتظل الأتمتة القائمة تعمل كما هي.</p>
+<div class="table-responsive"><table class="table">
+<thead>
+<tr>
+<th>الأمر الفرعي</th>
+<th>الغرض</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>generate</code></td>
+<td data-label="Purpose" class="text-left">تحويل ملف بيانات إلى XML بصيغة ISO 20022 متحقَّق منه وفق المخطط (الأمر الافتراضي).</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>validate</code></td>
+<td data-label="Purpose" class="text-left">التحقق من بيانات الإدخال دون كتابة XML.</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>versions [--json]</code></td>
+<td data-label="Purpose" class="text-left">عرض جميع تعريفات الرسائل المدعومة الـ 11.</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>inspect <type> [--json]</code></td>
+<td data-label="Purpose" class="text-left">عرض الحقول الإلزامية والاختيارية لنوع رسالة.</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>init <type> [-o DIR]</code></td>
+<td data-label="Purpose" class="text-left">إنشاء قالب CSV مبدئي لنوع رسالة.</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>serve [--host] [--port] [--reload]</code></td>
+<td data-label="Purpose" class="text-left">تشغيل خدمة REST المصغّرة المبنية على FastAPI (تتطلب الإضافة <code>api</code>).</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>mcp</code></td>
+<td data-label="Purpose" class="text-left">تشغيل خادم Model Context Protocol المضمّن في الشجرة (5 أدوات؛ الخادم الكامل ذو الأدوات الـ 17 يُشحن باسم <a href="/pain001-mcp/"><code>pain001-mcp</code></a>).</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>plugins list / show / disable</code></td>
+<td data-label="Purpose" class="text-left">فحص وإدارة إضافات المحمّلات والمدقّقات والأنظمة والكتّاب المكتشفة.</td>
+</tr>
+</tbody>
+</table></div>
+<h3>خيارات <code>generate</code></h3>
+<table>
+<thead>
+<tr>
+<th>الخيار</th>
+<th>الوصف</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Flag" class="text-left"><code>-t, --xml-message-type <TYPE></code></td>
+<td data-label="Description" class="text-left">تعريف الرسالة، مثل <code>pain.001.001.09</code>.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>-d, --data <FILE></code></td>
+<td data-label="Description" class="text-left">بيانات الإدخال: <code>.csv</code> أو <code>.json</code> أو <code>.jsonl</code> أو <code>.db</code> / <code>.sqlite</code> أو <code>.parquet</code> أو ملفات مشفّرة بـ PGP بامتداد <code>.gpg</code> / <code>.asc</code>.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>-o, --output-dir <DIR></code></td>
+<td data-label="Description" class="text-left">الدليل الذي يستقبل ملف XML المولَّد.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>-m, --template <FILE></code> / <code>-s, --schema <FILE></code></td>
+<td data-label="Description" class="text-left">استبدال قالب Jinja2 أو مخطط XSD المرفقَين.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>-c, --config <FILE></code></td>
+<td data-label="Description" class="text-left">تحميل القيم الافتراضية من ملف تعريف إعدادات (<code>--profile</code>، <code>--show-config</code>).</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--dry-run</code> (بالاسم البديل <code>--validate-only</code>)</td>
+<td data-label="Description" class="text-left">التحقق من الإدخال وفق JSON Schema وXSD وكتاب قواعد النظام دون كتابة مخرجات.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--scheme <NAME></code></td>
+<td data-label="Description" class="text-left">فرض كتاب قواعد نظام: <code>sepa-sct</code> أو <code>sepa-inst</code> أو <code>sepa-sdd</code> أو <code>sepa-b2b</code> أو <code>xborder-ct</code>.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--explain --scheme-format {text,json}</code></td>
+<td data-label="Description" class="text-left">الإبلاغ عن كل قاعدة نظام نجحت أو أخفقت، بصيغة مقروءة بشريًا أو آليًا.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size <N></code></td>
+<td data-label="Description" class="text-left">معالجة مجزّأة محدودة الذاكرة للدفعات الكبيرة (افتراضيًا 1,000 معاملة لكل جزء؛ يصبح كل جزء ملف XML مستقلًا بقيم <code>NbOfTxs</code> و<code>CtrlSum</code> معاد حسابها).</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--emit-metrics</code></td>
+<td data-label="Description" class="text-left">إصدار مقاييس تشغيل مقروءة آليًا لخطوط المراقبة.</td>
+</tr>
+</tbody>
+</table>
+<p>رموز الخروج ملائمة لأنظمة CI: <code>0</code> نجاح، <code>1</code> إخفاق في التحقق، <code>2</code> خطأ في الاستخدام.</p>
+<hr />
+<h2 id="2-python-api">2. واجهة Python البرمجية<a class="heading-anchor" href="#2-python-api" aria-label="رابط إلى القسم: 2. واجهة Python البرمجية">#</a></h2>
+<pre><code class="language-python">from pain001.core.core import process_files
+
+# Generate a validated pain.001.001.09 file from CSV
+process_files(
+    xml_message_type="pain.001.001.09",
+    xml_template_file_path="template.xml",
+    xsd_schema_file_path="schema.xsd",
+    data_file_path="payments.csv",
+    output_dir="out",
+)</code></pre>
+<p>يمر كل مستند مولَّد بثلاث طبقات قبل كتابته:</p>
+<ol>
+<li><strong>التحقق من الإدخال</strong> — يُفحص كل سجل وفق JSON Schema الخاص بنوع الرسالة، مع تطبيع الأسماء البديلة للحقول وفحوص صياغة IBAN/BIC.</li>
+<li><strong>كتاب قواعد النظام</strong> (اختياري) — قواعد SEPA SCT أو SEPA Instant أو SEPA SDD Core أو SEPA B2B أو التحويل الائتماني عبر الحدود.</li>
+<li><strong>التحقق وفق XSD</strong> — يُتحقق من ملف XML المولَّد وفق مخطط ISO 20022 الرسمي عبر <code>xmlschema</code> قبل كتابة بايت واحد على القرص.</li>
+</ol>
+<p>تُعالَج المبالغ النقدية كـ <code>decimal.Decimal</code> أثناء توليد XML والتحقق وفق النظام — وليس أبدًا كأعداد IEEE 754 العائمة — وتُعاد حساب مجاميع الضبط <code>NbOfTxs</code> / <code>CtrlSum</code> من السجلات المتحقَّق منها بدل الوثوق بها من الإدخال.</p>
+<p>إلى جانب توليد pain.001، تشحن المكتبة الأساسية أيضًا <strong>محلّلًا ومولّدًا لتقارير الحالة pain.002</strong> (لتتمكن من قراءة رد البنك بالقبول أو الرفض) و<strong>محلّلًا ومولّدًا لكشوف camt.053</strong> للتسوية في نهاية اليوم، إضافة إلى <code>VersionMapper</code> الذي يرحّل السجلات بين إصدارات الرسائل.</p>
+<hr />
+<h2 id="3-rest-microservice">3. خدمة REST المصغّرة<a class="heading-anchor" href="#3-rest-microservice" aria-label="رابط إلى القسم: 3. خدمة REST المصغّرة">#</a></h2>
+<pre><code class="language-bash">pip install "pain001[api]"
+pain001 serve --host 0.0.0.0 --port 8000</code></pre>
+<p>جميع نقاط النهاية مركّبة تحت <code>/api/v1</code> (مع مسار بديل بلا رقم إصدار <code>/api</code>):</p>
+<table>
+<thead>
+<tr>
+<th>الطريقة والمسار</th>
+<th>الغرض</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>GET /api/v1/health</code></td>
+<td data-label="Purpose" class="text-left">فحص الحيوية.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>POST /api/v1/validate</code></td>
+<td data-label="Purpose" class="text-left">التحقق من السجلات؛ يعيد أخطاء على مستوى الحقل.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>POST /api/v1/generate</code></td>
+<td data-label="Purpose" class="text-left">توليد XML متزامن.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>POST /api/v1/generate/async</code></td>
+<td data-label="Purpose" class="text-left">إدراج دفعة كبيرة في قائمة انتظار للتوليد في الخلفية.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>GET /api/v1/status/{job_id}</code></td>
+<td data-label="Purpose" class="text-left">استطلاع حالة مهمة غير متزامنة.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>GET /api/v1/download/{job_id}</code></td>
+<td data-label="Purpose" class="text-left">تنزيل ملف XML المكتمل.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>DELETE /api/v1/jobs/{job_id}</code></td>
+<td data-label="Purpose" class="text-left">تنظيف مهمة مكتملة.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>GET /metrics</code></td>
+<td data-label="Purpose" class="text-left">مقاييس Prometheus.</td>
+</tr>
+</tbody>
+</table>
+<p>تُقدَّم الوثائق التفاعلية على <code>/api/docs</code> (Swagger UI) و<code>/api/redoc</code> و<code>/api/reference</code> (Scalar)، مع مستند OpenAPI على <code>/openapi.json</code>.</p>
+<hr />
+<h2 id="4-input-normalisation">4. تطبيع المدخلات<a class="heading-anchor" href="#4-input-normalisation" aria-label="رابط إلى القسم: 4. تطبيع المدخلات">#</a></h2>
+<p>يحوّل Pain001 التصديرات الواقعية إلى سجلات صالحة قبل التحقق:</p>
+<ul>
+<li><strong>الأسماء البديلة للحقول</strong> — تُربط أسماء أعمدة أنظمة ERP الشائعة بالحقول القياسية (مثلًا <code>amount</code> → <code>payment_amount</code>).</li>
+<li><strong>تطبيع IBAN / BIC</strong> — تُزال المسافات، وتُوحَّد حالة الأحرف، ثم يُجرى الفحص (mod-97 وفق ISO 13616 لأرقام IBAN، وبنية ISO 9362 لرموز BIC).</li>
+<li><strong>التواريخ</strong> — تحليل تواريخ التنفيذ بصيغة ISO 8601 <code>YYYY-MM-DD</code>.</li>
+<li><strong>المبالغ</strong> — تمرَّر عبر <code>decimal.Decimal</code>؛ والمبالغ المشوّهة تُخفق في التحقق بدلًا من التقريب الصامت.</li>
+<li><strong>مجموعة المحارف</strong> — تقلّص أدوات النقل الحرفي المحتوى إلى مجموعة محارف ISO 20022 اللاتينية التي يقبلها SWIFT وSEPA.</li>
+</ul>
+<hr />
+<h2 id="5-plugin-architecture">5. بنية الإضافات<a class="heading-anchor" href="#5-plugin-architecture" aria-label="رابط إلى القسم: 5. بنية الإضافات">#</a></h2>
+<p>المنظومة قابلة للتوسعة عبر أربع مجموعات نقاط دخول: <code>pain001.loaders</code> و<code>pain001.validators</code> و<code>pain001.schemes</code> و<code>pain001.writers</code>. تسجَّل <a href="/pain001-loader-xlsx/"><code>pain001-loader-xlsx</code></a> عبر هذه الآلية وتُكتشف تلقائيًا عند التثبيت؛ أما <a href="/pain001-loader-mt101/"><code>pain001-loader-mt101</code></a> فهي مكتبة تحليل مستقلة تُستهلك مباشرة (ومن خلال أداة <code>convert_mt101</code> في خادم MCP). ويوجد مفتاح إيقاف — <code>PAIN001_DISABLE_PLUGINS=1</code> — يعطّل اكتشاف إضافات الأطراف الثالثة كليًا في البيئات المقيّدة.</p>
+<hr />
+<h2 id="6-quality-gates">6. بوابات الجودة<a class="heading-anchor" href="#6-quality-gates" aria-label="رابط إلى القسم: 6. بوابات الجودة">#</a></h2>
+<p>تُطوَّر المكتبة الأساسية وفق بوابات صارمة قابلة للتحقق: تغطية 100% للأسطر <strong>و</strong>الفروع مفروضة في CI (<code>--cov-fail-under=100</code>)، وفحص أنواع صارم بـ mypy، وتغطية 100% لسلاسل التوثيق، وفحص أمني (Bandit وpip-audit). وتُولَّد قائمة SBOM بصيغة CycloneDX لكل بناء إصدار.</p>
+<p>تابع مع <a href="/ar/installation/">دليل التثبيت</a> أو <a href="/pain001-mcp/">خادم MCP لوكلاء الذكاء الاصطناعي</a> أو <a href="/ar/glossary/">مسرد المدفوعات</a>.</p>
+</div>
+        </article>
+      </div>
+    </main>
+
+    <button class="totop" id="toTop" type="button" hidden aria-label="Back to top">&uarr;</button>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-brand">Pain001</p>
+            <p class="footer-tagline">بدء المدفوعات ISO 20022 مفتوح المصدر. ملفات موثَّقة، معالجة محلية، دون تقييد.</p>
+          </div>
+          <div>
+            <h2 class="footer-heading">التوثيق</h2>
+            <ul class="footer-links">
+              <li><a href="/ar/try/">جرّبه في متصفحك</a></li>
+              <li><a href="/ar/documentation/">مرجع تقني</a></li>
+              <li><a href="/ar/installation/">التثبيت &amp; Docker</a></li>
+              <li><a href="/payments/">خطوط معالجة المدفوعات</a></li>
+              <li><a href="/ar/glossary/">مسرد المصطلحات</a></li>
+              <li><a href="/ar/faqs/">الأسئلة الشائعة</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">المنظومة</h2>
+            <ul class="footer-links">
+              <li><a href="/pain001-mcp/">pain001-mcp · وكلاء الذكاء الاصطناعي</a></li>
+              <li><a href="/pain001-lsp/">pain001-lsp · المحررات</a></li>
+              <li><a href="/pain001-loader-mt101/">محمّل MT101</a></li>
+              <li><a href="/pain001-loader-xlsx/">محمّل Excel</a></li>
+              <li><a href="https://github.com/sebastienrousseau/pain001" rel="external">GitHub</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">الأبحاث والثقة</h2>
+            <ul class="footer-links">
+              <li><a href="/ar/why/">لماذا Pain001</a></li>
+              <li><a href="/ar/executive-brief/">موجز تنفيذي</a></li>
+              <li><a href="/iso20022-roadmap/">خارطة طريق ISO 20022</a></li>
+              <li><a href="/2026-iso20022-migration-trends/">إحاطة 2026</a></li>
+              <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/">دليل المدفوعات العابرة للحدود</a></li>
+              <li><a href="/competitors-comparison/">مقارنة بالأدوات التجارية</a></li>
+              <li><a href="/architecture-and-patents/">البنية &amp; براءات الاختراع</a></li>
+              <li><a href="/trust/">مركز الثقة</a></li>
+              <li><a href="/compatibility/">مصفوفة التوافق</a></li>
+              <li><a href="/security.txt">security.txt</a></li>
+              <li><a href="/sbom.cdx.json">SBOM</a> · <a href="/llms.txt">llms.txt</a> · <a href="/rss.xml">خلاصة RSS</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; 2023&ndash;2026 Sebastien Rousseau. Core dual-licensed Apache-2.0 / MIT; companion packages Apache-2.0.</p>
+          <ul aria-label="This overview in other languages">
+            <li><a href="/languages/">هذه النظرة العامة بـ 34 لغة</a></li>
+          </ul>
+          <ul>
+            <li><a href="/accessibility/">إمكانية الوصول</a></li>
+            <li><a href="/privacy/">الخصوصية</a></li>
+            <li><a href="/terms/">الشروط</a></li>
+            <li><a href="/contact/">اتصل بنا</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://pain001.com/ar/documentation/",
+          "url": "https://pain001.com/ar/documentation/",
+          "name": "Pain001: المرجع التقني — CLI وواجهة Python وREST",
+          "description": "مرجع كامل لـ pain001 v0.0.56 — أوامر CLI الفرعية وخياراتها، وواجهة Python البرمجية، ونقاط REST تحت /api/v1، وكتب قواعد الأنظمة، وتطبيع المدخلات، وبنية الإضافات.",
+          "inLanguage": "ar",
+          "dateModified": "2026-07-26",
+          "isPartOf": { "@id": "https://pain001.com/#website" },
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://pain001.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Pain001: المرجع التقني — CLI وواجهة Python وREST" }
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pain001.com/#organization",
+          "name": "Pain001",
+          "url": "https://pain001.com/",
+          "logo": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+          "founder": { "@type": "Person", "name": "Sebastien Rousseau", "url": "https://sebastienrousseau.com" },
+          "sameAs": [
+            "https://github.com/sebastienrousseau/pain001",
+            "https://pypi.org/project/pain001/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pain001.com/#website",
+          "url": "https://pain001.com/",
+          "name": "Pain001",
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        }
+      ]
+    }
+    </script>
+
+    <script src="/_csp/197fcfccbee69bda.js" integrity="sha384-geygAAYoalTqpA6bIgsGUMRQupyTiF/rCnvMiGE5+G0s0ZOYAhHnkhzyMXN9yNxa" crossorigin="anonymous"></script>
+  
+<!-- SSG Search Widget -->
+<div id="ssg-search-widget">
+
+<!-- Search trigger button -->
+<button id="ssg-search-btn" type="button" aria-label="Search">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<span>Search</span>
+<kbd>K</kbd>
+</button>
+<!-- Search modal -->
+<div id="ssg-search-overlay" role="dialog" aria-label="Search">
+<div id="ssg-search-box">
+<div id="ssg-search-header">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<input id="ssg-search-input" type="search" placeholder="Search documentation..." autocomplete="off" aria-label="Search"/>
+</div>
+<div id="ssg-search-results" aria-live="polite"></div>
+<div id="ssg-sr-status" role="status" aria-live="polite" aria-atomic="true"></div>
+<div class="ssg-search-footer"><span><kbd>Esc</kbd> close</span><span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span><span><kbd>Enter</kbd> open</span></div>
+</div>
+</div>
+<script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>

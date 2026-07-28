@@ -78,12 +78,12 @@
               </ul>
             </li>
             <li><a href="/ar/try/">شاهده مباشرة</a></li>
-            <li class="has-sub"><a href="/documentation/">الوثائق</a>
+            <li class="has-sub"><a href="/ar/documentation/">الوثائق</a>
               <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="تبديل القائمة الفرعية للوثائق"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
               <ul id="sub-docs" class="ap-sub">
-                <li><a href="/installation/" hreflang="en">التثبيت &amp; Docker (EN)</a></li>
-                <li><a href="/glossary/" hreflang="en">مسرد المصطلحات (EN)</a></li>
-                <li><a href="/faqs/" hreflang="en">الأسئلة الشائعة (EN)</a></li>
+                <li><a href="/ar/installation/">التثبيت &amp; Docker</a></li>
+                <li><a href="/ar/glossary/">مسرد المصطلحات</a></li>
+                <li><a href="/ar/faqs/">الأسئلة الشائعة</a></li>
                 <li><a href="/pain002-reason-codes/" hreflang="en">رموز أسباب pain.002 (EN)</a></li>
               </ul>
             </li>
@@ -189,13 +189,13 @@
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="المحتويات"><h2>المحتويات</h2><ol><li><a href="#treasury-finance">الخزانة والمالية</a></li><li><a href="#cfo-board">المدير المالي ومجلس الإدارة</a></li><li><a href="#payment-operations">عمليات الدفع</a></li><li><a href="#engineering-ai">الهندسة والذكاء الاصطناعي</a></li></ol></nav>
           <div lang="en"><h2 id="treasury-finance">الخزانة والمالية<a class="heading-anchor" href="#treasury-finance" aria-label="رابط إلى القسم: الخزانة والمالية">#</a></h2>
-<p>يرفض بنكك الملفات لأسباب لم يحذّرك منها نظام ERP لديك قط: رقم متبادل الموضع في IBAN، أو مجموع رقابي لم يعد مطابقاً، أو تنسيق عنوان لم يعد مقبولاً. يجعل Pain001 هذه الإخفاقات تحدث على مكتبك بدلاً من ذلك — فكل ملف يُثبت وفق دليل قواعد البنك الرسمي (ISO 20022 XSD) قبل التقديم، ويبيّن <a href="/payments/">دليل دورة حياة الدفع</a> موضع كل فحص بين الإنشاء والتسوية. ابدأ بـ<a href="/glossary/">المسرد</a> إذا كانت المفردات جديدة عليك؛ فالتعريفات المكتوبة بلغة واضحة وُضعت لجانبك من المكتب، لا للمهندسين.</p>
+<p>يرفض بنكك الملفات لأسباب لم يحذّرك منها نظام ERP لديك قط: رقم متبادل الموضع في IBAN، أو مجموع رقابي لم يعد مطابقاً، أو تنسيق عنوان لم يعد مقبولاً. يجعل Pain001 هذه الإخفاقات تحدث على مكتبك بدلاً من ذلك — فكل ملف يُثبت وفق دليل قواعد البنك الرسمي (ISO 20022 XSD) قبل التقديم، ويبيّن <a href="/payments/">دليل دورة حياة الدفع</a> موضع كل فحص بين الإنشاء والتسوية. ابدأ بـ<a href="/ar/glossary/">المسرد</a> إذا كانت المفردات جديدة عليك؛ فالتعريفات المكتوبة بلغة واضحة وُضعت لجانبك من المكتب، لا للمهندسين.</p>
 <h2 id="cfo-board">المدير المالي ومجلس الإدارة<a class="heading-anchor" href="#cfo-board" aria-label="رابط إلى القسم: المدير المالي ومجلس الإدارة">#</a></h2>
 <p>رقمان يؤطّران القرار. <strong>14 نوفمبر 2026</strong>: التاريخ الذي تبدأ فيه المدفوعات العابرة للحدود ذات العناوين غير المهيكلة بالارتداد على مستوى الشبكة — انكشاف يكمن في بياناتك الرئيسية للعملاء، لا في اتصالك المصرفي. <strong>€10,000–30,000 سنوياً</strong>: السعر المعلن لأقرب عدة ترجمة تجارية، مقابل صفر دائم لـPain001 على أي نطاق بموجب تراخيص مفتوحة. أسئلة الحوكمة — قابلية التدقيق، ومحلية البيانات، وأدلة سلسلة التوريد — تُجاب بمخرجات ملموسة لا بتطمينات: <a href="/sbom.cdx.json">SBOM</a> منشور، و<a href="/security.txt">سياسة أمنية</a>، ومعالجة لا تغادر بنيتك التحتية أبداً. <a href="/ar/executive-brief/">الموجز التنفيذي من صفحة واحدة</a> كُتب ليُعاد توجيهه.</p>
 <h2 id="payment-operations">عمليات الدفع<a class="heading-anchor" href="#payment-operations" aria-label="رابط إلى القسم: عمليات الدفع">#</a></h2>
 <p>أنت تعيش في ملفات الاستجابة. يغلق Pain001 الحلقة من طرف إلى طرف: فحوصات <code>--dry-run</code> السابقة للتقديم التي تنجح أو تفشل بوضوح في CI، ودلائل قواعد الأنظمة (SEPA والعابرة للحدود) مشروحة قاعدةً قاعدة، و<a href="/pain002-reason-codes/">مرجع رموز أسباب pain.002</a> لفكّ شفرة ما عاد إليك، ومحلّلات تحوّل استجابات البنوك وكشوف camt.053 إلى بيانات مهيكلة يمكن لخط المعالجة لديك توجيهها. <a href="/ar/try/">العرض التجريبي في المتصفح</a> هو أسرع طريقة لرؤية فئات الفشل التي يقضي عليها — بما فيها سيناريوهات "أدخل خطأ" بنقرة واحدة.</p>
 <h2 id="engineering-ai">الهندسة والذكاء الاصطناعي<a class="heading-anchor" href="#engineering-ai" aria-label="رابط إلى القسم: الهندسة والذكاء الاصطناعي">#</a></h2>
-<p>واجهة برمجة Python منمّطة، وواجهة سطر أوامر برموز خروج ذات معنى، وخدمة REST مصغّرة، ونقاط إضافات للمحمّلات والمدقّقات والأنظمة والكُتّاب — يغطي <a href="/documentation/">المرجع التقني</a> كل خيار ونقطة نهاية، وتحمل الشيفرة تغطية أسطر وفروع بنسبة 100% كبوابة CI صارمة. وإذا كنت تبني مع الوكلاء: <a href="/pain001-mcp/">pain001-mcp</a> هو خادم Model Context Protocol الوحيد في فئته — سبع عشرة أداة للقراءة فقط يستدعيها وكلاؤك محلياً، مع تشخيصات المحرّر من <a href="/pain001-lsp/">pain001-lsp</a> بينما يبقى البشر في الحلقة.</p>
+<p>واجهة برمجة Python منمّطة، وواجهة سطر أوامر برموز خروج ذات معنى، وخدمة REST مصغّرة، ونقاط إضافات للمحمّلات والمدقّقات والأنظمة والكُتّاب — يغطي <a href="/ar/documentation/">المرجع التقني</a> كل خيار ونقطة نهاية، وتحمل الشيفرة تغطية أسطر وفروع بنسبة 100% كبوابة CI صارمة. وإذا كنت تبني مع الوكلاء: <a href="/pain001-mcp/">pain001-mcp</a> هو خادم Model Context Protocol الوحيد في فئته — سبع عشرة أداة للقراءة فقط يستدعيها وكلاؤك محلياً، مع تشخيصات المحرّر من <a href="/pain001-lsp/">pain001-lsp</a> بينما يبقى البشر في الحلقة.</p>
 </div>
         </article>
       </div>
@@ -214,11 +214,11 @@
             <h2 class="footer-heading">التوثيق</h2>
             <ul class="footer-links">
               <li><a href="/ar/try/">جرّبه في متصفحك</a></li>
-              <li><a href="/documentation/">مرجع تقني</a></li>
-              <li><a href="/installation/">التثبيت &amp; Docker</a></li>
+              <li><a href="/ar/documentation/">مرجع تقني</a></li>
+              <li><a href="/ar/installation/">التثبيت &amp; Docker</a></li>
               <li><a href="/payments/">خطوط معالجة المدفوعات</a></li>
-              <li><a href="/glossary/">مسرد المصطلحات</a></li>
-              <li><a href="/faqs/">الأسئلة الشائعة</a></li>
+              <li><a href="/ar/glossary/">مسرد المصطلحات</a></li>
+              <li><a href="/ar/faqs/">الأسئلة الشائعة</a></li>
             </ul>
           </div>
           <div>

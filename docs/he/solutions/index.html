@@ -78,12 +78,12 @@
               </ul>
             </li>
             <li><a href="/he/try/">צפו בשידור חי</a></li>
-            <li class="has-sub"><a href="/documentation/">תיעוד</a>
+            <li class="has-sub"><a href="/he/documentation/">תיעוד</a>
               <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="פתיחה או סגירה של תפריט המשנה תיעוד"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
               <ul id="sub-docs" class="ap-sub">
-                <li><a href="/installation/" hreflang="en">התקנה &amp; Docker (EN)</a></li>
-                <li><a href="/glossary/" hreflang="en">מילון מונחים (EN)</a></li>
-                <li><a href="/faqs/" hreflang="en">שאלות נפוצות (EN)</a></li>
+                <li><a href="/he/installation/">התקנה &amp; Docker</a></li>
+                <li><a href="/he/glossary/">מילון מונחים</a></li>
+                <li><a href="/he/faqs/">שאלות נפוצות</a></li>
                 <li><a href="/pain002-reason-codes/" hreflang="en">קודי סיבה של pain.002 (EN)</a></li>
               </ul>
             </li>
@@ -189,13 +189,13 @@
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="תוכן העניינים"><h2>תוכן העניינים</h2><ol><li><a href="#treasury-finance">אוצר וכספים</a></li><li><a href="#cfo-board">סמנכ״ל כספים ודירקטוריון</a></li><li><a href="#payment-operations">תפעול תשלומים</a></li><li><a href="#engineering-ai">הנדסה ו-AI</a></li></ol></nav>
           <div lang="en"><h2 id="treasury-finance">אוצר וכספים<a class="heading-anchor" href="#treasury-finance" aria-label="קישור לפרק: אוצר וכספים">#</a></h2>
-<p>הבנק שלכם דוחה קבצים מסיבות שה-ERP שלכם מעולם לא הזהיר מפניהן: ספרת IBAN שהוחלפה, סכום בקרה שכבר אינו תואם, פורמט כתובת שחדל להיות קביל. Pain001 גורם לכשלים האלה להתרחש אצלכם על השולחן במקום זאת — כל קובץ מוכח מול ספר החוקים הרשמי של הבנק (ISO 20022 XSD) לפני ההגשה, ו<a href="/payments/">מדריך מחזור חיי התשלום</a> מראה היכן יושבת כל בדיקה בין היצירה להתאמה. התחילו ב<a href="/glossary/">מילון המונחים</a> אם אוצר המילים חדש לכם; ההגדרות בשפה פשוטה נכתבו עבור הצד שלכם של השולחן, לא עבור המהנדסים.</p>
+<p>הבנק שלכם דוחה קבצים מסיבות שה-ERP שלכם מעולם לא הזהיר מפניהן: ספרת IBAN שהוחלפה, סכום בקרה שכבר אינו תואם, פורמט כתובת שחדל להיות קביל. Pain001 גורם לכשלים האלה להתרחש אצלכם על השולחן במקום זאת — כל קובץ מוכח מול ספר החוקים הרשמי של הבנק (ISO 20022 XSD) לפני ההגשה, ו<a href="/payments/">מדריך מחזור חיי התשלום</a> מראה היכן יושבת כל בדיקה בין היצירה להתאמה. התחילו ב<a href="/he/glossary/">מילון המונחים</a> אם אוצר המילים חדש לכם; ההגדרות בשפה פשוטה נכתבו עבור הצד שלכם של השולחן, לא עבור המהנדסים.</p>
 <h2 id="cfo-board">סמנכ״ל כספים ודירקטוריון<a class="heading-anchor" href="#cfo-board" aria-label="קישור לפרק: סמנכ״ל כספים ודירקטוריון">#</a></h2>
 <p>שני מספרים ממסגרים את ההחלטה. <strong>14 בנובמבר 2026</strong>: התאריך שבו תשלומים חוצי גבולות עם כתובות בלתי מובנות מתחילים לחזור ברמת הרשת — חשיפה השוכנת בנתוני האב של הלקוחות שלכם, לא בחיבור הבנקאי. <strong>€10,000–30,000 לשנה</strong>: מחיר המחירון הפומבי של ערכת התרגום המסחרית הקרובה ביותר, מול אפס קבוע של Pain001 בכל היקף תחת רישיונות פתוחים. שאלות הממשל — יכולת ביקורת, מקומיות נתונים, ראיות שרשרת אספקה — נענות בתוצרים, לא בהבטחות: <a href="/sbom.cdx.json">SBOM</a> מפורסם, <a href="/security.txt">מדיניות אבטחה</a>, ועיבוד שלעולם אינו עוזב את התשתית שלכם. <a href="/he/executive-brief/">התקציר למנהלים בן העמוד האחד</a> נכתב כדי שיועבר הלאה.</p>
 <h2 id="payment-operations">תפעול תשלומים<a class="heading-anchor" href="#payment-operations" aria-label="קישור לפרק: תפעול תשלומים">#</a></h2>
 <p>אתם חיים בקובצי התגובה. Pain001 סוגר את המעגל מקצה לקצה: בדיקות <code>--dry-run</code> טרום-הגשה שעוברות או נכשלות בנקיון ב-CI, ספרי חוקים של סכימות (SEPA וחוצה גבולות) המוסברים כלל אחר כלל, <a href="/pain002-reason-codes/">מדריך קודי הסיבה של pain.002</a> לפענוח מה שחזר, ומנתחים ההופכים תגובות בנק ודוחות camt.053 לנתונים מובנים שהצינור שלכם יכול לנתב. <a href="/he/try/">ההדגמה בדפדפן</a> היא הדרך המהירה ביותר לראות את סוגי הכשל שהוא מחסל — כולל תרחישי "הכנס שגיאה" בקליק אחד.</p>
 <h2 id="engineering-ai">הנדסה ו-AI<a class="heading-anchor" href="#engineering-ai" aria-label="קישור לפרק: הנדסה ו-AI">#</a></h2>
-<p>ממשק Python עם טיפוסים, CLI עם קודי יציאה משמעותיים, מיקרו-שירות REST ונקודות תוסף לטוענים, מאמתים, סכימות וכותבים — <a href="/documentation/">המדריך הטכני</a> מכסה כל דגל ונקודת קצה, והקוד נושא כיסוי שורות וענפים של 100% כשער CI קשיח. אם אתם בונים עם סוכנים: <a href="/pain001-mcp/">pain001-mcp</a> הוא שרת ה-Model Context Protocol היחיד בקטגוריה — שבעה עשר כלים לקריאה בלבד שהסוכנים שלכם קוראים להם מקומית, עם אבחוני עורך מ-<a href="/pain001-lsp/">pain001-lsp</a> בעוד בני האדם נשארים בלולאה.</p>
+<p>ממשק Python עם טיפוסים, CLI עם קודי יציאה משמעותיים, מיקרו-שירות REST ונקודות תוסף לטוענים, מאמתים, סכימות וכותבים — <a href="/he/documentation/">המדריך הטכני</a> מכסה כל דגל ונקודת קצה, והקוד נושא כיסוי שורות וענפים של 100% כשער CI קשיח. אם אתם בונים עם סוכנים: <a href="/pain001-mcp/">pain001-mcp</a> הוא שרת ה-Model Context Protocol היחיד בקטגוריה — שבעה עשר כלים לקריאה בלבד שהסוכנים שלכם קוראים להם מקומית, עם אבחוני עורך מ-<a href="/pain001-lsp/">pain001-lsp</a> בעוד בני האדם נשארים בלולאה.</p>
 </div>
         </article>
       </div>
@@ -214,11 +214,11 @@
             <h2 class="footer-heading">תיעוד</h2>
             <ul class="footer-links">
               <li><a href="/he/try/">נסו בדפדפן שלכם</a></li>
-              <li><a href="/documentation/">עיון טכני</a></li>
-              <li><a href="/installation/">התקנה &amp; Docker</a></li>
+              <li><a href="/he/documentation/">עיון טכני</a></li>
+              <li><a href="/he/installation/">התקנה &amp; Docker</a></li>
               <li><a href="/payments/">צינורות תשלומים</a></li>
-              <li><a href="/glossary/">מילון מונחים</a></li>
-              <li><a href="/faqs/">שאלות נפוצות</a></li>
+              <li><a href="/he/glossary/">מילון מונחים</a></li>
+              <li><a href="/he/faqs/">שאלות נפוצות</a></li>
             </ul>
           </div>
           <div>

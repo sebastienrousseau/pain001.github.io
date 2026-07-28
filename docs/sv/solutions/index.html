@@ -78,12 +78,12 @@
               </ul>
             </li>
             <li><a href="/sv/try/">Se det live</a></li>
-            <li class="has-sub"><a href="/documentation/">Dok</a>
+            <li class="has-sub"><a href="/sv/documentation/">Dok</a>
               <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="Växla undermenyn Dokumentation"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
               <ul id="sub-docs" class="ap-sub">
-                <li><a href="/installation/" hreflang="en">Installation &amp; Docker (EN)</a></li>
-                <li><a href="/glossary/" hreflang="en">Ordlista (EN)</a></li>
-                <li><a href="/faqs/" hreflang="en">Vanliga frågor (EN)</a></li>
+                <li><a href="/sv/installation/">Installation &amp; Docker</a></li>
+                <li><a href="/sv/glossary/">Ordlista</a></li>
+                <li><a href="/sv/faqs/">Vanliga frågor</a></li>
                 <li><a href="/pain002-reason-codes/" hreflang="en">pain.002-orsakskoder (EN)</a></li>
               </ul>
             </li>
@@ -189,13 +189,13 @@
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="Innehåll"><h2>Innehåll</h2><ol><li><a href="#treasury-finance">Treasury & finans</a></li><li><a href="#cfo-board">CFO & styrelse</a></li><li><a href="#payment-operations">Betalningsdrift</a></li><li><a href="#engineering-ai">Engineering & AI</a></li></ol></nav>
           <div lang="en"><h2 id="treasury-finance">Treasury & finans<a class="heading-anchor" href="#treasury-finance" aria-label="Länk till avsnitt: Treasury & finans">#</a></h2>
-<p>Din bank avvisar filer av skäl som ditt ERP aldrig varnade för: en omkastad IBAN-siffra, en kontrollsumma som inte längre stämmer, ett adressformat som slutat vara godtagbart. Pain001 låter de felen inträffa vid ditt skrivbord i stället — varje fil prövas mot bankens officiella regelbok (ISO 20022 XSD) före inlämning, och <a href="/payments/">guiden till betalningens livscykel</a> visar var varje kontroll sitter mellan initiering och avstämning. Börja med <a href="/glossary/">ordlistan</a> om vokabulären är ny; klarspråksdefinitionerna skrevs för din sida av skrivbordet, inte ingenjörernas.</p>
+<p>Din bank avvisar filer av skäl som ditt ERP aldrig varnade för: en omkastad IBAN-siffra, en kontrollsumma som inte längre stämmer, ett adressformat som slutat vara godtagbart. Pain001 låter de felen inträffa vid ditt skrivbord i stället — varje fil prövas mot bankens officiella regelbok (ISO 20022 XSD) före inlämning, och <a href="/payments/">guiden till betalningens livscykel</a> visar var varje kontroll sitter mellan initiering och avstämning. Börja med <a href="/sv/glossary/">ordlistan</a> om vokabulären är ny; klarspråksdefinitionerna skrevs för din sida av skrivbordet, inte ingenjörernas.</p>
 <h2 id="cfo-board">CFO & styrelse<a class="heading-anchor" href="#cfo-board" aria-label="Länk till avsnitt: CFO & styrelse">#</a></h2>
 <p>Två tal ramar in beslutet. <strong>14 november 2026</strong>: datumet då gränsöverskridande betalningar med ostrukturerade adresser börjar studsa på nätverksnivå — en exponering som ligger i din kundmasterdata, inte i din bankanslutning. <strong>€10,000–30,000 per år</strong>: det offentliga listpriset för närmaste kommersiella översättnings-SDK, mot Pain001:s permanenta nolla i vilken skala som helst under öppna licenser. Styrningsfrågorna — spårbarhet, datalokalisering, bevis för leveranskedjan — besvaras med artefakter, inte försäkringar: publicerad <a href="/sbom.cdx.json">SBOM</a>, <a href="/security.txt">säkerhetspolicy</a> och bearbetning som aldrig lämnar din infrastruktur. <a href="/sv/executive-brief/">Executive brief på en sida</a> är skriven för att vidarebefordras.</p>
 <h2 id="payment-operations">Betalningsdrift<a class="heading-anchor" href="#payment-operations" aria-label="Länk till avsnitt: Betalningsdrift">#</a></h2>
 <p>Du lever i svarsfilerna. Pain001 sluter cirkeln från början till slut: <code>--dry-run</code>-kontroller före inlämning som passerar eller fallerar rent i CI, regelböcker för scheman (SEPA och gränsöverskridande) förklarade regel för regel, <a href="/pain002-reason-codes/">referensen över pain.002-orsakskoder</a> för att avkoda det som kom tillbaka, och parsrar som gör bankens svar och camt.053-utdrag till strukturerad data som din pipeline kan dirigera. <a href="/sv/try/">Webbläsardemot</a> är snabbaste sättet att se felklasserna det eliminerar — inklusive enklicksscenarierna "introducera ett fel".</p>
 <h2 id="engineering-ai">Engineering & AI<a class="heading-anchor" href="#engineering-ai" aria-label="Länk till avsnitt: Engineering & AI">#</a></h2>
-<p>Ett typat Python-API, ett CLI med meningsfulla utgångskoder, en REST-mikrotjänst och pluginpunkter för loaders, validatorer, scheman och writers — <a href="/documentation/">den tekniska referensen</a> täcker varje flagga och endpoint, och koden bär 100% rad- och grentäckning som hård CI-grind. Bygger du med agenter: <a href="/pain001-mcp/">pain001-mcp</a> är kategorins enda Model Context Protocol-server — sjutton skrivskyddade verktyg som dina agenter anropar lokalt, med redigerardiagnostik från <a href="/pain001-lsp/">pain001-lsp</a> medan människor stannar i loopen.</p>
+<p>Ett typat Python-API, ett CLI med meningsfulla utgångskoder, en REST-mikrotjänst och pluginpunkter för loaders, validatorer, scheman och writers — <a href="/sv/documentation/">den tekniska referensen</a> täcker varje flagga och endpoint, och koden bär 100% rad- och grentäckning som hård CI-grind. Bygger du med agenter: <a href="/pain001-mcp/">pain001-mcp</a> är kategorins enda Model Context Protocol-server — sjutton skrivskyddade verktyg som dina agenter anropar lokalt, med redigerardiagnostik från <a href="/pain001-lsp/">pain001-lsp</a> medan människor stannar i loopen.</p>
 </div>
         </article>
       </div>
@@ -214,11 +214,11 @@
             <h2 class="footer-heading">Dokumentation</h2>
             <ul class="footer-links">
               <li><a href="/sv/try/">Testa i webbläsaren</a></li>
-              <li><a href="/documentation/">Teknisk referens</a></li>
-              <li><a href="/installation/">Installation &amp; Docker</a></li>
+              <li><a href="/sv/documentation/">Teknisk referens</a></li>
+              <li><a href="/sv/installation/">Installation &amp; Docker</a></li>
               <li><a href="/payments/">Betalningspipelines</a></li>
-              <li><a href="/glossary/">Ordlista</a></li>
-              <li><a href="/faqs/">Vanliga frågor</a></li>
+              <li><a href="/sv/glossary/">Ordlista</a></li>
+              <li><a href="/sv/faqs/">Vanliga frågor</a></li>
             </ul>
           </div>
           <div>

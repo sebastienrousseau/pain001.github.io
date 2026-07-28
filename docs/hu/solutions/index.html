@@ -78,12 +78,12 @@
               </ul>
             </li>
             <li><a href="/hu/try/">Élő bemutató</a></li>
-            <li class="has-sub"><a href="/documentation/">Dokumentáció</a>
+            <li class="has-sub"><a href="/hu/documentation/">Dokumentáció</a>
               <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="A Dokumentáció almenü megnyitása vagy bezárása"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
               <ul id="sub-docs" class="ap-sub">
-                <li><a href="/installation/" hreflang="en">Telepítés &amp; Docker (EN)</a></li>
-                <li><a href="/glossary/" hreflang="en">Fogalomtár (EN)</a></li>
-                <li><a href="/faqs/" hreflang="en">GYIK (EN)</a></li>
+                <li><a href="/hu/installation/">Telepítés &amp; Docker</a></li>
+                <li><a href="/hu/glossary/">Fogalomtár</a></li>
+                <li><a href="/hu/faqs/">GYIK</a></li>
                 <li><a href="/pain002-reason-codes/" hreflang="en">pain.002 okkódok (EN)</a></li>
               </ul>
             </li>
@@ -189,13 +189,13 @@
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="Tartalom"><h2>Tartalom</h2><ol><li><a href="#treasury-finance">Treasury és pénzügy</a></li><li><a href="#cfo-board">CFO és igazgatóság</a></li><li><a href="#payment-operations">Fizetési műveletek</a></li><li><a href="#engineering-ai">Fejlesztés és AI</a></li></ol></nav>
           <div lang="en"><h2 id="treasury-finance">Treasury és pénzügy<a class="heading-anchor" href="#treasury-finance" aria-label="Ugrás a szakaszhoz: Treasury és pénzügy">#</a></h2>
-<p>Az Ön bankja olyan okokból utasít vissza fájlokat, amelyekre az ERP sosem figyelmeztette: egy felcserélt IBAN-számjegy, egy már nem egyező kontrollösszeg, egy címformátum, amely már nem elfogadható. A Pain001 ezeket a hibákat az Ön asztalánál buktatja ki — minden fájlt a bank hivatalos szabálykönyve (ISO 20022 XSD) alapján bizonyít benyújtás előtt, a <a href="/payments/">fizetési életciklus-útmutató</a> pedig megmutatja, hol helyezkedik el minden ellenőrzés az indítás és az egyeztetés között. Ha új a szókincs, kezdje a <a href="/glossary/">fogalomtárral</a>; a közérthető definíciók az asztal üzleti oldalának készültek, nem a mérnököknek.</p>
+<p>Az Ön bankja olyan okokból utasít vissza fájlokat, amelyekre az ERP sosem figyelmeztette: egy felcserélt IBAN-számjegy, egy már nem egyező kontrollösszeg, egy címformátum, amely már nem elfogadható. A Pain001 ezeket a hibákat az Ön asztalánál buktatja ki — minden fájlt a bank hivatalos szabálykönyve (ISO 20022 XSD) alapján bizonyít benyújtás előtt, a <a href="/payments/">fizetési életciklus-útmutató</a> pedig megmutatja, hol helyezkedik el minden ellenőrzés az indítás és az egyeztetés között. Ha új a szókincs, kezdje a <a href="/hu/glossary/">fogalomtárral</a>; a közérthető definíciók az asztal üzleti oldalának készültek, nem a mérnököknek.</p>
 <h2 id="cfo-board">CFO és igazgatóság<a class="heading-anchor" href="#cfo-board" aria-label="Ugrás a szakaszhoz: CFO és igazgatóság">#</a></h2>
 <p>Két szám keretezi a döntést. <strong>2026. november 14.</strong>: a nap, amelytől a strukturálatlan címmel indított, határon átnyúló fizetések a hálózat szintjén kezdenek visszapattanni — a kitettség az ügyféltörzsadatokban él, nem a banki kapcsolatban. <strong>Évi €10,000–30,000</strong>: a legközelebbi kereskedelmi fordító SDK nyilvános listaára, szemben a Pain001 tartósan nulla költségével bármilyen léptékben, nyílt licencek alatt. A vállalatirányítási kérdésekre — auditálhatóság, adatlokalitás, ellátásilánc-bizonyítékok — tényekkel, nem ígéretekkel érkezik válasz: közzétett <a href="/sbom.cdx.json">SBOM</a>, <a href="/security.txt">biztonsági szabályzat</a>, és olyan feldolgozás, amely sosem hagyja el az Ön infrastruktúráját. Az <a href="/hu/executive-brief/">egyoldalas vezetői összefoglaló</a> továbbküldésre készült.</p>
 <h2 id="payment-operations">Fizetési műveletek<a class="heading-anchor" href="#payment-operations" aria-label="Ugrás a szakaszhoz: Fizetési műveletek">#</a></h2>
 <p>Ön a válaszfájlokban él. A Pain001 végponttól végpontig zárja a kört: <code>--dry-run</code> benyújtás előtti ellenőrzések, amelyek tisztán mennek át vagy buknak el a CI-ban; sémaszabálykönyvek (SEPA és határon átnyúló) szabályról szabályra elmagyarázva; a <a href="/pain002-reason-codes/">pain.002 hibakód-referencia</a> a visszaérkező válaszok dekódolásához; és parserek, amelyek a banki válaszokat és a camt.053 kivonatokat a folyamatai által irányítható strukturált adattá alakítják. A <a href="/hu/try/">böngészős demó</a> a leggyorsabb módja annak, hogy lássa, milyen hibaosztályokat szüntet meg — beleértve az egykattintásos „hiba beszúrása” forgatókönyveket is.</p>
 <h2 id="engineering-ai">Fejlesztés és AI<a class="heading-anchor" href="#engineering-ai" aria-label="Ugrás a szakaszhoz: Fejlesztés és AI">#</a></h2>
-<p>Típusos Python API, értelmes kilépési kódokkal rendelkező CLI, REST-mikroszolgáltatás, valamint bővítési pontok loaderekhez, validátorokhoz, sémákhoz és writerekhez — <a href="/documentation/">a technikai referencia</a> minden kapcsolót és végpontot lefed, a kód pedig 100% sor- és elágazás-lefedettséget tart szigorú CI-kapuként. Ha ügynökökkel épít: a <a href="/pain001-mcp/">pain001-mcp</a> a kategória egyetlen Model Context Protocol szervere — tizenhét csak olvasható eszköz, amelyet az ügynökei helyben hívnak, szerkesztői diagnosztikával a <a href="/pain001-lsp/">pain001-lsp</a>-től, miközben az ember a folyamat része marad.</p>
+<p>Típusos Python API, értelmes kilépési kódokkal rendelkező CLI, REST-mikroszolgáltatás, valamint bővítési pontok loaderekhez, validátorokhoz, sémákhoz és writerekhez — <a href="/hu/documentation/">a technikai referencia</a> minden kapcsolót és végpontot lefed, a kód pedig 100% sor- és elágazás-lefedettséget tart szigorú CI-kapuként. Ha ügynökökkel épít: a <a href="/pain001-mcp/">pain001-mcp</a> a kategória egyetlen Model Context Protocol szervere — tizenhét csak olvasható eszköz, amelyet az ügynökei helyben hívnak, szerkesztői diagnosztikával a <a href="/pain001-lsp/">pain001-lsp</a>-től, miközben az ember a folyamat része marad.</p>
 </div>
         </article>
       </div>
@@ -214,11 +214,11 @@
             <h2 class="footer-heading">Dokumentáció</h2>
             <ul class="footer-links">
               <li><a href="/hu/try/">Próbálja ki böngészőjében</a></li>
-              <li><a href="/documentation/">Műszaki referencia</a></li>
-              <li><a href="/installation/">Telepítés &amp; Docker</a></li>
+              <li><a href="/hu/documentation/">Műszaki referencia</a></li>
+              <li><a href="/hu/installation/">Telepítés &amp; Docker</a></li>
               <li><a href="/payments/">Fizetési folyamatok</a></li>
-              <li><a href="/glossary/">Fogalomtár</a></li>
-              <li><a href="/faqs/">GYIK</a></li>
+              <li><a href="/hu/glossary/">Fogalomtár</a></li>
+              <li><a href="/hu/faqs/">GYIK</a></li>
             </ul>
           </div>
           <div>

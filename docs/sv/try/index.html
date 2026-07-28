@@ -73,12 +73,12 @@
               </ul>
             </li>
             <li><a href="/sv/try/">Se det live</a></li>
-            <li class="has-sub"><a href="/documentation/">Dok</a>
+            <li class="has-sub"><a href="/sv/documentation/">Dok</a>
               <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="Växla undermenyn Dokumentation"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
               <ul id="sub-docs" class="ap-sub">
-                <li><a href="/installation/" hreflang="en">Installation &amp; Docker (EN)</a></li>
-                <li><a href="/glossary/" hreflang="en">Ordlista (EN)</a></li>
-                <li><a href="/faqs/" hreflang="en">Vanliga frågor (EN)</a></li>
+                <li><a href="/sv/installation/">Installation &amp; Docker</a></li>
+                <li><a href="/sv/glossary/">Ordlista</a></li>
+                <li><a href="/sv/faqs/">Vanliga frågor</a></li>
                 <li><a href="/pain002-reason-codes/" hreflang="en">pain.002-orsakskoder (EN)</a></li>
               </ul>
             </li>
@@ -188,7 +188,7 @@
               <li><strong>Ingenting laddas upp.</strong> Filen läses av din egen webbläsare och lämnar aldrig din dator — det finns ingen server, ingen lagring, ingen telemetri. Säkert för riktiga data, även om maskerade testdata alltid är god praxis.</li>
               <li><strong>Endast ett testverktyg.</strong> Filer skickas aldrig in för behandling och ingenting du gör här kan resultera i en betalning.</li>
               <li><strong>Förväntade kolumner:</strong> <code>payment_id</code>, <code>payment_amount</code>, <code>currency</code>, betalarens och mottagarens namn / IBAN / BIC, <code>requested_execution_date</code> — komma, semikolon och tabb identifieras automatiskt. Ladda ned ett exempel nedan att använda som mall för din egen export.</li>
-              <li><strong>Inga avgifter.</strong> Det här verktyget, och den <a href="/installation/">fullständiga verktygskedjan</a> bakom det, är gratis och öppen källkod.</li>
+              <li><strong>Inga avgifter.</strong> Det här verktyget, och den <a href="/sv/installation/">fullständiga verktygskedjan</a> bakom det, är gratis och öppen källkod.</li>
             </ul>
           </div>
           <div class="guide-block">
@@ -289,7 +289,7 @@
           Demon implementerar en delmängd av pipelinen (obligatoriska fält, IBAN mod-97, BIC-struktur, belopps-
           och datumformat, omräknade <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code> kontrollsummor). Steg 3 kör den officiella XSD-grinden direkt här via WebAssembly. Den installerade verktygskedjan
           lägger till JSON Schema-validering och fem regelverk för betalningsscheman ovanpå —
-          <a href="/installation/">installera CLI:t</a> för den kompletta pipelinen.
+          <a href="/sv/installation/">installera CLI:t</a> för den kompletta pipelinen.
         </p>
       </div>
 

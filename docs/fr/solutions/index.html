@@ -78,12 +78,12 @@
               </ul>
             </li>
             <li><a href="/fr/try/">Voir la démo</a></li>
-            <li class="has-sub"><a href="/documentation/">Docs</a>
+            <li class="has-sub"><a href="/fr/documentation/">Docs</a>
               <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="Afficher ou masquer le sous-menu Documentation"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
               <ul id="sub-docs" class="ap-sub">
-                <li><a href="/installation/" hreflang="en">Installation &amp; Docker (EN)</a></li>
-                <li><a href="/glossary/" hreflang="en">Glossaire (EN)</a></li>
-                <li><a href="/faqs/" hreflang="en">FAQ (EN)</a></li>
+                <li><a href="/fr/installation/">Installation &amp; Docker</a></li>
+                <li><a href="/fr/glossary/">Glossaire</a></li>
+                <li><a href="/fr/faqs/">FAQ</a></li>
                 <li><a href="/pain002-reason-codes/" hreflang="en">Codes motif pain.002 (EN)</a></li>
               </ul>
             </li>
@@ -189,13 +189,13 @@
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="Sommaire"><h2>Sommaire</h2><ol><li><a href="#treasury-finance">Trésorerie & finance</a></li><li><a href="#cfo-board">CFO & conseil d'administration</a></li><li><a href="#payment-operations">Opérations de paiement</a></li><li><a href="#engineering-ai">Ingénierie & IA</a></li></ol></nav>
           <div lang="en"><h2 id="treasury-finance">Trésorerie & finance<a class="heading-anchor" href="#treasury-finance" aria-label="Lien vers la section : Trésorerie & finance">#</a></h2>
-<p>Votre banque rejette des fichiers pour des raisons dont votre ERP ne vous a jamais averti : un chiffre d'IBAN transposé, un total de contrôle qui ne correspond plus, un format d'adresse devenu inacceptable. Pain001 fait en sorte que ces échecs se produisent plutôt à votre bureau — chaque fichier est prouvé contre le référentiel officiel de la banque (XSD ISO 20022) avant soumission, et le <a href="/payments/">guide du cycle de vie des paiements</a> montre où se situe chaque contrôle entre l'initiation et le rapprochement. Commencez par le <a href="/glossary/">glossaire</a> si le vocabulaire est nouveau ; les définitions en langage clair ont été écrites pour votre côté du bureau, pas pour celui des ingénieurs.</p>
+<p>Votre banque rejette des fichiers pour des raisons dont votre ERP ne vous a jamais averti : un chiffre d'IBAN transposé, un total de contrôle qui ne correspond plus, un format d'adresse devenu inacceptable. Pain001 fait en sorte que ces échecs se produisent plutôt à votre bureau — chaque fichier est prouvé contre le référentiel officiel de la banque (XSD ISO 20022) avant soumission, et le <a href="/payments/">guide du cycle de vie des paiements</a> montre où se situe chaque contrôle entre l'initiation et le rapprochement. Commencez par le <a href="/fr/glossary/">glossaire</a> si le vocabulaire est nouveau ; les définitions en langage clair ont été écrites pour votre côté du bureau, pas pour celui des ingénieurs.</p>
 <h2 id="cfo-board">CFO & conseil d'administration<a class="heading-anchor" href="#cfo-board" aria-label="Lien vers la section : CFO & conseil d'administration">#</a></h2>
 <p>Deux chiffres cadrent la décision. <strong>14 novembre 2026</strong> : la date à laquelle les paiements transfrontaliers aux adresses non structurées commencent à être rejetés au niveau du réseau — une exposition qui réside dans vos données de référence clients, pas dans votre connexion bancaire. <strong>10 000–30 000 € par an</strong> : le prix public du SDK de traduction commercial le plus proche, face au zéro permanent de Pain001, à toute échelle, sous licences ouvertes. Les questions de gouvernance — auditabilité, localisation des données, preuves sur la chaîne d'approvisionnement — reçoivent des artefacts, pas des assurances : <a href="/sbom.cdx.json">SBOM</a> publié, <a href="/security.txt">politique de sécurité</a>, et un traitement qui ne quitte jamais votre infrastructure. Le <a href="/fr/executive-brief/">brief de direction d'une page</a> est écrit pour être transféré.</p>
 <h2 id="payment-operations">Opérations de paiement<a class="heading-anchor" href="#payment-operations" aria-label="Lien vers la section : Opérations de paiement">#</a></h2>
 <p>Vous vivez dans les fichiers de réponse. Pain001 boucle la boucle de bout en bout : des contrôles pré-soumission <code>--dry-run</code> qui réussissent ou échouent proprement en CI, les règlements de schémas (SEPA et transfrontalier) expliqués règle par règle, la <a href="/pain002-reason-codes/">référence des codes motifs pain.002</a> pour décoder ce qui est revenu, et des analyseurs qui transforment les réponses bancaires et les relevés camt.053 en données structurées que votre pipeline peut router. La <a href="/fr/try/">démo dans le navigateur</a> est le moyen le plus rapide de voir les classes d'échec qu'il élimine — y compris les scénarios « introduire une erreur » en un clic.</p>
 <h2 id="engineering-ai">Ingénierie & IA<a class="heading-anchor" href="#engineering-ai" aria-label="Lien vers la section : Ingénierie & IA">#</a></h2>
-<p>Une API Python typée, une CLI aux codes de sortie significatifs, un microservice REST et des points d'extension pour chargeurs, validateurs, schémas et rédacteurs — <a href="/documentation/">la référence technique</a> couvre chaque option et chaque point de terminaison, et le code maintient 100 % de couverture lignes et branches comme barrière CI stricte. Si vous construisez avec des agents : <a href="/pain001-mcp/">pain001-mcp</a> est le seul serveur Model Context Protocol de la catégorie — dix-sept outils en lecture seule que vos agents appellent localement, avec les diagnostics d'éditeur de <a href="/pain001-lsp/">pain001-lsp</a> pendant que les humains restent dans la boucle.</p>
+<p>Une API Python typée, une CLI aux codes de sortie significatifs, un microservice REST et des points d'extension pour chargeurs, validateurs, schémas et rédacteurs — <a href="/fr/documentation/">la référence technique</a> couvre chaque option et chaque point de terminaison, et le code maintient 100 % de couverture lignes et branches comme barrière CI stricte. Si vous construisez avec des agents : <a href="/pain001-mcp/">pain001-mcp</a> est le seul serveur Model Context Protocol de la catégorie — dix-sept outils en lecture seule que vos agents appellent localement, avec les diagnostics d'éditeur de <a href="/pain001-lsp/">pain001-lsp</a> pendant que les humains restent dans la boucle.</p>
 </div>
         </article>
       </div>
@@ -214,11 +214,11 @@
             <h2 class="footer-heading">Documentation</h2>
             <ul class="footer-links">
               <li><a href="/fr/try/">Essayer dans votre navigateur</a></li>
-              <li><a href="/documentation/">Référence technique</a></li>
-              <li><a href="/installation/">Installation &amp; Docker</a></li>
+              <li><a href="/fr/documentation/">Référence technique</a></li>
+              <li><a href="/fr/installation/">Installation &amp; Docker</a></li>
               <li><a href="/payments/">Pipelines de paiement</a></li>
-              <li><a href="/glossary/">Glossaire</a></li>
-              <li><a href="/faqs/">FAQ</a></li>
+              <li><a href="/fr/glossary/">Glossaire</a></li>
+              <li><a href="/fr/faqs/">FAQ</a></li>
             </ul>
           </div>
           <div>

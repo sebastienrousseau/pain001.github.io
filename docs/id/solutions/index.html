@@ -78,12 +78,12 @@
               </ul>
             </li>
             <li><a href="/id/try/">Lihat langsung</a></li>
-            <li class="has-sub"><a href="/documentation/">Dokumentasi</a>
+            <li class="has-sub"><a href="/id/documentation/">Dokumentasi</a>
               <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="Buka/tutup submenu Dokumentasi"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
               <ul id="sub-docs" class="ap-sub">
-                <li><a href="/installation/" hreflang="en">Instalasi &amp; Docker (EN)</a></li>
-                <li><a href="/glossary/" hreflang="en">Glosarium (EN)</a></li>
-                <li><a href="/faqs/" hreflang="en">Tanya jawab (EN)</a></li>
+                <li><a href="/id/installation/">Instalasi &amp; Docker</a></li>
+                <li><a href="/id/glossary/">Glosarium</a></li>
+                <li><a href="/id/faqs/">Tanya jawab</a></li>
                 <li><a href="/pain002-reason-codes/" hreflang="en">Kode alasan pain.002 (EN)</a></li>
               </ul>
             </li>
@@ -189,13 +189,13 @@
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="Daftar Isi"><h2>Daftar Isi</h2><ol><li><a href="#treasury-finance">Tresuri & keuangan</a></li><li><a href="#cfo-board">CFO & direksi</a></li><li><a href="#payment-operations">Operasi pembayaran</a></li><li><a href="#engineering-ai">Rekayasa & AI</a></li></ol></nav>
           <div lang="en"><h2 id="treasury-finance">Tresuri & keuangan<a class="heading-anchor" href="#treasury-finance" aria-label="Tautan ke bagian: Tresuri & keuangan">#</a></h2>
-<p>Bank Anda menolak file karena alasan yang tidak pernah diperingatkan oleh ERP Anda: digit IBAN yang tertukar, total kontrol yang tidak lagi cocok, format alamat yang tidak lagi diterima. Pain001 membuat kegagalan itu terjadi di meja Anda — setiap file dibuktikan terhadap buku aturan resmi bank (ISO 20022 XSD) sebelum pengiriman, dan <a href="/payments/">panduan siklus hidup pembayaran</a> menunjukkan posisi setiap pemeriksaan antara originasi dan rekonsiliasi. Mulailah dari <a href="/glossary/">glosarium</a> jika kosakatanya masih baru; definisi dalam bahasa yang jelas ditulis untuk sisi meja Anda, bukan untuk para insinyur.</p>
+<p>Bank Anda menolak file karena alasan yang tidak pernah diperingatkan oleh ERP Anda: digit IBAN yang tertukar, total kontrol yang tidak lagi cocok, format alamat yang tidak lagi diterima. Pain001 membuat kegagalan itu terjadi di meja Anda — setiap file dibuktikan terhadap buku aturan resmi bank (ISO 20022 XSD) sebelum pengiriman, dan <a href="/payments/">panduan siklus hidup pembayaran</a> menunjukkan posisi setiap pemeriksaan antara originasi dan rekonsiliasi. Mulailah dari <a href="/id/glossary/">glosarium</a> jika kosakatanya masih baru; definisi dalam bahasa yang jelas ditulis untuk sisi meja Anda, bukan untuk para insinyur.</p>
 <h2 id="cfo-board">CFO & direksi<a class="heading-anchor" href="#cfo-board" aria-label="Tautan ke bagian: CFO & direksi">#</a></h2>
 <p>Dua angka membingkai keputusan ini. <strong>14 November 2026</strong>: tanggal pembayaran lintas negara dengan alamat tidak terstruktur mulai ditolak di tingkat jaringan — eksposur yang berada dalam data induk pelanggan Anda, bukan pada koneksi bank Anda. <strong>€10,000–30,000 per tahun</strong>: harga daftar publik SDK translasi komersial terdekat, dibandingkan nol permanen Pain001 pada skala apa pun di bawah lisensi terbuka. Pertanyaan tata kelola — auditabilitas, lokalitas data, bukti rantai pasok — dijawab dengan artefak, bukan sekadar jaminan: <a href="/sbom.cdx.json">SBOM</a> yang diterbitkan, <a href="/security.txt">kebijakan keamanan</a>, dan pemrosesan yang tidak pernah meninggalkan infrastruktur Anda. <a href="/id/executive-brief/">Ringkasan eksekutif satu halaman</a> ditulis untuk diteruskan.</p>
 <h2 id="payment-operations">Operasi pembayaran<a class="heading-anchor" href="#payment-operations" aria-label="Tautan ke bagian: Operasi pembayaran">#</a></h2>
 <p>Anda hidup di antara file respons. Pain001 menutup siklus dari ujung ke ujung: pemeriksaan pra-pengiriman <code>--dry-run</code> yang lulus atau gagal secara bersih di CI, buku aturan skema (SEPA dan lintas negara) yang dijelaskan aturan demi aturan, <a href="/pain002-reason-codes/">referensi kode alasan pain.002</a> untuk menerjemahkan apa yang dikirim balik, serta parser yang mengubah respons bank dan laporan camt.053 menjadi data terstruktur yang dapat dirutekan oleh pipeline Anda. <a href="/id/try/">Demo peramban</a> adalah cara tercepat melihat kelas kegagalan yang dihilangkannya — termasuk skenario "sisipkan kesalahan" sekali klik.</p>
 <h2 id="engineering-ai">Rekayasa & AI<a class="heading-anchor" href="#engineering-ai" aria-label="Tautan ke bagian: Rekayasa & AI">#</a></h2>
-<p>API Python bertipe, CLI dengan kode keluar yang bermakna, microservice REST, dan titik plugin untuk loader, validator, skema, dan writer — <a href="/documentation/">referensi teknis</a> mencakup setiap flag dan endpoint, dan kodenya membawa cakupan baris-dan-cabang 100% sebagai gerbang CI yang ketat. Jika Anda membangun dengan agen: <a href="/pain001-mcp/">pain001-mcp</a> adalah satu-satunya server Model Context Protocol dalam kategorinya — tujuh belas alat hanya-baca yang dipanggil agen Anda secara lokal, dengan diagnostik editor dari <a href="/pain001-lsp/">pain001-lsp</a> sementara manusia tetap memegang kendali.</p>
+<p>API Python bertipe, CLI dengan kode keluar yang bermakna, microservice REST, dan titik plugin untuk loader, validator, skema, dan writer — <a href="/id/documentation/">referensi teknis</a> mencakup setiap flag dan endpoint, dan kodenya membawa cakupan baris-dan-cabang 100% sebagai gerbang CI yang ketat. Jika Anda membangun dengan agen: <a href="/pain001-mcp/">pain001-mcp</a> adalah satu-satunya server Model Context Protocol dalam kategorinya — tujuh belas alat hanya-baca yang dipanggil agen Anda secara lokal, dengan diagnostik editor dari <a href="/pain001-lsp/">pain001-lsp</a> sementara manusia tetap memegang kendali.</p>
 </div>
         </article>
       </div>
@@ -214,11 +214,11 @@
             <h2 class="footer-heading">Dokumentasi</h2>
             <ul class="footer-links">
               <li><a href="/id/try/">Coba di browser Anda</a></li>
-              <li><a href="/documentation/">Referensi teknis</a></li>
-              <li><a href="/installation/">Instalasi &amp; Docker</a></li>
+              <li><a href="/id/documentation/">Referensi teknis</a></li>
+              <li><a href="/id/installation/">Instalasi &amp; Docker</a></li>
               <li><a href="/payments/">Pipeline pembayaran</a></li>
-              <li><a href="/glossary/">Glosarium</a></li>
-              <li><a href="/faqs/">Tanya jawab</a></li>
+              <li><a href="/id/glossary/">Glosarium</a></li>
+              <li><a href="/id/faqs/">Tanya jawab</a></li>
             </ul>
           </div>
           <div>

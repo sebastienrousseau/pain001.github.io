@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta itemprop="datePublished" content="Sun, 26 Jul 2026 08:00:00 +0000" id="date" />
+    <meta itemprop="dateModified" content="Sun, 26 Jul 2026 08:00:00 +0000" id="last-modified" />
+    <title>FAQ Pain001 : trésorerie, opérations, ingénierie, audit</title>
+
+    <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
+<meta name="description" content="Pourquoi les banques rejettent des fichiers, pain.001 vs pain.008, les échéances de novembre 2026, le streaming des gros lots, la sécurité et l'audit — sans détour.">
+<meta name="keywords" content="pain.001 FAQ, pain.001 vs pain.008, why bank rejects payment file, SEPA validation questions, ISO 20022 FAQ, payment file audit">
+<meta property="og:image" content="https://pain001.com/og/pain001-card.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A question-and-answer session on ISO 20022 payment file generation — the questions treasury, operations, engineering, and audit teams actually ask." />
+    <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="FAQ Pain001 : trésorerie, opérations, ingénierie, audit">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    
+    
+
+    <link rel="alternate" href="https://pain001.com/fr/faqs/" hreflang="en" />
+    
+    <link rel="icon" type="image/svg+xml" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />
+    <link rel="preload" href="/fonts/source-serif-4-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/_csp/e9d2f9e83d6b47b6.css" integrity="sha384-NgS1FgtNO/+O73jGnYQcFGXyKGAVkFu/W1I8bL4l2QSI+eMJfSMSQrUdf2zJxS34" crossorigin="anonymous">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
+  <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="FAQ Pain001 : trésorerie, opérations, ingénierie, audit">
+<meta property="og:description" content="Home Pain001 FAQs for Treasury, Ops, Engineering and Audit Questions Pain001 FAQs for Treasury, Ops, Engineering and Audit Straight answers for treasurers,">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pain001.com/fr/faqs/">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FAQ Pain001 : trésorerie, opérations, ingénierie, audit">
+<meta name="twitter:description" content="Home Pain001 FAQs for Treasury, Ops, Engineering and Audit Questions Pain001 FAQs for Treasury, Ops, Engineering and Audit Straight answers for treasurers,">
+<meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg">
+<link rel="canonical" href="https://pain001.com/fr/faqs/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
+<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"><link rel="alternate" hreflang="en" href="https://pain001.com/faqs/" /><link rel="alternate" hreflang="x-default" href="https://pain001.com/faqs/" /><link rel="alternate" hreflang="ar" href="https://pain001.com/ar/faqs/" /><link rel="alternate" hreflang="bn" href="https://pain001.com/bn/faqs/" /><link rel="alternate" hreflang="cs" href="https://pain001.com/cs/faqs/" /><link rel="alternate" hreflang="de" href="https://pain001.com/de/faqs/" /><link rel="alternate" hreflang="el" href="https://pain001.com/el/faqs/" /><link rel="alternate" hreflang="es" href="https://pain001.com/es/faqs/" /><link rel="alternate" hreflang="fa" href="https://pain001.com/fa/faqs/" /><link rel="alternate" hreflang="fil" href="https://pain001.com/fil/faqs/" /><link rel="alternate" hreflang="ha" href="https://pain001.com/ha/faqs/" /><link rel="alternate" hreflang="he" href="https://pain001.com/he/faqs/" /><link rel="alternate" hreflang="hi" href="https://pain001.com/hi/faqs/" /><link rel="alternate" hreflang="hu" href="https://pain001.com/hu/faqs/" /><link rel="alternate" hreflang="id" href="https://pain001.com/id/faqs/" /><link rel="alternate" hreflang="it" href="https://pain001.com/it/faqs/" /><link rel="alternate" hreflang="ja" href="https://pain001.com/ja/faqs/" /><link rel="alternate" hreflang="ko" href="https://pain001.com/ko/faqs/" /><link rel="alternate" hreflang="mr" href="https://pain001.com/mr/faqs/" /><link rel="alternate" hreflang="ms" href="https://pain001.com/ms/faqs/" /><link rel="alternate" hreflang="nl" href="https://pain001.com/nl/faqs/" /><link rel="alternate" hreflang="pl" href="https://pain001.com/pl/faqs/" /><link rel="alternate" hreflang="pt-BR" href="https://pain001.com/pt-br/faqs/" /><link rel="alternate" hreflang="ro" href="https://pain001.com/ro/faqs/" /><link rel="alternate" hreflang="ru" href="https://pain001.com/ru/faqs/" /><link rel="alternate" hreflang="sv" href="https://pain001.com/sv/faqs/" /><link rel="alternate" hreflang="ta" href="https://pain001.com/ta/faqs/" /><link rel="alternate" hreflang="te" href="https://pain001.com/te/faqs/" /><link rel="alternate" hreflang="th" href="https://pain001.com/th/faqs/" /><link rel="alternate" hreflang="tr" href="https://pain001.com/tr/faqs/" /><link rel="alternate" hreflang="uk" href="https://pain001.com/uk/faqs/" /><link rel="alternate" hreflang="vi" href="https://pain001.com/vi/faqs/" /><link rel="alternate" hreflang="yo" href="https://pain001.com/yo/faqs/" /><link rel="alternate" hreflang="zh-Hans" href="https://pain001.com/zh-hans/faqs/" /><link rel="alternate" hreflang="zh-Hant" href="https://pain001.com/zh-hant/faqs/" /></head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="ap-nav">
+      <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Ouvrir la navigation" />
+      <div class="wrap ap-nav-wrap">
+        <a class="ap-brand" href="/" aria-label="Pain001 home">
+          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="" width="26" height="26" />
+          <span>Pain001</span>
+        </a>
+        <nav aria-label="Primary navigation" id="ap-primary-nav">
+          <ul class="ap-menu">
+            <li class="has-sub"><a href="/fr/why/">Pourquoi Pain001</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-why" aria-label="Afficher ou masquer le sous-menu Pourquoi Pain001"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-why" class="ap-sub">
+                <li><a href="/fr/solutions/">Pour qui&nbsp;?</a></li>
+                <li><a href="/fr/executive-brief/">Synthèse pour dirigeants</a></li>
+                <li><a href="/competitors-comparison/" hreflang="en">Comparatif avec les outils commerciaux (EN)</a></li>
+              </ul>
+            </li>
+            <li><a href="/fr/try/">Voir la démo</a></li>
+            <li class="has-sub"><a href="/fr/documentation/">Docs</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="Afficher ou masquer le sous-menu Documentation"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-docs" class="ap-sub">
+                <li><a href="/fr/installation/">Installation &amp; Docker</a></li>
+                <li><a href="/fr/glossary/">Glossaire</a></li>
+                <li><a href="/fr/faqs/">FAQ</a></li>
+                <li><a href="/pain002-reason-codes/" hreflang="en">Codes motif pain.002 (EN)</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/#suite-heading">Suite</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-suite" aria-label="Afficher ou masquer le sous-menu Suite"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-suite" class="ap-sub">
+                <li><a href="/pain001-mcp/" hreflang="en">Outils pour agents IA (MCP) (EN)</a></li>
+                <li><a href="/pain001-lsp/" hreflang="en">Intégration éditeur (LSP) (EN)</a></li>
+                <li><a href="/pain001-loader-mt101/" hreflang="en">Chargeur MT101 (EN)</a></li>
+                <li><a href="/pain001-loader-xlsx/" hreflang="en">Chargeur Excel (EN)</a></li>
+                <li><a href="/architecture-and-patents/" hreflang="en">Architecture &amp; sécurité (EN)</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/2026-iso20022-migration-trends/">Recherche</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-research" aria-label="Afficher ou masquer le sous-menu Recherche"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-research" class="ap-sub">
+                <li><a href="/2026-iso20022-migration-trends/" hreflang="en">Briefing 2026 (EN)</a></li>
+                <li><a href="/iso20022-roadmap/" hreflang="en">Feuille de route ISO 20022 (EN)</a></li>
+                <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/" hreflang="en">Guide transfrontalier (EN)</a></li>
+                <li><a href="/languages/" hreflang="en">En 34 langues (EN)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="ap-nav-right">
+          <button type="button" class="theme-toggle" aria-label="Passer au thème sombre" data-label-dark="Passer au thème sombre" data-label-light="Passer au thème clair" aria-pressed="false" title="Passer au thème sombre">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+          <button type="button" class="ap-search-btn" aria-label="Rechercher (Cmd/Ctrl + K)" title="Rechercher (⌘K)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <kbd class="ap-search-kbd" aria-hidden="true">⌘K</kbd>
+          </button>
+          <div class="ap-lang" role="group" aria-label="Language">
+            <button type="button" class="ap-lang-toggle" aria-label="Changer de langue" aria-expanded="false" aria-haspopup="menu" title="Changer de langue">
+              <span class="ap-lang-globe" aria-hidden="true">🌐</span>
+              <span class="ap-lang-current">FR</span>
+            </button>
+            <div class="ap-lang-menu" role="menu" hidden>
+              <div class="ap-lang-menu-grid">
+                <a class="ap-lang-item" href="/fr/faqs/" hreflang="en" lang="en" role="menuitem"><span aria-hidden="true">🇬🇧</span> English</a>
+                <a class="ap-lang-item" href="/fr/faqs/" hreflang="fr" lang="fr" role="menuitem"><span aria-hidden="true">🇫🇷</span> Français</a>
+                <a class="ap-lang-item" href="/de/faqs/" hreflang="de" lang="de" role="menuitem"><span aria-hidden="true">🇩🇪</span> Deutsch</a>
+                <a class="ap-lang-item" href="/es/faqs/" hreflang="es" lang="es" role="menuitem"><span aria-hidden="true">🇪🇸</span> Español</a>
+                <a class="ap-lang-item" href="/it/faqs/" hreflang="it" lang="it" role="menuitem"><span aria-hidden="true">🇮🇹</span> Italiano</a>
+                <a class="ap-lang-item" href="/pt-br/faqs/" hreflang="pt-BR" lang="pt-BR" role="menuitem"><span aria-hidden="true">🇧🇷</span> Português</a>
+                <a class="ap-lang-item" href="/nl/faqs/" hreflang="nl" lang="nl" role="menuitem"><span aria-hidden="true">🇳🇱</span> Nederlands</a>
+                <a class="ap-lang-item" href="/pl/faqs/" hreflang="pl" lang="pl" role="menuitem"><span aria-hidden="true">🇵🇱</span> Polski</a>
+                <a class="ap-lang-item" href="/sv/faqs/" hreflang="sv" lang="sv" role="menuitem"><span aria-hidden="true">🇸🇪</span> Svenska</a>
+                <a class="ap-lang-item" href="/cs/faqs/" hreflang="cs" lang="cs" role="menuitem"><span aria-hidden="true">🇨🇿</span> Čeština</a>
+                <a class="ap-lang-item" href="/ro/faqs/" hreflang="ro" lang="ro" role="menuitem"><span aria-hidden="true">🇷🇴</span> Română</a>
+                <a class="ap-lang-item" href="/hu/faqs/" hreflang="hu" lang="hu" role="menuitem"><span aria-hidden="true">🇭🇺</span> Magyar</a>
+                <a class="ap-lang-item" href="/el/faqs/" hreflang="el" lang="el" role="menuitem"><span aria-hidden="true">🇬🇷</span> Ελληνικά</a>
+                <a class="ap-lang-item" href="/tr/faqs/" hreflang="tr" lang="tr" role="menuitem"><span aria-hidden="true">🇹🇷</span> Türkçe</a>
+                <a class="ap-lang-item" href="/ru/faqs/" hreflang="ru" lang="ru" role="menuitem"><span aria-hidden="true">🇷🇺</span> Русский</a>
+                <a class="ap-lang-item" href="/uk/faqs/" hreflang="uk" lang="uk" role="menuitem"><span aria-hidden="true">🇺🇦</span> Українська</a>
+                <a class="ap-lang-item" href="/ar/faqs/" hreflang="ar" lang="ar" role="menuitem"><span aria-hidden="true">🇸🇦</span> العربية</a>
+                <a class="ap-lang-item" href="/he/faqs/" hreflang="he" lang="he" role="menuitem"><span aria-hidden="true">🇮🇱</span> עברית</a>
+                <a class="ap-lang-item" href="/fa/faqs/" hreflang="fa" lang="fa" role="menuitem"><span aria-hidden="true">🇮🇷</span> فارسی</a>
+                <a class="ap-lang-item" href="/hi/faqs/" hreflang="hi" lang="hi" role="menuitem"><span aria-hidden="true">🇮🇳</span> हिन्दी</a>
+                <a class="ap-lang-item" href="/bn/faqs/" hreflang="bn" lang="bn" role="menuitem"><span aria-hidden="true">🇧🇩</span> বাংলা</a>
+                <a class="ap-lang-item" href="/ta/faqs/" hreflang="ta" lang="ta" role="menuitem"><span aria-hidden="true">🇮🇳</span> தமிழ்</a>
+                <a class="ap-lang-item" href="/te/faqs/" hreflang="te" lang="te" role="menuitem"><span aria-hidden="true">🇮🇳</span> తెలుగు</a>
+                <a class="ap-lang-item" href="/mr/faqs/" hreflang="mr" lang="mr" role="menuitem"><span aria-hidden="true">🇮🇳</span> मराठी</a>
+                <a class="ap-lang-item" href="/th/faqs/" hreflang="th" lang="th" role="menuitem"><span aria-hidden="true">🇹🇭</span> ไทย</a>
+                <a class="ap-lang-item" href="/vi/faqs/" hreflang="vi" lang="vi" role="menuitem"><span aria-hidden="true">🇻🇳</span> Tiếng Việt</a>
+                <a class="ap-lang-item" href="/id/faqs/" hreflang="id" lang="id" role="menuitem"><span aria-hidden="true">🇮🇩</span> Indonesia</a>
+                <a class="ap-lang-item" href="/ms/faqs/" hreflang="ms" lang="ms" role="menuitem"><span aria-hidden="true">🇲🇾</span> Melayu</a>
+                <a class="ap-lang-item" href="/fil/faqs/" hreflang="fil" lang="fil" role="menuitem"><span aria-hidden="true">🇵🇭</span> Filipino</a>
+                <a class="ap-lang-item" href="/ja/faqs/" hreflang="ja" lang="ja" role="menuitem"><span aria-hidden="true">🇯🇵</span> 日本語</a>
+                <a class="ap-lang-item" href="/ko/faqs/" hreflang="ko" lang="ko" role="menuitem"><span aria-hidden="true">🇰🇷</span> 한국어</a>
+                <a class="ap-lang-item" href="/zh-hans/faqs/" hreflang="zh-Hans" lang="zh-Hans" role="menuitem"><span aria-hidden="true">🇨🇳</span> 简体中文</a>
+                <a class="ap-lang-item" href="/zh-hant/faqs/" hreflang="zh-Hant" lang="zh-Hant" role="menuitem"><span aria-hidden="true">🇹🇼</span> 繁體中文</a>
+                <a class="ap-lang-item" href="/ha/faqs/" hreflang="ha" lang="ha" role="menuitem"><span aria-hidden="true">🇳🇬</span> Hausa</a>
+                <a class="ap-lang-item" href="/yo/faqs/" hreflang="yo" lang="yo" role="menuitem"><span aria-hidden="true">🇳🇬</span> Yorùbá</a>
+              </div>
+            </div>
+          </div>
+          <a class="ap-cta-mini" href="/fr/try/">Essayer la démo&nbsp;&rsaquo;</a>
+          <label class="ap-burger" for="ap-menu-toggle" aria-hidden="true"><span class="ap-burger-icon">☰</span></label>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <header class="page-header">
+        <div class="wrap">
+          <nav class="breadcrumb" aria-label="Fil d'Ariane">
+            <ol>
+              <li><a href="/">Accueil</a></li>
+              <li aria-current="page">FAQ Pain001 : trésorerie, opérations, ingénierie, audit</li>
+            </ol>
+          </nav>
+          <p class="eyebrow">Questions</p>
+          <h1 class="page-title">FAQ Pain001 : trésorerie, opérations, ingénierie, audit</h1>
+          <p class="deck">Des réponses directes pour les trésoriers, les opérations de paiement, les ingénieurs et les auditeurs — formulées comme les gens posent réellement leurs questions.</p>
+          <div class="article-meta"><span>4 min de lecture</span>
+            <span>Dernière révision <time datetime="2026-07-26">2026-07-26</time></span>
+          </div>
+        </div>
+      </header>
+
+      <div class="wrap content-shell">
+        <article class="content-body"><nav class="article-toc" aria-label="Sommaire"><h2>Sommaire</h2><ol><li><a href="#for-treasury-and-finance-leaders">Pour les responsables trésorerie et finance</a></li><li><a href="#for-payment-operations">Pour les opérations de paiement</a></li><li><a href="#for-engineers-and-architects">Pour les ingénieurs et architectes</a></li><li><a href="#for-auditors-and-compliance">Pour les auditeurs et la conformité</a></li></ol></nav>
+          <div lang="en"><p>Des réponses directes pour les trésoriers, les opérations de paiement, les ingénieurs et les auditeurs. Les questions sont formulées comme les gens les posent réellement. Pour plus de détails techniques, consultez la <a href="/fr/documentation/">référence technique</a>.</p>
+<hr />
+<h2 id="for-treasury-and-finance-leaders">Pour les responsables trésorerie et finance<a class="heading-anchor" href="#for-treasury-and-finance-leaders" aria-label="Lien vers la section : Pour les responsables trésorerie et finance">#</a></h2>
+<p><strong>Qu'est-ce que pain.001, en un paragraphe ?</strong></p>
+<p><code>pain.001</code> est le message ISO 20022 qu'un client envoie à sa banque pour initier des virements — le successeur XML de formats comme SWIFT MT101 et les fichiers plats domestiques. Votre banque le valide contre un schéma et un recueil de règles avant de l'accepter. Pain001 (le logiciel) produit ces fichiers à partir des données que vous possédez déjà et prouve leur validité avant que vous ne les soumettiez.</p>
+<p><strong>Quelle est la différence entre pain.001 et pain.008 ?</strong></p>
+<p>Le sens du flux. <code>pain.001</code> initie des virements — vous poussez de l'argent vers l'extérieur. <code>pain.008</code> initie des prélèvements — vous encaissez des sommes qui vous sont dues au titre d'un mandat. Pain001 génère les deux : dix versions de <code>pain.001</code> (<code>.001.03</code> à <code>.001.12</code>) et <code>pain.008.001.02</code>.</p>
+<p><strong>Nous envoyons encore des fichiers MT101. La migration est-elle urgente ?</strong></p>
+<p>Urgente. SWIFT a retiré les messages MT des catégories 1, 2 et 9 pour les instructions de paiement interbancaires transfrontalières en novembre 2025 ; les canaux entreprises qui acceptent encore le MT le font à la discrétion de chaque banque et en sursis. Le <a href="/pain001-loader-mt101/">loader MT101</a> convertit les flux MT101 existants en <code>pain.001</code> validé sans rien ressaisir.</p>
+<p><strong>Que signifie pour nous l'échéance des adresses structurées de novembre 2026 ?</strong></p>
+<p>À partir de fin novembre 2026, les adresses postales entièrement non structurées ne sont plus acceptées dans les paiements transfrontaliers CBPR+ ; les adresses doivent être structurées ou hybrides — des éléments discrets comme la ville (<code><TwnNm></code>) et le pays (<code><Ctry></code>) au lieu de lignes en texte libre. Si vos données de référence stockent les adresses en blocs de texte, le travail se situe dans vos données, pas dans votre connexion bancaire. Commencez par là. Le <a href="/2026-iso20022-migration-trends/">briefing 2026</a> détaille le calendrier.</p>
+<p><strong>Combien coûte Pain001 ?</strong></p>
+<p>Rien. Le cœur est sous double licence Apache-2.0 / MIT ; les paquets compagnons sont sous Apache-2.0. L'usage commercial, la modification et la redistribution sont tous permis. Pour donner un ordre de grandeur, le seul SDK de traduction de SWIFT est affiché à €10,000–30,000 par an.</p>
+<hr />
+<h2 id="for-payment-operations">Pour les opérations de paiement<a class="heading-anchor" href="#for-payment-operations" aria-label="Lien vers la section : Pour les opérations de paiement">#</a></h2>
+<p><strong>Pourquoi les banques rejettent-elles des fichiers de paiement ?</strong></p>
+<p>Quatre causes récurrentes : violations de schéma (mauvais élément, mauvaise version, mauvais espace de noms), identifiants invalides (échecs de somme de contrôle IBAN, BIC mal formés), totaux de contrôle incohérents (<code>NbOfTxs</code> / <code>CtrlSum</code> ne correspondant pas aux transactions) et caractères hors du jeu latin ISO 20022. Pain001 vérifie les quatre avant même qu'un fichier n'existe : validation JSON Schema par enregistrement, contrôles IBAN mod-97 et BIC ISO 9362, totaux de contrôle recalculés, translittération du jeu de caractères et validation XSD finale du XML rendu.</p>
+<p><strong>Peut-on valider un fichier sans rien générer ?</strong></p>
+<p>Oui — <code>pain001 --dry-run</code> (ou la sous-commande <code>validate</code>, ou <code>POST /api/v1/validate</code>). Le code de sortie <code>0</code> signifie valide ; <code>1</code> signifie que la validation a échoué, avec des erreurs au niveau du champ. Intégrez-le à la CI ou à une liste de contrôle avant soumission.</p>
+<p><strong>Quels recueils de règles SEPA sont couverts ?</strong></p>
+<p>Cinq recueils de règles sont intégrés : SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) et virement transfrontalier (<code>xborder-ct</code>). Utilisez <code>--scheme <name> --explain</code> pour voir chaque règle réussie ou échouée.</p>
+<p><strong>Nos données vivent dans Excel. Où est le piège ?</strong></p>
+<p>Excel convertit silencieusement en nombres les chaînes ressemblant à des IBAN. Le <a href="/pain001-loader-xlsx/">loader Excel</a> lit directement <code>.xlsx</code>/<code>.xlsm</code> et s'arrête net si des colonnes IBAN contiennent des cellules numériques — la corruption est détectée au chargement, pas à la banque.</p>
+<p><strong>Comment gère-t-il un lot de 500,000 lignes ?</strong></p>
+<p><code>--streaming</code> traite l'entrée en blocs à mémoire bornée (1,000 transactions par défaut), chacun émis comme son propre fichier XML avec des totaux de contrôle correctement recalculés. L'API REST offre <code>POST /api/v1/generate/async</code> avec suivi de travaux pour la même raison.</p>
+<hr />
+<h2 id="for-engineers-and-architects">Pour les ingénieurs et architectes<a class="heading-anchor" href="#for-engineers-and-architects" aria-label="Lien vers la section : Pour les ingénieurs et architectes">#</a></h2>
+<p><strong>Comment l'intégrer — bibliothèque, CLI ou API ?</strong></p>
+<p>Les trois existent comme surfaces de premier rang : une API Python typée, une CLI avec des codes de sortie adaptés à la CI, et un microservice FastAPI (<code>pain001 serve</code>) avec des points d'accès synchrones, de travaux asynchrones, de santé et de métriques Prometheus. Le pipeline de validation sous-jacent est le même, si bien que les résultats ne divergent jamais d'une surface à l'autre.</p>
+<p><strong>La génération XML est-elle réellement à l'abri des arrondis flottants ?</strong></p>
+<p>Les montants sont en <code>decimal.Decimal</code> de bout en bout dans la génération et la validation de schéma — analysés comme décimaux exacts, additionnés comme décimaux exacts, rendus sans représentation flottante. Les totaux de contrôle sont recalculés à partir des enregistrements validés, jamais acceptés tels quels depuis l'entrée.</p>
+<p><strong>Quelle est la posture de sécurité ?</strong></p>
+<p>Toute l'analyse XML passe par <code>defusedxml</code> (bloquant les attaques XXE et d'expansion d'entités) ; il n'y a pas de <code>lxml</code> dans l'arbre de dépendances. Les entrées passent un validateur anti-traversée de chemin. L'image Docker s'exécute sans privilèges root. Un SBOM CycloneDX est généré pour les releases du cœur, et la découverte de plugins tiers peut être désactivée entièrement avec <code>PAIN001_DISABLE_PLUGINS=1</code>.</p>
+<p><strong>Comment la qualité est-elle imposée ?</strong></p>
+<p>Couverture de lignes et de branches à 100% comme porte CI stricte sur le cœur (vérifiable : 3,828 lignes, 926 branches à 100%), mypy strict, couverture de docstrings à 100%, analyses de sécurité Bandit et pip-audit, et analyse CodeQL. Les paquets compagnons appliquent la même discipline de couverture à 100%.</p>
+<p><strong>Peut-on l'étendre pour un format propriétaire ?</strong></p>
+<p>Oui — quatre groupes de points d'entrée pour plugins (<code>pain001.loaders</code>, <code>pain001.validators</code>, <code>pain001.schemes</code>, <code>pain001.writers</code>). Le loader Excel est lui-même un plugin utilisant le protocole public, il sert donc aussi d'implémentation de référence.</p>
+<hr />
+<h2 id="for-auditors-and-compliance">Pour les auditeurs et la conformité<a class="heading-anchor" href="#for-auditors-and-compliance" aria-label="Lien vers la section : Pour les auditeurs et la conformité">#</a></h2>
+<p><strong>Peut-on reproduire un fichier généré au trimestre dernier ?</strong></p>
+<p>Oui. Épinglez la version du paquet, rejouez la même entrée, et la sortie est déterministe. La chaîne d'outils étant open source, la piste d'audit s'étend jusque dans le chemin de code lui-même — et ne se limite pas à une attestation d'éditeur.</p>
+<p><strong>Les données de paiement quittent-elles notre environnement ?</strong></p>
+<p>Non. Chaque composant — CLI, bibliothèque, API REST, serveur MCP, LSP — s'exécute localement. Il n'y a ni télémétrie, ni rappel SaaS, ni service de validation externe. Le serveur MCP ne parle que stdio et ses 17 outils sont tous annotés en lecture seule et idempotents.</p>
+<p><strong>Qui maintient Pain001 ?</strong></p>
+<p><a href="https://sebastienrousseau.com">Sebastien Rousseau</a>, dirigeant en ingénierie fintech basé à Londres, avec des contributeurs de la communauté. Le développement est public sur <a href="https://github.com/sebastienrousseau/pain001">GitHub</a>, les releases sont publiées sur <a href="https://pypi.org/project/pain001/">PyPI</a> et le journal des modifications est versionné à chaque release.</p>
+</div>
+        </article>
+      </div>
+    </main>
+
+    <button class="totop" id="toTop" type="button" hidden aria-label="Back to top">&uarr;</button>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-brand">Pain001</p>
+            <p class="footer-tagline">Initiation de paiements ISO 20022 en open source. Fichiers validés, traitement local, aucune dépendance.</p>
+          </div>
+          <div>
+            <h2 class="footer-heading">Documentation</h2>
+            <ul class="footer-links">
+              <li><a href="/fr/try/">Essayer dans votre navigateur</a></li>
+              <li><a href="/fr/documentation/">Référence technique</a></li>
+              <li><a href="/fr/installation/">Installation &amp; Docker</a></li>
+              <li><a href="/payments/">Pipelines de paiement</a></li>
+              <li><a href="/fr/glossary/">Glossaire</a></li>
+              <li><a href="/fr/faqs/">FAQ</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Écosystème</h2>
+            <ul class="footer-links">
+              <li><a href="/pain001-mcp/">pain001-mcp · agents IA</a></li>
+              <li><a href="/pain001-lsp/">pain001-lsp · éditeurs</a></li>
+              <li><a href="/pain001-loader-mt101/">Chargeur MT101</a></li>
+              <li><a href="/pain001-loader-xlsx/">Chargeur Excel</a></li>
+              <li><a href="https://github.com/sebastienrousseau/pain001" rel="external">GitHub</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Recherche et confiance</h2>
+            <ul class="footer-links">
+              <li><a href="/fr/why/">Pourquoi Pain001</a></li>
+              <li><a href="/fr/executive-brief/">Synthèse pour dirigeants</a></li>
+              <li><a href="/iso20022-roadmap/">Feuille de route ISO 20022</a></li>
+              <li><a href="/2026-iso20022-migration-trends/">Briefing 2026</a></li>
+              <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/">Guide transfrontalier</a></li>
+              <li><a href="/competitors-comparison/">Comparatif avec les outils commerciaux</a></li>
+              <li><a href="/architecture-and-patents/">Architecture &amp; brevets</a></li>
+              <li><a href="/trust/">Centre de confiance</a></li>
+              <li><a href="/compatibility/">Matrice de compatibilité</a></li>
+              <li><a href="/security.txt">security.txt</a></li>
+              <li><a href="/sbom.cdx.json">SBOM</a> · <a href="/llms.txt">llms.txt</a> · <a href="/rss.xml">Flux RSS</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; 2023&ndash;2026 Sebastien Rousseau. Core dual-licensed Apache-2.0 / MIT; companion packages Apache-2.0.</p>
+          <ul aria-label="This overview in other languages">
+            <li><a href="/languages/">Cet aperçu en 34 langues</a></li>
+          </ul>
+          <ul>
+            <li><a href="/accessibility/">Accessibilité</a></li>
+            <li><a href="/privacy/">Confidentialité</a></li>
+            <li><a href="/terms/">Conditions</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://pain001.com/fr/faqs/",
+          "url": "https://pain001.com/fr/faqs/",
+          "name": "FAQ Pain001 : trésorerie, opérations, ingénierie, audit",
+          "description": "Pourquoi les banques rejettent des fichiers, pain.001 vs pain.008, les échéances de novembre 2026, le streaming des gros lots, la sécurité et l'audit — sans détour.",
+          "inLanguage": "fr",
+          "dateModified": "2026-07-26",
+          "isPartOf": { "@id": "https://pain001.com/#website" },
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://pain001.com/" },
+            { "@type": "ListItem", "position": 2, "name": "FAQ Pain001 : trésorerie, opérations, ingénierie, audit" }
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pain001.com/#organization",
+          "name": "Pain001",
+          "url": "https://pain001.com/",
+          "logo": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+          "founder": { "@type": "Person", "name": "Sebastien Rousseau", "url": "https://sebastienrousseau.com" },
+          "sameAs": [
+            "https://github.com/sebastienrousseau/pain001",
+            "https://pypi.org/project/pain001/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pain001.com/#website",
+          "url": "https://pain001.com/",
+          "name": "Pain001",
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        }
+      ]
+    }
+    </script>
+
+    <script src="/_csp/197fcfccbee69bda.js" integrity="sha384-geygAAYoalTqpA6bIgsGUMRQupyTiF/rCnvMiGE5+G0s0ZOYAhHnkhzyMXN9yNxa" crossorigin="anonymous"></script>
+  
+<!-- SSG Search Widget -->
+<div id="ssg-search-widget">
+
+<!-- Search trigger button -->
+<button id="ssg-search-btn" type="button" aria-label="Search">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<span>Search</span>
+<kbd>K</kbd>
+</button>
+<!-- Search modal -->
+<div id="ssg-search-overlay" role="dialog" aria-label="Search">
+<div id="ssg-search-box">
+<div id="ssg-search-header">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<input id="ssg-search-input" type="search" placeholder="Search documentation..." autocomplete="off" aria-label="Search"/>
+</div>
+<div id="ssg-search-results" aria-live="polite"></div>
+<div id="ssg-sr-status" role="status" aria-live="polite" aria-atomic="true"></div>
+<div class="ssg-search-footer"><span><kbd>Esc</kbd> close</span><span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span><span><kbd>Enter</kbd> open</span></div>
+</div>
+</div>
+<script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>

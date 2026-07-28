@@ -78,12 +78,12 @@
               </ul>
             </li>
             <li><a href="/vi/try/">Xem trực tiếp</a></li>
-            <li class="has-sub"><a href="/documentation/">Tài liệu</a>
+            <li class="has-sub"><a href="/vi/documentation/">Tài liệu</a>
               <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="Bật/tắt menu con Tài liệu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
               <ul id="sub-docs" class="ap-sub">
-                <li><a href="/installation/" hreflang="en">Cài đặt &amp; Docker (EN)</a></li>
-                <li><a href="/glossary/" hreflang="en">Bảng thuật ngữ (EN)</a></li>
-                <li><a href="/faqs/" hreflang="en">Câu hỏi thường gặp (EN)</a></li>
+                <li><a href="/vi/installation/">Cài đặt &amp; Docker</a></li>
+                <li><a href="/vi/glossary/">Bảng thuật ngữ</a></li>
+                <li><a href="/vi/faqs/">Câu hỏi thường gặp</a></li>
                 <li><a href="/pain002-reason-codes/" hreflang="en">Mã lý do pain.002 (EN)</a></li>
               </ul>
             </li>
@@ -189,13 +189,13 @@
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="Mục lục"><h2>Mục lục</h2><ol><li><a href="#treasury-finance">Ngân quỹ và tài chính</a></li><li><a href="#cfo-board">CFO và hội đồng quản trị</a></li><li><a href="#payment-operations">Vận hành thanh toán</a></li><li><a href="#engineering-ai">Kỹ thuật và AI</a></li></ol></nav>
           <div lang="en"><h2 id="treasury-finance">Ngân quỹ và tài chính<a class="heading-anchor" href="#treasury-finance" aria-label="Liên kết đến mục: Ngân quỹ và tài chính">#</a></h2>
-<p>Ngân hàng từ chối tệp của bạn vì những lý do mà ERP chưa từng cảnh báo: một chữ số IBAN bị đảo, một tổng kiểm soát không còn khớp, một định dạng địa chỉ không còn được chấp nhận. Pain001 khiến các lỗi đó xảy ra ngay tại bàn làm việc của bạn — mỗi tệp được chứng minh theo bộ quy tắc chính thức của ngân hàng (ISO 20022 XSD) trước khi nộp, và <a href="/payments/">hướng dẫn vòng đời thanh toán</a> chỉ ra từng bước kiểm tra nằm ở đâu giữa khởi tạo và đối soát. Nếu thuật ngữ còn mới, hãy bắt đầu với <a href="/glossary/">bảng thuật ngữ</a>; các định nghĩa dễ hiểu được viết cho phía bạn của bàn làm việc, không phải cho kỹ sư.</p>
+<p>Ngân hàng từ chối tệp của bạn vì những lý do mà ERP chưa từng cảnh báo: một chữ số IBAN bị đảo, một tổng kiểm soát không còn khớp, một định dạng địa chỉ không còn được chấp nhận. Pain001 khiến các lỗi đó xảy ra ngay tại bàn làm việc của bạn — mỗi tệp được chứng minh theo bộ quy tắc chính thức của ngân hàng (ISO 20022 XSD) trước khi nộp, và <a href="/payments/">hướng dẫn vòng đời thanh toán</a> chỉ ra từng bước kiểm tra nằm ở đâu giữa khởi tạo và đối soát. Nếu thuật ngữ còn mới, hãy bắt đầu với <a href="/vi/glossary/">bảng thuật ngữ</a>; các định nghĩa dễ hiểu được viết cho phía bạn của bàn làm việc, không phải cho kỹ sư.</p>
 <h2 id="cfo-board">CFO và hội đồng quản trị<a class="heading-anchor" href="#cfo-board" aria-label="Liên kết đến mục: CFO và hội đồng quản trị">#</a></h2>
 <p>Hai con số định khung quyết định. <strong>14 tháng 11 năm 2026</strong>: ngày các khoản thanh toán xuyên biên giới mang địa chỉ phi cấu trúc bắt đầu bị trả về ở cấp mạng lưới — rủi ro nằm trong dữ liệu gốc khách hàng của bạn, không phải trong kết nối ngân hàng. <strong>€10,000–30,000 mỗi năm</strong>: giá niêm yết công khai của SDK chuyển đổi thương mại gần nhất, so với mức 0 vĩnh viễn của Pain001 ở mọi quy mô theo giấy phép mở. Các câu hỏi quản trị — khả năng kiểm toán, nơi lưu dữ liệu, bằng chứng chuỗi cung ứng — được trả lời bằng chứng cứ, không phải lời cam đoan: <a href="/sbom.cdx.json">SBOM</a> đã công bố, <a href="/security.txt">chính sách bảo mật</a>, và quá trình xử lý không bao giờ rời hạ tầng của bạn. <a href="/vi/executive-brief/">Bản tóm tắt điều hành một trang</a> được viết để chuyển tiếp.</p>
 <h2 id="payment-operations">Vận hành thanh toán<a class="heading-anchor" href="#payment-operations" aria-label="Liên kết đến mục: Vận hành thanh toán">#</a></h2>
 <p>Bạn sống cùng các tệp phản hồi. Pain001 khép kín vòng lặp từ đầu đến cuối: các bước kiểm tra trước khi nộp bằng <code>--dry-run</code> đạt hoặc trượt rõ ràng trong CI, bộ quy tắc từng chương trình thanh toán (SEPA và xuyên biên giới) được giải thích theo từng quy tắc, <a href="/pain002-reason-codes/">tài liệu mã lý do pain.002</a> để giải mã những gì được trả về, và các bộ phân tích biến phản hồi ngân hàng cùng sao kê camt.053 thành dữ liệu có cấu trúc mà quy trình của bạn có thể định tuyến. <a href="/vi/try/">Bản demo trên trình duyệt</a> là cách nhanh nhất để thấy các nhóm lỗi mà nó loại bỏ — kể cả các kịch bản "tạo lỗi" chỉ với một cú nhấp.</p>
 <h2 id="engineering-ai">Kỹ thuật và AI<a class="heading-anchor" href="#engineering-ai" aria-label="Liên kết đến mục: Kỹ thuật và AI">#</a></h2>
-<p>Một API Python có kiểu, một CLI với mã thoát có ý nghĩa, một microservice REST, và các điểm cắm plugin cho loaders, validators, schemes và writers — <a href="/documentation/">tài liệu kỹ thuật</a> bao quát mọi cờ lệnh và endpoint, và mã nguồn duy trì độ phủ dòng-và-nhánh 100% như một cổng chặn CI bắt buộc. Nếu bạn xây dựng với agent: <a href="/pain001-mcp/">pain001-mcp</a> là máy chủ Model Context Protocol duy nhất trong hạng mục này — mười bảy công cụ chỉ đọc mà agent của bạn gọi cục bộ, cùng chẩn đoán trong trình soạn thảo từ <a href="/pain001-lsp/">pain001-lsp</a> trong khi con người vẫn giám sát.</p>
+<p>Một API Python có kiểu, một CLI với mã thoát có ý nghĩa, một microservice REST, và các điểm cắm plugin cho loaders, validators, schemes và writers — <a href="/vi/documentation/">tài liệu kỹ thuật</a> bao quát mọi cờ lệnh và endpoint, và mã nguồn duy trì độ phủ dòng-và-nhánh 100% như một cổng chặn CI bắt buộc. Nếu bạn xây dựng với agent: <a href="/pain001-mcp/">pain001-mcp</a> là máy chủ Model Context Protocol duy nhất trong hạng mục này — mười bảy công cụ chỉ đọc mà agent của bạn gọi cục bộ, cùng chẩn đoán trong trình soạn thảo từ <a href="/pain001-lsp/">pain001-lsp</a> trong khi con người vẫn giám sát.</p>
 </div>
         </article>
       </div>
@@ -214,11 +214,11 @@
             <h2 class="footer-heading">Tài liệu</h2>
             <ul class="footer-links">
               <li><a href="/vi/try/">Dùng thử trong trình duyệt</a></li>
-              <li><a href="/documentation/">Tài liệu tham chiếu kỹ thuật</a></li>
-              <li><a href="/installation/">Cài đặt &amp; Docker</a></li>
+              <li><a href="/vi/documentation/">Tài liệu tham chiếu kỹ thuật</a></li>
+              <li><a href="/vi/installation/">Cài đặt &amp; Docker</a></li>
               <li><a href="/payments/">Pipeline thanh toán</a></li>
-              <li><a href="/glossary/">Bảng thuật ngữ</a></li>
-              <li><a href="/faqs/">Câu hỏi thường gặp</a></li>
+              <li><a href="/vi/glossary/">Bảng thuật ngữ</a></li>
+              <li><a href="/vi/faqs/">Câu hỏi thường gặp</a></li>
             </ul>
           </div>
           <div>

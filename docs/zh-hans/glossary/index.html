@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta itemprop="datePublished" content="Sun, 26 Jul 2026 08:00:00 +0000" id="date" />
+    <meta itemprop="dateModified" content="Sun, 26 Jul 2026 08:00:00 +0000" id="last-modified" />
+    <title>ISO 20022 支付术语表（通俗解读）</title>
+
+    <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
+<meta name="description" content="pain.001、pacs.008、camt.053、CBPR+、VoP、UETR、混合地址、控制总计——为资金与运营团队而非仅为开发者定义的支付词汇。">
+<meta name="keywords" content="ISO 20022 glossary, pain.001 meaning, pacs.008 vs pain.001, camt.053 definition, CBPR+ meaning, UETR, verification of payee, payments terminology">
+<meta property="og:image" content="https://pain001.com/og/pain001-card.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="An open reference book of ISO 20022 payments terminology, from pain.001 to Verification of Payee, defined in plain English." />
+    <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ISO 20022 支付术语表（通俗解读）">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    
+    
+
+    <link rel="alternate" href="https://pain001.com/zh-hans/glossary/" hreflang="en" />
+    
+    <link rel="icon" type="image/svg+xml" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />
+    <link rel="preload" href="/fonts/source-serif-4-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/_csp/e9d2f9e83d6b47b6.css" integrity="sha384-NgS1FgtNO/+O73jGnYQcFGXyKGAVkFu/W1I8bL4l2QSI+eMJfSMSQrUdf2zJxS34" crossorigin="anonymous">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
+  <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="ISO 20022 支付术语表（通俗解读）">
+<meta property="og:description" content="Home ISO 20022 Payments Glossary in Plain English Glossary ISO 20022 Payments Glossary in Plain English The payments vocabulary in plain English — for the">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pain001.com/zh-hans/glossary/">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ISO 20022 支付术语表（通俗解读）">
+<meta name="twitter:description" content="Home ISO 20022 Payments Glossary in Plain English Glossary ISO 20022 Payments Glossary in Plain English The payments vocabulary in plain English — for the">
+<meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg">
+<link rel="canonical" href="https://pain001.com/zh-hans/glossary/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
+<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"><link rel="alternate" hreflang="en" href="https://pain001.com/glossary/" /><link rel="alternate" hreflang="x-default" href="https://pain001.com/glossary/" /><link rel="alternate" hreflang="ar" href="https://pain001.com/ar/glossary/" /><link rel="alternate" hreflang="bn" href="https://pain001.com/bn/glossary/" /><link rel="alternate" hreflang="cs" href="https://pain001.com/cs/glossary/" /><link rel="alternate" hreflang="de" href="https://pain001.com/de/glossary/" /><link rel="alternate" hreflang="el" href="https://pain001.com/el/glossary/" /><link rel="alternate" hreflang="es" href="https://pain001.com/es/glossary/" /><link rel="alternate" hreflang="fa" href="https://pain001.com/fa/glossary/" /><link rel="alternate" hreflang="fil" href="https://pain001.com/fil/glossary/" /><link rel="alternate" hreflang="fr" href="https://pain001.com/fr/glossary/" /><link rel="alternate" hreflang="ha" href="https://pain001.com/ha/glossary/" /><link rel="alternate" hreflang="he" href="https://pain001.com/he/glossary/" /><link rel="alternate" hreflang="hi" href="https://pain001.com/hi/glossary/" /><link rel="alternate" hreflang="hu" href="https://pain001.com/hu/glossary/" /><link rel="alternate" hreflang="id" href="https://pain001.com/id/glossary/" /><link rel="alternate" hreflang="it" href="https://pain001.com/it/glossary/" /><link rel="alternate" hreflang="ja" href="https://pain001.com/ja/glossary/" /><link rel="alternate" hreflang="ko" href="https://pain001.com/ko/glossary/" /><link rel="alternate" hreflang="mr" href="https://pain001.com/mr/glossary/" /><link rel="alternate" hreflang="ms" href="https://pain001.com/ms/glossary/" /><link rel="alternate" hreflang="nl" href="https://pain001.com/nl/glossary/" /><link rel="alternate" hreflang="pl" href="https://pain001.com/pl/glossary/" /><link rel="alternate" hreflang="pt-BR" href="https://pain001.com/pt-br/glossary/" /><link rel="alternate" hreflang="ro" href="https://pain001.com/ro/glossary/" /><link rel="alternate" hreflang="ru" href="https://pain001.com/ru/glossary/" /><link rel="alternate" hreflang="sv" href="https://pain001.com/sv/glossary/" /><link rel="alternate" hreflang="ta" href="https://pain001.com/ta/glossary/" /><link rel="alternate" hreflang="te" href="https://pain001.com/te/glossary/" /><link rel="alternate" hreflang="th" href="https://pain001.com/th/glossary/" /><link rel="alternate" hreflang="tr" href="https://pain001.com/tr/glossary/" /><link rel="alternate" hreflang="uk" href="https://pain001.com/uk/glossary/" /><link rel="alternate" hreflang="vi" href="https://pain001.com/vi/glossary/" /><link rel="alternate" hreflang="yo" href="https://pain001.com/yo/glossary/" /><link rel="alternate" hreflang="zh-Hant" href="https://pain001.com/zh-hant/glossary/" /></head>
+
+  <body>
+    <a href="#main-content" class="skip-link">跳到主要内容</a>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="ap-nav">
+      <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="切换导航" />
+      <div class="wrap ap-nav-wrap">
+        <a class="ap-brand" href="/" aria-label="Pain001 home">
+          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="" width="26" height="26" />
+          <span>Pain001</span>
+        </a>
+        <nav aria-label="Primary navigation" id="ap-primary-nav">
+          <ul class="ap-menu">
+            <li class="has-sub"><a href="/zh-hans/why/">为何选择 Pain001</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-why" aria-label="切换“为何选择 Pain001”子菜单"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-why" class="ap-sub">
+                <li><a href="/zh-hans/solutions/">适用对象</a></li>
+                <li><a href="/zh-hans/executive-brief/">高管简报</a></li>
+                <li><a href="/competitors-comparison/" hreflang="en">与商业工具对比 (EN)</a></li>
+              </ul>
+            </li>
+            <li><a href="/zh-hans/try/">在线体验</a></li>
+            <li class="has-sub"><a href="/zh-hans/documentation/">文档</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="切换“文档”子菜单"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-docs" class="ap-sub">
+                <li><a href="/zh-hans/installation/">安装 &amp; Docker</a></li>
+                <li><a href="/zh-hans/glossary/">术语表</a></li>
+                <li><a href="/zh-hans/faqs/">常见问题</a></li>
+                <li><a href="/pain002-reason-codes/" hreflang="en">pain.002 原因代码 (EN)</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/#suite-heading">套件</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-suite" aria-label="切换“套件”子菜单"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-suite" class="ap-sub">
+                <li><a href="/pain001-mcp/" hreflang="en">AI 智能体工具 (MCP) (EN)</a></li>
+                <li><a href="/pain001-lsp/" hreflang="en">编辑器集成 (LSP) (EN)</a></li>
+                <li><a href="/pain001-loader-mt101/" hreflang="en">MT101 加载器 (EN)</a></li>
+                <li><a href="/pain001-loader-xlsx/" hreflang="en">Excel 加载器 (EN)</a></li>
+                <li><a href="/architecture-and-patents/" hreflang="en">架构 &amp; 安全 (EN)</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/2026-iso20022-migration-trends/">研究</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-research" aria-label="切换“研究”子菜单"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-research" class="ap-sub">
+                <li><a href="/2026-iso20022-migration-trends/" hreflang="en">2026 年简报 (EN)</a></li>
+                <li><a href="/iso20022-roadmap/" hreflang="en">ISO 20022 路线图 (EN)</a></li>
+                <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/" hreflang="en">跨境指南 (EN)</a></li>
+                <li><a href="/languages/" hreflang="en">提供 34 种语言 (EN)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="ap-nav-right">
+          <button type="button" class="theme-toggle" aria-label="切换到深色主题" data-label-dark="切换到深色主题" data-label-light="切换到浅色主题" aria-pressed="false" title="切换到深色主题">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+          <button type="button" class="ap-search-btn" aria-label="搜索 (Cmd/Ctrl + K)" title="搜索 (⌘K)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <kbd class="ap-search-kbd" aria-hidden="true">⌘K</kbd>
+          </button>
+          <div class="ap-lang" role="group" aria-label="Language">
+            <button type="button" class="ap-lang-toggle" aria-label="更改语言" aria-expanded="false" aria-haspopup="menu" title="更改语言">
+              <span class="ap-lang-globe" aria-hidden="true">🌐</span>
+              <span class="ap-lang-current">ZH</span>
+            </button>
+            <div class="ap-lang-menu" role="menu" hidden>
+              <div class="ap-lang-menu-grid">
+                <a class="ap-lang-item" href="/zh-hans/glossary/" hreflang="en" lang="en" role="menuitem"><span aria-hidden="true">🇬🇧</span> English</a>
+                <a class="ap-lang-item" href="/fr/glossary/" hreflang="fr" lang="fr" role="menuitem"><span aria-hidden="true">🇫🇷</span> Français</a>
+                <a class="ap-lang-item" href="/de/glossary/" hreflang="de" lang="de" role="menuitem"><span aria-hidden="true">🇩🇪</span> Deutsch</a>
+                <a class="ap-lang-item" href="/es/glossary/" hreflang="es" lang="es" role="menuitem"><span aria-hidden="true">🇪🇸</span> Español</a>
+                <a class="ap-lang-item" href="/it/glossary/" hreflang="it" lang="it" role="menuitem"><span aria-hidden="true">🇮🇹</span> Italiano</a>
+                <a class="ap-lang-item" href="/pt-br/glossary/" hreflang="pt-BR" lang="pt-BR" role="menuitem"><span aria-hidden="true">🇧🇷</span> Português</a>
+                <a class="ap-lang-item" href="/nl/glossary/" hreflang="nl" lang="nl" role="menuitem"><span aria-hidden="true">🇳🇱</span> Nederlands</a>
+                <a class="ap-lang-item" href="/pl/glossary/" hreflang="pl" lang="pl" role="menuitem"><span aria-hidden="true">🇵🇱</span> Polski</a>
+                <a class="ap-lang-item" href="/sv/glossary/" hreflang="sv" lang="sv" role="menuitem"><span aria-hidden="true">🇸🇪</span> Svenska</a>
+                <a class="ap-lang-item" href="/cs/glossary/" hreflang="cs" lang="cs" role="menuitem"><span aria-hidden="true">🇨🇿</span> Čeština</a>
+                <a class="ap-lang-item" href="/ro/glossary/" hreflang="ro" lang="ro" role="menuitem"><span aria-hidden="true">🇷🇴</span> Română</a>
+                <a class="ap-lang-item" href="/hu/glossary/" hreflang="hu" lang="hu" role="menuitem"><span aria-hidden="true">🇭🇺</span> Magyar</a>
+                <a class="ap-lang-item" href="/el/glossary/" hreflang="el" lang="el" role="menuitem"><span aria-hidden="true">🇬🇷</span> Ελληνικά</a>
+                <a class="ap-lang-item" href="/tr/glossary/" hreflang="tr" lang="tr" role="menuitem"><span aria-hidden="true">🇹🇷</span> Türkçe</a>
+                <a class="ap-lang-item" href="/ru/glossary/" hreflang="ru" lang="ru" role="menuitem"><span aria-hidden="true">🇷🇺</span> Русский</a>
+                <a class="ap-lang-item" href="/uk/glossary/" hreflang="uk" lang="uk" role="menuitem"><span aria-hidden="true">🇺🇦</span> Українська</a>
+                <a class="ap-lang-item" href="/ar/glossary/" hreflang="ar" lang="ar" role="menuitem"><span aria-hidden="true">🇸🇦</span> العربية</a>
+                <a class="ap-lang-item" href="/he/glossary/" hreflang="he" lang="he" role="menuitem"><span aria-hidden="true">🇮🇱</span> עברית</a>
+                <a class="ap-lang-item" href="/fa/glossary/" hreflang="fa" lang="fa" role="menuitem"><span aria-hidden="true">🇮🇷</span> فارسی</a>
+                <a class="ap-lang-item" href="/hi/glossary/" hreflang="hi" lang="hi" role="menuitem"><span aria-hidden="true">🇮🇳</span> हिन्दी</a>
+                <a class="ap-lang-item" href="/bn/glossary/" hreflang="bn" lang="bn" role="menuitem"><span aria-hidden="true">🇧🇩</span> বাংলা</a>
+                <a class="ap-lang-item" href="/ta/glossary/" hreflang="ta" lang="ta" role="menuitem"><span aria-hidden="true">🇮🇳</span> தமிழ்</a>
+                <a class="ap-lang-item" href="/te/glossary/" hreflang="te" lang="te" role="menuitem"><span aria-hidden="true">🇮🇳</span> తెలుగు</a>
+                <a class="ap-lang-item" href="/mr/glossary/" hreflang="mr" lang="mr" role="menuitem"><span aria-hidden="true">🇮🇳</span> मराठी</a>
+                <a class="ap-lang-item" href="/th/glossary/" hreflang="th" lang="th" role="menuitem"><span aria-hidden="true">🇹🇭</span> ไทย</a>
+                <a class="ap-lang-item" href="/vi/glossary/" hreflang="vi" lang="vi" role="menuitem"><span aria-hidden="true">🇻🇳</span> Tiếng Việt</a>
+                <a class="ap-lang-item" href="/id/glossary/" hreflang="id" lang="id" role="menuitem"><span aria-hidden="true">🇮🇩</span> Indonesia</a>
+                <a class="ap-lang-item" href="/ms/glossary/" hreflang="ms" lang="ms" role="menuitem"><span aria-hidden="true">🇲🇾</span> Melayu</a>
+                <a class="ap-lang-item" href="/fil/glossary/" hreflang="fil" lang="fil" role="menuitem"><span aria-hidden="true">🇵🇭</span> Filipino</a>
+                <a class="ap-lang-item" href="/ja/glossary/" hreflang="ja" lang="ja" role="menuitem"><span aria-hidden="true">🇯🇵</span> 日本語</a>
+                <a class="ap-lang-item" href="/ko/glossary/" hreflang="ko" lang="ko" role="menuitem"><span aria-hidden="true">🇰🇷</span> 한국어</a>
+                <a class="ap-lang-item" href="/zh-hans/glossary/" hreflang="zh-Hans" lang="zh-Hans" role="menuitem"><span aria-hidden="true">🇨🇳</span> 简体中文</a>
+                <a class="ap-lang-item" href="/zh-hant/glossary/" hreflang="zh-Hant" lang="zh-Hant" role="menuitem"><span aria-hidden="true">🇹🇼</span> 繁體中文</a>
+                <a class="ap-lang-item" href="/ha/glossary/" hreflang="ha" lang="ha" role="menuitem"><span aria-hidden="true">🇳🇬</span> Hausa</a>
+                <a class="ap-lang-item" href="/yo/glossary/" hreflang="yo" lang="yo" role="menuitem"><span aria-hidden="true">🇳🇬</span> Yorùbá</a>
+              </div>
+            </div>
+          </div>
+          <a class="ap-cta-mini" href="/zh-hans/try/">试用演示&nbsp;&rsaquo;</a>
+          <label class="ap-burger" for="ap-menu-toggle" aria-hidden="true"><span class="ap-burger-icon">☰</span></label>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <header class="page-header">
+        <div class="wrap">
+          <nav class="breadcrumb" aria-label="面包屑导航">
+            <ol>
+              <li><a href="/">首页</a></li>
+              <li aria-current="page">ISO 20022 支付术语表（通俗解读）</li>
+            </ol>
+          </nav>
+          <p class="eyebrow">术语表</p>
+          <h1 class="page-title">ISO 20022 支付术语表（通俗解读）</h1>
+          <p class="deck">通俗易懂的支付词汇——写给在文件上签字的人，而不仅是生成文件的人。</p>
+          <div class="article-meta"><span>3 分钟阅读</span>
+            <span>最近审核 <time datetime="2026-07-26">2026-07-26</time></span>
+          </div>
+        </div>
+      </header>
+
+      <div class="wrap content-shell">
+        <article class="content-body"><nav class="article-toc" aria-label="目录"><h2>目录</h2><ol><li><a href="#messages">报文</a></li><li><a href="#schemes-and-rulebooks">方案与规则手册</a></li><li><a href="#identifiers-and-data">标识符与数据</a></li><li><a href="#tooling-terms-used-on-this-site">本站使用的工具术语</a></li></ol></nav>
+          <div lang="en"><p>对本站及您银行渠道文档中出现的术语给出通俗定义。首先写给资金与运营团队，其次才是工程师。</p>
+<hr />
+<h2 id="messages">报文<a class="heading-anchor" href="#messages" aria-label="跳转到章节：报文">#</a></h2>
+<p><strong>pain.001——客户贷记转账发起（Customer Credit Transfer Initiation）。</strong>客户发送给银行、用以发起一笔或多笔贷记转账的 XML 报文。“pain”系列表示<em>支付发起</em>（payment initiation）；<code>.001</code> 是报文编号；末尾的版本号（<code>.001.09</code>）锁定具体模式。</p>
+<p><strong>pain.002——客户支付状态报告（Customer Payment Status Report）。</strong>银行对您的 <code>pain.001</code> 或 <code>pain.008</code> 的答复：接受、部分接受或拒绝，并附每笔交易的 ISO 原因代码。</p>
+<p><strong>pain.008——客户直接借记发起（Customer Direct Debit Initiation）。</strong><code>pain.001</code> 的收款侧孪生报文：您根据扣款授权收取他人欠您的资金，而非把资金付出去。</p>
+<p><strong>pacs.008 / pacs.009。</strong>您的指令被银行接受后转化成的银行间清算报文。企业从不编制这些报文；它们由银行之间交换。</p>
+<p><strong>camt.052 / camt.053 / camt.054。</strong>账户报告：分别是日间报告、日终对账单和借记/贷记通知。<code>camt.053</code> 是对账团队每天早晨处理的内容。</p>
+<p><strong>MT101。</strong>被 <code>pain.001</code> 取代的传统 SWIFT“转账请求”文本报文。银行间 MT101 中转将于 2026 年 11 月 14 日停用，由 <code>pain.001.001.09</code> 接替；企业对银行的 MT101 是否延续完全取决于各银行的自主决定。</p>
+<h2 id="schemes-and-rulebooks">方案与规则手册<a class="heading-anchor" href="#schemes-and-rulebooks" aria-label="跳转到章节：方案与规则手册">#</a></h2>
+<p><strong>SEPA SCT / SCT Inst。</strong>由欧洲支付理事会规则手册管辖的欧元贷记转账方案（标准与即时）。即时转账全天候在数秒内完成清算。</p>
+<p><strong>SEPA SDD Core / B2B。</strong>欧元直接借记方案——Core 面向消费者（享有退款权），B2B 面向企业（无退款权，授权检查更严格）。</p>
+<p><strong>CBPR+。</strong>Cross-Border Payments and Reporting Plus（跨境支付与报告增强版）：为 SWIFT 代理行业务对 ISO 20022 报文进行裁剪的使用指南。人们所说的“SWIFT ISO 20022 迁移”，指的就是 CBPR+。</p>
+<p><strong>HVPS+。</strong>面向大额支付系统（T2、CHAPS、Fedwire 及同类系统）的对应裁剪规范。</p>
+<p><strong>CGI-MP。</strong>Common Global Implementation — Market Practice（共同全球实施——市场实践）：致力于统一企业在各银行间使用 <code>pain</code> 报文方式的组织，使一种文件格式可服务多家银行合作伙伴。</p>
+<p><strong>收款人核验（Verification of Payee，VoP）。</strong>自 2025 年 10 月 9 日起适用于所有 SEPA 贷记转账的欧盟强制性姓名/IBAN 匹配检查。由 PSP 在执行时完成；收款人数据是否干净决定了能否匹配。</p>
+<h2 id="identifiers-and-data">标识符与数据<a class="heading-anchor" href="#identifiers-and-data" aria-label="跳转到章节：标识符与数据">#</a></h2>
+<p><strong>IBAN。</strong>国际银行账号（ISO 13616），通过 mod-97 校验和自我校验——因此哪怕只有一位数字换位，也能在提交<em>之前</em>被发现。</p>
+<p><strong>BIC / BICFI。</strong>金融机构的 ISO 9362 业务标识代码。该 XML 元素在 <code>pain.001.001.03</code> 中是 <code><BIC></code>，但从版本 9 起改为 <code><BICFI></code>——这一改名在版本升级中造成过真实的拒收。</p>
+<p><strong>LEI。</strong>法人识别编码（ISO 17442）——20 位全球企业标识符。目前已有超过 300 万个处于活跃状态，且监管机构在支付中日益强制要求使用。</p>
+<p><strong>UETR。</strong>端到端唯一交易参考号（Unique End-to-end Transaction Reference）——让一笔支付可在代理行链条中被全程追踪的 UUID（SWIFT gpi）。</p>
+<p><strong>结构化 / 混合地址。</strong>以独立 XML 元素（街道、城镇、邮编、国家）表示的邮政地址，相对于自由文本行。自 2026 年 11 月 14 日起，CBPR+ 拒绝完全非结构化的地址；<em>混合</em>形式——结构化的城镇与国家，外加最多两行 70 字符的地址行——仍然有效。</p>
+<p><strong>NbOfTxs / CtrlSum。</strong>组头控制总计：交易笔数与金额合计。银行会重新计算它们；如果您的数字对不上，文件就会被退回。Pain001 始终从已校验的记录推导这两个值。</p>
+<p><strong>费用承担方。</strong>谁支付手续费：<code>DEBT</code>（付款方）、<code>CRED</code>（收款方）、<code>SHAR</code>（共担）、<code>SLEV</code>（按方案规则）。传统 MT 的 <code>OUR</code>/<code>BEN</code>/<code>SHA</code> 对应前三者。</p>
+<p><strong>汇款信息。</strong>说明“这笔钱是付什么的”的字段——自由文本（140 个字符）或结构化引用。也是对账团队最希望所有人认真填写的字段。</p>
+<h2 id="tooling-terms-used-on-this-site">本站使用的工具术语<a class="heading-anchor" href="#tooling-terms-used-on-this-site" aria-label="跳转到章节：本站使用的工具术语">#</a></h2>
+<p><strong>XSD 校验。</strong>根据官方 ISO 20022 模式定义检查 XML。Pain001 将其作为写出任何文件前的硬性门禁。</p>
+<p><strong>MCP——模型上下文协议（Model Context Protocol）。</strong>AI 助手调用外部工具所依据的开放标准。<a href="/pain001-mcp/"><code>pain001-mcp</code></a> 通过本地 stdio 向任何 MCP 客户端提供 17 个支付工具。</p>
+<p><strong>LSP——语言服务器协议（Language Server Protocol）。</strong>支撑 IDE 诊断的编辑器集成标准。<a href="/pain001-lsp/"><code>pain001-lsp</code></a> 借助它在您输入的同时校验支付文件。</p>
+<p><strong>SBOM。</strong>软件物料清单（Software Bill of Materials）——机器可读的发布依赖清单，Pain001 核心发布采用 CycloneDX 格式生成。</p>
+<hr />
+<p>缺少某个术语？<a href="https://github.com/sebastienrousseau/pain001/issues">提交建议</a>——这份术语表随着人们实际提出的问题不断成长。</p>
+</div>
+        </article>
+      </div>
+    </main>
+
+    <button class="totop" id="toTop" type="button" hidden aria-label="Back to top">&uarr;</button>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-brand">Pain001</p>
+            <p class="footer-tagline">开源 ISO 20022 支付发起。经校验的文件、本地处理、无锁定。</p>
+          </div>
+          <div>
+            <h2 class="footer-heading">文档</h2>
+            <ul class="footer-links">
+              <li><a href="/zh-hans/try/">在浏览器中试用</a></li>
+              <li><a href="/zh-hans/documentation/">技术参考</a></li>
+              <li><a href="/zh-hans/installation/">安装 &amp; Docker</a></li>
+              <li><a href="/payments/">支付流水线</a></li>
+              <li><a href="/zh-hans/glossary/">术语表</a></li>
+              <li><a href="/zh-hans/faqs/">常见问题</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">生态系统</h2>
+            <ul class="footer-links">
+              <li><a href="/pain001-mcp/">pain001-mcp · AI 智能体</a></li>
+              <li><a href="/pain001-lsp/">pain001-lsp · 编辑器</a></li>
+              <li><a href="/pain001-loader-mt101/">MT101 加载器</a></li>
+              <li><a href="/pain001-loader-xlsx/">Excel 加载器</a></li>
+              <li><a href="https://github.com/sebastienrousseau/pain001" rel="external">GitHub</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">研究与信任</h2>
+            <ul class="footer-links">
+              <li><a href="/zh-hans/why/">为何选择 Pain001</a></li>
+              <li><a href="/zh-hans/executive-brief/">高管简报</a></li>
+              <li><a href="/iso20022-roadmap/">ISO 20022 路线图</a></li>
+              <li><a href="/2026-iso20022-migration-trends/">2026 年简报</a></li>
+              <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/">跨境指南</a></li>
+              <li><a href="/competitors-comparison/">与商业工具对比</a></li>
+              <li><a href="/architecture-and-patents/">架构 &amp; 专利</a></li>
+              <li><a href="/trust/">信任中心</a></li>
+              <li><a href="/compatibility/">兼容性矩阵</a></li>
+              <li><a href="/security.txt">security.txt</a></li>
+              <li><a href="/sbom.cdx.json">SBOM</a> · <a href="/llms.txt">llms.txt</a> · <a href="/rss.xml">RSS 订阅</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; 2023&ndash;2026 Sebastien Rousseau. Core dual-licensed Apache-2.0 / MIT; companion packages Apache-2.0.</p>
+          <ul aria-label="This overview in other languages">
+            <li><a href="/languages/">本概览提供 34 种语言</a></li>
+          </ul>
+          <ul>
+            <li><a href="/accessibility/">无障碍</a></li>
+            <li><a href="/privacy/">隐私</a></li>
+            <li><a href="/terms/">条款</a></li>
+            <li><a href="/contact/">联系</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://pain001.com/zh-hans/glossary/",
+          "url": "https://pain001.com/zh-hans/glossary/",
+          "name": "ISO 20022 支付术语表（通俗解读）",
+          "description": "pain.001、pacs.008、camt.053、CBPR+、VoP、UETR、混合地址、控制总计——为资金与运营团队而非仅为开发者定义的支付词汇。",
+          "inLanguage": "zh-Hans",
+          "dateModified": "2026-07-26",
+          "isPartOf": { "@id": "https://pain001.com/#website" },
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://pain001.com/" },
+            { "@type": "ListItem", "position": 2, "name": "ISO 20022 支付术语表（通俗解读）" }
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pain001.com/#organization",
+          "name": "Pain001",
+          "url": "https://pain001.com/",
+          "logo": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+          "founder": { "@type": "Person", "name": "Sebastien Rousseau", "url": "https://sebastienrousseau.com" },
+          "sameAs": [
+            "https://github.com/sebastienrousseau/pain001",
+            "https://pypi.org/project/pain001/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pain001.com/#website",
+          "url": "https://pain001.com/",
+          "name": "Pain001",
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        }
+      ]
+    }
+    </script>
+
+    <script src="/_csp/197fcfccbee69bda.js" integrity="sha384-geygAAYoalTqpA6bIgsGUMRQupyTiF/rCnvMiGE5+G0s0ZOYAhHnkhzyMXN9yNxa" crossorigin="anonymous"></script>
+  
+<!-- SSG Search Widget -->
+<div id="ssg-search-widget">
+
+<!-- Search trigger button -->
+<button id="ssg-search-btn" type="button" aria-label="Search">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<span>Search</span>
+<kbd>K</kbd>
+</button>
+<!-- Search modal -->
+<div id="ssg-search-overlay" role="dialog" aria-label="Search">
+<div id="ssg-search-box">
+<div id="ssg-search-header">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<input id="ssg-search-input" type="search" placeholder="Search documentation..." autocomplete="off" aria-label="Search"/>
+</div>
+<div id="ssg-search-results" aria-live="polite"></div>
+<div id="ssg-sr-status" role="status" aria-live="polite" aria-atomic="true"></div>
+<div class="ssg-search-footer"><span><kbd>Esc</kbd> close</span><span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span><span><kbd>Enter</kbd> open</span></div>
+</div>
+</div>
+<script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>

@@ -78,12 +78,12 @@
               </ul>
             </li>
             <li><a href="/ja/try/">ライブで見る</a></li>
-            <li class="has-sub"><a href="/documentation/">ドキュメント</a>
+            <li class="has-sub"><a href="/ja/documentation/">ドキュメント</a>
               <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="「ドキュメント」サブメニューを開閉する"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
               <ul id="sub-docs" class="ap-sub">
-                <li><a href="/installation/" hreflang="en">インストール &amp; Docker (EN)</a></li>
-                <li><a href="/glossary/" hreflang="en">用語集 (EN)</a></li>
-                <li><a href="/faqs/" hreflang="en">よくあるご質問 (EN)</a></li>
+                <li><a href="/ja/installation/">インストール &amp; Docker</a></li>
+                <li><a href="/ja/glossary/">用語集</a></li>
+                <li><a href="/ja/faqs/">よくあるご質問</a></li>
                 <li><a href="/pain002-reason-codes/" hreflang="en">pain.002 理由コード (EN)</a></li>
               </ul>
             </li>
@@ -189,13 +189,13 @@
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="目次"><h2>目次</h2><ol><li><a href="#treasury-finance">トレジャリー&財務</a></li><li><a href="#cfo-board">CFO&取締役会</a></li><li><a href="#payment-operations">ペイメントオペレーション</a></li><li><a href="#engineering-ai">エンジニアリング&AI</a></li></ol></nav>
           <div lang="en"><h2 id="treasury-finance">トレジャリー&財務<a class="heading-anchor" href="#treasury-finance" aria-label="セクションへのリンク:トレジャリー&財務">#</a></h2>
-<p>銀行は、ERPが警告してくれなかった理由でファイルを却下します。IBANの数字の入れ替わり、一致しなくなったコントロールトータル、許容されなくなった住所フォーマットなどです。Pain001は、こうした失敗を提出前、お手元の段階で顕在化させます——すべてのファイルは提出前に銀行の公式ルールブック(ISO 20022 XSD)に照らして証明され、<a href="/payments/">ペイメントライフサイクルガイド</a>は、起票から照合までの間で各チェックがどこに位置するかを示します。用語に馴染みがなければ<a href="/glossary/">用語集</a>からどうぞ。平易な定義は、エンジニアではなく業務側の視点で書かれています。</p>
+<p>銀行は、ERPが警告してくれなかった理由でファイルを却下します。IBANの数字の入れ替わり、一致しなくなったコントロールトータル、許容されなくなった住所フォーマットなどです。Pain001は、こうした失敗を提出前、お手元の段階で顕在化させます——すべてのファイルは提出前に銀行の公式ルールブック(ISO 20022 XSD)に照らして証明され、<a href="/payments/">ペイメントライフサイクルガイド</a>は、起票から照合までの間で各チェックがどこに位置するかを示します。用語に馴染みがなければ<a href="/ja/glossary/">用語集</a>からどうぞ。平易な定義は、エンジニアではなく業務側の視点で書かれています。</p>
 <h2 id="cfo-board">CFO&取締役会<a class="heading-anchor" href="#cfo-board" aria-label="セクションへのリンク:CFO&取締役会">#</a></h2>
 <p>2つの数字が判断の枠組みになります。<strong>2026年11月14日</strong>:非構造化住所を含むクロスボーダー決済がネットワークレベルで却下され始める日です——リスクは銀行接続ではなく、顧客マスターデータの中にあります。<strong>年額€10,000–30,000</strong>:最も近い商用トランスレーションSDKの公表価格であり、対するPain001はオープンライセンスの下、どの規模でも恒久的にゼロです。ガバナンス上の問い——監査可能性、データ所在、サプライチェーンの証拠——には、保証の言葉ではなく成果物でお答えします:公開済みの<a href="/sbom.cdx.json">SBOM</a>、<a href="/security.txt">セキュリティポリシー</a>、そしてお客様のインフラから一切出ない処理です。<a href="/ja/executive-brief/">1ページのエグゼクティブブリーフ</a>は、そのまま転送していただけるように書かれています。</p>
 <h2 id="payment-operations">ペイメントオペレーション<a class="heading-anchor" href="#payment-operations" aria-label="セクションへのリンク:ペイメントオペレーション">#</a></h2>
 <p>皆様の日常はレスポンスファイルの中にあります。Pain001はループを端から端まで閉じます:CIで明確に合否が出る<code>--dry-run</code>の提出前チェック、ルールごとに解説されたスキームルールブック(SEPAおよびクロスボーダー)、返ってきた内容を読み解くための<a href="/pain002-reason-codes/">pain.002理由コードリファレンス</a>、そして銀行のレスポンスやcamt.053ステートメントをパイプラインでルーティングできる構造化データに変換するパーサーです。<a href="/ja/try/">ブラウザデモ</a>は、Pain001が排除する失敗クラスを確認する最速の方法です——ワンクリックの「エラーを挿入」シナリオも含まれます。</p>
 <h2 id="engineering-ai">エンジニアリング&AI<a class="heading-anchor" href="#engineering-ai" aria-label="セクションへのリンク:エンジニアリング&AI">#</a></h2>
-<p>型付きのPython API、意味のある終了コードを返すCLI、RESTマイクロサービス、そしてローダー、バリデーター、スキーム、ライター向けのプラグインポイント——<a href="/documentation/">技術リファレンス</a>がすべてのフラグとエンドポイントを網羅し、コードは行・ブランチカバレッジ100%を厳格なCIゲートとして維持しています。エージェントで構築される場合:<a href="/pain001-mcp/">pain001-mcp</a>はこのカテゴリー唯一のModel Context Protocolサーバーで、エージェントがローカルに呼び出せる17個の読み取り専用ツールを備え、<a href="/pain001-lsp/">pain001-lsp</a>によるエディター診断で人間がループに残ります。</p>
+<p>型付きのPython API、意味のある終了コードを返すCLI、RESTマイクロサービス、そしてローダー、バリデーター、スキーム、ライター向けのプラグインポイント——<a href="/ja/documentation/">技術リファレンス</a>がすべてのフラグとエンドポイントを網羅し、コードは行・ブランチカバレッジ100%を厳格なCIゲートとして維持しています。エージェントで構築される場合:<a href="/pain001-mcp/">pain001-mcp</a>はこのカテゴリー唯一のModel Context Protocolサーバーで、エージェントがローカルに呼び出せる17個の読み取り専用ツールを備え、<a href="/pain001-lsp/">pain001-lsp</a>によるエディター診断で人間がループに残ります。</p>
 </div>
         </article>
       </div>
@@ -214,11 +214,11 @@
             <h2 class="footer-heading">ドキュメント</h2>
             <ul class="footer-links">
               <li><a href="/ja/try/">ブラウザで試す</a></li>
-              <li><a href="/documentation/">技術リファレンス</a></li>
-              <li><a href="/installation/">インストール &amp; Docker</a></li>
+              <li><a href="/ja/documentation/">技術リファレンス</a></li>
+              <li><a href="/ja/installation/">インストール &amp; Docker</a></li>
               <li><a href="/payments/">決済パイプライン</a></li>
-              <li><a href="/glossary/">用語集</a></li>
-              <li><a href="/faqs/">よくあるご質問</a></li>
+              <li><a href="/ja/glossary/">用語集</a></li>
+              <li><a href="/ja/faqs/">よくあるご質問</a></li>
             </ul>
           </div>
           <div>

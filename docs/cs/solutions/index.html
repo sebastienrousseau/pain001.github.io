@@ -78,12 +78,12 @@
               </ul>
             </li>
             <li><a href="/cs/try/">Živá ukázka</a></li>
-            <li class="has-sub"><a href="/documentation/">Dokumentace</a>
+            <li class="has-sub"><a href="/cs/documentation/">Dokumentace</a>
               <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="Přepnout podnabídku Dokumentace"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
               <ul id="sub-docs" class="ap-sub">
-                <li><a href="/installation/" hreflang="en">Instalace &amp; Docker (EN)</a></li>
-                <li><a href="/glossary/" hreflang="en">Slovníček (EN)</a></li>
-                <li><a href="/faqs/" hreflang="en">Časté dotazy (EN)</a></li>
+                <li><a href="/cs/installation/">Instalace &amp; Docker</a></li>
+                <li><a href="/cs/glossary/">Slovníček</a></li>
+                <li><a href="/cs/faqs/">Časté dotazy</a></li>
                 <li><a href="/pain002-reason-codes/" hreflang="en">Kódy důvodů pain.002 (EN)</a></li>
               </ul>
             </li>
@@ -189,13 +189,13 @@
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="Obsah"><h2>Obsah</h2><ol><li><a href="#treasury-finance">Treasury a finance</a></li><li><a href="#cfo-board">CFO a představenstvo</a></li><li><a href="#payment-operations">Platební operace</a></li><li><a href="#engineering-ai">Engineering a AI</a></li></ol></nav>
           <div lang="en"><h2 id="treasury-finance">Treasury a finance<a class="heading-anchor" href="#treasury-finance" aria-label="Odkaz na sekci: Treasury a finance">#</a></h2>
-<p>Vaše banka odmítá soubory z důvodů, na které vás ERP nikdy neupozornil: prohozená číslice v IBAN, kontrolní součet, který přestal sedět, formát adresy, který přestal být přijatelný. Pain001 nechává tato selhání proběhnout raději u vašeho stolu — každý soubor je před odesláním ověřen proti oficiálnímu souboru pravidel banky (ISO 20022 XSD) a <a href="/payments/">průvodce životním cyklem platby</a> ukazuje, kde mezi pořízením a rekonciliací každá kontrola sedí. Pokud je slovník nový, začněte <a href="/glossary/">slovníčkem</a>; srozumitelné definice byly napsány pro vaši stranu stolu, ne pro inženýry.</p>
+<p>Vaše banka odmítá soubory z důvodů, na které vás ERP nikdy neupozornil: prohozená číslice v IBAN, kontrolní součet, který přestal sedět, formát adresy, který přestal být přijatelný. Pain001 nechává tato selhání proběhnout raději u vašeho stolu — každý soubor je před odesláním ověřen proti oficiálnímu souboru pravidel banky (ISO 20022 XSD) a <a href="/payments/">průvodce životním cyklem platby</a> ukazuje, kde mezi pořízením a rekonciliací každá kontrola sedí. Pokud je slovník nový, začněte <a href="/cs/glossary/">slovníčkem</a>; srozumitelné definice byly napsány pro vaši stranu stolu, ne pro inženýry.</p>
 <h2 id="cfo-board">CFO a představenstvo<a class="heading-anchor" href="#cfo-board" aria-label="Odkaz na sekci: CFO a představenstvo">#</a></h2>
 <p>Rozhodnutí rámují dvě čísla. <strong>14. listopad 2026</strong>: datum, od kterého přeshraniční platby s nestrukturovanými adresami začnou být odmítány na úrovni sítě — expozice sídlí ve vašich kmenových datech zákazníků, ne v připojení k bance. <strong>€10,000–30,000 ročně</strong>: veřejná ceníková cena nejbližšího komerčního překladového SDK, proti trvalé nule Pain001 v jakémkoli měřítku pod otevřenými licencemi. Otázky správy a řízení — auditovatelnost, umístění dat, důkazy o dodavatelském řetězci — zodpovídají artefakty, ne ujištění: zveřejněný <a href="/sbom.cdx.json">SBOM</a>, <a href="/security.txt">bezpečnostní politika</a> a zpracování, které nikdy neopustí vaši infrastrukturu. <a href="/cs/executive-brief/">Jednostránkový executive brief</a> je napsán tak, aby se dal přeposlat.</p>
 <h2 id="payment-operations">Platební operace<a class="heading-anchor" href="#payment-operations" aria-label="Odkaz na sekci: Platební operace">#</a></h2>
 <p>Žijete v souborech s odpověďmi. Pain001 uzavírá smyčku od začátku do konce: kontroly před odesláním <code>--dry-run</code>, které v CI čistě projdou, nebo selžou, soubory pravidel schémat (SEPA i přeshraniční) vysvětlené pravidlo za pravidlem, <a href="/pain002-reason-codes/">přehled kódů důvodů pain.002</a> k rozluštění toho, co se vrátilo, a parsery, které převádějí odpovědi bank a výpisy camt.053 na strukturovaná data, jež vaše pipeline umí směrovat. <a href="/cs/try/">Demo v prohlížeči</a> je nejrychlejší způsob, jak vidět třídy chyb, které eliminuje — včetně scénářů "vlož chybu" na jedno kliknutí.</p>
 <h2 id="engineering-ai">Engineering a AI<a class="heading-anchor" href="#engineering-ai" aria-label="Odkaz na sekci: Engineering a AI">#</a></h2>
-<p>Typované API v jazyce Python, CLI se smysluplnými návratovými kódy, mikroslužba REST a body pro zásuvné moduly — loadery, validátory, schémata a writery — <a href="/documentation/">technická reference</a> pokrývá každý přepínač i endpoint a kód drží 100% pokrytí řádků a větví jako tvrdou bránu CI. Pokud stavíte s agenty: <a href="/pain001-mcp/">pain001-mcp</a> je jediný server Model Context Protocol v této kategorii — sedmnáct nástrojů pouze pro čtení, které vaši agenti volají lokálně, s diagnostikou v editoru z <a href="/pain001-lsp/">pain001-lsp</a>, zatímco lidé zůstávají ve smyčce.</p>
+<p>Typované API v jazyce Python, CLI se smysluplnými návratovými kódy, mikroslužba REST a body pro zásuvné moduly — loadery, validátory, schémata a writery — <a href="/cs/documentation/">technická reference</a> pokrývá každý přepínač i endpoint a kód drží 100% pokrytí řádků a větví jako tvrdou bránu CI. Pokud stavíte s agenty: <a href="/pain001-mcp/">pain001-mcp</a> je jediný server Model Context Protocol v této kategorii — sedmnáct nástrojů pouze pro čtení, které vaši agenti volají lokálně, s diagnostikou v editoru z <a href="/pain001-lsp/">pain001-lsp</a>, zatímco lidé zůstávají ve smyčce.</p>
 </div>
         </article>
       </div>
@@ -214,11 +214,11 @@
             <h2 class="footer-heading">Dokumentace</h2>
             <ul class="footer-links">
               <li><a href="/cs/try/">Vyzkoušejte v prohlížeči</a></li>
-              <li><a href="/documentation/">Technická reference</a></li>
-              <li><a href="/installation/">Instalace &amp; Docker</a></li>
+              <li><a href="/cs/documentation/">Technická reference</a></li>
+              <li><a href="/cs/installation/">Instalace &amp; Docker</a></li>
               <li><a href="/payments/">Platební pipeline</a></li>
-              <li><a href="/glossary/">Slovníček</a></li>
-              <li><a href="/faqs/">Časté dotazy</a></li>
+              <li><a href="/cs/glossary/">Slovníček</a></li>
+              <li><a href="/cs/faqs/">Časté dotazy</a></li>
             </ul>
           </div>
           <div>

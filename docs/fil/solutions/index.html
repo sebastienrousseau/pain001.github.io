@@ -78,12 +78,12 @@
               </ul>
             </li>
             <li><a href="/fil/try/">Panoorin nang live</a></li>
-            <li class="has-sub"><a href="/documentation/">Dokumentasyon</a>
+            <li class="has-sub"><a href="/fil/documentation/">Dokumentasyon</a>
               <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="I-toggle ang submenu ng Dokumentasyon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
               <ul id="sub-docs" class="ap-sub">
-                <li><a href="/installation/" hreflang="en">Pag-install &amp; Docker (EN)</a></li>
-                <li><a href="/glossary/" hreflang="en">Glosaryo (EN)</a></li>
-                <li><a href="/faqs/" hreflang="en">Mga FAQ (EN)</a></li>
+                <li><a href="/fil/installation/">Pag-install &amp; Docker</a></li>
+                <li><a href="/fil/glossary/">Glosaryo</a></li>
+                <li><a href="/fil/faqs/">Mga FAQ</a></li>
                 <li><a href="/pain002-reason-codes/" hreflang="en">Mga reason code ng pain.002 (EN)</a></li>
               </ul>
             </li>
@@ -189,13 +189,13 @@
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="Mga Nilalaman"><h2>Mga Nilalaman</h2><ol><li><a href="#treasury-finance">Treasury & pananalapi</a></li><li><a href="#cfo-board">CFO & board</a></li><li><a href="#payment-operations">Payment operations</a></li><li><a href="#engineering-ai">Engineering & AI</a></li></ol></nav>
           <div lang="en"><h2 id="treasury-finance">Treasury & pananalapi<a class="heading-anchor" href="#treasury-finance" aria-label="Link sa seksiyon: Treasury & pananalapi">#</a></h2>
-<p>Tinatanggihan ng inyong bangko ang mga file sa mga dahilang hindi kailanman ibinabala ng inyong ERP: napagpalit na digit ng IBAN, control total na hindi na tugma, format ng address na hindi na tinatanggap. Sa Pain001, nangyayari ang mga pagkabigong iyon sa inyong mesa sa halip — bawat file ay pinapatunayan laban sa opisyal na rulebook ng bangko (ISO 20022 XSD) bago isumite, at ipinapakita ng <a href="/payments/">gabay sa payment lifecycle</a> kung saan nakapuwesto ang bawat pagsusuri sa pagitan ng origination at reconciliation. Magsimula sa <a href="/glossary/">glossary</a> kung bago ang bokabularyo; ang mga malinaw na depinisyon ay isinulat para sa inyong panig ng mesa, hindi para sa mga engineer.</p>
+<p>Tinatanggihan ng inyong bangko ang mga file sa mga dahilang hindi kailanman ibinabala ng inyong ERP: napagpalit na digit ng IBAN, control total na hindi na tugma, format ng address na hindi na tinatanggap. Sa Pain001, nangyayari ang mga pagkabigong iyon sa inyong mesa sa halip — bawat file ay pinapatunayan laban sa opisyal na rulebook ng bangko (ISO 20022 XSD) bago isumite, at ipinapakita ng <a href="/payments/">gabay sa payment lifecycle</a> kung saan nakapuwesto ang bawat pagsusuri sa pagitan ng origination at reconciliation. Magsimula sa <a href="/fil/glossary/">glossary</a> kung bago ang bokabularyo; ang mga malinaw na depinisyon ay isinulat para sa inyong panig ng mesa, hindi para sa mga engineer.</p>
 <h2 id="cfo-board">CFO & board<a class="heading-anchor" href="#cfo-board" aria-label="Link sa seksiyon: CFO & board">#</a></h2>
 <p>Dalawang numero ang bumabalangkas sa desisyon. <strong>14 Nobyembre 2026</strong>: ang petsa kung kailan magsisimulang tanggihan sa antas ng network ang mga cross-border na pagbabayad na may unstructured na address — panganib na nasa inyong customer master data, hindi sa koneksiyon ninyo sa bangko. <strong>€10,000–30,000 bawat taon</strong>: ang pampublikong list price ng pinakamalapit na komersiyal na translation SDK, laban sa permanenteng zero ng Pain001 sa anumang laki sa ilalim ng mga bukas na lisensiya. Ang mga tanong sa pamamahala — auditability, lokalidad ng data, ebidensiya ng supply chain — ay sinasagot ng mga artifact, hindi ng mga pangako: nailathalang <a href="/sbom.cdx.json">SBOM</a>, <a href="/security.txt">patakaran sa seguridad</a>, at pagpoproseso na hindi kailanman umaalis sa inyong imprastraktura. Ang <a href="/fil/executive-brief/">isang-pahinang executive brief</a> ay isinulat upang maipasa.</p>
 <h2 id="payment-operations">Payment operations<a class="heading-anchor" href="#payment-operations" aria-label="Link sa seksiyon: Payment operations">#</a></h2>
 <p>Nabubuhay kayo sa mga response file. Isinasara ng Pain001 ang buong ikot: mga pre-submission na pagsusuring <code>--dry-run</code> na malinis na pumapasa o bumabagsak sa CI, mga rulebook ng scheme (SEPA at cross-border) na ipinapaliwanag panuntunan bawat panuntunan, ang <a href="/pain002-reason-codes/">pain.002 reason-code reference</a> para basahin ang ibinalik, at mga parser na ginagawang structured data ang mga tugon ng bangko at camt.053 statement na kayang iruta ng inyong pipeline. Ang <a href="/fil/try/">browser demo</a> ang pinakamabilis na paraan para makita ang mga uri ng pagkabigong inaalis nito — kasama ang one-click na mga senaryong "maglagay ng error".</p>
 <h2 id="engineering-ai">Engineering & AI<a class="heading-anchor" href="#engineering-ai" aria-label="Link sa seksiyon: Engineering & AI">#</a></h2>
-<p>Isang typed na Python API, CLI na may makabuluhang exit code, REST microservice, at mga plugin point para sa mga loader, validator, scheme, at writer — saklaw ng <a href="/documentation/">teknikal na sanggunian</a> ang bawat flag at endpoint, at ang code ay may 100% line-and-branch coverage bilang mahigpit na CI gate. Kung gumagawa kayo gamit ang mga agent: ang <a href="/pain001-mcp/">pain001-mcp</a> ang nag-iisang Model Context Protocol server sa kategorya — labimpitong read-only na tool na tinatawag ng inyong mga agent nang lokal, may mga editor diagnostic mula sa <a href="/pain001-lsp/">pain001-lsp</a> habang nananatili sa loop ang mga tao.</p>
+<p>Isang typed na Python API, CLI na may makabuluhang exit code, REST microservice, at mga plugin point para sa mga loader, validator, scheme, at writer — saklaw ng <a href="/fil/documentation/">teknikal na sanggunian</a> ang bawat flag at endpoint, at ang code ay may 100% line-and-branch coverage bilang mahigpit na CI gate. Kung gumagawa kayo gamit ang mga agent: ang <a href="/pain001-mcp/">pain001-mcp</a> ang nag-iisang Model Context Protocol server sa kategorya — labimpitong read-only na tool na tinatawag ng inyong mga agent nang lokal, may mga editor diagnostic mula sa <a href="/pain001-lsp/">pain001-lsp</a> habang nananatili sa loop ang mga tao.</p>
 </div>
         </article>
       </div>
@@ -214,11 +214,11 @@
             <h2 class="footer-heading">Dokumentasyon</h2>
             <ul class="footer-links">
               <li><a href="/fil/try/">Subukan sa inyong browser</a></li>
-              <li><a href="/documentation/">Teknikal na sanggunian</a></li>
-              <li><a href="/installation/">Pag-install &amp; Docker</a></li>
+              <li><a href="/fil/documentation/">Teknikal na sanggunian</a></li>
+              <li><a href="/fil/installation/">Pag-install &amp; Docker</a></li>
               <li><a href="/payments/">Mga pipeline ng pagbabayad</a></li>
-              <li><a href="/glossary/">Glosaryo</a></li>
-              <li><a href="/faqs/">Mga FAQ</a></li>
+              <li><a href="/fil/glossary/">Glosaryo</a></li>
+              <li><a href="/fil/faqs/">Mga FAQ</a></li>
             </ul>
           </div>
           <div>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta itemprop="datePublished" content="Sun, 26 Jul 2026 08:00:00 +0000" id="date" />
+    <meta itemprop="dateModified" content="Sun, 26 Jul 2026 08:00:00 +0000" id="last-modified" />
+    <title>Pain001: технічний довідник CLI, Python API та REST</title>
+
+    <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
+<meta name="description" content="Повний довідник pain001 v0.0.56 — підкоманди та прапорці CLI, Python API, REST-ендпоінти під /api/v1, збірники правил схем, нормалізація вхідних даних і архітектура плагінів.">
+<meta name="keywords" content="pain001 documentation, pain.001 CLI, ISO 20022 Python library, pain001 REST API, XSD validation, SEPA scheme validation, pain.002 parser, camt.053 parser">
+<meta property="og:image" content="https://pain001.com/og/pain001-card.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Documentation pages for the Pain001 command-line interface and REST API — the working reference for teams generating ISO 20022 payment files." />
+    <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Pain001: технічний довідник CLI, Python API та REST">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    
+    
+
+    <link rel="alternate" href="https://pain001.com/uk/documentation/" hreflang="en" />
+    
+    <link rel="icon" type="image/svg+xml" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />
+    <link rel="preload" href="/fonts/source-serif-4-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/_csp/e9d2f9e83d6b47b6.css" integrity="sha384-NgS1FgtNO/+O73jGnYQcFGXyKGAVkFu/W1I8bL4l2QSI+eMJfSMSQrUdf2zJxS34" crossorigin="anonymous">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
+  <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="Pain001: технічний довідник CLI, Python API та REST">
+<meta property="og:description" content="Home Pain001 Technical Reference: CLI, Python API and REST Reference Pain001 Technical Reference: CLI, Python API and REST Every flag, endpoint, and behaviour">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pain001.com/uk/documentation/">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pain001: технічний довідник CLI, Python API та REST">
+<meta name="twitter:description" content="Home Pain001 Technical Reference: CLI, Python API and REST Reference Pain001 Technical Reference: CLI, Python API and REST Every flag, endpoint, and behaviour">
+<meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg">
+<link rel="canonical" href="https://pain001.com/uk/documentation/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
+<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"><link rel="alternate" hreflang="en" href="https://pain001.com/documentation/" /><link rel="alternate" hreflang="x-default" href="https://pain001.com/documentation/" /><link rel="alternate" hreflang="ar" href="https://pain001.com/ar/documentation/" /><link rel="alternate" hreflang="bn" href="https://pain001.com/bn/documentation/" /><link rel="alternate" hreflang="cs" href="https://pain001.com/cs/documentation/" /><link rel="alternate" hreflang="de" href="https://pain001.com/de/documentation/" /><link rel="alternate" hreflang="el" href="https://pain001.com/el/documentation/" /><link rel="alternate" hreflang="es" href="https://pain001.com/es/documentation/" /><link rel="alternate" hreflang="fa" href="https://pain001.com/fa/documentation/" /><link rel="alternate" hreflang="fil" href="https://pain001.com/fil/documentation/" /><link rel="alternate" hreflang="fr" href="https://pain001.com/fr/documentation/" /><link rel="alternate" hreflang="ha" href="https://pain001.com/ha/documentation/" /><link rel="alternate" hreflang="he" href="https://pain001.com/he/documentation/" /><link rel="alternate" hreflang="hi" href="https://pain001.com/hi/documentation/" /><link rel="alternate" hreflang="hu" href="https://pain001.com/hu/documentation/" /><link rel="alternate" hreflang="id" href="https://pain001.com/id/documentation/" /><link rel="alternate" hreflang="it" href="https://pain001.com/it/documentation/" /><link rel="alternate" hreflang="ja" href="https://pain001.com/ja/documentation/" /><link rel="alternate" hreflang="ko" href="https://pain001.com/ko/documentation/" /><link rel="alternate" hreflang="mr" href="https://pain001.com/mr/documentation/" /><link rel="alternate" hreflang="ms" href="https://pain001.com/ms/documentation/" /><link rel="alternate" hreflang="nl" href="https://pain001.com/nl/documentation/" /><link rel="alternate" hreflang="pl" href="https://pain001.com/pl/documentation/" /><link rel="alternate" hreflang="pt-BR" href="https://pain001.com/pt-br/documentation/" /><link rel="alternate" hreflang="ro" href="https://pain001.com/ro/documentation/" /><link rel="alternate" hreflang="ru" href="https://pain001.com/ru/documentation/" /><link rel="alternate" hreflang="sv" href="https://pain001.com/sv/documentation/" /><link rel="alternate" hreflang="ta" href="https://pain001.com/ta/documentation/" /><link rel="alternate" hreflang="te" href="https://pain001.com/te/documentation/" /><link rel="alternate" hreflang="th" href="https://pain001.com/th/documentation/" /><link rel="alternate" hreflang="tr" href="https://pain001.com/tr/documentation/" /><link rel="alternate" hreflang="vi" href="https://pain001.com/vi/documentation/" /><link rel="alternate" hreflang="yo" href="https://pain001.com/yo/documentation/" /><link rel="alternate" hreflang="zh-Hans" href="https://pain001.com/zh-hans/documentation/" /><link rel="alternate" hreflang="zh-Hant" href="https://pain001.com/zh-hant/documentation/" /></head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Перейти до основного вмісту</a>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="ap-nav">
+      <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Перемкнути навігацію" />
+      <div class="wrap ap-nav-wrap">
+        <a class="ap-brand" href="/" aria-label="Pain001 home">
+          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="" width="26" height="26" />
+          <span>Pain001</span>
+        </a>
+        <nav aria-label="Primary navigation" id="ap-primary-nav">
+          <ul class="ap-menu">
+            <li class="has-sub"><a href="/uk/why/">Чому Pain001</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-why" aria-label="Розгорнути або згорнути підменю «Чому Pain001»"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-why" class="ap-sub">
+                <li><a href="/uk/solutions/">Для кого це</a></li>
+                <li><a href="/uk/executive-brief/">Огляд для керівництва</a></li>
+                <li><a href="/competitors-comparison/" hreflang="en">Порівняння з комерційними інструментами (EN)</a></li>
+              </ul>
+            </li>
+            <li><a href="/uk/try/">Дивитися наживо</a></li>
+            <li class="has-sub"><a href="/uk/documentation/">Документація</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="Розгорнути або згорнути підменю «Документація»"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-docs" class="ap-sub">
+                <li><a href="/uk/installation/">Встановлення &amp; Docker</a></li>
+                <li><a href="/uk/glossary/">Глосарій</a></li>
+                <li><a href="/uk/faqs/">Поширені запитання</a></li>
+                <li><a href="/pain002-reason-codes/" hreflang="en">Коди причин pain.002 (EN)</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/#suite-heading">Пакет</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-suite" aria-label="Розгорнути або згорнути підменю «Набір інструментів»"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-suite" class="ap-sub">
+                <li><a href="/pain001-mcp/" hreflang="en">Інструменти для ШІ-агентів (MCP) (EN)</a></li>
+                <li><a href="/pain001-lsp/" hreflang="en">Інтеграція з редакторами (LSP) (EN)</a></li>
+                <li><a href="/pain001-loader-mt101/" hreflang="en">Завантажувач MT101 (EN)</a></li>
+                <li><a href="/pain001-loader-xlsx/" hreflang="en">Завантажувач Excel (EN)</a></li>
+                <li><a href="/architecture-and-patents/" hreflang="en">Архітектура &amp; безпека (EN)</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/2026-iso20022-migration-trends/">Дослідження</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-research" aria-label="Розгорнути або згорнути підменю «Дослідження»"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-research" class="ap-sub">
+                <li><a href="/2026-iso20022-migration-trends/" hreflang="en">Брифінг 2026 року (EN)</a></li>
+                <li><a href="/iso20022-roadmap/" hreflang="en">Дорожня карта ISO 20022 (EN)</a></li>
+                <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/" hreflang="en">Посібник із транскордонних платежів (EN)</a></li>
+                <li><a href="/languages/" hreflang="en">34 мовами (EN)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="ap-nav-right">
+          <button type="button" class="theme-toggle" aria-label="Перемкнути на темну тему" data-label-dark="Перемкнути на темну тему" data-label-light="Перемкнути на світлу тему" aria-pressed="false" title="Перемкнути на темну тему">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+          <button type="button" class="ap-search-btn" aria-label="Пошук (Cmd/Ctrl + K)" title="Пошук (⌘K)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <kbd class="ap-search-kbd" aria-hidden="true">⌘K</kbd>
+          </button>
+          <div class="ap-lang" role="group" aria-label="Language">
+            <button type="button" class="ap-lang-toggle" aria-label="Змінити мову" aria-expanded="false" aria-haspopup="menu" title="Змінити мову">
+              <span class="ap-lang-globe" aria-hidden="true">🌐</span>
+              <span class="ap-lang-current">UK</span>
+            </button>
+            <div class="ap-lang-menu" role="menu" hidden>
+              <div class="ap-lang-menu-grid">
+                <a class="ap-lang-item" href="/uk/documentation/" hreflang="en" lang="en" role="menuitem"><span aria-hidden="true">🇬🇧</span> English</a>
+                <a class="ap-lang-item" href="/fr/documentation/" hreflang="fr" lang="fr" role="menuitem"><span aria-hidden="true">🇫🇷</span> Français</a>
+                <a class="ap-lang-item" href="/de/documentation/" hreflang="de" lang="de" role="menuitem"><span aria-hidden="true">🇩🇪</span> Deutsch</a>
+                <a class="ap-lang-item" href="/es/documentation/" hreflang="es" lang="es" role="menuitem"><span aria-hidden="true">🇪🇸</span> Español</a>
+                <a class="ap-lang-item" href="/it/documentation/" hreflang="it" lang="it" role="menuitem"><span aria-hidden="true">🇮🇹</span> Italiano</a>
+                <a class="ap-lang-item" href="/pt-br/documentation/" hreflang="pt-BR" lang="pt-BR" role="menuitem"><span aria-hidden="true">🇧🇷</span> Português</a>
+                <a class="ap-lang-item" href="/nl/documentation/" hreflang="nl" lang="nl" role="menuitem"><span aria-hidden="true">🇳🇱</span> Nederlands</a>
+                <a class="ap-lang-item" href="/pl/documentation/" hreflang="pl" lang="pl" role="menuitem"><span aria-hidden="true">🇵🇱</span> Polski</a>
+                <a class="ap-lang-item" href="/sv/documentation/" hreflang="sv" lang="sv" role="menuitem"><span aria-hidden="true">🇸🇪</span> Svenska</a>
+                <a class="ap-lang-item" href="/cs/documentation/" hreflang="cs" lang="cs" role="menuitem"><span aria-hidden="true">🇨🇿</span> Čeština</a>
+                <a class="ap-lang-item" href="/ro/documentation/" hreflang="ro" lang="ro" role="menuitem"><span aria-hidden="true">🇷🇴</span> Română</a>
+                <a class="ap-lang-item" href="/hu/documentation/" hreflang="hu" lang="hu" role="menuitem"><span aria-hidden="true">🇭🇺</span> Magyar</a>
+                <a class="ap-lang-item" href="/el/documentation/" hreflang="el" lang="el" role="menuitem"><span aria-hidden="true">🇬🇷</span> Ελληνικά</a>
+                <a class="ap-lang-item" href="/tr/documentation/" hreflang="tr" lang="tr" role="menuitem"><span aria-hidden="true">🇹🇷</span> Türkçe</a>
+                <a class="ap-lang-item" href="/ru/documentation/" hreflang="ru" lang="ru" role="menuitem"><span aria-hidden="true">🇷🇺</span> Русский</a>
+                <a class="ap-lang-item" href="/uk/documentation/" hreflang="uk" lang="uk" role="menuitem"><span aria-hidden="true">🇺🇦</span> Українська</a>
+                <a class="ap-lang-item" href="/ar/documentation/" hreflang="ar" lang="ar" role="menuitem"><span aria-hidden="true">🇸🇦</span> العربية</a>
+                <a class="ap-lang-item" href="/he/documentation/" hreflang="he" lang="he" role="menuitem"><span aria-hidden="true">🇮🇱</span> עברית</a>
+                <a class="ap-lang-item" href="/fa/documentation/" hreflang="fa" lang="fa" role="menuitem"><span aria-hidden="true">🇮🇷</span> فارسی</a>
+                <a class="ap-lang-item" href="/hi/documentation/" hreflang="hi" lang="hi" role="menuitem"><span aria-hidden="true">🇮🇳</span> हिन्दी</a>
+                <a class="ap-lang-item" href="/bn/documentation/" hreflang="bn" lang="bn" role="menuitem"><span aria-hidden="true">🇧🇩</span> বাংলা</a>
+                <a class="ap-lang-item" href="/ta/documentation/" hreflang="ta" lang="ta" role="menuitem"><span aria-hidden="true">🇮🇳</span> தமிழ்</a>
+                <a class="ap-lang-item" href="/te/documentation/" hreflang="te" lang="te" role="menuitem"><span aria-hidden="true">🇮🇳</span> తెలుగు</a>
+                <a class="ap-lang-item" href="/mr/documentation/" hreflang="mr" lang="mr" role="menuitem"><span aria-hidden="true">🇮🇳</span> मराठी</a>
+                <a class="ap-lang-item" href="/th/documentation/" hreflang="th" lang="th" role="menuitem"><span aria-hidden="true">🇹🇭</span> ไทย</a>
+                <a class="ap-lang-item" href="/vi/documentation/" hreflang="vi" lang="vi" role="menuitem"><span aria-hidden="true">🇻🇳</span> Tiếng Việt</a>
+                <a class="ap-lang-item" href="/id/documentation/" hreflang="id" lang="id" role="menuitem"><span aria-hidden="true">🇮🇩</span> Indonesia</a>
+                <a class="ap-lang-item" href="/ms/documentation/" hreflang="ms" lang="ms" role="menuitem"><span aria-hidden="true">🇲🇾</span> Melayu</a>
+                <a class="ap-lang-item" href="/fil/documentation/" hreflang="fil" lang="fil" role="menuitem"><span aria-hidden="true">🇵🇭</span> Filipino</a>
+                <a class="ap-lang-item" href="/ja/documentation/" hreflang="ja" lang="ja" role="menuitem"><span aria-hidden="true">🇯🇵</span> 日本語</a>
+                <a class="ap-lang-item" href="/ko/documentation/" hreflang="ko" lang="ko" role="menuitem"><span aria-hidden="true">🇰🇷</span> 한국어</a>
+                <a class="ap-lang-item" href="/zh-hans/documentation/" hreflang="zh-Hans" lang="zh-Hans" role="menuitem"><span aria-hidden="true">🇨🇳</span> 简体中文</a>
+                <a class="ap-lang-item" href="/zh-hant/documentation/" hreflang="zh-Hant" lang="zh-Hant" role="menuitem"><span aria-hidden="true">🇹🇼</span> 繁體中文</a>
+                <a class="ap-lang-item" href="/ha/documentation/" hreflang="ha" lang="ha" role="menuitem"><span aria-hidden="true">🇳🇬</span> Hausa</a>
+                <a class="ap-lang-item" href="/yo/documentation/" hreflang="yo" lang="yo" role="menuitem"><span aria-hidden="true">🇳🇬</span> Yorùbá</a>
+              </div>
+            </div>
+          </div>
+          <a class="ap-cta-mini" href="/uk/try/">Спробувати демо&nbsp;&rsaquo;</a>
+          <label class="ap-burger" for="ap-menu-toggle" aria-hidden="true"><span class="ap-burger-icon">☰</span></label>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <header class="page-header">
+        <div class="wrap">
+          <nav class="breadcrumb" aria-label="Навігаційний ланцюжок">
+            <ol>
+              <li><a href="/">Головна</a></li>
+              <li aria-current="page">Pain001: технічний довідник CLI, Python API та REST</li>
+            </ol>
+          </nav>
+          <p class="eyebrow">Довідник</p>
+          <h1 class="page-title">Pain001: технічний довідник CLI, Python API та REST</h1>
+          <p class="deck">Кожен прапорець, ендпоінт і поведінка pain001 v0.0.56 — узяті з випущеного коду, а не з планів.</p>
+          <div class="article-meta"><span>4 хв читання</span>
+            <span>Остання перевірка <time datetime="2026-07-26">2026-07-26</time></span>
+          </div>
+        </div>
+      </header>
+
+      <div class="wrap content-shell">
+        <article class="content-body"><nav class="article-toc" aria-label="Зміст"><h2>Зміст</h2><ol><li><a href="#1-command-line-interface">Інтерфейс командного рядка</a></li><li><a href="#2-python-api">Python API</a></li><li><a href="#3-rest-microservice">REST-мікросервіс</a></li><li><a href="#4-input-normalisation">Нормалізація вхідних даних</a></li><li><a href="#5-plugin-architecture">Архітектура плагінів</a></li><li><a href="#6-quality-gates">Контроль якості</a></li></ol></nav>
+          <div lang="en"><p>Цей довідник описує інтерфейс командного рядка, Python API, REST-мікросервіс і конвеєр валідації для <strong>pain001 v0.0.56</strong>. Кожен прапорець, ендпоінт і поведінка, наведені тут, узяті з випущеного коду, а не з планів.</p>
+<p>Pain001 підтримує <strong>11 визначень повідомлень ISO 20022</strong>: від <code>pain.001.001.03</code> до <code>pain.001.001.12</code> (Customer Credit Transfer Initiation, десять версій) та <code>pain.008.001.02</code> (Customer Direct Debit Initiation).</p>
+<hr />
+<h2 id="1-command-line-interface">1. Інтерфейс командного рядка<a class="heading-anchor" href="#1-command-line-interface" aria-label="Посилання на розділ: 1. Інтерфейс командного рядка">#</a></h2>
+<p>Виконуваний файл <code>pain001</code> групує функціональність за підкомандами. Запуск лише з прапорцями генерації неявно викликає <code>generate</code>, тому наявна автоматизація продовжує працювати.</p>
+<div class="table-responsive"><table class="table">
+<thead>
+<tr>
+<th>Підкоманда</th>
+<th>Призначення</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>generate</code></td>
+<td data-label="Purpose" class="text-left">Перетворює файл даних на перевірений за схемою XML ISO 20022 (команда за замовчуванням).</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>validate</code></td>
+<td data-label="Purpose" class="text-left">Перевіряє вхідні дані без запису XML.</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>versions [--json]</code></td>
+<td data-label="Purpose" class="text-left">Виводить усі 11 підтримуваних визначень повідомлень.</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>inspect <type> [--json]</code></td>
+<td data-label="Purpose" class="text-left">Показує обов'язкові та необов'язкові поля для типу повідомлення.</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>init <type> [-o DIR]</code></td>
+<td data-label="Purpose" class="text-left">Створює стартовий CSV-шаблон для типу повідомлення.</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>serve [--host] [--port] [--reload]</code></td>
+<td data-label="Purpose" class="text-left">Запускає REST-мікросервіс на FastAPI (потрібна екстра <code>api</code>).</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>mcp</code></td>
+<td data-label="Purpose" class="text-left">Запускає вбудований сервер Model Context Protocol (5 інструментів; повний сервер із 17 інструментами постачається як <a href="/pain001-mcp/"><code>pain001-mcp</code></a>).</td>
+</tr>
+<tr>
+<td data-label="Subcommand" class="text-left"><code>plugins list / show / disable</code></td>
+<td data-label="Purpose" class="text-left">Перегляд і керування виявленими плагінами завантажувачів, валідаторів, схем і запису.</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Опції <code>generate</code></h3>
+<table>
+<thead>
+<tr>
+<th>Прапорець</th>
+<th>Опис</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Flag" class="text-left"><code>-t, --xml-message-type <TYPE></code></td>
+<td data-label="Description" class="text-left">Визначення повідомлення, наприклад <code>pain.001.001.09</code>.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>-d, --data <FILE></code></td>
+<td data-label="Description" class="text-left">Вхідні дані: <code>.csv</code>, <code>.json</code>, <code>.jsonl</code>, <code>.db</code> / <code>.sqlite</code>, <code>.parquet</code> або зашифровані PGP <code>.gpg</code> / <code>.asc</code>.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>-o, --output-dir <DIR></code></td>
+<td data-label="Description" class="text-left">Каталог, до якого записується згенерований XML.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>-m, --template <FILE></code> / <code>-s, --schema <FILE></code></td>
+<td data-label="Description" class="text-left">Перевизначає вбудований шаблон Jinja2 або XSD-схему.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>-c, --config <FILE></code></td>
+<td data-label="Description" class="text-left">Завантажує типові значення з профілю конфігурації (<code>--profile</code>, <code>--show-config</code>).</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--dry-run</code> (псевдонім <code>--validate-only</code>)</td>
+<td data-label="Description" class="text-left">Перевіряє вхідні дані за JSON Schema, XSD і збірником правил схеми без запису результату.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--scheme <NAME></code></td>
+<td data-label="Description" class="text-left">Застосовує збірник правил схеми: <code>sepa-sct</code>, <code>sepa-inst</code>, <code>sepa-sdd</code>, <code>sepa-b2b</code> або <code>xborder-ct</code>.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--explain --scheme-format {text,json}</code></td>
+<td data-label="Description" class="text-left">Звітує про кожне правило схеми — пройдене чи ні — у людино- або машиночитному вигляді.</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size <N></code></td>
+<td data-label="Description" class="text-left">Обробка великих пакетів блоками з обмеженням пам'яті (типово 1,000 транзакцій на блок; кожен блок стає окремим XML-файлом із переобчисленими <code>NbOfTxs</code> та <code>CtrlSum</code>).</td>
+</tr>
+<tr>
+<td data-label="Flag" class="text-left"><code>--emit-metrics</code></td>
+<td data-label="Description" class="text-left">Виводить машиночитні метрики виконання для конвеєрів спостережуваності.</td>
+</tr>
+</tbody>
+</table>
+<p>Коди виходу зручні для CI: <code>0</code> — успіх, <code>1</code> — помилка валідації, <code>2</code> — помилка використання.</p>
+<hr />
+<h2 id="2-python-api">2. Python API<a class="heading-anchor" href="#2-python-api" aria-label="Посилання на розділ: 2. Python API">#</a></h2>
+<pre><code class="language-python">from pain001.core.core import process_files
+
+# Generate a validated pain.001.001.09 file from CSV
+process_files(
+    xml_message_type="pain.001.001.09",
+    xml_template_file_path="template.xml",
+    xsd_schema_file_path="schema.xsd",
+    data_file_path="payments.csv",
+    output_dir="out",
+)</code></pre>
+<p>Кожен згенерований документ проходить три рівні, перш ніж буде записаний:</p>
+<ol>
+<li><strong>Валідація вхідних даних</strong> — кожен запис перевіряється за JSON Schema типу повідомлення, з нормалізацією псевдонімів полів і синтаксичними перевірками IBAN/BIC.</li>
+<li><strong>Збірник правил схеми</strong> (опційно) — правила SEPA SCT, SEPA Instant, SEPA SDD Core, SEPA B2B або транскордонних кредитових переказів.</li>
+<li><strong>Валідація за XSD</strong> — сформований XML перевіряється за офіційною схемою ISO 20022 через <code>xmlschema</code>, перш ніж на диск буде записано хоч один байт.</li>
+</ol>
+<p>Грошові суми обробляються як <code>decimal.Decimal</code> під час генерації XML і перевірки правил схеми — ніколи як числа IEEE 754 з рухомою комою — а контрольні підсумки <code>NbOfTxs</code> / <code>CtrlSum</code> переобчислюються з перевірених записів, а не беруться на віру з вхідних даних.</p>
+<p>Окрім генерації pain.001, базова бібліотека містить <strong>парсер і генератор звітів про статус pain.002</strong> (щоб читати відповідь банку про прийняття чи відхилення) та <strong>парсер і генератор виписок camt.053</strong> для звірки на кінець дня, а також <code>VersionMapper</code>, що переносить записи між версіями повідомлень.</p>
+<hr />
+<h2 id="3-rest-microservice">3. REST-мікросервіс<a class="heading-anchor" href="#3-rest-microservice" aria-label="Посилання на розділ: 3. REST-мікросервіс">#</a></h2>
+<pre><code class="language-bash">pip install "pain001[api]"
+pain001 serve --host 0.0.0.0 --port 8000</code></pre>
+<p>Усі ендпоінти змонтовано під <code>/api/v1</code> (з аліасом <code>/api</code> без версії):</p>
+<table>
+<thead>
+<tr>
+<th>Метод і шлях</th>
+<th>Призначення</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>GET /api/v1/health</code></td>
+<td data-label="Purpose" class="text-left">Перевірка життєздатності.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>POST /api/v1/validate</code></td>
+<td data-label="Purpose" class="text-left">Перевіряє записи; повертає помилки на рівні полів.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>POST /api/v1/generate</code></td>
+<td data-label="Purpose" class="text-left">Синхронна генерація XML.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>POST /api/v1/generate/async</code></td>
+<td data-label="Purpose" class="text-left">Ставить великий пакет у чергу на фонову генерацію.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>GET /api/v1/status/{job_id}</code></td>
+<td data-label="Purpose" class="text-left">Опитування асинхронного завдання.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>GET /api/v1/download/{job_id}</code></td>
+<td data-label="Purpose" class="text-left">Завантаження готового XML.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>DELETE /api/v1/jobs/{job_id}</code></td>
+<td data-label="Purpose" class="text-left">Видалення завершеного завдання.</td>
+</tr>
+<tr>
+<td data-label="Method & Path" class="text-left"><code>GET /metrics</code></td>
+<td data-label="Purpose" class="text-left">Метрики Prometheus.</td>
+</tr>
+</tbody>
+</table>
+<p>Інтерактивна документація доступна за адресами <code>/api/docs</code> (Swagger UI), <code>/api/redoc</code> та <code>/api/reference</code> (Scalar); документ OpenAPI — за адресою <code>/openapi.json</code>.</p>
+<hr />
+<h2 id="4-input-normalisation">4. Нормалізація вхідних даних<a class="heading-anchor" href="#4-input-normalisation" aria-label="Посилання на розділ: 4. Нормалізація вхідних даних">#</a></h2>
+<p>Pain001 приводить реальні вивантаження до валідних записів перед валідацією:</p>
+<ul>
+<li><strong>Псевдоніми полів</strong> — поширені назви стовпців ERP відображаються на канонічні поля (наприклад, <code>amount</code> → <code>payment_amount</code>).</li>
+<li><strong>Нормалізація IBAN / BIC</strong> — пробіли видаляються, регістр зводиться до єдиного, потім виконується перевірка (mod-97 за ISO 13616 для IBAN, структура ISO 9362 для BIC).</li>
+<li><strong>Дати</strong> — розбір дат виконання у форматі ISO 8601 <code>YYYY-MM-DD</code>.</li>
+<li><strong>Суми</strong> — проходять через <code>decimal.Decimal</code>; некоректні суми не проходять валідацію замість тихого округлення.</li>
+<li><strong>Набір символів</strong> — помічники транслітерації зводять вміст до латинського набору символів ISO 20022, який приймають SWIFT і SEPA.</li>
+</ul>
+<hr />
+<h2 id="5-plugin-architecture">5. Архітектура плагінів<a class="heading-anchor" href="#5-plugin-architecture" aria-label="Посилання на розділ: 5. Архітектура плагінів">#</a></h2>
+<p>Набір розширюється через чотири групи точок входу: <code>pain001.loaders</code>, <code>pain001.validators</code>, <code>pain001.schemes</code> та <code>pain001.writers</code>. <a href="/pain001-loader-xlsx/"><code>pain001-loader-xlsx</code></a> реєструється через цей механізм і автоматично виявляється під час встановлення; <a href="/pain001-loader-mt101/"><code>pain001-loader-mt101</code></a> — самостійна бібліотека розбору, що використовується напряму (та інструментом <code>convert_mt101</code> сервера MCP). Аварійний вимикач — <code>PAIN001_DISABLE_PLUGINS=1</code> — повністю вимикає виявлення сторонніх плагінів у закритих середовищах.</p>
+<hr />
+<h2 id="6-quality-gates">6. Контроль якості<a class="heading-anchor" href="#6-quality-gates" aria-label="Посилання на розділ: 6. Контроль якості">#</a></h2>
+<p>Базова бібліотека розробляється під суворими перевірюваними контрольними точками: 100% покриття рядків <strong>і</strong> гілок, обов'язкове в CI (<code>--cov-fail-under=100</code>), сувора типізація mypy, 100% покриття docstring і лінтинг безпеки (Bandit, pip-audit). Для кожного релізного збирання генерується CycloneDX SBOM.</p>
+<p>Продовжте з <a href="/uk/installation/">посібником зі встановлення</a>, <a href="/pain001-mcp/">сервером MCP для AI-агентів</a> або <a href="/uk/glossary/">глосарієм платежів</a>.</p>
+</div>
+        </article>
+      </div>
+    </main>
+
+    <button class="totop" id="toTop" type="button" hidden aria-label="Back to top">&uarr;</button>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-brand">Pain001</p>
+            <p class="footer-tagline">Ініціювання платежів ISO 20022 з відкритим кодом. Валідовані файли, локальна обробка, без прив'язки.</p>
+          </div>
+          <div>
+            <h2 class="footer-heading">Документація</h2>
+            <ul class="footer-links">
+              <li><a href="/uk/try/">Спробуйте у своєму браузері</a></li>
+              <li><a href="/uk/documentation/">Технічний довідник</a></li>
+              <li><a href="/uk/installation/">Встановлення &amp; Docker</a></li>
+              <li><a href="/payments/">Платіжні конвеєри</a></li>
+              <li><a href="/uk/glossary/">Глосарій</a></li>
+              <li><a href="/uk/faqs/">Поширені запитання</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Екосистема</h2>
+            <ul class="footer-links">
+              <li><a href="/pain001-mcp/">pain001-mcp · ШІ-агенти</a></li>
+              <li><a href="/pain001-lsp/">pain001-lsp · редактори</a></li>
+              <li><a href="/pain001-loader-mt101/">Завантажувач MT101</a></li>
+              <li><a href="/pain001-loader-xlsx/">Завантажувач Excel</a></li>
+              <li><a href="https://github.com/sebastienrousseau/pain001" rel="external">GitHub</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Дослідження та довіра</h2>
+            <ul class="footer-links">
+              <li><a href="/uk/why/">Чому Pain001</a></li>
+              <li><a href="/uk/executive-brief/">Огляд для керівництва</a></li>
+              <li><a href="/iso20022-roadmap/">Дорожня карта ISO 20022</a></li>
+              <li><a href="/2026-iso20022-migration-trends/">Брифінг 2026 року</a></li>
+              <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/">Посібник із транскордонних платежів</a></li>
+              <li><a href="/competitors-comparison/">Порівняння з комерційними інструментами</a></li>
+              <li><a href="/architecture-and-patents/">Архітектура &amp; патенти</a></li>
+              <li><a href="/trust/">Центр довіри</a></li>
+              <li><a href="/compatibility/">Матриця сумісності</a></li>
+              <li><a href="/security.txt">security.txt</a></li>
+              <li><a href="/sbom.cdx.json">SBOM</a> · <a href="/llms.txt">llms.txt</a> · <a href="/rss.xml">Стрічка RSS</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; 2023&ndash;2026 Sebastien Rousseau. Core dual-licensed Apache-2.0 / MIT; companion packages Apache-2.0.</p>
+          <ul aria-label="This overview in other languages">
+            <li><a href="/languages/">Цей огляд 34 мовами</a></li>
+          </ul>
+          <ul>
+            <li><a href="/accessibility/">Доступність</a></li>
+            <li><a href="/privacy/">Конфіденційність</a></li>
+            <li><a href="/terms/">Умови</a></li>
+            <li><a href="/contact/">Контакти</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://pain001.com/uk/documentation/",
+          "url": "https://pain001.com/uk/documentation/",
+          "name": "Pain001: технічний довідник CLI, Python API та REST",
+          "description": "Повний довідник pain001 v0.0.56 — підкоманди та прапорці CLI, Python API, REST-ендпоінти під /api/v1, збірники правил схем, нормалізація вхідних даних і архітектура плагінів.",
+          "inLanguage": "uk",
+          "dateModified": "2026-07-26",
+          "isPartOf": { "@id": "https://pain001.com/#website" },
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Головна", "item": "https://pain001.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Pain001: технічний довідник CLI, Python API та REST" }
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pain001.com/#organization",
+          "name": "Pain001",
+          "url": "https://pain001.com/",
+          "logo": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+          "founder": { "@type": "Person", "name": "Sebastien Rousseau", "url": "https://sebastienrousseau.com" },
+          "sameAs": [
+            "https://github.com/sebastienrousseau/pain001",
+            "https://pypi.org/project/pain001/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pain001.com/#website",
+          "url": "https://pain001.com/",
+          "name": "Pain001",
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        }
+      ]
+    }
+    </script>
+
+    <script src="/_csp/197fcfccbee69bda.js" integrity="sha384-geygAAYoalTqpA6bIgsGUMRQupyTiF/rCnvMiGE5+G0s0ZOYAhHnkhzyMXN9yNxa" crossorigin="anonymous"></script>
+  
+<!-- SSG Search Widget -->
+<div id="ssg-search-widget">
+
+<!-- Search trigger button -->
+<button id="ssg-search-btn" type="button" aria-label="Search">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<span>Search</span>
+<kbd>K</kbd>
+</button>
+<!-- Search modal -->
+<div id="ssg-search-overlay" role="dialog" aria-label="Search">
+<div id="ssg-search-box">
+<div id="ssg-search-header">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<input id="ssg-search-input" type="search" placeholder="Search documentation..." autocomplete="off" aria-label="Search"/>
+</div>
+<div id="ssg-search-results" aria-live="polite"></div>
+<div id="ssg-sr-status" role="status" aria-live="polite" aria-atomic="true"></div>
+<div class="ssg-search-footer"><span><kbd>Esc</kbd> close</span><span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span><span><kbd>Enter</kbd> open</span></div>
+</div>
+</div>
+<script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>

@@ -78,12 +78,12 @@
               </ul>
             </li>
             <li><a href="/zh-hans/try/">在线体验</a></li>
-            <li class="has-sub"><a href="/documentation/">文档</a>
+            <li class="has-sub"><a href="/zh-hans/documentation/">文档</a>
               <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="切换“文档”子菜单"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
               <ul id="sub-docs" class="ap-sub">
-                <li><a href="/installation/" hreflang="en">安装 &amp; Docker (EN)</a></li>
-                <li><a href="/glossary/" hreflang="en">术语表 (EN)</a></li>
-                <li><a href="/faqs/" hreflang="en">常见问题 (EN)</a></li>
+                <li><a href="/zh-hans/installation/">安装 &amp; Docker</a></li>
+                <li><a href="/zh-hans/glossary/">术语表</a></li>
+                <li><a href="/zh-hans/faqs/">常见问题</a></li>
                 <li><a href="/pain002-reason-codes/" hreflang="en">pain.002 原因代码 (EN)</a></li>
               </ul>
             </li>
@@ -189,13 +189,13 @@
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="目录"><h2>目录</h2><ol><li><a href="#treasury-finance">财资与财务</a></li><li><a href="#cfo-board">CFO 与董事会</a></li><li><a href="#payment-operations">支付运营</a></li><li><a href="#engineering-ai">工程与 AI</a></li></ol></nav>
           <div lang="en"><h2 id="treasury-finance">财资与财务<a class="heading-anchor" href="#treasury-finance" aria-label="跳转至章节：财资与财务">#</a></h2>
-<p>您的银行会以 ERP 从未提醒过您的理由退回文件：IBAN 数字换位、控制总额不再匹配、地址格式不再被接受。Pain001 让这些故障提前在您的案头暴露——每个文件在提交前都依据银行的官方规则手册（ISO 20022 XSD）得到证明，<a href="/payments/">支付生命周期指南</a>展示了每项检查在发起与对账之间所处的位置。如果这些术语对您还很陌生，请从<a href="/glossary/">术语表</a>开始；那些通俗易懂的定义是为您这一侧的办公桌而写，而非为工程师。</p>
+<p>您的银行会以 ERP 从未提醒过您的理由退回文件：IBAN 数字换位、控制总额不再匹配、地址格式不再被接受。Pain001 让这些故障提前在您的案头暴露——每个文件在提交前都依据银行的官方规则手册（ISO 20022 XSD）得到证明，<a href="/payments/">支付生命周期指南</a>展示了每项检查在发起与对账之间所处的位置。如果这些术语对您还很陌生，请从<a href="/zh-hans/glossary/">术语表</a>开始；那些通俗易懂的定义是为您这一侧的办公桌而写，而非为工程师。</p>
 <h2 id="cfo-board">CFO 与董事会<a class="heading-anchor" href="#cfo-board" aria-label="跳转至章节：CFO 与董事会">#</a></h2>
 <p>两个数字框定了这项决策。<strong>2026 年 11 月 14 日</strong>：携带非结构化地址的跨境支付开始在网络层面被退回的日期——风险敞口存在于您的客户主数据中，而非您的银行连接。<strong>每年 €10,000–30,000</strong>：最接近的商业转换 SDK 的公开标价，而 Pain001 在开放许可下、任何规模均永久免费。治理问题——可审计性、数据本地性、供应链证据——以实物凭证而非口头保证作答：公开发布的 <a href="/sbom.cdx.json">SBOM</a>、<a href="/security.txt">安全政策</a>，以及绝不离开您基础设施的处理流程。<a href="/zh-hans/executive-brief/">一页高管简报</a>专为转发而写。</p>
 <h2 id="payment-operations">支付运营<a class="heading-anchor" href="#payment-operations" aria-label="跳转至章节：支付运营">#</a></h2>
 <p>您的日常就在响应文件里。Pain001 端到端闭环：<code>--dry-run</code> 提交前检查在 CI 中干净地通过或失败，逐条解读的清算方案规则手册（SEPA 与跨境），用于解码回执的 <a href="/pain002-reason-codes/">pain.002 原因代码参考</a>，以及将银行响应和 camt.053 对账单转换为您的流水线可路由的结构化数据的解析器。<a href="/zh-hans/try/">浏览器演示</a>是了解它所消除的故障类别的最快方式——包括一键“引入错误”场景。</p>
 <h2 id="engineering-ai">工程与 AI<a class="heading-anchor" href="#engineering-ai" aria-label="跳转至章节：工程与 AI">#</a></h2>
-<p>类型化的 Python API、带有明确退出码的 CLI、REST 微服务，以及面向加载器、校验器、清算方案和写入器的插件点——<a href="/documentation/">技术参考</a>覆盖每一个标志与端点，代码以 100% 行与分支覆盖率作为硬性 CI 门槛。如果您在构建智能体：<a href="/pain001-mcp/">pain001-mcp</a> 是该类别中唯一的 Model Context Protocol 服务器——十七个只读工具供您的智能体在本地调用，并由 <a href="/pain001-lsp/">pain001-lsp</a> 提供编辑器诊断，同时人类始终在环。</p>
+<p>类型化的 Python API、带有明确退出码的 CLI、REST 微服务，以及面向加载器、校验器、清算方案和写入器的插件点——<a href="/zh-hans/documentation/">技术参考</a>覆盖每一个标志与端点，代码以 100% 行与分支覆盖率作为硬性 CI 门槛。如果您在构建智能体：<a href="/pain001-mcp/">pain001-mcp</a> 是该类别中唯一的 Model Context Protocol 服务器——十七个只读工具供您的智能体在本地调用，并由 <a href="/pain001-lsp/">pain001-lsp</a> 提供编辑器诊断，同时人类始终在环。</p>
 </div>
         </article>
       </div>
@@ -214,11 +214,11 @@
             <h2 class="footer-heading">文档</h2>
             <ul class="footer-links">
               <li><a href="/zh-hans/try/">在浏览器中试用</a></li>
-              <li><a href="/documentation/">技术参考</a></li>
-              <li><a href="/installation/">安装 &amp; Docker</a></li>
+              <li><a href="/zh-hans/documentation/">技术参考</a></li>
+              <li><a href="/zh-hans/installation/">安装 &amp; Docker</a></li>
               <li><a href="/payments/">支付流水线</a></li>
-              <li><a href="/glossary/">术语表</a></li>
-              <li><a href="/faqs/">常见问题</a></li>
+              <li><a href="/zh-hans/glossary/">术语表</a></li>
+              <li><a href="/zh-hans/faqs/">常见问题</a></li>
             </ul>
           </div>
           <div>
