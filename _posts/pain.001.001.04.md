@@ -83,7 +83,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Message reference"
-excerpt: "The reference page for pain.001.001.04, an early maintenance release: what distinguishes this Customer Credit Transfer Initiation version, the shared GrpHdr/PmtInf/CdtTrfTxInf element skeleton, generation and inspection commands, and how Pain001's VersionMapper reshapes records between any of the ten supported pain.001 versions."
+excerpt: "The reference page for pain.001.001.04, an early maintenance release: what distinguishes this Customer Credit Transfer Initiation version, the shared GrpHdr/PmtInf/CdtTrfTxInf element skeleton, generation and inspection commands, and how Pain001's VersionMapper reshapes records between any of the eleven supported pain.001 versions."
 last_reviewed: "2026-07-26"
 
 ---

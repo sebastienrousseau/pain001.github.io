@@ -99,7 +99,7 @@
     ],
     "title": "Compatibility Matrix",
     "url": "https://pain001.com/compatibility/",
-    "wordCount": 551
+    "wordCount": 552
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -813,7 +813,24 @@
     ],
     "title": "pain.001.001.12 Reference: Generate and Validate",
     "url": "https://pain001.com/pain.001.001.12/",
-    "wordCount": 234
+    "wordCount": 240
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "pain.001.001.13 — the newest supported version. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.",
+    "locale": "en_GB",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "pain.001.001.13 Reference: Generate and Validate",
+    "url": "https://pain001.com/pain.001.001.13/",
+    "wordCount": 249
   },
   {
     "date": "2026-07-26T08:00:00+00:00",

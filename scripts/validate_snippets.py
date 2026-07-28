@@ -98,11 +98,46 @@ def main() -> int:
                                              f"{owner.__name__}.{fn.attr}()",
                                              path, problems, skip_self=True)
 
+    problems += _check_migration_paths()
+
     print(f"checked {checked} python snippet(s) in _posts/")
     for p in problems:
         print("FAIL", p)
     print("result:", "CLEAN" if not problems else f"{len(problems)} problem(s)")
     return 1 if problems else 0
+
+
+def _check_migration_paths() -> list[str]:
+    """Verify documented VersionMapper paths are actually supported.
+
+    Arity and attribute checks pass happily on
+    ``migrate_rows(rows, "pain.001.001.09", "pain.001.001.12")`` — but
+    that raised DataSourceError at runtime until modern-to-modern
+    migration was implemented, and four version pages documented paths
+    that could not run. Signature checking cannot see this; the mapper's
+    own support predicate can.
+    """
+    problems: list[str] = []
+    try:
+        from pain001.migration import VersionMapper
+    except Exception:  # noqa: BLE001
+        return problems
+
+    mapper = VersionMapper()
+    pat = re.compile(
+        r'migrate_(?:rows|file)\(\s*[^,]+,\s*"([^"]+)"\s*,\s*"([^"]+)"',
+        re.S)
+    for path in sorted(glob.glob("_posts/*.md")):
+        text = open(path, encoding="utf-8").read()
+        for block in PY_BLOCK.findall(text):
+            for src, dst in pat.findall(block):
+                try:
+                    mapper.load_mapping(src, dst)
+                except Exception as exc:  # noqa: BLE001
+                    problems.append(
+                        f"{path}: documented migration {src} -> {dst} is not "
+                        f"supported ({exc.__class__.__name__})")
+    return problems
 
 
 def _check_arity(func, call: ast.Call, label: str, path: str,

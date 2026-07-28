@@ -83,12 +83,12 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Message reference"
-excerpt: "The reference page for pain.001.001.12, the newest version Pain001 supports: what distinguishes this Customer Credit Transfer Initiation version, the shared GrpHdr/PmtInf/CdtTrfTxInf element skeleton, generation and inspection commands, and how Pain001's VersionMapper reshapes records between any of the ten supported pain.001 versions."
+excerpt: "The reference page for pain.001.001.12, the newest version Pain001 supports: what distinguishes this Customer Credit Transfer Initiation version, the shared GrpHdr/PmtInf/CdtTrfTxInf element skeleton, generation and inspection commands, and how Pain001's VersionMapper reshapes records between any of the eleven supported pain.001 versions."
 last_reviewed: "2026-07-26"
 
 ---
 
-`pain.001.001.12` is the most recent Customer Credit Transfer Initiation version bundled with Pain001. It represents the current edge of the standard — ahead of most bank channel adoption, and exactly where forward-looking format work happens.
+`pain.001.001.12` was the newest version until ISO published [`pain.001.001.13`](/pain.001.001.13/) on 19 March 2026. Note that Pain001 ships a placeholder schema for `.12`, so `--dry-run` performs no real XSD validation for this version — use `.11` or `.09` where schema proof matters.
 
 ## What to know about this version
 

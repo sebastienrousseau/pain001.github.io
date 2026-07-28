@@ -83,7 +83,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Analysis"
-excerpt: "Pain001 measured against Prowide, python-sepaxml, php-sepa-xml, moov-io, SWIFT Translator, XMLdation, Volante, and treasury platforms — with licences, scope, maintenance status, and price anchors verified against public sources. No other open-source project combines multi-source ingestion, ten pain.001 versions, hard validation, and AI-agent tooling."
+excerpt: "Pain001 measured against Prowide, python-sepaxml, php-sepa-xml, moov-io, SWIFT Translator, XMLdation, Volante, and treasury platforms — with licences, scope, maintenance status, and price anchors verified against public sources. No other open-source project combines multi-source ingestion, eleven pain.001 versions, hard validation, and AI-agent tooling."
 last_reviewed: "2026-07-26"
 
 ---

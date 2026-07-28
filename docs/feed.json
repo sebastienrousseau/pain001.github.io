@@ -1112,6 +1112,29 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
+      "content_html": "pain.001.001.13 — the newest supported version. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.",
+      "date_modified": "2026-07-26T08:00:00+00:00",
+      "date_published": "2026-07-26T08:00:00+00:00",
+      "id": "https://pain001.com/pain.001.001.13/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "pain.001.001.13 Reference: Generate and Validate",
+      "url": "https://pain001.com/pain.001.001.13/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
       "content_html": "Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict error handling, ready for the 14 Nov 2026 relay cutover.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
@@ -1128,29 +1151,6 @@
       ],
       "title": "MT101 to pain.001 Conversion: pain001-loader-mt101",
       "url": "https://pain001.com/pain001-loader-mt101/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Read payment batches straight from .xlsx/.xlsm with an IBAN safety guard that stops Excel's numeric coercion corrupting account numbers before the bank ever sees them.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/pain001-loader-xlsx/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Excel to pain.001: pain001-loader-xlsx",
-      "url": "https://pain001.com/pain001-loader-xlsx/"
     }
   ],
   "language": "en-GB",

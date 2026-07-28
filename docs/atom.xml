@@ -438,21 +438,21 @@
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
+    <title>pain.001.001.13 Reference: Generate and Validate</title>
+    <link href="https://pain001.com/pain.001.001.13/"/>
+    <id>https://pain001.com/pain.001.001.13/</id>
+    <updated>2026-07-26T08:00:00+00:00</updated>
+    <published>2026-07-26T08:00:00+00:00</published>
+    <summary>pain.001.001.13 — the newest supported version. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
     <title>MT101 to pain.001 Conversion: pain001-loader-mt101</title>
     <link href="https://pain001.com/pain001-loader-mt101/"/>
     <id>https://pain001.com/pain001-loader-mt101/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
     <summary>Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict error handling, ready for the 14 Nov 2026 relay cutover.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Excel to pain.001: pain001-loader-xlsx</title>
-    <link href="https://pain001.com/pain001-loader-xlsx/"/>
-    <id>https://pain001.com/pain001-loader-xlsx/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Read payment batches straight from .xlsx/.xlsm with an IBAN safety guard that stops Excel&apos;s numeric coercion corrupting account numbers before the bank ever sees them.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
 </feed>
