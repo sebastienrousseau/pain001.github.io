@@ -223,11 +223,18 @@
 <td data-label="Notes" class="text-left">CBPR+ version; MT101-relay successor; <code><BICFI></code></td>
 </tr>
 <tr>
-<td data-label="Message definition" class="text-left">pain.001.001.10 – .12</td>
+<td data-label="Message definition" class="text-left">pain.001.001.10 – .11</td>
 <td data-label="Generate" class="text-left">Yes</td>
 <td data-label="XSD-validate" class="text-left">Yes</td>
 <td data-label="Migrate to/from" class="text-left">Yes</td>
 <td data-label="Notes" class="text-left">Post-2019 refinements</td>
+</tr>
+<tr>
+<td data-label="Message definition" class="text-left">pain.001.001.12</td>
+<td data-label="Generate" class="text-left">Yes</td>
+<td data-label="XSD-validate" class="text-left"><strong>No</strong></td>
+<td data-label="Migrate to/from" class="text-left">Yes</td>
+<td data-label="Notes" class="text-left">Generation and migration work, but the shipped schema for this version is a placeholder, so <code>--dry-run</code> performs <strong>no real XSD validation</strong> for <code>.12</code>. Use <code>.11</code> or <code>.09</code> where schema proof matters. <a href="https://github.com/sebastienrousseau/pain001/issues">Tracked</a></td>
 </tr>
 <tr>
 <td data-label="Message definition" class="text-left">pain.001.001.13</td>
