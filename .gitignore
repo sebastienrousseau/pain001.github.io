@@ -12,3 +12,6 @@ tarpaulin-report.html
 .ssg-plugin-cache.json
 docs/.ssg-cache/
 docs/.ssg-plugin-cache.json
+
+# Local-only accessibility tooling (see scripts/a11y_local.mjs)
+.a11y-tools/
