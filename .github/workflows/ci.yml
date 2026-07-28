@@ -62,6 +62,11 @@ jobs:
       - name: Link integrity (internal links, anchors, locale consistency)
         run: python3 scripts/validate_links.py docs
 
+      - name: Documentation snippets reference real API
+        run: |
+          python3 -m pip install --quiet pain001
+          python3 scripts/validate_snippets.py
+
       - name: Accessibility scan (pa11y-ci, WCAG2AAA)
         run: |
           (cd docs && python3 -m http.server 8899 &)

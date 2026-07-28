@@ -4,7 +4,7 @@ banner_alt: "An offline notice for pain001.com, shown when the network is unreac
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
-cdn: "https://cloudcdn.pro"
+cdn: "https://pain001.com"
 changefreq: weekly
 charset: utf-8
 cname: pain001.com
@@ -14,12 +14,12 @@ description: "The network is unreachable, so this page is served from cache. Pre
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
-icon: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/offline/"
 image_alt: "An offline notice for pain001.com, shown when the network is unreachable and the site is served from cache."
 image_height: 120
 image_width: 120
-image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+image: "https://pain001.com/img/pain001.svg"
 keywords: "offline page, PWA offline"
 language: en-GB
 layout: page
@@ -27,7 +27,7 @@ locale: en_GB
 logo_alt: "Pain001 Logo"
 logo_height: 36
 logo_width: 36
-logo: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+logo: "https://pain001.com/img/pain001.svg"
 menu: active
 measurementID: G-167B274ZWJ
 name: Pain001

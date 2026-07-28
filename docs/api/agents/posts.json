@@ -99,7 +99,7 @@
     ],
     "title": "Compatibility Matrix",
     "url": "https://pain001.com/compatibility/",
-    "wordCount": 477
+    "wordCount": 509
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -171,7 +171,7 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Complete reference for pain001 v0.0.56 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.",
+    "description": "Complete reference for pain001 v0.0.57 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -647,7 +647,7 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "pain.001.001.03 — the SEPA & CGI workhorse version. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
+    "description": "pain.001.001.03 — the SEPA & CGI workhorse version. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -660,11 +660,11 @@
     ],
     "title": "pain.001.001.03 Reference: Generate and Validate",
     "url": "https://pain001.com/pain.001.001.03/",
-    "wordCount": 255
+    "wordCount": 284
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "pain.001.001.04 — early maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
+    "description": "pain.001.001.04 — early maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -677,11 +677,11 @@
     ],
     "title": "pain.001.001.04 Reference: Generate and Validate",
     "url": "https://pain001.com/pain.001.001.04/",
-    "wordCount": 222
+    "wordCount": 251
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "pain.001.001.05 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
+    "description": "pain.001.001.05 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -694,11 +694,11 @@
     ],
     "title": "pain.001.001.05 Reference: Generate and Validate",
     "url": "https://pain001.com/pain.001.001.05/",
-    "wordCount": 208
+    "wordCount": 237
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "pain.001.001.06 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
+    "description": "pain.001.001.06 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -711,11 +711,11 @@
     ],
     "title": "pain.001.001.06 Reference: Generate and Validate",
     "url": "https://pain001.com/pain.001.001.06/",
-    "wordCount": 189
+    "wordCount": 218
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "pain.001.001.07 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
+    "description": "pain.001.001.07 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -728,11 +728,11 @@
     ],
     "title": "pain.001.001.07 Reference: Generate and Validate",
     "url": "https://pain001.com/pain.001.001.07/",
-    "wordCount": 183
+    "wordCount": 212
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "pain.001.001.08 — the last pre-2019 version. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
+    "description": "pain.001.001.08 — the last pre-2019 version. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -745,11 +745,11 @@
     ],
     "title": "pain.001.001.08 Reference: Generate and Validate",
     "url": "https://pain001.com/pain.001.001.08/",
-    "wordCount": 198
+    "wordCount": 227
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "pain.001.001.09 — the CBPR+ cross-border version. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
+    "description": "pain.001.001.09 — the CBPR+ cross-border version. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -762,11 +762,11 @@
     ],
     "title": "pain.001.001.09 Reference: Generate and Validate",
     "url": "https://pain001.com/pain.001.001.09/",
-    "wordCount": 242
+    "wordCount": 271
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "pain.001.001.10 — post-2019 refinement. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
+    "description": "pain.001.001.10 — post-2019 refinement. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -779,11 +779,11 @@
     ],
     "title": "pain.001.001.10 Reference: Generate and Validate",
     "url": "https://pain001.com/pain.001.001.10/",
-    "wordCount": 192
+    "wordCount": 221
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "pain.001.001.11 — recent maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
+    "description": "pain.001.001.11 — recent maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -796,11 +796,11 @@
     ],
     "title": "pain.001.001.11 Reference: Generate and Validate",
     "url": "https://pain001.com/pain.001.001.11/",
-    "wordCount": 188
+    "wordCount": 217
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "pain.001.001.12 — the newest supported version. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
+    "description": "pain.001.001.12 — the newest supported version. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -813,7 +813,7 @@
     ],
     "title": "pain.001.001.12 Reference: Generate and Validate",
     "url": "https://pain001.com/pain.001.001.12/",
-    "wordCount": 205
+    "wordCount": 234
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -898,7 +898,7 @@
     ],
     "title": "pain.002 Reason Codes: Why Banks Reject Payment Files",
     "url": "https://pain001.com/pain002-reason-codes/",
-    "wordCount": 1056
+    "wordCount": 1055
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -949,7 +949,7 @@
     ],
     "title": "Privacy: This Site Collects Nothing",
     "url": "https://pain001.com/privacy/",
-    "wordCount": 145
+    "wordCount": 168
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -1187,7 +1187,7 @@
     ],
     "title": "Trust Centre",
     "url": "https://pain001.com/trust/",
-    "wordCount": 652
+    "wordCount": 659
   },
   {
     "date": "2026-07-26T08:00:00+00:00",

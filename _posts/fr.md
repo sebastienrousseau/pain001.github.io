@@ -4,7 +4,7 @@ banner_alt: "Suite Python open source pour générer des fichiers pain.001 et pa
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
-cdn: "https://cloudcdn.pro"
+cdn: "https://pain001.com"
 changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
@@ -14,12 +14,12 @@ description: "Suite Python open source pour générer des fichiers pain.001 et p
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "fr"
-icon: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/fr/"
 image_alt: "A question-and-answer session on ISO 20022 payment file generation — the questions treasury, operations, engineering, and audit teams actually ask."
 image_height: 120
 image_width: 120
-image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+image: "https://pain001.com/img/pain001.svg"
 keywords: "pain001, ISO 20022, virement SEPA, fichier pain.001, générateur XML SEPA, paiements, Python, France"
 language: "fr"
 layout: "page"
@@ -27,7 +27,7 @@ locale: "fr_FR"
 logo_alt: "Pain001 Logo"
 logo_height: 36
 logo_width: 36
-logo: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+logo: "https://pain001.com/img/pain001.svg"
 menu: active
 measurementID: G-167B274ZWJ
 name: Pain001

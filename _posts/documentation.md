@@ -4,22 +4,22 @@ banner_alt: "Documentation pages for the Pain001 command-line interface and REST
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
-cdn: "https://cloudcdn.pro"
+cdn: "https://pain001.com"
 changefreq: weekly
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Complete reference for pain001 v0.0.56 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture."
+description: "Complete reference for pain001 v0.0.57 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
-icon: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/documentation/"
 image_alt: "Documentation pages for the Pain001 command-line interface and REST API — the working reference for teams generating ISO 20022 payment files."
 image_height: 120
 image_width: 120
-image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+image: "https://pain001.com/img/pain001.svg"
 keywords: "pain001 documentation, pain.001 CLI, ISO 20022 Python library, pain001 REST API, XSD validation, SEPA scheme validation, pain.002 parser, camt.053 parser"
 language: en-GB
 layout: page
@@ -27,7 +27,7 @@ locale: en_GB
 logo_alt: "Pain001 Logo"
 logo_height: 36
 logo_width: 36
-logo: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+logo: "https://pain001.com/img/pain001.svg"
 menu: active
 measurementID: G-167B274ZWJ
 name: Pain001
@@ -37,7 +37,7 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "Every flag, endpoint, and behaviour of pain001 v0.0.56 — taken from the shipped code, not from aspiration."
+subtitle: "Every flag, endpoint, and behaviour of pain001 v0.0.57 — taken from the shipped code, not from aspiration."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
 title: "Pain001 Technical Reference: CLI, Python API and REST"
@@ -47,7 +47,7 @@ atom_link: "https://pain001.com/documentation/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.47)"
-item_description: "Complete reference for pain001 v0.0.56 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture."
+item_description: "Complete reference for pain001 v0.0.57 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture."
 item_guid: "https://pain001.com/documentation/rss.xml"
 item_link: "https://pain001.com/documentation/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -68,7 +68,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: @wwdseb
-twitter_description: "Complete reference for pain001 v0.0.56 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture."
+twitter_description: "Complete reference for pain001 v0.0.57 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: @wwdseb
@@ -88,7 +88,7 @@ last_reviewed: "2026-07-26"
 
 ---
 
-This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for **pain001 v0.0.56**. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.
+This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for **pain001 v0.0.57**. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.
 
 Pain001 supports **11 ISO 20022 message definitions**: `pain.001.001.03` through `pain.001.001.12` (Customer Credit Transfer Initiation, ten versions) and `pain.008.001.02` (Customer Direct Debit Initiation).
 

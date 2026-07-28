@@ -4,7 +4,7 @@ banner_alt: "A compatibility matrix listing every ISO 20022 message version, inp
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
-cdn: "https://cloudcdn.pro"
+cdn: "https://pain001.com"
 changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
@@ -14,12 +14,12 @@ description: "Exactly what Pain001 supports: every message definition with gener
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
-icon: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/compatibility/"
 image_alt: "A question-and-answer session on ISO 20022 payment file generation — the questions treasury, operations, engineering, and audit teams actually ask."
 image_height: 120
 image_width: 120
-image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+image: "https://pain001.com/img/pain001.svg"
 keywords: "pain001 compatibility, pain.001 versions supported, pain.008 support, input formats, SEPA schemes, MT101 fields, supported message definitions"
 language: en-GB
 layout: page
@@ -27,7 +27,7 @@ locale: en_GB
 logo_alt: "Pain001 Logo"
 logo_height: 36
 logo_width: 36
-logo: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+logo: "https://pain001.com/img/pain001.svg"
 menu: active
 measurementID: G-167B274ZWJ
 name: Pain001
@@ -89,7 +89,7 @@ last_reviewed: "2026-07-26"
 
 ---
 
-Everything on this page is verified against the shipped code of **pain001 v0.0.56** and its companions — the same discipline as the [technical reference](/documentation/). If a cell says no, that is a statement, not an omission.
+Everything on this page is verified against the shipped code of **pain001 v0.0.57** and its companions — the same discipline as the [technical reference](/documentation/). If a cell says no, that is a statement, not an omission.
 
 ## 01. Message definitions
 
@@ -99,6 +99,7 @@ Everything on this page is verified against the shipped code of **pain001 v0.0.5
 | pain.001.001.04 – .08 | Yes | Yes | Yes | Channel-specific maintenance versions |
 | pain.001.001.09 | Yes | Yes | Yes | CBPR+ version; MT101-relay successor; `<BICFI>` |
 | pain.001.001.10 – .12 | Yes | Yes | Yes | Post-2019 refinements |
+| pain.001.001.13 | No | No | No | Published by ISO on 19 Mar 2026 and **not yet supported**. Tracked; no bank in the profiles we monitor accepts it yet |
 | pain.008.001.02 | Yes | Yes | — | The only pain.008 version supported — others are not |
 | pain.002 (responses) | No | — | — | **Parsed**, not generated-for-submission: status/reason extraction |
 | camt.053 (statements) | No | — | — | **Parsed** for reconciliation |

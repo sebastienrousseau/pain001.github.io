@@ -4,7 +4,7 @@ banner_alt: "An architecture diagram of the Pain001 validation pipeline, from lo
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
-cdn: "https://cloudcdn.pro"
+cdn: "https://pain001.com"
 changefreq: weekly
 charset: utf-8
 cname: pain001.com
@@ -14,12 +14,12 @@ description: "Zero-trust XML parsing, decimal-exact arithmetic, validation as a 
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
-icon: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/architecture-and-patents/"
 image_alt: "An architecture diagram of the Pain001 validation pipeline, from loaders through JSON Schema, scheme rulebooks, and XSD validation to ISO 20022 XML."
 image_height: 120
 image_width: 120
-image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+image: "https://pain001.com/img/pain001.svg"
 keywords: "pain001 architecture, defusedxml XXE, payment file security, ISO 20022 patents, MT MX transformation patent, decimal precision payments, CycloneDX SBOM"
 language: en-GB
 layout: page
@@ -27,7 +27,7 @@ locale: en_GB
 logo_alt: "Pain001 Logo"
 logo_height: 36
 logo_width: 36
-logo: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+logo: "https://pain001.com/img/pain001.svg"
 menu: active
 measurementID: G-167B274ZWJ
 name: Pain001

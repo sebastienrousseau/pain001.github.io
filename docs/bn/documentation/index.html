@@ -8,7 +8,7 @@
     <title>Pain001 প্রযুক্তিগত রেফারেন্স: CLI, Python API ও REST</title>
 
     <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
-<meta name="description" content="pain001 v0.0.56-এর সম্পূর্ণ রেফারেন্স — CLI সাবকমান্ড ও ফ্ল্যাগ, Python API, /api/v1-এর অধীন REST এন্ডপয়েন্ট, স্কিম রুলবুক, ইনপুট নর্মালাইজেশন ও প্লাগইন আর্কিটেকচার।">
+<meta name="description" content="Complete reference for pain001 v0.0.57 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.">
 <meta name="keywords" content="pain001 documentation, pain.001 CLI, ISO 20022 Python library, pain001 REST API, XSD validation, SEPA scheme validation, pain.002 parser, camt.053 parser">
 <meta property="og:image" content="https://pain001.com/og/pain001-card.jpg" />
     <meta property="og:image:width" content="1200" />
@@ -19,7 +19,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Pain001 প্রযুক্তিগত রেফারেন্স: CLI, Python API ও REST">
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
     <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -29,8 +29,8 @@
 
     <link rel="alternate" href="https://pain001.com/bn/documentation/" hreflang="en" />
     
-    <link rel="icon" type="image/svg+xml" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" sizes="any" />
-    <link rel="apple-touch-icon" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />
+    <link rel="icon" type="image/svg+xml" href="/img/pain001.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="/img/pain001.svg" />
     <link rel="preload" href="/fonts/source-serif-4-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="manifest" href="/manifest.json" />
     <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
@@ -45,13 +45,13 @@
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="Pain001 প্রযুক্তিগত রেফারেন্স: CLI, Python API ও REST">
-<meta property="og:description" content="Home Pain001 Technical Reference: CLI, Python API and REST Reference Pain001 Technical Reference: CLI, Python API and REST Every flag, endpoint, and behaviour">
+<meta property="og:description" content="Complete reference for pain001 v0.0.57 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://pain001.com/bn/documentation/">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Pain001 প্রযুক্তিগত রেফারেন্স: CLI, Python API ও REST">
-<meta name="twitter:description" content="Home Pain001 Technical Reference: CLI, Python API and REST Reference Pain001 Technical Reference: CLI, Python API and REST Every flag, endpoint, and behaviour">
+<meta name="twitter:description" content="Complete reference for pain001 v0.0.57 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.">
 <meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg">
 <link rel="canonical" href="https://pain001.com/bn/documentation/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
 <link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"><link rel="alternate" hreflang="en" href="https://pain001.com/documentation/" /><link rel="alternate" hreflang="x-default" href="https://pain001.com/documentation/" /><link rel="alternate" hreflang="ar" href="https://pain001.com/ar/documentation/" /><link rel="alternate" hreflang="cs" href="https://pain001.com/cs/documentation/" /><link rel="alternate" hreflang="de" href="https://pain001.com/de/documentation/" /><link rel="alternate" hreflang="el" href="https://pain001.com/el/documentation/" /><link rel="alternate" hreflang="es" href="https://pain001.com/es/documentation/" /><link rel="alternate" hreflang="fa" href="https://pain001.com/fa/documentation/" /><link rel="alternate" hreflang="fil" href="https://pain001.com/fil/documentation/" /><link rel="alternate" hreflang="fr" href="https://pain001.com/fr/documentation/" /><link rel="alternate" hreflang="ha" href="https://pain001.com/ha/documentation/" /><link rel="alternate" hreflang="he" href="https://pain001.com/he/documentation/" /><link rel="alternate" hreflang="hi" href="https://pain001.com/hi/documentation/" /><link rel="alternate" hreflang="hu" href="https://pain001.com/hu/documentation/" /><link rel="alternate" hreflang="id" href="https://pain001.com/id/documentation/" /><link rel="alternate" hreflang="it" href="https://pain001.com/it/documentation/" /><link rel="alternate" hreflang="ja" href="https://pain001.com/ja/documentation/" /><link rel="alternate" hreflang="ko" href="https://pain001.com/ko/documentation/" /><link rel="alternate" hreflang="mr" href="https://pain001.com/mr/documentation/" /><link rel="alternate" hreflang="ms" href="https://pain001.com/ms/documentation/" /><link rel="alternate" hreflang="nl" href="https://pain001.com/nl/documentation/" /><link rel="alternate" hreflang="pl" href="https://pain001.com/pl/documentation/" /><link rel="alternate" hreflang="pt-BR" href="https://pain001.com/pt-br/documentation/" /><link rel="alternate" hreflang="ro" href="https://pain001.com/ro/documentation/" /><link rel="alternate" hreflang="ru" href="https://pain001.com/ru/documentation/" /><link rel="alternate" hreflang="sv" href="https://pain001.com/sv/documentation/" /><link rel="alternate" hreflang="ta" href="https://pain001.com/ta/documentation/" /><link rel="alternate" hreflang="te" href="https://pain001.com/te/documentation/" /><link rel="alternate" hreflang="th" href="https://pain001.com/th/documentation/" /><link rel="alternate" hreflang="tr" href="https://pain001.com/tr/documentation/" /><link rel="alternate" hreflang="uk" href="https://pain001.com/uk/documentation/" /><link rel="alternate" hreflang="vi" href="https://pain001.com/vi/documentation/" /><link rel="alternate" hreflang="yo" href="https://pain001.com/yo/documentation/" /><link rel="alternate" hreflang="zh-Hans" href="https://pain001.com/zh-hans/documentation/" /><link rel="alternate" hreflang="zh-Hant" href="https://pain001.com/zh-hant/documentation/" /></head>
@@ -64,7 +64,7 @@
       <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="নেভিগেশন টগল করুন" />
       <div class="wrap ap-nav-wrap">
         <a class="ap-brand" href="/" aria-label="Pain001 home">
-          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="" width="26" height="26" />
+          <img src="/img/pain001.svg" alt="" width="26" height="26" />
           <span>Pain001</span>
         </a>
         <nav aria-label="Primary navigation" id="ap-primary-nav">
@@ -179,7 +179,7 @@
           </nav>
           <p class="eyebrow">রেফারেন্স</p>
           <h1 class="page-title">Pain001 প্রযুক্তিগত রেফারেন্স: CLI, Python API ও REST</h1>
-          <p class="deck">pain001 v0.0.56-এর প্রতিটি ফ্ল্যাগ, এন্ডপয়েন্ট ও আচরণ — শিপ করা কোড থেকে নেওয়া, আকাঙ্ক্ষা থেকে নয়।</p>
+          <p class="deck">Every flag, endpoint, and behaviour of pain001 v0.0.57 — taken from the shipped code, not from aspiration.</p>
           <div class="article-meta"><span>4 মিনিট পড়া</span>
             <span>সর্বশেষ পর্যালোচনা <time datetime="2026-07-26">2026-07-26</time></span>
           </div>
@@ -188,7 +188,7 @@
 
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="সূচিপত্র"><h2>সূচিপত্র</h2><ol><li><a href="#1-command-line-interface">কমান্ড-লাইন ইন্টারফেস</a></li><li><a href="#2-python-api">Python API</a></li><li><a href="#3-rest-microservice">REST মাইক্রোসার্ভিস</a></li><li><a href="#4-input-normalisation">ইনপুট নর্মালাইজেশন</a></li><li><a href="#5-plugin-architecture">প্লাগইন আর্কিটেকচার</a></li><li><a href="#6-quality-gates">গুণমান গেট</a></li></ol></nav>
-          <div lang="en"><p>এই রেফারেন্সে <strong>pain001 v0.0.56</strong>-এর কমান্ড-লাইন ইন্টারফেস, Python API, REST মাইক্রোসার্ভিস ও ভ্যালিডেশন পাইপলাইনের বিবরণ রয়েছে। এখানে তালিকাভুক্ত প্রতিটি ফ্ল্যাগ, এন্ডপয়েন্ট ও আচরণ শিপ করা কোড থেকে নেওয়া, আকাঙ্ক্ষা থেকে নয়।</p>
+          <div lang="en"><p>This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.57</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.</p>
 <p>Pain001 <strong>11টি ISO 20022 মেসেজ ডেফিনিশন</strong> সমর্থন করে: <code>pain.001.001.03</code> থেকে <code>pain.001.001.12</code> পর্যন্ত (Customer Credit Transfer Initiation, দশটি সংস্করণ) এবং <code>pain.008.001.02</code> (Customer Direct Debit Initiation)।</p>
 <hr />
 <h2 id="1-command-line-interface">1. কমান্ড-লাইন ইন্টারফেস<a class="heading-anchor" href="#1-command-line-interface" aria-label="বিভাগের লিংক: 1. কমান্ড-লাইন ইন্টারফেস">#</a></h2>
@@ -448,7 +448,7 @@ pain001 serve --host 0.0.0.0 --port 8000</code></pre>
           "@id": "https://pain001.com/bn/documentation/",
           "url": "https://pain001.com/bn/documentation/",
           "name": "Pain001 প্রযুক্তিগত রেফারেন্স: CLI, Python API ও REST",
-          "description": "pain001 v0.0.56-এর সম্পূর্ণ রেফারেন্স — CLI সাবকমান্ড ও ফ্ল্যাগ, Python API, /api/v1-এর অধীন REST এন্ডপয়েন্ট, স্কিম রুলবুক, ইনপুট নর্মালাইজেশন ও প্লাগইন আর্কিটেকচার।",
+          "description": "Complete reference for pain001 v0.0.57 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.",
           "inLanguage": "bn",
           "dateModified": "2026-07-26",
           "isPartOf": { "@id": "https://pain001.com/#website" },
@@ -466,7 +466,7 @@ pain001 serve --host 0.0.0.0 --port 8000</code></pre>
           "@id": "https://pain001.com/#organization",
           "name": "Pain001",
           "url": "https://pain001.com/",
-          "logo": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+          "logo": "/img/pain001.svg",
           "founder": { "@type": "Person", "name": "Sebastien Rousseau", "url": "https://sebastienrousseau.com" },
           "sameAs": [
             "https://github.com/sebastienrousseau/pain001",

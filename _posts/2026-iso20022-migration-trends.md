@@ -4,7 +4,7 @@ banner_alt: "A timeline of global ISO 20022 payment-system milestones converging
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
-cdn: "https://cloudcdn.pro"
+cdn: "https://pain001.com"
 changefreq: weekly
 charset: utf-8
 cname: pain001.com
@@ -14,12 +14,12 @@ description: "The post-migration landscape with primary sources: the 14 Nov 2026
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
-icon: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/2026-iso20022-migration-trends/"
 image_alt: "A timeline of global ISO 20022 payment-system milestones converging on the 14 November 2026 CBPR+ deadlines for structured addresses and the MT101 relay."
 image_height: 120
 image_width: 120
-image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+image: "https://pain001.com/img/pain001.svg"
 keywords: "ISO 20022 2026, structured address November 2026, MT101 decommission, CBPR+ deadline, hybrid postal address, Fedwire ISO 20022, FedNow, verification of payee, instant payments regulation"
 language: en-GB
 layout: page
@@ -27,7 +27,7 @@ locale: en_GB
 logo_alt: "Pain001 Logo"
 logo_height: 36
 logo_width: 36
-logo: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+logo: "https://pain001.com/img/pain001.svg"
 menu: active
 measurementID: G-167B274ZWJ
 name: Pain001

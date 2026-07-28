@@ -16,7 +16,7 @@
     <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
     {{apple}}
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self' 'unsafe-inline' 'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline' 'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
     <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -26,8 +26,8 @@
 
     <link rel="alternate" href="{{url}}" hreflang="{{hreflang}}" />
     <link rel="canonical" href="{{url}}" />
-    <link rel="icon" type="image/svg+xml" href="{{cdn}}/pain001/v1/logos/pain001.svg" sizes="any" />
-    <link rel="apple-touch-icon" href="{{cdn}}/pain001/v1/logos/pain001.svg" />
+    <link rel="icon" type="image/svg+xml" href="/img/pain001.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="/img/pain001.svg" />
     <link rel="preload" href="/fonts/source-serif-4-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="manifest" href="/manifest.json" />
     <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
@@ -866,7 +866,7 @@
       <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Toggle navigation" />
       <div class="wrap ap-nav-wrap">
         <a class="ap-brand" href="/" aria-label="Pain001 home">
-          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="" width="26" height="26" />
+          <img src="/img/pain001.svg" alt="" width="26" height="26" />
           <span>Pain001</span>
         </a>
         <nav aria-label="Primary navigation" id="ap-primary-nav">
@@ -978,7 +978,7 @@
           <a href="/iso20022-roadmap/"><strong>Next CBPR+ milestone:</strong> 14 Nov 2026</a>
           <a href="/2026-iso20022-migration-trends/"><strong>Address rule:</strong> structured or hybrid</a>
           <a href="/pain.001.001.09/"><strong>Relay version:</strong> pain.001 v9</a>
-          <a href="https://pypi.org/project/pain001/" rel="external"><strong>Latest release:</strong> v0.0.56</a>
+          <a href="https://pypi.org/project/pain001/" rel="external"><strong>Latest release:</strong> v0.0.57</a>
           <a href="/compatibility/"><strong>Message definitions:</strong> 11</a>
           <a href="/iso20022-roadmap/"><strong>Reviewed:</strong> 2026-07-27</a>
         </div>
@@ -1402,7 +1402,7 @@ pain001 -t pain.001.001.09 -d payments.csv --scheme sepa-sct --dry-run</code></p
           "@id": "https://pain001.com/#organization",
           "name": "Pain001",
           "url": "https://pain001.com/",
-          "logo": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+          "logo": "/img/pain001.svg",
           "founder": { "@type": "Person", "name": "Sebastien Rousseau", "url": "https://sebastienrousseau.com" },
           "sameAs": [
             "https://github.com/sebastienrousseau/pain001",

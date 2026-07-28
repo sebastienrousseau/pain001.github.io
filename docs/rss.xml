@@ -317,7 +317,7 @@
     <item>
       <title>Pain001 Technical Reference: CLI, Python API and REST</title>
       <link>https://pain001.com/documentation/</link>
-      <description>Complete reference for pain001 v0.0.56 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.</description>
+      <description>Complete reference for pain001 v0.0.57 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.</description>
       <guid isPermaLink="true">https://pain001.com/documentation/</guid>
       <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
       <author>contact@pain001.com (Sebastien Rousseau)</author>

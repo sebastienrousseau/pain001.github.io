@@ -4,7 +4,7 @@ banner_alt: "A cross-border credit transfer instruction rendered as CBPR+-confor
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
-cdn: "https://cloudcdn.pro"
+cdn: "https://pain001.com"
 changefreq: weekly
 charset: utf-8
 cname: pain001.com
@@ -14,12 +14,12 @@ description: "What CBPR+ requires of your pain.001: BICFI agents, structured or 
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
-icon: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/"
 image_alt: "A cross-border credit transfer instruction rendered as CBPR+-conformant ISO 20022 pain.001 XML, with structured address elements highlighted."
 image_height: 120
 image_width: 120
-image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+image: "https://pain001.com/img/pain001.svg"
 keywords: "CBPR+ pain.001, cross-border payment initiation, pain.001 v9 CBPR+, BICFI, structured address CBPR+, correspondent banking ISO 20022, pacs.008 vs pain.001"
 language: en-GB
 layout: page
@@ -27,7 +27,7 @@ locale: en_GB
 logo_alt: "Pain001 Logo"
 logo_height: 36
 logo_width: 36
-logo: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+logo: "https://pain001.com/img/pain001.svg"
 menu: active
 measurementID: G-167B274ZWJ
 name: Pain001

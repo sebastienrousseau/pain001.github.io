@@ -4,7 +4,7 @@ banner_alt: "The business case for Pain001 answered as five plain-English questi
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
-cdn: "https://cloudcdn.pro"
+cdn: "https://pain001.com"
 changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
@@ -14,12 +14,12 @@ description: "What a rejected payment file costs, why 14 November 2026 is fixed,
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "en"
-icon: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/why/"
 image_alt: "A question-and-answer session on ISO 20022 payment file generation — the questions treasury, operations, engineering, and audit teams actually ask."
 image_height: 120
 image_width: 120
-image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+image: "https://pain001.com/img/pain001.svg"
 keywords: "why pain001, ISO 20022 business case, payment file rejected cost, ISO 20022 migration deadline 2026, CBPR+ structured address requirement, pain.001 vs MT101, open source payment software"
 language: "en-GB"
 layout: "page"
@@ -27,7 +27,7 @@ locale: "en_GB"
 logo_alt: "Pain001 Logo"
 logo_height: 36
 logo_width: 36
-logo: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+logo: "https://pain001.com/img/pain001.svg"
 menu: active
 measurementID: G-167B274ZWJ
 name: Pain001

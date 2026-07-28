@@ -1,0 +1,129 @@
+#!/usr/bin/env python3
+"""Check that Python snippets in _posts/ reference real pain001 API.
+
+The ten pain.001 version pages shipped a snippet calling
+``VersionMapper("from", "to").migrate(records)`` — an API that has never
+existed (the constructor takes no arguments and the method is
+``migrate_rows``). It raised TypeError on every page and nothing caught
+it, because no test ever executed documentation.
+
+This does not run the snippets (they need payment data). It checks every
+``from pain001... import X`` resolves, every attribute accessed on an
+imported symbol exists, and every call's arity matches the signature.
+
+Skipped automatically when pain001 is not importable, so the site can
+still build without the library installed; CI installs it.
+"""
+from __future__ import annotations
+
+import ast
+import glob
+import importlib
+import inspect
+import re
+import sys
+
+PY_BLOCK = re.compile(r"```python\n(.*?)```", re.S)
+
+
+def main() -> int:
+    try:
+        importlib.import_module("pain001")
+    except Exception as exc:  # noqa: BLE001
+        print(f"pain001 not importable ({exc.__class__.__name__}); skipping.")
+        return 0
+
+    problems: list[str] = []
+    checked = 0
+
+    for path in sorted(glob.glob("_posts/*.md")):
+        text = open(path, encoding="utf-8").read()
+        for block in PY_BLOCK.findall(text):
+            try:
+                tree = ast.parse(block)
+            except SyntaxError as exc:
+                problems.append(f"{path}: snippet does not parse — {exc}")
+                continue
+            checked += 1
+
+            symbols: dict[str, object] = {}
+            for node in ast.walk(tree):
+                if isinstance(node, ast.ImportFrom) and (node.module or "").startswith("pain001"):
+                    # companion packages ship separately (pain001_loader_*,
+                    # pain001_mcp, pain001_lsp); absent here is not a defect
+                    if not node.module.startswith("pain001."):
+                        if node.module != "pain001":
+                            continue
+                    try:
+                        mod = importlib.import_module(node.module)
+                    except Exception as exc:  # noqa: BLE001
+                        problems.append(f"{path}: cannot import {node.module} — {exc}")
+                        continue
+                    for alias in node.names:
+                        obj = getattr(mod, alias.name, None)
+                        if obj is None:
+                            problems.append(
+                                f"{path}: {node.module} has no {alias.name!r}")
+                        else:
+                            symbols[alias.asname or alias.name] = obj
+
+            # attribute access + constructor arity on imported symbols
+            for node in ast.walk(tree):
+                if isinstance(node, ast.Call):
+                    fn = node.func
+                    # Symbol(...)  -> constructor arity
+                    if isinstance(fn, ast.Name) and fn.id in symbols:
+                        obj = symbols[fn.id]
+                        if inspect.isclass(obj):
+                            _check_arity(obj.__init__, node, f"{fn.id}()",
+                                         path, problems, skip_self=True)
+                    # Symbol(...).method(...) or var.method(...)
+                    if isinstance(fn, ast.Attribute):
+                        base = fn.value
+                        owner = None
+                        if isinstance(base, ast.Name) and base.id in symbols:
+                            owner = symbols[base.id]
+                        elif (isinstance(base, ast.Call)
+                              and isinstance(base.func, ast.Name)
+                              and base.func.id in symbols):
+                            owner = symbols[base.func.id]
+                        if owner is not None and inspect.isclass(owner):
+                            meth = getattr(owner, fn.attr, None)
+                            if meth is None:
+                                problems.append(
+                                    f"{path}: {owner.__name__} has no method "
+                                    f"{fn.attr!r}")
+                            elif callable(meth):
+                                _check_arity(meth, node,
+                                             f"{owner.__name__}.{fn.attr}()",
+                                             path, problems, skip_self=True)
+
+    print(f"checked {checked} python snippet(s) in _posts/")
+    for p in problems:
+        print("FAIL", p)
+    print("result:", "CLEAN" if not problems else f"{len(problems)} problem(s)")
+    return 1 if problems else 0
+
+
+def _check_arity(func, call: ast.Call, label: str, path: str,
+                 problems: list[str], skip_self: bool = False) -> None:
+    try:
+        sig = inspect.signature(func)
+    except (TypeError, ValueError):
+        return
+    params = list(sig.parameters.values())
+    if skip_self and params and params[0].name in ("self", "cls"):
+        params = params[1:]
+    if any(p.kind is p.VAR_POSITIONAL for p in params):
+        return
+    maxpos = sum(1 for p in params
+                 if p.kind in (p.POSITIONAL_ONLY, p.POSITIONAL_OR_KEYWORD))
+    given = len(call.args)
+    if given > maxpos:
+        problems.append(
+            f"{path}: {label} called with {given} positional arg(s) but "
+            f"accepts at most {maxpos}")
+
+
+if __name__ == "__main__":
+    sys.exit(main())

@@ -8,7 +8,7 @@
     <title>pain.001.001.05 Reference: Generate and Validate</title>
 
     <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
-<meta name="description" content="pain.001.001.05 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.">
+<meta name="description" content="pain.001.001.05 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.">
 <meta name="keywords" content="pain.001.001.05, pain.001.001.05 XSD, pain.001.001.05 example, customer credit transfer initiation, pain.001 versions, ISO 20022 message version">
 <meta property="og:image" content="https://pain001.com/og/pain001-card.jpg" />
     <meta property="og:image:width" content="1200" />
@@ -19,7 +19,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="pain.001.001.05 Reference: Generate and Validate">
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
     <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -29,8 +29,8 @@
 
     <link rel="alternate" href="https://pain001.com/pain.001.001.05/" hreflang="en" />
     
-    <link rel="icon" type="image/svg+xml" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" sizes="any" />
-    <link rel="apple-touch-icon" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />
+    <link rel="icon" type="image/svg+xml" href="/img/pain001.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="/img/pain001.svg" />
     <link rel="preload" href="/fonts/source-serif-4-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="manifest" href="/manifest.json" />
     <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
@@ -45,13 +45,13 @@
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="pain.001.001.05 Reference: Generate and Validate">
-<meta property="og:description" content="Home pain.001.001.05 Reference: Generate and Validate Message reference pain.001.001.05 Reference: Generate and Validate pain.001.001.05 — a maintenance">
+<meta property="og:description" content="pain.001.001.05 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://pain001.com/pain.001.001.05/">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="pain.001.001.05 Reference: Generate and Validate">
-<meta name="twitter:description" content="Home pain.001.001.05 Reference: Generate and Validate Message reference pain.001.001.05 Reference: Generate and Validate pain.001.001.05 — a maintenance">
+<meta name="twitter:description" content="pain.001.001.05 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.">
 <meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg">
 <link rel="canonical" href="https://pain001.com/pain.001.001.05/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
 <link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"></head>
@@ -64,7 +64,7 @@
       <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Toggle navigation" />
       <div class="wrap ap-nav-wrap">
         <a class="ap-brand" href="/" aria-label="Pain001 home">
-          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="" width="26" height="26" />
+          <img src="/img/pain001.svg" alt="" width="26" height="26" />
           <span>Pain001</span>
         </a>
         <nav aria-label="Primary navigation" id="ap-primary-nav">
@@ -179,7 +179,7 @@
           </nav>
           <p class="eyebrow">Message reference</p>
           <h1 class="page-title">pain.001.001.05 Reference: Generate and Validate</h1>
-          <p class="deck">pain.001.001.05 — a maintenance release on the road to 2019. Element structure, version notes, and lossless migration.</p>
+          <p class="deck">pain.001.001.05 — a maintenance release on the road to 2019. Element structure, version notes, and version migration.</p>
           <div class="article-meta"><span>1 min read</span>
             <span>Last reviewed <time datetime="2026-07-26">26 July 2026</time></span>
           </div>
@@ -204,9 +204,11 @@
 <pre><code class="language-bash">pain001 init pain.001.001.05 -o work/         # scaffold a starter CSV
 pain001 inspect pain.001.001.05               # list required + optional fields
 pain001 -t pain.001.001.05 -d payments.csv -o out/ --dry-run</code></pre>
-<p>Records migrate losslessly between supported versions:</p>
+<p>Records can be reshaped between supported versions. The mapper renames and defaults fields to match the target version; elements the target does not model are not carried over, so re-validate after migrating:</p>
 <pre><code class="language-python">from pain001.migration import VersionMapper
-records_v9 = VersionMapper("pain.001.001.05", "pain.001.001.09").migrate(records)</code></pre>
+rows = VersionMapper().migrate_rows(
+    rows, "pain.001.001.05", "pain.001.001.09"
+)</code></pre>
 <p>See the full <a href="/documentation/">version catalogue</a>, or the <a href="/glossary/">glossary</a> for the vocabulary used here.</p>
 </div>
         </article>
@@ -284,7 +286,7 @@ records_v9 = VersionMapper("pain.001.001.05", "pain.001.001.09").migrate(records
           "@id": "https://pain001.com/pain.001.001.05/",
           "url": "https://pain001.com/pain.001.001.05/",
           "name": "pain.001.001.05 Reference: Generate and Validate",
-          "description": "pain.001.001.05 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.",
+          "description": "pain.001.001.05 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.",
           "inLanguage": "en-GB",
           "dateModified": "2026-07-26",
           "isPartOf": { "@id": "https://pain001.com/#website" },
@@ -302,7 +304,7 @@ records_v9 = VersionMapper("pain.001.001.05", "pain.001.001.09").migrate(records
           "@id": "https://pain001.com/#organization",
           "name": "Pain001",
           "url": "https://pain001.com/",
-          "logo": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+          "logo": "/img/pain001.svg",
           "founder": { "@type": "Person", "name": "Sebastien Rousseau", "url": "https://sebastienrousseau.com" },
           "sameAs": [
             "https://github.com/sebastienrousseau/pain001",

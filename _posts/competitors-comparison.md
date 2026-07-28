@@ -4,7 +4,7 @@ banner_alt: "A comparison matrix of ISO 20022 payment tooling — open-source li
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
-cdn: "https://cloudcdn.pro"
+cdn: "https://pain001.com"
 changefreq: weekly
 charset: utf-8
 cname: pain001.com
@@ -14,12 +14,12 @@ description: "Pain001 against Prowide, python-sepaxml, SWIFT Translator, XMLdati
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
-icon: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/competitors-comparison/"
 image_alt: "A comparison matrix of ISO 20022 payment tooling — open-source libraries and commercial translators measured against the Pain001 suite, sources dated."
 image_height: 120
 image_width: 120
-image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+image: "https://pain001.com/img/pain001.svg"
 keywords: "pain001 vs sepaxml, prowide alternative, SWIFT translator price, ISO 20022 open source, pain.001 validator comparison, XMLdation alternative, payment file software comparison"
 language: en-GB
 layout: page
@@ -27,7 +27,7 @@ locale: en_GB
 logo_alt: "Pain001 Logo"
 logo_height: 36
 logo_width: 36
-logo: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+logo: "https://pain001.com/img/pain001.svg"
 menu: active
 measurementID: G-167B274ZWJ
 name: Pain001

@@ -4,7 +4,7 @@ banner_alt: "A privacy statement page for pain001.com — a static site that col
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
-cdn: "https://cloudcdn.pro"
+cdn: "https://pain001.com"
 changefreq: weekly
 charset: utf-8
 cname: pain001.com
@@ -14,12 +14,12 @@ description: "No cookies, no analytics, no tracking. The website stores only you
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
-icon: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/privacy/"
 image_alt: "A privacy statement page for pain001.com — a static site that collects nothing, documenting software that processes everything locally."
 image_height: 120
 image_width: 120
-image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+image: "https://pain001.com/img/pain001.svg"
 keywords: "pain001 privacy policy, no tracking, local processing, payment data privacy"
 language: en-GB
 layout: page
@@ -27,7 +27,7 @@ locale: en_GB
 logo_alt: "Pain001 Logo"
 logo_height: 36
 logo_width: 36
-logo: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+logo: "https://pain001.com/img/pain001.svg"
 menu: active
 measurementID: G-167B274ZWJ
 name: Pain001
@@ -94,7 +94,7 @@ The short version: this site collects nothing, and the software processes everyt
 
 - **No cookies, no analytics scripts, no tracking pixels.** The only state stored in your browser is your light/dark theme choice, kept in `localStorage` and never transmitted.
 - **Hosting.** The site is served as static files by GitHub Pages, which may log standard request metadata (IP address, user agent) under [GitHub's privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement).
-- **Assets.** The site logo loads from the `cloudcdn.pro` CDN; no other third-party requests are made.
+- **Assets.** Every asset — logo, fonts, styles, scripts, the demo's WebAssembly runtime and schemas — is served from this origin. The site makes **no third-party requests at all**; nothing on it can report your visit to anyone else.
 
 ## The Pain001 software
 

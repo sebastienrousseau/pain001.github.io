@@ -4,7 +4,7 @@ banner_alt: "A legacy SWIFT MT101 message beside its regenerated ISO 20022 pain.
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
-cdn: "https://cloudcdn.pro"
+cdn: "https://pain001.com"
 changefreq: weekly
 charset: utf-8
 cname: pain001.com
@@ -14,12 +14,12 @@ description: "Parse legacy SWIFT MT101 messages into records that pass pain.001.
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
-icon: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/pain001-loader-mt101/"
 image_alt: "A legacy SWIFT MT101 message beside its regenerated ISO 20022 pain.001 XML — the migration path for the November 2026 interbank relay decommission."
 image_height: 120
 image_width: 120
-image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+image: "https://pain001.com/img/pain001.svg"
 keywords: "MT101 to pain.001, MT101 mapping, SWIFT MT101 converter, MT101 decommission 2026, request for transfer, MT-MX migration, pain.001.001.09"
 language: en-GB
 layout: page
@@ -27,7 +27,7 @@ locale: en_GB
 logo_alt: "Pain001 Logo"
 logo_height: 36
 logo_width: 36
-logo: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+logo: "https://pain001.com/img/pain001.svg"
 menu: active
 measurementID: G-167B274ZWJ
 name: Pain001

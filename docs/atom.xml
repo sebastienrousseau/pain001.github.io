@@ -110,7 +110,7 @@
     <id>https://pain001.com/documentation/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Complete reference for pain001 v0.0.56 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.</summary>
+    <summary>Complete reference for pain001 v0.0.57 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
@@ -353,7 +353,7 @@
     <id>https://pain001.com/pain.001.001.03/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>pain.001.001.03 — the SEPA &amp; CGI workhorse version. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.</summary>
+    <summary>pain.001.001.03 — the SEPA &amp; CGI workhorse version. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
@@ -362,7 +362,7 @@
     <id>https://pain001.com/pain.001.001.04/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>pain.001.001.04 — early maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.</summary>
+    <summary>pain.001.001.04 — early maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
@@ -371,7 +371,7 @@
     <id>https://pain001.com/pain.001.001.05/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>pain.001.001.05 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.</summary>
+    <summary>pain.001.001.05 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
@@ -380,7 +380,7 @@
     <id>https://pain001.com/pain.001.001.06/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>pain.001.001.06 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.</summary>
+    <summary>pain.001.001.06 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
@@ -389,7 +389,7 @@
     <id>https://pain001.com/pain.001.001.07/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>pain.001.001.07 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.</summary>
+    <summary>pain.001.001.07 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
@@ -398,7 +398,7 @@
     <id>https://pain001.com/pain.001.001.08/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>pain.001.001.08 — the last pre-2019 version. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.</summary>
+    <summary>pain.001.001.08 — the last pre-2019 version. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
@@ -407,7 +407,7 @@
     <id>https://pain001.com/pain.001.001.09/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>pain.001.001.09 — the CBPR+ cross-border version. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.</summary>
+    <summary>pain.001.001.09 — the CBPR+ cross-border version. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
@@ -416,7 +416,7 @@
     <id>https://pain001.com/pain.001.001.10/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>pain.001.001.10 — post-2019 refinement. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.</summary>
+    <summary>pain.001.001.10 — post-2019 refinement. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
@@ -425,7 +425,7 @@
     <id>https://pain001.com/pain.001.001.11/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>pain.001.001.11 — recent maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.</summary>
+    <summary>pain.001.001.11 — recent maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
@@ -434,7 +434,7 @@
     <id>https://pain001.com/pain.001.001.12/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>pain.001.001.12 — the newest supported version. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001.</summary>
+    <summary>pain.001.001.12 — the newest supported version. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>

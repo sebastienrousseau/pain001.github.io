@@ -4,7 +4,7 @@ banner_alt: "A terminal rendering a validated ISO 20022 pain.001 payment file â€
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
-cdn: "https://cloudcdn.pro"
+cdn: "https://pain001.com"
 changefreq: weekly
 charset: utf-8
 cname: pain001.com
@@ -14,12 +14,12 @@ description: "Generate schema-validated ISO 20022 pain.001 and pain.008 XML from
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
-icon: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/"
 image_alt: "A terminal rendering a validated ISO 20022 pain.001 payment file â€” the Pain001 suite turning everyday spreadsheets and exports into bank-ready XML."
 image_height: 120
 image_width: 120
-image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+image: "https://pain001.com/img/pain001.svg"
 keywords: "pain001, ISO 20022, pain.001, payment initiation, SEPA XML generator, credit transfer, pain.008, Python, MCP server, LSP, SWIFT MT101, CBPR+, XSD validation"
 language: en-GB
 layout: index
@@ -27,7 +27,7 @@ locale: en_GB
 logo_alt: "Pain001 Logo"
 logo_height: 36
 logo_width: 36
-logo: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+logo: "https://pain001.com/img/pain001.svg"
 menu: active
 measurementID: G-167B274ZWJ
 name: Pain001

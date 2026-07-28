@@ -19,7 +19,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Privacy: This Site Collects Nothing">
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cloudcdn.pro data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
     <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -29,8 +29,8 @@
 
     <link rel="alternate" href="https://pain001.com/privacy/" hreflang="en" />
     
-    <link rel="icon" type="image/svg+xml" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" sizes="any" />
-    <link rel="apple-touch-icon" href="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" />
+    <link rel="icon" type="image/svg+xml" href="/img/pain001.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="/img/pain001.svg" />
     <link rel="preload" href="/fonts/source-serif-4-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="manifest" href="/manifest.json" />
     <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
@@ -45,13 +45,13 @@
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="Privacy: This Site Collects Nothing">
-<meta property="og:description" content="Home Privacy: This Site Collects Nothing Legal Privacy: This Site Collects Nothing No cookies, no analytics, no tracking. Your theme choice stays in your">
+<meta property="og:description" content="No cookies, no analytics, no tracking. The website stores only your theme choice locally, and the Pain001 software processes all payment data on your own infrastructure.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://pain001.com/privacy/">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Privacy: This Site Collects Nothing">
-<meta name="twitter:description" content="Home Privacy: This Site Collects Nothing Legal Privacy: This Site Collects Nothing No cookies, no analytics, no tracking. Your theme choice stays in your">
+<meta name="twitter:description" content="No cookies, no analytics, no tracking. The website stores only your theme choice locally, and the Pain001 software processes all payment data on your own infrastructure.">
 <meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg">
 <link rel="canonical" href="https://pain001.com/privacy/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
 <link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"></head>
@@ -64,7 +64,7 @@
       <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Toggle navigation" />
       <div class="wrap ap-nav-wrap">
         <a class="ap-brand" href="/" aria-label="Pain001 home">
-          <img src="https://cloudcdn.pro/pain001/v1/logos/pain001.svg" alt="" width="26" height="26" />
+          <img src="/img/pain001.svg" alt="" width="26" height="26" />
           <span>Pain001</span>
         </a>
         <nav aria-label="Primary navigation" id="ap-primary-nav">
@@ -193,7 +193,7 @@
 <ul>
 <li><strong>No cookies, no analytics scripts, no tracking pixels.</strong> The only state stored in your browser is your light/dark theme choice, kept in <code>localStorage</code> and never transmitted.</li>
 <li><strong>Hosting.</strong> The site is served as static files by GitHub Pages, which may log standard request metadata (IP address, user agent) under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">GitHub's privacy statement</a>.</li>
-<li><strong>Assets.</strong> The site logo loads from the <code>cloudcdn.pro</code> CDN; no other third-party requests are made.</li>
+<li><strong>Assets.</strong> Every asset — logo, fonts, styles, scripts, the demo's WebAssembly runtime and schemas — is served from this origin. The site makes <strong>no third-party requests at all</strong>; nothing on it can report your visit to anyone else.</li>
 </ul>
 <h2 id="the-pain001-software">The Pain001 software<a class="heading-anchor" href="#the-pain001-software" aria-label="Link to section: The Pain001 software">#</a></h2>
 <ul>
@@ -295,7 +295,7 @@
           "@id": "https://pain001.com/#organization",
           "name": "Pain001",
           "url": "https://pain001.com/",
-          "logo": "https://cloudcdn.pro/pain001/v1/logos/pain001.svg",
+          "logo": "/img/pain001.svg",
           "founder": { "@type": "Person", "name": "Sebastien Rousseau", "url": "https://sebastienrousseau.com" },
           "sameAs": [
             "https://github.com/sebastienrousseau/pain001",

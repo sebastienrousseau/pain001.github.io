@@ -4,7 +4,7 @@ banner_alt: "A trust-centre index assembling Pain001's security, supply-chain, p
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
-cdn: "https://cloudcdn.pro"
+cdn: "https://pain001.com"
 changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
@@ -14,12 +14,12 @@ description: "Everything a vendor-risk, security, or audit reviewer needs in one
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
-icon: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/trust/"
 image_alt: "A question-and-answer session on ISO 20022 payment file generation — the questions treasury, operations, engineering, and audit teams actually ask."
 image_height: 120
 image_width: 120
-image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+image: "https://pain001.com/img/pain001.svg"
 keywords: "pain001 trust centre, vendor risk assessment open source, SBOM, OpenSSF scorecard, SLSA provenance, security review ISO 20022, third-party risk"
 language: en-GB
 layout: page
@@ -27,7 +27,7 @@ locale: en_GB
 logo_alt: "Pain001 Logo"
 logo_height: 36
 logo_width: 36
-logo: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+logo: "https://pain001.com/img/pain001.svg"
 menu: active
 measurementID: G-167B274ZWJ
 name: Pain001
@@ -109,7 +109,7 @@ This page exists so that a security, vendor-risk, or audit reviewer can answer s
 ## 03. Data and privacy
 
 - **Product data flows** — every component (CLI, library, REST service, MCP server, LSP server) executes on your infrastructure. There is no telemetry, no SaaS callback, no network dependency for generation or validation. [Privacy position](/privacy/).
-- **Website** — no cookies, no analytics scripts, no third-party requests beyond one logo CDN. The [browser demo](/try/) reads files locally via the FileReader API; the "Verify it yourself" panel on that page shows how to falsify this with DevTools open.
+- **Website** — no cookies, no analytics scripts, and no third-party requests of any kind: every asset is served from this origin. The [browser demo](/try/) reads files locally via the FileReader API; the "Verify it yourself" panel on that page shows how to falsify this with DevTools open.
 - **Demo boundary** — the demo's WASM validation engine is served from this origin and cached by a service worker; after first load the demo works offline, which is the strongest proof no data leaves the machine.
 
 ## 04. Accessibility

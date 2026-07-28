@@ -4,22 +4,22 @@ banner_alt: "The ISO 20022 pain.001.001.06 message structure — group header, p
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
-cdn: "https://cloudcdn.pro"
+cdn: "https://pain001.com"
 changefreq: weekly
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "pain.001.001.06 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001."
+description: "pain.001.001.06 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
-icon: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/pain.001.001.06/"
 image_alt: "The ISO 20022 pain.001.001.06 message structure — group header, payment information, and credit transfer transaction blocks rendered as validated XML."
 image_height: 120
 image_width: 120
-image: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+image: "https://pain001.com/img/pain001.svg"
 keywords: "pain.001.001.06, pain.001.001.06 XSD, pain.001.001.06 example, customer credit transfer initiation, pain.001 versions, ISO 20022 message version"
 language: en-GB
 layout: page
@@ -27,7 +27,7 @@ locale: en_GB
 logo_alt: "Pain001 Logo"
 logo_height: 36
 logo_width: 36
-logo: "https://cloudcdn.pro/pain001/v1/logos/pain001.svg"
+logo: "https://pain001.com/img/pain001.svg"
 menu: active
 measurementID: G-167B274ZWJ
 name: Pain001
@@ -37,7 +37,7 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "pain.001.001.06 — a maintenance release some TMS platforms export. Element structure, version notes, and lossless migration."
+subtitle: "pain.001.001.06 — a maintenance release some TMS platforms export. Element structure, version notes, and version migration."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
 title: "pain.001.001.06 Reference: Generate and Validate"
@@ -47,7 +47,7 @@ atom_link: "https://pain001.com/pain.001.001.06/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.47)"
-item_description: "pain.001.001.06 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001."
+item_description: "pain.001.001.06 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001."
 item_guid: "https://pain001.com/pain.001.001.06/rss.xml"
 item_link: "https://pain001.com/pain.001.001.06/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -68,7 +68,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: @wwdseb
-twitter_description: "pain.001.001.06 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and lossless migration to other versions with Pain001."
+twitter_description: "pain.001.001.06 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: @wwdseb
@@ -83,7 +83,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Message reference"
-excerpt: "The reference page for pain.001.001.06, a maintenance release some TMS platforms export: what distinguishes this Customer Credit Transfer Initiation version, the shared GrpHdr/PmtInf/CdtTrfTxInf element skeleton, generation and inspection commands, and how Pain001's VersionMapper migrates records to and from any of the ten supported pain.001 versions."
+excerpt: "The reference page for pain.001.001.06, a maintenance release some TMS platforms export: what distinguishes this Customer Credit Transfer Initiation version, the shared GrpHdr/PmtInf/CdtTrfTxInf element skeleton, generation and inspection commands, and how Pain001's VersionMapper reshapes records between any of the ten supported pain.001 versions."
 last_reviewed: "2026-07-26"
 
 ---
@@ -109,11 +109,13 @@ pain001 inspect pain.001.001.06               # list required + optional fields
 pain001 -t pain.001.001.06 -d payments.csv -o out/ --dry-run
 ```
 
-Records migrate losslessly between supported versions:
+Records can be reshaped between supported versions. The mapper renames and defaults fields to match the target version; elements the target does not model are not carried over, so re-validate after migrating:
 
 ```python
 from pain001.migration import VersionMapper
-records_v9 = VersionMapper("pain.001.001.06", "pain.001.001.09").migrate(records)
+rows = VersionMapper().migrate_rows(
+    rows, "pain.001.001.06", "pain.001.001.09"
+)
 ```
 
 See the full [version catalogue](/documentation/), or the [glossary](/glossary/) for the vocabulary used here.

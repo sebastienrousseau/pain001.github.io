@@ -49,7 +49,7 @@ _CONTAINERS = [
 # (it drops 'unsafe-inline'), so the CSP-DRIFT audit sees one policy.
 CSP_META = (
     "<meta content=\"default-src 'self'; base-uri 'self'; "
-    "object-src 'none'; img-src 'self' https://cloudcdn.pro data:; "
+    "object-src 'none'; img-src 'self' data:; "
     "style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; "
     "script-src 'self'  'wasm-unsafe-eval'; "
     "connect-src 'self'; font-src 'self'; "
@@ -87,10 +87,15 @@ def dedupe_head_metas(html: str) -> str:
         return html
     head = html[:end]
     for name in _DEDUPE_NAMES:
-        pattern = re.compile(r"<meta\s+name=\"?%s\"?[^>]*>\s*" % name)
+        # ssg re-emits metas with attributes in arbitrary order
+        # (``<meta content=... name=viewport>``), so anchoring on
+        # ``name=`` first silently matched only one of the pair and
+        # deduped nothing. Match any <meta> carrying the name instead.
+        pattern = re.compile(
+            r'<meta\b(?=[^>]*\bname=["\']?%s["\']?[\s>])[^>]*>\s*' % name)
         matches = list(pattern.finditer(head))
         for m in reversed(matches[1:]):
-            head = head[: m.start()] + head[m.end() :]
+            head = head[: m.start()] + head[m.end():]
     return head + html[end:]
 
 
@@ -759,6 +764,42 @@ def localise_pages(site: Path) -> None:
           f"RTL dir on {len(RTL_LANGS & set(LOCALES))}")
 
 
+_DESC_RE = re.compile(
+    r'<meta\b(?=[^>]*\bname=["\']?description["\']?[\s>])[^>]*\bcontent="([^"]*)"[^>]*>')
+
+
+def fix_social_descriptions(site: Path) -> None:
+    """Point og:description and twitter:description at the authored
+    description.
+
+    ssg synthesises the social descriptions from visible page text, which
+    on the homepage means the status strip — shared links read "Next
+    CBPR+ milestone: ... Reviewed:" and truncate mid-label. The authored
+    <meta name=description> is the human-written one, so mirror it."""
+    fixed = 0
+    for page in site.rglob("index.html"):
+        html = page.read_text(encoding="utf-8")
+        m = _DESC_RE.search(html[:html.find("</head>")])
+        if not m:
+            continue
+        desc = m.group(1).strip()
+        if not desc:
+            continue
+        out = html
+        for prop, attr in (("og:description", "property"),
+                           ("twitter:description", "name")):
+            pat = re.compile(
+                r'(<meta\b(?=[^>]*\b%s=["\']?%s["\']?[\s>])[^>]*\bcontent=")'
+                r'([^"]*)(")' % (attr, re.escape(prop)))
+            def repl(mm, d=desc):
+                return mm.group(1) + d + mm.group(3)
+            out = pat.sub(repl, out)
+        if out != html:
+            page.write_text(out, encoding="utf-8")
+            fixed += 1
+    print(f"[postbuild] social descriptions aligned on {fixed} page(s)")
+
+
 def fix_tag_pages(site: Path) -> None:
     for page in site.glob("tags/*/index.html"):
         html = page.read_text(encoding="utf-8")
@@ -835,6 +876,7 @@ def main() -> None:
             repaired += 1
     print(f"[postbuild] unescaped head/body markup on {repaired} page(s)")
     fix_tag_pages(site)
+    fix_social_descriptions(site)
     fix_manifest(site)
     fix_try_strip(site)
     localise_pages(site)
