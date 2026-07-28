@@ -88,7 +88,7 @@ last_reviewed: "2026-07-26"
 
 ---
 
-`pain.001.001.12` was the newest version until ISO published [`pain.001.001.13`](/pain.001.001.13/) on 19 March 2026. Note that Pain001 ships a placeholder schema for `.12`, so `--dry-run` performs no real XSD validation for this version — use `.11` or `.09` where schema proof matters.
+`pain.001.001.12` was the newest version until ISO published [`pain.001.001.13`](/pain.001.001.13/) on 19 March 2026. It is fully supported: generated, migrated, and validated against the official ISO schema.
 
 ## What to know about this version
 

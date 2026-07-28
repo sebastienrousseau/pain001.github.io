@@ -352,9 +352,9 @@ No element-level changes: the versions differ only in type definitions or docume
 
 No element-level changes: the versions differ only in type definitions or documentation.
 
-## pain.001.001.11 → pain.001.001.13
+## pain.001.001.11 → pain.001.001.12
 
-**37 added · 1 removed**
+**35 added · 0 removed**
 
 ### Added
 
@@ -368,8 +368,6 @@ No element-level changes: the versions differ only in type definitions or docume
 - `CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Cdtr/CtctDtls/URLAdr`
 - `CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Cdtr/PstlAdr/CareOf`
 - `CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Cdtr/PstlAdr/UnitNb`
-- `CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/RgltryRptg/Dtls/RptgCd`
-- `CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/RmtInf/Strd/SctiesData`
 - `CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Tax/UltmtDbtr`
 - `CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Tax/UltmtDbtr/Authstn`
 - `CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Tax/UltmtDbtr/RegnId`
@@ -395,6 +393,15 @@ No element-level changes: the versions differ only in type definitions or docume
 - `CstmrCdtTrfInitn/PmtInf/UltmtDbtr/CtctDtls/URLAdr`
 - `CstmrCdtTrfInitn/PmtInf/UltmtDbtr/PstlAdr/CareOf`
 - `CstmrCdtTrfInitn/PmtInf/UltmtDbtr/PstlAdr/UnitNb`
+
+## pain.001.001.12 → pain.001.001.13
+
+**2 added · 1 removed**
+
+### Added
+
+- `CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/RgltryRptg/Dtls/RptgCd`
+- `CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/RmtInf/Strd/SctiesData`
 
 ### Removed
 

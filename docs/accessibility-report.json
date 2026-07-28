@@ -1,6 +1,6 @@
 {
-  "pages_scanned": 124,
-  "total_issues": 124,
+  "pages_scanned": 128,
+  "total_issues": 128,
   "wcag_version": "2.2",
   "pages": [
     {
@@ -715,6 +715,46 @@
     },
     {
       "path": "message-spec-pain.001.001.11-types-3/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.12/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.12-types/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.12-types-2/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.12-types-3/index.html",
       "issues": [
         {
           "criterion": "1.1.1",

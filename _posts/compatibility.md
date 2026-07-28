@@ -98,8 +98,7 @@ Everything on this page is verified against the shipped code of **pain001 v0.0.5
 | pain.001.001.03 | Yes | Yes | Yes | SEPA/CGI workhorse; `<BIC>` element naming |
 | pain.001.001.04 – .08 | Yes | Yes | Yes | Channel-specific maintenance versions |
 | pain.001.001.09 | Yes | Yes | Yes | CBPR+ version; MT101-relay successor; `<BICFI>` |
-| pain.001.001.10 – .11 | Yes | Yes | Yes | Post-2019 refinements |
-| pain.001.001.12 | Yes | **No** | Yes | Generation and migration work, but the shipped schema for this version is a placeholder, so `--dry-run` performs **no real XSD validation** for `.12`. Use `.11` or `.09` where schema proof matters. [Tracked](https://github.com/sebastienrousseau/pain001/issues) |
+| pain.001.001.10 – .12 | Yes | Yes | Yes | Post-2019 refinements |
 | pain.001.001.13 | Yes | Yes | Yes | Published by ISO 19 Mar 2026. Adds optional `UnqTxIdr` (UETR) and `DbtCdtRptgInd`. Generated and XSD-validated; **no bank channel we track accepts it yet** |
 | pain.008.001.02 | Yes | Yes | — | The only pain.008 version supported — others are not |
 | pain.002 (responses) | No | — | — | **Parsed**, not generated-for-submission: status/reason extraction |

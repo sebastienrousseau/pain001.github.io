@@ -99,7 +99,7 @@
     ],
     "title": "Compatibility Matrix",
     "url": "https://pain001.com/compatibility/",
-    "wordCount": 552
+    "wordCount": 510
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -592,7 +592,7 @@
     ],
     "title": "What changed between pain.001 versions — element-level diffs",
     "url": "https://pain001.com/message-spec-changes/",
-    "wordCount": 660
+    "wordCount": 671
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -609,7 +609,7 @@
     ],
     "title": "ISO 20022 payment code lists — every value, every version",
     "url": "https://pain001.com/message-spec-code-lists/",
-    "wordCount": 834
+    "wordCount": 851
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -1208,6 +1208,74 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
+    "description": "Complex types DocumentLineType1 – PaymentInitiationSource1 in ISO 20022 pain.001.001.12, with elements, cardinality and constraints, generated from the official XSD.",
+    "locale": "en_GB",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "pain.001.001.12 type reference (part 2 of 3) — DocumentLineType1 – PaymentInitiationSource1",
+    "url": "https://pain001.com/message-spec-pain.001.001.12-types-2/",
+    "wordCount": 1727
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "Complex types PaymentInstruction44 – TaxRecordDetails3 in ISO 20022 pain.001.001.12, with elements, cardinality and constraints, generated from the official XSD.",
+    "locale": "en_GB",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "pain.001.001.12 type reference (part 3 of 3) — PaymentInstruction44 – TaxRecordDetails3",
+    "url": "https://pain001.com/message-spec-pain.001.001.12-types-3/",
+    "wordCount": 1771
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "Complex types AccountIdentification4Choice – DocumentLineInformation2 in ISO 20022 pain.001.001.12, with elements, cardinality and constraints, generated from the official XSD.",
+    "locale": "en_GB",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "pain.001.001.12 type reference (part 1 of 3) — AccountIdentification4Choice – DocumentLineInformation2",
+    "url": "https://pain001.com/message-spec-pain.001.001.12-types/",
+    "wordCount": 1990
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "Every element of ISO 20022 pain.001.001.12: XML path, cardinality, data type, length and pattern constraints, and code lists — generated from the official XSD.",
+    "locale": "en_GB",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "pain.001.001.12 — complete element reference",
+    "url": "https://pain001.com/message-spec-pain.001.001.12/",
+    "wordCount": 1726
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
     "description": "Complex types DocumentLineType1 – PaymentInitiationSource1 in ISO 20022 pain.001.001.13, with elements, cardinality and constraints, generated from the official XSD.",
     "locale": "en_GB",
     "tags": [
@@ -1340,7 +1408,7 @@
     ],
     "title": "ISO 20022 message specifications — generated from the official XSDs",
     "url": "https://pain001.com/message-specs/",
-    "wordCount": 688
+    "wordCount": 673
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -1578,7 +1646,7 @@
     ],
     "title": "pain.001.001.12 Reference: Generate and Validate",
     "url": "https://pain001.com/pain.001.001.12/",
-    "wordCount": 240
+    "wordCount": 225
   },
   {
     "date": "2026-07-26T08:00:00+00:00",

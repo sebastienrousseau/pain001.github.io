@@ -93,31 +93,31 @@ Every code list in the supported ISO 20022 payment-initiation messages, with its
 
 A code list is a closed set: a value outside it makes the document invalid against the schema, so these are the exact strings your source data has to produce.
 
-**27 code lists** across 11 message versions.
+**27 code lists** across 12 message versions.
 
 ## `AddressType2Code`
 
-*6 values · in 11 version(s)*
+*6 values · in 12 version(s)*
 
 `ADDR` · `PBOX` · `HOME` · `BIZZ` · `MLTO` · `DLVY`
 
-*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`, `pain.008.001.02`*
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.12`, `pain.001.001.13`, `pain.008.001.02`*
 
 ## `AdviceType1Code`
 
-*2 values · in 3 version(s)*
+*2 values · in 4 version(s)*
 
 `ADWD` · `ADND`
 
-*Appears in: `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`*
+*Appears in: `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.12`, `pain.001.001.13`*
 
 ## `Authorisation1Code`
 
-*4 values · in 11 version(s)*
+*4 values · in 12 version(s)*
 
 `AUTH` · `FDET` · `FSUM` · `ILEV`
 
-*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`, `pain.008.001.02`*
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.12`, `pain.001.001.13`, `pain.008.001.02`*
 
 ## `CashAccountType4Code`
 
@@ -129,35 +129,35 @@ A code list is a closed set: a value outside it makes the document invalid again
 
 ## `ChargeBearerType1Code`
 
-*4 values · in 11 version(s)*
+*4 values · in 12 version(s)*
 
 `DEBT` · `CRED` · `SHAR` · `SLEV`
 
-*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`, `pain.008.001.02`*
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.12`, `pain.001.001.13`, `pain.008.001.02`*
 
 ## `ChequeDelivery1Code`
 
-*12 values · in 10 version(s)*
+*12 values · in 11 version(s)*
 
 `MLDB` · `MLCD` · `MLFA` · `CRDB` · `CRCD` · `CRFA` · `PUDB` · `PUCD` · `PUFA` · `RGDB` · `RGCD` · `RGFA`
 
-*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`*
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.12`, `pain.001.001.13`*
 
 ## `ChequeType2Code`
 
-*5 values · in 10 version(s)*
+*5 values · in 11 version(s)*
 
 `CCHQ` · `CCCH` · `BCHQ` · `DRFT` · `ELDR`
 
-*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`*
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.12`, `pain.001.001.13`*
 
 ## `CreditDebitCode`
 
-*2 values · in 11 version(s)*
+*2 values · in 12 version(s)*
 
 `CRDT` · `DBIT`
 
-*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`, `pain.008.001.02`*
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.12`, `pain.001.001.13`, `pain.008.001.02`*
 
 ## `DocumentType3Code`
 
@@ -185,11 +185,11 @@ A code list is a closed set: a value outside it makes the document invalid again
 
 ## `ExchangeRateType1Code`
 
-*3 values · in 10 version(s)*
+*3 values · in 11 version(s)*
 
 `SPOT` · `SALE` · `AGRD`
 
-*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`*
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.12`, `pain.001.001.13`*
 
 ## `Frequency1Code`
 
@@ -201,11 +201,11 @@ A code list is a closed set: a value outside it makes the document invalid again
 
 ## `Frequency6Code`
 
-*9 values · in 3 version(s)*
+*9 values · in 4 version(s)*
 
 `YEAR` · `MNTH` · `QURT` · `MIAN` · `WEEK` · `DAIL` · `ADHO` · `INDA` · `FRTN`
 
-*Appears in: `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`*
+*Appears in: `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.12`, `pain.001.001.13`*
 
 ## `Instruction3Code`
 
@@ -217,11 +217,11 @@ A code list is a closed set: a value outside it makes the document invalid again
 
 ## `MandateClassification1Code`
 
-*3 values · in 3 version(s)*
+*3 values · in 4 version(s)*
 
 `FIXE` · `USGB` · `VARI`
 
-*Appears in: `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`*
+*Appears in: `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.12`, `pain.001.001.13`*
 
 ## `NamePrefix1Code`
 
@@ -233,11 +233,11 @@ A code list is a closed set: a value outside it makes the document invalid again
 
 ## `NamePrefix2Code`
 
-*5 values · in 4 version(s)*
+*5 values · in 5 version(s)*
 
 `DOCT` · `MADM` · `MISS` · `MIST` · `MIKS`
 
-*Appears in: `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`*
+*Appears in: `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.12`, `pain.001.001.13`*
 
 ## `PaymentMethod2Code`
 
@@ -249,11 +249,11 @@ A code list is a closed set: a value outside it makes the document invalid again
 
 ## `PaymentMethod3Code`
 
-*3 values · in 10 version(s)*
+*3 values · in 11 version(s)*
 
 `CHK` · `TRF` · `TRA`
 
-*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`*
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.12`, `pain.001.001.13`*
 
 ## `PreferredContactMethod1Code`
 
@@ -265,35 +265,35 @@ A code list is a closed set: a value outside it makes the document invalid again
 
 ## `PreferredContactMethod2Code`
 
-*6 values · in 1 version(s)*
+*6 values · in 2 version(s)*
 
 `MAIL` · `FAXX` · `LETT` · `CELL` · `ONLI` · `PHON`
 
-*Appears in: `pain.001.001.13`*
+*Appears in: `pain.001.001.12`, `pain.001.001.13`*
 
 ## `Priority2Code`
 
-*2 values · in 11 version(s)*
+*2 values · in 12 version(s)*
 
 `HIGH` · `NORM`
 
-*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`, `pain.008.001.02`*
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.12`, `pain.001.001.13`, `pain.008.001.02`*
 
 ## `RegulatoryReportingType1Code`
 
-*3 values · in 11 version(s)*
+*3 values · in 12 version(s)*
 
 `CRED` · `DEBT` · `BOTH`
 
-*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`, `pain.008.001.02`*
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.12`, `pain.001.001.13`, `pain.008.001.02`*
 
 ## `RemittanceLocationMethod2Code`
 
-*6 values · in 11 version(s)*
+*6 values · in 12 version(s)*
 
 `FAXI` · `EDIC` · `URID` · `EMAL` · `POST` · `SMSM`
 
-*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`, `pain.008.001.02`*
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.12`, `pain.001.001.13`, `pain.008.001.02`*
 
 ## `SequenceType1Code`
 
@@ -305,8 +305,8 @@ A code list is a closed set: a value outside it makes the document invalid again
 
 ## `TaxRecordPeriod1Code`
 
-*18 values · in 11 version(s)*
+*18 values · in 12 version(s)*
 
 `MM01` · `MM02` · `MM03` · `MM04` · `MM05` · `MM06` · `MM07` · `MM08` · `MM09` · `MM10` · `MM11` · `MM12` · `QTR1` · `QTR2` · `QTR3` · `QTR4` · `HLF1` · `HLF2`
 
-*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`, `pain.008.001.02`*
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.12`, `pain.001.001.13`, `pain.008.001.02`*
