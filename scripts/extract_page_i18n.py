@@ -13,9 +13,14 @@ import json
 import re
 from pathlib import Path
 
+import sys
+
 ROOT = Path(__file__).resolve().parent.parent
 site = ROOT / "docs"
-PAGES = ("why", "solutions", "executive-brief")
+# default: journey pages -> pages_i18n; pass a dir name + page slugs to
+# extract another set (e.g. docs_i18n documentation faqs installation glossary)
+OUT_DIR = sys.argv[1] if len(sys.argv) > 2 else "pages_i18n"
+PAGES = tuple(sys.argv[2:]) if len(sys.argv) > 2 else ("why", "solutions", "executive-brief")
 
 out = {}
 for page in PAGES:
@@ -57,8 +62,8 @@ for page in PAGES:
     words = sum(len(re.sub(r"<[^>]+>", " ", k).split()) for k in text)
     print(f"{page}: text={len(text)} aria={len(aria)} words={words}")
 
-dest = ROOT / "scripts" / "pages_i18n"
+dest = ROOT / "scripts" / OUT_DIR
 dest.mkdir(exist_ok=True)
 (dest / "en.json").write_text(
     json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
-print("wrote scripts/pages_i18n/en.json")
+print(f"wrote scripts/{OUT_DIR}/en.json")

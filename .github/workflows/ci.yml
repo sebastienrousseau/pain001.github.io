@@ -52,6 +52,16 @@ jobs:
       - name: Unit tests (demo validation rules)
         run: node --test tests/*.test.mjs
 
+      - name: Translation table integrity (key/tag/placeholder parity)
+        run: |
+          python3 scripts/validate_try_i18n.py
+          python3 scripts/validate_pages_i18n.py pages_i18n
+          python3 scripts/validate_pages_i18n.py docs_i18n
+          python3 scripts/validate_runtime_i18n.py
+
+      - name: Link integrity (internal links, anchors, locale consistency)
+        run: python3 scripts/validate_links.py docs
+
       - name: Accessibility scan (pa11y-ci, WCAG2AAA)
         run: |
           (cd docs && python3 -m http.server 8899 &)

@@ -6,7 +6,7 @@ import re
 import sys
 from pathlib import Path
 
-d = Path(__file__).parent / "pages_i18n"
+d = Path(__file__).parent / (sys.argv[1] if len(sys.argv) > 1 else "pages_i18n")
 en = json.loads((d / "en.json").read_text(encoding="utf-8"))
 fail = 0
 

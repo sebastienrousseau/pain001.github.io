@@ -511,11 +511,12 @@ def retarget_lang_menu_to_try(html: str) -> str:
 
 
 JOURNEY_PAGES = ("why", "solutions", "executive-brief")
+DOCS_PAGES = ("documentation", "faqs", "installation", "glossary")
 
 # Submenu targets that exist only in English get a visible cue on
 # localized pages, so the language jump is expected instead of surprising.
 EN_ONLY_SUB = (
-    "/competitors-comparison/", "/installation/", "/glossary/", "/faqs/",
+    "/competitors-comparison/",
     "/pain002-reason-codes/", "/pain001-mcp/", "/pain001-lsp/",
     "/pain001-loader-mt101/", "/pain001-loader-xlsx/",
     "/architecture-and-patents/", "/2026-iso20022-migration-trends/",
@@ -525,8 +526,8 @@ EN_ONLY_SUB = (
 
 
 def retarget_journey_nav(html: str, slug: str) -> str:
-    """Nav/footer/body links to localized journey pages stay in-locale."""
-    for p in JOURNEY_PAGES:
+    """Nav/footer/body links to localized pages stay in-locale."""
+    for p in JOURNEY_PAGES + DOCS_PAGES:
         html = html.replace('href="/%s/"' % p, 'href="/%s/%s/"' % (slug, p))
     return html
 
@@ -630,15 +631,20 @@ def gen_try_locales(site: Path) -> None:
 
 
 def gen_journey_locales(site: Path) -> None:
-    """Generate /<slug>/{why,solutions,executive-brief}/ for every locale
-    with a pages_i18n table — same mechanics as the /try/ variants."""
+    _gen_localized_pages(site, JOURNEY_PAGES, "pages_i18n")
+    _gen_localized_pages(site, DOCS_PAGES, "docs_i18n")
+
+
+def _gen_localized_pages(site: Path, pages: tuple, table_dir: str) -> None:
+    """Generate /<slug>/<page>/ for every locale with a translation
+    table — same mechanics as the /try/ variants."""
     try:
         from locale_strings import STRINGS
     except ImportError:
         sys.path.insert(0, str(Path(__file__).parent))
         from locale_strings import STRINGS
-    en_all = load_pages_i18n("en") or {}
-    for page_name in JOURNEY_PAGES:
+    en_all = _load_i18n(table_dir, "en") or {}
+    for page_name in pages:
         src = site / page_name / "index.html"
         if not src.exists():
             continue
@@ -655,7 +661,7 @@ def gen_journey_locales(site: Path) -> None:
         en_meta = en_all.get(page_name, {}).get("meta", {})
         n = 0
         for slug, code in LOCALES.items():
-            d = load_pages_i18n(slug)
+            d = _load_i18n(table_dir, slug)
             if not d or page_name not in d or slug not in STRINGS:
                 continue
             pd = d[page_name]
