@@ -1,6 +1,6 @@
 {
-  "pages_scanned": 122,
-  "total_issues": 122,
+  "pages_scanned": 124,
+  "total_issues": 124,
   "wcag_version": "2.2",
   "pages": [
     {
@@ -765,6 +765,26 @@
     },
     {
       "path": "message-spec-pain.008.001.02/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.008.001.02-types/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.008.001.02-types-2/index.html",
       "issues": [
         {
           "criterion": "1.1.1",

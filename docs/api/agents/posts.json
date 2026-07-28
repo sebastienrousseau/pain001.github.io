@@ -609,7 +609,7 @@
     ],
     "title": "ISO 20022 payment code lists — every value, every version",
     "url": "https://pain001.com/message-spec-code-lists/",
-    "wordCount": 766
+    "wordCount": 834
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -660,7 +660,7 @@
     ],
     "title": "pain.001.001.03 — complete element reference",
     "url": "https://pain001.com/message-spec-pain.001.001.03/",
-    "wordCount": 1543
+    "wordCount": 1530
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -1068,7 +1068,7 @@
     ],
     "title": "pain.001.001.09 — complete element reference",
     "url": "https://pain001.com/message-spec-pain.001.001.09/",
-    "wordCount": 1666
+    "wordCount": 1653
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -1276,6 +1276,40 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
+    "description": "Complex types Party6Choice – TaxRecordDetails1 in ISO 20022 pain.008.001.02, with elements, cardinality and constraints, generated from the official XSD.",
+    "locale": "en_GB",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "pain.008.001.02 type reference (part 2 of 2) — Party6Choice – TaxRecordDetails1",
+    "url": "https://pain001.com/message-spec-pain.008.001.02-types-2/",
+    "wordCount": 1740
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
+    "description": "Complex types AccountIdentification4Choice – OrganisationIdentificationSchemeName1Choice in ISO 20022 pain.008.001.02, with elements, cardinality and constraints, generated from the official XSD.",
+    "locale": "en_GB",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "pain.008.001.02 type reference (part 1 of 2) — AccountIdentification4Choice – OrganisationIdentificationSchemeName1Choice",
+    "url": "https://pain001.com/message-spec-pain.008.001.02-types/",
+    "wordCount": 1854
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
     "description": "Every element of ISO 20022 pain.008.001.02: XML path, cardinality, data type, length and pattern constraints, and code lists — generated from the official XSD.",
     "locale": "en_GB",
     "tags": [
@@ -1289,7 +1323,7 @@
     ],
     "title": "pain.008.001.02 — complete element reference",
     "url": "https://pain001.com/message-spec-pain.008.001.02/",
-    "wordCount": 607
+    "wordCount": 1479
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -1306,7 +1340,7 @@
     ],
     "title": "ISO 20022 message specifications — generated from the official XSDs",
     "url": "https://pain001.com/message-specs/",
-    "wordCount": 685
+    "wordCount": 688
   },
   {
     "date": "2026-07-26T08:00:00+00:00",

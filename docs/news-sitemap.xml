@@ -914,6 +914,30 @@
   </news:news>
 </url>
 <url>
+  <loc>https://pain001.com/message-spec-pain.008.001.02-types/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.008.001.02 type reference (part 1 of 2) — AccountIdentification4Choice – OrganisationIdentificationSchemeName1Choice</news:title>
+    <news:keywords>pain.008.001.02 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.008.001.02-types-2/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.008.001.02 type reference (part 2 of 2) — Party6Choice – TaxRecordDetails1</news:title>
+    <news:keywords>pain.008.001.02 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
   <loc>https://pain001.com/message-specs/</loc>
   <news:news>
     <news:publication>
