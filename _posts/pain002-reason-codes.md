@@ -178,7 +178,7 @@ from pain001.pain002 import bundled_schema_versions, parse_pain002_report
 report = parse_pain002_report("bank-response.xml", validate=True)
 ```
 
-Pain001 bundles the ISO schemas for `pain.002.001.12` and `pain.002.001.15`; `bundled_schema_versions()` returns the current list. **If your bank replies in a version that is not bundled — SEPA commonly uses `pain.002.001.03` — `validate=True` raises rather than parsing unvalidated.** That is deliberate: silently skipping the check would report a validation that never happened. Either supply the schema yourself with `xsd_file_path=`, or omit `validate` and parse without schema validation.
+Pain001 bundles the ISO schemas for `pain.002.001.03` (what SEPA banks commonly reply with), `pain.002.001.12`, `pain.002.001.14` and `pain.002.001.15`; `bundled_schema_versions()` returns the current list. **If your bank replies in a version that is not bundled, `validate=True` raises rather than parsing unvalidated.** That is deliberate: silently skipping the check would report a validation that never happened. Either supply the schema yourself with `xsd_file_path=`, or omit `validate` and parse without schema validation.
 
 The [MCP server](/pain001-mcp/) exposes the same parser to AI agents as `parse_pain002`, and the [payment-lifecycle guide](/payments/) shows where status handling sits in the full pipeline.
 
