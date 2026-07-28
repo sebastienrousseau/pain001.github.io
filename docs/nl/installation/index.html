@@ -263,7 +263,7 @@ docker run --rm -p 8000:8000 \
 <pre><code class="language-bash">pip install pain001
 pain001 init pain.001.001.09 -o work/
 pain001 -t pain.001.001.09 -d work/template.csv -o work/ --dry-run</code></pre>
-<p><code>--dry-run</code> valideert tegen het JSON Schema, het XSD en (met <code>--scheme</code>) een SEPA- of grensoverschrijdend rulebook zonder uitvoer te schrijven — exitcode <code>0</code> betekent dat uw bank het bestand niet om schemaredenen zal afwijzen. Laat <code>--dry-run</code> weg om de XML weg te schrijven.</p>
+<p><code>--dry-run</code> valideert tegen het JSON Schema, het XSD en (met <code>--scheme</code>) een SEPA- of grensoverschrijdend rulebook zonder uitvoer te schrijven — exitcode <code>0</code> betekent dat het bestand die controles heeft doorstaan: het schema en, indien geselecteerd, het rulebook van het scheme. Het eigen profiel van uw bank en haar kanaalregels staan daar los van en vereisen nog steeds tests met de bank. Laat <code>--dry-run</code> weg om de XML weg te schrijven.</p>
 <p>Ga verder naar de <a href="/nl/documentation/">technische referentie</a> voor elke vlag en elk endpoint, of naar de <a href="/nl/faqs/">quickstart-FAQ</a> voor operationele vragen.</p>
 </div>
         </article>

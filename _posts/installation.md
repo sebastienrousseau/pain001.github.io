@@ -160,6 +160,6 @@ pain001 init pain.001.001.09 -o work/
 pain001 -t pain.001.001.09 -d work/template.csv -o work/ --dry-run
 ```
 
-`--dry-run` validates against the JSON Schema, the XSD, and (with `--scheme`) a SEPA or cross-border rulebook without writing output — exit code `0` means your bank will not reject the file for schema reasons. Drop `--dry-run` to write the XML.
+`--dry-run` validates against the JSON Schema, the XSD, and (with `--scheme`) a SEPA or cross-border rulebook without writing output — exit code `0` means the file passed those checks: the schema, and the scheme rulebook where selected. Your bank's own profile and channel rules are separate, and still require bank testing. Drop `--dry-run` to write the XML.
 
 Continue to the [Technical Reference](/documentation/) for every flag and endpoint, or the [Quickstart FAQ](/faqs/) for operational questions.

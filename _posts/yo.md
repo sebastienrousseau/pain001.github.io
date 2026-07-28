@@ -89,7 +89,7 @@ last_reviewed: "2026-07-26"
 
 ---
 
-## Àwọn fáìlì ìsanwó tí báńkì yín kò ní kọ̀
+## Ẹ ṣàwárí àwọn àṣìṣe inú fáìlì ìsanwó kí báńkì yín tó rí wọn
 
 **Pain001** jẹ́ àkójọpọ̀ Python orísun-ìmọ̀ fún ìbẹ̀rẹ̀ ìsanwó ISO 20022. Ó ń yí dátà tí ẹ ní tẹ́lẹ̀ padà — CSV, Excel, SQLite, JSON, Parquet tàbí àwọn ìránṣẹ́ SWIFT MT101 àtijọ́ — sí XML `pain.001` (ìfiránṣẹ́ owó) àti `pain.008` (ìyọkúrò tààrà), tí a fọwọ́sí pẹ̀lú àwọn àgbékalẹ̀ XSD aláṣẹ.
 

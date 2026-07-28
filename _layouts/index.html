@@ -360,6 +360,32 @@
       .section-sub a { color: var(--link); }
 
       .flow-step a { color: var(--link); }
+      /* Four-layer validity model. layer-no cards carry the boundary of
+         what a local tool can know; they must read as informative, not
+         as failure — hence the neutral rule rather than an error colour. */
+      .layer-grid {
+        display: grid; gap: 1px; background: var(--rule);
+        grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+        border: 1px solid var(--rule); border-radius: var(--radius-md);
+        overflow: hidden; margin-top: 2rem;
+      }
+      .layer-card { background: var(--bg-card); padding: 1.5rem 1.35rem; }
+      .layer-tag {
+        font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase;
+        font-weight: 700; margin-bottom: 0.55rem;
+      }
+      .layer-yes .layer-tag { color: var(--ok); }
+      .layer-no .layer-tag { color: var(--ink-mute); }
+      .layer-yes { border-top: 3px solid var(--ok); }
+      .layer-no { border-top: 3px solid var(--rule-strong); }
+      .layer-card h3 { font-size: 1.02rem; margin-bottom: 0.45rem; }
+      .layer-card p { color: var(--ink-soft); font-size: 0.94rem; }
+      .layer-note {
+        margin-top: 1.4rem; color: var(--ink-soft); font-size: 0.95rem;
+        max-width: 68ch;
+      }
+      .layer-note a { color: var(--link); }
+
       .status-strip {
         background: var(--bg-alt);
         border-bottom: 1px solid var(--rule);
@@ -988,15 +1014,13 @@
       <section class="hero" aria-labelledby="hero-heading">
         <div class="wrap">
           <p class="hero-eyebrow">Open source · ISO 20022 · CBPR+ ready</p>
-          <h1 id="hero-heading" class="hero-title">Payment files your bank will not reject.</h1>
+          <h1 id="hero-heading" class="hero-title">Catch payment-file errors before your bank does.</h1>
           <p class="hero-sub">
-            Pain001 turns the data you already have — CSV, Excel, SQLite, JSON, Parquet, legacy SWIFT MT101 — into schema-validated <code>pain.001</code> and <code>pain.008</code> XML, and proves it clean before submission. AI-agent tools and editor diagnostics included.
+            Pain001 turns the data you already have — CSV, Excel, SQLite, JSON, Parquet, legacy SWIFT MT101 — into <code>pain.001</code> and <code>pain.008</code> XML, checked against the ISO 20022 schema and the scheme rulebooks, on your machine. Every finding names the rule it came from.
           </p>
           <div class="hero-cta">
-            <a href="/try/" class="pill pill-primary">Try the demo&nbsp;&rsaquo;</a>
+            <a href="/try/" class="pill pill-primary">Validate a payment file&nbsp;&rsaquo;</a>
             <a href="/why/" class="pill pill-ghost">Why Pain001</a>
-            <a href="/try/" class="pill pill-ghost">Try it in your browser</a>
-            <a href="/2026-iso20022-migration-trends/" class="pill pill-ghost">Read the 2026 briefing</a>
           </div>
 
           <div class="terminal">
@@ -1056,6 +1080,43 @@ pain001 -t pain.001.001.09 -d payments.csv --scheme sepa-sct --dry-run</code></p
           </div>
         </div>
       </section>
+
+      <!-- What "valid" actually means: four independent layers, only two
+           of which any local tool can check. Stating the boundary is the
+           point — a schema-valid file can still fail a bank profile. -->
+      <section class="section section-alt" aria-labelledby="layers-heading">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">What &ldquo;valid&rdquo; means</p>
+            <h2 id="layers-heading" class="section-title">Four layers, and we are honest about two.</h2>
+            <p class="section-sub">A payment file can be correct at one level and rejected at the next. Pain001 checks the first two on your machine and tells you plainly where its knowledge stops.</p>
+          </div>
+          <div class="layer-grid">
+            <div class="layer-card layer-yes">
+              <p class="layer-tag">Checked by Pain001</p>
+              <h3>01. ISO 20022 schema</h3>
+              <p>The document validates against the official XSD for the chosen message version. A hard gate: no file is written that fails it.</p>
+            </div>
+            <div class="layer-card layer-yes">
+              <p class="layer-tag">Checked by Pain001</p>
+              <h3>02. Scheme rulebook</h3>
+              <p>SEPA credit transfer and instant, direct debit Core and B2B, and cross-border CBPR+ — the market-practice rules layered on top of the base standard.</p>
+            </div>
+            <div class="layer-card layer-no">
+              <p class="layer-tag">Not checked</p>
+              <h3>03. Your bank&rsquo;s profile</h3>
+              <p>Banks publish additional requirements per product and channel. Pain001 ships no bank profile packs, so a file that passes here can still fail your bank&rsquo;s own validation.</p>
+            </div>
+            <div class="layer-card layer-no">
+              <p class="layer-tag">Not checked</p>
+              <h3>04. Channel and eligibility</h3>
+              <p>Upload route, cut-off time, account configuration and product entitlement are decided by your bank, not by the file. Bank testing is still required.</p>
+            </div>
+          </div>
+          <p class="layer-note">This is why the promise is <strong>catch errors early</strong>, not <strong>guaranteed acceptance</strong>. See the <a href="/compatibility/">compatibility matrix</a> for exactly what is and is not covered.</p>
+        </div>
+      </section>
+
 
       <!-- Task entry points -->
       <section class="section section-alt" aria-labelledby="task-heading">

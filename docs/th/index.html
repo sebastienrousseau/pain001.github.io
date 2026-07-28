@@ -187,8 +187,8 @@
       </header>
 
       <div class="wrap content-shell">
-        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>สารบัญ</h2><ol><li><a href="#section">ไฟล์การชำระเงินที่ธนาคารของคุณจะไม่ปฏิเสธ</a></li><li><a href="#section-2">ลองใช้ในเบราว์เซอร์</a></li><li><a href="#14-2026">กำหนดเส้นตาย 14 พฤศจิกายน 2026</a></li><li><a href="#section-3">เริ่มต้นใช้งาน</a></li></ol></nav>
-          <div lang="en"><h2 id="section">ไฟล์การชำระเงินที่ธนาคารของคุณจะไม่ปฏิเสธ<a class="heading-anchor" href="#section" aria-label="Link to section: ไฟล์การชำระเงินที่ธนาคารของคุณจะไม่ปฏิเสธ">#</a></h2>
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>สารบัญ</h2><ol><li><a href="#section">ตรวจพบข้อผิดพลาดในไฟล์การชำระเงินก่อนที่ธนาคารของคุณจะตรวจพบ</a></li><li><a href="#section-2">ลองใช้ในเบราว์เซอร์</a></li><li><a href="#14-2026">กำหนดเส้นตาย 14 พฤศจิกายน 2026</a></li><li><a href="#section-3">เริ่มต้นใช้งาน</a></li></ol></nav>
+          <div lang="en"><h2 id="section">ตรวจพบข้อผิดพลาดในไฟล์การชำระเงินก่อนที่ธนาคารของคุณจะตรวจพบ<a class="heading-anchor" href="#section" aria-label="Link to section: ตรวจพบข้อผิดพลาดในไฟล์การชำระเงินก่อนที่ธนาคารของคุณจะตรวจพบ">#</a></h2>
 <p><strong>Pain001</strong> คือชุดเครื่องมือ Python โอเพนซอร์สสำหรับการเริ่มต้นการชำระเงินตามมาตรฐาน ISO 20022 แปลงข้อมูลที่คุณมีอยู่แล้ว — CSV, Excel, SQLite, JSON, Parquet หรือข้อความ SWIFT MT101 แบบเดิม — เป็น XML <code>pain.001</code> (โอนเงิน) และ <code>pain.008</code> (หักบัญชีอัตโนมัติ) ที่ตรวจสอบด้วยสคีมา XSD อย่างเป็นทางการ</p>
 <p>ทุกไฟล์ผ่านการตรวจสอบสามชั้นก่อนถูกเขียน: สคีมา JSON ต่อระเบียน (รวมการตรวจ mod-97 ของ IBAN และโครงสร้าง BIC) กฎ scheme (SEPA และ CBPR+ ข้ามพรมแดน) และการตรวจสอบ XSD ขั้นสุดท้าย ยอดรวมควบคุมถูกคำนวณใหม่เสมอ ไม่เคยคัดลอก ทุกอย่างทำงานในเครื่องของคุณ: ไม่มีข้อมูลการชำระเงินใดออกจากโครงสร้างพื้นฐานของคุณ</p>
 <h2 id="section-2">ลองใช้ในเบราว์เซอร์<a class="heading-anchor" href="#section-2" aria-label="Link to section: ลองใช้ในเบราว์เซอร์">#</a></h2>

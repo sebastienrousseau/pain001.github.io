@@ -263,7 +263,7 @@ docker run --rm -p 8000:8000 \
 <pre><code class="language-bash">pip install pain001
 pain001 init pain.001.001.09 -o work/
 pain001 -t pain.001.001.09 -d work/template.csv -o work/ --dry-run</code></pre>
-<p><code>--dry-run</code> ověří vstup proti JSON Schema, XSD a (s přepínačem <code>--scheme</code>) proti pravidlům SEPA nebo přeshraničního schématu, aniž by zapsal výstup — návratový kód <code>0</code> znamená, že vaše banka soubor neodmítne z důvodu schématu. Chcete-li XML zapsat, <code>--dry-run</code> vynechte.</p>
+<p><code>--dry-run</code> ověří vstup proti JSON Schema, XSD a (s přepínačem <code>--scheme</code>) proti pravidlům SEPA nebo přeshraničního schématu, aniž by zapsal výstup — návratový kód <code>0</code> znamená, že soubor těmito kontrolami prošel: kontrolou schématu a, pokud bylo zvoleno, pravidly platebního schématu. Vlastní profil vaší banky a pravidla kanálu jsou samostatná a stále vyžadují testování s bankou. Chcete-li XML zapsat, <code>--dry-run</code> vynechte.</p>
 <p>Pokračujte <a href="/cs/documentation/">technickou referencí</a>, kde najdete každý přepínač i endpoint, nebo <a href="/cs/faqs/">rychlým přehledem častých dotazů</a> pro provozní otázky.</p>
 </div>
         </article>

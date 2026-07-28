@@ -263,7 +263,7 @@ docker run --rm -p 8000:8000 \
 <pre><code class="language-bash">pip install pain001
 pain001 init pain.001.001.09 -o work/
 pain001 -t pain.001.001.09 -d work/template.csv -o work/ --dry-run</code></pre>
-<p><code>--dry-run</code> আউটপুট না লিখেই JSON Schema, XSD এবং (<code>--scheme</code> সহ) একটি SEPA বা ক্রস-বর্ডার রুলবুকের বিপরীতে যাচাই করে — এক্সিট কোড <code>0</code> মানে স্কিমাজনিত কারণে আপনার ব্যাংক ফাইলটি প্রত্যাখ্যান করবে না। XML লিখতে <code>--dry-run</code> বাদ দিন।</p>
+<p><code>--dry-run</code> আউটপুট না লিখেই JSON Schema, XSD এবং (<code>--scheme</code> সহ) একটি SEPA বা ক্রস-বর্ডার রুলবুকের বিপরীতে যাচাই করে — এক্সিট কোড <code>0</code> মানে ফাইলটি সেই পরীক্ষাগুলিতে উত্তীর্ণ হয়েছে: স্কিমা, এবং নির্বাচন করা হলে scheme রুলবুক। আপনার ব্যাংকের নিজস্ব প্রোফাইল ও চ্যানেল সংক্রান্ত নিয়ম আলাদা, এবং সেগুলির জন্য এখনও ব্যাংকের সঙ্গে পরীক্ষা প্রয়োজন। XML লিখতে <code>--dry-run</code> বাদ দিন।</p>
 <p>প্রতিটি ফ্ল্যাগ ও এন্ডপয়েন্টের জন্য <a href="/bn/documentation/">প্রযুক্তিগত রেফারেন্স</a>-এ যান, অথবা পরিচালনাগত প্রশ্নের জন্য <a href="/bn/faqs/">কুইকস্টার্ট FAQ</a>-এ।</p>
 </div>
         </article>

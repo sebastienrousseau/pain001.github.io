@@ -89,7 +89,7 @@ last_reviewed: "2026-07-26"
 
 ---
 
-## Fișiere de plată pe care banca nu le va respinge
+## Depistați erorile din fișierele de plată înaintea băncii
 
 **Pain001** este o suită Python open source pentru inițierea plăților ISO 20022. Convertește datele pe care le aveți deja — CSV, Excel, SQLite, JSON, Parquet sau mesaje SWIFT MT101 — în XML `pain.001` (transferuri) și `pain.008` (debitări directe), validate cu schemele XSD oficiale.
 

@@ -263,7 +263,7 @@ docker run --rm -p 8000:8000 \
 <pre><code class="language-bash">pip install pain001
 pain001 init pain.001.001.09 -o work/
 pain001 -t pain.001.001.09 -d work/template.csv -o work/ --dry-run</code></pre>
-<p>Vina-validate ng <code>--dry-run</code> laban sa JSON Schema, sa XSD, at (kasama ang <code>--scheme</code>) sa isang SEPA o cross-border na rulebook nang hindi nagsusulat ng output — ang exit code na <code>0</code> ay nangangahulugang hindi tatanggihan ng inyong bangko ang file dahil sa mga dahilang pang-schema. Alisin ang <code>--dry-run</code> upang isulat ang XML.</p>
+<p>Vina-validate ng <code>--dry-run</code> laban sa JSON Schema, sa XSD, at (kasama ang <code>--scheme</code>) sa isang SEPA o cross-border na rulebook nang hindi nagsusulat ng output — ang exit code na <code>0</code> ay nangangahulugang naipasa ng file ang mga pagsusuring iyon: ang schema, at ang scheme rulebook kapag napili. Hiwalay dito ang sariling profile at mga panuntunan sa channel ng inyong bangko, at kailangan pa rin ang pagsubok kasama ang bangko. Alisin ang <code>--dry-run</code> upang isulat ang XML.</p>
 <p>Magpatuloy sa <a href="/fil/documentation/">Teknikal na Sanggunian</a> para sa bawat flag at endpoint, o sa <a href="/fil/faqs/">Quickstart FAQ</a> para sa mga tanong sa operasyon.</p>
 </div>
         </article>

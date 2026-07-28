@@ -263,7 +263,7 @@ docker run --rm -p 8000:8000 \
 <pre><code class="language-bash">pip install pain001
 pain001 init pain.001.001.09 -o work/
 pain001 -t pain.001.001.09 -d work/template.csv -o work/ --dry-run</code></pre>
-<p><code>--dry-run</code> memvalidasi terhadap JSON Schema, XSD, dan (dengan <code>--scheme</code>) rulebook SEPA atau lintas negara tanpa menulis keluaran — kode keluar <code>0</code> berarti bank Anda tidak akan menolak berkas tersebut karena alasan skema. Hilangkan <code>--dry-run</code> untuk menulis XML-nya.</p>
+<p><code>--dry-run</code> memvalidasi terhadap JSON Schema, XSD, dan (dengan <code>--scheme</code>) rulebook SEPA atau lintas negara tanpa menulis keluaran — kode keluar <code>0</code> berarti berkas tersebut lolos pemeriksaan itu: skema, dan rulebook scheme bila dipilih. Profil dan aturan kanal milik bank Anda sendiri adalah hal terpisah, dan tetap memerlukan pengujian bersama bank. Hilangkan <code>--dry-run</code> untuk menulis XML-nya.</p>
 <p>Lanjutkan ke <a href="/id/documentation/">Referensi Teknis</a> untuk setiap flag dan endpoint, atau ke <a href="/id/faqs/">FAQ Mulai Cepat</a> untuk pertanyaan operasional.</p>
 </div>
         </article>

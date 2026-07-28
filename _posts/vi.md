@@ -89,7 +89,7 @@ last_reviewed: "2026-07-26"
 
 ---
 
-## Tệp thanh toán mà ngân hàng của bạn sẽ không từ chối
+## Tìm ra lỗi tệp thanh toán trước khi ngân hàng của bạn phát hiện
 
 **Pain001** là bộ công cụ Python mã nguồn mở cho khởi tạo thanh toán ISO 20022. Nó chuyển dữ liệu bạn đang có — CSV, Excel, SQLite, JSON, Parquet hoặc thông điệp SWIFT MT101 cũ — thành XML `pain.001` (chuyển khoản) và `pain.008` (ghi nợ trực tiếp), được xác thực bằng các lược đồ XSD chính thức.
 

@@ -8,7 +8,7 @@
     <title>Pain001 teknisk referens: CLI, Python-API och REST</title>
 
     <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
-<meta name="description" content="Complete reference for pain001 v0.0.57 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.">
+<meta name="description" content="Komplett referens för pain001 v0.0.56 — CLI-kommandon och flaggor, Python-API, REST-endpoints under /api/v1, regelverk, normalisering av indata och pluginarkitektur.">
 <meta name="keywords" content="pain001 documentation, pain.001 CLI, ISO 20022 Python library, pain001 REST API, XSD validation, SEPA scheme validation, pain.002 parser, camt.053 parser">
 <meta property="og:image" content="https://pain001.com/og/pain001-card.jpg" />
     <meta property="og:image:width" content="1200" />
@@ -45,13 +45,13 @@
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="Pain001 teknisk referens: CLI, Python-API och REST">
-<meta property="og:description" content="Complete reference for pain001 v0.0.57 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.">
+<meta property="og:description" content="Komplett referens för pain001 v0.0.56 — CLI-kommandon och flaggor, Python-API, REST-endpoints under /api/v1, regelverk, normalisering av indata och pluginarkitektur.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://pain001.com/sv/documentation/">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Pain001 teknisk referens: CLI, Python-API och REST">
-<meta name="twitter:description" content="Complete reference for pain001 v0.0.57 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.">
+<meta name="twitter:description" content="Komplett referens för pain001 v0.0.56 — CLI-kommandon och flaggor, Python-API, REST-endpoints under /api/v1, regelverk, normalisering av indata och pluginarkitektur.">
 <meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg">
 <link rel="canonical" href="https://pain001.com/sv/documentation/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
 <link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"><link rel="alternate" hreflang="en" href="https://pain001.com/documentation/" /><link rel="alternate" hreflang="x-default" href="https://pain001.com/documentation/" /><link rel="alternate" hreflang="ar" href="https://pain001.com/ar/documentation/" /><link rel="alternate" hreflang="bn" href="https://pain001.com/bn/documentation/" /><link rel="alternate" hreflang="cs" href="https://pain001.com/cs/documentation/" /><link rel="alternate" hreflang="de" href="https://pain001.com/de/documentation/" /><link rel="alternate" hreflang="el" href="https://pain001.com/el/documentation/" /><link rel="alternate" hreflang="es" href="https://pain001.com/es/documentation/" /><link rel="alternate" hreflang="fa" href="https://pain001.com/fa/documentation/" /><link rel="alternate" hreflang="fil" href="https://pain001.com/fil/documentation/" /><link rel="alternate" hreflang="fr" href="https://pain001.com/fr/documentation/" /><link rel="alternate" hreflang="ha" href="https://pain001.com/ha/documentation/" /><link rel="alternate" hreflang="he" href="https://pain001.com/he/documentation/" /><link rel="alternate" hreflang="hi" href="https://pain001.com/hi/documentation/" /><link rel="alternate" hreflang="hu" href="https://pain001.com/hu/documentation/" /><link rel="alternate" hreflang="id" href="https://pain001.com/id/documentation/" /><link rel="alternate" hreflang="it" href="https://pain001.com/it/documentation/" /><link rel="alternate" hreflang="ja" href="https://pain001.com/ja/documentation/" /><link rel="alternate" hreflang="ko" href="https://pain001.com/ko/documentation/" /><link rel="alternate" hreflang="mr" href="https://pain001.com/mr/documentation/" /><link rel="alternate" hreflang="ms" href="https://pain001.com/ms/documentation/" /><link rel="alternate" hreflang="nl" href="https://pain001.com/nl/documentation/" /><link rel="alternate" hreflang="pl" href="https://pain001.com/pl/documentation/" /><link rel="alternate" hreflang="pt-BR" href="https://pain001.com/pt-br/documentation/" /><link rel="alternate" hreflang="ro" href="https://pain001.com/ro/documentation/" /><link rel="alternate" hreflang="ru" href="https://pain001.com/ru/documentation/" /><link rel="alternate" hreflang="ta" href="https://pain001.com/ta/documentation/" /><link rel="alternate" hreflang="te" href="https://pain001.com/te/documentation/" /><link rel="alternate" hreflang="th" href="https://pain001.com/th/documentation/" /><link rel="alternate" hreflang="tr" href="https://pain001.com/tr/documentation/" /><link rel="alternate" hreflang="uk" href="https://pain001.com/uk/documentation/" /><link rel="alternate" hreflang="vi" href="https://pain001.com/vi/documentation/" /><link rel="alternate" hreflang="yo" href="https://pain001.com/yo/documentation/" /><link rel="alternate" hreflang="zh-Hans" href="https://pain001.com/zh-hans/documentation/" /><link rel="alternate" hreflang="zh-Hant" href="https://pain001.com/zh-hant/documentation/" /></head>
@@ -179,7 +179,7 @@
           </nav>
           <p class="eyebrow">Referens</p>
           <h1 class="page-title">Pain001 teknisk referens: CLI, Python-API och REST</h1>
-          <p class="deck">Every flag, endpoint, and behaviour of pain001 v0.0.57 — taken from the shipped code, not from aspiration.</p>
+          <p class="deck">Varje flagga, endpoint och beteende i pain001 v0.0.56 — hämtat från den levererade koden, inte från ambitioner.</p>
           <div class="article-meta"><span>4 min läsning</span>
             <span>Senast granskad <time datetime="2026-07-26">2026-07-26</time></span>
           </div>
@@ -188,7 +188,7 @@
 
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="Innehåll"><h2>Innehåll</h2><ol><li><a href="#1-command-line-interface">Kommandoradsgränssnitt</a></li><li><a href="#2-python-api">Python-API</a></li><li><a href="#3-rest-microservice">REST-mikrotjänst</a></li><li><a href="#4-input-normalisation">Normalisering av indata</a></li><li><a href="#5-plugin-architecture">Pluginarkitektur</a></li><li><a href="#6-quality-gates">Kvalitetsgrindar</a></li></ol></nav>
-          <div lang="en"><p>This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.57</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.</p>
+          <div lang="en"><p>Denna referens dokumenterar kommandoradsgränssnittet, Python-API:et, REST-mikrotjänsten och valideringspipelinen för <strong>pain001 v0.0.57</strong>. Varje flagga, endpoint och beteende som listas här är hämtat från den levererade koden, inte från ambitioner.</p>
 <p>Pain001 stöder <strong>11 ISO 20022-meddelandedefinitioner</strong>: <code>pain.001.001.03</code> till och med <code>pain.001.001.12</code> (Customer Credit Transfer Initiation, tio versioner) samt <code>pain.008.001.02</code> (Customer Direct Debit Initiation).</p>
 <hr />
 <h2 id="1-command-line-interface">1. Kommandoradsgränssnitt<a class="heading-anchor" href="#1-command-line-interface" aria-label="Länk till avsnitt: 1. Kommandoradsgränssnitt">#</a></h2>
@@ -448,7 +448,7 @@ pain001 serve --host 0.0.0.0 --port 8000</code></pre>
           "@id": "https://pain001.com/sv/documentation/",
           "url": "https://pain001.com/sv/documentation/",
           "name": "Pain001 teknisk referens: CLI, Python-API och REST",
-          "description": "Complete reference for pain001 v0.0.57 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.",
+          "description": "Komplett referens för pain001 v0.0.56 — CLI-kommandon och flaggor, Python-API, REST-endpoints under /api/v1, regelverk, normalisering av indata och pluginarkitektur.",
           "inLanguage": "sv",
           "dateModified": "2026-07-26",
           "isPartOf": { "@id": "https://pain001.com/#website" },

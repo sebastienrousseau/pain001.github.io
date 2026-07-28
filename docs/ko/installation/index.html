@@ -263,7 +263,7 @@ docker run --rm -p 8000:8000 \
 <pre><code class="language-bash">pip install pain001
 pain001 init pain.001.001.09 -o work/
 pain001 -t pain.001.001.09 -d work/template.csv -o work/ --dry-run</code></pre>
-<p><code>--dry-run</code>은 출력을 작성하지 않고 JSON Schema, XSD, 그리고 (<code>--scheme</code>과 함께 사용하면) SEPA 또는 국경 간 룰북에 대해 검증합니다. 종료 코드 <code>0</code>은 은행이 스키마 문제로 파일을 거절하지 않는다는 뜻입니다. XML을 작성하려면 <code>--dry-run</code>을 빼세요.</p>
+<p><code>--dry-run</code>은 출력을 작성하지 않고 JSON Schema, XSD, 그리고 (<code>--scheme</code>과 함께 사용하면) SEPA 또는 국경 간 룰북에 대해 검증합니다. 종료 코드 <code>0</code>은 파일이 바로 그 검사, 즉 스키마와 선택한 경우의 스킴 룰북을 통과했다는 뜻입니다. 은행 자체 프로파일과 채널 규칙은 이와 별개이며, 여전히 은행과의 테스트가 필요합니다. XML을 작성하려면 <code>--dry-run</code>을 빼세요.</p>
 <p>모든 플래그와 엔드포인트는 <a href="/ko/documentation/">기술 레퍼런스</a>에서, 운영 관련 질문은 <a href="/ko/faqs/">빠른 시작 FAQ</a>에서 이어서 확인하세요.</p>
 </div>
         </article>

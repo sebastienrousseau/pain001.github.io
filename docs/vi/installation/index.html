@@ -263,7 +263,7 @@ docker run --rm -p 8000:8000 \
 <pre><code class="language-bash">pip install pain001
 pain001 init pain.001.001.09 -o work/
 pain001 -t pain.001.001.09 -d work/template.csv -o work/ --dry-run</code></pre>
-<p><code>--dry-run</code> xác thực theo JSON Schema, XSD và (với <code>--scheme</code>) một bộ quy tắc SEPA hoặc xuyên biên giới mà không ghi kết quả — mã thoát <code>0</code> nghĩa là ngân hàng của quý vị sẽ không từ chối tệp vì lý do lược đồ. Bỏ <code>--dry-run</code> để ghi XML.</p>
+<p><code>--dry-run</code> xác thực theo JSON Schema, XSD và (với <code>--scheme</code>) một bộ quy tắc SEPA hoặc xuyên biên giới mà không ghi kết quả — mã thoát <code>0</code> nghĩa là tệp đã vượt qua chính những kiểm tra đó: lược đồ, và bộ quy tắc scheme khi được chọn. Hồ sơ riêng và quy tắc kênh của chính ngân hàng quý vị là chuyện tách biệt, và vẫn cần được kiểm thử với ngân hàng. Bỏ <code>--dry-run</code> để ghi XML.</p>
 <p>Tiếp tục đến <a href="/vi/documentation/">Tài liệu kỹ thuật</a> để xem mọi cờ lệnh và điểm cuối, hoặc <a href="/vi/faqs/">Hỏi đáp nhanh</a> cho các câu hỏi vận hành.</p>
 </div>
         </article>

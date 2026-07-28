@@ -187,8 +187,8 @@
       </header>
 
       <div class="wrap content-shell">
-        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>目次</h2><ol><li><a href="#section">銀行に差し戻されない支払いファイル</a></li><li><a href="#section-2">ブラウザで試す</a></li><li><a href="#2026-11-14">2026 年 11 月 14 日の期限</a></li><li><a href="#section-3">はじめに</a></li></ol></nav>
-          <div lang="en"><h2 id="section">銀行に差し戻されない支払いファイル<a class="heading-anchor" href="#section" aria-label="Link to section: 銀行に差し戻されない支払いファイル">#</a></h2>
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>目次</h2><ol><li><a href="#section">銀行より先に支払いファイルのエラーを見つける</a></li><li><a href="#section-2">ブラウザで試す</a></li><li><a href="#2026-11-14">2026 年 11 月 14 日の期限</a></li><li><a href="#section-3">はじめに</a></li></ol></nav>
+          <div lang="en"><h2 id="section">銀行より先に支払いファイルのエラーを見つける<a class="heading-anchor" href="#section" aria-label="Link to section: 銀行より先に支払いファイルのエラーを見つける">#</a></h2>
 <p><strong>Pain001</strong> は ISO 20022 送金指図のためのオープンソース Python スイートです。手元にあるデータ — CSV、Excel、SQLite、JSON、Parquet、旧来の SWIFT MT101 メッセージ — を、公式 XSD スキーマで検証済みの <code>pain.001</code>(振込)および <code>pain.008</code>(口座振替)XML に変換します。</p>
 <p>各ファイルは書き出される前に 3 段階の検証を通過します。レコードごとの JSON スキーマ(IBAN の mod-97 チェックと BIC 構造を含む)、スキームルール(SEPA および国際送金 CBPR+)、最終 XSD 検証です。コントロール合計は必ず再計算され、コピーされることはありません。すべてローカルで動作し、支払いデータがインフラの外に出ることはありません。</p>
 <h2 id="section-2">ブラウザで試す<a class="heading-anchor" href="#section-2" aria-label="Link to section: ブラウザで試す">#</a></h2>

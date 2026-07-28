@@ -89,7 +89,7 @@ last_reviewed: "2026-07-26"
 
 ---
 
-## Arquivos de pagamento que seu banco não vai rejeitar
+## Encontre os erros dos arquivos de pagamento antes do seu banco
 
 **Pain001** é uma suíte Python de código aberto para iniciação de pagamentos ISO 20022. Ela converte os dados que você já tem — CSV, Excel, SQLite, JSON, Parquet ou mensagens SWIFT MT101 legadas — em XML `pain.001` (transferências) e `pain.008` (débitos diretos), validados contra os esquemas XSD oficiais.
 

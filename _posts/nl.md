@@ -89,7 +89,7 @@ last_reviewed: "2026-07-26"
 
 ---
 
-## Betaalbestanden die uw bank niet zal weigeren
+## Ontdek fouten in betaalbestanden voordat uw bank dat doet
 
 **Pain001** is een open-source Python-suite voor ISO 20022-betalingsinitiatie. Ze zet de gegevens die u al heeft — CSV, Excel, SQLite, JSON, Parquet of oude SWIFT MT101-berichten — om in `pain.001`- (overboekingen) en `pain.008`-XML (incasso's), gevalideerd tegen de officiële XSD-schema's.
 

@@ -263,7 +263,7 @@ docker run --rm -p 8000:8000 \
 <pre><code class="language-bash">pip install pain001
 pain001 init pain.001.001.09 -o work/
 pain001 -t pain.001.001.09 -d work/template.csv -o work/ --dry-run</code></pre>
-<p><code>--dry-run</code> は、出力を書き出さずに、JSON Schema、XSD、および(<code>--scheme</code> 指定時は)SEPA またはクロスボーダーのルールブックに対して検証します — 終了コード <code>0</code> は、スキーマ上の理由で銀行がファイルを拒否することはないという意味です。XML を書き出すには <code>--dry-run</code> を外してください。</p>
+<p><code>--dry-run</code> は、出力を書き出さずに、JSON Schema、XSD、および(<code>--scheme</code> 指定時は)SEPA またはクロスボーダーのルールブックに対して検証します — 終了コード <code>0</code> は、ファイルがそれらのチェック、すなわちスキーマと、選択した場合はスキームのルールブックを通過したことを意味します。銀行独自のプロファイルやチャネル規則はこれとは別であり、引き続き銀行とのテストが必要です。XML を書き出すには <code>--dry-run</code> を外してください。</p>
 <p>すべてのフラグとエンドポイントについては<a href="/ja/documentation/">技術リファレンス</a>へ、運用上の質問については<a href="/ja/faqs/">クイックスタート FAQ</a> へお進みください。</p>
 </div>
         </article>

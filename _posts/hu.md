@@ -89,7 +89,7 @@ last_reviewed: "2026-07-26"
 
 ---
 
-## Fizetési fájlok, amelyeket a bank nem utasít el
+## Találja meg a fizetési fájlok hibáit, mielőtt a bank tenné meg
 
 A **Pain001** nyílt forráskódú Python-csomag ISO 20022 fizetésindításhoz. A meglévő adatokat — CSV, Excel, SQLite, JSON, Parquet vagy régi SWIFT MT101 üzenetek — `pain.001` (átutalás) és `pain.008` (beszedés) XML-lé alakítja, a hivatalos XSD-sémákkal validálva.
 

@@ -89,7 +89,7 @@ last_reviewed: "2026-07-26"
 
 ---
 
-## 银行不会退回的支付文件
+## 在银行发现之前先找出支付文件中的错误
 
 **Pain001** 是用于 ISO 20022 支付发起的开源 Python 套件。它将您已有的数据——CSV、Excel、SQLite、JSON、Parquet 或旧式 SWIFT MT101 报文——转换为经官方 XSD 模式校验的 `pain.001`(贷记转账)和 `pain.008`(直接借记)XML。
 

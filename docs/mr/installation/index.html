@@ -263,7 +263,7 @@ docker run --rm -p 8000:8000 \
 <pre><code class="language-bash">pip install pain001
 pain001 init pain.001.001.09 -o work/
 pain001 -t pain.001.001.09 -d work/template.csv -o work/ --dry-run</code></pre>
-<p><code>--dry-run</code> आउटपुट न लिहिता JSON Schema, XSD आणि (<code>--scheme</code> सह) SEPA किंवा सीमापार नियमपुस्तिकेविरुद्ध प्रमाणीकरण करते — एक्झिट कोड <code>0</code> म्हणजे तुमची बँक स्कीमाच्या कारणास्तव फाइल नाकारणार नाही. XML लिहिण्यासाठी <code>--dry-run</code> काढून टाका.</p>
+<p><code>--dry-run</code> आउटपुट न लिहिता JSON Schema, XSD आणि (<code>--scheme</code> सह) SEPA किंवा सीमापार नियमपुस्तिकेविरुद्ध प्रमाणीकरण करते — एक्झिट कोड <code>0</code> म्हणजे फाइल त्या तपासण्यांमध्ये उत्तीर्ण झाली: स्कीमा, आणि निवडलेली असल्यास scheme नियमपुस्तिका. तुमच्या बँकेची स्वतःची प्रोफाइल आणि चॅनेलसंबंधी नियम वेगळे आहेत आणि त्यांसाठी अजूनही बँकेसोबत चाचणी आवश्यक आहे. XML लिहिण्यासाठी <code>--dry-run</code> काढून टाका.</p>
 <p>प्रत्येक फ्लॅग व एंडपॉइंटसाठी <a href="/mr/documentation/">तांत्रिक संदर्भ</a> पाहा, किंवा प्रत्यक्ष कामकाजाच्या प्रश्नांसाठी <a href="/mr/faqs/">क्विकस्टार्ट FAQ</a> पाहा.</p>
 </div>
         </article>

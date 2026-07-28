@@ -89,7 +89,7 @@ last_reviewed: "2026-07-26"
 
 ---
 
-## Betalfiler som din bank inte avvisar
+## Hitta felen i betalfilerna innan din bank gör det
 
 **Pain001** är en Python-svit med öppen källkod för ISO 20022-betalningsinitiering. Den omvandlar data du redan har — CSV, Excel, SQLite, JSON, Parquet eller äldre SWIFT MT101-meddelanden — till `pain.001`- (betalningar) och `pain.008`-XML (autogiro), validerad mot de officiella XSD-schemana.
 

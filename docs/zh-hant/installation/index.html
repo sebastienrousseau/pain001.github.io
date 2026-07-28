@@ -263,7 +263,7 @@ docker run --rm -p 8000:8000 \
 <pre><code class="language-bash">pip install pain001
 pain001 init pain.001.001.09 -o work/
 pain001 -t pain.001.001.09 -d work/template.csv -o work/ --dry-run</code></pre>
-<p><code>--dry-run</code> 會依 JSON Schema、XSD 以及（搭配 <code>--scheme</code> 時）SEPA 或跨境規則手冊驗證，且不寫出任何輸出——結束代碼 <code>0</code> 表示您的銀行不會因結構描述問題退回檔案。移除 <code>--dry-run</code> 即會寫出 XML。</p>
+<p><code>--dry-run</code> 會依 JSON Schema、XSD 以及（搭配 <code>--scheme</code> 時）SEPA 或跨境規則手冊驗證，且不寫出任何輸出——結束代碼 <code>0</code> 表示該檔案通過了上述檢查：結構描述驗證，以及選用時的清算規則手冊驗證。您銀行本身的設定規範與通路規則屬於另一回事，仍須經過銀行測試。移除 <code>--dry-run</code> 即會寫出 XML。</p>
 <p>接著可到<a href="/zh-hant/documentation/">技術參考</a>查閱每個旗標與端點，或到<a href="/zh-hant/faqs/">快速開始常見問題</a>解決營運面的疑問。</p>
 </div>
         </article>

@@ -89,7 +89,7 @@ last_reviewed: "2026-07-26"
 
 ---
 
-## 銀行不會退回的付款檔案
+## 在銀行發現之前先找出付款檔案中的錯誤
 
 **Pain001** 是用於 ISO 20022 付款發起的開源 Python 套件。它將您既有的資料——CSV、Excel、SQLite、JSON、Parquet 或舊式 SWIFT MT101 報文——轉換為經官方 XSD 結構描述驗證的 `pain.001`(信用轉帳)與 `pain.008`(直接扣款)XML。
 

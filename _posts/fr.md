@@ -89,7 +89,7 @@ last_reviewed: "2026-07-26"
 
 ---
 
-## Des fichiers de paiement que votre banque n'aura pas à rejeter
+## Détectez les erreurs de vos fichiers de paiement avant votre banque
 
 **Pain001** est une suite Python open source pour l'initiation de paiements ISO 20022. Elle convertit les données que vous avez déjà — CSV, Excel, SQLite, JSON, Parquet, ou messages SWIFT MT101 hérités — en XML `pain.001` (virements) et `pain.008` (prélèvements) validés par les schémas XSD officiels.
 

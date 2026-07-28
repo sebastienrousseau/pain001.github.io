@@ -263,7 +263,7 @@ docker run --rm -p 8000:8000 \
 <pre><code class="language-bash">pip install pain001
 pain001 init pain.001.001.09 -o work/
 pain001 -t pain.001.001.09 -d work/template.csv -o work/ --dry-run</code></pre>
-<p><code>--dry-run</code>, çıktı yazmadan JSON Schema'ya, XSD'ye ve (<code>--scheme</code> ile) bir SEPA veya sınır ötesi kural kitabına göre doğrular — çıkış kodu <code>0</code>, bankanızın dosyayı şema nedenleriyle reddetmeyeceği anlamına gelir. XML'i yazmak için <code>--dry-run</code>'ı kaldırın.</p>
+<p><code>--dry-run</code>, çıktı yazmadan JSON Schema'ya, XSD'ye ve (<code>--scheme</code> ile) bir SEPA veya sınır ötesi kural kitabına göre doğrular — çıkış kodu <code>0</code>, dosyanın bu denetimleri geçtiği anlamına gelir: şema ve seçildiyse ödeme şeması kural kitabı. Bankanızın kendi profili ve kanal kuralları bunlardan ayrıdır ve yine de bankayla test edilmesini gerektirir. XML'i yazmak için <code>--dry-run</code>'ı kaldırın.</p>
 <p>Her bayrak ve uç nokta için <a href="/tr/documentation/">Teknik Referans</a> sayfasına veya operasyonel sorular için <a href="/tr/faqs/">Hızlı Başlangıç SSS</a> sayfasına geçin.</p>
 </div>
         </article>

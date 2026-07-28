@@ -263,7 +263,7 @@ docker run --rm -p 8000:8000 \
 <pre><code class="language-bash">pip install pain001
 pain001 init pain.001.001.09 -o work/
 pain001 -t pain.001.001.09 -d work/template.csv -o work/ --dry-run</code></pre>
-<p><code>--dry-run</code> 根据 JSON Schema、XSD 以及（配合 <code>--scheme</code> 时）SEPA 或跨境规则手册进行校验而不写出任何输出——退出码 <code>0</code> 表示您的银行不会因模式原因拒收该文件。去掉 <code>--dry-run</code> 即可写出 XML。</p>
+<p><code>--dry-run</code> 根据 JSON Schema、XSD 以及（配合 <code>--scheme</code> 时）SEPA 或跨境规则手册进行校验而不写出任何输出——退出码 <code>0</code> 表示该文件通过了上述检查：模式校验，以及在选用时的清算规则手册校验。您银行自身的配置规范与渠道规则属于另一回事，仍需通过银行测试。去掉 <code>--dry-run</code> 即可写出 XML。</p>
 <p>继续阅读<a href="/zh-hans/documentation/">技术参考</a>了解每个标志与端点，或查看<a href="/zh-hans/faqs/">快速上手常见问题</a>解决运营层面的疑问。</p>
 </div>
         </article>

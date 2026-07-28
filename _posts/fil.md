@@ -89,7 +89,7 @@ last_reviewed: "2026-07-26"
 
 ---
 
-## Mga payment file na hindi tatanggihan ng inyong bangko
+## Matukoy ang mga error sa payment file bago ito matukoy ng inyong bangko
 
 Ang **Pain001** ay open-source na Python suite para sa pagsisimula ng bayad sa ISO 20022. Kinokonberte nito ang data na mayroon na kayo — CSV, Excel, SQLite, JSON, Parquet o lumang SWIFT MT101 na mensahe — sa `pain.001` (credit transfer) at `pain.008` (direct debit) XML, validated laban sa mga opisyal na XSD schema.
 
