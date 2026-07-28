@@ -855,13 +855,17 @@ def add_version_requirements(site: Path) -> None:
         html = page.read_text(encoding="utf-8")
         if "version-requirement" in html:
             continue
+        # Worded to stay true before and after v%s reaches PyPI. Saying
+        # "upgrade with pip" would be its own false claim while the
+        # version is still unreleased, which is the problem this note
+        # exists to solve.
         note = (
             '<p class="version-requirement"><strong>Requires Pain001 '
-            'v%s or later.</strong> Earlier versions do not carry the API '
-            'shown on this page. Check yours with '
-            '<code class="tt-mono">pain001 --version</code>, and upgrade '
-            'with <code class="tt-mono">pip install --upgrade pain001</code>.'
-            "</p>" % version
+            "v%s or later.</strong> Earlier versions do not carry the API "
+            "shown on this page. Check what you have with "
+            '<code class="tt-mono">pain001 --version</code>, and see '
+            '<a href="https://github.com/sebastienrousseau/pain001/releases">'
+            "the releases page</a> for what is published.</p>" % version
         )
         for anchor in ('<article class="content-body">',
                        "<article class=content-body>"):
