@@ -1,6 +1,6 @@
 {
-  "pages_scanned": 79,
-  "total_issues": 79,
+  "pages_scanned": 122,
+  "total_issues": 122,
   "wcag_version": "2.2",
   "pages": [
     {
@@ -345,6 +345,436 @@
     },
     {
       "path": "made-with-shokunin/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-changes/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-code-lists/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.03/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.03-types/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.03-types-2/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.04/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.04-types/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.04-types-2/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.04-types-3/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.05/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.05-types/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.05-types-2/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.05-types-3/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.06/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.06-types/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.06-types-2/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.06-types-3/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.07/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.07-types/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.07-types-2/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.07-types-3/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.08/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.08-types/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.08-types-2/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.08-types-3/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.09/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.09-types/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.09-types-2/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.09-types-3/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.10/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.10-types/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.10-types-2/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.10-types-3/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.11/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.11-types/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.11-types-2/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.11-types-3/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.13/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.13-types/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.13-types-2/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.001.001.13-types-3/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-spec-pain.008.001.02/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "message-specs/index.html",
       "issues": [
         {
           "criterion": "1.1.1",

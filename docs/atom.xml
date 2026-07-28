@@ -312,147 +312,147 @@
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
-    <title>Pain001 — ओपन-सोर्स ISO 20022 पेमेंट आरंभ</title>
-    <link href="https://pain001.com/mr/"/>
-    <id>https://pain001.com/mr/</id>
+    <title>What changed between pain.001 versions — element-level diffs</title>
+    <link href="https://pain001.com/message-spec-changes/"/>
+    <id>https://pain001.com/message-spec-changes/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>CSV, Excel, SQLite, JSON, Parquet किंवा SWIFT MT101 मधून XSD-पडताळलेल्या pain.001 आणि pain.008 फाइल्स तयार करणारे ओपन-सोर्स Python सूट — AI एजंटसाठी MCP साधने आणि LSP सर्व्हरसह.</summary>
+    <summary>Element-by-element differences between consecutive ISO 20022 pain.001 versions, computed from the official schemas.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
-    <title>Pain001 — Pemulaan pembayaran ISO 20022 sumber terbuka</title>
-    <link href="https://pain001.com/ms/"/>
-    <id>https://pain001.com/ms/</id>
+    <title>ISO 20022 payment code lists — every value, every version</title>
+    <link href="https://pain001.com/message-spec-code-lists/"/>
+    <id>https://pain001.com/message-spec-code-lists/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Suite Python sumber terbuka yang menjana fail pain.001 dan pain.008 disahkan XSD daripada CSV, Excel, SQLite, JSON, Parquet atau SWIFT MT101 — dengan alat MCP untuk ejen AI dan pelayan LSP.</summary>
+    <summary>Every ISO 20022 payment-initiation code list with its complete value set and version coverage, generated from the official XSDs.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
-    <title>Pain001 — Open-source ISO 20022-betalingsinitiatie</title>
-    <link href="https://pain001.com/nl/"/>
-    <id>https://pain001.com/nl/</id>
+    <title>pain.001.001.03 type reference (part 2 of 2) — NameAndAddress10 – TaxRecordDetails1</title>
+    <link href="https://pain001.com/message-spec-pain.001.001.03-types-2/"/>
+    <id>https://pain001.com/message-spec-pain.001.001.03-types-2/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Open-source Python-suite voor XSD-gevalideerde pain.001- en pain.008-bestanden uit CSV, Excel, SQLite, JSON, Parquet of SWIFT MT101 — met MCP-tools voor AI-agenten en een LSP-server.</summary>
+    <summary>Complex types NameAndAddress10 – TaxRecordDetails1 in ISO 20022 pain.001.001.03, with elements, cardinality and constraints, generated from the official XSD.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
-    <title>Offline — Cached Copy Shown</title>
-    <link href="https://pain001.com/offline/"/>
-    <id>https://pain001.com/offline/</id>
+    <title>pain.001.001.03 type reference (part 1 of 2) — AccountIdentification4Choice – LocalInstrument2Choice</title>
+    <link href="https://pain001.com/message-spec-pain.001.001.03-types/"/>
+    <id>https://pain001.com/message-spec-pain.001.001.03-types/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>The network is unreachable, so this page is served from cache. Previously visited pages may still work; everything returns with your connection.</summary>
+    <summary>Complex types AccountIdentification4Choice – LocalInstrument2Choice in ISO 20022 pain.001.001.03, with elements, cardinality and constraints, generated from the official XSD.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
-    <title>pain.001.001.03 Reference: Generate and Validate</title>
-    <link href="https://pain001.com/pain.001.001.03/"/>
-    <id>https://pain001.com/pain.001.001.03/</id>
+    <title>pain.001.001.03 — complete element reference</title>
+    <link href="https://pain001.com/message-spec-pain.001.001.03/"/>
+    <id>https://pain001.com/message-spec-pain.001.001.03/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>pain.001.001.03 — the SEPA &amp; CGI workhorse version. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.</summary>
+    <summary>Every element of ISO 20022 pain.001.001.03: XML path, cardinality, data type, length and pattern constraints, and code lists — generated from the official XSD.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
-    <title>pain.001.001.04 Reference: Generate and Validate</title>
-    <link href="https://pain001.com/pain.001.001.04/"/>
-    <id>https://pain001.com/pain.001.001.04/</id>
+    <title>pain.001.001.04 type reference (part 2 of 3) — InstructionForCreditorAgent1 – TaxPeriod1</title>
+    <link href="https://pain001.com/message-spec-pain.001.001.04-types-2/"/>
+    <id>https://pain001.com/message-spec-pain.001.001.04-types-2/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>pain.001.001.04 — early maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.</summary>
+    <summary>Complex types InstructionForCreditorAgent1 – TaxPeriod1 in ISO 20022 pain.001.001.04, with elements, cardinality and constraints, generated from the official XSD.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
-    <title>pain.001.001.05 Reference: Generate and Validate</title>
-    <link href="https://pain001.com/pain.001.001.05/"/>
-    <id>https://pain001.com/pain.001.001.05/</id>
+    <title>pain.001.001.04 type reference (part 3 of 3) — TaxRecord1 – TaxRecordDetails1</title>
+    <link href="https://pain001.com/message-spec-pain.001.001.04-types-3/"/>
+    <id>https://pain001.com/message-spec-pain.001.001.04-types-3/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>pain.001.001.05 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.</summary>
+    <summary>Complex types TaxRecord1 – TaxRecordDetails1 in ISO 20022 pain.001.001.04, with elements, cardinality and constraints, generated from the official XSD.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
-    <title>pain.001.001.06 Reference: Generate and Validate</title>
-    <link href="https://pain001.com/pain.001.001.06/"/>
-    <id>https://pain001.com/pain.001.001.06/</id>
+    <title>pain.001.001.04 type reference (part 1 of 3) — AccountIdentification4Choice – GroupHeader48</title>
+    <link href="https://pain001.com/message-spec-pain.001.001.04-types/"/>
+    <id>https://pain001.com/message-spec-pain.001.001.04-types/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>pain.001.001.06 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.</summary>
+    <summary>Complex types AccountIdentification4Choice – GroupHeader48 in ISO 20022 pain.001.001.04, with elements, cardinality and constraints, generated from the official XSD.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
-    <title>pain.001.001.07 Reference: Generate and Validate</title>
-    <link href="https://pain001.com/pain.001.001.07/"/>
-    <id>https://pain001.com/pain.001.001.07/</id>
+    <title>pain.001.001.04 — complete element reference</title>
+    <link href="https://pain001.com/message-spec-pain.001.001.04/"/>
+    <id>https://pain001.com/message-spec-pain.001.001.04/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>pain.001.001.07 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.</summary>
+    <summary>Every element of ISO 20022 pain.001.001.04: XML path, cardinality, data type, length and pattern constraints, and code lists — generated from the official XSD.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
-    <title>pain.001.001.08 Reference: Generate and Validate</title>
-    <link href="https://pain001.com/pain.001.001.08/"/>
-    <id>https://pain001.com/pain.001.001.08/</id>
+    <title>pain.001.001.05 type reference (part 2 of 3) — InstructionForCreditorAgent1 – TaxPeriod1</title>
+    <link href="https://pain001.com/message-spec-pain.001.001.05-types-2/"/>
+    <id>https://pain001.com/message-spec-pain.001.001.05-types-2/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>pain.001.001.08 — the last pre-2019 version. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.</summary>
+    <summary>Complex types InstructionForCreditorAgent1 – TaxPeriod1 in ISO 20022 pain.001.001.05, with elements, cardinality and constraints, generated from the official XSD.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
-    <title>pain.001.001.09 Reference: Generate and Validate</title>
-    <link href="https://pain001.com/pain.001.001.09/"/>
-    <id>https://pain001.com/pain.001.001.09/</id>
+    <title>pain.001.001.05 type reference (part 3 of 3) — TaxRecord1 – TaxRecordDetails1</title>
+    <link href="https://pain001.com/message-spec-pain.001.001.05-types-3/"/>
+    <id>https://pain001.com/message-spec-pain.001.001.05-types-3/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>pain.001.001.09 — the CBPR+ cross-border version. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.</summary>
+    <summary>Complex types TaxRecord1 – TaxRecordDetails1 in ISO 20022 pain.001.001.05, with elements, cardinality and constraints, generated from the official XSD.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
-    <title>pain.001.001.10 Reference: Generate and Validate</title>
-    <link href="https://pain001.com/pain.001.001.10/"/>
-    <id>https://pain001.com/pain.001.001.10/</id>
+    <title>pain.001.001.05 type reference (part 1 of 3) — AccountIdentification4Choice – GroupHeader48</title>
+    <link href="https://pain001.com/message-spec-pain.001.001.05-types/"/>
+    <id>https://pain001.com/message-spec-pain.001.001.05-types/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>pain.001.001.10 — post-2019 refinement. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.</summary>
+    <summary>Complex types AccountIdentification4Choice – GroupHeader48 in ISO 20022 pain.001.001.05, with elements, cardinality and constraints, generated from the official XSD.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
-    <title>pain.001.001.11 Reference: Generate and Validate</title>
-    <link href="https://pain001.com/pain.001.001.11/"/>
-    <id>https://pain001.com/pain.001.001.11/</id>
+    <title>pain.001.001.05 — complete element reference</title>
+    <link href="https://pain001.com/message-spec-pain.001.001.05/"/>
+    <id>https://pain001.com/message-spec-pain.001.001.05/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>pain.001.001.11 — recent maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.</summary>
+    <summary>Every element of ISO 20022 pain.001.001.05: XML path, cardinality, data type, length and pattern constraints, and code lists — generated from the official XSD.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
-    <title>pain.001.001.12 Reference: Generate and Validate</title>
-    <link href="https://pain001.com/pain.001.001.12/"/>
-    <id>https://pain001.com/pain.001.001.12/</id>
+    <title>pain.001.001.06 type reference (part 2 of 3) — GenericOrganisationIdentification1 – TaxAuthorisation1</title>
+    <link href="https://pain001.com/message-spec-pain.001.001.06-types-2/"/>
+    <id>https://pain001.com/message-spec-pain.001.001.06-types-2/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>pain.001.001.12 — the newest supported version. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.</summary>
+    <summary>Complex types GenericOrganisationIdentification1 – TaxAuthorisation1 in ISO 20022 pain.001.001.06, with elements, cardinality and constraints, generated from the official XSD.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
-    <title>pain.001.001.13 Reference: Generate and Validate</title>
-    <link href="https://pain001.com/pain.001.001.13/"/>
-    <id>https://pain001.com/pain.001.001.13/</id>
+    <title>pain.001.001.06 type reference (part 3 of 3) — TaxInformation3 – TaxRecordDetails1</title>
+    <link href="https://pain001.com/message-spec-pain.001.001.06-types-3/"/>
+    <id>https://pain001.com/message-spec-pain.001.001.06-types-3/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>pain.001.001.13 — the newest supported version. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001.</summary>
+    <summary>Complex types TaxInformation3 – TaxRecordDetails1 in ISO 20022 pain.001.001.06, with elements, cardinality and constraints, generated from the official XSD.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
-    <title>MT101 to pain.001 Conversion: pain001-loader-mt101</title>
-    <link href="https://pain001.com/pain001-loader-mt101/"/>
-    <id>https://pain001.com/pain001-loader-mt101/</id>
+    <title>pain.001.001.06 type reference (part 1 of 3) — AccountIdentification4Choice – GenericFinancialIdentification1</title>
+    <link href="https://pain001.com/message-spec-pain.001.001.06-types/"/>
+    <id>https://pain001.com/message-spec-pain.001.001.06-types/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict error handling, ready for the 14 Nov 2026 relay cutover.</summary>
+    <summary>Complex types AccountIdentification4Choice – GenericFinancialIdentification1 in ISO 20022 pain.001.001.06, with elements, cardinality and constraints, generated from the official XSD.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
 </feed>

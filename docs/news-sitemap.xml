@@ -410,6 +410,522 @@
   </news:news>
 </url>
 <url>
+  <loc>https://pain001.com/message-spec-changes/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>What changed between pain.001 versions — element-level diffs</news:title>
+    <news:keywords>pain.001 version differences, ISO 20022 changes, schema diff, migration impact, pain.001.001.13 changes</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-code-lists/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>ISO 20022 payment code lists — every value, every version</news:title>
+    <news:keywords>ISO 20022 code lists, charge bearer, payment method, address type, sequence type, pain.001 codes, enumeration values</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.03/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.03 — complete element reference</news:title>
+    <news:keywords>pain.001.001.03, ISO 20022, element reference, cardinality, code lists, XML path, message specification, pain.001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.03-types/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.03 type reference (part 1 of 2) — AccountIdentification4Choice – LocalInstrument2Choice</news:title>
+    <news:keywords>pain.001.001.03 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.03-types-2/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.03 type reference (part 2 of 2) — NameAndAddress10 – TaxRecordDetails1</news:title>
+    <news:keywords>pain.001.001.03 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.04/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.04 — complete element reference</news:title>
+    <news:keywords>pain.001.001.04, ISO 20022, element reference, cardinality, code lists, XML path, message specification, pain.001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.04-types/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.04 type reference (part 1 of 3) — AccountIdentification4Choice – GroupHeader48</news:title>
+    <news:keywords>pain.001.001.04 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.04-types-2/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.04 type reference (part 2 of 3) — InstructionForCreditorAgent1 – TaxPeriod1</news:title>
+    <news:keywords>pain.001.001.04 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.04-types-3/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.04 type reference (part 3 of 3) — TaxRecord1 – TaxRecordDetails1</news:title>
+    <news:keywords>pain.001.001.04 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.05/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.05 — complete element reference</news:title>
+    <news:keywords>pain.001.001.05, ISO 20022, element reference, cardinality, code lists, XML path, message specification, pain.001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.05-types/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.05 type reference (part 1 of 3) — AccountIdentification4Choice – GroupHeader48</news:title>
+    <news:keywords>pain.001.001.05 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.05-types-2/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.05 type reference (part 2 of 3) — InstructionForCreditorAgent1 – TaxPeriod1</news:title>
+    <news:keywords>pain.001.001.05 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.05-types-3/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.05 type reference (part 3 of 3) — TaxRecord1 – TaxRecordDetails1</news:title>
+    <news:keywords>pain.001.001.05 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.06/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.06 — complete element reference</news:title>
+    <news:keywords>pain.001.001.06, ISO 20022, element reference, cardinality, code lists, XML path, message specification, pain.001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.06-types/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.06 type reference (part 1 of 3) — AccountIdentification4Choice – GenericFinancialIdentification1</news:title>
+    <news:keywords>pain.001.001.06 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.06-types-2/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.06 type reference (part 2 of 3) — GenericOrganisationIdentification1 – TaxAuthorisation1</news:title>
+    <news:keywords>pain.001.001.06 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.06-types-3/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.06 type reference (part 3 of 3) — TaxInformation3 – TaxRecordDetails1</news:title>
+    <news:keywords>pain.001.001.06 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.07/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.07 — complete element reference</news:title>
+    <news:keywords>pain.001.001.07, ISO 20022, element reference, cardinality, code lists, XML path, message specification, pain.001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.07-types/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.07 type reference (part 1 of 3) — AccountIdentification4Choice – Garnishment1</news:title>
+    <news:keywords>pain.001.001.07 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.07-types-2/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.07 type reference (part 2 of 3) — GarnishmentType1 – StructuredRemittanceInformation13</news:title>
+    <news:keywords>pain.001.001.07 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.07-types-3/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.07 type reference (part 3 of 3) — SupplementaryData1 – TaxRecordDetails1</news:title>
+    <news:keywords>pain.001.001.07 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.08/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.08 — complete element reference</news:title>
+    <news:keywords>pain.001.001.08, ISO 20022, element reference, cardinality, code lists, XML path, message specification, pain.001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.08-types/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.08 type reference (part 1 of 3) — AccountIdentification4Choice – FinancialInstitutionIdentification8</news:title>
+    <news:keywords>pain.001.001.08 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.08-types-2/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.08 type reference (part 2 of 3) — Garnishment1 – StructuredRegulatoryReporting3</news:title>
+    <news:keywords>pain.001.001.08 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.08-types-3/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.08 type reference (part 3 of 3) — StructuredRemittanceInformation13 – TaxRecordDetails1</news:title>
+    <news:keywords>pain.001.001.08 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.09/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.09 — complete element reference</news:title>
+    <news:keywords>pain.001.001.09, ISO 20022, element reference, cardinality, code lists, XML path, message specification, pain.001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.09-types/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.09 type reference (part 1 of 3) — AccountIdentification4Choice – FinancialIdentificationSchemeName1Choice</news:title>
+    <news:keywords>pain.001.001.09 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.09-types-2/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.09 type reference (part 2 of 3) — FinancialInstitutionIdentification18 – RemittanceAmount3</news:title>
+    <news:keywords>pain.001.001.09 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.09-types-3/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.09 type reference (part 3 of 3) — RemittanceInformation16 – TaxRecordDetails2</news:title>
+    <news:keywords>pain.001.001.09 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.10/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.10 — complete element reference</news:title>
+    <news:keywords>pain.001.001.10, ISO 20022, element reference, cardinality, code lists, XML path, message specification, pain.001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.10-types/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.10 type reference (part 1 of 3) — AccountIdentification4Choice – DocumentLineType1Choice</news:title>
+    <news:keywords>pain.001.001.10 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.10-types-2/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.10 type reference (part 2 of 3) — EquivalentAmount2 – PersonIdentificationSchemeName1Choice</news:title>
+    <news:keywords>pain.001.001.10 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.10-types-3/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.10 type reference (part 3 of 3) — PostalAddress24 – TaxRecordDetails2</news:title>
+    <news:keywords>pain.001.001.10 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.11/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.11 — complete element reference</news:title>
+    <news:keywords>pain.001.001.11, ISO 20022, element reference, cardinality, code lists, XML path, message specification, pain.001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.11-types/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.11 type reference (part 1 of 3) — AccountIdentification4Choice – DocumentLineType1Choice</news:title>
+    <news:keywords>pain.001.001.11 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.11-types-2/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.11 type reference (part 2 of 3) — EquivalentAmount2 – PersonIdentificationSchemeName1Choice</news:title>
+    <news:keywords>pain.001.001.11 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.11-types-3/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.11 type reference (part 3 of 3) — PostalAddress24 – TaxRecordDetails3</news:title>
+    <news:keywords>pain.001.001.11 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.13/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.13 — complete element reference</news:title>
+    <news:keywords>pain.001.001.13, ISO 20022, element reference, cardinality, code lists, XML path, message specification, pain.001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.13-types/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.13 type reference (part 1 of 3) — AccountIdentification4Choice – DocumentLineInformation2</news:title>
+    <news:keywords>pain.001.001.13 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.13-types-2/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.13 type reference (part 2 of 3) — DocumentLineType1 – PaymentInitiationSource1</news:title>
+    <news:keywords>pain.001.001.13 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.001.001.13-types-3/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.001.001.13 type reference (part 3 of 3) — PaymentInstruction51 – TaxRecordDetails3</news:title>
+    <news:keywords>pain.001.001.13 types, ISO 20022 complex types, cardinality, field mapping</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-spec-pain.008.001.02/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>pain.008.001.02 — complete element reference</news:title>
+    <news:keywords>pain.008.001.02, ISO 20022, element reference, cardinality, code lists, XML path, message specification, pain.001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/message-specs/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>ISO 20022 message specifications — generated from the official XSDs</news:title>
+    <news:keywords>ISO 20022 message specification, pain.001 elements, cardinality, code lists, XML paths, message definition report, pain.008</news:keywords>
+  </news:news>
+</url>
+<url>
   <loc>https://pain001.com/mr/</loc>
   <news:news>
     <news:publication>

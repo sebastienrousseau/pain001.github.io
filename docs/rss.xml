@@ -196,6 +196,40 @@
       <category>SEPA</category>
     </item>
     <item>
+      <title>ISO 20022 message specifications — generated from the official XSDs</title>
+      <link>https://pain001.com/message-specs/</link>
+      <description>Complete element references for every supported ISO 20022 payment-initiation version: paths, cardinality, types, constraints and code lists, generated from the official schemas.</description>
+      <guid isPermaLink="true">https://pain001.com/message-specs/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>ISO 20022 payment code lists — every value, every version</title>
+      <link>https://pain001.com/message-spec-code-lists/</link>
+      <description>Every ISO 20022 payment-initiation code list with its complete value set and version coverage, generated from the official XSDs.</description>
+      <guid isPermaLink="true">https://pain001.com/message-spec-code-lists/</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
       <title>Install Pain001: pip, Docker and First Validated File</title>
       <link>https://pain001.com/installation/</link>
       <description>Install the Pain001 suite on Python 3.10–3.12 via pip or Docker, add Excel and MT101 loaders, and produce your first bank-ready pain.001 file in three commands.</description>
@@ -812,40 +846,6 @@
       <link>https://pain001.com/bn/</link>
       <description>ওপেন-সোর্স Python স্যুট যা CSV, Excel, SQLite, JSON, Parquet বা SWIFT MT101 থেকে XSD-যাচাইকৃত pain.001 ও pain.008 ফাইল তৈরি করে — AI এজেন্টের জন্য MCP টুল ও LSP সার্ভারসহ।</description>
       <guid isPermaLink="true">https://pain001.com/bn/</guid>
-      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
-      <author>contact@pain001.com (Sebastien Rousseau)</author>
-      <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>
-      <category>Technology</category>
-      <category>ISO 20022</category>
-      <category>pain001</category>
-      <category>payments</category>
-      <category>python</category>
-      <category>banking</category>
-      <category>CBPR+</category>
-      <category>SEPA</category>
-    </item>
-    <item>
-      <title>Pain001 — திறந்த மூல ISO 20022 கட்டணத் தொடக்கம்</title>
-      <link>https://pain001.com/ta/</link>
-      <description>CSV, Excel, SQLite, JSON, Parquet அல்லது SWIFT MT101 இலிருந்து XSD-சரிபார்க்கப்பட்ட pain.001 மற்றும் pain.008 கோப்புகளை உருவாக்கும் திறந்த மூல Python தொகுப்பு — AI முகவர்களுக்கான MCP கருவிகள் மற்றும் LSP சேவையகத்துடன்.</description>
-      <guid isPermaLink="true">https://pain001.com/ta/</guid>
-      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
-      <author>contact@pain001.com (Sebastien Rousseau)</author>
-      <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>
-      <category>Technology</category>
-      <category>ISO 20022</category>
-      <category>pain001</category>
-      <category>payments</category>
-      <category>python</category>
-      <category>banking</category>
-      <category>CBPR+</category>
-      <category>SEPA</category>
-    </item>
-    <item>
-      <title>Pain001 — ఓపెన్-సోర్స్ ISO 20022 చెల్లింపు ప్రారంభం</title>
-      <link>https://pain001.com/te/</link>
-      <description>CSV, Excel, SQLite, JSON, Parquet లేదా SWIFT MT101 నుండి XSD-ధృవీకరించిన pain.001 మరియు pain.008 ఫైళ్లను రూపొందించే ఓపెన్-సోర్స్ Python సూట్ — AI ఏజెంట్ల కోసం MCP సాధనాలు మరియు LSP సర్వర్‌తో.</description>
-      <guid isPermaLink="true">https://pain001.com/te/</guid>
       <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
       <author>contact@pain001.com (Sebastien Rousseau)</author>
       <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>

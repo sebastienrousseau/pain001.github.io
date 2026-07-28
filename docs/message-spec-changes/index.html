@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta itemprop="datePublished" content="Sun, 26 Jul 2026 08:00:00 +0000" id="date" />
+    <meta itemprop="dateModified" content="Sun, 26 Jul 2026 08:00:00 +0000" id="last-modified" />
+    <title>What changed between pain.001 versions — element-level diffs</title>
+
+    <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
+<meta name="description" content="Element-by-element differences between consecutive ISO 20022 pain.001 versions, computed from the official schemas.">
+<meta name="keywords" content="pain.001 version differences, ISO 20022 changes, schema diff, migration impact, pain.001.001.13 changes">
+<meta property="og:image" content="https://pain001.com/og/pain001-card.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Element-by-element differences between consecutive ISO 20022 pain.001 versions, computed from the official schemas." />
+    <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="What changed between pain.001 versions — element-level diffs">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    
+    
+
+    <link rel="alternate" href="https://pain001.com/message-spec-changes/" hreflang="en" />
+    
+    <link rel="icon" type="image/svg+xml" href="/img/pain001.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="/img/pain001.svg" />
+    <link rel="preload" href="/fonts/source-serif-4-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/_csp/e9d2f9e83d6b47b6.css" integrity="sha384-NgS1FgtNO/+O73jGnYQcFGXyKGAVkFu/W1I8bL4l2QSI+eMJfSMSQrUdf2zJxS34" crossorigin="anonymous">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
+  <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="What changed between pain.001 versions — element-level diffs">
+<meta property="og:description" content="Element-by-element differences between consecutive ISO 20022 pain.001 versions, computed from the official schemas.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pain001.com/message-spec-changes/">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What changed between pain.001 versions — element-level diffs">
+<meta name="twitter:description" content="Element-by-element differences between consecutive ISO 20022 pain.001 versions, computed from the official schemas.">
+<meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg">
+<link rel="canonical" href="https://pain001.com/message-spec-changes/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
+<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"></head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="ap-nav">
+      <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Toggle navigation" />
+      <div class="wrap ap-nav-wrap">
+        <a class="ap-brand" href="/" aria-label="Pain001 home">
+          <img src="/img/pain001.svg" alt="" width="26" height="26" />
+          <span>Pain001</span>
+        </a>
+        <nav aria-label="Primary navigation" id="ap-primary-nav">
+          <ul class="ap-menu">
+            <li class="has-sub"><a href="/why/">Why Pain001</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-why" aria-label="Toggle Why Pain001 submenu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-why" class="ap-sub">
+                <li><a href="/solutions/">Who it&rsquo;s for</a></li>
+                <li><a href="/executive-brief/">Executive brief</a></li>
+                <li><a href="/competitors-comparison/">Comparison vs commercial tools</a></li>
+              </ul>
+            </li>
+            <li><a href="/try/">See it live</a></li>
+            <li class="has-sub"><a href="/documentation/">Docs</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="Toggle Docs submenu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-docs" class="ap-sub">
+                <li><a href="/installation/">Installation &amp; Docker</a></li>
+                <li><a href="/message-specs/">Message specifications</a></li>
+                <li><a href="/glossary/">Glossary</a></li>
+                <li><a href="/faqs/">FAQs</a></li>
+                <li><a href="/pain002-reason-codes/">pain.002 reason codes</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/#suite-heading">Suite</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-suite" aria-label="Toggle Suite submenu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-suite" class="ap-sub">
+                <li><a href="/pain001-mcp/">AI agent tools (MCP)</a></li>
+                <li><a href="/pain001-lsp/">Editor integration (LSP)</a></li>
+                <li><a href="/pain001-loader-mt101/">MT101 loader</a></li>
+                <li><a href="/pain001-loader-xlsx/">Excel loader</a></li>
+                <li><a href="/architecture-and-patents/">Architecture &amp; security</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/2026-iso20022-migration-trends/">Research</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-research" aria-label="Toggle Research submenu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-research" class="ap-sub">
+                <li><a href="/2026-iso20022-migration-trends/">2026 briefing</a></li>
+                <li><a href="/iso20022-roadmap/">ISO 20022 roadmap</a></li>
+                <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/">Cross-border guide</a></li>
+                <li><a href="/languages/">In 34 languages</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="ap-nav-right">
+          <button type="button" class="theme-toggle" aria-label="Switch to dark theme" aria-pressed="false" title="Switch theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+          <button type="button" class="ap-search-btn" aria-label="Search (Cmd or Ctrl + K)" title="Search (⌘K)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <kbd class="ap-search-kbd" aria-hidden="true">⌘K</kbd>
+          </button>
+          <div class="ap-lang" role="group" aria-label="Language">
+            <button type="button" class="ap-lang-toggle" aria-label="Change language" aria-expanded="false" aria-haspopup="menu" title="Change language">
+              <span class="ap-lang-globe" aria-hidden="true">🌐</span>
+              <span class="ap-lang-current">EN</span>
+            </button>
+            <div class="ap-lang-menu" role="menu" hidden>
+              <div class="ap-lang-menu-grid">
+                <a class="ap-lang-item" href="/" hreflang="en" lang="en" role="menuitem"><span aria-hidden="true">🇬🇧</span> English</a>
+                <a class="ap-lang-item" href="/fr/" hreflang="fr" lang="fr" role="menuitem"><span aria-hidden="true">🇫🇷</span> Français</a>
+                <a class="ap-lang-item" href="/de/" hreflang="de" lang="de" role="menuitem"><span aria-hidden="true">🇩🇪</span> Deutsch</a>
+                <a class="ap-lang-item" href="/es/" hreflang="es" lang="es" role="menuitem"><span aria-hidden="true">🇪🇸</span> Español</a>
+                <a class="ap-lang-item" href="/it/" hreflang="it" lang="it" role="menuitem"><span aria-hidden="true">🇮🇹</span> Italiano</a>
+                <a class="ap-lang-item" href="/pt-br/" hreflang="pt-BR" lang="pt-BR" role="menuitem"><span aria-hidden="true">🇧🇷</span> Português</a>
+                <a class="ap-lang-item" href="/nl/" hreflang="nl" lang="nl" role="menuitem"><span aria-hidden="true">🇳🇱</span> Nederlands</a>
+                <a class="ap-lang-item" href="/pl/" hreflang="pl" lang="pl" role="menuitem"><span aria-hidden="true">🇵🇱</span> Polski</a>
+                <a class="ap-lang-item" href="/sv/" hreflang="sv" lang="sv" role="menuitem"><span aria-hidden="true">🇸🇪</span> Svenska</a>
+                <a class="ap-lang-item" href="/cs/" hreflang="cs" lang="cs" role="menuitem"><span aria-hidden="true">🇨🇿</span> Čeština</a>
+                <a class="ap-lang-item" href="/ro/" hreflang="ro" lang="ro" role="menuitem"><span aria-hidden="true">🇷🇴</span> Română</a>
+                <a class="ap-lang-item" href="/hu/" hreflang="hu" lang="hu" role="menuitem"><span aria-hidden="true">🇭🇺</span> Magyar</a>
+                <a class="ap-lang-item" href="/el/" hreflang="el" lang="el" role="menuitem"><span aria-hidden="true">🇬🇷</span> Ελληνικά</a>
+                <a class="ap-lang-item" href="/tr/" hreflang="tr" lang="tr" role="menuitem"><span aria-hidden="true">🇹🇷</span> Türkçe</a>
+                <a class="ap-lang-item" href="/ru/" hreflang="ru" lang="ru" role="menuitem"><span aria-hidden="true">🇷🇺</span> Русский</a>
+                <a class="ap-lang-item" href="/uk/" hreflang="uk" lang="uk" role="menuitem"><span aria-hidden="true">🇺🇦</span> Українська</a>
+                <a class="ap-lang-item" href="/ar/" hreflang="ar" lang="ar" role="menuitem"><span aria-hidden="true">🇸🇦</span> العربية</a>
+                <a class="ap-lang-item" href="/he/" hreflang="he" lang="he" role="menuitem"><span aria-hidden="true">🇮🇱</span> עברית</a>
+                <a class="ap-lang-item" href="/fa/" hreflang="fa" lang="fa" role="menuitem"><span aria-hidden="true">🇮🇷</span> فارسی</a>
+                <a class="ap-lang-item" href="/hi/" hreflang="hi" lang="hi" role="menuitem"><span aria-hidden="true">🇮🇳</span> हिन्दी</a>
+                <a class="ap-lang-item" href="/bn/" hreflang="bn" lang="bn" role="menuitem"><span aria-hidden="true">🇧🇩</span> বাংলা</a>
+                <a class="ap-lang-item" href="/ta/" hreflang="ta" lang="ta" role="menuitem"><span aria-hidden="true">🇮🇳</span> தமிழ்</a>
+                <a class="ap-lang-item" href="/te/" hreflang="te" lang="te" role="menuitem"><span aria-hidden="true">🇮🇳</span> తెలుగు</a>
+                <a class="ap-lang-item" href="/mr/" hreflang="mr" lang="mr" role="menuitem"><span aria-hidden="true">🇮🇳</span> मराठी</a>
+                <a class="ap-lang-item" href="/th/" hreflang="th" lang="th" role="menuitem"><span aria-hidden="true">🇹🇭</span> ไทย</a>
+                <a class="ap-lang-item" href="/vi/" hreflang="vi" lang="vi" role="menuitem"><span aria-hidden="true">🇻🇳</span> Tiếng Việt</a>
+                <a class="ap-lang-item" href="/id/" hreflang="id" lang="id" role="menuitem"><span aria-hidden="true">🇮🇩</span> Indonesia</a>
+                <a class="ap-lang-item" href="/ms/" hreflang="ms" lang="ms" role="menuitem"><span aria-hidden="true">🇲🇾</span> Melayu</a>
+                <a class="ap-lang-item" href="/fil/" hreflang="fil" lang="fil" role="menuitem"><span aria-hidden="true">🇵🇭</span> Filipino</a>
+                <a class="ap-lang-item" href="/ja/" hreflang="ja" lang="ja" role="menuitem"><span aria-hidden="true">🇯🇵</span> 日本語</a>
+                <a class="ap-lang-item" href="/ko/" hreflang="ko" lang="ko" role="menuitem"><span aria-hidden="true">🇰🇷</span> 한국어</a>
+                <a class="ap-lang-item" href="/zh-hans/" hreflang="zh-Hans" lang="zh-Hans" role="menuitem"><span aria-hidden="true">🇨🇳</span> 简体中文</a>
+                <a class="ap-lang-item" href="/zh-hant/" hreflang="zh-Hant" lang="zh-Hant" role="menuitem"><span aria-hidden="true">🇹🇼</span> 繁體中文</a>
+                <a class="ap-lang-item" href="/ha/" hreflang="ha" lang="ha" role="menuitem"><span aria-hidden="true">🇳🇬</span> Hausa</a>
+                <a class="ap-lang-item" href="/yo/" hreflang="yo" lang="yo" role="menuitem"><span aria-hidden="true">🇳🇬</span> Yorùbá</a>
+              </div>
+            </div>
+          </div>
+          <a class="ap-cta-mini" href="/try/">Try the demo&nbsp;&rsaquo;</a>
+          <label class="ap-burger" for="ap-menu-toggle" aria-hidden="true"><span class="ap-burger-icon">☰</span></label>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <header class="page-header">
+        <div class="wrap">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li aria-current="page">What changed between pain.001 versions — element-level diffs</li>
+            </ol>
+          </nav>
+          <p class="eyebrow">Message specification</p>
+          <h1 class="page-title">What changed between pain.001 versions — element-level diffs</h1>
+          <p class="deck">The delta the ISO catalogue does not publish: exactly which elements each pain.001 version added and removed.</p>
+          <div class="article-meta"><span>2 min read</span>
+            <span>Last reviewed <time datetime="2026-07-26">26 July 2026</time></span>
+          </div>
+        </div>
+      </header>
+
+      <div class="wrap content-shell">
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>Contents</h2><ol><li><a href="#pain-001-001-03-pain-001-001-04">pain.001.001.03 → pain.001.001.04</a></li><li><a href="#pain-001-001-04-pain-001-001-05">pain.001.001.04 → pain.001.001.05</a></li><li><a href="#pain-001-001-05-pain-001-001-06">pain.001.001.05 → pain.001.001.06</a></li><li><a href="#pain-001-001-06-pain-001-001-07">pain.001.001.06 → pain.001.001.07</a></li><li><a href="#pain-001-001-07-pain-001-001-08">pain.001.001.07 → pain.001.001.08</a></li><li><a href="#pain-001-001-08-pain-001-001-09">pain.001.001.08 → pain.001.001.09</a></li><li><a href="#pain-001-001-09-pain-001-001-10">pain.001.001.09 → pain.001.001.10</a></li><li><a href="#pain-001-001-10-pain-001-001-11">pain.001.001.10 → pain.001.001.11</a></li><li><a href="#pain-001-001-11-pain-001-001-13">pain.001.001.11 → pain.001.001.13</a></li></ol></nav>
+          <div lang="en"><p>What changed between consecutive ISO 20022 payment-initiation versions, computed by diffing the official schemas element by element. This is the view the ISO catalogue does not provide: it publishes each version, not the delta between them.</p>
+<p>Paths are XML element paths. An added path means the element does not exist in the earlier version, so a document using it will not validate there.</p>
+<h2 id="pain-001-001-03-pain-001-001-04">pain.001.001.03 → pain.001.001.04<a class="heading-anchor" href="#pain-001-001-03-pain-001-001-04" aria-label="Link to section: pain.001.001.03 → pain.001.001.04">#</a></h2>
+<p><strong>16 added · 10 removed</strong></p>
+<h3>Added</h3>
+<ul>
+<li><code>CstmrCdtTrfInitn/GrpHdr/FwdgAgt/FinInstnId/BICFI</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitgPty/Id/OrgId/AnyBIC</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/CdtrAgt/FinInstnId/BICFI</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/ChqInstr/Sgntr</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/IntrmyAgt1/FinInstnId/BICFI</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/IntrmyAgt2/FinInstnId/BICFI</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/IntrmyAgt3/FinInstnId/BICFI</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/XchgRateInf/UnitCcy</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcctAgt/FinInstnId/BICFI</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/Dbtr/Id/OrgId/AnyBIC</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/DbtrAgt/FinInstnId/BICFI</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/InstrForDbtrAgt</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/UltmtDbtr/Id/OrgId/AnyBIC</code></li>
+<li><code>CstmrCdtTrfInitn/SplmtryData</code></li>
+<li><code>CstmrCdtTrfInitn/SplmtryData/Envlp</code></li>
+<li><code>CstmrCdtTrfInitn/SplmtryData/PlcAndNm</code></li>
+</ul>
+<h3>Removed</h3>
+<ul>
+<li><code>CstmrCdtTrfInitn/GrpHdr/FwdgAgt/FinInstnId/BIC</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitgPty/Id/OrgId/BICOrBEI</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/CdtrAgt/FinInstnId/BIC</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/IntrmyAgt1/FinInstnId/BIC</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/IntrmyAgt2/FinInstnId/BIC</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/IntrmyAgt3/FinInstnId/BIC</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcctAgt/FinInstnId/BIC</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/Dbtr/Id/OrgId/BICOrBEI</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/DbtrAgt/FinInstnId/BIC</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/UltmtDbtr/Id/OrgId/BICOrBEI</code></li>
+</ul>
+<h2 id="pain-001-001-04-pain-001-001-05">pain.001.001.04 → pain.001.001.05<a class="heading-anchor" href="#pain-001-001-04-pain-001-001-05" aria-label="Link to section: pain.001.001.04 → pain.001.001.05">#</a></h2>
+<p><strong>3 added · 0 removed</strong></p>
+<h3>Added</h3>
+<ul>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/SplmtryData</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/SplmtryData/Envlp</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/SplmtryData/PlcAndNm</code></li>
+</ul>
+<h2 id="pain-001-001-05-pain-001-001-06">pain.001.001.05 → pain.001.001.06<a class="heading-anchor" href="#pain-001-001-05-pain-001-001-06" aria-label="Link to section: pain.001.001.05 → pain.001.001.06">#</a></h2>
+<p><strong>6 added · 5 removed</strong></p>
+<h3>Added</h3>
+<ul>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/RltdRmtInf/RmtLctnDtls</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/RltdRmtInf/RmtLctnDtls/ElctrncAdr</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/RltdRmtInf/RmtLctnDtls/Mtd</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/RltdRmtInf/RmtLctnDtls/PstlAdr</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/RmtInf/Strd/GrnshmtRmt</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/RmtInf/Strd/TaxRmt</code></li>
+</ul>
+<h3>Removed</h3>
+<ul>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/RltdRmtInf/RmtLctnElctrncAdr</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/RltdRmtInf/RmtLctnMtd</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/RltdRmtInf/RmtLctnPstlAdr</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/RltdRmtInf/RmtLctnPstlAdr/Adr</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/RltdRmtInf/RmtLctnPstlAdr/Nm</code></li>
+</ul>
+<h2 id="pain-001-001-06-pain-001-001-07">pain.001.001.06 → pain.001.001.07<a class="heading-anchor" href="#pain-001-001-06-pain-001-001-07" aria-label="Link to section: pain.001.001.06 → pain.001.001.07">#</a></h2>
+<p><strong>0 added · 0 removed</strong></p>
+<p>No element-level changes: the versions differ only in type definitions or documentation.</p>
+<h2 id="pain-001-001-07-pain-001-001-08">pain.001.001.07 → pain.001.001.08<a class="heading-anchor" href="#pain-001-001-07-pain-001-001-08" aria-label="Link to section: pain.001.001.07 → pain.001.001.08">#</a></h2>
+<p><strong>2 added · 0 removed</strong></p>
+<h3>Added</h3>
+<ul>
+<li><code>CstmrCdtTrfInitn/PmtInf/ReqdExctnDt/Dt</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ReqdExctnDt/DtTm</code></li>
+</ul>
+<h2 id="pain-001-001-08-pain-001-001-09">pain.001.001.08 → pain.001.001.09<a class="heading-anchor" href="#pain-001-001-08-pain-001-001-09" aria-label="Link to section: pain.001.001.08 → pain.001.001.09">#</a></h2>
+<p><strong>163 added · 1 removed</strong></p>
+<h3>Added</h3>
+<ul>
+<li><code>CstmrCdtTrfInitn/GrpHdr/FwdgAgt/BrnchId/LEI</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/FwdgAgt/BrnchId/PstlAdr/BldgNm</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/FwdgAgt/BrnchId/PstlAdr/DstrctNm</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/FwdgAgt/BrnchId/PstlAdr/Flr</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/FwdgAgt/BrnchId/PstlAdr/PstBx</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/FwdgAgt/BrnchId/PstlAdr/Room</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/FwdgAgt/BrnchId/PstlAdr/TwnLctnNm</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/FwdgAgt/FinInstnId/LEI</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/FwdgAgt/FinInstnId/PstlAdr/BldgNm</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/FwdgAgt/FinInstnId/PstlAdr/DstrctNm</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/FwdgAgt/FinInstnId/PstlAdr/Flr</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/FwdgAgt/FinInstnId/PstlAdr/PstBx</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/FwdgAgt/FinInstnId/PstlAdr/Room</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/FwdgAgt/FinInstnId/PstlAdr/TwnLctnNm</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitgPty/CtctDtls/Dept</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitgPty/CtctDtls/EmailPurp</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitgPty/CtctDtls/JobTitl</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitgPty/CtctDtls/Othr/ChanlTp</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitgPty/CtctDtls/Othr/Id</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitgPty/CtctDtls/PrefrdMtd</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitgPty/CtctDtls/Rspnsblty</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitgPty/Id/OrgId/LEI</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitgPty/PstlAdr/AdrTp/Cd</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitgPty/PstlAdr/AdrTp/Prtry</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitgPty/PstlAdr/BldgNm</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitgPty/PstlAdr/DstrctNm</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitgPty/PstlAdr/Flr</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitgPty/PstlAdr/PstBx</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitgPty/PstlAdr/Room</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitgPty/PstlAdr/TwnLctnNm</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Cdtr/CtctDtls/Dept</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Cdtr/CtctDtls/EmailPurp</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Cdtr/CtctDtls/JobTitl</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Cdtr/CtctDtls/PrefrdMtd</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Cdtr/CtctDtls/Rspnsblty</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Cdtr/PstlAdr/BldgNm</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Cdtr/PstlAdr/DstrctNm</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Cdtr/PstlAdr/Flr</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Cdtr/PstlAdr/PstBx</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Cdtr/PstlAdr/Room</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Cdtr/PstlAdr/TwnLctnNm</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/CdtrAcct/Prxy</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/CdtrAcct/Prxy/Id</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/CdtrAcct/Prxy/Tp</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/CdtrAgt/BrnchId/LEI</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/CdtrAgt/FinInstnId/LEI</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/CdtrAgtAcct/Prxy</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/CdtrAgtAcct/Prxy/Id</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/CdtrAgtAcct/Prxy/Tp</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/IntrmyAgt1/BrnchId/LEI</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/IntrmyAgt1/FinInstnId/LEI</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/IntrmyAgt1Acct/Prxy</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/IntrmyAgt1Acct/Prxy/Id</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/IntrmyAgt1Acct/Prxy/Tp</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/IntrmyAgt2/BrnchId/LEI</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/IntrmyAgt2/FinInstnId/LEI</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/IntrmyAgt2Acct/Prxy</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/IntrmyAgt2Acct/Prxy/Id</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/IntrmyAgt2Acct/Prxy/Tp</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/IntrmyAgt3/BrnchId/LEI</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/IntrmyAgt3/FinInstnId/LEI</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/IntrmyAgt3Acct/Prxy</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/IntrmyAgt3Acct/Prxy/Id</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/IntrmyAgt3Acct/Prxy/Tp</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/PmtId/UETR</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Tax/AdmstnZone</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtCdtr/CtctDtls/Dept</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtCdtr/CtctDtls/EmailPurp</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtCdtr/CtctDtls/JobTitl</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtCdtr/CtctDtls/PrefrdMtd</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtCdtr/CtctDtls/Rspnsblty</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtCdtr/PstlAdr/BldgNm</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtCdtr/PstlAdr/DstrctNm</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtCdtr/PstlAdr/Flr</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtCdtr/PstlAdr/PstBx</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtCdtr/PstlAdr/Room</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtCdtr/PstlAdr/TwnLctnNm</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtDbtr/CtctDtls/Dept</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtDbtr/CtctDtls/EmailPurp</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtDbtr/CtctDtls/JobTitl</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtDbtr/CtctDtls/PrefrdMtd</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtDbtr/CtctDtls/Rspnsblty</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtDbtr/PstlAdr/BldgNm</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtDbtr/PstlAdr/DstrctNm</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtDbtr/PstlAdr/Flr</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtDbtr/PstlAdr/PstBx</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtDbtr/PstlAdr/Room</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtDbtr/PstlAdr/TwnLctnNm</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcct/Prxy</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcct/Prxy/Id</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcct/Prxy/Tp</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcct/Prxy/Tp/Cd</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcct/Prxy/Tp/Prtry</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcctAgt/BrnchId/LEI</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcctAgt/BrnchId/PstlAdr/BldgNm</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcctAgt/BrnchId/PstlAdr/DstrctNm</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcctAgt/BrnchId/PstlAdr/Flr</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcctAgt/BrnchId/PstlAdr/PstBx</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcctAgt/BrnchId/PstlAdr/Room</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcctAgt/BrnchId/PstlAdr/TwnLctnNm</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcctAgt/FinInstnId/LEI</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcctAgt/FinInstnId/PstlAdr/BldgNm</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcctAgt/FinInstnId/PstlAdr/DstrctNm</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcctAgt/FinInstnId/PstlAdr/Flr</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcctAgt/FinInstnId/PstlAdr/PstBx</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcctAgt/FinInstnId/PstlAdr/Room</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcctAgt/FinInstnId/PstlAdr/TwnLctnNm</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/Dbtr/CtctDtls/Dept</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/Dbtr/CtctDtls/EmailPurp</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/Dbtr/CtctDtls/JobTitl</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/Dbtr/CtctDtls/Othr/ChanlTp</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/Dbtr/CtctDtls/Othr/Id</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/Dbtr/CtctDtls/PrefrdMtd</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/Dbtr/CtctDtls/Rspnsblty</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/Dbtr/Id/OrgId/LEI</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/Dbtr/PstlAdr/AdrTp/Cd</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/Dbtr/PstlAdr/AdrTp/Prtry</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/Dbtr/PstlAdr/BldgNm</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/Dbtr/PstlAdr/DstrctNm</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/Dbtr/PstlAdr/Flr</code></li>
+<li><em>…and 43 more</em></li>
+</ul>
+<h3>Removed</h3>
+<ul>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Tax/AdmstnZn</code></li>
+</ul>
+<h2 id="pain-001-001-09-pain-001-001-10">pain.001.001.09 → pain.001.001.10<a class="heading-anchor" href="#pain-001-001-09-pain-001-001-10" aria-label="Link to section: pain.001.001.09 → pain.001.001.10">#</a></h2>
+<p><strong>32 added · 0 removed</strong></p>
+<h3>Added</h3>
+<ul>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitnSrc</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitnSrc/Nm</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitnSrc/Prvdr</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitnSrc/Vrsn</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/InstrForDbtrAgt/Cd</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/InstrForDbtrAgt/InstrInf</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/MndtRltdInf</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/MndtRltdInf/DtOfSgntr</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/MndtRltdInf/DtOfVrfctn</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/MndtRltdInf/ElctrncSgntr</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/MndtRltdInf/FnlPmtDt</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/MndtRltdInf/Frqcy</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/MndtRltdInf/Frqcy/Prd</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/MndtRltdInf/Frqcy/PtInTm</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/MndtRltdInf/Frqcy/Tp</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/MndtRltdInf/FrstPmtDt</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/MndtRltdInf/MndtId</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/MndtRltdInf/Rsn</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/MndtRltdInf/Rsn/Cd</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/MndtRltdInf/Rsn/Prtry</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/MndtRltdInf/Tp</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/MndtRltdInf/Tp/Clssfctn</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/MndtRltdInf/Tp/CtgyPurp</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/MndtRltdInf/Tp/LclInstrm</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/MndtRltdInf/Tp/SvcLvl</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ReqdAdvcTp</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ReqdAdvcTp/CdtAdvc</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ReqdAdvcTp/CdtAdvc/Cd</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ReqdAdvcTp/CdtAdvc/Prtry</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ReqdAdvcTp/DbtAdvc</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ReqdAdvcTp/DbtAdvc/Cd</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ReqdAdvcTp/DbtAdvc/Prtry</code></li>
+</ul>
+<h2 id="pain-001-001-10-pain-001-001-11">pain.001.001.10 → pain.001.001.11<a class="heading-anchor" href="#pain-001-001-10-pain-001-001-11" aria-label="Link to section: pain.001.001.10 → pain.001.001.11">#</a></h2>
+<p><strong>0 added · 0 removed</strong></p>
+<p>No element-level changes: the versions differ only in type definitions or documentation.</p>
+<h2 id="pain-001-001-11-pain-001-001-13">pain.001.001.11 → pain.001.001.13<a class="heading-anchor" href="#pain-001-001-11-pain-001-001-13" aria-label="Link to section: pain.001.001.11 → pain.001.001.13">#</a></h2>
+<p><strong>37 added · 1 removed</strong></p>
+<h3>Added</h3>
+<ul>
+<li><code>CstmrCdtTrfInitn/GrpHdr/FwdgAgt/BrnchId/PstlAdr/CareOf</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/FwdgAgt/BrnchId/PstlAdr/UnitNb</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/FwdgAgt/FinInstnId/PstlAdr/CareOf</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/FwdgAgt/FinInstnId/PstlAdr/UnitNb</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitgPty/CtctDtls/URLAdr</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitgPty/PstlAdr/CareOf</code></li>
+<li><code>CstmrCdtTrfInitn/GrpHdr/InitgPty/PstlAdr/UnitNb</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Cdtr/CtctDtls/URLAdr</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Cdtr/PstlAdr/CareOf</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Cdtr/PstlAdr/UnitNb</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/RgltryRptg/Dtls/RptgCd</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/RmtInf/Strd/SctiesData</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Tax/UltmtDbtr</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Tax/UltmtDbtr/Authstn</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Tax/UltmtDbtr/RegnId</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Tax/UltmtDbtr/TaxId</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/Tax/UltmtDbtr/TaxTp</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtCdtr/CtctDtls/URLAdr</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtCdtr/PstlAdr/CareOf</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtCdtr/PstlAdr/UnitNb</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtDbtr/CtctDtls/URLAdr</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtDbtr/PstlAdr/CareOf</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/UltmtDbtr/PstlAdr/UnitNb</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcctAgt/BrnchId/PstlAdr/CareOf</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcctAgt/BrnchId/PstlAdr/UnitNb</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcctAgt/FinInstnId/PstlAdr/CareOf</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/ChrgsAcctAgt/FinInstnId/PstlAdr/UnitNb</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/Dbtr/CtctDtls/URLAdr</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/Dbtr/PstlAdr/CareOf</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/Dbtr/PstlAdr/UnitNb</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/DbtrAgt/BrnchId/PstlAdr/CareOf</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/DbtrAgt/BrnchId/PstlAdr/UnitNb</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/DbtrAgt/FinInstnId/PstlAdr/CareOf</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/DbtrAgt/FinInstnId/PstlAdr/UnitNb</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/UltmtDbtr/CtctDtls/URLAdr</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/UltmtDbtr/PstlAdr/CareOf</code></li>
+<li><code>CstmrCdtTrfInitn/PmtInf/UltmtDbtr/PstlAdr/UnitNb</code></li>
+</ul>
+<h3>Removed</h3>
+<ul>
+<li><code>CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/RgltryRptg/Dtls/Cd</code></li>
+</ul>
+</div>
+        </article>
+      </div>
+    </main>
+
+    <button class="totop" id="toTop" type="button" hidden aria-label="Back to top">&uarr;</button>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-brand">Pain001</p>
+            <p class="footer-tagline">Open-source ISO 20022 payment initiation. Validated files, local processing, no lock-in.</p>
+          </div>
+          <div>
+            <h2 class="footer-heading">Documentation</h2>
+            <ul class="footer-links">
+              <li><a href="/try/">Try it in your browser</a></li>
+              <li><a href="/documentation/">Technical reference</a></li>
+              <li><a href="/installation/">Installation &amp; Docker</a></li>
+              <li><a href="/payments/">Payment pipelines</a></li>
+              <li><a href="/glossary/">Glossary</a></li>
+              <li><a href="/faqs/">FAQs</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Ecosystem</h2>
+            <ul class="footer-links">
+              <li><a href="/pain001-mcp/">pain001-mcp · AI agents</a></li>
+              <li><a href="/pain001-lsp/">pain001-lsp · editors</a></li>
+              <li><a href="/pain001-loader-mt101/">MT101 loader</a></li>
+              <li><a href="/pain001-loader-xlsx/">Excel loader</a></li>
+              <li><a href="https://github.com/sebastienrousseau/pain001" rel="external">GitHub</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Research &amp; trust</h2>
+            <ul class="footer-links">
+              <li><a href="/why/">Why Pain001</a></li>
+              <li><a href="/executive-brief/">Executive brief</a></li>
+              <li><a href="/iso20022-roadmap/">ISO 20022 roadmap</a></li>
+              <li><a href="/2026-iso20022-migration-trends/">2026 briefing</a></li>
+              <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/">Cross-Border Guide</a></li>
+              <li><a href="/competitors-comparison/">Comparison vs commercial tools</a></li>
+              <li><a href="/architecture-and-patents/">Architecture &amp; patents</a></li>
+              <li><a href="/trust/">Trust Centre</a></li>
+              <li><a href="/compatibility/">Compatibility matrix</a></li>
+              <li><a href="/security.txt">security.txt</a></li>
+              <li><a href="/sbom.cdx.json">SBOM</a> · <a href="/llms.txt">llms.txt</a> · <a href="/rss.xml">RSS feed</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; 2023&ndash;2026 Sebastien Rousseau. Core dual-licensed Apache-2.0 / MIT; companion packages Apache-2.0.</p>
+          <ul aria-label="This overview in other languages">
+            <li><a href="/languages/">This overview in 34 languages</a></li>
+          </ul>
+          <ul>
+            <li><a href="/accessibility/">Accessibility</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://pain001.com/message-spec-changes/",
+          "url": "https://pain001.com/message-spec-changes/",
+          "name": "What changed between pain.001 versions — element-level diffs",
+          "description": "Element-by-element differences between consecutive ISO 20022 pain.001 versions, computed from the official schemas.",
+          "inLanguage": "en-GB",
+          "dateModified": "2026-07-26",
+          "isPartOf": { "@id": "https://pain001.com/#website" },
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pain001.com/" },
+            { "@type": "ListItem", "position": 2, "name": "What changed between pain.001 versions — element-level diffs" }
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pain001.com/#organization",
+          "name": "Pain001",
+          "url": "https://pain001.com/",
+          "logo": "/img/pain001.svg",
+          "founder": { "@type": "Person", "name": "Sebastien Rousseau", "url": "https://sebastienrousseau.com" },
+          "sameAs": [
+            "https://github.com/sebastienrousseau/pain001",
+            "https://pypi.org/project/pain001/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pain001.com/#website",
+          "url": "https://pain001.com/",
+          "name": "Pain001",
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        }
+      ]
+    }
+    </script>
+
+    <script src="/_csp/197fcfccbee69bda.js" integrity="sha384-geygAAYoalTqpA6bIgsGUMRQupyTiF/rCnvMiGE5+G0s0ZOYAhHnkhzyMXN9yNxa" crossorigin="anonymous"></script>
+  
+<!-- SSG Search Widget -->
+<div id="ssg-search-widget">
+
+<!-- Search trigger button -->
+<button id="ssg-search-btn" type="button" aria-label="Search">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<span>Search</span>
+<kbd>K</kbd>
+</button>
+<!-- Search modal -->
+<div id="ssg-search-overlay" role="dialog" aria-label="Search">
+<div id="ssg-search-box">
+<div id="ssg-search-header">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<input id="ssg-search-input" type="search" placeholder="Search documentation..." autocomplete="off" aria-label="Search"/>
+</div>
+<div id="ssg-search-results" aria-live="polite"></div>
+<div id="ssg-sr-status" role="status" aria-live="polite" aria-atomic="true"></div>
+<div class="ssg-search-footer"><span><kbd>Esc</kbd> close</span><span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span><span><kbd>Enter</kbd> open</span></div>
+</div>
+</div>
+<script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>

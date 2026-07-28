@@ -1,0 +1,535 @@
+#!/usr/bin/env python3
+"""Render message-specification pages from the extracted schema data.
+
+Produces, from scripts/message_specs/*.json:
+
+  _posts/message-specs.md                     hub + version matrix
+  _posts/message-spec-<version>.md            full element reference
+  _posts/message-spec-code-lists.md           every code list, cross-version
+  _posts/message-spec-changes.md              version-to-version deltas
+
+Deliberately English-only: this is generated reference data that grows
+with every ISO release, and the site's 34-locale tables are hand-checked
+in CI. Localising it would multiply a growing surface by 34 forever. The
+hub page says so rather than leaving it to look like an oversight.
+"""
+from __future__ import annotations
+
+import json
+import re
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+DATA = HERE / "message_specs"
+POSTS = HERE.parent / "_posts"
+TEMPLATE_POST = POSTS / "faqs.md"
+
+# Business names for the top-level blocks, so the reference reads as
+# more than a tag dump. Sourced from the ISO message definition reports.
+BLOCK_NAMES = {
+    "GrpHdr": "Group Header — one per message",
+    "PmtInf": "Payment Information — one per debtor account and execution date",
+    "CdtTrfTxInf": "Credit Transfer Transaction Information — one per payment",
+    "DrctDbtTxInf": "Direct Debit Transaction Information — one per collection",
+    "SplmtryData": "Supplementary Data — scheme-specific extensions",
+}
+
+
+def esc(s: str) -> str:
+    return (s or "").replace("|", "\\|")
+
+
+def card(row: dict) -> str:
+    """Render cardinality as ISO writes it, flagging required elements."""
+    lo, hi = row["min"], row["max"]
+    hi = "*" if hi == "unbounded" else hi
+    text = f"{lo}..{hi}"
+    return f"**{text}**" if lo != "0" else text
+
+
+def constraint(row: dict) -> str:
+    """Human-readable type constraint: length, pattern, code count."""
+    f = row.get("facets") or {}
+    bits = []
+    if row.get("codes"):
+        bits.append(f"{len(row['codes'])} codes")
+    if "maxLength" in f:
+        lo = f.get("minLength", "1")
+        bits.append(f"length {lo}–{f['maxLength']}")
+    if "pattern" in f:
+        pat = f["pattern"]
+        bits.append(f"pattern `{pat[:40]}{'…' if len(pat) > 40 else ''}`")
+    if "fractionDigits" in f:
+        bits.append(f"{f['fractionDigits']} decimals max")
+    if "minInclusive" in f:
+        bits.append(f"min {f['minInclusive']}")
+    return "; ".join(bits)
+
+
+def load_frontmatter(slug: str, title: str, desc: str, eyebrow: str,
+                     deck: str, keywords: str) -> str:
+    """Clone a known-good post's frontmatter, retargeted."""
+    raw = TEMPLATE_POST.read_text(encoding="utf-8")
+    m = re.search(r"^---\n(.*?)\n---\n", raw, re.S)
+    lines = m.group(1).split("\n")
+
+    def setk(key: str, value: str) -> None:
+        value = str(value).replace('"', "'")
+        for i, line in enumerate(lines):
+            if line.startswith(key + ":"):
+                lines[i] = f'{key}: "{value}"'
+                return
+        lines.append(f'{key}: "{value}"')
+
+    fields = {
+        "title": title, "description": desc, "eyebrow": eyebrow,
+        "subtitle": deck, "excerpt": desc, "banner_alt": desc,
+        "keywords": keywords, "changefreq": "monthly", "layout": "page",
+        "image_alt": desc, "logo_alt": "Pain001 Logo",
+    }
+    for k, v in fields.items():
+        setk(k, v)
+        if k == "title":
+            for dk in ("apple-mobile-web-app-title", "twitter_title",
+                       "item_title"):
+                setk(dk, v)
+        if k == "description":
+            for dk in ("twitter_description", "item_description"):
+                setk(dk, v)
+    for key in ("id", "permalink", "url", "atom_link", "item_guid",
+                "item_link", "twitter_url"):
+        for i, line in enumerate(lines):
+            if line.startswith(key + ":"):
+                lines[i] = re.sub(r'"https://pain001\.com/[^"]*"',
+                                  f'"https://pain001.com/{slug}/"', line)
+    return "---\n" + "\n".join(lines) + "\n\n---\n\n"
+
+
+def write_post(slug: str, frontmatter: str, body: str) -> None:
+    (POSTS / f"{slug}.md").write_text(frontmatter + body.strip() + "\n",
+                                      encoding="utf-8")
+
+
+def render_version(payload: dict, index: dict) -> None:
+    v = payload["version"]
+    slug = f"message-spec-{v}"
+    rows = payload["elements"]
+    required = sum(1 for r in rows if r["min"] != "0")
+    is_pain001 = v.startswith("pain.001")
+
+    body = [
+        f"This is the complete element reference for `{v}`, generated "
+        f"directly from the official ISO 20022 XSD that Pain001 validates "
+        f"against — not transcribed by hand. Every cardinality, type and "
+        f"code value below can be checked against ISO's own publication.",
+        "",
+        f"**{len(rows)} elements** · **{required} required** · "
+        f"**{payload['complex_type_count']} types** · "
+        f"**{payload['code_list_count']} code lists**",
+        "",
+        "Cardinality is shown as ISO writes it: `0..1` optional, "
+        "`1..1` required, `0..*` repeating. Required elements are **bold** "
+        "— those are the ones whose absence makes the document invalid "
+        "before any bank sees it.",
+        "",
+    ]
+
+    # group by top-level block
+    blocks: dict[str, list[dict]] = {}
+    for r in rows:
+        parts = r["path"].split("/")
+        key = parts[1] if len(parts) > 1 else parts[0]
+        blocks.setdefault(key, []).append(r)
+
+    for block, brows in blocks.items():
+        label = BLOCK_NAMES.get(block, block)
+        body.append(f"## {block}")
+        body.append("")
+        if block in BLOCK_NAMES:
+            body.append(f"*{label}*")
+            body.append("")
+        body.append("| Element | Path | Card. | Type | Constraints |")
+        body.append("| :--- | :--- | :--- | :--- | :--- |")
+        for r in [x for x in brows if x["depth"] <= 3][:200]:
+            indent = "&nbsp;" * (r["depth"] * 2)
+            name = f"{indent}`{r['name']}`"
+            path = f"`{esc(r['path'])}`"
+            body.append(
+                f"| {name} | {path} | {card(r)} | `{esc(r['type'])}` | "
+                f"{esc(constraint(r))} |")
+        deeper = len([x for x in brows if x["depth"] > 3])
+        if deeper:
+            body.append(f"\n*{deeper} further nested elements sit below "
+                        "this depth — every one of them is defined in the "
+                        "type reference below, which lists each type once "
+                        "instead of repeating it under every party.*")
+        body.append("")
+
+    ti = payload.get("type_index") or {}
+    populated = {n: v for n, v in ti.items() if v["children"]}
+    if populated:
+        body.append("## Type reference")
+        body.append("")
+        body.append(
+            f"Every complex type in this version is defined once on the "
+            f"[**{v} type reference**](/message-spec-{v}-types/) — "
+            f"{len(populated)} types. The tree above repeats a party or "
+            f"address structure under each party; the type reference does "
+            f"not, which makes it the better page for mapping work.")
+        body.append("")
+
+    if payload["code_lists"]:
+        body.append("## Code lists used by this version")
+        body.append("")
+        body.append("| Code list | Values |")
+        body.append("| :--- | :--- |")
+        for name, cl in sorted(payload["code_lists"].items()):
+            codes = ", ".join(f"`{c}`" for c in cl["codes"][:14])
+            more = f" *(+{len(cl['codes']) - 14} more)*" if len(cl["codes"]) > 14 else ""
+            body.append(f"| `{name}` | {codes}{more} |")
+        body.append("")
+        body.append("The full value set for every list is on the "
+                    "[code lists page](/message-spec-code-lists/).")
+        body.append("")
+
+    body.append("## Generate and validate this version")
+    body.append("")
+    body.append("```bash")
+    body.append(f"pain001 -t {v} -d payments.csv -o out/ --dry-run")
+    body.append("```")
+    body.append("")
+    if is_pain001:
+        body.append(f"See the [narrative page for {v}](/{v}/) for what "
+                    "distinguishes this version and when to choose it, the "
+                    "[full compatibility matrix](/compatibility/), or "
+                    "[what changed between versions]"
+                    "(/message-spec-changes/).")
+    else:
+        body.append("See the [compatibility matrix](/compatibility/) for "
+                    "supported input formats and gates.")
+
+    fm = load_frontmatter(
+        slug,
+        f"{v} — complete element reference",
+        f"Every element of ISO 20022 {v}: XML path, cardinality, data type, "
+        f"length and pattern constraints, and code lists — generated from "
+        f"the official XSD.",
+        "Message specification",
+        f"All {len(rows)} elements of {v} with cardinality, types and code "
+        f"lists, generated from the official ISO schema.",
+        f"{v}, ISO 20022, element reference, cardinality, code lists, XML "
+        f"path, message specification, pain.001",
+    )
+    write_post(slug, fm, "\n".join(body))
+
+
+def render_types(payload: dict) -> None:
+    """Type reference as its own page: the per-version pages would blow
+    the 100 KiB page-weight budget with 100 types inlined."""
+    v = payload["version"]
+    ti = payload.get("type_index") or {}
+    populated = {n: c for n, c in ti.items() if c["children"]}
+    if not populated:
+        return
+    body = [
+        f"Every complex type in ISO 20022 `{v}`, defined once, generated "
+        f"from the official XSD.",
+        "",
+        f"**{len(populated)} types.** This is how the schema is actually "
+        "organised. The [message structure]"
+        f"(/message-spec-{v}/) repeats a party or address block under every "
+        "party; here each type appears exactly once, which is what you want "
+        "when mapping source fields or writing a transformer.",
+        "",
+        "A **choice** type means the children are alternatives — supply "
+        "one, not all. Cardinality in **bold** is required.",
+        "",
+    ]
+    for name in sorted(populated):
+        ct = populated[name]
+        kind = " *(choice — supply one)*" if ct["kind"] == "choice" else ""
+        body.append(f"## `{name}`{kind}")
+        body.append("")
+        body.append("| Element | Card. | Type | Constraints |")
+        body.append("| :--- | :--- | :--- | :--- |")
+        for c in ct["children"]:
+            body.append(
+                f"| `{c['name']}` | {card(c)} | `{esc(c['type'])}` | "
+                f"{esc(constraint(c))} |")
+        body.append("")
+    fm = load_frontmatter(
+        f"message-spec-{v}-types",
+        f"{v} type reference — every complex type",
+        f"All {len(populated)} complex types in ISO 20022 {v} with their "
+        f"elements, cardinality and constraints, generated from the "
+        f"official XSD.",
+        "Message specification",
+        f"Each of the {len(populated)} types in {v} defined once — the view "
+        "to use for field mapping.",
+        f"{v} types, ISO 20022 complex types, cardinality, field mapping, "
+        f"message specification",
+    )
+    write_post(f"message-spec-{v}-types", fm, "\n".join(body))
+
+
+# Types per page. 100 types inlined is ~163 KiB of HTML, well past the
+# 100 KiB page-weight budget the performance gate enforces; chunking
+# keeps each page fast without weakening the gate for the whole site.
+TYPES_PER_PAGE = 34
+
+
+def render_types_chunked(payload: dict) -> list[str]:
+    """Render the type reference across as many pages as the budget needs."""
+    v = payload["version"]
+    ti = payload.get("type_index") or {}
+    populated = {n: c for n, c in ti.items() if c["children"]}
+    if not populated:
+        return []
+    names = sorted(populated)
+    chunks = [names[i:i + TYPES_PER_PAGE]
+              for i in range(0, len(names), TYPES_PER_PAGE)]
+    slugs = [f"message-spec-{v}-types"
+             + ("" if i == 0 else f"-{i + 1}") for i in range(len(chunks))]
+
+    for i, (chunk, slug) in enumerate(zip(chunks, slugs)):
+        span = f"{chunk[0]} – {chunk[-1]}"
+        nav = " · ".join(
+            f"[Part {j + 1}](/{s}/)" if j != i else f"**Part {j + 1}**"
+            for j, s in enumerate(slugs))
+        body = [
+            f"Complex types in ISO 20022 `{v}`, generated from the official "
+            f"XSD. **Part {i + 1} of {len(chunks)}** — `{span}`.",
+            "",
+            nav if len(chunks) > 1 else "",
+            "",
+            "Each type is defined once here. The [message structure]"
+            f"(/message-spec-{v}/) repeats a party or address block under "
+            "every party; this view does not, which is what you want when "
+            "mapping source fields.",
+            "",
+            "A **choice** type means the children are alternatives — supply "
+            "one, not all. Cardinality in **bold** is required.",
+            "",
+        ]
+        for name in chunk:
+            ct = populated[name]
+            kind = " *(choice — supply one)*" if ct["kind"] == "choice" else ""
+            body.append(f"## `{name}`{kind}")
+            body.append("")
+            body.append("| Element | Card. | Type | Constraints |")
+            body.append("| :--- | :--- | :--- | :--- |")
+            for c in ct["children"]:
+                body.append(
+                    f"| `{c['name']}` | {card(c)} | `{esc(c['type'])}` | "
+                    f"{esc(constraint(c))} |")
+            body.append("")
+        part = f" (part {i + 1} of {len(chunks)})" if len(chunks) > 1 else ""
+        fm = load_frontmatter(
+            slug,
+            f"{v} type reference{part} — {span}",
+            f"Complex types {span} in ISO 20022 {v}, with elements, "
+            f"cardinality and constraints, generated from the official XSD.",
+            "Message specification",
+            f"Types {span} in {v}, defined once each — the view to use for "
+            "field mapping.",
+            f"{v} types, ISO 20022 complex types, cardinality, field mapping",
+        )
+        write_post(slug, fm, "\n".join(body))
+    return slugs
+
+
+def render_code_lists(specs: dict, index: dict) -> None:
+    cov = index["code_list_coverage"]
+    body = [
+        "Every code list in the supported ISO 20022 payment-initiation "
+        "messages, with its full value set and the versions it appears in. "
+        "Generated from the official XSDs.",
+        "",
+        "A code list is a closed set: a value outside it makes the document "
+        "invalid against the schema, so these are the exact strings your "
+        "source data has to produce.",
+        "",
+        f"**{len(cov)} code lists** across "
+        f"{len(index['versions'])} message versions.",
+        "",
+    ]
+    for name in sorted(cov):
+        entry = cov[name]
+        body.append(f"## `{name}`")
+        body.append("")
+        body.append(f"*{len(entry['codes'])} values · "
+                    f"in {len(entry['versions'])} version(s)*")
+        body.append("")
+        body.append("| Code |")
+        body.append("| :--- |")
+        for c in entry["codes"]:
+            body.append(f"| `{c}` |")
+        body.append("")
+    fm = load_frontmatter(
+        "message-spec-code-lists",
+        "ISO 20022 payment code lists — every value, every version",
+        "Every ISO 20022 payment-initiation code list with its complete "
+        "value set and version coverage, generated from the official XSDs.",
+        "Message specification",
+        "Closed value sets from the official schemas: charge bearer, "
+        "payment method, address type, sequence type and more.",
+        "ISO 20022 code lists, charge bearer, payment method, address type, "
+        "sequence type, pain.001 codes, enumeration values",
+    )
+    write_post("message-spec-code-lists", fm, "\n".join(body))
+
+
+def render_changes(index: dict) -> None:
+    body = [
+        "What changed between consecutive ISO 20022 payment-initiation "
+        "versions, computed by diffing the official schemas element by "
+        "element. This is the view the ISO catalogue does not provide: it "
+        "publishes each version, not the delta between them.",
+        "",
+        "Paths are XML element paths. An added path means the element does "
+        "not exist in the earlier version, so a document using it will not "
+        "validate there.",
+        "",
+    ]
+    for pair, delta in index["deltas"].items():
+        a, b = pair.split("->")
+        body.append(f"## {a} → {b}")
+        body.append("")
+        body.append(f"**{len(delta['added'])} added · "
+                    f"{len(delta['removed'])} removed**")
+        body.append("")
+        if delta["added"]:
+            body.append("### Added")
+            body.append("")
+            for p in delta["added"][:120]:
+                body.append(f"- `{p}`")
+            if len(delta["added"]) > 120:
+                body.append(f"- *…and {len(delta['added']) - 120} more*")
+            body.append("")
+        if delta["removed"]:
+            body.append("### Removed")
+            body.append("")
+            for p in delta["removed"][:120]:
+                body.append(f"- `{p}`")
+            body.append("")
+        if not delta["added"] and not delta["removed"]:
+            body.append("No element-level changes: the versions differ only "
+                        "in type definitions or documentation.")
+            body.append("")
+    fm = load_frontmatter(
+        "message-spec-changes",
+        "What changed between pain.001 versions — element-level diffs",
+        "Element-by-element differences between consecutive ISO 20022 "
+        "pain.001 versions, computed from the official schemas.",
+        "Message specification",
+        "The delta the ISO catalogue does not publish: exactly which "
+        "elements each pain.001 version added and removed.",
+        "pain.001 version differences, ISO 20022 changes, schema diff, "
+        "migration impact, pain.001.001.13 changes",
+    )
+    write_post("message-spec-changes", fm, "\n".join(body))
+
+
+def render_hub(specs: dict, index: dict) -> None:
+    body = [
+        "Complete, generated specifications for every ISO 20022 "
+        "payment-initiation message Pain001 supports — element paths, "
+        "cardinality, data types, constraints and code lists.",
+        "",
+        "**Everything here is generated from the official ISO XSDs**, the "
+        "same files the validator enforces. Nothing is hand-transcribed, so "
+        "the reference cannot drift from what the software actually does, "
+        "and every value can be checked against ISO's publication.",
+        "",
+        "## Versions",
+        "",
+        "| Version | Elements | Required | Types | Code lists | Reference |",
+        "| :--- | ---: | ---: | ---: | ---: | :--- |",
+    ]
+    for v in index["versions"]:
+        p = specs[v]
+        req = sum(1 for r in p["elements"] if r["min"] != "0")
+        body.append(
+            f"| `{v}` | {p['element_count']} | {req} | "
+            f"{p['complex_type_count']} | {p['code_list_count']} | "
+            f"[Element reference](/message-spec-{v}/) |")
+    body.append("")
+
+    if index["skipped"]:
+        body.append("### Not covered")
+        body.append("")
+        for v in index["skipped"]:
+            body.append(
+                f"- **`{v}`** — Pain001 ships a placeholder schema for this "
+                "version rather than the ISO publication, so there is no "
+                "specification to generate and no real XSD validation for "
+                "it. See the [compatibility matrix](/compatibility/).")
+        body.append("")
+
+    body += [
+        "## Also here",
+        "",
+        "- **[Code lists](/message-spec-code-lists/)** — every closed value "
+        "set, with the versions each appears in.",
+        "- **[What changed between versions](/message-spec-changes/)** — "
+        "element-level diffs, which the ISO catalogue does not publish.",
+        "",
+        "## How to read the tables",
+        "",
+        "| Column | Meaning |",
+        "| :--- | :--- |",
+        "| Element | The XML tag, indented by its depth in the message |",
+        "| Path | The full path from the message root, for XPath and "
+        "mapping work |",
+        "| Card. | Cardinality as ISO writes it — `0..1` optional, `1..1` "
+        "required, `0..*` repeating. Required is shown in bold |",
+        "| Type | The ISO data type; simple types carry the constraints |",
+        "| Constraints | Length, pattern, decimal places and code-list size |",
+        "",
+        "## Scope and honesty",
+        "",
+        "- These pages describe the **base ISO standard**. A document that "
+        "conforms here can still be rejected by a scheme rulebook, by your "
+        "bank's own profile, or by the channel you submit it through — see "
+        "the [four-layer model](/#layers-heading).",
+        "- The reference is **English only**. It is generated data that "
+        "grows with every ISO release, and the site's translated pages are "
+        "parity-checked in CI; localising a growing generated surface into "
+        "34 languages is not a commitment that could be kept honestly.",
+        "- Regenerate with `python3 scripts/extract_message_specs.py && "
+        "python3 scripts/generate_message_specs.py` after a schema update.",
+    ]
+    fm = load_frontmatter(
+        "message-specs",
+        "ISO 20022 message specifications — generated from the official XSDs",
+        "Complete element references for every supported ISO 20022 "
+        "payment-initiation version: paths, cardinality, types, constraints "
+        "and code lists, generated from the official schemas.",
+        "Message specification",
+        "Element paths, cardinality, data types and code lists for every "
+        "supported pain.001 and pain.008 version — generated, not "
+        "transcribed.",
+        "ISO 20022 message specification, pain.001 elements, cardinality, "
+        "code lists, XML paths, message definition report, pain.008",
+    )
+    write_post("message-specs", fm, "\n".join(body))
+
+
+def main() -> int:
+    index = json.loads((DATA / "index.json").read_text(encoding="utf-8"))
+    specs = {
+        v: json.loads((DATA / f"{v}.json").read_text(encoding="utf-8"))
+        for v in index["versions"]
+    }
+    for v, payload in specs.items():
+        render_version(payload, index)
+        render_types_chunked(payload)
+    render_code_lists(specs, index)
+    render_changes(index)
+    render_hub(specs, index)
+    print(f"rendered {len(specs)} version pages + hub, code lists, changes")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

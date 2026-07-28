@@ -521,7 +521,7 @@ DOCS_PAGES = ("documentation", "faqs", "installation", "glossary")
 # Submenu targets that exist only in English get a visible cue on
 # localized pages, so the language jump is expected instead of surprising.
 EN_ONLY_SUB = (
-    "/competitors-comparison/",
+    "/competitors-comparison/", "/message-specs/",
     "/pain002-reason-codes/", "/pain001-mcp/", "/pain001-lsp/",
     "/pain001-loader-mt101/", "/pain001-loader-xlsx/",
     "/architecture-and-patents/", "/2026-iso20022-migration-trends/",
