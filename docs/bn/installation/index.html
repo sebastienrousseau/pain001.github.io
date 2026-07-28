@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/e9d2f9e83d6b47b6.css" integrity="sha384-NgS1FgtNO/+O73jGnYQcFGXyKGAVkFu/W1I8bL4l2QSI+eMJfSMSQrUdf2zJxS34" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -189,7 +189,7 @@
 
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="সূচিপত্র"><h2>সূচিপত্র</h2><ol><li><a href="#01-pypi">PyPI</a></li><li><a href="#02-docker">Docker</a></li><li><a href="#03-locked-down-environments">কঠোরভাবে নিয়ন্ত্রিত পরিবেশ</a></li><li><a href="#04-first-file-in-three-commands">তিনটি কমান্ডে প্রথম ফাইল</a></li></ol></nav>
-          <div lang="en"><p>Pain001 চলে <strong>Python 3.10, 3.11 ও 3.12</strong>-এ (প্রতিটি সংস্করণ CI-তে পরীক্ষিত), macOS, Linux ও Windows-এ। যতটুকু প্রয়োজন ততটুকুই ইনস্টল করুন; প্রতিটি ঐচ্ছিক সক্ষমতা একটি এক্সট্রা, তাই মূল ইনস্টলেশন হালকা থাকে।</p>
+          <div lang="bn"><p>Pain001 চলে <strong>Python 3.10, 3.11 ও 3.12</strong>-এ (প্রতিটি সংস্করণ CI-তে পরীক্ষিত), macOS, Linux ও Windows-এ। যতটুকু প্রয়োজন ততটুকুই ইনস্টল করুন; প্রতিটি ঐচ্ছিক সক্ষমতা একটি এক্সট্রা, তাই মূল ইনস্টলেশন হালকা থাকে।</p>
 <hr />
 <h2 id="01-pypi">01. PyPI<a class="heading-anchor" href="#01-pypi" aria-label="বিভাগের লিংক: 01. PyPI">#</a></h2>
 <div class="table-responsive"><table class="table">
@@ -256,7 +256,7 @@ docker run --rm -p 8000:8000 \
 <p>ব্যাংক ও ট্রেজারি পরিবেশে প্রায়ই ডায়নামিক প্লাগইন লোডিং নিষিদ্ধ। ঠিক সেই ক্ষেত্রের জন্যই দুটি নিয়ন্ত্রণ রয়েছে:</p>
 <ul>
 <li><code>PAIN001_DISABLE_PLUGINS=1</code> তৃতীয় পক্ষের সব প্লাগইন আবিষ্কার নিষ্ক্রিয় করে; কেবল বান্ডিল করা লোডারগুলি চলে।</li>
-<li><code>pain001 plugins list</code> / <code>pain001 plugins show <name></code> make every discovered plugin auditable before first use.</li>
+<li><code>pain001 plugins list</code> / <code>pain001 plugins show <name></code> আবিষ্কৃত প্রতিটি প্লাগইনকে প্রথম ব্যবহারের আগেই নিরীক্ষাযোগ্য করে তোলে।</li>
 </ul>
 <p>সবকিছু স্থানীয়ভাবে চলে। স্যুটের কোনো প্যাকেজ বাইরে সংযোগ করে না, কোনো SaaS API কল করে না, বা হোস্টের বাইরে পেমেন্ট ডেটা সরায় না।</p>
 <hr />

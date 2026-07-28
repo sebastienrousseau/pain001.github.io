@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/e9d2f9e83d6b47b6.css" integrity="sha384-NgS1FgtNO/+O73jGnYQcFGXyKGAVkFu/W1I8bL4l2QSI+eMJfSMSQrUdf2zJxS34" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -189,7 +189,7 @@
 
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="Содержание"><h2>Содержание</h2><ol><li><a href="#what-does-a-rejected-payment-file-cost">Во что обходится отклонённый платёжный файл?</a></li><li><a href="#why-is-14-november-2026-non-negotiable">Почему 14 ноября 2026 года не подлежит обсуждению?</a></li><li><a href="#what-does-pain001-do-about-it">Что с этим делает Pain001?</a></li><li><a href="#what-does-it-cost">Сколько это стоит?</a></li><li><a href="#is-it-safe">Это безопасно?</a></li><li><a href="#what-is-the-next-step">Каков следующий шаг?</a></li></ol></nav>
-          <div lang="en"><h2 id="what-does-a-rejected-payment-file-cost">Во что обходится отклонённый платёжный файл?<a class="heading-anchor" href="#what-does-a-rejected-payment-file-cost" aria-label="Ссылка на раздел: Во что обходится отклонённый платёжный файл?">#</a></h2>
+          <div lang="ru"><h2 id="what-does-a-rejected-payment-file-cost">Во что обходится отклонённый платёжный файл?<a class="heading-anchor" href="#what-does-a-rejected-payment-file-cost" aria-label="Ссылка на раздел: Во что обходится отклонённый платёжный файл?">#</a></h2>
 <p>Файл, который банк вернул, не «падает» тихо. Кто-то должен разобрать код причины, исправить исходные данные, заново сформировать файл и отправить его повторно — а если исправление не успевает к дневному сроку приёма, расчёт сдвигается. Для зарплатных или поставщицких платежей сдвинутый день — это звонок, который вы не хотите делать. <a href="/pain002-reason-codes/">Справочник кодов причин</a> перечисляет, что банки действительно возвращают; почти каждую запись форматного класса в нём можно предотвратить до отправки.</p>
 <h2 id="why-is-14-november-2026-non-negotiable">Почему 14 ноября 2026 года не подлежит обсуждению?<a class="heading-anchor" href="#why-is-14-november-2026-non-negotiable" aria-label="Ссылка на раздел: Почему 14 ноября 2026 года не подлежит обсуждению?">#</a></h2>
 <p>Потому что это требование сети, а не внутренняя политика. С этой даты трансграничные платежи (CBPR+) с полностью неструктурированными почтовыми адресами отклоняются, а межбанковская ретрансляция MT101 выводится из эксплуатации в пользу <code>pain.001</code> версии 9. Даты исходят от SWIFT, а не от нас — каждая из них с источником приведена в <a href="/2026-iso20022-migration-trends/">обзоре 2026 года</a>, а график продолжается до 2028 года в <a href="/iso20022-roadmap/">живой дорожной карте</a>.</p>
@@ -200,7 +200,7 @@
 <h2 id="is-it-safe">Это безопасно?<a class="heading-anchor" href="#is-it-safe" aria-label="Ссылка на раздел: Это безопасно?">#</a></h2>
 <p>Проверяйте, а не доверяйте: платёжные данные <a href="/privacy/">никогда не покидают ваши машины</a>, перечень зависимостей — это опубликованный <a href="/sbom.cdx.json">SBOM</a>, код держит <a href="/architecture-and-patents/">100% покрытие ветвлений как CI-гейт</a>, а <a href="/ru/try/">демо в браузере</a> приглашает вашу службу безопасности опровергнуть эти утверждения с открытым DevTools.</p>
 <h2 id="what-is-the-next-step">Каков следующий шаг?<a class="heading-anchor" href="#what-is-the-next-step" aria-label="Ссылка на раздел: Каков следующий шаг?">#</a></h2>
-<p>Watch it work: the <a href="/ru/try/">60-second demo</a> validates a payment batch and proves it against the official schema, in your browser. Then hand your team the <a href="/ru/executive-brief/">executive brief</a> — one page, print-ready, available in <a href="/fr/executive-brief/">French</a>, <a href="/de/executive-brief/">German</a>, and <a href="/es/executive-brief/">Spanish</a>.</p>
+<p>Посмотрите, как это работает: <a href="/ru/try/">60-секундное демо</a> валидирует платёжный пакет и доказывает его соответствие официальной схеме — прямо в вашем браузере. Затем передайте команде <a href="/ru/executive-brief/">резюме для руководства</a> — одна страница, готова к печати, доступна на <a href="/fr/executive-brief/">французском</a>, <a href="/de/executive-brief/">немецком</a> и <a href="/es/executive-brief/">испанском</a>.</p>
 </div>
         </article>
       </div>

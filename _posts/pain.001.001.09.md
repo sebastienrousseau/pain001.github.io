@@ -22,6 +22,7 @@ image_width: 120
 image: "https://pain001.com/img/pain001.svg"
 keywords: "pain.001.001.09, pain.001.001.09 XSD, pain.001.001.09 example, customer credit transfer initiation, pain.001 versions, ISO 20022 message version"
 language: en-GB
+min_pain001: "0.0.58"
 layout: page
 locale: en_GB
 logo_alt: "Pain001 Logo"

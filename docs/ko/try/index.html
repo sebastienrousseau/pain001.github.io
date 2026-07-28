@@ -248,27 +248,27 @@
                  green: no local tool can know a bank's profile or its
                  channel rules. Saying so on every run is the point. -->
             <table class="layer-summary" id="layer-summary" hidden>
-              <caption>What was checked</caption>
+              <caption>확인한 항목</caption>
               <tbody>
                 <tr data-layer="iso">
-                  <th scope="row">ISO 20022 schema</th>
+                  <th scope="row">ISO 20022 스키마</th>
                   <td class="layer-state" id="layer-state-iso">—</td>
                 </tr>
                 <tr data-layer="data">
-                  <th scope="row">Data quality <span class="layer-hint">(beyond the schema)</span></th>
+                  <th scope="row">데이터 품질 <span class="layer-hint">(스키마 범위를 넘어서는 부분)</span></th>
                   <td class="layer-state" id="layer-state-data">—</td>
                 </tr>
                 <tr data-layer="scheme">
-                  <th scope="row">Scheme rulebook</th>
-                  <td class="layer-state" id="layer-state-scheme">Not run in the browser — the CLI checks this with <code class="tt-mono">--scheme</code></td>
+                  <th scope="row">스킴 룰북</th>
+                  <td class="layer-state" id="layer-state-scheme">브라우저에서는 실행되지 않습니다 — CLI가 <code class="tt-mono">--scheme</code>으로 확인합니다</td>
                 </tr>
                 <tr data-layer="bank">
-                  <th scope="row">Your bank&rsquo;s profile</th>
-                  <td class="layer-state">Not evaluated — Pain001 ships no bank profiles</td>
+                  <th scope="row">거래 은행의 프로필</th>
+                  <td class="layer-state">평가하지 않았습니다 — Pain001은 은행 프로필을 제공하지 않습니다</td>
                 </tr>
                 <tr data-layer="channel">
-                  <th scope="row">Channel and eligibility</th>
-                  <td class="layer-state">Not evaluated — decided by your bank, not the file</td>
+                  <th scope="row">채널과 이용 자격</th>
+                  <td class="layer-state">평가하지 않았습니다 — 파일이 아니라 거래 은행이 결정합니다</td>
                 </tr>
               </tbody>
             </table>
@@ -282,7 +282,7 @@
               </table>
               <p class="dialect-note" id="error-overflow" hidden></p>
             </div>
-            <div class="xml-out" id="xml-out" tabindex="0" aria-label="생성된 XML 출력"><span class="xml-placeholder">The validated pain.001.001.09 document will appear here — add data in step 1.</span></div>
+            <div class="xml-out" id="xml-out" tabindex="0" aria-label="생성된 XML 출력"><span class="xml-placeholder">검증된 pain.001.001.09 문서가 여기에 표시됩니다 — 1단계에서 데이터를 추가하십시오.</span></div>
             <div class="demo-actions">
               <button type="button" id="copy-btn" class="pill pill-ghost" disabled title="Add valid data in step 1 first">XML 복사</button>
               <button type="button" id="download-btn" class="pill pill-ghost" disabled title="Add valid data in step 1 first">.xml 다운로드</button>
@@ -325,7 +325,7 @@
 
       <div class="wrap content-note">
         <article>
-          <div lang="en"><h2>이 데모가 보여 주는 것 — 그리고 실제 파이프라인이 더하는 것</h2>
+          <div lang="ko"><h2>이 데모가 보여 주는 것 — 그리고 실제 파이프라인이 더하는 것</h2>
 <p>각 샘플 배치는 <a href="/samples/pain001-sample-sepa-sct.csv">CSV 파일로도 다운로드</a>하여 자체 ERP 또는 스프레드시트 내보내기의 템플릿으로 사용할 수 있습니다 — 헤더 행이 곧 계약입니다.</p>
 <p>위 데모는 Pain001 파이프라인의 <em>fail-fast</em> 계층을 구현합니다: 필수 필드 검사, ISO 13616 mod-97 IBAN 체크섬, ISO 9362 BIC 구조, 금액 및 날짜 형식, 그리고 레코드로부터 재계산되는(그대로 신뢰하지 않는) 컨트롤 합계 (<code>NbOfTxs</code>, <code>CtrlSum</code>) 입니다. "오류 삽입…" 메뉴를 사용해 보세요 — 각 시나리오는 현실적인 결함을 정확히 하나씩(뒤바뀐 IBAN 숫자, 잘못된 형식의 BIC, 누락된 열, 유럽식 쉼표 소수점 금액, 불가능한 날짜) 심어 두고, 그대로 두면 은행 게이트웨이가 며칠 뒤에야 보고했을 행 단위 결과를 바로 보여 줍니다.</p>
 <p>설치된 툴체인은 훨씬 더 깊은 게이트를 실행합니다: 필드 별칭 정규화를 포함한 레코드별 JSON Schema 검증, 규칙별 <code>--explain</code> 출력을 제공하는 다섯 가지 스킴 룰북(SEPA SCT, Instant, SDD Core, B2B, 국가 간 송금), 그리고 단 1바이트를 기록하기 전에 렌더링된 문서를 공식 ISO 20022 XSD로 최종 검증합니다. 열 개의 <code>pain.001</code> 버전과 <code>pain.008.001.02</code> 이 지원됩니다.</p>
@@ -385,5 +385,5 @@ pain001 -t pain.001.001.09 -d payments.csv -o out/ --scheme sepa-sct --dry-run</
 </div>
 <script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
 </div>
-<script id="try-i18n" type="application/json">{"Add valid data in step 1 first": "먼저 1단계에서 유효한 데이터를 추가하십시오", "Generate XML in step 2 first": "먼저 2단계에서 XML을 생성하십시오", "No XML generated — validation is a hard gate. Fix the findings above and re-validate.": "생성된 XML이 없습니다 — 검증은 필수 관문입니다. 위의 지적 사항을 수정한 후 다시 검증하십시오.", "The validated pain.001.001.09 document will appear here — add data in step 1.": "검증된 pain.001.001.09 문서가 여기에 표시됩니다 — 1단계에서 데이터를 추가하십시오.", "…and {n} more — download the full error report below.": "…외 {n}건 — 아래에서 전체 오류 보고서를 다운로드하십시오.", "Need a header row and at least one record.": "헤더 행과 최소 1건의 레코드가 필요합니다.", "Detected: {delim}-delimited": "감지됨: {delim} 구분 형식", "{n} record(s)": "{n}건의 레코드", "ignored column(s): {cols}": "무시된 열: {cols}", "large batch — the CLI streams batches of any size": "대용량 배치입니다 — CLI는 크기에 관계없이 배치를 스트리밍 처리합니다", "✗ Validation failed — {n} issue(s). This file would be rejected.": "✗ 검증에 실패했습니다 — 문제 {n}건. 이 파일은 거부됩니다.", "✓ {n} record(s) valid — control totals recomputed. Exit code 0.": "✓ 레코드 {n}건이 유효합니다 — 컨트롤 합계를 다시 계산했습니다. Exit code 0.", "✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.": "✗ 파일이 2 MB를 초과합니다 — 이 데모는 입력 크기를 제한하지만, CLI는 크기에 관계없이 배치를 스트리밍 처리합니다.", "✗ Could not read that file.": "✗ 해당 파일을 읽을 수 없습니다.", "Paste your CSV records, then press Validate & generate.": "CSV 레코드를 붙여넣은 후 '검증 및 생성'을 누르십시오.", "Copied ✓": "복사됨 ✓", "Copy XML": "XML 복사", "Copy command": "명령어 복사", "Downloading the engine (~13 MB, first run only)…": "엔진 다운로드 중(약 13 MB, 최초 1회만)…", "Booting Python runtime…": "Python 런타임 시작 중…", "Loading xmlschema…": "xmlschema 로드 중…", "Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.": "스키마 SHA-256: {hex} — pain.001.001.09용으로 공개된 사본과 비교하십시오.", "Validating against the official schema…": "공식 스키마에 대해 검증 중…", "✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).": "✓ 공식 ISO 20022 pain.001.001.09 XSD에 대해 유효합니다({s}초).", "✗ Official schema rejected the document — {n} error(s) ({s}s).": "✗ 공식 스키마가 문서를 거부했습니다 — 오류 {n}건({s}초).", "✗ Engine failed to load: {error}. Check your connection and try again.": "✗ 엔진을 로드하지 못했습니다: {error}. 연결을 확인한 후 다시 시도하십시오.", "comma": "쉼표", "semicolon": "세미콜론", "tab": "탭", "SEPA credit transfer (2 records, EUR)": "SEPA 크레딧 이체(레코드 2건, EUR)", "Cross-border (GBP, escaped chars)": "국가 간 송금(GBP, 이스케이프 문자 포함)", "Larger batch (20 records)": "더 큰 배치(레코드 20건)", "Flipped IBAN digit (mod-97 checksum)": "뒤바뀐 IBAN 숫자(mod-97 체크섬)", "Malformed BIC (wrong structure)": "형식이 잘못된 BIC(구조 오류)", "Missing required column (execution date)": "필수 열 누락(실행일)", "European comma-decimal amount": "유럽식 쉼표 소수점 금액", "Impossible calendar date": "존재할 수 없는 달력 날짜", "missing required value": "필수 값이 없습니다", "comma-decimal amount — expected point-decimal (e.g. 1234.56)": "쉼표 소수점 금액입니다 — 마침표 소수점이 필요합니다(예: 1234.56)", "not a valid decimal amount (expected e.g. 1234.56)": "유효한 소수 금액이 아닙니다(예: 1234.56)", "{ccy} is a zero-decimal currency — no fractional part allowed": "{ccy}은(는) 소수점이 없는 통화입니다 — 소수 부분을 사용할 수 없습니다", "more than 2 decimal places": "소수점 이하 2자리를 초과합니다", "not a 3-letter ISO 4217 code": "3글자 ISO 4217 코드가 아닙니다", "expected ISO 8601 YYYY-MM-DD": "ISO 8601 YYYY-MM-DD 형식이어야 합니다", "not a real calendar date": "실제 달력에 존재하는 날짜가 아닙니다", "wrong length for country {cc} (expected {len} characters)": "국가 {cc}에 대한 길이가 잘못되었습니다({len}자여야 합니다)", "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "ISO 13616 mod-97 체크섬 검사에 실패했습니다 — 숫자 오타일 가능성이 있습니다", "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "유효한 ISO 9362 BIC가 아닙니다(8자 또는 11자, AAAAAA00[XXX])", "row {row} has {cells} field(s), header has {header}": "{row}행의 필드는 {cells}개, 헤더는 {header}개입니다"}</script></body>
+<script id="try-i18n" type="application/json">{"Add valid data in step 1 first": "먼저 1단계에서 유효한 데이터를 추가하십시오", "Generate XML in step 2 first": "먼저 2단계에서 XML을 생성하십시오", "No XML generated — validation is a hard gate. Fix the findings above and re-validate.": "생성된 XML이 없습니다 — 검증은 필수 관문입니다. 위의 지적 사항을 수정한 후 다시 검증하십시오.", "The validated pain.001.001.09 document will appear here — add data in step 1.": "검증된 pain.001.001.09 문서가 여기에 표시됩니다 — 1단계에서 데이터를 추가하십시오.", "…and {n} more — download the full error report below.": "…외 {n}건 — 아래에서 전체 오류 보고서를 다운로드하십시오.", "Need a header row and at least one record.": "헤더 행과 최소 1건의 레코드가 필요합니다.", "Detected: {delim}-delimited": "감지됨: {delim} 구분 형식", "{n} record(s)": "{n}건의 레코드", "ignored column(s): {cols}": "무시된 열: {cols}", "large batch — the CLI streams batches of any size": "대용량 배치입니다 — CLI는 크기에 관계없이 배치를 스트리밍 처리합니다", "✗ Validation failed — {n} issue(s). This file would be rejected.": "✗ 검증에 실패했습니다 — 문제 {n}건. 이 파일은 거부됩니다.", "✓ {n} record(s) valid — control totals recomputed. Exit code 0.": "✓ 레코드 {n}건이 유효합니다 — 컨트롤 합계를 다시 계산했습니다. Exit code 0.", "✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.": "✗ 파일이 2 MB를 초과합니다 — 이 데모는 입력 크기를 제한하지만, CLI는 크기에 관계없이 배치를 스트리밍 처리합니다.", "✗ Could not read that file.": "✗ 해당 파일을 읽을 수 없습니다.", "Paste your CSV records, then press Validate & generate.": "CSV 레코드를 붙여넣은 후 '검증 및 생성'을 누르십시오.", "Copied ✓": "복사됨 ✓", "Copy XML": "XML 복사", "Copy command": "명령어 복사", "Downloading the engine (~13 MB, first run only)…": "엔진 다운로드 중(약 13 MB, 최초 1회만)…", "Booting Python runtime…": "Python 런타임 시작 중…", "Loading xmlschema…": "xmlschema 로드 중…", "Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.": "스키마 SHA-256: {hex} — pain.001.001.09용으로 공개된 사본과 비교하십시오.", "Validating against the official schema…": "공식 스키마에 대해 검증 중…", "✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).": "✓ 공식 ISO 20022 pain.001.001.09 XSD에 대해 유효합니다({s}초).", "✗ Official schema rejected the document — {n} error(s) ({s}s).": "✗ 공식 스키마가 문서를 거부했습니다 — 오류 {n}건({s}초).", "✗ Engine failed to load: {error}. Check your connection and try again.": "✗ 엔진을 로드하지 못했습니다: {error}. 연결을 확인한 후 다시 시도하십시오.", "comma": "쉼표", "semicolon": "세미콜론", "tab": "탭", "SEPA credit transfer (2 records, EUR)": "SEPA 크레딧 이체(레코드 2건, EUR)", "Cross-border (GBP, escaped chars)": "국가 간 송금(GBP, 이스케이프 문자 포함)", "Larger batch (20 records)": "더 큰 배치(레코드 20건)", "Flipped IBAN digit (mod-97 checksum)": "뒤바뀐 IBAN 숫자(mod-97 체크섬)", "Malformed BIC (wrong structure)": "형식이 잘못된 BIC(구조 오류)", "Missing required column (execution date)": "필수 열 누락(실행일)", "European comma-decimal amount": "유럽식 쉼표 소수점 금액", "Impossible calendar date": "존재할 수 없는 달력 날짜", "missing required value": "필수 값이 없습니다", "comma-decimal amount — expected point-decimal (e.g. 1234.56)": "쉼표 소수점 금액입니다 — 마침표 소수점이 필요합니다(예: 1234.56)", "not a valid decimal amount (expected e.g. 1234.56)": "유효한 소수 금액이 아닙니다(예: 1234.56)", "{ccy} is a zero-decimal currency — no fractional part allowed": "{ccy}은(는) 소수점이 없는 통화입니다 — 소수 부분을 사용할 수 없습니다", "more than 2 decimal places": "소수점 이하 2자리를 초과합니다", "not a 3-letter ISO 4217 code": "3글자 ISO 4217 코드가 아닙니다", "expected ISO 8601 YYYY-MM-DD": "ISO 8601 YYYY-MM-DD 형식이어야 합니다", "not a real calendar date": "실제 달력에 존재하는 날짜가 아닙니다", "wrong length for country {cc} (expected {len} characters)": "국가 {cc}에 대한 길이가 잘못되었습니다({len}자여야 합니다)", "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "ISO 13616 mod-97 체크섬 검사에 실패했습니다 — 숫자 오타일 가능성이 있습니다", "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "유효한 ISO 9362 BIC가 아닙니다(8자 또는 11자, AAAAAA00[XXX])", "row {row} has {cells} field(s), header has {header}": "{row}행의 필드는 {cells}개, 헤더는 {header}개입니다", "Passed the official XSD": "공식 XSD를 통과했습니다", "Rejected by the official XSD": "공식 XSD가 거부했습니다", "{n} issue(s) the schema would reject": "스키마가 거부할 문제 {n}건", "Pre-checks passed — run the XSD gate below to prove it": "사전 검사 통과 — 아래의 XSD 게이트를 실행해 증명하세요", "{n} issue(s) a schema would accept but a bank would not": "스키마는 허용해도 은행은 거부할 문제 {n}건", "No identifier or format problems found": "식별자나 형식 문제가 발견되지 않았습니다"}</script></body>
 </html>

@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/e9d2f9e83d6b47b6.css" integrity="sha384-NgS1FgtNO/+O73jGnYQcFGXyKGAVkFu/W1I8bL4l2QSI+eMJfSMSQrUdf2zJxS34" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -189,7 +189,7 @@
 
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="المحتويات"><h2>المحتويات</h2><ol><li><a href="#01-pypi">PyPI</a></li><li><a href="#02-docker">Docker</a></li><li><a href="#03-locked-down-environments">البيئات المقيّدة</a></li><li><a href="#04-first-file-in-three-commands">أول ملف بثلاثة أوامر</a></li></ol></nav>
-          <div lang="en"><p>يعمل Pain001 على <strong>Python 3.10 و3.11 و3.12</strong> (كل إصدار مُختبر في CI) على macOS وLinux وWindows. ثبّت ما تحتاجه فقط؛ فكل قدرة اختيارية تأتي كإضافة، فيبقى التثبيت الأساسي رشيقًا.</p>
+          <div lang="ar"><p>يعمل Pain001 على <strong>Python 3.10 و3.11 و3.12</strong> (كل إصدار مُختبر في CI) على macOS وLinux وWindows. ثبّت ما تحتاجه فقط؛ فكل قدرة اختيارية تأتي كإضافة، فيبقى التثبيت الأساسي رشيقًا.</p>
 <hr />
 <h2 id="01-pypi">01. PyPI<a class="heading-anchor" href="#01-pypi" aria-label="رابط إلى القسم: 01. PyPI">#</a></h2>
 <div class="table-responsive"><table class="table">
@@ -256,7 +256,7 @@ docker run --rm -p 8000:8000 \
 <p>كثيرًا ما تحظر بيئات البنوك والخزانة التحميل الديناميكي للإضافات. يوجد ضابطان لهذه الحالة تحديدًا:</p>
 <ul>
 <li>يعطّل <code>PAIN001_DISABLE_PLUGINS=1</code> كل اكتشاف لإضافات الأطراف الثالثة؛ فلا تعمل إلا المحمّلات المرفقة.</li>
-<li><code>pain001 plugins list</code> / <code>pain001 plugins show <name></code> make every discovered plugin auditable before first use.</li>
+<li>يجعل <code>pain001 plugins list</code> / <code>pain001 plugins show <name></code> كل إضافة مكتشَفة قابلة للتدقيق قبل أول استخدام.</li>
 </ul>
 <p>كل شيء يعمل محليًا. لا حزمة في المنظومة تتصل بخوادم خارجية، أو تستدعي واجهة SaaS، أو تنقل بيانات الدفع خارج المضيف.</p>
 <hr />

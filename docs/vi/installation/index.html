@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/e9d2f9e83d6b47b6.css" integrity="sha384-NgS1FgtNO/+O73jGnYQcFGXyKGAVkFu/W1I8bL4l2QSI+eMJfSMSQrUdf2zJxS34" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -189,7 +189,7 @@
 
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="Mục lục"><h2>Mục lục</h2><ol><li><a href="#01-pypi">PyPI</a></li><li><a href="#02-docker">Docker</a></li><li><a href="#03-locked-down-environments">Môi trường bị khoá chặt</a></li><li><a href="#04-first-file-in-three-commands">Tệp đầu tiên trong ba lệnh</a></li></ol></nav>
-          <div lang="en"><p>Pain001 chạy trên <strong>Python 3.10, 3.11 và 3.12</strong> (mỗi phiên bản đều được kiểm thử trong CI) trên macOS, Linux và Windows. Chỉ cài những gì quý vị cần; mọi khả năng tuỳ chọn đều là một extra, nên bản cài cơ sở luôn gọn nhẹ.</p>
+          <div lang="vi"><p>Pain001 chạy trên <strong>Python 3.10, 3.11 và 3.12</strong> (mỗi phiên bản đều được kiểm thử trong CI) trên macOS, Linux và Windows. Chỉ cài những gì quý vị cần; mọi khả năng tuỳ chọn đều là một extra, nên bản cài cơ sở luôn gọn nhẹ.</p>
 <hr />
 <h2 id="01-pypi">01. PyPI<a class="heading-anchor" href="#01-pypi" aria-label="Liên kết đến mục: 01. PyPI">#</a></h2>
 <div class="table-responsive"><table class="table">
@@ -256,7 +256,7 @@ docker run --rm -p 8000:8000 \
 <p>Các môi trường ngân hàng và ngân quỹ thường cấm nạp plugin động. Hai cơ chế kiểm soát tồn tại cho đúng trường hợp đó:</p>
 <ul>
 <li><code>PAIN001_DISABLE_PLUGINS=1</code> vô hiệu hoá toàn bộ việc phát hiện plugin bên thứ ba; chỉ các bộ nạp đi kèm được chạy.</li>
-<li><code>pain001 plugins list</code> / <code>pain001 plugins show <name></code> make every discovered plugin auditable before first use.</li>
+<li><code>pain001 plugins list</code> / <code>pain001 plugins show <name></code> giúp mọi plugin được phát hiện đều có thể kiểm toán trước lần dùng đầu tiên.</li>
 </ul>
 <p>Mọi thứ chạy cục bộ. Không gói nào trong bộ công cụ gửi dữ liệu về nhà sản xuất, gọi API SaaS hay chuyển dữ liệu thanh toán ra khỏi máy chủ.</p>
 <hr />

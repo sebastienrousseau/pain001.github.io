@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/e9d2f9e83d6b47b6.css" integrity="sha384-NgS1FgtNO/+O73jGnYQcFGXyKGAVkFu/W1I8bL4l2QSI+eMJfSMSQrUdf2zJxS34" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -189,7 +189,7 @@
 
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="Tartalom"><h2>Tartalom</h2><ol><li><a href="#01-pypi">PyPI</a></li><li><a href="#02-docker">Docker</a></li><li><a href="#03-locked-down-environments">Zárt környezetek</a></li><li><a href="#04-first-file-in-three-commands">Az első fájl három paranccsal</a></li></ol></nav>
-          <div lang="en"><p>A Pain001 <strong>Python 3.10, 3.11 és 3.12</strong> alatt fut (mindegyik verzió tesztelve a CI-ban) macOS, Linux és Windows rendszeren. Csak azt telepítse, amire szüksége van; minden opcionális képesség egy extra, így az alaptelepítés karcsú marad.</p>
+          <div lang="hu"><p>A Pain001 <strong>Python 3.10, 3.11 és 3.12</strong> alatt fut (mindegyik verzió tesztelve a CI-ban) macOS, Linux és Windows rendszeren. Csak azt telepítse, amire szüksége van; minden opcionális képesség egy extra, így az alaptelepítés karcsú marad.</p>
 <hr />
 <h2 id="01-pypi">01. PyPI<a class="heading-anchor" href="#01-pypi" aria-label="Hivatkozás a szakaszra: 01. PyPI">#</a></h2>
 <div class="table-responsive"><table class="table">
@@ -256,7 +256,7 @@ docker run --rm -p 8000:8000 \
 <p>A banki és treasury környezetek gyakran tiltják a bővítmények dinamikus betöltését. Pontosan erre az esetre két szabályozási lehetőség áll rendelkezésre:</p>
 <ul>
 <li><code>PAIN001_DISABLE_PLUGINS=1</code> kikapcsolja a külső bővítmények teljes felismerését; csak a csomaggal szállított betöltők futnak.</li>
-<li><code>pain001 plugins list</code> / <code>pain001 plugins show <name></code> make every discovered plugin auditable before first use.</li>
+<li><code>pain001 plugins list</code> / <code>pain001 plugins show <name></code> minden felismert bővítményt auditálhatóvá tesz az első használat előtt.</li>
 </ul>
 <p>Minden helyben fut. A csomagcsalád egyetlen csomagja sem küld haza adatokat, nem hív SaaS API-t, és nem viszi ki a fizetési adatokat a gazdagépről.</p>
 <hr />

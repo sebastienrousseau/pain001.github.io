@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/e9d2f9e83d6b47b6.css" integrity="sha384-NgS1FgtNO/+O73jGnYQcFGXyKGAVkFu/W1I8bL4l2QSI+eMJfSMSQrUdf2zJxS34" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -189,7 +189,7 @@
 
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="Sumário"><h2>Sumário</h2><ol><li><a href="#01-pypi">PyPI</a></li><li><a href="#02-docker">Docker</a></li><li><a href="#03-locked-down-environments">Ambientes restritos</a></li><li><a href="#04-first-file-in-three-commands">Primeiro arquivo em três comandos</a></li></ol></nav>
-          <div lang="en"><p>O Pain001 roda em <strong>Python 3.10, 3.11 e 3.12</strong> (cada versão testada na CI) em macOS, Linux e Windows. Instale o que precisar; cada capacidade opcional é um extra, então a instalação base permanece enxuta.</p>
+          <div lang="pt-BR"><p>O Pain001 roda em <strong>Python 3.10, 3.11 e 3.12</strong> (cada versão testada na CI) em macOS, Linux e Windows. Instale o que precisar; cada capacidade opcional é um extra, então a instalação base permanece enxuta.</p>
 <hr />
 <h2 id="01-pypi">01. PyPI<a class="heading-anchor" href="#01-pypi" aria-label="Link para a seção: 01. PyPI">#</a></h2>
 <div class="table-responsive"><table class="table">
@@ -256,7 +256,7 @@ docker run --rm -p 8000:8000 \
 <p>Ambientes de bancos e tesourarias costumam proibir o carregamento dinâmico de plugins. Existem dois controles exatamente para esse caso:</p>
 <ul>
 <li><code>PAIN001_DISABLE_PLUGINS=1</code> desativa toda a descoberta de plugins de terceiros; apenas os loaders incluídos são executados.</li>
-<li><code>pain001 plugins list</code> / <code>pain001 plugins show <name></code> make every discovered plugin auditable before first use.</li>
+<li><code>pain001 plugins list</code> / <code>pain001 plugins show <name></code> tornam cada plugin descoberto auditável antes do primeiro uso.</li>
 </ul>
 <p>Tudo executa localmente. Nenhum pacote da suíte telefona para casa, chama uma API SaaS ou move dados de pagamento para fora do host.</p>
 <hr />

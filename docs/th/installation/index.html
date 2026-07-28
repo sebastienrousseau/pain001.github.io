@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/e9d2f9e83d6b47b6.css" integrity="sha384-NgS1FgtNO/+O73jGnYQcFGXyKGAVkFu/W1I8bL4l2QSI+eMJfSMSQrUdf2zJxS34" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -189,7 +189,7 @@
 
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="สารบัญ"><h2>สารบัญ</h2><ol><li><a href="#01-pypi">PyPI</a></li><li><a href="#02-docker">Docker</a></li><li><a href="#03-locked-down-environments">สภาพแวดล้อมที่ควบคุมเข้มงวด</a></li><li><a href="#04-first-file-in-three-commands">ไฟล์แรกในสามคำสั่ง</a></li></ol></nav>
-          <div lang="en"><p>Pain001 ทำงานบน <strong>Python 3.10, 3.11 และ 3.12</strong> (ทดสอบครบทุกเวอร์ชันใน CI) ทั้งบน macOS, Linux และ Windows ติดตั้งเฉพาะส่วนที่คุณต้องการใช้ เนื่องจากความสามารถเสริมทุกอย่างเป็นส่วนเสริมแยกต่างหาก การติดตั้งพื้นฐานจึงมีขนาดเล็ก</p>
+          <div lang="th"><p>Pain001 ทำงานบน <strong>Python 3.10, 3.11 และ 3.12</strong> (ทดสอบครบทุกเวอร์ชันใน CI) ทั้งบน macOS, Linux และ Windows ติดตั้งเฉพาะส่วนที่คุณต้องการใช้ เนื่องจากความสามารถเสริมทุกอย่างเป็นส่วนเสริมแยกต่างหาก การติดตั้งพื้นฐานจึงมีขนาดเล็ก</p>
 <hr />
 <h2 id="01-pypi">01. PyPI<a class="heading-anchor" href="#01-pypi" aria-label="ลิงก์ไปยังส่วน: 01. PyPI">#</a></h2>
 <div class="table-responsive"><table class="table">
@@ -256,7 +256,7 @@ docker run --rm -p 8000:8000 \
 <p>สภาพแวดล้อมของธนาคารและฝ่ายบริหารเงินมักห้ามการโหลดปลั๊กอินแบบพลวัต จึงมีกลไกควบคุมสองอย่างสำหรับกรณีนี้โดยเฉพาะ:</p>
 <ul>
 <li><code>PAIN001_DISABLE_PLUGINS=1</code> ปิดการค้นหาปลั๊กอินจากบุคคลที่สามทั้งหมด เหลือเพียงตัวโหลดที่มาพร้อมในตัวเท่านั้นที่ทำงาน</li>
-<li><code>pain001 plugins list</code> / <code>pain001 plugins show <name></code> make every discovered plugin auditable before first use.</li>
+<li><code>pain001 plugins list</code> / <code>pain001 plugins show <name></code> ทำให้ปลั๊กอินทุกตัวที่ค้นพบตรวจสอบได้ก่อนใช้งานครั้งแรก</li>
 </ul>
 <p>ทุกอย่างทำงานภายในเครื่อง ไม่มีแพ็กเกจใดในชุดนี้ส่งข้อมูลกลับไปยังผู้พัฒนา เรียกใช้ API ของบริการ SaaS หรือย้ายข้อมูลการชำระเงินออกจากเครื่องที่ติดตั้ง</p>
 <hr />

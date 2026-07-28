@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/e9d2f9e83d6b47b6.css" integrity="sha384-NgS1FgtNO/+O73jGnYQcFGXyKGAVkFu/W1I8bL4l2QSI+eMJfSMSQrUdf2zJxS34" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -189,7 +189,7 @@
 
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="목차"><h2>목차</h2><ol><li><a href="#01-pypi">PyPI</a></li><li><a href="#02-docker">Docker</a></li><li><a href="#03-locked-down-environments">통제된 환경</a></li><li><a href="#04-first-file-in-three-commands">명령 세 개로 만드는 첫 파일</a></li></ol></nav>
-          <div lang="en"><p>Pain001은 macOS, Linux, Windows에서 <strong>Python 3.10, 3.11, 3.12</strong>로 동작하며, 각 버전은 CI에서 테스트됩니다. 필요한 것만 설치하세요. 모든 선택 기능은 엑스트라로 제공되므로 기본 설치는 가볍게 유지됩니다.</p>
+          <div lang="ko"><p>Pain001은 macOS, Linux, Windows에서 <strong>Python 3.10, 3.11, 3.12</strong>로 동작하며, 각 버전은 CI에서 테스트됩니다. 필요한 것만 설치하세요. 모든 선택 기능은 엑스트라로 제공되므로 기본 설치는 가볍게 유지됩니다.</p>
 <hr />
 <h2 id="01-pypi">01. PyPI<a class="heading-anchor" href="#01-pypi" aria-label="섹션 링크: 01. PyPI">#</a></h2>
 <div class="table-responsive"><table class="table">
@@ -256,7 +256,7 @@ docker run --rm -p 8000:8000 \
 <p>은행과 재무 부서 환경에서는 동적 플러그인 로딩을 금지하는 경우가 많습니다. 바로 그런 상황을 위해 두 가지 통제 수단이 있습니다:</p>
 <ul>
 <li><code>PAIN001_DISABLE_PLUGINS=1</code>은 모든 서드파티 플러그인 탐지를 비활성화하며, 기본 번들 로더만 실행됩니다.</li>
-<li><code>pain001 plugins list</code> / <code>pain001 plugins show <name></code> make every discovered plugin auditable before first use.</li>
+<li><code>pain001 plugins list</code> / <code>pain001 plugins show <name></code>으로 발견된 모든 플러그인을 최초 사용 전에 감사할 수 있습니다.</li>
 </ul>
 <p>모든 것이 로컬에서 실행됩니다. 제품군의 어떤 패키지도 외부로 신호를 보내거나 SaaS API를 호출하거나 지급 데이터를 호스트 밖으로 옮기지 않습니다.</p>
 <hr />

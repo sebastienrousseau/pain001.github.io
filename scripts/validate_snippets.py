@@ -11,8 +11,21 @@ This does not run the snippets (they need payment data). It checks every
 ``from pain001... import X`` resolves, every attribute accessed on an
 imported symbol exists, and every call's arity matches the signature.
 
+CI installs pain001 from PyPI on purpose: the question this answers is
+"does the documentation work for someone who ran ``pip install pain001``
+today", and only the published wheel can answer it.
+
+That makes documenting an API before it ships a guaranteed failure, and
+the honest fix is not to relax the check but to say which version a page
+needs. A page whose snippets require an unreleased API declares
+``min_pain001: "0.0.58"`` in its front matter; its failures are then
+reported as pending that release rather than as broken documentation,
+and the page renders a visible requirement note for readers. Once that
+version is on PyPI the same failures become real again, so a stale
+declaration cannot hide a genuine break.
+
 Skipped automatically when pain001 is not importable, so the site can
-still build without the library installed; CI installs it.
+still build without the library installed.
 """
 from __future__ import annotations
 
@@ -24,6 +37,19 @@ import re
 import sys
 
 PY_BLOCK = re.compile(r"```python\n(.*?)```", re.S)
+MIN_VERSION = re.compile(r'^min_pain001:\s*"?([\d.]+)"?\s*$', re.M)
+
+
+def _parse(v: str) -> tuple[int, ...]:
+    return tuple(int(p) for p in re.findall(r"\d+", v))
+
+
+def _pending_minimum(path: str, installed: str) -> str | None:
+    """The version this page needs, if it is newer than what is installed."""
+    m = MIN_VERSION.search(open(path, encoding="utf-8").read())
+    if not m:
+        return None
+    return m.group(1) if _parse(m.group(1)) > _parse(installed) else None
 
 
 def main() -> int:
@@ -100,11 +126,28 @@ def main() -> int:
 
     problems += _check_migration_paths()
 
-    print(f"checked {checked} python snippet(s) in _posts/")
+    installed = getattr(importlib.import_module("pain001"), "__version__", "0")
+    pending: dict[str, str] = {}
+    real: list[str] = []
     for p in problems:
+        path = p.split(":", 1)[0]
+        need = _pending_minimum(path, installed) if path.startswith("_posts/") else None
+        if need:
+            pending[p] = need
+        else:
+            real.append(p)
+
+    print(f"checked {checked} python snippet(s) in _posts/ "
+          f"against pain001 {installed}")
+    for p in real:
         print("FAIL", p)
-    print("result:", "CLEAN" if not problems else f"{len(problems)} problem(s)")
-    return 1 if problems else 0
+    for p, need in pending.items():
+        print(f"PENDING v{need}", p)
+    if pending:
+        print(f"\n{len(pending)} snippet issue(s) await a release; each page "
+              f"declares the version it needs and says so to readers.")
+    print("result:", "CLEAN" if not real else f"{len(real)} problem(s)")
+    return 1 if real else 0
 
 
 def _check_migration_paths() -> list[str]:

@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/e9d2f9e83d6b47b6.css" integrity="sha384-NgS1FgtNO/+O73jGnYQcFGXyKGAVkFu/W1I8bL4l2QSI+eMJfSMSQrUdf2zJxS34" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -189,7 +189,7 @@
 
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="目錄"><h2>目錄</h2><ol><li><a href="#01-pypi">PyPI</a></li><li><a href="#02-docker">Docker</a></li><li><a href="#03-locked-down-environments">高度管控環境</a></li><li><a href="#04-first-file-in-three-commands">三個命令產生第一個檔案</a></li></ol></nav>
-          <div lang="en"><p>Pain001 可在 macOS、Linux 與 Windows 上以 <strong>Python 3.10、3.11 與 3.12</strong> 執行（每個版本皆在 CI 測試）。按需安裝即可；所有選用功能皆為額外相依（extra），基礎安裝保持精簡。</p>
+          <div lang="zh-Hant"><p>Pain001 可在 macOS、Linux 與 Windows 上以 <strong>Python 3.10、3.11 與 3.12</strong> 執行（每個版本皆在 CI 測試）。按需安裝即可；所有選用功能皆為額外相依（extra），基礎安裝保持精簡。</p>
 <hr />
 <h2 id="01-pypi">01. PyPI<a class="heading-anchor" href="#01-pypi" aria-label="連結至章節：01. PyPI">#</a></h2>
 <div class="table-responsive"><table class="table">
@@ -256,7 +256,7 @@ docker run --rm -p 8000:8000 \
 <p>銀行與財資環境常禁止動態載入外掛。針對此情境提供兩項控管：</p>
 <ul>
 <li><code>PAIN001_DISABLE_PLUGINS=1</code> 停用所有第三方外掛探索；僅執行內建載入器。</li>
-<li><code>pain001 plugins list</code> / <code>pain001 plugins show <name></code> make every discovered plugin auditable before first use.</li>
+<li><code>pain001 plugins list</code> / <code>pain001 plugins show <name></code> 讓每個探索到的外掛在首次使用前都可稽核。</li>
 </ul>
 <p>一切皆在本機執行。套件中沒有任何套件會回傳資料、呼叫 SaaS API，或將付款資料移出主機。</p>
 <hr />

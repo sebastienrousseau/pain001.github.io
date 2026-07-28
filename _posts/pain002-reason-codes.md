@@ -22,6 +22,7 @@ image_width: 120
 image: "https://pain001.com/img/pain001.svg"
 keywords: "pain.002 reason codes, pain.002 reject codes, RJCT reason, AC01, AC04, AM04, AM10, FF01, MS03, payment rejected bank, SEPA reject codes, ExternalStatusReason, ISO 20022 status codes"
 language: en-GB
+min_pain001: "0.0.58"
 layout: page
 locale: en_GB
 logo_alt: "Pain001 Logo"

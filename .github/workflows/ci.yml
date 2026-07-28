@@ -59,6 +59,12 @@ jobs:
           python3 scripts/validate_pages_i18n.py docs_i18n
           python3 scripts/validate_runtime_i18n.py
 
+      # Parity above only compares locale tables to en.json. This checks
+      # en.json against the built pages, so a key that has drifted out of
+      # the markup fails instead of silently shipping English.
+      - name: Translation keys still match the built pages
+        run: python3 scripts/validate_i18n_keys_live.py
+
       - name: Link integrity (internal links, anchors, locale consistency)
         run: python3 scripts/validate_links.py docs
 

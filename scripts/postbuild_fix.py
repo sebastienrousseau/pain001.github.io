@@ -822,6 +822,57 @@ def fix_social_descriptions(site: Path) -> None:
     print(f"[postbuild] social descriptions aligned on {fixed} page(s)")
 
 
+def add_version_requirements(site: Path) -> None:
+    """Render a visible "needs version X" note on pages that document an
+    API newer than the current PyPI release.
+
+    Documentation that describes an unreleased API is a claim that is not
+    yet true: a reader who runs ``pip install pain001`` and follows the
+    page gets an ImportError with nothing to explain it. The front-matter
+    ``min_pain001`` that scripts/validate_snippets.py reads to defer its
+    failures has to be visible to readers too, or the site is keeping the
+    caveat to itself.
+
+    The note is emitted from the same field the validator reads, so the
+    two cannot disagree.
+    """
+    posts = Path("_posts")
+    if not posts.is_dir():
+        return
+    pat = re.compile(r'^min_pain001:\s*"?([\d.]+)"?\s*$', re.M)
+    url_pat = re.compile(r'^id:\s*"([^"]+)"\s*$', re.M)
+    n = 0
+    for md in sorted(posts.glob("*.md")):
+        text = md.read_text(encoding="utf-8")
+        m, u = pat.search(text), url_pat.search(text)
+        if not (m and u):
+            continue
+        version = m.group(1)
+        path = u.group(1).replace(BASE_URL, "").strip("/")
+        page = site / path / "index.html" if path else site / "index.html"
+        if not page.exists():
+            continue
+        html = page.read_text(encoding="utf-8")
+        if "version-requirement" in html:
+            continue
+        note = (
+            '<p class="version-requirement"><strong>Requires Pain001 '
+            'v%s or later.</strong> Earlier versions do not carry the API '
+            'shown on this page. Check yours with '
+            '<code class="tt-mono">pain001 --version</code>, and upgrade '
+            'with <code class="tt-mono">pip install --upgrade pain001</code>.'
+            "</p>" % version
+        )
+        for anchor in ('<article class="content-body">',
+                       "<article class=content-body>"):
+            if anchor in html:
+                html = html.replace(anchor, anchor + note, 1)
+                page.write_text(html, encoding="utf-8")
+                n += 1
+                break
+    print(f"[postbuild] version-requirement note on {n} page(s)")
+
+
 def fix_tag_pages(site: Path) -> None:
     for page in site.glob("tags/*/index.html"):
         html = page.read_text(encoding="utf-8")
@@ -897,6 +948,7 @@ def main() -> None:
             page.write_text(fixed, encoding="utf-8")
             repaired += 1
     print(f"[postbuild] unescaped head/body markup on {repaired} page(s)")
+    add_version_requirements(site)  # before the locale generators copy pages
     fix_tag_pages(site)
     fix_social_descriptions(site)
     fix_manifest(site)

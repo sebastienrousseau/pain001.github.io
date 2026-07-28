@@ -248,27 +248,27 @@
                  green: no local tool can know a bank's profile or its
                  channel rules. Saying so on every run is the point. -->
             <table class="layer-summary" id="layer-summary" hidden>
-              <caption>What was checked</caption>
+              <caption>已检查的内容</caption>
               <tbody>
                 <tr data-layer="iso">
-                  <th scope="row">ISO 20022 schema</th>
+                  <th scope="row">ISO 20022 架构</th>
                   <td class="layer-state" id="layer-state-iso">—</td>
                 </tr>
                 <tr data-layer="data">
-                  <th scope="row">Data quality <span class="layer-hint">(beyond the schema)</span></th>
+                  <th scope="row">数据质量 <span class="layer-hint">（架构之外）</span></th>
                   <td class="layer-state" id="layer-state-data">—</td>
                 </tr>
                 <tr data-layer="scheme">
-                  <th scope="row">Scheme rulebook</th>
-                  <td class="layer-state" id="layer-state-scheme">Not run in the browser — the CLI checks this with <code class="tt-mono">--scheme</code></td>
+                  <th scope="row">方案规则手册</th>
+                  <td class="layer-state" id="layer-state-scheme">浏览器中不运行——由 CLI 通过 <code class="tt-mono">--scheme</code> 检查</td>
                 </tr>
                 <tr data-layer="bank">
-                  <th scope="row">Your bank&rsquo;s profile</th>
-                  <td class="layer-state">Not evaluated — Pain001 ships no bank profiles</td>
+                  <th scope="row">您银行的配置规范</th>
+                  <td class="layer-state">未评估——Pain001 不附带任何银行配置规范</td>
                 </tr>
                 <tr data-layer="channel">
-                  <th scope="row">Channel and eligibility</th>
-                  <td class="layer-state">Not evaluated — decided by your bank, not the file</td>
+                  <th scope="row">通道与准入资格</th>
+                  <td class="layer-state">未评估——由您的银行决定，而非文件本身</td>
                 </tr>
               </tbody>
             </table>
@@ -282,7 +282,7 @@
               </table>
               <p class="dialect-note" id="error-overflow" hidden></p>
             </div>
-            <div class="xml-out" id="xml-out" tabindex="0" aria-label="生成的 XML 输出"><span class="xml-placeholder">The validated pain.001.001.09 document will appear here — add data in step 1.</span></div>
+            <div class="xml-out" id="xml-out" tabindex="0" aria-label="生成的 XML 输出"><span class="xml-placeholder">经验证的 pain.001.001.09 文档将显示在此处——请在步骤 1 中添加数据。</span></div>
             <div class="demo-actions">
               <button type="button" id="copy-btn" class="pill pill-ghost" disabled title="Add valid data in step 1 first">复制 XML</button>
               <button type="button" id="download-btn" class="pill pill-ghost" disabled title="Add valid data in step 1 first">下载 .xml</button>
@@ -325,7 +325,7 @@
 
       <div class="wrap content-note">
         <article>
-          <div lang="en"><h2>本演示展示的内容——以及真实流水线的额外能力</h2>
+          <div lang="zh-Hans"><h2>本演示展示的内容——以及真实流水线的额外能力</h2>
 <p>每个示例批次也<a href="/samples/pain001-sample-sepa-sct.csv">可作为 CSV 文件下载</a>，用作您自己 ERP 或电子表格导出的模板——表头行即是契约。</p>
 <p>上方演示实现的是 Pain001 流水线的<em>快速失败</em>层：必填字段检查、ISO 13616 mod-97 IBAN 校验和、ISO 9362 BIC 结构、金额与日期格式，以及从记录重新计算而非直接信任的控制总额 (<code>NbOfTxs</code>, <code>CtrlSum</code>)。试试“引入错误…”菜单——每个场景都会植入恰好一个真实缺陷（IBAN 数字颠倒、BIC 格式错误、缺失列、欧式逗号小数金额、不可能的日期），并向您展示银行网关原本要在数日后才会报告的行级发现。</p>
 <p>安装版工具链运行的关卡则深入得多：对每条记录进行带字段别名归一化的 JSON Schema 验证、五套方案规则手册（SEPA SCT、Instant、SDD Core、B2B、跨境）并逐条规则输出 <code>--explain</code>，以及在写出任何一个字节之前依据官方 ISO 20022 XSD 对渲染后文档的最终验证。支持十个 <code>pain.001</code> 版本及 <code>pain.008.001.02</code>。</p>
@@ -385,5 +385,5 @@ pain001 -t pain.001.001.09 -d payments.csv -o out/ --scheme sepa-sct --dry-run</
 </div>
 <script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
 </div>
-<script id="try-i18n" type="application/json">{"Add valid data in step 1 first": "请先在步骤 1 中添加有效数据", "Generate XML in step 2 first": "请先在步骤 2 中生成 XML", "No XML generated — validation is a hard gate. Fix the findings above and re-validate.": "未生成 XML——验证是硬性关口。请修正上述问题后重新验证。", "The validated pain.001.001.09 document will appear here — add data in step 1.": "经验证的 pain.001.001.09 文档将显示在此处——请在步骤 1 中添加数据。", "…and {n} more — download the full error report below.": "…另有 {n} 个——请在下方下载完整错误报告。", "Need a header row and at least one record.": "需要一个表头行和至少一条记录。", "Detected: {delim}-delimited": "检测到：以{delim}分隔", "{n} record(s)": "{n} 条记录", "ignored column(s): {cols}": "已忽略列：{cols}", "large batch — the CLI streams batches of any size": "大批量——CLI 可流式处理任意大小的批次", "✗ Validation failed — {n} issue(s). This file would be rejected.": "✗ 验证失败——{n} 个问题。此文件将被拒绝。", "✓ {n} record(s) valid — control totals recomputed. Exit code 0.": "✓ {n} 条记录有效——控制总额已重新计算。Exit code 0。", "✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.": "✗ 文件超过 2 MB——本演示限制输入大小；CLI 可流式处理任意大小的批次。", "✗ Could not read that file.": "✗ 无法读取该文件。", "Paste your CSV records, then press Validate & generate.": "请粘贴您的 CSV 记录，然后点击“验证并生成”。", "Copied ✓": "已复制 ✓", "Copy XML": "复制 XML", "Copy command": "复制命令", "Downloading the engine (~13 MB, first run only)…": "正在下载引擎（约 13 MB，仅首次运行）…", "Booting Python runtime…": "正在启动 Python 运行时…", "Loading xmlschema…": "正在加载 xmlschema…", "Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.": "架构 SHA-256：{hex}——请与 pain.001.001.09 官方发布的副本进行比对。", "Validating against the official schema…": "正在依据官方架构进行验证…", "✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).": "✓ 通过官方 ISO 20022 pain.001.001.09 XSD 验证（{s} 秒）。", "✗ Official schema rejected the document — {n} error(s) ({s}s).": "✗ 官方架构拒绝了该文档——{n} 个错误（{s} 秒）。", "✗ Engine failed to load: {error}. Check your connection and try again.": "✗ 引擎加载失败：{error}。请检查网络连接后重试。", "comma": "逗号", "semicolon": "分号", "tab": "制表符", "SEPA credit transfer (2 records, EUR)": "SEPA 贷记转账（2 条记录，EUR）", "Cross-border (GBP, escaped chars)": "跨境支付（GBP，含转义字符）", "Larger batch (20 records)": "较大批次（20 条记录）", "Flipped IBAN digit (mod-97 checksum)": "IBAN 数字输错（mod-97 校验和）", "Malformed BIC (wrong structure)": "BIC 格式错误（结构不正确）", "Missing required column (execution date)": "缺少必需列（执行日期）", "European comma-decimal amount": "欧式逗号小数金额", "Impossible calendar date": "不存在的日历日期", "missing required value": "缺少必填值", "comma-decimal amount — expected point-decimal (e.g. 1234.56)": "金额使用逗号小数——应为点号小数（例如 1234.56）", "not a valid decimal amount (expected e.g. 1234.56)": "不是有效的小数金额（应为例如 1234.56 的格式）", "{ccy} is a zero-decimal currency — no fractional part allowed": "{ccy} 是零小数位货币——不允许有小数部分", "more than 2 decimal places": "超过 2 位小数", "not a 3-letter ISO 4217 code": "不是 3 个字母的 ISO 4217 代码", "expected ISO 8601 YYYY-MM-DD": "应为 ISO 8601 YYYY-MM-DD 格式", "not a real calendar date": "不是真实存在的日历日期", "wrong length for country {cc} (expected {len} characters)": "长度与国家/地区 {cc} 不符（应为 {len} 个字符）", "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "未通过 ISO 13616 mod-97 校验——可能有数字输错", "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "不是有效的 ISO 9362 BIC（8 或 11 个字符，AAAAAA00[XXX]）", "row {row} has {cells} field(s), header has {header}": "第 {row} 行有 {cells} 个字段，表头有 {header} 个"}</script></body>
+<script id="try-i18n" type="application/json">{"Add valid data in step 1 first": "请先在步骤 1 中添加有效数据", "Generate XML in step 2 first": "请先在步骤 2 中生成 XML", "No XML generated — validation is a hard gate. Fix the findings above and re-validate.": "未生成 XML——验证是硬性关口。请修正上述问题后重新验证。", "The validated pain.001.001.09 document will appear here — add data in step 1.": "经验证的 pain.001.001.09 文档将显示在此处——请在步骤 1 中添加数据。", "…and {n} more — download the full error report below.": "…另有 {n} 个——请在下方下载完整错误报告。", "Need a header row and at least one record.": "需要一个表头行和至少一条记录。", "Detected: {delim}-delimited": "检测到：以{delim}分隔", "{n} record(s)": "{n} 条记录", "ignored column(s): {cols}": "已忽略列：{cols}", "large batch — the CLI streams batches of any size": "大批量——CLI 可流式处理任意大小的批次", "✗ Validation failed — {n} issue(s). This file would be rejected.": "✗ 验证失败——{n} 个问题。此文件将被拒绝。", "✓ {n} record(s) valid — control totals recomputed. Exit code 0.": "✓ {n} 条记录有效——控制总额已重新计算。Exit code 0。", "✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.": "✗ 文件超过 2 MB——本演示限制输入大小；CLI 可流式处理任意大小的批次。", "✗ Could not read that file.": "✗ 无法读取该文件。", "Paste your CSV records, then press Validate & generate.": "请粘贴您的 CSV 记录，然后点击“验证并生成”。", "Copied ✓": "已复制 ✓", "Copy XML": "复制 XML", "Copy command": "复制命令", "Downloading the engine (~13 MB, first run only)…": "正在下载引擎（约 13 MB，仅首次运行）…", "Booting Python runtime…": "正在启动 Python 运行时…", "Loading xmlschema…": "正在加载 xmlschema…", "Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.": "架构 SHA-256：{hex}——请与 pain.001.001.09 官方发布的副本进行比对。", "Validating against the official schema…": "正在依据官方架构进行验证…", "✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).": "✓ 通过官方 ISO 20022 pain.001.001.09 XSD 验证（{s} 秒）。", "✗ Official schema rejected the document — {n} error(s) ({s}s).": "✗ 官方架构拒绝了该文档——{n} 个错误（{s} 秒）。", "✗ Engine failed to load: {error}. Check your connection and try again.": "✗ 引擎加载失败：{error}。请检查网络连接后重试。", "comma": "逗号", "semicolon": "分号", "tab": "制表符", "SEPA credit transfer (2 records, EUR)": "SEPA 贷记转账（2 条记录，EUR）", "Cross-border (GBP, escaped chars)": "跨境支付（GBP，含转义字符）", "Larger batch (20 records)": "较大批次（20 条记录）", "Flipped IBAN digit (mod-97 checksum)": "IBAN 数字输错（mod-97 校验和）", "Malformed BIC (wrong structure)": "BIC 格式错误（结构不正确）", "Missing required column (execution date)": "缺少必需列（执行日期）", "European comma-decimal amount": "欧式逗号小数金额", "Impossible calendar date": "不存在的日历日期", "missing required value": "缺少必填值", "comma-decimal amount — expected point-decimal (e.g. 1234.56)": "金额使用逗号小数——应为点号小数（例如 1234.56）", "not a valid decimal amount (expected e.g. 1234.56)": "不是有效的小数金额（应为例如 1234.56 的格式）", "{ccy} is a zero-decimal currency — no fractional part allowed": "{ccy} 是零小数位货币——不允许有小数部分", "more than 2 decimal places": "超过 2 位小数", "not a 3-letter ISO 4217 code": "不是 3 个字母的 ISO 4217 代码", "expected ISO 8601 YYYY-MM-DD": "应为 ISO 8601 YYYY-MM-DD 格式", "not a real calendar date": "不是真实存在的日历日期", "wrong length for country {cc} (expected {len} characters)": "长度与国家/地区 {cc} 不符（应为 {len} 个字符）", "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "未通过 ISO 13616 mod-97 校验——可能有数字输错", "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "不是有效的 ISO 9362 BIC（8 或 11 个字符，AAAAAA00[XXX]）", "row {row} has {cells} field(s), header has {header}": "第 {row} 行有 {cells} 个字段，表头有 {header} 个", "Passed the official XSD": "已通过官方 XSD", "Rejected by the official XSD": "被官方 XSD 拒绝", "{n} issue(s) the schema would reject": "{n} 个架构会拒绝的问题", "Pre-checks passed — run the XSD gate below to prove it": "预检查通过——请运行下方的 XSD 关卡加以证明", "{n} issue(s) a schema would accept but a bank would not": "{n} 个架构会接受但银行不会接受的问题", "No identifier or format problems found": "未发现标识符或格式问题"}</script></body>
 </html>
