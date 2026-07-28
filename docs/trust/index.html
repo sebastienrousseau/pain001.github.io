@@ -198,8 +198,9 @@
 <h2 id="02-software-supply-chain">02. Software supply chain<a class="heading-anchor" href="#02-software-supply-chain" aria-label="Link to section: 02. Software supply chain">#</a></h2>
 <ul>
 <li><strong>Independently scored</strong> — <a href="https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/pain001">OpenSSF Scorecard</a> runs weekly and on every push; the score is published by the OpenSSF, not self-asserted.</li>
+<li><strong>OpenSSF Best Practices badge</strong> — the core repository holds the <a href="https://www.bestpractices.dev/projects/13858">passing badge</a> (100% of the criteria), covering documented contribution and vulnerability-reporting processes, enforced test coverage, static and dynamic analysis, and signed release delivery.</li>
 <li><strong>SBOM</strong> — a CycloneDX software bill of materials is generated for core release builds (<a href="/sbom.cdx.json">this site's own SBOM</a> is also published).</li>
-<li><strong>Provenance</strong> — a SLSA Build L3 attestation workflow is armed on the release pipeline; signed <code>*.intoto.jsonl</code> attestations attach to releases published from v0.0.57 onward, verifiable with <code>slsa-verifier</code>.</li>
+<li><strong>Provenance</strong> — SLSA Build L3 attestations are generated in the release pipeline itself; v0.0.57 onward carries a Sigstore-signed <code>multiple.intoto.jsonl</code> on the GitHub release, verifiable with <code>slsa-verifier</code> against the published wheel and sdist digests.</li>
 <li><strong>Pinned CI</strong> — every GitHub Action in the build pipeline is pinned to a full commit SHA; workflow tokens follow least privilege.</li>
 <li><strong>Kill switch</strong> — third-party plugin discovery can be disabled outright (<code>PAIN001_DISABLE_PLUGINS=1</code>), and every discovered plugin is auditable before first use (<code>pain001 plugins list</code>).</li>
 </ul>

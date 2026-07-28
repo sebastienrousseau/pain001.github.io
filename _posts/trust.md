@@ -100,8 +100,9 @@ This page exists so that a security, vendor-risk, or audit reviewer can answer s
 ## 02. Software supply chain
 
 - **Independently scored** — [OpenSSF Scorecard](https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/pain001) runs weekly and on every push; the score is published by the OpenSSF, not self-asserted.
+- **OpenSSF Best Practices badge** — the core repository holds the [passing badge](https://www.bestpractices.dev/projects/13858) (100% of the criteria), covering documented contribution and vulnerability-reporting processes, enforced test coverage, static and dynamic analysis, and signed release delivery.
 - **SBOM** — a CycloneDX software bill of materials is generated for core release builds ([this site's own SBOM](/sbom.cdx.json) is also published).
-- **Provenance** — a SLSA Build L3 attestation workflow is armed on the release pipeline; signed `*.intoto.jsonl` attestations attach to releases published from v0.0.57 onward, verifiable with `slsa-verifier`.
+- **Provenance** — SLSA Build L3 attestations are generated in the release pipeline itself; v0.0.57 onward carries a Sigstore-signed `multiple.intoto.jsonl` on the GitHub release, verifiable with `slsa-verifier` against the published wheel and sdist digests.
 - **Pinned CI** — every GitHub Action in the build pipeline is pinned to a full commit SHA; workflow tokens follow least privilege.
 - **Kill switch** — third-party plugin discovery can be disabled outright (`PAIN001_DISABLE_PLUGINS=1`), and every discovered plugin is auditable before first use (`pain001 plugins list`).
 
