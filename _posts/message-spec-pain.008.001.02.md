@@ -95,6 +95,8 @@ This is the complete element reference for `pain.008.001.02`, generated directly
 
 Cardinality is shown as ISO writes it: `0..1` optional, `1..1` required, `0..*` repeating. Required elements are **bold** — those are the ones whose absence makes the document invalid before any bank sees it.
 
+**Schema provenance.** The copy of `pain.008.001.02` shipped with Pain001 carries **no generation header**, so its origin cannot be evidenced from the file itself — it validates correctly, but treat the [ISO 20022 catalogue](https://www.iso20022.org/iso-20022-message-definitions?search=pain.008.001.02) as authoritative and check against it before relying on this reference for compliance work.
+
 ## CstmrDrctDbtInitn
 
 | Element | Path | Card. | Type | Constraints |

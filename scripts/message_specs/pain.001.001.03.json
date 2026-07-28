@@ -1,5 +1,11 @@
 {
  "version": "pain.001.001.03",
+ "provenance": {
+  "generator": null,
+  "build": null,
+  "generated": null,
+  "header": null
+ },
  "type_index": {
   "AccountIdentification4Choice": {
    "name": "AccountIdentification4Choice",
