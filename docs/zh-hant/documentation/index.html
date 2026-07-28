@@ -189,8 +189,8 @@
 
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="目錄"><h2>目錄</h2><ol><li><a href="#1-command-line-interface">命令列介面</a></li><li><a href="#2-python-api">Python API</a></li><li><a href="#3-rest-microservice">REST 微服務</a></li><li><a href="#4-input-normalisation">輸入正規化</a></li><li><a href="#5-plugin-architecture">外掛架構</a></li><li><a href="#6-quality-gates">品質關卡</a></li></ol></nav>
-          <div lang="zh-Hant"><p>本參考文件說明 <strong>pain001 v0.0.57</strong> 的命令列介面、Python API、REST 微服務與驗證管線。此處列出的每個旗標、端點與行為皆取自實際釋出的程式碼，而非願景。</p>
-<p>Pain001 支援 <strong>11 種 ISO 20022 電文定義</strong>：<code>pain.001.001.03</code> 至 <code>pain.001.001.12</code>（客戶貸記轉帳發動，共十個版本）以及 <code>pain.008.001.02</code>（客戶直接扣款發動）。</p>
+          <div lang="zh-Hant"><p>本參考文件說明 <strong>pain001 v0.0.58</strong> 的命令列介面、Python API、REST 微服務與驗證管線。此處列出的每個旗標、端點與行為皆取自實際釋出的程式碼，而非願景。</p>
+<p>Pain001 支援 <strong>12 種 ISO 20022 電文定義</strong>：<code>pain.001.001.03</code> 至 <code>pain.001.001.13</code>（客戶貸記轉帳發動，共十一個版本）以及 <code>pain.008.001.02</code>（客戶直接扣款發動）。</p>
 <hr />
 <h2 id="1-command-line-interface">1. 命令列介面<a class="heading-anchor" href="#1-command-line-interface" aria-label="連結至章節：1. 命令列介面">#</a></h2>
 <p><code>pain001</code> 執行檔將功能劃分為多個子命令。僅帶產生旗標執行時會隱含呼叫 <code>generate</code>，因此既有的自動化流程可照常運作。</p>

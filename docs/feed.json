@@ -261,7 +261,7 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
-      "content_html": "Complete reference for pain001 v0.0.57 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.",
+      "content_html": "Complete reference for pain001 v0.0.58 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
       "id": "https://pain001.com/documentation/",

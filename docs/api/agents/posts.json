@@ -171,7 +171,7 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Complete reference for pain001 v0.0.57 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.",
+    "description": "Complete reference for pain001 v0.0.58 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",

@@ -2,9 +2,9 @@
  "documentation": {
   "meta": {
    "title": "Pain001 Technical Reference: CLI, Python API and REST",
-   "description": "Complete reference for pain001 v0.0.57 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.",
+   "description": "Complete reference for pain001 v0.0.58 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.",
    "eyebrow": "Reference",
-   "deck": "Every flag, endpoint, and behaviour of pain001 v0.0.57 — taken from the shipped code, not from aspiration."
+   "deck": "Every flag, endpoint, and behaviour of pain001 v0.0.58 — taken from the shipped code, not from aspiration."
   },
   "text": {
    "<a href=\"/\">Home</a>": "<a href=\"/\">Home</a>",
@@ -15,8 +15,8 @@
    "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">Input Normalisation</a>",
    "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>",
    "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">Quality Gates</a>",
-   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.57</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.57</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.",
-   "Pain001 supports <strong>11 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.12</code> (Customer Credit Transfer Initiation, ten versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).": "Pain001 supports <strong>11 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.12</code> (Customer Credit Transfer Initiation, ten versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).",
+   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.58</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.58</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.",
+   "Pain001 supports <strong>12 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).": "Pain001 supports <strong>12 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).",
    "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
    "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.",
    "Subcommand": "Subcommand",

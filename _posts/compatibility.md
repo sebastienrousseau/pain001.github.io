@@ -89,7 +89,7 @@ last_reviewed: "2026-07-26"
 
 ---
 
-Everything on this page is verified against the shipped code of **pain001 v0.0.57** and its companions — the same discipline as the [technical reference](/documentation/). If a cell says no, that is a statement, not an omission.
+Everything on this page is verified against the shipped code of **pain001 v0.0.58** and its companions — the same discipline as the [technical reference](/documentation/). If a cell says no, that is a statement, not an omission.
 
 ## 01. Message definitions
 
