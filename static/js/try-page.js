@@ -9,8 +9,25 @@
 
 import {
   parseCsv, validateRecords, toXml, errorReportCsv, decodeBuffer,
-  DELIMITER_NAMES, SAMPLES, SCENARIOS,
+  DELIMITER_NAMES, SAMPLES, SCENARIOS, fillTemplate,
 } from "./try-demo.js";
+
+/* ==== Runtime i18n ====
+ * Locale demo pages carry a non-executable JSON table keyed by the
+ * English template; English pages have none and fall through. */
+const I18N = (() => {
+  try {
+    return JSON.parse(
+      document.getElementById("try-i18n")?.textContent || "{}");
+  } catch { return {}; }
+})();
+function t(template, params) {
+  return fillTemplate(I18N[template] || template, params || {});
+}
+function tFinding(f) {
+  return f.template && I18N[f.template]
+    ? fillTemplate(I18N[f.template], f.params) : f.message;
+}
 
 /* ==== State machine ====
  * empty → loaded → valid | invalid ; valid → xsd-running → xsd-valid | xsd-invalid
@@ -49,12 +66,12 @@ function render() {
   const hasXml = state.phase === "valid";
   els.copyBtn.disabled = !hasXml;
   els.downloadBtn.disabled = !hasXml;
-  els.copyBtn.title = hasXml ? "" : "Add valid data in step 1 first";
-  els.downloadBtn.title = hasXml ? "" : "Add valid data in step 1 first";
+  els.copyBtn.title = hasXml ? "" : t("Add valid data in step 1 first");
+  els.downloadBtn.title = hasXml ? "" : t("Add valid data in step 1 first");
   els.reportBtn.hidden = state.findings.length === 0;
   els.fixBtn.hidden = !state.scenarioActive;
   els.xsdBtn.disabled = !hasXml || state.xsd === "running";
-  els.xsdBtn.title = hasXml ? "" : "Generate XML in step 2 first";
+  els.xsdBtn.title = hasXml ? "" : t("Generate XML in step 2 first");
 }
 
 function showFindings(findings) {
@@ -67,7 +84,7 @@ function showFindings(findings) {
   findings.slice(0, MAX_VISIBLE_ERRORS).forEach((f) => {
     const tr = document.createElement("tr");
     [["td", f.row], ["td", f.column], ["td", f.rule, "cell-rule"],
-     ["td", f.value, "cell-value"], ["td", f.message, "cell-problem"]]
+     ["td", f.value, "cell-value"], ["td", tFinding(f), "cell-problem"]]
       .forEach(([tag, text, cls]) => {
         const td = document.createElement(tag);
         td.textContent = text === undefined || text === "" ? "—" : String(text);
@@ -79,7 +96,7 @@ function showFindings(findings) {
   els.tableWrap.hidden = false;
   const rest = findings.length - MAX_VISIBLE_ERRORS;
   els.overflow.hidden = rest <= 0;
-  if (rest > 0) els.overflow.textContent = "…and " + rest + " more — download the full error report below.";
+  if (rest > 0) els.overflow.textContent = t("…and {n} more — download the full error report below.", { n: rest });
 }
 
 function setXml(xml) {
@@ -91,8 +108,8 @@ function setXml(xml) {
     const span = document.createElement("span");
     span.className = "xml-placeholder";
     span.textContent = state.phase === "invalid"
-      ? "No XML generated — validation is a hard gate. Fix the findings above and re-validate."
-      : "The validated pain.001.001.09 document will appear here — add data in step 1.";
+      ? t("No XML generated — validation is a hard gate. Fix the findings above and re-validate.")
+      : t("The validated pain.001.001.09 document will appear here — add data in step 1.");
     els.xmlOut.appendChild(span);
   }
 }
@@ -102,7 +119,7 @@ function runValidation() {
   if (parsed.error) {
     state.phase = "invalid";
     state.findings = [];
-    els.status.textContent = "✗ " + parsed.error;
+    els.status.textContent = "✗ " + t(parsed.error);
     els.status.className = "status fail";
     els.dialectNote.textContent = "";
     showFindings([]);
@@ -111,10 +128,10 @@ function runValidation() {
     return;
   }
 
-  const notes = ["Detected: " + DELIMITER_NAMES[parsed.delimiter] + "-delimited",
-    parsed.rows.length + " record(s)"];
-  if (parsed.unknown.length) notes.push("ignored column(s): " + parsed.unknown.join(", "));
-  if (parsed.rows.length > MAX_ROWS_WARN) notes.push("large batch — the CLI streams batches of any size");
+  const notes = [t("Detected: {delim}-delimited", { delim: t(DELIMITER_NAMES[parsed.delimiter]) }),
+    t("{n} record(s)", { n: parsed.rows.length })];
+  if (parsed.unknown.length) notes.push(t("ignored column(s): {cols}", { cols: parsed.unknown.join(", ") }));
+  if (parsed.rows.length > MAX_ROWS_WARN) notes.push(t("large batch — the CLI streams batches of any size"));
   els.dialectNote.textContent = notes.join(" · ");
 
   const findings = parsed.structural.concat(validateRecords(parsed.rows));
@@ -123,14 +140,12 @@ function runValidation() {
 
   if (findings.length) {
     state.phase = "invalid";
-    els.status.textContent = "✗ Validation failed — " + findings.length +
-      " issue(s). This file would be rejected.";
+    els.status.textContent = t("✗ Validation failed — {n} issue(s). This file would be rejected.", { n: findings.length });
     els.status.className = "status fail";
     setXml("");
   } else {
     state.phase = "valid";
-    els.status.textContent = "✓ " + parsed.rows.length +
-      " record(s) valid — control totals recomputed. Exit code 0.";
+    els.status.textContent = t("✓ {n} record(s) valid — control totals recomputed. Exit code 0.", { n: parsed.rows.length });
     els.status.className = "status pass";
     setXml(toXml(parsed.rows, "DEMO-" + Date.now(),
       new Date().toISOString().slice(0, 19)));
@@ -155,7 +170,7 @@ function loadData(text, opts) {
 function readFile(file) {
   if (!file) return;
   if (file.size > MAX_FILE_BYTES) {
-    els.status.textContent = "✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.";
+    els.status.textContent = t("✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.");
     els.status.className = "status fail";
     return;
   }
@@ -168,7 +183,7 @@ function readFile(file) {
     }
   };
   reader.onerror = () => {
-    els.status.textContent = "✗ Could not read that file.";
+    els.status.textContent = t("✗ Could not read that file.");
     els.status.className = "status fail";
   };
   reader.readAsArrayBuffer(file);
@@ -179,13 +194,13 @@ function readFile(file) {
 for (const [key, sample] of Object.entries(SAMPLES)) {
   const opt = document.createElement("option");
   opt.value = key;
-  opt.textContent = sample.label;
+  opt.textContent = t(sample.label);
   els.sampleSelect.appendChild(opt);
 }
 for (const [key, scenario] of Object.entries(SCENARIOS)) {
   const opt = document.createElement("option");
   opt.value = key;
-  opt.textContent = scenario.label;
+  opt.textContent = t(scenario.label);
   els.scenarioSelect.appendChild(opt);
 }
 
@@ -213,7 +228,7 @@ els.pasteBtn.addEventListener("click", () => {
   state.scenarioActive = false;
   els.editorBlock.hidden = false;
   els.input.value = "";
-  els.dialectNote.textContent = "Paste your CSV records, then press Validate & generate.";
+  els.dialectNote.textContent = t("Paste your CSV records, then press Validate & generate.");
   els.input.focus();
   render();
 });
@@ -246,8 +261,8 @@ els.runBtn.addEventListener("click", () => {
 
 els.copyBtn.addEventListener("click", () => {
   navigator.clipboard.writeText(state.xml).then(() => {
-    els.copyBtn.textContent = "Copied ✓";
-    setTimeout(() => { els.copyBtn.textContent = "Copy XML"; }, 1600);
+    els.copyBtn.textContent = t("Copied ✓");
+    setTimeout(() => { els.copyBtn.textContent = t("Copy XML"); }, 1600);
   });
 });
 
@@ -322,10 +337,10 @@ async function sha256Hex(url) {
 function loadEngine() {
   if (pyodideReady) return pyodideReady;
   pyodideReady = (async () => {
-    els.xsdStatus.textContent = "Downloading the engine (~13 MB, first run only)…";
+    els.xsdStatus.textContent = t("Downloading the engine (~13 MB, first run only)…");
     await fetchWithProgress(WASM_URL, setProgress);
     setProgress(null);
-    els.xsdStatus.textContent = "Booting Python runtime…";
+    els.xsdStatus.textContent = t("Booting Python runtime…");
     await new Promise((resolve, reject) => {
       const s = document.createElement("script");
       s.src = "/pyodide/pyodide.js";
@@ -334,7 +349,7 @@ function loadEngine() {
       document.head.appendChild(s);
     });
     const py = await loadPyodide({ indexURL: "/pyodide/" });
-    els.xsdStatus.textContent = "Loading xmlschema…";
+    els.xsdStatus.textContent = t("Loading xmlschema…");
     await py.loadPackage([
       "/pyodide/elementpath-5.1.3-py3-none-any.whl",
       "/pyodide/xmlschema-4.3.2-py3-none-any.whl",
@@ -343,7 +358,7 @@ function loadEngine() {
     py.FS.writeFile("/pain.001.001.09.xsd", xsdText);
     py.runPython("import xmlschema\nschema = xmlschema.XMLSchema('/pain.001.001.09.xsd')");
     sha256Hex("/pyodide/pain.001.001.09.xsd").then((hex) => {
-      els.xsdHash.textContent = "Schema SHA-256: " + hex + " — compare it against the copy published for pain.001.001.09.";
+      els.xsdHash.textContent = t("Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.", { hex });
     }).catch(() => {});
     return py;
   })();
@@ -360,7 +375,7 @@ els.xsdBtn.addEventListener("click", async () => {
   const started = performance.now();
   try {
     const py = await loadEngine();
-    els.xsdStatus.textContent = "Validating against the official schema…";
+    els.xsdStatus.textContent = t("Validating against the official schema…");
     py.globals.set("xml_text", state.xml);
     const result = py.runPython(
       "import json\n" +
@@ -372,11 +387,11 @@ els.xsdBtn.addEventListener("click", async () => {
     if (errs.length === 0) {
       state.xsd = "valid";
       els.xsdStatus.className = "status pass";
-      els.xsdStatus.textContent = "✓ VALID against the official ISO 20022 pain.001.001.09 XSD (" + secs + "s).";
+      els.xsdStatus.textContent = t("✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).", { s: secs });
     } else {
       state.xsd = "invalid";
       els.xsdStatus.className = "status fail";
-      els.xsdStatus.textContent = "✗ Official schema rejected the document — " + errs.length + " error(s) (" + secs + "s).";
+      els.xsdStatus.textContent = t("✗ Official schema rejected the document — {n} error(s) ({s}s).", { n: errs.length, s: secs });
       for (const e of errs) {
         const li = document.createElement("li");
         li.textContent = e;
@@ -387,7 +402,7 @@ els.xsdBtn.addEventListener("click", async () => {
     state.xsd = "idle";
     setProgress(null);
     els.xsdStatus.className = "status fail";
-    els.xsdStatus.textContent = "✗ Engine failed to load: " + err.message + ". Check your connection and try again.";
+    els.xsdStatus.textContent = t("✗ Engine failed to load: {error}. Check your connection and try again.", { error: err.message });
   }
   render();
 });
@@ -399,11 +414,11 @@ document.querySelectorAll(".content-note pre").forEach((pre) => {
   btn.type = "button";
   btn.className = "pill pill-ghost";
   btn.style.marginTop = "0.5rem";
-  btn.textContent = "Copy command";
+  btn.textContent = t("Copy command");
   btn.addEventListener("click", () => {
     navigator.clipboard.writeText(pre.textContent.trim()).then(() => {
-      btn.textContent = "Copied ✓";
-      setTimeout(() => { btn.textContent = "Copy command"; }, 1600);
+      btn.textContent = t("Copied ✓");
+      setTimeout(() => { btn.textContent = t("Copy command"); }, 1600);
     });
   });
   pre.insertAdjacentElement("afterend", btn);

@@ -611,6 +611,17 @@ def gen_try_locales(site: Path) -> None:
         html = retarget_journey_nav(html, slug)
         html = mark_english_submenu(html)
         html = lang_badge(html, slug)
+        rd = _load_i18n("runtime_i18n", slug)
+        if rd:
+            import json as _json
+
+            # non-executable JSON table read by try-page.js; <
+            # escaping keeps "</script>" impossible inside the payload
+            payload = _json.dumps(rd, ensure_ascii=False).replace("<", "\\u003c")
+            html = html.replace(
+                "</body>",
+                '<script id="try-i18n" type="application/json">%s</script>'
+                "</body>" % payload, 1)
         dest = site / slug / "try"
         dest.mkdir(parents=True, exist_ok=True)
         (dest / "index.html").write_text(html, encoding="utf-8")

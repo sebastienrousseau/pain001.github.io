@@ -137,7 +137,10 @@ export function parseCsv(text) {
     if (cells.length !== headers.length) {
       structural.push({
         row: i, column: "", rule: "row-shape", value: "",
-        message: "row " + i + " has " + cells.length + " field(s), header has " + headers.length,
+        message: fillTemplate("row {row} has {cells} field(s), header has {header}",
+          { row: i, cells: cells.length, header: headers.length }),
+        template: "row {row} has {cells} field(s), header has {header}",
+        params: { row: i, cells: cells.length, header: headers.length },
       });
       continue;
     }
@@ -153,51 +156,60 @@ export function parseCsv(text) {
  * 1-based data rows (header excluded), matching what an ops person
  * counts in a spreadsheet. */
 
+
+/* Fill "{x}" placeholders in a message template. Exported so the page
+ * layer can re-fill translated templates with the same params. */
+export function fillTemplate(template, params) {
+  return template.replace(/\{(\w+)\}/g, (m, k) =>
+    params && k in params ? String(params[k]) : m);
+}
+
 export function validateRecords(rows) {
   const errors = [];
-  const add = (row, column, rule, value, message) =>
-    errors.push({ row, column, rule, value: String(value), message });
+  const add = (row, column, rule, value, template, params) =>
+    errors.push({ row, column, rule, value: String(value),
+      message: fillTemplate(template, params), template, params });
 
   rows.forEach((rec, idx) => {
     const row = idx + 1;
     for (const f of REQUIRED_COLUMNS) {
-      if (!rec[f]) add(row, f, "required-field", "", "missing required value");
+      if (!rec[f]) add(row, f, "required-field", "", "missing required value", {});
     }
     const amt = rec.payment_amount;
     if (amt) {
       if (/^\d{1,3}(\.\d{3})*,\d+$/.test(amt) || /^\d+,\d+$/.test(amt)) {
         add(row, "payment_amount", "amount-format", amt,
-          "comma-decimal amount — expected point-decimal (e.g. 1234.56)");
+          "comma-decimal amount — expected point-decimal (e.g. 1234.56)", {});
       } else if (!AMOUNT_RE.test(amt)) {
         add(row, "payment_amount", "amount-format", amt,
-          "not a valid decimal amount (expected e.g. 1234.56)");
+          "not a valid decimal amount (expected e.g. 1234.56)", {});
       } else {
         const decimals = (amt.split(".")[1] || "").length;
         const ccy = (rec.currency || "").toUpperCase();
         if (ZERO_DECIMAL_CCY.includes(ccy) && decimals > 0) {
           add(row, "payment_amount", "amount-precision", amt,
-            ccy + " is a zero-decimal currency — no fractional part allowed");
+            "{ccy} is a zero-decimal currency — no fractional part allowed", { ccy });
         } else if (decimals > 2) {
           add(row, "payment_amount", "amount-precision", amt,
-            "more than 2 decimal places");
+            "more than 2 decimal places", {});
         }
       }
     }
     if (rec.currency && !CCY_RE.test(rec.currency.toUpperCase())) {
       add(row, "currency", "currency-code", rec.currency,
-        "not a 3-letter ISO 4217 code");
+        "not a 3-letter ISO 4217 code", {});
     }
     if (rec.requested_execution_date) {
       const d = rec.requested_execution_date;
       if (!DATE_RE.test(d)) {
         add(row, "requested_execution_date", "date-format", d,
-          "expected ISO 8601 YYYY-MM-DD");
+          "expected ISO 8601 YYYY-MM-DD", {});
       } else {
         const [y, m, day] = d.split("-").map(Number);
         const dt = new Date(Date.UTC(y, m - 1, day));
         if (dt.getUTCMonth() !== m - 1 || dt.getUTCDate() !== day) {
           add(row, "requested_execution_date", "date-value", d,
-            "not a real calendar date");
+            "not a real calendar date", {});
         }
       }
     }
@@ -206,17 +218,18 @@ export function validateRecords(rows) {
       if (!v) continue;
       if (!ibanLengthValid(v)) {
         add(row, f, "iban-length", v,
-          "wrong length for country " + v.slice(0, 2).toUpperCase() +
-          " (expected " + IBAN_LENGTHS[v.slice(0, 2).toUpperCase()] + " characters)");
+          "wrong length for country {cc} (expected {len} characters)",
+          { cc: v.slice(0, 2).toUpperCase(),
+            len: IBAN_LENGTHS[v.slice(0, 2).toUpperCase()] });
       } else if (!ibanChecksumValid(v)) {
         add(row, f, "iban-checksum", v,
-          "fails the ISO 13616 mod-97 checksum — likely a mistyped digit");
+          "fails the ISO 13616 mod-97 checksum — likely a mistyped digit", {});
       }
     }
     for (const f of ["debtor_agent_BIC", "creditor_agent_BIC"]) {
       if (rec[f] && !bicValid(rec[f])) {
         add(row, f, "bic-structure", rec[f],
-          "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])");
+          "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])", {});
       }
     }
   });
