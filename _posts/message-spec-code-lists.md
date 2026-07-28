@@ -99,325 +99,190 @@ A code list is a closed set: a value outside it makes the document invalid again
 
 *6 values · in 10 version(s)*
 
-| Code |
-| :--- |
-| `ADDR` |
-| `PBOX` |
-| `HOME` |
-| `BIZZ` |
-| `MLTO` |
-| `DLVY` |
+`ADDR` · `PBOX` · `HOME` · `BIZZ` · `MLTO` · `DLVY`
+
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`*
 
 ## `AdviceType1Code`
 
 *2 values · in 3 version(s)*
 
-| Code |
-| :--- |
-| `ADWD` |
-| `ADND` |
+`ADWD` · `ADND`
+
+*Appears in: `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`*
 
 ## `Authorisation1Code`
 
 *4 values · in 10 version(s)*
 
-| Code |
-| :--- |
-| `AUTH` |
-| `FDET` |
-| `FSUM` |
-| `ILEV` |
+`AUTH` · `FDET` · `FSUM` · `ILEV`
+
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`*
 
 ## `CashAccountType4Code`
 
 *16 values · in 1 version(s)*
 
-| Code |
-| :--- |
-| `CASH` |
-| `CHAR` |
-| `COMM` |
-| `TAXE` |
-| `CISH` |
-| `TRAS` |
-| `SACC` |
-| `CACC` |
-| `SVGS` |
-| `ONDP` |
-| `MGLD` |
-| `NREX` |
-| `MOMA` |
-| `LOAN` |
-| `SLRY` |
-| `ODFT` |
+`CASH` · `CHAR` · `COMM` · `TAXE` · `CISH` · `TRAS` · `SACC` · `CACC` · `SVGS` · `ONDP` · `MGLD` · `NREX` · `MOMA` · `LOAN` · `SLRY` · `ODFT`
+
+*Appears in: `pain.001.001.03`*
 
 ## `ChargeBearerType1Code`
 
 *4 values · in 10 version(s)*
 
-| Code |
-| :--- |
-| `DEBT` |
-| `CRED` |
-| `SHAR` |
-| `SLEV` |
+`DEBT` · `CRED` · `SHAR` · `SLEV`
+
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`*
 
 ## `ChequeDelivery1Code`
 
 *12 values · in 10 version(s)*
 
-| Code |
-| :--- |
-| `MLDB` |
-| `MLCD` |
-| `MLFA` |
-| `CRDB` |
-| `CRCD` |
-| `CRFA` |
-| `PUDB` |
-| `PUCD` |
-| `PUFA` |
-| `RGDB` |
-| `RGCD` |
-| `RGFA` |
+`MLDB` · `MLCD` · `MLFA` · `CRDB` · `CRCD` · `CRFA` · `PUDB` · `PUCD` · `PUFA` · `RGDB` · `RGCD` · `RGFA`
+
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`*
 
 ## `ChequeType2Code`
 
 *5 values · in 10 version(s)*
 
-| Code |
-| :--- |
-| `CCHQ` |
-| `CCCH` |
-| `BCHQ` |
-| `DRFT` |
-| `ELDR` |
+`CCHQ` · `CCCH` · `BCHQ` · `DRFT` · `ELDR`
+
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`*
 
 ## `CreditDebitCode`
 
 *2 values · in 10 version(s)*
 
-| Code |
-| :--- |
-| `CRDT` |
-| `DBIT` |
+`CRDT` · `DBIT`
+
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`*
 
 ## `DocumentType3Code`
 
 *6 values · in 9 version(s)*
 
-| Code |
-| :--- |
-| `RADM` |
-| `RPIN` |
-| `FXDR` |
-| `DISP` |
-| `PUOR` |
-| `SCOR` |
+`RADM` · `RPIN` · `FXDR` · `DISP` · `PUOR` · `SCOR`
+
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`*
 
 ## `DocumentType5Code`
 
 *15 values · in 3 version(s)*
 
-| Code |
-| :--- |
-| `MSIN` |
-| `CNFA` |
-| `DNFA` |
-| `CINV` |
-| `CREN` |
-| `DEBN` |
-| `HIRI` |
-| `SBIN` |
-| `CMCN` |
-| `SOAC` |
-| `DISP` |
-| `BOLD` |
-| `VCHR` |
-| `AROI` |
-| `TSUT` |
+`MSIN` · `CNFA` · `DNFA` · `CINV` · `CREN` · `DEBN` · `HIRI` · `SBIN` · `CMCN` · `SOAC` · `DISP` · `BOLD` · `VCHR` · `AROI` · `TSUT`
+
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`*
 
 ## `DocumentType6Code`
 
 *16 values · in 6 version(s)*
 
-| Code |
-| :--- |
-| `MSIN` |
-| `CNFA` |
-| `DNFA` |
-| `CINV` |
-| `CREN` |
-| `DEBN` |
-| `HIRI` |
-| `SBIN` |
-| `CMCN` |
-| `SOAC` |
-| `DISP` |
-| `BOLD` |
-| `VCHR` |
-| `AROI` |
-| `TSUT` |
-| `PUOR` |
+`MSIN` · `CNFA` · `DNFA` · `CINV` · `CREN` · `DEBN` · `HIRI` · `SBIN` · `CMCN` · `SOAC` · `DISP` · `BOLD` · `VCHR` · `AROI` · `TSUT` · `PUOR`
+
+*Appears in: `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`*
 
 ## `ExchangeRateType1Code`
 
 *3 values · in 10 version(s)*
 
-| Code |
-| :--- |
-| `SPOT` |
-| `SALE` |
-| `AGRD` |
+`SPOT` · `SALE` · `AGRD`
+
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`*
 
 ## `Frequency6Code`
 
 *9 values · in 3 version(s)*
 
-| Code |
-| :--- |
-| `YEAR` |
-| `MNTH` |
-| `QURT` |
-| `MIAN` |
-| `WEEK` |
-| `DAIL` |
-| `ADHO` |
-| `INDA` |
-| `FRTN` |
+`YEAR` · `MNTH` · `QURT` · `MIAN` · `WEEK` · `DAIL` · `ADHO` · `INDA` · `FRTN`
+
+*Appears in: `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`*
 
 ## `Instruction3Code`
 
 *4 values · in 7 version(s)*
 
-| Code |
-| :--- |
-| `CHQB` |
-| `HOLD` |
-| `PHOB` |
-| `TELB` |
+`CHQB` · `HOLD` · `PHOB` · `TELB`
+
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`*
 
 ## `MandateClassification1Code`
 
 *3 values · in 3 version(s)*
 
-| Code |
-| :--- |
-| `FIXE` |
-| `USGB` |
-| `VARI` |
+`FIXE` · `USGB` · `VARI`
+
+*Appears in: `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`*
 
 ## `NamePrefix1Code`
 
 *4 values · in 6 version(s)*
 
-| Code |
-| :--- |
-| `DOCT` |
-| `MIST` |
-| `MISS` |
-| `MADM` |
+`DOCT` · `MIST` · `MISS` · `MADM`
+
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`*
 
 ## `NamePrefix2Code`
 
 *5 values · in 4 version(s)*
 
-| Code |
-| :--- |
-| `DOCT` |
-| `MADM` |
-| `MISS` |
-| `MIST` |
-| `MIKS` |
+`DOCT` · `MADM` · `MISS` · `MIST` · `MIKS`
+
+*Appears in: `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`*
 
 ## `PaymentMethod3Code`
 
 *3 values · in 10 version(s)*
 
-| Code |
-| :--- |
-| `CHK` |
-| `TRF` |
-| `TRA` |
+`CHK` · `TRF` · `TRA`
+
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`*
 
 ## `PreferredContactMethod1Code`
 
 *5 values · in 3 version(s)*
 
-| Code |
-| :--- |
-| `LETT` |
-| `MAIL` |
-| `PHON` |
-| `FAXX` |
-| `CELL` |
+`LETT` · `MAIL` · `PHON` · `FAXX` · `CELL`
+
+*Appears in: `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`*
 
 ## `PreferredContactMethod2Code`
 
 *6 values · in 1 version(s)*
 
-| Code |
-| :--- |
-| `MAIL` |
-| `FAXX` |
-| `LETT` |
-| `CELL` |
-| `ONLI` |
-| `PHON` |
+`MAIL` · `FAXX` · `LETT` · `CELL` · `ONLI` · `PHON`
+
+*Appears in: `pain.001.001.13`*
 
 ## `Priority2Code`
 
 *2 values · in 10 version(s)*
 
-| Code |
-| :--- |
-| `HIGH` |
-| `NORM` |
+`HIGH` · `NORM`
+
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`*
 
 ## `RegulatoryReportingType1Code`
 
 *3 values · in 10 version(s)*
 
-| Code |
-| :--- |
-| `CRED` |
-| `DEBT` |
-| `BOTH` |
+`CRED` · `DEBT` · `BOTH`
+
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`*
 
 ## `RemittanceLocationMethod2Code`
 
 *6 values · in 10 version(s)*
 
-| Code |
-| :--- |
-| `FAXI` |
-| `EDIC` |
-| `URID` |
-| `EMAL` |
-| `POST` |
-| `SMSM` |
+`FAXI` · `EDIC` · `URID` · `EMAL` · `POST` · `SMSM`
+
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`*
 
 ## `TaxRecordPeriod1Code`
 
 *18 values · in 10 version(s)*
 
-| Code |
-| :--- |
-| `MM01` |
-| `MM02` |
-| `MM03` |
-| `MM04` |
-| `MM05` |
-| `MM06` |
-| `MM07` |
-| `MM08` |
-| `MM09` |
-| `MM10` |
-| `MM11` |
-| `MM12` |
-| `QTR1` |
-| `QTR2` |
-| `QTR3` |
-| `QTR4` |
-| `HLF1` |
-| `HLF2` |
+`MM01` · `MM02` · `MM03` · `MM04` · `MM05` · `MM06` · `MM07` · `MM08` · `MM09` · `MM10` · `MM11` · `MM12` · `QTR1` · `QTR2` · `QTR3` · `QTR4` · `HLF1` · `HLF2`
+
+*Appears in: `pain.001.001.03`, `pain.001.001.04`, `pain.001.001.05`, `pain.001.001.06`, `pain.001.001.07`, `pain.001.001.08`, `pain.001.001.09`, `pain.001.001.10`, `pain.001.001.11`, `pain.001.001.13`*

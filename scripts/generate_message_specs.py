@@ -360,10 +360,11 @@ def render_code_lists(specs: dict, index: dict) -> None:
         body.append(f"*{len(entry['codes'])} values · "
                     f"in {len(entry['versions'])} version(s)*")
         body.append("")
-        body.append("| Code |")
-        body.append("| :--- |")
-        for c in entry["codes"]:
-            body.append(f"| `{c}` |")
+        # inline rather than one row per code: these are four-letter
+        # tokens, and a single-column table of them is mostly whitespace
+        body.append(" · ".join(f"`{c}`" for c in entry["codes"]))
+        body.append("")
+        body.append(f"*Appears in: {', '.join('`' + v + '`' for v in entry['versions'])}*")
         body.append("")
     fm = load_frontmatter(
         "message-spec-code-lists",
