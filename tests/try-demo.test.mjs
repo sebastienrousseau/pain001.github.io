@@ -4,7 +4,7 @@ import {
   ibanChecksumValid, ibanLengthValid, bicValid,
   sniffDelimiter, splitCsvLine, normaliseHeader, parseCsv,
   validateRecords, controlSum, toXml, xmlEscape,
-  errorReportCsv, decodeBuffer, SAMPLES, SCENARIOS,
+  errorReportCsv, decodeBuffer, SAMPLES, SCENARIOS, layerFor,
 } from "../static/js/try-demo.js";
 
 /* ==== IBAN vectors (published valid examples per country) ==== */
@@ -191,4 +191,45 @@ test("all samples parse and validate clean", () => {
     assert.equal(parsed.structural.length, 0, name);
     assert.deepEqual(validateRecords(parsed.rows), [], name);
   }
+});
+
+/* ==== Validation layers ====
+ * The layer of a finding is what the result summary reports, so it must
+ * be right: an "iso" finding is one the XSD would also catch, a "data"
+ * finding is one it would not. Getting these backwards would make the
+ * demo claim credit for checks the schema already does, or hide the
+ * checks that are actually the product's value.
+ */
+test("IBAN checksum failures are data-layer: the XSD accepts them", () => {
+  const csv = SAMPLES["sepa-sct"].csv.replace(/DE89370400440532013000/, "DE89370400440532013001");
+  const parsed = parseCsv(csv);
+  const findings = validateRecords(parsed.rows);
+  const iban = findings.find((f) => f.rule === "iban-checksum");
+  assert.ok(iban, "expected an iban-checksum finding");
+  assert.equal(iban.layer, "data",
+    "a mistyped IBAN digit is a valid string to a schema — it must not be reported as an ISO-layer finding");
+});
+
+test("missing required fields are iso-layer: the XSD would reject them too", () => {
+  const parsed = parseCsv("payment_id,payment_amount\nP1,100.00\n");
+  const findings = validateRecords(parsed.rows);
+  const req = findings.find((f) => f.rule === "required-field");
+  assert.ok(req, "expected a required-field finding");
+  assert.equal(req.layer, "iso");
+});
+
+test("every finding carries a layer", () => {
+  for (const key of Object.keys(SCENARIOS)) {
+    const csv = SCENARIOS[key].apply(SAMPLES["sepa-sct"].csv);
+    const parsed = parseCsv(csv);
+    const findings = parsed.structural.concat(validateRecords(parsed.rows || []));
+    for (const f of findings) {
+      assert.ok(["input", "iso", "data"].includes(f.layer),
+        `finding ${f.rule} has layer ${f.layer}`);
+    }
+  }
+});
+
+test("layerFor is total: unknown rules do not crash the summary", () => {
+  assert.equal(layerFor("not-a-real-rule"), "data");
 });

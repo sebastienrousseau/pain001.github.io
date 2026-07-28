@@ -37,7 +37,7 @@
 
     <script src="/_csp/6ccbbfb0b824e5f3.js" integrity="sha384-vD2D/DeQ7ybfwKVwsRoDzF6OdQbjm+gayKdOWKcqfqM76DP9CwfWMGtYvdpKSVJF" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/1ac40fd5c173dbef.css" integrity="sha384-s26i/i5+WFnoE3g+mRAi/2APB3ooE8MBfyu+e5TTATTu97n4vAjZORgWvNcnKlop" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/cdb7beb126abf17d.css" integrity="sha384-rmTePXam5Vkti4iBdWDPQisQLc12gRqEJPBaSUf5bie1qiq/rzhArrSREe203++n" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -242,6 +242,35 @@
           <section class="demo-panel" aria-labelledby="output-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">2</span><h2 id="output-heading">ผลการตรวจสอบ &amp; XML ที่สร้างขึ้น</h2></div>
             <p class="status" id="status" role="status">เพิ่มข้อมูลในขั้นตอนที่ 1 — การตรวจสอบทำงานโดยอัตโนมัติ</p>
+
+            <!-- Layered result summary. The last two rows never turn
+                 green: no local tool can know a bank's profile or its
+                 channel rules. Saying so on every run is the point. -->
+            <table class="layer-summary" id="layer-summary" hidden>
+              <caption>What was checked</caption>
+              <tbody>
+                <tr data-layer="iso">
+                  <th scope="row">ISO 20022 schema</th>
+                  <td class="layer-state" id="layer-state-iso">—</td>
+                </tr>
+                <tr data-layer="data">
+                  <th scope="row">Data quality <span class="layer-hint">(beyond the schema)</span></th>
+                  <td class="layer-state" id="layer-state-data">—</td>
+                </tr>
+                <tr data-layer="scheme">
+                  <th scope="row">Scheme rulebook</th>
+                  <td class="layer-state" id="layer-state-scheme">Not run in the browser — the CLI checks this with <code class="tt-mono">--scheme</code></td>
+                </tr>
+                <tr data-layer="bank">
+                  <th scope="row">Your bank&rsquo;s profile</th>
+                  <td class="layer-state">Not evaluated — Pain001 ships no bank profiles</td>
+                </tr>
+                <tr data-layer="channel">
+                  <th scope="row">Channel and eligibility</th>
+                  <td class="layer-state">Not evaluated — decided by your bank, not the file</td>
+                </tr>
+              </tbody>
+            </table>
             <div class="error-table-wrap" id="error-table-wrap" hidden>
               <table class="error-table">
                 <caption class="visually-hidden">ผลการตรวจสอบแยกตามแถวและคอลัมน์</caption>

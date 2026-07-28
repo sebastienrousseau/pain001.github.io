@@ -56,6 +56,8 @@ const els = {
   xsdBtn: $("xsd-btn"), xsdStatus: $("xsd-status"),
   xsdErrors: $("xsd-errors"), xsdHash: $("xsd-hash"),
   xsdProgress: $("xsd-progress"), xsdProgressBar: $("xsd-progress-bar"),
+  layerSummary: $("layer-summary"),
+  layerIso: $("layer-state-iso"), layerData: $("layer-state-data"),
 };
 
 const MAX_FILE_BYTES = 2 * 1024 * 1024;
@@ -72,6 +74,50 @@ function render() {
   els.fixBtn.hidden = !state.scenarioActive;
   els.xsdBtn.disabled = !hasXml || state.xsd === "running";
   els.xsdBtn.title = hasXml ? "" : t("Generate XML in step 2 first");
+}
+
+/* ==== Layered result summary ====
+ * Reports what each layer actually did on this run. The ISO row tracks
+ * two things: the fast pre-checks (always) and the authoritative XSD
+ * gate (on demand), so a clean pre-check never gets to claim the schema
+ * itself has passed. The bank and channel rows are static in the markup
+ * and never change — nothing local can evaluate them.
+ */
+function setLayerState(el, kind, text) {
+  if (!el) return;
+  el.className = "layer-state" + (kind ? " is-" + kind : "");
+  el.textContent = text;
+}
+
+function updateLayerSummary(findings) {
+  if (!els.layerSummary) return;
+  const shown = state.phase !== "empty";
+  els.layerSummary.hidden = !shown;
+  if (!shown) return;
+
+  const count = (layer) => findings.filter((f) => f.layer === layer).length;
+  const isoIssues = count("iso") + count("input");
+  const dataIssues = count("data");
+
+  // The XSD gate is authoritative; pre-checks only anticipate it.
+  if (state.xsdVerdict === "valid") {
+    setLayerState(els.layerIso, "pass",
+      t("Passed the official XSD"));
+  } else if (state.xsdVerdict === "invalid") {
+    setLayerState(els.layerIso, "fail",
+      t("Rejected by the official XSD"));
+  } else if (isoIssues > 0) {
+    setLayerState(els.layerIso, "fail",
+      t("{n} issue(s) the schema would reject", { n: isoIssues }));
+  } else {
+    setLayerState(els.layerIso, null,
+      t("Pre-checks passed — run the XSD gate below to prove it"));
+  }
+
+  setLayerState(els.layerData, dataIssues ? "fail" : "pass",
+    dataIssues
+      ? t("{n} issue(s) a schema would accept but a bank would not", { n: dataIssues })
+      : t("No identifier or format problems found"));
 }
 
 function showFindings(findings) {
@@ -115,6 +161,8 @@ function setXml(xml) {
 }
 
 function runValidation() {
+  // a previous XSD verdict does not apply to freshly edited data
+  state.xsdVerdict = null;
   const parsed = parseCsv(els.input.value);
   if (parsed.error) {
     state.phase = "invalid";
@@ -151,6 +199,7 @@ function runValidation() {
       new Date().toISOString().slice(0, 19)));
     prefetchEngine();
   }
+  updateLayerSummary(findings);   // after the phase is known
   render();
 }
 
@@ -388,10 +437,14 @@ els.xsdBtn.addEventListener("click", async () => {
       state.xsd = "valid";
       els.xsdStatus.className = "status pass";
       els.xsdStatus.textContent = t("✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).", { s: secs });
+      state.xsdVerdict = "valid";
+      updateLayerSummary(state.findings);
     } else {
       state.xsd = "invalid";
       els.xsdStatus.className = "status fail";
       els.xsdStatus.textContent = t("✗ Official schema rejected the document — {n} error(s) ({s}s).", { n: errs.length, s: secs });
+      state.xsdVerdict = "invalid";
+      updateLayerSummary(state.findings);
       for (const e of errs) {
         const li = document.createElement("li");
         li.textContent = e;

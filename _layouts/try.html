@@ -546,6 +546,34 @@
       .tt-inherit { font-family: inherit; }
       .fineprint-tight { margin: 0; }
 
+      /* Layered result summary. The "not evaluated" rows are permanent
+         and must not read as errors — neutral rule, never a fail colour. */
+      .layer-summary {
+        width: 100%; border-collapse: collapse; margin: 1.1rem 0 0;
+        font-size: 0.9rem;
+      }
+      .layer-summary caption {
+        text-align: left; font-weight: 650; color: var(--ink-soft);
+        padding-bottom: 0.5rem;
+      }
+      .layer-summary th, .layer-summary td {
+        text-align: left; padding: 0.55rem 0.7rem;
+        border-top: 1px solid var(--rule); vertical-align: top;
+      }
+      .layer-summary th { font-weight: 600; white-space: nowrap; }
+      .layer-hint { font-weight: 400; color: var(--ink-mute); }
+      .layer-state { color: var(--ink-soft); }
+      .layer-state.is-pass { color: var(--ok); font-weight: 650; }
+      .layer-state.is-fail { color: var(--bad); font-weight: 650; }
+      .layer-summary tr[data-layer="bank"] th,
+      .layer-summary tr[data-layer="channel"] th,
+      .layer-summary tr[data-layer="scheme"] th { color: var(--ink-mute); }
+      @media (max-width: 560px) {
+        .layer-summary th, .layer-summary td { display: block; padding: 0.3rem 0; }
+        .layer-summary th { border-top: 1px solid var(--rule); padding-top: 0.6rem; }
+        .layer-summary td { border-top: none; padding-bottom: 0.6rem; }
+      }
+
       /* Status strip — same facts bar as the homepage; HTML is injected
          by postbuild from the homepage strip so values cannot drift. */
       .status-strip {
@@ -757,6 +785,35 @@
           <section class="demo-panel" aria-labelledby="output-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">2</span><h2 id="output-heading">Validation result &amp; generated XML</h2></div>
             <p class="status" id="status" role="status">Add data in step 1 — validation runs automatically.</p>
+
+            <!-- Layered result summary. The last two rows never turn
+                 green: no local tool can know a bank's profile or its
+                 channel rules. Saying so on every run is the point. -->
+            <table class="layer-summary" id="layer-summary" hidden>
+              <caption>What was checked</caption>
+              <tbody>
+                <tr data-layer="iso">
+                  <th scope="row">ISO 20022 schema</th>
+                  <td class="layer-state" id="layer-state-iso">—</td>
+                </tr>
+                <tr data-layer="data">
+                  <th scope="row">Data quality <span class="layer-hint">(beyond the schema)</span></th>
+                  <td class="layer-state" id="layer-state-data">—</td>
+                </tr>
+                <tr data-layer="scheme">
+                  <th scope="row">Scheme rulebook</th>
+                  <td class="layer-state" id="layer-state-scheme">Not run in the browser — the CLI checks this with <code class="tt-mono">--scheme</code></td>
+                </tr>
+                <tr data-layer="bank">
+                  <th scope="row">Your bank&rsquo;s profile</th>
+                  <td class="layer-state">Not evaluated — Pain001 ships no bank profiles</td>
+                </tr>
+                <tr data-layer="channel">
+                  <th scope="row">Channel and eligibility</th>
+                  <td class="layer-state">Not evaluated — decided by your bank, not the file</td>
+                </tr>
+              </tbody>
+            </table>
             <div class="error-table-wrap" id="error-table-wrap" hidden>
               <table class="error-table">
                 <caption class="visually-hidden">Validation findings by row and column</caption>

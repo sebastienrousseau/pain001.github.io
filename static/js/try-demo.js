@@ -141,6 +141,7 @@ export function parseCsv(text) {
           { row: i, cells: cells.length, header: headers.length }),
         template: "row {row} has {cells} field(s), header has {header}",
         params: { row: i, cells: cells.length, header: headers.length },
+        layer: layerFor("row-shape"),
       });
       continue;
     }
@@ -159,6 +160,37 @@ export function parseCsv(text) {
 
 /* Fill "{x}" placeholders in a message template. Exported so the page
  * layer can re-fill translated templates with the same params. */
+/* Which validation layer each rule belongs to, for the layered result
+ * summary. The distinction matters and is the product's actual value:
+ *
+ *   "iso"   the XSD would also reject this — we just say so faster and
+ *           in plainer language than a schema parser does.
+ *   "data"  the XSD would ACCEPT this. A mistyped IBAN digit is a valid
+ *           string to a schema; the bank rejects it days later. These
+ *           are the findings that justify "before your bank does".
+ *   "input" the file could not be read as tabular data at all.
+ *
+ * Scheme rulebooks (SEPA, CBPR+) are not evaluated in the browser — the
+ * CLI does that with --scheme. The summary says so rather than implying
+ * a clean run means scheme-clean.
+ */
+export const RULE_LAYERS = {
+  "row-shape": "input",
+  "required-field": "iso",
+  "amount-format": "iso",
+  "amount-precision": "iso",
+  "currency-code": "iso",
+  "date-format": "iso",
+  "date-value": "iso",
+  "iban-length": "data",
+  "iban-checksum": "data",
+  "bic-structure": "data",
+};
+
+export function layerFor(rule) {
+  return RULE_LAYERS[rule] || "data";
+}
+
 export function fillTemplate(template, params) {
   return template.replace(/\{(\w+)\}/g, (m, k) =>
     params && k in params ? String(params[k]) : m);
@@ -168,7 +200,8 @@ export function validateRecords(rows) {
   const errors = [];
   const add = (row, column, rule, value, template, params) =>
     errors.push({ row, column, rule, value: String(value),
-      message: fillTemplate(template, params), template, params });
+      message: fillTemplate(template, params), template, params,
+      layer: layerFor(rule) });
 
   rows.forEach((rec, idx) => {
     const row = idx + 1;
