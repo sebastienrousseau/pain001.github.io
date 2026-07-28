@@ -19,6 +19,13 @@
     "http://127.0.0.1:8899/competitors-comparison/",
     "http://127.0.0.1:8899/contact/",
     "http://127.0.0.1:8899/fr/",
-    "http://127.0.0.1:8899/404/"
+    "http://127.0.0.1:8899/404/",
+
+    "http://127.0.0.1:8899/ar/try/",
+    "http://127.0.0.1:8899/fr/glossary/",
+    "http://127.0.0.1:8899/fr/executive-brief/",
+    "http://127.0.0.1:8899/pain002-reason-codes/",
+    "http://127.0.0.1:8899/message-specs/",
+    "http://127.0.0.1:8899/message-spec-pain.001.001.13/"
   ]
 }
