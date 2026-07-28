@@ -37,7 +37,7 @@
 
     <script src="/_csp/6ccbbfb0b824e5f3.js" integrity="sha384-vD2D/DeQ7ybfwKVwsRoDzF6OdQbjm+gayKdOWKcqfqM76DP9CwfWMGtYvdpKSVJF" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/33c6bbe347edc56d.css" integrity="sha384-hVfB6dzfKV49YMzbnalH5RnWI3NDf0rvQq8SPk130ZQWgQks6mTCnRo+9dhF74yl" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/1ac40fd5c173dbef.css" integrity="sha384-s26i/i5+WFnoE3g+mRAi/2APB3ooE8MBfyu+e5TTATTu97n4vAjZORgWvNcnKlop" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -262,10 +262,10 @@
 
           <section class="demo-panel" aria-labelledby="xsd-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">3</span><h2 id="xsd-heading">Chứng minh với XSD chính thức của ISO 20022</h2></div>
-            <p class="fineprint" style="margin: 0;">
+            <p class="fineprint fineprint-tight">
               Các bước 1–2 chạy những phép kiểm tra nhanh, viết thủ công. Bước này chạy bản thật: một môi trường
-              Python (qua WebAssembly) thực thi <code style="font-family: var(--type-mono);">xmlschema</code>
-              với lược đồ <code style="font-family: var(--type-mono);">pain.001.001.09</code> chính thức —
+              Python (qua WebAssembly) thực thi <code class="tt-mono">xmlschema</code>
+              với lược đồ <code class="tt-mono">pain.001.001.09</code> chính thức —
               cùng hạng mức kiểm tra mà CLI thực hiện. Engine ~13&nbsp;MB được phục vụ từ chính
               trang này và chỉ tải xuống một lần, khi bạn yêu cầu (nó bắt đầu tải ngầm ngay khi
               bước 2 tạo ra XML hợp lệ).
@@ -287,7 +287,7 @@
         <p class="fineprint" id="demo-fineprint">
           Mọi thứ trên trang này chạy trong trình duyệt của bạn — không có gì được tải lên, lưu trữ hay gửi đi đâu cả.
           Bản demo này triển khai một phần của pipeline (trường bắt buộc, IBAN mod-97, cấu trúc BIC, định dạng số tiền
-          và ngày tháng, tổng kiểm soát <code style="font-family: inherit;">NbOfTxs</code>/<code style="font-family: inherit;">CtrlSum</code> được tính lại). Bước 3 chạy cổng XSD chính thức ngay tại đây qua WebAssembly. Bộ công cụ đã cài đặt
+          và ngày tháng, tổng kiểm soát <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code> được tính lại). Bước 3 chạy cổng XSD chính thức ngay tại đây qua WebAssembly. Bộ công cụ đã cài đặt
           bổ sung kiểm tra JSON Schema và năm bộ quy tắc scheme —
           <a href="/installation/">cài đặt CLI</a> để có pipeline hoàn chỉnh.
         </p>

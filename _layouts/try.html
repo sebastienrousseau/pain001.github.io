@@ -542,6 +542,10 @@
         border-color: var(--rule-strong) !important;
       }
 
+      .tt-mono { font-family: var(--type-mono); }
+      .tt-inherit { font-family: inherit; }
+      .fineprint-tight { margin: 0; }
+
       /* Status strip — same facts bar as the homepage; HTML is injected
          by postbuild from the homepage strip so values cannot drift. */
       .status-strip {
@@ -773,10 +777,10 @@
 
           <section class="demo-panel" aria-labelledby="xsd-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">3</span><h2 id="xsd-heading">Prove it against the official ISO 20022 XSD</h2></div>
-            <p class="fineprint" style="margin: 0;">
+            <p class="fineprint fineprint-tight">
               Steps 1–2 run fast, hand-written checks. This step runs the genuine article: a Python
-              runtime (via WebAssembly) executing <code style="font-family: var(--type-mono);">xmlschema</code>
-              against the official <code style="font-family: var(--type-mono);">pain.001.001.09</code> schema —
+              runtime (via WebAssembly) executing <code class="tt-mono">xmlschema</code>
+              against the official <code class="tt-mono">pain.001.001.09</code> schema —
               the same class of validation the CLI performs. The ~13&nbsp;MB engine is served from this
               site and downloaded once, when you ask for it (it starts downloading quietly as soon as
               step 2 produces valid XML).
@@ -798,7 +802,7 @@
         <p class="fineprint" id="demo-fineprint">
           Everything on this page runs in your browser — nothing is uploaded, stored, or sent anywhere.
           This demo implements a subset of the pipeline (required fields, IBAN mod-97, BIC structure, amount
-          and date formats, recomputed <code style="font-family: inherit;">NbOfTxs</code>/<code style="font-family: inherit;">CtrlSum</code> control totals). Step 3 runs the official XSD gate right here via WebAssembly. The installed toolchain
+          and date formats, recomputed <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code> control totals). Step 3 runs the official XSD gate right here via WebAssembly. The installed toolchain
           adds JSON Schema validation and five scheme rulebooks on top —
           <a href="/installation/">install the CLI</a> for the complete pipeline.
         </p>

@@ -37,7 +37,7 @@
 
     <script src="/_csp/6ccbbfb0b824e5f3.js" integrity="sha384-vD2D/DeQ7ybfwKVwsRoDzF6OdQbjm+gayKdOWKcqfqM76DP9CwfWMGtYvdpKSVJF" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/33c6bbe347edc56d.css" integrity="sha384-hVfB6dzfKV49YMzbnalH5RnWI3NDf0rvQq8SPk130ZQWgQks6mTCnRo+9dhF74yl" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/1ac40fd5c173dbef.css" integrity="sha384-s26i/i5+WFnoE3g+mRAi/2APB3ooE8MBfyu+e5TTATTu97n4vAjZORgWvNcnKlop" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -262,10 +262,10 @@
 
           <section class="demo-panel" aria-labelledby="xsd-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">3</span><h2 id="xsd-heading">Convalida con l’XSD ufficiale ISO 20022</h2></div>
-            <p class="fineprint" style="margin: 0;">
+            <p class="fineprint fineprint-tight">
               I passaggi 1–2 eseguono controlli rapidi scritti a mano. Questo passaggio esegue l’originale: un runtime
-              Python (via WebAssembly) che esegue <code style="font-family: var(--type-mono);">xmlschema</code>
-              rispetto allo schema ufficiale <code style="font-family: var(--type-mono);">pain.001.001.09</code> —
+              Python (via WebAssembly) che esegue <code class="tt-mono">xmlschema</code>
+              rispetto allo schema ufficiale <code class="tt-mono">pain.001.001.09</code> —
               la stessa classe di validazione effettuata dalla CLI. Il motore di circa 13&nbsp;MB è servito da questo
               sito e viene scaricato una sola volta, su sua richiesta (il download parte silenziosamente non appena
               il passaggio 2 produce XML valido).
@@ -287,7 +287,7 @@
         <p class="fineprint" id="demo-fineprint">
           Tutto in questa pagina viene eseguito nel suo browser — nulla viene caricato, memorizzato o inviato altrove.
           Questa demo implementa un sottoinsieme della pipeline (campi obbligatori, IBAN mod-97, struttura BIC, formati
-          di importo e data, totali di controllo <code style="font-family: inherit;">NbOfTxs</code>/<code style="font-family: inherit;">CtrlSum</code> ricalcolati). Il passaggio 3 esegue il controllo XSD ufficiale direttamente qui via WebAssembly. La toolchain installata
+          di importo e data, totali di controllo <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code> ricalcolati). Il passaggio 3 esegue il controllo XSD ufficiale direttamente qui via WebAssembly. La toolchain installata
           aggiunge inoltre la validazione JSON Schema e cinque insiemi di regole di schema —
           <a href="/installation/">installi la CLI</a> per la pipeline completa.
         </p>

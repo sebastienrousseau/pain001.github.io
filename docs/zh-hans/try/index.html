@@ -37,7 +37,7 @@
 
     <script src="/_csp/6ccbbfb0b824e5f3.js" integrity="sha384-vD2D/DeQ7ybfwKVwsRoDzF6OdQbjm+gayKdOWKcqfqM76DP9CwfWMGtYvdpKSVJF" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/33c6bbe347edc56d.css" integrity="sha384-hVfB6dzfKV49YMzbnalH5RnWI3NDf0rvQq8SPk130ZQWgQks6mTCnRo+9dhF74yl" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/1ac40fd5c173dbef.css" integrity="sha384-s26i/i5+WFnoE3g+mRAi/2APB3ooE8MBfyu+e5TTATTu97n4vAjZORgWvNcnKlop" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -262,10 +262,10 @@
 
           <section class="demo-panel" aria-labelledby="xsd-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">3</span><h2 id="xsd-heading">依据官方 ISO 20022 XSD 进行验证</h2></div>
-            <p class="fineprint" style="margin: 0;">
+            <p class="fineprint fineprint-tight">
               第 1–2 步运行的是快速的手写检查。此步骤运行的则是货真价实的验证：一个 Python
-              运行时（通过 WebAssembly）执行 <code style="font-family: var(--type-mono);">xmlschema</code>
-              ，依据官方 <code style="font-family: var(--type-mono);">pain.001.001.09</code> Schema 进行验证——
+              运行时（通过 WebAssembly）执行 <code class="tt-mono">xmlschema</code>
+              ，依据官方 <code class="tt-mono">pain.001.001.09</code> Schema 进行验证——
               与 CLI 所执行的验证属于同一级别。约 13&nbsp;MB 的引擎由本
               站点提供，仅在您请求时下载一次（当第 2 步生成有效 XML 后，
               它便会开始静默下载）。
@@ -287,7 +287,7 @@
         <p class="fineprint" id="demo-fineprint">
           本页面的一切都在您的浏览器中运行——不会上传、存储或向任何地方发送任何数据。
           本演示实现了流水线的一个子集（必填字段、IBAN mod-97、BIC 结构、金额
-          与日期格式、重新计算的 <code style="font-family: inherit;">NbOfTxs</code>/<code style="font-family: inherit;">CtrlSum</code> 控制总额）。第 3 步通过 WebAssembly 就地运行官方 XSD 关卡。安装版工具链
+          与日期格式、重新计算的 <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code> 控制总额）。第 3 步通过 WebAssembly 就地运行官方 XSD 关卡。安装版工具链
           在此之上还提供 JSON Schema 验证和五套方案规则手册——
           <a href="/installation/">安装 CLI</a> 以获得完整流水线。
         </p>

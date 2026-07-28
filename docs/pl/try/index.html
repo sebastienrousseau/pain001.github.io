@@ -37,7 +37,7 @@
 
     <script src="/_csp/6ccbbfb0b824e5f3.js" integrity="sha384-vD2D/DeQ7ybfwKVwsRoDzF6OdQbjm+gayKdOWKcqfqM76DP9CwfWMGtYvdpKSVJF" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/33c6bbe347edc56d.css" integrity="sha384-hVfB6dzfKV49YMzbnalH5RnWI3NDf0rvQq8SPk130ZQWgQks6mTCnRo+9dhF74yl" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/1ac40fd5c173dbef.css" integrity="sha384-s26i/i5+WFnoE3g+mRAi/2APB3ooE8MBfyu+e5TTATTu97n4vAjZORgWvNcnKlop" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -262,10 +262,10 @@
 
           <section class="demo-panel" aria-labelledby="xsd-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">3</span><h2 id="xsd-heading">Zweryfikuj względem oficjalnego XSD ISO 20022</h2></div>
-            <p class="fineprint" style="margin: 0;">
+            <p class="fineprint fineprint-tight">
               Kroki 1–2 wykonują szybkie, ręcznie napisane kontrole. Ten krok uruchamia oryginał: środowisko
-              Pythona (przez WebAssembly) wykonujące <code style="font-family: var(--type-mono);">xmlschema</code>
-              względem oficjalnego <code style="font-family: var(--type-mono);">pain.001.001.09</code> schematu —
+              Pythona (przez WebAssembly) wykonujące <code class="tt-mono">xmlschema</code>
+              względem oficjalnego <code class="tt-mono">pain.001.001.09</code> schematu —
               tę samą klasę walidacji, którą wykonuje CLI. Silnik o rozmiarze ~13&nbsp;MB jest serwowany z tej
               witryny i pobierany raz, na żądanie (pobieranie rozpoczyna się dyskretnie, gdy tylko
               krok 2 wygeneruje poprawny XML).
@@ -287,7 +287,7 @@
         <p class="fineprint" id="demo-fineprint">
           Wszystko na tej stronie działa w przeglądarce — nic nie jest przesyłane, zapisywane ani nigdzie wysyłane.
           To demo implementuje podzbiór potoku (pola wymagane, IBAN mod-97, struktura BIC, formaty kwot
-          i dat, przeliczone <code style="font-family: inherit;">NbOfTxs</code>/<code style="font-family: inherit;">CtrlSum</code> sumy kontrolne). Krok 3 uruchamia oficjalną bramkę XSD bezpośrednio tutaj, przez WebAssembly. Zainstalowany zestaw narzędzi
+          i dat, przeliczone <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code> sumy kontrolne). Krok 3 uruchamia oficjalną bramkę XSD bezpośrednio tutaj, przez WebAssembly. Zainstalowany zestaw narzędzi
           dodaje do tego walidację JSON Schema i pięć zbiorów reguł schematów płatności —
           <a href="/installation/">zainstaluj CLI</a>, aby uzyskać pełny potok.
         </p>

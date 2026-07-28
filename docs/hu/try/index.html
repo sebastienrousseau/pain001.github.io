@@ -37,7 +37,7 @@
 
     <script src="/_csp/6ccbbfb0b824e5f3.js" integrity="sha384-vD2D/DeQ7ybfwKVwsRoDzF6OdQbjm+gayKdOWKcqfqM76DP9CwfWMGtYvdpKSVJF" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/33c6bbe347edc56d.css" integrity="sha384-hVfB6dzfKV49YMzbnalH5RnWI3NDf0rvQq8SPk130ZQWgQks6mTCnRo+9dhF74yl" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/1ac40fd5c173dbef.css" integrity="sha384-s26i/i5+WFnoE3g+mRAi/2APB3ooE8MBfyu+e5TTATTu97n4vAjZORgWvNcnKlop" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -262,10 +262,10 @@
 
           <section class="demo-panel" aria-labelledby="xsd-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">3</span><h2 id="xsd-heading">Igazolja a hivatalos ISO 20022 XSD alapján</h2></div>
-            <p class="fineprint" style="margin: 0;">
+            <p class="fineprint fineprint-tight">
               Az 1–2. lépés gyors, kézzel írt ellenőrzéseket futtat. Ez a lépés már az igazit futtatja: egy Python
-              futtatókörnyezet (WebAssembly révén) futtatja a következőt: <code style="font-family: var(--type-mono);">xmlschema</code>
-              a hivatalos <code style="font-family: var(--type-mono);">pain.001.001.09</code> séma ellenében —
+              futtatókörnyezet (WebAssembly révén) futtatja a következőt: <code class="tt-mono">xmlschema</code>
+              a hivatalos <code class="tt-mono">pain.001.001.09</code> séma ellenében —
               ugyanaz az ellenőrzési kategória, amelyet a CLI is elvégez. A ~13&nbsp;MB méretű motort ez az
               oldal szolgálja ki, és csak egyszer, akkor töltődik le, amikor Ön kéri (a letöltés csendben megkezdődik, amint
               a 2. lépés érvényes XML-t állít elő).
@@ -287,7 +287,7 @@
         <p class="fineprint" id="demo-fineprint">
           Ezen az oldalon minden a böngészőjében fut — semmi sem kerül feltöltésre, tárolásra vagy továbbításra.
           Ez a bemutató a folyamat egy részhalmazát valósítja meg (kötelező mezők, IBAN mod-97, BIC-szerkezet, összeg-
-          és dátumformátumok, újraszámított <code style="font-family: inherit;">NbOfTxs</code>/<code style="font-family: inherit;">CtrlSum</code> kontrollösszegek). A 3. lépés a hivatalos XSD-kaput futtatja, közvetlenül itt, WebAssembly révén. A telepített eszközlánc
+          és dátumformátumok, újraszámított <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code> kontrollösszegek). A 3. lépés a hivatalos XSD-kaput futtatja, közvetlenül itt, WebAssembly révén. A telepített eszközlánc
           ezenfelül JSON Schema-ellenőrzéssel és öt sémaszabálykönyvvel egészíti ki mindezt —
           a teljes folyamathoz <a href="/installation/">telepítse a CLI-t</a>.
         </p>

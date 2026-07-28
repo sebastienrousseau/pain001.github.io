@@ -359,6 +359,7 @@
       .section-sub { color: var(--ink-soft); font-size: 1.12rem; max-width: 58ch; }
       .section-sub a { color: var(--link); }
 
+      .flow-step a { color: var(--link); }
       .status-strip {
         background: var(--bg-alt);
         border-bottom: 1px solid var(--rule);
@@ -1047,11 +1048,11 @@ pain001 -t pain.001.001.09 -d payments.csv --scheme sepa-sct --dry-run</code></p
             <p class="section-sub">Pain001 is the control layer between your source data and your bank channel — it begins at import and ends with the bank's answer, explained.</p>
           </div>
           <div class="flow">
-            <div class="flow-step"><h3>Import</h3><p>CSV, Excel, SQLite, JSON, Parquet, or legacy SWIFT MT101 — <a href="/compatibility/" style="color: var(--link);">every format and gate</a>.</p></div>
+            <div class="flow-step"><h3>Import</h3><p>CSV, Excel, SQLite, JSON, Parquet, or legacy SWIFT MT101 — <a href="/compatibility/">every format and gate</a>.</p></div>
             <div class="flow-step"><h3>Normalise</h3><p>Field aliases mapped, IBANs and BICs checked, amounts made exact decimals, charset contained.</p></div>
             <div class="flow-step"><h3>Validate</h3><p>JSON Schema per record, scheme rulebooks, then the official ISO 20022 XSD — a hard gate, not an option.</p></div>
             <div class="flow-step"><h3>Generate</h3><p>Bank-ready <code>pain.001</code> / <code>pain.008</code> XML with recomputed control totals.</p></div>
-            <div class="flow-step"><h3>Explain</h3><p>The bank's <code>pain.002</code> answer parsed, <a href="/pain002-reason-codes/" style="color: var(--link);">reason codes decoded</a>, camt.053 reconciled.</p></div>
+            <div class="flow-step"><h3>Explain</h3><p>The bank's <code>pain.002</code> answer parsed, <a href="/pain002-reason-codes/">reason codes decoded</a>, camt.053 reconciled.</p></div>
           </div>
         </div>
       </section>
