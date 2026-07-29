@@ -225,7 +225,13 @@ function probe() {
       for (const [w, h] of VIEWPORTS) {
         try {
           await page.setViewport({ width: w, height: h, deviceScaleFactor: 1 });
-          await page.goto(ORIGIN + path, { waitUntil: "domcontentloaded", timeout: 30000 });
+          // "load", not "domcontentloaded": DCL does not wait for
+          // stylesheets. On the CI runner the tag page was measured
+          // before /css/taxonomy.css applied and reported a bogus 39px
+          // overflow with an 8px browser-default gutter. Waiting for
+          // fonts too, since ch-based measures depend on them.
+          await page.goto(ORIGIN + path, { waitUntil: "load", timeout: 30000 });
+          await page.evaluate(() => document.fonts && document.fonts.ready);
           const r = await page.evaluate(probe);
           fs.appendFileSync(OUT, JSON.stringify({ path, vw: w, ...r }) + "\n");
         } catch (e) {
