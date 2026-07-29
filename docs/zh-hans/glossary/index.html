@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -207,7 +207,7 @@
 <p><strong>收款人核验（Verification of Payee，VoP）。</strong>自 2025 年 10 月 9 日起适用于所有 SEPA 贷记转账的欧盟强制性姓名/IBAN 匹配检查。由 PSP 在执行时完成；收款人数据是否干净决定了能否匹配。</p>
 <h2 id="identifiers-and-data">标识符与数据<a class="heading-anchor" href="#identifiers-and-data" aria-label="跳转到章节：标识符与数据">#</a></h2>
 <p><strong>IBAN。</strong>国际银行账号（ISO 13616），通过 mod-97 校验和自我校验——因此哪怕只有一位数字换位，也能在提交<em>之前</em>被发现。</p>
-<p><strong>BIC / BICFI。</strong>金融机构的 ISO 9362 业务标识代码。该 XML 元素在 <code>pain.001.001.03</code> 中是 <code><BIC></code>，但从版本 9 起改为 <code><BICFI></code>——这一改名在版本升级中造成过真实的拒收。</p>
+<p><strong>BIC / BICFI。</strong>金融机构的 ISO 9362 业务标识代码。该 XML 元素在 <code>pain.001.001.03</code> 中是 <code>&lt;BIC&gt;</code>，但从版本 9 起改为 <code>&lt;BICFI&gt;</code>——这一改名在版本升级中造成过真实的拒收。</p>
 <p><strong>LEI。</strong>法人识别编码（ISO 17442）——20 位全球企业标识符。目前已有超过 300 万个处于活跃状态，且监管机构在支付中日益强制要求使用。</p>
 <p><strong>UETR。</strong>端到端唯一交易参考号（Unique End-to-end Transaction Reference）——让一笔支付可在代理行链条中被全程追踪的 UUID（SWIFT gpi）。</p>
 <p><strong>结构化 / 混合地址。</strong>以独立 XML 元素（街道、城镇、邮编、国家）表示的邮政地址，相对于自由文本行。自 2026 年 11 月 14 日起，CBPR+ 拒绝完全非结构化的地址；<em>混合</em>形式——结构化的城镇与国家，外加最多两行 70 字符的地址行——仍然有效。</p>

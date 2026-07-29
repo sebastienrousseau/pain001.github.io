@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -215,11 +215,11 @@
 <td data-label="Purpose" class="text-left">Lista las 11 definiciones de mensaje admitidas.</td>
 </tr>
 <tr>
-<td data-label="Subcommand" class="text-left"><code>inspect <type> [--json]</code></td>
+<td data-label="Subcommand" class="text-left"><code>inspect &lt;type&gt; [--json]</code></td>
 <td data-label="Purpose" class="text-left">Muestra los campos obligatorios y opcionales de un tipo de mensaje.</td>
 </tr>
 <tr>
-<td data-label="Subcommand" class="text-left"><code>init <type> [-o DIR]</code></td>
+<td data-label="Subcommand" class="text-left"><code>init &lt;type&gt; [-o DIR]</code></td>
 <td data-label="Purpose" class="text-left">Genera una plantilla CSV inicial para un tipo de mensaje.</td>
 </tr>
 <tr>
@@ -237,7 +237,7 @@
 </tbody>
 </table></div>
 <h3>Opciones de <code>generate</code></h3>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th>Opción</th>
@@ -246,23 +246,23 @@
 </thead>
 <tbody>
 <tr>
-<td data-label="Flag" class="text-left"><code>-t, --xml-message-type <TYPE></code></td>
+<td data-label="Flag" class="text-left"><code>-t, --xml-message-type &lt;TYPE&gt;</code></td>
 <td data-label="Description" class="text-left">Definición de mensaje, p. ej. <code>pain.001.001.09</code>.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-d, --data <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-d, --data &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">Datos de entrada: <code>.csv</code>, <code>.json</code>, <code>.jsonl</code>, <code>.db</code> / <code>.sqlite</code>, <code>.parquet</code>, o <code>.gpg</code> / <code>.asc</code> cifrados con PGP.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-o, --output-dir <DIR></code></td>
+<td data-label="Flag" class="text-left"><code>-o, --output-dir &lt;DIR&gt;</code></td>
 <td data-label="Description" class="text-left">Directorio que recibe el XML generado.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-m, --template <FILE></code> / <code>-s, --schema <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-m, --template &lt;FILE&gt;</code> / <code>-s, --schema &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">Sustituye la plantilla Jinja2 o el esquema XSD incluidos.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-c, --config <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-c, --config &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">Carga valores por defecto desde un perfil de configuración (<code>--profile</code>, <code>--show-config</code>).</td>
 </tr>
 <tr>
@@ -270,7 +270,7 @@
 <td data-label="Description" class="text-left">Valida la entrada contra el JSON Schema, el XSD y el reglamento del esquema sin escribir salida.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>--scheme <NAME></code></td>
+<td data-label="Flag" class="text-left"><code>--scheme &lt;NAME&gt;</code></td>
 <td data-label="Description" class="text-left">Aplica un reglamento de esquema: <code>sepa-sct</code>, <code>sepa-inst</code>, <code>sepa-sdd</code>, <code>sepa-b2b</code> o <code>xborder-ct</code>.</td>
 </tr>
 <tr>
@@ -278,7 +278,7 @@
 <td data-label="Description" class="text-left">Informa de cada regla del esquema superada o incumplida, en formato legible por humanos o por máquinas.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size <N></code></td>
+<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size &lt;N&gt;</code></td>
 <td data-label="Description" class="text-left">Procesamiento por bloques con memoria acotada para lotes grandes (por defecto 1,000 transacciones por bloque; cada bloque se convierte en su propio archivo XML con <code>NbOfTxs</code> y <code>CtrlSum</code> recalculados).</td>
 </tr>
 <tr>
@@ -286,7 +286,7 @@
 <td data-label="Description" class="text-left">Emite métricas de ejecución legibles por máquinas para pipelines de observabilidad.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Los códigos de salida son aptos para CI: <code>0</code> éxito, <code>1</code> fallo de validación, <code>2</code> error de uso.</p>
 <hr />
 <h2 id="2-python-api">2. API de Python<a class="heading-anchor" href="#2-python-api" aria-label="Enlace a la sección: 2. API de Python">#</a></h2>
@@ -313,7 +313,7 @@ process_files(
 <pre><code class="language-bash">pip install "pain001[api]"
 pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <p>Todos los endpoints están montados bajo <code>/api/v1</code> (con un alias sin versión <code>/api</code>):</p>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th>Método y ruta</th>
@@ -354,7 +354,7 @@ pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <td data-label="Purpose" class="text-left">Métricas de Prometheus.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>La documentación interactiva se sirve en <code>/api/docs</code> (Swagger UI), <code>/api/redoc</code> y <code>/api/reference</code> (Scalar), con el documento OpenAPI en <code>/openapi.json</code>.</p>
 <hr />
 <h2 id="4-input-normalisation">4. Normalización de entradas<a class="heading-anchor" href="#4-input-normalisation" aria-label="Enlace a la sección: 4. Normalización de entradas">#</a></h2>

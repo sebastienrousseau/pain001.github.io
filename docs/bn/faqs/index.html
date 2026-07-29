@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -199,7 +199,7 @@
 <p><strong>আমরা এখনও MT101 ফাইল পাঠাই। মাইগ্রেশন কতটা জরুরি?</strong></p>
 <p>জরুরি। ক্রস-বর্ডার আন্তঃব্যাংক পেমেন্ট নির্দেশনার জন্য SWIFT নভেম্বর 2025-এ MT ক্যাটাগরি 1, 2 ও 9 মেসেজ প্রত্যাহার করেছে; যেসব কর্পোরেট চ্যানেল এখনও MT গ্রহণ করে, তারা প্রতিটি ব্যাংকের নিজস্ব বিবেচনায় এবং ধার করা সময়ের উপর ভর করেই তা করে। <a href="/pain001-loader-mt101/">MT101 লোডার</a> কিছুই পুনরায় টাইপ না করে বিদ্যমান MT101 প্রবাহকে ভ্যালিডেটেড <code>pain.001</code>-এ রূপান্তর করে।</p>
 <p><strong>নভেম্বর 2026-এর স্ট্রাকচার্ড অ্যাড্রেস সময়সীমা আমাদের জন্য কী অর্থ বহন করে?</strong></p>
-<p>নভেম্বর 2026-এর শেষ থেকে CBPR+ ক্রস-বর্ডার পেমেন্টে সম্পূর্ণ অস্ট্রাকচার্ড ডাক ঠিকানা আর গ্রহণযোগ্য নয়; ঠিকানা অবশ্যই স্ট্রাকচার্ড বা হাইব্রিড হতে হবে — মুক্ত-পাঠ্য লাইনের বদলে শহর (<code><TwnNm></code>) ও দেশ (<code><Ctry></code>)-এর মতো পৃথক উপাদান। আপনার মাস্টার ডেটায় ঠিকানা যদি অখণ্ড টেক্সট হিসেবে থাকে, তবে কাজটি আপনার ডেটায়, ব্যাংক সংযোগে নয়। সেখান থেকেই শুরু করুন। <a href="/2026-iso20022-migration-trends/">2026 ব্রিফিং</a>-এ সময়রেখা বিস্তারিতভাবে রয়েছে।</p>
+<p>নভেম্বর 2026-এর শেষ থেকে CBPR+ ক্রস-বর্ডার পেমেন্টে সম্পূর্ণ অস্ট্রাকচার্ড ডাক ঠিকানা আর গ্রহণযোগ্য নয়; ঠিকানা অবশ্যই স্ট্রাকচার্ড বা হাইব্রিড হতে হবে — মুক্ত-পাঠ্য লাইনের বদলে শহর (<code>&lt;TwnNm&gt;</code>) ও দেশ (<code>&lt;Ctry&gt;</code>)-এর মতো পৃথক উপাদান। আপনার মাস্টার ডেটায় ঠিকানা যদি অখণ্ড টেক্সট হিসেবে থাকে, তবে কাজটি আপনার ডেটায়, ব্যাংক সংযোগে নয়। সেখান থেকেই শুরু করুন। <a href="/2026-iso20022-migration-trends/">2026 ব্রিফিং</a>-এ সময়রেখা বিস্তারিতভাবে রয়েছে।</p>
 <p><strong>Pain001-এর খরচ কত?</strong></p>
 <p>কিছুই না। কোরটি দ্বৈত-লাইসেন্সপ্রাপ্ত Apache-2.0 / MIT; সহযোগী প্যাকেজগুলি Apache-2.0। বাণিজ্যিক ব্যবহার, পরিমার্জন ও পুনর্বণ্টন সবই অনুমোদিত। মাত্রা বোঝাতে: SWIFT-এর ট্রান্সলেশন SDK-এর তালিকাভুক্ত মূল্যই বছরে €10,000–30,000।</p>
 <hr />
@@ -209,7 +209,7 @@
 <p><strong>কিছু জেনারেট না করেই কি আমরা একটি ফাইল ভ্যালিডেট করতে পারি?</strong></p>
 <p>হ্যাঁ — <code>pain001 --dry-run</code> (অথবা <code>validate</code> সাবকমান্ড, অথবা <code>POST /api/v1/validate</code>)। এক্সিট কোড <code>0</code> মানে বৈধ; <code>1</code> মানে ফিল্ড-স্তরের ত্রুটিসহ ভ্যালিডেশন ব্যর্থ হয়েছে। এটি CI-তে বা জমা দেওয়ার আগের চেকলিস্টে যুক্ত করুন।</p>
 <p><strong>কোন SEPA রুলবুকগুলি অন্তর্ভুক্ত?</strong></p>
-<p>পাঁচটি স্কিম রুলবুক অন্তর্নির্মিতভাবে আসে: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) এবং ক্রস-বর্ডার ক্রেডিট ট্রান্সফার (<code>xborder-ct</code>)। উত্তীর্ণ বা ব্যর্থ প্রতিটি নিয়ম দেখতে <code>--scheme <name> --explain</code> ব্যবহার করুন।</p>
+<p>পাঁচটি স্কিম রুলবুক অন্তর্নির্মিতভাবে আসে: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) এবং ক্রস-বর্ডার ক্রেডিট ট্রান্সফার (<code>xborder-ct</code>)। উত্তীর্ণ বা ব্যর্থ প্রতিটি নিয়ম দেখতে <code>--scheme &lt;name&gt; --explain</code> ব্যবহার করুন।</p>
 <p><strong>আমাদের ডেটা Excel-এ থাকে। সমস্যাটা কোথায়?</strong></p>
 <p>Excel নীরবে IBAN-সদৃশ স্ট্রিংকে সংখ্যায় রূপান্তরিত করে। <a href="/pain001-loader-xlsx/">Excel লোডার</a> সরাসরি <code>.xlsx</code>/<code>.xlsm</code> পড়ে এবং IBAN কলামে সাংখ্যিক সেল থাকলে সঙ্গে সঙ্গে থেমে যায় — বিকৃতিটি ব্যাংকে নয়, লোড করার সময়েই ধরা পড়ে।</p>
 <p><strong>500,000-সারির ব্যাচ এটি কীভাবে সামলায়?</strong></p>

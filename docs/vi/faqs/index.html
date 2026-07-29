@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -199,7 +199,7 @@
 <p><strong>Chúng tôi vẫn gửi tệp MT101. Việc di trú cấp bách đến mức nào?</strong></p>
 <p>Rất cấp bách. SWIFT đã ngừng các thông điệp MT nhóm 1, 2 và 9 cho chỉ thị thanh toán liên ngân hàng xuyên biên giới vào tháng 11 năm 2025; các kênh doanh nghiệp còn chấp nhận MT chỉ theo quyết định riêng của từng ngân hàng và trong thời gian còn lại rất ngắn. <a href="/pain001-loader-mt101/">Bộ nạp MT101</a> chuyển các luồng MT101 hiện có thành <code>pain.001</code> đã xác thực mà không phải nhập lại bất cứ dữ liệu nào.</p>
 <p><strong>Hạn chót địa chỉ có cấu trúc tháng 11 năm 2026 có ý nghĩa gì với chúng tôi?</strong></p>
-<p>Từ cuối tháng 11 năm 2026, địa chỉ bưu chính hoàn toàn phi cấu trúc không còn được chấp nhận trong thanh toán xuyên biên giới CBPR+; địa chỉ phải có cấu trúc hoặc dạng lai — các phần tử riêng biệt như thành phố (<code><TwnNm></code>) và quốc gia (<code><Ctry></code>) thay cho các dòng văn bản tự do. Nếu dữ liệu chủ của quý vị lưu địa chỉ dưới dạng khối văn bản, việc cần làm nằm ở dữ liệu của quý vị, không phải ở kết nối ngân hàng. Hãy bắt đầu từ đó. <a href="/2026-iso20022-migration-trends/">Bản tóm lược 2026</a> trình bày chi tiết lộ trình.</p>
+<p>Từ cuối tháng 11 năm 2026, địa chỉ bưu chính hoàn toàn phi cấu trúc không còn được chấp nhận trong thanh toán xuyên biên giới CBPR+; địa chỉ phải có cấu trúc hoặc dạng lai — các phần tử riêng biệt như thành phố (<code>&lt;TwnNm&gt;</code>) và quốc gia (<code>&lt;Ctry&gt;</code>) thay cho các dòng văn bản tự do. Nếu dữ liệu chủ của quý vị lưu địa chỉ dưới dạng khối văn bản, việc cần làm nằm ở dữ liệu của quý vị, không phải ở kết nối ngân hàng. Hãy bắt đầu từ đó. <a href="/2026-iso20022-migration-trends/">Bản tóm lược 2026</a> trình bày chi tiết lộ trình.</p>
 <p><strong>Pain001 có giá bao nhiêu?</strong></p>
 <p>Không mất phí. Phần lõi được cấp phép kép Apache-2.0 / MIT; các gói đồng hành theo Apache-2.0. Sử dụng thương mại, chỉnh sửa và phân phối lại đều được phép. Để hình dung quy mô, riêng SDK dịch chuyển đổi của SWIFT đã niêm yết ở mức €10,000–30,000 mỗi năm.</p>
 <hr />
@@ -209,7 +209,7 @@
 <p><strong>Chúng tôi có thể xác thực một tệp mà không tạo ra gì không?</strong></p>
 <p>Có — <code>pain001 --dry-run</code> (hoặc lệnh con <code>validate</code>, hoặc <code>POST /api/v1/validate</code>). Mã thoát <code>0</code> nghĩa là hợp lệ; <code>1</code> nghĩa là xác thực thất bại kèm lỗi ở cấp trường. Hãy đưa vào CI hoặc danh sách kiểm tra trước khi nộp.</p>
 <p><strong>Những bộ quy tắc SEPA nào được hỗ trợ?</strong></p>
-<p>Năm bộ quy tắc scheme được tích hợp sẵn: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) và chuyển khoản tín dụng xuyên biên giới (<code>xborder-ct</code>). Dùng <code>--scheme <name> --explain</code> để xem từng quy tắc đạt hay không đạt.</p>
+<p>Năm bộ quy tắc scheme được tích hợp sẵn: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) và chuyển khoản tín dụng xuyên biên giới (<code>xborder-ct</code>). Dùng <code>--scheme &lt;name&gt; --explain</code> để xem từng quy tắc đạt hay không đạt.</p>
 <p><strong>Dữ liệu của chúng tôi nằm trong Excel. Có điều gì cần lưu ý?</strong></p>
 <p>Excel âm thầm chuyển các chuỗi giống IBAN thành số. <a href="/pain001-loader-xlsx/">Bộ nạp Excel</a> đọc trực tiếp <code>.xlsx</code>/<code>.xlsm</code> và dừng ngay nếu cột IBAN chứa ô kiểu số — lỗi hỏng dữ liệu được phát hiện lúc nạp, không phải tại ngân hàng.</p>
 <p><strong>Công cụ xử lý một lô 500,000 dòng như thế nào?</strong></p>

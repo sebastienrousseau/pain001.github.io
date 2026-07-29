@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -215,11 +215,11 @@
 <td data-label="Purpose" class="text-left">عرض جميع تعريفات الرسائل المدعومة الـ 11.</td>
 </tr>
 <tr>
-<td data-label="Subcommand" class="text-left"><code>inspect <type> [--json]</code></td>
+<td data-label="Subcommand" class="text-left"><code>inspect &lt;type&gt; [--json]</code></td>
 <td data-label="Purpose" class="text-left">عرض الحقول الإلزامية والاختيارية لنوع رسالة.</td>
 </tr>
 <tr>
-<td data-label="Subcommand" class="text-left"><code>init <type> [-o DIR]</code></td>
+<td data-label="Subcommand" class="text-left"><code>init &lt;type&gt; [-o DIR]</code></td>
 <td data-label="Purpose" class="text-left">إنشاء قالب CSV مبدئي لنوع رسالة.</td>
 </tr>
 <tr>
@@ -237,7 +237,7 @@
 </tbody>
 </table></div>
 <h3>خيارات <code>generate</code></h3>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th>الخيار</th>
@@ -246,23 +246,23 @@
 </thead>
 <tbody>
 <tr>
-<td data-label="Flag" class="text-left"><code>-t, --xml-message-type <TYPE></code></td>
+<td data-label="Flag" class="text-left"><code>-t, --xml-message-type &lt;TYPE&gt;</code></td>
 <td data-label="Description" class="text-left">تعريف الرسالة، مثل <code>pain.001.001.09</code>.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-d, --data <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-d, --data &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">بيانات الإدخال: <code>.csv</code> أو <code>.json</code> أو <code>.jsonl</code> أو <code>.db</code> / <code>.sqlite</code> أو <code>.parquet</code> أو ملفات مشفّرة بـ PGP بامتداد <code>.gpg</code> / <code>.asc</code>.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-o, --output-dir <DIR></code></td>
+<td data-label="Flag" class="text-left"><code>-o, --output-dir &lt;DIR&gt;</code></td>
 <td data-label="Description" class="text-left">الدليل الذي يستقبل ملف XML المولَّد.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-m, --template <FILE></code> / <code>-s, --schema <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-m, --template &lt;FILE&gt;</code> / <code>-s, --schema &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">استبدال قالب Jinja2 أو مخطط XSD المرفقَين.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-c, --config <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-c, --config &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">تحميل القيم الافتراضية من ملف تعريف إعدادات (<code>--profile</code>، <code>--show-config</code>).</td>
 </tr>
 <tr>
@@ -270,7 +270,7 @@
 <td data-label="Description" class="text-left">التحقق من الإدخال وفق JSON Schema وXSD وكتاب قواعد النظام دون كتابة مخرجات.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>--scheme <NAME></code></td>
+<td data-label="Flag" class="text-left"><code>--scheme &lt;NAME&gt;</code></td>
 <td data-label="Description" class="text-left">فرض كتاب قواعد نظام: <code>sepa-sct</code> أو <code>sepa-inst</code> أو <code>sepa-sdd</code> أو <code>sepa-b2b</code> أو <code>xborder-ct</code>.</td>
 </tr>
 <tr>
@@ -278,7 +278,7 @@
 <td data-label="Description" class="text-left">الإبلاغ عن كل قاعدة نظام نجحت أو أخفقت، بصيغة مقروءة بشريًا أو آليًا.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size <N></code></td>
+<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size &lt;N&gt;</code></td>
 <td data-label="Description" class="text-left">معالجة مجزّأة محدودة الذاكرة للدفعات الكبيرة (افتراضيًا 1,000 معاملة لكل جزء؛ يصبح كل جزء ملف XML مستقلًا بقيم <code>NbOfTxs</code> و<code>CtrlSum</code> معاد حسابها).</td>
 </tr>
 <tr>
@@ -286,7 +286,7 @@
 <td data-label="Description" class="text-left">إصدار مقاييس تشغيل مقروءة آليًا لخطوط المراقبة.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>رموز الخروج ملائمة لأنظمة CI: <code>0</code> نجاح، <code>1</code> إخفاق في التحقق، <code>2</code> خطأ في الاستخدام.</p>
 <hr />
 <h2 id="2-python-api">2. واجهة Python البرمجية<a class="heading-anchor" href="#2-python-api" aria-label="رابط إلى القسم: 2. واجهة Python البرمجية">#</a></h2>
@@ -313,7 +313,7 @@ process_files(
 <pre><code class="language-bash">pip install "pain001[api]"
 pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <p>جميع نقاط النهاية مركّبة تحت <code>/api/v1</code> (مع مسار بديل بلا رقم إصدار <code>/api</code>):</p>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th>الطريقة والمسار</th>
@@ -354,7 +354,7 @@ pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <td data-label="Purpose" class="text-left">مقاييس Prometheus.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>تُقدَّم الوثائق التفاعلية على <code>/api/docs</code> (Swagger UI) و<code>/api/redoc</code> و<code>/api/reference</code> (Scalar)، مع مستند OpenAPI على <code>/openapi.json</code>.</p>
 <hr />
 <h2 id="4-input-normalisation">4. تطبيع المدخلات<a class="heading-anchor" href="#4-input-normalisation" aria-label="رابط إلى القسم: 4. تطبيع المدخلات">#</a></h2>

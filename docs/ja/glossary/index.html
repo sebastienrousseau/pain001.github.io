@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -207,7 +207,7 @@
 <p><strong>Verification of Payee(VoP)。</strong>2025 年 10 月 9 日以降、すべての SEPA 振込に適用されている、EU が義務付けた名義/IBAN の照合チェックです。実行時に PSP が行い、照合が一致するかどうかは債権者データの正確さで決まります。</p>
 <h2 id="identifiers-and-data">識別子とデータ<a class="heading-anchor" href="#identifiers-and-data" aria-label="セクションへのリンク:識別子とデータ">#</a></h2>
 <p><strong>IBAN。</strong>International Bank Account Number(ISO 13616)。mod-97 チェックサムによる自己検査機能を持つため、桁の入れ替わりが 1 か所でもあれば、提出<em>前</em>に検出できます。</p>
-<p><strong>BIC / BICFI。</strong>金融機関の ISO 9362 Business Identifier Code です。XML 要素は <code>pain.001.001.03</code> では <code><BIC></code> ですが、バージョン 9 以降は <code><BICFI></code> になります — この名称変更が、バージョンアップグレード時に実際の拒否を引き起こします。</p>
+<p><strong>BIC / BICFI。</strong>金融機関の ISO 9362 Business Identifier Code です。XML 要素は <code>pain.001.001.03</code> では <code>&lt;BIC&gt;</code> ですが、バージョン 9 以降は <code>&lt;BICFI&gt;</code> になります — この名称変更が、バージョンアップグレード時に実際の拒否を引き起こします。</p>
 <p><strong>LEI。</strong>Legal Entity Identifier(ISO 17442)— 20 文字のグローバルな法人識別子です。300 万件超が有効であり、規制当局は決済における使用をますます義務付けています。</p>
 <p><strong>UETR。</strong>Unique End-to-end Transaction Reference — コルレスチェーン全体で支払を追跡できるようにする UUID です(SWIFT gpi)。</p>
 <p><strong>構造化/ハイブリッド住所。</strong>個別の XML 要素(通り、都市、郵便番号、国)としての郵便住所と、自由記述の行との対比です。2026 年 11 月 14 日以降、CBPR+ は完全に非構造化の住所を拒否します。<em>ハイブリッド</em> — 構造化された都市と国に、最大 2 行の 70 文字住所行を加えたもの — は引き続き有効です。</p>

@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -215,11 +215,11 @@
 <td data-label="Purpose" class="text-left">Menampilkan seluruh 11 definisi pesan yang didukung.</td>
 </tr>
 <tr>
-<td data-label="Subcommand" class="text-left"><code>inspect <type> [--json]</code></td>
+<td data-label="Subcommand" class="text-left"><code>inspect &lt;type&gt; [--json]</code></td>
 <td data-label="Purpose" class="text-left">Menampilkan bidang wajib dan opsional untuk sebuah tipe pesan.</td>
 </tr>
 <tr>
-<td data-label="Subcommand" class="text-left"><code>init <type> [-o DIR]</code></td>
+<td data-label="Subcommand" class="text-left"><code>init &lt;type&gt; [-o DIR]</code></td>
 <td data-label="Purpose" class="text-left">Membuat kerangka templat CSV awal untuk sebuah tipe pesan.</td>
 </tr>
 <tr>
@@ -237,7 +237,7 @@
 </tbody>
 </table></div>
 <h3>Opsi <code>generate</code></h3>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th>Flag</th>
@@ -246,23 +246,23 @@
 </thead>
 <tbody>
 <tr>
-<td data-label="Flag" class="text-left"><code>-t, --xml-message-type <TYPE></code></td>
+<td data-label="Flag" class="text-left"><code>-t, --xml-message-type &lt;TYPE&gt;</code></td>
 <td data-label="Description" class="text-left">Definisi pesan, misalnya <code>pain.001.001.09</code>.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-d, --data <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-d, --data &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">Data input: <code>.csv</code>, <code>.json</code>, <code>.jsonl</code>, <code>.db</code> / <code>.sqlite</code>, <code>.parquet</code>, atau <code>.gpg</code> / <code>.asc</code> yang terenkripsi PGP.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-o, --output-dir <DIR></code></td>
+<td data-label="Flag" class="text-left"><code>-o, --output-dir &lt;DIR&gt;</code></td>
 <td data-label="Description" class="text-left">Direktori tempat XML yang dihasilkan disimpan.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-m, --template <FILE></code> / <code>-s, --schema <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-m, --template &lt;FILE&gt;</code> / <code>-s, --schema &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">Mengganti templat Jinja2 atau skema XSD bawaan.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-c, --config <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-c, --config &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">Memuat nilai bawaan dari profil konfigurasi (<code>--profile</code>, <code>--show-config</code>).</td>
 </tr>
 <tr>
@@ -270,7 +270,7 @@
 <td data-label="Description" class="text-left">Memvalidasi input terhadap JSON Schema, XSD, dan rulebook skema tanpa menulis keluaran.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>--scheme <NAME></code></td>
+<td data-label="Flag" class="text-left"><code>--scheme &lt;NAME&gt;</code></td>
 <td data-label="Description" class="text-left">Menerapkan rulebook skema: <code>sepa-sct</code>, <code>sepa-inst</code>, <code>sepa-sdd</code>, <code>sepa-b2b</code>, atau <code>xborder-ct</code>.</td>
 </tr>
 <tr>
@@ -278,7 +278,7 @@
 <td data-label="Description" class="text-left">Melaporkan setiap aturan skema yang lolos atau gagal, dalam bentuk terbaca manusia atau terbaca mesin.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size <N></code></td>
+<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size &lt;N&gt;</code></td>
 <td data-label="Description" class="text-left">Pemrosesan per bagian dengan batas memori untuk batch besar (bawaan 1,000 transaksi per bagian; setiap bagian menjadi berkas XML tersendiri dengan <code>NbOfTxs</code> dan <code>CtrlSum</code> yang dihitung ulang).</td>
 </tr>
 <tr>
@@ -286,7 +286,7 @@
 <td data-label="Description" class="text-left">Menghasilkan metrik eksekusi yang terbaca mesin untuk pipeline observabilitas.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Kode keluar ramah CI: <code>0</code> berhasil, <code>1</code> kegagalan validasi, <code>2</code> kesalahan penggunaan.</p>
 <hr />
 <h2 id="2-python-api">2. Python API<a class="heading-anchor" href="#2-python-api" aria-label="Tautan ke bagian: 2. Python API">#</a></h2>
@@ -313,7 +313,7 @@ process_files(
 <pre><code class="language-bash">pip install "pain001[api]"
 pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <p>Seluruh endpoint dipasang di bawah <code>/api/v1</code> (dengan alias tanpa versi <code>/api</code>):</p>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th>Metode & Jalur</th>
@@ -354,7 +354,7 @@ pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <td data-label="Purpose" class="text-left">Metrik Prometheus.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Dokumentasi interaktif disajikan di <code>/api/docs</code> (Swagger UI), <code>/api/redoc</code>, dan <code>/api/reference</code> (Scalar), dengan dokumen OpenAPI di <code>/openapi.json</code>.</p>
 <hr />
 <h2 id="4-input-normalisation">4. Normalisasi Input<a class="heading-anchor" href="#4-input-normalisation" aria-label="Tautan ke bagian: 4. Normalisasi Input">#</a></h2>

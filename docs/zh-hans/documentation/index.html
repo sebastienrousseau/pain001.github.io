@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -215,11 +215,11 @@
 <td data-label="Purpose" class="text-left">列出全部 11 种受支持的报文定义。</td>
 </tr>
 <tr>
-<td data-label="Subcommand" class="text-left"><code>inspect <type> [--json]</code></td>
+<td data-label="Subcommand" class="text-left"><code>inspect &lt;type&gt; [--json]</code></td>
 <td data-label="Purpose" class="text-left">显示某报文类型的必填与可选字段。</td>
 </tr>
 <tr>
-<td data-label="Subcommand" class="text-left"><code>init <type> [-o DIR]</code></td>
+<td data-label="Subcommand" class="text-left"><code>init &lt;type&gt; [-o DIR]</code></td>
 <td data-label="Purpose" class="text-left">为报文类型生成入门 CSV 模板。</td>
 </tr>
 <tr>
@@ -237,7 +237,7 @@
 </tbody>
 </table></div>
 <h3><code>generate</code> 选项</h3>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th>标志</th>
@@ -246,23 +246,23 @@
 </thead>
 <tbody>
 <tr>
-<td data-label="Flag" class="text-left"><code>-t, --xml-message-type <TYPE></code></td>
+<td data-label="Flag" class="text-left"><code>-t, --xml-message-type &lt;TYPE&gt;</code></td>
 <td data-label="Description" class="text-left">报文定义，例如 <code>pain.001.001.09</code>。</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-d, --data <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-d, --data &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">输入数据：<code>.csv</code>、<code>.json</code>、<code>.jsonl</code>、<code>.db</code> / <code>.sqlite</code>、<code>.parquet</code>，或 PGP 加密的 <code>.gpg</code> / <code>.asc</code>。</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-o, --output-dir <DIR></code></td>
+<td data-label="Flag" class="text-left"><code>-o, --output-dir &lt;DIR&gt;</code></td>
 <td data-label="Description" class="text-left">接收生成 XML 的目录。</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-m, --template <FILE></code> / <code>-s, --schema <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-m, --template &lt;FILE&gt;</code> / <code>-s, --schema &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">覆盖内置的 Jinja2 模板或 XSD 模式。</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-c, --config <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-c, --config &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">从配置档案加载默认值（<code>--profile</code>、<code>--show-config</code>）。</td>
 </tr>
 <tr>
@@ -270,7 +270,7 @@
 <td data-label="Description" class="text-left">根据 JSON Schema、XSD 与方案规则手册校验输入，但不写出任何输出。</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>--scheme <NAME></code></td>
+<td data-label="Flag" class="text-left"><code>--scheme &lt;NAME&gt;</code></td>
 <td data-label="Description" class="text-left">强制执行方案规则手册：<code>sepa-sct</code>、<code>sepa-inst</code>、<code>sepa-sdd</code>、<code>sepa-b2b</code> 或 <code>xborder-ct</code>。</td>
 </tr>
 <tr>
@@ -278,7 +278,7 @@
 <td data-label="Description" class="text-left">报告每条通过或未通过的方案规则，支持人读或机读格式。</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size <N></code></td>
+<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size &lt;N&gt;</code></td>
 <td data-label="Description" class="text-left">面向大批量的内存受限分块处理（默认每块 1,000 笔交易；每个分块生成独立的 XML 文件，并重新计算 <code>NbOfTxs</code> 与 <code>CtrlSum</code>）。</td>
 </tr>
 <tr>
@@ -286,7 +286,7 @@
 <td data-label="Description" class="text-left">输出机读运行指标，供可观测性流水线使用。</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>退出码对 CI 友好：<code>0</code> 表示成功，<code>1</code> 表示校验失败，<code>2</code> 表示用法错误。</p>
 <hr />
 <h2 id="2-python-api">2. Python API<a class="heading-anchor" href="#2-python-api" aria-label="跳转到章节：2. Python API">#</a></h2>
@@ -313,7 +313,7 @@ process_files(
 <pre><code class="language-bash">pip install "pain001[api]"
 pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <p>所有端点均挂载在 <code>/api/v1</code> 下（并提供不带版本的 <code>/api</code> 别名）：</p>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th>方法与路径</th>
@@ -354,7 +354,7 @@ pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <td data-label="Purpose" class="text-left">Prometheus 指标。</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>交互式文档位于 <code>/api/docs</code>（Swagger UI）、<code>/api/redoc</code> 与 <code>/api/reference</code>（Scalar），OpenAPI 文档位于 <code>/openapi.json</code>。</p>
 <hr />
 <h2 id="4-input-normalisation">4. 输入规范化<a class="heading-anchor" href="#4-input-normalisation" aria-label="跳转到章节：4. 输入规范化">#</a></h2>

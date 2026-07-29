@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -199,7 +199,7 @@
 <p><strong>We still send MT101 files. How urgent is migration?</strong></p>
 <p>Urgent. SWIFT retired MT category 1, 2 and 9 messages for cross-border interbank payment instructions in November 2025; corporate channels that still accept MT do so at each bank's discretion and on borrowed time. The <a href="/pain001-loader-mt101/">MT101 loader</a> converts existing MT101 flows to validated <code>pain.001</code> without re-keying anything.</p>
 <p><strong>What does the November 2026 structured address deadline mean for us?</strong></p>
-<p>From the end of November 2026, fully unstructured postal addresses are no longer accepted in CBPR+ cross-border payments; addresses must be structured or hybrid — discrete elements such as town (<code><TwnNm></code>) and country (<code><Ctry></code>) instead of free-text lines. If your master data holds addresses as blobs, the work is in your data, not your bank connection. Start there. The <a href="/2026-iso20022-migration-trends/">2026 briefing</a> covers the timeline in detail.</p>
+<p>From the end of November 2026, fully unstructured postal addresses are no longer accepted in CBPR+ cross-border payments; addresses must be structured or hybrid — discrete elements such as town (<code>&lt;TwnNm&gt;</code>) and country (<code>&lt;Ctry&gt;</code>) instead of free-text lines. If your master data holds addresses as blobs, the work is in your data, not your bank connection. Start there. The <a href="/2026-iso20022-migration-trends/">2026 briefing</a> covers the timeline in detail.</p>
 <p><strong>What does Pain001 cost?</strong></p>
 <p>Nothing. The core is dual-licensed Apache-2.0 / MIT; companion packages are Apache-2.0. Commercial use, modification, and redistribution are all permitted. For scale reference, SWIFT's translation SDK alone lists at €10,000–30,000 per year.</p>
 <hr />
@@ -209,7 +209,7 @@
 <p><strong>Can we validate a file without generating anything?</strong></p>
 <p>Yes — <code>pain001 --dry-run</code> (or the <code>validate</code> subcommand, or <code>POST /api/v1/validate</code>). Exit code <code>0</code> means valid; <code>1</code> means validation failed with field-level errors. Wire it into CI or a pre-submission checklist.</p>
 <p><strong>Which SEPA rulebooks are covered?</strong></p>
-<p>Five scheme rulebooks ship built-in: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>), and cross-border credit transfer (<code>xborder-ct</code>). Use <code>--scheme <name> --explain</code> to see every rule that passed or failed.</p>
+<p>Five scheme rulebooks ship built-in: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>), and cross-border credit transfer (<code>xborder-ct</code>). Use <code>--scheme &lt;name&gt; --explain</code> to see every rule that passed or failed.</p>
 <p><strong>Our data lives in Excel. What is the catch?</strong></p>
 <p>Excel silently coerces IBAN-like strings into numbers. The <a href="/pain001-loader-xlsx/">Excel loader</a> reads <code>.xlsx</code>/<code>.xlsm</code> directly and hard-stops if IBAN columns contain numeric cells — the corruption is caught at load, not at the bank.</p>
 <p><strong>How does it handle a 500,000-row batch?</strong></p>

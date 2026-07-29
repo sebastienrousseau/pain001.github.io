@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -199,7 +199,7 @@
 <p><strong>आम्ही अजूनही MT101 फाइल पाठवतो. स्थलांतर किती तातडीचे आहे?</strong></p>
 <p>तातडीचे. SWIFT ने नोव्हेंबर 2025 मध्ये सीमापार आंतरबँक पेमेंट सूचनांसाठी MT श्रेणी 1, 2 व 9 चे संदेश बंद केले; जे कॉर्पोरेट चॅनेल अजूनही MT स्वीकारतात, ते प्रत्येक बँकेच्या विवेकावर आणि मर्यादित काळापुरतेच. <a href="/pain001-loader-mt101/">MT101 लोडर</a> विद्यमान MT101 प्रवाह पुन्हा टंकलेखन न करता प्रमाणित <code>pain.001</code> मध्ये रूपांतरित करतो.</p>
 <p><strong>नोव्हेंबर 2026 ची संरचित पत्त्याची मुदत आमच्यासाठी काय अर्थ ठेवते?</strong></p>
-<p>नोव्हेंबर 2026 अखेरीपासून CBPR+ सीमापार पेमेंटमध्ये पूर्णपणे असंरचित टपाल पत्ते स्वीकारले जाणार नाहीत; पत्ते संरचित किंवा संमिश्र असावे लागतील — मुक्त-मजकूर ओळींऐवजी शहर (<code><TwnNm></code>) व देश (<code><Ctry></code>) यांसारखे स्वतंत्र घटक. तुमच्या मास्टर डेटामध्ये पत्ते एकसंध मजकूर म्हणून साठवलेले असतील, तर काम तुमच्या डेटामध्ये आहे, बँक जोडणीत नाही. तिथूनच सुरुवात करा. <a href="/2026-iso20022-migration-trends/">2026 चे विवरण</a> या कालरेषेचा तपशीलवार आढावा घेते.</p>
+<p>नोव्हेंबर 2026 अखेरीपासून CBPR+ सीमापार पेमेंटमध्ये पूर्णपणे असंरचित टपाल पत्ते स्वीकारले जाणार नाहीत; पत्ते संरचित किंवा संमिश्र असावे लागतील — मुक्त-मजकूर ओळींऐवजी शहर (<code>&lt;TwnNm&gt;</code>) व देश (<code>&lt;Ctry&gt;</code>) यांसारखे स्वतंत्र घटक. तुमच्या मास्टर डेटामध्ये पत्ते एकसंध मजकूर म्हणून साठवलेले असतील, तर काम तुमच्या डेटामध्ये आहे, बँक जोडणीत नाही. तिथूनच सुरुवात करा. <a href="/2026-iso20022-migration-trends/">2026 चे विवरण</a> या कालरेषेचा तपशीलवार आढावा घेते.</p>
 <p><strong>Pain001 चा खर्च किती?</strong></p>
 <p>काहीही नाही. मुख्य घटक Apache-2.0 / MIT या दुहेरी परवान्याखाली आहे; सहयोगी पॅकेजेस Apache-2.0 अंतर्गत आहेत. व्यावसायिक वापर, बदल आणि पुनर्वितरण या सर्वांना परवानगी आहे. तुलनेसाठी, केवळ SWIFT च्या ट्रान्सलेशन SDK ची किंमत वर्षाला €10,000–30,000 आहे.</p>
 <hr />
@@ -209,7 +209,7 @@
 <p><strong>काहीही निर्माण न करता आम्ही फाइल प्रमाणित करू शकतो का?</strong></p>
 <p>होय — <code>pain001 --dry-run</code> (किंवा <code>validate</code> उपआदेश, किंवा <code>POST /api/v1/validate</code>). एक्झिट कोड <code>0</code> म्हणजे वैध; <code>1</code> म्हणजे फील्ड-स्तरीय त्रुटींसह प्रमाणीकरण अयशस्वी. हे CI मध्ये किंवा सादरीकरणपूर्व तपासणी-यादीत जोडा.</p>
 <p><strong>कोणत्या SEPA नियमपुस्तिका समाविष्ट आहेत?</strong></p>
-<p>पाच स्कीम नियमपुस्तिका अंतर्भूत आहेत: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) आणि सीमापार क्रेडिट ट्रान्सफर (<code>xborder-ct</code>). उत्तीर्ण किंवा अनुत्तीर्ण झालेला प्रत्येक नियम पाहण्यासाठी <code>--scheme <name> --explain</code> वापरा.</p>
+<p>पाच स्कीम नियमपुस्तिका अंतर्भूत आहेत: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) आणि सीमापार क्रेडिट ट्रान्सफर (<code>xborder-ct</code>). उत्तीर्ण किंवा अनुत्तीर्ण झालेला प्रत्येक नियम पाहण्यासाठी <code>--scheme &lt;name&gt; --explain</code> वापरा.</p>
 <p><strong>आमचा डेटा Excel मध्ये आहे. यात अडचण काय?</strong></p>
 <p>Excel हे IBAN सदृश मजकूर मूकपणे संख्यांमध्ये रूपांतरित करते. <a href="/pain001-loader-xlsx/">Excel लोडर</a> <code>.xlsx</code>/<code>.xlsm</code> थेट वाचतो आणि IBAN स्तंभांत संख्यात्मक सेल आढळल्यास तत्काळ थांबतो — बिघाड बँकेत नव्हे, लोडिंगच्या वेळीच पकडला जातो.</p>
 <p><strong>500,000 ओळींची बॅच ते कसे हाताळते?</strong></p>

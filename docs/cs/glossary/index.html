@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -207,7 +207,7 @@
 <p><strong>Verification of Payee (VoP).</strong> Kontrola shody jména a IBAN, kterou EU nařídila u všech úhrad SEPA od 9. října 2025. Provádí ji poskytovatel platebních služeb v okamžiku provedení; zda dojde ke shodě, rozhodují čistá data o příjemcích.</p>
 <h2 id="identifiers-and-data">Identifikátory a data<a class="heading-anchor" href="#identifiers-and-data" aria-label="Odkaz na sekci: Identifikátory a data">#</a></h2>
 <p><strong>IBAN.</strong> Mezinárodní číslo bankovního účtu (ISO 13616) se samokontrolou pomocí kontrolního součtu mod-97 — díky tomu lze jedinou přehozenou číslici odhalit <em>před</em> odesláním.</p>
-<p><strong>BIC / BICFI.</strong> Identifikační kód finanční instituce podle ISO 9362. Prvek XML se v <code>pain.001.001.03</code> jmenuje <code><BIC></code>, ale od verze 9 <code><BICFI></code> — přejmenování, které při přechodu na novější verzi v praxi působí zamítnutí.</p>
+<p><strong>BIC / BICFI.</strong> Identifikační kód finanční instituce podle ISO 9362. Prvek XML se v <code>pain.001.001.03</code> jmenuje <code>&lt;BIC&gt;</code>, ale od verze 9 <code>&lt;BICFI&gt;</code> — přejmenování, které při přechodu na novější verzi v praxi působí zamítnutí.</p>
 <p><strong>LEI.</strong> Identifikátor právnické osoby (ISO 17442) — celosvětový dvacetiznakový identifikátor společnosti. Aktivních jich jsou přes 3 miliony a regulátoři je v platbách vyžadují stále častěji.</p>
 <p><strong>UETR.</strong> Unique End-to-end Transaction Reference — UUID, díky němuž lze platbu sledovat napříč korespondenčním řetězcem (SWIFT gpi).</p>
 <p><strong>Strukturovaná / hybridní adresa.</strong> Poštovní adresy jako samostatné prvky XML (ulice, město, PSČ, země) oproti volným řádkům textu. Od 14. listopadu 2026 CBPR+ zcela nestrukturované adresy odmítá; <em>hybridní</em> — strukturované město a země plus nejvýše dva adresní řádky po 70 znacích — zůstává platná.</p>

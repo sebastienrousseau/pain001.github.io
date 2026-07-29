@@ -40,17 +40,17 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="Release &amp;amp; Support Policy">
+<meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="Release &amp; Support Policy">
 <meta property="og:description" content="How Pain001 versions, what 'supported' means before 1.0, how security fixes ship, how releases are signed and attested, and how to roll back safely.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://pain001.com/release-policy/">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Release &amp;amp; Support Policy">
+<meta name="twitter:title" content="Release &amp; Support Policy">
 <meta name="twitter:description" content="How Pain001 versions, what 'supported' means before 1.0, how security fixes ship, how releases are signed and attested, and how to roll back safely.">
 <meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg">
 <link rel="canonical" href="https://pain001.com/release-policy/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
@@ -201,7 +201,7 @@
 <li><strong>Inventory</strong> — each core release build generates a CycloneDX SBOM for dependency review.</li>
 </ul>
 <h2 id="pinning-and-rollback">Pinning and rollback<a class="heading-anchor" href="#pinning-and-rollback" aria-label="Link to section: Pinning and rollback">#</a></h2>
-<p>Deployments should pin exact versions in a lockfile and treat upgrades as changes: run your own regression (a <code>--dry-run</code> over a representative batch is the natural smoke test) before promoting. Rollback is <code>pip install pain001==<previous></code> — no migrations, no state, no server-side coupling; generated files from any version remain valid against the schemas they targeted.</p>
+<p>Deployments should pin exact versions in a lockfile and treat upgrades as changes: run your own regression (a <code>--dry-run</code> over a representative batch is the natural smoke test) before promoting. Rollback is <code>pip install pain001==&lt;previous&gt;</code> — no migrations, no state, no server-side coupling; generated files from any version remain valid against the schemas they targeted.</p>
 <h2 id="cadence-and-deprecation">Cadence and deprecation<a class="heading-anchor" href="#cadence-and-deprecation" aria-label="Link to section: Cadence and deprecation">#</a></h2>
 <p>There is no fixed calendar cadence; releases ship when tested work is ready — historically multiple times per month (<a href="https://github.com/sebastienrousseau/pain001/releases">release history</a>). Deprecations appear in release notes at least one release before removal. <strong>The 1.0 commitment</strong>, when made, will bring semantic-versioning guarantees: no breaking changes within a major version and a documented support window per major — that promise is deliberately not being made before it can be kept.</p>
 </div>

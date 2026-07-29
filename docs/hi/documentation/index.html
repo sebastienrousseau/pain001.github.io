@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -215,11 +215,11 @@
 <td data-label="Purpose" class="text-left">सभी 11 समर्थित संदेश परिभाषाएँ सूचीबद्ध करें।</td>
 </tr>
 <tr>
-<td data-label="Subcommand" class="text-left"><code>inspect <type> [--json]</code></td>
+<td data-label="Subcommand" class="text-left"><code>inspect &lt;type&gt; [--json]</code></td>
 <td data-label="Purpose" class="text-left">किसी संदेश प्रकार के अनिवार्य और वैकल्पिक फ़ील्ड दिखाएँ।</td>
 </tr>
 <tr>
-<td data-label="Subcommand" class="text-left"><code>init <type> [-o DIR]</code></td>
+<td data-label="Subcommand" class="text-left"><code>init &lt;type&gt; [-o DIR]</code></td>
 <td data-label="Purpose" class="text-left">किसी संदेश प्रकार के लिए स्टार्टर CSV टेम्पलेट तैयार करें।</td>
 </tr>
 <tr>
@@ -237,7 +237,7 @@
 </tbody>
 </table></div>
 <h3><code>generate</code> विकल्प</h3>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th>फ़्लैग</th>
@@ -246,23 +246,23 @@
 </thead>
 <tbody>
 <tr>
-<td data-label="Flag" class="text-left"><code>-t, --xml-message-type <TYPE></code></td>
+<td data-label="Flag" class="text-left"><code>-t, --xml-message-type &lt;TYPE&gt;</code></td>
 <td data-label="Description" class="text-left">संदेश परिभाषा, जैसे <code>pain.001.001.09</code>।</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-d, --data <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-d, --data &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">इनपुट डेटा: <code>.csv</code>, <code>.json</code>, <code>.jsonl</code>, <code>.db</code> / <code>.sqlite</code>, <code>.parquet</code>, या PGP-एन्क्रिप्टेड <code>.gpg</code> / <code>.asc</code>।</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-o, --output-dir <DIR></code></td>
+<td data-label="Flag" class="text-left"><code>-o, --output-dir &lt;DIR&gt;</code></td>
 <td data-label="Description" class="text-left">वह डायरेक्टरी जिसमें जनरेट किया गया XML लिखा जाता है।</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-m, --template <FILE></code> / <code>-s, --schema <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-m, --template &lt;FILE&gt;</code> / <code>-s, --schema &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">बंडल किए गए Jinja2 टेम्पलेट या XSD स्कीमा को ओवरराइड करें।</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-c, --config <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-c, --config &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">किसी कॉन्फ़िगरेशन प्रोफ़ाइल से डिफ़ॉल्ट लोड करें (<code>--profile</code>, <code>--show-config</code>)।</td>
 </tr>
 <tr>
@@ -270,7 +270,7 @@
 <td data-label="Description" class="text-left">आउटपुट लिखे बिना इनपुट को JSON Schema, XSD और स्कीम नियमपुस्तिका के विरुद्ध सत्यापित करें।</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>--scheme <NAME></code></td>
+<td data-label="Flag" class="text-left"><code>--scheme &lt;NAME&gt;</code></td>
 <td data-label="Description" class="text-left">स्कीम नियमपुस्तिका लागू करें: <code>sepa-sct</code>, <code>sepa-inst</code>, <code>sepa-sdd</code>, <code>sepa-b2b</code>, या <code>xborder-ct</code>।</td>
 </tr>
 <tr>
@@ -278,7 +278,7 @@
 <td data-label="Description" class="text-left">पास या फ़ेल हुए हर स्कीम नियम की रिपोर्ट दें, मानव- या मशीन-पठनीय रूप में।</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size <N></code></td>
+<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size &lt;N&gt;</code></td>
 <td data-label="Description" class="text-left">बड़े बैचों के लिए मेमोरी-सीमित चंक-आधारित प्रोसेसिंग (डिफ़ॉल्ट 1,000 लेनदेन प्रति चंक; हर चंक पुनर्गणित <code>NbOfTxs</code> और <code>CtrlSum</code> के साथ अपनी अलग XML फ़ाइल बनता है)।</td>
 </tr>
 <tr>
@@ -286,7 +286,7 @@
 <td data-label="Description" class="text-left">ऑब्ज़र्वेबिलिटी पाइपलाइनों के लिए मशीन-पठनीय रन मेट्रिक्स उत्सर्जित करें।</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>एग्ज़िट कोड CI-अनुकूल हैं: <code>0</code> सफलता, <code>1</code> सत्यापन विफलता, <code>2</code> उपयोग त्रुटि।</p>
 <hr />
 <h2 id="2-python-api">2. Python API<a class="heading-anchor" href="#2-python-api" aria-label="अनुभाग का लिंक: 2. Python API">#</a></h2>
@@ -313,7 +313,7 @@ process_files(
 <pre><code class="language-bash">pip install "pain001[api]"
 pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <p>सभी एंडपॉइंट <code>/api/v1</code> के अंतर्गत माउंट किए गए हैं (अनवर्जन्ड <code>/api</code> उपनाम के साथ):</p>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th>मेथड और पाथ</th>
@@ -354,7 +354,7 @@ pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <td data-label="Purpose" class="text-left">Prometheus मेट्रिक्स।</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>इंटरैक्टिव दस्तावेज़ीकरण <code>/api/docs</code> (Swagger UI), <code>/api/redoc</code> और <code>/api/reference</code> (Scalar) पर उपलब्ध है, और OpenAPI दस्तावेज़ <code>/openapi.json</code> पर।</p>
 <hr />
 <h2 id="4-input-normalisation">4. इनपुट सामान्यीकरण<a class="heading-anchor" href="#4-input-normalisation" aria-label="अनुभाग का लिंक: 4. इनपुट सामान्यीकरण">#</a></h2>

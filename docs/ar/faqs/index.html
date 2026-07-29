@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -199,7 +199,7 @@
 <p><strong>ما زلنا نرسل ملفات MT101. ما مدى إلحاح الترحيل؟</strong></p>
 <p>الأمر مُلحّ. أوقفت SWIFT رسائل MT من الفئات 1 و2 و9 لتعليمات الدفع بين البنوك عبر الحدود في نوفمبر 2025؛ والقنوات المؤسسية التي ما زالت تقبل MT تفعل ذلك وفق تقدير كل بنك وعلى وقت مستعار. يحوّل <a href="/pain001-loader-mt101/">محمّل MT101</a> تدفقات MT101 القائمة إلى <code>pain.001</code> متحقَّق منه دون إعادة إدخال أي شيء.</p>
 <p><strong>ماذا يعني لنا الموعد النهائي للعناوين المهيكلة في نوفمبر 2026؟</strong></p>
-<p>اعتبارًا من نهاية نوفمبر 2026، لن تُقبل العناوين البريدية غير المهيكلة كليًا في مدفوعات CBPR+ عبر الحدود؛ إذ يجب أن تكون العناوين مهيكلة أو هجينة — عناصر منفصلة مثل المدينة (<code><TwnNm></code>) والبلد (<code><Ctry></code>) بدلًا من أسطر نص حر. وإذا كانت بياناتك الرئيسية تخزّن العناوين ككتل نصية، فالعمل يكمن في بياناتك لا في اتصالك البنكي. ابدأ من هناك. وتغطي <a href="/2026-iso20022-migration-trends/">إحاطة 2026</a> الجدول الزمني بالتفصيل.</p>
+<p>اعتبارًا من نهاية نوفمبر 2026، لن تُقبل العناوين البريدية غير المهيكلة كليًا في مدفوعات CBPR+ عبر الحدود؛ إذ يجب أن تكون العناوين مهيكلة أو هجينة — عناصر منفصلة مثل المدينة (<code>&lt;TwnNm&gt;</code>) والبلد (<code>&lt;Ctry&gt;</code>) بدلًا من أسطر نص حر. وإذا كانت بياناتك الرئيسية تخزّن العناوين ككتل نصية، فالعمل يكمن في بياناتك لا في اتصالك البنكي. ابدأ من هناك. وتغطي <a href="/2026-iso20022-migration-trends/">إحاطة 2026</a> الجدول الزمني بالتفصيل.</p>
 <p><strong>كم يكلّف Pain001؟</strong></p>
 <p>لا شيء. النواة مرخّصة ترخيصًا مزدوجًا Apache-2.0 / MIT؛ والحزم المصاحبة مرخّصة Apache-2.0. الاستخدام التجاري والتعديل وإعادة التوزيع كلها مسموح بها. وللمقارنة، تُدرج SDK الترجمة من SWIFT وحدها بسعر €10,000–30,000 سنويًا.</p>
 <hr />
@@ -209,7 +209,7 @@
 <p><strong>هل يمكننا التحقق من ملف دون توليد أي شيء؟</strong></p>
 <p>نعم — <code>pain001 --dry-run</code> (أو الأمر الفرعي <code>validate</code>، أو <code>POST /api/v1/validate</code>). رمز الخروج <code>0</code> يعني أن الملف صالح؛ و<code>1</code> يعني إخفاق التحقق مع أخطاء على مستوى الحقل. أدرجه في CI أو في قائمة تحقق ما قبل التقديم.</p>
 <p><strong>ما كتب قواعد SEPA المشمولة؟</strong></p>
-<p>خمسة كتب قواعد أنظمة مضمّنة: SEPA Credit Transfer (<code>sepa-sct</code>)، وSEPA Instant (<code>sepa-inst</code>)، وSEPA Direct Debit Core (<code>sepa-sdd</code>)، وSEPA B2B (<code>sepa-b2b</code>)، والتحويل الائتماني عبر الحدود (<code>xborder-ct</code>). استخدم <code>--scheme <name> --explain</code> لرؤية كل قاعدة نجحت أو أخفقت.</p>
+<p>خمسة كتب قواعد أنظمة مضمّنة: SEPA Credit Transfer (<code>sepa-sct</code>)، وSEPA Instant (<code>sepa-inst</code>)، وSEPA Direct Debit Core (<code>sepa-sdd</code>)، وSEPA B2B (<code>sepa-b2b</code>)، والتحويل الائتماني عبر الحدود (<code>xborder-ct</code>). استخدم <code>--scheme &lt;name&gt; --explain</code> لرؤية كل قاعدة نجحت أو أخفقت.</p>
 <p><strong>بياناتنا في Excel. ما المشكلة؟</strong></p>
 <p>يحوّل Excel صامتًا السلاسل الشبيهة بأرقام IBAN إلى أرقام. يقرأ <a href="/pain001-loader-xlsx/">محمّل Excel</a> ملفات <code>.xlsx</code>/<code>.xlsm</code> مباشرة ويتوقف فورًا إذا احتوت أعمدة IBAN على خلايا رقمية — فيُكتشف التلف عند التحميل، لا عند البنك.</p>
 <p><strong>كيف يتعامل مع دفعة من 500,000 صف؟</strong></p>

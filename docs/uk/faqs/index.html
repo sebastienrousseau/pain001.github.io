@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -199,7 +199,7 @@
 <p><strong>Ми досі надсилаємо файли MT101. Наскільки термінова міграція?</strong></p>
 <p>Термінова. У листопаді 2025 року SWIFT вивів з експлуатації повідомлення MT категорій 1, 2 і 9 для транскордонних міжбанківських платіжних інструкцій; корпоративні канали, що досі приймають MT, роблять це на розсуд кожного банку та в позичений час. <a href="/pain001-loader-mt101/">Завантажувач MT101</a> перетворює наявні потоки MT101 на перевірений <code>pain.001</code> без повторного введення даних.</p>
 <p><strong>Що для нас означає дедлайн щодо структурованих адрес у листопаді 2026 року?</strong></p>
-<p>З кінця листопада 2026 року повністю неструктуровані поштові адреси більше не приймаються в транскордонних платежах CBPR+; адреси мають бути структурованими або гібридними — окремі елементи, як-от місто (<code><TwnNm></code>) і країна (<code><Ctry></code>), замість рядків вільного тексту. Якщо ваші майстер-дані зберігають адреси суцільним текстом, робота лежить у ваших даних, а не в підключенні до банку. Почніть звідти. <a href="/2026-iso20022-migration-trends/">Брифінг 2026</a> детально описує терміни.</p>
+<p>З кінця листопада 2026 року повністю неструктуровані поштові адреси більше не приймаються в транскордонних платежах CBPR+; адреси мають бути структурованими або гібридними — окремі елементи, як-от місто (<code>&lt;TwnNm&gt;</code>) і країна (<code>&lt;Ctry&gt;</code>), замість рядків вільного тексту. Якщо ваші майстер-дані зберігають адреси суцільним текстом, робота лежить у ваших даних, а не в підключенні до банку. Почніть звідти. <a href="/2026-iso20022-migration-trends/">Брифінг 2026</a> детально описує терміни.</p>
 <p><strong>Скільки коштує Pain001?</strong></p>
 <p>Нічого. Ядро має подвійну ліцензію Apache-2.0 / MIT; супутні пакети — Apache-2.0. Комерційне використання, модифікація та розповсюдження дозволені. Для масштабу: лише SDK трансляції від SWIFT коштує за прайсом €10,000–30,000 на рік.</p>
 <hr />
@@ -209,7 +209,7 @@
 <p><strong>Чи можна перевірити файл, нічого не генеруючи?</strong></p>
 <p>Так — <code>pain001 --dry-run</code> (або підкоманда <code>validate</code>, або <code>POST /api/v1/validate</code>). Код виходу <code>0</code> означає валідність; <code>1</code> — валідація не пройдена, з помилками на рівні полів. Вбудуйте це в CI або в чек-лист перед поданням.</p>
 <p><strong>Які збірники правил SEPA покриті?</strong></p>
-<p>П'ять збірників правил схем вбудовано: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) і транскордонний кредитовий переказ (<code>xborder-ct</code>). Використовуйте <code>--scheme <name> --explain</code>, щоб побачити кожне пройдене чи непройдене правило.</p>
+<p>П'ять збірників правил схем вбудовано: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) і транскордонний кредитовий переказ (<code>xborder-ct</code>). Використовуйте <code>--scheme &lt;name&gt; --explain</code>, щоб побачити кожне пройдене чи непройдене правило.</p>
 <p><strong>Наші дані живуть в Excel. У чому підступ?</strong></p>
 <p>Excel непомітно перетворює IBAN-подібні рядки на числа. <a href="/pain001-loader-xlsx/">Завантажувач Excel</a> читає <code>.xlsx</code>/<code>.xlsm</code> напряму та жорстко зупиняється, якщо стовпці IBAN містять числові комірки — пошкодження виявляється під час завантаження, а не в банку.</p>
 <p><strong>Як він обробляє пакет із 500,000 рядків?</strong></p>

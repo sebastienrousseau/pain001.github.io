@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -199,7 +199,7 @@
 <p><strong>Még mindig MT101 fájlokat küldünk. Mennyire sürgős az átállás?</strong></p>
 <p>Sürgős. A SWIFT 2025 novemberében kivezette az 1-es, 2-es és 9-es kategóriájú MT üzeneteket a határon átnyúló bankközi fizetési megbízásoknál; azok a vállalati csatornák, amelyek még fogadnak MT-t, ezt az egyes bankok saját döntése alapján és kifutó időben teszik. Az <a href="/pain001-loader-mt101/">MT101 betöltő</a> a meglévő MT101 folyamatokat validált <code>pain.001</code> üzenetekké alakítja, adatok újragépelése nélkül.</p>
 <p><strong>Mit jelent számunkra a 2026. novemberi, strukturált címekre vonatkozó határidő?</strong></p>
-<p>2026 novemberének végétől a teljesen strukturálatlan postai címek már nem fogadhatók el a CBPR+ határon átnyúló fizetésekben; a címeknek strukturáltnak vagy hibridnek kell lenniük — különálló elemek, például a település (<code><TwnNm></code>) és az ország (<code><Ctry></code>), a szabad szöveges sorok helyett. Ha a törzsadataiban a címek egybefüggő szövegként szerepelnek, a munka az adatokban van, nem a banki kapcsolatban. Kezdje ott. A <a href="/2026-iso20022-migration-trends/">2026-os elemzés</a> részletesen bemutatja az ütemtervet.</p>
+<p>2026 novemberének végétől a teljesen strukturálatlan postai címek már nem fogadhatók el a CBPR+ határon átnyúló fizetésekben; a címeknek strukturáltnak vagy hibridnek kell lenniük — különálló elemek, például a település (<code>&lt;TwnNm&gt;</code>) és az ország (<code>&lt;Ctry&gt;</code>), a szabad szöveges sorok helyett. Ha a törzsadataiban a címek egybefüggő szövegként szerepelnek, a munka az adatokban van, nem a banki kapcsolatban. Kezdje ott. A <a href="/2026-iso20022-migration-trends/">2026-os elemzés</a> részletesen bemutatja az ütemtervet.</p>
 <p><strong>Mennyibe kerül a Pain001?</strong></p>
 <p>Semmibe. Az alapcsomag kettős, Apache-2.0 / MIT licencű; a kiegészítő csomagok Apache-2.0 licencűek. A kereskedelmi használat, a módosítás és a továbbterjesztés egyaránt megengedett. Nagyságrendi viszonyításként: önmagában a SWIFT fordítási SDK-jának listaára €10,000–30,000 évente.</p>
 <hr />
@@ -209,7 +209,7 @@
 <p><strong>Tudunk fájlt validálni anélkül, hogy bármit generálnánk?</strong></p>
 <p>Igen — <code>pain001 --dry-run</code> (vagy a <code>validate</code> alparancs, illetve a <code>POST /api/v1/validate</code> hívás). A <code>0</code> kilépési kód érvényes fájlt jelent, az <code>1</code> pedig azt, hogy a validálás mezőszintű hibákkal elbukott. Kösse be a CI-ba vagy egy beküldés előtti ellenőrzőlistába.</p>
 <p><strong>Mely SEPA szabálykönyveket fedi le?</strong></p>
-<p>Öt sémaszabálykönyv beépítve érkezik: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) és határon átnyúló átutalás (<code>xborder-ct</code>). A <code>--scheme <name> --explain</code> kapcsolóval megtekintheti az összes teljesült vagy megbukott szabályt.</p>
+<p>Öt sémaszabálykönyv beépítve érkezik: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) és határon átnyúló átutalás (<code>xborder-ct</code>). A <code>--scheme &lt;name&gt; --explain</code> kapcsolóval megtekintheti az összes teljesült vagy megbukott szabályt.</p>
 <p><strong>Az adataink Excelben vannak. Mi ebben a buktató?</strong></p>
 <p>Az Excel csendben számmá alakítja az IBAN-szerű karakterláncokat. Az <a href="/pain001-loader-xlsx/">Excel betöltő</a> közvetlenül olvassa a <code>.xlsx</code>/<code>.xlsm</code> fájlokat, és azonnal megáll, ha az IBAN-oszlopok numerikus cellákat tartalmaznak — a sérülés a betöltéskor derül ki, nem a banknál.</p>
 <p><strong>Hogyan kezel egy 500,000 soros köteget?</strong></p>

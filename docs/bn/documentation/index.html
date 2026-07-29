@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -215,11 +215,11 @@
 <td data-label="Purpose" class="text-left">সমর্থিত সব 11টি মেসেজ ডেফিনিশন তালিকাভুক্ত করে।</td>
 </tr>
 <tr>
-<td data-label="Subcommand" class="text-left"><code>inspect <type> [--json]</code></td>
+<td data-label="Subcommand" class="text-left"><code>inspect &lt;type&gt; [--json]</code></td>
 <td data-label="Purpose" class="text-left">একটি মেসেজ টাইপের আবশ্যিক ও ঐচ্ছিক ফিল্ডগুলি দেখায়।</td>
 </tr>
 <tr>
-<td data-label="Subcommand" class="text-left"><code>init <type> [-o DIR]</code></td>
+<td data-label="Subcommand" class="text-left"><code>init &lt;type&gt; [-o DIR]</code></td>
 <td data-label="Purpose" class="text-left">একটি মেসেজ টাইপের জন্য প্রারম্ভিক CSV টেমপ্লেট তৈরি করে।</td>
 </tr>
 <tr>
@@ -237,7 +237,7 @@
 </tbody>
 </table></div>
 <h3><code>generate</code> অপশন</h3>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th>ফ্ল্যাগ</th>
@@ -246,23 +246,23 @@
 </thead>
 <tbody>
 <tr>
-<td data-label="Flag" class="text-left"><code>-t, --xml-message-type <TYPE></code></td>
+<td data-label="Flag" class="text-left"><code>-t, --xml-message-type &lt;TYPE&gt;</code></td>
 <td data-label="Description" class="text-left">মেসেজ ডেফিনিশন, যেমন <code>pain.001.001.09</code>।</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-d, --data <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-d, --data &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">ইনপুট ডেটা: <code>.csv</code>, <code>.json</code>, <code>.jsonl</code>, <code>.db</code> / <code>.sqlite</code>, <code>.parquet</code>, অথবা PGP-এনক্রিপ্টেড <code>.gpg</code> / <code>.asc</code>।</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-o, --output-dir <DIR></code></td>
+<td data-label="Flag" class="text-left"><code>-o, --output-dir &lt;DIR&gt;</code></td>
 <td data-label="Description" class="text-left">যে ডিরেক্টরিতে জেনারেট করা XML রাখা হয়।</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-m, --template <FILE></code> / <code>-s, --schema <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-m, --template &lt;FILE&gt;</code> / <code>-s, --schema &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">বান্ডিল করা Jinja2 টেমপ্লেট বা XSD স্কিমা ওভাররাইড করে।</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-c, --config <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-c, --config &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">একটি কনফিগারেশন প্রোফাইল থেকে ডিফল্ট মান লোড করে (<code>--profile</code>, <code>--show-config</code>)।</td>
 </tr>
 <tr>
@@ -270,7 +270,7 @@
 <td data-label="Description" class="text-left">আউটপুট না লিখেই JSON Schema, XSD ও স্কিম রুলবুকের বিপরীতে ইনপুট ভ্যালিডেট করে।</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>--scheme <NAME></code></td>
+<td data-label="Flag" class="text-left"><code>--scheme &lt;NAME&gt;</code></td>
 <td data-label="Description" class="text-left">একটি স্কিম রুলবুক প্রয়োগ করে: <code>sepa-sct</code>, <code>sepa-inst</code>, <code>sepa-sdd</code>, <code>sepa-b2b</code>, অথবা <code>xborder-ct</code>।</td>
 </tr>
 <tr>
@@ -278,7 +278,7 @@
 <td data-label="Description" class="text-left">উত্তীর্ণ বা ব্যর্থ প্রতিটি স্কিম নিয়ম রিপোর্ট করে, মানুষ- বা মেশিন-পাঠযোগ্য আকারে।</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size <N></code></td>
+<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size &lt;N&gt;</code></td>
 <td data-label="Description" class="text-left">বড় ব্যাচের জন্য মেমরি-সীমাবদ্ধ চাঙ্ক-ভিত্তিক প্রক্রিয়াকরণ (ডিফল্ট প্রতি চাঙ্কে 1,000টি লেনদেন; প্রতিটি চাঙ্ক পুনর্গণিত <code>NbOfTxs</code> ও <code>CtrlSum</code> সহ নিজস্ব XML ফাইলে পরিণত হয়)।</td>
 </tr>
 <tr>
@@ -286,7 +286,7 @@
 <td data-label="Description" class="text-left">অবজারভেবিলিটি পাইপলাইনের জন্য মেশিন-পাঠযোগ্য রান মেট্রিক নির্গত করে।</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>এক্সিট কোডগুলি CI-বান্ধব: <code>0</code> সফল, <code>1</code> ভ্যালিডেশন ব্যর্থ, <code>2</code> ব্যবহারজনিত ত্রুটি।</p>
 <hr />
 <h2 id="2-python-api">2. Python API<a class="heading-anchor" href="#2-python-api" aria-label="বিভাগের লিংক: 2. Python API">#</a></h2>
@@ -313,7 +313,7 @@ process_files(
 <pre><code class="language-bash">pip install "pain001[api]"
 pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <p>সব এন্ডপয়েন্ট <code>/api/v1</code>-এর অধীনে মাউন্ট করা (সঙ্গে একটি সংস্করণহীন <code>/api</code> উপনাম):</p>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th>মেথড ও পাথ</th>
@@ -354,7 +354,7 @@ pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <td data-label="Purpose" class="text-left">Prometheus মেট্রিক।</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>ইন্টারঅ্যাক্টিভ ডকুমেন্টেশন পরিবেশিত হয় <code>/api/docs</code> (Swagger UI), <code>/api/redoc</code> ও <code>/api/reference</code> (Scalar)-এ, আর OpenAPI ডকুমেন্টটি থাকে <code>/openapi.json</code>-এ।</p>
 <hr />
 <h2 id="4-input-normalisation">4. ইনপুট নর্মালাইজেশন<a class="heading-anchor" href="#4-input-normalisation" aria-label="বিভাগের লিংক: 4. ইনপুট নর্মালাইজেশন">#</a></h2>

@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -199,7 +199,7 @@
 <p><strong>Nadal wysyłamy pliki MT101. Jak pilna jest migracja?</strong></p>
 <p>Pilna. SWIFT wycofał komunikaty MT kategorii 1, 2 i 9 dla transgranicznych międzybankowych instrukcji płatniczych w listopadzie 2025 r.; kanały korporacyjne, które wciąż przyjmują MT, robią to według uznania danego banku i na pożyczonym czasie. <a href="/pain001-loader-mt101/">Loader MT101</a> konwertuje istniejące przepływy MT101 na zwalidowane <code>pain.001</code> bez ręcznego przepisywania danych.</p>
 <p><strong>Co oznacza dla nas termin adresów ustrukturyzowanych w listopadzie 2026?</strong></p>
-<p>Od końca listopada 2026 r. w płatnościach transgranicznych CBPR+ w pełni nieustrukturyzowane adresy pocztowe nie będą już akceptowane; adresy muszą być ustrukturyzowane lub hybrydowe — odrębne elementy, takie jak miejscowość (<code><TwnNm></code>) i kraj (<code><Ctry></code>), zamiast wierszy dowolnego tekstu. Jeśli Państwa dane podstawowe przechowują adresy jako bloki tekstu, praca leży w danych, nie w połączeniu z bankiem. Od tego warto zacząć. <a href="/2026-iso20022-migration-trends/">Raport 2026</a> szczegółowo omawia harmonogram.</p>
+<p>Od końca listopada 2026 r. w płatnościach transgranicznych CBPR+ w pełni nieustrukturyzowane adresy pocztowe nie będą już akceptowane; adresy muszą być ustrukturyzowane lub hybrydowe — odrębne elementy, takie jak miejscowość (<code>&lt;TwnNm&gt;</code>) i kraj (<code>&lt;Ctry&gt;</code>), zamiast wierszy dowolnego tekstu. Jeśli Państwa dane podstawowe przechowują adresy jako bloki tekstu, praca leży w danych, nie w połączeniu z bankiem. Od tego warto zacząć. <a href="/2026-iso20022-migration-trends/">Raport 2026</a> szczegółowo omawia harmonogram.</p>
 <p><strong>Ile kosztuje Pain001?</strong></p>
 <p>Nic. Rdzeń jest podwójnie licencjonowany Apache-2.0 / MIT; pakiety towarzyszące — Apache-2.0. Użycie komercyjne, modyfikacja i redystrybucja są dozwolone. Dla porównania skali: sam SDK translacyjny SWIFT jest wyceniany na €10,000–30,000 rocznie.</p>
 <hr />
@@ -209,7 +209,7 @@
 <p><strong>Czy możemy zwalidować plik bez generowania czegokolwiek?</strong></p>
 <p>Tak — <code>pain001 --dry-run</code> (albo podkomenda <code>validate</code>, albo <code>POST /api/v1/validate</code>). Kod wyjścia <code>0</code> oznacza plik poprawny; <code>1</code> — walidacja nie powiodła się, z błędami na poziomie pól. Można to wpiąć w CI lub listę kontrolną przed wysyłką.</p>
 <p><strong>Które zbiory reguł SEPA są obsługiwane?</strong></p>
-<p>Wbudowanych jest pięć zbiorów reguł: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) oraz transgraniczne polecenie przelewu (<code>xborder-ct</code>). Użycie <code>--scheme <name> --explain</code> pokazuje każdą regułę — zaliczoną lub nie.</p>
+<p>Wbudowanych jest pięć zbiorów reguł: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) oraz transgraniczne polecenie przelewu (<code>xborder-ct</code>). Użycie <code>--scheme &lt;name&gt; --explain</code> pokazuje każdą regułę — zaliczoną lub nie.</p>
 <p><strong>Nasze dane są w Excelu. W czym haczyk?</strong></p>
 <p>Excel po cichu zamienia ciągi przypominające IBAN na liczby. <a href="/pain001-loader-xlsx/">Loader Excel</a> odczytuje <code>.xlsx</code>/<code>.xlsm</code> bezpośrednio i twardo zatrzymuje się, jeśli kolumny IBAN zawierają komórki liczbowe — uszkodzenie danych jest wychwytywane przy wczytaniu, a nie w banku.</p>
 <p><strong>Jak radzi sobie z partią 500,000 wierszy?</strong></p>

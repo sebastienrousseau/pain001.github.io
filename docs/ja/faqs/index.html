@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -199,7 +199,7 @@
 <p><strong>まだ MT101 ファイルを送信しています。移行はどれほど急務ですか?</strong></p>
 <p>急務です。SWIFT は 2025 年 11 月に、クロスボーダーの銀行間支払指図における MT カテゴリー 1、2、9 のメッセージを廃止しました。MT をまだ受け付けている企業向けチャネルは、各銀行の裁量による猶予期間中の対応にすぎません。<a href="/pain001-loader-mt101/">MT101 ローダー</a>は、既存の MT101 フローを、再入力なしで検証済みの <code>pain.001</code> に変換します。</p>
 <p><strong>2026 年 11 月の構造化住所の期限は、当社にとって何を意味しますか?</strong></p>
-<p>2026 年 11 月末以降、CBPR+ のクロスボーダー決済では、完全に非構造化の住所は受け付けられなくなります。住所は構造化またはハイブリッドでなければなりません — 自由記述の行ではなく、都市名(<code><TwnNm></code>)や国(<code><Ctry></code>)といった個別の要素が必要です。マスターデータが住所を一括テキストとして保持している場合、対応すべきはデータそのものであり、銀行との接続ではありません。そこから着手してください。<a href="/2026-iso20022-migration-trends/">2026 年ブリーフィング</a>でタイムラインを詳しく解説しています。</p>
+<p>2026 年 11 月末以降、CBPR+ のクロスボーダー決済では、完全に非構造化の住所は受け付けられなくなります。住所は構造化またはハイブリッドでなければなりません — 自由記述の行ではなく、都市名(<code>&lt;TwnNm&gt;</code>)や国(<code>&lt;Ctry&gt;</code>)といった個別の要素が必要です。マスターデータが住所を一括テキストとして保持している場合、対応すべきはデータそのものであり、銀行との接続ではありません。そこから着手してください。<a href="/2026-iso20022-migration-trends/">2026 年ブリーフィング</a>でタイムラインを詳しく解説しています。</p>
 <p><strong>Pain001 の費用はいくらですか?</strong></p>
 <p>無料です。コアは Apache-2.0 / MIT のデュアルライセンスで、コンパニオンパッケージは Apache-2.0 です。商用利用、改変、再配布のすべてが許可されています。規模感の参考として、SWIFT の変換 SDK だけでも年間 €10,000–30,000 の価格が提示されています。</p>
 <hr />
@@ -209,7 +209,7 @@
 <p><strong>何も生成せずにファイルを検証できますか?</strong></p>
 <p>できます — <code>pain001 --dry-run</code>(または <code>validate</code> サブコマンド、あるいは <code>POST /api/v1/validate</code>)をご利用ください。終了コード <code>0</code> は有効、<code>1</code> はフィールドレベルのエラーを伴う検証失敗を意味します。CI や提出前チェックリストに組み込んでください。</p>
 <p><strong>どの SEPA ルールブックに対応していますか?</strong></p>
-<p>5 つのスキームルールブックが組み込みで提供されています:SEPA Credit Transfer(<code>sepa-sct</code>)、SEPA Instant(<code>sepa-inst</code>)、SEPA Direct Debit Core(<code>sepa-sdd</code>)、SEPA B2B(<code>sepa-b2b</code>)、クロスボーダー送金(<code>xborder-ct</code>)です。<code>--scheme <name> --explain</code> を使うと、合格・不合格となったすべてのルールを確認できます。</p>
+<p>5 つのスキームルールブックが組み込みで提供されています:SEPA Credit Transfer(<code>sepa-sct</code>)、SEPA Instant(<code>sepa-inst</code>)、SEPA Direct Debit Core(<code>sepa-sdd</code>)、SEPA B2B(<code>sepa-b2b</code>)、クロスボーダー送金(<code>xborder-ct</code>)です。<code>--scheme &lt;name&gt; --explain</code> を使うと、合格・不合格となったすべてのルールを確認できます。</p>
 <p><strong>データは Excel にあります。何が問題になりますか?</strong></p>
 <p>Excel は IBAN のような文字列を暗黙のうちに数値へ変換してしまいます。<a href="/pain001-loader-xlsx/">Excel ローダー</a>は <code>.xlsx</code>/<code>.xlsm</code> を直接読み取り、IBAN 列に数値セルが含まれている場合は即座に停止します — データ破損は銀行ではなく、読み込み時点で検出されます。</p>
 <p><strong>500,000 行のバッチはどのように処理されますか?</strong></p>

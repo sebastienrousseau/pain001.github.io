@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -207,7 +207,7 @@
 <p><strong>Verification of Payee (VoP)</strong> การตรวจความตรงกันของชื่อกับ IBAN ที่สหภาพยุโรปกำหนดให้ใช้กับการโอนเงิน SEPA ทุกรายการตั้งแต่วันที่ 9 ตุลาคม 2025 ดำเนินการโดยผู้ให้บริการชำระเงินในขณะประมวลผล ความถูกต้องของข้อมูลผู้รับเงินจึงเป็นตัวชี้ว่าผลการตรวจจะตรงกันหรือไม่</p>
 <h2 id="identifiers-and-data">รหัสระบุตัวตนและข้อมูล<a class="heading-anchor" href="#identifiers-and-data" aria-label="ลิงก์ไปยังส่วน: รหัสระบุตัวตนและข้อมูล">#</a></h2>
 <p><strong>IBAN</strong> International Bank Account Number (ISO 13616) เลขที่บัญชีธนาคารสากลซึ่งตรวจสอบตัวเองได้ด้วย checksum แบบ mod-97 — จึงตรวจพบการสลับตำแหน่งตัวเลขเพียงหลักเดียวได้ตั้งแต่<em>ก่อน</em>ส่งไฟล์</p>
-<p><strong>BIC / BICFI</strong> รหัสระบุสถาบันการเงินตามมาตรฐาน ISO 9362 องค์ประกอบ XML คือ <code><BIC></code> ใน <code>pain.001.001.03</code> แต่เปลี่ยนเป็น <code><BICFI></code> ตั้งแต่เวอร์ชัน 9 — การเปลี่ยนชื่อนี้ทำให้ไฟล์ถูกปฏิเสธจริงในระหว่างการอัปเกรดเวอร์ชัน</p>
+<p><strong>BIC / BICFI</strong> รหัสระบุสถาบันการเงินตามมาตรฐาน ISO 9362 องค์ประกอบ XML คือ <code>&lt;BIC&gt;</code> ใน <code>pain.001.001.03</code> แต่เปลี่ยนเป็น <code>&lt;BICFI&gt;</code> ตั้งแต่เวอร์ชัน 9 — การเปลี่ยนชื่อนี้ทำให้ไฟล์ถูกปฏิเสธจริงในระหว่างการอัปเกรดเวอร์ชัน</p>
 <p><strong>LEI</strong> Legal Entity Identifier (ISO 17442) — รหัสระบุนิติบุคคลระดับสากลความยาว 20 อักขระ ปัจจุบันมีที่ใช้งานอยู่กว่า 3 ล้านรหัส และหน่วยงานกำกับดูแลกำหนดให้ใช้ในการชำระเงินมากขึ้นเรื่อย ๆ</p>
 <p><strong>UETR</strong> Unique End-to-end Transaction Reference — รหัส UUID ที่ทำให้ติดตามรายการชำระเงินได้ตลอดสายธนาคารตัวแทน (SWIFT gpi)</p>
 <p><strong>ที่อยู่แบบมีโครงสร้าง / แบบผสม</strong> ที่อยู่ทางไปรษณีย์ที่แยกเป็นองค์ประกอบ XML แต่ละส่วน (ถนน เมือง รหัสไปรษณีย์ ประเทศ) เทียบกับที่อยู่แบบบรรทัดข้อความอิสระ ตั้งแต่วันที่ 14 พฤศจิกายน 2026 CBPR+ จะปฏิเสธที่อยู่ที่ไม่มีโครงสร้างเลย ส่วนแบบ<em>ผสม</em> — ระบุเมืองและประเทศแบบมีโครงสร้าง พร้อมบรรทัดที่อยู่ได้ไม่เกินสองบรรทัด บรรทัดละ 70 อักขระ — ยังคงใช้ได้</p>

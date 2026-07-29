@@ -65,6 +65,11 @@ jobs:
       - name: Translation keys still match the built pages
         run: python3 scripts/validate_i18n_keys_live.py
 
+      # Escaping defects produce valid HTML that every other gate
+      # passes, so they need their own structural check.
+      - name: Content integrity (no eaten markup, no double encoding)
+        run: python3 scripts/validate_content_integrity.py
+
       - name: Link integrity (internal links, anchors, locale consistency)
         run: python3 scripts/validate_links.py docs
 

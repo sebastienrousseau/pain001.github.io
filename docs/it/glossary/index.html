@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -207,7 +207,7 @@
 <p><strong>Verification of Payee (VoP).</strong> Il controllo di corrispondenza nome/IBAN imposto dall'UE, applicato a tutti i bonifici SEPA dal 9 ottobre 2025. Eseguito dal PSP al momento dell'esecuzione; sono i dati puliti del creditore a determinare la corrispondenza.</p>
 <h2 id="identifiers-and-data">Identificativi e dati<a class="heading-anchor" href="#identifiers-and-data" aria-label="Collegamento alla sezione: Identificativi e dati">#</a></h2>
 <p><strong>IBAN.</strong> International Bank Account Number (ISO 13616), autoverificante tramite checksum mod-97 — motivo per cui una sola cifra trasposta è rilevabile <em>prima</em> dell'invio.</p>
-<p><strong>BIC / BICFI.</strong> Il Business Identifier Code ISO 9362 di un istituto finanziario. L'elemento XML è <code><BIC></code> in <code>pain.001.001.03</code> ma <code><BICFI></code> dalla versione 9 — una ridenominazione che causa rifiuti reali durante gli aggiornamenti di versione.</p>
+<p><strong>BIC / BICFI.</strong> Il Business Identifier Code ISO 9362 di un istituto finanziario. L'elemento XML è <code>&lt;BIC&gt;</code> in <code>pain.001.001.03</code> ma <code>&lt;BICFI&gt;</code> dalla versione 9 — una ridenominazione che causa rifiuti reali durante gli aggiornamenti di versione.</p>
 <p><strong>LEI.</strong> Legal Entity Identifier (ISO 17442) — l'identificativo societario globale di 20 caratteri. Ne sono attivi oltre 3 milioni e i regolatori li richiedono sempre più spesso nei pagamenti.</p>
 <p><strong>UETR.</strong> Unique End-to-end Transaction Reference — l'UUID che consente di tracciare un pagamento lungo la catena dei corrispondenti (SWIFT gpi).</p>
 <p><strong>Indirizzo strutturato / ibrido.</strong> Indirizzi postali come elementi XML discreti (via, località, CAP, paese) contrapposti a righe di testo libero. Dal 14 novembre 2026 CBPR+ rifiuta gli indirizzi completamente non strutturati; l'<em>ibrido</em> — località e paese strutturati più fino a due righe di indirizzo da 70 caratteri — resta valido.</p>

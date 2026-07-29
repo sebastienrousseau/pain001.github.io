@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -215,11 +215,11 @@
 <td data-label="Purpose" class="text-left">Wyświetla wszystkie 11 obsługiwanych definicji komunikatów.</td>
 </tr>
 <tr>
-<td data-label="Subcommand" class="text-left"><code>inspect <type> [--json]</code></td>
+<td data-label="Subcommand" class="text-left"><code>inspect &lt;type&gt; [--json]</code></td>
 <td data-label="Purpose" class="text-left">Pokazuje pola wymagane i opcjonalne dla danego typu komunikatu.</td>
 </tr>
 <tr>
-<td data-label="Subcommand" class="text-left"><code>init <type> [-o DIR]</code></td>
+<td data-label="Subcommand" class="text-left"><code>init &lt;type&gt; [-o DIR]</code></td>
 <td data-label="Purpose" class="text-left">Tworzy startowy szablon CSV dla typu komunikatu.</td>
 </tr>
 <tr>
@@ -237,7 +237,7 @@
 </tbody>
 </table></div>
 <h3>Opcje <code>generate</code></h3>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th>Flaga</th>
@@ -246,23 +246,23 @@
 </thead>
 <tbody>
 <tr>
-<td data-label="Flag" class="text-left"><code>-t, --xml-message-type <TYPE></code></td>
+<td data-label="Flag" class="text-left"><code>-t, --xml-message-type &lt;TYPE&gt;</code></td>
 <td data-label="Description" class="text-left">Definicja komunikatu, np. <code>pain.001.001.09</code>.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-d, --data <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-d, --data &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">Dane wejściowe: <code>.csv</code>, <code>.json</code>, <code>.jsonl</code>, <code>.db</code> / <code>.sqlite</code>, <code>.parquet</code> lub zaszyfrowane PGP <code>.gpg</code> / <code>.asc</code>.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-o, --output-dir <DIR></code></td>
+<td data-label="Flag" class="text-left"><code>-o, --output-dir &lt;DIR&gt;</code></td>
 <td data-label="Description" class="text-left">Katalog, do którego trafia wygenerowany XML.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-m, --template <FILE></code> / <code>-s, --schema <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-m, --template &lt;FILE&gt;</code> / <code>-s, --schema &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">Zastępuje dołączony szablon Jinja2 lub schemat XSD.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-c, --config <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-c, --config &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">Wczytuje wartości domyślne z profilu konfiguracji (<code>--profile</code>, <code>--show-config</code>).</td>
 </tr>
 <tr>
@@ -270,7 +270,7 @@
 <td data-label="Description" class="text-left">Waliduje dane wejściowe względem JSON Schema, XSD i reguł schematu płatności bez zapisywania wyniku.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>--scheme <NAME></code></td>
+<td data-label="Flag" class="text-left"><code>--scheme &lt;NAME&gt;</code></td>
 <td data-label="Description" class="text-left">Wymusza reguły schematu płatności: <code>sepa-sct</code>, <code>sepa-inst</code>, <code>sepa-sdd</code>, <code>sepa-b2b</code> lub <code>xborder-ct</code>.</td>
 </tr>
 <tr>
@@ -278,7 +278,7 @@
 <td data-label="Description" class="text-left">Raportuje każdą regułę schematu — zaliczoną lub nie — w formie czytelnej dla człowieka lub maszyny.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size <N></code></td>
+<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size &lt;N&gt;</code></td>
 <td data-label="Description" class="text-left">Przetwarzanie w porcjach o ograniczonym zużyciu pamięci dla dużych partii (domyślnie 1,000 transakcji na porcję; każda porcja staje się osobnym plikiem XML z przeliczonymi <code>NbOfTxs</code> i <code>CtrlSum</code>).</td>
 </tr>
 <tr>
@@ -286,7 +286,7 @@
 <td data-label="Description" class="text-left">Emituje odczytywalne maszynowo metryki uruchomienia dla potoków obserwowalności.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Kody wyjścia są przyjazne dla CI: <code>0</code> — sukces, <code>1</code> — błąd walidacji, <code>2</code> — błąd użycia.</p>
 <hr />
 <h2 id="2-python-api">2. API Python<a class="heading-anchor" href="#2-python-api" aria-label="Łącze do sekcji: 2. API Python">#</a></h2>
@@ -313,7 +313,7 @@ process_files(
 <pre><code class="language-bash">pip install "pain001[api]"
 pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <p>Wszystkie endpointy są zamontowane pod <code>/api/v1</code> (z niewersjonowanym aliasem <code>/api</code>):</p>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th>Metoda i ścieżka</th>
@@ -354,7 +354,7 @@ pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <td data-label="Purpose" class="text-left">Metryki Prometheus.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Interaktywna dokumentacja jest dostępna pod <code>/api/docs</code> (Swagger UI), <code>/api/redoc</code> i <code>/api/reference</code> (Scalar), a dokument OpenAPI pod <code>/openapi.json</code>.</p>
 <hr />
 <h2 id="4-input-normalisation">4. Normalizacja danych wejściowych<a class="heading-anchor" href="#4-input-normalisation" aria-label="Łącze do sekcji: 4. Normalizacja danych wejściowych">#</a></h2>

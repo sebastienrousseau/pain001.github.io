@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -199,7 +199,7 @@
 <p><strong>Hâlâ MT101 dosyaları gönderiyoruz. Geçiş ne kadar acil?</strong></p>
 <p>Acil. SWIFT, sınır ötesi bankalar arası ödeme talimatları için MT kategori 1, 2 ve 9 mesajlarını Kasım 2025'te emekliye ayırdı; MT'yi hâlâ kabul eden kurumsal kanallar bunu her bankanın kendi takdiriyle ve ödünç alınmış zamanla yapıyor. <a href="/pain001-loader-mt101/">MT101 yükleyicisi</a>, mevcut MT101 akışlarını hiçbir şeyi yeniden girmeden doğrulanmış <code>pain.001</code>'e dönüştürür.</p>
 <p><strong>Kasım 2026 yapılandırılmış adres son tarihi bizim için ne anlama geliyor?</strong></p>
-<p>Kasım 2026 sonundan itibaren, tamamen yapılandırılmamış posta adresleri CBPR+ sınır ötesi ödemelerde artık kabul edilmiyor; adresler yapılandırılmış veya hibrit olmalı — serbest metin satırları yerine şehir (<code><TwnNm></code>) ve ülke (<code><Ctry></code>) gibi ayrık öğeler. Ana verileriniz adresleri tek parça metin olarak tutuyorsa, iş banka bağlantınızda değil verilerinizdedir. Oradan başlayın. <a href="/2026-iso20022-migration-trends/">2026 brifingi</a> zaman çizelgesini ayrıntılı olarak ele alır.</p>
+<p>Kasım 2026 sonundan itibaren, tamamen yapılandırılmamış posta adresleri CBPR+ sınır ötesi ödemelerde artık kabul edilmiyor; adresler yapılandırılmış veya hibrit olmalı — serbest metin satırları yerine şehir (<code>&lt;TwnNm&gt;</code>) ve ülke (<code>&lt;Ctry&gt;</code>) gibi ayrık öğeler. Ana verileriniz adresleri tek parça metin olarak tutuyorsa, iş banka bağlantınızda değil verilerinizdedir. Oradan başlayın. <a href="/2026-iso20022-migration-trends/">2026 brifingi</a> zaman çizelgesini ayrıntılı olarak ele alır.</p>
 <p><strong>Pain001'in maliyeti nedir?</strong></p>
 <p>Hiçbir şey. Çekirdek, Apache-2.0 / MIT çift lisanslıdır; yardımcı paketler Apache-2.0'dır. Ticari kullanım, değiştirme ve yeniden dağıtımın tümü serbesttir. Ölçek için: yalnızca SWIFT'in çeviri SDK'sının liste fiyatı yılda €10,000–30,000'dir.</p>
 <hr />
@@ -209,7 +209,7 @@
 <p><strong>Hiçbir şey üretmeden bir dosyayı doğrulayabilir miyiz?</strong></p>
 <p>Evet — <code>pain001 --dry-run</code> (veya <code>validate</code> alt komutu ya da <code>POST /api/v1/validate</code>). Çıkış kodu <code>0</code> geçerli demektir; <code>1</code>, doğrulamanın alan düzeyinde hatalarla başarısız olduğu anlamına gelir. CI'a veya gönderim öncesi kontrol listesine bağlayın.</p>
 <p><strong>Hangi SEPA kural kitapları kapsanıyor?</strong></p>
-<p>Beş şema kural kitabı yerleşik olarak gelir: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) ve sınır ötesi havale (<code>xborder-ct</code>). Geçen veya başarısız olan her kuralı görmek için <code>--scheme <name> --explain</code> kullanın.</p>
+<p>Beş şema kural kitabı yerleşik olarak gelir: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) ve sınır ötesi havale (<code>xborder-ct</code>). Geçen veya başarısız olan her kuralı görmek için <code>--scheme &lt;name&gt; --explain</code> kullanın.</p>
 <p><strong>Verilerimiz Excel'de. Sorun nerede?</strong></p>
 <p>Excel, IBAN benzeri dizeleri sessizce sayılara dönüştürür. <a href="/pain001-loader-xlsx/">Excel yükleyicisi</a>, <code>.xlsx</code>/<code>.xlsm</code> dosyalarını doğrudan okur ve IBAN sütunları sayısal hücreler içeriyorsa işlemi durdurur — bozulma bankada değil, yükleme anında yakalanır.</p>
 <p><strong>500,000 satırlık bir partiyi nasıl işler?</strong></p>

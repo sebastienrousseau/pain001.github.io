@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -199,7 +199,7 @@
 <p><strong>Stále posíláme soubory MT101. Jak naléhavá je migrace?</strong></p>
 <p>Naléhavá. SWIFT v listopadu 2025 ukončil zprávy MT kategorií 1, 2 a 9 pro přeshraniční mezibankovní platební příkazy; firemní kanály, které MT stále přijímají, tak činí podle uvážení každé banky a na vypůjčený čas. <a href="/pain001-loader-mt101/">Loader MT101</a> převede stávající toky MT101 na ověřené <code>pain.001</code>, aniž byste cokoli přepisovali.</p>
 <p><strong>Co pro nás znamená listopadový termín roku 2026 pro strukturované adresy?</strong></p>
-<p>Od konce listopadu 2026 se v přeshraničních platbách CBPR+ již nepřijímají zcela nestrukturované poštovní adresy; adresy musí být strukturované nebo hybridní — samostatné prvky jako město (<code><TwnNm></code>) a země (<code><Ctry></code>) namísto volných řádků textu. Pokud jsou ve vašich kmenových datech adresy uloženy jako souvislý text, práce čeká na vašich datech, nikoli na bankovním spojení. Začněte tam. Podrobný harmonogram popisuje <a href="/2026-iso20022-migration-trends/">přehled pro rok 2026</a>.</p>
+<p>Od konce listopadu 2026 se v přeshraničních platbách CBPR+ již nepřijímají zcela nestrukturované poštovní adresy; adresy musí být strukturované nebo hybridní — samostatné prvky jako město (<code>&lt;TwnNm&gt;</code>) a země (<code>&lt;Ctry&gt;</code>) namísto volných řádků textu. Pokud jsou ve vašich kmenových datech adresy uloženy jako souvislý text, práce čeká na vašich datech, nikoli na bankovním spojení. Začněte tam. Podrobný harmonogram popisuje <a href="/2026-iso20022-migration-trends/">přehled pro rok 2026</a>.</p>
 <p><strong>Kolik Pain001 stojí?</strong></p>
 <p>Nic. Jádro je dvojlicencované pod Apache-2.0 / MIT; doprovodné balíčky pod Apache-2.0. Komerční užití, úpravy i další šíření jsou povoleny. Pro srovnání měřítka: samotné překladové SDK od SWIFT je v ceníku za €10,000–30,000 ročně.</p>
 <hr />
@@ -209,7 +209,7 @@
 <p><strong>Můžeme soubor ověřit, aniž bychom cokoli generovali?</strong></p>
 <p>Ano — <code>pain001 --dry-run</code> (nebo podpříkaz <code>validate</code>, případně <code>POST /api/v1/validate</code>). Návratový kód <code>0</code> znamená platný soubor; <code>1</code> znamená, že validace selhala s chybami na úrovni polí. Zapojte to do CI nebo do kontrolního seznamu před odesláním.</p>
 <p><strong>Která pravidla SEPA jsou pokryta?</strong></p>
-<p>Vestavěná jsou pravidla pěti schémat: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) a přeshraniční úhrada (<code>xborder-ct</code>). Pomocí <code>--scheme <name> --explain</code> uvidíte každé pravidlo, které prošlo či selhalo.</p>
+<p>Vestavěná jsou pravidla pěti schémat: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) a přeshraniční úhrada (<code>xborder-ct</code>). Pomocí <code>--scheme &lt;name&gt; --explain</code> uvidíte každé pravidlo, které prošlo či selhalo.</p>
 <p><strong>Naše data jsou v Excelu. V čem je háček?</strong></p>
 <p>Excel tiše převádí řetězce podobné IBAN na čísla. <a href="/pain001-loader-xlsx/">Loader pro Excel</a> čte <code>.xlsx</code>/<code>.xlsm</code> přímo a tvrdě se zastaví, pokud sloupce s IBAN obsahují číselné buňky — poškození se odhalí při načtení, nikoli až v bance.</p>
 <p><strong>Jak si poradí s dávkou o 500,000 řádcích?</strong></p>

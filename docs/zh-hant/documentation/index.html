@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -215,11 +215,11 @@
 <td data-label="Purpose" class="text-left">列出全部 11 種支援的電文定義。</td>
 </tr>
 <tr>
-<td data-label="Subcommand" class="text-left"><code>inspect <type> [--json]</code></td>
+<td data-label="Subcommand" class="text-left"><code>inspect &lt;type&gt; [--json]</code></td>
 <td data-label="Purpose" class="text-left">顯示某電文類型的必填與選填欄位。</td>
 </tr>
 <tr>
-<td data-label="Subcommand" class="text-left"><code>init <type> [-o DIR]</code></td>
+<td data-label="Subcommand" class="text-left"><code>init &lt;type&gt; [-o DIR]</code></td>
 <td data-label="Purpose" class="text-left">為電文類型建立入門 CSV 範本。</td>
 </tr>
 <tr>
@@ -237,7 +237,7 @@
 </tbody>
 </table></div>
 <h3><code>generate</code> 選項</h3>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th>旗標</th>
@@ -246,23 +246,23 @@
 </thead>
 <tbody>
 <tr>
-<td data-label="Flag" class="text-left"><code>-t, --xml-message-type <TYPE></code></td>
+<td data-label="Flag" class="text-left"><code>-t, --xml-message-type &lt;TYPE&gt;</code></td>
 <td data-label="Description" class="text-left">電文定義，例如 <code>pain.001.001.09</code>。</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-d, --data <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-d, --data &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">輸入資料：<code>.csv</code>、<code>.json</code>、<code>.jsonl</code>、<code>.db</code> / <code>.sqlite</code>、<code>.parquet</code>，或經 PGP 加密的 <code>.gpg</code> / <code>.asc</code>。</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-o, --output-dir <DIR></code></td>
+<td data-label="Flag" class="text-left"><code>-o, --output-dir &lt;DIR&gt;</code></td>
 <td data-label="Description" class="text-left">存放產生 XML 的目錄。</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-m, --template <FILE></code> / <code>-s, --schema <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-m, --template &lt;FILE&gt;</code> / <code>-s, --schema &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">覆寫內建的 Jinja2 範本或 XSD 結構描述。</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-c, --config <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-c, --config &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">從組態設定檔載入預設值（<code>--profile</code>、<code>--show-config</code>）。</td>
 </tr>
 <tr>
@@ -270,7 +270,7 @@
 <td data-label="Description" class="text-left">依 JSON Schema、XSD 與方案規則手冊驗證輸入，但不寫出任何輸出。</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>--scheme <NAME></code></td>
+<td data-label="Flag" class="text-left"><code>--scheme &lt;NAME&gt;</code></td>
 <td data-label="Description" class="text-left">強制套用方案規則手冊：<code>sepa-sct</code>、<code>sepa-inst</code>、<code>sepa-sdd</code>、<code>sepa-b2b</code> 或 <code>xborder-ct</code>。</td>
 </tr>
 <tr>
@@ -278,7 +278,7 @@
 <td data-label="Description" class="text-left">回報每條通過或未通過的方案規則，可輸出人類可讀或機器可讀格式。</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size <N></code></td>
+<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size &lt;N&gt;</code></td>
 <td data-label="Description" class="text-left">針對大批次的記憶體受控分塊處理（預設每塊 1,000 筆交易；每個分塊各自產生一個 XML 檔案，並重新計算 <code>NbOfTxs</code> 與 <code>CtrlSum</code>）。</td>
 </tr>
 <tr>
@@ -286,7 +286,7 @@
 <td data-label="Description" class="text-left">輸出機器可讀的執行指標，供可觀測性管線使用。</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>結束代碼對 CI 友善：<code>0</code> 表示成功、<code>1</code> 表示驗證失敗、<code>2</code> 表示用法錯誤。</p>
 <hr />
 <h2 id="2-python-api">2. Python API<a class="heading-anchor" href="#2-python-api" aria-label="連結至章節：2. Python API">#</a></h2>
@@ -313,7 +313,7 @@ process_files(
 <pre><code class="language-bash">pip install "pain001[api]"
 pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <p>所有端點皆掛載於 <code>/api/v1</code> 之下（並提供不含版本的 <code>/api</code> 別名）：</p>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th>方法與路徑</th>
@@ -354,7 +354,7 @@ pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <td data-label="Purpose" class="text-left">Prometheus 指標。</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>互動式文件位於 <code>/api/docs</code>（Swagger UI）、<code>/api/redoc</code> 與 <code>/api/reference</code>（Scalar），OpenAPI 文件則在 <code>/openapi.json</code>。</p>
 <hr />
 <h2 id="4-input-normalisation">4. 輸入正規化<a class="heading-anchor" href="#4-input-normalisation" aria-label="連結至章節：4. 輸入正規化">#</a></h2>

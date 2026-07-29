@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -215,11 +215,11 @@
 <td data-label="Purpose" class="text-left">Παραθέτει και τους 11 υποστηριζόμενους ορισμούς μηνυμάτων.</td>
 </tr>
 <tr>
-<td data-label="Subcommand" class="text-left"><code>inspect <type> [--json]</code></td>
+<td data-label="Subcommand" class="text-left"><code>inspect &lt;type&gt; [--json]</code></td>
 <td data-label="Purpose" class="text-left">Εμφανίζει τα υποχρεωτικά και τα προαιρετικά πεδία ενός τύπου μηνύματος.</td>
 </tr>
 <tr>
-<td data-label="Subcommand" class="text-left"><code>init <type> [-o DIR]</code></td>
+<td data-label="Subcommand" class="text-left"><code>init &lt;type&gt; [-o DIR]</code></td>
 <td data-label="Purpose" class="text-left">Δημιουργεί ένα αρχικό πρότυπο CSV για έναν τύπο μηνύματος.</td>
 </tr>
 <tr>
@@ -237,7 +237,7 @@
 </tbody>
 </table></div>
 <h3>Επιλογές του <code>generate</code></h3>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th>Σημαία</th>
@@ -246,23 +246,23 @@
 </thead>
 <tbody>
 <tr>
-<td data-label="Flag" class="text-left"><code>-t, --xml-message-type <TYPE></code></td>
+<td data-label="Flag" class="text-left"><code>-t, --xml-message-type &lt;TYPE&gt;</code></td>
 <td data-label="Description" class="text-left">Ορισμός μηνύματος, π.χ. <code>pain.001.001.09</code>.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-d, --data <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-d, --data &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">Δεδομένα εισόδου: <code>.csv</code>, <code>.json</code>, <code>.jsonl</code>, <code>.db</code> / <code>.sqlite</code>, <code>.parquet</code> ή αρχεία <code>.gpg</code> / <code>.asc</code> κρυπτογραφημένα με PGP.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-o, --output-dir <DIR></code></td>
+<td data-label="Flag" class="text-left"><code>-o, --output-dir &lt;DIR&gt;</code></td>
 <td data-label="Description" class="text-left">Ο κατάλογος στον οποίο γράφεται το παραγόμενο XML.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-m, --template <FILE></code> / <code>-s, --schema <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-m, --template &lt;FILE&gt;</code> / <code>-s, --schema &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">Αντικαθιστά το ενσωματωμένο πρότυπο Jinja2 ή το σχήμα XSD.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-c, --config <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-c, --config &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">Φορτώνει προεπιλογές από ένα προφίλ διαμόρφωσης (<code>--profile</code>, <code>--show-config</code>).</td>
 </tr>
 <tr>
@@ -270,7 +270,7 @@
 <td data-label="Description" class="text-left">Επικυρώνει την είσοδο ως προς το JSON Schema, το XSD και τον κανονισμό του συστήματος, χωρίς να γράψει έξοδο.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>--scheme <NAME></code></td>
+<td data-label="Flag" class="text-left"><code>--scheme &lt;NAME&gt;</code></td>
 <td data-label="Description" class="text-left">Επιβάλλει έναν κανονισμό συστήματος: <code>sepa-sct</code>, <code>sepa-inst</code>, <code>sepa-sdd</code>, <code>sepa-b2b</code> ή <code>xborder-ct</code>.</td>
 </tr>
 <tr>
@@ -278,7 +278,7 @@
 <td data-label="Description" class="text-left">Αναφέρει κάθε κανόνα του συστήματος που πέρασε ή απέτυχε, σε μορφή αναγνώσιμη από άνθρωπο ή από μηχανή.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size <N></code></td>
+<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size &lt;N&gt;</code></td>
 <td data-label="Description" class="text-left">Τμηματική επεξεργασία με περιορισμένη χρήση μνήμης για μεγάλες παρτίδες (προεπιλογή 1,000 συναλλαγές ανά τμήμα· κάθε τμήμα γίνεται ξεχωριστό αρχείο XML με επανυπολογισμένα <code>NbOfTxs</code> και <code>CtrlSum</code>).</td>
 </tr>
 <tr>
@@ -286,7 +286,7 @@
 <td data-label="Description" class="text-left">Εκπέμπει μετρικές εκτέλεσης αναγνώσιμες από μηχανή για αγωγούς παρατηρησιμότητας.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Οι κωδικοί εξόδου είναι φιλικοί προς CI: <code>0</code> επιτυχία, <code>1</code> αποτυχία επικύρωσης, <code>2</code> σφάλμα χρήσης.</p>
 <hr />
 <h2 id="2-python-api">2. Python API<a class="heading-anchor" href="#2-python-api" aria-label="Σύνδεσμος στην ενότητα: 2. Python API">#</a></h2>
@@ -313,7 +313,7 @@ process_files(
 <pre><code class="language-bash">pip install "pain001[api]"
 pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <p>Όλα τα τελικά σημεία βρίσκονται κάτω από το <code>/api/v1</code> (με το <code>/api</code> ως εναλλακτική διαδρομή χωρίς έκδοση):</p>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th>Μέθοδος & διαδρομή</th>
@@ -354,7 +354,7 @@ pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <td data-label="Purpose" class="text-left">Μετρικές Prometheus.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Η διαδραστική τεκμηρίωση παρέχεται στα <code>/api/docs</code> (Swagger UI), <code>/api/redoc</code> και <code>/api/reference</code> (Scalar), ενώ το έγγραφο OpenAPI βρίσκεται στο <code>/openapi.json</code>.</p>
 <hr />
 <h2 id="4-input-normalisation">4. Κανονικοποίηση εισόδου<a class="heading-anchor" href="#4-input-normalisation" aria-label="Σύνδεσμος στην ενότητα: 4. Κανονικοποίηση εισόδου">#</a></h2>

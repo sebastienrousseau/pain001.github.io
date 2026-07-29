@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -199,7 +199,7 @@
 <p><strong>Nous envoyons encore des fichiers MT101. La migration est-elle urgente ?</strong></p>
 <p>Urgente. SWIFT a retiré les messages MT des catégories 1, 2 et 9 pour les instructions de paiement interbancaires transfrontalières en novembre 2025 ; les canaux entreprises qui acceptent encore le MT le font à la discrétion de chaque banque et en sursis. Le <a href="/pain001-loader-mt101/">loader MT101</a> convertit les flux MT101 existants en <code>pain.001</code> validé sans rien ressaisir.</p>
 <p><strong>Que signifie pour nous l'échéance des adresses structurées de novembre 2026 ?</strong></p>
-<p>À partir de fin novembre 2026, les adresses postales entièrement non structurées ne sont plus acceptées dans les paiements transfrontaliers CBPR+ ; les adresses doivent être structurées ou hybrides — des éléments discrets comme la ville (<code><TwnNm></code>) et le pays (<code><Ctry></code>) au lieu de lignes en texte libre. Si vos données de référence stockent les adresses en blocs de texte, le travail se situe dans vos données, pas dans votre connexion bancaire. Commencez par là. Le <a href="/2026-iso20022-migration-trends/">briefing 2026</a> détaille le calendrier.</p>
+<p>À partir de fin novembre 2026, les adresses postales entièrement non structurées ne sont plus acceptées dans les paiements transfrontaliers CBPR+ ; les adresses doivent être structurées ou hybrides — des éléments discrets comme la ville (<code>&lt;TwnNm&gt;</code>) et le pays (<code>&lt;Ctry&gt;</code>) au lieu de lignes en texte libre. Si vos données de référence stockent les adresses en blocs de texte, le travail se situe dans vos données, pas dans votre connexion bancaire. Commencez par là. Le <a href="/2026-iso20022-migration-trends/">briefing 2026</a> détaille le calendrier.</p>
 <p><strong>Combien coûte Pain001 ?</strong></p>
 <p>Rien. Le cœur est sous double licence Apache-2.0 / MIT ; les paquets compagnons sont sous Apache-2.0. L'usage commercial, la modification et la redistribution sont tous permis. Pour donner un ordre de grandeur, le seul SDK de traduction de SWIFT est affiché à €10,000–30,000 par an.</p>
 <hr />
@@ -209,7 +209,7 @@
 <p><strong>Peut-on valider un fichier sans rien générer ?</strong></p>
 <p>Oui — <code>pain001 --dry-run</code> (ou la sous-commande <code>validate</code>, ou <code>POST /api/v1/validate</code>). Le code de sortie <code>0</code> signifie valide ; <code>1</code> signifie que la validation a échoué, avec des erreurs au niveau du champ. Intégrez-le à la CI ou à une liste de contrôle avant soumission.</p>
 <p><strong>Quels recueils de règles SEPA sont couverts ?</strong></p>
-<p>Cinq recueils de règles sont intégrés : SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) et virement transfrontalier (<code>xborder-ct</code>). Utilisez <code>--scheme <name> --explain</code> pour voir chaque règle réussie ou échouée.</p>
+<p>Cinq recueils de règles sont intégrés : SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) et virement transfrontalier (<code>xborder-ct</code>). Utilisez <code>--scheme &lt;name&gt; --explain</code> pour voir chaque règle réussie ou échouée.</p>
 <p><strong>Nos données vivent dans Excel. Où est le piège ?</strong></p>
 <p>Excel convertit silencieusement en nombres les chaînes ressemblant à des IBAN. Le <a href="/pain001-loader-xlsx/">loader Excel</a> lit directement <code>.xlsx</code>/<code>.xlsm</code> et s'arrête net si des colonnes IBAN contiennent des cellules numériques — la corruption est détectée au chargement, pas à la banque.</p>
 <p><strong>Comment gère-t-il un lot de 500,000 lignes ?</strong></p>

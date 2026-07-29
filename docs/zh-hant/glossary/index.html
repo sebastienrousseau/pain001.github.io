@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -207,7 +207,7 @@
 <p><strong>收款人驗證（Verification of Payee，VoP）。</strong>自 2025 年 10 月 9 日起適用於所有 SEPA 貸記轉帳的歐盟強制姓名/IBAN 比對檢查。由 PSP 於執行當下完成；收款人資料是否乾淨決定比對能否成功。</p>
 <h2 id="identifiers-and-data">識別碼與資料<a class="heading-anchor" href="#identifiers-and-data" aria-label="連結至章節：識別碼與資料">#</a></h2>
 <p><strong>IBAN。</strong>國際銀行帳戶號碼（ISO 13616），透過 mod-97 檢核碼自我檢查——因此即使只有一位數字對調，也能在提交<em>之前</em>被偵測出來。</p>
-<p><strong>BIC / BICFI。</strong>金融機構的 ISO 9362 商業識別碼。此 XML 元素在 <code>pain.001.001.03</code> 為 <code><BIC></code>，自版本 9 起改為 <code><BICFI></code>——這項更名在版本升級時造成過實際退件。</p>
+<p><strong>BIC / BICFI。</strong>金融機構的 ISO 9362 商業識別碼。此 XML 元素在 <code>pain.001.001.03</code> 為 <code>&lt;BIC&gt;</code>，自版本 9 起改為 <code>&lt;BICFI&gt;</code>——這項更名在版本升級時造成過實際退件。</p>
 <p><strong>LEI。</strong>法人機構識別碼（ISO 17442）——20 碼的全球企業識別碼。現有超過 300 萬個處於有效狀態，且監理機關日益要求在支付中使用。</p>
 <p><strong>UETR。</strong>端對端唯一交易參考碼（Unique End-to-end Transaction Reference）——讓一筆付款能沿通匯鏈全程追蹤的 UUID（SWIFT gpi）。</p>
 <p><strong>結構化 / 混合地址。</strong>以獨立 XML 元素（街道、城鎮、郵遞區號、國家）表示的郵政地址，相對於自由文字行。自 2026 年 11 月 14 日起，CBPR+ 拒收完全非結構化的地址；<em>混合</em>形式——結構化的城鎮與國家，加上最多兩行 70 字元的地址行——仍屬有效。</p>

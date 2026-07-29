@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -207,7 +207,7 @@
 <p><strong>Verification of Payee (VoP).</strong> Pemeriksaan kecocokan nama/IBAN yang diwajibkan Uni Eropa untuk seluruh transfer kredit SEPA sejak 9 Oktober 2025. Dilakukan oleh PSP pada saat eksekusi; kebersihan data kreditur menentukan apakah pemeriksaan itu cocok.</p>
 <h2 id="identifiers-and-data">Pengidentifikasi dan data<a class="heading-anchor" href="#identifiers-and-data" aria-label="Tautan ke bagian: Pengidentifikasi dan data">#</a></h2>
 <p><strong>IBAN.</strong> International Bank Account Number (ISO 13616), yang memeriksa dirinya sendiri melalui checksum mod-97 — itulah sebabnya satu digit yang tertukar dapat terdeteksi <em>sebelum</em> pengiriman.</p>
-<p><strong>BIC / BICFI.</strong> Business Identifier Code ISO 9362 milik sebuah lembaga keuangan. Elemen XML-nya adalah <code><BIC></code> pada <code>pain.001.001.03</code>, tetapi <code><BICFI></code> sejak versi 9 — penggantian nama yang menyebabkan penolakan nyata saat peningkatan versi.</p>
+<p><strong>BIC / BICFI.</strong> Business Identifier Code ISO 9362 milik sebuah lembaga keuangan. Elemen XML-nya adalah <code>&lt;BIC&gt;</code> pada <code>pain.001.001.03</code>, tetapi <code>&lt;BICFI&gt;</code> sejak versi 9 — penggantian nama yang menyebabkan penolakan nyata saat peningkatan versi.</p>
 <p><strong>LEI.</strong> Legal Entity Identifier (ISO 17442) — pengidentifikasi perusahaan global sepanjang 20 karakter. Lebih dari 3 juta di antaranya aktif, dan regulator semakin mewajibkannya dalam pembayaran.</p>
 <p><strong>UETR.</strong> Unique End-to-end Transaction Reference — UUID yang memungkinkan sebuah pembayaran dilacak di sepanjang rantai koresponden (SWIFT gpi).</p>
 <p><strong>Alamat terstruktur / hibrida.</strong> Alamat pos sebagai elemen XML terpisah (jalan, kota, kode pos, negara) dibandingkan dengan baris teks bebas. Mulai 14 November 2026, CBPR+ menolak alamat yang sepenuhnya tidak terstruktur; bentuk <em>hibrida</em> — kota dan negara yang terstruktur ditambah paling banyak dua baris alamat sepanjang 70 karakter — tetap berlaku.</p>

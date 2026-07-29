@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -207,7 +207,7 @@
 <p><strong>Verification of Payee (VoP).</strong> Wymagana przez UE kontrola zgodności nazwy z IBAN, stosowana do wszystkich poleceń przelewu SEPA od 9 października 2025 r. Wykonywana przez dostawcę usług płatniczych w momencie realizacji; o dopasowaniu decydują czyste dane wierzyciela.</p>
 <h2 id="identifiers-and-data">Identyfikatory i dane<a class="heading-anchor" href="#identifiers-and-data" aria-label="Łącze do sekcji: Identyfikatory i dane">#</a></h2>
 <p><strong>IBAN.</strong> Międzynarodowy numer rachunku bankowego (ISO 13616), samokontrolujący się dzięki sumie kontrolnej mod-97 — dlatego pojedyncza przestawiona cyfra jest wykrywalna <em>przed</em> wysłaniem.</p>
-<p><strong>BIC / BICFI.</strong> Kod identyfikacyjny instytucji finansowej wg ISO 9362. Element XML to <code><BIC></code> w <code>pain.001.001.03</code>, ale <code><BICFI></code> od wersji 9 — zmiana nazwy, która powoduje rzeczywiste odrzucenia podczas aktualizacji wersji.</p>
+<p><strong>BIC / BICFI.</strong> Kod identyfikacyjny instytucji finansowej wg ISO 9362. Element XML to <code>&lt;BIC&gt;</code> w <code>pain.001.001.03</code>, ale <code>&lt;BICFI&gt;</code> od wersji 9 — zmiana nazwy, która powoduje rzeczywiste odrzucenia podczas aktualizacji wersji.</p>
 <p><strong>LEI.</strong> Legal Entity Identifier (ISO 17442) — 20-znakowy globalny identyfikator podmiotu. Aktywnych jest ponad 3 miliony, a regulatorzy coraz częściej wymagają ich w płatnościach.</p>
 <p><strong>UETR.</strong> Unique End-to-end Transaction Reference — UUID, dzięki któremu płatność można śledzić w całym łańcuchu banków korespondentów (SWIFT gpi).</p>
 <p><strong>Adres ustrukturyzowany / hybrydowy.</strong> Adresy pocztowe jako odrębne elementy XML (ulica, miejscowość, kod pocztowy, kraj) zamiast wierszy dowolnego tekstu. Od 14 listopada 2026 r. CBPR+ odrzuca adresy w pełni nieustrukturyzowane; format <em>hybrydowy</em> — ustrukturyzowana miejscowość i kraj plus maksymalnie dwa 70-znakowe wiersze adresu — pozostaje ważny.</p>

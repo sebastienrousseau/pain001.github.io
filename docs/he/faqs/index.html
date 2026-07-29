@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -199,7 +199,7 @@
 <p><strong>אנחנו עדיין שולחים קובצי MT101. עד כמה ההגירה דחופה?</strong></p>
 <p>דחופה מאוד. SWIFT הוציאה משימוש את הודעות MT מקטגוריות 1, 2 ו-9 עבור הוראות תשלום בין-בנקאיות חוצות גבולות בנובמבר 2025; ערוצים עסקיים שעדיין מקבלים MT עושים זאת לפי שיקול דעתו של כל בנק ובזמן מושאל. <a href="/pain001-loader-mt101/">טוען ה-MT101</a> ממיר זרימות MT101 קיימות ל-<code>pain.001</code> מאומת ללא הקלדה מחדש של דבר.</p>
 <p><strong>מה משמעות המועד האחרון של נובמבר 2026 לכתובות מובנות עבורנו?</strong></p>
-<p>מסוף נובמבר 2026, כתובות דואר שאינן מובנות כלל לא יתקבלו עוד בתשלומים חוצי גבולות במסגרת CBPR+; הכתובות חייבות להיות מובנות או היברידיות — רכיבים נפרדים כגון עיר (<code><TwnNm></code>) ומדינה (<code><Ctry></code>) במקום שורות טקסט חופשי. אם נתוני האב שלכם מחזיקים כתובות כגושי טקסט, העבודה נמצאת בנתונים שלכם ולא בחיבור לבנק. התחילו שם. <a href="/2026-iso20022-migration-trends/">התדריך לשנת 2026</a> מפרט את לוח הזמנים.</p>
+<p>מסוף נובמבר 2026, כתובות דואר שאינן מובנות כלל לא יתקבלו עוד בתשלומים חוצי גבולות במסגרת CBPR+; הכתובות חייבות להיות מובנות או היברידיות — רכיבים נפרדים כגון עיר (<code>&lt;TwnNm&gt;</code>) ומדינה (<code>&lt;Ctry&gt;</code>) במקום שורות טקסט חופשי. אם נתוני האב שלכם מחזיקים כתובות כגושי טקסט, העבודה נמצאת בנתונים שלכם ולא בחיבור לבנק. התחילו שם. <a href="/2026-iso20022-migration-trends/">התדריך לשנת 2026</a> מפרט את לוח הזמנים.</p>
 <p><strong>כמה עולה Pain001?</strong></p>
 <p>כלום. הליבה מופצת ברישוי כפול Apache-2.0 / MIT; חבילות הלוויין מופצות תחת Apache-2.0. שימוש מסחרי, שינוי והפצה מחדש — כולם מותרים. לשם השוואת סדרי גודל, ה-SDK לתרגום של SWIFT לבדו מתומחר ב-€10,000–30,000 לשנה.</p>
 <hr />
@@ -209,7 +209,7 @@
 <p><strong>אפשר לאמת קובץ בלי לייצר דבר?</strong></p>
 <p>כן — <code>pain001 --dry-run</code> (או תת-הפקודה <code>validate</code>, או <code>POST /api/v1/validate</code>). קוד יציאה <code>0</code> משמעו תקף; <code>1</code> משמעו שהאימות נכשל עם שגיאות ברמת השדה. שלבו זאת ב-CI או ברשימת בדיקות טרום-הגשה.</p>
 <p><strong>אילו ספרי כללים של SEPA מכוסים?</strong></p>
-<p>חמישה ספרי כללי מסלול מגיעים מובנים: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) והעברת זיכוי חוצת גבולות (<code>xborder-ct</code>). השתמשו ב-<code>--scheme <name> --explain</code> כדי לראות כל כלל שעבר או נכשל.</p>
+<p>חמישה ספרי כללי מסלול מגיעים מובנים: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) והעברת זיכוי חוצת גבולות (<code>xborder-ct</code>). השתמשו ב-<code>--scheme &lt;name&gt; --explain</code> כדי לראות כל כלל שעבר או נכשל.</p>
 <p><strong>הנתונים שלנו נמצאים ב-Excel. מה המלכוד?</strong></p>
 <p>Excel ממיר בשקט מחרוזות הדומות ל-IBAN למספרים. <a href="/pain001-loader-xlsx/">טוען ה-Excel</a> קורא קובצי <code>.xlsx</code>/<code>.xlsm</code> ישירות ועוצר לחלוטין אם עמודות IBAN מכילות תאים מספריים — השיבוש נתפס בשלב הטעינה, ולא אצל הבנק.</p>
 <p><strong>כיצד המערכת מטפלת באצווה של 500,000 שורות?</strong></p>

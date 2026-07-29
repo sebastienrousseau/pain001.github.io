@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -197,9 +197,9 @@
 </ul>
 <h2 id="element-structure-all-versions-share-this-skeleton">Element structure (all versions share this skeleton)<a class="heading-anchor" href="#element-structure-all-versions-share-this-skeleton" aria-label="Link to section: Element structure (all versions share this skeleton)">#</a></h2>
 <ul>
-<li><strong><code><GrpHdr></code> Group Header</strong> — message id, creation timestamp, <code>NbOfTxs</code>, <code>CtrlSum</code>, initiating party. Pain001 recomputes the control totals from validated records.</li>
-<li><strong><code><PmtInf></code> Payment Information</strong> — debtor, debtor account and agent, requested execution date, payment method, charge bearer; one block can carry many transactions.</li>
-<li><strong><code><CdtTrfTxInf></code> Credit Transfer Transaction</strong> — amount and currency, creditor, creditor account and agent, remittance information, end-to-end reference.</li>
+<li><strong><code>&lt;GrpHdr&gt;</code> Group Header</strong> — message id, creation timestamp, <code>NbOfTxs</code>, <code>CtrlSum</code>, initiating party. Pain001 recomputes the control totals from validated records.</li>
+<li><strong><code>&lt;PmtInf&gt;</code> Payment Information</strong> — debtor, debtor account and agent, requested execution date, payment method, charge bearer; one block can carry many transactions.</li>
+<li><strong><code>&lt;CdtTrfTxInf&gt;</code> Credit Transfer Transaction</strong> — amount and currency, creditor, creditor account and agent, remittance information, end-to-end reference.</li>
 </ul>
 <h2 id="generate-and-inspect">Generate and inspect<a class="heading-anchor" href="#generate-and-inspect" aria-label="Link to section: Generate and inspect">#</a></h2>
 <pre><code class="language-bash">pain001 init pain.001.001.13 -o work/         # scaffold a starter CSV

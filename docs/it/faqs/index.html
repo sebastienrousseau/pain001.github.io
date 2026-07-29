@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -199,7 +199,7 @@
 <p><strong>Inviamo ancora file MT101. Quanto è urgente la migrazione?</strong></p>
 <p>Urgente. SWIFT ha ritirato i messaggi MT delle categorie 1, 2 e 9 per le istruzioni di pagamento interbancarie transfrontaliere a novembre 2025; i canali corporate che accettano ancora MT lo fanno a discrezione di ciascuna banca e a tempo determinato. Il <a href="/pain001-loader-mt101/">loader MT101</a> converte i flussi MT101 esistenti in <code>pain.001</code> validato senza dover ridigitare nulla.</p>
 <p><strong>Che cosa comporta per noi la scadenza degli indirizzi strutturati di novembre 2026?</strong></p>
-<p>Dalla fine di novembre 2026 gli indirizzi postali completamente non strutturati non saranno più accettati nei pagamenti transfrontalieri CBPR+; gli indirizzi dovranno essere strutturati o ibridi — elementi discreti come la località (<code><TwnNm></code>) e il paese (<code><Ctry></code>) al posto di righe di testo libero. Se i vostri dati anagrafici conservano gli indirizzi come blocchi di testo, il lavoro è nei dati, non nella connessione bancaria. Partite da lì. Il <a href="/2026-iso20022-migration-trends/">briefing 2026</a> illustra la tempistica in dettaglio.</p>
+<p>Dalla fine di novembre 2026 gli indirizzi postali completamente non strutturati non saranno più accettati nei pagamenti transfrontalieri CBPR+; gli indirizzi dovranno essere strutturati o ibridi — elementi discreti come la località (<code>&lt;TwnNm&gt;</code>) e il paese (<code>&lt;Ctry&gt;</code>) al posto di righe di testo libero. Se i vostri dati anagrafici conservano gli indirizzi come blocchi di testo, il lavoro è nei dati, non nella connessione bancaria. Partite da lì. Il <a href="/2026-iso20022-migration-trends/">briefing 2026</a> illustra la tempistica in dettaglio.</p>
 <p><strong>Quanto costa Pain001?</strong></p>
 <p>Nulla. Il core è a doppia licenza Apache-2.0 / MIT; i pacchetti complementari sono Apache-2.0. Uso commerciale, modifica e ridistribuzione sono tutti consentiti. Come riferimento di scala, il solo SDK di traduzione di SWIFT è listato a €10,000–30,000 l'anno.</p>
 <hr />
@@ -209,7 +209,7 @@
 <p><strong>Possiamo validare un file senza generare nulla?</strong></p>
 <p>Sì — <code>pain001 --dry-run</code> (oppure il sottocomando <code>validate</code>, o <code>POST /api/v1/validate</code>). Codice di uscita <code>0</code> significa valido; <code>1</code> significa validazione fallita con errori a livello di campo. Integratelo nella CI o in una checklist pre-invio.</p>
 <p><strong>Quali rulebook SEPA sono coperti?</strong></p>
-<p>Cinque rulebook di schema sono inclusi: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) e bonifico transfrontaliero (<code>xborder-ct</code>). Usate <code>--scheme <name> --explain</code> per vedere ogni regola superata o fallita.</p>
+<p>Cinque rulebook di schema sono inclusi: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) e bonifico transfrontaliero (<code>xborder-ct</code>). Usate <code>--scheme &lt;name&gt; --explain</code> per vedere ogni regola superata o fallita.</p>
 <p><strong>I nostri dati vivono in Excel. Dov'è l'insidia?</strong></p>
 <p>Excel converte silenziosamente le stringhe simili a IBAN in numeri. Il <a href="/pain001-loader-xlsx/">loader Excel</a> legge direttamente <code>.xlsx</code>/<code>.xlsm</code> e si arresta se le colonne IBAN contengono celle numeriche — la corruzione viene intercettata al caricamento, non in banca.</p>
 <p><strong>Come gestisce un batch da 500,000 righe?</strong></p>

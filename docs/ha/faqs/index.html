@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -199,7 +199,7 @@
 <p><strong>Har yanzu muna aika fayilolin MT101. Yaya gaggawar sauyawa take?</strong></p>
 <p>Gaggawa ce. SWIFT ta janye saƙonnin MT na rukunin 1, 2 da 9 don umarnin biyan kuɗi tsakanin bankuna a ƙasashen waje a watan Nuwamba 2025; hanyoyin kamfanoni da suke har yanzu karɓar MT suna yin hakan bisa ra'ayin kowane banki kuma na ɗan lokaci ne. <a href="/pain001-loader-mt101/">Loader ɗin MT101</a> yana juya hanyoyin MT101 da kake da su zuwa <code>pain.001</code> da aka tantance ba tare da sake shigar da komai ba.</p>
 <p><strong>Me wa'adin adireshi mai tsari na Nuwamba 2026 ke nufi a gare mu?</strong></p>
-<p>Daga ƙarshen Nuwamba 2026, ba za a ƙara karɓar adiresoshin gidan waya marasa tsari gaba ɗaya a biyan kuɗi tsakanin ƙasashe na CBPR+ ba; dole adireshi ya kasance mai tsari ko haɗaɗɗe — sassa daban-daban kamar gari (<code><TwnNm></code>) da ƙasa (<code><Ctry></code>) maimakon layukan rubutu kyauta. Idan bayananku na asali suna riƙe da adiresoshi a matsayin rubutu guda, aikin yana cikin bayananku ne, ba a haɗin bankinku ba. Ku fara daga can. <a href="/2026-iso20022-migration-trends/">Takaitaccen bayanin 2026</a> ya yi bayanin lokutan dalla-dalla.</p>
+<p>Daga ƙarshen Nuwamba 2026, ba za a ƙara karɓar adiresoshin gidan waya marasa tsari gaba ɗaya a biyan kuɗi tsakanin ƙasashe na CBPR+ ba; dole adireshi ya kasance mai tsari ko haɗaɗɗe — sassa daban-daban kamar gari (<code>&lt;TwnNm&gt;</code>) da ƙasa (<code>&lt;Ctry&gt;</code>) maimakon layukan rubutu kyauta. Idan bayananku na asali suna riƙe da adiresoshi a matsayin rubutu guda, aikin yana cikin bayananku ne, ba a haɗin bankinku ba. Ku fara daga can. <a href="/2026-iso20022-migration-trends/">Takaitaccen bayanin 2026</a> ya yi bayanin lokutan dalla-dalla.</p>
 <p><strong>Nawa ne kuɗin Pain001?</strong></p>
 <p>Ba kome. Tushen yana da lasisi biyu na Apache-2.0 / MIT; ƙarin fakitocin suna ƙarƙashin Apache-2.0. An ba da izinin amfani na kasuwanci, gyarawa da sake rarrabawa. A matsayin ma'auni na kwatanta, SDK na fassara na SWIFT kaɗai yana kan €10,000–30,000 a shekara.</p>
 <hr />
@@ -209,7 +209,7 @@
 <p><strong>Za mu iya tantance fayil ba tare da ƙirƙirar komai ba?</strong></p>
 <p>Eh — <code>pain001 --dry-run</code> (ko ƙaramin umarnin <code>validate</code>, ko <code>POST /api/v1/validate</code>). Lambar fita <code>0</code> na nufin fayil ɗin yana da inganci; <code>1</code> na nufin tantancewa ta faɗi tare da kurakurai a matakin filaye. Ka haɗa shi cikin CI ko cikin jerin duba kafin gabatarwa.</p>
 <p><strong>Waɗanne littattafan ƙa'ida na SEPA ake tallafawa?</strong></p>
-<p>Littattafan ƙa'idar tsari guda biyar suna zuwa a ciki: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>), da tura kuɗi tsakanin ƙasashe (<code>xborder-ct</code>). Yi amfani da <code>--scheme <name> --explain</code> don ganin kowace ƙa'ida da ta ci nasara ko ta faɗi.</p>
+<p>Littattafan ƙa'idar tsari guda biyar suna zuwa a ciki: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>), da tura kuɗi tsakanin ƙasashe (<code>xborder-ct</code>). Yi amfani da <code>--scheme &lt;name&gt; --explain</code> don ganin kowace ƙa'ida da ta ci nasara ko ta faɗi.</p>
 <p><strong>Bayananmu suna cikin Excel. Ina matsalar?</strong></p>
 <p>Excel yana juya rubutun da yake kama da IBAN zuwa lambobi a shiru. <a href="/pain001-loader-xlsx/">Loader ɗin Excel</a> yana karanta <code>.xlsx</code>/<code>.xlsm</code> kai tsaye kuma yana tsayawa nan take idan ginshiƙan IBAN suna ɗauke da sel na lambobi — ana kama lalacewar a lokacin ɗorawa, ba a banki ba.</p>
 <p><strong>Yaya yake sarrafa tari mai layuka 500,000?</strong></p>

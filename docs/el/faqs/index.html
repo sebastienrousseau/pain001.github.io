@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -199,7 +199,7 @@
 <p><strong>Στέλνουμε ακόμη αρχεία MT101. Πόσο επείγουσα είναι η μετάβαση;</strong></p>
 <p>Επείγουσα. Η SWIFT απέσυρε τα μηνύματα MT των κατηγοριών 1, 2 και 9 για τις διασυνοριακές διατραπεζικές εντολές πληρωμής τον Νοέμβριο του 2025· τα εταιρικά κανάλια που εξακολουθούν να δέχονται MT το κάνουν κατά τη διακριτική ευχέρεια κάθε τράπεζας και για περιορισμένο χρόνο ακόμη. Ο <a href="/pain001-loader-mt101/">φορτωτής MT101</a> μετατρέπει τις υπάρχουσες ροές MT101 σε επικυρωμένο <code>pain.001</code> χωρίς καμία επανακαταχώριση δεδομένων.</p>
 <p><strong>Τι σημαίνει για εμάς η προθεσμία του Νοεμβρίου 2026 για τις δομημένες διευθύνσεις;</strong></p>
-<p>Από το τέλος Νοεμβρίου 2026, οι πλήρως αδόμητες ταχυδρομικές διευθύνσεις δεν γίνονται πλέον δεκτές στις διασυνοριακές πληρωμές CBPR+· οι διευθύνσεις πρέπει να είναι δομημένες ή υβριδικές — διακριτά στοιχεία όπως πόλη (<code><TwnNm></code>) και χώρα (<code><Ctry></code>) αντί για γραμμές ελεύθερου κειμένου. Αν τα κύρια δεδομένα σας τηρούν τις διευθύνσεις ως ενιαία κείμενα, η δουλειά βρίσκεται στα δεδομένα σας, όχι στη σύνδεση με την τράπεζα. Ξεκινήστε από εκεί. Η <a href="/2026-iso20022-migration-trends/">ενημέρωση για το 2026</a> καλύπτει αναλυτικά το χρονοδιάγραμμα.</p>
+<p>Από το τέλος Νοεμβρίου 2026, οι πλήρως αδόμητες ταχυδρομικές διευθύνσεις δεν γίνονται πλέον δεκτές στις διασυνοριακές πληρωμές CBPR+· οι διευθύνσεις πρέπει να είναι δομημένες ή υβριδικές — διακριτά στοιχεία όπως πόλη (<code>&lt;TwnNm&gt;</code>) και χώρα (<code>&lt;Ctry&gt;</code>) αντί για γραμμές ελεύθερου κειμένου. Αν τα κύρια δεδομένα σας τηρούν τις διευθύνσεις ως ενιαία κείμενα, η δουλειά βρίσκεται στα δεδομένα σας, όχι στη σύνδεση με την τράπεζα. Ξεκινήστε από εκεί. Η <a href="/2026-iso20022-migration-trends/">ενημέρωση για το 2026</a> καλύπτει αναλυτικά το χρονοδιάγραμμα.</p>
 <p><strong>Πόσο κοστίζει το Pain001;</strong></p>
 <p>Τίποτα. Ο πυρήνας διατίθεται με διπλή άδεια Apache-2.0 / MIT· τα συνοδευτικά πακέτα με Apache-2.0. Η εμπορική χρήση, η τροποποίηση και η αναδιανομή επιτρέπονται όλες. Ως μέτρο σύγκρισης, μόνο το SDK μετάφρασης της SWIFT τιμολογείται στα €10,000–30,000 ετησίως.</p>
 <hr />
@@ -209,7 +209,7 @@
 <p><strong>Μπορούμε να επικυρώσουμε ένα αρχείο χωρίς να παραχθεί τίποτα;</strong></p>
 <p>Ναι — <code>pain001 --dry-run</code> (ή η υποεντολή <code>validate</code> ή το <code>POST /api/v1/validate</code>). Ο κωδικός εξόδου <code>0</code> σημαίνει έγκυρο· ο <code>1</code> σημαίνει ότι η επικύρωση απέτυχε με σφάλματα σε επίπεδο πεδίου. Εντάξτε το στο CI ή σε μια λίστα ελέγχου πριν από την υποβολή.</p>
 <p><strong>Ποιοι κανονισμοί SEPA καλύπτονται;</strong></p>
-<p>Πέντε κανονισμοί συστημάτων παρέχονται ενσωματωμένοι: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) και διασυνοριακή μεταφορά πίστωσης (<code>xborder-ct</code>). Χρησιμοποιήστε <code>--scheme <name> --explain</code> για να δείτε κάθε κανόνα που πέρασε ή απέτυχε.</p>
+<p>Πέντε κανονισμοί συστημάτων παρέχονται ενσωματωμένοι: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) και διασυνοριακή μεταφορά πίστωσης (<code>xborder-ct</code>). Χρησιμοποιήστε <code>--scheme &lt;name&gt; --explain</code> για να δείτε κάθε κανόνα που πέρασε ή απέτυχε.</p>
 <p><strong>Τα δεδομένα μας βρίσκονται σε Excel. Πού είναι η παγίδα;</strong></p>
 <p>Το Excel μετατρέπει σιωπηρά σε αριθμούς τις συμβολοσειρές που μοιάζουν με IBAN. Ο <a href="/pain001-loader-xlsx/">φορτωτής Excel</a> διαβάζει απευθείας αρχεία <code>.xlsx</code>/<code>.xlsm</code> και σταματά αμέσως αν οι στήλες IBAN περιέχουν αριθμητικά κελιά — η αλλοίωση εντοπίζεται κατά τη φόρτωση, όχι στην τράπεζα.</p>
 <p><strong>Πώς διαχειρίζεται μια παρτίδα 500,000 γραμμών;</strong></p>

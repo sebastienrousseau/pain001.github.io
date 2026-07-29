@@ -144,6 +144,129 @@
       .skip-link:focus { top: 1rem; }
 
       .wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 1.75rem; }
+
+      @media print {
+        .ap-nav, .footer, .breadcrumb, .totop, .progress, .skip-link,
+        #themeToggle, .nav-cta, .heading-anchor, .status-strip,
+        .lang-badge, .search-widget { display: none !important; }
+        body { background: #fff; color: #000; }
+        .page-header { padding: 0 0 1rem; border-bottom: 2px solid #000; }
+        .content-body { max-width: none; font-size: 11pt; }
+
+        /* Nothing scrolls on paper. A box left at overflow:auto simply
+           loses whatever sits past its edge — measured at 40-78px of
+           silently missing code on /, /installation/ and
+           /pain002-reason-codes/. Undo the screen breakout too: its
+           negative inline margins are measured against the screen
+           shell and push content off the sheet. */
+        .table-responsive, .matrix-wrap, pre, .xml-out, .error-table-wrap {
+          overflow: visible !important;
+          max-width: 100% !important;
+          width: auto !important;
+          margin-inline: 0 !important;
+          background-image: none !important;
+        }
+        /* Long commands and XML must fold rather than be cut. */
+        pre, pre code { white-space: pre-wrap !important; word-break: break-word; }
+
+        /* Keep units whole across page boundaries, and repeat table
+           headers so a table continuing overleaf is still readable. */
+        tr, img, figure, pre, blockquote, .version-requirement { break-inside: avoid; }
+        thead { display: table-header-group; }
+        tfoot { display: table-footer-group; }
+        /* A heading stranded at the foot of a page is the classic
+           print defect; keep it with the text it introduces. */
+        h1, h2, h3, h4 { break-after: avoid; break-inside: avoid; }
+        p, li, dd { orphans: 3; widows: 3; }
+
+        /* Paper is 658px wide (A4 less 18mm margins), which is below
+           the 720px breakpoint where tables become stacked cards. Every
+           printed table was therefore rendering one field per line:
+           /message-specs/ took 15 pages, most of each one blank. Paper
+           has no narrow-screen problem to solve, so restore the real
+           table. */
+        .content-body table { display: table !important; width: 100% !important; }
+        .content-body tbody { display: table-row-group !important; }
+        .content-body tr { display: table-row !important; border: 0 !important;
+                           border-radius: 0 !important; padding: 0 !important;
+                           margin: 0 !important; width: auto !important; }
+        /* width:auto matters: the card layout sets td{width:100%}, and
+           restoring display alone left every cell claiming the full
+           table, which Chrome resolved as 557px/101px on a two-column
+           table whose long text was in the second column. */
+        .content-body td { display: table-cell !important;
+                           width: auto !important;
+                           border-bottom: 1px solid #ddd !important;
+                           padding: 0.4rem 0.5rem !important; }
+        /* Reference tables are built from long unbroken tokens
+           (pain.001.001.03, XPath fragments). Their combined min-content
+           was 832px on a 658px sheet, so the right-hand columns fell off
+           the paper. Allowing the tokens to break lets the table fit. */
+        .content-body table { max-width: 100% !important; }
+        .content-body td { word-break: break-word; overflow-wrap: anywhere; }
+        /* Deliberately NOT white-space:nowrap on td code. Keeping
+           identifiers whole read better but pushed the version table to
+           673px and an element reference to 846px on a 658px sheet —
+           content off the page costs more than a wrapped token. */
+        .content-body td code { font-size: 0.85em; }
+        /* Headers get the gentler rule: `anywhere` split short labels
+           mid-word on paper — STATUS became "STAT / US", CODE "COD / E".
+           break-word only splits a word that cannot fit on its own. */
+        .content-body th { overflow-wrap: break-word; }
+        /* Uppercase + 0.1em tracking is a screen flourish that inflates
+           every header: it alone held the 8-column version table at
+           799px on a 658px sheet. Sentence case is narrower and reads
+           better in print. */
+        .content-body thead th {
+          text-transform: none !important;
+          letter-spacing: 0 !important;
+          font-size: 8.5pt !important;
+        }
+        .content-body thead { position: static !important;
+                              width: auto !important; height: auto !important;
+                              overflow: visible !important; clip: auto !important;
+                              display: table-header-group !important; }
+        .content-body td[data-label]::before { display: none !important; }
+        /* Reference tables carry many columns; drop a step so they fit
+           the sheet instead of forcing a horizontal squeeze. */
+        .content-body table { font-size: 9.5pt; }
+
+        /* Print the destination, resolved — a bare "/glossary/" is not
+           actionable once the page is on paper. In-page anchors are
+           left alone by these selectors. */
+        .content-body a[href^="http"]::after {
+          content: " (" attr(href) ")";
+          font-size: 0.85em; color: #333; word-break: break-all;
+        }
+        .content-body a[href^="/"]::after {
+          content: " (https://pain001.com" attr(href) ")";
+          font-size: 0.85em; color: #333; word-break: break-all;
+        }
+        /* ...but not inside tables or the contents list. A
+           reference table's cells are labels, and expanding each into a
+           full URL tripled the row height and pushed the table over
+           extra pages for no reader benefit. */
+        .content-body table a::after,
+        .article-toc a::after,
+        .taxonomy-page-list a::after { content: "" !important; }
+        @page { margin: 18mm; }
+      }
+
+      /* ==== Overflow safety net ====
+         Every layout gets this. The article rules live under
+         .content-body, so a table or code block rendered by any other
+         layout had no overflow handling at all: the homepage clipped a
+         table by up to 298px on a phone, and /try/ pushed the whole
+         page 334px sideways from one <pre>. Content that outgrows its
+         column must scroll inside its own box, never move the page. */
+      .table-responsive, .matrix-wrap { overflow-x: auto; max-width: 100%; }
+      pre { overflow-x: auto; max-width: 100%; }
+      /* Unbreakable tokens — ISO type names, namespaces, URLs — must
+         wrap rather than widen their container. */
+      li, p, dd, dt, td, th, h1, h2, h3, h4, figcaption, blockquote, a {
+        overflow-wrap: break-word;
+      }
+
       .container { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
       .back-link { color: var(--link); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; min-height: 44px; }
       .back-link:hover { text-decoration: underline; }
@@ -357,6 +480,23 @@
         }
         .ap-menu > li > a[aria-current="page"]::after { display: none; }
       }
+      /* ==== Nav width headroom ====
+         The nav shell is capped at 1180px and English filled it exactly,
+         so any locale with longer labels overflowed at every viewport:
+         9 of 35 did, worst Russian at 1301px (+121). That pushed the
+         whole page sideways at ~1280px widths. Reclaiming space here
+         costs a few pixels of padding and fixes every locale at once,
+         which beats collapsing verbose locales to a burger on desktop.
+         Grid children also need min-width:0 or the centre column cannot
+         shrink at all. */
+      .ap-nav-wrap > *, .ap-nav nav { min-width: 0; }
+      .ap-menu { gap: 0.1rem; }
+      .ap-menu a { padding: 0 0.4rem; }
+      .ap-menu > li > a[aria-current="page"]::after { left: 0.4rem; right: 0.4rem; }
+      .ap-cta-mini { padding: 0 0.8rem; }
+      /* The ⌘K hint is a nicety; the nav fitting is not. */
+      @media (max-width: 1460px) { .ap-search-kbd { display: none; } }
+
       @media (max-width: 720px) { .ap-cta-mini { display: none; } .ap-search-kbd { display: none; } }
       @media (max-width: 480px) {
         .ap-nav-wrap { gap: 0.5rem; }

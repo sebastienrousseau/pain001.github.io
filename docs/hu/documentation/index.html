@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -215,11 +215,11 @@
 <td data-label="Purpose" class="text-left">A 11 támogatott üzenetdefiníció listázása.</td>
 </tr>
 <tr>
-<td data-label="Subcommand" class="text-left"><code>inspect <type> [--json]</code></td>
+<td data-label="Subcommand" class="text-left"><code>inspect &lt;type&gt; [--json]</code></td>
 <td data-label="Purpose" class="text-left">Egy üzenettípus kötelező és opcionális mezőinek megjelenítése.</td>
 </tr>
 <tr>
-<td data-label="Subcommand" class="text-left"><code>init <type> [-o DIR]</code></td>
+<td data-label="Subcommand" class="text-left"><code>init &lt;type&gt; [-o DIR]</code></td>
 <td data-label="Purpose" class="text-left">Kiinduló CSV sablon létrehozása egy üzenettípushoz.</td>
 </tr>
 <tr>
@@ -237,7 +237,7 @@
 </tbody>
 </table></div>
 <h3>A <code>generate</code> beállításai</h3>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th>Kapcsoló</th>
@@ -246,23 +246,23 @@
 </thead>
 <tbody>
 <tr>
-<td data-label="Flag" class="text-left"><code>-t, --xml-message-type <TYPE></code></td>
+<td data-label="Flag" class="text-left"><code>-t, --xml-message-type &lt;TYPE&gt;</code></td>
 <td data-label="Description" class="text-left">Üzenetdefiníció, például <code>pain.001.001.09</code>.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-d, --data <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-d, --data &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">Bemeneti adatok: <code>.csv</code>, <code>.json</code>, <code>.jsonl</code>, <code>.db</code> / <code>.sqlite</code>, <code>.parquet</code>, illetve PGP-vel titkosított <code>.gpg</code> / <code>.asc</code> fájlok.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-o, --output-dir <DIR></code></td>
+<td data-label="Flag" class="text-left"><code>-o, --output-dir &lt;DIR&gt;</code></td>
 <td data-label="Description" class="text-left">Az a könyvtár, amelybe a generált XML kerül.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-m, --template <FILE></code> / <code>-s, --schema <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-m, --template &lt;FILE&gt;</code> / <code>-s, --schema &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">A csomaggal szállított Jinja2 sablon vagy XSD séma felülbírálása.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-c, --config <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-c, --config &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">Alapértelmezések betöltése konfigurációs profilból (<code>--profile</code>, <code>--show-config</code>).</td>
 </tr>
 <tr>
@@ -270,7 +270,7 @@
 <td data-label="Description" class="text-left">A bemenet validálása a JSON Schema, az XSD és a sémaszabálykönyv alapján, kimenet írása nélkül.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>--scheme <NAME></code></td>
+<td data-label="Flag" class="text-left"><code>--scheme &lt;NAME&gt;</code></td>
 <td data-label="Description" class="text-left">Sémaszabálykönyv kikényszerítése: <code>sepa-sct</code>, <code>sepa-inst</code>, <code>sepa-sdd</code>, <code>sepa-b2b</code> vagy <code>xborder-ct</code>.</td>
 </tr>
 <tr>
@@ -278,7 +278,7 @@
 <td data-label="Description" class="text-left">Minden teljesült vagy megbukott sémaszabály jelentése, ember vagy gép által olvasható formában.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size <N></code></td>
+<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size &lt;N&gt;</code></td>
 <td data-label="Description" class="text-left">Memóriakorlátos, darabokra bontott feldolgozás nagy kötegekhez (alapértelmezetten 1,000 tranzakció darabonként; minden darabból önálló XML fájl lesz, újraszámolt <code>NbOfTxs</code> és <code>CtrlSum</code> értékekkel).</td>
 </tr>
 <tr>
@@ -286,7 +286,7 @@
 <td data-label="Description" class="text-left">Gépi feldolgozásra alkalmas futásmetrikák kibocsátása megfigyelhetőségi rendszerek számára.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>A kilépési kódok CI-barátok: <code>0</code> sikeres futás, <code>1</code> validálási hiba, <code>2</code> használati hiba.</p>
 <hr />
 <h2 id="2-python-api">2. Python API<a class="heading-anchor" href="#2-python-api" aria-label="Hivatkozás a szakaszra: 2. Python API">#</a></h2>
@@ -313,7 +313,7 @@ process_files(
 <pre><code class="language-bash">pip install "pain001[api]"
 pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <p>Minden végpont a <code>/api/v1</code> útvonal alatt érhető el (verziószám nélküli <code>/api</code> aliasszal):</p>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th>Metódus és útvonal</th>
@@ -354,7 +354,7 @@ pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <td data-label="Purpose" class="text-left">Prometheus metrikák.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Az interaktív dokumentáció a <code>/api/docs</code> (Swagger UI), a <code>/api/redoc</code> és a <code>/api/reference</code> (Scalar) címen érhető el, az OpenAPI dokumentum pedig a <code>/openapi.json</code> címen.</p>
 <hr />
 <h2 id="4-input-normalisation">4. Bemenet normalizálása<a class="heading-anchor" href="#4-input-normalisation" aria-label="Hivatkozás a szakaszra: 4. Bemenet normalizálása">#</a></h2>

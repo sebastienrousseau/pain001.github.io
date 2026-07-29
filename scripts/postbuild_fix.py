@@ -117,6 +117,45 @@ def fix_body(html: str) -> str:
     return html
 
 
+_PRE_BLOCK_RE = re.compile(r"<pre\b.*?</pre>", re.DOTALL)
+_INLINE_CODE_RE = re.compile(r"(<code\b[^>]*>)(.*?)(</code>)", re.DOTALL)
+
+
+def escape_inline_code(html: str) -> str:
+    """Re-escape angle brackets inside inline ``<code>`` spans.
+
+    ``fix_body`` unescapes the whole content blob because ssg
+    double-escapes it. Block code survives that (it was escaped twice),
+    but inline code was escaped once, so a single pass strips it bare:
+    markdown's ``` `<BIC>` ``` became a literal ``<code><BIC></code>``
+    and the browser parsed ``<BIC>`` as an element. The element name
+    disappeared from the page entirely — 184 times across 84 pages, on
+    a site whose subject is ISO 20022 element names. Readers saw an
+    empty code chip where ``<BIC>`` should be.
+
+    ``<pre>`` blocks are excluded: their contents are legitimately
+    marked up with syntax-highlighting spans, and escaping those would
+    show the markup as text.
+    """
+    spans: list[str] = []
+
+    def stash(m: re.Match) -> str:
+        spans.append(m.group(0))
+        return "\x00PRE%d\x00" % (len(spans) - 1)
+
+    body = _PRE_BLOCK_RE.sub(stash, html)
+
+    def fix(m: re.Match) -> str:
+        inner = m.group(2)
+        if "<" not in inner and ">" not in inner:
+            return m.group(0)
+        inner = inner.replace("<", "&lt;").replace(">", "&gt;")
+        return m.group(1) + inner + m.group(3)
+
+    body = _INLINE_CODE_RE.sub(fix, body)
+    return re.sub(r"\x00PRE(\d+)\x00", lambda m: spans[int(m.group(1))], body)
+
+
 _H2_RE = re.compile(r"<h2>(.*?)</h2>", re.DOTALL)
 _TAG_RE = re.compile(r"<[^>]+>")
 _ARTICLE_RE = re.compile(
@@ -185,6 +224,50 @@ def add_article_furniture(html: str) -> str:
         r"\1<span>%d min read</span>" % minutes, html, count=1
     )
     return html
+
+
+_TABLE_BLOCK_RE = re.compile(r"<table\b.*?</table>", re.DOTALL)
+
+
+def wrap_tables(html: str) -> str:
+    """Put every article table in a scrollable, breakout-capable box.
+
+    Markdown emits a bare ``<table>``, so 1136 of the site's 1261 tables
+    had no wrapper: a table wider than the 68ch reading measure was
+    simply clipped, with no way to reach the hidden columns. Only the
+    125 hand-authored ones were wrapped.
+
+    The wrapper is what the stylesheet targets to let wide tables escape
+    the prose measure on large screens and to scroll on small ones, so
+    this is what makes the CSS fix apply site-wide rather than to the
+    handful someone remembered to wrap.
+
+    Idempotent: a table already preceded by the wrapper is left alone,
+    which also means a second postbuild pass is a no-op.
+    """
+    start, end = html.find("<main"), html.find("</main>")
+    if start == -1 or end == -1:
+        return html
+    body = html[start:end]
+    out, pos, wrapped = [], 0, 0
+    for m in _TABLE_BLOCK_RE.finditer(body):
+        # A nested table would break the non-greedy match; none exist
+        # today, and saying so beats silently mangling one later.
+        if "<table" in m.group(0)[6:]:
+            print("[postbuild] WARNING: nested table left unwrapped")
+            continue
+        if "table-responsive" in body[max(0, m.start() - 80):m.start()]:
+            continue
+        out.append(body[pos:m.start()])
+        out.append('<div class="table-responsive">')
+        out.append(m.group(0))
+        out.append("</div>")
+        pos = m.end()
+        wrapped += 1
+    if not wrapped:
+        return html
+    out.append(body[pos:])
+    return html[:start] + "".join(out) + html[end:]
 
 
 _TABLE_RE = re.compile(r"<table\b.*?</table>", re.DOTALL)
@@ -923,7 +1006,48 @@ def add_version_requirements(site: Path) -> None:
     print(f"[postbuild] version-requirement note on {n} page(s)")
 
 
+TAXONOMY_CSS = '<link rel="stylesheet" href="/css/taxonomy.css" />'
+TAXONOMY_VIEWPORT = (
+    '<meta name="viewport" content="width=device-width, initial-scale=1" />'
+)
+
+
+_DOUBLE_ENC_RE = re.compile(r"&amp;(amp|lt|gt|quot|#\d+|#x[0-9a-fA-F]+);")
+
+
+def fix_double_encoded_meta(site: Path) -> None:
+    """Undo ssg's second escaping pass on social metadata.
+
+    A title containing a plain ``&`` in the front matter is escaped once
+    for ``<title>`` (correct) and twice for og:title/twitter:title, so
+    "Release & Support Policy" reached Twitter and LinkedIn as
+    "Release &amp; Support Policy" — visible mojibake in every share
+    card. Only the head is touched, and only the doubled form, so a
+    correctly escaped entity is left alone.
+    """
+    n = 0
+    for page in site.rglob("*.html"):
+        html = page.read_text(encoding="utf-8")
+        end = html.find("</head>")
+        if end == -1:
+            continue
+        head = html[:end]
+        fixed = _DOUBLE_ENC_RE.sub(lambda m: "&" + m.group(1) + ";", head)
+        if fixed != head:
+            page.write_text(fixed + html[end:], encoding="utf-8")
+            n += 1
+    print(f"[postbuild] un-double-encoded head metadata on {n} page(s)")
+
+
 def fix_tag_pages(site: Path) -> None:
+    """The taxonomy plugin emits pages outside _layouts/, so they arrive
+    with no stylesheet and no viewport meta: an 8px browser-default
+    gutter, a link list running the full 1424px of a 1440px screen, and
+    no mobile scaling at all. Link the shell stylesheet and give them a
+    viewport, alongside the CSP and og:image the audit gates want.
+
+    Linked rather than inlined because the CSP allows style-src 'self',
+    so a same-origin file needs no hash bookkeeping."""
     for page in site.glob("tags/*/index.html"):
         html = page.read_text(encoding="utf-8")
         inject = ""
@@ -931,9 +1055,13 @@ def fix_tag_pages(site: Path) -> None:
             inject += CSP_META
         if 'property="og:image"' not in html:
             inject += OG_IMAGE_META
+        if "css/taxonomy.css" not in html:
+            inject += TAXONOMY_CSS
+        if 'name="viewport"' not in html:
+            inject += TAXONOMY_VIEWPORT
         if inject:
             page.write_text(html.replace("</head>", inject + "</head>", 1), encoding="utf-8")
-            print(f"[postbuild] patched CSP/og:image: {page}")
+            print(f"[postbuild] patched tag page: {page}")
 
 
 def fix_manifest(site: Path) -> None:
@@ -996,9 +1124,11 @@ def main() -> None:
             fix_code_blocks(
                 strip_align_attrs(
                     stamp_table_labels(
+                        wrap_tables(
                         add_article_furniture(
-                            fix_body(dedupe_head_metas(fix_head(html)))
-                        )
+                            escape_inline_code(
+                                fix_body(dedupe_head_metas(fix_head(html))))
+                        ))
                     )
                 )
             )
@@ -1010,6 +1140,7 @@ def main() -> None:
     add_version_requirements(site)  # before the locale generators copy pages
     fix_tag_pages(site)
     fix_social_descriptions(site)
+    fix_double_encoded_meta(site)
     fix_manifest(site)
     fix_try_strip(site)
     localise_pages(site)

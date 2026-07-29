@@ -1,0 +1,482 @@
+
+      /* Source Serif 4 — self-hosted (no third-party requests), display use
+         only. latin + latin-ext subsets; system serif fallback below keeps
+         CLS negligible via metric-similar Iowan/Georgia. */
+      @font-face {
+        font-family: "Source Serif 4";
+        font-style: normal; font-weight: 400; font-display: swap;
+        src: url("/fonts/source-serif-4-latin-400-normal.woff2") format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Source Serif 4";
+        font-style: normal; font-weight: 600; font-display: swap;
+        src: url("/fonts/source-serif-4-latin-600-normal.woff2") format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Source Serif 4";
+        font-style: normal; font-weight: 700; font-display: swap;
+        src: url("/fonts/source-serif-4-latin-700-normal.woff2") format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Source Serif 4";
+        font-style: normal; font-weight: 400; font-display: swap;
+        src: url("/fonts/source-serif-4-latin-ext-400-normal.woff2") format("woff2");
+        unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Source Serif 4";
+        font-style: normal; font-weight: 600; font-display: swap;
+        src: url("/fonts/source-serif-4-latin-ext-600-normal.woff2") format("woff2");
+        unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Source Serif 4";
+        font-style: normal; font-weight: 700; font-display: swap;
+        src: url("/fonts/source-serif-4-latin-ext-700-normal.woff2") format("woff2");
+        unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      /* Tokens match page.html; ratios measured, AAA (7:1) throughout. */
+      :root {
+        --type-display: "Source Serif 4", "Iowan Old Style", Palatino, "New York", ui-serif, Georgia, serif;
+        --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        --bg-page: #ffffff;
+        --bg-alt: #f7f5f1;
+        --text-main: #1d1d1f;   /* 16.7:1 — AAA */
+        --text-muted: #3a3a3c;  /* 11.3:1 — AAA */
+        --border-color: #c9c5bb;
+        --link: #0a5566;        /* 8.4:1 — AAA teal */
+        --btn-bg: #1d1d1f;
+        --btn-text: #ffffff;
+        --focus-ring: #0a5566;
+        --radius-sm: 8px;
+        --radius-md: 14px;
+        --radius-pill: 999px;
+        --ink: var(--text-main);
+        --ink-soft: var(--text-muted);
+        --ink-mute: var(--text-muted);
+        --rule: var(--border-color);
+        --rule-strong: var(--border-color);
+        --bg-card: var(--bg-page);
+        --shadow-md: 0 12px 32px -12px rgb(0 0 0 / 0.25);
+        --type-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+      [data-theme="dark"] {
+        --bg-page: #0b0e14;
+        --bg-alt: #10141c;
+        --text-main: #f5f5f7;
+        --text-muted: #d6d9e0;
+        --border-color: #3a4252;
+        --link: #7fd4e8;
+        --btn-bg: #f5f5f7;
+        --btn-text: #16181d;
+        --focus-ring: #7fd4e8;
+      }
+      @media (prefers-color-scheme: dark) {
+        html:not([data-theme="light"]) {
+          --bg-page: #0b0e14;
+          --bg-alt: #10141c;
+          --text-main: #f5f5f7;
+          --text-muted: #d6d9e0;
+          --border-color: #3a4252;
+          --link: #7fd4e8;
+          --btn-bg: #f5f5f7;
+          --btn-text: #16181d;
+          --focus-ring: #7fd4e8;
+        }
+      }
+
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.65; }
+
+      :focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 2px; border-radius: 2px; }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+      }
+
+      .skip-link {
+        position: absolute; top: -100px; left: 1rem;
+        background: var(--btn-bg); color: var(--btn-text);
+        padding: 0.75rem 1.5rem; z-index: 10000;
+        border-radius: var(--radius-pill); font-weight: 600;
+      }
+      .skip-link:focus { top: 1rem; }
+
+      .wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 1.75rem; }
+
+      @media print {
+        .ap-nav, .footer, .breadcrumb, .totop, .progress, .skip-link,
+        #themeToggle, .nav-cta, .heading-anchor, .status-strip,
+        .lang-badge, .search-widget { display: none !important; }
+        body { background: #fff; color: #000; }
+        .page-header { padding: 0 0 1rem; border-bottom: 2px solid #000; }
+        .content-body { max-width: none; font-size: 11pt; }
+
+        /* Nothing scrolls on paper. A box left at overflow:auto simply
+           loses whatever sits past its edge — measured at 40-78px of
+           silently missing code on /, /installation/ and
+           /pain002-reason-codes/. Undo the screen breakout too: its
+           negative inline margins are measured against the screen
+           shell and push content off the sheet. */
+        .table-responsive, .matrix-wrap, pre, .xml-out, .error-table-wrap {
+          overflow: visible !important;
+          max-width: 100% !important;
+          width: auto !important;
+          margin-inline: 0 !important;
+          background-image: none !important;
+        }
+        /* Long commands and XML must fold rather than be cut. */
+        pre, pre code { white-space: pre-wrap !important; word-break: break-word; }
+
+        /* Keep units whole across page boundaries, and repeat table
+           headers so a table continuing overleaf is still readable. */
+        tr, img, figure, pre, blockquote, .version-requirement { break-inside: avoid; }
+        thead { display: table-header-group; }
+        tfoot { display: table-footer-group; }
+        /* A heading stranded at the foot of a page is the classic
+           print defect; keep it with the text it introduces. */
+        h1, h2, h3, h4 { break-after: avoid; break-inside: avoid; }
+        p, li, dd { orphans: 3; widows: 3; }
+
+        /* Paper is 658px wide (A4 less 18mm margins), which is below
+           the 720px breakpoint where tables become stacked cards. Every
+           printed table was therefore rendering one field per line:
+           /message-specs/ took 15 pages, most of each one blank. Paper
+           has no narrow-screen problem to solve, so restore the real
+           table. */
+        .content-body table { display: table !important; width: 100% !important; }
+        .content-body tbody { display: table-row-group !important; }
+        .content-body tr { display: table-row !important; border: 0 !important;
+                           border-radius: 0 !important; padding: 0 !important;
+                           margin: 0 !important; width: auto !important; }
+        /* width:auto matters: the card layout sets td{width:100%}, and
+           restoring display alone left every cell claiming the full
+           table, which Chrome resolved as 557px/101px on a two-column
+           table whose long text was in the second column. */
+        .content-body td { display: table-cell !important;
+                           width: auto !important;
+                           border-bottom: 1px solid #ddd !important;
+                           padding: 0.4rem 0.5rem !important; }
+        /* Reference tables are built from long unbroken tokens
+           (pain.001.001.03, XPath fragments). Their combined min-content
+           was 832px on a 658px sheet, so the right-hand columns fell off
+           the paper. Allowing the tokens to break lets the table fit. */
+        .content-body table { max-width: 100% !important; }
+        .content-body td { word-break: break-word; overflow-wrap: anywhere; }
+        /* Deliberately NOT white-space:nowrap on td code. Keeping
+           identifiers whole read better but pushed the version table to
+           673px and an element reference to 846px on a 658px sheet —
+           content off the page costs more than a wrapped token. */
+        .content-body td code { font-size: 0.85em; }
+        /* Headers get the gentler rule: `anywhere` split short labels
+           mid-word on paper — STATUS became "STAT / US", CODE "COD / E".
+           break-word only splits a word that cannot fit on its own. */
+        .content-body th { overflow-wrap: break-word; }
+        /* Uppercase + 0.1em tracking is a screen flourish that inflates
+           every header: it alone held the 8-column version table at
+           799px on a 658px sheet. Sentence case is narrower and reads
+           better in print. */
+        .content-body thead th {
+          text-transform: none !important;
+          letter-spacing: 0 !important;
+          font-size: 8.5pt !important;
+        }
+        .content-body thead { position: static !important;
+                              width: auto !important; height: auto !important;
+                              overflow: visible !important; clip: auto !important;
+                              display: table-header-group !important; }
+        .content-body td[data-label]::before { display: none !important; }
+        /* Reference tables carry many columns; drop a step so they fit
+           the sheet instead of forcing a horizontal squeeze. */
+        .content-body table { font-size: 9.5pt; }
+
+        /* Print the destination, resolved — a bare "/glossary/" is not
+           actionable once the page is on paper. In-page anchors are
+           left alone by these selectors. */
+        .content-body a[href^="http"]::after {
+          content: " (" attr(href) ")";
+          font-size: 0.85em; color: #333; word-break: break-all;
+        }
+        .content-body a[href^="/"]::after {
+          content: " (https://pain001.com" attr(href) ")";
+          font-size: 0.85em; color: #333; word-break: break-all;
+        }
+        /* ...but not inside tables or the contents list. A
+           reference table's cells are labels, and expanding each into a
+           full URL tripled the row height and pushed the table over
+           extra pages for no reader benefit. */
+        .content-body table a::after,
+        .article-toc a::after,
+        .taxonomy-page-list a::after { content: "" !important; }
+        @page { margin: 18mm; }
+      }
+
+      /* ==== Overflow safety net ====
+         Every layout gets this. The article rules live under
+         .content-body, so a table or code block rendered by any other
+         layout had no overflow handling at all: the homepage clipped a
+         table by up to 298px on a phone, and /try/ pushed the whole
+         page 334px sideways from one <pre>. Content that outgrows its
+         column must scroll inside its own box, never move the page. */
+      .table-responsive, .matrix-wrap { overflow-x: auto; max-width: 100%; }
+      pre { overflow-x: auto; max-width: 100%; }
+      /* Unbreakable tokens — ISO type names, namespaces, URLs — must
+         wrap rather than widen their container. */
+      li, p, dd, dt, td, th, h1, h2, h3, h4, figcaption, blockquote, a {
+        overflow-wrap: break-word;
+      }
+
+      .container { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+      .back-link { color: var(--link); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; min-height: 44px; }
+      .back-link:hover { text-decoration: underline; }
+      h1 { font-family: var(--type-display); font-size: 2.5rem; letter-spacing: -0.015em; line-height: 1.15; margin: 1.5rem 0 1rem; }
+      .lede { color: var(--text-muted); margin-bottom: 2rem; max-width: 60ch; }
+
+      .form-group { margin-bottom: 1.5rem; }
+      label { display: block; font-weight: 600; margin-bottom: 0.5rem; }
+      .hint { display: block; font-weight: 400; font-size: 0.9rem; color: var(--text-muted); margin-top: 0.25rem; }
+      input, textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border-color);
+        background: var(--bg-page);
+        color: var(--text-main);
+        font-size: 1rem;
+        font-family: inherit;
+      }
+      button {
+        background: var(--btn-bg);
+        color: var(--btn-text);
+        min-height: 50px;
+        padding: 0.85rem 2rem;
+        border: none;
+        border-radius: var(--radius-pill);
+        font-weight: 700;
+        font-size: 1rem;
+        font-family: inherit;
+        cursor: pointer;
+      }
+      .alt-channels { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.95rem; }
+      .alt-channels a { color: var(--link); }
+
+      article { margin-top: 2rem; color: var(--text-muted); }
+      article h1 { display: none; } /* the layout renders the page H1 */
+      article a { color: var(--link); }
+      article p, article li { margin-bottom: 0.75rem; }
+      article ul { padding-left: 1.5rem; }
+
+      /* ==== Header (ported from sebastienrousseau.com): 3-column grid,
+         disclosure submenus, sun/moon toggle, cmd-K search, globe locale
+         menu, CTA pill, checkbox-burger mobile sheet. ==== */
+      .ap-nav {
+        position: sticky; top: 0; z-index: 1000;
+        background: color-mix(in srgb, var(--bg-page) 92%, transparent);
+        backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--rule);
+      }
+      .ap-nav-wrap {
+        display: grid; grid-template-columns: auto 1fr auto;
+        align-items: center; gap: 1rem; min-height: 64px;
+      }
+      .ap-toggle { position: absolute; opacity: 0; height: 0; width: 0; }
+      .ap-brand {
+        justify-self: start; display: inline-flex; align-items: center; gap: 0.55rem;
+        font-family: var(--type-display); font-size: 1.2rem; font-weight: 700;
+        color: var(--ink); text-decoration: none; min-height: 44px; white-space: nowrap;
+      }
+      .ap-brand img { width: 26px; height: 26px; }
+      .ap-menu {
+        justify-self: center; display: flex; align-items: center;
+        list-style: none; margin: 0; padding: 0; gap: 0.35rem;
+      }
+      .ap-menu > li { position: relative; display: inline-flex; align-items: center; }
+      .ap-menu a {
+        display: inline-flex; align-items: center; min-height: 44px;
+        padding: 0 0.55rem; color: var(--ink-soft); text-decoration: none;
+        font-size: 0.9rem; font-weight: 500; white-space: nowrap;
+        border-radius: var(--radius-sm);
+      }
+      .ap-menu a:hover { color: var(--ink); background: var(--bg-alt); }
+      .ap-menu a[aria-current="page"] {
+        color: var(--link); font-weight: 700; position: relative;
+      }
+      .ap-menu > li > a[aria-current="page"]::after {
+        content: ""; position: absolute; left: 0.55rem; right: 0.55rem; bottom: 4px;
+        height: 2px; background: var(--link); border-radius: 1px;
+      }
+      .ap-sub-toggle {
+        display: inline-flex; align-items: center; justify-content: center;
+        width: 44px; height: 44px; margin-inline-start: -6px;
+        padding: 0; background: transparent; border: 0; border-radius: 50%;
+        color: var(--ink-soft); cursor: pointer;
+      }
+      .ap-sub-toggle:hover { color: var(--ink); background: var(--bg-alt); }
+      .ap-sub-toggle svg {
+        width: 12px; height: 12px; stroke: currentColor; fill: none;
+        stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+        transition: transform 0.18s ease;
+      }
+      .ap-sub-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+      .ap-sub {
+        position: absolute; top: calc(100% + 8px); left: 50%;
+        transform: translateX(-50%);
+        min-width: 240px; margin: 0; padding: 0.6rem 0; list-style: none;
+        background: var(--bg-card); border: 1px solid var(--rule);
+        border-radius: var(--radius-md); box-shadow: var(--shadow-md);
+        display: none; z-index: 1100;
+      }
+      /* Invisible bridge across the 8px offset so :hover survives the
+         pointer's travel from the trigger into the panel. */
+      .ap-sub::before {
+        content: ""; position: absolute; top: -9px; left: 0; right: 0; height: 9px;
+      }
+      .has-sub:hover > .ap-sub,
+      .ap-sub-toggle[aria-expanded="true"] + .ap-sub { display: block; }
+      html:not(.has-js) .has-sub:focus-within > .ap-sub { display: block; }
+      .ap-sub li { display: block; }
+      .ap-sub a { display: flex; padding: 0 1.1rem; font-size: 0.9rem; border-radius: 0; }
+      .ap-nav-right {
+        justify-self: end; display: inline-flex; align-items: center; gap: 0.35rem;
+      }
+      .theme-toggle, .ap-search-btn {
+        display: inline-flex; align-items: center; justify-content: center;
+        gap: 0.4rem; min-width: 44px; min-height: 44px; padding: 0 0.5rem;
+        background: transparent; border: 1px solid transparent; border-radius: 999px;
+        color: var(--ink); cursor: pointer; font-family: inherit;
+      }
+      .theme-toggle { width: 44px; padding: 0; }
+      .theme-toggle:hover, .ap-search-btn:hover { background: var(--bg-alt); }
+      .theme-toggle svg, .ap-search-btn svg {
+        width: 16px; height: 16px; stroke: currentColor; fill: none;
+        stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+      }
+      .theme-toggle .icon-sun { display: none; }
+      .theme-toggle .icon-moon { display: inline; }
+      [data-theme="dark"] .theme-toggle .icon-sun { display: inline; }
+      [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+      @media (prefers-color-scheme: dark) {
+        html:not([data-theme="light"]) .theme-toggle .icon-sun { display: inline; }
+        html:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
+      }
+      .ap-search-kbd {
+        display: inline-flex; align-items: center; padding: 2px 6px;
+        font-family: var(--type-mono); font-size: 0.72rem;
+        color: var(--ink-mute); background: var(--bg-alt);
+        border: 1px solid var(--rule); border-radius: 5px;
+      }
+      .ap-lang { position: relative; }
+      .ap-lang-toggle {
+        display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+        padding: 0 0.8rem; min-height: 44px; background: transparent;
+        border: 1px solid var(--rule-strong); border-radius: 999px;
+        color: var(--ink); cursor: pointer; font-family: inherit;
+        font-size: 0.8rem; font-weight: 600;
+      }
+      .ap-lang-toggle:hover { background: var(--bg-alt); }
+      .ap-lang-globe { font-size: 1rem; line-height: 1; }
+      .ap-lang-menu {
+        position: absolute; top: 100%; right: 0; margin-top: 0.4rem; padding: 0.5rem;
+        background: var(--bg-card); border: 1px solid var(--rule);
+        border-radius: var(--radius-md); box-shadow: var(--shadow-md);
+        z-index: 1100; max-height: min(70vh, 480px); overflow: auto;
+      }
+      .ap-lang-menu[hidden] { display: none; }
+      .ap-lang-menu-grid { display: grid; grid-template-columns: repeat(4, minmax(120px, 1fr)); }
+      .ap-lang-item {
+        display: flex; align-items: center; gap: 0.4rem;
+        padding: 0.45rem 0.6rem; min-height: 40px; border-radius: 6px;
+        font-size: 0.82rem; color: var(--ink-soft); text-decoration: none; white-space: nowrap;
+      }
+      .ap-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
+      .ap-lang-item[aria-current="true"] { color: var(--link); font-weight: 700; }
+      .ap-cta-mini {
+        display: inline-flex; align-items: center; gap: 0.2rem;
+        min-height: 44px; padding: 0 1.1rem;
+        background: var(--btn-bg); color: var(--btn-text);
+        border-radius: 999px; font-size: 0.85rem; font-weight: 600;
+        text-decoration: none; white-space: nowrap;
+      }
+      .ap-cta-mini:hover { opacity: 0.85; }
+      .ap-burger {
+        display: none; align-items: center; justify-content: center;
+        width: 44px; height: 44px; cursor: pointer;
+        font-size: 1.2rem; color: var(--ink); border-radius: var(--radius-sm);
+        border: 1px solid var(--rule-strong); user-select: none;
+      }
+      .ap-toggle:focus-visible ~ .ap-nav-wrap .ap-burger {
+        outline: 3px solid var(--focus-ring); outline-offset: 2px;
+      }
+      .ap-toggle:checked ~ .ap-nav-wrap .ap-burger { color: var(--link); border-color: var(--link); }
+
+      @media (max-width: 1180px) {
+        .ap-nav-wrap { grid-template-columns: auto auto; }
+        .ap-brand { grid-row: 1; grid-column: 1; }
+        .ap-nav-right { grid-row: 1; grid-column: 2; }
+        .ap-burger { display: inline-flex; }
+        .ap-nav nav { display: none; grid-row: 2; grid-column: 1 / -1; }
+        .ap-toggle:checked ~ .ap-nav-wrap nav { display: block; }
+        .ap-menu {
+          display: block; width: 100%; justify-self: stretch;
+          padding: 0.25rem 0 1rem;
+          max-height: calc(100dvh - 76px); overflow: auto;
+        }
+        .ap-menu > li { display: block; position: static; }
+        .ap-menu > li + li { border-top: 1px solid var(--rule); }
+        .ap-menu > li > a {
+          display: flex; justify-content: center; min-height: 48px;
+          font-size: 1rem; font-weight: 600;
+        }
+        .ap-sub-toggle { display: none; }
+        .ap-sub {
+          position: static; transform: none; display: block !important;
+          min-width: 0; border: 0; border-radius: 0; box-shadow: none;
+          background: transparent; padding: 0 0 0.5rem;
+        }
+        .ap-sub a {
+          justify-content: center; min-height: 44px;
+          padding: 0; color: var(--ink-mute);
+        }
+        .ap-menu > li > a[aria-current="page"]::after { display: none; }
+      }
+      @media (max-width: 720px) { .ap-cta-mini { display: none; } .ap-search-kbd { display: none; } }
+      @media (max-width: 480px) {
+        .ap-nav-wrap { gap: 0.5rem; }
+        .ap-lang-toggle { padding: 0 0.55rem; }
+        .ap-lang-current { display: none; } /* globe alone at watch-strap widths */
+      }
+      @media (max-width: 380px) {
+        /* Watch-strap widths: logo-only brand (aria-label keeps the name),
+           tighter padding — every target stays 44px. */
+        .ap-nav-wrap { padding: 0 0.75rem; }
+        .ap-brand span { display: none; }
+        .ap-nav-right { gap: 0.15rem; }
+      }
+      /* Mobile locale menu: a fixed, viewport-fitted panel instead of an
+         anchored dropdown (the 4-column grid overflowed small screens). */
+      @media (max-width: 1180px) {
+        .ap-lang { position: static; }
+        .ap-lang-menu {
+          position: fixed; left: 0.75rem; right: 0.75rem; top: 72px;
+          margin-top: 0; max-height: min(75dvh, 560px);
+        }
+        .ap-lang-menu-grid {
+          grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+          min-width: 0;
+        }
+      }
+
+      /* ssg's injected floating search trigger duplicates the in-nav
+         search button; hide the trigger, keep the overlay it opens. */
+      #ssg-search-btn { display: none !important; }
+      /* AAA overrides for ssg's injected search widget: its own stylesheet
+         ships 6.3-6.9:1 labels; force token colours (>= 7:1 both themes). */
+      #ssg-search-btn, #ssg-search-btn span { color: var(--text-muted) !important; }
+      #ssg-search-btn kbd {
+        color: var(--text-main) !important;
+        background: var(--bg-page) !important;
+        border-color: var(--border-color) !important;
+      }
+    

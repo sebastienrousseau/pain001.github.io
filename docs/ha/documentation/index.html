@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -215,11 +215,11 @@
 <td data-label="Purpose" class="text-left">Lissafa dukkan ma'anonin saƙo 11 da ake goyon baya.</td>
 </tr>
 <tr>
-<td data-label="Subcommand" class="text-left"><code>inspect <type> [--json]</code></td>
+<td data-label="Subcommand" class="text-left"><code>inspect &lt;type&gt; [--json]</code></td>
 <td data-label="Purpose" class="text-left">Nuna filayen wajibi da na zaɓi ga wani nau'in saƙo.</td>
 </tr>
 <tr>
-<td data-label="Subcommand" class="text-left"><code>init <type> [-o DIR]</code></td>
+<td data-label="Subcommand" class="text-left"><code>init &lt;type&gt; [-o DIR]</code></td>
 <td data-label="Purpose" class="text-left">Ƙirƙiri samfurin CSV na farawa ga wani nau'in saƙo.</td>
 </tr>
 <tr>
@@ -237,7 +237,7 @@
 </tbody>
 </table></div>
 <h3>Zaɓuɓɓukan <code>generate</code></h3>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th>Tuta</th>
@@ -246,23 +246,23 @@
 </thead>
 <tbody>
 <tr>
-<td data-label="Flag" class="text-left"><code>-t, --xml-message-type <TYPE></code></td>
+<td data-label="Flag" class="text-left"><code>-t, --xml-message-type &lt;TYPE&gt;</code></td>
 <td data-label="Description" class="text-left">Ma'anar saƙo, misali <code>pain.001.001.09</code>.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-d, --data <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-d, --data &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">Bayanan shigarwa: <code>.csv</code>, <code>.json</code>, <code>.jsonl</code>, <code>.db</code> / <code>.sqlite</code>, <code>.parquet</code>, ko <code>.gpg</code> / <code>.asc</code> da aka ɓoye da PGP.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-o, --output-dir <DIR></code></td>
+<td data-label="Flag" class="text-left"><code>-o, --output-dir &lt;DIR&gt;</code></td>
 <td data-label="Description" class="text-left">Babban fayil ɗin da ke karɓar XML ɗin da aka ƙirƙira.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-m, --template <FILE></code> / <code>-s, --schema <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-m, --template &lt;FILE&gt;</code> / <code>-s, --schema &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">Sauya samfurin Jinja2 ko schema na XSD da aka haɗa a ciki.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-c, --config <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-c, --config &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">Ɗauko tsoffin ƙimomi daga bayanan sanyi (<code>--profile</code>, <code>--show-config</code>).</td>
 </tr>
 <tr>
@@ -270,7 +270,7 @@
 <td data-label="Description" class="text-left">Tantance shigarwa bisa JSON Schema, XSD, da littafin ƙa'idar tsari ba tare da rubuta fitarwa ba.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>--scheme <NAME></code></td>
+<td data-label="Flag" class="text-left"><code>--scheme &lt;NAME&gt;</code></td>
 <td data-label="Description" class="text-left">Tilasta littafin ƙa'idar tsari: <code>sepa-sct</code>, <code>sepa-inst</code>, <code>sepa-sdd</code>, <code>sepa-b2b</code>, ko <code>xborder-ct</code>.</td>
 </tr>
 <tr>
@@ -278,7 +278,7 @@
 <td data-label="Description" class="text-left">Bayar da rahoton kowace ƙa'idar tsari da ta ci nasara ko ta faɗi, a sigar da mutum ko na'ura za ta iya karantawa.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size <N></code></td>
+<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size &lt;N&gt;</code></td>
 <td data-label="Description" class="text-left">Sarrafawa a gutsuttsura tare da iyakancewar ƙwaƙwalwa don manyan tarin bayanai (tsoho: mu'amala 1,000 a kowace gutsure; kowace gutsure tana zama fayil ɗin XML na kanta tare da <code>NbOfTxs</code> da <code>CtrlSum</code> da aka sake ƙidayawa).</td>
 </tr>
 <tr>
@@ -286,7 +286,7 @@
 <td data-label="Description" class="text-left">Fitar da ma'aunan gudanarwa da na'ura za ta iya karantawa don tsarin sa ido.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Lambobin fita suna dacewa da CI: <code>0</code> nasara, <code>1</code> faɗuwar tantancewa, <code>2</code> kuskuren amfani.</p>
 <hr />
 <h2 id="2-python-api">2. Python API<a class="heading-anchor" href="#2-python-api" aria-label="Haɗi zuwa sashe: 2. Python API">#</a></h2>
@@ -313,7 +313,7 @@ process_files(
 <pre><code class="language-bash">pip install "pain001[api]"
 pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <p>Ana ɗora dukkan endpoints a ƙarƙashin <code>/api/v1</code> (tare da wani suna maras siga <code>/api</code>):</p>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th>Hanya & Adireshi</th>
@@ -354,7 +354,7 @@ pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <td data-label="Purpose" class="text-left">Ma'aunan Prometheus.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Ana bayar da takardun hulɗa a <code>/api/docs</code> (Swagger UI), <code>/api/redoc</code>, da <code>/api/reference</code> (Scalar), yayin da takardar OpenAPI take a <code>/openapi.json</code>.</p>
 <hr />
 <h2 id="4-input-normalisation">4. Daidaita Bayanan Shigarwa<a class="heading-anchor" href="#4-input-normalisation" aria-label="Haɗi zuwa sashe: 4. Daidaita Bayanan Shigarwa">#</a></h2>

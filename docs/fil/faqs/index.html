@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -199,7 +199,7 @@
 <p><strong>Nagpapadala pa rin kami ng mga MT101 file. Gaano kaagad kailangan ang migration?</strong></p>
 <p>Kagyat. Itinigil na ng SWIFT ang mga mensaheng MT category 1, 2 at 9 para sa cross-border na interbank na mga tagubilin sa pagbabayad noong Nobyembre 2025; ang mga corporate channel na tumatanggap pa rin ng MT ay ginagawa iyon ayon sa pagpapasya ng bawat bangko at sa hiram na oras. Kino-convert ng <a href="/pain001-loader-mt101/">MT101 loader</a> ang mga umiiral na MT101 flow sa validated na <code>pain.001</code> nang walang muling ini-encode.</p>
 <p><strong>Ano ang ibig sabihin sa amin ng deadline ng structured address sa Nobyembre 2026?</strong></p>
-<p>Mula sa katapusan ng Nobyembre 2026, hindi na tinatanggap ang ganap na unstructured na mga postal address sa CBPR+ na cross-border na pagbabayad; ang mga address ay dapat structured o hybrid — mga hiwalay na elemento tulad ng bayan (<code><TwnNm></code>) at bansa (<code><Ctry></code>) sa halip na mga free-text na linya. Kung ang inyong master data ay nag-iimbak ng mga address bilang mga blob, ang trabaho ay nasa inyong data, hindi sa inyong koneksyon sa bangko. Magsimula roon. Tinatalakay nang detalyado ng <a href="/2026-iso20022-migration-trends/">Briefing sa 2026</a> ang timeline.</p>
+<p>Mula sa katapusan ng Nobyembre 2026, hindi na tinatanggap ang ganap na unstructured na mga postal address sa CBPR+ na cross-border na pagbabayad; ang mga address ay dapat structured o hybrid — mga hiwalay na elemento tulad ng bayan (<code>&lt;TwnNm&gt;</code>) at bansa (<code>&lt;Ctry&gt;</code>) sa halip na mga free-text na linya. Kung ang inyong master data ay nag-iimbak ng mga address bilang mga blob, ang trabaho ay nasa inyong data, hindi sa inyong koneksyon sa bangko. Magsimula roon. Tinatalakay nang detalyado ng <a href="/2026-iso20022-migration-trends/">Briefing sa 2026</a> ang timeline.</p>
 <p><strong>Magkano ang Pain001?</strong></p>
 <p>Wala. Ang core ay dual-licensed na Apache-2.0 / MIT; ang mga companion package ay Apache-2.0. Pinapayagan lahat ang komersyal na paggamit, pagbabago, at muling pamamahagi. Bilang sanggunian sa laki, ang translation SDK lamang ng SWIFT ay nakalista sa €10,000–30,000 bawat taon.</p>
 <hr />
@@ -209,7 +209,7 @@
 <p><strong>Maaari ba naming i-validate ang isang file nang walang binubuong anuman?</strong></p>
 <p>Oo — <code>pain001 --dry-run</code> (o ang <code>validate</code> subcommand, o <code>POST /api/v1/validate</code>). Ang exit code na <code>0</code> ay nangangahulugang wasto; ang <code>1</code> ay nangangahulugang bigo ang validation na may mga error sa antas ng field. Ikonekta ito sa CI o sa isang checklist bago magsumite.</p>
 <p><strong>Aling mga SEPA rulebook ang saklaw?</strong></p>
-<p>Limang scheme rulebook ang built-in: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>), at cross-border credit transfer (<code>xborder-ct</code>). Gamitin ang <code>--scheme <name> --explain</code> upang makita ang bawat panuntunang pumasa o bumagsak.</p>
+<p>Limang scheme rulebook ang built-in: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>), at cross-border credit transfer (<code>xborder-ct</code>). Gamitin ang <code>--scheme &lt;name&gt; --explain</code> upang makita ang bawat panuntunang pumasa o bumagsak.</p>
 <p><strong>Nasa Excel ang aming data. Ano ang panganib?</strong></p>
 <p>Tahimik na ginagawang numero ng Excel ang mga string na parang IBAN. Direktang binabasa ng <a href="/pain001-loader-xlsx/">Excel loader</a> ang <code>.xlsx</code>/<code>.xlsm</code> at agad na humihinto kung ang mga IBAN column ay naglalaman ng mga numeric na cell — nahuhuli ang pagkasira sa pag-load, hindi sa bangko.</p>
 <p><strong>Paano nito hinahawakan ang isang batch na may 500,000 row?</strong></p>

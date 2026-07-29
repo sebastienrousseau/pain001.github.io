@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -207,7 +207,7 @@
 <p><strong>Verification of Payee (VoP).</strong> 9 अक्टूबर 2025 से सभी SEPA क्रेडिट ट्रांसफ़र पर लागू EU-अनिवार्य नाम/IBAN मिलान जाँच। निष्पादन के समय PSP द्वारा की जाती है; मिलान सफल होगा या नहीं, यह स्वच्छ लेनदार डेटा तय करता है।</p>
 <h2 id="identifiers-and-data">पहचानकर्ता और डेटा<a class="heading-anchor" href="#identifiers-and-data" aria-label="अनुभाग का लिंक: पहचानकर्ता और डेटा">#</a></h2>
 <p><strong>IBAN.</strong> International Bank Account Number (ISO 13616), जो mod-97 चेकसम से स्व-जाँच करता है — इसीलिए एक भी अदला-बदली हुआ अंक सबमिशन से <em>पहले</em> पकड़ा जा सकता है।</p>
-<p><strong>BIC / BICFI.</strong> किसी वित्तीय संस्था का ISO 9362 Business Identifier Code। XML तत्व <code>pain.001.001.03</code> में <code><BIC></code> है लेकिन संस्करण 9 से <code><BICFI></code> — एक नाम-परिवर्तन जो संस्करण अपग्रेड के दौरान वास्तविक अस्वीकृतियाँ पैदा करता है।</p>
+<p><strong>BIC / BICFI.</strong> किसी वित्तीय संस्था का ISO 9362 Business Identifier Code। XML तत्व <code>pain.001.001.03</code> में <code>&lt;BIC&gt;</code> है लेकिन संस्करण 9 से <code>&lt;BICFI&gt;</code> — एक नाम-परिवर्तन जो संस्करण अपग्रेड के दौरान वास्तविक अस्वीकृतियाँ पैदा करता है।</p>
 <p><strong>LEI.</strong> Legal Entity Identifier (ISO 17442) — 20-वर्णों का वैश्विक कंपनी पहचानकर्ता। 3 मिलियन से अधिक सक्रिय हैं, और नियामक भुगतानों में इन्हें बढ़ते हुए अनिवार्य कर रहे हैं।</p>
 <p><strong>UETR.</strong> Unique End-to-end Transaction Reference — वह UUID जिससे किसी भुगतान को संवाददाता श्रृंखला (SWIFT gpi) में ट्रेस किया जा सकता है।</p>
 <p><strong>संरचित / हाइब्रिड पता।</strong> मुक्त-पाठ पंक्तियों के बजाय पृथक XML तत्वों (सड़क, शहर, पोस्टकोड, देश) के रूप में डाक पते। 14 नवंबर 2026 से CBPR+ पूर्णतः असंरचित पते अस्वीकार करता है; <em>हाइब्रिड</em> — संरचित शहर और देश तथा अधिकतम दो 70-वर्णीय पता पंक्तियाँ — वैध रहता है।</p>

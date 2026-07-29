@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -195,7 +195,7 @@
 <p>CBPR+ (Cross-Border Payments and Reporting Plus) is the set of usage guidelines that constrains generic ISO 20022 messages for the SWIFT correspondent-banking network. Your <code>pain.001</code> initiates the chain; banks carry it onward as <code>pacs.008</code>. Since coexistence ended on 22 November 2025, this is not an alternative format — it is the format. The version that matters for initiation is <strong><code>pain.001.001.09</code></strong>: it is the CBPR+ choice and, from <strong>14 November 2026</strong>, the mandated replacement for the interbank MT101 relay.</p>
 <h2 id="02-the-fields-cross-border-payments-live-or-die-on">02. The fields cross-border payments live or die on<a class="heading-anchor" href="#02-the-fields-cross-border-payments-live-or-die-on" aria-label="Link to section: 02. The fields cross-border payments live or die on">#</a></h2>
 <ul>
-<li><strong>Agents as BICs.</strong> Identify debtor and creditor agents with a BIC (<code><BICFI></code> from v09 onward — the element name change from v03's <code><BIC></code> is a classic rejection cause when switching versions).</li>
+<li><strong>Agents as BICs.</strong> Identify debtor and creditor agents with a BIC (<code>&lt;BICFI&gt;</code> from v09 onward — the element name change from v03's <code>&lt;BIC&gt;</code> is a classic rejection cause when switching versions).</li>
 <li><strong>Structured or hybrid addresses.</strong> From 14 November 2026, a fully free-text address is a rejection. Minimum viable: structured town and country, with up to two 70-character address lines (hybrid). Pain001 emits both forms.</li>
 <li><strong>Charge bearer.</strong> <code>SHAR</code> is the SEPA norm; cross-border flows may need <code>DEBT</code> or <code>CRED</code>. Pain001's <code>xborder-ct</code> scheme rulebook checks consistency (and its MT101 loader maps legacy <code>OUR</code>/<code>BEN</code>/<code>SHA</code> automatically).</li>
 <li><strong>Purpose codes and remittance data.</strong> Increasingly mandated downstream (the Bank of England extends mandatory purpose codes to all CHAPS payments from November 2027) and the raw material for the CPMI's harmonised cross-border data requirements.</li>

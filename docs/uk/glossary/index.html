@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -207,7 +207,7 @@
 <p><strong>Verification of Payee (VoP).</strong> Обов'язкова в ЄС перевірка відповідності імені та IBAN, застосовувана до всіх кредитових переказів SEPA з 9 жовтня 2025 року. Виконується PSP у момент виконання; збіг визначають чисті дані про кредитора.</p>
 <h2 id="identifiers-and-data">Ідентифікатори та дані<a class="heading-anchor" href="#identifiers-and-data" aria-label="Посилання на розділ: Ідентифікатори та дані">#</a></h2>
 <p><strong>IBAN.</strong> Міжнародний номер банківського рахунку (ISO 13616), самоперевірний через контрольну суму mod-97 — тому одна переставлена цифра виявляється <em>до</em> подання.</p>
-<p><strong>BIC / BICFI.</strong> Ідентифікаційний код фінансової установи за ISO 9362. XML-елемент називається <code><BIC></code> у <code>pain.001.001.03</code>, але <code><BICFI></code> починаючи з версії 9 — перейменування, що спричиняє реальні відхилення під час оновлення версій.</p>
+<p><strong>BIC / BICFI.</strong> Ідентифікаційний код фінансової установи за ISO 9362. XML-елемент називається <code>&lt;BIC&gt;</code> у <code>pain.001.001.03</code>, але <code>&lt;BICFI&gt;</code> починаючи з версії 9 — перейменування, що спричиняє реальні відхилення під час оновлення версій.</p>
 <p><strong>LEI.</strong> Legal Entity Identifier (ISO 17442) — глобальний 20-символьний ідентифікатор компанії. Активних понад 3 мільйони, і регулятори дедалі частіше вимагають їх у платежах.</p>
 <p><strong>UETR.</strong> Unique End-to-end Transaction Reference — UUID, що дає змогу відстежити платіж уздовж усього кореспондентського ланцюжка (SWIFT gpi).</p>
 <p><strong>Структурована / гібридна адреса.</strong> Поштові адреси як окремі XML-елементи (вулиця, місто, індекс, країна) проти рядків вільного тексту. З 14 листопада 2026 року CBPR+ відхиляє повністю неструктуровані адреси; <em>гібрид</em> — структуровані місто та країна плюс до двох адресних рядків по 70 символів — залишається чинним.</p>

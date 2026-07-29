@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -207,7 +207,7 @@
 <p><strong>Verification of Payee (VoP).</strong> فحص مطابقة الاسم/IBAN المفروض من الاتحاد الأوروبي والمطبق على جميع تحويلات SEPA الائتمانية منذ 9 أكتوبر 2025. يجريه مقدم خدمة الدفع وقت التنفيذ؛ ونظافة بيانات الدائن هي ما يحدد المطابقة.</p>
 <h2 id="identifiers-and-data">المعرّفات والبيانات<a class="heading-anchor" href="#identifiers-and-data" aria-label="رابط إلى القسم: المعرّفات والبيانات">#</a></h2>
 <p><strong>IBAN.</strong> رقم الحساب المصرفي الدولي (ISO 13616)، ذاتي الفحص عبر مجموع تحقق mod-97 — ولهذا يمكن اكتشاف رقم واحد مُبدَّل الموضع <em>قبل</em> التقديم.</p>
-<p><strong>BIC / BICFI.</strong> رمز معرّف الأعمال وفق ISO 9362 لمؤسسة مالية. العنصر في XML هو <code><BIC></code> في <code>pain.001.001.03</code> لكنه <code><BICFI></code> اعتبارًا من الإصدار 9 — إعادة تسمية تسبب حالات رفض فعلية أثناء ترقيات الإصدار.</p>
+<p><strong>BIC / BICFI.</strong> رمز معرّف الأعمال وفق ISO 9362 لمؤسسة مالية. العنصر في XML هو <code>&lt;BIC&gt;</code> في <code>pain.001.001.03</code> لكنه <code>&lt;BICFI&gt;</code> اعتبارًا من الإصدار 9 — إعادة تسمية تسبب حالات رفض فعلية أثناء ترقيات الإصدار.</p>
 <p><strong>LEI.</strong> معرّف الكيان القانوني (ISO 17442) — المعرّف العالمي للشركات المكوّن من 20 محرفًا. أكثر من 3 ملايين معرّف نشط، والجهات التنظيمية تفرضه في المدفوعات بازدياد.</p>
 <p><strong>UETR.</strong> المرجع الفريد للمعاملة من طرف إلى طرف — معرّف UUID الذي يتيح تتبع الدفعة عبر سلسلة البنوك المراسلة (SWIFT gpi).</p>
 <p><strong>العنوان المهيكل / الهجين.</strong> العناوين البريدية كعناصر XML منفصلة (الشارع، المدينة، الرمز البريدي، البلد) مقابل أسطر نص حر. اعتبارًا من 14 نوفمبر 2026، يرفض CBPR+ العناوين غير المهيكلة كليًا؛ ويبقى <em>الهجين</em> — مدينة وبلد مهيكلان مع ما يصل إلى سطرَي عنوان من 70 محرفًا — صالحًا.</p>

@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -207,7 +207,7 @@
 <p><strong>Verification of Payee (VoP).</strong> Den EU-påbjudna namn-/IBAN-matchningskontrollen som tillämpas på alla SEPA-gireringar sedan den 9 oktober 2025. Utförs av betaltjänstleverantören vid utförandet; rena mottagardata avgör om det blir en träff.</p>
 <h2 id="identifiers-and-data">Identifierare och data<a class="heading-anchor" href="#identifiers-and-data" aria-label="Länk till avsnitt: Identifierare och data">#</a></h2>
 <p><strong>IBAN.</strong> International Bank Account Number (ISO 13616), självkontrollerande via en mod-97-kontrollsumma — vilket är varför en enda omkastad siffra kan upptäckas <em>före</em> inskickning.</p>
-<p><strong>BIC / BICFI.</strong> En finansinstitutions Business Identifier Code enligt ISO 9362. XML-elementet är <code><BIC></code> i <code>pain.001.001.03</code> men <code><BICFI></code> från version 9 — ett namnbyte som orsakar verkliga avvisningar vid versionsuppgraderingar.</p>
+<p><strong>BIC / BICFI.</strong> En finansinstitutions Business Identifier Code enligt ISO 9362. XML-elementet är <code>&lt;BIC&gt;</code> i <code>pain.001.001.03</code> men <code>&lt;BICFI&gt;</code> från version 9 — ett namnbyte som orsakar verkliga avvisningar vid versionsuppgraderingar.</p>
 <p><strong>LEI.</strong> Legal Entity Identifier (ISO 17442) — den 20 tecken långa globala företagsidentifieraren. Över 3 miljoner är aktiva, och tillsynsmyndigheter kräver dem allt oftare i betalningar.</p>
 <p><strong>UETR.</strong> Unique End-to-end Transaction Reference — UUID:t som gör att en betalning kan spåras genom hela korrespondentkedjan (SWIFT gpi).</p>
 <p><strong>Strukturerad/hybrid adress.</strong> Postadresser som separata XML-element (gata, ort, postnummer, land) i motsats till fritextrader. Från den 14 november 2026 avvisar CBPR+ helt ostrukturerade adresser; <em>hybrid</em> — strukturerad ort och strukturerat land plus upp till två adressrader om 70 tecken — förblir giltig.</p>

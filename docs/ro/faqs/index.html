@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -199,7 +199,7 @@
 <p><strong>Încă trimitem fișiere MT101. Cât de urgentă este migrarea?</strong></p>
 <p>Urgentă. SWIFT a retras mesajele MT din categoriile 1, 2 și 9 pentru instrucțiunile de plată interbancare transfrontaliere în noiembrie 2025; canalele corporative care încă acceptă MT o fac la discreția fiecărei bănci și pe timp împrumutat. <a href="/pain001-loader-mt101/">Loaderul MT101</a> convertește fluxurile MT101 existente în <code>pain.001</code> validat, fără reintroducerea vreunei date.</p>
 <p><strong>Ce înseamnă pentru noi termenul din noiembrie 2026 privind adresele structurate?</strong></p>
-<p>De la sfârșitul lunii noiembrie 2026, adresele poștale complet nestructurate nu mai sunt acceptate în plățile transfrontaliere CBPR+; adresele trebuie să fie structurate sau hibride — elemente distincte precum localitatea (<code><TwnNm></code>) și țara (<code><Ctry></code>), în locul liniilor de text liber. Dacă datele dumneavoastră de referință păstrează adresele ca blocuri de text, efortul este în date, nu în conexiunea cu banca. Începeți de acolo. <a href="/2026-iso20022-migration-trends/">Analiza pentru 2026</a> prezintă calendarul în detaliu.</p>
+<p>De la sfârșitul lunii noiembrie 2026, adresele poștale complet nestructurate nu mai sunt acceptate în plățile transfrontaliere CBPR+; adresele trebuie să fie structurate sau hibride — elemente distincte precum localitatea (<code>&lt;TwnNm&gt;</code>) și țara (<code>&lt;Ctry&gt;</code>), în locul liniilor de text liber. Dacă datele dumneavoastră de referință păstrează adresele ca blocuri de text, efortul este în date, nu în conexiunea cu banca. Începeți de acolo. <a href="/2026-iso20022-migration-trends/">Analiza pentru 2026</a> prezintă calendarul în detaliu.</p>
 <p><strong>Cât costă Pain001?</strong></p>
 <p>Nimic. Nucleul are licențiere duală Apache-2.0 / MIT, iar pachetele însoțitoare sunt Apache-2.0. Utilizarea comercială, modificarea și redistribuirea sunt toate permise. Ca reper de scară, doar SDK-ul de traducere al SWIFT este listat la €10,000–30,000 pe an.</p>
 <hr />
@@ -209,7 +209,7 @@
 <p><strong>Putem valida un fișier fără a genera nimic?</strong></p>
 <p>Da — <code>pain001 --dry-run</code> (sau subcomanda <code>validate</code>, ori <code>POST /api/v1/validate</code>). Codul de ieșire <code>0</code> înseamnă că fișierul este valid; <code>1</code> înseamnă că validarea a eșuat, cu erori la nivel de câmp. Integrați-l în CI sau într-o listă de verificare dinaintea transmiterii.</p>
 <p><strong>Ce regulamente SEPA sunt acoperite?</strong></p>
-<p>Cinci regulamente de schemă sunt incluse din start: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) și transfer credit transfrontalier (<code>xborder-ct</code>). Folosiți <code>--scheme <name> --explain</code> pentru a vedea fiecare regulă trecută sau eșuată.</p>
+<p>Cinci regulamente de schemă sunt incluse din start: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) și transfer credit transfrontalier (<code>xborder-ct</code>). Folosiți <code>--scheme &lt;name&gt; --explain</code> pentru a vedea fiecare regulă trecută sau eșuată.</p>
 <p><strong>Datele noastre sunt în Excel. Unde este capcana?</strong></p>
 <p>Excel convertește în tăcere în numere șirurile care seamănă cu un IBAN. <a href="/pain001-loader-xlsx/">Loaderul Excel</a> citește direct <code>.xlsx</code>/<code>.xlsm</code> și se oprește imediat dacă în coloanele IBAN apar celule numerice — coruperea este depistată la încărcare, nu la bancă.</p>
 <p><strong>Cum gestionează un lot de 500,000 de rânduri?</strong></p>

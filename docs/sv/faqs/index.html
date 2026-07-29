@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -199,7 +199,7 @@
 <p><strong>Vi skickar fortfarande MT101-filer. Hur brådskande är migreringen?</strong></p>
 <p>Brådskande. SWIFT pensionerade MT-meddelanden i kategori 1, 2 och 9 för gränsöverskridande interbankbetalningsinstruktioner i november 2025; företagskanaler som fortfarande tar emot MT gör det efter varje banks eget gottfinnande och på lånad tid. <a href="/pain001-loader-mt101/">MT101-inläsaren</a> konverterar befintliga MT101-flöden till validerad <code>pain.001</code> utan att något behöver knappas in på nytt.</p>
 <p><strong>Vad betyder deadline för strukturerade adresser i november 2026 för oss?</strong></p>
-<p>Från slutet av november 2026 accepteras inte längre helt ostrukturerade postadresser i CBPR+-gränsöverskridande betalningar; adresser måste vara strukturerade eller hybrida — separata element som ort (<code><TwnNm></code>) och land (<code><Ctry></code>) i stället för fritextrader. Om era masterdata lagrar adresser som textklumpar ligger arbetet i era data, inte i bankanslutningen. Börja där. <a href="/2026-iso20022-migration-trends/">2026-genomgången</a> täcker tidslinjen i detalj.</p>
+<p>Från slutet av november 2026 accepteras inte längre helt ostrukturerade postadresser i CBPR+-gränsöverskridande betalningar; adresser måste vara strukturerade eller hybrida — separata element som ort (<code>&lt;TwnNm&gt;</code>) och land (<code>&lt;Ctry&gt;</code>) i stället för fritextrader. Om era masterdata lagrar adresser som textklumpar ligger arbetet i era data, inte i bankanslutningen. Börja där. <a href="/2026-iso20022-migration-trends/">2026-genomgången</a> täcker tidslinjen i detalj.</p>
 <p><strong>Vad kostar Pain001?</strong></p>
 <p>Ingenting. Kärnan är dubbellicensierad Apache-2.0 / MIT; kompletterande paket är Apache-2.0. Kommersiell användning, modifiering och vidaredistribution är tillåtna. Som jämförelse listas enbart SWIFT:s översättnings-SDK till €10,000–30,000 per år.</p>
 <hr />
@@ -209,7 +209,7 @@
 <p><strong>Kan vi validera en fil utan att generera något?</strong></p>
 <p>Ja — <code>pain001 --dry-run</code> (eller underkommandot <code>validate</code>, eller <code>POST /api/v1/validate</code>). Slutkod <code>0</code> betyder giltig; <code>1</code> betyder att valideringen misslyckades, med fel på fältnivå. Koppla in det i CI eller i en checklista före inskickning.</p>
 <p><strong>Vilka SEPA-regelverk täcks?</strong></p>
-<p>Fem regelverk medföljer inbyggt: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) och gränsöverskridande betalningsöverföring (<code>xborder-ct</code>). Använd <code>--scheme <name> --explain</code> för att se varje regel som godkänts eller underkänts.</p>
+<p>Fem regelverk medföljer inbyggt: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) och gränsöverskridande betalningsöverföring (<code>xborder-ct</code>). Använd <code>--scheme &lt;name&gt; --explain</code> för att se varje regel som godkänts eller underkänts.</p>
 <p><strong>Våra data ligger i Excel. Vad är haken?</strong></p>
 <p>Excel omvandlar i tysthet IBAN-liknande strängar till tal. <a href="/pain001-loader-xlsx/">Excel-inläsaren</a> läser <code>.xlsx</code>/<code>.xlsm</code> direkt och stoppar tvärt om IBAN-kolumner innehåller numeriska celler — korruptionen fångas vid inläsning, inte hos banken.</p>
 <p><strong>Hur hanterar det en batch med 500,000 rader?</strong></p>

@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -199,7 +199,7 @@
 <p><strong>Wij versturen nog MT101-bestanden. Hoe urgent is migratie?</strong></p>
 <p>Urgent. SWIFT heeft de MT-berichten van categorie 1, 2 en 9 voor grensoverschrijdende interbancaire betaalopdrachten in november 2025 uitgefaseerd; zakelijke kanalen die MT nog accepteren, doen dat naar het inzicht van elke bank afzonderlijk en op geleende tijd. De <a href="/pain001-loader-mt101/">MT101-loader</a> zet bestaande MT101-stromen om naar gevalideerde <code>pain.001</code> zonder dat u iets opnieuw hoeft in te typen.</p>
 <p><strong>Wat betekent de deadline van november 2026 voor gestructureerde adressen voor ons?</strong></p>
-<p>Vanaf eind november 2026 worden volledig ongestructureerde postadressen niet meer geaccepteerd in grensoverschrijdende CBPR+-betalingen; adressen moeten gestructureerd of hybride zijn — losse elementen zoals plaats (<code><TwnNm></code>) en land (<code><Ctry></code>) in plaats van vrije tekstregels. Staan de adressen in uw stamgegevens als tekstblokken, dan zit het werk in uw data, niet in uw bankkoppeling. Begin daar. De <a href="/2026-iso20022-migration-trends/">briefing over 2026</a> behandelt de tijdlijn in detail.</p>
+<p>Vanaf eind november 2026 worden volledig ongestructureerde postadressen niet meer geaccepteerd in grensoverschrijdende CBPR+-betalingen; adressen moeten gestructureerd of hybride zijn — losse elementen zoals plaats (<code>&lt;TwnNm&gt;</code>) en land (<code>&lt;Ctry&gt;</code>) in plaats van vrije tekstregels. Staan de adressen in uw stamgegevens als tekstblokken, dan zit het werk in uw data, niet in uw bankkoppeling. Begin daar. De <a href="/2026-iso20022-migration-trends/">briefing over 2026</a> behandelt de tijdlijn in detail.</p>
 <p><strong>Wat kost Pain001?</strong></p>
 <p>Niets. De kern is dubbel gelicentieerd onder Apache-2.0 / MIT; de aanvullende pakketten onder Apache-2.0. Commercieel gebruik, aanpassing en herdistributie zijn allemaal toegestaan. Ter vergelijking: alleen al de vertaal-SDK van SWIFT staat in de prijslijst voor €10,000–30,000 per jaar.</p>
 <hr />
@@ -209,7 +209,7 @@
 <p><strong>Kunnen wij een bestand valideren zonder iets te genereren?</strong></p>
 <p>Ja — <code>pain001 --dry-run</code> (of het subcommando <code>validate</code>, of <code>POST /api/v1/validate</code>). Exitcode <code>0</code> betekent geldig; <code>1</code> betekent dat de validatie is mislukt met fouten op veldniveau. Neem het op in uw CI of in een checklist vóór indiening.</p>
 <p><strong>Welke SEPA-rulebooks worden gedekt?</strong></p>
-<p>Vijf scheme-rulebooks worden standaard meegeleverd: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) en de grensoverschrijdende overboeking (<code>xborder-ct</code>). Gebruik <code>--scheme <name> --explain</code> om elke regel te zien die slaagde of faalde.</p>
+<p>Vijf scheme-rulebooks worden standaard meegeleverd: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) en de grensoverschrijdende overboeking (<code>xborder-ct</code>). Gebruik <code>--scheme &lt;name&gt; --explain</code> om elke regel te zien die slaagde of faalde.</p>
 <p><strong>Onze gegevens staan in Excel. Waar zit het addertje?</strong></p>
 <p>Excel zet IBAN-achtige tekenreeksen stilzwijgend om in getallen. De <a href="/pain001-loader-xlsx/">Excel-loader</a> leest <code>.xlsx</code>/<code>.xlsm</code> rechtstreeks en stopt onherroepelijk zodra IBAN-kolommen numerieke cellen bevatten — de corruptie wordt bij het inlezen opgemerkt, niet bij de bank.</p>
 <p><strong>Hoe gaat het om met een batch van 500,000 regels?</strong></p>

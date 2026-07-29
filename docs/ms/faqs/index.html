@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -199,7 +199,7 @@
 <p><strong>Kami masih menghantar fail MT101. Sejauh manakah mendesaknya migrasi ini?</strong></p>
 <p>Sangat mendesak. SWIFT menamatkan mesej MT kategori 1, 2 dan 9 bagi arahan pembayaran antara bank rentas sempadan pada November 2025; saluran korporat yang masih menerima MT berbuat demikian atas budi bicara setiap bank dan hanya buat sementara waktu. <a href="/pain001-loader-mt101/">Loader MT101</a> menukarkan aliran MT101 sedia ada kepada <code>pain.001</code> yang disahkan tanpa perlu menaip semula apa-apa.</p>
 <p><strong>Apakah maksud tarikh akhir alamat berstruktur November 2026 bagi kami?</strong></p>
-<p>Mulai akhir November 2026, alamat pos yang sepenuhnya tidak berstruktur tidak lagi diterima dalam pembayaran rentas sempadan CBPR+; alamat mesti berstruktur atau hibrid — elemen berasingan seperti bandar (<code><TwnNm></code>) dan negara (<code><Ctry></code>) dan bukannya baris teks bebas. Jika data induk anda menyimpan alamat sebagai gumpalan teks, kerjanya terletak pada data anda, bukan pada sambungan bank anda. Mulakan di situ. <a href="/2026-iso20022-migration-trends/">Taklimat 2026</a> membincangkan garis masanya secara terperinci.</p>
+<p>Mulai akhir November 2026, alamat pos yang sepenuhnya tidak berstruktur tidak lagi diterima dalam pembayaran rentas sempadan CBPR+; alamat mesti berstruktur atau hibrid — elemen berasingan seperti bandar (<code>&lt;TwnNm&gt;</code>) dan negara (<code>&lt;Ctry&gt;</code>) dan bukannya baris teks bebas. Jika data induk anda menyimpan alamat sebagai gumpalan teks, kerjanya terletak pada data anda, bukan pada sambungan bank anda. Mulakan di situ. <a href="/2026-iso20022-migration-trends/">Taklimat 2026</a> membincangkan garis masanya secara terperinci.</p>
 <p><strong>Berapakah kos Pain001?</strong></p>
 <p>Tiada kos. Bahagian terasnya berlesen dwi Apache-2.0 / MIT; pakej pendampingnya berlesen Apache-2.0. Penggunaan komersial, pengubahsuaian dan pengedaran semula semuanya dibenarkan. Sebagai rujukan skala, SDK terjemahan SWIFT sahaja disenaraikan pada €10,000–30,000 setahun.</p>
 <hr />
@@ -209,7 +209,7 @@
 <p><strong>Bolehkah kami mengesahkan sesuatu fail tanpa menjana apa-apa?</strong></p>
 <p>Boleh — <code>pain001 --dry-run</code> (atau subperintah <code>validate</code>, atau <code>POST /api/v1/validate</code>). Kod keluar <code>0</code> bermakna sah; <code>1</code> bermakna pengesahan gagal dengan ralat pada peringkat medan. Sambungkannya ke CI atau ke senarai semak sebelum penghantaran.</p>
 <p><strong>Rulebook SEPA yang manakah dirangkumi?</strong></p>
-<p>Lima rulebook skim disertakan secara terbina dalam: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) dan pindahan kredit rentas sempadan (<code>xborder-ct</code>). Gunakan <code>--scheme <name> --explain</code> untuk melihat setiap peraturan yang lulus atau gagal.</p>
+<p>Lima rulebook skim disertakan secara terbina dalam: SEPA Credit Transfer (<code>sepa-sct</code>), SEPA Instant (<code>sepa-inst</code>), SEPA Direct Debit Core (<code>sepa-sdd</code>), SEPA B2B (<code>sepa-b2b</code>) dan pindahan kredit rentas sempadan (<code>xborder-ct</code>). Gunakan <code>--scheme &lt;name&gt; --explain</code> untuk melihat setiap peraturan yang lulus atau gagal.</p>
 <p><strong>Data kami tersimpan dalam Excel. Apakah risikonya?</strong></p>
 <p>Excel secara senyap menukarkan rentetan yang menyerupai IBAN kepada nombor. <a href="/pain001-loader-xlsx/">Loader Excel</a> membaca <code>.xlsx</code>/<code>.xlsm</code> secara terus dan berhenti terus jika lajur IBAN mengandungi sel berangka — kerosakan itu ditangkap semasa pemuatan, bukan di bank.</p>
 <p><strong>Bagaimanakah ia mengendalikan kelompok 500,000 baris?</strong></p>

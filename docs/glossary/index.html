@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -207,7 +207,7 @@
 <p><strong>Verification of Payee (VoP).</strong> The EU-mandated name/IBAN match check applied to all SEPA credit transfers since 9 October 2025. Done by the PSP at execution time; clean creditor data determines whether it matches.</p>
 <h2 id="identifiers-and-data">Identifiers and data<a class="heading-anchor" href="#identifiers-and-data" aria-label="Link to section: Identifiers and data">#</a></h2>
 <p><strong>IBAN.</strong> International Bank Account Number (ISO 13616), self-checking via a mod-97 checksum — which is why a single transposed digit is detectable <em>before</em> submission.</p>
-<p><strong>BIC / BICFI.</strong> The ISO 9362 Business Identifier Code of a financial institution. The XML element is <code><BIC></code> in <code>pain.001.001.03</code> but <code><BICFI></code> from version 9 — a rename that causes real-world rejections during version upgrades.</p>
+<p><strong>BIC / BICFI.</strong> The ISO 9362 Business Identifier Code of a financial institution. The XML element is <code>&lt;BIC&gt;</code> in <code>pain.001.001.03</code> but <code>&lt;BICFI&gt;</code> from version 9 — a rename that causes real-world rejections during version upgrades.</p>
 <p><strong>LEI.</strong> Legal Entity Identifier (ISO 17442) — the 20-character global company identifier. Over 3 million are active, and regulators increasingly mandate them in payments.</p>
 <p><strong>UETR.</strong> Unique End-to-end Transaction Reference — the UUID that lets a payment be traced across the correspondent chain (SWIFT gpi).</p>
 <p><strong>Structured / hybrid address.</strong> Postal addresses as discrete XML elements (street, town, postcode, country) versus free-text lines. From 14 November 2026, CBPR+ rejects fully unstructured addresses; <em>hybrid</em> — structured town and country plus up to two 70-character address lines — remains valid.</p>

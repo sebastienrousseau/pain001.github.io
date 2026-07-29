@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -207,7 +207,7 @@
 <p><strong>Verification of Payee (VoP).</strong> 9 অক্টোবর 2025 থেকে সব SEPA ক্রেডিট ট্রান্সফারে প্রযোজ্য EU-নির্দেশিত নাম/IBAN মিলকরণ পরীক্ষা। এক্সিকিউশনের সময় PSP এটি সম্পন্ন করে; ক্রেডিটর ডেটা কতটা পরিচ্ছন্ন তার উপরই মিল নির্ভর করে।</p>
 <h2 id="identifiers-and-data">শনাক্তকারী ও ডেটা<a class="heading-anchor" href="#identifiers-and-data" aria-label="বিভাগের লিংক: শনাক্তকারী ও ডেটা">#</a></h2>
 <p><strong>IBAN.</strong> International Bank Account Number (ISO 13616), mod-97 চেকসামের মাধ্যমে স্ব-যাচাইকারী — এ কারণেই একটিমাত্র অদলবদল হওয়া অঙ্কও জমা দেওয়ার <em>আগেই</em> শনাক্ত করা যায়।</p>
-<p><strong>BIC / BICFI.</strong> একটি আর্থিক প্রতিষ্ঠানের ISO 9362 Business Identifier Code। <code>pain.001.001.03</code>-এ XML এলিমেন্টটি <code><BIC></code>, কিন্তু সংস্করণ 9 থেকে <code><BICFI></code> — এই নাম পরিবর্তন সংস্করণ আপগ্রেডের সময় বাস্তবেই প্রত্যাখ্যানের কারণ হয়।</p>
+<p><strong>BIC / BICFI.</strong> একটি আর্থিক প্রতিষ্ঠানের ISO 9362 Business Identifier Code। <code>pain.001.001.03</code>-এ XML এলিমেন্টটি <code>&lt;BIC&gt;</code>, কিন্তু সংস্করণ 9 থেকে <code>&lt;BICFI&gt;</code> — এই নাম পরিবর্তন সংস্করণ আপগ্রেডের সময় বাস্তবেই প্রত্যাখ্যানের কারণ হয়।</p>
 <p><strong>LEI.</strong> Legal Entity Identifier (ISO 17442) — 20-অক্ষরের বৈশ্বিক কোম্পানি শনাক্তকারী। 3 মিলিয়নেরও বেশি সক্রিয় রয়েছে, এবং নিয়ন্ত্রকেরা ক্রমশ পেমেন্টে এগুলি বাধ্যতামূলক করছেন।</p>
 <p><strong>UETR.</strong> Unique End-to-end Transaction Reference — সেই UUID, যা করেসপন্ডেন্ট চেইন জুড়ে একটি পেমেন্ট ট্র্যাক করতে দেয় (SWIFT gpi)।</p>
 <p><strong>স্ট্রাকচার্ড / হাইব্রিড ঠিকানা।</strong> মুক্ত-পাঠ্য লাইনের বদলে পৃথক XML এলিমেন্ট হিসেবে ডাক ঠিকানা (রাস্তা, শহর, পোস্টকোড, দেশ)। 14 নভেম্বর 2026 থেকে CBPR+ সম্পূর্ণ অস্ট্রাকচার্ড ঠিকানা প্রত্যাখ্যান করে; <em>হাইব্রিড</em> — স্ট্রাকচার্ড শহর ও দেশ, সঙ্গে সর্বাধিক দুটি 70-অক্ষরের ঠিকানা লাইন — বৈধ থাকে।</p>

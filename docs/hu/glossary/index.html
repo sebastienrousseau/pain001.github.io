@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -207,7 +207,7 @@
 <p><strong>Verification of Payee (VoP).</strong> Az EU által előírt név–IBAN egyezőségi ellenőrzés, amely 2025. október 9-e óta minden SEPA átutalásra vonatkozik. A pénzforgalmi szolgáltató végzi a teljesítéskor; hogy egyezik-e, azt a kedvezményezetti adatok tisztasága dönti el.</p>
 <h2 id="identifiers-and-data">Azonosítók és adatok<a class="heading-anchor" href="#identifiers-and-data" aria-label="Hivatkozás a szakaszra: Azonosítók és adatok">#</a></h2>
 <p><strong>IBAN.</strong> International Bank Account Number (ISO 13616), amely mod-97 ellenőrző összeggel önellenőrző — ezért egyetlen felcserélt számjegy is kiszűrhető a beküldés <em>előtt</em>.</p>
-<p><strong>BIC / BICFI.</strong> Egy pénzügyi intézmény ISO 9362 szerinti üzleti azonosító kódja. Az XML elem a <code>pain.001.001.03</code> üzenetben <code><BIC></code>, a 9-es verziótól viszont <code><BICFI></code> — ez az átnevezés a verzióváltásoknál valós elutasításokat okoz.</p>
+<p><strong>BIC / BICFI.</strong> Egy pénzügyi intézmény ISO 9362 szerinti üzleti azonosító kódja. Az XML elem a <code>pain.001.001.03</code> üzenetben <code>&lt;BIC&gt;</code>, a 9-es verziótól viszont <code>&lt;BICFI&gt;</code> — ez az átnevezés a verzióváltásoknál valós elutasításokat okoz.</p>
 <p><strong>LEI.</strong> Legal Entity Identifier (ISO 17442) — a 20 karakteres, globális vállalati azonosító. Több mint 3 millió aktív azonosító létezik, és a szabályozók egyre gyakrabban írják elő a fizetésekben.</p>
 <p><strong>UETR.</strong> Unique End-to-end Transaction Reference — az az UUID, amellyel egy fizetés végigkövethető a levelezőbanki láncon (SWIFT gpi).</p>
 <p><strong>Strukturált / hibrid cím.</strong> Postai címek különálló XML elemekként (utca, település, irányítószám, ország) a szabad szöveges sorok helyett. 2026. november 14-étől a CBPR+ elutasítja a teljesen strukturálatlan címeket; a <em>hibrid</em> forma — strukturált település és ország, valamint legfeljebb két, 70 karakteres címsor — érvényes marad.</p>

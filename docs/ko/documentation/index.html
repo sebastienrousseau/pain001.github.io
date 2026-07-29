@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -215,11 +215,11 @@
 <td data-label="Purpose" class="text-left">지원되는 11개 메시지 정의를 모두 나열합니다.</td>
 </tr>
 <tr>
-<td data-label="Subcommand" class="text-left"><code>inspect <type> [--json]</code></td>
+<td data-label="Subcommand" class="text-left"><code>inspect &lt;type&gt; [--json]</code></td>
 <td data-label="Purpose" class="text-left">메시지 유형의 필수 필드와 선택 필드를 표시합니다.</td>
 </tr>
 <tr>
-<td data-label="Subcommand" class="text-left"><code>init <type> [-o DIR]</code></td>
+<td data-label="Subcommand" class="text-left"><code>init &lt;type&gt; [-o DIR]</code></td>
 <td data-label="Purpose" class="text-left">메시지 유형에 맞는 시작용 CSV 템플릿을 생성합니다.</td>
 </tr>
 <tr>
@@ -237,7 +237,7 @@
 </tbody>
 </table></div>
 <h3><code>generate</code> 옵션</h3>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th>플래그</th>
@@ -246,23 +246,23 @@
 </thead>
 <tbody>
 <tr>
-<td data-label="Flag" class="text-left"><code>-t, --xml-message-type <TYPE></code></td>
+<td data-label="Flag" class="text-left"><code>-t, --xml-message-type &lt;TYPE&gt;</code></td>
 <td data-label="Description" class="text-left">메시지 정의입니다. 예: <code>pain.001.001.09</code>.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-d, --data <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-d, --data &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">입력 데이터입니다: <code>.csv</code>, <code>.json</code>, <code>.jsonl</code>, <code>.db</code> / <code>.sqlite</code>, <code>.parquet</code>, 또는 PGP로 암호화된 <code>.gpg</code> / <code>.asc</code>.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-o, --output-dir <DIR></code></td>
+<td data-label="Flag" class="text-left"><code>-o, --output-dir &lt;DIR&gt;</code></td>
 <td data-label="Description" class="text-left">생성된 XML이 저장되는 디렉터리입니다.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-m, --template <FILE></code> / <code>-s, --schema <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-m, --template &lt;FILE&gt;</code> / <code>-s, --schema &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">번들로 제공되는 Jinja2 템플릿 또는 XSD 스키마를 재정의합니다.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>-c, --config <FILE></code></td>
+<td data-label="Flag" class="text-left"><code>-c, --config &lt;FILE&gt;</code></td>
 <td data-label="Description" class="text-left">구성 프로필에서 기본값을 불러옵니다(<code>--profile</code>, <code>--show-config</code>).</td>
 </tr>
 <tr>
@@ -270,7 +270,7 @@
 <td data-label="Description" class="text-left">출력을 작성하지 않고 JSON Schema, XSD, 스킴 룰북에 대해 입력을 검증합니다.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>--scheme <NAME></code></td>
+<td data-label="Flag" class="text-left"><code>--scheme &lt;NAME&gt;</code></td>
 <td data-label="Description" class="text-left">스킴 룰북을 적용합니다: <code>sepa-sct</code>, <code>sepa-inst</code>, <code>sepa-sdd</code>, <code>sepa-b2b</code>, 또는 <code>xborder-ct</code>.</td>
 </tr>
 <tr>
@@ -278,7 +278,7 @@
 <td data-label="Description" class="text-left">통과하거나 실패한 각 스킴 규칙을 사람이 읽는 형식 또는 기계가 읽는 형식으로 보고합니다.</td>
 </tr>
 <tr>
-<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size <N></code></td>
+<td data-label="Flag" class="text-left"><code>--streaming</code> / <code>--chunk-size &lt;N&gt;</code></td>
 <td data-label="Description" class="text-left">대규모 배치를 위한 메모리 제한 청크 처리입니다(기본값은 청크당 1,000건의 거래이며, 각 청크는 <code>NbOfTxs</code>와 <code>CtrlSum</code>을 다시 계산한 별도의 XML 파일이 됩니다).</td>
 </tr>
 <tr>
@@ -286,7 +286,7 @@
 <td data-label="Description" class="text-left">관측 가능성 파이프라인을 위해 기계가 읽을 수 있는 실행 지표를 내보냅니다.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>종료 코드는 CI 친화적입니다. <code>0</code>은 성공, <code>1</code>은 검증 실패, <code>2</code>는 사용법 오류입니다.</p>
 <hr />
 <h2 id="2-python-api">2. Python API<a class="heading-anchor" href="#2-python-api" aria-label="섹션 링크: 2. Python API">#</a></h2>
@@ -313,7 +313,7 @@ process_files(
 <pre><code class="language-bash">pip install "pain001[api]"
 pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <p>모든 엔드포인트는 <code>/api/v1</code> 아래에 마운트됩니다(버전이 없는 <code>/api</code> 별칭도 제공됩니다):</p>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th>메서드 및 경로</th>
@@ -354,7 +354,7 @@ pain001 serve --host 0.0.0.0 --port 8000</code></pre>
 <td data-label="Purpose" class="text-left">Prometheus 지표입니다.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>대화형 문서는 <code>/api/docs</code>(Swagger UI), <code>/api/redoc</code>, <code>/api/reference</code>(Scalar)에서 제공되며, OpenAPI 문서는 <code>/openapi.json</code>에 있습니다.</p>
 <hr />
 <h2 id="4-input-normalisation">4. 입력 정규화<a class="heading-anchor" href="#4-input-normalisation" aria-label="섹션 링크: 4. 입력 정규화">#</a></h2>

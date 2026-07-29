@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -199,7 +199,7 @@
 <p><strong>我們仍在傳送 MT101 檔案。移轉有多急迫？</strong></p>
 <p>非常急迫。SWIFT 已於 2025 年 11 月停用跨境銀行間支付指示的 MT 第 1、2、9 類電文；仍受理 MT 的企業金融通道全憑各銀行自行決定，且時日無多。<a href="/pain001-loader-mt101/">MT101 載入器</a>可將既有 MT101 流程轉換為經驗證的 <code>pain.001</code>，完全不必重新輸入資料。</p>
 <p><strong>2026 年 11 月的結構化地址期限對我們代表什麼？</strong></p>
-<p>自 2026 年 11 月底起，CBPR+ 跨境支付不再受理完全非結構化的郵政地址；地址必須採結構化或混合形式——以城鎮（<code><TwnNm></code>）、國家（<code><Ctry></code>）等獨立元素取代自由文字行。若您的主檔資料以整段文字存放地址，工作重點在您的資料，而非銀行連線。請從資料著手。<a href="/2026-iso20022-migration-trends/">2026 年簡報</a>詳述了時程。</p>
+<p>自 2026 年 11 月底起，CBPR+ 跨境支付不再受理完全非結構化的郵政地址；地址必須採結構化或混合形式——以城鎮（<code>&lt;TwnNm&gt;</code>）、國家（<code>&lt;Ctry&gt;</code>）等獨立元素取代自由文字行。若您的主檔資料以整段文字存放地址，工作重點在您的資料，而非銀行連線。請從資料著手。<a href="/2026-iso20022-migration-trends/">2026 年簡報</a>詳述了時程。</p>
 <p><strong>Pain001 要多少費用？</strong></p>
 <p>免費。核心採 Apache-2.0 / MIT 雙授權；附屬套件採 Apache-2.0。商業使用、修改與再散布皆獲允許。作為規模對照，光是 SWIFT 的轉換 SDK 每年定價即達 €10,000–30,000。</p>
 <hr />
@@ -209,7 +209,7 @@
 <p><strong>可以只驗證檔案而不產生任何東西嗎？</strong></p>
 <p>可以——使用 <code>pain001 --dry-run</code>（或 <code>validate</code> 子命令，或 <code>POST /api/v1/validate</code>）。結束代碼 <code>0</code> 表示有效；<code>1</code> 表示驗證失敗並附欄位層級錯誤。可將其接進 CI 或提交前檢查清單。</p>
 <p><strong>涵蓋哪些 SEPA 規則手冊？</strong></p>
-<p>內建五套方案規則手冊：SEPA 貸記轉帳（<code>sepa-sct</code>）、SEPA 即時轉帳（<code>sepa-inst</code>）、SEPA 直接扣款 Core（<code>sepa-sdd</code>）、SEPA B2B（<code>sepa-b2b</code>）與跨境貸記轉帳（<code>xborder-ct</code>）。使用 <code>--scheme <name> --explain</code> 可檢視每條規則的通過或失敗情形。</p>
+<p>內建五套方案規則手冊：SEPA 貸記轉帳（<code>sepa-sct</code>）、SEPA 即時轉帳（<code>sepa-inst</code>）、SEPA 直接扣款 Core（<code>sepa-sdd</code>）、SEPA B2B（<code>sepa-b2b</code>）與跨境貸記轉帳（<code>xborder-ct</code>）。使用 <code>--scheme &lt;name&gt; --explain</code> 可檢視每條規則的通過或失敗情形。</p>
 <p><strong>我們的資料都在 Excel。有什麼陷阱？</strong></p>
 <p>Excel 會默默把類似 IBAN 的字串強制轉成數字。<a href="/pain001-loader-xlsx/">Excel 載入器</a>直接讀取 <code>.xlsx</code>/<code>.xlsm</code>，一旦 IBAN 欄含有數值儲存格便立即停止——資料毀損在載入時就被攔下，而不是到了銀行才發現。</p>
 <p><strong>它如何處理 500,000 列的批次？</strong></p>

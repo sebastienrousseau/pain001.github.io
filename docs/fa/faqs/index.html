@@ -40,7 +40,7 @@
 
     <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/_csp/4ff6b6a4fd7d54f7.css" integrity="sha384-cuaW2/OpeNM8VA5xOQe3sWObhLqa4pc7UM3TGbrWn26kNbp3mY6CTlJjJdJnrqtW" crossorigin="anonymous">
+    <link rel="stylesheet" href="/_csp/8bbf0545b7f9f9bb.css" integrity="sha384-+Jz5mj2kZzyeK55aVF3EijhibMiNSr87WlEt5VR1PPxDk5ug+QsCTB2L5FaWE/rD" crossorigin="anonymous">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -199,7 +199,7 @@
 <p><strong>ما هنوز فایل‌های MT101 می‌فرستیم. مهاجرت چقدر فوری است؟</strong></p>
 <p>فوری. SWIFT پیام‌های دسته 1، 2 و 9 از خانواده MT را برای دستورهای پرداخت برون‌مرزی بین‌بانکی در نوامبر 2025 بازنشسته کرد؛ کانال‌های شرکتی که هنوز MT را می‌پذیرند، این کار را به صلاحدید هر بانک و در فرصتی عاریتی انجام می‌دهند. <a href="/pain001-loader-mt101/">بارگذار MT101</a> جریان‌های موجود MT101 را بدون بازتایپ هیچ داده‌ای به <code>pain.001</code> معتبر تبدیل می‌کند.</p>
 <p><strong>مهلت نوامبر 2026 برای نشانی ساخت‌یافته چه معنایی برای ما دارد؟</strong></p>
-<p>از پایان نوامبر 2026، نشانی‌های پستی کاملاً بدون ساختار دیگر در پرداخت‌های برون‌مرزی CBPR+ پذیرفته نمی‌شوند؛ نشانی‌ها باید ساخت‌یافته یا ترکیبی باشند — عناصری مجزا مانند شهر (<code><TwnNm></code>) و کشور (<code><Ctry></code>) به‌جای سطرهای متن آزاد. اگر داده‌های مرجع شما نشانی‌ها را به‌صورت یک‌تکه نگه می‌دارد، کار اصلی در داده شماست، نه در اتصال بانکی. از همان‌جا آغاز کنید. <a href="/2026-iso20022-migration-trends/">گزارش 2026</a> جدول زمانی را با جزئیات پوشش می‌دهد.</p>
+<p>از پایان نوامبر 2026، نشانی‌های پستی کاملاً بدون ساختار دیگر در پرداخت‌های برون‌مرزی CBPR+ پذیرفته نمی‌شوند؛ نشانی‌ها باید ساخت‌یافته یا ترکیبی باشند — عناصری مجزا مانند شهر (<code>&lt;TwnNm&gt;</code>) و کشور (<code>&lt;Ctry&gt;</code>) به‌جای سطرهای متن آزاد. اگر داده‌های مرجع شما نشانی‌ها را به‌صورت یک‌تکه نگه می‌دارد، کار اصلی در داده شماست، نه در اتصال بانکی. از همان‌جا آغاز کنید. <a href="/2026-iso20022-migration-trends/">گزارش 2026</a> جدول زمانی را با جزئیات پوشش می‌دهد.</p>
 <p><strong>هزینه Pain001 چقدر است؟</strong></p>
 <p>هیچ. هسته با مجوز دوگانه Apache-2.0 / MIT عرضه می‌شود؛ بسته‌های همراه Apache-2.0 هستند. استفاده تجاری، تغییر و بازتوزیع همگی مجازند. برای درک مقیاس، تنها SDK ترجمه SWIFT سالانه €10,000–30,000 قیمت‌گذاری شده است.</p>
 <hr />
@@ -209,7 +209,7 @@
 <p><strong>آیا می‌توانیم فایلی را بدون تولید چیزی اعتبارسنجی کنیم؟</strong></p>
 <p>بله — <code>pain001 --dry-run</code> (یا زیرفرمان <code>validate</code>، یا <code>POST /api/v1/validate</code>). کد خروج <code>0</code> یعنی معتبر؛ <code>1</code> یعنی اعتبارسنجی با خطاهای سطح فیلد شکست خورده است. آن را در CI یا در سیاهه بررسی پیش از ارسال بگنجانید.</p>
 <p><strong>کدام آیین‌نامه‌های SEPA پوشش داده شده‌اند؟</strong></p>
-<p>پنج آیین‌نامه طرح به‌صورت درون‌ساخت عرضه می‌شوند: انتقال اعتباری SEPA (<code>sepa-sct</code>)، SEPA Instant (<code>sepa-inst</code>)، برداشت مستقیم SEPA Core (<code>sepa-sdd</code>)، SEPA B2B (<code>sepa-b2b</code>) و انتقال اعتباری برون‌مرزی (<code>xborder-ct</code>). با <code>--scheme <name> --explain</code> می‌توانید هر قاعده موفق یا ناموفق را ببینید.</p>
+<p>پنج آیین‌نامه طرح به‌صورت درون‌ساخت عرضه می‌شوند: انتقال اعتباری SEPA (<code>sepa-sct</code>)، SEPA Instant (<code>sepa-inst</code>)، برداشت مستقیم SEPA Core (<code>sepa-sdd</code>)، SEPA B2B (<code>sepa-b2b</code>) و انتقال اعتباری برون‌مرزی (<code>xborder-ct</code>). با <code>--scheme &lt;name&gt; --explain</code> می‌توانید هر قاعده موفق یا ناموفق را ببینید.</p>
 <p><strong>داده‌های ما در Excel نگهداری می‌شود. مشکل کجاست؟</strong></p>
 <p>Excel رشته‌های شبیه IBAN را خاموشانه به عدد تبدیل می‌کند. <a href="/pain001-loader-xlsx/">بارگذار Excel</a> فایل‌های <code>.xlsx</code>/<code>.xlsm</code> را مستقیماً می‌خواند و اگر ستون‌های IBAN حاوی سلول عددی باشند، کار را قاطعانه متوقف می‌کند — خرابی هنگام بارگذاری گرفته می‌شود، نه در بانک.</p>
 <p><strong>یک دسته 500,000 سطری را چگونه مدیریت می‌کند؟</strong></p>

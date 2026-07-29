@@ -1,0 +1,146 @@
+/*
+ * Taxonomy (tag) pages.
+ *
+ * These are emitted by ssg's taxonomy plugin, not by _layouts/, so they
+ * inherited nothing: no stylesheet at all, an 8px browser-default
+ * gutter, and a full-bleed measure — 1424px of unbroken link list on a
+ * 1440px screen. This gives them the same shell geometry, type scale
+ * and colours as the rest of the site.
+ *
+ * Linked (not inlined) by postbuild: the CSP these pages carry allows
+ * style-src 'self', and a same-origin file needs no hash bookkeeping.
+ *
+ * Tokens are duplicated from _layouts/page.html rather than shared,
+ * because there is no build step joining the two. Keep the values in
+ * step; they are only the handful this page actually uses.
+ */
+:root {
+  --type-display: "Source Serif 4", "Iowan Old Style", Palatino, "New York", ui-serif, Georgia, serif;
+  --type-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --bg-page: #ffffff;
+  --ink: #1d1d1f;
+  --ink-soft: #3a3a3c;
+  --ink-mute: #4d4d55;
+  --rule: #e4e1da;
+  --link: #0a5566;
+  --link-hover: #073f4c;
+
+  --shell: 1180px;
+  --shell-pad: 1.75rem;
+  --measure: 68ch;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-page: #0b0e14;
+    --ink: #f5f5f7;
+    --ink-soft: #d6d7dc;
+    --ink-mute: #a8abb5;
+    --rule: #262b36;
+    --link: #7fd4e8;
+    --link-hover: #a9e5f4;
+  }
+}
+:root[data-theme="dark"] {
+  --bg-page: #0b0e14;
+  --ink: #f5f5f7;
+  --ink-soft: #d6d7dc;
+  --ink-mute: #a8abb5;
+  --rule: #262b36;
+  --link: #7fd4e8;
+  --link-hover: #a9e5f4;
+}
+:root[data-theme="light"] {
+  --bg-page: #ffffff;
+  --ink: #1d1d1f;
+  --ink-soft: #3a3a3c;
+  --ink-mute: #4d4d55;
+  --rule: #e4e1da;
+  --link: #0a5566;
+  --link-hover: #073f4c;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-page);
+  color: var(--ink);
+  font-family: var(--type-body);
+  font-size: 1.06rem;
+  line-height: 1.75;
+  -webkit-text-size-adjust: 100%;
+}
+
+.taxonomy-page {
+  /* Same centred shell as every other page, so the tag list lines up
+     with the header and footer instead of running edge to edge. */
+  max-width: var(--shell);
+  margin-inline: auto;
+  padding: 3rem var(--shell-pad) 4rem;
+  box-sizing: border-box;
+}
+
+.taxonomy-page header {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.taxonomy-page h1 {
+  font-family: var(--type-display);
+  font-size: clamp(1.9rem, 1.4rem + 2vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0 0 0.4rem;
+  overflow-wrap: break-word;
+}
+
+.taxonomy-meta {
+  margin: 0;
+  color: var(--ink-mute);
+  font-size: 0.95rem;
+}
+
+.taxonomy-page-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* Hold the list to a readable measure on wide screens; a single
+     column of 1400px-wide links is unreadable. Multiple columns keep
+     long lists scannable without shrinking the hit area. */
+  columns: var(--measure) 2;
+  column-gap: 3rem;
+}
+
+.taxonomy-page-list li {
+  break-inside: avoid;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--rule);
+  overflow-wrap: break-word;
+}
+
+.taxonomy-page-list a {
+  color: var(--link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.taxonomy-page-list a:hover { color: var(--link-hover); }
+
+a:focus-visible,
+.taxonomy-page-list a:focus-visible {
+  outline: 3px solid var(--link);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (max-width: 720px) {
+  .taxonomy-page { padding: 2rem 1.25rem 3rem; }
+  .taxonomy-page-list { columns: 1; }
+}
+
+@media print {
+  .taxonomy-page { max-width: none; padding: 0; }
+  .taxonomy-page-list { columns: 2; }
+  .taxonomy-page-list a { color: #000; text-decoration: none; }
+}
