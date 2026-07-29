@@ -433,9 +433,20 @@
          column, which is why .content-body must stay centred above. */
       @media (min-width: 900px) {
         .content-body .table-responsive {
-          --breakout: min(var(--shell-inner), calc(100vw - 2 * var(--shell-pad)));
-          width: var(--breakout);
-          margin-inline: calc(50% - var(--breakout) / 2);
+          /* Grow rightwards only, keeping the left edge shared with
+             every heading and paragraph on the page. The width is the
+             distance from the reading column's left edge to the shell's
+             right edge: half the reading measure plus half the shell.
+             A symmetric breakout was tried first and read as broken —
+             the table began 199px left of the heading above it.
+
+             max-width must be lifted explicitly: the overflow safety
+             net sets max-width:100%, which is 100% of the 68ch column,
+             and silently capped this back to the text width. */
+          --avail: min(var(--shell-inner), calc(100vw - 2 * var(--shell-pad)));
+          width: calc((var(--avail) + var(--measure)) / 2);
+          max-width: none;
+          margin-inline: 0;
         }
       }
       /* A table that still overflows gets a visible edge, so a cut-off
