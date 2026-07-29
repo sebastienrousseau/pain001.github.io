@@ -78,6 +78,23 @@ jobs:
           python3 -m pip install --quiet pain001
           python3 scripts/validate_snippets.py
 
+      # Layout and print defects produce valid, accessible, well-linked
+      # pages — every other gate passes while a table is cropped, a
+      # title is 140px adrift, or every table prints as stacked cards.
+      # Three such regressions were caught only by a human looking at a
+      # screenshot. These assert the invariants instead.
+      - name: Layout and print integrity (real Chrome)
+        run: |
+          mkdir -p .a11y-tools
+          cd .a11y-tools
+          echo '{"name":"pain001-a11y-tools","private":true}' > package.json
+          PUPPETEER_SKIP_DOWNLOAD=1 npm install --silent --no-audit --no-fund puppeteer-core@23
+          cd ..
+          (cd docs && python3 -m http.server 8899 &)
+          sleep 2
+          node scripts/layout_audit.cjs
+          node scripts/print_audit.cjs
+
       - name: Accessibility scan (pa11y-ci, WCAG2AAA)
         run: |
           (cd docs && python3 -m http.server 8899 &)
