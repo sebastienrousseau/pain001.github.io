@@ -335,7 +335,9 @@
       .fineprint { color: var(--ink-mute); font-size: 0.9rem; max-width: 70ch; }
       .fineprint a { color: var(--link); }
 
-      .content-note { padding: 1.5rem 0 3rem; }
+      /* Same trap as .guide-grid: also a .wrap, so a shorthand here
+         wipes the shell gutter and the note touches the screen edge. */
+      .content-note { padding: 1.5rem 1.75rem 3rem; }
       .content-note article { max-width: 68ch; color: var(--ink-soft); }
       .content-note article h1 { display: none; }
       .content-note article h2 { font-family: var(--type-display); font-size: 1.5rem; margin: 2rem 0 0.8rem; color: var(--ink); }
@@ -357,7 +359,13 @@
       /* ==== Guided layout: guidance rail + stepped tool column ==== */
       .guide-grid {
         display: grid; grid-template-columns: minmax(280px, 1fr) 2fr;
-        gap: 2rem; padding: 2.5rem 0 1.5rem;
+        gap: 2rem;
+        /* Horizontal padding must be restated: this element is
+           also .wrap, and a four-value shorthand here wiped the
+           shell's 1.75rem gutter. The demo column sat flush
+           against the screen edge on every phone while the title
+           above it kept its inset. */
+        padding: 2.5rem 1.75rem 1.5rem;
         align-items: start;
       }
       @media (max-width: 980px) { .guide-grid { grid-template-columns: 1fr; } }

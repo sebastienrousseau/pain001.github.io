@@ -509,7 +509,10 @@
       .offer-link:hover { text-decoration: underline; text-underline-offset: 3px; }
 
       /* ==== Markdown content ==== */
-      .content-body { font-size: 1.06rem; line-height: 1.75; max-width: 68ch; }
+      /* Centred like the article pages. Left-aligned, this prose
+         section sat with ~400px of empty shell to its right while
+         the bands above and below it spanned the full width. */
+      .content-body { font-size: 1.06rem; line-height: 1.75; max-width: 68ch; margin-inline: auto; }
       .content-body h1 { display: none; } /* hero carries the H1 */
       .content-body h2 {
         font-family: var(--type-display);

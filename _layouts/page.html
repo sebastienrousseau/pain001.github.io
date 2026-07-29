@@ -285,6 +285,23 @@
 
       /* ==== Page header ==== */
       .page-header { padding: 4.5rem 0 2.75rem; border-bottom: 1px solid var(--rule); }
+      /* The title block shares the article's column.
+         Centring .content-body without doing the same here left the
+         heading at the shell's left edge while the prose it introduces
+         started 140px further in — the two read as different pages.
+         A common wrapper keeps them locked together; .page-title and
+         .deck keep their own narrower measures for line length, which
+         now cap within this column instead of the full shell. */
+      .page-header > .wrap {
+        /* --measure is 68ch, and ch resolves against the font size at
+           the point of use: 1.06rem in .content-body but 1rem here, a
+           20px difference that left the title block visibly inset from
+           the prose. Matching the body's font size makes the two
+           measures compute identically. Every child sets its own
+           font-size, so this only affects the ch calculation. */
+        font-size: 1.06rem;
+        max-width: calc(var(--measure) + 2 * var(--shell-pad));
+      }
       .breadcrumb { font-size: 0.85rem; color: var(--ink-mute); margin-bottom: 2rem; }
       .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; }
       .breadcrumb li + li::before { content: "\203A"; margin-right: 0.5rem; color: var(--ink-mute); }
@@ -320,7 +337,11 @@
       }
 
       /* ==== Article body ==== */
-      .content-shell { padding: 3rem 0 2rem; }
+      /* Restate the horizontal gutter: .content-shell is also .wrap,
+         and this shorthand was zeroing it. Below the 68ch measure the
+         article filled the viewport, so body text ran flush to both
+         screen edges on every phone while the title kept its inset. */
+      .content-shell { padding: 3rem var(--shell-pad) 2rem; }
       /* Centre the reading column inside the shell. It used to be
          left-aligned, so on a 1920px screen the article sat between
          370px and 1096px — a 370px gutter on the left against 824px on
