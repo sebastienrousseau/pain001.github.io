@@ -1,8 +1,47 @@
 # Implementation plan — completing the 2026 audit backlog
 
-**Written:** 28 July 2026 · **Status:** proposal, not yet approved
+**Written:** 28 July 2026 · **Revised:** 30 July 2026
+**Status:** Phase A shipped. Phases B–G open, ordered below.
 **Covers:** everything from the July 2026 audit that is still open, after
 the claim-architecture and defect work already merged.
+
+---
+
+## Priority order — read this first
+
+The July plan sequenced by dependency. Two days of work since have
+changed what the binding constraint actually is, so this section
+re-orders by *what unblocks the most*, not by what is easiest.
+
+| # | Do this | Why it is here | Effort |
+|---|---|---|---:|
+| **1** | **Recruit a second maintainer** | The single highest-leverage action available. It is the sole blocker on OpenSSF badge silver (`bus_factor`) and gold (`two_person_review`, `contributors_unassociated`), and on Scorecard `Code-Review 0` and `Contributors 0`. Four separate scores, one cause. No amount of engineering moves any of them. | recruiting |
+| **2** | **Send the accessibility audit RFQ** | Drafted and ready in `AUDIT-RFQ.md` / `AUDIT-OUTREACH.md`; three vendors shortlisted. Nothing has been sent. An independent audit is the only external validation currently within reach. | one email |
+| **3** | **Ask three users to be named** | An institutional buyer looks for a reference customer before a feature list. Zero named adopters is a harder objection than any missing capability. | conversations |
+| **4** | **Phase B — layer-aware demo** | Makes the four-layer claim tangible where visitors actually land. No maintenance commitment, no dependency on C. | 12–18 d |
+| **5** | **Phase C — rule engine** | Prerequisite for D. Committing to C implies committing to D. | 20–30 d |
+| **6** | **Phase D — profile registry** | The genuine differentiator, and an indefinite freshness obligation. Do not start until profile maintenance can be staffed beyond one person — which is item 1 again. | 40–70 d + ongoing |
+| **7** | **Phase E — Readiness Lab** | Flagship, but every component is written twice if it precedes C. | 30–50 d |
+| **8** | **Phase F — enterprise packaging** | Demand-led. Only with a named pipeline. | 30–60 d |
+
+**Items 1–3 are not engineering and cannot be delegated to tooling.**
+They are also the only things standing between the project's current
+state and every remaining external score. Items 4–8 are worth doing on
+their merits, but none of them changes that.
+
+### What has been closed since this plan was written
+
+| Area | Then | Now |
+|---|---|---|
+| `pain.001.001.13` | not supported | shipped (Phase A) |
+| Release provenance | 2 of 5 artefacts, branch-bound | all 5, tag-bound, verified with `slsa-verifier` |
+| OpenSSF badge silver | 15% | 93% — `bus_factor` is the only gap |
+| OpenSSF Scorecard | 7.8 | 8.0 (`Signed-Releases` 4→6, `CI-Tests` −1→10) |
+| Dependency pinning | api extra unpinned in the image | hash-pinned everywhere |
+| Licensing | dual claimed, Apache-only published | `License-Expression: Apache-2.0 OR MIT`, SPDX in 194/194 files |
+| DCO | none | required and CI-enforced |
+| Branch protection | admin-bypassable | enforced across 156 repos, PR-only |
+| Layout / print / content | ungated | 7 invariants gated in CI |
 
 This plan is written against the code as it exists, not against a generic
 consulting template. Every phase names the files it touches, the data
@@ -64,9 +103,14 @@ unchanged.
 
 ---
 
-## Phase A — pain.001.001.13 support
+## Phase A — pain.001.001.13 support ✅ SHIPPED
 
-**Why first:** it is the smallest phase, it closes an open standards-currency
+*Completed 29 July 2026 and released in v0.0.58. Twelve message
+definitions now ship, all with genuine ISO schemas; the placeholder
+detection added alongside it caught a `pain.008` defect that would have
+had every generated direct-debit file rejected by the bank.*
+
+**Why it was first:** it is the smallest phase, it closes an open standards-currency
 gap, and it exercises the version pipeline end to end before anything
 larger depends on it. ISO published `.13` on 19 March 2026; the site now
 lists it as tracked/not-supported, which is honest but temporary.
@@ -411,8 +455,9 @@ of market leadership.
 | Independent security review | Not started | Scope after the accessibility audit lands |
 | Named adopters | None | Ask the first three real users for permission to name them |
 | Quantified case studies | None | One is worth more than ten feature bullets |
-| Scorecard Signed-Releases | 2/10, rises automatically | Ship releases; it averages the last five |
-| OpenSSF badge silver/gold | Passing earned | Silver needs governance docs already partly written |
+| Scorecard Signed-Releases | 6/10 as of v0.0.59 | Keep shipping; it averages the last five |
+| OpenSSF badge silver | 93% — `bus_factor` is the only remaining criterion | Recruit a second maintainer (row 3 above) |
+| OpenSSF badge gold | 22% — blocked on `two_person_review`, `contributors_unassociated`, `bus_factor` | Same single cause |
 
 **The honest read:** the project's ceiling right now is not technical.
 Phases A–F would take it from an excellent tool to a category-defining
@@ -425,13 +470,13 @@ is the single thing an institutional buyer looks for first.
 
 | Phase | Effort (person-days) | Depends on | Ship value |
 |---|---:|---|---|
-| A — pain.001.001.13 | 5–8 | — | Standards currency |
+| ~~A — pain.001.001.13~~ | ~~5–8~~ | — | ✅ shipped in v0.0.58 |
 | B — layer-aware demo | 12–18 | — | Makes the new claim real |
 | C — rule engine | 20–30 | — | Prerequisite for D |
 | D — profile registry | 40–70 + ongoing | C | The differentiator |
 | E — Readiness Lab | 30–50 | B, C, D | Flagship product |
 | F — enterprise packaging | 30–60 | demand | Regulated adoption |
-| **Total** | **137–236** | | |
+| **Remaining (B–F)** | **132–228** | | |
 
 That is meaningfully below the audit's 365–625 estimate, for two
 reasons: it excludes the team-building and marketing workstreams that
@@ -439,9 +484,10 @@ estimate included, and it reuses far more of the existing architecture
 (the violation record, the i18n pipelines, the CI gates) than a
 from-scratch plan would assume.
 
-**A and B are independent and can run in parallel.** If only two weeks
-are available, do A and B: they close the standards gap and make the
-repositioning tangible, and neither creates a maintenance commitment.
+**With A shipped, B is the next engineering item.** If only two weeks
+are available, do B: it makes the repositioning tangible and creates no
+maintenance commitment. But see the priority table at the top — two
+weeks spent on items 1–3 would move more.
 
 **C is the decision point.** Committing to C implies committing to D,
 and D implies an indefinite freshness obligation. That is a genuine
@@ -461,4 +507,9 @@ maintenance can be staffed beyond one person.
   profile presented as authoritative is worse than an absent one.
 - **Do not chase Scorecard Code-Review or Contributors.** Both require a
   second person; they are structurally unreachable and not worth
-  distorting the workflow for.
+  distorting the workflow for. The same is now true of OpenSSF badge
+  silver and gold — confirmed on 30 July, when every other silver
+  criterion was satisfied and the level still would not complete.
+- **Do not treat a badge percentage as the goal.** Adopting DCO was
+  worth doing on its merits and moved the silver score by zero. Fix the
+  thing; let the score follow.
