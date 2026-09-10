@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import json
 import re
+import os
 import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -25,7 +26,12 @@ XS = "{http://www.w3.org/2001/XMLSchema}"
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "message_specs"
 
-DEFAULT_LIB = Path("/Users/seb/Code/Public/python/pain001")
+# The pain001 library checkout: PAIN001_LIB if set, else the sibling
+# checkout at Public/Python/pain001 relative to this website's location.
+DEFAULT_LIB = Path(
+    os.environ.get("PAIN001_LIB")
+    or HERE.parents[2] / "Python" / "pain001"
+)
 
 # Schemas known to be placeholders rather than ISO publications. They
 # are excluded rather than silently producing an empty specification.
