@@ -222,6 +222,23 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
+    "description": "Download realistic ISO 20022 pain.001 and pain.008 example files per country and rail, with bank variants, plus a schema coverage corpus for every supported edition. Generated from the pain001 library, validated at every rung.",
+    "locale": "en_GB",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "ISO 20022 example corpus — downloadable pain.001 and pain.008 files",
+    "url": "https://pain001.com/example-corpus/",
+    "wordCount": 2269
+  },
+  {
+    "date": "2026-07-26T08:00:00+00:00",
     "description": "One page for decision-makers: the rejected-file problem, the fixed 14 November 2026 deadline, what Pain001 does, what it costs, the safety evidence, and the one ask — print-ready.",
     "locale": "en_GB",
     "tags": [

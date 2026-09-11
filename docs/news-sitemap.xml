@@ -170,6 +170,18 @@
   </news:news>
 </url>
 <url>
+  <loc>https://pain001.com/example-corpus/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
+    <news:title>ISO 20022 example corpus — downloadable pain.001 and pain.008 files</news:title>
+    <news:keywords>ISO 20022 example files, pain.001 sample XML, pain.008 sample, SEPA example, CHAPS example, Faster Payments example, ACH pain.001, QR-bill pain.001, Bankgiro pain.001, test corpus</news:keywords>
+  </news:news>
+</url>
+<url>
   <loc>https://pain001.com/executive-brief/</loc>
   <news:news>
     <news:publication>
