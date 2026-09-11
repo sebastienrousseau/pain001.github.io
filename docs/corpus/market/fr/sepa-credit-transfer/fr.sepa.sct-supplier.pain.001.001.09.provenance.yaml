@@ -2,7 +2,6 @@ scenario: fr.sepa.sct-supplier
 family: sepa-credit-transfer
 country: FR
 message_type: pain.001.001.09
-variant: null
 description: SEPA credit transfer, supplier invoice with an RF creditor reference.
 sha256: 2d9d91e5beba967943d6efe14066313947c9875899737034e5fff74fe521d294
 build:

@@ -2,7 +2,6 @@ scenario: fr.sepa.sdd-core
 family: sepa-direct-debit
 country: FR
 message_type: pain.008.001.08
-variant: null
 description: SEPA Core direct debit, recurring collection on an amended mandate.
 sha256: ba71042980d7bddbdb65d14def5316d3a9ab68f220a7d1620481dad9f1b0a0c7
 build:

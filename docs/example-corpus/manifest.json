@@ -1,6 +1,6 @@
 {
   "background_color": "#ffffff",
-  "description": "Download realistic ISO 20022 pain.001 and pain.008 example files per country and rail, with bank variants, plus a schema",
+  "description": "Download ISO 20022 pain.001 and pain.008 sample files built from the public scheme rulebooks per country and rail, each ",
   "display": "standalone",
   "icons": [
     {

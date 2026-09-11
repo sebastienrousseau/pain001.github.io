@@ -8,6 +8,52 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
+      "content_html": "Generated pain.001 and pain.008 files that between them use every element path and choice branch of each supported schema edition, each named after what it adds, with a zip per edition.",
+      "date_modified": "2026-09-11T08:00:00+00:00",
+      "date_published": "2026-09-11T08:00:00+00:00",
+      "id": "https://pain001.com/example-corpus-coverage/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "ISO 20022 schema coverage files — every element of every edition",
+      "url": "https://pain001.com/example-corpus-coverage/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Download ISO 20022 pain.001 and pain.008 sample files built from the public scheme rulebooks per country and rail, each with a record of where it comes from and how it was checked, plus schema coverage files for every supported edition.",
+      "date_modified": "2026-09-11T08:00:00+00:00",
+      "date_published": "2026-09-11T08:00:00+00:00",
+      "id": "https://pain001.com/example-corpus/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "ISO 20022 example files — pain.001 and pain.008 samples per country and rail",
+      "url": "https://pain001.com/example-corpus/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
       "content_html": "The post-migration landscape with primary sources: the 14 Nov 2026 structured address and MT101-relay deadlines, Fedwire and FedNow status, IPR and VoP, LEIs, and agentic AI.",
       "date_modified": "2026-07-26T08:00:00+00:00",
       "date_published": "2026-07-26T08:00:00+00:00",
@@ -323,29 +369,6 @@
       ],
       "title": "Pain001 — Iniciación de pagos ISO 20022 en código abierto",
       "url": "https://pain001.com/es/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Download realistic ISO 20022 pain.001 and pain.008 example files per country and rail, with bank variants, plus a schema coverage corpus for every supported edition. Generated from the pain001 library, validated at every rung.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/example-corpus/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "ISO 20022 example corpus — downloadable pain.001 and pain.008 files",
-      "url": "https://pain001.com/example-corpus/"
     },
     {
       "authors": [
@@ -1128,29 +1151,6 @@
       ],
       "title": "pain.001.001.06 type reference (part 2 of 3) — GenericOrganisationIdentification1 – TaxAuthorisation1",
       "url": "https://pain001.com/message-spec-pain.001.001.06-types-2/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Complex types TaxInformation3 – TaxRecordDetails1 in ISO 20022 pain.001.001.06, with elements, cardinality and constraints, generated from the official XSD.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/message-spec-pain.001.001.06-types-3/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "pain.001.001.06 type reference (part 3 of 3) — TaxInformation3 – TaxRecordDetails1",
-      "url": "https://pain001.com/message-spec-pain.001.001.06-types-3/"
     }
   ],
   "language": "en-GB",

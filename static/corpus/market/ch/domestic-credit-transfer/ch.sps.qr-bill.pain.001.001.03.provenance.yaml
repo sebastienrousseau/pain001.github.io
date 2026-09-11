@@ -2,7 +2,6 @@ scenario: ch.sps.qr-bill
 family: domestic-credit-transfer
 country: CH
 message_type: pain.001.001.03
-variant: null
 description: Swiss domestic credit transfer settling a QR-bill (QRR reference).
 sha256: 2bdf430626d4f17b92a81c9761c54b906ba77ece3783d54653d61735fdac116a
 build:

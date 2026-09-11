@@ -2,7 +2,6 @@ scenario: it.sepa.sct-single
 family: sepa-credit-transfer
 country: IT
 message_type: pain.001.001.03
-variant: null
 description: SEPA credit transfer, single supplier payment.
 sha256: a9f8c98a61ede150b490f3e7bc0ed047c268fdd63512b510a4d00cf73e36d32a
 build:

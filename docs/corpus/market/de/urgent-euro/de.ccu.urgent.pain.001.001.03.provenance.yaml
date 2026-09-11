@@ -2,7 +2,6 @@ scenario: de.ccu.urgent
 family: urgent-euro
 country: DE
 message_type: pain.001.001.03
-variant: null
 description: Urgent euro payment (TARGET) from a German account, DK order type CCU.
 sha256: b6a7f31bb7c867cc531e44549e23e5261a9e336aeedb3fd0022428f0730d3a2b
 build:

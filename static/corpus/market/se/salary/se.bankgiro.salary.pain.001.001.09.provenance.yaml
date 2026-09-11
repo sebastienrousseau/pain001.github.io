@@ -2,7 +2,6 @@ scenario: se.bankgiro.salary
 family: salary
 country: SE
 message_type: pain.001.001.09
-variant: null
 description: Swedish salary batch (Bankgirot Löner), SALA, one debit.
 sha256: 0df7dd6601208a0ee92bc44e1cc5eb8281977f127eea942e49c500b528ed0ea7
 build:

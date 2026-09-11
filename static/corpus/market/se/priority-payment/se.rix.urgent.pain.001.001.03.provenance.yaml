@@ -2,7 +2,6 @@ scenario: se.rix.urgent
 family: priority-payment
 country: SE
 message_type: pain.001.001.03
-variant: null
 description: Swedish domestic high-value SEK payment through RIX, urgent, intra-group.
 sha256: 824facd6ed88ebf050cb1bb6a90c1f5a6b2c19ce2bef5bac889ada6c48746a8d
 build:

@@ -2,7 +2,6 @@ scenario: ch.international.usd
 family: cross-border
 country: CH
 message_type: pain.001.001.09
-variant: null
 description: Cross-border USD payment from Switzerland (SPS payment type X).
 sha256: bba5add27b324862dd7ff799f402ab0421733150ec2523920913f0ea99d76262
 build:

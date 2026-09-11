@@ -2,9 +2,8 @@ scenario: gb.fps.single
 family: faster-payment
 country: GB
 message_type: pain.001.001.03
-variant: null
 description: Faster Payments single supplier payment, sort code and account.
-sha256: 1abf49c73e1a43cda43580262af74341230c3a8bb97bbf2c07ef31652a022251
+sha256: a3d78639833ff1bbcf0836c677ffb4a06128bc93a4e6a9d79a3907e0bc17dcbe
 build:
   renamed:
   - /Document/CstmrCdtTrfInitn/PmtInf/DbtrAgt/FinInstnId/BICFI -> BIC
@@ -35,9 +34,6 @@ provenance:
   sources:
   - title: Pay.UK Faster Payments scheme limits and ISO 20022 library
     read: '2026-09-10'
-  - title: HSBC UK Faster Payments usage guideline, HSBCnet, 18 September 2025 (restricted;
-      not in this repository)
-    read: '2026-09-11'
   confidence: derived
   evidence: []
 constraints: []

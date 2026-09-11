@@ -2,7 +2,6 @@ scenario: us.wire.domestic
 family: priority-payment
 country: US
 message_type: pain.001.001.09
-variant: null
 description: Fedwire domestic funds transfer, urgent.
 sha256: 453f29800096a3aaba906347941b6717cad9f3f9bcd449127ee6f0ef007a663e
 build:

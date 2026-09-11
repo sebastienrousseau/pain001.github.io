@@ -2,7 +2,6 @@ scenario: de.axz.foreign
 family: cross-border
 country: DE
 message_type: pain.001.001.09
-variant: null
 description: Foreign payment in USD from a German account, DK order type AXZ.
 sha256: 287fa7fe27c9b6ac58774881c828fa6a2ae4e734e0e3da513637c5cd4238225f
 build:

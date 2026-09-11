@@ -2,7 +2,6 @@ scenario: us.check.vendor
 family: cheque
 country: US
 message_type: pain.001.001.09
-variant: null
 description: Bank-issued cheque to a vendor, mailed to the creditor.
 sha256: 6be2451610dba2497906f238cd7e49107a30fcc6fd8f83ece2e0a635b6861297
 build:

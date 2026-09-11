@@ -2,7 +2,6 @@ scenario: be.sepa.sct-supplier
 family: sepa-credit-transfer
 country: BE
 message_type: pain.001.001.03
-variant: null
 description: SEPA credit transfer with a Belgian structured communication (BBA).
 sha256: dd39856cc3472cb90a897a02c558748c573fda573207dc44cdcdef4f23b71150
 build:

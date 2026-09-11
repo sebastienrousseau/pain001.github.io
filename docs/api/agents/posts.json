@@ -221,8 +221,8 @@
     "wordCount": 314
   },
   {
-    "date": "2026-07-26T08:00:00+00:00",
-    "description": "Download realistic ISO 20022 pain.001 and pain.008 example files per country and rail, with bank variants, plus a schema coverage corpus for every supported edition. Generated from the pain001 library, validated at every rung.",
+    "date": "2026-09-11T08:00:00+00:00",
+    "description": "Generated pain.001 and pain.008 files that between them use every element path and choice branch of each supported schema edition, each named after what it adds, with a zip per edition.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -233,9 +233,26 @@
       "payments",
       "python"
     ],
-    "title": "ISO 20022 example corpus — downloadable pain.001 and pain.008 files",
+    "title": "ISO 20022 schema coverage files — every element of every edition",
+    "url": "https://pain001.com/example-corpus-coverage/",
+    "wordCount": 4061
+  },
+  {
+    "date": "2026-09-11T08:00:00+00:00",
+    "description": "Download ISO 20022 pain.001 and pain.008 sample files built from the public scheme rulebooks per country and rail, each with a record of where it comes from and how it was checked, plus schema coverage files for every supported edition.",
+    "locale": "en_GB",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "ISO 20022 example files — pain.001 and pain.008 samples per country and rail",
     "url": "https://pain001.com/example-corpus/",
-    "wordCount": 2269
+    "wordCount": 2086
   },
   {
     "date": "2026-07-26T08:00:00+00:00",

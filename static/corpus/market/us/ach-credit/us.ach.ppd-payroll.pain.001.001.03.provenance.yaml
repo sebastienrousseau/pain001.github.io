@@ -2,7 +2,6 @@ scenario: us.ach.ppd-payroll
 family: ach-credit
 country: US
 message_type: pain.001.001.03
-variant: null
 description: ACH PPD payroll run, two employees.
 sha256: 746b9ecd75e3391fe7be5f9b2b88c334cceb741433be3e15c660b009511b8864
 build:

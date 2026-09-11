@@ -4,7 +4,25 @@
   <link href="https://pain001.com/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://pain001.com"/>
   <id>https://pain001.com</id>
-  <updated>2026-07-26T08:00:00+00:00</updated>
+  <updated>2026-09-11T08:00:00+00:00</updated>
+  <entry>
+    <title>ISO 20022 schema coverage files — every element of every edition</title>
+    <link href="https://pain001.com/example-corpus-coverage/"/>
+    <id>https://pain001.com/example-corpus-coverage/</id>
+    <updated>2026-09-11T08:00:00+00:00</updated>
+    <published>2026-09-11T08:00:00+00:00</published>
+    <summary>Generated pain.001 and pain.008 files that between them use every element path and choice branch of each supported schema edition, each named after what it adds, with a zip per edition.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>ISO 20022 example files — pain.001 and pain.008 samples per country and rail</title>
+    <link href="https://pain001.com/example-corpus/"/>
+    <id>https://pain001.com/example-corpus/</id>
+    <updated>2026-09-11T08:00:00+00:00</updated>
+    <published>2026-09-11T08:00:00+00:00</published>
+    <summary>Download ISO 20022 pain.001 and pain.008 sample files built from the public scheme rulebooks per country and rail, each with a record of where it comes from and how it was checked, plus schema coverage files for every supported edition.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
   <entry>
     <title>ISO 20022 in 2026: Deadlines, Data and What Comes Next</title>
     <link href="https://pain001.com/2026-iso20022-migration-trends/"/>
@@ -129,15 +147,6 @@
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
     <summary>Suite Python de código abierto para generar ficheros pain.001 y pain.008 validados por XSD desde CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101 — con herramientas MCP para agentes de IA y servidor LSP.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>ISO 20022 example corpus — downloadable pain.001 and pain.008 files</title>
-    <link href="https://pain001.com/example-corpus/"/>
-    <id>https://pain001.com/example-corpus/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Download realistic ISO 20022 pain.001 and pain.008 example files per country and rail, with bank variants, plus a schema coverage corpus for every supported edition. Generated from the pain001 library, validated at every rung.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
@@ -444,15 +453,6 @@
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
     <summary>Complex types GenericOrganisationIdentification1 – TaxAuthorisation1 in ISO 20022 pain.001.001.06, with elements, cardinality and constraints, generated from the official XSD.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>pain.001.001.06 type reference (part 3 of 3) — TaxInformation3 – TaxRecordDetails1</title>
-    <link href="https://pain001.com/message-spec-pain.001.001.06-types-3/"/>
-    <id>https://pain001.com/message-spec-pain.001.001.06-types-3/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Complex types TaxInformation3 – TaxRecordDetails1 in ISO 20022 pain.001.001.06, with elements, cardinality and constraints, generated from the official XSD.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
 </feed>

@@ -2,7 +2,6 @@ scenario: us.rtp.single
 family: instant-payment
 country: US
 message_type: pain.001.001.09
-variant: null
 description: RTP real-time payment, single.
 sha256: 69ee518dc9865feb893526b8dbe4cd56841b97f562f2e1c971e5c7152f70d33d
 build:

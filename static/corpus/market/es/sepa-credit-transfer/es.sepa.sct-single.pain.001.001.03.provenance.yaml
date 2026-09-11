@@ -2,7 +2,6 @@ scenario: es.sepa.sct-single
 family: sepa-credit-transfer
 country: ES
 message_type: pain.001.001.03
-variant: null
 description: SEPA credit transfer, single, initiating party identified by NIF.
 sha256: 17db18eb492bbcb5c3c388e9cddad99702a1aa436c926787547bafd5ff1dca27
 build:

@@ -1,6 +1,6 @@
 {
-  "pages_scanned": 129,
-  "total_issues": 129,
+  "pages_scanned": 130,
+  "total_issues": 130,
   "wcag_version": "2.2",
   "pages": [
     {
@@ -145,6 +145,16 @@
     },
     {
       "path": "example-corpus/index.html",
+      "issues": [
+        {
+          "criterion": "1.1.1",
+          "severity": "error",
+          "message": "<img> missing alt text: /img/pain001.svg"
+        }
+      ]
+    },
+    {
+      "path": "example-corpus-coverage/index.html",
       "issues": [
         {
           "criterion": "1.1.1",

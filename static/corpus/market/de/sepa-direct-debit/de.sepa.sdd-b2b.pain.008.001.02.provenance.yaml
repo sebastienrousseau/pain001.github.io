@@ -2,7 +2,6 @@ scenario: de.sepa.sdd-b2b
 family: sepa-direct-debit
 country: DE
 message_type: pain.008.001.02
-variant: null
 description: SEPA B2B direct debit, first collection.
 sha256: 3885987f7953ec31c1ffbf6271ad72847f7f0d3c032499fde4330c8a164f238b
 build:

@@ -2,7 +2,6 @@ scenario: nl.sepa.sct-supplier
 family: sepa-credit-transfer
 country: NL
 message_type: pain.001.001.03
-variant: null
 description: SEPA credit transfer with a Dutch payment reference (CUR).
 sha256: fe586b51fa8e8340e879edb2e033e8fa5e74c04d178dd5f56927b0e90cd73fc8
 build:

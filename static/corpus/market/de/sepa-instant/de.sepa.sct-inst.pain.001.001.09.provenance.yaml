@@ -2,7 +2,6 @@ scenario: de.sepa.sct-inst
 family: sepa-instant
 country: DE
 message_type: pain.001.001.09
-variant: null
 description: SEPA Instant credit transfer, single, INST at PmtInf.
 sha256: 3d90b9351b111efa05658f0050270d35ec935cfe0c4e21491f047b7cb62a0577
 build:

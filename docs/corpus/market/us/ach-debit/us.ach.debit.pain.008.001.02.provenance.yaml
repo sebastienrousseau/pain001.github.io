@@ -2,7 +2,6 @@ scenario: us.ach.debit
 family: ach-debit
 country: US
 message_type: pain.008.001.02
-variant: null
 description: ACH debit collection (CCD) with routing numbers.
 sha256: 79444138c537e84ca9e4822b559ec2631df47a7bc0b520d950d1f19905b14a3b
 build:

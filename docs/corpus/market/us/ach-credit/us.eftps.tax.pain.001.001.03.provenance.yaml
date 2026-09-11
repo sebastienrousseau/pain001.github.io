@@ -2,7 +2,6 @@ scenario: us.eftps.tax
 family: ach-credit
 country: US
 message_type: pain.001.001.03
-variant: null
 description: IRS EFTPS federal tax deposit, CCD with the TXP addenda string.
 sha256: d52cdbe38e2975f1f3043334d1d68145b73a6e933f8eb440404e51019f87bfbf
 build:

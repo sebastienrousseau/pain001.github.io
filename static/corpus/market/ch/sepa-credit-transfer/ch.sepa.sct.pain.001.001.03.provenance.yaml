@@ -2,7 +2,6 @@ scenario: ch.sepa.sct
 family: sepa-credit-transfer
 country: CH
 message_type: pain.001.001.03
-variant: null
 description: SEPA credit transfer from Switzerland (SPS payment type S).
 sha256: c10c360e6234438b005307db236ce41ca94f69e0e46304cf738cefe9d3fdac33
 build:

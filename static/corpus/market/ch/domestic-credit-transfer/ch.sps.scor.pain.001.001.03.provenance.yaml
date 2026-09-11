@@ -2,7 +2,6 @@ scenario: ch.sps.scor
 family: domestic-credit-transfer
 country: CH
 message_type: pain.001.001.03
-variant: null
 description: Swiss domestic credit transfer with an ISO 11649 creditor reference (SCOR).
 sha256: e917feccf2c8a58faebc8267f2805afc427b757467e0b2c5ee06442f079260c9
 build:

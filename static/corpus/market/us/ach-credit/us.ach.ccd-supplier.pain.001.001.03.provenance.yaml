@@ -2,7 +2,6 @@ scenario: us.ach.ccd-supplier
 family: ach-credit
 country: US
 message_type: pain.001.001.03
-variant: null
 description: ACH CCD credit to a supplier with an addenda remittance line.
 sha256: 5a00bfef95f5577ed2bd8a98be9f68af033ebdd7321c0b5fea822406bfb26ccd
 build:

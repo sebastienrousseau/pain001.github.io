@@ -2,7 +2,6 @@ scenario: lu.sepa.sct-single
 family: sepa-credit-transfer
 country: LU
 message_type: pain.001.001.03
-variant: null
 description: SEPA credit transfer, single supplier payment.
 sha256: b06a6a99358fa71fa2d8940a58b72ccf0b47e56b0fa72b1119cb469d5c0ad4d6
 build:

@@ -2,7 +2,6 @@ scenario: se.bankgiro.supplier
 family: bankgiro-credit
 country: SE
 message_type: pain.001.001.03
-variant: null
 description: Swedish Bankgiro supplier payment with an OCR reference.
 sha256: fce8407811f3bd61276f6e1b609d5d2e75e4268503f55bf270304fcd7da98a67
 build:
