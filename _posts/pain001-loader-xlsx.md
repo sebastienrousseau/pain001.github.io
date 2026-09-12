@@ -87,7 +87,7 @@ last_reviewed: "2026-07-26"
 
 ---
 
-**`pain001-loader-xlsx` v0.0.69** teaches the Pain001 core to read payment batches straight from Excel `.xlsx` and `.xlsm` workbooks. No "Save As CSV" step, no encoding surprises, no silently corrupted account numbers.
+**`pain001-loader-xlsx` v0.0.70** teaches the Pain001 core to read payment batches straight from Excel `.xlsx` and `.xlsm` workbooks. No "Save As CSV" step, no encoding surprises, no silently corrupted account numbers.
 
 Install it and it just works: the loader registers under the `pain001.loaders` entry point and is auto-discovered — `pain001 -t pain.001.001.09 -d payments.xlsx -o out/` needs no further configuration.
 

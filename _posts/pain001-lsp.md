@@ -87,7 +87,7 @@ last_reviewed: "2026-07-26"
 
 ---
 
-**`pain001-lsp` v0.0.69** is a Language Server Protocol implementation for payment-data authoring. It validates payment JSON against ISO 20022 message schemas as you type — in VS Code, Neovim, Helix, Emacs, or any LSP-compliant editor.
+**`pain001-lsp` v0.0.70** is a Language Server Protocol implementation for payment-data authoring. It validates payment JSON against ISO 20022 message schemas as you type — in VS Code, Neovim, Helix, Emacs, or any LSP-compliant editor.
 
 A malformed batch discovered at the bank gateway costs a repair cycle, a cut-off time, and sometimes a settlement day. The same error discovered as a red squiggle while typing costs nothing. That is the entire premise.
 
