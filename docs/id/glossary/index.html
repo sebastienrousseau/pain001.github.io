@@ -64,7 +64,7 @@
       <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Alihkan navigasi" />
       <div class="wrap ap-nav-wrap">
         <a class="ap-brand" href="/" aria-label="Pain001 home">
-          <img src="/img/pain001.svg" alt="" width="26" height="26" />
+          <img src="/img/pain001.svg" alt="Pain001" width="26" height="26" />
           <span>Pain001</span>
         </a>
         <nav aria-label="Primary navigation" id="ap-primary-nav">
@@ -198,7 +198,7 @@
 <p><strong>pain.008 — Customer Direct Debit Initiation.</strong> Kembaran <code>pain.001</code> di sisi penagihan: Anda menarik dana yang terutang kepada Anda berdasarkan sebuah mandat, bukan mendorong dana keluar.</p>
 <p><strong>pacs.008 / pacs.009.</strong> Pesan penyelesaian antarbank yang menjadi bentuk instruksi Anda setelah bank menerimanya. Korporat tidak pernah menyusunnya sendiri; banklah yang saling bertukar pesan ini.</p>
 <p><strong>camt.052 / camt.053 / camt.054.</strong> Pelaporan rekening: laporan intrahari, laporan akhir hari, dan notifikasi debit/kredit, secara berurutan. <code>camt.053</code> adalah yang digunakan tim rekonsiliasi setiap pagi.</p>
-<p><strong>MT101.</strong> Pesan teks SWIFT lawas "Request for Transfer" yang digantikan oleh <code>pain.001</code>. Relai MT101 antarbank dihentikan pada 14 November 2026 dan digantikan oleh <code>pain.001.001.09</code>; MT101 dari korporat ke bank hanya bertahan atas kebijakan masing-masing bank.</p>
+<p><strong>MT101.</strong> Pesan teks SWIFT lawas "Request for Transfer" yang digantikan oleh <code>pain.001</code>. Relai MT101 antarbank dihentikan pada November 2026 (SR 2026; <a href="https://www.swift.com/standards/iso-20022">Swift ISO 20022 programme</a>) dan digantikan oleh <code>pain.001.001.09</code>; MT101 dari korporat ke bank hanya bertahan atas kebijakan masing-masing bank.</p>
 <h2 id="schemes-and-rulebooks">Skema dan rulebook<a class="heading-anchor" href="#schemes-and-rulebooks" aria-label="Tautan ke bagian: Skema dan rulebook">#</a></h2>
 <p><strong>SEPA SCT / SCT Inst.</strong> Skema transfer kredit euro (standar dan instan) yang diatur oleh rulebook European Payments Council. Transfer instan diselesaikan dalam hitungan detik, sepanjang waktu.</p>
 <p><strong>SEPA SDD Core / B2B.</strong> Skema debit langsung euro — Core untuk konsumen (dengan hak pengembalian dana), B2B untuk perusahaan (tanpa hak pengembalian dana, dengan pemeriksaan mandat yang lebih ketat).</p>
@@ -211,7 +211,7 @@
 <p><strong>BIC / BICFI.</strong> Business Identifier Code ISO 9362 milik sebuah lembaga keuangan. Elemen XML-nya adalah <code>&lt;BIC&gt;</code> pada <code>pain.001.001.03</code>, tetapi <code>&lt;BICFI&gt;</code> sejak versi 9 — penggantian nama yang menyebabkan penolakan nyata saat peningkatan versi.</p>
 <p><strong>LEI.</strong> Legal Entity Identifier (ISO 17442) — pengidentifikasi perusahaan global sepanjang 20 karakter. Lebih dari 3 juta di antaranya aktif, dan regulator semakin mewajibkannya dalam pembayaran.</p>
 <p><strong>UETR.</strong> Unique End-to-end Transaction Reference — UUID yang memungkinkan sebuah pembayaran dilacak di sepanjang rantai koresponden (SWIFT gpi).</p>
-<p><strong>Alamat terstruktur / hibrida.</strong> Alamat pos sebagai elemen XML terpisah (jalan, kota, kode pos, negara) dibandingkan dengan baris teks bebas. Mulai 14 November 2026, CBPR+ menolak alamat yang sepenuhnya tidak terstruktur; bentuk <em>hibrida</em> — kota dan negara yang terstruktur ditambah paling banyak dua baris alamat sepanjang 70 karakter — tetap berlaku.</p>
+<p><strong>Alamat terstruktur / hibrida.</strong> Alamat pos sebagai elemen XML terpisah (jalan, kota, kode pos, negara) dibandingkan dengan baris teks bebas. Mulai November 2026 (SR 2026), CBPR+ menolak alamat yang sepenuhnya tidak terstruktur; bentuk <em>hibrida</em> — kota dan negara yang terstruktur ditambah paling banyak dua baris alamat sepanjang 70 karakter — tetap berlaku.</p>
 <p><strong>NbOfTxs / CtrlSum.</strong> Total kendali pada header grup: jumlah transaksi dan total nominal. Bank menghitungnya ulang; jika milik Anda berbeda, berkasnya akan ditolak. Pain001 selalu menurunkannya dari rekaman yang tervalidasi.</p>
 <p><strong>Penanggung biaya.</strong> Pihak yang membayar biaya: <code>DEBT</code> (pengirim), <code>CRED</code> (penerima), <code>SHAR</code> (dibagi), <code>SLEV</code> (sesuai aturan skema). Kode MT lawas <code>OUR</code>/<code>BEN</code>/<code>SHA</code> dipetakan ke tiga yang pertama.</p>
 <p><strong>Informasi remitansi.</strong> Bidang "pembayaran ini untuk apa" — teks bebas (140 karakter) atau referensi terstruktur. Hal yang diharapkan tim rekonsiliasi diisi dengan benar oleh semua orang.</p>

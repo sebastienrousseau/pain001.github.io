@@ -64,7 +64,7 @@
       <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Navigatie tonen/verbergen" />
       <div class="wrap ap-nav-wrap">
         <a class="ap-brand" href="/" aria-label="Pain001 home">
-          <img src="/img/pain001.svg" alt="" width="26" height="26" />
+          <img src="/img/pain001.svg" alt="Pain001" width="26" height="26" />
           <span>Pain001</span>
         </a>
         <nav aria-label="Primary navigation" id="ap-primary-nav">
@@ -198,7 +198,7 @@
 <p><strong>pain.008 — Customer Direct Debit Initiation.</strong> De incassotegenhanger van <code>pain.001</code>: u int middelen die u onder een machtiging toekomen in plaats van geld naar buiten te duwen.</p>
 <p><strong>pacs.008 / pacs.009.</strong> De interbancaire afwikkelberichten waarin uw opdracht verandert zodra de bank haar accepteert. Bedrijven stellen deze nooit zelf op; banken wisselen ze onderling uit.</p>
 <p><strong>camt.052 / camt.053 / camt.054.</strong> Rekeningrapportage: respectievelijk het intradayrapport, het dagafschrift en de debet-/creditmelding. <code>camt.053</code> is wat reconciliatieteams elke ochtend verwerken.</p>
-<p><strong>MT101.</strong> Het verouderde SWIFT-tekstbericht "Request for Transfer" dat door <code>pain.001</code> wordt vervangen. De interbancaire MT101-doorgifte wordt op 14 november 2026 buiten gebruik gesteld ten gunste van <code>pain.001.001.09</code>; MT101 tussen bedrijf en bank blijft alleen bestaan naar het inzicht van elke bank afzonderlijk.</p>
+<p><strong>MT101.</strong> Het verouderde SWIFT-tekstbericht "Request for Transfer" dat door <code>pain.001</code> wordt vervangen. De interbancaire MT101-doorgifte wordt op november 2026 (SR 2026; <a href="https://www.swift.com/standards/iso-20022">Swift ISO 20022 programme</a>) buiten gebruik gesteld ten gunste van <code>pain.001.001.09</code>; MT101 tussen bedrijf en bank blijft alleen bestaan naar het inzicht van elke bank afzonderlijk.</p>
 <h2 id="schemes-and-rulebooks">Schemes en rulebooks<a class="heading-anchor" href="#schemes-and-rulebooks" aria-label="Link naar sectie: Schemes en rulebooks">#</a></h2>
 <p><strong>SEPA SCT / SCT Inst.</strong> De euro-overboekingsschema's (standaard en instant) die vallen onder de rulebooks van de European Payments Council. Instantoverboekingen worden binnen seconden afgewikkeld, de klok rond.</p>
 <p><strong>SEPA SDD Core / B2B.</strong> De euro-incassoschema's — Core voor consumenten (met terugboekrecht), B2B voor bedrijven (geen terugboekrecht, strengere controles op de machtiging).</p>
@@ -211,7 +211,7 @@
 <p><strong>BIC / BICFI.</strong> De ISO 9362 Business Identifier Code van een financiële instelling. Het XML-element heet <code>&lt;BIC&gt;</code> in <code>pain.001.001.03</code>, maar <code>&lt;BICFI&gt;</code> vanaf versie 9 — een hernoeming die bij versie-upgrades in de praktijk tot afwijzingen leidt.</p>
 <p><strong>LEI.</strong> Legal Entity Identifier (ISO 17442) — de wereldwijde bedrijfsidentificatie van 20 tekens. Er zijn er ruim 3 miljoen actief, en toezichthouders schrijven ze steeds vaker voor in betalingen.</p>
 <p><strong>UETR.</strong> Unique End-to-end Transaction Reference — de UUID waarmee een betaling door de hele correspondentketen heen te volgen is (SWIFT gpi).</p>
-<p><strong>Gestructureerd / hybride adres.</strong> Postadressen als losse XML-elementen (straat, plaats, postcode, land) tegenover vrije tekstregels. Vanaf 14 november 2026 wijst CBPR+ volledig ongestructureerde adressen af; <em>hybride</em> — gestructureerde plaats en land plus maximaal twee adresregels van 70 tekens — blijft geldig.</p>
+<p><strong>Gestructureerd / hybride adres.</strong> Postadressen als losse XML-elementen (straat, plaats, postcode, land) tegenover vrije tekstregels. Vanaf november 2026 (SR 2026) wijst CBPR+ volledig ongestructureerde adressen af; <em>hybride</em> — gestructureerde plaats en land plus maximaal twee adresregels van 70 tekens — blijft geldig.</p>
 <p><strong>NbOfTxs / CtrlSum.</strong> De controletotalen in de group header: het aantal transacties en de som van de bedragen. Banken berekenen ze opnieuw; wijken die van u daarvan af, dan wordt het bestand geweigerd. Pain001 leidt ze altijd af uit de gevalideerde records.</p>
 <p><strong>Kostendrager.</strong> Wie de kosten betaalt: <code>DEBT</code> (afzender), <code>CRED</code> (ontvanger), <code>SHAR</code> (gedeeld), <code>SLEV</code> (volgens de schemaregels). De oude MT-codes <code>OUR</code>/<code>BEN</code>/<code>SHA</code> komen overeen met de eerste drie.</p>
 <p><strong>Betalingskenmerk.</strong> Het veld "waar deze betaling voor is" — vrije tekst (140 tekens) of gestructureerde referenties. Precies dat wat reconciliatieteams graag door iedereen goed ingevuld zouden zien.</p>

@@ -64,7 +64,7 @@
       <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Bật/tắt điều hướng" />
       <div class="wrap ap-nav-wrap">
         <a class="ap-brand" href="/" aria-label="Pain001 home">
-          <img src="/img/pain001.svg" alt="" width="26" height="26" />
+          <img src="/img/pain001.svg" alt="Pain001" width="26" height="26" />
           <span>Pain001</span>
         </a>
         <nav aria-label="Primary navigation" id="ap-primary-nav">
@@ -198,7 +198,7 @@
 <p><strong>pain.008 — Customer Direct Debit Initiation.</strong> Người song sinh phía thu của <code>pain.001</code>: quý vị kéo về khoản tiền được nợ theo một uỷ nhiệm thay vì đẩy tiền đi.</p>
 <p><strong>pacs.008 / pacs.009.</strong> Các thông điệp quyết toán liên ngân hàng mà chỉ thị của quý vị trở thành sau khi ngân hàng chấp nhận. Doanh nghiệp không bao giờ soạn các thông điệp này; các ngân hàng trao đổi chúng với nhau.</p>
 <p><strong>camt.052 / camt.053 / camt.054.</strong> Báo cáo tài khoản: lần lượt là báo cáo trong ngày, sao kê cuối ngày, và thông báo ghi nợ/ghi có. <code>camt.053</code> là thứ các đội đối soát sử dụng mỗi sáng.</p>
-<p><strong>MT101.</strong> Thông điệp văn bản "Request for Transfer" (Yêu cầu chuyển khoản) cũ của SWIFT mà <code>pain.001</code> thay thế. Kênh chuyển tiếp MT101 liên ngân hàng ngừng hoạt động vào ngày 14 tháng 11 năm 2026, nhường chỗ cho <code>pain.001.001.09</code>; MT101 doanh nghiệp-đến-ngân hàng chỉ tồn tại theo quyết định riêng của từng ngân hàng.</p>
+<p><strong>MT101.</strong> Thông điệp văn bản "Request for Transfer" (Yêu cầu chuyển khoản) cũ của SWIFT mà <code>pain.001</code> thay thế. Kênh chuyển tiếp MT101 liên ngân hàng ngừng hoạt động vào ngày tháng 11 năm 2026 (SR 2026; <a href="https://www.swift.com/standards/iso-20022">Swift ISO 20022 programme</a>), nhường chỗ cho <code>pain.001.001.09</code>; MT101 doanh nghiệp-đến-ngân hàng chỉ tồn tại theo quyết định riêng của từng ngân hàng.</p>
 <h2 id="schemes-and-rulebooks">Scheme và bộ quy tắc<a class="heading-anchor" href="#schemes-and-rulebooks" aria-label="Liên kết đến mục: Scheme và bộ quy tắc">#</a></h2>
 <p><strong>SEPA SCT / SCT Inst.</strong> Các scheme chuyển khoản tín dụng bằng euro (tiêu chuẩn và tức thời) do các bộ quy tắc của European Payments Council điều chỉnh. Chuyển khoản tức thời quyết toán trong vài giây, suốt ngày đêm.</p>
 <p><strong>SEPA SDD Core / B2B.</strong> Các scheme ghi nợ trực tiếp bằng euro — Core cho người tiêu dùng (có quyền hoàn tiền), B2B cho doanh nghiệp (không có quyền hoàn tiền, kiểm tra uỷ nhiệm chặt hơn).</p>
@@ -211,7 +211,7 @@
 <p><strong>BIC / BICFI.</strong> Mã định danh doanh nghiệp ISO 9362 của một định chế tài chính. Phần tử XML là <code>&lt;BIC&gt;</code> trong <code>pain.001.001.03</code> nhưng là <code>&lt;BICFI&gt;</code> từ phiên bản 9 — một lần đổi tên gây ra các từ chối thực tế khi nâng cấp phiên bản.</p>
 <p><strong>LEI.</strong> Legal Entity Identifier (ISO 17442) — mã định danh pháp nhân toàn cầu gồm 20 ký tự. Hơn 3 triệu mã đang hoạt động, và các cơ quan quản lý ngày càng bắt buộc dùng chúng trong thanh toán.</p>
 <p><strong>UETR.</strong> Unique End-to-end Transaction Reference — mã UUID cho phép truy vết một khoản thanh toán xuyên suốt chuỗi ngân hàng đại lý (SWIFT gpi).</p>
-<p><strong>Địa chỉ có cấu trúc / lai.</strong> Địa chỉ bưu chính dưới dạng các phần tử XML riêng biệt (đường phố, thành phố, mã bưu chính, quốc gia) so với các dòng văn bản tự do. Từ ngày 14 tháng 11 năm 2026, CBPR+ từ chối địa chỉ hoàn toàn phi cấu trúc; dạng <em>lai</em> — thành phố và quốc gia có cấu trúc cộng tối đa hai dòng địa chỉ 70 ký tự — vẫn hợp lệ.</p>
+<p><strong>Địa chỉ có cấu trúc / lai.</strong> Địa chỉ bưu chính dưới dạng các phần tử XML riêng biệt (đường phố, thành phố, mã bưu chính, quốc gia) so với các dòng văn bản tự do. Từ ngày tháng 11 năm 2026 (SR 2026), CBPR+ từ chối địa chỉ hoàn toàn phi cấu trúc; dạng <em>lai</em> — thành phố và quốc gia có cấu trúc cộng tối đa hai dòng địa chỉ 70 ký tự — vẫn hợp lệ.</p>
 <p><strong>NbOfTxs / CtrlSum.</strong> Các tổng kiểm soát trong tiêu đề nhóm: số lượng giao dịch và tổng số tiền. Ngân hàng tính lại chúng; nếu số của quý vị không khớp, tệp bị trả về. Pain001 luôn suy ra chúng từ các bản ghi đã xác thực.</p>
 <p><strong>Bên chịu phí.</strong> Ai trả phí: <code>DEBT</code> (người gửi), <code>CRED</code> (người nhận), <code>SHAR</code> (chia sẻ), <code>SLEV</code> (theo quy tắc scheme). Các mã MT cũ <code>OUR</code>/<code>BEN</code>/<code>SHA</code> ánh xạ sang ba mã đầu.</p>
 <p><strong>Thông tin diễn giải thanh toán.</strong> Trường "khoản thanh toán này để làm gì" — văn bản tự do (140 ký tự) hoặc tham chiếu có cấu trúc. Là thứ mà các đội đối soát mong mọi người điền đầy đủ và chính xác.</p>

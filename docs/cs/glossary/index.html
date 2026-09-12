@@ -64,7 +64,7 @@
       <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Přepnout navigaci" />
       <div class="wrap ap-nav-wrap">
         <a class="ap-brand" href="/" aria-label="Pain001 home">
-          <img src="/img/pain001.svg" alt="" width="26" height="26" />
+          <img src="/img/pain001.svg" alt="Pain001" width="26" height="26" />
           <span>Pain001</span>
         </a>
         <nav aria-label="Primary navigation" id="ap-primary-nav">
@@ -198,7 +198,7 @@
 <p><strong>pain.008 — Customer Direct Debit Initiation.</strong> Inkasní dvojče <code>pain.001</code>: peníze, na které máte na základě mandátu nárok, si stahujete, místo abyste je posílali ven.</p>
 <p><strong>pacs.008 / pacs.009.</strong> Mezibankovní zúčtovací zprávy, v něž se váš příkaz promění poté, co jej banka přijme. Firmy je nikdy nevytvářejí; vyměňují si je banky.</p>
 <p><strong>camt.052 / camt.053 / camt.054.</strong> Reporting k účtu: postupně zpráva v průběhu dne, závěrečný denní výpis a avízo o odepsání či připsání. <code>camt.053</code> je to, co rekonciliační týmy zpracovávají každé ráno.</p>
-<p><strong>MT101.</strong> Zastaralá textová zpráva SWIFT "Request for Transfer", kterou <code>pain.001</code> nahrazuje. Mezibankovní přenos MT101 bude 14. listopadu 2026 vyřazen z provozu ve prospěch <code>pain.001.001.09</code>; MT101 mezi firmou a bankou přetrvává jen podle uvážení každé banky.</p>
+<p><strong>MT101.</strong> Zastaralá textová zpráva SWIFT "Request for Transfer", kterou <code>pain.001</code> nahrazuje. Mezibankovní přenos MT101 bude listopadu 2026 (SR 2026; <a href="https://www.swift.com/standards/iso-20022">Swift ISO 20022 programme</a>) vyřazen z provozu ve prospěch <code>pain.001.001.09</code>; MT101 mezi firmou a bankou přetrvává jen podle uvážení každé banky.</p>
 <h2 id="schemes-and-rulebooks">Schémata a pravidla<a class="heading-anchor" href="#schemes-and-rulebooks" aria-label="Odkaz na sekci: Schémata a pravidla">#</a></h2>
 <p><strong>SEPA SCT / SCT Inst.</strong> Eurová schémata úhrad (standardní a okamžité), která se řídí pravidly organizace European Payments Council. Okamžité úhrady se zúčtují během několika sekund, nepřetržitě.</p>
 <p><strong>SEPA SDD Core / B2B.</strong> Eurová inkasní schémata — Core pro spotřebitele (s právem na vrácení platby), B2B pro firmy (bez práva na vrácení, s přísnější kontrolou mandátu).</p>
@@ -211,7 +211,7 @@
 <p><strong>BIC / BICFI.</strong> Identifikační kód finanční instituce podle ISO 9362. Prvek XML se v <code>pain.001.001.03</code> jmenuje <code>&lt;BIC&gt;</code>, ale od verze 9 <code>&lt;BICFI&gt;</code> — přejmenování, které při přechodu na novější verzi v praxi působí zamítnutí.</p>
 <p><strong>LEI.</strong> Identifikátor právnické osoby (ISO 17442) — celosvětový dvacetiznakový identifikátor společnosti. Aktivních jich jsou přes 3 miliony a regulátoři je v platbách vyžadují stále častěji.</p>
 <p><strong>UETR.</strong> Unique End-to-end Transaction Reference — UUID, díky němuž lze platbu sledovat napříč korespondenčním řetězcem (SWIFT gpi).</p>
-<p><strong>Strukturovaná / hybridní adresa.</strong> Poštovní adresy jako samostatné prvky XML (ulice, město, PSČ, země) oproti volným řádkům textu. Od 14. listopadu 2026 CBPR+ zcela nestrukturované adresy odmítá; <em>hybridní</em> — strukturované město a země plus nejvýše dva adresní řádky po 70 znacích — zůstává platná.</p>
+<p><strong>Strukturovaná / hybridní adresa.</strong> Poštovní adresy jako samostatné prvky XML (ulice, město, PSČ, země) oproti volným řádkům textu. Od listopadu 2026 (SR 2026) CBPR+ zcela nestrukturované adresy odmítá; <em>hybridní</em> — strukturované město a země plus nejvýše dva adresní řádky po 70 znacích — zůstává platná.</p>
 <p><strong>NbOfTxs / CtrlSum.</strong> Kontrolní součty ve skupinové hlavičce: počet transakcí a součet částek. Banky si je přepočítávají; pokud se ty vaše neshodují, soubor se vrátí. Pain001 je vždy odvozuje z ověřených záznamů.</p>
 <p><strong>Nositel poplatků.</strong> Kdo platí poplatky: <code>DEBT</code> (odesílatel), <code>CRED</code> (příjemce), <code>SHAR</code> (sdílené), <code>SLEV</code> (podle pravidel schématu). Starším kódům MT <code>OUR</code>/<code>BEN</code>/<code>SHA</code> odpovídají první tři.</p>
 <p><strong>Informace o platbě.</strong> Pole "za co je tato platba" — volný text (140 znaků) nebo strukturované reference. Právě to, co by rekonciliační týmy rády viděly vždy řádně vyplněné.</p>

@@ -64,7 +64,7 @@
       <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="切换导航" />
       <div class="wrap ap-nav-wrap">
         <a class="ap-brand" href="/" aria-label="Pain001 home">
-          <img src="/img/pain001.svg" alt="" width="26" height="26" />
+          <img src="/img/pain001.svg" alt="Pain001" width="26" height="26" />
           <span>Pain001</span>
         </a>
         <nav aria-label="Primary navigation" id="ap-primary-nav">
@@ -198,7 +198,7 @@
 <p><strong>pain.008——客户直接借记发起（Customer Direct Debit Initiation）。</strong><code>pain.001</code> 的收款侧孪生报文：您根据扣款授权收取他人欠您的资金，而非把资金付出去。</p>
 <p><strong>pacs.008 / pacs.009。</strong>您的指令被银行接受后转化成的银行间清算报文。企业从不编制这些报文；它们由银行之间交换。</p>
 <p><strong>camt.052 / camt.053 / camt.054。</strong>账户报告：分别是日间报告、日终对账单和借记/贷记通知。<code>camt.053</code> 是对账团队每天早晨处理的内容。</p>
-<p><strong>MT101。</strong>被 <code>pain.001</code> 取代的传统 SWIFT“转账请求”文本报文。银行间 MT101 中转将于 2026 年 11 月 14 日停用，由 <code>pain.001.001.09</code> 接替；企业对银行的 MT101 是否延续完全取决于各银行的自主决定。</p>
+<p><strong>MT101。</strong>被 <code>pain.001</code> 取代的传统 SWIFT“转账请求”文本报文。银行间 MT101 中转将于 2026年11月 (SR 2026; <a href="https://www.swift.com/standards/iso-20022">Swift ISO 20022 programme</a>)停用，由 <code>pain.001.001.09</code> 接替；企业对银行的 MT101 是否延续完全取决于各银行的自主决定。</p>
 <h2 id="schemes-and-rulebooks">方案与规则手册<a class="heading-anchor" href="#schemes-and-rulebooks" aria-label="跳转到章节：方案与规则手册">#</a></h2>
 <p><strong>SEPA SCT / SCT Inst。</strong>由欧洲支付理事会规则手册管辖的欧元贷记转账方案（标准与即时）。即时转账全天候在数秒内完成清算。</p>
 <p><strong>SEPA SDD Core / B2B。</strong>欧元直接借记方案——Core 面向消费者（享有退款权），B2B 面向企业（无退款权，授权检查更严格）。</p>
@@ -211,7 +211,7 @@
 <p><strong>BIC / BICFI。</strong>金融机构的 ISO 9362 业务标识代码。该 XML 元素在 <code>pain.001.001.03</code> 中是 <code>&lt;BIC&gt;</code>，但从版本 9 起改为 <code>&lt;BICFI&gt;</code>——这一改名在版本升级中造成过真实的拒收。</p>
 <p><strong>LEI。</strong>法人识别编码（ISO 17442）——20 位全球企业标识符。目前已有超过 300 万个处于活跃状态，且监管机构在支付中日益强制要求使用。</p>
 <p><strong>UETR。</strong>端到端唯一交易参考号（Unique End-to-end Transaction Reference）——让一笔支付可在代理行链条中被全程追踪的 UUID（SWIFT gpi）。</p>
-<p><strong>结构化 / 混合地址。</strong>以独立 XML 元素（街道、城镇、邮编、国家）表示的邮政地址，相对于自由文本行。自 2026 年 11 月 14 日起，CBPR+ 拒绝完全非结构化的地址；<em>混合</em>形式——结构化的城镇与国家，外加最多两行 70 字符的地址行——仍然有效。</p>
+<p><strong>结构化 / 混合地址。</strong>以独立 XML 元素（街道、城镇、邮编、国家）表示的邮政地址，相对于自由文本行。自 2026年11月 (SR 2026)起，CBPR+ 拒绝完全非结构化的地址；<em>混合</em>形式——结构化的城镇与国家，外加最多两行 70 字符的地址行——仍然有效。</p>
 <p><strong>NbOfTxs / CtrlSum。</strong>组头控制总计：交易笔数与金额合计。银行会重新计算它们；如果您的数字对不上，文件就会被退回。Pain001 始终从已校验的记录推导这两个值。</p>
 <p><strong>费用承担方。</strong>谁支付手续费：<code>DEBT</code>（付款方）、<code>CRED</code>（收款方）、<code>SHAR</code>（共担）、<code>SLEV</code>（按方案规则）。传统 MT 的 <code>OUR</code>/<code>BEN</code>/<code>SHA</code> 对应前三者。</p>
 <p><strong>汇款信息。</strong>说明“这笔钱是付什么的”的字段——自由文本（140 个字符）或结构化引用。也是对账团队最希望所有人认真填写的字段。</p>

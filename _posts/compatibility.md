@@ -89,7 +89,7 @@ last_reviewed: "2026-07-26"
 
 ---
 
-Everything on this page is verified against the shipped code of **pain001 v0.0.58** and its companions — the same discipline as the [technical reference](/documentation/). If a cell says no, that is a statement, not an omission.
+Everything on this page is verified against the shipped code of **pain001 v0.0.69** and its companions — the same discipline as the [technical reference](/documentation/). If a cell says no, that is a statement, not an omission.
 
 ## 01. Message definitions
 
@@ -122,7 +122,7 @@ Everything on this page is verified against the shipped code of **pain001 v0.0.5
 
 ## 04. Address models
 
-Structured and hybrid postal address elements are generated today, meeting the [14 November 2026 CBPR+ requirement](/iso20022-roadmap/). Unstructured `AdrLine` output remains available for channels that still accept it.
+Structured and hybrid postal address elements are generated today, meeting the [November 2026 (SR 2026) ([Swift ISO 20022 programme](https://www.swift.com/standards/iso-20022)) CBPR+ requirement](/iso20022-roadmap/). Unstructured `AdrLine` output remains available for channels that still accept it.
 
 ## 05. Known limitations
 

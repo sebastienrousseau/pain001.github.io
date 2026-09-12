@@ -64,7 +64,7 @@
       <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="I-toggle ang nabigasyon" />
       <div class="wrap ap-nav-wrap">
         <a class="ap-brand" href="/" aria-label="Pain001 home">
-          <img src="/img/pain001.svg" alt="" width="26" height="26" />
+          <img src="/img/pain001.svg" alt="Pain001" width="26" height="26" />
           <span>Pain001</span>
         </a>
         <nav aria-label="Primary navigation" id="ap-primary-nav">
@@ -198,7 +198,7 @@
 <p><strong>pain.008 — Customer Direct Debit Initiation.</strong> Ang kambal na pang-koleksyon ng <code>pain.001</code>: sinisingil ninyo ang mga pondong inutang sa inyo sa ilalim ng isang mandato sa halip na magpadala ng pondo palabas.</p>
 <p><strong>pacs.008 / pacs.009.</strong> Ang mga interbank settlement na mensaheng kinauuwian ng inyong tagubilin kapag tinanggap ito ng bangko. Hindi kailanman inaakda ng mga korporasyon ang mga ito; ang mga bangko ang nagpapalitan ng mga ito.</p>
 <p><strong>camt.052 / camt.053 / camt.054.</strong> Pag-uulat ng account: intraday na ulat, end-of-day na statement, at abiso ng debit/credit ayon sa pagkakabanggit. Ang <code>camt.053</code> ang kinokonsumo ng mga reconciliation team tuwing umaga.</p>
-<p><strong>MT101.</strong> Ang legacy na SWIFT na text na mensaheng "Request for Transfer" na pinapalitan ng <code>pain.001</code>. Ang interbank na MT101 relay ay ide-decommission sa 14 Nobyembre 2026 pabor sa <code>pain.001.001.09</code>; ang corporate-to-bank na MT101 ay nananatili lamang ayon sa pagpapasya ng bawat bangko.</p>
+<p><strong>MT101.</strong> Ang legacy na SWIFT na text na mensaheng "Request for Transfer" na pinapalitan ng <code>pain.001</code>. Ang interbank na MT101 relay ay ide-decommission sa Nobyembre 2026 (SR 2026; <a href="https://www.swift.com/standards/iso-20022">Swift ISO 20022 programme</a>) pabor sa <code>pain.001.001.09</code>; ang corporate-to-bank na MT101 ay nananatili lamang ayon sa pagpapasya ng bawat bangko.</p>
 <h2 id="schemes-and-rulebooks">Mga scheme at rulebook<a class="heading-anchor" href="#schemes-and-rulebooks" aria-label="Link sa seksyon: Mga scheme at rulebook">#</a></h2>
 <p><strong>SEPA SCT / SCT Inst.</strong> Ang mga euro credit-transfer scheme (standard at instant) na pinamamahalaan ng mga rulebook ng European Payments Council. Ang mga instant na transfer ay nase-settle sa loob ng ilang segundo, buong araw at gabi.</p>
 <p><strong>SEPA SDD Core / B2B.</strong> Ang mga euro direct-debit scheme — Core para sa mga consumer (may karapatan sa refund), B2B para sa mga negosyo (walang karapatan sa refund, mas mahigpit na pagsusuri ng mandato).</p>
@@ -211,7 +211,7 @@
 <p><strong>BIC / BICFI.</strong> Ang ISO 9362 Business Identifier Code ng isang institusyong pampinansyal. Ang XML element ay <code>&lt;BIC&gt;</code> sa <code>pain.001.001.03</code> ngunit <code>&lt;BICFI&gt;</code> mula sa bersyon 9 — isang pagpapalit ng pangalan na nagdudulot ng mga totoong pagtanggi sa panahon ng pag-upgrade ng bersyon.</p>
 <p><strong>LEI.</strong> Legal Entity Identifier (ISO 17442) — ang 20-character na pandaigdigang identifier ng kumpanya. Mahigit 3 milyon ang aktibo, at lalong iniuutos ng mga regulator ang mga ito sa mga pagbabayad.</p>
 <p><strong>UETR.</strong> Unique End-to-end Transaction Reference — ang UUID na nagpapahintulot na masubaybayan ang isang pagbabayad sa buong correspondent chain (SWIFT gpi).</p>
-<p><strong>Structured / hybrid na address.</strong> Mga postal address bilang mga hiwalay na XML element (kalye, bayan, postcode, bansa) kumpara sa mga free-text na linya. Mula 14 Nobyembre 2026, tinatanggihan ng CBPR+ ang ganap na unstructured na mga address; ang <em>hybrid</em> — structured na bayan at bansa kasama ang hanggang dalawang 70-character na linya ng address — ay nananatiling wasto.</p>
+<p><strong>Structured / hybrid na address.</strong> Mga postal address bilang mga hiwalay na XML element (kalye, bayan, postcode, bansa) kumpara sa mga free-text na linya. Mula Nobyembre 2026 (SR 2026), tinatanggihan ng CBPR+ ang ganap na unstructured na mga address; ang <em>hybrid</em> — structured na bayan at bansa kasama ang hanggang dalawang 70-character na linya ng address — ay nananatiling wasto.</p>
 <p><strong>NbOfTxs / CtrlSum.</strong> Ang mga control total sa group header: bilang ng mga transaksyon at suma ng halaga. Muling kinukuwenta ng mga bangko ang mga ito; kung hindi tugma ang sa inyo, babalik ang file. Palaging kinukuha ng Pain001 ang mga ito mula sa mga na-validate na record.</p>
 <p><strong>Charge bearer.</strong> Kung sino ang magbabayad ng mga bayarin: <code>DEBT</code> (nagpadala), <code>CRED</code> (tumanggap), <code>SHAR</code> (hinati), <code>SLEV</code> (ayon sa mga panuntunan ng scheme). Ang legacy na MT na <code>OUR</code>/<code>BEN</code>/<code>SHA</code> ay tumutugma sa unang tatlo.</p>
 <p><strong>Remittance information.</strong> Ang field na "para saan ang bayad na ito" — free text (140 character) o mga structured na reference. Ang bagay na hinihiling ng mga reconciliation team na punan nang maayos ng lahat.</p>

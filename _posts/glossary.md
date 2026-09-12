@@ -104,7 +104,7 @@ Plain-English definitions of the terms that appear across this site and in your 
 
 **camt.052 / camt.053 / camt.054.** Account reporting: intraday report, end-of-day statement, and debit/credit notification respectively. `camt.053` is what reconciliation teams consume each morning.
 
-**MT101.** The legacy SWIFT "Request for Transfer" text message that `pain.001` replaces. The interbank MT101 relay is decommissioned on 14 November 2026 in favour of `pain.001.001.09`; corporate-to-bank MT101 persists only at each bank's discretion.
+**MT101.** The legacy SWIFT "Request for Transfer" text message that `pain.001` replaces. The interbank MT101 relay is decommissioned with Swift Standards Release 2026 in November 2026 ([Swift ISO 20022 programme](https://www.swift.com/standards/iso-20022)) in favour of `pain.001.001.09`; corporate-to-bank MT101 persists only at each bank's discretion.
 
 ## Schemes and rulebooks
 
@@ -130,7 +130,7 @@ Plain-English definitions of the terms that appear across this site and in your 
 
 **UETR.** Unique End-to-end Transaction Reference — the UUID that lets a payment be traced across the correspondent chain (SWIFT gpi).
 
-**Structured / hybrid address.** Postal addresses as discrete XML elements (street, town, postcode, country) versus free-text lines. From 14 November 2026, CBPR+ rejects fully unstructured addresses; *hybrid* — structured town and country plus up to two 70-character address lines — remains valid.
+**Structured / hybrid address.** Postal addresses as discrete XML elements (street, town, postcode, country) versus free-text lines. From Swift Standards Release 2026 in November 2026, CBPR+ rejects fully unstructured addresses; *hybrid* — structured town and country plus up to two 70-character address lines — remains valid.
 
 **NbOfTxs / CtrlSum.** The group-header control totals: transaction count and amount sum. Banks recompute them; if yours disagree, the file bounces. Pain001 always derives them from the validated records.
 

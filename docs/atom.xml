@@ -128,7 +128,7 @@
     <id>https://pain001.com/documentation/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Complete reference for pain001 v0.0.58 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.</summary>
+    <summary>Complete reference for pain001 v0.0.69 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
@@ -155,7 +155,7 @@
     <id>https://pain001.com/executive-brief/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>One page for decision-makers: the rejected-file problem, the fixed 14 November 2026 deadline, what Pain001 does, what it costs, the safety evidence, and the one ask — print-ready.</summary>
+    <summary>One page for decision-makers: the rejected-file problem, the November 2026 (SR 2026) deadline, what Pain001 does, what it costs, the safety evidence, and the one ask — print-ready.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
@@ -317,7 +317,7 @@
     <id>https://pain001.com/languages/</id>
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
-    <summary>The Pain001 overview — validation pipeline, the 14 November 2026 deadline, quickstart — translated into 34 languages, from Deutsch and 日本語 to العربية and Yorùbá, with correct hreflang and RTL support.</summary>
+    <summary>The Pain001 overview — validation pipeline, the November 2026 (SR 2026) deadline, quickstart — translated into 34 languages, from Deutsch and 日本語 to العربية and Yorùbá, with correct hreflang and RTL support.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>

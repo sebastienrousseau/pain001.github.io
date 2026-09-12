@@ -99,9 +99,9 @@ Setiap fail melalui tiga lapisan pengesahan sebelum ditulis: skema JSON bagi set
 
 Sahkan kelompok contoh terus dalam pelayar anda — tiada apa yang dimuat naik — dan buktikan hasilnya dengan skema XSD rasmi: [cuba Pain001](/try/). Fail CSV contoh boleh dimuat turun sebagai templat untuk eksport anda sendiri.
 
-## Tarikh akhir 14 November 2026
+## Tarikh akhir November 2026 (SR 2026)
 
-Selepas koeksistensi MT–MX berakhir pada 22 November 2025, tarikh akhir seterusnya ialah **14 November 2026**: alamat pos yang tidak berstruktur sepenuhnya akan ditolak dalam pembayaran CBPR+, dan geganti MT101 antara bank digantikan oleh `pain.001` versi 9. Pain001 sudah menjana alamat berstruktur dan hibrid hari ini — dan menukar MT101 dengan satu arahan.
+Selepas koeksistensi MT–MX berakhir pada 22 November 2025, tarikh akhir seterusnya ialah **November 2026** (Swift Standards Release 2026): alamat pos yang tidak berstruktur sepenuhnya akan ditolak dalam pembayaran CBPR+, dan geganti MT101 antara bank digantikan oleh `pain.001` versi 9. Pain001 sudah menjana alamat berstruktur dan hibrid hari ini — dan menukar MT101 dengan satu arahan.
 
 ## Mula
 

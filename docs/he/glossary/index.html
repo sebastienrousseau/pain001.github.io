@@ -64,7 +64,7 @@
       <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="החלף ניווט" />
       <div class="wrap ap-nav-wrap">
         <a class="ap-brand" href="/" aria-label="Pain001 home">
-          <img src="/img/pain001.svg" alt="" width="26" height="26" />
+          <img src="/img/pain001.svg" alt="Pain001" width="26" height="26" />
           <span>Pain001</span>
         </a>
         <nav aria-label="Primary navigation" id="ap-primary-nav">
@@ -198,7 +198,7 @@
 <p><strong>pain.008 — Customer Direct Debit Initiation.</strong> התאום של <code>pain.001</code> בצד הגבייה: אתם מושכים כספים המגיעים לכם מכוח הרשאה במקום לשלוח כספים החוצה.</p>
 <p><strong>pacs.008 / pacs.009.</strong> הודעות הסליקה הבין-בנקאיות שההוראה שלכם הופכת אליהן ברגע שהבנק מקבל אותה. גופים עסקיים לעולם אינם מחברים אותן; הבנקים מחליפים אותן ביניהם.</p>
 <p><strong>camt.052 / camt.053 / camt.054.</strong> דיווח חשבון: דוח תוך-יומי, דף חשבון לסוף יום והודעת חיוב או זיכוי, בהתאמה. <code>camt.053</code> הוא מה שצוותי ההתאמות צורכים מדי בוקר.</p>
-<p><strong>MT101.</strong> הודעת הטקסט הישנה של SWIFT בשם "Request for Transfer", שאותה מחליף <code>pain.001</code>. ממסר ה-MT101 הבין-בנקאי יוצא משירות ב-14 בנובמבר 2026 לטובת <code>pain.001.001.09</code>; MT101 מעסק לבנק נשמר רק לפי שיקול דעתו של כל בנק.</p>
+<p><strong>MT101.</strong> הודעת הטקסט הישנה של SWIFT בשם "Request for Transfer", שאותה מחליף <code>pain.001</code>. ממסר ה-MT101 הבין-בנקאי יוצא משירות ב-בנובמבר 2026 (SR 2026; <a href="https://www.swift.com/standards/iso-20022">Swift ISO 20022 programme</a>) לטובת <code>pain.001.001.09</code>; MT101 מעסק לבנק נשמר רק לפי שיקול דעתו של כל בנק.</p>
 <h2 id="schemes-and-rulebooks">מסלולים וספרי כללים<a class="heading-anchor" href="#schemes-and-rulebooks" aria-label="קישור למקטע: מסלולים וספרי כללים">#</a></h2>
 <p><strong>SEPA SCT / SCT Inst.</strong> מסלולי העברת הזיכוי באירו (רגיל ומיידי) הנשלטים על ידי ספרי הכללים של European Payments Council. העברות מיידיות נסלקות בתוך שניות, מסביב לשעון.</p>
 <p><strong>SEPA SDD Core / B2B.</strong> מסלולי החיוב הישיר באירו — Core לצרכנים (עם זכות החזר), B2B לעסקים (ללא זכות החזר, עם בדיקות הרשאה מחמירות יותר).</p>
@@ -211,7 +211,7 @@
 <p><strong>BIC / BICFI.</strong> ה-Business Identifier Code לפי ISO 9362 של מוסד פיננסי. רכיב ה-XML הוא <code>&lt;BIC&gt;</code> ב-<code>pain.001.001.03</code>, אך <code>&lt;BICFI&gt;</code> החל מגרסה 9 — שינוי שם שגורם לדחיות אמיתיות בעת שדרוגי גרסה.</p>
 <p><strong>LEI.</strong> Legal Entity Identifier (ISO 17442) — מזהה החברות הגלובלי בן 20 התווים. יותר מ-3 מיליון מזהים פעילים, והרגולטורים מחייבים אותם יותר ויותר בתשלומים.</p>
 <p><strong>UETR.</strong> Unique End-to-end Transaction Reference — ה-UUID המאפשר לעקוב אחר תשלום לאורך שרשרת הכתבים (SWIFT gpi).</p>
-<p><strong>כתובת מובנית / היברידית.</strong> כתובות דואר כרכיבי XML נפרדים (רחוב, עיר, מיקוד, מדינה) לעומת שורות טקסט חופשי. החל מ-14 בנובמבר 2026, CBPR+ דוחה כתובות שאינן מובנות כלל; הצורה <em>ההיברידית</em> — עיר ומדינה מובנות בתוספת עד שתי שורות כתובת באורך 70 תווים — נשארת תקפה.</p>
+<p><strong>כתובת מובנית / היברידית.</strong> כתובות דואר כרכיבי XML נפרדים (רחוב, עיר, מיקוד, מדינה) לעומת שורות טקסט חופשי. החל מ-בנובמבר 2026 (SR 2026), CBPR+ דוחה כתובות שאינן מובנות כלל; הצורה <em>ההיברידית</em> — עיר ומדינה מובנות בתוספת עד שתי שורות כתובת באורך 70 תווים — נשארת תקפה.</p>
 <p><strong>NbOfTxs / CtrlSum.</strong> סכומי הבקרה בכותרת הקבוצה: מספר העסקאות וסכום הסכומים. הבנקים מחשבים אותם מחדש; אם שלכם אינם תואמים, הקובץ נדחה. Pain001 תמיד גוזרת אותם מהרשומות המאומתות.</p>
 <p><strong>נושא העמלות.</strong> מי משלם את העמלות: <code>DEBT</code> (השולח), <code>CRED</code> (המקבל), <code>SHAR</code> (משותף), <code>SLEV</code> (לפי כללי המסלול). מונחי ה-MT הישנים <code>OUR</code>/<code>BEN</code>/<code>SHA</code> ממופים לשלושת הראשונים.</p>
 <p><strong>פרטי ההעברה.</strong> השדה של "בגין מה התשלום הזה" — טקסט חופשי (140 תווים) או אסמכתאות מובנות. הדבר שצוותי ההתאמות היו רוצים שכולם ימלאו כראוי.</p>

@@ -64,7 +64,7 @@
       <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Gezinmeyi aç/kapat" />
       <div class="wrap ap-nav-wrap">
         <a class="ap-brand" href="/" aria-label="Pain001 home">
-          <img src="/img/pain001.svg" alt="" width="26" height="26" />
+          <img src="/img/pain001.svg" alt="Pain001" width="26" height="26" />
           <span>Pain001</span>
         </a>
         <nav aria-label="Primary navigation" id="ap-primary-nav">
@@ -198,7 +198,7 @@
 <p><strong>pain.008 — Customer Direct Debit Initiation.</strong> <code>pain.001</code>'in tahsilat tarafındaki ikizi: parayı dışarı göndermek yerine, bir yetki belgesi kapsamında size borçlu olunan fonları çekersiniz.</p>
 <p><strong>pacs.008 / pacs.009.</strong> Talimatınızın banka tarafından kabul edildikten sonra dönüştüğü bankalar arası mutabakat mesajları. Kurumsal müşteriler bunları asla yazmaz; bankalar aralarında değiş tokuş eder.</p>
 <p><strong>camt.052 / camt.053 / camt.054.</strong> Hesap raporlaması: sırasıyla gün içi rapor, gün sonu hesap özeti ve borç/alacak bildirimi. <code>camt.053</code>, mutabakat ekiplerinin her sabah tükettiği belgedir.</p>
-<p><strong>MT101.</strong> <code>pain.001</code>'in yerini aldığı eski SWIFT "Request for Transfer" metin mesajı. Bankalar arası MT101 aktarımı, 14 Kasım 2026'da <code>pain.001.001.09</code> lehine devre dışı bırakılıyor; kurumsaldan bankaya MT101 yalnızca her bankanın kendi takdiriyle varlığını sürdürür.</p>
+<p><strong>MT101.</strong> <code>pain.001</code>'in yerini aldığı eski SWIFT "Request for Transfer" metin mesajı. Bankalar arası MT101 aktarımı, Kasım 2026 (SR 2026; <a href="https://www.swift.com/standards/iso-20022">Swift ISO 20022 programme</a>)'da <code>pain.001.001.09</code> lehine devre dışı bırakılıyor; kurumsaldan bankaya MT101 yalnızca her bankanın kendi takdiriyle varlığını sürdürür.</p>
 <h2 id="schemes-and-rulebooks">Şemalar ve kural kitapları<a class="heading-anchor" href="#schemes-and-rulebooks" aria-label="Bölüm bağlantısı: Şemalar ve kural kitapları">#</a></h2>
 <p><strong>SEPA SCT / SCT Inst.</strong> Avrupa Ödemeler Konseyi kural kitaplarınca yönetilen euro havale şemaları (standart ve anlık). Anlık havaleler günün her saati, saniyeler içinde takas edilir.</p>
 <p><strong>SEPA SDD Core / B2B.</strong> Euro otomatik ödeme şemaları — Core tüketiciler için (iade hakkıyla), B2B işletmeler için (iade hakkı yok, daha sıkı yetki belgesi denetimleri).</p>
@@ -211,7 +211,7 @@
 <p><strong>BIC / BICFI.</strong> Bir finansal kuruluşun ISO 9362 İşletme Tanımlayıcı Kodu. XML öğesi <code>pain.001.001.03</code>'te <code>&lt;BIC&gt;</code>, 9. sürümden itibaren ise <code>&lt;BICFI&gt;</code>'dir — sürüm yükseltmeleri sırasında gerçek dünyada reddedilmelere yol açan bir yeniden adlandırma.</p>
 <p><strong>LEI.</strong> Legal Entity Identifier (ISO 17442) — 20 karakterlik küresel şirket tanımlayıcısı. 3 milyondan fazlası aktiftir ve düzenleyiciler ödemelerde bunları giderek daha fazla zorunlu kılmaktadır.</p>
 <p><strong>UETR.</strong> Unique End-to-end Transaction Reference — bir ödemenin muhabir zinciri boyunca izlenmesini sağlayan UUID (SWIFT gpi).</p>
-<p><strong>Yapılandırılmış / hibrit adres.</strong> Posta adreslerinin serbest metin satırları yerine ayrık XML öğeleri (sokak, şehir, posta kodu, ülke) olarak tutulması. 14 Kasım 2026'dan itibaren CBPR+, tamamen yapılandırılmamış adresleri reddeder; <em>hibrit</em> — yapılandırılmış şehir ve ülke artı en fazla iki adet 70 karakterlik adres satırı — geçerli kalır.</p>
+<p><strong>Yapılandırılmış / hibrit adres.</strong> Posta adreslerinin serbest metin satırları yerine ayrık XML öğeleri (sokak, şehir, posta kodu, ülke) olarak tutulması. Kasım 2026 (SR 2026)'dan itibaren CBPR+, tamamen yapılandırılmamış adresleri reddeder; <em>hibrit</em> — yapılandırılmış şehir ve ülke artı en fazla iki adet 70 karakterlik adres satırı — geçerli kalır.</p>
 <p><strong>NbOfTxs / CtrlSum.</strong> Grup başlığı kontrol toplamları: işlem sayısı ve tutar toplamı. Bankalar bunları yeniden hesaplar; sizinkiler uyuşmazsa dosya geri döner. Pain001 bunları her zaman doğrulanmış kayıtlardan türetir.</p>
 <p><strong>Masraf üstlenicisi.</strong> Ücretleri kimin ödediği: <code>DEBT</code> (gönderen), <code>CRED</code> (alıcı), <code>SHAR</code> (paylaşımlı), <code>SLEV</code> (şema kurallarına göre). Eski MT kodları <code>OUR</code>/<code>BEN</code>/<code>SHA</code> ilk üçüne eşlenir.</p>
 <p><strong>Havale açıklaması (remittance information).</strong> "Bu ödeme ne için" alanı — serbest metin (140 karakter) veya yapılandırılmış referanslar. Mutabakat ekiplerinin herkesin düzgünce doldurmasını dilediği alan.</p>

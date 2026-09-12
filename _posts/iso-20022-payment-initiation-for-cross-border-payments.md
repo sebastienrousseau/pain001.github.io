@@ -83,7 +83,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Guide"
-excerpt: "Cross-border payment initiation under CBPR+ in practice: why pain.001.001.09 is the version that matters, BICFI agent identification, structured and hybrid addresses ahead of 14 November 2026, charge bearers, purpose codes, character-set discipline, and a worked example with the xborder-ct scheme rulebook explained rule by rule."
+excerpt: "Cross-border payment initiation under CBPR+ in practice: why pain.001.001.09 is the version that matters, BICFI agent identification, structured and hybrid addresses ahead of November 2026 (SR 2026), charge bearers, purpose codes, character-set discipline, and a worked example with the xborder-ct scheme rulebook explained rule by rule."
 last_reviewed: "2026-07-26"
 
 ---
@@ -94,12 +94,12 @@ What changes when a `pain.001` leaves the domestic rails: the CBPR+ usage guidel
 
 ## 01. CBPR+ in one minute
 
-CBPR+ (Cross-Border Payments and Reporting Plus) is the set of usage guidelines that constrains generic ISO 20022 messages for the SWIFT correspondent-banking network. Your `pain.001` initiates the chain; banks carry it onward as `pacs.008`. Since coexistence ended on 22 November 2025, this is not an alternative format — it is the format. The version that matters for initiation is **`pain.001.001.09`**: it is the CBPR+ choice and, from **14 November 2026**, the mandated replacement for the interbank MT101 relay.
+CBPR+ (Cross-Border Payments and Reporting Plus) is the set of usage guidelines that constrains generic ISO 20022 messages for the SWIFT correspondent-banking network. Your `pain.001` initiates the chain; banks carry it onward as `pacs.008`. Since coexistence ended on 22 November 2025, this is not an alternative format — it is the format. The version that matters for initiation is **`pain.001.001.09`**: it is the CBPR+ choice and, from **November 2026** (Swift Standards Release 2026; [Swift ISO 20022 programme](https://www.swift.com/standards/iso-20022)), the mandated replacement for the interbank MT101 relay.
 
 ## 02. The fields cross-border payments live or die on
 
 - **Agents as BICs.** Identify debtor and creditor agents with a BIC (`<BICFI>` from v09 onward — the element name change from v03's `<BIC>` is a classic rejection cause when switching versions).
-- **Structured or hybrid addresses.** From 14 November 2026, a fully free-text address is a rejection. Minimum viable: structured town and country, with up to two 70-character address lines (hybrid). Pain001 emits both forms.
+- **Structured or hybrid addresses.** From Swift Standards Release 2026 in November 2026, a fully free-text address is a rejection. Minimum viable: structured town and country, with up to two 70-character address lines (hybrid). Pain001 emits both forms.
 - **Charge bearer.** `SHAR` is the SEPA norm; cross-border flows may need `DEBT` or `CRED`. Pain001's `xborder-ct` scheme rulebook checks consistency (and its MT101 loader maps legacy `OUR`/`BEN`/`SHA` automatically).
 - **Purpose codes and remittance data.** Increasingly mandated downstream (the Bank of England extends mandatory purpose codes to all CHAPS payments from November 2027) and the raw material for the CPMI's harmonised cross-border data requirements.
 - **Character set.** The ISO 20022 Latin subset only; Pain001 transliterates before rendering so a `ß` or `ø` in a beneficiary name never becomes a NAK.

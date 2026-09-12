@@ -90,7 +90,7 @@ last_reviewed: "2026-07-26"
 
 ## The 2026 deadlines are data deadlines
 
-The ISO 20022 cutover is done: MT–MX coexistence on SWIFT ended on 22 November 2025, and roughly 97% of cross-border payment instructions now travel as ISO 20022. What remains is data quality, and the clock runs to **14 November 2026** — the day fully unstructured postal addresses stop being accepted in CBPR+ payments, and the interbank MT101 relay is replaced by `pain.001` version 9.
+The ISO 20022 cutover is done: MT–MX coexistence on SWIFT ended on 22 November 2025, and roughly 97% of cross-border payment instructions now travel as ISO 20022. What remains is data quality, and the clock runs to **November 2026** (Swift Standards Release 2026; [Swift ISO 20022 programme](https://www.swift.com/standards/iso-20022)) — the day fully unstructured postal addresses stop being accepted in CBPR+ payments, and the interbank MT101 relay is replaced by `pain.001` version 9.
 
 Pain001 ships both requirements today: structured and hybrid address elements in generated XML, and one-command MT101 conversion. The [2026 migration briefing](/2026-iso20022-migration-trends/) maps this year's deadlines with primary sources, and the [living ISO 20022 roadmap](/iso20022-roadmap/) carries the schedule through 2028 — purpose codes, camt investigations, statement migration. The deadline is a milestone, not the finish line.
 

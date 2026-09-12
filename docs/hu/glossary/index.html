@@ -64,7 +64,7 @@
       <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Navigáció be/ki" />
       <div class="wrap ap-nav-wrap">
         <a class="ap-brand" href="/" aria-label="Pain001 home">
-          <img src="/img/pain001.svg" alt="" width="26" height="26" />
+          <img src="/img/pain001.svg" alt="Pain001" width="26" height="26" />
           <span>Pain001</span>
         </a>
         <nav aria-label="Primary navigation" id="ap-primary-nav">
@@ -198,7 +198,7 @@
 <p><strong>pain.008 — Customer Direct Debit Initiation.</strong> A <code>pain.001</code> beszedési oldali párja: felhatalmazás alapján Önt megillető összegeket hív le, ahelyett hogy pénzt küldene ki.</p>
 <p><strong>pacs.008 / pacs.009.</strong> Azok a bankközi elszámolási üzenetek, amelyekké a megbízása alakul, miután a bank befogadta. Vállalatok soha nem állítják elő ezeket; a bankok váltják őket egymás között.</p>
 <p><strong>camt.052 / camt.053 / camt.054.</strong> Számlariportálás: napközbeni jelentés, napvégi kivonat, illetve terhelési/jóváírási értesítés. A <code>camt.053</code> az, amelyet az egyeztető csapatok minden reggel feldolgoznak.</p>
-<p><strong>MT101.</strong> A régi SWIFT „Request for Transfer” szöveges üzenet, amelyet a <code>pain.001</code> vált fel. A bankközi MT101 továbbítást 2026. november 14-én kivezetik a <code>pain.001.001.09</code> javára; a vállalat–bank irányú MT101 csak az egyes bankok saját döntése alapján marad fenn.</p>
+<p><strong>MT101.</strong> A régi SWIFT „Request for Transfer” szöveges üzenet, amelyet a <code>pain.001</code> vált fel. A bankközi MT101 továbbítást 2026. november (SR 2026; <a href="https://www.swift.com/standards/iso-20022">Swift ISO 20022 programme</a>)-én kivezetik a <code>pain.001.001.09</code> javára; a vállalat–bank irányú MT101 csak az egyes bankok saját döntése alapján marad fenn.</p>
 <h2 id="schemes-and-rulebooks">Sémák és szabálykönyvek<a class="heading-anchor" href="#schemes-and-rulebooks" aria-label="Hivatkozás a szakaszra: Sémák és szabálykönyvek">#</a></h2>
 <p><strong>SEPA SCT / SCT Inst.</strong> Az euró alapú átutalási sémák (normál és azonnali), amelyeket az Európai Fizetési Tanács szabálykönyvei szabályoznak. Az azonnali átutalások másodpercek alatt, a nap 24 órájában teljesülnek.</p>
 <p><strong>SEPA SDD Core / B2B.</strong> Az euró alapú beszedési sémák — a Core a fogyasztóknak (visszatérítési joggal), a B2B a vállalkozásoknak (visszatérítési jog nélkül, szigorúbb felhatalmazás-ellenőrzéssel).</p>
@@ -211,7 +211,7 @@
 <p><strong>BIC / BICFI.</strong> Egy pénzügyi intézmény ISO 9362 szerinti üzleti azonosító kódja. Az XML elem a <code>pain.001.001.03</code> üzenetben <code>&lt;BIC&gt;</code>, a 9-es verziótól viszont <code>&lt;BICFI&gt;</code> — ez az átnevezés a verzióváltásoknál valós elutasításokat okoz.</p>
 <p><strong>LEI.</strong> Legal Entity Identifier (ISO 17442) — a 20 karakteres, globális vállalati azonosító. Több mint 3 millió aktív azonosító létezik, és a szabályozók egyre gyakrabban írják elő a fizetésekben.</p>
 <p><strong>UETR.</strong> Unique End-to-end Transaction Reference — az az UUID, amellyel egy fizetés végigkövethető a levelezőbanki láncon (SWIFT gpi).</p>
-<p><strong>Strukturált / hibrid cím.</strong> Postai címek különálló XML elemekként (utca, település, irányítószám, ország) a szabad szöveges sorok helyett. 2026. november 14-étől a CBPR+ elutasítja a teljesen strukturálatlan címeket; a <em>hibrid</em> forma — strukturált település és ország, valamint legfeljebb két, 70 karakteres címsor — érvényes marad.</p>
+<p><strong>Strukturált / hibrid cím.</strong> Postai címek különálló XML elemekként (utca, település, irányítószám, ország) a szabad szöveges sorok helyett. 2026. november (SR 2026)-étől a CBPR+ elutasítja a teljesen strukturálatlan címeket; a <em>hibrid</em> forma — strukturált település és ország, valamint legfeljebb két, 70 karakteres címsor — érvényes marad.</p>
 <p><strong>NbOfTxs / CtrlSum.</strong> A csoportfejléc ellenőrző összegei: a tranzakciók száma és az összegek összesítése. A bankok újraszámolják őket; ha az Önéi eltérnek, a fájl visszapattan. A Pain001 ezeket mindig a validált rekordokból vezeti le.</p>
 <p><strong>Költségviselő.</strong> Ki fizeti a díjakat: <code>DEBT</code> (a küldő), <code>CRED</code> (a fogadó), <code>SHAR</code> (megosztott), <code>SLEV</code> (a séma szabályai szerint). A régi MT <code>OUR</code>/<code>BEN</code>/<code>SHA</code> kódok az első háromnak felelnek meg.</p>
 <p><strong>Közlemény.</strong> A „mire vonatkozik ez a fizetés” mező — szabad szöveg (140 karakter) vagy strukturált hivatkozások. Az egyeztető csapatok legnagyobb vágya, hogy ezt mindenki rendesen kitöltse.</p>

@@ -64,7 +64,7 @@
       <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Comută navigarea" />
       <div class="wrap ap-nav-wrap">
         <a class="ap-brand" href="/" aria-label="Pain001 home">
-          <img src="/img/pain001.svg" alt="" width="26" height="26" />
+          <img src="/img/pain001.svg" alt="Pain001" width="26" height="26" />
           <span>Pain001</span>
         </a>
         <nav aria-label="Primary navigation" id="ap-primary-nav">
@@ -198,7 +198,7 @@
 <p><strong>pain.008 — Customer Direct Debit Initiation.</strong> Geamănul de încasare al lui <code>pain.001</code>: trageți fonduri care vi se cuvin în baza unui mandat, în loc să trimiteți fonduri în afară.</p>
 <p><strong>pacs.008 / pacs.009.</strong> Mesajele de decontare interbancară în care se transformă instrucțiunea dumneavoastră după ce banca o acceptă. Companiile nu le redactează niciodată; băncile le schimbă între ele.</p>
 <p><strong>camt.052 / camt.053 / camt.054.</strong> Raportare de cont: raport intrazilnic, extras de sfârșit de zi și, respectiv, notificare de debit/credit. <code>camt.053</code> este cel pe care echipele de reconciliere îl folosesc în fiecare dimineață.</p>
-<p><strong>MT101.</strong> Vechiul mesaj text SWIFT „Request for Transfer”, pe care <code>pain.001</code> îl înlocuiește. Releul interbancar MT101 este scos din uz la 14 noiembrie 2026, în favoarea <code>pain.001.001.09</code>; MT101 de la companie către bancă se menține doar la discreția fiecărei bănci.</p>
+<p><strong>MT101.</strong> Vechiul mesaj text SWIFT „Request for Transfer”, pe care <code>pain.001</code> îl înlocuiește. Releul interbancar MT101 este scos din uz la noiembrie 2026 (SR 2026; <a href="https://www.swift.com/standards/iso-20022">Swift ISO 20022 programme</a>), în favoarea <code>pain.001.001.09</code>; MT101 de la companie către bancă se menține doar la discreția fiecărei bănci.</p>
 <h2 id="schemes-and-rulebooks">Scheme și regulamente<a class="heading-anchor" href="#schemes-and-rulebooks" aria-label="Link către secțiunea: Scheme și regulamente">#</a></h2>
 <p><strong>SEPA SCT / SCT Inst.</strong> Schemele de transfer credit în euro (standard și instant), guvernate de regulamentele Consiliului European al Plăților. Transferurile instant se decontează în câteva secunde, non-stop.</p>
 <p><strong>SEPA SDD Core / B2B.</strong> Schemele de debitare directă în euro — Core pentru consumatori (cu drept de rambursare), B2B pentru companii (fără drept de rambursare, cu verificări mai stricte ale mandatului).</p>
@@ -211,7 +211,7 @@
 <p><strong>BIC / BICFI.</strong> Codul de identificare a entității (Business Identifier Code, ISO 9362) al unei instituții financiare. Elementul XML este <code>&lt;BIC&gt;</code> în <code>pain.001.001.03</code>, dar <code>&lt;BICFI&gt;</code> începând cu versiunea 9 — o redenumire care provoacă respingeri reale la trecerea între versiuni.</p>
 <p><strong>LEI.</strong> Legal Entity Identifier (ISO 17442) — identificatorul global de companie, format din 20 de caractere. Peste 3 milioane sunt active, iar autoritățile de reglementare le impun tot mai des în plăți.</p>
 <p><strong>UETR.</strong> Unique End-to-end Transaction Reference — identificatorul UUID care permite urmărirea unei plăți de-a lungul lanțului de bănci corespondente (SWIFT gpi).</p>
-<p><strong>Adresă structurată / hibridă.</strong> Adrese poștale sub formă de elemente XML distincte (stradă, localitate, cod poștal, țară), spre deosebire de liniile de text liber. De la 14 noiembrie 2026, CBPR+ respinge adresele complet nestructurate; forma <em>hibridă</em> — localitate și țară structurate, plus cel mult două linii de adresă de 70 de caractere — rămâne validă.</p>
+<p><strong>Adresă structurată / hibridă.</strong> Adrese poștale sub formă de elemente XML distincte (stradă, localitate, cod poștal, țară), spre deosebire de liniile de text liber. De la noiembrie 2026 (SR 2026), CBPR+ respinge adresele complet nestructurate; forma <em>hibridă</em> — localitate și țară structurate, plus cel mult două linii de adresă de 70 de caractere — rămâne validă.</p>
 <p><strong>NbOfTxs / CtrlSum.</strong> Totalurile de control din antetul de grup: numărul de tranzacții și suma totală. Băncile le recalculează; dacă ale dumneavoastră nu corespund, fișierul este respins. Pain001 le derivă întotdeauna din înregistrările validate.</p>
 <p><strong>Suportarea comisioanelor.</strong> Cine plătește comisioanele: <code>DEBT</code> (expeditorul), <code>CRED</code> (beneficiarul), <code>SHAR</code> (împărțit), <code>SLEV</code> (conform regulilor schemei). Vechile coduri MT <code>OUR</code>/<code>BEN</code>/<code>SHA</code> corespund primelor trei.</p>
 <p><strong>Informații de remitere.</strong> Câmpul care arată „pentru ce este această plată” — text liber (140 de caractere) sau referințe structurate. Exact ce și-ar dori echipele de reconciliere să fie completat corect de toată lumea.</p>
