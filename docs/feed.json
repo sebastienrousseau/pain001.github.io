@@ -974,6 +974,29 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
+      "content_html": "The core stays free and permissively licensed. For teams that need a throat to choke: a supported release channel with an LTS line, private derivation of your bank's usage guideline into a validated profile, and integration recipes for your ERP or TMS. No prices on this page; one form.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/enterprise/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "Pain001 for regulated teams: supported channel, private profiles, integration help",
+      "url": "https://pain001.com/enterprise/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
       "content_html": "Generated pain.001 and pain.008 files that between them use every element path and choice branch of each supported schema edition, each named after what it adds, with a zip per edition.",
       "date_modified": "2026-09-12T08:00:00+00:00",
       "date_published": "2026-09-12T08:00:00+00:00",
@@ -1128,29 +1151,6 @@
       ],
       "title": "Architecture, Security and the Patent Landscape",
       "url": "https://pain001.com/architecture-and-patents/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "ওপেন-সোর্স Python স্যুট যা CSV, Excel, SQLite, JSON, Parquet বা SWIFT MT101 থেকে XSD-যাচাইকৃত pain.001 ও pain.008 ফাইল তৈরি করে — AI এজেন্টের জন্য MCP টুল ও LSP সার্ভারসহ।",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/bn/",
-      "language": "bn",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Pain001 — ওপেন-সোর্স ISO 20022 পেমেন্ট সূচনা",
-      "url": "https://pain001.com/bn/"
     }
   ],
   "language": "en-GB",

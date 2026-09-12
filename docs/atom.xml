@@ -384,6 +384,15 @@
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
+    <title>Pain001 for regulated teams: supported channel, private profiles, integration help</title>
+    <link href="https://pain001.com/enterprise/"/>
+    <id>https://pain001.com/enterprise/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>The core stays free and permissively licensed. For teams that need a throat to choke: a supported release channel with an LTS line, private derivation of your bank&apos;s usage guideline into a validated profile, and integration recipes for your ERP or TMS. No prices on this page; one form.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
     <title>ISO 20022 schema coverage files — every element of every edition</title>
     <link href="https://pain001.com/example-corpus-coverage/"/>
     <id>https://pain001.com/example-corpus-coverage/</id>
@@ -444,15 +453,6 @@
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
     <summary>Zero-trust XML parsing, decimal-exact arithmetic, validation as a hard gate, 100% branch coverage — and where Pain001 sits amid patented MT–MX transformation services.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Pain001 — ওপেন-সোর্স ISO 20022 পেমেন্ট সূচনা</title>
-    <link href="https://pain001.com/bn/"/>
-    <id>https://pain001.com/bn/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>ওপেন-সোর্স Python স্যুট যা CSV, Excel, SQLite, JSON, Parquet বা SWIFT MT101 থেকে XSD-যাচাইকৃত pain.001 ও pain.008 ফাইল তৈরি করে — AI এজেন্টের জন্য MCP টুল ও LSP সার্ভারসহ।</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
 </feed>

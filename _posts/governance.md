@@ -105,7 +105,7 @@ Feature and design decisions are made by the maintainer, in public, with rationa
 
 ## Funding and conflicts of interest
 
-Development is currently **self-funded**. There is no sponsor, no investor, no commercial edition, and no revenue relationship with any bank, vendor, or standards body mentioned on this site. The [comparison page](/competitors-comparison/) names commercial competitors' genuine advantages precisely because no commercial interest prevents it. If sponsorship or paid support offerings are introduced, they will be disclosed on this page before launch.
+Development is **self-funded**. The core has no commercial edition and no revenue relationship with any bank, vendor, or standards body mentioned on this site; the [comparison page](/competitors-comparison/) names commercial competitors' genuine advantages precisely because no commercial interest prevents it. What is offered, and disclosed here, is work *around* the free software: a supported release channel, private derivation of a bank's usage guideline into a validated profile, and integration help, described on the [enterprise page](/enterprise/). Any such engagement is disclosed on that page; none changes the licences, holds a feature back, or brings bank material into the public project.
 
 ## Traction, stated plainly
 

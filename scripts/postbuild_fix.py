@@ -1174,6 +1174,7 @@ def write_llms(site: Path) -> None:
         "- Message element references: https://pain001.com/message-specs/",
         "- MCP server: https://pain001.com/pain001-mcp/ ; LSP server: https://pain001.com/pain001-lsp/",
         "- Trust centre, privacy, governance: https://pain001.com/trust/ https://pain001.com/privacy/ https://pain001.com/governance/",
+        "- Supported channel, private profile derivation, integration help (the software stays free): https://pain001.com/enterprise/",
         "",
         "## Rules of use",
         "",
@@ -1231,6 +1232,10 @@ def main() -> None:
     gen_journey_locales(site)
     inject_dataset_ld(site)
     write_llms(site)
+    sec = site / "security.txt"
+    if sec.exists():
+        (site / ".well-known").mkdir(exist_ok=True)
+        (site / ".well-known" / "security.txt").write_bytes(sec.read_bytes())
     regen_sitemap(site)
     gen_legacy_redirects(site)  # after sitemap so stubs stay unindexed
 

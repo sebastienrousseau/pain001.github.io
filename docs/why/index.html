@@ -198,6 +198,7 @@
 <p>Three things. It turns the data you already have — spreadsheets, ERP exports, legacy SWIFT files — into bank-ready ISO 20022 payment files. It proves each file clean before submission: validation against the bank's official rulebook (ISO 20022 XSD), the account-number checksum your bank runs (ISO 13616 mod-97), and control totals recalculated from the records, never trusted. And it does all of this on your own infrastructure — nothing is uploaded anywhere.</p>
 <h2 id="what-does-it-cost">What does it cost?<a class="heading-anchor" href="#what-does-it-cost" aria-label="Link to section: What does it cost?">#</a></h2>
 <p>Nothing, at any scale, permanently. The core is dual-licensed (Apache-2.0 or MIT); companion packages are Apache-2.0. The nearest commercial reference point — SWIFT's translation SDK — is publicly listed at €10,000–30,000 per year before integration effort. The full landscape, including where commercial platforms genuinely win, is in the <a href="/competitors-comparison/">comparison</a>.</p>
+<p>Optional and separate: a supported release channel, private profile derivation for your bank's guideline, and integration help, for teams that need a named party with obligations. See the <a href="/enterprise/">enterprise page</a>; the software itself stays free.</p>
 <h2 id="is-it-safe">Is it safe?<a class="heading-anchor" href="#is-it-safe" aria-label="Link to section: Is it safe?">#</a></h2>
 <p>Check rather than trust: payment data <a href="/privacy/">never leaves your machines</a>, the dependency inventory is a published <a href="/sbom.cdx.json">SBOM</a>, the code holds <a href="/architecture-and-patents/">100% branch coverage as a CI gate</a>, and the <a href="/try/">browser demo</a> invites your security team to falsify the claims with DevTools open.</p>
 <h2 id="what-is-the-next-step">What is the next step?<a class="heading-anchor" href="#what-is-the-next-step" aria-label="Link to section: What is the next step?">#</a></h2>
@@ -248,6 +249,7 @@
               <li><a href="/competitors-comparison/">Comparison vs commercial tools</a></li>
               <li><a href="/architecture-and-patents/">Architecture &amp; patents</a></li>
               <li><a href="/trust/">Trust Centre</a></li>
+              <li><a href="/enterprise/">Enterprise</a></li>
               <li><a href="/compatibility/">Compatibility matrix</a></li>
               <li><a href="/security.txt">security.txt</a></li>
               <li><a href="/sbom.cdx.json">SBOM</a> · <a href="/llms.txt">llms.txt</a> · <a href="/rss.xml">RSS feed</a></li>
