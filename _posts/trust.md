@@ -29,7 +29,6 @@ logo_height: 36
 logo_width: 36
 logo: "https://pain001.com/img/pain001.svg"
 menu: active
-measurementID: G-167B274ZWJ
 name: Pain001
 permalink: "https://pain001.com/trust/"
 rating: general
@@ -109,7 +108,7 @@ This page exists so that a security, vendor-risk, or audit reviewer can answer s
 ## 03. Data and privacy
 
 - **Product data flows** — every component (CLI, library, REST service, MCP server, LSP server) executes on your infrastructure. There is no telemetry, no SaaS callback, no network dependency for generation or validation. [Privacy position](/privacy/).
-- **Website** — no cookies, no analytics scripts, and no third-party requests of any kind: every asset is served from this origin. The [browser demo](/try/) reads files locally via the FileReader API; the "Verify it yourself" panel on that page shows how to falsify this with DevTools open.
+- **Website** — no cookies, no third-party analytics, and no requests to third parties: every asset is served from this origin, and the only beacon goes to the project's own `metrics.pain001.com` (cookieless, five named events, off under Do-Not-Track and Global Privacy Control; see the [privacy page](/privacy/)). The [browser demo](/try/) reads files locally via the FileReader API; the "Verify it yourself" panel on that page shows how to falsify this with DevTools open.
 - **Demo boundary** — the demo's WASM validation engine is served from this origin and cached by a service worker; after first load the demo works offline, which is the strongest proof no data leaves the machine.
 
 ## 04. Accessibility

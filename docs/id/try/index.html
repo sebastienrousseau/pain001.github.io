@@ -19,7 +19,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Coba Pain001 di Browser Anda">
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self'; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self' https://metrics.pain001.com; font-src 'self'; form-action 'self' https://formspree.io" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
@@ -235,7 +235,7 @@
               <textarea id="csv-input" spellcheck="false" aria-describedby="dialect-note demo-fineprint"></textarea>
               <p class="dialect-note" id="dialect-note"></p>
               <div class="demo-actions">
-                <button type="button" id="run-btn" class="pill pill-primary">Validasi &amp; hasilkan&nbsp;&rsaquo;</button>
+                <button type="button" id="run-btn" class="pill pill-primary" data-track="try_run">Validasi &amp; hasilkan&nbsp;&rsaquo;</button>
                 <button type="button" id="fix-btn" class="pill pill-ghost" hidden>Perbaiki</button>
               </div>
             </div>
@@ -286,7 +286,7 @@
             <div class="xml-out" id="xml-out" tabindex="0" aria-label="Keluaran XML yang dihasilkan"><span class="xml-placeholder">Dokumen pain.001.001.09 yang tervalidasi akan muncul di sini — tambahkan data di langkah 1.</span></div>
             <div class="demo-actions">
               <button type="button" id="copy-btn" class="pill pill-ghost" disabled title="Add valid data in step 1 first">Salin XML</button>
-              <button type="button" id="download-btn" class="pill pill-ghost" disabled title="Add valid data in step 1 first">Unduh .xml</button>
+              <button type="button" id="download-btn" class="pill pill-ghost" data-track="try_download_xml" disabled title="Add valid data in step 1 first">Unduh .xml</button>
               <button type="button" id="report-btn" class="pill pill-ghost" hidden>Unduh laporan kesalahan (.csv)</button>
             </div>
           </section>
@@ -362,6 +362,7 @@ pain001 -t pain.001.001.09 -d payments.csv -o out/ --scheme sepa-sct --dry-run</
 
     <script type="module" src="/js/try-page.js"></script>
     <script src="/_csp/e38b5491bba0b876.js" integrity="sha384-BlLPha0BXYJmWraYH1Vh4HLn2tIWX6yT5oEcrtzxCs9Q/Z5nn517KuWsjByvrN0v" crossorigin="anonymous"></script>
+    <script type="module" src="/js/metrics.js" data-website-id="00000000-0000-0000-0000-000000000000" data-host-url="https://metrics.pain001.com"></script>
   
 <!-- SSG Search Widget -->
 <div id="ssg-search-widget">

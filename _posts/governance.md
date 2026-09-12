@@ -29,7 +29,6 @@ logo_height: 36
 logo_width: 36
 logo: "https://pain001.com/img/pain001.svg"
 menu: active
-measurementID: G-167B274ZWJ
 name: Pain001
 permalink: "https://pain001.com/governance/"
 rating: general
@@ -107,6 +106,21 @@ Feature and design decisions are made by the maintainer, in public, with rationa
 ## Funding and conflicts of interest
 
 Development is currently **self-funded**. There is no sponsor, no investor, no commercial edition, and no revenue relationship with any bank, vendor, or standards body mentioned on this site. The [comparison page](/competitors-comparison/) names commercial competitors' genuine advantages precisely because no commercial interest prevents it. If sponsorship or paid support offerings are introduced, they will be disclosed on this page before launch.
+
+## Traction, stated plainly
+
+<!-- traction:start -->
+Figures refreshed at each site build from public sources (PyPI download statistics and the GitHub API); the date is the build date.
+
+| Measure | Value | Source |
+| :--- | ---: | :--- |
+| pain001 downloads, last 30 days | 3,499 | PyPI |
+| pain001 downloads, last 7 days | 381 | PyPI |
+| GitHub stars | 49 | GitHub |
+| GitHub forks | 15 | GitHub |
+
+Refreshed 2026-09-12. Demo runs and corpus downloads will appear here once the site's [first-party measurement](/privacy/) is live.
+<!-- traction:end -->
 
 ## Trademark
 

@@ -53,7 +53,7 @@ CSP_META = (
     "object-src 'none'; img-src 'self' data:; "
     "style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; "
     "script-src 'self'  'wasm-unsafe-eval'; "
-    "connect-src 'self'; font-src 'self'; "
+    "connect-src 'self' https://metrics.pain001.com; font-src 'self'; "
     "form-action 'self' https://formspree.io\" "
     "http-equiv=Content-Security-Policy>"
 )

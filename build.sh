@@ -21,6 +21,7 @@ AUDIT=0
 
 rm -rf output Pain001
 
+python3 scripts/traction.py
 ssg build -f ssg.toml
 
 # GitHub Pages custom-domain file must contain exactly the apex domain.
