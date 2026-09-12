@@ -8,6 +8,7 @@
   "Detected: {delim}-delimited": "الفاصل المكتشف: {delim}",
   "European comma-decimal amount": "مبلغ بفاصلة عشرية أوروبية",
   "Flipped IBAN digit (mod-97 checksum)": "رقم IBAN مقلوب (تدقيق mod-97)",
+  "From the example corpus ({n} scenarios)": "From the example corpus ({n} scenarios)",
   "Generate XML in step 2 first": "أنشئ XML في الخطوة 2 أولاً",
   "Generate XML in step 2 first — the XSD gate runs on that output.": "Generate XML in step 2 first — the XSD gate runs on that output.",
   "Impossible calendar date": "تاريخ تقويمي مستحيل",

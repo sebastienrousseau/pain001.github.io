@@ -53,8 +53,11 @@
     "Rule": "Règle",
     "Value": "Valeur",
     "Problem": "Problème",
+    "XML": "XML",
+    "JSON twin": "JSON twin",
     "Copy XML": "Copier le XML",
     "Download .xml": "Télécharger le .xml",
+    "Download JSON twin": "Download JSON twin",
     "Download error report (.csv)": "Télécharger le rapport d’erreurs (.csv)",
     "Prove it against the official ISO 20022 XSD": "Validez-le avec le XSD officiel ISO 20022",
     "Steps 1–2 already ran the pain001 library itself: its record validation, the scheme\n              rulebook you chose, XML generation, and the official <code class=\"tt-mono\">pain.001.001.09</code>\n              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served\n              from this site. This button re-runs the schema gate on the XML shown above, so you can\n              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the\n              first time you validate, and stays cached.": "Steps 1–2 already ran the pain001 library itself: its record validation, the scheme\n              rulebook you chose, XML generation, and the official <code class=\"tt-mono\">pain.001.001.09</code>\n              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served\n              from this site. This button re-runs the schema gate on the XML shown above, so you can\n              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the\n              first time you validate, and stays cached.",
@@ -71,7 +74,8 @@
   "aria": {
     "Drag a CSV file here, or press Enter to browse your files": "Glissez un fichier CSV ici, ou appuyez sur Entrée pour parcourir vos fichiers",
     "Choose a CSV file of payment records": "Choisir un fichier CSV d’enregistrements de paiement",
-    "Generated XML output": "Sortie XML générée"
+    "Output format": "Output format",
+    "Generated output": "Generated output"
   },
   "chrome": {
     "Who it&rsquo;s for": "Pour qui&nbsp;?",

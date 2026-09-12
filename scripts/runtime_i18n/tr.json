@@ -8,6 +8,7 @@
   "Detected: {delim}-delimited": "Algılanan ayırıcı: {delim}",
   "European comma-decimal amount": "Avrupa tarzı virgüllü ondalık tutar",
   "Flipped IBAN digit (mod-97 checksum)": "Hatalı girilmiş IBAN basamağı (mod-97 sağlama toplamı)",
+  "From the example corpus ({n} scenarios)": "From the example corpus ({n} scenarios)",
   "Generate XML in step 2 first": "Önce 2. adımda XML oluşturun",
   "Generate XML in step 2 first — the XSD gate runs on that output.": "Generate XML in step 2 first — the XSD gate runs on that output.",
   "Impossible calendar date": "İmkânsız takvim tarihi",

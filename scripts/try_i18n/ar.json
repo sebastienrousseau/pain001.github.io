@@ -53,8 +53,11 @@
     "Rule": "القاعدة",
     "Value": "القيمة",
     "Problem": "المشكلة",
+    "XML": "XML",
+    "JSON twin": "JSON twin",
     "Copy XML": "انسخ XML",
     "Download .xml": "نزّل .xml",
+    "Download JSON twin": "Download JSON twin",
     "Download error report (.csv)": "نزّل تقرير الأخطاء (.csv)",
     "Prove it against the official ISO 20022 XSD": "أثبته وفق XSD الرسمي لمعيار ISO 20022",
     "Steps 1–2 already ran the pain001 library itself: its record validation, the scheme\n              rulebook you chose, XML generation, and the official <code class=\"tt-mono\">pain.001.001.09</code>\n              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served\n              from this site. This button re-runs the schema gate on the XML shown above, so you can\n              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the\n              first time you validate, and stays cached.": "Steps 1–2 already ran the pain001 library itself: its record validation, the scheme\n              rulebook you chose, XML generation, and the official <code class=\"tt-mono\">pain.001.001.09</code>\n              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served\n              from this site. This button re-runs the schema gate on the XML shown above, so you can\n              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the\n              first time you validate, and stays cached.",
@@ -71,7 +74,8 @@
   "aria": {
     "Drag a CSV file here, or press Enter to browse your files": "اسحب ملف CSV إلى هنا، أو اضغط Enter لاستعراض ملفاتك",
     "Choose a CSV file of payment records": "اختر ملف CSV يحتوي سجلات المدفوعات",
-    "Generated XML output": "مُخرَج XML المُنشأ"
+    "Output format": "Output format",
+    "Generated output": "Generated output"
   },
   "chrome": {
     "Who it&rsquo;s for": "لمن هذه الأداة",

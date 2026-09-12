@@ -8,6 +8,7 @@
   "Detected: {delim}-delimited": "Đã phát hiện: phân tách bằng {delim}",
   "European comma-decimal amount": "Số tiền thập phân dùng dấu phẩy kiểu châu Âu",
   "Flipped IBAN digit (mod-97 checksum)": "Chữ số IBAN bị đảo (tổng kiểm tra mod-97)",
+  "From the example corpus ({n} scenarios)": "From the example corpus ({n} scenarios)",
   "Generate XML in step 2 first": "Vui lòng tạo XML ở bước 2 trước",
   "Generate XML in step 2 first — the XSD gate runs on that output.": "Generate XML in step 2 first — the XSD gate runs on that output.",
   "Impossible calendar date": "Ngày lịch không tồn tại",

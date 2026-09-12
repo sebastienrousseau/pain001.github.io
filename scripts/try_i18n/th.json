@@ -53,8 +53,11 @@
     "Rule": "กฎ",
     "Value": "ค่า",
     "Problem": "ปัญหา",
+    "XML": "XML",
+    "JSON twin": "JSON twin",
     "Copy XML": "คัดลอก XML",
     "Download .xml": "ดาวน์โหลด .xml",
+    "Download JSON twin": "Download JSON twin",
     "Download error report (.csv)": "ดาวน์โหลดรายงานข้อผิดพลาด (.csv)",
     "Prove it against the official ISO 20022 XSD": "พิสูจน์กับ XSD ทางการของ ISO 20022",
     "Steps 1–2 already ran the pain001 library itself: its record validation, the scheme\n              rulebook you chose, XML generation, and the official <code class=\"tt-mono\">pain.001.001.09</code>\n              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served\n              from this site. This button re-runs the schema gate on the XML shown above, so you can\n              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the\n              first time you validate, and stays cached.": "Steps 1–2 already ran the pain001 library itself: its record validation, the scheme\n              rulebook you chose, XML generation, and the official <code class=\"tt-mono\">pain.001.001.09</code>\n              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served\n              from this site. This button re-runs the schema gate on the XML shown above, so you can\n              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the\n              first time you validate, and stays cached.",
@@ -71,7 +74,8 @@
   "aria": {
     "Drag a CSV file here, or press Enter to browse your files": "ลากไฟล์ CSV มาวางที่นี่ หรือกด Enter เพื่อเรียกดูไฟล์ของคุณ",
     "Choose a CSV file of payment records": "เลือกไฟล์ CSV ของระเบียนการชำระเงิน",
-    "Generated XML output": "เอาต์พุต XML ที่สร้างขึ้น"
+    "Output format": "Output format",
+    "Generated output": "Generated output"
   },
   "chrome": {
     "Who it&rsquo;s for": "เหมาะสำหรับใคร",

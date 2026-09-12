@@ -8,6 +8,7 @@
   "Detected: {delim}-delimited": "Rilevato: delimitato da {delim}",
   "European comma-decimal amount": "Importo europeo con virgola decimale",
   "Flipped IBAN digit (mod-97 checksum)": "Cifra IBAN invertita (checksum mod-97)",
+  "From the example corpus ({n} scenarios)": "From the example corpus ({n} scenarios)",
   "Generate XML in step 2 first": "Generi prima l'XML nel passaggio 2",
   "Generate XML in step 2 first — the XSD gate runs on that output.": "Generate XML in step 2 first — the XSD gate runs on that output.",
   "Impossible calendar date": "Data di calendario impossibile",

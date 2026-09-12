@@ -53,8 +53,11 @@
     "Rule": "Regola",
     "Value": "Valore",
     "Problem": "Problema",
+    "XML": "XML",
+    "JSON twin": "JSON twin",
     "Copy XML": "Copia XML",
     "Download .xml": "Scarica .xml",
+    "Download JSON twin": "Download JSON twin",
     "Download error report (.csv)": "Scarica il report degli errori (.csv)",
     "Prove it against the official ISO 20022 XSD": "Convalida con l’XSD ufficiale ISO 20022",
     "Steps 1–2 already ran the pain001 library itself: its record validation, the scheme\n              rulebook you chose, XML generation, and the official <code class=\"tt-mono\">pain.001.001.09</code>\n              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served\n              from this site. This button re-runs the schema gate on the XML shown above, so you can\n              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the\n              first time you validate, and stays cached.": "Steps 1–2 already ran the pain001 library itself: its record validation, the scheme\n              rulebook you chose, XML generation, and the official <code class=\"tt-mono\">pain.001.001.09</code>\n              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served\n              from this site. This button re-runs the schema gate on the XML shown above, so you can\n              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the\n              first time you validate, and stays cached.",
@@ -71,7 +74,8 @@
   "aria": {
     "Drag a CSV file here, or press Enter to browse your files": "Trascini qui un file CSV o prema Invio per sfogliare i suoi file",
     "Choose a CSV file of payment records": "Scelga un file CSV di record di pagamento",
-    "Generated XML output": "Output XML generato"
+    "Output format": "Output format",
+    "Generated output": "Generated output"
   },
   "chrome": {
     "Who it&rsquo;s for": "A chi si rivolge",

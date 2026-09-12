@@ -8,6 +8,7 @@
   "Detected: {delim}-delimited": "تشخیص داده شد: جداشده با {delim}",
   "European comma-decimal amount": "مبلغ با ممیز ویرگولی اروپایی",
   "Flipped IBAN digit (mod-97 checksum)": "رقم جابه‌جاشدهٔ IBAN (جمع کنترلی mod-97)",
+  "From the example corpus ({n} scenarios)": "From the example corpus ({n} scenarios)",
   "Generate XML in step 2 first": "ابتدا در مرحله 2 خروجی XML تولید کنید",
   "Generate XML in step 2 first — the XSD gate runs on that output.": "Generate XML in step 2 first — the XSD gate runs on that output.",
   "Impossible calendar date": "تاریخ تقویمی ناممکن",

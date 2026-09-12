@@ -8,6 +8,7 @@
   "Detected: {delim}-delimited": "Delimitator detectat: {delim}",
   "European comma-decimal amount": "Sumă cu virgulă zecimală europeană",
   "Flipped IBAN digit (mod-97 checksum)": "Cifră IBAN inversată (sumă de control mod-97)",
+  "From the example corpus ({n} scenarios)": "From the example corpus ({n} scenarios)",
   "Generate XML in step 2 first": "Generați mai întâi XML la pasul 2",
   "Generate XML in step 2 first — the XSD gate runs on that output.": "Generate XML in step 2 first — the XSD gate runs on that output.",
   "Impossible calendar date": "Dată calendaristică imposibilă",

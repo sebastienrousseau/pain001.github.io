@@ -53,8 +53,11 @@
     "Rule": "Κανόνας",
     "Value": "Τιμή",
     "Problem": "Πρόβλημα",
+    "XML": "XML",
+    "JSON twin": "JSON twin",
     "Copy XML": "Αντιγραφή XML",
     "Download .xml": "Λήψη .xml",
+    "Download JSON twin": "Download JSON twin",
     "Download error report (.csv)": "Λήψη αναφοράς σφαλμάτων (.csv)",
     "Prove it against the official ISO 20022 XSD": "Επαληθεύστε το έναντι του επίσημου XSD του ISO 20022",
     "Steps 1–2 already ran the pain001 library itself: its record validation, the scheme\n              rulebook you chose, XML generation, and the official <code class=\"tt-mono\">pain.001.001.09</code>\n              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served\n              from this site. This button re-runs the schema gate on the XML shown above, so you can\n              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the\n              first time you validate, and stays cached.": "Steps 1–2 already ran the pain001 library itself: its record validation, the scheme\n              rulebook you chose, XML generation, and the official <code class=\"tt-mono\">pain.001.001.09</code>\n              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served\n              from this site. This button re-runs the schema gate on the XML shown above, so you can\n              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the\n              first time you validate, and stays cached.",
@@ -71,7 +74,8 @@
   "aria": {
     "Drag a CSV file here, or press Enter to browse your files": "Σύρετε εδώ ένα αρχείο CSV ή πατήστε Enter για αναζήτηση στα αρχεία σας",
     "Choose a CSV file of payment records": "Επιλέξτε ένα αρχείο CSV με εγγραφές πληρωμών",
-    "Generated XML output": "Παραγόμενη έξοδος XML"
+    "Output format": "Output format",
+    "Generated output": "Generated output"
   },
   "chrome": {
     "Who it&rsquo;s for": "Σε ποιους απευθύνεται",

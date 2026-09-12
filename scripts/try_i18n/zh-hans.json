@@ -53,8 +53,11 @@
     "Rule": "规则",
     "Value": "值",
     "Problem": "问题",
+    "XML": "XML",
+    "JSON twin": "JSON twin",
     "Copy XML": "复制 XML",
     "Download .xml": "下载 .xml",
+    "Download JSON twin": "Download JSON twin",
     "Download error report (.csv)": "下载错误报告 (.csv)",
     "Prove it against the official ISO 20022 XSD": "依据官方 ISO 20022 XSD 进行验证",
     "Steps 1–2 already ran the pain001 library itself: its record validation, the scheme\n              rulebook you chose, XML generation, and the official <code class=\"tt-mono\">pain.001.001.09</code>\n              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served\n              from this site. This button re-runs the schema gate on the XML shown above, so you can\n              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the\n              first time you validate, and stays cached.": "Steps 1–2 already ran the pain001 library itself: its record validation, the scheme\n              rulebook you chose, XML generation, and the official <code class=\"tt-mono\">pain.001.001.09</code>\n              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served\n              from this site. This button re-runs the schema gate on the XML shown above, so you can\n              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the\n              first time you validate, and stays cached.",
@@ -71,7 +74,8 @@
   "aria": {
     "Drag a CSV file here, or press Enter to browse your files": "将 CSV 文件拖到此处，或按 Enter 键浏览您的文件",
     "Choose a CSV file of payment records": "选择包含付款记录的 CSV 文件",
-    "Generated XML output": "生成的 XML 输出"
+    "Output format": "Output format",
+    "Generated output": "Generated output"
   },
   "chrome": {
     "Who it&rsquo;s for": "适用对象",

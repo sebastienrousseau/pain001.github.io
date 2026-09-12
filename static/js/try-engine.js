@@ -14,8 +14,8 @@ export const MESSAGE_TYPE = "pain.001.001.09";
 
 /** Package names Pyodide's own lock knows; loaded before the pure wheels. */
 export const PYODIDE_PACKAGES = [
-  "sqlite3", "lxml", "markupsafe", "pyyaml", "rpds-py", "pyrsistent", "attrs", "six",
-  "typing-extensions", "referencing", "jsonschema-specifications", "jsonschema", "click", "jinja2",
+  "markupsafe", "pyyaml", "rpds-py", "pyrsistent", "attrs", "six", "typing-extensions",
+  "referencing", "jsonschema-specifications", "jsonschema", "click", "jinja2",
 ];
 
 /** The Python side. One module, three entry points: warm, run, version. */
@@ -28,6 +28,7 @@ from pain001.validation.schema_validator import SchemaValidator
 from pain001.validation.bic_validator import validate_bic
 from pain001.validation.iban_validator import validate_iban
 from pain001.validation.schemes import validate_scheme
+from pain001.twins import to_iso_json
 from pain001.xml.generate_xml import generate_xml_string, normalize_payment_records
 
 _SCHEMAS = {}
@@ -103,7 +104,11 @@ def _identifiers(rows):
 
 def run(rows_json, message_type, scheme):
     """Validate records, apply a scheme rulebook, generate and XSD-check the file."""
-    rows = json.loads(rows_json)
+    # A blank CSV cell is an absent value, as it is for the CLI's loaders.
+    rows = [
+        {key: value for key, value in row.items() if str(value).strip() != ""}
+        for row in json.loads(rows_json)
+    ]
     findings = []
     if not rows:
         findings.append(_finding("", "", "empty", "", "No records to process", "input"))
@@ -134,6 +139,7 @@ def run(rows_json, message_type, scheme):
                 ))
     xml = ""
     xsd_errors = []
+    twin = None
     if not findings:
         meta = _meta(message_type)
         try:
@@ -142,8 +148,10 @@ def run(rows_json, message_type, scheme):
             findings.append(_finding("", "", "generate", "", exc, "iso"))
         else:
             xsd_errors = json.loads(xsd_errors_text(xml, message_type))
+            if not xsd_errors:
+                twin = to_iso_json(xml, message_type)
     return json.dumps({
-        "findings": findings, "scheme": scheme_result, "xml": xml,
+        "findings": findings, "scheme": scheme_result, "xml": xml, "twin": twin,
         "xsd_errors": xsd_errors, "records": len(rows), "version": pain001.__version__,
     })
 `;

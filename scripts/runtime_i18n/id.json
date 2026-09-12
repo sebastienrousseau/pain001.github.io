@@ -8,6 +8,7 @@
   "Detected: {delim}-delimited": "Terdeteksi: dipisahkan dengan {delim}",
   "European comma-decimal amount": "Jumlah desimal-koma gaya Eropa",
   "Flipped IBAN digit (mod-97 checksum)": "Digit IBAN tertukar (checksum mod-97)",
+  "From the example corpus ({n} scenarios)": "From the example corpus ({n} scenarios)",
   "Generate XML in step 2 first": "Buat XML di langkah 2 terlebih dahulu",
   "Generate XML in step 2 first — the XSD gate runs on that output.": "Generate XML in step 2 first — the XSD gate runs on that output.",
   "Impossible calendar date": "Tanggal kalender mustahil",

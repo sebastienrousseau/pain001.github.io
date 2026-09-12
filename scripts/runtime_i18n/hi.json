@@ -8,6 +8,7 @@
   "Detected: {delim}-delimited": "पहचाना गया: {delim} से सीमांकित",
   "European comma-decimal amount": "यूरोपीय अल्पविराम-दशमलव राशि",
   "Flipped IBAN digit (mod-97 checksum)": "उलटा IBAN अंक (mod-97 चेकसम)",
+  "From the example corpus ({n} scenarios)": "From the example corpus ({n} scenarios)",
   "Generate XML in step 2 first": "पहले चरण 2 में XML बनाएँ",
   "Generate XML in step 2 first — the XSD gate runs on that output.": "Generate XML in step 2 first — the XSD gate runs on that output.",
   "Impossible calendar date": "असंभव कैलेंडर तिथि",

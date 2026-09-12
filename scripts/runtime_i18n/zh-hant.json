@@ -8,6 +8,7 @@
   "Detected: {delim}-delimited": "偵測到：以{delim}分隔",
   "European comma-decimal amount": "歐式逗號小數金額",
   "Flipped IBAN digit (mod-97 checksum)": "IBAN 數字輸錯（mod-97 檢查碼）",
+  "From the example corpus ({n} scenarios)": "From the example corpus ({n} scenarios)",
   "Generate XML in step 2 first": "請先在步驟 2 中產生 XML",
   "Generate XML in step 2 first — the XSD gate runs on that output.": "Generate XML in step 2 first — the XSD gate runs on that output.",
   "Impossible calendar date": "不存在的日曆日期",

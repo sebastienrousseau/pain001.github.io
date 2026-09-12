@@ -53,8 +53,11 @@
     "Rule": "नियम",
     "Value": "मान",
     "Problem": "समस्या",
+    "XML": "XML",
+    "JSON twin": "JSON twin",
     "Copy XML": "XML कॉपी करें",
     "Download .xml": ".xml डाउनलोड करें",
+    "Download JSON twin": "Download JSON twin",
     "Download error report (.csv)": "त्रुटि रिपोर्ट डाउनलोड करें (.csv)",
     "Prove it against the official ISO 20022 XSD": "इसे आधिकारिक ISO 20022 XSD से सिद्ध करें",
     "Steps 1–2 already ran the pain001 library itself: its record validation, the scheme\n              rulebook you chose, XML generation, and the official <code class=\"tt-mono\">pain.001.001.09</code>\n              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served\n              from this site. This button re-runs the schema gate on the XML shown above, so you can\n              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the\n              first time you validate, and stays cached.": "Steps 1–2 already ran the pain001 library itself: its record validation, the scheme\n              rulebook you chose, XML generation, and the official <code class=\"tt-mono\">pain.001.001.09</code>\n              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served\n              from this site. This button re-runs the schema gate on the XML shown above, so you can\n              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the\n              first time you validate, and stays cached.",
@@ -71,7 +74,8 @@
   "aria": {
     "Drag a CSV file here, or press Enter to browse your files": "यहाँ CSV फ़ाइल खींचें, या अपनी फ़ाइलें ब्राउज़ करने के लिए Enter दबाएँ",
     "Choose a CSV file of payment records": "भुगतान रिकॉर्ड की एक CSV फ़ाइल चुनें",
-    "Generated XML output": "जनरेट किया गया XML आउटपुट"
+    "Output format": "Output format",
+    "Generated output": "Generated output"
   },
   "chrome": {
     "Who it&rsquo;s for": "यह किनके लिए है",

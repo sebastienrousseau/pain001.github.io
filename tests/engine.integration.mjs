@@ -66,5 +66,23 @@ const usd = parseCsv(SAMPLES["cross-border"].csv);
 const blocked = runEngine(engine, usd.rows, { scheme: "sepa-sct" });
 check("non-EUR batch fails sepa-sct", blocked.findings.some((f) => f.layer === "scheme") && !blocked.xml, { rules: [...new Set(blocked.findings.map((f) => f.rule))] });
 
+// every corpus sample the demo offers runs clean, with its scenario's scheme
+const corpus = JSON.parse(await readFile(path.join(staticDir, "corpus", "try-samples.json"), "utf8"));
+let corpusClean = 0;
+for (const sample of corpus.samples) {
+  const parsed = parseCsv(sample.csv);
+  let out;
+  try {
+    out = runEngine(engine, parsed.rows, { scheme: sample.scheme || "" });
+  } catch (err) {
+    check(`corpus ${sample.id} clean`, false, { error: String(err.message).split("\n").filter((l) => /Error|error/.test(l)).slice(-2).join(" | ").slice(0, 300) });
+    continue;
+  }
+  const ok = parsed.structural.length === 0 && out.findings.length === 0 && out.xml.length > 0 && out.xsd_errors.length === 0;
+  if (ok) corpusClean += 1;
+  else check(`corpus ${sample.id} clean`, false, { scheme: sample.scheme, findings: out.findings.slice(0, 3).map((f) => `${f.rule}:${f.column}:${f.message.slice(0, 60)}`), xsd: out.xsd_errors.slice(0, 2) });
+}
+check(`corpus samples clean: ${corpusClean}/${corpus.samples.length}`, corpusClean === corpus.samples.length, { pain001: corpus.pain001 });
+
 console.log(JSON.stringify({ failures, total_s: +((Date.now() - t0) / 1000).toFixed(1) }));
 process.exit(failures ? 1 : 0);

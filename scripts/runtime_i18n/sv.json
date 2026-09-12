@@ -8,6 +8,7 @@
   "Detected: {delim}-delimited": "Identifierad avgränsare: {delim}",
   "European comma-decimal amount": "Belopp med europeiskt decimalkomma",
   "Flipped IBAN digit (mod-97 checksum)": "Omkastad IBAN-siffra (mod-97-kontrollsumma)",
+  "From the example corpus ({n} scenarios)": "From the example corpus ({n} scenarios)",
   "Generate XML in step 2 first": "Generera först XML i steg 2",
   "Generate XML in step 2 first — the XSD gate runs on that output.": "Generate XML in step 2 first — the XSD gate runs on that output.",
   "Impossible calendar date": "Omöjligt kalenderdatum",

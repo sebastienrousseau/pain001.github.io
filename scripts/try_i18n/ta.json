@@ -53,8 +53,11 @@
     "Rule": "விதி",
     "Value": "மதிப்பு",
     "Problem": "சிக்கல்",
+    "XML": "XML",
+    "JSON twin": "JSON twin",
     "Copy XML": "XML-ஐ நகலெடுக்கவும்",
     "Download .xml": ".xml பதிவிறக்கவும்",
+    "Download JSON twin": "Download JSON twin",
     "Download error report (.csv)": "பிழை அறிக்கையைப் பதிவிறக்கவும் (.csv)",
     "Prove it against the official ISO 20022 XSD": "அதிகாரப்பூர்வ ISO 20022 XSD-க்கு எதிராக நிரூபிக்கவும்",
     "Steps 1–2 already ran the pain001 library itself: its record validation, the scheme\n              rulebook you chose, XML generation, and the official <code class=\"tt-mono\">pain.001.001.09</code>\n              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served\n              from this site. This button re-runs the schema gate on the XML shown above, so you can\n              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the\n              first time you validate, and stays cached.": "Steps 1–2 already ran the pain001 library itself: its record validation, the scheme\n              rulebook you chose, XML generation, and the official <code class=\"tt-mono\">pain.001.001.09</code>\n              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served\n              from this site. This button re-runs the schema gate on the XML shown above, so you can\n              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the\n              first time you validate, and stays cached.",
@@ -71,7 +74,8 @@
   "aria": {
     "Drag a CSV file here, or press Enter to browse your files": "ஒரு CSV கோப்பை இங்கே இழுத்து விடவும், அல்லது உங்கள் கோப்புகளை உலாவ Enter-ஐ அழுத்தவும்",
     "Choose a CSV file of payment records": "பணம் செலுத்தும் பதிவுகளின் CSV கோப்பைத் தேர்ந்தெடுக்கவும்",
-    "Generated XML output": "உருவாக்கப்பட்ட XML வெளியீடு"
+    "Output format": "Output format",
+    "Generated output": "Generated output"
   },
   "chrome": {
     "Who it&rsquo;s for": "இது யாருக்கானது",

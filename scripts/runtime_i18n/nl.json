@@ -8,6 +8,7 @@
   "Detected: {delim}-delimited": "Gedetecteerd scheidingsteken: {delim}",
   "European comma-decimal amount": "Bedrag met Europese decimale komma",
   "Flipped IBAN digit (mod-97 checksum)": "Verwisseld IBAN-cijfer (mod-97-controlesom)",
+  "From the example corpus ({n} scenarios)": "From the example corpus ({n} scenarios)",
   "Generate XML in step 2 first": "Genereer eerst XML in stap 2",
   "Generate XML in step 2 first — the XSD gate runs on that output.": "Generate XML in step 2 first — the XSD gate runs on that output.",
   "Impossible calendar date": "Onmogelijke kalenderdatum",

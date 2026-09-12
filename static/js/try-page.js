@@ -41,6 +41,8 @@ const state = {
   engine: "idle",        // idle | loading | ready | failed
   findings: [],
   xml: "",
+  twin: null,            // JSON twin of the generated file, once XSD-clean
+  view: "xml",           // xml | twin
   pristine: "",          // sample before a scenario broke it
   scenarioActive: false,
   xsdVerdict: null,      // null | "valid" | "invalid"
@@ -67,7 +69,8 @@ const els = {
   tbody: $("error-tbody"), overflow: $("error-overflow"),
   runProgress: $("run-progress"), runProgressBar: $("run-progress-bar"),
   xmlOut: $("xml-out"), copyBtn: $("copy-btn"),
-  downloadBtn: $("download-btn"), reportBtn: $("report-btn"),
+  downloadBtn: $("download-btn"), downloadJsonBtn: $("download-json-btn"),
+  tabXml: $("tab-xml"), tabTwin: $("tab-twin"), reportBtn: $("report-btn"),
   xsdBtn: $("xsd-btn"), xsdStatus: $("xsd-status"),
   xsdErrors: $("xsd-errors"), xsdHash: $("xsd-hash"),
   xsdProgress: $("xsd-progress"), xsdProgressBar: $("xsd-progress-bar"),
@@ -88,6 +91,20 @@ function render() {
   els.copyBtn.title = hasXml ? "" : t("Add valid data in step 1 first");
   els.downloadBtn.title = hasXml ? "" : t("Add valid data in step 1 first");
   els.reportBtn.hidden = state.findings.length === 0;
+  const hasTwin = hasXml && !!state.twin;
+  if (els.downloadJsonBtn) {
+    els.downloadJsonBtn.disabled = !hasTwin;
+    els.downloadJsonBtn.title = hasTwin ? "" : t("Generate XML in step 2 first");
+  }
+  if (els.tabTwin) {
+    els.tabTwin.disabled = !hasTwin;
+    els.tabTwin.title = hasTwin ? "" : t("Generate XML in step 2 first");
+    const twinView = state.view === "twin" && hasTwin;
+    els.tabTwin.setAttribute("aria-selected", twinView ? "true" : "false");
+    els.tabXml.setAttribute("aria-selected", twinView ? "false" : "true");
+    els.tabTwin.className = "pill " + (twinView ? "pill-primary" : "pill-ghost");
+    els.tabXml.className = "pill " + (twinView ? "pill-ghost" : "pill-primary");
+  }
   els.fixBtn.hidden = !state.scenarioActive;
   els.runBtn.disabled = busy;
   els.xsdBtn.disabled = !hasXml || busy;
@@ -166,10 +183,12 @@ function showFindings(findings) {
   if (rest > 0) els.overflow.textContent = t("…and {n} more — download the full error report below.", { n: rest });
 }
 
-function setXml(xml) {
+function setXml(xml, twin) {
   state.xml = xml;
+  state.twin = twin || null;
   if (xml) {
-    els.xmlOut.textContent = xml;
+    els.xmlOut.textContent = state.view === "twin" && state.twin
+      ? JSON.stringify(state.twin, null, 2) : xml;
   } else {
     els.xmlOut.innerHTML = "";
     const span = document.createElement("span");
@@ -322,7 +341,7 @@ async function runValidation() {
     setXml("");
   } else {
     state.phase = "valid";
-    setXml(out.xml);
+    setXml(out.xml, out.twin);
     showXsd(out.xsd_errors, secs);
     els.status.textContent = t("✓ {n} record(s) valid — pain001 {version} generated the file and the official XSD accepted it ({s}s).",
       { n: out.records, version: out.version, s: secs });
@@ -382,9 +401,37 @@ for (const [key, scenario] of Object.entries(SCENARIOS)) {
   els.scenarioSelect.appendChild(opt);
 }
 
+const CORPUS = new Map();
+
+async function loadCorpusSamples() {
+  try {
+    const data = await fetch("/corpus/try-samples.json").then((r) => (r.ok ? r.json() : null));
+    if (!data || !Array.isArray(data.samples) || !data.samples.length) return;
+    const group = document.createElement("optgroup");
+    group.label = t("From the example corpus ({n} scenarios)", { n: data.samples.length });
+    for (const sample of data.samples) {
+      CORPUS.set("corpus:" + sample.id, sample);
+      const opt = document.createElement("option");
+      opt.value = "corpus:" + sample.id;
+      opt.textContent = `${sample.country.toUpperCase()} · ${sample.id} (${sample.records})`;
+      group.appendChild(opt);
+    }
+    els.sampleSelect.appendChild(group);
+  } catch (_) { /* the built-in samples remain */ }
+}
+void loadCorpusSamples();
+
 els.sampleSelect.addEventListener("change", () => {
   const key = els.sampleSelect.value;
-  if (key) loadData(SAMPLES[key].csv);
+  if (CORPUS.has(key)) {
+    const sample = CORPUS.get(key);
+    if (els.schemeSelect && sample.scheme && [...els.schemeSelect.options].some((o) => o.value === sample.scheme)) {
+      els.schemeSelect.value = sample.scheme;
+    }
+    loadData(sample.csv);
+  } else if (key) {
+    loadData(SAMPLES[key].csv);
+  }
   els.sampleSelect.value = "";
 });
 
@@ -459,6 +506,25 @@ els.downloadBtn.addEventListener("click", () => {
   downloadBlob(state.xml, "application/xml",
     "pain001-demo-" + new Date().toISOString().slice(0, 10) + ".xml");
 });
+
+if (els.downloadJsonBtn) {
+  els.downloadJsonBtn.addEventListener("click", () => {
+    if (!state.twin) return;
+    downloadBlob(JSON.stringify(state.twin, null, 2), "application/json",
+      "pain001-demo-" + new Date().toISOString().slice(0, 10) + ".iso.json");
+  });
+}
+
+/* ==== Output tabs: the file, or its ISO 20022 JSON twin ==== */
+
+for (const [el, view] of [[els.tabXml, "xml"], [els.tabTwin, "twin"]]) {
+  if (!el) continue;
+  el.addEventListener("click", () => {
+    state.view = view;
+    setXml(state.xml, state.twin);
+    render();
+  });
+}
 
 els.reportBtn.addEventListener("click", () => {
   downloadBlob(errorReportCsv(state.findings), "text/csv",

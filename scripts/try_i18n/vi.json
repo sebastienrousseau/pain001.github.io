@@ -53,8 +53,11 @@
     "Rule": "Quy tắc",
     "Value": "Giá trị",
     "Problem": "Vấn đề",
+    "XML": "XML",
+    "JSON twin": "JSON twin",
     "Copy XML": "Sao chép XML",
     "Download .xml": "Tải xuống .xml",
+    "Download JSON twin": "Download JSON twin",
     "Download error report (.csv)": "Tải xuống báo cáo lỗi (.csv)",
     "Prove it against the official ISO 20022 XSD": "Chứng minh với XSD chính thức của ISO 20022",
     "Steps 1–2 already ran the pain001 library itself: its record validation, the scheme\n              rulebook you chose, XML generation, and the official <code class=\"tt-mono\">pain.001.001.09</code>\n              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served\n              from this site. This button re-runs the schema gate on the XML shown above, so you can\n              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the\n              first time you validate, and stays cached.": "Steps 1–2 already ran the pain001 library itself: its record validation, the scheme\n              rulebook you chose, XML generation, and the official <code class=\"tt-mono\">pain.001.001.09</code>\n              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served\n              from this site. This button re-runs the schema gate on the XML shown above, so you can\n              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the\n              first time you validate, and stays cached.",
@@ -71,7 +74,8 @@
   "aria": {
     "Drag a CSV file here, or press Enter to browse your files": "Kéo tệp CSV vào đây, hoặc nhấn Enter để duyệt tệp của bạn",
     "Choose a CSV file of payment records": "Chọn một tệp CSV chứa bản ghi thanh toán",
-    "Generated XML output": "Đầu ra XML đã tạo"
+    "Output format": "Output format",
+    "Generated output": "Generated output"
   },
   "chrome": {
     "Who it&rsquo;s for": "Dành cho ai",

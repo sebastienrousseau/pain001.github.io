@@ -8,6 +8,7 @@
   "Detected: {delim}-delimited": "An gano: an raba shi da {delim}",
   "European comma-decimal amount": "Adadi irin na Turai mai waƙafi",
   "Flipped IBAN digit (mod-97 checksum)": "Lambar IBAN da aka juya (binciken mod-97)",
+  "From the example corpus ({n} scenarios)": "From the example corpus ({n} scenarios)",
   "Generate XML in step 2 first": "Ku fara samar da XML a mataki na 2",
   "Generate XML in step 2 first — the XSD gate runs on that output.": "Generate XML in step 2 first — the XSD gate runs on that output.",
   "Impossible calendar date": "Ranar kalanda da ba ta yiwuwa",

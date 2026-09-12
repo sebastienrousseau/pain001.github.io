@@ -53,8 +53,11 @@
     "Rule": "규칙",
     "Value": "값",
     "Problem": "문제",
+    "XML": "XML",
+    "JSON twin": "JSON twin",
     "Copy XML": "XML 복사",
     "Download .xml": ".xml 다운로드",
+    "Download JSON twin": "Download JSON twin",
     "Download error report (.csv)": "오류 보고서(.csv) 다운로드",
     "Prove it against the official ISO 20022 XSD": "공식 ISO 20022 XSD로 증명하기",
     "Steps 1–2 already ran the pain001 library itself: its record validation, the scheme\n              rulebook you chose, XML generation, and the official <code class=\"tt-mono\">pain.001.001.09</code>\n              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served\n              from this site. This button re-runs the schema gate on the XML shown above, so you can\n              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the\n              first time you validate, and stays cached.": "Steps 1–2 already ran the pain001 library itself: its record validation, the scheme\n              rulebook you chose, XML generation, and the official <code class=\"tt-mono\">pain.001.001.09</code>\n              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served\n              from this site. This button re-runs the schema gate on the XML shown above, so you can\n              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the\n              first time you validate, and stays cached.",
@@ -71,7 +74,8 @@
   "aria": {
     "Drag a CSV file here, or press Enter to browse your files": "여기에 CSV 파일을 끌어다 놓거나 Enter 키를 눌러 파일을 찾아보세요",
     "Choose a CSV file of payment records": "결제 레코드 CSV 파일 선택",
-    "Generated XML output": "생성된 XML 출력"
+    "Output format": "Output format",
+    "Generated output": "Generated output"
   },
   "chrome": {
     "Who it&rsquo;s for": "누구를 위한 도구인가",

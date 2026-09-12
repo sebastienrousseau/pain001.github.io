@@ -53,8 +53,11 @@
     "Rule": "Regla",
     "Value": "Valor",
     "Problem": "Problema",
+    "XML": "XML",
+    "JSON twin": "JSON twin",
     "Copy XML": "Copiar XML",
     "Download .xml": "Descargar .xml",
+    "Download JSON twin": "Download JSON twin",
     "Download error report (.csv)": "Descargar informe de errores (.csv)",
     "Prove it against the official ISO 20022 XSD": "Contrástelo con el XSD oficial de ISO 20022",
     "Steps 1–2 already ran the pain001 library itself: its record validation, the scheme\n              rulebook you chose, XML generation, and the official <code class=\"tt-mono\">pain.001.001.09</code>\n              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served\n              from this site. This button re-runs the schema gate on the XML shown above, so you can\n              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the\n              first time you validate, and stays cached.": "Steps 1–2 already ran the pain001 library itself: its record validation, the scheme\n              rulebook you chose, XML generation, and the official <code class=\"tt-mono\">pain.001.001.09</code>\n              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served\n              from this site. This button re-runs the schema gate on the XML shown above, so you can\n              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the\n              first time you validate, and stays cached.",
@@ -71,7 +74,8 @@
   "aria": {
     "Drag a CSV file here, or press Enter to browse your files": "Arrastre aquí un fichero CSV o pulse Intro para examinar sus ficheros",
     "Choose a CSV file of payment records": "Elija un fichero CSV con registros de pago",
-    "Generated XML output": "Salida XML generada"
+    "Output format": "Output format",
+    "Generated output": "Generated output"
   },
   "chrome": {
     "Who it&rsquo;s for": "A quién va dirigido",

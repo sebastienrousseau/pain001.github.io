@@ -8,6 +8,7 @@
   "Detected: {delim}-delimited": "ตรวจพบ: คั่นด้วย{delim}",
   "European comma-decimal amount": "จำนวนเงินทศนิยมแบบจุลภาคของยุโรป",
   "Flipped IBAN digit (mod-97 checksum)": "ตัวเลข IBAN พิมพ์สลับ (เช็กซัม mod-97)",
+  "From the example corpus ({n} scenarios)": "From the example corpus ({n} scenarios)",
   "Generate XML in step 2 first": "โปรดสร้าง XML ในขั้นตอนที่ 2 ก่อน",
   "Generate XML in step 2 first — the XSD gate runs on that output.": "Generate XML in step 2 first — the XSD gate runs on that output.",
   "Impossible calendar date": "วันที่ปฏิทินที่เป็นไปไม่ได้",

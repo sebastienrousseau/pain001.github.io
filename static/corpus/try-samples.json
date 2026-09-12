@@ -1,0 +1,303 @@
+{
+ "pain001": "0.0.70",
+ "message_type": "pain.001.001.09",
+ "samples": [
+  {
+   "id": "ae.uaefts.single",
+   "country": "AE",
+   "family": "priority-payment",
+   "description": "UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code.",
+   "scheme": "anti-duplicate",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,creditor_account_IBAN,remittance_information,initiator_town_name,initiator_country_code,initiator_address_line,debtor_town_name,debtor_country_code,debtor_address_line,debtor_account_currency,creditor_town_name,creditor_country_code,purpose_code,regulatory_reporting_indicator,regulatory_reporting_country,regulatory_reporting_code,regulatory_reporting_info,payment_currency\nAKB-20260921-01,2026-09-21T08:45:00,1,156000.00,Al Khaleej Building Materials LLC,AKB-FTS-260921-01,TRF,false,URGP,2026-09-21,Al Khaleej Building Materials LLC,AE307070122266392446102,EDCDAEL0,SHAR,AKB-2026-0921-001,156000.00,AED,UGENAE20,Emirates Steel Distribution,AE950889557780374725853,PO 2026-0812,Dubai,AE,Sheikh Zayed Road 220,Dubai,AE,Sheikh Zayed Road 220,AED,Abu Dhabi,AE,GDDS,CRED,AE,GDS,/BENEFRES/AE//GDS,AED\n"
+  },
+  {
+   "id": "be.sepa.sct-supplier",
+   "country": "BE",
+   "family": "sepa-credit-transfer",
+   "description": "SEPA credit transfer with a Belgian structured communication (BBA).",
+   "scheme": "sepa-sct",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,creditor_account_IBAN,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,initiator_id,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,debtor_id,creditor_postal_code,creditor_town_name,creditor_country_code,creditor_reference,creditor_reference_type,creditor_reference_issuer,initiator_id_scheme_proprietary,debtor_id_scheme_proprietary,payment_currency\nBDS-SCT-20260921,2026-09-21T09:00:00,1,1180.00,Brasserie de la Senne NV,SCT-20260921-BE-01,TRF,true,SEPA,2026-09-22,Brasserie de la Senne NV,BE72536889307716,BWBGBE80,SLEV,BDS-2026-0921-001,1180.00,EUR,KWBZBE60,Mouterij Dingemans,BE22575526903747,1000,Brussels,BE,Rue Picard 3,0123456789,1000,Brussels,BE,Rue Picard 3,0123456789,2860,Sint-Katelijne-Waver,BE,090123456744,SCOR,BBA,KBO-BCE,KBO-BCE,EUR\n"
+  },
+  {
+   "id": "ch.international.usd",
+   "country": "CH",
+   "family": "cross-border",
+   "description": "Cross-border USD payment from Switzerland (SPS payment type X).",
+   "scheme": "cbpr-cross-border",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,remittance_information,instruction_priority,initiator_postal_code,initiator_town_name,initiator_country_subdivision,initiator_country_code,initiator_address_line,initiator_lei,debtor_postal_code,debtor_town_name,debtor_country_subdivision,debtor_country_code,debtor_address_line,debtor_lei,debtor_account_currency,uetr,creditor_postal_code,creditor_town_name,creditor_country_subdivision,creditor_country_code,creditor_address_line,creditor_account_number,creditor_account_scheme,creditor_agent_clearing_system,creditor_agent_member_id,purpose_code,payment_currency\nAFM-20260921-04,2026-09-21T09:30:00,1,48200.00,Alpina Feinmechanik AG,AFM-X-260921-01,TRF,false,URGP,2026-09-22,Alpina Feinmechanik AG,CH9009808930715794848,OSEDCHZ0,SHAR,AFM-X-0921-001,48200.00,USD,DXTQUSY0,Sierra Optics Inc,PO 2026-772,HIGH,8952,Schlieren,ZH,CH,Industriestrasse 14,0000006CAZNK09K2SG52,8952,Schlieren,ZH,CH,Industriestrasse 14,0000006CAZNK09K2SG52,USD,939a78eb-9ed2-4fab-bb57-65dc07d0f58d,94538,Fremont,CA,US,4800 Fremont Boulevard,5512345678,BBAN,USABA,121000248,GDDS,USD\n"
+  },
+  {
+   "id": "ch.sepa.sct",
+   "country": "CH",
+   "family": "sepa-credit-transfer",
+   "description": "SEPA credit transfer from Switzerland (SPS payment type S).",
+   "scheme": "anti-duplicate",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,creditor_account_IBAN,remittance_information,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,debtor_account_currency,creditor_postal_code,creditor_town_name,creditor_country_code,payment_currency\nAFM-20260921-03,2026-09-21T09:00:00,1,6250.00,Alpina Feinmechanik AG,AFM-S-260921-01,TRF,false,SEPA,2026-09-22,Alpina Feinmechanik AG,CH0225323063368134316,EGTLCHC0,SLEV,AFM-2026-0921-004,6250.00,EUR,BBECDEY0,Präzisionsstahl Schwaben GmbH,DE57148839832248984871,Invoice 2026-3310,8952,Schlieren,CH,Industriestrasse 14,8952,Schlieren,CH,Industriestrasse 14,EUR,89073,Ulm,DE,EUR\n"
+  },
+  {
+   "id": "ch.sps.qr-bill",
+   "country": "CH",
+   "family": "domestic-credit-transfer",
+   "description": "Swiss domestic credit transfer settling a QR-bill (QRR reference).",
+   "scheme": "ch-domestic",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,creditor_account_IBAN,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,initiator_id,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,debtor_id,creditor_postal_code,creditor_town_name,creditor_country_code,creditor_address_line,creditor_reference,creditor_reference_type,initiator_id_scheme_proprietary,debtor_id_scheme_proprietary,additional_remittance_information,payment_currency\nAFM-20260921-01,2026-09-21T08:30:00,1,3488.55,Alpina Feinmechanik AG,AFM-D-260921-01,TRF,false,NURG,2026-09-22,Alpina Feinmechanik AG,CH7827307265471511330,WEUVCH20,SLEV,AFM-2026-0921-001,3488.55,CHF,TRIDCHS0,Werkzeugbau Muster GmbH,CH7430000001234567891,8952,Schlieren,CH,Industriestrasse 14,CHE-123.456.789,8952,Schlieren,CH,Industriestrasse 14,CHE-123.456.789,6003,Luzern,CH,Bahnhofstrasse 7,210000000003139471430009017,QRR,UID,UID,Rechnung 2026-1187,CHF\n"
+  },
+  {
+   "id": "ch.sps.scor",
+   "country": "CH",
+   "family": "domestic-credit-transfer",
+   "description": "Swiss domestic credit transfer with an ISO 11649 creditor reference (SCOR).",
+   "scheme": "ch-domestic",
+   "records": 2,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,creditor_account_IBAN,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,creditor_postal_code,creditor_town_name,creditor_country_code,creditor_reference,creditor_reference_type,payment_currency\nAFM-20260921-02,2026-09-21T08:35:00,2,1127.40,Alpina Feinmechanik AG,AFM-D-260921-02,TRF,true,NURG,2026-09-22,Alpina Feinmechanik AG,CH9865371906857213108,WPGBCHR0,SLEV,AFM-2026-0921-002,912.00,CHF,AVGFCHE0,Kanzlei Bergmann,CH3059010197641085953,8952,Schlieren,CH,Industriestrasse 14,8952,Schlieren,CH,Industriestrasse 14,3011,Bern,CH,RF18539007547034,SCOR,CHF\nAFM-20260921-02,2026-09-21T08:35:00,2,1127.40,Alpina Feinmechanik AG,AFM-D-260921-02,TRF,true,NURG,2026-09-22,Alpina Feinmechanik AG,CH9865371906857213108,WPGBCHR0,SLEV,AFM-2026-0921-003,215.40,CHF,QKITCHA0,Druckerei Sonnenberg,CH7201909996508230257,8952,Schlieren,CH,Industriestrasse 14,8952,Schlieren,CH,Industriestrasse 14,9000,St. Gallen,CH,,,CHF\n"
+  },
+  {
+   "id": "cz.certis.domestic",
+   "country": "CZ",
+   "family": "domestic-credit-transfer",
+   "description": "Czech domestic CZK transfer through CERTIS with VS/KS/SS payment symbols.",
+   "scheme": "anti-duplicate",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,creditor_account_IBAN,remittance_information,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,initiator_id,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,debtor_id,debtor_account_currency,debtor_agent_clearing_system,debtor_agent_member_id,creditor_postal_code,creditor_town_name,creditor_country_code,creditor_agent_clearing_system,creditor_agent_member_id,initiator_id_scheme_proprietary,debtor_id_scheme_proprietary,payment_currency\nMSB-20260921-01,2026-09-21T08:00:00,1,48600.00,Moravské strojírny s.r.o.,MSB-CZK-260921-01,TRF,false,NURG,2026-09-22,Moravské strojírny s.r.o.,CZ2715658290382437641520,PCLSCZO0,SLEV,MSB-2026-0921-001,48600.00,CZK,MXHXCZI0,Kovoslužba Ostrava a.s.,CZ8889551188181098287840,/VS/2026091201/KS/0308/SS/12345,639 00,Brno,CZ,Vídeňská 118,27654321,639 00,Brno,CZ,Vídeňská 118,27654321,CZK,CZNCC,9876,702 00,Ostrava,CZ,CZNCC,9871,ICO,ICO,CZK\n"
+  },
+  {
+   "id": "cz.sepa.sct",
+   "country": "CZ",
+   "family": "sepa-credit-transfer",
+   "description": "SEPA credit transfer from a Czech EUR account to a German supplier.",
+   "scheme": "sepa-sct",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,creditor_account_IBAN,remittance_information,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,debtor_account_currency,creditor_postal_code,creditor_town_name,creditor_country_code,payment_currency\nMSB-20260921-02,2026-09-21T08:10:00,1,7320.00,Moravske strojirny s.r.o.,MSB-EUR-260921-01,TRF,false,SEPA,2026-09-22,Moravske strojirny s.r.o.,CZ5222115594100842233660,OBVWCZG0,SLEV,MSB-2026-0921-002,7320.00,EUR,EYFTDEE0,Werkzeugtechnik Passau GmbH,DE90885632568114584698,Invoice 2026-4471,639 00,Brno,CZ,Videnska 118,639 00,Brno,CZ,Videnska 118,EUR,94032,Passau,DE,EUR\n"
+  },
+  {
+   "id": "de.ccu.urgent",
+   "country": "DE",
+   "family": "urgent-euro",
+   "description": "Urgent euro payment (TARGET) from a German account, DK order type CCU.",
+   "scheme": "de-ccu",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,creditor_account_IBAN,remittance_information,instruction_priority,initiator_street_name,initiator_building_number,initiator_postal_code,initiator_town_name,initiator_country_subdivision,initiator_country_code,debtor_street_name,debtor_building_number,debtor_postal_code,debtor_town_name,debtor_country_subdivision,debtor_country_code,uetr,creditor_street_name,creditor_building_number,creditor_postal_code,creditor_town_name,creditor_country_subdivision,creditor_country_code,purpose_code,debtor_agent_town_name,debtor_agent_country_code,creditor_agent_town_name,creditor_agent_country_code,payment_currency\nMSTR-CCU-20260921-01,2026-09-21T09:30:00,1,250000.00,Musterfirma GmbH,CCU-20260921-01,TRF,URGP,2026-09-21,Musterfirma GmbH,DE89099991287457870052,HPXTDEW0,SHAR,MSTR-CCU-2026-0921-01,250000.00,EUR,FVEHFRT0,Compagnie Industrielle de Lorraine,FR2485465373980A5BUYVL3NS43,Anzahlung Auftrag 2026-4471,HIGH,Hauptstrasse,12,80331,Muenchen,BY,DE,Hauptstrasse,12,80331,Muenchen,BY,DE,12a4be1a-5290-4d64-97a5-6607b041914b,Rue de Metz,7,54000,Nancy,GES,FR,GDDS,Muenchen,DE,Paris,FR,EUR\n"
+  },
+  {
+   "id": "de.sepa.sct-inst",
+   "country": "DE",
+   "family": "sepa-instant",
+   "description": "SEPA Instant credit transfer, single, INST at PmtInf.",
+   "scheme": "sepa-inst",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,creditor_account_IBAN,remittance_information,local_instrument_code,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,creditor_postal_code,creditor_town_name,creditor_country_code,requested_execution_datetime,payment_currency\nMSTR-INST-20260921-01,2026-09-21T14:05:00,1,450.00,Musterfirma GmbH,INST-20260921-01,TRF,false,SEPA,Musterfirma GmbH,DE32836434947078661011,CJPSDE90,SLEV,MSTR-INST-2026-0921-01,450.00,EUR,CYCVDEQ0,Schnelldienst Berlin GmbH,DE46910579234762349724,Eilrechnung 2026-117,INST,80331,Muenchen,DE,Hauptstrasse 12,80331,Muenchen,DE,Hauptstrasse 12,10115,Berlin,DE,2026-09-21T14:05:00,EUR\n"
+  },
+  {
+   "id": "de.sepa.sct-salary",
+   "country": "DE",
+   "family": "sepa-credit-transfer",
+   "description": "SEPA SCT salary batch with structured and unstructured remittance.",
+   "scheme": "sepa-sct",
+   "records": 2,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,creditor_account_IBAN,remittance_information,category_purpose_code,initiator_street_name,initiator_building_number,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_id,initiator_id_scheme,debtor_street_name,debtor_building_number,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_id,debtor_id_scheme,creditor_postal_code,creditor_town_name,creditor_country_code,purpose_code,payment_currency\nMSTR-SAL-2026-09,2026-09-25T10:00:00,2,6230.50,Musterfirma GmbH,SAL-2026-09,TRF,true,SEPA,2026-09-28,Musterfirma GmbH,DE09028457998082047609,OPSHDEW0,SLEV,SAL-2026-09-0001,3250.00,EUR,XOZFDEA0,Anna Beispiel,DE65261964603287767307,Gehalt September 2026,SALA,Hauptstraße,12,80331,München,DE,DE98ZZZ09999999999,BANK,Hauptstraße,12,80331,München,DE,DE98ZZZ09999999999,BANK,10115,Berlin,DE,SALA,EUR\nMSTR-SAL-2026-09,2026-09-25T10:00:00,2,6230.50,Musterfirma GmbH,SAL-2026-09,TRF,true,SEPA,2026-09-28,Musterfirma GmbH,DE09028457998082047609,OPSHDEW0,SLEV,SAL-2026-09-0002,2980.50,EUR,DQBJDEN0,Max Mustermann,DE74157667219201256428,,SALA,Hauptstraße,12,80331,München,DE,DE98ZZZ09999999999,BANK,Hauptstraße,12,80331,München,DE,DE98ZZZ09999999999,BANK,20095,Hamburg,DE,SALA,EUR\n"
+  },
+  {
+   "id": "es.sepa.sct-single",
+   "country": "ES",
+   "family": "sepa-credit-transfer",
+   "description": "SEPA credit transfer, single, initiating party identified by NIF.",
+   "scheme": "sepa-sct",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,creditor_account_IBAN,remittance_information,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,initiator_id,initiator_id_scheme,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,debtor_id,debtor_id_scheme,creditor_postal_code,creditor_town_name,creditor_country_code,payment_currency\nBDE-SCT-20260921,2026-09-21T11:00:00,1,5120.00,Bodegas del Ebro SL,SCT-20260921-ES-01,TRF,false,SEPA,2026-09-22,Bodegas del Ebro SL,ES4793760993178221590616,PUKAESC0,SLEV,BDE-2026-0921-01,5120.00,EUR,RDHSESH0,Vidrieria Riojana SA,ES7200732545500484629565,Factura 2026-0117,26001,Logrono,ES,Calle Mayor 8,B12345674,COID,26001,Logrono,ES,Calle Mayor 8,B12345674,COID,26006,Logrono,ES,EUR\n"
+  },
+  {
+   "id": "fr.sepa.sct-supplier",
+   "country": "FR",
+   "family": "sepa-credit-transfer",
+   "description": "SEPA credit transfer, supplier invoice with an RF creditor reference.",
+   "scheme": "sepa-sct",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,creditor_account_IBAN,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,initiator_id,initiator_id_scheme,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,debtor_id,debtor_id_scheme,creditor_postal_code,creditor_town_name,creditor_country_code,purpose_code,creditor_reference,creditor_reference_type,creditor_reference_issuer,payment_currency\nADR-SCT-20260921-01,2026-09-21T08:00:00,1,2340.80,Ateliers du Rhone SAS,SCT-20260921-01,TRF,false,SEPA,2026-09-22,Ateliers du Rhone SAS,FR893354380052HVVA82N96W433,SRKHFRC0,SLEV,FACT-2026-09-0117,2340.80,EUR,RGMPFRJ0,Fournitures Industrielles Nord,FR45661040549856QM2V1TIAZ01,69002,Lyon,FR,Rue de la Republique 42,83201234500017,SREN,69002,Lyon,FR,Rue de la Republique 42,83201234500017,SREN,59000,Lille,FR,GDDS,RF18539007547034,SCOR,ISO,EUR\n"
+  },
+  {
+   "id": "gb.bacs.supplier-run",
+   "country": "GB",
+   "family": "bacs-direct-credit",
+   "description": "Bacs Direct Credit supplier run, two payments, SUN in the debtor id.",
+   "scheme": "uk-bacs",
+   "records": 2,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,remittance_information,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,initiator_id,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,debtor_id,debtor_account_number,debtor_account_scheme,debtor_account_currency,debtor_agent_clearing_system,debtor_agent_member_id,creditor_town_name,creditor_country_code,creditor_account_number,creditor_account_scheme,creditor_agent_clearing_system,creditor_agent_member_id,initiator_id_scheme_proprietary,debtor_id_scheme_proprietary,debtor_agent_town_name,debtor_agent_country_code,creditor_agent_town_name,creditor_agent_country_code,payment_currency\nELMRD-BACS-20260918,2026-09-15T17:00:00,2,5760.50,Elm Road Developments,BACS-20260918-01,TRF,true,NURG,2026-09-18,Elm Road Developments,DYEMGBJ0,SLEV,INV-0915-0042,4800.00,GBP,HERAGB80,Northgate Timber,INV-0915-0042,SW1A 1AA,London,GB,14 Elm Road,654321,SW1A 1AA,London,GB,14 Elm Road,654321,12345678,BBAN,GBP,GBDSC,040004,Leeds,GB,87654321,BBAN,GBDSC,200415,SUN,SUN,London,GB,Leeds,GB,GBP\nELMRD-BACS-20260918,2026-09-15T17:00:00,2,5760.50,Elm Road Developments,BACS-20260918-01,TRF,true,NURG,2026-09-18,Elm Road Developments,DYEMGBJ0,SLEV,INV-0915-0043,960.50,GBP,MROCGBF0,Avon Plant Hire,INV-0915-0043,SW1A 1AA,London,GB,14 Elm Road,654321,SW1A 1AA,London,GB,14 Elm Road,654321,12345678,BBAN,GBP,GBDSC,040004,Bristol,GB,11223344,BBAN,GBDSC,309634,SUN,SUN,London,GB,Bristol,GB,GBP\n"
+  },
+  {
+   "id": "gb.chaps.property-purchase",
+   "country": "GB",
+   "family": "priority-payment",
+   "description": "CHAPS same-day property completion with the BoE HLST purpose code.",
+   "scheme": "uk-chaps",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,creditor_account_IBAN,remittance_information,instruction_priority,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,initiator_lei,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,debtor_lei,debtor_account_currency,debtor_agent_clearing_system,debtor_agent_member_id,uetr,creditor_postal_code,creditor_town_name,creditor_country_code,creditor_address_line,creditor_agent_clearing_system,creditor_agent_member_id,purpose_code,payment_currency\nELMRD-20260912-0001,2026-09-12T08:30:00,1,425000.00,Elm Road Developments Ltd,CHAPS-20260912-001,TRF,false,SDVA,2026-09-12,Elm Road Developments Ltd,GB07OUER60969382168086,OICSGB40,SHAR,COMPLETION-2026-0912,425000.00,GBP,NPHBGBS0,Bramley and Co Solicitors Client Account,GB20OYKL60284231569811,Completion 14 Elm Road,HIGH,SW1A 1AA,London,GB,14 Elm Road,000000NMWEL2E9U1VL21,SW1A 1AA,London,GB,14 Elm Road,000000NMWEL2E9U1VL21,GBP,GBDSC,040004,069356c8-b718-4363-b1bc-824f86f5108f,RG1 2AB,Reading,GB,2 High Street,GBDSC,309634,HLST,GBP\n"
+  },
+  {
+   "id": "gb.fps.single",
+   "country": "GB",
+   "family": "faster-payment",
+   "description": "Faster Payments single supplier payment, sort code and account.",
+   "scheme": "uk-fps",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,remittance_information,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,initiator_id,initiator_id_scheme,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,debtor_id,debtor_id_scheme,debtor_account_number,debtor_account_scheme,debtor_account_currency,debtor_agent_clearing_system,debtor_agent_member_id,uetr,creditor_postal_code,creditor_town_name,creditor_country_code,creditor_account_number,creditor_account_scheme,creditor_agent_clearing_system,creditor_agent_member_id,debtor_agent_town_name,debtor_agent_country_code,creditor_agent_town_name,creditor_agent_country_code,payment_currency\nELMRD-FPS-20260915-01,2026-09-15T09:15:00,1,1250.00,Elm Road Developments Ltd,FPS-20260915-01,TRF,false,URGP,2026-09-15,Elm Road Developments Ltd,MKWNGBI0,SHAR,INV-2026-0915-01,1250.00,GBP,NIYGGB80,Northgate Timber Supplies,INV-2026-0915-01,SW1A 1AA,London,GB,14 Elm Road,123456,CUST,SW1A 1AA,London,GB,14 Elm Road,123456,CUST,12345678,BBAN,GBP,GBDSC,040004,1dad1e3b-1ee5-4337-aa66-c292928cb5a1,LS1 4AP,Leeds,GB,87654321,BBAN,GBDSC,309634,London,GB,Leeds,GB,GBP\n"
+  },
+  {
+   "id": "gb.international.usd",
+   "country": "GB",
+   "family": "priority-payment",
+   "description": "USD cross-border payment from a UK account to a US supplier.",
+   "scheme": "cbpr-cross-border",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,remittance_information,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,initiator_lei,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,debtor_lei,debtor_account_currency,uetr,creditor_postal_code,creditor_town_name,creditor_country_subdivision,creditor_country_code,creditor_address_line,creditor_account_number,creditor_account_scheme,creditor_agent_clearing_system,creditor_agent_member_id,purpose_code,debtor_agent_town_name,debtor_agent_country_code,creditor_agent_town_name,creditor_agent_country_code,payment_currency\nELMRD-INTL-20260916-01,2026-09-16T10:00:00,1,18500.00,Elm Road Developments Ltd,INTL-20260916-01,TRF,false,URGP,2026-09-16,Elm Road Developments Ltd,GB36KGFR97386824311654,CDMXGB80,SHAR,PO-2026-0916-7781,18500.00,USD,TXRPUSY0,Cascade Millwork Inc,PO 2026-0916-7781 millwork,SW1A 1AA,London,GB,14 Elm Road,0000001ODT6PK08RLJ71,SW1A 1AA,London,GB,14 Elm Road,0000001ODT6PK08RLJ71,GBP,e507a755-8cd9-4634-85cb-c1af0981bc63,97204,Portland,OR,US,1200 Pine Street,4412345678,BBAN,USABA,021000021,GDDS,London,GB,New York,US,USD\n"
+  },
+  {
+   "id": "hk.fps.single",
+   "country": "HK",
+   "family": "instant-payment",
+   "description": "Hong Kong FPS credit in HKD, clearing codes and account numbers.",
+   "scheme": "hk-fps",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,remittance_information,initiator_town_name,initiator_country_code,initiator_address_line,debtor_town_name,debtor_country_code,debtor_address_line,debtor_account_number,debtor_account_scheme,debtor_account_currency,debtor_agent_clearing_system,debtor_agent_member_id,creditor_town_name,creditor_country_code,creditor_account_number,creditor_account_scheme,creditor_agent_clearing_system,creditor_agent_member_id,payment_currency\nHLL-20260921-01,2026-09-21T09:00:00,1,68500.00,Harbour Logistics Ltd,HLL-FPS-260921-01,TRF,false,URGP,2026-09-21,Harbour Logistics Ltd,MUPSHK80,SHAR,HLL-2026-0921-001,68500.00,HKD,ZGGDHKJ0,Kowloon Freight Services,INV 2026-0921,Kwun Tong,HK,88 Hoi Bun Road,Kwun Tong,HK,88 Hoi Bun Road,312345678,BBAN,HKD,HKNCC,876,Kowloon,HK,123456789012,BBAN,HKNCC,861,HKD\n"
+  },
+  {
+   "id": "it.sepa.sct-single",
+   "country": "IT",
+   "family": "sepa-credit-transfer",
+   "description": "SEPA credit transfer, single supplier payment.",
+   "scheme": "sepa-sct",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,creditor_account_IBAN,remittance_information,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,creditor_postal_code,creditor_town_name,creditor_country_code,payment_currency\nOML-SCT-20260921,2026-09-21T12:00:00,1,2200.00,Officine Meccaniche Lombarde SpA,SCT-20260921-IT-01,TRF,false,SEPA,2026-09-22,Officine Meccaniche Lombarde SpA,IT48T78971134594OGDKY5VXE41,TLAOIT60,SLEV,OML-2026-0921-01,2200.00,EUR,MHXHITI0,Fonderia Bresciana Srl,IT23J14887404856NF3794IGWXN,Fattura 117/2026,20123,Milano,IT,Via Torino 15,20123,Milano,IT,Via Torino 15,25121,Brescia,IT,EUR\n"
+  },
+  {
+   "id": "lu.sepa.sct-single",
+   "country": "LU",
+   "family": "sepa-credit-transfer",
+   "description": "SEPA credit transfer, single supplier payment.",
+   "scheme": "sepa-sct",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,creditor_account_IBAN,remittance_information,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,creditor_postal_code,creditor_town_name,creditor_country_code,payment_currency\nKLS-SCT-20260921,2026-09-21T13:00:00,1,980.00,Kirchberg Logistics SA,SCT-20260921-LU-01,TRF,false,SEPA,2026-09-22,Kirchberg Logistics SA,LU4838625GRVNAWDC2NO,CRRMLUS0,SLEV,KLS-2026-0921-01,980.00,EUR,WAQRLU80,Transports Moselle Sarl,LU2777470UPND72BZXA4,Facture 2026-117,L-2540,Luxembourg,LU,Rue Edward Steichen 12,L-2540,Luxembourg,LU,Rue Edward Steichen 12,L-6791,Grevenmacher,LU,EUR\n"
+  },
+  {
+   "id": "my.duitnow.single",
+   "country": "MY",
+   "family": "instant-payment",
+   "description": "Malaysia DuitNow credit in MYR with a BNM purpose code.",
+   "scheme": "anti-duplicate",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,remittance_information,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,debtor_account_number,debtor_account_scheme,debtor_account_currency,creditor_postal_code,creditor_town_name,creditor_country_code,creditor_account_number,creditor_account_scheme,purpose_code,payment_currency\nSPP-20260921-01,2026-09-21T09:30:00,1,18750.00,Selangor Palm Products Sdn Bhd,SPP-DN-260921-01,TRF,false,URGP,2026-09-21,Selangor Palm Products Sdn Bhd,EFYIMYS0,SHAR,SPP-2026-0921-001,18750.00,MYR,KILXMYT0,Penang Machinery Trading,INV PMT-2026-0331,50450,Kuala Lumpur,MY,160 Jalan Ampang,50450,Kuala Lumpur,MY,160 Jalan Ampang,12345678901234,BBAN,MYR,10450,George Town,MY,98765432109876,BBAN,GDDS,MYR\n"
+  },
+  {
+   "id": "nl.sepa.sct-supplier",
+   "country": "NL",
+   "family": "sepa-credit-transfer",
+   "description": "SEPA credit transfer with a Dutch payment reference (CUR).",
+   "scheme": "sepa-sct",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,creditor_account_IBAN,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,creditor_postal_code,creditor_town_name,creditor_country_code,creditor_reference,creditor_reference_type,creditor_reference_issuer,payment_currency\nMTB-SCT-20260921,2026-09-21T10:00:00,1,764.30,Molen Techniek BV,SCT-20260921-NL-01,TRF,false,SEPA,2026-09-22,Molen Techniek BV,NL58HDNL0657267333,VXOONL70,SLEV,MTB-2026-0921-01,764.30,EUR,KEMPNLV0,Staalhandel Zuid,NL93JFZI0849932270,1015 CS,Amsterdam,NL,Keizersgracht 62,1015 CS,Amsterdam,NL,Keizersgracht 62,5611 AB,Eindhoven,NL,1234567890123456,SCOR,CUR,EUR\n"
+  },
+  {
+   "id": "qa.qatch.single",
+   "country": "QA",
+   "family": "domestic-credit-transfer",
+   "description": "Qatar QATCH credit in QAR with the QCB purpose of payment.",
+   "scheme": "anti-duplicate",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,creditor_account_IBAN,remittance_information,initiator_town_name,initiator_country_code,initiator_address_line,debtor_town_name,debtor_country_code,debtor_address_line,debtor_account_currency,creditor_town_name,creditor_country_code,purpose_code,payment_currency\nDMS-20260921-01,2026-09-21T08:30:00,1,92000.00,Doha Marine Supplies WLL,DMS-QATCH-260921-01,TRF,false,NURG,2026-09-22,Doha Marine Supplies WLL,QA58VDZTMHRMT3J8Z4KX3U36MI9SL,DKKFQAK0,SHAR,DMS-2026-0921-001,92000.00,QAR,MSNXQAS0,Gulf Engineering Services,QA17KWOYL77GFWYXAE267CIYE03FN,Contract 2026-14 milestone 1,Doha,QA,Al Corniche Street 5,Doha,QA,Al Corniche Street 5,QAR,Doha,QA,SUPP,QAR\n"
+  },
+  {
+   "id": "se.bankgiro.salary",
+   "country": "SE",
+   "family": "salary",
+   "description": "Swedish salary batch (Bankgirot Löner), SALA, one debit.",
+   "scheme": "se-bankgiro",
+   "records": 2,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,creditor_account_IBAN,remittance_information,category_purpose_code,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,debtor_account_currency,payment_currency\nNTA-LON-202609,2026-09-22T06:00:00,2,59950.00,Norrland Trävaror AB,NTA-LON-20260925,TRF,true,NURG,2026-09-25,Norrland Trävaror AB,SE7550639613542320999232,UIQTSE60,SLEV,NTA-LON-0925-0001,31200.00,SEK,EQOLSE60,Anna Lindqvist,SE2807489095803679803230,Lön september 2026 anst 710996,SALA,903 26,Umeå,SE,Storgatan 22,903 26,Umeå,SE,Storgatan 22,SEK,SEK\nNTA-LON-202609,2026-09-22T06:00:00,2,59950.00,Norrland Trävaror AB,NTA-LON-20260925,TRF,true,NURG,2026-09-25,Norrland Trävaror AB,SE7550639613542320999232,UIQTSE60,SLEV,NTA-LON-0925-0002,28750.00,SEK,HFJKSET0,Erik Sandström,SE9063629992753071679900,Lön september 2026 anst 720995,SALA,903 26,Umeå,SE,Storgatan 22,903 26,Umeå,SE,Storgatan 22,SEK,SEK\n"
+  },
+  {
+   "id": "se.bankgiro.supplier",
+   "country": "SE",
+   "family": "bankgiro-credit",
+   "description": "Swedish Bankgiro supplier payment with an OCR reference.",
+   "scheme": "se-bankgiro",
+   "records": 2,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,initiator_id,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,debtor_id,debtor_account_currency,creditor_postal_code,creditor_town_name,creditor_country_code,creditor_account_number,creditor_reference,creditor_reference_type,initiator_id_scheme_proprietary,debtor_id_scheme_proprietary,creditor_account_scheme_proprietary,payment_currency\nNTA-20260921-01,2026-09-21T07:45:00,2,21440.00,Norrland Trävaror AB,NTA-BG-20260921,TRF,true,NURG,2026-09-22,Norrland Trävaror AB,SE4256065723789397612318,FURLSEN0,SLEV,NTA-2026-0921-001,18450.00,SEK,BGABSESS,Sågverk Öster AB,903 26,Umeå,SE,Storgatan 22,5561234567,903 26,Umeå,SE,Storgatan 22,5561234567,SEK,891 33,Örnsköldsvik,SE,50501055,20260911000000316,SCOR,ORGNR,ORGNR,BGNR,SEK\nNTA-20260921-01,2026-09-21T07:45:00,2,21440.00,Norrland Trävaror AB,NTA-BG-20260921,TRF,true,NURG,2026-09-22,Norrland Trävaror AB,SE4256065723789397612318,FURLSEN0,SLEV,NTA-2026-0921-002,2990.00,SEK,BGABSESS,Kontorsservice Nord,903 26,Umeå,SE,Storgatan 22,5561234567,903 26,Umeå,SE,Storgatan 22,5561234567,SEK,972 32,Luleå,SE,50501055,123456782,SCOR,ORGNR,ORGNR,BGNR,SEK\n"
+  },
+  {
+   "id": "se.plusgiro.supplier",
+   "country": "SE",
+   "family": "plusgiro-credit",
+   "description": "Swedish Plusgiro supplier payment with an invoice message.",
+   "scheme": "se-bankgiro",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,remittance_information,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,debtor_account_currency,creditor_postal_code,creditor_town_name,creditor_country_code,creditor_account_number,creditor_account_scheme_proprietary,payment_currency\nNTA-20260921-02,2026-09-21T07:50:00,1,7125.50,Norrland Trävaror AB,NTA-PG-20260921,TRF,true,NURG,2026-09-22,Norrland Trävaror AB,SE4407238474849977370614,MNWHSEA0,SLEV,NTA-2026-0921-003,7125.50,SEK,NDEASESS,Fjällmaskin Service AB,Faktura 2026-0512,903 26,Umeå,SE,Storgatan 22,903 26,Umeå,SE,Storgatan 22,SEK,831 30,Östersund,SE,123455,PGNR,SEK\n"
+  },
+  {
+   "id": "se.rix.urgent",
+   "country": "SE",
+   "family": "priority-payment",
+   "description": "Swedish domestic high-value SEK payment through RIX, urgent, intra-group.",
+   "scheme": "anti-duplicate",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,creditor_account_IBAN,remittance_information,instruction_priority,category_purpose_code,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,initiator_lei,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,debtor_lei,debtor_account_currency,uetr,creditor_postal_code,creditor_town_name,creditor_country_code,creditor_address_line,payment_currency\nNTA-20260921-05,2026-09-21T10:15:00,1,2000000.00,Norrland Trävaror AB,NTA-RIX-20260921,TRF,false,URGP,2026-09-21,Norrland Trävaror AB,SE6586083667920426060071,WSMHSED0,DEBT,NTA-RIX-0921-001,2000000.00,SEK,ETQWSE40,Norrland Trävaror Finans AB,SE8324846535171284456770,Treasury sweep 2026-09-21,HIGH,INTC,903 26,Umeå,SE,Storgatan 22,0000001MDIRQSR400E15,903 26,Umeå,SE,Storgatan 22,0000001MDIRQSR400E15,SEK,ed6c9d0b-f268-4ced-930f-594b01382789,111 20,Stockholm,SE,Vasagatan 11,SEK\n"
+  },
+  {
+   "id": "sg.fast.single",
+   "country": "SG",
+   "family": "instant-payment",
+   "description": "Singapore FAST credit in SGD, bank and branch codes, addresses on both parties.",
+   "scheme": "sg-fast",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,remittance_information,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,debtor_account_number,debtor_account_scheme,debtor_account_currency,debtor_agent_clearing_system,debtor_agent_member_id,creditor_postal_code,creditor_town_name,creditor_country_code,creditor_address_line,creditor_account_number,creditor_account_scheme,creditor_agent_clearing_system,creditor_agent_member_id,payment_currency\nMTP-20260921-01,2026-09-21T10:00:00,1,45200.00,Merlion Trading Pte Ltd,MTP-FAST-260921-01,TRF,false,URGP,2026-09-21,Merlion Trading Pte Ltd,YVRSSGD0,SHAR,MTP-2026-0921-001,45200.00,SGD,QKCYSGM0,Jurong Packaging Supplies,Invoice JPS-2026-118,068895,Singapore,SG,71 Robinson Road,068895,Singapore,SG,71 Robinson Road,0123456789,BBAN,SGD,SGIBG,9990001,628505,Singapore,SG,12 Pioneer Road,9876543210,BBAN,SGIBG,9990002,SGD\n"
+  },
+  {
+   "id": "us.ach.ccd-supplier",
+   "country": "US",
+   "family": "ach-credit",
+   "description": "ACH CCD credit to a supplier with an addenda remittance line.",
+   "scheme": "us-ach",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,remittance_information,local_instrument_code,category_purpose_code,initiator_postal_code,initiator_town_name,initiator_country_subdivision,initiator_country_code,initiator_address_line,initiator_id,debtor_postal_code,debtor_town_name,debtor_country_subdivision,debtor_country_code,debtor_address_line,debtor_id,debtor_account_number,debtor_account_scheme,debtor_agent_clearing_system,debtor_agent_member_id,creditor_postal_code,creditor_town_name,creditor_country_subdivision,creditor_country_code,creditor_account_number,creditor_account_scheme,creditor_agent_clearing_system,creditor_agent_member_id,initiator_id_scheme_proprietary,debtor_id_scheme_proprietary,debtor_agent_town_name,debtor_agent_country_code,creditor_agent_town_name,creditor_agent_country_code,payment_currency\nCMI-ACH-20260922-01,2026-09-22T09:00:00,1,7450.00,Cascade Millwork Inc,ACH-20260922-01,TRF,true,NURG,2026-09-23,Cascade Millwork Inc,CXMCUSI0,SLEV,CMI-INV-2026-0912,7450.00,USD,TNHLUSB0,Redwood Hardware Supply LLC,INV 2026-0912 PO 7781,CCD,SUPP,97204,Portland,OR,US,1200 Pine Street,1234567890,97204,Portland,OR,US,1200 Pine Street,1234567890,4412345678,BBAN,USABA,021000021,94103,San Francisco,CA,US,5512345678,BBAN,USABA,121000248,COMPANY-ID,COMPANY-ID,New York,US,San Francisco,US,USD\n"
+  },
+  {
+   "id": "us.ach.ppd-payroll",
+   "country": "US",
+   "family": "ach-credit",
+   "description": "ACH PPD payroll run, two employees.",
+   "scheme": "us-ach",
+   "records": 2,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,remittance_information,local_instrument_code,category_purpose_code,initiator_postal_code,initiator_town_name,initiator_country_subdivision,initiator_country_code,initiator_address_line,initiator_id,debtor_postal_code,debtor_town_name,debtor_country_subdivision,debtor_country_code,debtor_address_line,debtor_id,debtor_account_number,debtor_account_scheme,debtor_agent_clearing_system,debtor_agent_member_id,creditor_postal_code,creditor_town_name,creditor_country_subdivision,creditor_country_code,creditor_account_number,creditor_account_scheme,creditor_agent_clearing_system,creditor_agent_member_id,purpose_code,initiator_id_scheme_proprietary,debtor_id_scheme_proprietary,debtor_agent_town_name,debtor_agent_country_code,creditor_agent_town_name,creditor_agent_country_code,payment_currency\nCMI-PAY-20260925,2026-09-23T17:00:00,2,5995.65,Cascade Millwork Inc,PAY-20260925-01,TRF,true,NURG,2026-09-25,Cascade Millwork Inc,RSEDUS60,SLEV,PAY-2026-09-0001,3120.55,USD,HQSGUS70,Jordan Lee,Payroll Sep 2026,PPD,SALA,97204,Portland,OR,US,1200 Pine Street,1234567890,97204,Portland,OR,US,1200 Pine Street,1234567890,4412345678,BBAN,USABA,021000021,97209,Portland,OR,US,7712345678,BBAN,USABA,121000248,SALA,COMPANY-ID,COMPANY-ID,New York,US,San Francisco,US,USD\nCMI-PAY-20260925,2026-09-23T17:00:00,2,5995.65,Cascade Millwork Inc,PAY-20260925-01,TRF,true,NURG,2026-09-25,Cascade Millwork Inc,RSEDUS60,SLEV,PAY-2026-09-0002,2875.10,USD,QMOLUSD0,Sam Rivera,Payroll Sep 2026,PPD,SALA,97204,Portland,OR,US,1200 Pine Street,1234567890,97204,Portland,OR,US,1200 Pine Street,1234567890,4412345678,BBAN,USABA,021000021,97214,Portland,OR,US,7798765432,BBAN,USABA,026009593,SALA,COMPANY-ID,COMPANY-ID,New York,US,New York,US,USD\n"
+  },
+  {
+   "id": "us.eftps.tax",
+   "country": "US",
+   "family": "ach-credit",
+   "description": "IRS EFTPS federal tax deposit, CCD with the TXP addenda string.",
+   "scheme": "us-ach",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,remittance_information,local_instrument_code,category_purpose_code,initiator_postal_code,initiator_town_name,initiator_country_subdivision,initiator_country_code,initiator_id,debtor_postal_code,debtor_town_name,debtor_country_subdivision,debtor_country_code,debtor_id,debtor_account_number,debtor_account_scheme,debtor_agent_clearing_system,debtor_agent_member_id,creditor_town_name,creditor_country_subdivision,creditor_country_code,creditor_account_number,creditor_account_scheme,creditor_agent_clearing_system,creditor_agent_member_id,purpose_code,initiator_id_scheme_proprietary,debtor_id_scheme_proprietary,debtor_agent_town_name,debtor_agent_country_code,creditor_agent_town_name,creditor_agent_country_code,payment_currency\nCMI-TAX-20260930,2026-09-28T10:00:00,1,18240.00,Cascade Millwork Inc,TAX-20260930-01,TRF,false,NURG,2026-09-30,Cascade Millwork Inc,NVECUSD0,SLEV,TXP-941-2026Q3,18240.00,USD,DIXNUSF0,US Treasury EFTPS,TXP*123456789*94105*260930*1*1824000\\,CCD,TAXS,97204,Portland,OR,US,1234567890,97204,Portland,OR,US,1234567890,4412345678,BBAN,USABA,021000021,Atlanta,GA,US,23401009,BBAN,USABA,061036000,TAXS,COMPANY-ID,COMPANY-ID,New York,US,Atlanta,US,USD\n"
+  },
+  {
+   "id": "us.rtp.single",
+   "country": "US",
+   "family": "instant-payment",
+   "description": "RTP real-time payment, single.",
+   "scheme": "us-rtp",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,service_level_code,requested_execution_date,debtor_name,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,remittance_information,local_instrument_proprietary,initiator_street_name,initiator_building_number,initiator_postal_code,initiator_town_name,initiator_country_subdivision,initiator_country_code,debtor_street_name,debtor_building_number,debtor_postal_code,debtor_town_name,debtor_country_subdivision,debtor_country_code,debtor_account_number,debtor_account_scheme,debtor_agent_clearing_system,debtor_agent_member_id,uetr,creditor_street_name,creditor_building_number,creditor_postal_code,creditor_town_name,creditor_country_subdivision,creditor_country_code,creditor_account_number,creditor_account_scheme,creditor_agent_clearing_system,creditor_agent_member_id,debtor_agent_town_name,debtor_agent_country_subdivision,debtor_agent_country_code,creditor_agent_town_name,creditor_agent_country_subdivision,creditor_agent_country_code,payment_currency\nCMI-RTP-20260922-01,2026-09-22T12:00:00,1,8600.00,Cascade Millwork Inc,RTP-20260922-01,TRF,URNS,2026-09-22,Cascade Millwork Inc,GDNXUSX0,SLEV,CMI-RTP-2026-0922-01,8600.00,USD,TLSEUSI0,Redwood Hardware Supply LLC,INV 2026-0912,rtp,Pine Street,1200,97204,Portland,OR,US,Pine Street,1200,97204,Portland,OR,US,4412345678,BBAN,USABA,021000021,5105128c-2397-45c1-977e-7a3a69182632,Mission Street,800,94103,San Francisco,CA,US,5512345678,BBAN,USABA,121000248,New York,NY,US,San Francisco,CA,US,USD\n"
+  },
+  {
+   "id": "us.wire.domestic",
+   "country": "US",
+   "family": "priority-payment",
+   "description": "Fedwire domestic funds transfer, urgent.",
+   "scheme": "us-wire",
+   "records": 1,
+   "csv": "id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,service_level_code,requested_execution_date,debtor_name,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,remittance_information,instruction_priority,initiator_postal_code,initiator_town_name,initiator_country_subdivision,initiator_country_code,initiator_address_line,debtor_postal_code,debtor_town_name,debtor_country_subdivision,debtor_country_code,debtor_address_line,debtor_account_number,debtor_account_scheme,debtor_agent_clearing_system,debtor_agent_member_id,uetr,creditor_postal_code,creditor_town_name,creditor_country_subdivision,creditor_country_code,creditor_address_line,creditor_account_number,creditor_account_scheme,creditor_agent_clearing_system,creditor_agent_member_id,purpose_code,debtor_agent_town_name,debtor_agent_country_code,creditor_agent_town_name,creditor_agent_country_code,payment_currency\nCMI-WIRE-20260922-01,2026-09-22T11:00:00,1,125000.00,Cascade Millwork Inc,WIRE-20260922-01,TRF,URGP,2026-09-22,Cascade Millwork Inc,YPTEUSH0,DEBT,CMI-WIRE-2026-0922-01,125000.00,USD,DZKNUSB0,Golden Gate Timber Corp,Contract 2026-31 milestone 2,HIGH,97204,Portland,OR,US,1200 Pine Street,97204,Portland,OR,US,1200 Pine Street,4412345678,BBAN,USABA,021000021,b91d993d-76d3-49a2-bf82-7486b4593fe3,94104,San Francisco,CA,US,600 Market Street,5512345678,BBAN,USABA,121000248,GDDS,New York,US,San Francisco,US,USD\n"
+  }
+ ]
+}

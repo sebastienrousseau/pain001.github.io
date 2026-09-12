@@ -8,6 +8,7 @@
   "Detected: {delim}-delimited": "감지됨: {delim} 구분 형식",
   "European comma-decimal amount": "유럽식 쉼표 소수점 금액",
   "Flipped IBAN digit (mod-97 checksum)": "뒤바뀐 IBAN 숫자(mod-97 체크섬)",
+  "From the example corpus ({n} scenarios)": "From the example corpus ({n} scenarios)",
   "Generate XML in step 2 first": "먼저 2단계에서 XML을 생성하십시오",
   "Generate XML in step 2 first — the XSD gate runs on that output.": "Generate XML in step 2 first — the XSD gate runs on that output.",
   "Impossible calendar date": "존재할 수 없는 달력 날짜",

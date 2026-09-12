@@ -53,8 +53,11 @@
     "Rule": "Panuntunan",
     "Value": "Halaga",
     "Problem": "Problema",
+    "XML": "XML",
+    "JSON twin": "JSON twin",
     "Copy XML": "Kopyahin ang XML",
     "Download .xml": "I-download ang .xml",
+    "Download JSON twin": "Download JSON twin",
     "Download error report (.csv)": "I-download ang ulat ng error (.csv)",
     "Prove it against the official ISO 20022 XSD": "Patunayan ito laban sa opisyal na ISO 20022 XSD",
     "Steps 1–2 already ran the pain001 library itself: its record validation, the scheme\n              rulebook you chose, XML generation, and the official <code class=\"tt-mono\">pain.001.001.09</code>\n              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served\n              from this site. This button re-runs the schema gate on the XML shown above, so you can\n              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the\n              first time you validate, and stays cached.": "Steps 1–2 already ran the pain001 library itself: its record validation, the scheme\n              rulebook you chose, XML generation, and the official <code class=\"tt-mono\">pain.001.001.09</code>\n              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served\n              from this site. This button re-runs the schema gate on the XML shown above, so you can\n              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the\n              first time you validate, and stays cached.",
@@ -71,7 +74,8 @@
   "aria": {
     "Drag a CSV file here, or press Enter to browse your files": "Mag-drag ng CSV file dito, o pindutin ang Enter upang i-browse ang inyong mga file",
     "Choose a CSV file of payment records": "Pumili ng CSV file ng mga rekord ng pagbabayad",
-    "Generated XML output": "Nabuong XML output"
+    "Output format": "Output format",
+    "Generated output": "Generated output"
   },
   "chrome": {
     "Who it&rsquo;s for": "Para kanino ito",

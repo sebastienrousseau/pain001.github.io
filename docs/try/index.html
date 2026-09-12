@@ -290,10 +290,15 @@
               </table></div>
               <p class="dialect-note" id="error-overflow" hidden></p>
             </div>
-            <div class="xml-out" id="xml-out" tabindex="0" aria-label="Generated XML output"><span class="xml-placeholder">The validated pain.001.001.09 document will appear here — add data in step 1.</span></div>
+            <div class="demo-actions output-tabs" role="tablist" aria-label="Output format">
+              <button type="button" id="tab-xml" class="pill pill-primary" role="tab" aria-selected="true" aria-controls="xml-out">XML</button>
+              <button type="button" id="tab-twin" class="pill pill-ghost" role="tab" aria-selected="false" aria-controls="xml-out" disabled title="Generate XML in step 2 first">JSON twin</button>
+            </div>
+            <div class="xml-out" id="xml-out" tabindex="0" aria-label="Generated output"><span class="xml-placeholder">The validated pain.001.001.09 document will appear here — add data in step 1.</span></div>
             <div class="demo-actions">
               <button type="button" id="copy-btn" class="pill pill-ghost" disabled title="Add valid data in step 1 first">Copy XML</button>
               <button type="button" id="download-btn" class="pill pill-ghost" data-track="try_download_xml" disabled title="Add valid data in step 1 first">Download .xml</button>
+              <button type="button" id="download-json-btn" class="pill pill-ghost" disabled title="Generate XML in step 2 first">Download JSON twin</button>
               <button type="button" id="report-btn" class="pill pill-ghost" hidden>Download error report (.csv)</button>
             </div>
           </section>
