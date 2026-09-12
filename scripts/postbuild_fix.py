@@ -1213,11 +1213,12 @@ def stamp_suite_version(site: Path) -> int:
         html = page.read_text(encoding="utf-8")
         if marker in html or "<footer" not in html:
             continue
-        m = link.search(html)
+        start = html.find("<footer")
+        m = link.search(html, start) if start >= 0 else None
         if not m:
             continue
-        # after the paragraph that holds the link, so translated footer
-        # fragments (locale table keys) stay byte-identical
+        # after the footer paragraph that holds the link, so translated
+        # footer fragments (locale table keys) stay byte-identical
         end = html.find("</p>", m.end())
         if end < 0:
             continue
