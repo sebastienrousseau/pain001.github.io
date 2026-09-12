@@ -222,6 +222,10 @@
               <select id="scenario-select" class="pill-select">
                 <option value="">Добавить ошибку&hellip;</option>
               </select>
+              <label class="visually-hidden" for="scheme-select">Scheme rulebook to apply</label>
+              <select id="scheme-select" class="pill-select">
+                <option value="">Scheme rulebook: none</option>
+              </select>
               <button type="button" id="paste-btn" class="pill pill-ghost">Вставить записи</button>
             </div>
             <p class="dialect-note">
@@ -244,6 +248,9 @@
           <section class="demo-panel" aria-labelledby="output-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">2</span><h2 id="output-heading">Результат проверки &amp; сгенерированный XML</h2></div>
             <p class="status" id="status" role="status">Добавьте данные на шаге 1 — проверка запустится автоматически.</p>
+            <div class="xsd-progress" id="run-progress" hidden>
+              <div class="xsd-progress-bar" id="run-progress-bar"></div>
+            </div>
 
             <!-- Layered result summary. The last two rows never turn
                  green: no local tool can know a bank's profile or its
@@ -261,7 +268,7 @@
                 </tr>
                 <tr data-layer="scheme">
                   <th scope="row">Свод правил платёжной схемы</th>
-                  <td class="layer-state" id="layer-state-scheme">В браузере не выполняется — CLI проверяет это с помощью <code class="tt-mono">--scheme</code></td>
+                  <td class="layer-state" id="layer-state-scheme">Not run — choose a scheme rulebook in step 1</td>
                 </tr>
                 <tr data-layer="bank">
                   <th scope="row">Профиль вашего банка</th>
@@ -294,17 +301,17 @@
           <section class="demo-panel" aria-labelledby="xsd-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">3</span><h2 id="xsd-heading">Подтвердите результат по официальной XSD ISO 20022</h2></div>
             <p class="fineprint fineprint-tight">
-              Шаги 1–2 выполняют быстрые проверки, написанные вручную. На этом шаге работает настоящий инструмент: среда
-              выполнения Python (через WebAssembly) запускает <code class="tt-mono">xmlschema</code>
-              по официальной схеме <code class="tt-mono">pain.001.001.09</code> —
-              тот же класс валидации, который выполняет CLI. Движок объёмом ~13&nbsp;МБ раздаётся с этого
-              сайта и скачивается один раз, по вашему запросу (загрузка незаметно начинается, как только
-              шаг 2 сформирует корректный XML).
+              Steps 1–2 already ran the pain001 library itself: its record validation, the scheme
+              rulebook you chose, XML generation, and the official <code class="tt-mono">pain.001.001.09</code>
+              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served
+              from this site. This button re-runs the schema gate on the XML shown above, so you can
+              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the
+              first time you validate, and stays cached.
             </p>
             <div class="demo-actions">
-              <button type="button" id="xsd-btn" class="pill pill-primary" disabled title="Generate XML in step 2 first">Запустить официальную проверку XSD&nbsp;&rsaquo;</button>
+              <button type="button" id="xsd-btn" class="pill pill-primary" disabled title="Generate XML in step 2 first">Re-run the official XSD gate&nbsp;&rsaquo;</button>
             </div>
-            <p class="status" id="xsd-status" role="status">Сначала сформируйте XML на шаге 2 — проверка XSD выполняется именно для этого результата.</p>
+            <p class="status" id="xsd-status" role="status">Generate XML in step 2 first — the XSD gate runs on that output.</p>
             <div class="xsd-progress" id="xsd-progress" hidden>
               <div class="xsd-progress-bar" id="xsd-progress-bar"></div>
             </div>
@@ -316,11 +323,13 @@
 
       <div class="wrap">
         <p class="fineprint" id="demo-fineprint">
-          Всё на этой странице работает в вашем браузере — ничего не загружается, не сохраняется и никуда не отправляется.
-          Эта демонстрация реализует часть конвейера (обязательные поля, IBAN mod-97, структура BIC, форматы
-          сумм и дат, пересчитанные <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code> контрольные итоги). Шаг 3 запускает официальную проверку XSD прямо здесь, через WebAssembly. Установленный набор инструментов
-          добавляет к этому валидацию по JSON Schema и пять сводов правил платёжных схем —
-          <a href="/ru/installation/">установите CLI</a>, чтобы получить полный конвейер.
+          Everything on this page runs in your browser — nothing is uploaded, stored, or sent anywhere.
+          It runs the pain001 library itself, the same package you install with <code class="tt-inherit">pip</code>,
+          inside a Python runtime compiled to WebAssembly: record validation, IBAN and BIC checks, the scheme
+          rulebook you choose, XML generation with recomputed <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code>
+          control totals, and the official XSD gate. What the CLI adds is scale and inputs: files of any size,
+          Excel, SQLite, JSON, Parquet and SWIFT MT101, and every message edition —
+          <a href="/ru/installation/">install the CLI</a> for the complete pipeline.
         </p>
       </div>
 
@@ -387,5 +396,5 @@ pain001 -t pain.001.001.09 -d payments.csv -o out/ --scheme sepa-sct --dry-run</
 </div>
 <script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
 </div>
-<script id="try-i18n" type="application/json">{"Add valid data in step 1 first": "Сначала добавьте корректные данные на шаге 1", "Generate XML in step 2 first": "Сначала сгенерируйте XML на шаге 2", "No XML generated — validation is a hard gate. Fix the findings above and re-validate.": "XML не сгенерирован — валидация является обязательным этапом. Исправьте указанные выше замечания и повторите валидацию.", "The validated pain.001.001.09 document will appear here — add data in step 1.": "Валидированный документ pain.001.001.09 появится здесь — добавьте данные на шаге 1.", "…and {n} more — download the full error report below.": "…и ещё {n} — скачайте полный отчёт об ошибках ниже.", "Need a header row and at least one record.": "Нужна строка заголовка и хотя бы одна запись.", "Detected: {delim}-delimited": "Обнаружен разделитель: {delim}", "{n} record(s)": "записей: {n}", "ignored column(s): {cols}": "игнорируемые столбцы: {cols}", "large batch — the CLI streams batches of any size": "крупный пакет — CLI потоково обрабатывает пакеты любого размера", "✗ Validation failed — {n} issue(s). This file would be rejected.": "✗ Валидация не пройдена — проблем: {n}. Такой файл был бы отклонён.", "✓ {n} record(s) valid — control totals recomputed. Exit code 0.": "✓ Корректных записей: {n} — контрольные суммы пересчитаны. Exit code 0.", "✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.": "✗ Файл больше 2 MB — это демо ограничивает размер ввода; CLI потоково обрабатывает пакеты любого размера.", "✗ Could not read that file.": "✗ Не удалось прочитать файл.", "Paste your CSV records, then press Validate & generate.": "Вставьте записи CSV и нажмите «Проверить и сгенерировать».", "Copied ✓": "Скопировано ✓", "Copy XML": "Копировать XML", "Copy command": "Копировать команду", "Downloading the engine (~13 MB, first run only)…": "Загрузка движка (~13 MB, только при первом запуске)…", "Booting Python runtime…": "Запуск среды выполнения Python…", "Loading xmlschema…": "Загрузка xmlschema…", "Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.": "SHA-256 схемы: {hex} — сверьте с копией, опубликованной для pain.001.001.09.", "Validating against the official schema…": "Валидация по официальной схеме…", "✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).": "✓ ВАЛИДНО по официальной XSD-схеме ISO 20022 pain.001.001.09 ({s}s).", "✗ Official schema rejected the document — {n} error(s) ({s}s).": "✗ Официальная схема отклонила документ — ошибок: {n} ({s}s).", "✗ Engine failed to load: {error}. Check your connection and try again.": "✗ Не удалось загрузить движок: {error}. Проверьте соединение и повторите попытку.", "comma": "запятая", "semicolon": "точка с запятой", "tab": "табуляция", "SEPA credit transfer (2 records, EUR)": "Кредитовый перевод SEPA (2 записи, EUR)", "Cross-border (GBP, escaped chars)": "Трансграничный (GBP, экранированные символы)", "Larger batch (20 records)": "Крупный пакет (20 записей)", "Flipped IBAN digit (mod-97 checksum)": "Опечатка в цифре IBAN (контрольная сумма mod-97)", "Malformed BIC (wrong structure)": "Некорректный BIC (неверная структура)", "Missing required column (execution date)": "Отсутствует обязательный столбец (дата исполнения)", "European comma-decimal amount": "Европейский формат суммы с десятичной запятой", "Impossible calendar date": "Невозможная календарная дата", "missing required value": "отсутствует обязательное значение", "comma-decimal amount — expected point-decimal (e.g. 1234.56)": "сумма с десятичной запятой — ожидается десятичная точка (напр. 1234.56)", "not a valid decimal amount (expected e.g. 1234.56)": "недопустимая десятичная сумма (ожидается напр. 1234.56)", "{ccy} is a zero-decimal currency — no fractional part allowed": "{ccy} — валюта без десятичных знаков; дробная часть не допускается", "more than 2 decimal places": "более 2 десятичных знаков", "not a 3-letter ISO 4217 code": "не является 3-буквенным кодом ISO 4217", "expected ISO 8601 YYYY-MM-DD": "ожидается ISO 8601 YYYY-MM-DD", "not a real calendar date": "несуществующая календарная дата", "wrong length for country {cc} (expected {len} characters)": "неверная длина для страны {cc} (ожидается {len} символов)", "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "не проходит проверку mod-97 по ISO 13616 — вероятно, опечатка в цифре", "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "недопустимый BIC по ISO 9362 (8 или 11 символов, AAAAAA00[XXX])", "row {row} has {cells} field(s), header has {header}": "в строке {row} полей: {cells}, в заголовке: {header}", "Passed the official XSD": "Прошло проверку официальной XSD", "Rejected by the official XSD": "Отклонено официальной XSD", "{n} issue(s) the schema would reject": "Проблем, которые схема отклонила бы: {n}", "Pre-checks passed — run the XSD gate below to prove it": "Предварительные проверки пройдены — запустите проверку XSD ниже, чтобы это доказать", "{n} issue(s) a schema would accept but a bank would not": "Проблем, которые схема приняла бы, а банк — нет: {n}", "No identifier or format problems found": "Проблем с идентификаторами и форматами не найдено"}</script></body>
+<script id="try-i18n" type="application/json">{"Add valid data in step 1 first": "Сначала добавьте корректные данные на шаге 1", "Booting Python runtime…": "Запуск среды выполнения Python…", "Copied ✓": "Скопировано ✓", "Copy XML": "Копировать XML", "Copy command": "Копировать команду", "Cross-border (GBP, escaped chars)": "Трансграничный (GBP, экранированные символы)", "Detected: {delim}-delimited": "Обнаружен разделитель: {delim}", "European comma-decimal amount": "Европейский формат суммы с десятичной запятой", "Flipped IBAN digit (mod-97 checksum)": "Опечатка в цифре IBAN (контрольная сумма mod-97)", "Generate XML in step 2 first": "Сначала сгенерируйте XML на шаге 2", "Generate XML in step 2 first — the XSD gate runs on that output.": "Generate XML in step 2 first — the XSD gate runs on that output.", "Impossible calendar date": "Невозможная календарная дата", "Installing pain001 and its dependencies…": "Installing pain001 and its dependencies…", "Larger batch (20 records)": "Крупный пакет (20 записей)", "Malformed BIC (wrong structure)": "Некорректный BIC (неверная структура)", "Missing required column (execution date)": "Отсутствует обязательный столбец (дата исполнения)", "Need a header row and at least one record.": "Нужна строка заголовка и хотя бы одна запись.", "No XML generated — validation is a hard gate. Fix the findings above and re-validate.": "XML не сгенерирован — валидация является обязательным этапом. Исправьте указанные выше замечания и повторите валидацию.", "No identifier or format problems found": "Проблем с идентификаторами и форматами не найдено", "Not reached — fix the findings above first": "Not reached — fix the findings above first", "Not run — choose a scheme rulebook in step 1": "Not run — choose a scheme rulebook in step 1", "Passed the official XSD": "Прошло проверку официальной XSD", "Passed {scheme}": "Passed {scheme}", "Paste your CSV records, then press Validate & generate.": "Вставьте записи CSV и нажмите «Проверить и сгенерировать».", "Rejected by the official XSD": "Отклонено официальной XSD", "Running pain001 in your browser…": "Running pain001 in your browser…", "SEPA credit transfer (2 records, EUR)": "Кредитовый перевод SEPA (2 записи, EUR)", "Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.": "SHA-256 схемы: {hex} — сверьте с копией, опубликованной для pain.001.001.09.", "Starting a private Python runtime in your browser — {done} of {total} MB; nothing leaves your machine.": "Starting a private Python runtime in your browser — {done} of {total} MB; nothing leaves your machine.", "The validated pain.001.001.09 document will appear here — add data in step 1.": "Валидированный документ pain.001.001.09 появится здесь — добавьте данные на шаге 1.", "Validating against the official schema…": "Валидация по официальной схеме…", "Warming the official schema (once per visit)…": "Warming the official schema (once per visit)…", "comma": "запятая", "ignored column(s): {cols}": "игнорируемые столбцы: {cols}", "large batch — the CLI streams batches of any size": "крупный пакет — CLI потоково обрабатывает пакеты любого размера", "row {row} has {cells} field(s), header has {header}": "в строке {row} полей: {cells}, в заголовке: {header}", "semicolon": "точка с запятой", "tab": "табуляция", "{n} issue(s) a schema would accept but a bank would not": "Проблем, которые схема приняла бы, а банк — нет: {n}", "{n} issue(s) the schema would reject": "Проблем, которые схема отклонила бы: {n}", "{n} record(s)": "записей: {n}", "{n} violation(s) against {scheme}": "{n} violation(s) against {scheme}", "…and {n} more — download the full error report below.": "…и ещё {n} — скачайте полный отчёт об ошибках ниже.", "✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).": "✓ ВАЛИДНО по официальной XSD-схеме ISO 20022 pain.001.001.09 ({s}s).", "✓ {n} record(s) valid — pain001 {version} generated the file and the official XSD accepted it ({s}s).": "✓ {n} record(s) valid — pain001 {version} generated the file and the official XSD accepted it ({s}s).", "✗ Could not read that file.": "✗ Не удалось прочитать файл.", "✗ Engine failed to load: {error}. Check your connection and try again.": "✗ Не удалось загрузить движок: {error}. Проверьте соединение и повторите попытку.", "✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.": "✗ Файл больше 2 MB — это демо ограничивает размер ввода; CLI потоково обрабатывает пакеты любого размера.", "✗ Official schema rejected the document — {n} error(s) ({s}s).": "✗ Официальная схема отклонила документ — ошибок: {n} ({s}s).", "✗ The library raised an error: {error}": "✗ The library raised an error: {error}", "✗ Validation failed — {n} issue(s). This file would be rejected.": "✗ Валидация не пройдена — проблем: {n}. Такой файл был бы отклонён."}</script></body>
 </html>

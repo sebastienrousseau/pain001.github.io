@@ -222,6 +222,10 @@
               <select id="scenario-select" class="pill-select">
                 <option value="">Chèn một lỗi&hellip;</option>
               </select>
+              <label class="visually-hidden" for="scheme-select">Scheme rulebook to apply</label>
+              <select id="scheme-select" class="pill-select">
+                <option value="">Scheme rulebook: none</option>
+              </select>
               <button type="button" id="paste-btn" class="pill pill-ghost">Dán bản ghi</button>
             </div>
             <p class="dialect-note">
@@ -244,6 +248,9 @@
           <section class="demo-panel" aria-labelledby="output-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">2</span><h2 id="output-heading">Kết quả kiểm tra &amp; XML đã tạo</h2></div>
             <p class="status" id="status" role="status">Thêm dữ liệu ở bước 1 — quá trình kiểm tra chạy tự động.</p>
+            <div class="xsd-progress" id="run-progress" hidden>
+              <div class="xsd-progress-bar" id="run-progress-bar"></div>
+            </div>
 
             <!-- Layered result summary. The last two rows never turn
                  green: no local tool can know a bank's profile or its
@@ -261,7 +268,7 @@
                 </tr>
                 <tr data-layer="scheme">
                   <th scope="row">Bộ quy tắc scheme</th>
-                  <td class="layer-state" id="layer-state-scheme">Không chạy trong trình duyệt — CLI kiểm tra phần này bằng <code class="tt-mono">--scheme</code></td>
+                  <td class="layer-state" id="layer-state-scheme">Not run — choose a scheme rulebook in step 1</td>
                 </tr>
                 <tr data-layer="bank">
                   <th scope="row">Hồ sơ ngân hàng của bạn</th>
@@ -294,17 +301,17 @@
           <section class="demo-panel" aria-labelledby="xsd-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">3</span><h2 id="xsd-heading">Chứng minh với XSD chính thức của ISO 20022</h2></div>
             <p class="fineprint fineprint-tight">
-              Các bước 1–2 chạy những phép kiểm tra nhanh, viết thủ công. Bước này chạy bản thật: một môi trường
-              Python (qua WebAssembly) thực thi <code class="tt-mono">xmlschema</code>
-              với lược đồ <code class="tt-mono">pain.001.001.09</code> chính thức —
-              cùng hạng mức kiểm tra mà CLI thực hiện. Engine ~13&nbsp;MB được phục vụ từ chính
-              trang này và chỉ tải xuống một lần, khi bạn yêu cầu (nó bắt đầu tải ngầm ngay khi
-              bước 2 tạo ra XML hợp lệ).
+              Steps 1–2 already ran the pain001 library itself: its record validation, the scheme
+              rulebook you chose, XML generation, and the official <code class="tt-mono">pain.001.001.09</code>
+              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served
+              from this site. This button re-runs the schema gate on the XML shown above, so you can
+              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the
+              first time you validate, and stays cached.
             </p>
             <div class="demo-actions">
-              <button type="button" id="xsd-btn" class="pill pill-primary" disabled title="Generate XML in step 2 first">Chạy cổng XSD chính thức&nbsp;&rsaquo;</button>
+              <button type="button" id="xsd-btn" class="pill pill-primary" disabled title="Generate XML in step 2 first">Re-run the official XSD gate&nbsp;&rsaquo;</button>
             </div>
-            <p class="status" id="xsd-status" role="status">Hãy tạo XML ở bước 2 trước — cổng XSD kiểm tra chính kết quả đó.</p>
+            <p class="status" id="xsd-status" role="status">Generate XML in step 2 first — the XSD gate runs on that output.</p>
             <div class="xsd-progress" id="xsd-progress" hidden>
               <div class="xsd-progress-bar" id="xsd-progress-bar"></div>
             </div>
@@ -316,11 +323,13 @@
 
       <div class="wrap">
         <p class="fineprint" id="demo-fineprint">
-          Mọi thứ trên trang này chạy trong trình duyệt của bạn — không có gì được tải lên, lưu trữ hay gửi đi đâu cả.
-          Bản demo này triển khai một phần của pipeline (trường bắt buộc, IBAN mod-97, cấu trúc BIC, định dạng số tiền
-          và ngày tháng, tổng kiểm soát <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code> được tính lại). Bước 3 chạy cổng XSD chính thức ngay tại đây qua WebAssembly. Bộ công cụ đã cài đặt
-          bổ sung kiểm tra JSON Schema và năm bộ quy tắc scheme —
-          <a href="/vi/installation/">cài đặt CLI</a> để có pipeline hoàn chỉnh.
+          Everything on this page runs in your browser — nothing is uploaded, stored, or sent anywhere.
+          It runs the pain001 library itself, the same package you install with <code class="tt-inherit">pip</code>,
+          inside a Python runtime compiled to WebAssembly: record validation, IBAN and BIC checks, the scheme
+          rulebook you choose, XML generation with recomputed <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code>
+          control totals, and the official XSD gate. What the CLI adds is scale and inputs: files of any size,
+          Excel, SQLite, JSON, Parquet and SWIFT MT101, and every message edition —
+          <a href="/vi/installation/">install the CLI</a> for the complete pipeline.
         </p>
       </div>
 
@@ -387,5 +396,5 @@ pain001 -t pain.001.001.09 -d payments.csv -o out/ --scheme sepa-sct --dry-run</
 </div>
 <script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
 </div>
-<script id="try-i18n" type="application/json">{"Add valid data in step 1 first": "Vui lòng thêm dữ liệu hợp lệ ở bước 1 trước", "Generate XML in step 2 first": "Vui lòng tạo XML ở bước 2 trước", "No XML generated — validation is a hard gate. Fix the findings above and re-validate.": "Chưa tạo XML — kiểm tra hợp lệ là điều kiện bắt buộc. Vui lòng sửa các lỗi nêu trên và kiểm tra lại.", "The validated pain.001.001.09 document will appear here — add data in step 1.": "Tài liệu pain.001.001.09 đã được kiểm tra sẽ hiển thị tại đây — vui lòng thêm dữ liệu ở bước 1.", "…and {n} more — download the full error report below.": "…và {n} mục nữa — tải xuống báo cáo lỗi đầy đủ bên dưới.", "Need a header row and at least one record.": "Cần một hàng tiêu đề và ít nhất một bản ghi.", "Detected: {delim}-delimited": "Đã phát hiện: phân tách bằng {delim}", "{n} record(s)": "{n} bản ghi", "ignored column(s): {cols}": "cột bị bỏ qua: {cols}", "large batch — the CLI streams batches of any size": "lô lớn — CLI truyền phát lô ở mọi kích thước", "✗ Validation failed — {n} issue(s). This file would be rejected.": "✗ Kiểm tra thất bại — {n} vấn đề. Tệp này sẽ bị từ chối.", "✓ {n} record(s) valid — control totals recomputed. Exit code 0.": "✓ {n} bản ghi hợp lệ — đã tính lại tổng kiểm soát. Exit code 0.", "✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.": "✗ Tệp lớn hơn 2 MB — bản demo này giới hạn kích thước đầu vào; CLI truyền phát lô ở mọi kích thước.", "✗ Could not read that file.": "✗ Không thể đọc tệp đó.", "Paste your CSV records, then press Validate & generate.": "Dán các bản ghi CSV của quý vị, sau đó nhấn Validate & generate.", "Copied ✓": "Đã sao chép ✓", "Copy XML": "Sao chép XML", "Copy command": "Sao chép lệnh", "Downloading the engine (~13 MB, first run only)…": "Đang tải xuống bộ máy (~13 MB, chỉ ở lần chạy đầu tiên)…", "Booting Python runtime…": "Đang khởi động môi trường chạy Python…", "Loading xmlschema…": "Đang tải xmlschema…", "Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.": "SHA-256 của lược đồ: {hex} — hãy so sánh với bản đã công bố cho pain.001.001.09.", "Validating against the official schema…": "Đang kiểm tra theo lược đồ chính thức…", "✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).": "✓ HỢP LỆ theo XSD chính thức của ISO 20022 pain.001.001.09 ({s}s).", "✗ Official schema rejected the document — {n} error(s) ({s}s).": "✗ Lược đồ chính thức đã từ chối tài liệu — {n} lỗi ({s}s).", "✗ Engine failed to load: {error}. Check your connection and try again.": "✗ Không tải được bộ máy: {error}. Vui lòng kiểm tra kết nối và thử lại.", "comma": "dấu phẩy", "semicolon": "dấu chấm phẩy", "tab": "tab", "SEPA credit transfer (2 records, EUR)": "Chuyển khoản tín dụng SEPA (2 bản ghi, EUR)", "Cross-border (GBP, escaped chars)": "Xuyên biên giới (GBP, ký tự escape)", "Larger batch (20 records)": "Lô lớn hơn (20 bản ghi)", "Flipped IBAN digit (mod-97 checksum)": "Chữ số IBAN bị đảo (tổng kiểm tra mod-97)", "Malformed BIC (wrong structure)": "BIC sai định dạng (cấu trúc không đúng)", "Missing required column (execution date)": "Thiếu cột bắt buộc (ngày thực hiện)", "European comma-decimal amount": "Số tiền thập phân dùng dấu phẩy kiểu châu Âu", "Impossible calendar date": "Ngày lịch không tồn tại", "missing required value": "thiếu giá trị bắt buộc", "comma-decimal amount — expected point-decimal (e.g. 1234.56)": "số tiền thập phân dùng dấu phẩy — cần dấu chấm thập phân (ví dụ 1234.56)", "not a valid decimal amount (expected e.g. 1234.56)": "không phải số tiền thập phân hợp lệ (cần dạng ví dụ 1234.56)", "{ccy} is a zero-decimal currency — no fractional part allowed": "{ccy} là tiền tệ không có phần thập phân — không cho phép phần lẻ", "more than 2 decimal places": "quá 2 chữ số thập phân", "not a 3-letter ISO 4217 code": "không phải mã ISO 4217 gồm 3 chữ cái", "expected ISO 8601 YYYY-MM-DD": "cần định dạng ISO 8601 YYYY-MM-DD", "not a real calendar date": "không phải ngày lịch có thật", "wrong length for country {cc} (expected {len} characters)": "sai độ dài cho quốc gia {cc} (cần {len} ký tự)", "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "không đạt tổng kiểm tra mod-97 theo ISO 13616 — có thể do gõ nhầm một chữ số", "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "không phải BIC hợp lệ theo ISO 9362 (8 hoặc 11 ký tự, AAAAAA00[XXX])", "row {row} has {cells} field(s), header has {header}": "hàng {row} có {cells} trường, tiêu đề có {header}", "Passed the official XSD": "Đạt XSD chính thức", "Rejected by the official XSD": "Bị XSD chính thức từ chối", "{n} issue(s) the schema would reject": "{n} vấn đề mà lược đồ sẽ từ chối", "Pre-checks passed — run the XSD gate below to prove it": "Đã qua các kiểm tra sơ bộ — chạy cổng XSD bên dưới để chứng minh", "{n} issue(s) a schema would accept but a bank would not": "{n} vấn đề mà lược đồ chấp nhận nhưng ngân hàng thì không", "No identifier or format problems found": "Không phát hiện vấn đề nào về định danh hay định dạng"}</script></body>
+<script id="try-i18n" type="application/json">{"Add valid data in step 1 first": "Vui lòng thêm dữ liệu hợp lệ ở bước 1 trước", "Booting Python runtime…": "Đang khởi động môi trường chạy Python…", "Copied ✓": "Đã sao chép ✓", "Copy XML": "Sao chép XML", "Copy command": "Sao chép lệnh", "Cross-border (GBP, escaped chars)": "Xuyên biên giới (GBP, ký tự escape)", "Detected: {delim}-delimited": "Đã phát hiện: phân tách bằng {delim}", "European comma-decimal amount": "Số tiền thập phân dùng dấu phẩy kiểu châu Âu", "Flipped IBAN digit (mod-97 checksum)": "Chữ số IBAN bị đảo (tổng kiểm tra mod-97)", "Generate XML in step 2 first": "Vui lòng tạo XML ở bước 2 trước", "Generate XML in step 2 first — the XSD gate runs on that output.": "Generate XML in step 2 first — the XSD gate runs on that output.", "Impossible calendar date": "Ngày lịch không tồn tại", "Installing pain001 and its dependencies…": "Installing pain001 and its dependencies…", "Larger batch (20 records)": "Lô lớn hơn (20 bản ghi)", "Malformed BIC (wrong structure)": "BIC sai định dạng (cấu trúc không đúng)", "Missing required column (execution date)": "Thiếu cột bắt buộc (ngày thực hiện)", "Need a header row and at least one record.": "Cần một hàng tiêu đề và ít nhất một bản ghi.", "No XML generated — validation is a hard gate. Fix the findings above and re-validate.": "Chưa tạo XML — kiểm tra hợp lệ là điều kiện bắt buộc. Vui lòng sửa các lỗi nêu trên và kiểm tra lại.", "No identifier or format problems found": "Không phát hiện vấn đề nào về định danh hay định dạng", "Not reached — fix the findings above first": "Not reached — fix the findings above first", "Not run — choose a scheme rulebook in step 1": "Not run — choose a scheme rulebook in step 1", "Passed the official XSD": "Đạt XSD chính thức", "Passed {scheme}": "Passed {scheme}", "Paste your CSV records, then press Validate & generate.": "Dán các bản ghi CSV của quý vị, sau đó nhấn Validate & generate.", "Rejected by the official XSD": "Bị XSD chính thức từ chối", "Running pain001 in your browser…": "Running pain001 in your browser…", "SEPA credit transfer (2 records, EUR)": "Chuyển khoản tín dụng SEPA (2 bản ghi, EUR)", "Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.": "SHA-256 của lược đồ: {hex} — hãy so sánh với bản đã công bố cho pain.001.001.09.", "Starting a private Python runtime in your browser — {done} of {total} MB; nothing leaves your machine.": "Starting a private Python runtime in your browser — {done} of {total} MB; nothing leaves your machine.", "The validated pain.001.001.09 document will appear here — add data in step 1.": "Tài liệu pain.001.001.09 đã được kiểm tra sẽ hiển thị tại đây — vui lòng thêm dữ liệu ở bước 1.", "Validating against the official schema…": "Đang kiểm tra theo lược đồ chính thức…", "Warming the official schema (once per visit)…": "Warming the official schema (once per visit)…", "comma": "dấu phẩy", "ignored column(s): {cols}": "cột bị bỏ qua: {cols}", "large batch — the CLI streams batches of any size": "lô lớn — CLI truyền phát lô ở mọi kích thước", "row {row} has {cells} field(s), header has {header}": "hàng {row} có {cells} trường, tiêu đề có {header}", "semicolon": "dấu chấm phẩy", "tab": "tab", "{n} issue(s) a schema would accept but a bank would not": "{n} vấn đề mà lược đồ chấp nhận nhưng ngân hàng thì không", "{n} issue(s) the schema would reject": "{n} vấn đề mà lược đồ sẽ từ chối", "{n} record(s)": "{n} bản ghi", "{n} violation(s) against {scheme}": "{n} violation(s) against {scheme}", "…and {n} more — download the full error report below.": "…và {n} mục nữa — tải xuống báo cáo lỗi đầy đủ bên dưới.", "✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).": "✓ HỢP LỆ theo XSD chính thức của ISO 20022 pain.001.001.09 ({s}s).", "✓ {n} record(s) valid — pain001 {version} generated the file and the official XSD accepted it ({s}s).": "✓ {n} record(s) valid — pain001 {version} generated the file and the official XSD accepted it ({s}s).", "✗ Could not read that file.": "✗ Không thể đọc tệp đó.", "✗ Engine failed to load: {error}. Check your connection and try again.": "✗ Không tải được bộ máy: {error}. Vui lòng kiểm tra kết nối và thử lại.", "✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.": "✗ Tệp lớn hơn 2 MB — bản demo này giới hạn kích thước đầu vào; CLI truyền phát lô ở mọi kích thước.", "✗ Official schema rejected the document — {n} error(s) ({s}s).": "✗ Lược đồ chính thức đã từ chối tài liệu — {n} lỗi ({s}s).", "✗ The library raised an error: {error}": "✗ The library raised an error: {error}", "✗ Validation failed — {n} issue(s). This file would be rejected.": "✗ Kiểm tra thất bại — {n} vấn đề. Tệp này sẽ bị từ chối."}</script></body>
 </html>

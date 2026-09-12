@@ -930,6 +930,10 @@
               <select id="scenario-select" class="pill-select">
                 <option value="">Introduce an error&hellip;</option>
               </select>
+              <label class="visually-hidden" for="scheme-select">Scheme rulebook to apply</label>
+              <select id="scheme-select" class="pill-select">
+                <option value="">Scheme rulebook: none</option>
+              </select>
               <button type="button" id="paste-btn" class="pill pill-ghost">Paste records</button>
             </div>
             <p class="dialect-note">
@@ -952,6 +956,9 @@
           <section class="demo-panel" aria-labelledby="output-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">2</span><h2 id="output-heading">Validation result &amp; generated XML</h2></div>
             <p class="status" id="status" role="status">Add data in step 1 — validation runs automatically.</p>
+            <div class="xsd-progress" id="run-progress" hidden>
+              <div class="xsd-progress-bar" id="run-progress-bar"></div>
+            </div>
 
             <!-- Layered result summary. The last two rows never turn
                  green: no local tool can know a bank's profile or its
@@ -969,7 +976,7 @@
                 </tr>
                 <tr data-layer="scheme">
                   <th scope="row">Scheme rulebook</th>
-                  <td class="layer-state" id="layer-state-scheme">Not run in the browser — the CLI checks this with <code class="tt-mono">--scheme</code></td>
+                  <td class="layer-state" id="layer-state-scheme">Not run — choose a scheme rulebook in step 1</td>
                 </tr>
                 <tr data-layer="bank">
                   <th scope="row">Your bank&rsquo;s profile</th>
@@ -1002,17 +1009,17 @@
           <section class="demo-panel" aria-labelledby="xsd-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">3</span><h2 id="xsd-heading">Prove it against the official ISO 20022 XSD</h2></div>
             <p class="fineprint fineprint-tight">
-              Steps 1–2 run fast, hand-written checks. This step runs the genuine article: a Python
-              runtime (via WebAssembly) executing <code class="tt-mono">xmlschema</code>
-              against the official <code class="tt-mono">pain.001.001.09</code> schema —
-              the same class of validation the CLI performs. The ~13&nbsp;MB engine is served from this
-              site and downloaded once, when you ask for it (it starts downloading quietly as soon as
-              step 2 produces valid XML).
+              Steps 1–2 already ran the pain001 library itself: its record validation, the scheme
+              rulebook you chose, XML generation, and the official <code class="tt-mono">pain.001.001.09</code>
+              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served
+              from this site. This button re-runs the schema gate on the XML shown above, so you can
+              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the
+              first time you validate, and stays cached.
             </p>
             <div class="demo-actions">
-              <button type="button" id="xsd-btn" class="pill pill-primary" disabled title="Generate XML in step 2 first">Run the official XSD gate&nbsp;&rsaquo;</button>
+              <button type="button" id="xsd-btn" class="pill pill-primary" disabled title="Generate XML in step 2 first">Re-run the official XSD gate&nbsp;&rsaquo;</button>
             </div>
-            <p class="status" id="xsd-status" role="status">Generate XML in step 2 first — the XSD gate validates that output.</p>
+            <p class="status" id="xsd-status" role="status">Generate XML in step 2 first — the XSD gate runs on that output.</p>
             <div class="xsd-progress" id="xsd-progress" hidden>
               <div class="xsd-progress-bar" id="xsd-progress-bar"></div>
             </div>
@@ -1025,9 +1032,11 @@
       <div class="wrap">
         <p class="fineprint" id="demo-fineprint">
           Everything on this page runs in your browser — nothing is uploaded, stored, or sent anywhere.
-          This demo implements a subset of the pipeline (required fields, IBAN mod-97, BIC structure, amount
-          and date formats, recomputed <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code> control totals). Step 3 runs the official XSD gate right here via WebAssembly. The installed toolchain
-          adds JSON Schema validation and five scheme rulebooks on top —
+          It runs the pain001 library itself, the same package you install with <code class="tt-inherit">pip</code>,
+          inside a Python runtime compiled to WebAssembly: record validation, IBAN and BIC checks, the scheme
+          rulebook you choose, XML generation with recomputed <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code>
+          control totals, and the official XSD gate. What the CLI adds is scale and inputs: files of any size,
+          Excel, SQLite, JSON, Parquet and SWIFT MT101, and every message edition —
           <a href="/installation/">install the CLI</a> for the complete pipeline.
         </p>
       </div>

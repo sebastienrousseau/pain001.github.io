@@ -222,6 +222,10 @@
               <select id="scenario-select" class="pill-select">
                 <option value="">오류 삽입&hellip;</option>
               </select>
+              <label class="visually-hidden" for="scheme-select">Scheme rulebook to apply</label>
+              <select id="scheme-select" class="pill-select">
+                <option value="">Scheme rulebook: none</option>
+              </select>
               <button type="button" id="paste-btn" class="pill pill-ghost">레코드 붙여넣기</button>
             </div>
             <p class="dialect-note">
@@ -244,6 +248,9 @@
           <section class="demo-panel" aria-labelledby="output-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">2</span><h2 id="output-heading">검증 결과 &amp; 생성된 XML</h2></div>
             <p class="status" id="status" role="status">1단계에서 데이터를 추가하세요 — 검증이 자동으로 실행됩니다.</p>
+            <div class="xsd-progress" id="run-progress" hidden>
+              <div class="xsd-progress-bar" id="run-progress-bar"></div>
+            </div>
 
             <!-- Layered result summary. The last two rows never turn
                  green: no local tool can know a bank's profile or its
@@ -261,7 +268,7 @@
                 </tr>
                 <tr data-layer="scheme">
                   <th scope="row">스킴 룰북</th>
-                  <td class="layer-state" id="layer-state-scheme">브라우저에서는 실행되지 않습니다 — CLI가 <code class="tt-mono">--scheme</code>으로 확인합니다</td>
+                  <td class="layer-state" id="layer-state-scheme">Not run — choose a scheme rulebook in step 1</td>
                 </tr>
                 <tr data-layer="bank">
                   <th scope="row">거래 은행의 프로필</th>
@@ -294,17 +301,17 @@
           <section class="demo-panel" aria-labelledby="xsd-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">3</span><h2 id="xsd-heading">공식 ISO 20022 XSD로 증명하기</h2></div>
             <p class="fineprint fineprint-tight">
-              1–2단계는 빠른 수작업 검사를 실행합니다. 이 단계는 진짜를 실행합니다: Python
-              런타임(WebAssembly 기반)이 <code class="tt-mono">xmlschema</code>
-              을(를) 공식 <code class="tt-mono">pain.001.001.09</code> 스키마에 대해 실행합니다 —
-              CLI가 수행하는 것과 같은 등급의 검증입니다. 약 13&nbsp;MB 크기의 엔진은 이
-              사이트에서 제공되며, 요청 시 한 번만 다운로드됩니다(2단계에서 유효한 XML이 생성되는 즉시
-              조용히 다운로드가 시작됩니다).
+              Steps 1–2 already ran the pain001 library itself: its record validation, the scheme
+              rulebook you chose, XML generation, and the official <code class="tt-mono">pain.001.001.09</code>
+              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served
+              from this site. This button re-runs the schema gate on the XML shown above, so you can
+              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the
+              first time you validate, and stays cached.
             </p>
             <div class="demo-actions">
-              <button type="button" id="xsd-btn" class="pill pill-primary" disabled title="Generate XML in step 2 first">공식 XSD 게이트 실행&nbsp;&rsaquo;</button>
+              <button type="button" id="xsd-btn" class="pill pill-primary" disabled title="Generate XML in step 2 first">Re-run the official XSD gate&nbsp;&rsaquo;</button>
             </div>
-            <p class="status" id="xsd-status" role="status">먼저 2단계에서 XML을 생성하세요 — XSD 게이트는 해당 출력을 검증합니다.</p>
+            <p class="status" id="xsd-status" role="status">Generate XML in step 2 first — the XSD gate runs on that output.</p>
             <div class="xsd-progress" id="xsd-progress" hidden>
               <div class="xsd-progress-bar" id="xsd-progress-bar"></div>
             </div>
@@ -316,11 +323,13 @@
 
       <div class="wrap">
         <p class="fineprint" id="demo-fineprint">
-          이 페이지의 모든 것은 브라우저에서 실행됩니다 — 아무것도 업로드, 저장, 전송되지 않습니다.
-          이 데모는 파이프라인의 일부(필수 필드, IBAN mod-97, BIC 구조, 금액
-          및 날짜 형식, 재계산된 <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code> 컨트롤 합계)를 구현합니다. 3단계는 WebAssembly를 통해 공식 XSD 게이트를 바로 여기서 실행합니다. 설치된 툴체인은
-          그 위에 JSON Schema 검증과 다섯 가지 스킴 룰북을 추가합니다 —
-          전체 파이프라인을 사용하려면 <a href="/ko/installation/">CLI를 설치</a>하세요.
+          Everything on this page runs in your browser — nothing is uploaded, stored, or sent anywhere.
+          It runs the pain001 library itself, the same package you install with <code class="tt-inherit">pip</code>,
+          inside a Python runtime compiled to WebAssembly: record validation, IBAN and BIC checks, the scheme
+          rulebook you choose, XML generation with recomputed <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code>
+          control totals, and the official XSD gate. What the CLI adds is scale and inputs: files of any size,
+          Excel, SQLite, JSON, Parquet and SWIFT MT101, and every message edition —
+          <a href="/ko/installation/">install the CLI</a> for the complete pipeline.
         </p>
       </div>
 
@@ -387,5 +396,5 @@ pain001 -t pain.001.001.09 -d payments.csv -o out/ --scheme sepa-sct --dry-run</
 </div>
 <script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
 </div>
-<script id="try-i18n" type="application/json">{"Add valid data in step 1 first": "먼저 1단계에서 유효한 데이터를 추가하십시오", "Generate XML in step 2 first": "먼저 2단계에서 XML을 생성하십시오", "No XML generated — validation is a hard gate. Fix the findings above and re-validate.": "생성된 XML이 없습니다 — 검증은 필수 관문입니다. 위의 지적 사항을 수정한 후 다시 검증하십시오.", "The validated pain.001.001.09 document will appear here — add data in step 1.": "검증된 pain.001.001.09 문서가 여기에 표시됩니다 — 1단계에서 데이터를 추가하십시오.", "…and {n} more — download the full error report below.": "…외 {n}건 — 아래에서 전체 오류 보고서를 다운로드하십시오.", "Need a header row and at least one record.": "헤더 행과 최소 1건의 레코드가 필요합니다.", "Detected: {delim}-delimited": "감지됨: {delim} 구분 형식", "{n} record(s)": "{n}건의 레코드", "ignored column(s): {cols}": "무시된 열: {cols}", "large batch — the CLI streams batches of any size": "대용량 배치입니다 — CLI는 크기에 관계없이 배치를 스트리밍 처리합니다", "✗ Validation failed — {n} issue(s). This file would be rejected.": "✗ 검증에 실패했습니다 — 문제 {n}건. 이 파일은 거부됩니다.", "✓ {n} record(s) valid — control totals recomputed. Exit code 0.": "✓ 레코드 {n}건이 유효합니다 — 컨트롤 합계를 다시 계산했습니다. Exit code 0.", "✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.": "✗ 파일이 2 MB를 초과합니다 — 이 데모는 입력 크기를 제한하지만, CLI는 크기에 관계없이 배치를 스트리밍 처리합니다.", "✗ Could not read that file.": "✗ 해당 파일을 읽을 수 없습니다.", "Paste your CSV records, then press Validate & generate.": "CSV 레코드를 붙여넣은 후 '검증 및 생성'을 누르십시오.", "Copied ✓": "복사됨 ✓", "Copy XML": "XML 복사", "Copy command": "명령어 복사", "Downloading the engine (~13 MB, first run only)…": "엔진 다운로드 중(약 13 MB, 최초 1회만)…", "Booting Python runtime…": "Python 런타임 시작 중…", "Loading xmlschema…": "xmlschema 로드 중…", "Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.": "스키마 SHA-256: {hex} — pain.001.001.09용으로 공개된 사본과 비교하십시오.", "Validating against the official schema…": "공식 스키마에 대해 검증 중…", "✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).": "✓ 공식 ISO 20022 pain.001.001.09 XSD에 대해 유효합니다({s}초).", "✗ Official schema rejected the document — {n} error(s) ({s}s).": "✗ 공식 스키마가 문서를 거부했습니다 — 오류 {n}건({s}초).", "✗ Engine failed to load: {error}. Check your connection and try again.": "✗ 엔진을 로드하지 못했습니다: {error}. 연결을 확인한 후 다시 시도하십시오.", "comma": "쉼표", "semicolon": "세미콜론", "tab": "탭", "SEPA credit transfer (2 records, EUR)": "SEPA 크레딧 이체(레코드 2건, EUR)", "Cross-border (GBP, escaped chars)": "국가 간 송금(GBP, 이스케이프 문자 포함)", "Larger batch (20 records)": "더 큰 배치(레코드 20건)", "Flipped IBAN digit (mod-97 checksum)": "뒤바뀐 IBAN 숫자(mod-97 체크섬)", "Malformed BIC (wrong structure)": "형식이 잘못된 BIC(구조 오류)", "Missing required column (execution date)": "필수 열 누락(실행일)", "European comma-decimal amount": "유럽식 쉼표 소수점 금액", "Impossible calendar date": "존재할 수 없는 달력 날짜", "missing required value": "필수 값이 없습니다", "comma-decimal amount — expected point-decimal (e.g. 1234.56)": "쉼표 소수점 금액입니다 — 마침표 소수점이 필요합니다(예: 1234.56)", "not a valid decimal amount (expected e.g. 1234.56)": "유효한 소수 금액이 아닙니다(예: 1234.56)", "{ccy} is a zero-decimal currency — no fractional part allowed": "{ccy}은(는) 소수점이 없는 통화입니다 — 소수 부분을 사용할 수 없습니다", "more than 2 decimal places": "소수점 이하 2자리를 초과합니다", "not a 3-letter ISO 4217 code": "3글자 ISO 4217 코드가 아닙니다", "expected ISO 8601 YYYY-MM-DD": "ISO 8601 YYYY-MM-DD 형식이어야 합니다", "not a real calendar date": "실제 달력에 존재하는 날짜가 아닙니다", "wrong length for country {cc} (expected {len} characters)": "국가 {cc}에 대한 길이가 잘못되었습니다({len}자여야 합니다)", "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "ISO 13616 mod-97 체크섬 검사에 실패했습니다 — 숫자 오타일 가능성이 있습니다", "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "유효한 ISO 9362 BIC가 아닙니다(8자 또는 11자, AAAAAA00[XXX])", "row {row} has {cells} field(s), header has {header}": "{row}행의 필드는 {cells}개, 헤더는 {header}개입니다", "Passed the official XSD": "공식 XSD를 통과했습니다", "Rejected by the official XSD": "공식 XSD가 거부했습니다", "{n} issue(s) the schema would reject": "스키마가 거부할 문제 {n}건", "Pre-checks passed — run the XSD gate below to prove it": "사전 검사 통과 — 아래의 XSD 게이트를 실행해 증명하세요", "{n} issue(s) a schema would accept but a bank would not": "스키마는 허용해도 은행은 거부할 문제 {n}건", "No identifier or format problems found": "식별자나 형식 문제가 발견되지 않았습니다"}</script></body>
+<script id="try-i18n" type="application/json">{"Add valid data in step 1 first": "먼저 1단계에서 유효한 데이터를 추가하십시오", "Booting Python runtime…": "Python 런타임 시작 중…", "Copied ✓": "복사됨 ✓", "Copy XML": "XML 복사", "Copy command": "명령어 복사", "Cross-border (GBP, escaped chars)": "국가 간 송금(GBP, 이스케이프 문자 포함)", "Detected: {delim}-delimited": "감지됨: {delim} 구분 형식", "European comma-decimal amount": "유럽식 쉼표 소수점 금액", "Flipped IBAN digit (mod-97 checksum)": "뒤바뀐 IBAN 숫자(mod-97 체크섬)", "Generate XML in step 2 first": "먼저 2단계에서 XML을 생성하십시오", "Generate XML in step 2 first — the XSD gate runs on that output.": "Generate XML in step 2 first — the XSD gate runs on that output.", "Impossible calendar date": "존재할 수 없는 달력 날짜", "Installing pain001 and its dependencies…": "Installing pain001 and its dependencies…", "Larger batch (20 records)": "더 큰 배치(레코드 20건)", "Malformed BIC (wrong structure)": "형식이 잘못된 BIC(구조 오류)", "Missing required column (execution date)": "필수 열 누락(실행일)", "Need a header row and at least one record.": "헤더 행과 최소 1건의 레코드가 필요합니다.", "No XML generated — validation is a hard gate. Fix the findings above and re-validate.": "생성된 XML이 없습니다 — 검증은 필수 관문입니다. 위의 지적 사항을 수정한 후 다시 검증하십시오.", "No identifier or format problems found": "식별자나 형식 문제가 발견되지 않았습니다", "Not reached — fix the findings above first": "Not reached — fix the findings above first", "Not run — choose a scheme rulebook in step 1": "Not run — choose a scheme rulebook in step 1", "Passed the official XSD": "공식 XSD를 통과했습니다", "Passed {scheme}": "Passed {scheme}", "Paste your CSV records, then press Validate & generate.": "CSV 레코드를 붙여넣은 후 '검증 및 생성'을 누르십시오.", "Rejected by the official XSD": "공식 XSD가 거부했습니다", "Running pain001 in your browser…": "Running pain001 in your browser…", "SEPA credit transfer (2 records, EUR)": "SEPA 크레딧 이체(레코드 2건, EUR)", "Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.": "스키마 SHA-256: {hex} — pain.001.001.09용으로 공개된 사본과 비교하십시오.", "Starting a private Python runtime in your browser — {done} of {total} MB; nothing leaves your machine.": "Starting a private Python runtime in your browser — {done} of {total} MB; nothing leaves your machine.", "The validated pain.001.001.09 document will appear here — add data in step 1.": "검증된 pain.001.001.09 문서가 여기에 표시됩니다 — 1단계에서 데이터를 추가하십시오.", "Validating against the official schema…": "공식 스키마에 대해 검증 중…", "Warming the official schema (once per visit)…": "Warming the official schema (once per visit)…", "comma": "쉼표", "ignored column(s): {cols}": "무시된 열: {cols}", "large batch — the CLI streams batches of any size": "대용량 배치입니다 — CLI는 크기에 관계없이 배치를 스트리밍 처리합니다", "row {row} has {cells} field(s), header has {header}": "{row}행의 필드는 {cells}개, 헤더는 {header}개입니다", "semicolon": "세미콜론", "tab": "탭", "{n} issue(s) a schema would accept but a bank would not": "스키마는 허용해도 은행은 거부할 문제 {n}건", "{n} issue(s) the schema would reject": "스키마가 거부할 문제 {n}건", "{n} record(s)": "{n}건의 레코드", "{n} violation(s) against {scheme}": "{n} violation(s) against {scheme}", "…and {n} more — download the full error report below.": "…외 {n}건 — 아래에서 전체 오류 보고서를 다운로드하십시오.", "✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).": "✓ 공식 ISO 20022 pain.001.001.09 XSD에 대해 유효합니다({s}초).", "✓ {n} record(s) valid — pain001 {version} generated the file and the official XSD accepted it ({s}s).": "✓ {n} record(s) valid — pain001 {version} generated the file and the official XSD accepted it ({s}s).", "✗ Could not read that file.": "✗ 해당 파일을 읽을 수 없습니다.", "✗ Engine failed to load: {error}. Check your connection and try again.": "✗ 엔진을 로드하지 못했습니다: {error}. 연결을 확인한 후 다시 시도하십시오.", "✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.": "✗ 파일이 2 MB를 초과합니다 — 이 데모는 입력 크기를 제한하지만, CLI는 크기에 관계없이 배치를 스트리밍 처리합니다.", "✗ Official schema rejected the document — {n} error(s) ({s}s).": "✗ 공식 스키마가 문서를 거부했습니다 — 오류 {n}건({s}초).", "✗ The library raised an error: {error}": "✗ The library raised an error: {error}", "✗ Validation failed — {n} issue(s). This file would be rejected.": "✗ 검증에 실패했습니다 — 문제 {n}건. 이 파일은 거부됩니다."}</script></body>
 </html>

@@ -222,6 +222,10 @@
               <select id="scenario-select" class="pill-select">
                 <option value="">Introduci un errore&hellip;</option>
               </select>
+              <label class="visually-hidden" for="scheme-select">Scheme rulebook to apply</label>
+              <select id="scheme-select" class="pill-select">
+                <option value="">Scheme rulebook: none</option>
+              </select>
               <button type="button" id="paste-btn" class="pill pill-ghost">Incolla record</button>
             </div>
             <p class="dialect-note">
@@ -244,6 +248,9 @@
           <section class="demo-panel" aria-labelledby="output-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">2</span><h2 id="output-heading">Risultato della validazione &amp; XML generato</h2></div>
             <p class="status" id="status" role="status">Aggiunga i dati al passaggio 1 — la validazione viene eseguita automaticamente.</p>
+            <div class="xsd-progress" id="run-progress" hidden>
+              <div class="xsd-progress-bar" id="run-progress-bar"></div>
+            </div>
 
             <!-- Layered result summary. The last two rows never turn
                  green: no local tool can know a bank's profile or its
@@ -261,7 +268,7 @@
                 </tr>
                 <tr data-layer="scheme">
                   <th scope="row">Regolamento dello schema di pagamento</th>
-                  <td class="layer-state" id="layer-state-scheme">Non eseguito nel browser — la CLI lo verifica con <code class="tt-mono">--scheme</code></td>
+                  <td class="layer-state" id="layer-state-scheme">Not run — choose a scheme rulebook in step 1</td>
                 </tr>
                 <tr data-layer="bank">
                   <th scope="row">Il profilo della sua banca</th>
@@ -294,17 +301,17 @@
           <section class="demo-panel" aria-labelledby="xsd-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">3</span><h2 id="xsd-heading">Convalida con l’XSD ufficiale ISO 20022</h2></div>
             <p class="fineprint fineprint-tight">
-              I passaggi 1–2 eseguono controlli rapidi scritti a mano. Questo passaggio esegue l’originale: un runtime
-              Python (via WebAssembly) che esegue <code class="tt-mono">xmlschema</code>
-              rispetto allo schema ufficiale <code class="tt-mono">pain.001.001.09</code> —
-              la stessa classe di validazione effettuata dalla CLI. Il motore di circa 13&nbsp;MB è servito da questo
-              sito e viene scaricato una sola volta, su sua richiesta (il download parte silenziosamente non appena
-              il passaggio 2 produce XML valido).
+              Steps 1–2 already ran the pain001 library itself: its record validation, the scheme
+              rulebook you chose, XML generation, and the official <code class="tt-mono">pain.001.001.09</code>
+              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served
+              from this site. This button re-runs the schema gate on the XML shown above, so you can
+              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the
+              first time you validate, and stays cached.
             </p>
             <div class="demo-actions">
-              <button type="button" id="xsd-btn" class="pill pill-primary" disabled title="Generate XML in step 2 first">Esegui la validazione XSD ufficiale&nbsp;&rsaquo;</button>
+              <button type="button" id="xsd-btn" class="pill pill-primary" disabled title="Generate XML in step 2 first">Re-run the official XSD gate&nbsp;&rsaquo;</button>
             </div>
-            <p class="status" id="xsd-status" role="status">Generi prima l’XML al passaggio 2 — il controllo XSD convalida quel risultato.</p>
+            <p class="status" id="xsd-status" role="status">Generate XML in step 2 first — the XSD gate runs on that output.</p>
             <div class="xsd-progress" id="xsd-progress" hidden>
               <div class="xsd-progress-bar" id="xsd-progress-bar"></div>
             </div>
@@ -316,11 +323,13 @@
 
       <div class="wrap">
         <p class="fineprint" id="demo-fineprint">
-          Tutto in questa pagina viene eseguito nel suo browser — nulla viene caricato, memorizzato o inviato altrove.
-          Questa demo implementa un sottoinsieme della pipeline (campi obbligatori, IBAN mod-97, struttura BIC, formati
-          di importo e data, totali di controllo <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code> ricalcolati). Il passaggio 3 esegue il controllo XSD ufficiale direttamente qui via WebAssembly. La toolchain installata
-          aggiunge inoltre la validazione JSON Schema e cinque insiemi di regole di schema —
-          <a href="/it/installation/">installi la CLI</a> per la pipeline completa.
+          Everything on this page runs in your browser — nothing is uploaded, stored, or sent anywhere.
+          It runs the pain001 library itself, the same package you install with <code class="tt-inherit">pip</code>,
+          inside a Python runtime compiled to WebAssembly: record validation, IBAN and BIC checks, the scheme
+          rulebook you choose, XML generation with recomputed <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code>
+          control totals, and the official XSD gate. What the CLI adds is scale and inputs: files of any size,
+          Excel, SQLite, JSON, Parquet and SWIFT MT101, and every message edition —
+          <a href="/it/installation/">install the CLI</a> for the complete pipeline.
         </p>
       </div>
 
@@ -387,5 +396,5 @@ pain001 -t pain.001.001.09 -d payments.csv -o out/ --scheme sepa-sct --dry-run</
 </div>
 <script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
 </div>
-<script id="try-i18n" type="application/json">{"Add valid data in step 1 first": "Aggiunga prima dati validi nel passaggio 1", "Generate XML in step 2 first": "Generi prima l'XML nel passaggio 2", "No XML generated — validation is a hard gate. Fix the findings above and re-validate.": "Nessun XML generato — la validazione è un requisito vincolante. Corregga i rilievi sopra indicati e ripeta la validazione.", "The validated pain.001.001.09 document will appear here — add data in step 1.": "Il documento pain.001.001.09 validato apparirà qui — aggiunga i dati nel passaggio 1.", "…and {n} more — download the full error report below.": "…e altri {n} — scarichi il rapporto completo degli errori qui sotto.", "Need a header row and at least one record.": "Sono necessarie una riga di intestazione e almeno un record.", "Detected: {delim}-delimited": "Rilevato: delimitato da {delim}", "{n} record(s)": "{n} record", "ignored column(s): {cols}": "colonne ignorate: {cols}", "large batch — the CLI streams batches of any size": "batch di grandi dimensioni — la CLI elabora in streaming batch di qualsiasi dimensione", "✗ Validation failed — {n} issue(s). This file would be rejected.": "✗ Validazione non riuscita — {n} problema/i. Questo file verrebbe rifiutato.", "✓ {n} record(s) valid — control totals recomputed. Exit code 0.": "✓ {n} record valido/i — totali di controllo ricalcolati. Exit code 0.", "✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.": "✗ Il file supera i 2 MB — questa demo limita la dimensione dell'input; la CLI elabora in streaming batch di qualsiasi dimensione.", "✗ Could not read that file.": "✗ Impossibile leggere il file.", "Paste your CSV records, then press Validate & generate.": "Incolli i suoi record CSV, quindi prema Valida e genera.", "Copied ✓": "Copiato ✓", "Copy XML": "Copia XML", "Copy command": "Copia comando", "Downloading the engine (~13 MB, first run only)…": "Download del motore in corso (~13 MB, solo al primo avvio)…", "Booting Python runtime…": "Avvio del runtime Python…", "Loading xmlschema…": "Caricamento di xmlschema…", "Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.": "SHA-256 dello schema: {hex} — lo confronti con la copia pubblicata per pain.001.001.09.", "Validating against the official schema…": "Validazione rispetto allo schema ufficiale…", "✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).": "✓ VALIDO secondo l'XSD ufficiale ISO 20022 pain.001.001.09 ({s}s).", "✗ Official schema rejected the document — {n} error(s) ({s}s).": "✗ Lo schema ufficiale ha rifiutato il documento — {n} errore/i ({s}s).", "✗ Engine failed to load: {error}. Check your connection and try again.": "✗ Caricamento del motore non riuscito: {error}. Verifichi la connessione e riprovi.", "comma": "virgola", "semicolon": "punto e virgola", "tab": "tabulazione", "SEPA credit transfer (2 records, EUR)": "Bonifico SEPA (2 record, EUR)", "Cross-border (GBP, escaped chars)": "Transfrontaliero (GBP, caratteri con escape)", "Larger batch (20 records)": "Batch più grande (20 record)", "Flipped IBAN digit (mod-97 checksum)": "Cifra IBAN invertita (checksum mod-97)", "Malformed BIC (wrong structure)": "BIC malformato (struttura errata)", "Missing required column (execution date)": "Colonna obbligatoria mancante (data di esecuzione)", "European comma-decimal amount": "Importo europeo con virgola decimale", "Impossible calendar date": "Data di calendario impossibile", "missing required value": "valore obbligatorio mancante", "comma-decimal amount — expected point-decimal (e.g. 1234.56)": "importo con virgola decimale — atteso punto decimale (es. 1234.56)", "not a valid decimal amount (expected e.g. 1234.56)": "importo decimale non valido (atteso es. 1234.56)", "{ccy} is a zero-decimal currency — no fractional part allowed": "{ccy} è una valuta senza decimali — parte frazionaria non consentita", "more than 2 decimal places": "più di 2 cifre decimali", "not a 3-letter ISO 4217 code": "non è un codice ISO 4217 di 3 lettere", "expected ISO 8601 YYYY-MM-DD": "atteso ISO 8601 YYYY-MM-DD", "not a real calendar date": "non è una data di calendario reale", "wrong length for country {cc} (expected {len} characters)": "lunghezza errata per il paese {cc} (attesi {len} caratteri)", "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "non supera il checksum mod-97 ISO 13616 — probabilmente una cifra digitata male", "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "non è un BIC ISO 9362 valido (8 o 11 caratteri, AAAAAA00[XXX])", "row {row} has {cells} field(s), header has {header}": "la riga {row} ha {cells} campo/i, l'intestazione ne ha {header}", "Passed the official XSD": "Superato l'XSD ufficiale", "Rejected by the official XSD": "Rifiutato dall'XSD ufficiale", "{n} issue(s) the schema would reject": "{n} problema/i che lo schema rifiuterebbe", "Pre-checks passed — run the XSD gate below to prove it": "Controlli preliminari superati — esegua la validazione XSD qui sotto per dimostrarlo", "{n} issue(s) a schema would accept but a bank would not": "{n} problema/i che uno schema accetterebbe ma una banca no", "No identifier or format problems found": "Nessun problema di identificativi o di formato rilevato"}</script></body>
+<script id="try-i18n" type="application/json">{"Add valid data in step 1 first": "Aggiunga prima dati validi nel passaggio 1", "Booting Python runtime…": "Avvio del runtime Python…", "Copied ✓": "Copiato ✓", "Copy XML": "Copia XML", "Copy command": "Copia comando", "Cross-border (GBP, escaped chars)": "Transfrontaliero (GBP, caratteri con escape)", "Detected: {delim}-delimited": "Rilevato: delimitato da {delim}", "European comma-decimal amount": "Importo europeo con virgola decimale", "Flipped IBAN digit (mod-97 checksum)": "Cifra IBAN invertita (checksum mod-97)", "Generate XML in step 2 first": "Generi prima l'XML nel passaggio 2", "Generate XML in step 2 first — the XSD gate runs on that output.": "Generate XML in step 2 first — the XSD gate runs on that output.", "Impossible calendar date": "Data di calendario impossibile", "Installing pain001 and its dependencies…": "Installing pain001 and its dependencies…", "Larger batch (20 records)": "Batch più grande (20 record)", "Malformed BIC (wrong structure)": "BIC malformato (struttura errata)", "Missing required column (execution date)": "Colonna obbligatoria mancante (data di esecuzione)", "Need a header row and at least one record.": "Sono necessarie una riga di intestazione e almeno un record.", "No XML generated — validation is a hard gate. Fix the findings above and re-validate.": "Nessun XML generato — la validazione è un requisito vincolante. Corregga i rilievi sopra indicati e ripeta la validazione.", "No identifier or format problems found": "Nessun problema di identificativi o di formato rilevato", "Not reached — fix the findings above first": "Not reached — fix the findings above first", "Not run — choose a scheme rulebook in step 1": "Not run — choose a scheme rulebook in step 1", "Passed the official XSD": "Superato l'XSD ufficiale", "Passed {scheme}": "Passed {scheme}", "Paste your CSV records, then press Validate & generate.": "Incolli i suoi record CSV, quindi prema Valida e genera.", "Rejected by the official XSD": "Rifiutato dall'XSD ufficiale", "Running pain001 in your browser…": "Running pain001 in your browser…", "SEPA credit transfer (2 records, EUR)": "Bonifico SEPA (2 record, EUR)", "Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.": "SHA-256 dello schema: {hex} — lo confronti con la copia pubblicata per pain.001.001.09.", "Starting a private Python runtime in your browser — {done} of {total} MB; nothing leaves your machine.": "Starting a private Python runtime in your browser — {done} of {total} MB; nothing leaves your machine.", "The validated pain.001.001.09 document will appear here — add data in step 1.": "Il documento pain.001.001.09 validato apparirà qui — aggiunga i dati nel passaggio 1.", "Validating against the official schema…": "Validazione rispetto allo schema ufficiale…", "Warming the official schema (once per visit)…": "Warming the official schema (once per visit)…", "comma": "virgola", "ignored column(s): {cols}": "colonne ignorate: {cols}", "large batch — the CLI streams batches of any size": "batch di grandi dimensioni — la CLI elabora in streaming batch di qualsiasi dimensione", "row {row} has {cells} field(s), header has {header}": "la riga {row} ha {cells} campo/i, l'intestazione ne ha {header}", "semicolon": "punto e virgola", "tab": "tabulazione", "{n} issue(s) a schema would accept but a bank would not": "{n} problema/i che uno schema accetterebbe ma una banca no", "{n} issue(s) the schema would reject": "{n} problema/i che lo schema rifiuterebbe", "{n} record(s)": "{n} record", "{n} violation(s) against {scheme}": "{n} violation(s) against {scheme}", "…and {n} more — download the full error report below.": "…e altri {n} — scarichi il rapporto completo degli errori qui sotto.", "✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).": "✓ VALIDO secondo l'XSD ufficiale ISO 20022 pain.001.001.09 ({s}s).", "✓ {n} record(s) valid — pain001 {version} generated the file and the official XSD accepted it ({s}s).": "✓ {n} record(s) valid — pain001 {version} generated the file and the official XSD accepted it ({s}s).", "✗ Could not read that file.": "✗ Impossibile leggere il file.", "✗ Engine failed to load: {error}. Check your connection and try again.": "✗ Caricamento del motore non riuscito: {error}. Verifichi la connessione e riprovi.", "✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.": "✗ Il file supera i 2 MB — questa demo limita la dimensione dell'input; la CLI elabora in streaming batch di qualsiasi dimensione.", "✗ Official schema rejected the document — {n} error(s) ({s}s).": "✗ Lo schema ufficiale ha rifiutato il documento — {n} errore/i ({s}s).", "✗ The library raised an error: {error}": "✗ The library raised an error: {error}", "✗ Validation failed — {n} issue(s). This file would be rejected.": "✗ Validazione non riuscita — {n} problema/i. Questo file verrebbe rifiutato."}</script></body>
 </html>
