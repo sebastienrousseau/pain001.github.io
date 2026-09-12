@@ -103,6 +103,12 @@ jobs:
           node scripts/layout_audit.cjs
           node scripts/print_audit.cjs
 
+      - name: Performance budgets (Lighthouse, mobile)
+        run: |
+          (cd docs && python3 -m http.server 8898 &)
+          sleep 2
+          CHROME_PATH=/usr/bin/google-chrome node scripts/perf_budget.mjs http://127.0.0.1:8898
+
       - name: Accessibility scan (pa11y-ci, WCAG2AAA)
         run: |
           (cd docs && python3 -m http.server 8899 &)

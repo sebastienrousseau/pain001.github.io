@@ -1190,6 +1190,36 @@ def write_llms(site: Path) -> None:
     (site / "llms-full.txt").write_text("\n".join(head + ["## Scenarios", ""] + lines + [""]), encoding="utf-8")
 
 
+def stamp_suite_version(site: Path) -> int:
+    """Say in every footer which suite version the site was generated against.
+
+    The version comes from the corpus index the generator wrote, so the
+    footer can never claim a version the corpus pages do not carry. The
+    stamp is its own paragraph just inside the closing footer tag, outside
+    <main>, so no locale table key (a leaf fragment of <main>) changes.
+    """
+    import json as _json
+    index = Path(__file__).resolve().parent.parent / "static" / "corpus" / "index.json"
+    if not index.exists():
+        return 0
+    version = _json.loads(index.read_text(encoding="utf-8")).get("pain001", "")
+    if not version:
+        return 0
+    stamp = f'<p class="suite-version">Generated against pain001 {version}</p>'
+    count = 0
+    for page in site.rglob("index.html"):
+        html = page.read_text(encoding="utf-8")
+        if 'class="suite-version"' in html:
+            continue
+        start = html.find("<footer")
+        close = html.find("</footer>", start) if start >= 0 else -1
+        if close < 0:
+            continue
+        page.write_text(html[:close] + stamp + html[close:], encoding="utf-8")
+        count += 1
+    return count
+
+
 def main() -> None:
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     site = Path(args[0] if args else "Pain001")
@@ -1232,6 +1262,7 @@ def main() -> None:
     gen_journey_locales(site)
     inject_dataset_ld(site)
     write_llms(site)
+    stamp_suite_version(site)
     sec = site / "security.txt"
     if sec.exists():
         (site / ".well-known").mkdir(exist_ok=True)
