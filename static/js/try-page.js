@@ -1,16 +1,18 @@
 /* Pain001 browser demo — page wiring.
  *
- * All validation/parsing/XML logic lives in ./try-demo.js (pure,
- * unit-tested). This file only binds DOM, drives the state machine,
- * and runs the optional WASM XSD gate. No network request in this
- * file ever carries user data: the only fetches are same-origin GETs
- * for the Pyodide runtime and the official schema.
+ * Input handling lives in ./try-demo.js (pure, unit-tested); the
+ * verdicts come from the pain001 library itself, loaded into a Python
+ * runtime (WebAssembly) by ./try-engine.js. This file binds the DOM,
+ * drives the state machine and shows what the library said. No network
+ * request in this file ever carries user data: the only fetches are
+ * same-origin GETs for the runtime, the library and its dependencies.
  */
 
 import {
-  parseCsv, validateRecords, toXml, errorReportCsv, decodeBuffer,
+  parseCsv, errorReportCsv, decodeBuffer,
   DELIMITER_NAMES, SAMPLES, SCENARIOS, fillTemplate,
 } from "./try-demo.js";
+import { loadEngine, runEngine, MESSAGE_TYPE } from "./try-engine.js";
 
 /* ==== Runtime i18n ====
  * Locale demo pages carry a non-executable JSON table keyed by the
@@ -30,34 +32,51 @@ function tFinding(f) {
 }
 
 /* ==== State machine ====
- * empty → loaded → valid | invalid ; valid → xsd-running → xsd-valid | xsd-invalid
- * Every control's enabled state derives from here — nothing toggles
- * buttons ad hoc. */
+ * empty → loaded → running → valid | invalid. The engine has its own
+ * state (idle → loading → ready | failed) and every control's enabled
+ * state derives from the two — nothing toggles buttons ad hoc. */
+
 const state = {
-  phase: "empty",        // empty | loaded | valid | invalid
-  xsd: "idle",           // idle | running | valid | invalid
+  phase: "empty",        // empty | loaded | running | valid | invalid
+  engine: "idle",        // idle | loading | ready | failed
   findings: [],
   xml: "",
+  twin: null,            // JSON twin of the generated file, once XSD-clean
+  view: "xml",           // xml | twin
   pristine: "",          // sample before a scenario broke it
   scenarioActive: false,
+  xsdVerdict: null,      // null | "valid" | "invalid"
+  schemeVerdict: null,   // null | { scheme, valid, violations }
+  version: "",           // pain001 version reported by the runtime
 };
+
+/** Scheme rulebooks the library ships that fit a credit-transfer batch. */
+const SCHEMES = [
+  "sepa-sct", "sepa-inst", "sepa-b2b", "cbpr-cross-border", "uk-fps", "uk-chaps",
+  "uk-bacs", "us-ach", "us-wire", "us-rtp", "ch-domestic", "se-bankgiro", "de-ccu",
+  "hk-fps", "sg-fast", "anti-duplicate",
+];
 
 const $ = (id) => document.getElementById(id);
 const els = {
   dropzone: $("dropzone"), fileInput: $("file-input"),
   sampleSelect: $("sample-select"), scenarioSelect: $("scenario-select"),
+  schemeSelect: $("scheme-select"),
   pasteBtn: $("paste-btn"), editorBlock: $("editor-block"),
   input: $("csv-input"), dialectNote: $("dialect-note"),
   runBtn: $("run-btn"), fixBtn: $("fix-btn"),
   status: $("status"), tableWrap: $("error-table-wrap"),
   tbody: $("error-tbody"), overflow: $("error-overflow"),
+  runProgress: $("run-progress"), runProgressBar: $("run-progress-bar"),
   xmlOut: $("xml-out"), copyBtn: $("copy-btn"),
-  downloadBtn: $("download-btn"), reportBtn: $("report-btn"),
+  downloadBtn: $("download-btn"), downloadJsonBtn: $("download-json-btn"),
+  tabXml: $("tab-xml"), tabTwin: $("tab-twin"), reportBtn: $("report-btn"),
   xsdBtn: $("xsd-btn"), xsdStatus: $("xsd-status"),
   xsdErrors: $("xsd-errors"), xsdHash: $("xsd-hash"),
   xsdProgress: $("xsd-progress"), xsdProgressBar: $("xsd-progress-bar"),
   layerSummary: $("layer-summary"),
   layerIso: $("layer-state-iso"), layerData: $("layer-state-data"),
+  layerScheme: $("layer-state-scheme"),
 };
 
 const MAX_FILE_BYTES = 2 * 1024 * 1024;
@@ -66,23 +85,37 @@ const MAX_VISIBLE_ERRORS = 50;
 
 function render() {
   const hasXml = state.phase === "valid";
+  const busy = state.phase === "running";
   els.copyBtn.disabled = !hasXml;
   els.downloadBtn.disabled = !hasXml;
   els.copyBtn.title = hasXml ? "" : t("Add valid data in step 1 first");
   els.downloadBtn.title = hasXml ? "" : t("Add valid data in step 1 first");
   els.reportBtn.hidden = state.findings.length === 0;
+  const hasTwin = hasXml && !!state.twin;
+  if (els.downloadJsonBtn) {
+    els.downloadJsonBtn.disabled = !hasTwin;
+    els.downloadJsonBtn.title = hasTwin ? "" : t("Generate XML in step 2 first");
+  }
+  if (els.tabTwin) {
+    els.tabTwin.disabled = !hasTwin;
+    els.tabTwin.title = hasTwin ? "" : t("Generate XML in step 2 first");
+    const twinView = state.view === "twin" && hasTwin;
+    els.tabTwin.setAttribute("aria-selected", twinView ? "true" : "false");
+    els.tabXml.setAttribute("aria-selected", twinView ? "false" : "true");
+    els.tabTwin.className = "pill " + (twinView ? "pill-primary" : "pill-ghost");
+    els.tabXml.className = "pill " + (twinView ? "pill-ghost" : "pill-primary");
+  }
   els.fixBtn.hidden = !state.scenarioActive;
-  els.xsdBtn.disabled = !hasXml || state.xsd === "running";
+  els.runBtn.disabled = busy;
+  els.xsdBtn.disabled = !hasXml || busy;
   els.xsdBtn.title = hasXml ? "" : t("Generate XML in step 2 first");
 }
 
 /* ==== Layered result summary ====
- * Reports what each layer actually did on this run. The ISO row tracks
- * two things: the fast pre-checks (always) and the authoritative XSD
- * gate (on demand), so a clean pre-check never gets to claim the schema
- * itself has passed. The bank and channel rows are static in the markup
- * and never change — nothing local can evaluate them.
- */
+ * Three rows now carry live verdicts from the library: the official XSD
+ * gate, the data-quality checks a schema cannot make (IBAN mod-97, BIC
+ * structure), and the scheme rulebook chosen in step 1. The bank and
+ * channel rows stay static: nothing local can evaluate them. */
 function setLayerState(el, kind, text) {
   if (!el) return;
   el.className = "layer-state" + (kind ? " is-" + kind : "");
@@ -99,25 +132,30 @@ function updateLayerSummary(findings) {
   const isoIssues = count("iso") + count("input");
   const dataIssues = count("data");
 
-  // The XSD gate is authoritative; pre-checks only anticipate it.
   if (state.xsdVerdict === "valid") {
-    setLayerState(els.layerIso, "pass",
-      t("Passed the official XSD"));
+    setLayerState(els.layerIso, "pass", t("Passed the official XSD"));
   } else if (state.xsdVerdict === "invalid") {
-    setLayerState(els.layerIso, "fail",
-      t("Rejected by the official XSD"));
+    setLayerState(els.layerIso, "fail", t("Rejected by the official XSD"));
   } else if (isoIssues > 0) {
-    setLayerState(els.layerIso, "fail",
-      t("{n} issue(s) the schema would reject", { n: isoIssues }));
+    setLayerState(els.layerIso, "fail", t("{n} issue(s) the schema would reject", { n: isoIssues }));
   } else {
-    setLayerState(els.layerIso, null,
-      t("Pre-checks passed — run the XSD gate below to prove it"));
+    setLayerState(els.layerIso, null, t("Not reached — fix the findings above first"));
   }
 
   setLayerState(els.layerData, dataIssues ? "fail" : "pass",
     dataIssues
       ? t("{n} issue(s) a schema would accept but a bank would not", { n: dataIssues })
       : t("No identifier or format problems found"));
+
+  const verdict = state.schemeVerdict;
+  if (!verdict) {
+    setLayerState(els.layerScheme, null, t("Not run — choose a scheme rulebook in step 1"));
+  } else if (verdict.valid) {
+    setLayerState(els.layerScheme, "pass", t("Passed {scheme}", { scheme: verdict.scheme }));
+  } else {
+    setLayerState(els.layerScheme, "fail",
+      t("{n} violation(s) against {scheme}", { n: verdict.violations.length, scheme: verdict.scheme }));
+  }
 }
 
 function showFindings(findings) {
@@ -145,10 +183,12 @@ function showFindings(findings) {
   if (rest > 0) els.overflow.textContent = t("…and {n} more — download the full error report below.", { n: rest });
 }
 
-function setXml(xml) {
+function setXml(xml, twin) {
   state.xml = xml;
+  state.twin = twin || null;
   if (xml) {
-    els.xmlOut.textContent = xml;
+    els.xmlOut.textContent = state.view === "twin" && state.twin
+      ? JSON.stringify(state.twin, null, 2) : xml;
   } else {
     els.xmlOut.innerHTML = "";
     const span = document.createElement("span");
@@ -160,9 +200,85 @@ function setXml(xml) {
   }
 }
 
-function runValidation() {
-  // a previous XSD verdict does not apply to freshly edited data
+/* ==== The engine: the library, loaded once ==== */
+
+let engineReady = null;
+
+function setRunProgress(pct) {
+  if (!els.runProgress) return;
+  if (pct === null) { els.runProgress.hidden = true; return; }
+  els.runProgress.hidden = false;
+  els.runProgressBar.style.width = pct + "%";
+}
+
+function reportProgress(p) {
+  const mb = (n) => (n / 1e6).toFixed(1);
+  if (p.phase === "download") {
+    setRunProgress(p.total ? Math.round((p.done / p.total) * 100) : 0);
+    els.status.textContent = t("Starting a private Python runtime in your browser — {done} of {total} MB; nothing leaves your machine.",
+      { done: mb(p.done), total: mb(p.total) });
+  } else if (p.phase === "boot") {
+    els.status.textContent = t("Booting Python runtime…");
+  } else if (p.phase === "install") {
+    els.status.textContent = t("Installing pain001 and its dependencies…");
+  } else if (p.phase === "warm") {
+    els.status.textContent = t("Warming the official schema (once per visit)…");
+  }
+}
+
+function ensureEngine() {
+  if (engineReady) return engineReady;
+  state.engine = "loading";
+  engineReady = (async () => {
+    await new Promise((resolve, reject) => {
+      if (window.loadPyodide) { resolve(); return; }
+      const s = document.createElement("script");
+      s.src = "/pyodide/pyodide.js";
+      s.onload = resolve;
+      s.onerror = () => reject(new Error("runtime script failed to load"));
+      document.head.appendChild(s);
+    });
+    const engine = await loadEngine({ base: "", loadPyodide: window.loadPyodide, onProgress: reportProgress });
+    state.engine = "ready";
+    state.version = engine.version;
+    setRunProgress(null);
+    try {
+      const hex = engine.py.runPython(`xsd_sha256(${JSON.stringify(MESSAGE_TYPE)})`);
+      els.xsdHash.textContent = t("Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.", { hex });
+    } catch (_) { /* informational only */ }
+    return engine;
+  })();
+  engineReady.catch(() => { engineReady = null; state.engine = "failed"; setRunProgress(null); });
+  return engineReady;
+}
+
+/* Warm the runtime the moment intent is clear: data has been loaded. */
+function prefetchEngine() { ensureEngine().catch(() => {}); }
+
+function showXsd(errors, secs) {
+  els.xsdErrors.innerHTML = "";
+  if (errors.length === 0) {
+    state.xsdVerdict = "valid";
+    els.xsdStatus.className = "status pass";
+    els.xsdStatus.textContent = t("✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).", { s: secs });
+  } else {
+    state.xsdVerdict = "invalid";
+    els.xsdStatus.className = "status fail";
+    els.xsdStatus.textContent = t("✗ Official schema rejected the document — {n} error(s) ({s}s).", { n: errors.length, s: secs });
+    for (const e of errors) {
+      const li = document.createElement("li");
+      li.textContent = e;
+      els.xsdErrors.appendChild(li);
+    }
+  }
+}
+
+async function runValidation() {
   state.xsdVerdict = null;
+  state.schemeVerdict = null;
+  els.xsdErrors.innerHTML = "";
+  els.xsdStatus.className = "status";
+  els.xsdStatus.textContent = t("Generate XML in step 2 first — the XSD gate runs on that output.");
   const parsed = parseCsv(els.input.value);
   if (parsed.error) {
     state.phase = "invalid";
@@ -172,6 +288,7 @@ function runValidation() {
     els.dialectNote.textContent = "";
     showFindings([]);
     setXml("");
+    updateLayerSummary([]);
     render();
     return;
   }
@@ -182,8 +299,39 @@ function runValidation() {
   if (parsed.rows.length > MAX_ROWS_WARN) notes.push(t("large batch — the CLI streams batches of any size"));
   els.dialectNote.textContent = notes.join(" · ");
 
-  const findings = parsed.structural.concat(validateRecords(parsed.rows));
+  state.phase = "running";
+  state.findings = [];
+  els.status.className = "status";
+  els.status.textContent = t("Running pain001 in your browser…");
+  setXml("");
+  render();
+
+  let engine;
+  try {
+    engine = await ensureEngine();
+  } catch (err) {
+    state.phase = "loaded";
+    els.status.className = "status fail";
+    els.status.textContent = t("✗ Engine failed to load: {error}. Check your connection and try again.", { error: err.message });
+    render();
+    return;
+  }
+
+  const started = performance.now();
+  let out;
+  try {
+    out = runEngine(engine, parsed.rows, { scheme: els.schemeSelect ? els.schemeSelect.value : "" });
+  } catch (err) {
+    state.phase = "invalid";
+    els.status.className = "status fail";
+    els.status.textContent = t("✗ The library raised an error: {error}", { error: String(err.message).split("\n").pop() });
+    render();
+    return;
+  }
+  const secs = ((performance.now() - started) / 1000).toFixed(1);
+  const findings = parsed.structural.concat(out.findings);
   state.findings = findings;
+  state.schemeVerdict = out.scheme;
   showFindings(findings);
 
   if (findings.length) {
@@ -193,13 +341,13 @@ function runValidation() {
     setXml("");
   } else {
     state.phase = "valid";
-    els.status.textContent = t("✓ {n} record(s) valid — control totals recomputed. Exit code 0.", { n: parsed.rows.length });
+    setXml(out.xml, out.twin);
+    showXsd(out.xsd_errors, secs);
+    els.status.textContent = t("✓ {n} record(s) valid — pain001 {version} generated the file and the official XSD accepted it ({s}s).",
+      { n: out.records, version: out.version, s: secs });
     els.status.className = "status pass";
-    setXml(toXml(parsed.rows, "DEMO-" + Date.now(),
-      new Date().toISOString().slice(0, 19)));
-    prefetchEngine();
   }
-  updateLayerSummary(findings);   // after the phase is known
+  updateLayerSummary(findings);
   render();
 }
 
@@ -209,7 +357,7 @@ function loadData(text, opts) {
   if (!opts.scenario) state.pristine = text;
   els.input.value = String(text).trim();
   els.editorBlock.hidden = false;
-  runValidation();
+  void runValidation();
   els.status.scrollIntoView({
     behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
     block: "center",
@@ -253,9 +401,37 @@ for (const [key, scenario] of Object.entries(SCENARIOS)) {
   els.scenarioSelect.appendChild(opt);
 }
 
+const CORPUS = new Map();
+
+async function loadCorpusSamples() {
+  try {
+    const data = await fetch("/corpus/try-samples.json").then((r) => (r.ok ? r.json() : null));
+    if (!data || !Array.isArray(data.samples) || !data.samples.length) return;
+    const group = document.createElement("optgroup");
+    group.label = t("From the example corpus ({n} scenarios)", { n: data.samples.length });
+    for (const sample of data.samples) {
+      CORPUS.set("corpus:" + sample.id, sample);
+      const opt = document.createElement("option");
+      opt.value = "corpus:" + sample.id;
+      opt.textContent = `${sample.country.toUpperCase()} · ${sample.id} (${sample.records})`;
+      group.appendChild(opt);
+    }
+    els.sampleSelect.appendChild(group);
+  } catch (_) { /* the built-in samples remain */ }
+}
+void loadCorpusSamples();
+
 els.sampleSelect.addEventListener("change", () => {
   const key = els.sampleSelect.value;
-  if (key) loadData(SAMPLES[key].csv);
+  if (CORPUS.has(key)) {
+    const sample = CORPUS.get(key);
+    if (els.schemeSelect && sample.scheme && [...els.schemeSelect.options].some((o) => o.value === sample.scheme)) {
+      els.schemeSelect.value = sample.scheme;
+    }
+    loadData(sample.csv);
+  } else if (key) {
+    loadData(SAMPLES[key].csv);
+  }
   els.sampleSelect.value = "";
 });
 
@@ -303,7 +479,7 @@ els.dropzone.addEventListener("drop", (e) => {
 
 els.runBtn.addEventListener("click", () => {
   state.scenarioActive = false;
-  runValidation();
+  void runValidation();
 });
 
 /* ==== Step 2 outputs ==== */
@@ -331,134 +507,66 @@ els.downloadBtn.addEventListener("click", () => {
     "pain001-demo-" + new Date().toISOString().slice(0, 10) + ".xml");
 });
 
+if (els.downloadJsonBtn) {
+  els.downloadJsonBtn.addEventListener("click", () => {
+    if (!state.twin) return;
+    downloadBlob(JSON.stringify(state.twin, null, 2), "application/json",
+      "pain001-demo-" + new Date().toISOString().slice(0, 10) + ".iso.json");
+  });
+}
+
+/* ==== Output tabs: the file, or its ISO 20022 JSON twin ==== */
+
+for (const [el, view] of [[els.tabXml, "xml"], [els.tabTwin, "twin"]]) {
+  if (!el) continue;
+  el.addEventListener("click", () => {
+    state.view = view;
+    setXml(state.xml, state.twin);
+    render();
+  });
+}
+
 els.reportBtn.addEventListener("click", () => {
   downloadBlob(errorReportCsv(state.findings), "text/csv",
     "pain001-error-report-" + new Date().toISOString().slice(0, 10) + ".csv");
 });
 
-/* ==== Step 3: the WASM XSD gate ==== */
-
-const WASM_URL = "/pyodide/pyodide.asm.wasm";
-let pyodideReady = null;
-let prefetched = false;
-
-/* Warm the HTTP cache for the big payload the moment intent is clear
- * (valid XML exists, or the button is hovered/focused). loadPyodide's
- * own fetch then hits the cache. */
-function prefetchEngine() {
-  if (prefetched) return;
-  prefetched = true;
-  fetch(WASM_URL).catch(() => { prefetched = false; });
-}
-els.xsdBtn.addEventListener("mouseenter", prefetchEngine);
-els.xsdBtn.addEventListener("focus", prefetchEngine);
-
-function setProgress(pct) {
-  if (pct === null) {
-    els.xsdProgress.hidden = true;
-    return;
-  }
-  els.xsdProgress.hidden = false;
-  els.xsdProgressBar.style.width = pct + "%";
-}
-
-async function fetchWithProgress(url, onPct) {
-  const resp = await fetch(url);
-  const total = Number(resp.headers.get("Content-Length")) || 0;
-  if (!resp.body || !total) { await resp.arrayBuffer(); onPct(100); return; }
-  const reader = resp.body.getReader();
-  let seen = 0;
-  for (;;) {
-    const { done, value } = await reader.read();
-    if (done) break;
-    seen += value.length;
-    onPct(Math.min(100, Math.round((seen / total) * 100)));
-  }
-}
-
-async function sha256Hex(url) {
-  const buf = await fetch(url).then((r) => r.arrayBuffer());
-  const digest = await crypto.subtle.digest("SHA-256", buf);
-  return Array.from(new Uint8Array(digest))
-    .map((b) => b.toString(16).padStart(2, "0")).join("");
-}
-
-function loadEngine() {
-  if (pyodideReady) return pyodideReady;
-  pyodideReady = (async () => {
-    els.xsdStatus.textContent = t("Downloading the engine (~13 MB, first run only)…");
-    await fetchWithProgress(WASM_URL, setProgress);
-    setProgress(null);
-    els.xsdStatus.textContent = t("Booting Python runtime…");
-    await new Promise((resolve, reject) => {
-      const s = document.createElement("script");
-      s.src = "/pyodide/pyodide.js";
-      s.onload = resolve;
-      s.onerror = () => reject(new Error("engine script failed to load"));
-      document.head.appendChild(s);
-    });
-    const py = await loadPyodide({ indexURL: "/pyodide/" });
-    els.xsdStatus.textContent = t("Loading xmlschema…");
-    await py.loadPackage([
-      "/pyodide/elementpath-5.1.3-py3-none-any.whl",
-      "/pyodide/xmlschema-4.3.2-py3-none-any.whl",
-    ]);
-    const xsdText = await fetch("/pyodide/pain.001.001.09.xsd").then((r) => r.text());
-    py.FS.writeFile("/pain.001.001.09.xsd", xsdText);
-    py.runPython("import xmlschema\nschema = xmlschema.XMLSchema('/pain.001.001.09.xsd')");
-    sha256Hex("/pyodide/pain.001.001.09.xsd").then((hex) => {
-      els.xsdHash.textContent = t("Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.", { hex });
-    }).catch(() => {});
-    return py;
-  })();
-  pyodideReady.catch(() => { pyodideReady = null; });
-  return pyodideReady;
-}
+/* ==== Step 3: re-run the official XSD gate on the XML shown ==== */
 
 els.xsdBtn.addEventListener("click", async () => {
-  if (state.phase !== "valid") return;
-  state.xsd = "running";
-  render();
-  els.xsdErrors.innerHTML = "";
+  if (state.phase !== "valid" || !state.xml) return;
   els.xsdStatus.className = "status";
+  els.xsdStatus.textContent = t("Validating against the official schema…");
   const started = performance.now();
   try {
-    const py = await loadEngine();
-    els.xsdStatus.textContent = t("Validating against the official schema…");
-    py.globals.set("xml_text", state.xml);
-    const result = py.runPython(
-      "import json\n" +
-      "errs = [str(e.reason or e) for e in schema.iter_errors(xml_text)]\n" +
-      "json.dumps(errs[:10])"
-    );
-    const errs = JSON.parse(result);
-    const secs = ((performance.now() - started) / 1000).toFixed(1);
-    if (errs.length === 0) {
-      state.xsd = "valid";
-      els.xsdStatus.className = "status pass";
-      els.xsdStatus.textContent = t("✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).", { s: secs });
-      state.xsdVerdict = "valid";
-      updateLayerSummary(state.findings);
-    } else {
-      state.xsd = "invalid";
-      els.xsdStatus.className = "status fail";
-      els.xsdStatus.textContent = t("✗ Official schema rejected the document — {n} error(s) ({s}s).", { n: errs.length, s: secs });
-      state.xsdVerdict = "invalid";
-      updateLayerSummary(state.findings);
-      for (const e of errs) {
-        const li = document.createElement("li");
-        li.textContent = e;
-        els.xsdErrors.appendChild(li);
-      }
-    }
+    const engine = await ensureEngine();
+    engine.py.globals.set("_xml_text", state.xml);
+    const errs = JSON.parse(engine.py.runPython(`xsd_errors(_xml_text, ${JSON.stringify(MESSAGE_TYPE)})`));
+    showXsd(errs, ((performance.now() - started) / 1000).toFixed(1));
+    updateLayerSummary(state.findings);
   } catch (err) {
-    state.xsd = "idle";
-    setProgress(null);
     els.xsdStatus.className = "status fail";
     els.xsdStatus.textContent = t("✗ Engine failed to load: {error}. Check your connection and try again.", { error: err.message });
   }
   render();
 });
+
+/* ==== Scheme rulebook choice ==== */
+
+if (els.schemeSelect) {
+  for (const id of SCHEMES) {
+    const opt = document.createElement("option");
+    opt.value = id;
+    opt.textContent = id;
+    els.schemeSelect.appendChild(opt);
+  }
+  els.schemeSelect.addEventListener("change", () => {
+    if (state.phase === "valid" || state.phase === "invalid") void runValidation();
+  });
+}
+
+els.input.addEventListener("focus", prefetchEngine, { once: true });
+els.editorBlock.addEventListener("input", prefetchEngine, { once: true });
 
 /* ==== Copy buttons for code samples in the prose ==== */
 

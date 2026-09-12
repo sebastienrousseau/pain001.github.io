@@ -108,10 +108,10 @@ Identifiers are synthetic: IBANs, BICs, LEIs and account numbers pass their chec
 
 | Bundle | Contents | Size |
 | :--- | :--- | ---: |
-| [Complete corpus](/corpus/pain001-example-corpus-0.0.69.zip) | 84 payment files with their provenance records, and 131 schema coverage files across 13 editions | 313 KB |
+| [Complete corpus](/corpus/pain001-example-corpus-0.0.70.zip) | 84 payment files with their provenance records, and 131 schema coverage files across 13 editions | 313 KB |
 | Coverage files per edition | one zip each, listed on the [coverage page](/example-corpus-coverage/) | 9 to 12 KB |
 
-Everything here is generated from pain001 0.0.69's own corpus, which also ships inside the Python package (`pain001.corpus`) and in the [repository](https://github.com/sebastienrousseau/pain001/tree/main/pain001/corpus/data).
+Everything here is generated from pain001 0.0.70's own corpus, which also ships inside the Python package (`pain001.corpus`) and in the [repository](https://github.com/sebastienrousseau/pain001/tree/main/pain001/corpus/data).
 
 ## One scenario, end to end
 

@@ -49,8 +49,13 @@ jobs:
       - name: Audit gates (fail on warnings)
         run: ssg audit -f ssg.toml -o docs --severity warn --fail-on warn
 
-      - name: Unit tests (demo validation rules)
+      - name: Unit tests (demo input handling, measurement)
         run: node --test tests/*.test.mjs
+
+      - name: Browser engine runs the library (Node, vendored runtime)
+        run: |
+          npm i --no-save pyodide@0.27.2
+          node tests/engine.integration.mjs
 
       - name: Translation table integrity (key/tag/placeholder parity)
         run: |

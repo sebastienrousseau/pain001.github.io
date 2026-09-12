@@ -222,6 +222,10 @@
               <select id="scenario-select" class="pill-select">
                 <option value="">Bir hata ekleyin&hellip;</option>
               </select>
+              <label class="visually-hidden" for="scheme-select">Scheme rulebook to apply</label>
+              <select id="scheme-select" class="pill-select">
+                <option value="">Scheme rulebook: none</option>
+              </select>
               <button type="button" id="paste-btn" class="pill pill-ghost">Kayıtları yapıştırın</button>
             </div>
             <p class="dialect-note">
@@ -244,6 +248,9 @@
           <section class="demo-panel" aria-labelledby="output-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">2</span><h2 id="output-heading">Doğrulama sonucu &amp; oluşturulan XML</h2></div>
             <p class="status" id="status" role="status">1. adımda veri ekleyin — doğrulama otomatik olarak çalışır.</p>
+            <div class="xsd-progress" id="run-progress" hidden>
+              <div class="xsd-progress-bar" id="run-progress-bar"></div>
+            </div>
 
             <!-- Layered result summary. The last two rows never turn
                  green: no local tool can know a bank's profile or its
@@ -261,7 +268,7 @@
                 </tr>
                 <tr data-layer="scheme">
                   <th scope="row">Ödeme şeması kural kitabı</th>
-                  <td class="layer-state" id="layer-state-scheme">Tarayıcıda çalıştırılmaz — CLI bunu <code class="tt-mono">--scheme</code> ile kontrol eder</td>
+                  <td class="layer-state" id="layer-state-scheme">Not run — choose a scheme rulebook in step 1</td>
                 </tr>
                 <tr data-layer="bank">
                   <th scope="row">Bankanızın profili</th>
@@ -283,10 +290,15 @@
               </table></div>
               <p class="dialect-note" id="error-overflow" hidden></p>
             </div>
-            <div class="xml-out" id="xml-out" tabindex="0" aria-label="Oluşturulan XML çıktısı"><span class="xml-placeholder">Doğrulanmış pain.001.001.09 belgesi burada görünecek — 1. adımda veri ekleyin.</span></div>
+            <div class="demo-actions output-tabs" role="tablist" aria-label="Output format">
+              <button type="button" id="tab-xml" class="pill pill-primary" role="tab" aria-selected="true" aria-controls="xml-out">XML</button>
+              <button type="button" id="tab-twin" class="pill pill-ghost" role="tab" aria-selected="false" aria-controls="xml-out" disabled title="Generate XML in step 2 first">JSON twin</button>
+            </div>
+            <div class="xml-out" id="xml-out" tabindex="0" aria-label="Generated output"><span class="xml-placeholder">Doğrulanmış pain.001.001.09 belgesi burada görünecek — 1. adımda veri ekleyin.</span></div>
             <div class="demo-actions">
               <button type="button" id="copy-btn" class="pill pill-ghost" disabled title="Add valid data in step 1 first">XML’i kopyala</button>
               <button type="button" id="download-btn" class="pill pill-ghost" data-track="try_download_xml" disabled title="Add valid data in step 1 first">.xml indir</button>
+              <button type="button" id="download-json-btn" class="pill pill-ghost" disabled title="Generate XML in step 2 first">Download JSON twin</button>
               <button type="button" id="report-btn" class="pill pill-ghost" hidden>Hata raporunu indir (.csv)</button>
             </div>
           </section>
@@ -294,17 +306,17 @@
           <section class="demo-panel" aria-labelledby="xsd-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">3</span><h2 id="xsd-heading">Resmî ISO 20022 XSD ile kanıtlayın</h2></div>
             <p class="fineprint fineprint-tight">
-              1–2. adımlar hızlı, elle yazılmış kontroller çalıştırır. Bu adım ise işin aslını çalıştırır: bir Python
-              çalışma zamanı (WebAssembly üzerinden), <code class="tt-mono">xmlschema</code>
-              komutunu resmî <code class="tt-mono">pain.001.001.09</code> şemasına karşı yürütür —
-              CLI’nin uyguladığıyla aynı sınıf bir doğrulamadır. ~13&nbsp;MB boyutundaki motor bu
-              siteden sunulur ve yalnızca siz istediğinizde bir kez indirilir (2. adım geçerli XML
-              ürettiği anda sessizce indirilmeye başlar).
+              Steps 1–2 already ran the pain001 library itself: its record validation, the scheme
+              rulebook you chose, XML generation, and the official <code class="tt-mono">pain.001.001.09</code>
+              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served
+              from this site. This button re-runs the schema gate on the XML shown above, so you can
+              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the
+              first time you validate, and stays cached.
             </p>
             <div class="demo-actions">
-              <button type="button" id="xsd-btn" class="pill pill-primary" disabled title="Generate XML in step 2 first">Resmî XSD kapısını çalıştır&nbsp;&rsaquo;</button>
+              <button type="button" id="xsd-btn" class="pill pill-primary" disabled title="Generate XML in step 2 first">Re-run the official XSD gate&nbsp;&rsaquo;</button>
             </div>
-            <p class="status" id="xsd-status" role="status">Önce 2. adımda XML oluşturun — XSD kapısı bu çıktıyı doğrular.</p>
+            <p class="status" id="xsd-status" role="status">Generate XML in step 2 first — the XSD gate runs on that output.</p>
             <div class="xsd-progress" id="xsd-progress" hidden>
               <div class="xsd-progress-bar" id="xsd-progress-bar"></div>
             </div>
@@ -316,11 +328,13 @@
 
       <div class="wrap">
         <p class="fineprint" id="demo-fineprint">
-          Bu sayfadaki her şey tarayıcınızda çalışır — hiçbir şey yüklenmez, saklanmaz veya herhangi bir yere gönderilmez.
-          Bu demo, işlem hattının bir alt kümesini uygular (zorunlu alanlar, IBAN mod-97, BIC yapısı, tutar
-          ve tarih biçimleri, yeniden hesaplanan <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code> kontrol toplamları). 3. adım, resmî XSD kapısını tam burada WebAssembly aracılığıyla çalıştırır. Kurulu araç zinciri
-          bunların üzerine JSON Schema doğrulaması ve beş ödeme şeması kural kitabı ekler —
-          eksiksiz işlem hattı için <a href="/tr/installation/">CLI’yi kurun</a>.
+          Everything on this page runs in your browser — nothing is uploaded, stored, or sent anywhere.
+          It runs the pain001 library itself, the same package you install with <code class="tt-inherit">pip</code>,
+          inside a Python runtime compiled to WebAssembly: record validation, IBAN and BIC checks, the scheme
+          rulebook you choose, XML generation with recomputed <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code>
+          control totals, and the official XSD gate. What the CLI adds is scale and inputs: files of any size,
+          Excel, SQLite, JSON, Parquet and SWIFT MT101, and every message edition —
+          <a href="/tr/installation/">install the CLI</a> for the complete pipeline.
         </p>
       </div>
 
@@ -387,5 +401,5 @@ pain001 -t pain.001.001.09 -d payments.csv -o out/ --scheme sepa-sct --dry-run</
 </div>
 <script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
 </div>
-<script id="try-i18n" type="application/json">{"Add valid data in step 1 first": "Önce 1. adımda geçerli veri ekleyin", "Generate XML in step 2 first": "Önce 2. adımda XML oluşturun", "No XML generated — validation is a hard gate. Fix the findings above and re-validate.": "XML oluşturulmadı — doğrulama zorunlu bir aşamadır. Yukarıdaki bulguları düzeltip yeniden doğrulayın.", "The validated pain.001.001.09 document will appear here — add data in step 1.": "Doğrulanmış pain.001.001.09 belgesi burada görünecek — 1. adımda veri ekleyin.", "…and {n} more — download the full error report below.": "…ve {n} tane daha — tam hata raporunu aşağıdan indirin.", "Need a header row and at least one record.": "Bir başlık satırı ve en az bir kayıt gerekli.", "Detected: {delim}-delimited": "Algılanan ayırıcı: {delim}", "{n} record(s)": "{n} kayıt", "ignored column(s): {cols}": "yok sayılan sütun(lar): {cols}", "large batch — the CLI streams batches of any size": "büyük toplu iş — CLI her boyutta toplu işi akış halinde işler", "✗ Validation failed — {n} issue(s). This file would be rejected.": "✗ Doğrulama başarısız — {n} sorun. Bu dosya reddedilirdi.", "✓ {n} record(s) valid — control totals recomputed. Exit code 0.": "✓ {n} kayıt geçerli — kontrol toplamları yeniden hesaplandı. Exit code 0.", "✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.": "✗ Dosya 2 MB'tan büyük — bu demo girdi boyutunu sınırlar; CLI her boyutta toplu işi akış halinde işler.", "✗ Could not read that file.": "✗ Dosya okunamadı.", "Paste your CSV records, then press Validate & generate.": "CSV kayıtlarınızı yapıştırın, ardından Doğrula ve oluştur düğmesine basın.", "Copied ✓": "Kopyalandı ✓", "Copy XML": "XML'i kopyala", "Copy command": "Komutu kopyala", "Downloading the engine (~13 MB, first run only)…": "Motor indiriliyor (~13 MB, yalnızca ilk çalıştırmada)…", "Booting Python runtime…": "Python çalışma zamanı başlatılıyor…", "Loading xmlschema…": "xmlschema yükleniyor…", "Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.": "Şema SHA-256: {hex} — pain.001.001.09 için yayımlanan kopyayla karşılaştırın.", "Validating against the official schema…": "Resmi şemaya göre doğrulanıyor…", "✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).": "✓ Resmi ISO 20022 pain.001.001.09 XSD'sine göre GEÇERLİ ({s}s).", "✗ Official schema rejected the document — {n} error(s) ({s}s).": "✗ Resmi şema belgeyi reddetti — {n} hata ({s}s).", "✗ Engine failed to load: {error}. Check your connection and try again.": "✗ Motor yüklenemedi: {error}. Bağlantınızı kontrol edip yeniden deneyin.", "comma": "virgül", "semicolon": "noktalı virgül", "tab": "sekme", "SEPA credit transfer (2 records, EUR)": "SEPA kredi transferi (2 kayıt, EUR)", "Cross-border (GBP, escaped chars)": "Sınır ötesi (GBP, kaçış karakterleri)", "Larger batch (20 records)": "Daha büyük toplu iş (20 kayıt)", "Flipped IBAN digit (mod-97 checksum)": "Hatalı girilmiş IBAN basamağı (mod-97 sağlama toplamı)", "Malformed BIC (wrong structure)": "Bozuk BIC (yanlış yapı)", "Missing required column (execution date)": "Eksik zorunlu sütun (işlem tarihi)", "European comma-decimal amount": "Avrupa tarzı virgüllü ondalık tutar", "Impossible calendar date": "İmkânsız takvim tarihi", "missing required value": "eksik zorunlu değer", "comma-decimal amount — expected point-decimal (e.g. 1234.56)": "virgüllü ondalık tutar — nokta ondalıklı bekleniyor (örn. 1234.56)", "not a valid decimal amount (expected e.g. 1234.56)": "geçerli bir ondalık tutar değil (beklenen örn. 1234.56)", "{ccy} is a zero-decimal currency — no fractional part allowed": "{ccy} ondalıksız bir para birimidir — kesirli kısma izin verilmez", "more than 2 decimal places": "2'den fazla ondalık basamak", "not a 3-letter ISO 4217 code": "3 harfli bir ISO 4217 kodu değil", "expected ISO 8601 YYYY-MM-DD": "beklenen: ISO 8601 YYYY-MM-DD", "not a real calendar date": "gerçek bir takvim tarihi değil", "wrong length for country {cc} (expected {len} characters)": "{cc} ülkesi için yanlış uzunluk (beklenen {len} karakter)", "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "ISO 13616 mod-97 sağlama toplamını geçemiyor — büyük olasılıkla yanlış girilmiş bir rakam", "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "geçerli bir ISO 9362 BIC değil (8 veya 11 karakter, AAAAAA00[XXX])", "row {row} has {cells} field(s), header has {header}": "{row}. satırda {cells} alan var, başlıkta {header}", "Passed the official XSD": "Resmi XSD'den geçti", "Rejected by the official XSD": "Resmi XSD tarafından reddedildi", "{n} issue(s) the schema would reject": "Şemanın reddedeceği {n} sorun", "Pre-checks passed — run the XSD gate below to prove it": "Ön kontroller geçildi — kanıtlamak için aşağıdaki XSD kapısını çalıştırın", "{n} issue(s) a schema would accept but a bank would not": "Bir şemanın kabul edeceği ama bir bankanın etmeyeceği {n} sorun", "No identifier or format problems found": "Tanımlayıcı veya biçim sorunu bulunamadı"}</script></body>
+<script id="try-i18n" type="application/json">{"Add valid data in step 1 first": "Önce 1. adımda geçerli veri ekleyin", "Booting Python runtime…": "Python çalışma zamanı başlatılıyor…", "Copied ✓": "Kopyalandı ✓", "Copy XML": "XML'i kopyala", "Copy command": "Komutu kopyala", "Cross-border (GBP, escaped chars)": "Sınır ötesi (GBP, kaçış karakterleri)", "Detected: {delim}-delimited": "Algılanan ayırıcı: {delim}", "European comma-decimal amount": "Avrupa tarzı virgüllü ondalık tutar", "Flipped IBAN digit (mod-97 checksum)": "Hatalı girilmiş IBAN basamağı (mod-97 sağlama toplamı)", "From the example corpus ({n} scenarios)": "From the example corpus ({n} scenarios)", "Generate XML in step 2 first": "Önce 2. adımda XML oluşturun", "Generate XML in step 2 first — the XSD gate runs on that output.": "Generate XML in step 2 first — the XSD gate runs on that output.", "Impossible calendar date": "İmkânsız takvim tarihi", "Installing pain001 and its dependencies…": "Installing pain001 and its dependencies…", "Larger batch (20 records)": "Daha büyük toplu iş (20 kayıt)", "Malformed BIC (wrong structure)": "Bozuk BIC (yanlış yapı)", "Missing required column (execution date)": "Eksik zorunlu sütun (işlem tarihi)", "Need a header row and at least one record.": "Bir başlık satırı ve en az bir kayıt gerekli.", "No XML generated — validation is a hard gate. Fix the findings above and re-validate.": "XML oluşturulmadı — doğrulama zorunlu bir aşamadır. Yukarıdaki bulguları düzeltip yeniden doğrulayın.", "No identifier or format problems found": "Tanımlayıcı veya biçim sorunu bulunamadı", "Not reached — fix the findings above first": "Not reached — fix the findings above first", "Not run — choose a scheme rulebook in step 1": "Not run — choose a scheme rulebook in step 1", "Passed the official XSD": "Resmi XSD'den geçti", "Passed {scheme}": "Passed {scheme}", "Paste your CSV records, then press Validate & generate.": "CSV kayıtlarınızı yapıştırın, ardından Doğrula ve oluştur düğmesine basın.", "Rejected by the official XSD": "Resmi XSD tarafından reddedildi", "Running pain001 in your browser…": "Running pain001 in your browser…", "SEPA credit transfer (2 records, EUR)": "SEPA kredi transferi (2 kayıt, EUR)", "Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.": "Şema SHA-256: {hex} — pain.001.001.09 için yayımlanan kopyayla karşılaştırın.", "Starting a private Python runtime in your browser — {done} of {total} MB; nothing leaves your machine.": "Starting a private Python runtime in your browser — {done} of {total} MB; nothing leaves your machine.", "The validated pain.001.001.09 document will appear here — add data in step 1.": "Doğrulanmış pain.001.001.09 belgesi burada görünecek — 1. adımda veri ekleyin.", "Validating against the official schema…": "Resmi şemaya göre doğrulanıyor…", "Warming the official schema (once per visit)…": "Warming the official schema (once per visit)…", "comma": "virgül", "ignored column(s): {cols}": "yok sayılan sütun(lar): {cols}", "large batch — the CLI streams batches of any size": "büyük toplu iş — CLI her boyutta toplu işi akış halinde işler", "row {row} has {cells} field(s), header has {header}": "{row}. satırda {cells} alan var, başlıkta {header}", "semicolon": "noktalı virgül", "tab": "sekme", "{n} issue(s) a schema would accept but a bank would not": "Bir şemanın kabul edeceği ama bir bankanın etmeyeceği {n} sorun", "{n} issue(s) the schema would reject": "Şemanın reddedeceği {n} sorun", "{n} record(s)": "{n} kayıt", "{n} violation(s) against {scheme}": "{n} violation(s) against {scheme}", "…and {n} more — download the full error report below.": "…ve {n} tane daha — tam hata raporunu aşağıdan indirin.", "✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).": "✓ Resmi ISO 20022 pain.001.001.09 XSD'sine göre GEÇERLİ ({s}s).", "✓ {n} record(s) valid — pain001 {version} generated the file and the official XSD accepted it ({s}s).": "✓ {n} record(s) valid — pain001 {version} generated the file and the official XSD accepted it ({s}s).", "✗ Could not read that file.": "✗ Dosya okunamadı.", "✗ Engine failed to load: {error}. Check your connection and try again.": "✗ Motor yüklenemedi: {error}. Bağlantınızı kontrol edip yeniden deneyin.", "✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.": "✗ Dosya 2 MB'tan büyük — bu demo girdi boyutunu sınırlar; CLI her boyutta toplu işi akış halinde işler.", "✗ Official schema rejected the document — {n} error(s) ({s}s).": "✗ Resmi şema belgeyi reddetti — {n} hata ({s}s).", "✗ The library raised an error: {error}": "✗ The library raised an error: {error}", "✗ Validation failed — {n} issue(s). This file would be rejected.": "✗ Doğrulama başarısız — {n} sorun. Bu dosya reddedilirdi."}</script></body>
 </html>

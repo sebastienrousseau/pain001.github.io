@@ -222,6 +222,10 @@
               <select id="scenario-select" class="pill-select">
                 <option value="">Εισαγωγή σφάλματος&hellip;</option>
               </select>
+              <label class="visually-hidden" for="scheme-select">Scheme rulebook to apply</label>
+              <select id="scheme-select" class="pill-select">
+                <option value="">Scheme rulebook: none</option>
+              </select>
               <button type="button" id="paste-btn" class="pill pill-ghost">Επικολλήστε εγγραφές</button>
             </div>
             <p class="dialect-note">
@@ -244,6 +248,9 @@
           <section class="demo-panel" aria-labelledby="output-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">2</span><h2 id="output-heading">Αποτέλεσμα επικύρωσης &amp; παραγόμενο XML</h2></div>
             <p class="status" id="status" role="status">Προσθέστε δεδομένα στο βήμα 1 — η επικύρωση εκτελείται αυτόματα.</p>
+            <div class="xsd-progress" id="run-progress" hidden>
+              <div class="xsd-progress-bar" id="run-progress-bar"></div>
+            </div>
 
             <!-- Layered result summary. The last two rows never turn
                  green: no local tool can know a bank's profile or its
@@ -261,7 +268,7 @@
                 </tr>
                 <tr data-layer="scheme">
                   <th scope="row">Κανονισμός συστήματος πληρωμών</th>
-                  <td class="layer-state" id="layer-state-scheme">Δεν εκτελείται στον περιηγητή — το CLI το ελέγχει με <code class="tt-mono">--scheme</code></td>
+                  <td class="layer-state" id="layer-state-scheme">Not run — choose a scheme rulebook in step 1</td>
                 </tr>
                 <tr data-layer="bank">
                   <th scope="row">Το προφίλ της τράπεζάς σας</th>
@@ -283,10 +290,15 @@
               </table></div>
               <p class="dialect-note" id="error-overflow" hidden></p>
             </div>
-            <div class="xml-out" id="xml-out" tabindex="0" aria-label="Παραγόμενη έξοδος XML"><span class="xml-placeholder">Το επικυρωμένο έγγραφο pain.001.001.09 θα εμφανιστεί εδώ — προσθέστε δεδομένα στο βήμα 1.</span></div>
+            <div class="demo-actions output-tabs" role="tablist" aria-label="Output format">
+              <button type="button" id="tab-xml" class="pill pill-primary" role="tab" aria-selected="true" aria-controls="xml-out">XML</button>
+              <button type="button" id="tab-twin" class="pill pill-ghost" role="tab" aria-selected="false" aria-controls="xml-out" disabled title="Generate XML in step 2 first">JSON twin</button>
+            </div>
+            <div class="xml-out" id="xml-out" tabindex="0" aria-label="Generated output"><span class="xml-placeholder">Το επικυρωμένο έγγραφο pain.001.001.09 θα εμφανιστεί εδώ — προσθέστε δεδομένα στο βήμα 1.</span></div>
             <div class="demo-actions">
               <button type="button" id="copy-btn" class="pill pill-ghost" disabled title="Add valid data in step 1 first">Αντιγραφή XML</button>
               <button type="button" id="download-btn" class="pill pill-ghost" data-track="try_download_xml" disabled title="Add valid data in step 1 first">Λήψη .xml</button>
+              <button type="button" id="download-json-btn" class="pill pill-ghost" disabled title="Generate XML in step 2 first">Download JSON twin</button>
               <button type="button" id="report-btn" class="pill pill-ghost" hidden>Λήψη αναφοράς σφαλμάτων (.csv)</button>
             </div>
           </section>
@@ -294,17 +306,17 @@
           <section class="demo-panel" aria-labelledby="xsd-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">3</span><h2 id="xsd-heading">Επαληθεύστε το έναντι του επίσημου XSD του ISO 20022</h2></div>
             <p class="fineprint fineprint-tight">
-              Τα βήματα 1–2 εκτελούν γρήγορους, χειρόγραφους ελέγχους. Αυτό το βήμα εκτελεί το αυθεντικό: ένα περιβάλλον
-              εκτέλεσης Python (μέσω WebAssembly) που τρέχει το <code class="tt-mono">xmlschema</code>
-              έναντι του επίσημου σχήματος <code class="tt-mono">pain.001.001.09</code> —
-              η ίδια κατηγορία επικύρωσης που εκτελεί και το CLI. Η μηχανή των ~13&nbsp;MB εξυπηρετείται από αυτόν τον
-              ιστότοπο και λαμβάνεται μία μόνο φορά, όταν τη ζητήσετε (η λήψη ξεκινά διακριτικά μόλις
-              το βήμα 2 παραγάγει έγκυρο XML).
+              Steps 1–2 already ran the pain001 library itself: its record validation, the scheme
+              rulebook you chose, XML generation, and the official <code class="tt-mono">pain.001.001.09</code>
+              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served
+              from this site. This button re-runs the schema gate on the XML shown above, so you can
+              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the
+              first time you validate, and stays cached.
             </p>
             <div class="demo-actions">
-              <button type="button" id="xsd-btn" class="pill pill-primary" disabled title="Generate XML in step 2 first">Εκτέλεση του επίσημου ελέγχου XSD&nbsp;&rsaquo;</button>
+              <button type="button" id="xsd-btn" class="pill pill-primary" disabled title="Generate XML in step 2 first">Re-run the official XSD gate&nbsp;&rsaquo;</button>
             </div>
-            <p class="status" id="xsd-status" role="status">Δημιουργήστε πρώτα XML στο βήμα 2 — ο έλεγχος XSD επικυρώνει αυτό το αποτέλεσμα.</p>
+            <p class="status" id="xsd-status" role="status">Generate XML in step 2 first — the XSD gate runs on that output.</p>
             <div class="xsd-progress" id="xsd-progress" hidden>
               <div class="xsd-progress-bar" id="xsd-progress-bar"></div>
             </div>
@@ -316,11 +328,13 @@
 
       <div class="wrap">
         <p class="fineprint" id="demo-fineprint">
-          Όλα σε αυτή τη σελίδα εκτελούνται στον περιηγητή σας — τίποτα δεν μεταφορτώνεται, δεν αποθηκεύεται ούτε αποστέλλεται πουθενά.
-          Αυτή η επίδειξη υλοποιεί ένα υποσύνολο της ροής επεξεργασίας (υποχρεωτικά πεδία, IBAN mod-97, δομή BIC, μορφές
-          ποσών και ημερομηνιών, επανυπολογισμένα <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code> σύνολα ελέγχου). Το βήμα 3 εκτελεί τον επίσημο έλεγχο XSD εδώ ακριβώς, μέσω WebAssembly. Η εγκατεστημένη εργαλειοθήκη
-          προσθέτει επιπλέον επικύρωση JSON Schema και πέντε σύνολα κανόνων συστημάτων πληρωμών —
-          <a href="/el/installation/">εγκαταστήστε το CLI</a> για την πλήρη ροή επεξεργασίας.
+          Everything on this page runs in your browser — nothing is uploaded, stored, or sent anywhere.
+          It runs the pain001 library itself, the same package you install with <code class="tt-inherit">pip</code>,
+          inside a Python runtime compiled to WebAssembly: record validation, IBAN and BIC checks, the scheme
+          rulebook you choose, XML generation with recomputed <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code>
+          control totals, and the official XSD gate. What the CLI adds is scale and inputs: files of any size,
+          Excel, SQLite, JSON, Parquet and SWIFT MT101, and every message edition —
+          <a href="/el/installation/">install the CLI</a> for the complete pipeline.
         </p>
       </div>
 
@@ -387,5 +401,5 @@ pain001 -t pain.001.001.09 -d payments.csv -o out/ --scheme sepa-sct --dry-run</
 </div>
 <script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
 </div>
-<script id="try-i18n" type="application/json">{"Add valid data in step 1 first": "Προσθέστε πρώτα έγκυρα δεδομένα στο βήμα 1", "Generate XML in step 2 first": "Δημιουργήστε πρώτα το XML στο βήμα 2", "No XML generated — validation is a hard gate. Fix the findings above and re-validate.": "Δεν δημιουργήθηκε XML — η επικύρωση είναι αυστηρή προϋπόθεση. Διορθώστε τα παραπάνω ευρήματα και επικυρώστε ξανά.", "The validated pain.001.001.09 document will appear here — add data in step 1.": "Το επικυρωμένο έγγραφο pain.001.001.09 θα εμφανιστεί εδώ — προσθέστε δεδομένα στο βήμα 1.", "…and {n} more — download the full error report below.": "…και {n} ακόμη — κατεβάστε την πλήρη αναφορά σφαλμάτων παρακάτω.", "Need a header row and at least one record.": "Απαιτείται γραμμή κεφαλίδας και τουλάχιστον μία εγγραφή.", "Detected: {delim}-delimited": "Εντοπίστηκε οριοθέτης: {delim}", "{n} record(s)": "{n} εγγραφή(-ές)", "ignored column(s): {cols}": "στήλες που αγνοήθηκαν: {cols}", "large batch — the CLI streams batches of any size": "μεγάλη παρτίδα — το CLI επεξεργάζεται σε ροή παρτίδες οποιουδήποτε μεγέθους", "✗ Validation failed — {n} issue(s). This file would be rejected.": "✗ Η επικύρωση απέτυχε — {n} πρόβλημα(-τα). Αυτό το αρχείο θα απορριπτόταν.", "✓ {n} record(s) valid — control totals recomputed. Exit code 0.": "✓ {n} έγκυρη(-ες) εγγραφή(-ές) — τα σύνολα ελέγχου επανυπολογίστηκαν. Exit code 0.", "✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.": "✗ Το αρχείο υπερβαίνει τα 2 MB — η επίδειξη περιορίζει το μέγεθος εισόδου· το CLI επεξεργάζεται σε ροή παρτίδες οποιουδήποτε μεγέθους.", "✗ Could not read that file.": "✗ Δεν ήταν δυνατή η ανάγνωση του αρχείου.", "Paste your CSV records, then press Validate & generate.": "Επικολλήστε τις εγγραφές CSV και πατήστε «Επικύρωση & δημιουργία».", "Copied ✓": "Αντιγράφηκε ✓", "Copy XML": "Αντιγραφή XML", "Copy command": "Αντιγραφή εντολής", "Downloading the engine (~13 MB, first run only)…": "Λήψη της μηχανής (~13 MB, μόνο στην πρώτη εκτέλεση)…", "Booting Python runtime…": "Εκκίνηση περιβάλλοντος εκτέλεσης Python…", "Loading xmlschema…": "Φόρτωση xmlschema…", "Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.": "SHA-256 σχήματος: {hex} — συγκρίνετέ το με το αντίγραφο που έχει δημοσιευτεί για το pain.001.001.09.", "Validating against the official schema…": "Επικύρωση με βάση το επίσημο σχήμα…", "✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).": "✓ ΕΓΚΥΡΟ σύμφωνα με το επίσημο XSD ISO 20022 pain.001.001.09 ({s}s).", "✗ Official schema rejected the document — {n} error(s) ({s}s).": "✗ Το επίσημο σχήμα απέρριψε το έγγραφο — {n} σφάλμα(-τα) ({s}s).", "✗ Engine failed to load: {error}. Check your connection and try again.": "✗ Η μηχανή δεν φορτώθηκε: {error}. Ελέγξτε τη σύνδεσή σας και δοκιμάστε ξανά.", "comma": "κόμμα", "semicolon": "ερωτηματικό", "tab": "στηλοθέτης", "SEPA credit transfer (2 records, EUR)": "Μεταφορά πίστωσης SEPA (2 εγγραφές, EUR)", "Cross-border (GBP, escaped chars)": "Διασυνοριακή (GBP, χαρακτήρες με διαφυγή)", "Larger batch (20 records)": "Μεγαλύτερη παρτίδα (20 εγγραφές)", "Flipped IBAN digit (mod-97 checksum)": "Λανθασμένο ψηφίο IBAN (άθροισμα ελέγχου mod-97)", "Malformed BIC (wrong structure)": "Κακοσχηματισμένο BIC (λανθασμένη δομή)", "Missing required column (execution date)": "Λείπει υποχρεωτική στήλη (ημερομηνία εκτέλεσης)", "European comma-decimal amount": "Ευρωπαϊκό ποσό με δεκαδικό κόμμα", "Impossible calendar date": "Αδύνατη ημερολογιακή ημερομηνία", "missing required value": "λείπει υποχρεωτική τιμή", "comma-decimal amount — expected point-decimal (e.g. 1234.56)": "ποσό με δεκαδικό κόμμα — αναμένεται δεκαδική τελεία (π.χ. 1234.56)", "not a valid decimal amount (expected e.g. 1234.56)": "μη έγκυρο δεκαδικό ποσό (αναμένεται π.χ. 1234.56)", "{ccy} is a zero-decimal currency — no fractional part allowed": "το {ccy} είναι νόμισμα χωρίς δεκαδικά — δεν επιτρέπεται κλασματικό μέρος", "more than 2 decimal places": "περισσότερα από 2 δεκαδικά ψηφία", "not a 3-letter ISO 4217 code": "δεν είναι κωδικός ISO 4217 3 γραμμάτων", "expected ISO 8601 YYYY-MM-DD": "αναμένεται ISO 8601 YYYY-MM-DD", "not a real calendar date": "δεν είναι πραγματική ημερολογιακή ημερομηνία", "wrong length for country {cc} (expected {len} characters)": "λανθασμένο μήκος για τη χώρα {cc} (αναμένονται {len} χαρακτήρες)", "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "αποτυγχάνει στο άθροισμα ελέγχου ISO 13616 mod-97 — πιθανόν λάθος πληκτρολογημένο ψηφίο", "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "μη έγκυρο BIC ISO 9362 (8 ή 11 χαρακτήρες, AAAAAA00[XXX])", "row {row} has {cells} field(s), header has {header}": "η γραμμή {row} έχει {cells} πεδίο(-α), η κεφαλίδα έχει {header}", "Passed the official XSD": "Πέρασε το επίσημο XSD", "Rejected by the official XSD": "Απορρίφθηκε από το επίσημο XSD", "{n} issue(s) the schema would reject": "{n} πρόβλημα(-τα) που θα απέρριπτε το σχήμα", "Pre-checks passed — run the XSD gate below to prove it": "Οι προκαταρκτικοί έλεγχοι πέρασαν — εκτελέστε τον έλεγχο XSD παρακάτω για να το αποδείξετε", "{n} issue(s) a schema would accept but a bank would not": "{n} πρόβλημα(-τα) που ένα σχήμα θα δεχόταν αλλά μια τράπεζα όχι", "No identifier or format problems found": "Δεν βρέθηκαν προβλήματα αναγνωριστικών ή μορφής"}</script></body>
+<script id="try-i18n" type="application/json">{"Add valid data in step 1 first": "Προσθέστε πρώτα έγκυρα δεδομένα στο βήμα 1", "Booting Python runtime…": "Εκκίνηση περιβάλλοντος εκτέλεσης Python…", "Copied ✓": "Αντιγράφηκε ✓", "Copy XML": "Αντιγραφή XML", "Copy command": "Αντιγραφή εντολής", "Cross-border (GBP, escaped chars)": "Διασυνοριακή (GBP, χαρακτήρες με διαφυγή)", "Detected: {delim}-delimited": "Εντοπίστηκε οριοθέτης: {delim}", "European comma-decimal amount": "Ευρωπαϊκό ποσό με δεκαδικό κόμμα", "Flipped IBAN digit (mod-97 checksum)": "Λανθασμένο ψηφίο IBAN (άθροισμα ελέγχου mod-97)", "From the example corpus ({n} scenarios)": "From the example corpus ({n} scenarios)", "Generate XML in step 2 first": "Δημιουργήστε πρώτα το XML στο βήμα 2", "Generate XML in step 2 first — the XSD gate runs on that output.": "Generate XML in step 2 first — the XSD gate runs on that output.", "Impossible calendar date": "Αδύνατη ημερολογιακή ημερομηνία", "Installing pain001 and its dependencies…": "Installing pain001 and its dependencies…", "Larger batch (20 records)": "Μεγαλύτερη παρτίδα (20 εγγραφές)", "Malformed BIC (wrong structure)": "Κακοσχηματισμένο BIC (λανθασμένη δομή)", "Missing required column (execution date)": "Λείπει υποχρεωτική στήλη (ημερομηνία εκτέλεσης)", "Need a header row and at least one record.": "Απαιτείται γραμμή κεφαλίδας και τουλάχιστον μία εγγραφή.", "No XML generated — validation is a hard gate. Fix the findings above and re-validate.": "Δεν δημιουργήθηκε XML — η επικύρωση είναι αυστηρή προϋπόθεση. Διορθώστε τα παραπάνω ευρήματα και επικυρώστε ξανά.", "No identifier or format problems found": "Δεν βρέθηκαν προβλήματα αναγνωριστικών ή μορφής", "Not reached — fix the findings above first": "Not reached — fix the findings above first", "Not run — choose a scheme rulebook in step 1": "Not run — choose a scheme rulebook in step 1", "Passed the official XSD": "Πέρασε το επίσημο XSD", "Passed {scheme}": "Passed {scheme}", "Paste your CSV records, then press Validate & generate.": "Επικολλήστε τις εγγραφές CSV και πατήστε «Επικύρωση & δημιουργία».", "Rejected by the official XSD": "Απορρίφθηκε από το επίσημο XSD", "Running pain001 in your browser…": "Running pain001 in your browser…", "SEPA credit transfer (2 records, EUR)": "Μεταφορά πίστωσης SEPA (2 εγγραφές, EUR)", "Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.": "SHA-256 σχήματος: {hex} — συγκρίνετέ το με το αντίγραφο που έχει δημοσιευτεί για το pain.001.001.09.", "Starting a private Python runtime in your browser — {done} of {total} MB; nothing leaves your machine.": "Starting a private Python runtime in your browser — {done} of {total} MB; nothing leaves your machine.", "The validated pain.001.001.09 document will appear here — add data in step 1.": "Το επικυρωμένο έγγραφο pain.001.001.09 θα εμφανιστεί εδώ — προσθέστε δεδομένα στο βήμα 1.", "Validating against the official schema…": "Επικύρωση με βάση το επίσημο σχήμα…", "Warming the official schema (once per visit)…": "Warming the official schema (once per visit)…", "comma": "κόμμα", "ignored column(s): {cols}": "στήλες που αγνοήθηκαν: {cols}", "large batch — the CLI streams batches of any size": "μεγάλη παρτίδα — το CLI επεξεργάζεται σε ροή παρτίδες οποιουδήποτε μεγέθους", "row {row} has {cells} field(s), header has {header}": "η γραμμή {row} έχει {cells} πεδίο(-α), η κεφαλίδα έχει {header}", "semicolon": "ερωτηματικό", "tab": "στηλοθέτης", "{n} issue(s) a schema would accept but a bank would not": "{n} πρόβλημα(-τα) που ένα σχήμα θα δεχόταν αλλά μια τράπεζα όχι", "{n} issue(s) the schema would reject": "{n} πρόβλημα(-τα) που θα απέρριπτε το σχήμα", "{n} record(s)": "{n} εγγραφή(-ές)", "{n} violation(s) against {scheme}": "{n} violation(s) against {scheme}", "…and {n} more — download the full error report below.": "…και {n} ακόμη — κατεβάστε την πλήρη αναφορά σφαλμάτων παρακάτω.", "✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).": "✓ ΕΓΚΥΡΟ σύμφωνα με το επίσημο XSD ISO 20022 pain.001.001.09 ({s}s).", "✓ {n} record(s) valid — pain001 {version} generated the file and the official XSD accepted it ({s}s).": "✓ {n} record(s) valid — pain001 {version} generated the file and the official XSD accepted it ({s}s).", "✗ Could not read that file.": "✗ Δεν ήταν δυνατή η ανάγνωση του αρχείου.", "✗ Engine failed to load: {error}. Check your connection and try again.": "✗ Η μηχανή δεν φορτώθηκε: {error}. Ελέγξτε τη σύνδεσή σας και δοκιμάστε ξανά.", "✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.": "✗ Το αρχείο υπερβαίνει τα 2 MB — η επίδειξη περιορίζει το μέγεθος εισόδου· το CLI επεξεργάζεται σε ροή παρτίδες οποιουδήποτε μεγέθους.", "✗ Official schema rejected the document — {n} error(s) ({s}s).": "✗ Το επίσημο σχήμα απέρριψε το έγγραφο — {n} σφάλμα(-τα) ({s}s).", "✗ The library raised an error: {error}": "✗ The library raised an error: {error}", "✗ Validation failed — {n} issue(s). This file would be rejected.": "✗ Η επικύρωση απέτυχε — {n} πρόβλημα(-τα). Αυτό το αρχείο θα απορριπτόταν."}</script></body>
 </html>

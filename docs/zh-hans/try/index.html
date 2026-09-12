@@ -222,6 +222,10 @@
               <select id="scenario-select" class="pill-select">
                 <option value="">引入错误&hellip;</option>
               </select>
+              <label class="visually-hidden" for="scheme-select">Scheme rulebook to apply</label>
+              <select id="scheme-select" class="pill-select">
+                <option value="">Scheme rulebook: none</option>
+              </select>
               <button type="button" id="paste-btn" class="pill pill-ghost">粘贴记录</button>
             </div>
             <p class="dialect-note">
@@ -244,6 +248,9 @@
           <section class="demo-panel" aria-labelledby="output-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">2</span><h2 id="output-heading">验证结果 &amp; 生成的 XML</h2></div>
             <p class="status" id="status" role="status">在第 1 步添加数据——验证将自动运行。</p>
+            <div class="xsd-progress" id="run-progress" hidden>
+              <div class="xsd-progress-bar" id="run-progress-bar"></div>
+            </div>
 
             <!-- Layered result summary. The last two rows never turn
                  green: no local tool can know a bank's profile or its
@@ -261,7 +268,7 @@
                 </tr>
                 <tr data-layer="scheme">
                   <th scope="row">方案规则手册</th>
-                  <td class="layer-state" id="layer-state-scheme">浏览器中不运行——由 CLI 通过 <code class="tt-mono">--scheme</code> 检查</td>
+                  <td class="layer-state" id="layer-state-scheme">Not run — choose a scheme rulebook in step 1</td>
                 </tr>
                 <tr data-layer="bank">
                   <th scope="row">您银行的配置规范</th>
@@ -283,10 +290,15 @@
               </table></div>
               <p class="dialect-note" id="error-overflow" hidden></p>
             </div>
-            <div class="xml-out" id="xml-out" tabindex="0" aria-label="生成的 XML 输出"><span class="xml-placeholder">经验证的 pain.001.001.09 文档将显示在此处——请在步骤 1 中添加数据。</span></div>
+            <div class="demo-actions output-tabs" role="tablist" aria-label="Output format">
+              <button type="button" id="tab-xml" class="pill pill-primary" role="tab" aria-selected="true" aria-controls="xml-out">XML</button>
+              <button type="button" id="tab-twin" class="pill pill-ghost" role="tab" aria-selected="false" aria-controls="xml-out" disabled title="Generate XML in step 2 first">JSON twin</button>
+            </div>
+            <div class="xml-out" id="xml-out" tabindex="0" aria-label="Generated output"><span class="xml-placeholder">经验证的 pain.001.001.09 文档将显示在此处——请在步骤 1 中添加数据。</span></div>
             <div class="demo-actions">
               <button type="button" id="copy-btn" class="pill pill-ghost" disabled title="Add valid data in step 1 first">复制 XML</button>
               <button type="button" id="download-btn" class="pill pill-ghost" data-track="try_download_xml" disabled title="Add valid data in step 1 first">下载 .xml</button>
+              <button type="button" id="download-json-btn" class="pill pill-ghost" disabled title="Generate XML in step 2 first">Download JSON twin</button>
               <button type="button" id="report-btn" class="pill pill-ghost" hidden>下载错误报告 (.csv)</button>
             </div>
           </section>
@@ -294,17 +306,17 @@
           <section class="demo-panel" aria-labelledby="xsd-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">3</span><h2 id="xsd-heading">依据官方 ISO 20022 XSD 进行验证</h2></div>
             <p class="fineprint fineprint-tight">
-              第 1–2 步运行的是快速的手写检查。此步骤运行的则是货真价实的验证：一个 Python
-              运行时（通过 WebAssembly）执行 <code class="tt-mono">xmlschema</code>
-              ，依据官方 <code class="tt-mono">pain.001.001.09</code> Schema 进行验证——
-              与 CLI 所执行的验证属于同一级别。约 13&nbsp;MB 的引擎由本
-              站点提供，仅在您请求时下载一次（当第 2 步生成有效 XML 后，
-              它便会开始静默下载）。
+              Steps 1–2 already ran the pain001 library itself: its record validation, the scheme
+              rulebook you chose, XML generation, and the official <code class="tt-mono">pain.001.001.09</code>
+              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served
+              from this site. This button re-runs the schema gate on the XML shown above, so you can
+              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the
+              first time you validate, and stays cached.
             </p>
             <div class="demo-actions">
-              <button type="button" id="xsd-btn" class="pill pill-primary" disabled title="Generate XML in step 2 first">运行官方 XSD 关卡&nbsp;&rsaquo;</button>
+              <button type="button" id="xsd-btn" class="pill pill-primary" disabled title="Generate XML in step 2 first">Re-run the official XSD gate&nbsp;&rsaquo;</button>
             </div>
-            <p class="status" id="xsd-status" role="status">请先在第 2 步生成 XML——XSD 关卡验证的正是该输出。</p>
+            <p class="status" id="xsd-status" role="status">Generate XML in step 2 first — the XSD gate runs on that output.</p>
             <div class="xsd-progress" id="xsd-progress" hidden>
               <div class="xsd-progress-bar" id="xsd-progress-bar"></div>
             </div>
@@ -316,11 +328,13 @@
 
       <div class="wrap">
         <p class="fineprint" id="demo-fineprint">
-          本页面的一切都在您的浏览器中运行——不会上传、存储或向任何地方发送任何数据。
-          本演示实现了流水线的一个子集（必填字段、IBAN mod-97、BIC 结构、金额
-          与日期格式、重新计算的 <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code> 控制总额）。第 3 步通过 WebAssembly 就地运行官方 XSD 关卡。安装版工具链
-          在此之上还提供 JSON Schema 验证和五套方案规则手册——
-          <a href="/zh-hans/installation/">安装 CLI</a> 以获得完整流水线。
+          Everything on this page runs in your browser — nothing is uploaded, stored, or sent anywhere.
+          It runs the pain001 library itself, the same package you install with <code class="tt-inherit">pip</code>,
+          inside a Python runtime compiled to WebAssembly: record validation, IBAN and BIC checks, the scheme
+          rulebook you choose, XML generation with recomputed <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code>
+          control totals, and the official XSD gate. What the CLI adds is scale and inputs: files of any size,
+          Excel, SQLite, JSON, Parquet and SWIFT MT101, and every message edition —
+          <a href="/zh-hans/installation/">install the CLI</a> for the complete pipeline.
         </p>
       </div>
 
@@ -387,5 +401,5 @@ pain001 -t pain.001.001.09 -d payments.csv -o out/ --scheme sepa-sct --dry-run</
 </div>
 <script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
 </div>
-<script id="try-i18n" type="application/json">{"Add valid data in step 1 first": "请先在步骤 1 中添加有效数据", "Generate XML in step 2 first": "请先在步骤 2 中生成 XML", "No XML generated — validation is a hard gate. Fix the findings above and re-validate.": "未生成 XML——验证是硬性关口。请修正上述问题后重新验证。", "The validated pain.001.001.09 document will appear here — add data in step 1.": "经验证的 pain.001.001.09 文档将显示在此处——请在步骤 1 中添加数据。", "…and {n} more — download the full error report below.": "…另有 {n} 个——请在下方下载完整错误报告。", "Need a header row and at least one record.": "需要一个表头行和至少一条记录。", "Detected: {delim}-delimited": "检测到：以{delim}分隔", "{n} record(s)": "{n} 条记录", "ignored column(s): {cols}": "已忽略列：{cols}", "large batch — the CLI streams batches of any size": "大批量——CLI 可流式处理任意大小的批次", "✗ Validation failed — {n} issue(s). This file would be rejected.": "✗ 验证失败——{n} 个问题。此文件将被拒绝。", "✓ {n} record(s) valid — control totals recomputed. Exit code 0.": "✓ {n} 条记录有效——控制总额已重新计算。Exit code 0。", "✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.": "✗ 文件超过 2 MB——本演示限制输入大小；CLI 可流式处理任意大小的批次。", "✗ Could not read that file.": "✗ 无法读取该文件。", "Paste your CSV records, then press Validate & generate.": "请粘贴您的 CSV 记录，然后点击“验证并生成”。", "Copied ✓": "已复制 ✓", "Copy XML": "复制 XML", "Copy command": "复制命令", "Downloading the engine (~13 MB, first run only)…": "正在下载引擎（约 13 MB，仅首次运行）…", "Booting Python runtime…": "正在启动 Python 运行时…", "Loading xmlschema…": "正在加载 xmlschema…", "Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.": "架构 SHA-256：{hex}——请与 pain.001.001.09 官方发布的副本进行比对。", "Validating against the official schema…": "正在依据官方架构进行验证…", "✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).": "✓ 通过官方 ISO 20022 pain.001.001.09 XSD 验证（{s} 秒）。", "✗ Official schema rejected the document — {n} error(s) ({s}s).": "✗ 官方架构拒绝了该文档——{n} 个错误（{s} 秒）。", "✗ Engine failed to load: {error}. Check your connection and try again.": "✗ 引擎加载失败：{error}。请检查网络连接后重试。", "comma": "逗号", "semicolon": "分号", "tab": "制表符", "SEPA credit transfer (2 records, EUR)": "SEPA 贷记转账（2 条记录，EUR）", "Cross-border (GBP, escaped chars)": "跨境支付（GBP，含转义字符）", "Larger batch (20 records)": "较大批次（20 条记录）", "Flipped IBAN digit (mod-97 checksum)": "IBAN 数字输错（mod-97 校验和）", "Malformed BIC (wrong structure)": "BIC 格式错误（结构不正确）", "Missing required column (execution date)": "缺少必需列（执行日期）", "European comma-decimal amount": "欧式逗号小数金额", "Impossible calendar date": "不存在的日历日期", "missing required value": "缺少必填值", "comma-decimal amount — expected point-decimal (e.g. 1234.56)": "金额使用逗号小数——应为点号小数（例如 1234.56）", "not a valid decimal amount (expected e.g. 1234.56)": "不是有效的小数金额（应为例如 1234.56 的格式）", "{ccy} is a zero-decimal currency — no fractional part allowed": "{ccy} 是零小数位货币——不允许有小数部分", "more than 2 decimal places": "超过 2 位小数", "not a 3-letter ISO 4217 code": "不是 3 个字母的 ISO 4217 代码", "expected ISO 8601 YYYY-MM-DD": "应为 ISO 8601 YYYY-MM-DD 格式", "not a real calendar date": "不是真实存在的日历日期", "wrong length for country {cc} (expected {len} characters)": "长度与国家/地区 {cc} 不符（应为 {len} 个字符）", "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "未通过 ISO 13616 mod-97 校验——可能有数字输错", "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "不是有效的 ISO 9362 BIC（8 或 11 个字符，AAAAAA00[XXX]）", "row {row} has {cells} field(s), header has {header}": "第 {row} 行有 {cells} 个字段，表头有 {header} 个", "Passed the official XSD": "已通过官方 XSD", "Rejected by the official XSD": "被官方 XSD 拒绝", "{n} issue(s) the schema would reject": "{n} 个架构会拒绝的问题", "Pre-checks passed — run the XSD gate below to prove it": "预检查通过——请运行下方的 XSD 关卡加以证明", "{n} issue(s) a schema would accept but a bank would not": "{n} 个架构会接受但银行不会接受的问题", "No identifier or format problems found": "未发现标识符或格式问题"}</script></body>
+<script id="try-i18n" type="application/json">{"Add valid data in step 1 first": "请先在步骤 1 中添加有效数据", "Booting Python runtime…": "正在启动 Python 运行时…", "Copied ✓": "已复制 ✓", "Copy XML": "复制 XML", "Copy command": "复制命令", "Cross-border (GBP, escaped chars)": "跨境支付（GBP，含转义字符）", "Detected: {delim}-delimited": "检测到：以{delim}分隔", "European comma-decimal amount": "欧式逗号小数金额", "Flipped IBAN digit (mod-97 checksum)": "IBAN 数字输错（mod-97 校验和）", "From the example corpus ({n} scenarios)": "From the example corpus ({n} scenarios)", "Generate XML in step 2 first": "请先在步骤 2 中生成 XML", "Generate XML in step 2 first — the XSD gate runs on that output.": "Generate XML in step 2 first — the XSD gate runs on that output.", "Impossible calendar date": "不存在的日历日期", "Installing pain001 and its dependencies…": "Installing pain001 and its dependencies…", "Larger batch (20 records)": "较大批次（20 条记录）", "Malformed BIC (wrong structure)": "BIC 格式错误（结构不正确）", "Missing required column (execution date)": "缺少必需列（执行日期）", "Need a header row and at least one record.": "需要一个表头行和至少一条记录。", "No XML generated — validation is a hard gate. Fix the findings above and re-validate.": "未生成 XML——验证是硬性关口。请修正上述问题后重新验证。", "No identifier or format problems found": "未发现标识符或格式问题", "Not reached — fix the findings above first": "Not reached — fix the findings above first", "Not run — choose a scheme rulebook in step 1": "Not run — choose a scheme rulebook in step 1", "Passed the official XSD": "已通过官方 XSD", "Passed {scheme}": "Passed {scheme}", "Paste your CSV records, then press Validate & generate.": "请粘贴您的 CSV 记录，然后点击“验证并生成”。", "Rejected by the official XSD": "被官方 XSD 拒绝", "Running pain001 in your browser…": "Running pain001 in your browser…", "SEPA credit transfer (2 records, EUR)": "SEPA 贷记转账（2 条记录，EUR）", "Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.": "架构 SHA-256：{hex}——请与 pain.001.001.09 官方发布的副本进行比对。", "Starting a private Python runtime in your browser — {done} of {total} MB; nothing leaves your machine.": "Starting a private Python runtime in your browser — {done} of {total} MB; nothing leaves your machine.", "The validated pain.001.001.09 document will appear here — add data in step 1.": "经验证的 pain.001.001.09 文档将显示在此处——请在步骤 1 中添加数据。", "Validating against the official schema…": "正在依据官方架构进行验证…", "Warming the official schema (once per visit)…": "Warming the official schema (once per visit)…", "comma": "逗号", "ignored column(s): {cols}": "已忽略列：{cols}", "large batch — the CLI streams batches of any size": "大批量——CLI 可流式处理任意大小的批次", "row {row} has {cells} field(s), header has {header}": "第 {row} 行有 {cells} 个字段，表头有 {header} 个", "semicolon": "分号", "tab": "制表符", "{n} issue(s) a schema would accept but a bank would not": "{n} 个架构会接受但银行不会接受的问题", "{n} issue(s) the schema would reject": "{n} 个架构会拒绝的问题", "{n} record(s)": "{n} 条记录", "{n} violation(s) against {scheme}": "{n} violation(s) against {scheme}", "…and {n} more — download the full error report below.": "…另有 {n} 个——请在下方下载完整错误报告。", "✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).": "✓ 通过官方 ISO 20022 pain.001.001.09 XSD 验证（{s} 秒）。", "✓ {n} record(s) valid — pain001 {version} generated the file and the official XSD accepted it ({s}s).": "✓ {n} record(s) valid — pain001 {version} generated the file and the official XSD accepted it ({s}s).", "✗ Could not read that file.": "✗ 无法读取该文件。", "✗ Engine failed to load: {error}. Check your connection and try again.": "✗ 引擎加载失败：{error}。请检查网络连接后重试。", "✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.": "✗ 文件超过 2 MB——本演示限制输入大小；CLI 可流式处理任意大小的批次。", "✗ Official schema rejected the document — {n} error(s) ({s}s).": "✗ 官方架构拒绝了该文档——{n} 个错误（{s} 秒）。", "✗ The library raised an error: {error}": "✗ The library raised an error: {error}", "✗ Validation failed — {n} issue(s). This file would be rejected.": "✗ 验证失败——{n} 个问题。此文件将被拒绝。"}</script></body>
 </html>

@@ -222,6 +222,10 @@
               <select id="scenario-select" class="pill-select">
                 <option value="">Saka kuskure&hellip;</option>
               </select>
+              <label class="visually-hidden" for="scheme-select">Scheme rulebook to apply</label>
+              <select id="scheme-select" class="pill-select">
+                <option value="">Scheme rulebook: none</option>
+              </select>
               <button type="button" id="paste-btn" class="pill pill-ghost">Liƙa bayanai</button>
             </div>
             <p class="dialect-note">
@@ -244,6 +248,9 @@
           <section class="demo-panel" aria-labelledby="output-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">2</span><h2 id="output-heading">Sakamakon tantancewa &amp; XML da aka samar</h2></div>
             <p class="status" id="status" role="status">Ƙara bayanai a mataki na 1 — tantancewa na gudana kai tsaye.</p>
+            <div class="xsd-progress" id="run-progress" hidden>
+              <div class="xsd-progress-bar" id="run-progress-bar"></div>
+            </div>
 
             <!-- Layered result summary. The last two rows never turn
                  green: no local tool can know a bank's profile or its
@@ -261,7 +268,7 @@
                 </tr>
                 <tr data-layer="scheme">
                   <th scope="row">Littafin ƙa'idar tsarin</th>
-                  <td class="layer-state" id="layer-state-scheme">Ba a gudanar da shi a burauza ba — CLI ne ke duba wannan da <code class="tt-mono">--scheme</code></td>
+                  <td class="layer-state" id="layer-state-scheme">Not run — choose a scheme rulebook in step 1</td>
                 </tr>
                 <tr data-layer="bank">
                   <th scope="row">Bayanan tsarin bankinku</th>
@@ -283,10 +290,15 @@
               </table></div>
               <p class="dialect-note" id="error-overflow" hidden></p>
             </div>
-            <div class="xml-out" id="xml-out" tabindex="0" aria-label="Fitowar XML da aka samar"><span class="xml-placeholder">Takardar pain.001.001.09 da aka tantance za ta bayyana a nan — ku shigar da bayanai a mataki na 1.</span></div>
+            <div class="demo-actions output-tabs" role="tablist" aria-label="Output format">
+              <button type="button" id="tab-xml" class="pill pill-primary" role="tab" aria-selected="true" aria-controls="xml-out">XML</button>
+              <button type="button" id="tab-twin" class="pill pill-ghost" role="tab" aria-selected="false" aria-controls="xml-out" disabled title="Generate XML in step 2 first">JSON twin</button>
+            </div>
+            <div class="xml-out" id="xml-out" tabindex="0" aria-label="Generated output"><span class="xml-placeholder">Takardar pain.001.001.09 da aka tantance za ta bayyana a nan — ku shigar da bayanai a mataki na 1.</span></div>
             <div class="demo-actions">
               <button type="button" id="copy-btn" class="pill pill-ghost" disabled title="Add valid data in step 1 first">Kwafi XML</button>
               <button type="button" id="download-btn" class="pill pill-ghost" data-track="try_download_xml" disabled title="Add valid data in step 1 first">Sauke .xml</button>
+              <button type="button" id="download-json-btn" class="pill pill-ghost" disabled title="Generate XML in step 2 first">Download JSON twin</button>
               <button type="button" id="report-btn" class="pill pill-ghost" hidden>Sauke rahoton kurakurai (.csv)</button>
             </div>
           </section>
@@ -294,17 +306,17 @@
           <section class="demo-panel" aria-labelledby="xsd-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">3</span><h2 id="xsd-heading">Tabbatar da shi bisa XSD na ISO 20022 na hukuma</h2></div>
             <p class="fineprint fineprint-tight">
-              Matakai na 1–2 na gudanar da gwaje-gwaje masu sauri da aka rubuta da hannu. Wannan matakin na gudanar da ainihin abin: wani Python
-              runtime (ta hanyar WebAssembly) yana aiwatar da <code class="tt-mono">xmlschema</code>
-              bisa tsarin <code class="tt-mono">pain.001.001.09</code> na hukuma —
-              irin tantancewar da CLI ke yi. Ana kawo injin mai kusan 13&nbsp;MB daga wannan
-              shafin, kuma ana saukar da shi sau ɗaya, sa'ad da kuka nema (yana fara saukowa a hankali da zarar
-              mataki na 2 ya samar da ingantaccen XML).
+              Steps 1–2 already ran the pain001 library itself: its record validation, the scheme
+              rulebook you chose, XML generation, and the official <code class="tt-mono">pain.001.001.09</code>
+              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served
+              from this site. This button re-runs the schema gate on the XML shown above, so you can
+              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the
+              first time you validate, and stays cached.
             </p>
             <div class="demo-actions">
-              <button type="button" id="xsd-btn" class="pill pill-primary" disabled title="Generate XML in step 2 first">Gudanar da ƙofar XSD ta hukuma&nbsp;&rsaquo;</button>
+              <button type="button" id="xsd-btn" class="pill pill-primary" disabled title="Generate XML in step 2 first">Re-run the official XSD gate&nbsp;&rsaquo;</button>
             </div>
-            <p class="status" id="xsd-status" role="status">Da farko ku samar da XML a mataki na 2 — ƙofar XSD na tantance wannan fitowar ce.</p>
+            <p class="status" id="xsd-status" role="status">Generate XML in step 2 first — the XSD gate runs on that output.</p>
             <div class="xsd-progress" id="xsd-progress" hidden>
               <div class="xsd-progress-bar" id="xsd-progress-bar"></div>
             </div>
@@ -316,11 +328,13 @@
 
       <div class="wrap">
         <p class="fineprint" id="demo-fineprint">
-          Duk abin da ke wannan shafi na gudana a cikin burauzarku — ba a ɗora, ba a adana, ba a aika komai ko'ina.
-          Wannan nunin ya ƙunshi wani ɓangare na jerin aikin (filayen dole, IBAN mod-97, tsarin BIC, tsarin kuɗi
-          da kwanan wata, jimillolin <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code> sarrafawa da aka sake lissafawa). Mataki na 3 na gudanar da ƙofar XSD ta hukuma a nan take ta WebAssembly. Kayan aikin da aka shigar
-          na ƙara tantancewar JSON Schema da littattafan ƙa'ida guda biyar a kai —
-          <a href="/ha/installation/">shigar da CLI</a> don samun cikakken jerin aikin.
+          Everything on this page runs in your browser — nothing is uploaded, stored, or sent anywhere.
+          It runs the pain001 library itself, the same package you install with <code class="tt-inherit">pip</code>,
+          inside a Python runtime compiled to WebAssembly: record validation, IBAN and BIC checks, the scheme
+          rulebook you choose, XML generation with recomputed <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code>
+          control totals, and the official XSD gate. What the CLI adds is scale and inputs: files of any size,
+          Excel, SQLite, JSON, Parquet and SWIFT MT101, and every message edition —
+          <a href="/ha/installation/">install the CLI</a> for the complete pipeline.
         </p>
       </div>
 
@@ -387,5 +401,5 @@ pain001 -t pain.001.001.09 -d payments.csv -o out/ --scheme sepa-sct --dry-run</
 </div>
 <script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
 </div>
-<script id="try-i18n" type="application/json">{"Add valid data in step 1 first": "Ku fara shigar da ingantattun bayanai a mataki na 1", "Generate XML in step 2 first": "Ku fara samar da XML a mataki na 2", "No XML generated — validation is a hard gate. Fix the findings above and re-validate.": "Ba a samar da XML ba — tantancewa ƙofa ce ta tilas. Ku gyara matsalolin da ke sama sannan ku sake tantancewa.", "The validated pain.001.001.09 document will appear here — add data in step 1.": "Takardar pain.001.001.09 da aka tantance za ta bayyana a nan — ku shigar da bayanai a mataki na 1.", "…and {n} more — download the full error report below.": "…da sauran {n} — ku sauke cikakken rahoton kurakurai a ƙasa.", "Need a header row and at least one record.": "Ana buƙatar layin kanun bayanai da aƙalla rikodi guda ɗaya.", "Detected: {delim}-delimited": "An gano: an raba shi da {delim}", "{n} record(s)": "rikodi {n}", "ignored column(s): {cols}": "ginshiƙan da aka yi watsi da su: {cols}", "large batch — the CLI streams batches of any size": "babban rukuni — CLI na sarrafa rukunoni na kowane girma", "✗ Validation failed — {n} issue(s). This file would be rejected.": "✗ Tantancewa ta gaza — matsala {n}. Za a ƙi wannan fayil ɗin.", "✓ {n} record(s) valid — control totals recomputed. Exit code 0.": "✓ Rikodi {n} sun inganta — an sake lissafa jimillolin sarrafawa. Exit code 0.", "✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.": "✗ Fayil ɗin ya fi 2 MB girma — wannan gwajin yana iyakance girman shigarwa; CLI na sarrafa rukunoni na kowane girma.", "✗ Could not read that file.": "✗ Ba a iya karanta wannan fayil ɗin ba.", "Paste your CSV records, then press Validate & generate.": "Ku manna rikodin CSV naku, sannan ku danna Tantance & samar.", "Copied ✓": "An kwafa ✓", "Copy XML": "Kwafi XML", "Copy command": "Kwafi umarni", "Downloading the engine (~13 MB, first run only)…": "Ana sauke injin (~13 MB, gudu na farko kawai)…", "Booting Python runtime…": "Ana ƙaddamar da mahallin aiki na Python…", "Loading xmlschema…": "Ana ɗora xmlschema…", "Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.": "SHA-256 na schema: {hex} — ku kwatanta shi da kwafin da aka wallafa don pain.001.001.09.", "Validating against the official schema…": "Ana tantancewa bisa ga schema na hukuma…", "✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).": "✓ YA INGANTA bisa ga XSD na hukuma na ISO 20022 pain.001.001.09 (daƙiƙa {s}).", "✗ Official schema rejected the document — {n} error(s) ({s}s).": "✗ Schema na hukuma ya ƙi takardar — kuskure {n} (daƙiƙa {s}).", "✗ Engine failed to load: {error}. Check your connection and try again.": "✗ Injin ya kasa ɗorawa: {error}. Ku duba haɗin yanar gizonku sannan ku sake gwadawa.", "comma": "waƙafi", "semicolon": "waƙafi da ɗigo", "tab": "tab", "SEPA credit transfer (2 records, EUR)": "Canja wurin kuɗi na SEPA (rikodi 2, EUR)", "Cross-border (GBP, escaped chars)": "Na ƙasashen waje (GBP, haruffan escape)", "Larger batch (20 records)": "Rukuni mafi girma (rikodi 20)", "Flipped IBAN digit (mod-97 checksum)": "Lambar IBAN da aka juya (binciken mod-97)", "Malformed BIC (wrong structure)": "BIC mara kyau (tsari ba daidai ba)", "Missing required column (execution date)": "Ginshiƙin tilas ya ɓace (ranar aiwatarwa)", "European comma-decimal amount": "Adadi irin na Turai mai waƙafi", "Impossible calendar date": "Ranar kalanda da ba ta yiwuwa", "missing required value": "an rasa ƙimar da ake buƙata", "comma-decimal amount — expected point-decimal (e.g. 1234.56)": "adadi mai waƙafi — ana buƙatar ɗigo (misali 1234.56)", "not a valid decimal amount (expected e.g. 1234.56)": "ba adadi mai inganci ba (ana buƙatar misali 1234.56)", "{ccy} is a zero-decimal currency — no fractional part allowed": "{ccy} kuɗi ne mara ɗigo — ba a yarda da sashin ɗigo ba", "more than 2 decimal places": "ya wuce wurare 2 bayan ɗigo", "not a 3-letter ISO 4217 code": "ba lambar ISO 4217 mai haruffa 3 ba", "expected ISO 8601 YYYY-MM-DD": "ana buƙatar ISO 8601 YYYY-MM-DD", "not a real calendar date": "ba rana ta gaskiya a kalanda ba", "wrong length for country {cc} (expected {len} characters)": "tsawon bai dace da ƙasar {cc} ba (ana buƙatar haruffa {len})", "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "ya gaza binciken mod-97 na ISO 13616 — mai yiwuwa an rubuta lamba kuskure", "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "ba BIC mai inganci na ISO 9362 ba (haruffa 8 ko 11, AAAAAA00[XXX])", "row {row} has {cells} field(s), header has {header}": "layi {row} yana da filaye {cells}, kanun bayanai yana da {header}", "Passed the official XSD": "Ya wuce XSD na hukuma", "Rejected by the official XSD": "XSD na hukuma ya ƙi shi", "{n} issue(s) the schema would reject": "Matsala {n} da schema zai ƙi", "Pre-checks passed — run the XSD gate below to prove it": "Gwaje-gwajen farko sun wuce — ku gudanar da ƙofar XSD da ke ƙasa don tabbatar da hakan", "{n} issue(s) a schema would accept but a bank would not": "Matsala {n} da schema zai karɓa amma banki ba zai karɓa ba", "No identifier or format problems found": "Ba a sami wata matsala a lambobin shaida ko tsari ba"}</script></body>
+<script id="try-i18n" type="application/json">{"Add valid data in step 1 first": "Ku fara shigar da ingantattun bayanai a mataki na 1", "Booting Python runtime…": "Ana ƙaddamar da mahallin aiki na Python…", "Copied ✓": "An kwafa ✓", "Copy XML": "Kwafi XML", "Copy command": "Kwafi umarni", "Cross-border (GBP, escaped chars)": "Na ƙasashen waje (GBP, haruffan escape)", "Detected: {delim}-delimited": "An gano: an raba shi da {delim}", "European comma-decimal amount": "Adadi irin na Turai mai waƙafi", "Flipped IBAN digit (mod-97 checksum)": "Lambar IBAN da aka juya (binciken mod-97)", "From the example corpus ({n} scenarios)": "From the example corpus ({n} scenarios)", "Generate XML in step 2 first": "Ku fara samar da XML a mataki na 2", "Generate XML in step 2 first — the XSD gate runs on that output.": "Generate XML in step 2 first — the XSD gate runs on that output.", "Impossible calendar date": "Ranar kalanda da ba ta yiwuwa", "Installing pain001 and its dependencies…": "Installing pain001 and its dependencies…", "Larger batch (20 records)": "Rukuni mafi girma (rikodi 20)", "Malformed BIC (wrong structure)": "BIC mara kyau (tsari ba daidai ba)", "Missing required column (execution date)": "Ginshiƙin tilas ya ɓace (ranar aiwatarwa)", "Need a header row and at least one record.": "Ana buƙatar layin kanun bayanai da aƙalla rikodi guda ɗaya.", "No XML generated — validation is a hard gate. Fix the findings above and re-validate.": "Ba a samar da XML ba — tantancewa ƙofa ce ta tilas. Ku gyara matsalolin da ke sama sannan ku sake tantancewa.", "No identifier or format problems found": "Ba a sami wata matsala a lambobin shaida ko tsari ba", "Not reached — fix the findings above first": "Not reached — fix the findings above first", "Not run — choose a scheme rulebook in step 1": "Not run — choose a scheme rulebook in step 1", "Passed the official XSD": "Ya wuce XSD na hukuma", "Passed {scheme}": "Passed {scheme}", "Paste your CSV records, then press Validate & generate.": "Ku manna rikodin CSV naku, sannan ku danna Tantance & samar.", "Rejected by the official XSD": "XSD na hukuma ya ƙi shi", "Running pain001 in your browser…": "Running pain001 in your browser…", "SEPA credit transfer (2 records, EUR)": "Canja wurin kuɗi na SEPA (rikodi 2, EUR)", "Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.": "SHA-256 na schema: {hex} — ku kwatanta shi da kwafin da aka wallafa don pain.001.001.09.", "Starting a private Python runtime in your browser — {done} of {total} MB; nothing leaves your machine.": "Starting a private Python runtime in your browser — {done} of {total} MB; nothing leaves your machine.", "The validated pain.001.001.09 document will appear here — add data in step 1.": "Takardar pain.001.001.09 da aka tantance za ta bayyana a nan — ku shigar da bayanai a mataki na 1.", "Validating against the official schema…": "Ana tantancewa bisa ga schema na hukuma…", "Warming the official schema (once per visit)…": "Warming the official schema (once per visit)…", "comma": "waƙafi", "ignored column(s): {cols}": "ginshiƙan da aka yi watsi da su: {cols}", "large batch — the CLI streams batches of any size": "babban rukuni — CLI na sarrafa rukunoni na kowane girma", "row {row} has {cells} field(s), header has {header}": "layi {row} yana da filaye {cells}, kanun bayanai yana da {header}", "semicolon": "waƙafi da ɗigo", "tab": "tab", "{n} issue(s) a schema would accept but a bank would not": "Matsala {n} da schema zai karɓa amma banki ba zai karɓa ba", "{n} issue(s) the schema would reject": "Matsala {n} da schema zai ƙi", "{n} record(s)": "rikodi {n}", "{n} violation(s) against {scheme}": "{n} violation(s) against {scheme}", "…and {n} more — download the full error report below.": "…da sauran {n} — ku sauke cikakken rahoton kurakurai a ƙasa.", "✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).": "✓ YA INGANTA bisa ga XSD na hukuma na ISO 20022 pain.001.001.09 (daƙiƙa {s}).", "✓ {n} record(s) valid — pain001 {version} generated the file and the official XSD accepted it ({s}s).": "✓ {n} record(s) valid — pain001 {version} generated the file and the official XSD accepted it ({s}s).", "✗ Could not read that file.": "✗ Ba a iya karanta wannan fayil ɗin ba.", "✗ Engine failed to load: {error}. Check your connection and try again.": "✗ Injin ya kasa ɗorawa: {error}. Ku duba haɗin yanar gizonku sannan ku sake gwadawa.", "✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.": "✗ Fayil ɗin ya fi 2 MB girma — wannan gwajin yana iyakance girman shigarwa; CLI na sarrafa rukunoni na kowane girma.", "✗ Official schema rejected the document — {n} error(s) ({s}s).": "✗ Schema na hukuma ya ƙi takardar — kuskure {n} (daƙiƙa {s}).", "✗ The library raised an error: {error}": "✗ The library raised an error: {error}", "✗ Validation failed — {n} issue(s). This file would be rejected.": "✗ Tantancewa ta gaza — matsala {n}. Za a ƙi wannan fayil ɗin."}</script></body>
 </html>

@@ -98,7 +98,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.001.001.03
 
-10 files. [Download the set](/corpus/pain001-coverage-pain.001.001.03-0.0.69.zip) (10 KB).
+10 files. [Download the set](/corpus/pain001-coverage-pain.001.001.03-0.0.70.zip) (10 KB).
 
 | File | What it is for |
 | :--- | :--- |
@@ -115,7 +115,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.001.001.04
 
-10 files. [Download the set](/corpus/pain001-coverage-pain.001.001.04-0.0.69.zip) (10 KB).
+10 files. [Download the set](/corpus/pain001-coverage-pain.001.001.04-0.0.70.zip) (10 KB).
 
 | File | What it is for |
 | :--- | :--- |
@@ -132,7 +132,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.001.001.05
 
-10 files. [Download the set](/corpus/pain001-coverage-pain.001.001.05-0.0.69.zip) (10 KB).
+10 files. [Download the set](/corpus/pain001-coverage-pain.001.001.05-0.0.70.zip) (10 KB).
 
 | File | What it is for |
 | :--- | :--- |
@@ -149,7 +149,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.001.001.06
 
-10 files. [Download the set](/corpus/pain001-coverage-pain.001.001.06-0.0.69.zip) (11 KB).
+10 files. [Download the set](/corpus/pain001-coverage-pain.001.001.06-0.0.70.zip) (11 KB).
 
 | File | What it is for |
 | :--- | :--- |
@@ -166,7 +166,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.001.001.07
 
-10 files. [Download the set](/corpus/pain001-coverage-pain.001.001.07-0.0.69.zip) (11 KB).
+10 files. [Download the set](/corpus/pain001-coverage-pain.001.001.07-0.0.70.zip) (11 KB).
 
 | File | What it is for |
 | :--- | :--- |
@@ -183,7 +183,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.001.001.08
 
-10 files. [Download the set](/corpus/pain001-coverage-pain.001.001.08-0.0.69.zip) (11 KB).
+10 files. [Download the set](/corpus/pain001-coverage-pain.001.001.08-0.0.70.zip) (11 KB).
 
 | File | What it is for |
 | :--- | :--- |
@@ -200,7 +200,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.001.001.09
 
-11 files. [Download the set](/corpus/pain001-coverage-pain.001.001.09-0.0.69.zip) (13 KB).
+11 files. [Download the set](/corpus/pain001-coverage-pain.001.001.09-0.0.70.zip) (13 KB).
 
 | File | What it is for |
 | :--- | :--- |
@@ -218,7 +218,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.001.001.10
 
-11 files. [Download the set](/corpus/pain001-coverage-pain.001.001.10-0.0.69.zip) (13 KB).
+11 files. [Download the set](/corpus/pain001-coverage-pain.001.001.10-0.0.70.zip) (13 KB).
 
 | File | What it is for |
 | :--- | :--- |
@@ -236,7 +236,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.001.001.11
 
-11 files. [Download the set](/corpus/pain001-coverage-pain.001.001.11-0.0.69.zip) (13 KB).
+11 files. [Download the set](/corpus/pain001-coverage-pain.001.001.11-0.0.70.zip) (13 KB).
 
 | File | What it is for |
 | :--- | :--- |
@@ -254,7 +254,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.001.001.12
 
-11 files. [Download the set](/corpus/pain001-coverage-pain.001.001.12-0.0.69.zip) (13 KB).
+11 files. [Download the set](/corpus/pain001-coverage-pain.001.001.12-0.0.70.zip) (13 KB).
 
 | File | What it is for |
 | :--- | :--- |
@@ -272,7 +272,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.001.001.13
 
-11 files. [Download the set](/corpus/pain001-coverage-pain.001.001.13-0.0.69.zip) (14 KB).
+11 files. [Download the set](/corpus/pain001-coverage-pain.001.001.13-0.0.70.zip) (14 KB).
 
 | File | What it is for |
 | :--- | :--- |
@@ -290,7 +290,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.008.001.02
 
-8 files. [Download the set](/corpus/pain001-coverage-pain.008.001.02-0.0.69.zip) (10 KB).
+8 files. [Download the set](/corpus/pain001-coverage-pain.008.001.02-0.0.70.zip) (10 KB).
 
 | File | What it is for |
 | :--- | :--- |
@@ -305,7 +305,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.008.001.08
 
-8 files. [Download the set](/corpus/pain001-coverage-pain.008.001.08-0.0.69.zip) (12 KB).
+8 files. [Download the set](/corpus/pain001-coverage-pain.008.001.08-0.0.70.zip) (12 KB).
 
 | File | What it is for |
 | :--- | :--- |

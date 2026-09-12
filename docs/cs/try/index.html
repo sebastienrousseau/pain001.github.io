@@ -222,6 +222,10 @@
               <select id="scenario-select" class="pill-select">
                 <option value="">Zavést chybu&hellip;</option>
               </select>
+              <label class="visually-hidden" for="scheme-select">Scheme rulebook to apply</label>
+              <select id="scheme-select" class="pill-select">
+                <option value="">Scheme rulebook: none</option>
+              </select>
               <button type="button" id="paste-btn" class="pill pill-ghost">Vložit záznamy</button>
             </div>
             <p class="dialect-note">
@@ -244,6 +248,9 @@
           <section class="demo-panel" aria-labelledby="output-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">2</span><h2 id="output-heading">Výsledek validace &amp; vygenerované XML</h2></div>
             <p class="status" id="status" role="status">Přidejte data v kroku 1 — validace proběhne automaticky.</p>
+            <div class="xsd-progress" id="run-progress" hidden>
+              <div class="xsd-progress-bar" id="run-progress-bar"></div>
+            </div>
 
             <!-- Layered result summary. The last two rows never turn
                  green: no local tool can know a bank's profile or its
@@ -261,7 +268,7 @@
                 </tr>
                 <tr data-layer="scheme">
                   <th scope="row">Sada pravidel platebního schématu</th>
-                  <td class="layer-state" id="layer-state-scheme">Nespouští se v prohlížeči — CLI to kontroluje pomocí <code class="tt-mono">--scheme</code></td>
+                  <td class="layer-state" id="layer-state-scheme">Not run — choose a scheme rulebook in step 1</td>
                 </tr>
                 <tr data-layer="bank">
                   <th scope="row">Profil vaší banky</th>
@@ -283,10 +290,15 @@
               </table></div>
               <p class="dialect-note" id="error-overflow" hidden></p>
             </div>
-            <div class="xml-out" id="xml-out" tabindex="0" aria-label="Vygenerovaný výstup XML"><span class="xml-placeholder">Validovaný dokument pain.001.001.09 se zobrazí zde — přidejte data v kroku 1.</span></div>
+            <div class="demo-actions output-tabs" role="tablist" aria-label="Output format">
+              <button type="button" id="tab-xml" class="pill pill-primary" role="tab" aria-selected="true" aria-controls="xml-out">XML</button>
+              <button type="button" id="tab-twin" class="pill pill-ghost" role="tab" aria-selected="false" aria-controls="xml-out" disabled title="Generate XML in step 2 first">JSON twin</button>
+            </div>
+            <div class="xml-out" id="xml-out" tabindex="0" aria-label="Generated output"><span class="xml-placeholder">Validovaný dokument pain.001.001.09 se zobrazí zde — přidejte data v kroku 1.</span></div>
             <div class="demo-actions">
               <button type="button" id="copy-btn" class="pill pill-ghost" disabled title="Add valid data in step 1 first">Kopírovat XML</button>
               <button type="button" id="download-btn" class="pill pill-ghost" data-track="try_download_xml" disabled title="Add valid data in step 1 first">Stáhnout .xml</button>
+              <button type="button" id="download-json-btn" class="pill pill-ghost" disabled title="Generate XML in step 2 first">Download JSON twin</button>
               <button type="button" id="report-btn" class="pill pill-ghost" hidden>Stáhnout zprávu o chybách (.csv)</button>
             </div>
           </section>
@@ -294,17 +306,17 @@
           <section class="demo-panel" aria-labelledby="xsd-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">3</span><h2 id="xsd-heading">Ověřte jej proti oficiálnímu XSD ISO 20022</h2></div>
             <p class="fineprint fineprint-tight">
-              Kroky 1–2 provádějí rychlé, ručně psané kontroly. Tento krok spouští originál: běhové prostředí
-              Pythonu (přes WebAssembly) vykonávající <code class="tt-mono">xmlschema</code>
-              proti oficiálnímu <code class="tt-mono">pain.001.001.09</code> schématu —
-              stejnou třídu validace, jakou provádí CLI. Engine o velikosti ~13&nbsp;MB je servírován z tohoto
-              webu a stahuje se jednou, když o něj požádáte (stahování začne tiše, jakmile
-              krok 2 vytvoří platné XML).
+              Steps 1–2 already ran the pain001 library itself: its record validation, the scheme
+              rulebook you chose, XML generation, and the official <code class="tt-mono">pain.001.001.09</code>
+              schema gate on the result, all inside a Python runtime compiled to WebAssembly and served
+              from this site. This button re-runs the schema gate on the XML shown above, so you can
+              edit the document and check it again. The runtime (about 28&nbsp;MB) downloads once, the
+              first time you validate, and stays cached.
             </p>
             <div class="demo-actions">
-              <button type="button" id="xsd-btn" class="pill pill-primary" disabled title="Generate XML in step 2 first">Spustit oficiální XSD bránu&nbsp;&rsaquo;</button>
+              <button type="button" id="xsd-btn" class="pill pill-primary" disabled title="Generate XML in step 2 first">Re-run the official XSD gate&nbsp;&rsaquo;</button>
             </div>
-            <p class="status" id="xsd-status" role="status">Nejprve vygenerujte XML v kroku 2 — XSD brána validuje právě tento výstup.</p>
+            <p class="status" id="xsd-status" role="status">Generate XML in step 2 first — the XSD gate runs on that output.</p>
             <div class="xsd-progress" id="xsd-progress" hidden>
               <div class="xsd-progress-bar" id="xsd-progress-bar"></div>
             </div>
@@ -316,11 +328,13 @@
 
       <div class="wrap">
         <p class="fineprint" id="demo-fineprint">
-          Vše na této stránce běží ve vašem prohlížeči — nic se nenahrává, neukládá ani nikam neodesílá.
-          Toto demo implementuje podmnožinu pipeline (povinná pole, IBAN mod-97, struktura BIC, formáty částek
-          a dat, přepočtené <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code> kontrolní součty). Krok 3 spouští oficiální XSD bránu přímo zde přes WebAssembly. Nainstalovaná sada nástrojů
-          navíc přidává validaci JSON Schema a pět sad pravidel platebních schémat —
-          <a href="/cs/installation/">nainstalujte CLI</a> pro kompletní pipeline.
+          Everything on this page runs in your browser — nothing is uploaded, stored, or sent anywhere.
+          It runs the pain001 library itself, the same package you install with <code class="tt-inherit">pip</code>,
+          inside a Python runtime compiled to WebAssembly: record validation, IBAN and BIC checks, the scheme
+          rulebook you choose, XML generation with recomputed <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code>
+          control totals, and the official XSD gate. What the CLI adds is scale and inputs: files of any size,
+          Excel, SQLite, JSON, Parquet and SWIFT MT101, and every message edition —
+          <a href="/cs/installation/">install the CLI</a> for the complete pipeline.
         </p>
       </div>
 
@@ -387,5 +401,5 @@ pain001 -t pain.001.001.09 -d payments.csv -o out/ --scheme sepa-sct --dry-run</
 </div>
 <script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
 </div>
-<script id="try-i18n" type="application/json">{"Add valid data in step 1 first": "Nejprve přidejte platná data v kroku 1", "Generate XML in step 2 first": "Nejprve vygenerujte XML v kroku 2", "No XML generated — validation is a hard gate. Fix the findings above and re-validate.": "Nebylo vygenerováno žádné XML — validace je nezbytnou podmínkou. Opravte výše uvedené nálezy a spusťte validaci znovu.", "The validated pain.001.001.09 document will appear here — add data in step 1.": "Validovaný dokument pain.001.001.09 se zobrazí zde — přidejte data v kroku 1.", "…and {n} more — download the full error report below.": "…a dalších {n} — úplnou zprávu o chybách si stáhněte níže.", "Need a header row and at least one record.": "Je vyžadován řádek záhlaví a alespoň jeden záznam.", "Detected: {delim}-delimited": "Zjištěný oddělovač: {delim}", "{n} record(s)": "{n} záznam(ů)", "ignored column(s): {cols}": "ignorované sloupce: {cols}", "large batch — the CLI streams batches of any size": "velká dávka — CLI streamuje dávky libovolné velikosti", "✗ Validation failed — {n} issue(s). This file would be rejected.": "✗ Validace se nezdařila — {n} problém(ů). Tento soubor by byl odmítnut.", "✓ {n} record(s) valid — control totals recomputed. Exit code 0.": "✓ {n} záznam(ů) platných — kontrolní součty byly přepočítány. Exit code 0.", "✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.": "✗ Soubor je větší než 2 MB — toto demo omezuje velikost vstupu; CLI streamuje dávky libovolné velikosti.", "✗ Could not read that file.": "✗ Tento soubor se nepodařilo přečíst.", "Paste your CSV records, then press Validate & generate.": "Vložte své záznamy CSV a poté stiskněte „Validovat a generovat“.", "Copied ✓": "Zkopírováno ✓", "Copy XML": "Kopírovat XML", "Copy command": "Kopírovat příkaz", "Downloading the engine (~13 MB, first run only)…": "Stahování enginu (~13 MB, pouze při prvním spuštění)…", "Booting Python runtime…": "Spouštění běhového prostředí Python…", "Loading xmlschema…": "Načítání xmlschema…", "Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.": "SHA-256 schématu: {hex} — porovnejte jej s kopií publikovanou pro pain.001.001.09.", "Validating against the official schema…": "Probíhá validace proti oficiálnímu schématu…", "✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).": "✓ PLATNÝ podle oficiálního XSD ISO 20022 pain.001.001.09 ({s}s).", "✗ Official schema rejected the document — {n} error(s) ({s}s).": "✗ Oficiální schéma dokument odmítlo — {n} chyb(y) ({s}s).", "✗ Engine failed to load: {error}. Check your connection and try again.": "✗ Engine se nepodařilo načíst: {error}. Zkontrolujte připojení a zkuste to znovu.", "comma": "čárka", "semicolon": "středník", "tab": "tabulátor", "SEPA credit transfer (2 records, EUR)": "SEPA úhrada (2 záznamy, EUR)", "Cross-border (GBP, escaped chars)": "Přeshraniční (GBP, escapované znaky)", "Larger batch (20 records)": "Větší dávka (20 záznamů)", "Flipped IBAN digit (mod-97 checksum)": "Zaměněná číslice IBAN (kontrolní součet mod-97)", "Malformed BIC (wrong structure)": "Chybný BIC (nesprávná struktura)", "Missing required column (execution date)": "Chybějící povinný sloupec (datum provedení)", "European comma-decimal amount": "Částka s evropskou desetinnou čárkou", "Impossible calendar date": "Nemožné kalendářní datum", "missing required value": "chybí povinná hodnota", "comma-decimal amount — expected point-decimal (e.g. 1234.56)": "částka s desetinnou čárkou — očekává se desetinná tečka (např. 1234.56)", "not a valid decimal amount (expected e.g. 1234.56)": "neplatná desetinná částka (očekává se např. 1234.56)", "{ccy} is a zero-decimal currency — no fractional part allowed": "{ccy} je měna bez desetinných míst — zlomková část není povolena", "more than 2 decimal places": "více než 2 desetinná místa", "not a 3-letter ISO 4217 code": "není třípísmenný kód ISO 4217", "expected ISO 8601 YYYY-MM-DD": "očekává se formát ISO 8601 YYYY-MM-DD", "not a real calendar date": "neexistující kalendářní datum", "wrong length for country {cc} (expected {len} characters)": "nesprávná délka pro zemi {cc} (očekává se {len} znaků)", "fails the ISO 13616 mod-97 checksum — likely a mistyped digit": "neprošel kontrolním součtem mod-97 dle ISO 13616 — pravděpodobně překlep v číslici", "not a valid ISO 9362 BIC (8 or 11 characters, AAAAAA00[XXX])": "neplatný BIC dle ISO 9362 (8 nebo 11 znaků, AAAAAA00[XXX])", "row {row} has {cells} field(s), header has {header}": "řádek {row} má {cells} polí, záhlaví má {header}", "Passed the official XSD": "Prošlo oficiálním XSD", "Rejected by the official XSD": "Odmítnuto oficiálním XSD", "{n} issue(s) the schema would reject": "{n} problém(ů), které by schéma odmítlo", "Pre-checks passed — run the XSD gate below to prove it": "Předběžné kontroly prošly — spuštěním XSD brány níže to prokážete", "{n} issue(s) a schema would accept but a bank would not": "{n} problém(ů), které by schéma přijalo, ale banka ne", "No identifier or format problems found": "Nenalezeny žádné problémy s identifikátory ani formáty"}</script></body>
+<script id="try-i18n" type="application/json">{"Add valid data in step 1 first": "Nejprve přidejte platná data v kroku 1", "Booting Python runtime…": "Spouštění běhového prostředí Python…", "Copied ✓": "Zkopírováno ✓", "Copy XML": "Kopírovat XML", "Copy command": "Kopírovat příkaz", "Cross-border (GBP, escaped chars)": "Přeshraniční (GBP, escapované znaky)", "Detected: {delim}-delimited": "Zjištěný oddělovač: {delim}", "European comma-decimal amount": "Částka s evropskou desetinnou čárkou", "Flipped IBAN digit (mod-97 checksum)": "Zaměněná číslice IBAN (kontrolní součet mod-97)", "From the example corpus ({n} scenarios)": "From the example corpus ({n} scenarios)", "Generate XML in step 2 first": "Nejprve vygenerujte XML v kroku 2", "Generate XML in step 2 first — the XSD gate runs on that output.": "Generate XML in step 2 first — the XSD gate runs on that output.", "Impossible calendar date": "Nemožné kalendářní datum", "Installing pain001 and its dependencies…": "Installing pain001 and its dependencies…", "Larger batch (20 records)": "Větší dávka (20 záznamů)", "Malformed BIC (wrong structure)": "Chybný BIC (nesprávná struktura)", "Missing required column (execution date)": "Chybějící povinný sloupec (datum provedení)", "Need a header row and at least one record.": "Je vyžadován řádek záhlaví a alespoň jeden záznam.", "No XML generated — validation is a hard gate. Fix the findings above and re-validate.": "Nebylo vygenerováno žádné XML — validace je nezbytnou podmínkou. Opravte výše uvedené nálezy a spusťte validaci znovu.", "No identifier or format problems found": "Nenalezeny žádné problémy s identifikátory ani formáty", "Not reached — fix the findings above first": "Not reached — fix the findings above first", "Not run — choose a scheme rulebook in step 1": "Not run — choose a scheme rulebook in step 1", "Passed the official XSD": "Prošlo oficiálním XSD", "Passed {scheme}": "Passed {scheme}", "Paste your CSV records, then press Validate & generate.": "Vložte své záznamy CSV a poté stiskněte „Validovat a generovat“.", "Rejected by the official XSD": "Odmítnuto oficiálním XSD", "Running pain001 in your browser…": "Running pain001 in your browser…", "SEPA credit transfer (2 records, EUR)": "SEPA úhrada (2 záznamy, EUR)", "Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.": "SHA-256 schématu: {hex} — porovnejte jej s kopií publikovanou pro pain.001.001.09.", "Starting a private Python runtime in your browser — {done} of {total} MB; nothing leaves your machine.": "Starting a private Python runtime in your browser — {done} of {total} MB; nothing leaves your machine.", "The validated pain.001.001.09 document will appear here — add data in step 1.": "Validovaný dokument pain.001.001.09 se zobrazí zde — přidejte data v kroku 1.", "Validating against the official schema…": "Probíhá validace proti oficiálnímu schématu…", "Warming the official schema (once per visit)…": "Warming the official schema (once per visit)…", "comma": "čárka", "ignored column(s): {cols}": "ignorované sloupce: {cols}", "large batch — the CLI streams batches of any size": "velká dávka — CLI streamuje dávky libovolné velikosti", "row {row} has {cells} field(s), header has {header}": "řádek {row} má {cells} polí, záhlaví má {header}", "semicolon": "středník", "tab": "tabulátor", "{n} issue(s) a schema would accept but a bank would not": "{n} problém(ů), které by schéma přijalo, ale banka ne", "{n} issue(s) the schema would reject": "{n} problém(ů), které by schéma odmítlo", "{n} record(s)": "{n} záznam(ů)", "{n} violation(s) against {scheme}": "{n} violation(s) against {scheme}", "…and {n} more — download the full error report below.": "…a dalších {n} — úplnou zprávu o chybách si stáhněte níže.", "✓ VALID against the official ISO 20022 pain.001.001.09 XSD ({s}s).": "✓ PLATNÝ podle oficiálního XSD ISO 20022 pain.001.001.09 ({s}s).", "✓ {n} record(s) valid — pain001 {version} generated the file and the official XSD accepted it ({s}s).": "✓ {n} record(s) valid — pain001 {version} generated the file and the official XSD accepted it ({s}s).", "✗ Could not read that file.": "✗ Tento soubor se nepodařilo přečíst.", "✗ Engine failed to load: {error}. Check your connection and try again.": "✗ Engine se nepodařilo načíst: {error}. Zkontrolujte připojení a zkuste to znovu.", "✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.": "✗ Soubor je větší než 2 MB — toto demo omezuje velikost vstupu; CLI streamuje dávky libovolné velikosti.", "✗ Official schema rejected the document — {n} error(s) ({s}s).": "✗ Oficiální schéma dokument odmítlo — {n} chyb(y) ({s}s).", "✗ The library raised an error: {error}": "✗ The library raised an error: {error}", "✗ Validation failed — {n} issue(s). This file would be rejected.": "✗ Validace se nezdařila — {n} problém(ů). Tento soubor by byl odmítnut."}</script></body>
 </html>

@@ -94,7 +94,7 @@ Pain001 is **pre-1.0** (`0.0.x`). Within that range, releases are frequent and m
 
 ## What "supported" means
 
-The honest pre-1.0 statement: **the latest release is the supported release.** Bug and security fixes ship as new releases rather than backports. If you need a frozen version, pin it (`pain001==0.0.69`) — pinned installs keep working because releases are never deleted or mutated on PyPI.
+The honest pre-1.0 statement: **the latest release is the supported release.** Bug and security fixes ship as new releases rather than backports. If you need a frozen version, pin it (`pain001==0.0.70`) — pinned installs keep working because releases are never deleted or mutated on PyPI.
 
 Security reports against older versions are still triaged: if the flaw exists in the latest release, it is fixed there with an advisory noting affected versions.
 
