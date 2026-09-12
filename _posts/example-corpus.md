@@ -156,128 +156,128 @@ These checks are the library's own; they are not a certification, and passing th
 
 | Scenario | What it shows | Checked against | Editions | Evidence |
 | :--- | :--- | :--- | :--- | :--- |
-| `ae.uaefts.single` | UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code. | `ae-uaefts`, `purpose-mandate-ae` | [pain.001.001.03](/corpus/market/ae/priority-payment/ae.uaefts.single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/ae/priority-payment/ae.uaefts.single.pain.001.001.09.xml) | assumed |
+| [`ae.uaefts.single`](/corpus-ae-uaefts-single/) | UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code. | `ae-uaefts`, `purpose-mandate-ae` | [pain.001.001.03](/corpus/market/ae/priority-payment/ae.uaefts.single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/ae/priority-payment/ae.uaefts.single.pain.001.001.09.xml) | assumed |
 
 ### Belgium (BE)
 
 | Scenario | What it shows | Checked against | Editions | Evidence |
 | :--- | :--- | :--- | :--- | :--- |
-| `be.sepa.sct-supplier` | SEPA credit transfer with a Belgian structured communication (BBA). | `sepa-sct` | [pain.001.001.03](/corpus/market/be/sepa-credit-transfer/be.sepa.sct-supplier.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/be/sepa-credit-transfer/be.sepa.sct-supplier.pain.001.001.09.xml) | derived |
-| `be.sepa.sdd-core` | SEPA Core direct debit, recurring, Belgian creditor identifier. | `sepa-sdd` | [pain.008.001.02](/corpus/market/be/sepa-direct-debit/be.sepa.sdd-core.pain.008.001.02.xml), [pain.008.001.08](/corpus/market/be/sepa-direct-debit/be.sepa.sdd-core.pain.008.001.08.xml) | derived |
+| [`be.sepa.sct-supplier`](/corpus-be-sepa-sct-supplier/) | SEPA credit transfer with a Belgian structured communication (BBA). | `sepa-sct` | [pain.001.001.03](/corpus/market/be/sepa-credit-transfer/be.sepa.sct-supplier.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/be/sepa-credit-transfer/be.sepa.sct-supplier.pain.001.001.09.xml) | derived |
+| [`be.sepa.sdd-core`](/corpus-be-sepa-sdd-core/) | SEPA Core direct debit, recurring, Belgian creditor identifier. | `sepa-sdd` | [pain.008.001.02](/corpus/market/be/sepa-direct-debit/be.sepa.sdd-core.pain.008.001.02.xml), [pain.008.001.08](/corpus/market/be/sepa-direct-debit/be.sepa.sdd-core.pain.008.001.08.xml) | derived |
 
 ### Switzerland (CH)
 
 | Scenario | What it shows | Checked against | Editions | Evidence |
 | :--- | :--- | :--- | :--- | :--- |
-| `ch.international.usd` | Cross-border USD payment from Switzerland (SPS payment type X). | `cbpr-cross-border` | [pain.001.001.03](/corpus/market/ch/cross-border/ch.international.usd.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/ch/cross-border/ch.international.usd.pain.001.001.09.xml) | derived |
-| `ch.sps.qr-bill` | Swiss domestic credit transfer settling a QR-bill (QRR reference). | `ch-domestic` | [pain.001.001.03](/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.09.xml) | derived |
-| `ch.sps.scor` | Swiss domestic credit transfer with an ISO 11649 creditor reference (SCOR). | `ch-domestic` | [pain.001.001.03](/corpus/market/ch/domestic-credit-transfer/ch.sps.scor.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/ch/domestic-credit-transfer/ch.sps.scor.pain.001.001.09.xml) | derived |
-| `ch.sepa.sct` | SEPA credit transfer from Switzerland (SPS payment type S). | `ch-sepa` | [pain.001.001.03](/corpus/market/ch/sepa-credit-transfer/ch.sepa.sct.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/ch/sepa-credit-transfer/ch.sepa.sct.pain.001.001.09.xml) | derived |
+| [`ch.international.usd`](/corpus-ch-international-usd/) | Cross-border USD payment from Switzerland (SPS payment type X). | `cbpr-cross-border` | [pain.001.001.03](/corpus/market/ch/cross-border/ch.international.usd.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/ch/cross-border/ch.international.usd.pain.001.001.09.xml) | derived |
+| [`ch.sps.qr-bill`](/corpus-ch-sps-qr-bill/) | Swiss domestic credit transfer settling a QR-bill (QRR reference). | `ch-domestic` | [pain.001.001.03](/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.09.xml) | derived |
+| [`ch.sps.scor`](/corpus-ch-sps-scor/) | Swiss domestic credit transfer with an ISO 11649 creditor reference (SCOR). | `ch-domestic` | [pain.001.001.03](/corpus/market/ch/domestic-credit-transfer/ch.sps.scor.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/ch/domestic-credit-transfer/ch.sps.scor.pain.001.001.09.xml) | derived |
+| [`ch.sepa.sct`](/corpus-ch-sepa-sct/) | SEPA credit transfer from Switzerland (SPS payment type S). | `ch-sepa` | [pain.001.001.03](/corpus/market/ch/sepa-credit-transfer/ch.sepa.sct.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/ch/sepa-credit-transfer/ch.sepa.sct.pain.001.001.09.xml) | derived |
 
 ### CZ (CZ)
 
 | Scenario | What it shows | Checked against | Editions | Evidence |
 | :--- | :--- | :--- | :--- | :--- |
-| `cz.certis.domestic` | Czech domestic CZK transfer through CERTIS with VS/KS/SS payment symbols. | base rules only | [pain.001.001.03](/corpus/market/cz/domestic-credit-transfer/cz.certis.domestic.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/cz/domestic-credit-transfer/cz.certis.domestic.pain.001.001.09.xml) | derived |
-| `cz.sepa.sct` | SEPA credit transfer from a Czech EUR account to a German supplier. | `sepa-sct` | [pain.001.001.03](/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.09.xml) | derived |
+| [`cz.certis.domestic`](/corpus-cz-certis-domestic/) | Czech domestic CZK transfer through CERTIS with VS/KS/SS payment symbols. | base rules only | [pain.001.001.03](/corpus/market/cz/domestic-credit-transfer/cz.certis.domestic.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/cz/domestic-credit-transfer/cz.certis.domestic.pain.001.001.09.xml) | derived |
+| [`cz.sepa.sct`](/corpus-cz-sepa-sct/) | SEPA credit transfer from a Czech EUR account to a German supplier. | `sepa-sct` | [pain.001.001.03](/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.09.xml) | derived |
 
 ### Germany (DE)
 
 | Scenario | What it shows | Checked against | Editions | Evidence |
 | :--- | :--- | :--- | :--- | :--- |
-| `de.axz.foreign` | Foreign payment in USD from a German account, DK order type AXZ. | `de-axz` | [pain.001.001.03](/corpus/market/de/cross-border/de.axz.foreign.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/de/cross-border/de.axz.foreign.pain.001.001.09.xml) | assumed |
-| `de.sepa.sct-salary` | SEPA SCT salary batch with structured and unstructured remittance. | `sepa-sct` | [pain.001.001.03](/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.09.xml), [pain.001.001.13](/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.13.xml) | derived |
-| `de.sepa.sdd-b2b` | SEPA B2B direct debit, first collection. | `sepa-b2b` | [pain.008.001.02](/corpus/market/de/sepa-direct-debit/de.sepa.sdd-b2b.pain.008.001.02.xml), [pain.008.001.08](/corpus/market/de/sepa-direct-debit/de.sepa.sdd-b2b.pain.008.001.08.xml) | derived |
-| `de.sepa.sct-inst` | SEPA Instant credit transfer, single, INST at PmtInf. | `sepa-inst` | [pain.001.001.09](/corpus/market/de/sepa-instant/de.sepa.sct-inst.pain.001.001.09.xml) | derived |
-| `de.ccu.urgent` | Urgent euro payment (TARGET) from a German account, DK order type CCU. | `de-ccu` | [pain.001.001.03](/corpus/market/de/urgent-euro/de.ccu.urgent.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/de/urgent-euro/de.ccu.urgent.pain.001.001.09.xml) | derived |
+| [`de.axz.foreign`](/corpus-de-axz-foreign/) | Foreign payment in USD from a German account, DK order type AXZ. | `de-axz` | [pain.001.001.03](/corpus/market/de/cross-border/de.axz.foreign.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/de/cross-border/de.axz.foreign.pain.001.001.09.xml) | assumed |
+| [`de.sepa.sct-salary`](/corpus-de-sepa-sct-salary/) | SEPA SCT salary batch with structured and unstructured remittance. | `sepa-sct` | [pain.001.001.03](/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.09.xml), [pain.001.001.13](/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.13.xml) | derived |
+| [`de.sepa.sdd-b2b`](/corpus-de-sepa-sdd-b2b/) | SEPA B2B direct debit, first collection. | `sepa-b2b` | [pain.008.001.02](/corpus/market/de/sepa-direct-debit/de.sepa.sdd-b2b.pain.008.001.02.xml), [pain.008.001.08](/corpus/market/de/sepa-direct-debit/de.sepa.sdd-b2b.pain.008.001.08.xml) | derived |
+| [`de.sepa.sct-inst`](/corpus-de-sepa-sct-inst/) | SEPA Instant credit transfer, single, INST at PmtInf. | `sepa-inst` | [pain.001.001.09](/corpus/market/de/sepa-instant/de.sepa.sct-inst.pain.001.001.09.xml) | derived |
+| [`de.ccu.urgent`](/corpus-de-ccu-urgent/) | Urgent euro payment (TARGET) from a German account, DK order type CCU. | `de-ccu` | [pain.001.001.03](/corpus/market/de/urgent-euro/de.ccu.urgent.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/de/urgent-euro/de.ccu.urgent.pain.001.001.09.xml) | derived |
 
 ### Spain (ES)
 
 | Scenario | What it shows | Checked against | Editions | Evidence |
 | :--- | :--- | :--- | :--- | :--- |
-| `es.sepa.sct-single` | SEPA credit transfer, single, initiating party identified by NIF. | `sepa-sct` | [pain.001.001.03](/corpus/market/es/sepa-credit-transfer/es.sepa.sct-single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/es/sepa-credit-transfer/es.sepa.sct-single.pain.001.001.09.xml) | derived |
-| `es.sepa.sdd-core` | SEPA Core direct debit, recurring, Spanish creditor identifier. | `sepa-sdd` | [pain.008.001.02](/corpus/market/es/sepa-direct-debit/es.sepa.sdd-core.pain.008.001.02.xml), [pain.008.001.08](/corpus/market/es/sepa-direct-debit/es.sepa.sdd-core.pain.008.001.08.xml) | derived |
+| [`es.sepa.sct-single`](/corpus-es-sepa-sct-single/) | SEPA credit transfer, single, initiating party identified by NIF. | `sepa-sct` | [pain.001.001.03](/corpus/market/es/sepa-credit-transfer/es.sepa.sct-single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/es/sepa-credit-transfer/es.sepa.sct-single.pain.001.001.09.xml) | derived |
+| [`es.sepa.sdd-core`](/corpus-es-sepa-sdd-core/) | SEPA Core direct debit, recurring, Spanish creditor identifier. | `sepa-sdd` | [pain.008.001.02](/corpus/market/es/sepa-direct-debit/es.sepa.sdd-core.pain.008.001.02.xml), [pain.008.001.08](/corpus/market/es/sepa-direct-debit/es.sepa.sdd-core.pain.008.001.08.xml) | derived |
 
 ### France (FR)
 
 | Scenario | What it shows | Checked against | Editions | Evidence |
 | :--- | :--- | :--- | :--- | :--- |
-| `fr.sepa.sct-supplier` | SEPA credit transfer, supplier invoice with an RF creditor reference. | `sepa-sct` | [pain.001.001.03](/corpus/market/fr/sepa-credit-transfer/fr.sepa.sct-supplier.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/fr/sepa-credit-transfer/fr.sepa.sct-supplier.pain.001.001.09.xml) | derived |
-| `fr.sepa.sdd-core` | SEPA Core direct debit, recurring collection on an amended mandate. | `sepa-sdd` | [pain.008.001.02](/corpus/market/fr/sepa-direct-debit/fr.sepa.sdd-core.pain.008.001.02.xml), [pain.008.001.08](/corpus/market/fr/sepa-direct-debit/fr.sepa.sdd-core.pain.008.001.08.xml) | derived |
+| [`fr.sepa.sct-supplier`](/corpus-fr-sepa-sct-supplier/) | SEPA credit transfer, supplier invoice with an RF creditor reference. | `sepa-sct` | [pain.001.001.03](/corpus/market/fr/sepa-credit-transfer/fr.sepa.sct-supplier.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/fr/sepa-credit-transfer/fr.sepa.sct-supplier.pain.001.001.09.xml) | derived |
+| [`fr.sepa.sdd-core`](/corpus-fr-sepa-sdd-core/) | SEPA Core direct debit, recurring collection on an amended mandate. | `sepa-sdd` | [pain.008.001.02](/corpus/market/fr/sepa-direct-debit/fr.sepa.sdd-core.pain.008.001.02.xml), [pain.008.001.08](/corpus/market/fr/sepa-direct-debit/fr.sepa.sdd-core.pain.008.001.08.xml) | derived |
 
 ### United Kingdom (GB)
 
 | Scenario | What it shows | Checked against | Editions | Evidence |
 | :--- | :--- | :--- | :--- | :--- |
-| `gb.bacs.supplier-run` | Bacs Direct Credit supplier run, two payments, SUN in the debtor id. | `uk-bacs` | [pain.001.001.03](/corpus/market/gb/bacs-direct-credit/gb.bacs.supplier-run.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/gb/bacs-direct-credit/gb.bacs.supplier-run.pain.001.001.09.xml) | derived |
-| `gb.bacs-dd.collection` | Bacs Direct Debit collection, first and recurring, SUN as creditor id. | `uk-bacs-dd` | [pain.008.001.02](/corpus/market/gb/bacs-direct-debit/gb.bacs-dd.collection.pain.008.001.02.xml), [pain.008.001.08](/corpus/market/gb/bacs-direct-debit/gb.bacs-dd.collection.pain.008.001.08.xml) | derived |
-| `gb.fps.single` | Faster Payments single supplier payment, sort code and account. | `uk-fps` | [pain.001.001.03](/corpus/market/gb/faster-payment/gb.fps.single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/gb/faster-payment/gb.fps.single.pain.001.001.09.xml) | derived |
-| `gb.chaps.property-purchase` | CHAPS same-day property completion with the BoE HLST purpose code. | `uk-chaps`, `purpose-mandate-gb` | [pain.001.001.03](/corpus/market/gb/priority-payment/gb.chaps.property-purchase.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/gb/priority-payment/gb.chaps.property-purchase.pain.001.001.09.xml) | derived |
-| `gb.international.usd` | USD cross-border payment from a UK account to a US supplier. | `cbpr-cross-border` | [pain.001.001.03](/corpus/market/gb/priority-payment/gb.international.usd.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/gb/priority-payment/gb.international.usd.pain.001.001.09.xml) | derived |
+| [`gb.bacs.supplier-run`](/corpus-gb-bacs-supplier-run/) | Bacs Direct Credit supplier run, two payments, SUN in the debtor id. | `uk-bacs` | [pain.001.001.03](/corpus/market/gb/bacs-direct-credit/gb.bacs.supplier-run.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/gb/bacs-direct-credit/gb.bacs.supplier-run.pain.001.001.09.xml) | derived |
+| [`gb.bacs-dd.collection`](/corpus-gb-bacs-dd-collection/) | Bacs Direct Debit collection, first and recurring, SUN as creditor id. | `uk-bacs-dd` | [pain.008.001.02](/corpus/market/gb/bacs-direct-debit/gb.bacs-dd.collection.pain.008.001.02.xml), [pain.008.001.08](/corpus/market/gb/bacs-direct-debit/gb.bacs-dd.collection.pain.008.001.08.xml) | derived |
+| [`gb.fps.single`](/corpus-gb-fps-single/) | Faster Payments single supplier payment, sort code and account. | `uk-fps` | [pain.001.001.03](/corpus/market/gb/faster-payment/gb.fps.single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/gb/faster-payment/gb.fps.single.pain.001.001.09.xml) | derived |
+| [`gb.chaps.property-purchase`](/corpus-gb-chaps-property-purchase/) | CHAPS same-day property completion with the BoE HLST purpose code. | `uk-chaps`, `purpose-mandate-gb` | [pain.001.001.03](/corpus/market/gb/priority-payment/gb.chaps.property-purchase.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/gb/priority-payment/gb.chaps.property-purchase.pain.001.001.09.xml) | derived |
+| [`gb.international.usd`](/corpus-gb-international-usd/) | USD cross-border payment from a UK account to a US supplier. | `cbpr-cross-border` | [pain.001.001.03](/corpus/market/gb/priority-payment/gb.international.usd.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/gb/priority-payment/gb.international.usd.pain.001.001.09.xml) | derived |
 
 ### HK (HK)
 
 | Scenario | What it shows | Checked against | Editions | Evidence |
 | :--- | :--- | :--- | :--- | :--- |
-| `hk.fps.single` | Hong Kong FPS credit in HKD, clearing codes and account numbers. | `hk-fps`, `purpose-mandate-hk` | [pain.001.001.03](/corpus/market/hk/instant-payment/hk.fps.single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/hk/instant-payment/hk.fps.single.pain.001.001.09.xml) | assumed |
+| [`hk.fps.single`](/corpus-hk-fps-single/) | Hong Kong FPS credit in HKD, clearing codes and account numbers. | `hk-fps`, `purpose-mandate-hk` | [pain.001.001.03](/corpus/market/hk/instant-payment/hk.fps.single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/hk/instant-payment/hk.fps.single.pain.001.001.09.xml) | assumed |
 
 ### Italy (IT)
 
 | Scenario | What it shows | Checked against | Editions | Evidence |
 | :--- | :--- | :--- | :--- | :--- |
-| `it.sepa.sct-single` | SEPA credit transfer, single supplier payment. | `sepa-sct` | [pain.001.001.03](/corpus/market/it/sepa-credit-transfer/it.sepa.sct-single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/it/sepa-credit-transfer/it.sepa.sct-single.pain.001.001.09.xml) | derived |
+| [`it.sepa.sct-single`](/corpus-it-sepa-sct-single/) | SEPA credit transfer, single supplier payment. | `sepa-sct` | [pain.001.001.03](/corpus/market/it/sepa-credit-transfer/it.sepa.sct-single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/it/sepa-credit-transfer/it.sepa.sct-single.pain.001.001.09.xml) | derived |
 
 ### Luxembourg (LU)
 
 | Scenario | What it shows | Checked against | Editions | Evidence |
 | :--- | :--- | :--- | :--- | :--- |
-| `lu.sepa.sct-single` | SEPA credit transfer, single supplier payment. | `sepa-sct` | [pain.001.001.03](/corpus/market/lu/sepa-credit-transfer/lu.sepa.sct-single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/lu/sepa-credit-transfer/lu.sepa.sct-single.pain.001.001.09.xml) | derived |
+| [`lu.sepa.sct-single`](/corpus-lu-sepa-sct-single/) | SEPA credit transfer, single supplier payment. | `sepa-sct` | [pain.001.001.03](/corpus/market/lu/sepa-credit-transfer/lu.sepa.sct-single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/lu/sepa-credit-transfer/lu.sepa.sct-single.pain.001.001.09.xml) | derived |
 
 ### MY (MY)
 
 | Scenario | What it shows | Checked against | Editions | Evidence |
 | :--- | :--- | :--- | :--- | :--- |
-| `my.duitnow.single` | Malaysia DuitNow credit in MYR with a BNM purpose code. | `my-duitnow`, `purpose-mandate-my` | [pain.001.001.03](/corpus/market/my/instant-payment/my.duitnow.single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/my/instant-payment/my.duitnow.single.pain.001.001.09.xml) | assumed |
+| [`my.duitnow.single`](/corpus-my-duitnow-single/) | Malaysia DuitNow credit in MYR with a BNM purpose code. | `my-duitnow`, `purpose-mandate-my` | [pain.001.001.03](/corpus/market/my/instant-payment/my.duitnow.single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/my/instant-payment/my.duitnow.single.pain.001.001.09.xml) | assumed |
 
 ### Netherlands (NL)
 
 | Scenario | What it shows | Checked against | Editions | Evidence |
 | :--- | :--- | :--- | :--- | :--- |
-| `nl.sepa.sct-supplier` | SEPA credit transfer with a Dutch payment reference (CUR). | `sepa-sct` | [pain.001.001.03](/corpus/market/nl/sepa-credit-transfer/nl.sepa.sct-supplier.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/nl/sepa-credit-transfer/nl.sepa.sct-supplier.pain.001.001.09.xml) | derived |
-| `nl.sepa.sdd-core` | SEPA Core direct debit, recurring collections under mandates. | `sepa-sdd` | [pain.008.001.02](/corpus/market/nl/sepa-direct-debit/nl.sepa.sdd-core.pain.008.001.02.xml), [pain.008.001.08](/corpus/market/nl/sepa-direct-debit/nl.sepa.sdd-core.pain.008.001.08.xml) | derived |
+| [`nl.sepa.sct-supplier`](/corpus-nl-sepa-sct-supplier/) | SEPA credit transfer with a Dutch payment reference (CUR). | `sepa-sct` | [pain.001.001.03](/corpus/market/nl/sepa-credit-transfer/nl.sepa.sct-supplier.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/nl/sepa-credit-transfer/nl.sepa.sct-supplier.pain.001.001.09.xml) | derived |
+| [`nl.sepa.sdd-core`](/corpus-nl-sepa-sdd-core/) | SEPA Core direct debit, recurring collections under mandates. | `sepa-sdd` | [pain.008.001.02](/corpus/market/nl/sepa-direct-debit/nl.sepa.sdd-core.pain.008.001.02.xml), [pain.008.001.08](/corpus/market/nl/sepa-direct-debit/nl.sepa.sdd-core.pain.008.001.08.xml) | derived |
 
 ### QA (QA)
 
 | Scenario | What it shows | Checked against | Editions | Evidence |
 | :--- | :--- | :--- | :--- | :--- |
-| `qa.qatch.single` | Qatar QATCH credit in QAR with the QCB purpose of payment. | `qa-qatch`, `purpose-mandate-qa` | [pain.001.001.03](/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.09.xml) | assumed |
+| [`qa.qatch.single`](/corpus-qa-qatch-single/) | Qatar QATCH credit in QAR with the QCB purpose of payment. | `qa-qatch`, `purpose-mandate-qa` | [pain.001.001.03](/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.09.xml) | assumed |
 
 ### Sweden (SE)
 
 | Scenario | What it shows | Checked against | Editions | Evidence |
 | :--- | :--- | :--- | :--- | :--- |
-| `se.bankgiro.supplier` | Swedish Bankgiro supplier payment with an OCR reference. | `se-bankgiro` | [pain.001.001.03](/corpus/market/se/bankgiro-credit/se.bankgiro.supplier.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/se/bankgiro-credit/se.bankgiro.supplier.pain.001.001.09.xml) | derived |
-| `se.plusgiro.supplier` | Swedish Plusgiro supplier payment with an invoice message. | `se-bankgiro` | [pain.001.001.03](/corpus/market/se/plusgiro-credit/se.plusgiro.supplier.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/se/plusgiro-credit/se.plusgiro.supplier.pain.001.001.09.xml) | derived |
-| `se.rix.urgent` | Swedish domestic high-value SEK payment through RIX, urgent, intra-group. | base rules only | [pain.001.001.03](/corpus/market/se/priority-payment/se.rix.urgent.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/se/priority-payment/se.rix.urgent.pain.001.001.09.xml) | derived |
-| `se.bankgiro.salary` | Swedish salary batch (Bankgirot Löner), SALA, one debit. | `se-bankgiro` | [pain.001.001.03](/corpus/market/se/salary/se.bankgiro.salary.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/se/salary/se.bankgiro.salary.pain.001.001.09.xml) | derived |
+| [`se.bankgiro.supplier`](/corpus-se-bankgiro-supplier/) | Swedish Bankgiro supplier payment with an OCR reference. | `se-bankgiro` | [pain.001.001.03](/corpus/market/se/bankgiro-credit/se.bankgiro.supplier.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/se/bankgiro-credit/se.bankgiro.supplier.pain.001.001.09.xml) | derived |
+| [`se.plusgiro.supplier`](/corpus-se-plusgiro-supplier/) | Swedish Plusgiro supplier payment with an invoice message. | `se-bankgiro` | [pain.001.001.03](/corpus/market/se/plusgiro-credit/se.plusgiro.supplier.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/se/plusgiro-credit/se.plusgiro.supplier.pain.001.001.09.xml) | derived |
+| [`se.rix.urgent`](/corpus-se-rix-urgent/) | Swedish domestic high-value SEK payment through RIX, urgent, intra-group. | base rules only | [pain.001.001.03](/corpus/market/se/priority-payment/se.rix.urgent.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/se/priority-payment/se.rix.urgent.pain.001.001.09.xml) | derived |
+| [`se.bankgiro.salary`](/corpus-se-bankgiro-salary/) | Swedish salary batch (Bankgirot Löner), SALA, one debit. | `se-bankgiro` | [pain.001.001.03](/corpus/market/se/salary/se.bankgiro.salary.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/se/salary/se.bankgiro.salary.pain.001.001.09.xml) | derived |
 
 ### SG (SG)
 
 | Scenario | What it shows | Checked against | Editions | Evidence |
 | :--- | :--- | :--- | :--- | :--- |
-| `sg.fast.single` | Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. | `sg-fast` | [pain.001.001.03](/corpus/market/sg/instant-payment/sg.fast.single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/sg/instant-payment/sg.fast.single.pain.001.001.09.xml) | assumed |
+| [`sg.fast.single`](/corpus-sg-fast-single/) | Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. | `sg-fast` | [pain.001.001.03](/corpus/market/sg/instant-payment/sg.fast.single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/sg/instant-payment/sg.fast.single.pain.001.001.09.xml) | assumed |
 
 ### United States (US)
 
 | Scenario | What it shows | Checked against | Editions | Evidence |
 | :--- | :--- | :--- | :--- | :--- |
-| `us.ach.ccd-supplier` | ACH CCD credit to a supplier with an addenda remittance line. | `us-ach` | [pain.001.001.03](/corpus/market/us/ach-credit/us.ach.ccd-supplier.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/us/ach-credit/us.ach.ccd-supplier.pain.001.001.09.xml) | derived |
-| `us.ach.ppd-payroll` | ACH PPD payroll run, two employees. | `us-ach` | [pain.001.001.03](/corpus/market/us/ach-credit/us.ach.ppd-payroll.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/us/ach-credit/us.ach.ppd-payroll.pain.001.001.09.xml) | derived |
-| `us.eftps.tax` | IRS EFTPS federal tax deposit, CCD with the TXP addenda string. | `us-ach` | [pain.001.001.03](/corpus/market/us/ach-credit/us.eftps.tax.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/us/ach-credit/us.eftps.tax.pain.001.001.09.xml) | derived |
-| `us.ach.debit` | ACH debit collection (CCD) with routing numbers. | `us-ach` | [pain.008.001.02](/corpus/market/us/ach-debit/us.ach.debit.pain.008.001.02.xml), [pain.008.001.08](/corpus/market/us/ach-debit/us.ach.debit.pain.008.001.08.xml) | derived |
-| `us.check.vendor` | Bank-issued cheque to a vendor, mailed to the creditor. | base rules only | [pain.001.001.03](/corpus/market/us/cheque/us.check.vendor.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/us/cheque/us.check.vendor.pain.001.001.09.xml) | assumed |
-| `us.rtp.single` | RTP real-time payment, single. | `us-rtp` | [pain.001.001.03](/corpus/market/us/instant-payment/us.rtp.single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/us/instant-payment/us.rtp.single.pain.001.001.09.xml) | derived |
-| `us.wire.domestic` | Fedwire domestic funds transfer, urgent. | `us-wire` | [pain.001.001.03](/corpus/market/us/priority-payment/us.wire.domestic.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/us/priority-payment/us.wire.domestic.pain.001.001.09.xml) | derived |
+| [`us.ach.ccd-supplier`](/corpus-us-ach-ccd-supplier/) | ACH CCD credit to a supplier with an addenda remittance line. | `us-ach` | [pain.001.001.03](/corpus/market/us/ach-credit/us.ach.ccd-supplier.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/us/ach-credit/us.ach.ccd-supplier.pain.001.001.09.xml) | derived |
+| [`us.ach.ppd-payroll`](/corpus-us-ach-ppd-payroll/) | ACH PPD payroll run, two employees. | `us-ach` | [pain.001.001.03](/corpus/market/us/ach-credit/us.ach.ppd-payroll.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/us/ach-credit/us.ach.ppd-payroll.pain.001.001.09.xml) | derived |
+| [`us.eftps.tax`](/corpus-us-eftps-tax/) | IRS EFTPS federal tax deposit, CCD with the TXP addenda string. | `us-ach` | [pain.001.001.03](/corpus/market/us/ach-credit/us.eftps.tax.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/us/ach-credit/us.eftps.tax.pain.001.001.09.xml) | derived |
+| [`us.ach.debit`](/corpus-us-ach-debit/) | ACH debit collection (CCD) with routing numbers. | `us-ach` | [pain.008.001.02](/corpus/market/us/ach-debit/us.ach.debit.pain.008.001.02.xml), [pain.008.001.08](/corpus/market/us/ach-debit/us.ach.debit.pain.008.001.08.xml) | derived |
+| [`us.check.vendor`](/corpus-us-check-vendor/) | Bank-issued cheque to a vendor, mailed to the creditor. | base rules only | [pain.001.001.03](/corpus/market/us/cheque/us.check.vendor.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/us/cheque/us.check.vendor.pain.001.001.09.xml) | assumed |
+| [`us.rtp.single`](/corpus-us-rtp-single/) | RTP real-time payment, single. | `us-rtp` | [pain.001.001.03](/corpus/market/us/instant-payment/us.rtp.single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/us/instant-payment/us.rtp.single.pain.001.001.09.xml) | derived |
+| [`us.wire.domestic`](/corpus-us-wire-domestic/) | Fedwire domestic funds transfer, urgent. | `us-wire` | [pain.001.001.03](/corpus/market/us/priority-payment/us.wire.domestic.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/us/priority-payment/us.wire.domestic.pain.001.001.09.xml) | derived |
 
 ## Schema coverage files
 

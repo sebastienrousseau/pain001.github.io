@@ -1,0 +1,2734 @@
+{
+ "corpus-ae-uaefts-single": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "ae.uaefts.single: ISO 20022 pain.001 example (AE)",
+  "description": "UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code.",
+  "url": "https://pain001.com/corpus-ae-uaefts-single/",
+  "identifier": "ae.uaefts.single",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "AE",
+   "priority-payment",
+   "ae-uaefts",
+   "purpose-mandate-ae"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/ae/priority-payment/ae.uaefts.single.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/ae/priority-payment/ae.uaefts.single.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/ae/priority-payment/ae.uaefts.single.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/ae/priority-payment/ae.uaefts.single.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/ae/priority-payment/ae.uaefts.single.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/ae/priority-payment/ae.uaefts.single.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-be-sepa-sct-supplier": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "be.sepa.sct-supplier: ISO 20022 pain.001 example (BE)",
+  "description": "SEPA credit transfer with a Belgian structured communication (BBA).",
+  "url": "https://pain001.com/corpus-be-sepa-sct-supplier/",
+  "identifier": "be.sepa.sct-supplier",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "BE",
+   "sepa-credit-transfer",
+   "sepa-sct"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/be/sepa-credit-transfer/be.sepa.sct-supplier.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/be/sepa-credit-transfer/be.sepa.sct-supplier.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/be/sepa-credit-transfer/be.sepa.sct-supplier.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/be/sepa-credit-transfer/be.sepa.sct-supplier.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/be/sepa-credit-transfer/be.sepa.sct-supplier.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/be/sepa-credit-transfer/be.sepa.sct-supplier.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-be-sepa-sdd-core": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "be.sepa.sdd-core: ISO 20022 pain.001 example (BE)",
+  "description": "SEPA Core direct debit, recurring, Belgian creditor identifier.",
+  "url": "https://pain001.com/corpus-be-sepa-sdd-core/",
+  "identifier": "be.sepa.sdd-core",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "BE",
+   "sepa-direct-debit",
+   "sepa-sdd"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.008.001.02 XML",
+    "contentUrl": "https://pain001.com/corpus/market/be/sepa-direct-debit/be.sepa.sdd-core.pain.008.001.02.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.008.001.02 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/be/sepa-direct-debit/be.sepa.sdd-core.pain.008.001.02.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.008.001.08 XML",
+    "contentUrl": "https://pain001.com/corpus/market/be/sepa-direct-debit/be.sepa.sdd-core.pain.008.001.08.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.008.001.08 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/be/sepa-direct-debit/be.sepa.sdd-core.pain.008.001.08.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-ch-international-usd": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "ch.international.usd: ISO 20022 pain.001 example (CH)",
+  "description": "Cross-border USD payment from Switzerland (SPS payment type X).",
+  "url": "https://pain001.com/corpus-ch-international-usd/",
+  "identifier": "ch.international.usd",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "CH",
+   "cross-border",
+   "cbpr-cross-border"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/ch/cross-border/ch.international.usd.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/ch/cross-border/ch.international.usd.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/ch/cross-border/ch.international.usd.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/ch/cross-border/ch.international.usd.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/ch/cross-border/ch.international.usd.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/ch/cross-border/ch.international.usd.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-ch-sepa-sct": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "ch.sepa.sct: ISO 20022 pain.001 example (CH)",
+  "description": "SEPA credit transfer from Switzerland (SPS payment type S).",
+  "url": "https://pain001.com/corpus-ch-sepa-sct/",
+  "identifier": "ch.sepa.sct",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "CH",
+   "sepa-credit-transfer",
+   "ch-sepa"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/ch/sepa-credit-transfer/ch.sepa.sct.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/ch/sepa-credit-transfer/ch.sepa.sct.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/ch/sepa-credit-transfer/ch.sepa.sct.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/ch/sepa-credit-transfer/ch.sepa.sct.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/ch/sepa-credit-transfer/ch.sepa.sct.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/ch/sepa-credit-transfer/ch.sepa.sct.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-ch-sps-qr-bill": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "ch.sps.qr-bill: ISO 20022 pain.001 example (CH)",
+  "description": "Swiss domestic credit transfer settling a QR-bill (QRR reference).",
+  "url": "https://pain001.com/corpus-ch-sps-qr-bill/",
+  "identifier": "ch.sps.qr-bill",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "CH",
+   "domestic-credit-transfer",
+   "ch-domestic"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-ch-sps-scor": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "ch.sps.scor: ISO 20022 pain.001 example (CH)",
+  "description": "Swiss domestic credit transfer with an ISO 11649 creditor reference (SCOR).",
+  "url": "https://pain001.com/corpus-ch-sps-scor/",
+  "identifier": "ch.sps.scor",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "CH",
+   "domestic-credit-transfer",
+   "ch-domestic"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.scor.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.scor.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.scor.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.scor.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.scor.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.scor.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-cz-certis-domestic": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "cz.certis.domestic: ISO 20022 pain.001 example (CZ)",
+  "description": "Czech domestic CZK transfer through CERTIS with VS/KS/SS payment symbols.",
+  "url": "https://pain001.com/corpus-cz-certis-domestic/",
+  "identifier": "cz.certis.domestic",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "CZ",
+   "domestic-credit-transfer"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/cz/domestic-credit-transfer/cz.certis.domestic.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/cz/domestic-credit-transfer/cz.certis.domestic.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/cz/domestic-credit-transfer/cz.certis.domestic.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/cz/domestic-credit-transfer/cz.certis.domestic.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/cz/domestic-credit-transfer/cz.certis.domestic.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/cz/domestic-credit-transfer/cz.certis.domestic.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-cz-sepa-sct": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "cz.sepa.sct: ISO 20022 pain.001 example (CZ)",
+  "description": "SEPA credit transfer from a Czech EUR account to a German supplier.",
+  "url": "https://pain001.com/corpus-cz-sepa-sct/",
+  "identifier": "cz.sepa.sct",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "CZ",
+   "sepa-credit-transfer",
+   "sepa-sct"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-de-axz-foreign": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "de.axz.foreign: ISO 20022 pain.001 example (DE)",
+  "description": "Foreign payment in USD from a German account, DK order type AXZ.",
+  "url": "https://pain001.com/corpus-de-axz-foreign/",
+  "identifier": "de.axz.foreign",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "DE",
+   "cross-border",
+   "de-axz"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/de/cross-border/de.axz.foreign.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/de/cross-border/de.axz.foreign.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/de/cross-border/de.axz.foreign.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/de/cross-border/de.axz.foreign.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/de/cross-border/de.axz.foreign.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/de/cross-border/de.axz.foreign.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-de-ccu-urgent": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "de.ccu.urgent: ISO 20022 pain.001 example (DE)",
+  "description": "Urgent euro payment (TARGET) from a German account, DK order type CCU.",
+  "url": "https://pain001.com/corpus-de-ccu-urgent/",
+  "identifier": "de.ccu.urgent",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "DE",
+   "urgent-euro",
+   "de-ccu"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/de/urgent-euro/de.ccu.urgent.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/de/urgent-euro/de.ccu.urgent.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/de/urgent-euro/de.ccu.urgent.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/de/urgent-euro/de.ccu.urgent.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/de/urgent-euro/de.ccu.urgent.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/de/urgent-euro/de.ccu.urgent.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-de-sepa-sct-inst": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "de.sepa.sct-inst: ISO 20022 pain.001 example (DE)",
+  "description": "SEPA Instant credit transfer, single, INST at PmtInf.",
+  "url": "https://pain001.com/corpus-de-sepa-sct-inst/",
+  "identifier": "de.sepa.sct-inst",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "DE",
+   "sepa-instant",
+   "sepa-inst"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/de/sepa-instant/de.sepa.sct-inst.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/de/sepa-instant/de.sepa.sct-inst.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/de/sepa-instant/de.sepa.sct-inst.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-de-sepa-sct-salary": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "de.sepa.sct-salary: ISO 20022 pain.001 example (DE)",
+  "description": "SEPA SCT salary batch with structured and unstructured remittance.",
+  "url": "https://pain001.com/corpus-de-sepa-sct-salary/",
+  "identifier": "de.sepa.sct-salary",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "DE",
+   "sepa-credit-transfer",
+   "sepa-sct"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.09.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.13 XML",
+    "contentUrl": "https://pain001.com/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.13.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.13 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.13.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.13 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.13.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-de-sepa-sdd-b2b": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "de.sepa.sdd-b2b: ISO 20022 pain.001 example (DE)",
+  "description": "SEPA B2B direct debit, first collection.",
+  "url": "https://pain001.com/corpus-de-sepa-sdd-b2b/",
+  "identifier": "de.sepa.sdd-b2b",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "DE",
+   "sepa-direct-debit",
+   "sepa-b2b"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.008.001.02 XML",
+    "contentUrl": "https://pain001.com/corpus/market/de/sepa-direct-debit/de.sepa.sdd-b2b.pain.008.001.02.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.008.001.02 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/de/sepa-direct-debit/de.sepa.sdd-b2b.pain.008.001.02.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.008.001.08 XML",
+    "contentUrl": "https://pain001.com/corpus/market/de/sepa-direct-debit/de.sepa.sdd-b2b.pain.008.001.08.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.008.001.08 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/de/sepa-direct-debit/de.sepa.sdd-b2b.pain.008.001.08.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-es-sepa-sct-single": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "es.sepa.sct-single: ISO 20022 pain.001 example (ES)",
+  "description": "SEPA credit transfer, single, initiating party identified by NIF.",
+  "url": "https://pain001.com/corpus-es-sepa-sct-single/",
+  "identifier": "es.sepa.sct-single",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "ES",
+   "sepa-credit-transfer",
+   "sepa-sct"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/es/sepa-credit-transfer/es.sepa.sct-single.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/es/sepa-credit-transfer/es.sepa.sct-single.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/es/sepa-credit-transfer/es.sepa.sct-single.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/es/sepa-credit-transfer/es.sepa.sct-single.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/es/sepa-credit-transfer/es.sepa.sct-single.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/es/sepa-credit-transfer/es.sepa.sct-single.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-es-sepa-sdd-core": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "es.sepa.sdd-core: ISO 20022 pain.001 example (ES)",
+  "description": "SEPA Core direct debit, recurring, Spanish creditor identifier.",
+  "url": "https://pain001.com/corpus-es-sepa-sdd-core/",
+  "identifier": "es.sepa.sdd-core",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "ES",
+   "sepa-direct-debit",
+   "sepa-sdd"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.008.001.02 XML",
+    "contentUrl": "https://pain001.com/corpus/market/es/sepa-direct-debit/es.sepa.sdd-core.pain.008.001.02.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.008.001.02 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/es/sepa-direct-debit/es.sepa.sdd-core.pain.008.001.02.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.008.001.08 XML",
+    "contentUrl": "https://pain001.com/corpus/market/es/sepa-direct-debit/es.sepa.sdd-core.pain.008.001.08.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.008.001.08 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/es/sepa-direct-debit/es.sepa.sdd-core.pain.008.001.08.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-fr-sepa-sct-supplier": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "fr.sepa.sct-supplier: ISO 20022 pain.001 example (FR)",
+  "description": "SEPA credit transfer, supplier invoice with an RF creditor reference.",
+  "url": "https://pain001.com/corpus-fr-sepa-sct-supplier/",
+  "identifier": "fr.sepa.sct-supplier",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "FR",
+   "sepa-credit-transfer",
+   "sepa-sct"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/fr/sepa-credit-transfer/fr.sepa.sct-supplier.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/fr/sepa-credit-transfer/fr.sepa.sct-supplier.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/fr/sepa-credit-transfer/fr.sepa.sct-supplier.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/fr/sepa-credit-transfer/fr.sepa.sct-supplier.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/fr/sepa-credit-transfer/fr.sepa.sct-supplier.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/fr/sepa-credit-transfer/fr.sepa.sct-supplier.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-fr-sepa-sdd-core": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "fr.sepa.sdd-core: ISO 20022 pain.001 example (FR)",
+  "description": "SEPA Core direct debit, recurring collection on an amended mandate.",
+  "url": "https://pain001.com/corpus-fr-sepa-sdd-core/",
+  "identifier": "fr.sepa.sdd-core",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "FR",
+   "sepa-direct-debit",
+   "sepa-sdd"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.008.001.02 XML",
+    "contentUrl": "https://pain001.com/corpus/market/fr/sepa-direct-debit/fr.sepa.sdd-core.pain.008.001.02.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.008.001.02 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/fr/sepa-direct-debit/fr.sepa.sdd-core.pain.008.001.02.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.008.001.08 XML",
+    "contentUrl": "https://pain001.com/corpus/market/fr/sepa-direct-debit/fr.sepa.sdd-core.pain.008.001.08.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.008.001.08 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/fr/sepa-direct-debit/fr.sepa.sdd-core.pain.008.001.08.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-gb-bacs-dd-collection": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "gb.bacs-dd.collection: ISO 20022 pain.001 example (GB)",
+  "description": "Bacs Direct Debit collection, first and recurring, SUN as creditor id.",
+  "url": "https://pain001.com/corpus-gb-bacs-dd-collection/",
+  "identifier": "gb.bacs-dd.collection",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "GB",
+   "bacs-direct-debit",
+   "uk-bacs-dd"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.008.001.02 XML",
+    "contentUrl": "https://pain001.com/corpus/market/gb/bacs-direct-debit/gb.bacs-dd.collection.pain.008.001.02.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.008.001.02 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/gb/bacs-direct-debit/gb.bacs-dd.collection.pain.008.001.02.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.008.001.08 XML",
+    "contentUrl": "https://pain001.com/corpus/market/gb/bacs-direct-debit/gb.bacs-dd.collection.pain.008.001.08.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.008.001.08 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/gb/bacs-direct-debit/gb.bacs-dd.collection.pain.008.001.08.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-gb-bacs-supplier-run": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "gb.bacs.supplier-run: ISO 20022 pain.001 example (GB)",
+  "description": "Bacs Direct Credit supplier run, two payments, SUN in the debtor id.",
+  "url": "https://pain001.com/corpus-gb-bacs-supplier-run/",
+  "identifier": "gb.bacs.supplier-run",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "GB",
+   "bacs-direct-credit",
+   "uk-bacs"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/gb/bacs-direct-credit/gb.bacs.supplier-run.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/gb/bacs-direct-credit/gb.bacs.supplier-run.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/gb/bacs-direct-credit/gb.bacs.supplier-run.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/gb/bacs-direct-credit/gb.bacs.supplier-run.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/gb/bacs-direct-credit/gb.bacs.supplier-run.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/gb/bacs-direct-credit/gb.bacs.supplier-run.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-gb-chaps-property-purchase": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "gb.chaps.property-purchase: ISO 20022 pain.001 example (GB)",
+  "description": "CHAPS same-day property completion with the BoE HLST purpose code.",
+  "url": "https://pain001.com/corpus-gb-chaps-property-purchase/",
+  "identifier": "gb.chaps.property-purchase",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "GB",
+   "priority-payment",
+   "uk-chaps",
+   "purpose-mandate-gb"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/gb/priority-payment/gb.chaps.property-purchase.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/gb/priority-payment/gb.chaps.property-purchase.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/gb/priority-payment/gb.chaps.property-purchase.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/gb/priority-payment/gb.chaps.property-purchase.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/gb/priority-payment/gb.chaps.property-purchase.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/gb/priority-payment/gb.chaps.property-purchase.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-gb-fps-single": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "gb.fps.single: ISO 20022 pain.001 example (GB)",
+  "description": "Faster Payments single supplier payment, sort code and account.",
+  "url": "https://pain001.com/corpus-gb-fps-single/",
+  "identifier": "gb.fps.single",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "GB",
+   "faster-payment",
+   "uk-fps"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/gb/faster-payment/gb.fps.single.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/gb/faster-payment/gb.fps.single.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/gb/faster-payment/gb.fps.single.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/gb/faster-payment/gb.fps.single.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/gb/faster-payment/gb.fps.single.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/gb/faster-payment/gb.fps.single.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-gb-international-usd": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "gb.international.usd: ISO 20022 pain.001 example (GB)",
+  "description": "USD cross-border payment from a UK account to a US supplier.",
+  "url": "https://pain001.com/corpus-gb-international-usd/",
+  "identifier": "gb.international.usd",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "GB",
+   "priority-payment",
+   "cbpr-cross-border"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/gb/priority-payment/gb.international.usd.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/gb/priority-payment/gb.international.usd.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/gb/priority-payment/gb.international.usd.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/gb/priority-payment/gb.international.usd.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/gb/priority-payment/gb.international.usd.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/gb/priority-payment/gb.international.usd.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-hk-fps-single": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "hk.fps.single: ISO 20022 pain.001 example (HK)",
+  "description": "Hong Kong FPS credit in HKD, clearing codes and account numbers.",
+  "url": "https://pain001.com/corpus-hk-fps-single/",
+  "identifier": "hk.fps.single",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "HK",
+   "instant-payment",
+   "hk-fps",
+   "purpose-mandate-hk"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/hk/instant-payment/hk.fps.single.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/hk/instant-payment/hk.fps.single.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/hk/instant-payment/hk.fps.single.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/hk/instant-payment/hk.fps.single.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/hk/instant-payment/hk.fps.single.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/hk/instant-payment/hk.fps.single.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-it-sepa-sct-single": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "it.sepa.sct-single: ISO 20022 pain.001 example (IT)",
+  "description": "SEPA credit transfer, single supplier payment.",
+  "url": "https://pain001.com/corpus-it-sepa-sct-single/",
+  "identifier": "it.sepa.sct-single",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "IT",
+   "sepa-credit-transfer",
+   "sepa-sct"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/it/sepa-credit-transfer/it.sepa.sct-single.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/it/sepa-credit-transfer/it.sepa.sct-single.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/it/sepa-credit-transfer/it.sepa.sct-single.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/it/sepa-credit-transfer/it.sepa.sct-single.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/it/sepa-credit-transfer/it.sepa.sct-single.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/it/sepa-credit-transfer/it.sepa.sct-single.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-lu-sepa-sct-single": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "lu.sepa.sct-single: ISO 20022 pain.001 example (LU)",
+  "description": "SEPA credit transfer, single supplier payment.",
+  "url": "https://pain001.com/corpus-lu-sepa-sct-single/",
+  "identifier": "lu.sepa.sct-single",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "LU",
+   "sepa-credit-transfer",
+   "sepa-sct"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/lu/sepa-credit-transfer/lu.sepa.sct-single.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/lu/sepa-credit-transfer/lu.sepa.sct-single.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/lu/sepa-credit-transfer/lu.sepa.sct-single.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/lu/sepa-credit-transfer/lu.sepa.sct-single.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/lu/sepa-credit-transfer/lu.sepa.sct-single.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/lu/sepa-credit-transfer/lu.sepa.sct-single.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-my-duitnow-single": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "my.duitnow.single: ISO 20022 pain.001 example (MY)",
+  "description": "Malaysia DuitNow credit in MYR with a BNM purpose code.",
+  "url": "https://pain001.com/corpus-my-duitnow-single/",
+  "identifier": "my.duitnow.single",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "MY",
+   "instant-payment",
+   "my-duitnow",
+   "purpose-mandate-my"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/my/instant-payment/my.duitnow.single.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/my/instant-payment/my.duitnow.single.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/my/instant-payment/my.duitnow.single.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/my/instant-payment/my.duitnow.single.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/my/instant-payment/my.duitnow.single.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/my/instant-payment/my.duitnow.single.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-nl-sepa-sct-supplier": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "nl.sepa.sct-supplier: ISO 20022 pain.001 example (NL)",
+  "description": "SEPA credit transfer with a Dutch payment reference (CUR).",
+  "url": "https://pain001.com/corpus-nl-sepa-sct-supplier/",
+  "identifier": "nl.sepa.sct-supplier",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "NL",
+   "sepa-credit-transfer",
+   "sepa-sct"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/nl/sepa-credit-transfer/nl.sepa.sct-supplier.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/nl/sepa-credit-transfer/nl.sepa.sct-supplier.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/nl/sepa-credit-transfer/nl.sepa.sct-supplier.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/nl/sepa-credit-transfer/nl.sepa.sct-supplier.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/nl/sepa-credit-transfer/nl.sepa.sct-supplier.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/nl/sepa-credit-transfer/nl.sepa.sct-supplier.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-nl-sepa-sdd-core": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "nl.sepa.sdd-core: ISO 20022 pain.001 example (NL)",
+  "description": "SEPA Core direct debit, recurring collections under mandates.",
+  "url": "https://pain001.com/corpus-nl-sepa-sdd-core/",
+  "identifier": "nl.sepa.sdd-core",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "NL",
+   "sepa-direct-debit",
+   "sepa-sdd"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.008.001.02 XML",
+    "contentUrl": "https://pain001.com/corpus/market/nl/sepa-direct-debit/nl.sepa.sdd-core.pain.008.001.02.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.008.001.02 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/nl/sepa-direct-debit/nl.sepa.sdd-core.pain.008.001.02.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.008.001.08 XML",
+    "contentUrl": "https://pain001.com/corpus/market/nl/sepa-direct-debit/nl.sepa.sdd-core.pain.008.001.08.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.008.001.08 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/nl/sepa-direct-debit/nl.sepa.sdd-core.pain.008.001.08.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-qa-qatch-single": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "qa.qatch.single: ISO 20022 pain.001 example (QA)",
+  "description": "Qatar QATCH credit in QAR with the QCB purpose of payment.",
+  "url": "https://pain001.com/corpus-qa-qatch-single/",
+  "identifier": "qa.qatch.single",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "QA",
+   "domestic-credit-transfer",
+   "qa-qatch",
+   "purpose-mandate-qa"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-se-bankgiro-salary": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "se.bankgiro.salary: ISO 20022 pain.001 example (SE)",
+  "description": "Swedish salary batch (Bankgirot Löner), SALA, one debit.",
+  "url": "https://pain001.com/corpus-se-bankgiro-salary/",
+  "identifier": "se.bankgiro.salary",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "SE",
+   "salary",
+   "se-bankgiro"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/se/salary/se.bankgiro.salary.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/se/salary/se.bankgiro.salary.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/se/salary/se.bankgiro.salary.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/se/salary/se.bankgiro.salary.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/se/salary/se.bankgiro.salary.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/se/salary/se.bankgiro.salary.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-se-bankgiro-supplier": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "se.bankgiro.supplier: ISO 20022 pain.001 example (SE)",
+  "description": "Swedish Bankgiro supplier payment with an OCR reference.",
+  "url": "https://pain001.com/corpus-se-bankgiro-supplier/",
+  "identifier": "se.bankgiro.supplier",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "SE",
+   "bankgiro-credit",
+   "se-bankgiro"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/se/bankgiro-credit/se.bankgiro.supplier.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/se/bankgiro-credit/se.bankgiro.supplier.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/se/bankgiro-credit/se.bankgiro.supplier.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/se/bankgiro-credit/se.bankgiro.supplier.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/se/bankgiro-credit/se.bankgiro.supplier.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/se/bankgiro-credit/se.bankgiro.supplier.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-se-plusgiro-supplier": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "se.plusgiro.supplier: ISO 20022 pain.001 example (SE)",
+  "description": "Swedish Plusgiro supplier payment with an invoice message.",
+  "url": "https://pain001.com/corpus-se-plusgiro-supplier/",
+  "identifier": "se.plusgiro.supplier",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "SE",
+   "plusgiro-credit",
+   "se-bankgiro"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/se/plusgiro-credit/se.plusgiro.supplier.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/se/plusgiro-credit/se.plusgiro.supplier.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/se/plusgiro-credit/se.plusgiro.supplier.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/se/plusgiro-credit/se.plusgiro.supplier.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/se/plusgiro-credit/se.plusgiro.supplier.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/se/plusgiro-credit/se.plusgiro.supplier.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-se-rix-urgent": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "se.rix.urgent: ISO 20022 pain.001 example (SE)",
+  "description": "Swedish domestic high-value SEK payment through RIX, urgent, intra-group.",
+  "url": "https://pain001.com/corpus-se-rix-urgent/",
+  "identifier": "se.rix.urgent",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "SE",
+   "priority-payment"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/se/priority-payment/se.rix.urgent.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/se/priority-payment/se.rix.urgent.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/se/priority-payment/se.rix.urgent.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/se/priority-payment/se.rix.urgent.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/se/priority-payment/se.rix.urgent.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/se/priority-payment/se.rix.urgent.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-sg-fast-single": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "sg.fast.single: ISO 20022 pain.001 example (SG)",
+  "description": "Singapore FAST credit in SGD, bank and branch codes, addresses on both parties.",
+  "url": "https://pain001.com/corpus-sg-fast-single/",
+  "identifier": "sg.fast.single",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "SG",
+   "instant-payment",
+   "sg-fast"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/sg/instant-payment/sg.fast.single.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/sg/instant-payment/sg.fast.single.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/sg/instant-payment/sg.fast.single.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/sg/instant-payment/sg.fast.single.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/sg/instant-payment/sg.fast.single.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/sg/instant-payment/sg.fast.single.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-us-ach-ccd-supplier": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "us.ach.ccd-supplier: ISO 20022 pain.001 example (US)",
+  "description": "ACH CCD credit to a supplier with an addenda remittance line.",
+  "url": "https://pain001.com/corpus-us-ach-ccd-supplier/",
+  "identifier": "us.ach.ccd-supplier",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "US",
+   "ach-credit",
+   "us-ach"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/us/ach-credit/us.ach.ccd-supplier.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/us/ach-credit/us.ach.ccd-supplier.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/us/ach-credit/us.ach.ccd-supplier.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/us/ach-credit/us.ach.ccd-supplier.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/us/ach-credit/us.ach.ccd-supplier.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/us/ach-credit/us.ach.ccd-supplier.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-us-ach-debit": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "us.ach.debit: ISO 20022 pain.001 example (US)",
+  "description": "ACH debit collection (CCD) with routing numbers.",
+  "url": "https://pain001.com/corpus-us-ach-debit/",
+  "identifier": "us.ach.debit",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "US",
+   "ach-debit",
+   "us-ach"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.008.001.02 XML",
+    "contentUrl": "https://pain001.com/corpus/market/us/ach-debit/us.ach.debit.pain.008.001.02.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.008.001.02 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/us/ach-debit/us.ach.debit.pain.008.001.02.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.008.001.08 XML",
+    "contentUrl": "https://pain001.com/corpus/market/us/ach-debit/us.ach.debit.pain.008.001.08.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.008.001.08 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/us/ach-debit/us.ach.debit.pain.008.001.08.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-us-ach-ppd-payroll": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "us.ach.ppd-payroll: ISO 20022 pain.001 example (US)",
+  "description": "ACH PPD payroll run, two employees.",
+  "url": "https://pain001.com/corpus-us-ach-ppd-payroll/",
+  "identifier": "us.ach.ppd-payroll",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "US",
+   "ach-credit",
+   "us-ach"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/us/ach-credit/us.ach.ppd-payroll.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/us/ach-credit/us.ach.ppd-payroll.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/us/ach-credit/us.ach.ppd-payroll.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/us/ach-credit/us.ach.ppd-payroll.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/us/ach-credit/us.ach.ppd-payroll.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/us/ach-credit/us.ach.ppd-payroll.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-us-check-vendor": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "us.check.vendor: ISO 20022 pain.001 example (US)",
+  "description": "Bank-issued cheque to a vendor, mailed to the creditor.",
+  "url": "https://pain001.com/corpus-us-check-vendor/",
+  "identifier": "us.check.vendor",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "US",
+   "cheque"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/us/cheque/us.check.vendor.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/us/cheque/us.check.vendor.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/us/cheque/us.check.vendor.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/us/cheque/us.check.vendor.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/us/cheque/us.check.vendor.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/us/cheque/us.check.vendor.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-us-eftps-tax": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "us.eftps.tax: ISO 20022 pain.001 example (US)",
+  "description": "IRS EFTPS federal tax deposit, CCD with the TXP addenda string.",
+  "url": "https://pain001.com/corpus-us-eftps-tax/",
+  "identifier": "us.eftps.tax",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "US",
+   "ach-credit",
+   "us-ach"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/us/ach-credit/us.eftps.tax.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/us/ach-credit/us.eftps.tax.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/us/ach-credit/us.eftps.tax.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/us/ach-credit/us.eftps.tax.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/us/ach-credit/us.eftps.tax.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/us/ach-credit/us.eftps.tax.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-us-rtp-single": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "us.rtp.single: ISO 20022 pain.001 example (US)",
+  "description": "RTP real-time payment, single.",
+  "url": "https://pain001.com/corpus-us-rtp-single/",
+  "identifier": "us.rtp.single",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "US",
+   "instant-payment",
+   "us-rtp"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/us/instant-payment/us.rtp.single.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/us/instant-payment/us.rtp.single.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/us/instant-payment/us.rtp.single.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/us/instant-payment/us.rtp.single.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/us/instant-payment/us.rtp.single.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/us/instant-payment/us.rtp.single.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ },
+ "corpus-us-wire-domestic": {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "us.wire.domestic: ISO 20022 pain.001 example (US)",
+  "description": "Fedwire domestic funds transfer, urgent.",
+  "url": "https://pain001.com/corpus-us-wire-domestic/",
+  "identifier": "us.wire.domestic",
+  "version": "0.0.70",
+  "dateModified": "2026-09-12",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "isAccessibleForFree": true,
+  "keywords": [
+   "ISO 20022",
+   "pain.001",
+   "US",
+   "priority-payment",
+   "us-wire"
+  ],
+  "creator": {
+   "@type": "Organization",
+   "name": "Pain001",
+   "url": "https://pain001.com/"
+  },
+  "isPartOf": {
+   "@type": "DataCatalog",
+   "name": "pain001 example corpus",
+   "url": "https://pain001.com/example-corpus/"
+  },
+  "distribution": [
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.03 XML",
+    "contentUrl": "https://pain001.com/corpus/market/us/priority-payment/us.wire.domestic.pain.001.001.03.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.03 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/us/priority-payment/us.wire.domestic.pain.001.001.03.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.03 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/us/priority-payment/us.wire.domestic.pain.001.001.03.provenance.yaml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/xml",
+    "name": "pain.001.001.09 XML",
+    "contentUrl": "https://pain001.com/corpus/market/us/priority-payment/us.wire.domestic.pain.001.001.09.xml"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "name": "pain.001.001.09 ISO 20022 JSON twin",
+    "contentUrl": "https://pain001.com/corpus/market/us/priority-payment/us.wire.domestic.pain.001.001.09.iso.json"
+   },
+   {
+    "@type": "DataDownload",
+    "encodingFormat": "application/yaml",
+    "name": "pain.001.001.09 provenance record",
+    "contentUrl": "https://pain001.com/corpus/market/us/priority-payment/us.wire.domestic.pain.001.001.09.provenance.yaml"
+   }
+  ]
+ }
+}

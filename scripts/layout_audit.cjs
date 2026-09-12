@@ -49,9 +49,26 @@ const VIEWPORTS = [
   [1024, 768], [1280, 800], [1440, 900], [1920, 1080], [2560, 1440],
 ];
 
+// The longest generated corpus scenario page joins the probe, so a release
+// that lengthens a string or adds a column fails here rather than overflowing.
+function longestCorpusPage() {
+  try {
+    const docs = require("node:path").resolve(__dirname, "..", "docs");
+    const dirs = fs2.readdirSync(docs).filter((d) => d.startsWith("corpus-"));
+    let best = null, size = -1;
+    for (const d of dirs) {
+      const f = require("node:path").join(docs, d, "index.html");
+      if (!fs2.existsSync(f)) continue;
+      const n = fs2.statSync(f).size;
+      if (n > size) { size = n; best = `/${d}/`; }
+    }
+    return best ? [best] : [];
+  } catch { return []; }
+}
+
 const PAGES = process.env.PAGES
   ? process.env.PAGES.split(",")
-  : [
+  : [...longestCorpusPage(), 
       "/", "/try/", "/documentation/", "/installation/", "/faqs/", "/glossary/",
       "/message-specs/", "/example-corpus/", "/message-spec-pain.001.001.13/",
       "/message-spec-pain.001.001.13-types/", "/message-spec-code-lists/",

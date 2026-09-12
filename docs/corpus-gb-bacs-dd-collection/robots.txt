@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://pain001.com/corpus-gb-bacs-dd-collection/sitemap.xml

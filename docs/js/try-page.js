@@ -417,6 +417,12 @@ async function loadCorpusSamples() {
       group.appendChild(opt);
     }
     els.sampleSelect.appendChild(group);
+    // /try/?sample=corpus:<scenario id> opens a scenario page's example directly
+    const wanted = new URLSearchParams(location.search).get("sample");
+    if (wanted && CORPUS.has(wanted)) {
+      els.sampleSelect.value = wanted;
+      els.sampleSelect.dispatchEvent(new Event("change"));
+    }
   } catch (_) { /* the built-in samples remain */ }
 }
 void loadCorpusSamples();

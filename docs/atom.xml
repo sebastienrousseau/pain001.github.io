@@ -6,6 +6,384 @@
   <id>https://pain001.com</id>
   <updated>2026-09-12T08:00:00+00:00</updated>
   <entry>
+    <title>ae.uaefts.single — ISO 20022 pain.001 example for AE (priority-payment)</title>
+    <link href="https://pain001.com/corpus-ae-uaefts-single/"/>
+    <id>https://pain001.com/corpus-ae-uaefts-single/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code. A validated pain.001 sample for AE on the priority-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>be.sepa.sct-supplier — ISO 20022 pain.001 example for Belgium (sepa-credit-transfer)</title>
+    <link href="https://pain001.com/corpus-be-sepa-sct-supplier/"/>
+    <id>https://pain001.com/corpus-be-sepa-sct-supplier/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>SEPA credit transfer with a Belgian structured communication (BBA). A validated pain.001 sample for Belgium on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>be.sepa.sdd-core — ISO 20022 pain.001 example for Belgium (sepa-direct-debit)</title>
+    <link href="https://pain001.com/corpus-be-sepa-sdd-core/"/>
+    <id>https://pain001.com/corpus-be-sepa-sdd-core/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>SEPA Core direct debit, recurring, Belgian creditor identifier. A validated pain.001 sample for Belgium on the sepa-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>ch.international.usd — ISO 20022 pain.001 example for Switzerland (cross-border)</title>
+    <link href="https://pain001.com/corpus-ch-international-usd/"/>
+    <id>https://pain001.com/corpus-ch-international-usd/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>Cross-border USD payment from Switzerland (SPS payment type X). A validated pain.001 sample for Switzerland on the cross-border rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>ch.sepa.sct — ISO 20022 pain.001 example for Switzerland (sepa-credit-transfer)</title>
+    <link href="https://pain001.com/corpus-ch-sepa-sct/"/>
+    <id>https://pain001.com/corpus-ch-sepa-sct/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>SEPA credit transfer from Switzerland (SPS payment type S). A validated pain.001 sample for Switzerland on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>ch.sps.qr-bill — ISO 20022 pain.001 example for Switzerland (domestic-credit-transfer)</title>
+    <link href="https://pain001.com/corpus-ch-sps-qr-bill/"/>
+    <id>https://pain001.com/corpus-ch-sps-qr-bill/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>Swiss domestic credit transfer settling a QR-bill (QRR reference). A validated pain.001 sample for Switzerland on the domestic-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>ch.sps.scor — ISO 20022 pain.001 example for Switzerland (domestic-credit-transfer)</title>
+    <link href="https://pain001.com/corpus-ch-sps-scor/"/>
+    <id>https://pain001.com/corpus-ch-sps-scor/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>Swiss domestic credit transfer with an ISO 11649 creditor reference (SCOR). A validated pain.001 sample for Switzerland on the domestic-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>cz.certis.domestic — ISO 20022 pain.001 example for CZ (domestic-credit-transfer)</title>
+    <link href="https://pain001.com/corpus-cz-certis-domestic/"/>
+    <id>https://pain001.com/corpus-cz-certis-domestic/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>Czech domestic CZK transfer through CERTIS with VS/KS/SS payment symbols. A validated pain.001 sample for CZ on the domestic-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>cz.sepa.sct — ISO 20022 pain.001 example for CZ (sepa-credit-transfer)</title>
+    <link href="https://pain001.com/corpus-cz-sepa-sct/"/>
+    <id>https://pain001.com/corpus-cz-sepa-sct/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>SEPA credit transfer from a Czech EUR account to a German supplier. A validated pain.001 sample for CZ on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>de.axz.foreign — ISO 20022 pain.001 example for Germany (cross-border)</title>
+    <link href="https://pain001.com/corpus-de-axz-foreign/"/>
+    <id>https://pain001.com/corpus-de-axz-foreign/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>Foreign payment in USD from a German account, DK order type AXZ. A validated pain.001 sample for Germany on the cross-border rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>de.ccu.urgent — ISO 20022 pain.001 example for Germany (urgent-euro)</title>
+    <link href="https://pain001.com/corpus-de-ccu-urgent/"/>
+    <id>https://pain001.com/corpus-de-ccu-urgent/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>Urgent euro payment (TARGET) from a German account, DK order type CCU. A validated pain.001 sample for Germany on the urgent-euro rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>de.sepa.sct-inst — ISO 20022 pain.001 example for Germany (sepa-instant)</title>
+    <link href="https://pain001.com/corpus-de-sepa-sct-inst/"/>
+    <id>https://pain001.com/corpus-de-sepa-sct-inst/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>SEPA Instant credit transfer, single, INST at PmtInf. A validated pain.001 sample for Germany on the sepa-instant rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>de.sepa.sct-salary — ISO 20022 pain.001 example for Germany (sepa-credit-transfer)</title>
+    <link href="https://pain001.com/corpus-de-sepa-sct-salary/"/>
+    <id>https://pain001.com/corpus-de-sepa-sct-salary/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>SEPA SCT salary batch with structured and unstructured remittance. A validated pain.001 sample for Germany on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>de.sepa.sdd-b2b — ISO 20022 pain.001 example for Germany (sepa-direct-debit)</title>
+    <link href="https://pain001.com/corpus-de-sepa-sdd-b2b/"/>
+    <id>https://pain001.com/corpus-de-sepa-sdd-b2b/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>SEPA B2B direct debit, first collection. A validated pain.001 sample for Germany on the sepa-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>es.sepa.sct-single — ISO 20022 pain.001 example for Spain (sepa-credit-transfer)</title>
+    <link href="https://pain001.com/corpus-es-sepa-sct-single/"/>
+    <id>https://pain001.com/corpus-es-sepa-sct-single/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>SEPA credit transfer, single, initiating party identified by NIF. A validated pain.001 sample for Spain on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>es.sepa.sdd-core — ISO 20022 pain.001 example for Spain (sepa-direct-debit)</title>
+    <link href="https://pain001.com/corpus-es-sepa-sdd-core/"/>
+    <id>https://pain001.com/corpus-es-sepa-sdd-core/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>SEPA Core direct debit, recurring, Spanish creditor identifier. A validated pain.001 sample for Spain on the sepa-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>fr.sepa.sct-supplier — ISO 20022 pain.001 example for France (sepa-credit-transfer)</title>
+    <link href="https://pain001.com/corpus-fr-sepa-sct-supplier/"/>
+    <id>https://pain001.com/corpus-fr-sepa-sct-supplier/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>SEPA credit transfer, supplier invoice with an RF creditor reference. A validated pain.001 sample for France on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>fr.sepa.sdd-core — ISO 20022 pain.001 example for France (sepa-direct-debit)</title>
+    <link href="https://pain001.com/corpus-fr-sepa-sdd-core/"/>
+    <id>https://pain001.com/corpus-fr-sepa-sdd-core/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>SEPA Core direct debit, recurring collection on an amended mandate. A validated pain.001 sample for France on the sepa-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>gb.bacs-dd.collection — ISO 20022 pain.001 example for United Kingdom (bacs-direct-debit)</title>
+    <link href="https://pain001.com/corpus-gb-bacs-dd-collection/"/>
+    <id>https://pain001.com/corpus-gb-bacs-dd-collection/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>Bacs Direct Debit collection, first and recurring, SUN as creditor id. A validated pain.001 sample for United Kingdom on the bacs-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>gb.bacs.supplier-run — ISO 20022 pain.001 example for United Kingdom (bacs-direct-credit)</title>
+    <link href="https://pain001.com/corpus-gb-bacs-supplier-run/"/>
+    <id>https://pain001.com/corpus-gb-bacs-supplier-run/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>Bacs Direct Credit supplier run, two payments, SUN in the debtor id. A validated pain.001 sample for United Kingdom on the bacs-direct-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>gb.chaps.property-purchase — ISO 20022 pain.001 example for United Kingdom (priority-payment)</title>
+    <link href="https://pain001.com/corpus-gb-chaps-property-purchase/"/>
+    <id>https://pain001.com/corpus-gb-chaps-property-purchase/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>CHAPS same-day property completion with the BoE HLST purpose code. A validated pain.001 sample for United Kingdom on the priority-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>gb.fps.single — ISO 20022 pain.001 example for United Kingdom (faster-payment)</title>
+    <link href="https://pain001.com/corpus-gb-fps-single/"/>
+    <id>https://pain001.com/corpus-gb-fps-single/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>Faster Payments single supplier payment, sort code and account. A validated pain.001 sample for United Kingdom on the faster-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>gb.international.usd — ISO 20022 pain.001 example for United Kingdom (priority-payment)</title>
+    <link href="https://pain001.com/corpus-gb-international-usd/"/>
+    <id>https://pain001.com/corpus-gb-international-usd/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>USD cross-border payment from a UK account to a US supplier. A validated pain.001 sample for United Kingdom on the priority-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>hk.fps.single — ISO 20022 pain.001 example for HK (instant-payment)</title>
+    <link href="https://pain001.com/corpus-hk-fps-single/"/>
+    <id>https://pain001.com/corpus-hk-fps-single/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>Hong Kong FPS credit in HKD, clearing codes and account numbers. A validated pain.001 sample for HK on the instant-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>it.sepa.sct-single — ISO 20022 pain.001 example for Italy (sepa-credit-transfer)</title>
+    <link href="https://pain001.com/corpus-it-sepa-sct-single/"/>
+    <id>https://pain001.com/corpus-it-sepa-sct-single/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>SEPA credit transfer, single supplier payment. A validated pain.001 sample for Italy on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>lu.sepa.sct-single — ISO 20022 pain.001 example for Luxembourg (sepa-credit-transfer)</title>
+    <link href="https://pain001.com/corpus-lu-sepa-sct-single/"/>
+    <id>https://pain001.com/corpus-lu-sepa-sct-single/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>SEPA credit transfer, single supplier payment. A validated pain.001 sample for Luxembourg on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>my.duitnow.single — ISO 20022 pain.001 example for MY (instant-payment)</title>
+    <link href="https://pain001.com/corpus-my-duitnow-single/"/>
+    <id>https://pain001.com/corpus-my-duitnow-single/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>Malaysia DuitNow credit in MYR with a BNM purpose code. A validated pain.001 sample for MY on the instant-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>nl.sepa.sct-supplier — ISO 20022 pain.001 example for Netherlands (sepa-credit-transfer)</title>
+    <link href="https://pain001.com/corpus-nl-sepa-sct-supplier/"/>
+    <id>https://pain001.com/corpus-nl-sepa-sct-supplier/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>SEPA credit transfer with a Dutch payment reference (CUR). A validated pain.001 sample for Netherlands on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>nl.sepa.sdd-core — ISO 20022 pain.001 example for Netherlands (sepa-direct-debit)</title>
+    <link href="https://pain001.com/corpus-nl-sepa-sdd-core/"/>
+    <id>https://pain001.com/corpus-nl-sepa-sdd-core/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>SEPA Core direct debit, recurring collections under mandates. A validated pain.001 sample for Netherlands on the sepa-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>qa.qatch.single — ISO 20022 pain.001 example for QA (domestic-credit-transfer)</title>
+    <link href="https://pain001.com/corpus-qa-qatch-single/"/>
+    <id>https://pain001.com/corpus-qa-qatch-single/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>Qatar QATCH credit in QAR with the QCB purpose of payment. A validated pain.001 sample for QA on the domestic-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>se.bankgiro.salary — ISO 20022 pain.001 example for Sweden (salary)</title>
+    <link href="https://pain001.com/corpus-se-bankgiro-salary/"/>
+    <id>https://pain001.com/corpus-se-bankgiro-salary/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>Swedish salary batch (Bankgirot Löner), SALA, one debit. A validated pain.001 sample for Sweden on the salary rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>se.bankgiro.supplier — ISO 20022 pain.001 example for Sweden (bankgiro-credit)</title>
+    <link href="https://pain001.com/corpus-se-bankgiro-supplier/"/>
+    <id>https://pain001.com/corpus-se-bankgiro-supplier/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>Swedish Bankgiro supplier payment with an OCR reference. A validated pain.001 sample for Sweden on the bankgiro-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>se.plusgiro.supplier — ISO 20022 pain.001 example for Sweden (plusgiro-credit)</title>
+    <link href="https://pain001.com/corpus-se-plusgiro-supplier/"/>
+    <id>https://pain001.com/corpus-se-plusgiro-supplier/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>Swedish Plusgiro supplier payment with an invoice message. A validated pain.001 sample for Sweden on the plusgiro-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>se.rix.urgent — ISO 20022 pain.001 example for Sweden (priority-payment)</title>
+    <link href="https://pain001.com/corpus-se-rix-urgent/"/>
+    <id>https://pain001.com/corpus-se-rix-urgent/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>Swedish domestic high-value SEK payment through RIX, urgent, intra-group. A validated pain.001 sample for Sweden on the priority-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>sg.fast.single — ISO 20022 pain.001 example for SG (instant-payment)</title>
+    <link href="https://pain001.com/corpus-sg-fast-single/"/>
+    <id>https://pain001.com/corpus-sg-fast-single/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. A validated pain.001 sample for SG on the instant-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>us.ach.ccd-supplier — ISO 20022 pain.001 example for United States (ach-credit)</title>
+    <link href="https://pain001.com/corpus-us-ach-ccd-supplier/"/>
+    <id>https://pain001.com/corpus-us-ach-ccd-supplier/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>ACH CCD credit to a supplier with an addenda remittance line. A validated pain.001 sample for United States on the ach-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>us.ach.debit — ISO 20022 pain.001 example for United States (ach-debit)</title>
+    <link href="https://pain001.com/corpus-us-ach-debit/"/>
+    <id>https://pain001.com/corpus-us-ach-debit/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>ACH debit collection (CCD) with routing numbers. A validated pain.001 sample for United States on the ach-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>us.ach.ppd-payroll — ISO 20022 pain.001 example for United States (ach-credit)</title>
+    <link href="https://pain001.com/corpus-us-ach-ppd-payroll/"/>
+    <id>https://pain001.com/corpus-us-ach-ppd-payroll/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>ACH PPD payroll run, two employees. A validated pain.001 sample for United States on the ach-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>us.check.vendor — ISO 20022 pain.001 example for United States (cheque)</title>
+    <link href="https://pain001.com/corpus-us-check-vendor/"/>
+    <id>https://pain001.com/corpus-us-check-vendor/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>Bank-issued cheque to a vendor, mailed to the creditor. A validated pain.001 sample for United States on the cheque rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>us.eftps.tax — ISO 20022 pain.001 example for United States (ach-credit)</title>
+    <link href="https://pain001.com/corpus-us-eftps-tax/"/>
+    <id>https://pain001.com/corpus-us-eftps-tax/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>IRS EFTPS federal tax deposit, CCD with the TXP addenda string. A validated pain.001 sample for United States on the ach-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>us.rtp.single — ISO 20022 pain.001 example for United States (instant-payment)</title>
+    <link href="https://pain001.com/corpus-us-rtp-single/"/>
+    <id>https://pain001.com/corpus-us-rtp-single/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>RTP real-time payment, single. A validated pain.001 sample for United States on the instant-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>us.wire.domestic — ISO 20022 pain.001 example for United States (priority-payment)</title>
+    <link href="https://pain001.com/corpus-us-wire-domestic/"/>
+    <id>https://pain001.com/corpus-us-wire-domestic/</id>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
+    <summary>Fedwire domestic funds transfer, urgent. A validated pain.001 sample for United States on the priority-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
     <title>ISO 20022 schema coverage files — every element of every edition</title>
     <link href="https://pain001.com/example-corpus-coverage/"/>
     <id>https://pain001.com/example-corpus-coverage/</id>
@@ -75,384 +453,6 @@
     <updated>2026-07-26T08:00:00+00:00</updated>
     <published>2026-07-26T08:00:00+00:00</published>
     <summary>ওপেন-সোর্স Python স্যুট যা CSV, Excel, SQLite, JSON, Parquet বা SWIFT MT101 থেকে XSD-যাচাইকৃত pain.001 ও pain.008 ফাইল তৈরি করে — AI এজেন্টের জন্য MCP টুল ও LSP সার্ভারসহ।</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Compatibility Matrix</title>
-    <link href="https://pain001.com/compatibility/"/>
-    <id>https://pain001.com/compatibility/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Exactly what Pain001 supports: every message definition with generate/validate/migrate coverage, input formats, scheme rulebooks, address models, and the known limitations — verified against the shipped code.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Pain001 vs Alternatives: an Honest Comparison</title>
-    <link href="https://pain001.com/competitors-comparison/"/>
-    <id>https://pain001.com/competitors-comparison/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Pain001 against Prowide, python-sepaxml, SWIFT Translator, XMLdation, Volante and the rest — what each does well, what it costs, and where the gaps are. Sources dated.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Contact Pain001: Support, Security and Enquiries</title>
-    <link href="https://pain001.com/contact/"/>
-    <id>https://pain001.com/contact/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Where to report bugs, disclose security issues privately, and reach the maintainer — with what to include for the fastest possible fix.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Pain001 — open-source iniciace plateb ISO 20022</title>
-    <link href="https://pain001.com/cs/"/>
-    <id>https://pain001.com/cs/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Open-source sada v Pythonu generující XSD-validované soubory pain.001 a pain.008 z CSV, Excelu, SQLite, JSON, Parquet nebo SWIFT MT101 — s nástroji MCP pro AI agenty a LSP serverem.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Pain001 — Open-Source-Zahlungsinitiierung nach ISO 20022</title>
-    <link href="https://pain001.com/de/"/>
-    <id>https://pain001.com/de/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Open-Source-Python-Suite zur Erzeugung XSD-validierter pain.001- und pain.008-Dateien aus CSV, Excel, SQLite, JSON, Parquet oder SWIFT MT101 — mit MCP-Tools für KI-Agenten und LSP-Server.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Pain001 Technical Reference: CLI, Python API and REST</title>
-    <link href="https://pain001.com/documentation/"/>
-    <id>https://pain001.com/documentation/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Complete reference for pain001 v0.0.70 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Pain001 — Έναρξη πληρωμών ISO 20022 ανοικτού κώδικα</title>
-    <link href="https://pain001.com/el/"/>
-    <id>https://pain001.com/el/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Σουίτα Python ανοικτού κώδικα που παράγει αρχεία pain.001 και pain.008 επικυρωμένα με XSD από CSV, Excel, SQLite, JSON, Parquet ή SWIFT MT101 — με εργαλεία MCP για πράκτορες AI και διακομιστή LSP.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Pain001 — Iniciación de pagos ISO 20022 en código abierto</title>
-    <link href="https://pain001.com/es/"/>
-    <id>https://pain001.com/es/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Suite Python de código abierto para generar ficheros pain.001 y pain.008 validados por XSD desde CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101 — con herramientas MCP para agentes de IA y servidor LSP.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Pain001 Executive Brief</title>
-    <link href="https://pain001.com/executive-brief/"/>
-    <id>https://pain001.com/executive-brief/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>One page for decision-makers: the rejected-file problem, the November 2026 (SR 2026) deadline, what Pain001 does, what it costs, the safety evidence, and the one ask — print-ready.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Pain001 — آغاز پرداخت ISO 20022 متن‌باز</title>
-    <link href="https://pain001.com/fa/"/>
-    <id>https://pain001.com/fa/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>مجموعهٔ متن‌باز Python برای تولید فایل‌های pain.001 و pain.008 اعتبارسنجی‌شده با XSD از CSV، Excel، SQLite، JSON، Parquet یا SWIFT MT101 — با ابزارهای MCP برای عامل‌های هوش مصنوعی و سرور LSP.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Pain001 FAQs for Treasury, Ops, Engineering and Audit</title>
-    <link href="https://pain001.com/faqs/"/>
-    <id>https://pain001.com/faqs/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Why banks reject payment files, pain.001 vs pain.008, the November 2026 deadlines, streaming large batches, security posture, and audit reproducibility — answered plainly.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Pain001 — Open-source na pagsisimula ng bayad sa ISO 20022</title>
-    <link href="https://pain001.com/fil/"/>
-    <id>https://pain001.com/fil/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Open-source na Python suite na gumagawa ng XSD-validated na pain.001 at pain.008 na file mula sa CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101 — may MCP tools para sa AI agents at LSP server.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Pain001 — Initiation de paiements ISO 20022 en open source</title>
-    <link href="https://pain001.com/fr/"/>
-    <id>https://pain001.com/fr/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Suite Python open source pour générer des fichiers pain.001 et pain.008 validés par XSD à partir de CSV, Excel, SQLite, JSON, Parquet ou SWIFT MT101 — avec outils MCP pour agents IA et serveur LSP.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>ISO 20022 Payments Glossary in Plain English</title>
-    <link href="https://pain001.com/glossary/"/>
-    <id>https://pain001.com/glossary/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, hybrid addresses, control sums — the payments vocabulary defined for treasurers and operations teams, not just developers.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Governance &amp; Continuity</title>
-    <link href="https://pain001.com/governance/"/>
-    <id>https://pain001.com/governance/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Who maintains Pain001, how decisions are made, how it is funded, what mitigates single-maintainer risk, and the editorial and corrections policy — stated plainly, limitations included.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Pain001 — Fara biyan kuɗi na ISO 20022 a buɗaɗɗen tushe</title>
-    <link href="https://pain001.com/ha/"/>
-    <id>https://pain001.com/ha/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Kunshin Python na buɗaɗɗen tushe da ke samar da fayilolin pain.001 da pain.008 da aka tabbatar da XSD daga CSV, Excel, SQLite, JSON, Parquet ko SWIFT MT101 — tare da kayan aikin MCP don wakilan AI da uwar garken LSP.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Pain001 — ייזום תשלומים ISO 20022 בקוד פתוח</title>
-    <link href="https://pain001.com/he/"/>
-    <id>https://pain001.com/he/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>חבילת Python בקוד פתוח המפיקה קובצי pain.001 ו-pain.008 מאומתי XSD מ-CSV, Excel, SQLite, JSON, Parquet או SWIFT MT101 — עם כלי MCP לסוכני AI ושרת LSP.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Pain001 — ओपन-सोर्स ISO 20022 भुगतान आरंभ</title>
-    <link href="https://pain001.com/hi/"/>
-    <id>https://pain001.com/hi/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>ओपन-सोर्स Python सुइट जो CSV, Excel, SQLite, JSON, Parquet या SWIFT MT101 से XSD-सत्यापित pain.001 और pain.008 फ़ाइलें बनाती है — AI एजेंटों के लिए MCP टूल और LSP सर्वर के साथ।</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Pain001 — Nyílt forráskódú ISO 20022 fizetésindítás</title>
-    <link href="https://pain001.com/hu/"/>
-    <id>https://pain001.com/hu/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Nyílt forráskódú Python-csomag, amely XSD-validált pain.001 és pain.008 fájlokat készít CSV, Excel, SQLite, JSON, Parquet vagy SWIFT MT101 forrásból — MCP-eszközökkel AI-ügynökökhöz és LSP-szerverrel.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Pain001 — Inisiasi pembayaran ISO 20022 sumber terbuka</title>
-    <link href="https://pain001.com/id/"/>
-    <id>https://pain001.com/id/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Suite Python sumber terbuka yang menghasilkan berkas pain.001 dan pain.008 tervalidasi XSD dari CSV, Excel, SQLite, JSON, Parquet, atau SWIFT MT101 — dengan perkakas MCP untuk agen AI dan server LSP.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Install Pain001: pip, Docker and First Validated File</title>
-    <link href="https://pain001.com/installation/"/>
-    <id>https://pain001.com/installation/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Install the Pain001 suite on Python 3.10–3.12 via pip or Docker, add Excel and MT101 loaders, and produce your first bank-ready pain.001 file in three commands.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Cross-Border pain.001 Under CBPR+: a Field Guide</title>
-    <link href="https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/"/>
-    <id>https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>What CBPR+ requires of your pain.001: BICFI agents, structured or hybrid addresses from 14 Nov 2026, charge bearers, purpose codes — with a worked xborder-ct example.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>ISO 20022 Roadmap: Every Deadline Through 2028</title>
-    <link href="https://pain001.com/iso20022-roadmap/"/>
-    <id>https://pain001.com/iso20022-roadmap/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>The living schedule of ISO 20022 mandates: 14 Nov 2026 structured addresses and MT101 retirement, 2027 CHAPS purpose codes and camt investigations, 2028 statement and direct-debit migration — primary-sourced and dated.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Pain001 — Iniziazione di pagamenti ISO 20022 open source</title>
-    <link href="https://pain001.com/it/"/>
-    <id>https://pain001.com/it/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Suite Python open source per generare file pain.001 e pain.008 validati XSD da CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101 — con strumenti MCP per agenti IA e server LSP.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Pain001 — オープンソースの ISO 20022 送金指図</title>
-    <link href="https://pain001.com/ja/"/>
-    <id>https://pain001.com/ja/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>CSV・Excel・SQLite・JSON・Parquet・SWIFT MT101 から XSD 検証済みの pain.001 / pain.008 ファイルを生成するオープンソース Python スイート。AI エージェント向け MCP ツールと LSP サーバーを同梱。</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Pain001 — 오픈소스 ISO 20022 지급 지시</title>
-    <link href="https://pain001.com/ko/"/>
-    <id>https://pain001.com/ko/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>CSV, Excel, SQLite, JSON, Parquet 또는 SWIFT MT101에서 XSD 검증을 마친 pain.001 및 pain.008 파일을 생성하는 오픈소스 Python 스위트 — AI 에이전트용 MCP 도구와 LSP 서버 포함.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Pain001 in 34 Languages</title>
-    <link href="https://pain001.com/languages/"/>
-    <id>https://pain001.com/languages/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>The Pain001 overview — validation pipeline, the November 2026 (SR 2026) deadline, quickstart — translated into 34 languages, from Deutsch and 日本語 to العربية and Yorùbá, with correct hreflang and RTL support.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>Made with Shokunin: How This Site Is Built</title>
-    <link href="https://pain001.com/made-with-shokunin/"/>
-    <id>https://pain001.com/made-with-shokunin/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>A Rust static site generator with security-first defaults, Markdown content, no JavaScript framework, and machine-readable surfaces from llms.txt to a CycloneDX SBOM.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>What changed between pain.001 versions — element-level diffs</title>
-    <link href="https://pain001.com/message-spec-changes/"/>
-    <id>https://pain001.com/message-spec-changes/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Element-by-element differences between consecutive ISO 20022 pain.001 versions, computed from the official schemas.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>ISO 20022 payment code lists — every value, every version</title>
-    <link href="https://pain001.com/message-spec-code-lists/"/>
-    <id>https://pain001.com/message-spec-code-lists/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Every ISO 20022 payment-initiation code list with its complete value set and version coverage, generated from the official XSDs.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>pain.001.001.03 type reference (part 2 of 2) — NameAndAddress10 – TaxRecordDetails1</title>
-    <link href="https://pain001.com/message-spec-pain.001.001.03-types-2/"/>
-    <id>https://pain001.com/message-spec-pain.001.001.03-types-2/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Complex types NameAndAddress10 – TaxRecordDetails1 in ISO 20022 pain.001.001.03, with elements, cardinality and constraints, generated from the official XSD.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>pain.001.001.03 type reference (part 1 of 2) — AccountIdentification4Choice – LocalInstrument2Choice</title>
-    <link href="https://pain001.com/message-spec-pain.001.001.03-types/"/>
-    <id>https://pain001.com/message-spec-pain.001.001.03-types/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Complex types AccountIdentification4Choice – LocalInstrument2Choice in ISO 20022 pain.001.001.03, with elements, cardinality and constraints, generated from the official XSD.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>pain.001.001.03 — complete element reference</title>
-    <link href="https://pain001.com/message-spec-pain.001.001.03/"/>
-    <id>https://pain001.com/message-spec-pain.001.001.03/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Every element of ISO 20022 pain.001.001.03: XML path, cardinality, data type, length and pattern constraints, and code lists — generated from the official XSD.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>pain.001.001.04 type reference (part 2 of 3) — InstructionForCreditorAgent1 – TaxPeriod1</title>
-    <link href="https://pain001.com/message-spec-pain.001.001.04-types-2/"/>
-    <id>https://pain001.com/message-spec-pain.001.001.04-types-2/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Complex types InstructionForCreditorAgent1 – TaxPeriod1 in ISO 20022 pain.001.001.04, with elements, cardinality and constraints, generated from the official XSD.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>pain.001.001.04 type reference (part 3 of 3) — TaxRecord1 – TaxRecordDetails1</title>
-    <link href="https://pain001.com/message-spec-pain.001.001.04-types-3/"/>
-    <id>https://pain001.com/message-spec-pain.001.001.04-types-3/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Complex types TaxRecord1 – TaxRecordDetails1 in ISO 20022 pain.001.001.04, with elements, cardinality and constraints, generated from the official XSD.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>pain.001.001.04 type reference (part 1 of 3) — AccountIdentification4Choice – GroupHeader48</title>
-    <link href="https://pain001.com/message-spec-pain.001.001.04-types/"/>
-    <id>https://pain001.com/message-spec-pain.001.001.04-types/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Complex types AccountIdentification4Choice – GroupHeader48 in ISO 20022 pain.001.001.04, with elements, cardinality and constraints, generated from the official XSD.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>pain.001.001.04 — complete element reference</title>
-    <link href="https://pain001.com/message-spec-pain.001.001.04/"/>
-    <id>https://pain001.com/message-spec-pain.001.001.04/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Every element of ISO 20022 pain.001.001.04: XML path, cardinality, data type, length and pattern constraints, and code lists — generated from the official XSD.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>pain.001.001.05 type reference (part 2 of 3) — InstructionForCreditorAgent1 – TaxPeriod1</title>
-    <link href="https://pain001.com/message-spec-pain.001.001.05-types-2/"/>
-    <id>https://pain001.com/message-spec-pain.001.001.05-types-2/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Complex types InstructionForCreditorAgent1 – TaxPeriod1 in ISO 20022 pain.001.001.05, with elements, cardinality and constraints, generated from the official XSD.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>pain.001.001.05 type reference (part 3 of 3) — TaxRecord1 – TaxRecordDetails1</title>
-    <link href="https://pain001.com/message-spec-pain.001.001.05-types-3/"/>
-    <id>https://pain001.com/message-spec-pain.001.001.05-types-3/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Complex types TaxRecord1 – TaxRecordDetails1 in ISO 20022 pain.001.001.05, with elements, cardinality and constraints, generated from the official XSD.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>pain.001.001.05 type reference (part 1 of 3) — AccountIdentification4Choice – GroupHeader48</title>
-    <link href="https://pain001.com/message-spec-pain.001.001.05-types/"/>
-    <id>https://pain001.com/message-spec-pain.001.001.05-types/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Complex types AccountIdentification4Choice – GroupHeader48 in ISO 20022 pain.001.001.05, with elements, cardinality and constraints, generated from the official XSD.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>pain.001.001.05 — complete element reference</title>
-    <link href="https://pain001.com/message-spec-pain.001.001.05/"/>
-    <id>https://pain001.com/message-spec-pain.001.001.05/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Every element of ISO 20022 pain.001.001.05: XML path, cardinality, data type, length and pattern constraints, and code lists — generated from the official XSD.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>pain.001.001.06 type reference (part 2 of 3) — GenericOrganisationIdentification1 – TaxAuthorisation1</title>
-    <link href="https://pain001.com/message-spec-pain.001.001.06-types-2/"/>
-    <id>https://pain001.com/message-spec-pain.001.001.06-types-2/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Complex types GenericOrganisationIdentification1 – TaxAuthorisation1 in ISO 20022 pain.001.001.06, with elements, cardinality and constraints, generated from the official XSD.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
 </feed>

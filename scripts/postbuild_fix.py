@@ -1106,6 +1106,29 @@ def regen_sitemap(site: Path) -> None:
     print(f"[postbuild] sitemap.xml regenerated with {len(urls)} URLs")
 
 
+def inject_dataset_ld(site: Path) -> None:
+    """Add schema.org Dataset markup to the corpus scenario pages.
+
+    The generator records one JSON-LD object per page slug in
+    scripts/corpus_pages.json; the block is a data script (not executed,
+    so the CSP does not apply) placed before </head>.
+    """
+    table = Path(__file__).resolve().parent / "corpus_pages.json"
+    if not table.exists():
+        return
+    import json as _json
+    pages = _json.loads(table.read_text(encoding="utf-8"))
+    for slug, ld in pages.items():
+        page = site / slug / "index.html"
+        if not page.exists():
+            continue
+        html = page.read_text(encoding="utf-8")
+        if '"@type": "Dataset"' in html:
+            continue
+        block = '<script type="application/ld+json">' + _json.dumps(ld, ensure_ascii=False) + "</script>\n"
+        page.write_text(html.replace("</head>", block + "</head>", 1), encoding="utf-8")
+
+
 def main() -> None:
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     site = Path(args[0] if args else "Pain001")
@@ -1146,6 +1169,7 @@ def main() -> None:
     localise_pages(site)
     gen_try_locales(site)
     gen_journey_locales(site)
+    inject_dataset_ld(site)
     regen_sitemap(site)
     gen_legacy_redirects(site)  # after sitemap so stubs stay unindexed
 
