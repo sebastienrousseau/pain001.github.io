@@ -371,9 +371,14 @@ def scenario_page(sid: str, recs: list[dict], version: str, sample: dict | None)
             f"[{r['_sidecar'].name}](/corpus/market/{rel.replace('.xml', '.provenance.yaml')}) |"
         )
     if any(r["_xml"].with_name(r["_xml"].name.replace(".xml", ".iso.json")).exists() for r in recs):
+        schema_links = ", ".join(
+            f"[{r['message_type']}](/corpus/schemas/{r['message_type']}.schema.json)"
+            for r in recs if r["_xml"].with_name(r["_xml"].name.replace(".xml", ".iso.json")).exists()
+        )
         lines += ["", "The twin is the same payment in the ISO 20022 Registration Authority's JSON convention, "
-                  "lossless in both directions; its JSON Schema is bundled with the library "
-                  "(`pain001/schemas/iso-json/`).", ""]
+                  f"lossless in both directions; its JSON Schema (2020-12) is published per edition: {schema_links}. "
+                  "An agent can produce a twin that validates against the schema and hand it to the library to "
+                  "render the XML.", ""]
     else:
         lines.append("")
     if sample:
@@ -417,6 +422,61 @@ def scenario_page(sid: str, recs: list[dict], version: str, sample: dict | None)
               "library's overlay tooling.", "",
               f"[Back to the example corpus](/example-corpus/) · [All payment files by country](/example-corpus/#payment-files-by-country)"]
     return "\n".join(lines)
+
+
+def copy_schemas(lib: Path) -> int:
+    """Serve the twin JSON Schemas the library bundles, one per edition."""
+    src = lib / "pain001" / "schemas" / "iso-json"
+    target = STATIC / "schemas"
+    _clear(target)
+    target.mkdir(parents=True, exist_ok=True)
+    n = 0
+    for path in sorted(src.glob("*.schema.json")):
+        (target / path.name).write_bytes(path.read_bytes())
+        n += 1
+    return n
+
+
+def write_index(files: list[dict], version: str) -> None:
+    """A machine-readable index of the corpus: one entry per scenario, every URL absolute."""
+    base = "https://pain001.com"
+    scenarios: dict[str, list[dict]] = defaultdict(list)
+    for record in files:
+        scenarios[record["scenario"]].append(record)
+    samples = load_try_samples()
+    entries = []
+    for sid, recs in sorted(scenarios.items()):
+        first = recs[0]
+        editions = []
+        for r in recs:
+            rel = r["_rel"]
+            entry = {
+                "message_type": r["message_type"],
+                "xml": f"{base}/corpus/market/{rel}",
+                "provenance": f"{base}/corpus/market/{rel.replace('.xml', '.provenance.yaml')}",
+                "sha256": r.get("sha256"),
+            }
+            if r["_xml"].with_name(r["_xml"].name.replace(".xml", ".iso.json")).exists():
+                entry["twin"] = f"{base}/corpus/market/{rel.replace('.xml', '.iso.json')}"
+                entry["twin_schema"] = f"{base}/corpus/schemas/{r['message_type']}.schema.json"
+            editions.append(entry)
+        entries.append({
+            "id": sid,
+            "country": first.get("country"),
+            "family": first.get("family"),
+            "description": str(first.get("description", "")).strip(),
+            "page": f"{base}/{scenario_slug(sid)}/",
+            "confidence": (first.get("provenance") or {}).get("confidence"),
+            "rails": [p for p in ((first.get("validation") or {}).get("profiles") or {}) if p != "anti-duplicate"],
+            "demo": f"{base}/try/?sample=corpus:{sid}" if sid in samples else None,
+            "editions": editions,
+        })
+    (STATIC / "index.json").write_text(json.dumps({
+        "pain001": version,
+        "catalog": f"{base}/example-corpus/",
+        "license": "Apache-2.0 OR MIT",
+        "scenarios": entries,
+    }, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
 def write_scenario_pages(files: list[dict], version: str) -> int:
@@ -687,6 +747,8 @@ def main(argv: list[str] | None = None) -> int:
     sizes = write_zips(files, editions, data, version)
     body = render(files, editions, sizes, version)
     pages = write_scenario_pages(files, version)
+    write_index(files, version)
+    schemas = copy_schemas(lib)
     fm = load_frontmatter(
         SLUG,
         "ISO 20022 example files — pain.001 and pain.008 samples per country and rail",
@@ -703,7 +765,7 @@ def main(argv: list[str] | None = None) -> int:
         "QR-bill pain.001, Bankgiro pain.001, test corpus",
     )
     write_post(SLUG, stamp_date(fm), body)
-    print(f"wrote {pages} scenario pages")
+    print(f"wrote {pages} scenario pages, corpus/index.json, {schemas} twin schemas")
     coverage_fm = load_frontmatter(
         COVERAGE_SLUG,
         "ISO 20022 schema coverage files — every element of every edition",

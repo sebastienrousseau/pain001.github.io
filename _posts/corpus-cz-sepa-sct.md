@@ -99,7 +99,7 @@ A payment initiation file for **CZ** on the **sepa-credit-transfer** rail, shipp
 | `pain.001.001.03` | [cz.sepa.sct.pain.001.001.03.xml](/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.03.xml) | [cz.sepa.sct.pain.001.001.03.iso.json](/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.03.iso.json) | [cz.sepa.sct.pain.001.001.03.provenance.yaml](/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.03.provenance.yaml) |
 | `pain.001.001.09` | [cz.sepa.sct.pain.001.001.09.xml](/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.09.xml) | [cz.sepa.sct.pain.001.001.09.iso.json](/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.09.iso.json) | [cz.sepa.sct.pain.001.001.09.provenance.yaml](/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.09.provenance.yaml) |
 
-The twin is the same payment in the ISO 20022 Registration Authority's JSON convention, lossless in both directions; its JSON Schema is bundled with the library (`pain001/schemas/iso-json/`).
+The twin is the same payment in the ISO 20022 Registration Authority's JSON convention, lossless in both directions; its JSON Schema (2020-12) is published per edition: [pain.001.001.03](/corpus/schemas/pain.001.001.03.schema.json), [pain.001.001.09](/corpus/schemas/pain.001.001.09.schema.json). An agent can produce a twin that validates against the schema and hand it to the library to render the XML.
 
 ## Run it in your browser
 

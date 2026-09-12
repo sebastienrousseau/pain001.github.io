@@ -1,0 +1,1238 @@
+{
+ "pain001": "0.0.70",
+ "catalog": "https://pain001.com/example-corpus/",
+ "license": "Apache-2.0 OR MIT",
+ "scenarios": [
+  {
+   "id": "ae.uaefts.single",
+   "country": "AE",
+   "family": "priority-payment",
+   "description": "UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code.",
+   "page": "https://pain001.com/corpus-ae-uaefts-single/",
+   "confidence": "assumed",
+   "rails": [
+    "ae-uaefts",
+    "purpose-mandate-ae"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:ae.uaefts.single",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/ae/priority-payment/ae.uaefts.single.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/ae/priority-payment/ae.uaefts.single.pain.001.001.03.provenance.yaml",
+     "sha256": "13c3794ea88ea8cd0bd345ae88c564d65ac870569bace99aba84687eff85130d",
+     "twin": "https://pain001.com/corpus/market/ae/priority-payment/ae.uaefts.single.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/ae/priority-payment/ae.uaefts.single.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/ae/priority-payment/ae.uaefts.single.pain.001.001.09.provenance.yaml",
+     "sha256": "643a1bd0068f06766d7ea61ccf522a541a503ce070dac22180e60436702dfb7f",
+     "twin": "https://pain001.com/corpus/market/ae/priority-payment/ae.uaefts.single.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "be.sepa.sct-supplier",
+   "country": "BE",
+   "family": "sepa-credit-transfer",
+   "description": "SEPA credit transfer with a Belgian structured communication (BBA).",
+   "page": "https://pain001.com/corpus-be-sepa-sct-supplier/",
+   "confidence": "derived",
+   "rails": [
+    "sepa-sct"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:be.sepa.sct-supplier",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/be/sepa-credit-transfer/be.sepa.sct-supplier.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/be/sepa-credit-transfer/be.sepa.sct-supplier.pain.001.001.03.provenance.yaml",
+     "sha256": "dd39856cc3472cb90a897a02c558748c573fda573207dc44cdcdef4f23b71150",
+     "twin": "https://pain001.com/corpus/market/be/sepa-credit-transfer/be.sepa.sct-supplier.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/be/sepa-credit-transfer/be.sepa.sct-supplier.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/be/sepa-credit-transfer/be.sepa.sct-supplier.pain.001.001.09.provenance.yaml",
+     "sha256": "b00a893a6c35aee193328c9cbcf93e2ab8dd292baf508b86e3c1cdc8c45769ba",
+     "twin": "https://pain001.com/corpus/market/be/sepa-credit-transfer/be.sepa.sct-supplier.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "be.sepa.sdd-core",
+   "country": "BE",
+   "family": "sepa-direct-debit",
+   "description": "SEPA Core direct debit, recurring, Belgian creditor identifier.",
+   "page": "https://pain001.com/corpus-be-sepa-sdd-core/",
+   "confidence": "derived",
+   "rails": [
+    "sepa-sdd"
+   ],
+   "demo": null,
+   "editions": [
+    {
+     "message_type": "pain.008.001.02",
+     "xml": "https://pain001.com/corpus/market/be/sepa-direct-debit/be.sepa.sdd-core.pain.008.001.02.xml",
+     "provenance": "https://pain001.com/corpus/market/be/sepa-direct-debit/be.sepa.sdd-core.pain.008.001.02.provenance.yaml",
+     "sha256": "f1408ff05b1705fd0e0d3003067e04ba9e28e713be7b542f6c6f4aaab434638f"
+    },
+    {
+     "message_type": "pain.008.001.08",
+     "xml": "https://pain001.com/corpus/market/be/sepa-direct-debit/be.sepa.sdd-core.pain.008.001.08.xml",
+     "provenance": "https://pain001.com/corpus/market/be/sepa-direct-debit/be.sepa.sdd-core.pain.008.001.08.provenance.yaml",
+     "sha256": "6426fd54243af6bf29da43f5aafaae31cae6a324af2bffabe59b253decfdd242"
+    }
+   ]
+  },
+  {
+   "id": "ch.international.usd",
+   "country": "CH",
+   "family": "cross-border",
+   "description": "Cross-border USD payment from Switzerland (SPS payment type X).",
+   "page": "https://pain001.com/corpus-ch-international-usd/",
+   "confidence": "derived",
+   "rails": [
+    "cbpr-cross-border"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:ch.international.usd",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/ch/cross-border/ch.international.usd.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/ch/cross-border/ch.international.usd.pain.001.001.03.provenance.yaml",
+     "sha256": "ec79e6b2c90fe45fc6f2d8a8074c0799044a43a53db3564928a646bbf9b30aa7",
+     "twin": "https://pain001.com/corpus/market/ch/cross-border/ch.international.usd.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/ch/cross-border/ch.international.usd.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/ch/cross-border/ch.international.usd.pain.001.001.09.provenance.yaml",
+     "sha256": "bba5add27b324862dd7ff799f402ab0421733150ec2523920913f0ea99d76262",
+     "twin": "https://pain001.com/corpus/market/ch/cross-border/ch.international.usd.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "ch.sepa.sct",
+   "country": "CH",
+   "family": "sepa-credit-transfer",
+   "description": "SEPA credit transfer from Switzerland (SPS payment type S).",
+   "page": "https://pain001.com/corpus-ch-sepa-sct/",
+   "confidence": "derived",
+   "rails": [
+    "ch-sepa"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:ch.sepa.sct",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/ch/sepa-credit-transfer/ch.sepa.sct.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/ch/sepa-credit-transfer/ch.sepa.sct.pain.001.001.03.provenance.yaml",
+     "sha256": "c10c360e6234438b005307db236ce41ca94f69e0e46304cf738cefe9d3fdac33",
+     "twin": "https://pain001.com/corpus/market/ch/sepa-credit-transfer/ch.sepa.sct.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/ch/sepa-credit-transfer/ch.sepa.sct.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/ch/sepa-credit-transfer/ch.sepa.sct.pain.001.001.09.provenance.yaml",
+     "sha256": "654127ec167ea272409b59087f7a6e9e35f6505b8f2bfb68a698ffbc843f4f92",
+     "twin": "https://pain001.com/corpus/market/ch/sepa-credit-transfer/ch.sepa.sct.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "ch.sps.qr-bill",
+   "country": "CH",
+   "family": "domestic-credit-transfer",
+   "description": "Swiss domestic credit transfer settling a QR-bill (QRR reference).",
+   "page": "https://pain001.com/corpus-ch-sps-qr-bill/",
+   "confidence": "derived",
+   "rails": [
+    "ch-domestic"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:ch.sps.qr-bill",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.03.provenance.yaml",
+     "sha256": "2bdf430626d4f17b92a81c9761c54b906ba77ece3783d54653d61735fdac116a",
+     "twin": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.09.provenance.yaml",
+     "sha256": "24d289e618bcb317f020c8a6d4f545bf7c6f3be10601553c11a797a4db16ed09",
+     "twin": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "ch.sps.scor",
+   "country": "CH",
+   "family": "domestic-credit-transfer",
+   "description": "Swiss domestic credit transfer with an ISO 11649 creditor reference (SCOR).",
+   "page": "https://pain001.com/corpus-ch-sps-scor/",
+   "confidence": "derived",
+   "rails": [
+    "ch-domestic"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:ch.sps.scor",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.scor.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.scor.pain.001.001.03.provenance.yaml",
+     "sha256": "e917feccf2c8a58faebc8267f2805afc427b757467e0b2c5ee06442f079260c9",
+     "twin": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.scor.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.scor.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.scor.pain.001.001.09.provenance.yaml",
+     "sha256": "cf4217a26d95868371ed024cc476b1ff511197f6b379c43cabccfd8adef80e07",
+     "twin": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.scor.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "cz.certis.domestic",
+   "country": "CZ",
+   "family": "domestic-credit-transfer",
+   "description": "Czech domestic CZK transfer through CERTIS with VS/KS/SS payment symbols.",
+   "page": "https://pain001.com/corpus-cz-certis-domestic/",
+   "confidence": "derived",
+   "rails": [],
+   "demo": "https://pain001.com/try/?sample=corpus:cz.certis.domestic",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/cz/domestic-credit-transfer/cz.certis.domestic.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/cz/domestic-credit-transfer/cz.certis.domestic.pain.001.001.03.provenance.yaml",
+     "sha256": "bfaf37c80d68ab663964832597ee69b676028d19c0f288bb19c9e7e3f2dc0bec",
+     "twin": "https://pain001.com/corpus/market/cz/domestic-credit-transfer/cz.certis.domestic.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/cz/domestic-credit-transfer/cz.certis.domestic.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/cz/domestic-credit-transfer/cz.certis.domestic.pain.001.001.09.provenance.yaml",
+     "sha256": "f525725bd26538d981697b191add734872ac33618f669f8c4eccf291d162500d",
+     "twin": "https://pain001.com/corpus/market/cz/domestic-credit-transfer/cz.certis.domestic.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "cz.sepa.sct",
+   "country": "CZ",
+   "family": "sepa-credit-transfer",
+   "description": "SEPA credit transfer from a Czech EUR account to a German supplier.",
+   "page": "https://pain001.com/corpus-cz-sepa-sct/",
+   "confidence": "derived",
+   "rails": [
+    "sepa-sct"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:cz.sepa.sct",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.03.provenance.yaml",
+     "sha256": "1c2ce80f7476ed8808933f9305d0d0c8eacac4456b604ce0c43c5f992c704d16",
+     "twin": "https://pain001.com/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.09.provenance.yaml",
+     "sha256": "bc543313de5935bebbb202caeadcfdbf5049d11c77bacae0c05c7670d14529c3",
+     "twin": "https://pain001.com/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "de.axz.foreign",
+   "country": "DE",
+   "family": "cross-border",
+   "description": "Foreign payment in USD from a German account, DK order type AXZ.",
+   "page": "https://pain001.com/corpus-de-axz-foreign/",
+   "confidence": "assumed",
+   "rails": [
+    "de-axz"
+   ],
+   "demo": null,
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/de/cross-border/de.axz.foreign.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/de/cross-border/de.axz.foreign.pain.001.001.03.provenance.yaml",
+     "sha256": "1dccc423a061944366fa9fd2c6f8bc14a09f59f8e1ca368351167aaed081a762",
+     "twin": "https://pain001.com/corpus/market/de/cross-border/de.axz.foreign.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/de/cross-border/de.axz.foreign.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/de/cross-border/de.axz.foreign.pain.001.001.09.provenance.yaml",
+     "sha256": "287fa7fe27c9b6ac58774881c828fa6a2ae4e734e0e3da513637c5cd4238225f",
+     "twin": "https://pain001.com/corpus/market/de/cross-border/de.axz.foreign.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "de.ccu.urgent",
+   "country": "DE",
+   "family": "urgent-euro",
+   "description": "Urgent euro payment (TARGET) from a German account, DK order type CCU.",
+   "page": "https://pain001.com/corpus-de-ccu-urgent/",
+   "confidence": "derived",
+   "rails": [
+    "de-ccu"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:de.ccu.urgent",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/de/urgent-euro/de.ccu.urgent.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/de/urgent-euro/de.ccu.urgent.pain.001.001.03.provenance.yaml",
+     "sha256": "b6a7f31bb7c867cc531e44549e23e5261a9e336aeedb3fd0022428f0730d3a2b",
+     "twin": "https://pain001.com/corpus/market/de/urgent-euro/de.ccu.urgent.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/de/urgent-euro/de.ccu.urgent.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/de/urgent-euro/de.ccu.urgent.pain.001.001.09.provenance.yaml",
+     "sha256": "2d730538ba631a26d6273ed75f60614d58a25c317fbc03155292db2f9432512c",
+     "twin": "https://pain001.com/corpus/market/de/urgent-euro/de.ccu.urgent.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "de.sepa.sct-inst",
+   "country": "DE",
+   "family": "sepa-instant",
+   "description": "SEPA Instant credit transfer, single, INST at PmtInf.",
+   "page": "https://pain001.com/corpus-de-sepa-sct-inst/",
+   "confidence": "derived",
+   "rails": [
+    "sepa-inst"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:de.sepa.sct-inst",
+   "editions": [
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/de/sepa-instant/de.sepa.sct-inst.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/de/sepa-instant/de.sepa.sct-inst.pain.001.001.09.provenance.yaml",
+     "sha256": "3d90b9351b111efa05658f0050270d35ec935cfe0c4e21491f047b7cb62a0577",
+     "twin": "https://pain001.com/corpus/market/de/sepa-instant/de.sepa.sct-inst.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "de.sepa.sct-salary",
+   "country": "DE",
+   "family": "sepa-credit-transfer",
+   "description": "SEPA SCT salary batch with structured and unstructured remittance.",
+   "page": "https://pain001.com/corpus-de-sepa-sct-salary/",
+   "confidence": "derived",
+   "rails": [
+    "sepa-sct"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:de.sepa.sct-salary",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.03.provenance.yaml",
+     "sha256": "e7d6954d339967345dd35086ee4e193bd6ad70c3fb674ca50f79fee43b5bbd87",
+     "twin": "https://pain001.com/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.09.provenance.yaml",
+     "sha256": "d29c2ff6df303bff9400707a622507270168e3d6aa07551c4995b2f326fc1669",
+     "twin": "https://pain001.com/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.13",
+     "xml": "https://pain001.com/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.13.xml",
+     "provenance": "https://pain001.com/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.13.provenance.yaml",
+     "sha256": "53c3063dc5e139ea83da0f1447aac0a0af5c964a52249554a6275294a1305404",
+     "twin": "https://pain001.com/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.13.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.13.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "de.sepa.sdd-b2b",
+   "country": "DE",
+   "family": "sepa-direct-debit",
+   "description": "SEPA B2B direct debit, first collection.",
+   "page": "https://pain001.com/corpus-de-sepa-sdd-b2b/",
+   "confidence": "derived",
+   "rails": [
+    "sepa-b2b"
+   ],
+   "demo": null,
+   "editions": [
+    {
+     "message_type": "pain.008.001.02",
+     "xml": "https://pain001.com/corpus/market/de/sepa-direct-debit/de.sepa.sdd-b2b.pain.008.001.02.xml",
+     "provenance": "https://pain001.com/corpus/market/de/sepa-direct-debit/de.sepa.sdd-b2b.pain.008.001.02.provenance.yaml",
+     "sha256": "3885987f7953ec31c1ffbf6271ad72847f7f0d3c032499fde4330c8a164f238b"
+    },
+    {
+     "message_type": "pain.008.001.08",
+     "xml": "https://pain001.com/corpus/market/de/sepa-direct-debit/de.sepa.sdd-b2b.pain.008.001.08.xml",
+     "provenance": "https://pain001.com/corpus/market/de/sepa-direct-debit/de.sepa.sdd-b2b.pain.008.001.08.provenance.yaml",
+     "sha256": "1debdb2ede92c67c0878ecb04bd7415dc7ad7762b5f03836eadeb36ae549d8de"
+    }
+   ]
+  },
+  {
+   "id": "es.sepa.sct-single",
+   "country": "ES",
+   "family": "sepa-credit-transfer",
+   "description": "SEPA credit transfer, single, initiating party identified by NIF.",
+   "page": "https://pain001.com/corpus-es-sepa-sct-single/",
+   "confidence": "derived",
+   "rails": [
+    "sepa-sct"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:es.sepa.sct-single",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/es/sepa-credit-transfer/es.sepa.sct-single.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/es/sepa-credit-transfer/es.sepa.sct-single.pain.001.001.03.provenance.yaml",
+     "sha256": "17db18eb492bbcb5c3c388e9cddad99702a1aa436c926787547bafd5ff1dca27",
+     "twin": "https://pain001.com/corpus/market/es/sepa-credit-transfer/es.sepa.sct-single.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/es/sepa-credit-transfer/es.sepa.sct-single.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/es/sepa-credit-transfer/es.sepa.sct-single.pain.001.001.09.provenance.yaml",
+     "sha256": "0deaca66ac9f27e2771bb5dd98597329242eb2a4479f63168eb673685ff7354b",
+     "twin": "https://pain001.com/corpus/market/es/sepa-credit-transfer/es.sepa.sct-single.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "es.sepa.sdd-core",
+   "country": "ES",
+   "family": "sepa-direct-debit",
+   "description": "SEPA Core direct debit, recurring, Spanish creditor identifier.",
+   "page": "https://pain001.com/corpus-es-sepa-sdd-core/",
+   "confidence": "derived",
+   "rails": [
+    "sepa-sdd"
+   ],
+   "demo": null,
+   "editions": [
+    {
+     "message_type": "pain.008.001.02",
+     "xml": "https://pain001.com/corpus/market/es/sepa-direct-debit/es.sepa.sdd-core.pain.008.001.02.xml",
+     "provenance": "https://pain001.com/corpus/market/es/sepa-direct-debit/es.sepa.sdd-core.pain.008.001.02.provenance.yaml",
+     "sha256": "ee7502ba6edcd2dab96fec5224221168350ac53f0771f8c5698bfabf5685ef89"
+    },
+    {
+     "message_type": "pain.008.001.08",
+     "xml": "https://pain001.com/corpus/market/es/sepa-direct-debit/es.sepa.sdd-core.pain.008.001.08.xml",
+     "provenance": "https://pain001.com/corpus/market/es/sepa-direct-debit/es.sepa.sdd-core.pain.008.001.08.provenance.yaml",
+     "sha256": "586ac55f14b24b0285f06db45c391155edb87d7813901573f50f358d4e7ff206"
+    }
+   ]
+  },
+  {
+   "id": "fr.sepa.sct-supplier",
+   "country": "FR",
+   "family": "sepa-credit-transfer",
+   "description": "SEPA credit transfer, supplier invoice with an RF creditor reference.",
+   "page": "https://pain001.com/corpus-fr-sepa-sct-supplier/",
+   "confidence": "derived",
+   "rails": [
+    "sepa-sct"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:fr.sepa.sct-supplier",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/fr/sepa-credit-transfer/fr.sepa.sct-supplier.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/fr/sepa-credit-transfer/fr.sepa.sct-supplier.pain.001.001.03.provenance.yaml",
+     "sha256": "9afddb87a497e55390fe5f2d6aa73d37a5659f66fcf36bc48280873fc713625b",
+     "twin": "https://pain001.com/corpus/market/fr/sepa-credit-transfer/fr.sepa.sct-supplier.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/fr/sepa-credit-transfer/fr.sepa.sct-supplier.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/fr/sepa-credit-transfer/fr.sepa.sct-supplier.pain.001.001.09.provenance.yaml",
+     "sha256": "2d9d91e5beba967943d6efe14066313947c9875899737034e5fff74fe521d294",
+     "twin": "https://pain001.com/corpus/market/fr/sepa-credit-transfer/fr.sepa.sct-supplier.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "fr.sepa.sdd-core",
+   "country": "FR",
+   "family": "sepa-direct-debit",
+   "description": "SEPA Core direct debit, recurring collection on an amended mandate.",
+   "page": "https://pain001.com/corpus-fr-sepa-sdd-core/",
+   "confidence": "derived",
+   "rails": [
+    "sepa-sdd"
+   ],
+   "demo": null,
+   "editions": [
+    {
+     "message_type": "pain.008.001.02",
+     "xml": "https://pain001.com/corpus/market/fr/sepa-direct-debit/fr.sepa.sdd-core.pain.008.001.02.xml",
+     "provenance": "https://pain001.com/corpus/market/fr/sepa-direct-debit/fr.sepa.sdd-core.pain.008.001.02.provenance.yaml",
+     "sha256": "9aca5c18350396689197527973e4a52f81f024021042c809ba4021a0dcb0ff0b"
+    },
+    {
+     "message_type": "pain.008.001.08",
+     "xml": "https://pain001.com/corpus/market/fr/sepa-direct-debit/fr.sepa.sdd-core.pain.008.001.08.xml",
+     "provenance": "https://pain001.com/corpus/market/fr/sepa-direct-debit/fr.sepa.sdd-core.pain.008.001.08.provenance.yaml",
+     "sha256": "ba71042980d7bddbdb65d14def5316d3a9ab68f220a7d1620481dad9f1b0a0c7"
+    }
+   ]
+  },
+  {
+   "id": "gb.bacs-dd.collection",
+   "country": "GB",
+   "family": "bacs-direct-debit",
+   "description": "Bacs Direct Debit collection, first and recurring, SUN as creditor id.",
+   "page": "https://pain001.com/corpus-gb-bacs-dd-collection/",
+   "confidence": "derived",
+   "rails": [
+    "uk-bacs-dd"
+   ],
+   "demo": null,
+   "editions": [
+    {
+     "message_type": "pain.008.001.02",
+     "xml": "https://pain001.com/corpus/market/gb/bacs-direct-debit/gb.bacs-dd.collection.pain.008.001.02.xml",
+     "provenance": "https://pain001.com/corpus/market/gb/bacs-direct-debit/gb.bacs-dd.collection.pain.008.001.02.provenance.yaml",
+     "sha256": "897d0a41ad904d27fb271eee1179cf03ec7af9b9e4f74f487492c423462bbcd6"
+    },
+    {
+     "message_type": "pain.008.001.08",
+     "xml": "https://pain001.com/corpus/market/gb/bacs-direct-debit/gb.bacs-dd.collection.pain.008.001.08.xml",
+     "provenance": "https://pain001.com/corpus/market/gb/bacs-direct-debit/gb.bacs-dd.collection.pain.008.001.08.provenance.yaml",
+     "sha256": "1bd84871cab9d75e0641d9df32607aa9e5e6f273d0dc235d65a2523bc448a29c"
+    }
+   ]
+  },
+  {
+   "id": "gb.bacs.supplier-run",
+   "country": "GB",
+   "family": "bacs-direct-credit",
+   "description": "Bacs Direct Credit supplier run, two payments, SUN in the debtor id.",
+   "page": "https://pain001.com/corpus-gb-bacs-supplier-run/",
+   "confidence": "derived",
+   "rails": [
+    "uk-bacs"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:gb.bacs.supplier-run",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/gb/bacs-direct-credit/gb.bacs.supplier-run.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/gb/bacs-direct-credit/gb.bacs.supplier-run.pain.001.001.03.provenance.yaml",
+     "sha256": "12f220ea49af91295c920e43d0d5ff74383c241c4a6daa6459a9f9b50abcaea0",
+     "twin": "https://pain001.com/corpus/market/gb/bacs-direct-credit/gb.bacs.supplier-run.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/gb/bacs-direct-credit/gb.bacs.supplier-run.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/gb/bacs-direct-credit/gb.bacs.supplier-run.pain.001.001.09.provenance.yaml",
+     "sha256": "1852c56a8c3dae62ce0b1e3431b714d859b35ed771d02b27bba540290473203b",
+     "twin": "https://pain001.com/corpus/market/gb/bacs-direct-credit/gb.bacs.supplier-run.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "gb.chaps.property-purchase",
+   "country": "GB",
+   "family": "priority-payment",
+   "description": "CHAPS same-day property completion with the BoE HLST purpose code.",
+   "page": "https://pain001.com/corpus-gb-chaps-property-purchase/",
+   "confidence": "derived",
+   "rails": [
+    "uk-chaps",
+    "purpose-mandate-gb"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:gb.chaps.property-purchase",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/gb/priority-payment/gb.chaps.property-purchase.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/gb/priority-payment/gb.chaps.property-purchase.pain.001.001.03.provenance.yaml",
+     "sha256": "436ada306c5c5def1a6df6d660cd0bda820f6b02b24d6c52517e1757f7816936",
+     "twin": "https://pain001.com/corpus/market/gb/priority-payment/gb.chaps.property-purchase.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/gb/priority-payment/gb.chaps.property-purchase.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/gb/priority-payment/gb.chaps.property-purchase.pain.001.001.09.provenance.yaml",
+     "sha256": "5f6eb22a2d635082af984e4870abc6ac4fc7f6410f0910d6eeec4aabd76d0844",
+     "twin": "https://pain001.com/corpus/market/gb/priority-payment/gb.chaps.property-purchase.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "gb.fps.single",
+   "country": "GB",
+   "family": "faster-payment",
+   "description": "Faster Payments single supplier payment, sort code and account.",
+   "page": "https://pain001.com/corpus-gb-fps-single/",
+   "confidence": "derived",
+   "rails": [
+    "uk-fps"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:gb.fps.single",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/gb/faster-payment/gb.fps.single.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/gb/faster-payment/gb.fps.single.pain.001.001.03.provenance.yaml",
+     "sha256": "a3d78639833ff1bbcf0836c677ffb4a06128bc93a4e6a9d79a3907e0bc17dcbe",
+     "twin": "https://pain001.com/corpus/market/gb/faster-payment/gb.fps.single.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/gb/faster-payment/gb.fps.single.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/gb/faster-payment/gb.fps.single.pain.001.001.09.provenance.yaml",
+     "sha256": "9bb0fc2a948373a8cd462cd5332686f5e912ddf40f733c40bc2e8e496b4209aa",
+     "twin": "https://pain001.com/corpus/market/gb/faster-payment/gb.fps.single.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "gb.international.usd",
+   "country": "GB",
+   "family": "priority-payment",
+   "description": "USD cross-border payment from a UK account to a US supplier.",
+   "page": "https://pain001.com/corpus-gb-international-usd/",
+   "confidence": "derived",
+   "rails": [
+    "cbpr-cross-border"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:gb.international.usd",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/gb/priority-payment/gb.international.usd.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/gb/priority-payment/gb.international.usd.pain.001.001.03.provenance.yaml",
+     "sha256": "9fc601e715ad22e3304de63d281401d6d1e363283b96c412a747611ff2349863",
+     "twin": "https://pain001.com/corpus/market/gb/priority-payment/gb.international.usd.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/gb/priority-payment/gb.international.usd.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/gb/priority-payment/gb.international.usd.pain.001.001.09.provenance.yaml",
+     "sha256": "d3c4535eb1d401e46a300d5ea1a50cb63361cd64fec2a24d1b539038c38a55ab",
+     "twin": "https://pain001.com/corpus/market/gb/priority-payment/gb.international.usd.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "hk.fps.single",
+   "country": "HK",
+   "family": "instant-payment",
+   "description": "Hong Kong FPS credit in HKD, clearing codes and account numbers.",
+   "page": "https://pain001.com/corpus-hk-fps-single/",
+   "confidence": "assumed",
+   "rails": [
+    "hk-fps",
+    "purpose-mandate-hk"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:hk.fps.single",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/hk/instant-payment/hk.fps.single.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/hk/instant-payment/hk.fps.single.pain.001.001.03.provenance.yaml",
+     "sha256": "7d6fd2ca1d784cc6e495efcc516f29faa7fc45a12b1fbc34295b8e4cc9b1c42f",
+     "twin": "https://pain001.com/corpus/market/hk/instant-payment/hk.fps.single.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/hk/instant-payment/hk.fps.single.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/hk/instant-payment/hk.fps.single.pain.001.001.09.provenance.yaml",
+     "sha256": "fc387cac0bd08393e2980f052d0052dd63cd880bedea877b155dca05605880df",
+     "twin": "https://pain001.com/corpus/market/hk/instant-payment/hk.fps.single.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "it.sepa.sct-single",
+   "country": "IT",
+   "family": "sepa-credit-transfer",
+   "description": "SEPA credit transfer, single supplier payment.",
+   "page": "https://pain001.com/corpus-it-sepa-sct-single/",
+   "confidence": "derived",
+   "rails": [
+    "sepa-sct"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:it.sepa.sct-single",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/it/sepa-credit-transfer/it.sepa.sct-single.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/it/sepa-credit-transfer/it.sepa.sct-single.pain.001.001.03.provenance.yaml",
+     "sha256": "a9f8c98a61ede150b490f3e7bc0ed047c268fdd63512b510a4d00cf73e36d32a",
+     "twin": "https://pain001.com/corpus/market/it/sepa-credit-transfer/it.sepa.sct-single.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/it/sepa-credit-transfer/it.sepa.sct-single.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/it/sepa-credit-transfer/it.sepa.sct-single.pain.001.001.09.provenance.yaml",
+     "sha256": "2d3ad1804a3d24cfe2a7c6d3ffc58c787a644fd3e083ad529ac4cb1aadb2c606",
+     "twin": "https://pain001.com/corpus/market/it/sepa-credit-transfer/it.sepa.sct-single.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "lu.sepa.sct-single",
+   "country": "LU",
+   "family": "sepa-credit-transfer",
+   "description": "SEPA credit transfer, single supplier payment.",
+   "page": "https://pain001.com/corpus-lu-sepa-sct-single/",
+   "confidence": "derived",
+   "rails": [
+    "sepa-sct"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:lu.sepa.sct-single",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/lu/sepa-credit-transfer/lu.sepa.sct-single.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/lu/sepa-credit-transfer/lu.sepa.sct-single.pain.001.001.03.provenance.yaml",
+     "sha256": "b06a6a99358fa71fa2d8940a58b72ccf0b47e56b0fa72b1119cb469d5c0ad4d6",
+     "twin": "https://pain001.com/corpus/market/lu/sepa-credit-transfer/lu.sepa.sct-single.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/lu/sepa-credit-transfer/lu.sepa.sct-single.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/lu/sepa-credit-transfer/lu.sepa.sct-single.pain.001.001.09.provenance.yaml",
+     "sha256": "f1ff789b194726424ab05629ec1052b5cc35a172b042448a332db378b7091197",
+     "twin": "https://pain001.com/corpus/market/lu/sepa-credit-transfer/lu.sepa.sct-single.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "my.duitnow.single",
+   "country": "MY",
+   "family": "instant-payment",
+   "description": "Malaysia DuitNow credit in MYR with a BNM purpose code.",
+   "page": "https://pain001.com/corpus-my-duitnow-single/",
+   "confidence": "assumed",
+   "rails": [
+    "my-duitnow",
+    "purpose-mandate-my"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:my.duitnow.single",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/my/instant-payment/my.duitnow.single.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/my/instant-payment/my.duitnow.single.pain.001.001.03.provenance.yaml",
+     "sha256": "599071afed283ef492c427ab260a90a5413256a030514209784c290b70d4b790",
+     "twin": "https://pain001.com/corpus/market/my/instant-payment/my.duitnow.single.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/my/instant-payment/my.duitnow.single.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/my/instant-payment/my.duitnow.single.pain.001.001.09.provenance.yaml",
+     "sha256": "ae5716463ba5d055e38a783beaba778a01d9583985cb15f94f428fffcfcc6f59",
+     "twin": "https://pain001.com/corpus/market/my/instant-payment/my.duitnow.single.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "nl.sepa.sct-supplier",
+   "country": "NL",
+   "family": "sepa-credit-transfer",
+   "description": "SEPA credit transfer with a Dutch payment reference (CUR).",
+   "page": "https://pain001.com/corpus-nl-sepa-sct-supplier/",
+   "confidence": "derived",
+   "rails": [
+    "sepa-sct"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:nl.sepa.sct-supplier",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/nl/sepa-credit-transfer/nl.sepa.sct-supplier.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/nl/sepa-credit-transfer/nl.sepa.sct-supplier.pain.001.001.03.provenance.yaml",
+     "sha256": "fe586b51fa8e8340e879edb2e033e8fa5e74c04d178dd5f56927b0e90cd73fc8",
+     "twin": "https://pain001.com/corpus/market/nl/sepa-credit-transfer/nl.sepa.sct-supplier.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/nl/sepa-credit-transfer/nl.sepa.sct-supplier.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/nl/sepa-credit-transfer/nl.sepa.sct-supplier.pain.001.001.09.provenance.yaml",
+     "sha256": "270beba3474ee7171e73b4fca50ab9abbcba85e4ec63386bd2d27023914ce145",
+     "twin": "https://pain001.com/corpus/market/nl/sepa-credit-transfer/nl.sepa.sct-supplier.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "nl.sepa.sdd-core",
+   "country": "NL",
+   "family": "sepa-direct-debit",
+   "description": "SEPA Core direct debit, recurring collections under mandates.",
+   "page": "https://pain001.com/corpus-nl-sepa-sdd-core/",
+   "confidence": "derived",
+   "rails": [
+    "sepa-sdd"
+   ],
+   "demo": null,
+   "editions": [
+    {
+     "message_type": "pain.008.001.02",
+     "xml": "https://pain001.com/corpus/market/nl/sepa-direct-debit/nl.sepa.sdd-core.pain.008.001.02.xml",
+     "provenance": "https://pain001.com/corpus/market/nl/sepa-direct-debit/nl.sepa.sdd-core.pain.008.001.02.provenance.yaml",
+     "sha256": "3c9c525e523684a66bca1afeeb9be867f522ac85e1577e4b1fc0ba71132c95cf"
+    },
+    {
+     "message_type": "pain.008.001.08",
+     "xml": "https://pain001.com/corpus/market/nl/sepa-direct-debit/nl.sepa.sdd-core.pain.008.001.08.xml",
+     "provenance": "https://pain001.com/corpus/market/nl/sepa-direct-debit/nl.sepa.sdd-core.pain.008.001.08.provenance.yaml",
+     "sha256": "fecd56a0b103cc04091a3a6dc54520e07d4e063fe5c101c8ced6b72a019bed3b"
+    }
+   ]
+  },
+  {
+   "id": "qa.qatch.single",
+   "country": "QA",
+   "family": "domestic-credit-transfer",
+   "description": "Qatar QATCH credit in QAR with the QCB purpose of payment.",
+   "page": "https://pain001.com/corpus-qa-qatch-single/",
+   "confidence": "assumed",
+   "rails": [
+    "qa-qatch",
+    "purpose-mandate-qa"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:qa.qatch.single",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.03.provenance.yaml",
+     "sha256": "b4d5eb1b88d2c398d9c498696e551a9132dd20a540c27271b52fcd01b12fd5b3",
+     "twin": "https://pain001.com/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.09.provenance.yaml",
+     "sha256": "93e67dee0d29572905d98c0ba7464bd00a8cbdbbf8e74243597986d74ae138ae",
+     "twin": "https://pain001.com/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "se.bankgiro.salary",
+   "country": "SE",
+   "family": "salary",
+   "description": "Swedish salary batch (Bankgirot Löner), SALA, one debit.",
+   "page": "https://pain001.com/corpus-se-bankgiro-salary/",
+   "confidence": "derived",
+   "rails": [
+    "se-bankgiro"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:se.bankgiro.salary",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/se/salary/se.bankgiro.salary.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/se/salary/se.bankgiro.salary.pain.001.001.03.provenance.yaml",
+     "sha256": "cfe98959063a0c4c78ebc618381937b7d8ad18e9849fb8199707647cf41754e1",
+     "twin": "https://pain001.com/corpus/market/se/salary/se.bankgiro.salary.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/se/salary/se.bankgiro.salary.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/se/salary/se.bankgiro.salary.pain.001.001.09.provenance.yaml",
+     "sha256": "0df7dd6601208a0ee92bc44e1cc5eb8281977f127eea942e49c500b528ed0ea7",
+     "twin": "https://pain001.com/corpus/market/se/salary/se.bankgiro.salary.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "se.bankgiro.supplier",
+   "country": "SE",
+   "family": "bankgiro-credit",
+   "description": "Swedish Bankgiro supplier payment with an OCR reference.",
+   "page": "https://pain001.com/corpus-se-bankgiro-supplier/",
+   "confidence": "derived",
+   "rails": [
+    "se-bankgiro"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:se.bankgiro.supplier",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/se/bankgiro-credit/se.bankgiro.supplier.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/se/bankgiro-credit/se.bankgiro.supplier.pain.001.001.03.provenance.yaml",
+     "sha256": "fce8407811f3bd61276f6e1b609d5d2e75e4268503f55bf270304fcd7da98a67",
+     "twin": "https://pain001.com/corpus/market/se/bankgiro-credit/se.bankgiro.supplier.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/se/bankgiro-credit/se.bankgiro.supplier.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/se/bankgiro-credit/se.bankgiro.supplier.pain.001.001.09.provenance.yaml",
+     "sha256": "f84edaa519cda1dc82c789eb0591ce7debf830f2f0e076d76301b25d7e80e856",
+     "twin": "https://pain001.com/corpus/market/se/bankgiro-credit/se.bankgiro.supplier.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "se.plusgiro.supplier",
+   "country": "SE",
+   "family": "plusgiro-credit",
+   "description": "Swedish Plusgiro supplier payment with an invoice message.",
+   "page": "https://pain001.com/corpus-se-plusgiro-supplier/",
+   "confidence": "derived",
+   "rails": [
+    "se-bankgiro"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:se.plusgiro.supplier",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/se/plusgiro-credit/se.plusgiro.supplier.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/se/plusgiro-credit/se.plusgiro.supplier.pain.001.001.03.provenance.yaml",
+     "sha256": "7d54f6f985c30ace794c224b44ad2a8bafdbf0f44eee22e37fa0b1102c904191",
+     "twin": "https://pain001.com/corpus/market/se/plusgiro-credit/se.plusgiro.supplier.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/se/plusgiro-credit/se.plusgiro.supplier.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/se/plusgiro-credit/se.plusgiro.supplier.pain.001.001.09.provenance.yaml",
+     "sha256": "535b0be71df984bd36e61779b82df3450217199088e4f38256086bf6b30a1dc9",
+     "twin": "https://pain001.com/corpus/market/se/plusgiro-credit/se.plusgiro.supplier.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "se.rix.urgent",
+   "country": "SE",
+   "family": "priority-payment",
+   "description": "Swedish domestic high-value SEK payment through RIX, urgent, intra-group.",
+   "page": "https://pain001.com/corpus-se-rix-urgent/",
+   "confidence": "derived",
+   "rails": [],
+   "demo": "https://pain001.com/try/?sample=corpus:se.rix.urgent",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/se/priority-payment/se.rix.urgent.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/se/priority-payment/se.rix.urgent.pain.001.001.03.provenance.yaml",
+     "sha256": "824facd6ed88ebf050cb1bb6a90c1f5a6b2c19ce2bef5bac889ada6c48746a8d",
+     "twin": "https://pain001.com/corpus/market/se/priority-payment/se.rix.urgent.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/se/priority-payment/se.rix.urgent.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/se/priority-payment/se.rix.urgent.pain.001.001.09.provenance.yaml",
+     "sha256": "015e5904b596c597d65f64db3958b5ac40f86e3320418f8c82647ce77ccd253d",
+     "twin": "https://pain001.com/corpus/market/se/priority-payment/se.rix.urgent.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "sg.fast.single",
+   "country": "SG",
+   "family": "instant-payment",
+   "description": "Singapore FAST credit in SGD, bank and branch codes, addresses on both parties.",
+   "page": "https://pain001.com/corpus-sg-fast-single/",
+   "confidence": "assumed",
+   "rails": [
+    "sg-fast"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:sg.fast.single",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/sg/instant-payment/sg.fast.single.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/sg/instant-payment/sg.fast.single.pain.001.001.03.provenance.yaml",
+     "sha256": "f6899d63b804d38d7ae2f6b3e66460429e3fce964d9be3c044dc1c820b37271a",
+     "twin": "https://pain001.com/corpus/market/sg/instant-payment/sg.fast.single.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/sg/instant-payment/sg.fast.single.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/sg/instant-payment/sg.fast.single.pain.001.001.09.provenance.yaml",
+     "sha256": "4445dc1a90b9bd5ab66486c9c0ba72984f9b33cd8b1f21a0fd79677f76c1263d",
+     "twin": "https://pain001.com/corpus/market/sg/instant-payment/sg.fast.single.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "us.ach.ccd-supplier",
+   "country": "US",
+   "family": "ach-credit",
+   "description": "ACH CCD credit to a supplier with an addenda remittance line.",
+   "page": "https://pain001.com/corpus-us-ach-ccd-supplier/",
+   "confidence": "derived",
+   "rails": [
+    "us-ach"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:us.ach.ccd-supplier",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/us/ach-credit/us.ach.ccd-supplier.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/us/ach-credit/us.ach.ccd-supplier.pain.001.001.03.provenance.yaml",
+     "sha256": "5a00bfef95f5577ed2bd8a98be9f68af033ebdd7321c0b5fea822406bfb26ccd",
+     "twin": "https://pain001.com/corpus/market/us/ach-credit/us.ach.ccd-supplier.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/us/ach-credit/us.ach.ccd-supplier.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/us/ach-credit/us.ach.ccd-supplier.pain.001.001.09.provenance.yaml",
+     "sha256": "06481f93cf28c3a76da3482de965f43194bdbc88e955315b02af847ae2163008",
+     "twin": "https://pain001.com/corpus/market/us/ach-credit/us.ach.ccd-supplier.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "us.ach.debit",
+   "country": "US",
+   "family": "ach-debit",
+   "description": "ACH debit collection (CCD) with routing numbers.",
+   "page": "https://pain001.com/corpus-us-ach-debit/",
+   "confidence": "derived",
+   "rails": [
+    "us-ach"
+   ],
+   "demo": null,
+   "editions": [
+    {
+     "message_type": "pain.008.001.02",
+     "xml": "https://pain001.com/corpus/market/us/ach-debit/us.ach.debit.pain.008.001.02.xml",
+     "provenance": "https://pain001.com/corpus/market/us/ach-debit/us.ach.debit.pain.008.001.02.provenance.yaml",
+     "sha256": "79444138c537e84ca9e4822b559ec2631df47a7bc0b520d950d1f19905b14a3b"
+    },
+    {
+     "message_type": "pain.008.001.08",
+     "xml": "https://pain001.com/corpus/market/us/ach-debit/us.ach.debit.pain.008.001.08.xml",
+     "provenance": "https://pain001.com/corpus/market/us/ach-debit/us.ach.debit.pain.008.001.08.provenance.yaml",
+     "sha256": "7bb0988c3c89ee4bccec33d5a626da6ce4cd8249a6df73c6a445dc8337847909"
+    }
+   ]
+  },
+  {
+   "id": "us.ach.ppd-payroll",
+   "country": "US",
+   "family": "ach-credit",
+   "description": "ACH PPD payroll run, two employees.",
+   "page": "https://pain001.com/corpus-us-ach-ppd-payroll/",
+   "confidence": "derived",
+   "rails": [
+    "us-ach"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:us.ach.ppd-payroll",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/us/ach-credit/us.ach.ppd-payroll.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/us/ach-credit/us.ach.ppd-payroll.pain.001.001.03.provenance.yaml",
+     "sha256": "746b9ecd75e3391fe7be5f9b2b88c334cceb741433be3e15c660b009511b8864",
+     "twin": "https://pain001.com/corpus/market/us/ach-credit/us.ach.ppd-payroll.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/us/ach-credit/us.ach.ppd-payroll.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/us/ach-credit/us.ach.ppd-payroll.pain.001.001.09.provenance.yaml",
+     "sha256": "91b2b587fdcd59fb244e61a3abb3408c3131b961aaaa96489152fb32669f03ab",
+     "twin": "https://pain001.com/corpus/market/us/ach-credit/us.ach.ppd-payroll.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "us.check.vendor",
+   "country": "US",
+   "family": "cheque",
+   "description": "Bank-issued cheque to a vendor, mailed to the creditor.",
+   "page": "https://pain001.com/corpus-us-check-vendor/",
+   "confidence": "assumed",
+   "rails": [],
+   "demo": null,
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/us/cheque/us.check.vendor.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/us/cheque/us.check.vendor.pain.001.001.03.provenance.yaml",
+     "sha256": "59b75d6e217c98f874c432262980b21e31b98620b73f09031cb09fa06967574f",
+     "twin": "https://pain001.com/corpus/market/us/cheque/us.check.vendor.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/us/cheque/us.check.vendor.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/us/cheque/us.check.vendor.pain.001.001.09.provenance.yaml",
+     "sha256": "6be2451610dba2497906f238cd7e49107a30fcc6fd8f83ece2e0a635b6861297",
+     "twin": "https://pain001.com/corpus/market/us/cheque/us.check.vendor.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "us.eftps.tax",
+   "country": "US",
+   "family": "ach-credit",
+   "description": "IRS EFTPS federal tax deposit, CCD with the TXP addenda string.",
+   "page": "https://pain001.com/corpus-us-eftps-tax/",
+   "confidence": "derived",
+   "rails": [
+    "us-ach"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:us.eftps.tax",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/us/ach-credit/us.eftps.tax.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/us/ach-credit/us.eftps.tax.pain.001.001.03.provenance.yaml",
+     "sha256": "d52cdbe38e2975f1f3043334d1d68145b73a6e933f8eb440404e51019f87bfbf",
+     "twin": "https://pain001.com/corpus/market/us/ach-credit/us.eftps.tax.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/us/ach-credit/us.eftps.tax.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/us/ach-credit/us.eftps.tax.pain.001.001.09.provenance.yaml",
+     "sha256": "56031a4002e6b68f9efae26fe2978d1cb65482e264aeb7b31c250cec898a6403",
+     "twin": "https://pain001.com/corpus/market/us/ach-credit/us.eftps.tax.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "us.rtp.single",
+   "country": "US",
+   "family": "instant-payment",
+   "description": "RTP real-time payment, single.",
+   "page": "https://pain001.com/corpus-us-rtp-single/",
+   "confidence": "derived",
+   "rails": [
+    "us-rtp"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:us.rtp.single",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/us/instant-payment/us.rtp.single.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/us/instant-payment/us.rtp.single.pain.001.001.03.provenance.yaml",
+     "sha256": "2be3dcfc6d8d6adfc68efcb841d0961abae6bbaf939e82a4c396f8067e403dfc",
+     "twin": "https://pain001.com/corpus/market/us/instant-payment/us.rtp.single.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/us/instant-payment/us.rtp.single.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/us/instant-payment/us.rtp.single.pain.001.001.09.provenance.yaml",
+     "sha256": "69ee518dc9865feb893526b8dbe4cd56841b97f562f2e1c971e5c7152f70d33d",
+     "twin": "https://pain001.com/corpus/market/us/instant-payment/us.rtp.single.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  },
+  {
+   "id": "us.wire.domestic",
+   "country": "US",
+   "family": "priority-payment",
+   "description": "Fedwire domestic funds transfer, urgent.",
+   "page": "https://pain001.com/corpus-us-wire-domestic/",
+   "confidence": "derived",
+   "rails": [
+    "us-wire"
+   ],
+   "demo": "https://pain001.com/try/?sample=corpus:us.wire.domestic",
+   "editions": [
+    {
+     "message_type": "pain.001.001.03",
+     "xml": "https://pain001.com/corpus/market/us/priority-payment/us.wire.domestic.pain.001.001.03.xml",
+     "provenance": "https://pain001.com/corpus/market/us/priority-payment/us.wire.domestic.pain.001.001.03.provenance.yaml",
+     "sha256": "295fde89312098ff6c54099da1fd91b74e2d0adff6e1298b82c70b8c8cc644b5",
+     "twin": "https://pain001.com/corpus/market/us/priority-payment/us.wire.domestic.pain.001.001.03.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
+    },
+    {
+     "message_type": "pain.001.001.09",
+     "xml": "https://pain001.com/corpus/market/us/priority-payment/us.wire.domestic.pain.001.001.09.xml",
+     "provenance": "https://pain001.com/corpus/market/us/priority-payment/us.wire.domestic.pain.001.001.09.provenance.yaml",
+     "sha256": "453f29800096a3aaba906347941b6717cad9f3f9bcd449127ee6f0ef007a663e",
+     "twin": "https://pain001.com/corpus/market/us/priority-payment/us.wire.domestic.pain.001.001.09.iso.json",
+     "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
+    }
+   ]
+  }
+ ]
+}

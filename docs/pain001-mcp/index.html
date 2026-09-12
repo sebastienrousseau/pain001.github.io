@@ -182,7 +182,7 @@
           <p class="eyebrow">AI agents</p>
           <h1 class="page-title">pain001-mcp: The MCP Server for ISO 20022 Payments</h1>
           <p class="deck">Seventeen read-only tools that let AI agents validate, migrate, convert, and generate ISO 20022 payment files — locally, over stdio.</p>
-          <div class="article-meta"><span>3 min read</span>
+          <div class="article-meta"><span>4 min read</span>
             <span>Last reviewed <time datetime="2026-07-26">26 July 2026</time></span>
           </div>
         </div>
@@ -302,6 +302,24 @@
 }</code></pre>
 <p><strong>Claude Code:</strong></p>
 <pre><code class="language-bash">claude mcp add pain001 -- pain001-mcp</code></pre>
+<p><strong>Cursor</strong> (<code>~/.cursor/mcp.json</code>, or <code>.cursor/mcp.json</code> in a project):</p>
+<pre><code class="language-json">{
+  "mcpServers": {
+    "pain001": {
+      "command": "pain001-mcp"
+    }
+  }
+}</code></pre>
+<p><strong>VS Code</strong> (<code>.vscode/mcp.json</code> in a workspace):</p>
+<pre><code class="language-json">{
+  "servers": {
+    "pain001": {
+      "type": "stdio",
+      "command": "pain001-mcp"
+    }
+  }
+}</code></pre>
+<p>Every block starts the same stdio server; only the file that carries it differs. The example corpus is reachable through <code>list_corpus_files</code>, <code>get_corpus_file</code> and <code>get_corpus_provenance</code>, and the same files are published for direct fetch at <a href="/corpus/index.json">/corpus/index.json</a> with the JSON Schema per edition under <code>/corpus/schemas/</code>.</p>
 <p>A Docker image is published as <code>ghcr.io/sebastienrousseau/pain001-mcp</code> with build provenance attestation, and the server is listed in the MCP registry as <code>io.github.sebastienrousseau/pain001-mcp</code>.</p>
 <hr />
 <h2 id="03-design-decisions-that-matter-in-a-payments-context">03. Design decisions that matter in a payments context<a class="heading-anchor" href="#03-design-decisions-that-matter-in-a-payments-context" aria-label="Link to section: 03. Design decisions that matter in a payments context">#</a></h2>
