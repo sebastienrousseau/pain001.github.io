@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta itemprop="datePublished" content="Sun, 13 Sep 2026 08:00:00 +0000" id="date" />
+    <meta itemprop="dateModified" content="Sun, 13 Sep 2026 08:00:00 +0000" id="last-modified" />
+    <title>ch.sps.qr-bill — ISO-20022-pain.001-Beispiel: Schweiz (domestic-credit-transfer)</title>
+
+    <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
+<meta name="description" content="Swiss domestic credit transfer settling a QR-bill (QRR reference). Eine validierte pain.001-Beispieldatei (Schweiz, Schiene domestic-credit-transfer), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar.">
+<meta name="keywords" content="pain.001 Beispiel Schweiz, domestic-credit-transfer Beispiel-XML, ISO 20022 Schweiz Zahlungsdatei, ch.sps.qr-bill, pain001 Korpus">
+<meta property="og:image" content="https://pain001.com/og/pain001-card.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Swiss domestic credit transfer settling a QR-bill (QRR reference). Eine validierte pain.001-Beispieldatei (Schweiz, Schiene domestic-credit-transfer), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar." />
+    <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ch.sps.qr-bill — ISO-20022-pain.001-Beispiel: Schweiz (domestic-credit-transfer)">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self' https://metrics.pain001.com; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    
+    
+
+    <link rel="alternate" href="https://pain001.com/de/corpus-ch-sps-qr-bill/" hreflang="de" />
+    
+    <link rel="icon" type="image/svg+xml" href="/img/pain001.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="/img/pain001.svg" />
+    <link rel="preload" href="/fonts/source-serif-4-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/_csp/64d7bf8a80a09b01.css" integrity="sha384-hMew7+Ejvfkm0TCwqZIBOTSB3tnhU/x3ZFhFj+KoWxHPTbJAh4TLa7Vp19Rxr7iw" crossorigin="anonymous">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
+  <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="ch.sps.qr-bill — ISO-20022-pain.001-Beispiel: Schweiz (domestic-credit-transfer)">
+<meta property="og:description" content="Swiss domestic credit transfer settling a QR-bill (QRR reference). Eine validierte pain.001-Beispieldatei (Schweiz, Schiene domestic-credit-transfer), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pain001.com/de/corpus-ch-sps-qr-bill/">
+<meta property="og:locale" content="de">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ch.sps.qr-bill — ISO-20022-pain.001-Beispiel: Schweiz (domestic-credit-transfer)">
+<meta name="twitter:description" content="Swiss domestic credit transfer settling a QR-bill (QRR reference). Eine validierte pain.001-Beispieldatei (Schweiz, Schiene domestic-credit-transfer), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar.">
+<meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg">
+<link rel="canonical" href="https://pain001.com/de/corpus-ch-sps-qr-bill/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
+<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"><link rel="alternate" hreflang="en" href="https://pain001.com/corpus-ch-sps-qr-bill/" /><link rel="alternate" hreflang="x-default" href="https://pain001.com/corpus-ch-sps-qr-bill/" /><link rel="alternate" hreflang="fr" href="https://pain001.com/fr/corpus-ch-sps-qr-bill/" /><link rel="alternate" hreflang="es" href="https://pain001.com/es/corpus-ch-sps-qr-bill/" /><link rel="alternate" hreflang="it" href="https://pain001.com/it/corpus-ch-sps-qr-bill/" /><link rel="alternate" hreflang="nl" href="https://pain001.com/nl/corpus-ch-sps-qr-bill/" /><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "ch.sps.qr-bill: ISO 20022 pain.001 example (CH)", "description": "Swiss domestic credit transfer settling a QR-bill (QRR reference).", "url": "https://pain001.com/de/corpus-ch-sps-qr-bill/", "identifier": "ch.sps.qr-bill", "inLanguage": "de", "version": "0.0.70", "dateModified": "2026-09-13", "license": "https://spdx.org/licenses/Apache-2.0.html", "isAccessibleForFree": true, "keywords": ["ISO 20022", "pain.001", "CH", "domestic-credit-transfer", "ch-domestic"], "creator": {"@type": "Organization", "name": "Pain001", "url": "https://pain001.com/"}, "isPartOf": {"@type": "DataCatalog", "name": "pain001 example corpus", "url": "https://pain001.com/example-corpus/"}, "distribution": [{"@type": "DataDownload", "encodingFormat": "application/xml", "name": "pain.001.001.03 XML", "contentUrl": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.03.xml"}, {"@type": "DataDownload", "encodingFormat": "application/json", "name": "pain.001.001.03 ISO 20022 JSON twin", "contentUrl": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.03.iso.json"}, {"@type": "DataDownload", "encodingFormat": "application/yaml", "name": "pain.001.001.03 provenance record", "contentUrl": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.03.provenance.yaml"}, {"@type": "DataDownload", "encodingFormat": "application/xml", "name": "pain.001.001.09 XML", "contentUrl": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.09.xml"}, {"@type": "DataDownload", "encodingFormat": "application/json", "name": "pain.001.001.09 ISO 20022 JSON twin", "contentUrl": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.09.iso.json"}, {"@type": "DataDownload", "encodingFormat": "application/yaml", "name": "pain.001.001.09 provenance record", "contentUrl": "https://pain001.com/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.09.provenance.yaml"}]}</script>
+</head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="ap-nav">
+      <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Navigation umschalten" />
+      <div class="wrap ap-nav-wrap">
+        <a class="ap-brand" href="/" aria-label="Pain001 home">
+          <img src="/img/pain001.svg" alt="Pain001" width="26" height="26" />
+          <span>Pain001</span>
+        </a>
+        <nav aria-label="Primary navigation" id="ap-primary-nav">
+          <ul class="ap-menu">
+            <li class="has-sub"><a href="/de/why/">Warum Pain001</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-why" aria-label="Untermenü „Warum Pain001“ ein-/ausblenden"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-why" class="ap-sub">
+                <li><a href="/de/solutions/">Für wen es gedacht ist</a></li>
+                <li><a href="/de/executive-brief/">Kurzbriefing für Entscheider</a></li>
+                <li><a href="/competitors-comparison/" hreflang="en">Vergleich mit kommerziellen Tools (EN)</a></li>
+              </ul>
+            </li>
+            <li><a href="/de/try/">Live ansehen</a></li>
+            <li class="has-sub"><a href="/de/documentation/">Doku</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="Untermenü „Dokumentation“ ein-/ausblenden"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-docs" class="ap-sub">
+                <li><a href="/de/installation/">Installation &amp; Docker</a></li>
+                <li><a href="/message-specs/" hreflang="en">Message specifications (EN)</a></li>
+                <li><a href="/example-corpus/" hreflang="en">Example corpus (EN)</a></li>
+                <li><a href="/de/glossary/">Glossar</a></li>
+                <li><a href="/de/faqs/">FAQ</a></li>
+                <li><a href="/pain002-reason-codes/" hreflang="en">pain.002-Reason-Codes (EN)</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/#suite-heading">Suite</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-suite" aria-label="Untermenü „Suite“ ein-/ausblenden"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-suite" class="ap-sub">
+                <li><a href="/pain001-mcp/" hreflang="en">KI-Agenten-Tools (MCP) (EN)</a></li>
+                <li><a href="/pain001-lsp/" hreflang="en">Editor-Integration (LSP) (EN)</a></li>
+                <li><a href="/pain001-loader-mt101/" hreflang="en">MT101-Loader (EN)</a></li>
+                <li><a href="/pain001-loader-xlsx/" hreflang="en">Excel-Loader (EN)</a></li>
+                <li><a href="/architecture-and-patents/" hreflang="en">Architektur &amp; Sicherheit (EN)</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/2026-iso20022-migration-trends/">Forschung</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-research" aria-label="Untermenü „Forschung“ ein-/ausblenden"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-research" class="ap-sub">
+                <li><a href="/2026-iso20022-migration-trends/" hreflang="en">Briefing 2026 (EN)</a></li>
+                <li><a href="/iso20022-roadmap/" hreflang="en">ISO-20022-Roadmap (EN)</a></li>
+                <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/" hreflang="en">Cross-Border-Leitfaden (EN)</a></li>
+                <li><a href="/languages/" hreflang="en">In 34 Sprachen (EN)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="ap-nav-right">
+          <button type="button" class="theme-toggle" aria-label="Zum dunklen Design wechseln" data-label-dark="Zum dunklen Design wechseln" data-label-light="Zum hellen Design wechseln" aria-pressed="false" title="Zum dunklen Design wechseln">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+          <button type="button" class="ap-search-btn" aria-label="Suchen (Cmd/Ctrl + K)" title="Suchen (⌘K)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <kbd class="ap-search-kbd" aria-hidden="true">⌘K</kbd>
+          </button>
+          <div class="ap-lang" role="group" aria-label="Language">
+            <button type="button" class="ap-lang-toggle" aria-label="Sprache ändern" aria-expanded="false" aria-haspopup="menu" title="Sprache ändern">
+              <span class="ap-lang-globe" aria-hidden="true">🌐</span>
+              <span class="ap-lang-current">DE</span>
+            </button>
+            <div class="ap-lang-menu" role="menu" hidden>
+              <div class="ap-lang-menu-grid">
+                <a class="ap-lang-item" href="/corpus-ch-sps-qr-bill/" hreflang="en" lang="en" role="menuitem"><span aria-hidden="true">🇬🇧</span> English</a>
+                <a class="ap-lang-item" href="/fr/corpus-ch-sps-qr-bill/" hreflang="fr" lang="fr" role="menuitem"><span aria-hidden="true">🇫🇷</span> Français</a>
+                <a class="ap-lang-item" href="/de/corpus-ch-sps-qr-bill/" hreflang="de" lang="de" role="menuitem"><span aria-hidden="true">🇩🇪</span> Deutsch</a>
+                <a class="ap-lang-item" href="/es/corpus-ch-sps-qr-bill/" hreflang="es" lang="es" role="menuitem"><span aria-hidden="true">🇪🇸</span> Español</a>
+                <a class="ap-lang-item" href="/it/corpus-ch-sps-qr-bill/" hreflang="it" lang="it" role="menuitem"><span aria-hidden="true">🇮🇹</span> Italiano</a>
+                <a class="ap-lang-item" href="/pt-br/" hreflang="pt-BR" lang="pt-BR" role="menuitem"><span aria-hidden="true">🇧🇷</span> Português</a>
+                <a class="ap-lang-item" href="/nl/corpus-ch-sps-qr-bill/" hreflang="nl" lang="nl" role="menuitem"><span aria-hidden="true">🇳🇱</span> Nederlands</a>
+                <a class="ap-lang-item" href="/pl/" hreflang="pl" lang="pl" role="menuitem"><span aria-hidden="true">🇵🇱</span> Polski</a>
+                <a class="ap-lang-item" href="/sv/" hreflang="sv" lang="sv" role="menuitem"><span aria-hidden="true">🇸🇪</span> Svenska</a>
+                <a class="ap-lang-item" href="/cs/" hreflang="cs" lang="cs" role="menuitem"><span aria-hidden="true">🇨🇿</span> Čeština</a>
+                <a class="ap-lang-item" href="/ro/" hreflang="ro" lang="ro" role="menuitem"><span aria-hidden="true">🇷🇴</span> Română</a>
+                <a class="ap-lang-item" href="/hu/" hreflang="hu" lang="hu" role="menuitem"><span aria-hidden="true">🇭🇺</span> Magyar</a>
+                <a class="ap-lang-item" href="/el/" hreflang="el" lang="el" role="menuitem"><span aria-hidden="true">🇬🇷</span> Ελληνικά</a>
+                <a class="ap-lang-item" href="/tr/" hreflang="tr" lang="tr" role="menuitem"><span aria-hidden="true">🇹🇷</span> Türkçe</a>
+                <a class="ap-lang-item" href="/ru/" hreflang="ru" lang="ru" role="menuitem"><span aria-hidden="true">🇷🇺</span> Русский</a>
+                <a class="ap-lang-item" href="/uk/" hreflang="uk" lang="uk" role="menuitem"><span aria-hidden="true">🇺🇦</span> Українська</a>
+                <a class="ap-lang-item" href="/ar/" hreflang="ar" lang="ar" role="menuitem"><span aria-hidden="true">🇸🇦</span> العربية</a>
+                <a class="ap-lang-item" href="/he/" hreflang="he" lang="he" role="menuitem"><span aria-hidden="true">🇮🇱</span> עברית</a>
+                <a class="ap-lang-item" href="/fa/" hreflang="fa" lang="fa" role="menuitem"><span aria-hidden="true">🇮🇷</span> فارسی</a>
+                <a class="ap-lang-item" href="/hi/" hreflang="hi" lang="hi" role="menuitem"><span aria-hidden="true">🇮🇳</span> हिन्दी</a>
+                <a class="ap-lang-item" href="/bn/" hreflang="bn" lang="bn" role="menuitem"><span aria-hidden="true">🇧🇩</span> বাংলা</a>
+                <a class="ap-lang-item" href="/ta/" hreflang="ta" lang="ta" role="menuitem"><span aria-hidden="true">🇮🇳</span> தமிழ்</a>
+                <a class="ap-lang-item" href="/te/" hreflang="te" lang="te" role="menuitem"><span aria-hidden="true">🇮🇳</span> తెలుగు</a>
+                <a class="ap-lang-item" href="/mr/" hreflang="mr" lang="mr" role="menuitem"><span aria-hidden="true">🇮🇳</span> मराठी</a>
+                <a class="ap-lang-item" href="/th/" hreflang="th" lang="th" role="menuitem"><span aria-hidden="true">🇹🇭</span> ไทย</a>
+                <a class="ap-lang-item" href="/vi/" hreflang="vi" lang="vi" role="menuitem"><span aria-hidden="true">🇻🇳</span> Tiếng Việt</a>
+                <a class="ap-lang-item" href="/id/" hreflang="id" lang="id" role="menuitem"><span aria-hidden="true">🇮🇩</span> Indonesia</a>
+                <a class="ap-lang-item" href="/ms/" hreflang="ms" lang="ms" role="menuitem"><span aria-hidden="true">🇲🇾</span> Melayu</a>
+                <a class="ap-lang-item" href="/fil/" hreflang="fil" lang="fil" role="menuitem"><span aria-hidden="true">🇵🇭</span> Filipino</a>
+                <a class="ap-lang-item" href="/ja/" hreflang="ja" lang="ja" role="menuitem"><span aria-hidden="true">🇯🇵</span> 日本語</a>
+                <a class="ap-lang-item" href="/ko/" hreflang="ko" lang="ko" role="menuitem"><span aria-hidden="true">🇰🇷</span> 한국어</a>
+                <a class="ap-lang-item" href="/zh-hans/" hreflang="zh-Hans" lang="zh-Hans" role="menuitem"><span aria-hidden="true">🇨🇳</span> 简体中文</a>
+                <a class="ap-lang-item" href="/zh-hant/" hreflang="zh-Hant" lang="zh-Hant" role="menuitem"><span aria-hidden="true">🇹🇼</span> 繁體中文</a>
+                <a class="ap-lang-item" href="/ha/" hreflang="ha" lang="ha" role="menuitem"><span aria-hidden="true">🇳🇬</span> Hausa</a>
+                <a class="ap-lang-item" href="/yo/" hreflang="yo" lang="yo" role="menuitem"><span aria-hidden="true">🇳🇬</span> Yorùbá</a>
+              </div>
+            </div>
+          </div>
+          <a class="ap-cta-mini" href="/de/try/">Demo testen&nbsp;&rsaquo;</a>
+          <label class="ap-burger" for="ap-menu-toggle" aria-hidden="true"><span class="ap-burger-icon">☰</span></label>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <header class="page-header">
+        <div class="wrap">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/">Startseite</a></li>
+              <li aria-current="page">ch.sps.qr-bill — ISO-20022-pain.001-Beispiel: Schweiz (domestic-credit-transfer)</li>
+            </ol>
+          </nav>
+          <p class="eyebrow">Beispielkorpus</p>
+          <h1 class="page-title">ch.sps.qr-bill — ISO-20022-pain.001-Beispiel: Schweiz (domestic-credit-transfer)</h1>
+          <p class="deck">Swiss domestic credit transfer settling a QR-bill (QRR reference).</p>
+          <div class="article-meta"><span>1 Min. Lesezeit</span>
+            <span>Zuletzt geprüft <time datetime="2026-07-26">2026-07-26</time></span>
+          </div>
+        </div>
+      </header>
+
+      <div class="wrap content-shell">
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>Inhalt</h2><ol><li><a href="#dateien">Dateien</a></li><li><a href="#im-browser-ausf-hren">Im Browser ausführen</a></li><li><a href="#wie-die-bibliothek-die-datei-gepr-ft-hat">Wie die Bibliothek die Datei geprüft hat</a></li><li><a href="#woher-der-inhalt-stammt">Woher der Inhalt stammt</a></li></ol></nav>
+          <div lang="de"><p>Szenariobeschreibung, zitiert aus dem Provenienzdatensatz (englischer Originaltext):</p>
+<blockquote>
+<p>Swiss domestic credit transfer settling a QR-bill (QRR reference).</p>
+</blockquote>
+<p>Eine Zahlungsinitiierungsdatei (<strong>Schweiz</strong>, Schiene <strong>domestic-credit-transfer</strong>), ausgeliefert in <code>pain.001.001.03</code>, <code>pain.001.001.09</code>, erzeugt und geprüft von pain001 0.0.70. Es handelt sich um ein synthetisches Beispiel aus den öffentlichen Regelwerken der Zahlungssysteme: keine reale Partei, kein reales Konto und keine Bankrichtlinie dahinter.</p>
+<h2 id="dateien">Dateien<a class="heading-anchor" href="#dateien" aria-label="Link to section: Dateien">#</a></h2>
+<div class="table-responsive"><table class="table">
+<thead>
+<tr>
+<th>Edition</th>
+<th>Zahlungsdatei</th>
+<th>ISO-20022-JSON-Zwilling</th>
+<th>Provenienzdatensatz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Edition" class="text-left"><code>pain.001.001.03</code></td>
+<td data-label="Zahlungsdatei" class="text-left"><a href="/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.03.xml">ch.sps.qr-bill.pain.001.001.03.xml</a></td>
+<td data-label="ISO-20022-JSON-Zwilling" class="text-left"><a href="/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.03.iso.json">ch.sps.qr-bill.pain.001.001.03.iso.json</a></td>
+<td data-label="Provenienzdatensatz" class="text-left"><a href="/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.03.provenance.yaml">ch.sps.qr-bill.pain.001.001.03.provenance.yaml</a></td>
+</tr>
+<tr>
+<td data-label="Edition" class="text-left"><code>pain.001.001.09</code></td>
+<td data-label="Zahlungsdatei" class="text-left"><a href="/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.09.xml">ch.sps.qr-bill.pain.001.001.09.xml</a></td>
+<td data-label="ISO-20022-JSON-Zwilling" class="text-left"><a href="/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.09.iso.json">ch.sps.qr-bill.pain.001.001.09.iso.json</a></td>
+<td data-label="Provenienzdatensatz" class="text-left"><a href="/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.09.provenance.yaml">ch.sps.qr-bill.pain.001.001.09.provenance.yaml</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Der Zwilling ist dieselbe Zahlung in der JSON-Konvention der ISO-20022-Registrierungsstelle, in beide Richtungen verlustfrei; sein JSON-Schema (2020-12) wird je Edition veröffentlicht: <a href="/corpus/schemas/pain.001.001.03.schema.json">pain.001.001.03</a>, <a href="/corpus/schemas/pain.001.001.09.schema.json">pain.001.001.09</a>. Ein Agent kann einen Zwilling erzeugen, der gegen das Schema validiert, und ihn der Bibliothek zur XML-Erzeugung übergeben.</p>
+<h2 id="im-browser-ausf-hren">Im Browser ausführen<a class="heading-anchor" href="#im-browser-ausf-hren" aria-label="Link to section: Im Browser ausführen">#</a></h2>
+<p><a href="/de/try/?sample=corpus:ch.sps.qr-bill">Dieses Szenario in der Demo öffnen</a>: Die pain001-Bibliothek wird in einer Python-Laufzeit in Ihrem Browser geladen, baut die Datei aus den unten stehenden Datensätzen (1) neu auf, prüft sie gegen das Regelwerk <code>ch-domestic</code> und die offizielle XSD und zeigt den JSON-Zwilling. Nichts verlässt Ihren Rechner.</p>
+<p>Die flachen Datensätze, aus denen die Bibliothek die Datei neu aufbaut (die Spaltennamen der CSV-Pipeline):</p>
+<pre><code class="language-csv">id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,creditor_account_IBAN,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,initiator_id,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,debtor_id,creditor_postal_code,creditor_town_name,creditor_country_code,creditor_address_line,creditor_reference,creditor_reference_type,initiator_id_scheme_proprietary,debtor_id_scheme_proprietary,additional_remittance_information,payment_currency
+AFM-20260921-01,2026-09-21T08:30:00,1,3488.55,Alpina Feinmechanik AG,AFM-D-260921-01,TRF,false,NURG,2026-09-22,Alpina Feinmechanik AG,CH7827307265471511330,WEUVCH20,SLEV,AFM-2026-0921-001,3488.55,CHF,TRIDCHS0,Werkzeugbau Muster GmbH,CH7430000001234567891,8952,Schlieren,CH,Industriestrasse 14,CHE-123.456.789,8952,Schlieren,CH,Industriestrasse 14,CHE-123.456.789,6003,Luzern,CH,Bahnhofstrasse 7,210000000003139471430009017,QRR,UID,UID,Rechnung 2026-1187,CHF</code></pre>
+<h2 id="wie-die-bibliothek-die-datei-gepr-ft-hat">Wie die Bibliothek die Datei geprüft hat<a class="heading-anchor" href="#wie-die-bibliothek-die-datei-gepr-ft-hat" aria-label="Link to section: Wie die Bibliothek die Datei geprüft hat">#</a></h2>
+<ul>
+<li><strong>Offizielle XSD</strong>: bestanden.</li>
+<li><strong>ISO-Nachrichtendefinitionsregeln</strong>: bestanden.</li>
+<li><strong>Schienenprofil <code>ch-domestic</code></strong>: bestanden.</li>
+<li><strong>Schienenprofil <code>anti-duplicate</code></strong>: bestanden.</li>
+</ul>
+<p>Konfidenz <strong>abgeleitet</strong>: aus dem öffentlichen Regelwerk oder Implementierungsleitfaden aufgebaut; kein veröffentlichtes Muster stand zum Vergleich zur Verfügung.</p>
+<h2 id="woher-der-inhalt-stammt">Woher der Inhalt stammt<a class="heading-anchor" href="#woher-der-inhalt-stammt" aria-label="Link to section: Woher der Inhalt stammt">#</a></h2>
+<ul>
+<li>SIX, Swiss Payment Standards, Implementation Guidelines for Customer-to-Bank Messages, Credit Transfer (pain.001), SPS 2025 v2.2, payment type D (gelesen am 2026-09-10)</li>
+<li>SIX, Swiss Implementation Guidelines QR-bill v2.3: QR reference and QR-IBAN (gelesen am 2026-09-10)</li>
+</ul>
+<p>Der SHA-256-Wert jeder Datei steht in ihrem Provenienzdatensatz. Die eigene Nutzungsrichtlinie Ihrer Bank ist hier nicht abgebildet: <a href="/example-corpus/#your-bank-s-guideline">Wenden Sie sie privat an</a> mit dem Overlay-Werkzeug der Bibliothek.</p>
+<p><a href="/example-corpus/">Zurück zum Beispielkorpus (EN)</a> · <a href="/example-corpus/#payment-files-by-country">Alle Zahlungsdateien nach Land (EN)</a></p>
+</div>
+        </article>
+      </div>
+    </main>
+
+    <button class="totop" id="toTop" type="button" hidden aria-label="Back to top">&uarr;</button>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-brand">Pain001</p>
+            <p class="footer-tagline">Open-Source-Zahlungsinitiierung nach ISO 20022. Validierte Dateien, lokale Verarbeitung, kein Lock-in.</p>
+          </div>
+          <div>
+            <h2 class="footer-heading">Dokumentation</h2>
+            <ul class="footer-links">
+              <li><a href="/de/try/">Im Browser ausprobieren</a></li>
+              <li><a href="/de/documentation/">Technische Referenz</a></li>
+              <li><a href="/de/installation/">Installation &amp; Docker</a></li>
+              <li><a href="/payments/">Zahlungspipelines</a></li>
+              <li><a href="/de/glossary/">Glossar</a></li>
+              <li><a href="/de/faqs/">FAQ</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Ökosystem</h2>
+            <ul class="footer-links">
+              <li><a href="/pain001-mcp/">pain001-mcp · KI-Agenten</a></li>
+              <li><a href="/pain001-lsp/">pain001-lsp · Editoren</a></li>
+              <li><a href="/pain001-loader-mt101/">MT101-Loader</a></li>
+              <li><a href="/pain001-loader-xlsx/">Excel-Loader</a></li>
+              <li><a href="https://github.com/sebastienrousseau/pain001" rel="external">GitHub</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Forschung & Vertrauen</h2>
+            <ul class="footer-links">
+              <li><a href="/de/why/">Warum Pain001</a></li>
+              <li><a href="/de/executive-brief/">Kurzbriefing für Entscheider</a></li>
+              <li><a href="/iso20022-roadmap/">ISO-20022-Roadmap</a></li>
+              <li><a href="/2026-iso20022-migration-trends/">Briefing 2026</a></li>
+              <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/">Cross-Border-Leitfaden</a></li>
+              <li><a href="/competitors-comparison/">Vergleich mit kommerziellen Tools</a></li>
+              <li><a href="/architecture-and-patents/">Architektur &amp; Patente</a></li>
+              <li><a href="/trust/">Trust Center</a></li>
+              <li><a href="/enterprise/">Enterprise</a></li>
+              <li><a href="/compatibility/">Kompatibilitätsmatrix</a></li>
+              <li><a href="/security.txt">security.txt</a></li>
+              <li><a href="/sbom.cdx.json">SBOM</a> · <a href="/llms.txt">llms.txt</a> · <a href="/rss.xml">RSS-Feed</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; 2023&ndash;2026 <a href="https://sebastienrousseau.com/" rel="external author">Sebastien Rousseau</a>. Core dual-licensed Apache-2.0 / MIT; companion packages Apache-2.0.</p>
+          <ul aria-label="This overview in other languages">
+            <li><a href="/languages/">Diese Übersicht in 34 Sprachen</a></li>
+          </ul>
+          <ul>
+            <li><a href="/accessibility/">Barrierefreiheit</a></li>
+            <li><a href="/privacy/">Datenschutz</a></li>
+            <li><a href="/terms/">Bedingungen</a></li>
+            <li><a href="/contact/">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+    <p class="suite-version">Generated against pain001 0.0.70</p></footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://pain001.com/de/corpus-ch-sps-qr-bill/",
+          "url": "https://pain001.com/de/corpus-ch-sps-qr-bill/",
+          "name": "ch.sps.qr-bill — ISO-20022-pain.001-Beispiel: Schweiz (domestic-credit-transfer)",
+          "description": "Swiss domestic credit transfer settling a QR-bill (QRR reference). Eine validierte pain.001-Beispieldatei (Schweiz, Schiene domestic-credit-transfer), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar.",
+          "inLanguage": "de",
+          "dateModified": "2026-07-26",
+          "isPartOf": { "@id": "https://pain001.com/#website" },
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://pain001.com/" },
+            { "@type": "ListItem", "position": 2, "name": "ch.sps.qr-bill — ISO-20022-pain.001-Beispiel: Schweiz (domestic-credit-transfer)" }
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pain001.com/#organization",
+          "name": "Pain001",
+          "url": "https://pain001.com/",
+          "logo": "/img/pain001.svg",
+          "founder": { "@type": "Person", "name": "Sebastien Rousseau", "url": "https://sebastienrousseau.com" },
+          "sameAs": [
+            "https://github.com/sebastienrousseau/pain001",
+            "https://pypi.org/project/pain001/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pain001.com/#website",
+          "url": "https://pain001.com/",
+          "name": "Pain001",
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        }
+      ]
+    }
+    </script>
+
+    <script src="/_csp/197fcfccbee69bda.js" integrity="sha384-geygAAYoalTqpA6bIgsGUMRQupyTiF/rCnvMiGE5+G0s0ZOYAhHnkhzyMXN9yNxa" crossorigin="anonymous"></script>
+    <script type="module" src="/js/metrics.js" data-enabled="false" data-host-url="https://metrics.pain001.com"></script>
+  
+<!-- SSG Search Widget -->
+<div id="ssg-search-widget">
+
+<!-- Search trigger button -->
+<button id="ssg-search-btn" type="button" aria-label="Search">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<span>Search</span>
+<kbd>K</kbd>
+</button>
+<!-- Search modal -->
+<div id="ssg-search-overlay" role="dialog" aria-label="Search">
+<div id="ssg-search-box">
+<div id="ssg-search-header">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<input id="ssg-search-input" type="search" placeholder="Search documentation..." autocomplete="off" aria-label="Search"/>
+</div>
+<div id="ssg-search-results" aria-live="polite"></div>
+<div id="ssg-sr-status" role="status" aria-live="polite" aria-atomic="true"></div>
+<div class="ssg-search-footer"><span><kbd>Esc</kbd> close</span><span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span><span><kbd>Enter</kbd> open</span></div>
+</div>
+</div>
+<script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "background_color": "#ffffff",
+  "description": "Swiss domestic credit transfer settling a QR-bill (QRR reference). Un campione pain.001 validato (Svizzera, circuito dom",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any maskable",
+      "sizes": "512x512",
+      "src": "https://pain001.com/img/pain001.svg",
+      "type": "image/svg+xml"
+    }
+  ],
+  "name": "Pain001",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "pain001",
+  "start_url": ".",
+  "theme_color": null
+}

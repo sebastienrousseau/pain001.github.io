@@ -1,0 +1,19 @@
+{
+  "background_color": "#ffffff",
+  "description": "IRS EFTPS federal tax deposit, CCD with the TXP addenda string. Eine validierte pain.001-Beispieldatei (Vereinigte Staat",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any maskable",
+      "sizes": "512x512",
+      "src": "https://pain001.com/img/pain001.svg",
+      "type": "image/svg+xml"
+    }
+  ],
+  "name": "Pain001",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "pain001",
+  "start_url": ".",
+  "theme_color": null
+}

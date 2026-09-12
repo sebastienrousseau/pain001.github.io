@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://pain001.com/it/corpus-ch-international-usd/sitemap.xml

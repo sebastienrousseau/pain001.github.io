@@ -1106,6 +1106,105 @@ def regen_sitemap(site: Path) -> None:
     print(f"[postbuild] sitemap.xml regenerated with {len(urls)} URLs")
 
 
+# Corpus scenario pages exist in English and in the five locales whose
+# market packs the corpus covers (scripts/corpus_l10n.py). The generator
+# writes them as /<loc>-corpus-<id>/ posts (ssg names output after the
+# post file); this pass moves them under /<loc>/ and localises the chrome
+# the same way the /try/ and journey pages are. The hreflang cluster is
+# the six-language one, never the 35-locale site cluster: Google ignores
+# a cluster whose members do not all exist.
+CORPUS_LOCALES = ("de", "fr", "es", "it", "nl")
+_EN_DATE_RE = re.compile(
+    r">(\d{1,2}) (January|February|March|April|May|June|July|August|"
+    r"September|October|November|December) (\d{4})<")
+_MONTHS = ("January", "February", "March", "April", "May", "June", "July",
+           "August", "September", "October", "November", "December")
+
+
+def corpus_hreflang_cluster(slug: str, self_lang: str) -> str:
+    links = ['<link rel="alternate" hreflang="en" href="%s/%s/" />' % (BASE_URL, slug),
+             '<link rel="alternate" hreflang="x-default" href="%s/%s/" />' % (BASE_URL, slug)]
+    for loc in CORPUS_LOCALES:
+        links.append('<link rel="alternate" hreflang="%s" href="%s/%s/%s/" />'
+                     % (LOCALES[loc], BASE_URL, loc, slug))
+    return "".join(l for l in links if 'hreflang="%s"' % self_lang not in l)
+
+
+def retarget_lang_menu_corpus(html: str, slug: str) -> str:
+    """The globe menu switches between this scenario's six variants; the
+    other locales keep pointing at their home page, which is what exists."""
+    html = html.replace('class="ap-lang-item" href="/" hreflang="en"',
+                        'class="ap-lang-item" href="/%s/" hreflang="en"' % slug)
+    for loc in CORPUS_LOCALES:
+        html = html.replace('class="ap-lang-item" href="/%s/" hreflang=' % loc,
+                            'class="ap-lang-item" href="/%s/%s/" hreflang=' % (loc, slug))
+    return html
+
+
+def iso_english_dates(html: str) -> str:
+    """A locale page must not carry an English month name in its chrome."""
+    return _EN_DATE_RE.sub(
+        lambda m: ">%s-%02d-%02d<" % (m.group(3), _MONTHS.index(m.group(2)) + 1, int(m.group(1))), html)
+
+
+def relocate_corpus_locales(site: Path) -> None:
+    try:
+        from locale_strings import STRINGS
+    except ImportError:
+        sys.path.insert(0, str(Path(__file__).parent))
+        from locale_strings import STRINGS
+    import shutil
+    moved = 0
+    slugs = sorted(d.name for d in site.iterdir()
+                   if d.is_dir() and d.name.startswith("corpus-") and (d / "index.html").exists())
+    for slug in slugs:
+        page = site / slug / "index.html"
+        html = page.read_text(encoding="utf-8")
+        if "x-default" not in html:
+            html = html.replace("</head>", corpus_hreflang_cluster(slug, "en") + "</head>", 1)
+        html = retarget_lang_menu_corpus(html, slug)
+        page.write_text(html, encoding="utf-8")
+        for loc in CORPUS_LOCALES:
+            src = site / f"{loc}-{slug}"
+            if not (src / "index.html").exists():
+                continue
+            dest = site / loc / slug
+            if dest.exists():
+                shutil.rmtree(dest)
+            shutil.move(str(src), str(dest))
+            html = (dest / "index.html").read_text(encoding="utf-8")
+            code = LOCALES[loc]
+            html = html.replace("/%s-%s/" % (loc, slug), "/%s/%s/" % (loc, slug))
+            html = html.replace("</head>", corpus_hreflang_cluster(slug, code) + "</head>", 1)
+            td = load_try_i18n(loc)
+            if td:
+                html = apply_chrome_extra(html, td)
+            html = translate_chrome(html, STRINGS[loc])
+            html = iso_english_dates(html)
+            html = retarget_lang_menu_corpus(html, slug)
+            html = retarget_journey_nav(html, loc)
+            html = html.replace('href="/try/">', 'href="/%s/try/">' % loc)
+            html = mark_english_submenu(html)
+            html = lang_badge(html, loc)
+            html = retag_body_lang(html, code)
+            (dest / "index.html").write_text(html, encoding="utf-8")
+            moved += 1
+    # ssg derives every URL from the post's file name, so the tag pages,
+    # feeds and search index still cite /<loc>-corpus-<id>/; rewrite them.
+    stale = re.compile(r"/(%s)-corpus-" % "|".join(CORPUS_LOCALES))
+    rewritten = 0
+    for path in site.rglob("*"):
+        if path.suffix not in (".html", ".xml", ".json", ".txt") or not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        fixed = stale.sub(r"/\1/corpus-", text)
+        if fixed != text:
+            path.write_text(fixed, encoding="utf-8")
+            rewritten += 1
+    print(f"[postbuild] {len(slugs)} corpus page(s) clustered; {moved} locale variant(s) moved under "
+          f"/<locale>/; stale paths rewritten in {rewritten} file(s)")
+
+
 def inject_dataset_ld(site: Path) -> None:
     """Add schema.org Dataset markup to the corpus scenario pages.
 
@@ -1260,6 +1359,7 @@ def main() -> None:
     localise_pages(site)
     gen_try_locales(site)
     gen_journey_locales(site)
+    relocate_corpus_locales(site)  # before the Dataset markup, which is keyed by final path
     inject_dataset_ld(site)
     write_llms(site)
     stamp_suite_version(site)

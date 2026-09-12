@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://pain001.com/it/corpus-us-check-vendor/sitemap.xml

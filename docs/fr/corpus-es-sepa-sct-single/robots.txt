@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://pain001.com/fr/corpus-es-sepa-sct-single/sitemap.xml

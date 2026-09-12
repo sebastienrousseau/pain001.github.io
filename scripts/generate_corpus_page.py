@@ -37,6 +37,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 sys.path.insert(0, str(HERE))
 from generate_message_specs import load_frontmatter, write_post  # noqa: E402
+from corpus_l10n import CORPUS_LOCALES, STRINGS as L10N  # noqa: E402
 import datetime as _dt  # noqa: E402
 
 
@@ -305,8 +306,9 @@ def load_try_samples() -> dict[str, dict]:
     return {s["id"]: s for s in data.get("samples", [])}
 
 
-def dataset_ld(sid: str, recs: list[dict], version: str, stamp: str) -> dict:
-    """schema.org Dataset markup for one scenario page."""
+def dataset_ld(sid: str, recs: list[dict], version: str, stamp: str,
+               lang: str = "en-GB", page_url: str | None = None) -> dict:
+    """schema.org Dataset markup for one scenario page (English or a locale variant)."""
     first = recs[0]
     distribution = []
     for r in recs:
@@ -326,8 +328,9 @@ def dataset_ld(sid: str, recs: list[dict], version: str, stamp: str) -> dict:
         "@type": "Dataset",
         "name": f"{sid}: ISO 20022 pain.001 example ({first.get('country', '').upper()})",
         "description": str(first.get("description", "")).strip(),
-        "url": f"https://pain001.com/{scenario_slug(sid)}/",
+        "url": page_url or f"https://pain001.com/{scenario_slug(sid)}/",
         "identifier": sid,
+        "inLanguage": lang,
         "version": version,
         "dateModified": stamp,
         "license": "https://spdx.org/licenses/Apache-2.0.html",
@@ -339,33 +342,43 @@ def dataset_ld(sid: str, recs: list[dict], version: str, stamp: str) -> dict:
     }
 
 
-def scenario_page(sid: str, recs: list[dict], version: str, sample: dict | None) -> str:
-    """The body of one scenario's page: what it is, its files, how it was checked, where it comes from."""
+def scenario_page(sid: str, recs: list[dict], version: str, sample: dict | None,
+                  locale: str = "en") -> str:
+    """The body of one scenario's page: what it is, its files, how it was checked, where it comes from.
+
+    ``locale`` picks the fixed strings (scripts/corpus_l10n.py). The record's own
+    prose (description, source titles) is quoted in English and labelled as such
+    on the locale variants; the demo link points at that locale's /try/ page."""
+    t = L10N[locale]
     first = recs[0]
     country = first.get("country", "").upper()
+    country_name = t["countries"].get(first.get("country", ""), country)
     prov = public_record(first).get("provenance") or {}
     validation = first.get("validation") or {}
     profiles = {p: v for p, v in (validation.get("profiles") or {}).items()}
     sources = prov.get("sources", [])
-    lines = [
-        f"{first.get('description', '')}",
+    editions = ", ".join(f"`{r['message_type']}`" for r in recs)
+    desc = str(first.get("description", "")).strip()
+    lines = []
+    if t["desc_label"]:
+        lines += [t["desc_label"], "", f"> {desc}"]
+    else:
+        lines.append(desc)
+    lines += [
         "",
-        f"A payment initiation file for **{COUNTRIES.get(first.get('country', ''), country)}** "
-        f"on the **{first.get('family', '')}** rail, shipped in "
-        f"{', '.join(f'`{r[chr(109)+chr(101)+chr(115)+chr(115)+chr(97)+chr(103)+chr(101)+chr(95)+chr(116)+chr(121)+chr(112)+chr(101)]}`' for r in recs)}, "
-        f"generated and checked by pain001 {version}. It is a synthetic example built from the "
-        "public scheme rulebooks: no real party, account or bank guideline behind it.",
+        t["intro"].format(country=country_name, family=first.get("family", ""),
+                          editions=editions, version=version),
         "",
-        "## Files",
+        f"## {t['h_files']}",
         "",
-        "| Edition | Payment file | ISO 20022 JSON twin | Provenance record |",
+        f"| {t['th_edition']} | {t['th_file']} | {t['th_twin']} | {t['th_prov']} |",
         "| :--- | :--- | :--- | :--- |",
     ]
     for r in recs:
         rel = r["_rel"]
         has_twin = r["_xml"].with_name(r["_xml"].name.replace(".xml", ".iso.json")).exists()
         twin_md = (f"[{r['_xml'].name.replace('.xml', '.iso.json')}](/corpus/market/{rel.replace('.xml', '.iso.json')})"
-                   if has_twin else "— (twins cover pain.001 only)")
+                   if has_twin else t["no_twin"])
         lines.append(
             f"| `{r['message_type']}` | [{r['_xml'].name}](/corpus/market/{rel}) | {twin_md} | "
             f"[{r['_sidecar'].name}](/corpus/market/{rel.replace('.xml', '.provenance.yaml')}) |"
@@ -375,52 +388,50 @@ def scenario_page(sid: str, recs: list[dict], version: str, sample: dict | None)
             f"[{r['message_type']}](/corpus/schemas/{r['message_type']}.schema.json)"
             for r in recs if r["_xml"].with_name(r["_xml"].name.replace(".xml", ".iso.json")).exists()
         )
-        lines += ["", "The twin is the same payment in the ISO 20022 Registration Authority's JSON convention, "
-                  f"lossless in both directions; its JSON Schema (2020-12) is published per edition: {schema_links}. "
-                  "An agent can produce a twin that validates against the schema and hand it to the library to "
-                  "render the XML.", ""]
+        lines += ["", t["twin_para"].format(schemas=schema_links), ""]
     else:
         lines.append("")
     if sample:
+        demo = f"/try/?sample=corpus:{sid}" if locale == "en" else f"/{locale}/try/?sample=corpus:{sid}"
         lines += [
-            "## Run it in your browser",
+            f"## {t['h_run']}",
             "",
-            f"[Open this scenario in the demo](/try/?sample=corpus:{sid}): the pain001 library loads in a "
-            f"Python runtime in your browser, rebuilds the file from the {sample['records']} record(s) below, "
-            f"checks it against the `{sample['scheme']}` rulebook and the official XSD, and shows the JSON twin. "
-            "Nothing leaves your machine.",
+            t["run_para"].format(url=demo, n=sample["records"], scheme=sample["scheme"]),
             "",
-            "The flat records the library rebuilds it from (the CSV pipeline's own column names):",
+            t["flat_records"],
             "",
             "```csv",
             sample["csv"].strip(),
             "```",
             "",
         ]
-    lines += ["## How the library checked it", ""]
+    lines += [f"## {t['h_checked']}", ""]
     xsd = (validation.get("xsd") or {}).get("errors", 0)
     mdr = (validation.get("mdr") or {}).get("errors", 0)
-    lines.append(f"- **Official XSD**: {'passed' if not xsd else f'{xsd} error(s)'}.")
-    lines.append(f"- **ISO message definition rules**: {'passed' if not mdr else f'{mdr} error(s)'}.")
-    for name, verdict in profiles.items():
-        errs = (verdict or {}).get("errors", 0); warns = (verdict or {}).get("warnings", 0)
-        lines.append(f"- **Rail profile `{name}`**: {'passed' if not errs else f'{errs} error(s)'}"
-                     + (f", {warns} warning(s)" if warns else "") + ".")
+
+    def verdict(errs: int) -> str:
+        return t["passed"] if not errs else t["errors"].format(n=errs)
+
+    lines.append(f"- **{t['xsd']}**: {verdict(xsd)}.")
+    lines.append(f"- **{t['mdr']}**: {verdict(mdr)}.")
+    for name, v in profiles.items():
+        errs = (v or {}).get("errors", 0); warns = (v or {}).get("warnings", 0)
+        lines.append(f"- **{t['profile']} `{name}`**: {verdict(errs)}"
+                     + (", " + t["warnings"].format(n=warns) if warns else "") + ".")
     conf = prov.get("confidence", "unknown")
-    lines += ["", f"Confidence **{conf}**: {confidence_note(conf)}.", "",
-              "## Where the content comes from", ""]
+    lines += ["", t["confidence"].format(level=t["levels"].get(conf, conf),
+                                         note=t["notes"].get(conf, conf)), "",
+              f"## {t['h_sources']}", ""]
     if sources:
         for src in sources:
             title = str(src.get("title", "")).strip(); read = src.get("read") or src.get("retrieved") or ""
             url = src.get("url") or ""
             item = f"[{title}]({url})" if url else title
-            lines.append(f"- {item}" + (f" (read {read})" if read else ""))
+            lines.append(f"- {item}" + (" " + t["read"].format(date=read) if read else ""))
     else:
-        lines.append("- Public rulebook content only; see the corpus page for the method.")
-    lines += ["", f"SHA-256 of each file is in its provenance record. Your bank's own usage guideline is not "
-              "represented here: [apply it privately](/example-corpus/#your-bank-s-guideline) with the "
-              "library's overlay tooling.", "",
-              f"[Back to the example corpus](/example-corpus/) · [All payment files by country](/example-corpus/#payment-files-by-country)"]
+        lines.append(f"- {t['public_only']}")
+    lines += ["", t["sha_para"], "",
+              f"[{t['back']}](/example-corpus/) · [{t['all_by_country']}](/example-corpus/#payment-files-by-country)"]
     return "\n".join(lines)
 
 
@@ -479,8 +490,22 @@ def write_index(files: list[dict], version: str) -> None:
     }, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
+def _locale_frontmatter(fm: str, loc: str, slug: str) -> str:
+    """Retarget a cloned English front matter at /<loc>/<slug>/ in that locale."""
+    lang, posix = CORPUS_LOCALES[loc]
+    fm = fm.replace(f"https://pain001.com/{loc}-{slug}/", f"https://pain001.com/{loc}/{slug}/")
+    for key, value in (("hreflang", lang), ("language", lang), ("locale", posix)):
+        fm, n = re.subn(rf'^{key}: .*$', f'{key}: "{value}"', fm, flags=re.M)
+        if not n:
+            fm = fm.replace("\n\n---\n\n", f'\n{key}: "{value}"\n\n---\n\n', 1)
+    return fm
+
+
 def write_scenario_pages(files: list[dict], version: str) -> int:
-    """One page per scenario; returns how many were written. Also records the JSON-LD for post-build injection."""
+    """One page per scenario in English plus one per corpus locale; returns how
+    many were written. Also records the JSON-LD for post-build injection, keyed
+    by the page's final path (the locale variants are built at /<loc>-<slug>/
+    and moved under /<loc>/ by postbuild_fix.relocate_corpus_locales)."""
     scenarios: dict[str, list[dict]] = defaultdict(list)
     for record in files:
         scenarios[record["scenario"]].append(record)
@@ -490,20 +515,28 @@ def write_scenario_pages(files: list[dict], version: str) -> int:
     for sid, recs in sorted(scenarios.items()):
         first = recs[0]
         slug = scenario_slug(sid)
-        country = COUNTRIES.get(first.get("country", ""), first.get("country", "").upper())
         desc = str(first.get("description", "")).strip()
-        fm = load_frontmatter(
-            slug,
-            f"{sid} — ISO 20022 pain.001 example for {country} ({first.get('family', '')})",
-            f"{desc} A validated pain.001 sample for {country} on the {first.get('family', '')} rail, "
-            f"with its ISO 20022 JSON twin and provenance record; run it in the browser.",
-            "Example corpus",
-            desc,
-            f"pain.001 example {country}, {first.get('family', '')} sample XML, ISO 20022 {country} payment file, "
-            f"{sid}, pain001 corpus",
-        )
-        write_post(slug, stamp_date(fm), scenario_page(sid, recs, version, samples.get(sid)))
-        ld[slug] = dataset_ld(sid, recs, version, stamp)
+        family = first.get("family", "")
+        for loc in ("en", *CORPUS_LOCALES):
+            t = L10N[loc]
+            country = t["countries"].get(first.get("country", ""), first.get("country", "").upper())
+            post_slug = slug if loc == "en" else f"{loc}-{slug}"
+            fm = load_frontmatter(
+                post_slug,
+                t["title"].format(sid=sid, country=country, family=family),
+                t["meta_desc"].format(desc=desc, country=country, family=family),
+                t["eyebrow"],
+                desc,
+                t["keywords"].format(sid=sid, country=country, family=family),
+            )
+            if loc != "en":
+                fm = _locale_frontmatter(fm, loc, slug)
+            write_post(post_slug, stamp_date(fm), scenario_page(sid, recs, version, samples.get(sid), loc))
+            if loc == "en":
+                ld[slug] = dataset_ld(sid, recs, version, stamp)
+            else:
+                ld[f"{loc}/{slug}"] = dataset_ld(sid, recs, version, stamp, CORPUS_LOCALES[loc][0],
+                                                 f"https://pain001.com/{loc}/{slug}/")
     (HERE / "corpus_pages.json").write_text(json.dumps(ld, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     return len(ld)
 

@@ -116,7 +116,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>ae.uaefts.single — ISO 20022 pain.001 example for AE (priority-payment)</news:title>
     <news:keywords>pain.001 example AE, priority-payment sample XML, ISO 20022 AE payment file, ae.uaefts.single, pain001 corpus</news:keywords>
   </news:news>
@@ -128,7 +128,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>be.sepa.sct-supplier — ISO 20022 pain.001 example for Belgium (sepa-credit-transfer)</news:title>
     <news:keywords>pain.001 example Belgium, sepa-credit-transfer sample XML, ISO 20022 Belgium payment file, be.sepa.sct-supplier, pain001 corpus</news:keywords>
   </news:news>
@@ -140,7 +140,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>be.sepa.sdd-core — ISO 20022 pain.001 example for Belgium (sepa-direct-debit)</news:title>
     <news:keywords>pain.001 example Belgium, sepa-direct-debit sample XML, ISO 20022 Belgium payment file, be.sepa.sdd-core, pain001 corpus</news:keywords>
   </news:news>
@@ -152,7 +152,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>ch.international.usd — ISO 20022 pain.001 example for Switzerland (cross-border)</news:title>
     <news:keywords>pain.001 example Switzerland, cross-border sample XML, ISO 20022 Switzerland payment file, ch.international.usd, pain001 corpus</news:keywords>
   </news:news>
@@ -164,7 +164,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>ch.sepa.sct — ISO 20022 pain.001 example for Switzerland (sepa-credit-transfer)</news:title>
     <news:keywords>pain.001 example Switzerland, sepa-credit-transfer sample XML, ISO 20022 Switzerland payment file, ch.sepa.sct, pain001 corpus</news:keywords>
   </news:news>
@@ -176,7 +176,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>ch.sps.qr-bill — ISO 20022 pain.001 example for Switzerland (domestic-credit-transfer)</news:title>
     <news:keywords>pain.001 example Switzerland, domestic-credit-transfer sample XML, ISO 20022 Switzerland payment file, ch.sps.qr-bill, pain001 corpus</news:keywords>
   </news:news>
@@ -188,7 +188,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>ch.sps.scor — ISO 20022 pain.001 example for Switzerland (domestic-credit-transfer)</news:title>
     <news:keywords>pain.001 example Switzerland, domestic-credit-transfer sample XML, ISO 20022 Switzerland payment file, ch.sps.scor, pain001 corpus</news:keywords>
   </news:news>
@@ -200,7 +200,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>cz.certis.domestic — ISO 20022 pain.001 example for CZ (domestic-credit-transfer)</news:title>
     <news:keywords>pain.001 example CZ, domestic-credit-transfer sample XML, ISO 20022 CZ payment file, cz.certis.domestic, pain001 corpus</news:keywords>
   </news:news>
@@ -212,7 +212,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>cz.sepa.sct — ISO 20022 pain.001 example for CZ (sepa-credit-transfer)</news:title>
     <news:keywords>pain.001 example CZ, sepa-credit-transfer sample XML, ISO 20022 CZ payment file, cz.sepa.sct, pain001 corpus</news:keywords>
   </news:news>
@@ -224,7 +224,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>de.axz.foreign — ISO 20022 pain.001 example for Germany (cross-border)</news:title>
     <news:keywords>pain.001 example Germany, cross-border sample XML, ISO 20022 Germany payment file, de.axz.foreign, pain001 corpus</news:keywords>
   </news:news>
@@ -236,7 +236,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>de.ccu.urgent — ISO 20022 pain.001 example for Germany (urgent-euro)</news:title>
     <news:keywords>pain.001 example Germany, urgent-euro sample XML, ISO 20022 Germany payment file, de.ccu.urgent, pain001 corpus</news:keywords>
   </news:news>
@@ -248,7 +248,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>de.sepa.sct-inst — ISO 20022 pain.001 example for Germany (sepa-instant)</news:title>
     <news:keywords>pain.001 example Germany, sepa-instant sample XML, ISO 20022 Germany payment file, de.sepa.sct-inst, pain001 corpus</news:keywords>
   </news:news>
@@ -260,7 +260,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>de.sepa.sct-salary — ISO 20022 pain.001 example for Germany (sepa-credit-transfer)</news:title>
     <news:keywords>pain.001 example Germany, sepa-credit-transfer sample XML, ISO 20022 Germany payment file, de.sepa.sct-salary, pain001 corpus</news:keywords>
   </news:news>
@@ -272,7 +272,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>de.sepa.sdd-b2b — ISO 20022 pain.001 example for Germany (sepa-direct-debit)</news:title>
     <news:keywords>pain.001 example Germany, sepa-direct-debit sample XML, ISO 20022 Germany payment file, de.sepa.sdd-b2b, pain001 corpus</news:keywords>
   </news:news>
@@ -284,7 +284,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>es.sepa.sct-single — ISO 20022 pain.001 example for Spain (sepa-credit-transfer)</news:title>
     <news:keywords>pain.001 example Spain, sepa-credit-transfer sample XML, ISO 20022 Spain payment file, es.sepa.sct-single, pain001 corpus</news:keywords>
   </news:news>
@@ -296,7 +296,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>es.sepa.sdd-core — ISO 20022 pain.001 example for Spain (sepa-direct-debit)</news:title>
     <news:keywords>pain.001 example Spain, sepa-direct-debit sample XML, ISO 20022 Spain payment file, es.sepa.sdd-core, pain001 corpus</news:keywords>
   </news:news>
@@ -308,7 +308,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>fr.sepa.sct-supplier — ISO 20022 pain.001 example for France (sepa-credit-transfer)</news:title>
     <news:keywords>pain.001 example France, sepa-credit-transfer sample XML, ISO 20022 France payment file, fr.sepa.sct-supplier, pain001 corpus</news:keywords>
   </news:news>
@@ -320,7 +320,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>fr.sepa.sdd-core — ISO 20022 pain.001 example for France (sepa-direct-debit)</news:title>
     <news:keywords>pain.001 example France, sepa-direct-debit sample XML, ISO 20022 France payment file, fr.sepa.sdd-core, pain001 corpus</news:keywords>
   </news:news>
@@ -332,7 +332,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>gb.bacs-dd.collection — ISO 20022 pain.001 example for United Kingdom (bacs-direct-debit)</news:title>
     <news:keywords>pain.001 example United Kingdom, bacs-direct-debit sample XML, ISO 20022 United Kingdom payment file, gb.bacs-dd.collection, pain001 corpus</news:keywords>
   </news:news>
@@ -344,7 +344,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>gb.bacs.supplier-run — ISO 20022 pain.001 example for United Kingdom (bacs-direct-credit)</news:title>
     <news:keywords>pain.001 example United Kingdom, bacs-direct-credit sample XML, ISO 20022 United Kingdom payment file, gb.bacs.supplier-run, pain001 corpus</news:keywords>
   </news:news>
@@ -356,7 +356,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>gb.chaps.property-purchase — ISO 20022 pain.001 example for United Kingdom (priority-payment)</news:title>
     <news:keywords>pain.001 example United Kingdom, priority-payment sample XML, ISO 20022 United Kingdom payment file, gb.chaps.property-purchase, pain001 corpus</news:keywords>
   </news:news>
@@ -368,7 +368,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>gb.fps.single — ISO 20022 pain.001 example for United Kingdom (faster-payment)</news:title>
     <news:keywords>pain.001 example United Kingdom, faster-payment sample XML, ISO 20022 United Kingdom payment file, gb.fps.single, pain001 corpus</news:keywords>
   </news:news>
@@ -380,7 +380,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>gb.international.usd — ISO 20022 pain.001 example for United Kingdom (priority-payment)</news:title>
     <news:keywords>pain.001 example United Kingdom, priority-payment sample XML, ISO 20022 United Kingdom payment file, gb.international.usd, pain001 corpus</news:keywords>
   </news:news>
@@ -392,7 +392,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>hk.fps.single — ISO 20022 pain.001 example for HK (instant-payment)</news:title>
     <news:keywords>pain.001 example HK, instant-payment sample XML, ISO 20022 HK payment file, hk.fps.single, pain001 corpus</news:keywords>
   </news:news>
@@ -404,7 +404,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>it.sepa.sct-single — ISO 20022 pain.001 example for Italy (sepa-credit-transfer)</news:title>
     <news:keywords>pain.001 example Italy, sepa-credit-transfer sample XML, ISO 20022 Italy payment file, it.sepa.sct-single, pain001 corpus</news:keywords>
   </news:news>
@@ -416,7 +416,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>lu.sepa.sct-single — ISO 20022 pain.001 example for Luxembourg (sepa-credit-transfer)</news:title>
     <news:keywords>pain.001 example Luxembourg, sepa-credit-transfer sample XML, ISO 20022 Luxembourg payment file, lu.sepa.sct-single, pain001 corpus</news:keywords>
   </news:news>
@@ -428,7 +428,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>my.duitnow.single — ISO 20022 pain.001 example for MY (instant-payment)</news:title>
     <news:keywords>pain.001 example MY, instant-payment sample XML, ISO 20022 MY payment file, my.duitnow.single, pain001 corpus</news:keywords>
   </news:news>
@@ -440,7 +440,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>nl.sepa.sct-supplier — ISO 20022 pain.001 example for Netherlands (sepa-credit-transfer)</news:title>
     <news:keywords>pain.001 example Netherlands, sepa-credit-transfer sample XML, ISO 20022 Netherlands payment file, nl.sepa.sct-supplier, pain001 corpus</news:keywords>
   </news:news>
@@ -452,7 +452,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>nl.sepa.sdd-core — ISO 20022 pain.001 example for Netherlands (sepa-direct-debit)</news:title>
     <news:keywords>pain.001 example Netherlands, sepa-direct-debit sample XML, ISO 20022 Netherlands payment file, nl.sepa.sdd-core, pain001 corpus</news:keywords>
   </news:news>
@@ -464,7 +464,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>qa.qatch.single — ISO 20022 pain.001 example for QA (domestic-credit-transfer)</news:title>
     <news:keywords>pain.001 example QA, domestic-credit-transfer sample XML, ISO 20022 QA payment file, qa.qatch.single, pain001 corpus</news:keywords>
   </news:news>
@@ -476,7 +476,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>se.bankgiro.salary — ISO 20022 pain.001 example for Sweden (salary)</news:title>
     <news:keywords>pain.001 example Sweden, salary sample XML, ISO 20022 Sweden payment file, se.bankgiro.salary, pain001 corpus</news:keywords>
   </news:news>
@@ -488,7 +488,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>se.bankgiro.supplier — ISO 20022 pain.001 example for Sweden (bankgiro-credit)</news:title>
     <news:keywords>pain.001 example Sweden, bankgiro-credit sample XML, ISO 20022 Sweden payment file, se.bankgiro.supplier, pain001 corpus</news:keywords>
   </news:news>
@@ -500,7 +500,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>se.plusgiro.supplier — ISO 20022 pain.001 example for Sweden (plusgiro-credit)</news:title>
     <news:keywords>pain.001 example Sweden, plusgiro-credit sample XML, ISO 20022 Sweden payment file, se.plusgiro.supplier, pain001 corpus</news:keywords>
   </news:news>
@@ -512,7 +512,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>se.rix.urgent — ISO 20022 pain.001 example for Sweden (priority-payment)</news:title>
     <news:keywords>pain.001 example Sweden, priority-payment sample XML, ISO 20022 Sweden payment file, se.rix.urgent, pain001 corpus</news:keywords>
   </news:news>
@@ -524,7 +524,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>sg.fast.single — ISO 20022 pain.001 example for SG (instant-payment)</news:title>
     <news:keywords>pain.001 example SG, instant-payment sample XML, ISO 20022 SG payment file, sg.fast.single, pain001 corpus</news:keywords>
   </news:news>
@@ -536,7 +536,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>us.ach.ccd-supplier — ISO 20022 pain.001 example for United States (ach-credit)</news:title>
     <news:keywords>pain.001 example United States, ach-credit sample XML, ISO 20022 United States payment file, us.ach.ccd-supplier, pain001 corpus</news:keywords>
   </news:news>
@@ -548,7 +548,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>us.ach.debit — ISO 20022 pain.001 example for United States (ach-debit)</news:title>
     <news:keywords>pain.001 example United States, ach-debit sample XML, ISO 20022 United States payment file, us.ach.debit, pain001 corpus</news:keywords>
   </news:news>
@@ -560,7 +560,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>us.ach.ppd-payroll — ISO 20022 pain.001 example for United States (ach-credit)</news:title>
     <news:keywords>pain.001 example United States, ach-credit sample XML, ISO 20022 United States payment file, us.ach.ppd-payroll, pain001 corpus</news:keywords>
   </news:news>
@@ -572,7 +572,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>us.check.vendor — ISO 20022 pain.001 example for United States (cheque)</news:title>
     <news:keywords>pain.001 example United States, cheque sample XML, ISO 20022 United States payment file, us.check.vendor, pain001 corpus</news:keywords>
   </news:news>
@@ -584,7 +584,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>us.eftps.tax — ISO 20022 pain.001 example for United States (ach-credit)</news:title>
     <news:keywords>pain.001 example United States, ach-credit sample XML, ISO 20022 United States payment file, us.eftps.tax, pain001 corpus</news:keywords>
   </news:news>
@@ -596,7 +596,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>us.rtp.single — ISO 20022 pain.001 example for United States (instant-payment)</news:title>
     <news:keywords>pain.001 example United States, instant-payment sample XML, ISO 20022 United States payment file, us.rtp.single, pain001 corpus</news:keywords>
   </news:news>
@@ -608,7 +608,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>us.wire.domestic — ISO 20022 pain.001 example for United States (priority-payment)</news:title>
     <news:keywords>pain.001 example United States, priority-payment sample XML, ISO 20022 United States payment file, us.wire.domestic, pain001 corpus</news:keywords>
   </news:news>
@@ -635,6 +635,510 @@
     <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
     <news:title>Pain001 — Open-Source-Zahlungsinitiierung nach ISO 20022</news:title>
     <news:keywords>pain001, ISO 20022, SEPA Überweisung, pain.001 Datei, SEPA XML Generator, Zahlungsverkehr, Python, Deutschland</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-ae-uaefts-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ae.uaefts.single — ISO-20022-pain.001-Beispiel: AE (priority-payment)</news:title>
+    <news:keywords>pain.001 Beispiel AE, priority-payment Beispiel-XML, ISO 20022 AE Zahlungsdatei, ae.uaefts.single, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-be-sepa-sct-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>be.sepa.sct-supplier — ISO-20022-pain.001-Beispiel: Belgien (sepa-credit-transfer)</news:title>
+    <news:keywords>pain.001 Beispiel Belgien, sepa-credit-transfer Beispiel-XML, ISO 20022 Belgien Zahlungsdatei, be.sepa.sct-supplier, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-be-sepa-sdd-core/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>be.sepa.sdd-core — ISO-20022-pain.001-Beispiel: Belgien (sepa-direct-debit)</news:title>
+    <news:keywords>pain.001 Beispiel Belgien, sepa-direct-debit Beispiel-XML, ISO 20022 Belgien Zahlungsdatei, be.sepa.sdd-core, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-ch-international-usd/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ch.international.usd — ISO-20022-pain.001-Beispiel: Schweiz (cross-border)</news:title>
+    <news:keywords>pain.001 Beispiel Schweiz, cross-border Beispiel-XML, ISO 20022 Schweiz Zahlungsdatei, ch.international.usd, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-ch-sepa-sct/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ch.sepa.sct — ISO-20022-pain.001-Beispiel: Schweiz (sepa-credit-transfer)</news:title>
+    <news:keywords>pain.001 Beispiel Schweiz, sepa-credit-transfer Beispiel-XML, ISO 20022 Schweiz Zahlungsdatei, ch.sepa.sct, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-ch-sps-qr-bill/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ch.sps.qr-bill — ISO-20022-pain.001-Beispiel: Schweiz (domestic-credit-transfer)</news:title>
+    <news:keywords>pain.001 Beispiel Schweiz, domestic-credit-transfer Beispiel-XML, ISO 20022 Schweiz Zahlungsdatei, ch.sps.qr-bill, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-ch-sps-scor/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ch.sps.scor — ISO-20022-pain.001-Beispiel: Schweiz (domestic-credit-transfer)</news:title>
+    <news:keywords>pain.001 Beispiel Schweiz, domestic-credit-transfer Beispiel-XML, ISO 20022 Schweiz Zahlungsdatei, ch.sps.scor, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-cz-certis-domestic/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>cz.certis.domestic — ISO-20022-pain.001-Beispiel: CZ (domestic-credit-transfer)</news:title>
+    <news:keywords>pain.001 Beispiel CZ, domestic-credit-transfer Beispiel-XML, ISO 20022 CZ Zahlungsdatei, cz.certis.domestic, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-cz-sepa-sct/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>cz.sepa.sct — ISO-20022-pain.001-Beispiel: CZ (sepa-credit-transfer)</news:title>
+    <news:keywords>pain.001 Beispiel CZ, sepa-credit-transfer Beispiel-XML, ISO 20022 CZ Zahlungsdatei, cz.sepa.sct, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-de-axz-foreign/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.axz.foreign — ISO-20022-pain.001-Beispiel: Deutschland (cross-border)</news:title>
+    <news:keywords>pain.001 Beispiel Deutschland, cross-border Beispiel-XML, ISO 20022 Deutschland Zahlungsdatei, de.axz.foreign, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-de-ccu-urgent/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.ccu.urgent — ISO-20022-pain.001-Beispiel: Deutschland (urgent-euro)</news:title>
+    <news:keywords>pain.001 Beispiel Deutschland, urgent-euro Beispiel-XML, ISO 20022 Deutschland Zahlungsdatei, de.ccu.urgent, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-de-sepa-sct-inst/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.sepa.sct-inst — ISO-20022-pain.001-Beispiel: Deutschland (sepa-instant)</news:title>
+    <news:keywords>pain.001 Beispiel Deutschland, sepa-instant Beispiel-XML, ISO 20022 Deutschland Zahlungsdatei, de.sepa.sct-inst, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-de-sepa-sct-salary/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.sepa.sct-salary — ISO-20022-pain.001-Beispiel: Deutschland (sepa-credit-transfer)</news:title>
+    <news:keywords>pain.001 Beispiel Deutschland, sepa-credit-transfer Beispiel-XML, ISO 20022 Deutschland Zahlungsdatei, de.sepa.sct-salary, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-de-sepa-sdd-b2b/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.sepa.sdd-b2b — ISO-20022-pain.001-Beispiel: Deutschland (sepa-direct-debit)</news:title>
+    <news:keywords>pain.001 Beispiel Deutschland, sepa-direct-debit Beispiel-XML, ISO 20022 Deutschland Zahlungsdatei, de.sepa.sdd-b2b, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-es-sepa-sct-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>es.sepa.sct-single — ISO-20022-pain.001-Beispiel: Spanien (sepa-credit-transfer)</news:title>
+    <news:keywords>pain.001 Beispiel Spanien, sepa-credit-transfer Beispiel-XML, ISO 20022 Spanien Zahlungsdatei, es.sepa.sct-single, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-es-sepa-sdd-core/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>es.sepa.sdd-core — ISO-20022-pain.001-Beispiel: Spanien (sepa-direct-debit)</news:title>
+    <news:keywords>pain.001 Beispiel Spanien, sepa-direct-debit Beispiel-XML, ISO 20022 Spanien Zahlungsdatei, es.sepa.sdd-core, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-fr-sepa-sct-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>fr.sepa.sct-supplier — ISO-20022-pain.001-Beispiel: Frankreich (sepa-credit-transfer)</news:title>
+    <news:keywords>pain.001 Beispiel Frankreich, sepa-credit-transfer Beispiel-XML, ISO 20022 Frankreich Zahlungsdatei, fr.sepa.sct-supplier, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-fr-sepa-sdd-core/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>fr.sepa.sdd-core — ISO-20022-pain.001-Beispiel: Frankreich (sepa-direct-debit)</news:title>
+    <news:keywords>pain.001 Beispiel Frankreich, sepa-direct-debit Beispiel-XML, ISO 20022 Frankreich Zahlungsdatei, fr.sepa.sdd-core, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-gb-bacs-dd-collection/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.bacs-dd.collection — ISO-20022-pain.001-Beispiel: Vereinigtes Königreich (bacs-direct-debit)</news:title>
+    <news:keywords>pain.001 Beispiel Vereinigtes Königreich, bacs-direct-debit Beispiel-XML, ISO 20022 Vereinigtes Königreich Zahlungsdatei, gb.bacs-dd.collection, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-gb-bacs-supplier-run/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.bacs.supplier-run — ISO-20022-pain.001-Beispiel: Vereinigtes Königreich (bacs-direct-credit)</news:title>
+    <news:keywords>pain.001 Beispiel Vereinigtes Königreich, bacs-direct-credit Beispiel-XML, ISO 20022 Vereinigtes Königreich Zahlungsdatei, gb.bacs.supplier-run, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-gb-chaps-property-purchase/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.chaps.property-purchase — ISO-20022-pain.001-Beispiel: Vereinigtes Königreich (priority-payment)</news:title>
+    <news:keywords>pain.001 Beispiel Vereinigtes Königreich, priority-payment Beispiel-XML, ISO 20022 Vereinigtes Königreich Zahlungsdatei, gb.chaps.property-purchase, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-gb-fps-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.fps.single — ISO-20022-pain.001-Beispiel: Vereinigtes Königreich (faster-payment)</news:title>
+    <news:keywords>pain.001 Beispiel Vereinigtes Königreich, faster-payment Beispiel-XML, ISO 20022 Vereinigtes Königreich Zahlungsdatei, gb.fps.single, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-gb-international-usd/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.international.usd — ISO-20022-pain.001-Beispiel: Vereinigtes Königreich (priority-payment)</news:title>
+    <news:keywords>pain.001 Beispiel Vereinigtes Königreich, priority-payment Beispiel-XML, ISO 20022 Vereinigtes Königreich Zahlungsdatei, gb.international.usd, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-hk-fps-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>hk.fps.single — ISO-20022-pain.001-Beispiel: HK (instant-payment)</news:title>
+    <news:keywords>pain.001 Beispiel HK, instant-payment Beispiel-XML, ISO 20022 HK Zahlungsdatei, hk.fps.single, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-it-sepa-sct-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>it.sepa.sct-single — ISO-20022-pain.001-Beispiel: Italien (sepa-credit-transfer)</news:title>
+    <news:keywords>pain.001 Beispiel Italien, sepa-credit-transfer Beispiel-XML, ISO 20022 Italien Zahlungsdatei, it.sepa.sct-single, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-lu-sepa-sct-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>lu.sepa.sct-single — ISO-20022-pain.001-Beispiel: Luxemburg (sepa-credit-transfer)</news:title>
+    <news:keywords>pain.001 Beispiel Luxemburg, sepa-credit-transfer Beispiel-XML, ISO 20022 Luxemburg Zahlungsdatei, lu.sepa.sct-single, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-my-duitnow-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>my.duitnow.single — ISO-20022-pain.001-Beispiel: MY (instant-payment)</news:title>
+    <news:keywords>pain.001 Beispiel MY, instant-payment Beispiel-XML, ISO 20022 MY Zahlungsdatei, my.duitnow.single, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-nl-sepa-sct-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>nl.sepa.sct-supplier — ISO-20022-pain.001-Beispiel: Niederlande (sepa-credit-transfer)</news:title>
+    <news:keywords>pain.001 Beispiel Niederlande, sepa-credit-transfer Beispiel-XML, ISO 20022 Niederlande Zahlungsdatei, nl.sepa.sct-supplier, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-nl-sepa-sdd-core/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>nl.sepa.sdd-core — ISO-20022-pain.001-Beispiel: Niederlande (sepa-direct-debit)</news:title>
+    <news:keywords>pain.001 Beispiel Niederlande, sepa-direct-debit Beispiel-XML, ISO 20022 Niederlande Zahlungsdatei, nl.sepa.sdd-core, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-qa-qatch-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>qa.qatch.single — ISO-20022-pain.001-Beispiel: QA (domestic-credit-transfer)</news:title>
+    <news:keywords>pain.001 Beispiel QA, domestic-credit-transfer Beispiel-XML, ISO 20022 QA Zahlungsdatei, qa.qatch.single, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-se-bankgiro-salary/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>se.bankgiro.salary — ISO-20022-pain.001-Beispiel: Schweden (salary)</news:title>
+    <news:keywords>pain.001 Beispiel Schweden, salary Beispiel-XML, ISO 20022 Schweden Zahlungsdatei, se.bankgiro.salary, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-se-bankgiro-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>se.bankgiro.supplier — ISO-20022-pain.001-Beispiel: Schweden (bankgiro-credit)</news:title>
+    <news:keywords>pain.001 Beispiel Schweden, bankgiro-credit Beispiel-XML, ISO 20022 Schweden Zahlungsdatei, se.bankgiro.supplier, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-se-plusgiro-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>se.plusgiro.supplier — ISO-20022-pain.001-Beispiel: Schweden (plusgiro-credit)</news:title>
+    <news:keywords>pain.001 Beispiel Schweden, plusgiro-credit Beispiel-XML, ISO 20022 Schweden Zahlungsdatei, se.plusgiro.supplier, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-se-rix-urgent/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>se.rix.urgent — ISO-20022-pain.001-Beispiel: Schweden (priority-payment)</news:title>
+    <news:keywords>pain.001 Beispiel Schweden, priority-payment Beispiel-XML, ISO 20022 Schweden Zahlungsdatei, se.rix.urgent, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-sg-fast-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>sg.fast.single — ISO-20022-pain.001-Beispiel: SG (instant-payment)</news:title>
+    <news:keywords>pain.001 Beispiel SG, instant-payment Beispiel-XML, ISO 20022 SG Zahlungsdatei, sg.fast.single, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-us-ach-ccd-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.ach.ccd-supplier — ISO-20022-pain.001-Beispiel: Vereinigte Staaten (ach-credit)</news:title>
+    <news:keywords>pain.001 Beispiel Vereinigte Staaten, ach-credit Beispiel-XML, ISO 20022 Vereinigte Staaten Zahlungsdatei, us.ach.ccd-supplier, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-us-ach-debit/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.ach.debit — ISO-20022-pain.001-Beispiel: Vereinigte Staaten (ach-debit)</news:title>
+    <news:keywords>pain.001 Beispiel Vereinigte Staaten, ach-debit Beispiel-XML, ISO 20022 Vereinigte Staaten Zahlungsdatei, us.ach.debit, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-us-ach-ppd-payroll/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.ach.ppd-payroll — ISO-20022-pain.001-Beispiel: Vereinigte Staaten (ach-credit)</news:title>
+    <news:keywords>pain.001 Beispiel Vereinigte Staaten, ach-credit Beispiel-XML, ISO 20022 Vereinigte Staaten Zahlungsdatei, us.ach.ppd-payroll, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-us-check-vendor/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.check.vendor — ISO-20022-pain.001-Beispiel: Vereinigte Staaten (cheque)</news:title>
+    <news:keywords>pain.001 Beispiel Vereinigte Staaten, cheque Beispiel-XML, ISO 20022 Vereinigte Staaten Zahlungsdatei, us.check.vendor, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-us-eftps-tax/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.eftps.tax — ISO-20022-pain.001-Beispiel: Vereinigte Staaten (ach-credit)</news:title>
+    <news:keywords>pain.001 Beispiel Vereinigte Staaten, ach-credit Beispiel-XML, ISO 20022 Vereinigte Staaten Zahlungsdatei, us.eftps.tax, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-us-rtp-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.rtp.single — ISO-20022-pain.001-Beispiel: Vereinigte Staaten (instant-payment)</news:title>
+    <news:keywords>pain.001 Beispiel Vereinigte Staaten, instant-payment Beispiel-XML, ISO 20022 Vereinigte Staaten Zahlungsdatei, us.rtp.single, pain001 Korpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/de/corpus-us-wire-domestic/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>de</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.wire.domestic — ISO-20022-pain.001-Beispiel: Vereinigte Staaten (priority-payment)</news:title>
+    <news:keywords>pain.001 Beispiel Vereinigte Staaten, priority-payment Beispiel-XML, ISO 20022 Vereinigte Staaten Zahlungsdatei, us.wire.domestic, pain001 Korpus</news:keywords>
   </news:news>
 </url>
 <url>
@@ -686,13 +1190,517 @@
   </news:news>
 </url>
 <url>
+  <loc>https://pain001.com/es/corpus-ae-uaefts-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ae.uaefts.single — ejemplo pain.001 ISO 20022: AE (priority-payment)</news:title>
+    <news:keywords>ejemplo pain.001 AE, XML de muestra priority-payment, archivo de pago ISO 20022 AE, ae.uaefts.single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-be-sepa-sct-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>be.sepa.sct-supplier — ejemplo pain.001 ISO 20022: Bélgica (sepa-credit-transfer)</news:title>
+    <news:keywords>ejemplo pain.001 Bélgica, XML de muestra sepa-credit-transfer, archivo de pago ISO 20022 Bélgica, be.sepa.sct-supplier, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-be-sepa-sdd-core/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>be.sepa.sdd-core — ejemplo pain.001 ISO 20022: Bélgica (sepa-direct-debit)</news:title>
+    <news:keywords>ejemplo pain.001 Bélgica, XML de muestra sepa-direct-debit, archivo de pago ISO 20022 Bélgica, be.sepa.sdd-core, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-ch-international-usd/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ch.international.usd — ejemplo pain.001 ISO 20022: Suiza (cross-border)</news:title>
+    <news:keywords>ejemplo pain.001 Suiza, XML de muestra cross-border, archivo de pago ISO 20022 Suiza, ch.international.usd, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-ch-sepa-sct/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ch.sepa.sct — ejemplo pain.001 ISO 20022: Suiza (sepa-credit-transfer)</news:title>
+    <news:keywords>ejemplo pain.001 Suiza, XML de muestra sepa-credit-transfer, archivo de pago ISO 20022 Suiza, ch.sepa.sct, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-ch-sps-qr-bill/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ch.sps.qr-bill — ejemplo pain.001 ISO 20022: Suiza (domestic-credit-transfer)</news:title>
+    <news:keywords>ejemplo pain.001 Suiza, XML de muestra domestic-credit-transfer, archivo de pago ISO 20022 Suiza, ch.sps.qr-bill, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-ch-sps-scor/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ch.sps.scor — ejemplo pain.001 ISO 20022: Suiza (domestic-credit-transfer)</news:title>
+    <news:keywords>ejemplo pain.001 Suiza, XML de muestra domestic-credit-transfer, archivo de pago ISO 20022 Suiza, ch.sps.scor, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-cz-certis-domestic/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>cz.certis.domestic — ejemplo pain.001 ISO 20022: CZ (domestic-credit-transfer)</news:title>
+    <news:keywords>ejemplo pain.001 CZ, XML de muestra domestic-credit-transfer, archivo de pago ISO 20022 CZ, cz.certis.domestic, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-cz-sepa-sct/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>cz.sepa.sct — ejemplo pain.001 ISO 20022: CZ (sepa-credit-transfer)</news:title>
+    <news:keywords>ejemplo pain.001 CZ, XML de muestra sepa-credit-transfer, archivo de pago ISO 20022 CZ, cz.sepa.sct, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-de-axz-foreign/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.axz.foreign — ejemplo pain.001 ISO 20022: Alemania (cross-border)</news:title>
+    <news:keywords>ejemplo pain.001 Alemania, XML de muestra cross-border, archivo de pago ISO 20022 Alemania, de.axz.foreign, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-de-ccu-urgent/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.ccu.urgent — ejemplo pain.001 ISO 20022: Alemania (urgent-euro)</news:title>
+    <news:keywords>ejemplo pain.001 Alemania, XML de muestra urgent-euro, archivo de pago ISO 20022 Alemania, de.ccu.urgent, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-de-sepa-sct-inst/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.sepa.sct-inst — ejemplo pain.001 ISO 20022: Alemania (sepa-instant)</news:title>
+    <news:keywords>ejemplo pain.001 Alemania, XML de muestra sepa-instant, archivo de pago ISO 20022 Alemania, de.sepa.sct-inst, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-de-sepa-sct-salary/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.sepa.sct-salary — ejemplo pain.001 ISO 20022: Alemania (sepa-credit-transfer)</news:title>
+    <news:keywords>ejemplo pain.001 Alemania, XML de muestra sepa-credit-transfer, archivo de pago ISO 20022 Alemania, de.sepa.sct-salary, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-de-sepa-sdd-b2b/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.sepa.sdd-b2b — ejemplo pain.001 ISO 20022: Alemania (sepa-direct-debit)</news:title>
+    <news:keywords>ejemplo pain.001 Alemania, XML de muestra sepa-direct-debit, archivo de pago ISO 20022 Alemania, de.sepa.sdd-b2b, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-es-sepa-sct-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>es.sepa.sct-single — ejemplo pain.001 ISO 20022: España (sepa-credit-transfer)</news:title>
+    <news:keywords>ejemplo pain.001 España, XML de muestra sepa-credit-transfer, archivo de pago ISO 20022 España, es.sepa.sct-single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-es-sepa-sdd-core/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>es.sepa.sdd-core — ejemplo pain.001 ISO 20022: España (sepa-direct-debit)</news:title>
+    <news:keywords>ejemplo pain.001 España, XML de muestra sepa-direct-debit, archivo de pago ISO 20022 España, es.sepa.sdd-core, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-fr-sepa-sct-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>fr.sepa.sct-supplier — ejemplo pain.001 ISO 20022: Francia (sepa-credit-transfer)</news:title>
+    <news:keywords>ejemplo pain.001 Francia, XML de muestra sepa-credit-transfer, archivo de pago ISO 20022 Francia, fr.sepa.sct-supplier, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-fr-sepa-sdd-core/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>fr.sepa.sdd-core — ejemplo pain.001 ISO 20022: Francia (sepa-direct-debit)</news:title>
+    <news:keywords>ejemplo pain.001 Francia, XML de muestra sepa-direct-debit, archivo de pago ISO 20022 Francia, fr.sepa.sdd-core, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-gb-bacs-dd-collection/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.bacs-dd.collection — ejemplo pain.001 ISO 20022: Reino Unido (bacs-direct-debit)</news:title>
+    <news:keywords>ejemplo pain.001 Reino Unido, XML de muestra bacs-direct-debit, archivo de pago ISO 20022 Reino Unido, gb.bacs-dd.collection, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-gb-bacs-supplier-run/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.bacs.supplier-run — ejemplo pain.001 ISO 20022: Reino Unido (bacs-direct-credit)</news:title>
+    <news:keywords>ejemplo pain.001 Reino Unido, XML de muestra bacs-direct-credit, archivo de pago ISO 20022 Reino Unido, gb.bacs.supplier-run, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-gb-chaps-property-purchase/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.chaps.property-purchase — ejemplo pain.001 ISO 20022: Reino Unido (priority-payment)</news:title>
+    <news:keywords>ejemplo pain.001 Reino Unido, XML de muestra priority-payment, archivo de pago ISO 20022 Reino Unido, gb.chaps.property-purchase, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-gb-fps-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.fps.single — ejemplo pain.001 ISO 20022: Reino Unido (faster-payment)</news:title>
+    <news:keywords>ejemplo pain.001 Reino Unido, XML de muestra faster-payment, archivo de pago ISO 20022 Reino Unido, gb.fps.single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-gb-international-usd/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.international.usd — ejemplo pain.001 ISO 20022: Reino Unido (priority-payment)</news:title>
+    <news:keywords>ejemplo pain.001 Reino Unido, XML de muestra priority-payment, archivo de pago ISO 20022 Reino Unido, gb.international.usd, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-hk-fps-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>hk.fps.single — ejemplo pain.001 ISO 20022: HK (instant-payment)</news:title>
+    <news:keywords>ejemplo pain.001 HK, XML de muestra instant-payment, archivo de pago ISO 20022 HK, hk.fps.single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-it-sepa-sct-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>it.sepa.sct-single — ejemplo pain.001 ISO 20022: Italia (sepa-credit-transfer)</news:title>
+    <news:keywords>ejemplo pain.001 Italia, XML de muestra sepa-credit-transfer, archivo de pago ISO 20022 Italia, it.sepa.sct-single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-lu-sepa-sct-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>lu.sepa.sct-single — ejemplo pain.001 ISO 20022: Luxemburgo (sepa-credit-transfer)</news:title>
+    <news:keywords>ejemplo pain.001 Luxemburgo, XML de muestra sepa-credit-transfer, archivo de pago ISO 20022 Luxemburgo, lu.sepa.sct-single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-my-duitnow-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>my.duitnow.single — ejemplo pain.001 ISO 20022: MY (instant-payment)</news:title>
+    <news:keywords>ejemplo pain.001 MY, XML de muestra instant-payment, archivo de pago ISO 20022 MY, my.duitnow.single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-nl-sepa-sct-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>nl.sepa.sct-supplier — ejemplo pain.001 ISO 20022: Países Bajos (sepa-credit-transfer)</news:title>
+    <news:keywords>ejemplo pain.001 Países Bajos, XML de muestra sepa-credit-transfer, archivo de pago ISO 20022 Países Bajos, nl.sepa.sct-supplier, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-nl-sepa-sdd-core/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>nl.sepa.sdd-core — ejemplo pain.001 ISO 20022: Países Bajos (sepa-direct-debit)</news:title>
+    <news:keywords>ejemplo pain.001 Países Bajos, XML de muestra sepa-direct-debit, archivo de pago ISO 20022 Países Bajos, nl.sepa.sdd-core, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-qa-qatch-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>qa.qatch.single — ejemplo pain.001 ISO 20022: QA (domestic-credit-transfer)</news:title>
+    <news:keywords>ejemplo pain.001 QA, XML de muestra domestic-credit-transfer, archivo de pago ISO 20022 QA, qa.qatch.single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-se-bankgiro-salary/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>se.bankgiro.salary — ejemplo pain.001 ISO 20022: Suecia (salary)</news:title>
+    <news:keywords>ejemplo pain.001 Suecia, XML de muestra salary, archivo de pago ISO 20022 Suecia, se.bankgiro.salary, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-se-bankgiro-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>se.bankgiro.supplier — ejemplo pain.001 ISO 20022: Suecia (bankgiro-credit)</news:title>
+    <news:keywords>ejemplo pain.001 Suecia, XML de muestra bankgiro-credit, archivo de pago ISO 20022 Suecia, se.bankgiro.supplier, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-se-plusgiro-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>se.plusgiro.supplier — ejemplo pain.001 ISO 20022: Suecia (plusgiro-credit)</news:title>
+    <news:keywords>ejemplo pain.001 Suecia, XML de muestra plusgiro-credit, archivo de pago ISO 20022 Suecia, se.plusgiro.supplier, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-se-rix-urgent/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>se.rix.urgent — ejemplo pain.001 ISO 20022: Suecia (priority-payment)</news:title>
+    <news:keywords>ejemplo pain.001 Suecia, XML de muestra priority-payment, archivo de pago ISO 20022 Suecia, se.rix.urgent, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-sg-fast-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>sg.fast.single — ejemplo pain.001 ISO 20022: SG (instant-payment)</news:title>
+    <news:keywords>ejemplo pain.001 SG, XML de muestra instant-payment, archivo de pago ISO 20022 SG, sg.fast.single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-us-ach-ccd-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.ach.ccd-supplier — ejemplo pain.001 ISO 20022: Estados Unidos (ach-credit)</news:title>
+    <news:keywords>ejemplo pain.001 Estados Unidos, XML de muestra ach-credit, archivo de pago ISO 20022 Estados Unidos, us.ach.ccd-supplier, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-us-ach-debit/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.ach.debit — ejemplo pain.001 ISO 20022: Estados Unidos (ach-debit)</news:title>
+    <news:keywords>ejemplo pain.001 Estados Unidos, XML de muestra ach-debit, archivo de pago ISO 20022 Estados Unidos, us.ach.debit, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-us-ach-ppd-payroll/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.ach.ppd-payroll — ejemplo pain.001 ISO 20022: Estados Unidos (ach-credit)</news:title>
+    <news:keywords>ejemplo pain.001 Estados Unidos, XML de muestra ach-credit, archivo de pago ISO 20022 Estados Unidos, us.ach.ppd-payroll, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-us-check-vendor/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.check.vendor — ejemplo pain.001 ISO 20022: Estados Unidos (cheque)</news:title>
+    <news:keywords>ejemplo pain.001 Estados Unidos, XML de muestra cheque, archivo de pago ISO 20022 Estados Unidos, us.check.vendor, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-us-eftps-tax/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.eftps.tax — ejemplo pain.001 ISO 20022: Estados Unidos (ach-credit)</news:title>
+    <news:keywords>ejemplo pain.001 Estados Unidos, XML de muestra ach-credit, archivo de pago ISO 20022 Estados Unidos, us.eftps.tax, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-us-rtp-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.rtp.single — ejemplo pain.001 ISO 20022: Estados Unidos (instant-payment)</news:title>
+    <news:keywords>ejemplo pain.001 Estados Unidos, XML de muestra instant-payment, archivo de pago ISO 20022 Estados Unidos, us.rtp.single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/es/corpus-us-wire-domestic/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>es</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.wire.domestic — ejemplo pain.001 ISO 20022: Estados Unidos (priority-payment)</news:title>
+    <news:keywords>ejemplo pain.001 Estados Unidos, XML de muestra priority-payment, archivo de pago ISO 20022 Estados Unidos, us.wire.domestic, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
   <loc>https://pain001.com/example-corpus/</loc>
   <news:news>
     <news:publication>
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>ISO 20022 example files — pain.001 and pain.008 samples per country and rail</news:title>
     <news:keywords>ISO 20022 example files, pain.001 sample XML, pain.008 sample, bank usage guideline, SEPA example, CHAPS example, Faster Payments example, ACH pain.001, QR-bill pain.001, Bankgiro pain.001, test corpus</news:keywords>
   </news:news>
@@ -704,7 +1712,7 @@
       <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
       <news:language>en-GB</news:language>
     </news:publication>
-    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
     <news:title>ISO 20022 schema coverage files — every element of every edition</news:title>
     <news:keywords>ISO 20022 schema coverage, pain.001 test files, pain.008 test files, XSD coverage, parser test corpus</news:keywords>
   </news:news>
@@ -767,6 +1775,510 @@
     <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
     <news:title>Pain001 — Initiation de paiements ISO 20022 en open source</news:title>
     <news:keywords>pain001, ISO 20022, virement SEPA, fichier pain.001, générateur XML SEPA, paiements, Python, France</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-ae-uaefts-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ae.uaefts.single — exemple pain.001 ISO 20022 : AE (priority-payment)</news:title>
+    <news:keywords>exemple pain.001 AE, XML exemple priority-payment, fichier de paiement ISO 20022 AE, ae.uaefts.single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-be-sepa-sct-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>be.sepa.sct-supplier — exemple pain.001 ISO 20022 : Belgique (sepa-credit-transfer)</news:title>
+    <news:keywords>exemple pain.001 Belgique, XML exemple sepa-credit-transfer, fichier de paiement ISO 20022 Belgique, be.sepa.sct-supplier, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-be-sepa-sdd-core/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>be.sepa.sdd-core — exemple pain.001 ISO 20022 : Belgique (sepa-direct-debit)</news:title>
+    <news:keywords>exemple pain.001 Belgique, XML exemple sepa-direct-debit, fichier de paiement ISO 20022 Belgique, be.sepa.sdd-core, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-ch-international-usd/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ch.international.usd — exemple pain.001 ISO 20022 : Suisse (cross-border)</news:title>
+    <news:keywords>exemple pain.001 Suisse, XML exemple cross-border, fichier de paiement ISO 20022 Suisse, ch.international.usd, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-ch-sepa-sct/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ch.sepa.sct — exemple pain.001 ISO 20022 : Suisse (sepa-credit-transfer)</news:title>
+    <news:keywords>exemple pain.001 Suisse, XML exemple sepa-credit-transfer, fichier de paiement ISO 20022 Suisse, ch.sepa.sct, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-ch-sps-qr-bill/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ch.sps.qr-bill — exemple pain.001 ISO 20022 : Suisse (domestic-credit-transfer)</news:title>
+    <news:keywords>exemple pain.001 Suisse, XML exemple domestic-credit-transfer, fichier de paiement ISO 20022 Suisse, ch.sps.qr-bill, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-ch-sps-scor/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ch.sps.scor — exemple pain.001 ISO 20022 : Suisse (domestic-credit-transfer)</news:title>
+    <news:keywords>exemple pain.001 Suisse, XML exemple domestic-credit-transfer, fichier de paiement ISO 20022 Suisse, ch.sps.scor, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-cz-certis-domestic/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>cz.certis.domestic — exemple pain.001 ISO 20022 : CZ (domestic-credit-transfer)</news:title>
+    <news:keywords>exemple pain.001 CZ, XML exemple domestic-credit-transfer, fichier de paiement ISO 20022 CZ, cz.certis.domestic, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-cz-sepa-sct/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>cz.sepa.sct — exemple pain.001 ISO 20022 : CZ (sepa-credit-transfer)</news:title>
+    <news:keywords>exemple pain.001 CZ, XML exemple sepa-credit-transfer, fichier de paiement ISO 20022 CZ, cz.sepa.sct, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-de-axz-foreign/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.axz.foreign — exemple pain.001 ISO 20022 : Allemagne (cross-border)</news:title>
+    <news:keywords>exemple pain.001 Allemagne, XML exemple cross-border, fichier de paiement ISO 20022 Allemagne, de.axz.foreign, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-de-ccu-urgent/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.ccu.urgent — exemple pain.001 ISO 20022 : Allemagne (urgent-euro)</news:title>
+    <news:keywords>exemple pain.001 Allemagne, XML exemple urgent-euro, fichier de paiement ISO 20022 Allemagne, de.ccu.urgent, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-de-sepa-sct-inst/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.sepa.sct-inst — exemple pain.001 ISO 20022 : Allemagne (sepa-instant)</news:title>
+    <news:keywords>exemple pain.001 Allemagne, XML exemple sepa-instant, fichier de paiement ISO 20022 Allemagne, de.sepa.sct-inst, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-de-sepa-sct-salary/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.sepa.sct-salary — exemple pain.001 ISO 20022 : Allemagne (sepa-credit-transfer)</news:title>
+    <news:keywords>exemple pain.001 Allemagne, XML exemple sepa-credit-transfer, fichier de paiement ISO 20022 Allemagne, de.sepa.sct-salary, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-de-sepa-sdd-b2b/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.sepa.sdd-b2b — exemple pain.001 ISO 20022 : Allemagne (sepa-direct-debit)</news:title>
+    <news:keywords>exemple pain.001 Allemagne, XML exemple sepa-direct-debit, fichier de paiement ISO 20022 Allemagne, de.sepa.sdd-b2b, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-es-sepa-sct-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>es.sepa.sct-single — exemple pain.001 ISO 20022 : Espagne (sepa-credit-transfer)</news:title>
+    <news:keywords>exemple pain.001 Espagne, XML exemple sepa-credit-transfer, fichier de paiement ISO 20022 Espagne, es.sepa.sct-single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-es-sepa-sdd-core/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>es.sepa.sdd-core — exemple pain.001 ISO 20022 : Espagne (sepa-direct-debit)</news:title>
+    <news:keywords>exemple pain.001 Espagne, XML exemple sepa-direct-debit, fichier de paiement ISO 20022 Espagne, es.sepa.sdd-core, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-fr-sepa-sct-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>fr.sepa.sct-supplier — exemple pain.001 ISO 20022 : France (sepa-credit-transfer)</news:title>
+    <news:keywords>exemple pain.001 France, XML exemple sepa-credit-transfer, fichier de paiement ISO 20022 France, fr.sepa.sct-supplier, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-fr-sepa-sdd-core/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>fr.sepa.sdd-core — exemple pain.001 ISO 20022 : France (sepa-direct-debit)</news:title>
+    <news:keywords>exemple pain.001 France, XML exemple sepa-direct-debit, fichier de paiement ISO 20022 France, fr.sepa.sdd-core, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-gb-bacs-dd-collection/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.bacs-dd.collection — exemple pain.001 ISO 20022 : Royaume-Uni (bacs-direct-debit)</news:title>
+    <news:keywords>exemple pain.001 Royaume-Uni, XML exemple bacs-direct-debit, fichier de paiement ISO 20022 Royaume-Uni, gb.bacs-dd.collection, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-gb-bacs-supplier-run/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.bacs.supplier-run — exemple pain.001 ISO 20022 : Royaume-Uni (bacs-direct-credit)</news:title>
+    <news:keywords>exemple pain.001 Royaume-Uni, XML exemple bacs-direct-credit, fichier de paiement ISO 20022 Royaume-Uni, gb.bacs.supplier-run, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-gb-chaps-property-purchase/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.chaps.property-purchase — exemple pain.001 ISO 20022 : Royaume-Uni (priority-payment)</news:title>
+    <news:keywords>exemple pain.001 Royaume-Uni, XML exemple priority-payment, fichier de paiement ISO 20022 Royaume-Uni, gb.chaps.property-purchase, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-gb-fps-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.fps.single — exemple pain.001 ISO 20022 : Royaume-Uni (faster-payment)</news:title>
+    <news:keywords>exemple pain.001 Royaume-Uni, XML exemple faster-payment, fichier de paiement ISO 20022 Royaume-Uni, gb.fps.single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-gb-international-usd/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.international.usd — exemple pain.001 ISO 20022 : Royaume-Uni (priority-payment)</news:title>
+    <news:keywords>exemple pain.001 Royaume-Uni, XML exemple priority-payment, fichier de paiement ISO 20022 Royaume-Uni, gb.international.usd, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-hk-fps-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>hk.fps.single — exemple pain.001 ISO 20022 : HK (instant-payment)</news:title>
+    <news:keywords>exemple pain.001 HK, XML exemple instant-payment, fichier de paiement ISO 20022 HK, hk.fps.single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-it-sepa-sct-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>it.sepa.sct-single — exemple pain.001 ISO 20022 : Italie (sepa-credit-transfer)</news:title>
+    <news:keywords>exemple pain.001 Italie, XML exemple sepa-credit-transfer, fichier de paiement ISO 20022 Italie, it.sepa.sct-single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-lu-sepa-sct-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>lu.sepa.sct-single — exemple pain.001 ISO 20022 : Luxembourg (sepa-credit-transfer)</news:title>
+    <news:keywords>exemple pain.001 Luxembourg, XML exemple sepa-credit-transfer, fichier de paiement ISO 20022 Luxembourg, lu.sepa.sct-single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-my-duitnow-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>my.duitnow.single — exemple pain.001 ISO 20022 : MY (instant-payment)</news:title>
+    <news:keywords>exemple pain.001 MY, XML exemple instant-payment, fichier de paiement ISO 20022 MY, my.duitnow.single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-nl-sepa-sct-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>nl.sepa.sct-supplier — exemple pain.001 ISO 20022 : Pays-Bas (sepa-credit-transfer)</news:title>
+    <news:keywords>exemple pain.001 Pays-Bas, XML exemple sepa-credit-transfer, fichier de paiement ISO 20022 Pays-Bas, nl.sepa.sct-supplier, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-nl-sepa-sdd-core/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>nl.sepa.sdd-core — exemple pain.001 ISO 20022 : Pays-Bas (sepa-direct-debit)</news:title>
+    <news:keywords>exemple pain.001 Pays-Bas, XML exemple sepa-direct-debit, fichier de paiement ISO 20022 Pays-Bas, nl.sepa.sdd-core, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-qa-qatch-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>qa.qatch.single — exemple pain.001 ISO 20022 : QA (domestic-credit-transfer)</news:title>
+    <news:keywords>exemple pain.001 QA, XML exemple domestic-credit-transfer, fichier de paiement ISO 20022 QA, qa.qatch.single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-se-bankgiro-salary/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>se.bankgiro.salary — exemple pain.001 ISO 20022 : Suède (salary)</news:title>
+    <news:keywords>exemple pain.001 Suède, XML exemple salary, fichier de paiement ISO 20022 Suède, se.bankgiro.salary, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-se-bankgiro-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>se.bankgiro.supplier — exemple pain.001 ISO 20022 : Suède (bankgiro-credit)</news:title>
+    <news:keywords>exemple pain.001 Suède, XML exemple bankgiro-credit, fichier de paiement ISO 20022 Suède, se.bankgiro.supplier, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-se-plusgiro-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>se.plusgiro.supplier — exemple pain.001 ISO 20022 : Suède (plusgiro-credit)</news:title>
+    <news:keywords>exemple pain.001 Suède, XML exemple plusgiro-credit, fichier de paiement ISO 20022 Suède, se.plusgiro.supplier, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-se-rix-urgent/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>se.rix.urgent — exemple pain.001 ISO 20022 : Suède (priority-payment)</news:title>
+    <news:keywords>exemple pain.001 Suède, XML exemple priority-payment, fichier de paiement ISO 20022 Suède, se.rix.urgent, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-sg-fast-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>sg.fast.single — exemple pain.001 ISO 20022 : SG (instant-payment)</news:title>
+    <news:keywords>exemple pain.001 SG, XML exemple instant-payment, fichier de paiement ISO 20022 SG, sg.fast.single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-us-ach-ccd-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.ach.ccd-supplier — exemple pain.001 ISO 20022 : États-Unis (ach-credit)</news:title>
+    <news:keywords>exemple pain.001 États-Unis, XML exemple ach-credit, fichier de paiement ISO 20022 États-Unis, us.ach.ccd-supplier, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-us-ach-debit/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.ach.debit — exemple pain.001 ISO 20022 : États-Unis (ach-debit)</news:title>
+    <news:keywords>exemple pain.001 États-Unis, XML exemple ach-debit, fichier de paiement ISO 20022 États-Unis, us.ach.debit, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-us-ach-ppd-payroll/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.ach.ppd-payroll — exemple pain.001 ISO 20022 : États-Unis (ach-credit)</news:title>
+    <news:keywords>exemple pain.001 États-Unis, XML exemple ach-credit, fichier de paiement ISO 20022 États-Unis, us.ach.ppd-payroll, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-us-check-vendor/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.check.vendor — exemple pain.001 ISO 20022 : États-Unis (cheque)</news:title>
+    <news:keywords>exemple pain.001 États-Unis, XML exemple cheque, fichier de paiement ISO 20022 États-Unis, us.check.vendor, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-us-eftps-tax/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.eftps.tax — exemple pain.001 ISO 20022 : États-Unis (ach-credit)</news:title>
+    <news:keywords>exemple pain.001 États-Unis, XML exemple ach-credit, fichier de paiement ISO 20022 États-Unis, us.eftps.tax, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-us-rtp-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.rtp.single — exemple pain.001 ISO 20022 : États-Unis (instant-payment)</news:title>
+    <news:keywords>exemple pain.001 États-Unis, XML exemple instant-payment, fichier de paiement ISO 20022 États-Unis, us.rtp.single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/fr/corpus-us-wire-domestic/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>fr</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.wire.domestic — exemple pain.001 ISO 20022 : États-Unis (priority-payment)</news:title>
+    <news:keywords>exemple pain.001 États-Unis, XML exemple priority-payment, fichier de paiement ISO 20022 États-Unis, us.wire.domestic, corpus pain001</news:keywords>
   </news:news>
 </url>
 <url>
@@ -899,6 +2411,510 @@
     <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
     <news:title>Pain001 — Iniziazione di pagamenti ISO 20022 open source</news:title>
     <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, Italiano</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-ae-uaefts-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ae.uaefts.single — esempio pain.001 ISO 20022: AE (priority-payment)</news:title>
+    <news:keywords>esempio pain.001 AE, XML di esempio priority-payment, file di pagamento ISO 20022 AE, ae.uaefts.single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-be-sepa-sct-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>be.sepa.sct-supplier — esempio pain.001 ISO 20022: Belgio (sepa-credit-transfer)</news:title>
+    <news:keywords>esempio pain.001 Belgio, XML di esempio sepa-credit-transfer, file di pagamento ISO 20022 Belgio, be.sepa.sct-supplier, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-be-sepa-sdd-core/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>be.sepa.sdd-core — esempio pain.001 ISO 20022: Belgio (sepa-direct-debit)</news:title>
+    <news:keywords>esempio pain.001 Belgio, XML di esempio sepa-direct-debit, file di pagamento ISO 20022 Belgio, be.sepa.sdd-core, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-ch-international-usd/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ch.international.usd — esempio pain.001 ISO 20022: Svizzera (cross-border)</news:title>
+    <news:keywords>esempio pain.001 Svizzera, XML di esempio cross-border, file di pagamento ISO 20022 Svizzera, ch.international.usd, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-ch-sepa-sct/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ch.sepa.sct — esempio pain.001 ISO 20022: Svizzera (sepa-credit-transfer)</news:title>
+    <news:keywords>esempio pain.001 Svizzera, XML di esempio sepa-credit-transfer, file di pagamento ISO 20022 Svizzera, ch.sepa.sct, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-ch-sps-qr-bill/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ch.sps.qr-bill — esempio pain.001 ISO 20022: Svizzera (domestic-credit-transfer)</news:title>
+    <news:keywords>esempio pain.001 Svizzera, XML di esempio domestic-credit-transfer, file di pagamento ISO 20022 Svizzera, ch.sps.qr-bill, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-ch-sps-scor/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ch.sps.scor — esempio pain.001 ISO 20022: Svizzera (domestic-credit-transfer)</news:title>
+    <news:keywords>esempio pain.001 Svizzera, XML di esempio domestic-credit-transfer, file di pagamento ISO 20022 Svizzera, ch.sps.scor, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-cz-certis-domestic/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>cz.certis.domestic — esempio pain.001 ISO 20022: CZ (domestic-credit-transfer)</news:title>
+    <news:keywords>esempio pain.001 CZ, XML di esempio domestic-credit-transfer, file di pagamento ISO 20022 CZ, cz.certis.domestic, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-cz-sepa-sct/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>cz.sepa.sct — esempio pain.001 ISO 20022: CZ (sepa-credit-transfer)</news:title>
+    <news:keywords>esempio pain.001 CZ, XML di esempio sepa-credit-transfer, file di pagamento ISO 20022 CZ, cz.sepa.sct, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-de-axz-foreign/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.axz.foreign — esempio pain.001 ISO 20022: Germania (cross-border)</news:title>
+    <news:keywords>esempio pain.001 Germania, XML di esempio cross-border, file di pagamento ISO 20022 Germania, de.axz.foreign, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-de-ccu-urgent/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.ccu.urgent — esempio pain.001 ISO 20022: Germania (urgent-euro)</news:title>
+    <news:keywords>esempio pain.001 Germania, XML di esempio urgent-euro, file di pagamento ISO 20022 Germania, de.ccu.urgent, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-de-sepa-sct-inst/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.sepa.sct-inst — esempio pain.001 ISO 20022: Germania (sepa-instant)</news:title>
+    <news:keywords>esempio pain.001 Germania, XML di esempio sepa-instant, file di pagamento ISO 20022 Germania, de.sepa.sct-inst, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-de-sepa-sct-salary/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.sepa.sct-salary — esempio pain.001 ISO 20022: Germania (sepa-credit-transfer)</news:title>
+    <news:keywords>esempio pain.001 Germania, XML di esempio sepa-credit-transfer, file di pagamento ISO 20022 Germania, de.sepa.sct-salary, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-de-sepa-sdd-b2b/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.sepa.sdd-b2b — esempio pain.001 ISO 20022: Germania (sepa-direct-debit)</news:title>
+    <news:keywords>esempio pain.001 Germania, XML di esempio sepa-direct-debit, file di pagamento ISO 20022 Germania, de.sepa.sdd-b2b, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-es-sepa-sct-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>es.sepa.sct-single — esempio pain.001 ISO 20022: Spagna (sepa-credit-transfer)</news:title>
+    <news:keywords>esempio pain.001 Spagna, XML di esempio sepa-credit-transfer, file di pagamento ISO 20022 Spagna, es.sepa.sct-single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-es-sepa-sdd-core/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>es.sepa.sdd-core — esempio pain.001 ISO 20022: Spagna (sepa-direct-debit)</news:title>
+    <news:keywords>esempio pain.001 Spagna, XML di esempio sepa-direct-debit, file di pagamento ISO 20022 Spagna, es.sepa.sdd-core, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-fr-sepa-sct-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>fr.sepa.sct-supplier — esempio pain.001 ISO 20022: Francia (sepa-credit-transfer)</news:title>
+    <news:keywords>esempio pain.001 Francia, XML di esempio sepa-credit-transfer, file di pagamento ISO 20022 Francia, fr.sepa.sct-supplier, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-fr-sepa-sdd-core/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>fr.sepa.sdd-core — esempio pain.001 ISO 20022: Francia (sepa-direct-debit)</news:title>
+    <news:keywords>esempio pain.001 Francia, XML di esempio sepa-direct-debit, file di pagamento ISO 20022 Francia, fr.sepa.sdd-core, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-gb-bacs-dd-collection/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.bacs-dd.collection — esempio pain.001 ISO 20022: Regno Unito (bacs-direct-debit)</news:title>
+    <news:keywords>esempio pain.001 Regno Unito, XML di esempio bacs-direct-debit, file di pagamento ISO 20022 Regno Unito, gb.bacs-dd.collection, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-gb-bacs-supplier-run/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.bacs.supplier-run — esempio pain.001 ISO 20022: Regno Unito (bacs-direct-credit)</news:title>
+    <news:keywords>esempio pain.001 Regno Unito, XML di esempio bacs-direct-credit, file di pagamento ISO 20022 Regno Unito, gb.bacs.supplier-run, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-gb-chaps-property-purchase/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.chaps.property-purchase — esempio pain.001 ISO 20022: Regno Unito (priority-payment)</news:title>
+    <news:keywords>esempio pain.001 Regno Unito, XML di esempio priority-payment, file di pagamento ISO 20022 Regno Unito, gb.chaps.property-purchase, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-gb-fps-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.fps.single — esempio pain.001 ISO 20022: Regno Unito (faster-payment)</news:title>
+    <news:keywords>esempio pain.001 Regno Unito, XML di esempio faster-payment, file di pagamento ISO 20022 Regno Unito, gb.fps.single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-gb-international-usd/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.international.usd — esempio pain.001 ISO 20022: Regno Unito (priority-payment)</news:title>
+    <news:keywords>esempio pain.001 Regno Unito, XML di esempio priority-payment, file di pagamento ISO 20022 Regno Unito, gb.international.usd, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-hk-fps-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>hk.fps.single — esempio pain.001 ISO 20022: HK (instant-payment)</news:title>
+    <news:keywords>esempio pain.001 HK, XML di esempio instant-payment, file di pagamento ISO 20022 HK, hk.fps.single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-it-sepa-sct-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>it.sepa.sct-single — esempio pain.001 ISO 20022: Italia (sepa-credit-transfer)</news:title>
+    <news:keywords>esempio pain.001 Italia, XML di esempio sepa-credit-transfer, file di pagamento ISO 20022 Italia, it.sepa.sct-single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-lu-sepa-sct-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>lu.sepa.sct-single — esempio pain.001 ISO 20022: Lussemburgo (sepa-credit-transfer)</news:title>
+    <news:keywords>esempio pain.001 Lussemburgo, XML di esempio sepa-credit-transfer, file di pagamento ISO 20022 Lussemburgo, lu.sepa.sct-single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-my-duitnow-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>my.duitnow.single — esempio pain.001 ISO 20022: MY (instant-payment)</news:title>
+    <news:keywords>esempio pain.001 MY, XML di esempio instant-payment, file di pagamento ISO 20022 MY, my.duitnow.single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-nl-sepa-sct-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>nl.sepa.sct-supplier — esempio pain.001 ISO 20022: Paesi Bassi (sepa-credit-transfer)</news:title>
+    <news:keywords>esempio pain.001 Paesi Bassi, XML di esempio sepa-credit-transfer, file di pagamento ISO 20022 Paesi Bassi, nl.sepa.sct-supplier, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-nl-sepa-sdd-core/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>nl.sepa.sdd-core — esempio pain.001 ISO 20022: Paesi Bassi (sepa-direct-debit)</news:title>
+    <news:keywords>esempio pain.001 Paesi Bassi, XML di esempio sepa-direct-debit, file di pagamento ISO 20022 Paesi Bassi, nl.sepa.sdd-core, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-qa-qatch-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>qa.qatch.single — esempio pain.001 ISO 20022: QA (domestic-credit-transfer)</news:title>
+    <news:keywords>esempio pain.001 QA, XML di esempio domestic-credit-transfer, file di pagamento ISO 20022 QA, qa.qatch.single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-se-bankgiro-salary/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>se.bankgiro.salary — esempio pain.001 ISO 20022: Svezia (salary)</news:title>
+    <news:keywords>esempio pain.001 Svezia, XML di esempio salary, file di pagamento ISO 20022 Svezia, se.bankgiro.salary, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-se-bankgiro-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>se.bankgiro.supplier — esempio pain.001 ISO 20022: Svezia (bankgiro-credit)</news:title>
+    <news:keywords>esempio pain.001 Svezia, XML di esempio bankgiro-credit, file di pagamento ISO 20022 Svezia, se.bankgiro.supplier, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-se-plusgiro-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>se.plusgiro.supplier — esempio pain.001 ISO 20022: Svezia (plusgiro-credit)</news:title>
+    <news:keywords>esempio pain.001 Svezia, XML di esempio plusgiro-credit, file di pagamento ISO 20022 Svezia, se.plusgiro.supplier, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-se-rix-urgent/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>se.rix.urgent — esempio pain.001 ISO 20022: Svezia (priority-payment)</news:title>
+    <news:keywords>esempio pain.001 Svezia, XML di esempio priority-payment, file di pagamento ISO 20022 Svezia, se.rix.urgent, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-sg-fast-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>sg.fast.single — esempio pain.001 ISO 20022: SG (instant-payment)</news:title>
+    <news:keywords>esempio pain.001 SG, XML di esempio instant-payment, file di pagamento ISO 20022 SG, sg.fast.single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-us-ach-ccd-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.ach.ccd-supplier — esempio pain.001 ISO 20022: Stati Uniti (ach-credit)</news:title>
+    <news:keywords>esempio pain.001 Stati Uniti, XML di esempio ach-credit, file di pagamento ISO 20022 Stati Uniti, us.ach.ccd-supplier, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-us-ach-debit/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.ach.debit — esempio pain.001 ISO 20022: Stati Uniti (ach-debit)</news:title>
+    <news:keywords>esempio pain.001 Stati Uniti, XML di esempio ach-debit, file di pagamento ISO 20022 Stati Uniti, us.ach.debit, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-us-ach-ppd-payroll/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.ach.ppd-payroll — esempio pain.001 ISO 20022: Stati Uniti (ach-credit)</news:title>
+    <news:keywords>esempio pain.001 Stati Uniti, XML di esempio ach-credit, file di pagamento ISO 20022 Stati Uniti, us.ach.ppd-payroll, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-us-check-vendor/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.check.vendor — esempio pain.001 ISO 20022: Stati Uniti (cheque)</news:title>
+    <news:keywords>esempio pain.001 Stati Uniti, XML di esempio cheque, file di pagamento ISO 20022 Stati Uniti, us.check.vendor, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-us-eftps-tax/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.eftps.tax — esempio pain.001 ISO 20022: Stati Uniti (ach-credit)</news:title>
+    <news:keywords>esempio pain.001 Stati Uniti, XML di esempio ach-credit, file di pagamento ISO 20022 Stati Uniti, us.eftps.tax, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-us-rtp-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.rtp.single — esempio pain.001 ISO 20022: Stati Uniti (instant-payment)</news:title>
+    <news:keywords>esempio pain.001 Stati Uniti, XML di esempio instant-payment, file di pagamento ISO 20022 Stati Uniti, us.rtp.single, corpus pain001</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/it/corpus-us-wire-domestic/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>it</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.wire.domestic — esempio pain.001 ISO 20022: Stati Uniti (priority-payment)</news:title>
+    <news:keywords>esempio pain.001 Stati Uniti, XML di esempio priority-payment, file di pagamento ISO 20022 Stati Uniti, us.wire.domestic, corpus pain001</news:keywords>
   </news:news>
 </url>
 <url>
@@ -1571,6 +3587,510 @@
     <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
     <news:title>Pain001 — Open-source ISO 20022-betalingsinitiatie</news:title>
     <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, Nederlands</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-ae-uaefts-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ae.uaefts.single — ISO 20022 pain.001-voorbeeld: AE (priority-payment)</news:title>
+    <news:keywords>pain.001 voorbeeld AE, priority-payment voorbeeld-XML, ISO 20022 AE betaalbestand, ae.uaefts.single, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-be-sepa-sct-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>be.sepa.sct-supplier — ISO 20022 pain.001-voorbeeld: België (sepa-credit-transfer)</news:title>
+    <news:keywords>pain.001 voorbeeld België, sepa-credit-transfer voorbeeld-XML, ISO 20022 België betaalbestand, be.sepa.sct-supplier, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-be-sepa-sdd-core/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>be.sepa.sdd-core — ISO 20022 pain.001-voorbeeld: België (sepa-direct-debit)</news:title>
+    <news:keywords>pain.001 voorbeeld België, sepa-direct-debit voorbeeld-XML, ISO 20022 België betaalbestand, be.sepa.sdd-core, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-ch-international-usd/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ch.international.usd — ISO 20022 pain.001-voorbeeld: Zwitserland (cross-border)</news:title>
+    <news:keywords>pain.001 voorbeeld Zwitserland, cross-border voorbeeld-XML, ISO 20022 Zwitserland betaalbestand, ch.international.usd, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-ch-sepa-sct/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ch.sepa.sct — ISO 20022 pain.001-voorbeeld: Zwitserland (sepa-credit-transfer)</news:title>
+    <news:keywords>pain.001 voorbeeld Zwitserland, sepa-credit-transfer voorbeeld-XML, ISO 20022 Zwitserland betaalbestand, ch.sepa.sct, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-ch-sps-qr-bill/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ch.sps.qr-bill — ISO 20022 pain.001-voorbeeld: Zwitserland (domestic-credit-transfer)</news:title>
+    <news:keywords>pain.001 voorbeeld Zwitserland, domestic-credit-transfer voorbeeld-XML, ISO 20022 Zwitserland betaalbestand, ch.sps.qr-bill, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-ch-sps-scor/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>ch.sps.scor — ISO 20022 pain.001-voorbeeld: Zwitserland (domestic-credit-transfer)</news:title>
+    <news:keywords>pain.001 voorbeeld Zwitserland, domestic-credit-transfer voorbeeld-XML, ISO 20022 Zwitserland betaalbestand, ch.sps.scor, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-cz-certis-domestic/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>cz.certis.domestic — ISO 20022 pain.001-voorbeeld: CZ (domestic-credit-transfer)</news:title>
+    <news:keywords>pain.001 voorbeeld CZ, domestic-credit-transfer voorbeeld-XML, ISO 20022 CZ betaalbestand, cz.certis.domestic, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-cz-sepa-sct/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>cz.sepa.sct — ISO 20022 pain.001-voorbeeld: CZ (sepa-credit-transfer)</news:title>
+    <news:keywords>pain.001 voorbeeld CZ, sepa-credit-transfer voorbeeld-XML, ISO 20022 CZ betaalbestand, cz.sepa.sct, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-de-axz-foreign/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.axz.foreign — ISO 20022 pain.001-voorbeeld: Duitsland (cross-border)</news:title>
+    <news:keywords>pain.001 voorbeeld Duitsland, cross-border voorbeeld-XML, ISO 20022 Duitsland betaalbestand, de.axz.foreign, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-de-ccu-urgent/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.ccu.urgent — ISO 20022 pain.001-voorbeeld: Duitsland (urgent-euro)</news:title>
+    <news:keywords>pain.001 voorbeeld Duitsland, urgent-euro voorbeeld-XML, ISO 20022 Duitsland betaalbestand, de.ccu.urgent, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-de-sepa-sct-inst/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.sepa.sct-inst — ISO 20022 pain.001-voorbeeld: Duitsland (sepa-instant)</news:title>
+    <news:keywords>pain.001 voorbeeld Duitsland, sepa-instant voorbeeld-XML, ISO 20022 Duitsland betaalbestand, de.sepa.sct-inst, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-de-sepa-sct-salary/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.sepa.sct-salary — ISO 20022 pain.001-voorbeeld: Duitsland (sepa-credit-transfer)</news:title>
+    <news:keywords>pain.001 voorbeeld Duitsland, sepa-credit-transfer voorbeeld-XML, ISO 20022 Duitsland betaalbestand, de.sepa.sct-salary, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-de-sepa-sdd-b2b/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>de.sepa.sdd-b2b — ISO 20022 pain.001-voorbeeld: Duitsland (sepa-direct-debit)</news:title>
+    <news:keywords>pain.001 voorbeeld Duitsland, sepa-direct-debit voorbeeld-XML, ISO 20022 Duitsland betaalbestand, de.sepa.sdd-b2b, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-es-sepa-sct-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>es.sepa.sct-single — ISO 20022 pain.001-voorbeeld: Spanje (sepa-credit-transfer)</news:title>
+    <news:keywords>pain.001 voorbeeld Spanje, sepa-credit-transfer voorbeeld-XML, ISO 20022 Spanje betaalbestand, es.sepa.sct-single, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-es-sepa-sdd-core/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>es.sepa.sdd-core — ISO 20022 pain.001-voorbeeld: Spanje (sepa-direct-debit)</news:title>
+    <news:keywords>pain.001 voorbeeld Spanje, sepa-direct-debit voorbeeld-XML, ISO 20022 Spanje betaalbestand, es.sepa.sdd-core, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-fr-sepa-sct-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>fr.sepa.sct-supplier — ISO 20022 pain.001-voorbeeld: Frankrijk (sepa-credit-transfer)</news:title>
+    <news:keywords>pain.001 voorbeeld Frankrijk, sepa-credit-transfer voorbeeld-XML, ISO 20022 Frankrijk betaalbestand, fr.sepa.sct-supplier, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-fr-sepa-sdd-core/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>fr.sepa.sdd-core — ISO 20022 pain.001-voorbeeld: Frankrijk (sepa-direct-debit)</news:title>
+    <news:keywords>pain.001 voorbeeld Frankrijk, sepa-direct-debit voorbeeld-XML, ISO 20022 Frankrijk betaalbestand, fr.sepa.sdd-core, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-gb-bacs-dd-collection/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.bacs-dd.collection — ISO 20022 pain.001-voorbeeld: Verenigd Koninkrijk (bacs-direct-debit)</news:title>
+    <news:keywords>pain.001 voorbeeld Verenigd Koninkrijk, bacs-direct-debit voorbeeld-XML, ISO 20022 Verenigd Koninkrijk betaalbestand, gb.bacs-dd.collection, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-gb-bacs-supplier-run/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.bacs.supplier-run — ISO 20022 pain.001-voorbeeld: Verenigd Koninkrijk (bacs-direct-credit)</news:title>
+    <news:keywords>pain.001 voorbeeld Verenigd Koninkrijk, bacs-direct-credit voorbeeld-XML, ISO 20022 Verenigd Koninkrijk betaalbestand, gb.bacs.supplier-run, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-gb-chaps-property-purchase/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.chaps.property-purchase — ISO 20022 pain.001-voorbeeld: Verenigd Koninkrijk (priority-payment)</news:title>
+    <news:keywords>pain.001 voorbeeld Verenigd Koninkrijk, priority-payment voorbeeld-XML, ISO 20022 Verenigd Koninkrijk betaalbestand, gb.chaps.property-purchase, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-gb-fps-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.fps.single — ISO 20022 pain.001-voorbeeld: Verenigd Koninkrijk (faster-payment)</news:title>
+    <news:keywords>pain.001 voorbeeld Verenigd Koninkrijk, faster-payment voorbeeld-XML, ISO 20022 Verenigd Koninkrijk betaalbestand, gb.fps.single, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-gb-international-usd/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>gb.international.usd — ISO 20022 pain.001-voorbeeld: Verenigd Koninkrijk (priority-payment)</news:title>
+    <news:keywords>pain.001 voorbeeld Verenigd Koninkrijk, priority-payment voorbeeld-XML, ISO 20022 Verenigd Koninkrijk betaalbestand, gb.international.usd, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-hk-fps-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>hk.fps.single — ISO 20022 pain.001-voorbeeld: HK (instant-payment)</news:title>
+    <news:keywords>pain.001 voorbeeld HK, instant-payment voorbeeld-XML, ISO 20022 HK betaalbestand, hk.fps.single, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-it-sepa-sct-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>it.sepa.sct-single — ISO 20022 pain.001-voorbeeld: Italië (sepa-credit-transfer)</news:title>
+    <news:keywords>pain.001 voorbeeld Italië, sepa-credit-transfer voorbeeld-XML, ISO 20022 Italië betaalbestand, it.sepa.sct-single, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-lu-sepa-sct-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>lu.sepa.sct-single — ISO 20022 pain.001-voorbeeld: Luxemburg (sepa-credit-transfer)</news:title>
+    <news:keywords>pain.001 voorbeeld Luxemburg, sepa-credit-transfer voorbeeld-XML, ISO 20022 Luxemburg betaalbestand, lu.sepa.sct-single, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-my-duitnow-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>my.duitnow.single — ISO 20022 pain.001-voorbeeld: MY (instant-payment)</news:title>
+    <news:keywords>pain.001 voorbeeld MY, instant-payment voorbeeld-XML, ISO 20022 MY betaalbestand, my.duitnow.single, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-nl-sepa-sct-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>nl.sepa.sct-supplier — ISO 20022 pain.001-voorbeeld: Nederland (sepa-credit-transfer)</news:title>
+    <news:keywords>pain.001 voorbeeld Nederland, sepa-credit-transfer voorbeeld-XML, ISO 20022 Nederland betaalbestand, nl.sepa.sct-supplier, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-nl-sepa-sdd-core/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>nl.sepa.sdd-core — ISO 20022 pain.001-voorbeeld: Nederland (sepa-direct-debit)</news:title>
+    <news:keywords>pain.001 voorbeeld Nederland, sepa-direct-debit voorbeeld-XML, ISO 20022 Nederland betaalbestand, nl.sepa.sdd-core, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-qa-qatch-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>qa.qatch.single — ISO 20022 pain.001-voorbeeld: QA (domestic-credit-transfer)</news:title>
+    <news:keywords>pain.001 voorbeeld QA, domestic-credit-transfer voorbeeld-XML, ISO 20022 QA betaalbestand, qa.qatch.single, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-se-bankgiro-salary/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>se.bankgiro.salary — ISO 20022 pain.001-voorbeeld: Zweden (salary)</news:title>
+    <news:keywords>pain.001 voorbeeld Zweden, salary voorbeeld-XML, ISO 20022 Zweden betaalbestand, se.bankgiro.salary, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-se-bankgiro-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>se.bankgiro.supplier — ISO 20022 pain.001-voorbeeld: Zweden (bankgiro-credit)</news:title>
+    <news:keywords>pain.001 voorbeeld Zweden, bankgiro-credit voorbeeld-XML, ISO 20022 Zweden betaalbestand, se.bankgiro.supplier, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-se-plusgiro-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>se.plusgiro.supplier — ISO 20022 pain.001-voorbeeld: Zweden (plusgiro-credit)</news:title>
+    <news:keywords>pain.001 voorbeeld Zweden, plusgiro-credit voorbeeld-XML, ISO 20022 Zweden betaalbestand, se.plusgiro.supplier, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-se-rix-urgent/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>se.rix.urgent — ISO 20022 pain.001-voorbeeld: Zweden (priority-payment)</news:title>
+    <news:keywords>pain.001 voorbeeld Zweden, priority-payment voorbeeld-XML, ISO 20022 Zweden betaalbestand, se.rix.urgent, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-sg-fast-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>sg.fast.single — ISO 20022 pain.001-voorbeeld: SG (instant-payment)</news:title>
+    <news:keywords>pain.001 voorbeeld SG, instant-payment voorbeeld-XML, ISO 20022 SG betaalbestand, sg.fast.single, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-us-ach-ccd-supplier/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.ach.ccd-supplier — ISO 20022 pain.001-voorbeeld: Verenigde Staten (ach-credit)</news:title>
+    <news:keywords>pain.001 voorbeeld Verenigde Staten, ach-credit voorbeeld-XML, ISO 20022 Verenigde Staten betaalbestand, us.ach.ccd-supplier, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-us-ach-debit/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.ach.debit — ISO 20022 pain.001-voorbeeld: Verenigde Staten (ach-debit)</news:title>
+    <news:keywords>pain.001 voorbeeld Verenigde Staten, ach-debit voorbeeld-XML, ISO 20022 Verenigde Staten betaalbestand, us.ach.debit, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-us-ach-ppd-payroll/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.ach.ppd-payroll — ISO 20022 pain.001-voorbeeld: Verenigde Staten (ach-credit)</news:title>
+    <news:keywords>pain.001 voorbeeld Verenigde Staten, ach-credit voorbeeld-XML, ISO 20022 Verenigde Staten betaalbestand, us.ach.ppd-payroll, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-us-check-vendor/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.check.vendor — ISO 20022 pain.001-voorbeeld: Verenigde Staten (cheque)</news:title>
+    <news:keywords>pain.001 voorbeeld Verenigde Staten, cheque voorbeeld-XML, ISO 20022 Verenigde Staten betaalbestand, us.check.vendor, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-us-eftps-tax/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.eftps.tax — ISO 20022 pain.001-voorbeeld: Verenigde Staten (ach-credit)</news:title>
+    <news:keywords>pain.001 voorbeeld Verenigde Staten, ach-credit voorbeeld-XML, ISO 20022 Verenigde Staten betaalbestand, us.eftps.tax, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-us-rtp-single/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.rtp.single — ISO 20022 pain.001-voorbeeld: Verenigde Staten (instant-payment)</news:title>
+    <news:keywords>pain.001 voorbeeld Verenigde Staten, instant-payment voorbeeld-XML, ISO 20022 Verenigde Staten betaalbestand, us.rtp.single, pain001 corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/nl/corpus-us-wire-domestic/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>nl</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-13T08:00:00+00:00</news:publication_date>
+    <news:title>us.wire.domestic — ISO 20022 pain.001-voorbeeld: Verenigde Staten (priority-payment)</news:title>
+    <news:keywords>pain.001 voorbeeld Verenigde Staten, priority-payment voorbeeld-XML, ISO 20022 Verenigde Staten betaalbestand, us.wire.domestic, pain001 corpus</news:keywords>
   </news:news>
 </url>
 <url>
