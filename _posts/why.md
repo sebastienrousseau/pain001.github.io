@@ -104,6 +104,8 @@ Three things. It turns the data you already have — spreadsheets, ERP exports, 
 
 Nothing, at any scale, permanently. The core is dual-licensed (Apache-2.0 or MIT); companion packages are Apache-2.0. The nearest commercial reference point — SWIFT's translation SDK — is publicly listed at €10,000–30,000 per year before integration effort. The full landscape, including where commercial platforms genuinely win, is in the [comparison](/competitors-comparison/).
 
+Optional and separate: a supported release channel, private profile derivation for your bank's guideline, and integration help, for teams that need a named party with obligations. See the [enterprise page](/enterprise/); the software itself stays free.
+
 ## Is it safe?
 
 Check rather than trust: payment data [never leaves your machines](/privacy/), the dependency inventory is a published [SBOM](/sbom.cdx.json), the code holds [100% branch coverage as a CI gate](/architecture-and-patents/), and the [browser demo](/try/) invites your security team to falsify the claims with DevTools open.

@@ -918,6 +918,23 @@
     "wordCount": 261
   },
   {
+    "date": "2026-09-12T08:00:00+00:00",
+    "description": "The core stays free and permissively licensed. For teams that need a throat to choke: a supported release channel with an LTS line, private derivation of your bank's usage guideline into a validated profile, and integration recipes for your ERP or TMS. No prices on this page; one form.",
+    "locale": "en_GB",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "Pain001 for regulated teams: supported channel, private profiles, integration help",
+    "url": "https://pain001.com/enterprise/",
+    "wordCount": 456
+  },
+  {
     "date": "2026-07-26T08:00:00+00:00",
     "description": "Suite Python de código abierto para generar ficheros pain.001 y pain.008 validados por XSD desde CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101 — con herramientas MCP para agentes de IA y servidor LSP.",
     "locale": "es_ES",
@@ -983,7 +1000,7 @@
     ],
     "title": "Pain001 Executive Brief",
     "url": "https://pain001.com/executive-brief/",
-    "wordCount": 297
+    "wordCount": 318
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -1085,7 +1102,7 @@
     ],
     "title": "Governance & Continuity",
     "url": "https://pain001.com/governance/",
-    "wordCount": 538
+    "wordCount": 576
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -2785,7 +2802,7 @@
     ],
     "title": "Trust Centre",
     "url": "https://pain001.com/trust/",
-    "wordCount": 683
+    "wordCount": 749
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -2853,7 +2870,7 @@
     ],
     "title": "Why Pain001: the Business Case in Five Questions",
     "url": "https://pain001.com/why/",
-    "wordCount": 368
+    "wordCount": 403
   },
   {
     "date": "2026-07-26T08:00:00+00:00",

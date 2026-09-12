@@ -102,6 +102,7 @@ This page exists so that a security, vendor-risk, or audit reviewer can answer s
 - **OpenSSF Best Practices badge** — the core repository holds the [passing badge](https://www.bestpractices.dev/projects/13858) (100% of the criteria), covering documented contribution and vulnerability-reporting processes, enforced test coverage, static and dynamic analysis, and signed release delivery.
 - **SBOM** — a CycloneDX software bill of materials is generated for core release builds ([this site's own SBOM](/sbom.cdx.json) is also published).
 - **Provenance** — SLSA Build L3 attestations are generated in the release pipeline itself; v0.0.57 onward carries a Sigstore-signed `multiple.intoto.jsonl` on the GitHub release, verifiable with `slsa-verifier` against the published wheel and sdist digests.
+- **Per-release artefacts** — every core release on [GitHub Releases](https://github.com/sebastienrousseau/pain001/releases) carries its wheel, its SLSA provenance (`multiple.intoto.jsonl`) and its SBOM; verify a wheel with `slsa-verifier verify-artifact pain001-<version>-py3-none-any.whl --provenance-path multiple.intoto.jsonl --source-uri github.com/sebastienrousseau/pain001 --source-tag v<version>`. The five packages share one version number; the [governance page](/governance/) lists the current one.
 - **Pinned CI** — every GitHub Action in the build pipeline is pinned to a full commit SHA; workflow tokens follow least privilege.
 - **Kill switch** — third-party plugin discovery can be disabled outright (`PAIN001_DISABLE_PLUGINS=1`), and every discovered plugin is auditable before first use (`pain001 plugins list`).
 
@@ -109,7 +110,7 @@ This page exists so that a security, vendor-risk, or audit reviewer can answer s
 
 - **Product data flows** — every component (CLI, library, REST service, MCP server, LSP server) executes on your infrastructure. There is no telemetry, no SaaS callback, no network dependency for generation or validation. [Privacy position](/privacy/).
 - **Website** — no cookies, no third-party analytics, and no requests to third parties: every asset is served from this origin, and the only beacon goes to the project's own `metrics.pain001.com` (cookieless, five named events, off under Do-Not-Track and Global Privacy Control; see the [privacy page](/privacy/)). The [browser demo](/try/) reads files locally via the FileReader API; the "Verify it yourself" panel on that page shows how to falsify this with DevTools open.
-- **Demo boundary** — the demo's WASM validation engine is served from this origin and cached by a service worker; after first load the demo works offline, which is the strongest proof no data leaves the machine.
+- **Demo boundary** — the browser demo runs the pain001 library itself inside a Python runtime compiled to WebAssembly, served from this origin and cached by a service worker: records, generated XML and verdicts never leave the page, and after first load the demo works offline, which is the strongest proof no data leaves your machine.
 
 ## 04. Accessibility
 

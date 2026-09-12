@@ -662,6 +662,18 @@
   </news:news>
 </url>
 <url>
+  <loc>https://pain001.com/enterprise/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:title>Pain001 for regulated teams: supported channel, private profiles, integration help</news:title>
+    <news:keywords>pain001 enterprise support, ISO 20022 LTS, bank usage guideline profile, pain.001 integration support, payment file validation support, SLA open source payments</news:keywords>
+  </news:news>
+</url>
+<url>
   <loc>https://pain001.com/es/</loc>
   <news:news>
     <news:publication>

@@ -198,6 +198,7 @@
 <p>三件事。它将您已有的数据——电子表格、ERP 导出文件、传统 SWIFT 文件——转换为可直接提交银行的 ISO 20022 支付文件。它在提交前证明每个文件均无瑕疵：依据银行的官方规则手册（ISO 20022 XSD）进行校验，执行您的银行所使用的账号校验和（ISO 13616 mod-97），并根据记录重新计算控制总额，绝不盲目采信。而且这一切都在您自己的基础设施上完成——任何数据都不会被上传。</p>
 <h2 id="what-does-it-cost">它的成本是多少？<a class="heading-anchor" href="#what-does-it-cost" aria-label="跳转至章节：它的成本是多少？">#</a></h2>
 <p>零成本，任何规模，永久如此。核心采用双重许可（Apache-2.0 或 MIT）；配套软件包采用 Apache-2.0。最接近的商业参照——SWIFT 的转换 SDK——公开标价为每年 €10,000–30,000，尚不含集成成本。完整格局，包括商业平台真正胜出之处，见<a href="/competitors-comparison/">对比分析</a>。</p>
+<p>Optional and separate: a supported release channel, private profile derivation for your bank's guideline, and integration help, for teams that need a named party with obligations. See the <a href="/enterprise/">enterprise page</a>; the software itself stays free.</p>
 <h2 id="is-it-safe">它安全吗？<a class="heading-anchor" href="#is-it-safe" aria-label="跳转至章节：它安全吗？">#</a></h2>
 <p>核验而非轻信：支付数据<a href="/privacy/">绝不离开您的设备</a>，依赖项清单是公开发布的 <a href="/sbom.cdx.json">SBOM</a>，代码以 <a href="/architecture-and-patents/">100% 分支覆盖率作为 CI 门槛</a>，<a href="/zh-hans/try/">浏览器演示</a>更欢迎您的安全团队打开 DevTools 来证伪这些论断。</p>
 <h2 id="what-is-the-next-step">下一步是什么？<a class="heading-anchor" href="#what-is-the-next-step" aria-label="跳转至章节：下一步是什么？">#</a></h2>
@@ -248,6 +249,7 @@
               <li><a href="/competitors-comparison/">与商业工具对比</a></li>
               <li><a href="/architecture-and-patents/">架构 &amp; 专利</a></li>
               <li><a href="/trust/">信任中心</a></li>
+              <li><a href="/enterprise/">Enterprise</a></li>
               <li><a href="/compatibility/">兼容性矩阵</a></li>
               <li><a href="/security.txt">security.txt</a></li>
               <li><a href="/sbom.cdx.json">SBOM</a> · <a href="/llms.txt">llms.txt</a> · <a href="/rss.xml">RSS 订阅</a></li>

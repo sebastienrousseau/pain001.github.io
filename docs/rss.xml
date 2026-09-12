@@ -43,6 +43,23 @@
       <category>SEPA</category>
     </item>
     <item>
+      <title>Pain001 for regulated teams: supported channel, private profiles, integration help</title>
+      <link>https://pain001.com/enterprise/</link>
+      <description>The core stays free and permissively licensed. For teams that need a throat to choke: a supported release channel with an LTS line, private derivation of your bank&apos;s usage guideline into a validated profile, and integration recipes for your ERP or TMS. No prices on this page; one form.</description>
+      <guid isPermaLink="true">https://pain001.com/enterprise/</guid>
+      <pubDate>Sat, 12 Sep 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
       <title>ae.uaefts.single — ISO 20022 pain.001 example for AE (priority-payment)</title>
       <link>https://pain001.com/corpus-ae-uaefts-single/</link>
       <description>UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code. A validated pain.001 sample for AE on the priority-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</description>
@@ -829,23 +846,6 @@
       <link>https://pain001.com/contact/</link>
       <description>Where to report bugs, disclose security issues privately, and reach the maintainer — with what to include for the fastest possible fix.</description>
       <guid isPermaLink="true">https://pain001.com/contact/</guid>
-      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
-      <author>contact@pain001.com (Sebastien Rousseau)</author>
-      <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>
-      <category>Technology</category>
-      <category>ISO 20022</category>
-      <category>pain001</category>
-      <category>payments</category>
-      <category>python</category>
-      <category>banking</category>
-      <category>CBPR+</category>
-      <category>SEPA</category>
-    </item>
-    <item>
-      <title>Cross-Border pain.001 Under CBPR+: a Field Guide</title>
-      <link>https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/</link>
-      <description>What CBPR+ requires of your pain.001: BICFI agents, structured or hybrid addresses from 14 Nov 2026, charge bearers, purpose codes — with a worked xborder-ct example.</description>
-      <guid isPermaLink="true">https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/</guid>
       <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
       <author>contact@pain001.com (Sebastien Rousseau)</author>
       <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>
