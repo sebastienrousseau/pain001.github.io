@@ -53,7 +53,7 @@ const PAGES = process.env.PAGES
   ? process.env.PAGES.split(",")
   : [
       "/", "/try/", "/documentation/", "/installation/", "/faqs/", "/glossary/",
-      "/message-specs/", "/message-spec-pain.001.001.13/",
+      "/message-specs/", "/example-corpus/", "/message-spec-pain.001.001.13/",
       "/message-spec-pain.001.001.13-types/", "/message-spec-code-lists/",
       "/message-spec-changes/", "/compatibility/", "/pain002-reason-codes/",
       "/competitors-comparison/", "/executive-brief/", "/trust/", "/contact/",

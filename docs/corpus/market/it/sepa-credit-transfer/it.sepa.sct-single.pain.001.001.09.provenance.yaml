@@ -1,0 +1,45 @@
+scenario: it.sepa.sct-single
+family: sepa-credit-transfer
+country: IT
+message_type: pain.001.001.09
+description: SEPA credit transfer, single supplier payment.
+sha256: 2d3ad1804a3d24cfe2a7c6d3ffc58c787a644fd3e083ad529ac4cb1aadb2c606
+build:
+  renamed: []
+  wrapped:
+  - /Document/CstmrCdtTrfInitn/PmtInf/ReqdExctnDt
+  unwrapped: []
+  dropped: []
+  truncated: []
+validation:
+  xsd:
+    errors: 0
+    findings: []
+  mdr:
+    errors: 0
+    findings: []
+  profiles:
+    sepa-sct:
+      errors: 0
+      warnings: 0
+      findings: []
+    anti-duplicate:
+      errors: 0
+      warnings: 0
+      findings: []
+  overlays: {}
+twins:
+  iso_json:
+    sha256: 704184bdab859ebae75081d377b4db98a8bb79ed0e0c4bc6beee4aa6c20ca925
+    schema_findings: []
+  records:
+    rows: 1
+    gap: []
+    missing_required: []
+provenance:
+  sources:
+  - title: EPC132-08 Customer-to-PSP SCT Implementation Guidelines 2025 v1.0
+    read: '2026-09-10'
+  confidence: derived
+  evidence: []
+constraints: []

@@ -221,6 +221,40 @@
     "wordCount": 314
   },
   {
+    "date": "2026-09-12T08:00:00+00:00",
+    "description": "Generated pain.001 and pain.008 files that between them use every element path and choice branch of each supported schema edition, each named after what it adds, with a zip per edition.",
+    "locale": "en_GB",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "ISO 20022 schema coverage files — every element of every edition",
+    "url": "https://pain001.com/example-corpus-coverage/",
+    "wordCount": 4061
+  },
+  {
+    "date": "2026-09-12T08:00:00+00:00",
+    "description": "Download ISO 20022 pain.001 and pain.008 sample files built from the public scheme rulebooks per country and rail, each with a record of where it comes from and how it was checked, plus schema coverage files for every supported edition.",
+    "locale": "en_GB",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "ISO 20022 example files — pain.001 and pain.008 samples per country and rail",
+    "url": "https://pain001.com/example-corpus/",
+    "wordCount": 2416
+  },
+  {
     "date": "2026-07-26T08:00:00+00:00",
     "description": "One page for decision-makers: the rejected-file problem, the fixed 14 November 2026 deadline, what Pain001 does, what it costs, the safety evidence, and the one ask — print-ready.",
     "locale": "en_GB",

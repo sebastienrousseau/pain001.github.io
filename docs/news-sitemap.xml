@@ -170,6 +170,30 @@
   </news:news>
 </url>
 <url>
+  <loc>https://pain001.com/example-corpus/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:title>ISO 20022 example files — pain.001 and pain.008 samples per country and rail</news:title>
+    <news:keywords>ISO 20022 example files, pain.001 sample XML, pain.008 sample, bank usage guideline, SEPA example, CHAPS example, Faster Payments example, ACH pain.001, QR-bill pain.001, Bankgiro pain.001, test corpus</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/example-corpus-coverage/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-12T08:00:00+00:00</news:publication_date>
+    <news:title>ISO 20022 schema coverage files — every element of every edition</news:title>
+    <news:keywords>ISO 20022 schema coverage, pain.001 test files, pain.008 test files, XSD coverage, parser test corpus</news:keywords>
+  </news:news>
+</url>
+<url>
   <loc>https://pain001.com/executive-brief/</loc>
   <news:news>
     <news:publication>

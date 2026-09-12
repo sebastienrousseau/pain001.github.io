@@ -54,7 +54,7 @@ const PAGES = process.env.PAGES
   ? process.env.PAGES.split(",")
   : [
       "/", "/executive-brief/", "/documentation/", "/installation/", "/faqs/",
-      "/glossary/", "/message-specs/", "/message-spec-pain.001.001.13/",
+      "/glossary/", "/message-specs/", "/example-corpus/", "/message-spec-pain.001.001.13/",
       "/message-spec-pain.001.001.13-types/", "/message-spec-code-lists/",
       "/compatibility/", "/pain002-reason-codes/", "/competitors-comparison/",
       "/trust/", "/try/", "/contact/", "/fr/executive-brief/", "/tags/iso-20022/",

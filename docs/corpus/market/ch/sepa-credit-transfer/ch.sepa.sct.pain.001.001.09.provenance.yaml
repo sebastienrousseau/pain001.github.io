@@ -1,0 +1,46 @@
+scenario: ch.sepa.sct
+family: sepa-credit-transfer
+country: CH
+message_type: pain.001.001.09
+description: SEPA credit transfer from Switzerland (SPS payment type S).
+sha256: 654127ec167ea272409b59087f7a6e9e35f6505b8f2bfb68a698ffbc843f4f92
+build:
+  renamed: []
+  wrapped:
+  - /Document/CstmrCdtTrfInitn/PmtInf/ReqdExctnDt
+  unwrapped: []
+  dropped: []
+  truncated: []
+validation:
+  xsd:
+    errors: 0
+    findings: []
+  mdr:
+    errors: 0
+    findings: []
+  profiles:
+    ch-sepa:
+      errors: 0
+      warnings: 0
+      findings: []
+    anti-duplicate:
+      errors: 0
+      warnings: 0
+      findings: []
+  overlays: {}
+twins:
+  iso_json:
+    sha256: 49d43f310d7abdb4ca9ffa107131805580ee37d124be27c19d46b04cb0d6cc1b
+    schema_findings: []
+  records:
+    rows: 1
+    gap: []
+    missing_required: []
+provenance:
+  sources:
+  - title: SIX, Swiss Payment Standards, Implementation Guidelines Credit Transfer
+      (pain.001), SPS 2025 v2.2, payment type S
+    read: '2026-09-10'
+  confidence: derived
+  evidence: []
+constraints: []

@@ -1,0 +1,47 @@
+scenario: us.check.vendor
+family: cheque
+country: US
+message_type: pain.001.001.03
+description: Bank-issued cheque to a vendor, mailed to the creditor.
+sha256: 59b75d6e217c98f874c432262980b21e31b98620b73f09031cb09fa06967574f
+build:
+  renamed:
+  - /Document/CstmrCdtTrfInitn/PmtInf/DbtrAgt/FinInstnId/BICFI -> BIC
+  wrapped: []
+  unwrapped: []
+  dropped: []
+  truncated: []
+validation:
+  xsd:
+    errors: 0
+    findings: []
+  mdr:
+    errors: 0
+    findings: []
+  profiles:
+    anti-duplicate:
+      errors: 0
+      warnings: 0
+      findings: []
+  overlays: {}
+twins:
+  iso_json:
+    sha256: b4366c1d2b4ca46f37251cad3d861638afb02002db6664b074c273993bf82a26
+    schema_findings: []
+  records:
+    rows: 1
+    gap:
+    - CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/ChqInstr/ChqTp
+    - CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/ChqInstr/DlvryMtd/Cd
+    - CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/ChqInstr/MemoFld
+    missing_required:
+    - creditor_account_IBAN|creditor_account_number
+    - creditor_agent_BIC|creditor_agent_member_id
+provenance:
+  sources:
+  - title: ISO 20022 MDR Payments Initiation 2020-2021, cheque rules; Cross River
+      pain.001.001.03 check sample (index)
+    read: '2026-09-10'
+  confidence: assumed
+  evidence: []
+constraints: []
