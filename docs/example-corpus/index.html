@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta itemprop="datePublished" content="Fri, 11 Sep 2026 08:00:00 +0000" id="date" />
-    <meta itemprop="dateModified" content="Fri, 11 Sep 2026 08:00:00 +0000" id="last-modified" />
+    <meta itemprop="datePublished" content="Sat, 12 Sep 2026 08:00:00 +0000" id="date" />
+    <meta itemprop="dateModified" content="Sat, 12 Sep 2026 08:00:00 +0000" id="last-modified" />
     <title>ISO 20022 example files — pain.001 and pain.008 samples per country and rail</title>
 
     <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
@@ -181,8 +181,8 @@
           </nav>
           <p class="eyebrow">Example corpus</p>
           <h1 class="page-title">ISO 20022 example files — pain.001 and pain.008 samples per country and rail</h1>
-          <p class="deck">Sample payment files for 11 countries and their payment rails, plus schema coverage files for every supported edition, each traceable to its public sources.</p>
-          <div class="article-meta"><span>7 min read</span>
+          <p class="deck">Sample payment files for 17 countries and their payment rails, plus schema coverage files for every supported edition, each traceable to its public sources.</p>
+          <div class="article-meta"><span>8 min read</span>
             <span>Last reviewed <time datetime="2026-07-26">26 July 2026</time></span>
           </div>
         </div>
@@ -193,7 +193,7 @@
           <div lang="en"><p>If you are connecting a system to a bank, writing a parser, or testing a mapping, you need sample ISO 20022 files that are correct for your country and your rail. The ones passed around are usually old, hand-edited, or from somewhere else. This page gives you files built from the public rulebooks, with a record of where each one comes from.</p>
 <p><strong>What you get</strong></p>
 <ul>
-<li><strong>35 realistic payments</strong> across 11 countries: a UK CHAPS property purchase, a Swiss QR-bill, a Swedish Bankgiro run, a US ACH payroll, a SEPA direct debit, and more, each rendered in the message editions you are likely to meet.</li>
+<li><strong>42 realistic payments</strong> across 17 countries: a UK CHAPS property purchase, a Swiss QR-bill, a Swedish Bankgiro run, a US ACH payroll, a SEPA direct debit, and more, each rendered in the message editions you are likely to meet.</li>
 <li><strong>131 schema coverage files</strong> across 13 editions: deliberately exhaustive files that exercise the elements and choices of one schema edition, for testing a parser or a mapping against the whole schema rather than the usual happy path.</li>
 <li><strong>A provenance record beside every payment file</strong> saying where its content comes from, how far to trust it, and how the library checked it.</li>
 </ul>
@@ -215,9 +215,9 @@
 </thead>
 <tbody>
 <tr>
-<td data-label="Bundle" class="text-left"><a href="/corpus/pain001-example-corpus-0.0.68.zip">Complete corpus</a></td>
-<td data-label="Contents" class="text-left">70 payment files with their provenance records, and 131 schema coverage files across 13 editions</td>
-<td data-label="Size" class="text-right">278 KB</td>
+<td data-label="Bundle" class="text-left"><a href="/corpus/pain001-example-corpus-0.0.69.zip">Complete corpus</a></td>
+<td data-label="Contents" class="text-left">84 payment files with their provenance records, and 131 schema coverage files across 13 editions</td>
+<td data-label="Size" class="text-right">313 KB</td>
 </tr>
 <tr>
 <td data-label="Bundle" class="text-left">Coverage files per edition</td>
@@ -226,7 +226,7 @@
 </tr>
 </tbody>
 </table></div>
-<p>Everything here is generated from pain001 0.0.68's own corpus, which also ships inside the Python package (<code>pain001.corpus</code>) and in the <a href="https://github.com/sebastienrousseau/pain001/tree/main/pain001/corpus/data">repository</a>.</p>
+<p>Everything here is generated from pain001 0.0.69's own corpus, which also ships inside the Python package (<code>pain001.corpus</code>) and in the <a href="https://github.com/sebastienrousseau/pain001/tree/main/pain001/corpus/data">repository</a>.</p>
 <h2 id="one-scenario-end-to-end">One scenario, end to end<a class="heading-anchor" href="#one-scenario-end-to-end" aria-label="Link to section: One scenario, end to end">#</a></h2>
 <p>Take <code>gb.chaps.property-purchase</code>: CHAPS same-day property completion with the BoE HLST purpose code.</p>
 <p>It ships as these files:</p>
@@ -275,6 +275,27 @@
 <p>These checks are the library's own; they are not a certification, and passing them does not mean a bank will accept the file. Channel rules, onboarding profiles, cut-off times and the bank's guideline sit on top.</p>
 <p><strong>Reading the evidence column.</strong> <code>verified</code> means checked against a sample the scheme itself published. <code>derived</code> means built from the public rulebook or implementation guide; no published sample was available to compare. <code>assumed</code> means one detail rests on an assumption the record names; treat that detail with care.</p>
 <h2 id="payment-files-by-country">Payment files by country<a class="heading-anchor" href="#payment-files-by-country" aria-label="Link to section: Payment files by country">#</a></h2>
+<h3>AE (AE)</h3>
+<div class="table-responsive"><table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>What it shows</th>
+<th>Checked against</th>
+<th>Editions</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Scenario" class="text-left"><code>ae.uaefts.single</code></td>
+<td data-label="What it shows" class="text-left">UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code.</td>
+<td data-label="Checked against" class="text-left"><code>ae-uaefts</code>, <code>purpose-mandate-ae</code></td>
+<td data-label="Editions" class="text-left"><a href="/corpus/market/ae/priority-payment/ae.uaefts.single.pain.001.001.03.xml">pain.001.001.03</a>, <a href="/corpus/market/ae/priority-payment/ae.uaefts.single.pain.001.001.09.xml">pain.001.001.09</a></td>
+<td data-label="Evidence" class="text-left">assumed</td>
+</tr>
+</tbody>
+</table></div>
 <h3>Belgium (BE)</h3>
 <div class="table-responsive"><table>
 <thead>
@@ -341,6 +362,34 @@
 <td data-label="What it shows" class="text-left">SEPA credit transfer from Switzerland (SPS payment type S).</td>
 <td data-label="Checked against" class="text-left"><code>ch-sepa</code></td>
 <td data-label="Editions" class="text-left"><a href="/corpus/market/ch/sepa-credit-transfer/ch.sepa.sct.pain.001.001.03.xml">pain.001.001.03</a>, <a href="/corpus/market/ch/sepa-credit-transfer/ch.sepa.sct.pain.001.001.09.xml">pain.001.001.09</a></td>
+<td data-label="Evidence" class="text-left">derived</td>
+</tr>
+</tbody>
+</table></div>
+<h3>CZ (CZ)</h3>
+<div class="table-responsive"><table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>What it shows</th>
+<th>Checked against</th>
+<th>Editions</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Scenario" class="text-left"><code>cz.certis.domestic</code></td>
+<td data-label="What it shows" class="text-left">Czech domestic CZK transfer through CERTIS with VS/KS/SS payment symbols.</td>
+<td data-label="Checked against" class="text-left">base rules only</td>
+<td data-label="Editions" class="text-left"><a href="/corpus/market/cz/domestic-credit-transfer/cz.certis.domestic.pain.001.001.03.xml">pain.001.001.03</a>, <a href="/corpus/market/cz/domestic-credit-transfer/cz.certis.domestic.pain.001.001.09.xml">pain.001.001.09</a></td>
+<td data-label="Evidence" class="text-left">derived</td>
+</tr>
+<tr>
+<td data-label="Scenario" class="text-left"><code>cz.sepa.sct</code></td>
+<td data-label="What it shows" class="text-left">SEPA credit transfer from a Czech EUR account to a German supplier.</td>
+<td data-label="Checked against" class="text-left"><code>sepa-sct</code></td>
+<td data-label="Editions" class="text-left"><a href="/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.03.xml">pain.001.001.03</a>, <a href="/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.09.xml">pain.001.001.09</a></td>
 <td data-label="Evidence" class="text-left">derived</td>
 </tr>
 </tbody>
@@ -499,6 +548,27 @@
 </tr>
 </tbody>
 </table></div>
+<h3>HK (HK)</h3>
+<div class="table-responsive"><table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>What it shows</th>
+<th>Checked against</th>
+<th>Editions</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Scenario" class="text-left"><code>hk.fps.single</code></td>
+<td data-label="What it shows" class="text-left">Hong Kong FPS credit in HKD, clearing codes and account numbers.</td>
+<td data-label="Checked against" class="text-left"><code>hk-fps</code>, <code>purpose-mandate-hk</code></td>
+<td data-label="Editions" class="text-left"><a href="/corpus/market/hk/instant-payment/hk.fps.single.pain.001.001.03.xml">pain.001.001.03</a>, <a href="/corpus/market/hk/instant-payment/hk.fps.single.pain.001.001.09.xml">pain.001.001.09</a></td>
+<td data-label="Evidence" class="text-left">assumed</td>
+</tr>
+</tbody>
+</table></div>
 <h3>Italy (IT)</h3>
 <div class="table-responsive"><table>
 <thead>
@@ -541,6 +611,27 @@
 </tr>
 </tbody>
 </table></div>
+<h3>MY (MY)</h3>
+<div class="table-responsive"><table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>What it shows</th>
+<th>Checked against</th>
+<th>Editions</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Scenario" class="text-left"><code>my.duitnow.single</code></td>
+<td data-label="What it shows" class="text-left">Malaysia DuitNow credit in MYR with a BNM purpose code.</td>
+<td data-label="Checked against" class="text-left"><code>my-duitnow</code>, <code>purpose-mandate-my</code></td>
+<td data-label="Editions" class="text-left"><a href="/corpus/market/my/instant-payment/my.duitnow.single.pain.001.001.03.xml">pain.001.001.03</a>, <a href="/corpus/market/my/instant-payment/my.duitnow.single.pain.001.001.09.xml">pain.001.001.09</a></td>
+<td data-label="Evidence" class="text-left">assumed</td>
+</tr>
+</tbody>
+</table></div>
 <h3>Netherlands (NL)</h3>
 <div class="table-responsive"><table>
 <thead>
@@ -566,6 +657,27 @@
 <td data-label="Checked against" class="text-left"><code>sepa-sdd</code></td>
 <td data-label="Editions" class="text-left"><a href="/corpus/market/nl/sepa-direct-debit/nl.sepa.sdd-core.pain.008.001.02.xml">pain.008.001.02</a>, <a href="/corpus/market/nl/sepa-direct-debit/nl.sepa.sdd-core.pain.008.001.08.xml">pain.008.001.08</a></td>
 <td data-label="Evidence" class="text-left">derived</td>
+</tr>
+</tbody>
+</table></div>
+<h3>QA (QA)</h3>
+<div class="table-responsive"><table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>What it shows</th>
+<th>Checked against</th>
+<th>Editions</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Scenario" class="text-left"><code>qa.qatch.single</code></td>
+<td data-label="What it shows" class="text-left">Qatar QATCH credit in QAR with the QCB purpose of payment.</td>
+<td data-label="Checked against" class="text-left"><code>qa-qatch</code>, <code>purpose-mandate-qa</code></td>
+<td data-label="Editions" class="text-left"><a href="/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.03.xml">pain.001.001.03</a>, <a href="/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.09.xml">pain.001.001.09</a></td>
+<td data-label="Evidence" class="text-left">assumed</td>
 </tr>
 </tbody>
 </table></div>
@@ -608,6 +720,27 @@
 <td data-label="Checked against" class="text-left"><code>se-bankgiro</code></td>
 <td data-label="Editions" class="text-left"><a href="/corpus/market/se/salary/se.bankgiro.salary.pain.001.001.03.xml">pain.001.001.03</a>, <a href="/corpus/market/se/salary/se.bankgiro.salary.pain.001.001.09.xml">pain.001.001.09</a></td>
 <td data-label="Evidence" class="text-left">derived</td>
+</tr>
+</tbody>
+</table></div>
+<h3>SG (SG)</h3>
+<div class="table-responsive"><table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>What it shows</th>
+<th>Checked against</th>
+<th>Editions</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Scenario" class="text-left"><code>sg.fast.single</code></td>
+<td data-label="What it shows" class="text-left">Singapore FAST credit in SGD, bank and branch codes, addresses on both parties.</td>
+<td data-label="Checked against" class="text-left"><code>sg-fast</code></td>
+<td data-label="Editions" class="text-left"><a href="/corpus/market/sg/instant-payment/sg.fast.single.pain.001.001.03.xml">pain.001.001.03</a>, <a href="/corpus/market/sg/instant-payment/sg.fast.single.pain.001.001.09.xml">pain.001.001.09</a></td>
+<td data-label="Evidence" class="text-left">assumed</td>
 </tr>
 </tbody>
 </table></div>

@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-09-11T08:00:00+00:00"
+date: "2026-09-12T08:00:00+00:00"
 description: "Download ISO 20022 pain.001 and pain.008 sample files built from the public scheme rulebooks per country and rail, each with a record of where it comes from and how it was checked, plus schema coverage files for every supported edition."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -37,7 +37,7 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "Sample payment files for 11 countries and their payment rails, plus schema coverage files for every supported edition, each traceable to its public sources."
+subtitle: "Sample payment files for 17 countries and their payment rails, plus schema coverage files for every supported edition, each traceable to its public sources."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
 title: "ISO 20022 example files — pain.001 and pain.008 samples per country and rail"
@@ -50,11 +50,11 @@ generator: "Static Site Generator (SSG) (version 0.0.47)"
 item_description: "Download ISO 20022 pain.001 and pain.008 sample files built from the public scheme rulebooks per country and rail, each with a record of where it comes from and how it was checked, plus schema coverage files for every supported edition."
 item_guid: "https://pain001.com/example-corpus/"
 item_link: "https://pain001.com/example-corpus/"
-item_pub_date: "Fri, 11 Sep 2026 08:00:00 +0000"
+item_pub_date: "Sat, 12 Sep 2026 08:00:00 +0000"
 item_title: "ISO 20022 example files — pain.001 and pain.008 samples per country and rail"
-last_build_date: "Fri, 11 Sep 2026 08:00:00 +0000"
+last_build_date: "Sat, 12 Sep 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Fri, 11 Sep 2026 08:00:00 +0000"
+pub_date: "Sat, 12 Sep 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -93,7 +93,7 @@ If you are connecting a system to a bank, writing a parser, or testing a mapping
 
 **What you get**
 
-- **35 realistic payments** across 11 countries: a UK CHAPS property purchase, a Swiss QR-bill, a Swedish Bankgiro run, a US ACH payroll, a SEPA direct debit, and more, each rendered in the message editions you are likely to meet.
+- **42 realistic payments** across 17 countries: a UK CHAPS property purchase, a Swiss QR-bill, a Swedish Bankgiro run, a US ACH payroll, a SEPA direct debit, and more, each rendered in the message editions you are likely to meet.
 - **131 schema coverage files** across 13 editions: deliberately exhaustive files that exercise the elements and choices of one schema edition, for testing a parser or a mapping against the whole schema rather than the usual happy path.
 - **A provenance record beside every payment file** saying where its content comes from, how far to trust it, and how the library checked it.
 
@@ -109,10 +109,10 @@ Identifiers are synthetic: IBANs, BICs, LEIs and account numbers pass their chec
 
 | Bundle | Contents | Size |
 | :--- | :--- | ---: |
-| [Complete corpus](/corpus/pain001-example-corpus-0.0.68.zip) | 70 payment files with their provenance records, and 131 schema coverage files across 13 editions | 278 KB |
+| [Complete corpus](/corpus/pain001-example-corpus-0.0.69.zip) | 84 payment files with their provenance records, and 131 schema coverage files across 13 editions | 313 KB |
 | Coverage files per edition | one zip each, listed on the [coverage page](/example-corpus-coverage/) | 9 to 12 KB |
 
-Everything here is generated from pain001 0.0.68's own corpus, which also ships inside the Python package (`pain001.corpus`) and in the [repository](https://github.com/sebastienrousseau/pain001/tree/main/pain001/corpus/data).
+Everything here is generated from pain001 0.0.69's own corpus, which also ships inside the Python package (`pain001.corpus`) and in the [repository](https://github.com/sebastienrousseau/pain001/tree/main/pain001/corpus/data).
 
 ## One scenario, end to end
 
@@ -153,6 +153,12 @@ These checks are the library's own; they are not a certification, and passing th
 
 ## Payment files by country
 
+### AE (AE)
+
+| Scenario | What it shows | Checked against | Editions | Evidence |
+| :--- | :--- | :--- | :--- | :--- |
+| `ae.uaefts.single` | UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code. | `ae-uaefts`, `purpose-mandate-ae` | [pain.001.001.03](/corpus/market/ae/priority-payment/ae.uaefts.single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/ae/priority-payment/ae.uaefts.single.pain.001.001.09.xml) | assumed |
+
 ### Belgium (BE)
 
 | Scenario | What it shows | Checked against | Editions | Evidence |
@@ -168,6 +174,13 @@ These checks are the library's own; they are not a certification, and passing th
 | `ch.sps.qr-bill` | Swiss domestic credit transfer settling a QR-bill (QRR reference). | `ch-domestic` | [pain.001.001.03](/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/ch/domestic-credit-transfer/ch.sps.qr-bill.pain.001.001.09.xml) | derived |
 | `ch.sps.scor` | Swiss domestic credit transfer with an ISO 11649 creditor reference (SCOR). | `ch-domestic` | [pain.001.001.03](/corpus/market/ch/domestic-credit-transfer/ch.sps.scor.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/ch/domestic-credit-transfer/ch.sps.scor.pain.001.001.09.xml) | derived |
 | `ch.sepa.sct` | SEPA credit transfer from Switzerland (SPS payment type S). | `ch-sepa` | [pain.001.001.03](/corpus/market/ch/sepa-credit-transfer/ch.sepa.sct.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/ch/sepa-credit-transfer/ch.sepa.sct.pain.001.001.09.xml) | derived |
+
+### CZ (CZ)
+
+| Scenario | What it shows | Checked against | Editions | Evidence |
+| :--- | :--- | :--- | :--- | :--- |
+| `cz.certis.domestic` | Czech domestic CZK transfer through CERTIS with VS/KS/SS payment symbols. | base rules only | [pain.001.001.03](/corpus/market/cz/domestic-credit-transfer/cz.certis.domestic.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/cz/domestic-credit-transfer/cz.certis.domestic.pain.001.001.09.xml) | derived |
+| `cz.sepa.sct` | SEPA credit transfer from a Czech EUR account to a German supplier. | `sepa-sct` | [pain.001.001.03](/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/cz/sepa-credit-transfer/cz.sepa.sct.pain.001.001.09.xml) | derived |
 
 ### Germany (DE)
 
@@ -203,6 +216,12 @@ These checks are the library's own; they are not a certification, and passing th
 | `gb.chaps.property-purchase` | CHAPS same-day property completion with the BoE HLST purpose code. | `uk-chaps`, `purpose-mandate-gb` | [pain.001.001.03](/corpus/market/gb/priority-payment/gb.chaps.property-purchase.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/gb/priority-payment/gb.chaps.property-purchase.pain.001.001.09.xml) | derived |
 | `gb.international.usd` | USD cross-border payment from a UK account to a US supplier. | `cbpr-cross-border` | [pain.001.001.03](/corpus/market/gb/priority-payment/gb.international.usd.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/gb/priority-payment/gb.international.usd.pain.001.001.09.xml) | derived |
 
+### HK (HK)
+
+| Scenario | What it shows | Checked against | Editions | Evidence |
+| :--- | :--- | :--- | :--- | :--- |
+| `hk.fps.single` | Hong Kong FPS credit in HKD, clearing codes and account numbers. | `hk-fps`, `purpose-mandate-hk` | [pain.001.001.03](/corpus/market/hk/instant-payment/hk.fps.single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/hk/instant-payment/hk.fps.single.pain.001.001.09.xml) | assumed |
+
 ### Italy (IT)
 
 | Scenario | What it shows | Checked against | Editions | Evidence |
@@ -215,12 +234,24 @@ These checks are the library's own; they are not a certification, and passing th
 | :--- | :--- | :--- | :--- | :--- |
 | `lu.sepa.sct-single` | SEPA credit transfer, single supplier payment. | `sepa-sct` | [pain.001.001.03](/corpus/market/lu/sepa-credit-transfer/lu.sepa.sct-single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/lu/sepa-credit-transfer/lu.sepa.sct-single.pain.001.001.09.xml) | derived |
 
+### MY (MY)
+
+| Scenario | What it shows | Checked against | Editions | Evidence |
+| :--- | :--- | :--- | :--- | :--- |
+| `my.duitnow.single` | Malaysia DuitNow credit in MYR with a BNM purpose code. | `my-duitnow`, `purpose-mandate-my` | [pain.001.001.03](/corpus/market/my/instant-payment/my.duitnow.single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/my/instant-payment/my.duitnow.single.pain.001.001.09.xml) | assumed |
+
 ### Netherlands (NL)
 
 | Scenario | What it shows | Checked against | Editions | Evidence |
 | :--- | :--- | :--- | :--- | :--- |
 | `nl.sepa.sct-supplier` | SEPA credit transfer with a Dutch payment reference (CUR). | `sepa-sct` | [pain.001.001.03](/corpus/market/nl/sepa-credit-transfer/nl.sepa.sct-supplier.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/nl/sepa-credit-transfer/nl.sepa.sct-supplier.pain.001.001.09.xml) | derived |
 | `nl.sepa.sdd-core` | SEPA Core direct debit, recurring collections under mandates. | `sepa-sdd` | [pain.008.001.02](/corpus/market/nl/sepa-direct-debit/nl.sepa.sdd-core.pain.008.001.02.xml), [pain.008.001.08](/corpus/market/nl/sepa-direct-debit/nl.sepa.sdd-core.pain.008.001.08.xml) | derived |
+
+### QA (QA)
+
+| Scenario | What it shows | Checked against | Editions | Evidence |
+| :--- | :--- | :--- | :--- | :--- |
+| `qa.qatch.single` | Qatar QATCH credit in QAR with the QCB purpose of payment. | `qa-qatch`, `purpose-mandate-qa` | [pain.001.001.03](/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.09.xml) | assumed |
 
 ### Sweden (SE)
 
@@ -230,6 +261,12 @@ These checks are the library's own; they are not a certification, and passing th
 | `se.plusgiro.supplier` | Swedish Plusgiro supplier payment with an invoice message. | `se-bankgiro` | [pain.001.001.03](/corpus/market/se/plusgiro-credit/se.plusgiro.supplier.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/se/plusgiro-credit/se.plusgiro.supplier.pain.001.001.09.xml) | derived |
 | `se.rix.urgent` | Swedish domestic high-value SEK payment through RIX, urgent, intra-group. | base rules only | [pain.001.001.03](/corpus/market/se/priority-payment/se.rix.urgent.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/se/priority-payment/se.rix.urgent.pain.001.001.09.xml) | derived |
 | `se.bankgiro.salary` | Swedish salary batch (Bankgirot Löner), SALA, one debit. | `se-bankgiro` | [pain.001.001.03](/corpus/market/se/salary/se.bankgiro.salary.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/se/salary/se.bankgiro.salary.pain.001.001.09.xml) | derived |
+
+### SG (SG)
+
+| Scenario | What it shows | Checked against | Editions | Evidence |
+| :--- | :--- | :--- | :--- | :--- |
+| `sg.fast.single` | Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. | `sg-fast` | [pain.001.001.03](/corpus/market/sg/instant-payment/sg.fast.single.pain.001.001.03.xml), [pain.001.001.09](/corpus/market/sg/instant-payment/sg.fast.single.pain.001.001.09.xml) | assumed |
 
 ### United States (US)
 

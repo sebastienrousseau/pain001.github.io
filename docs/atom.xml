@@ -4,13 +4,13 @@
   <link href="https://pain001.com/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://pain001.com"/>
   <id>https://pain001.com</id>
-  <updated>2026-09-11T08:00:00+00:00</updated>
+  <updated>2026-09-12T08:00:00+00:00</updated>
   <entry>
     <title>ISO 20022 schema coverage files — every element of every edition</title>
     <link href="https://pain001.com/example-corpus-coverage/"/>
     <id>https://pain001.com/example-corpus-coverage/</id>
-    <updated>2026-09-11T08:00:00+00:00</updated>
-    <published>2026-09-11T08:00:00+00:00</published>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
     <summary>Generated pain.001 and pain.008 files that between them use every element path and choice branch of each supported schema edition, each named after what it adds, with a zip per edition.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -18,8 +18,8 @@
     <title>ISO 20022 example files — pain.001 and pain.008 samples per country and rail</title>
     <link href="https://pain001.com/example-corpus/"/>
     <id>https://pain001.com/example-corpus/</id>
-    <updated>2026-09-11T08:00:00+00:00</updated>
-    <published>2026-09-11T08:00:00+00:00</published>
+    <updated>2026-09-12T08:00:00+00:00</updated>
+    <published>2026-09-12T08:00:00+00:00</published>
     <summary>Download ISO 20022 pain.001 and pain.008 sample files built from the public scheme rulebooks per country and rail, each with a record of where it comes from and how it was checked, plus schema coverage files for every supported edition.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>

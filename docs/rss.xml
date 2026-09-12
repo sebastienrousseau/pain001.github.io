@@ -6,14 +6,14 @@
     <description>Generate schema-validated ISO 20022 pain.001 and pain.008 XML from CSV, Excel, SQLite, JSON, Parquet, or SWIFT MT101 — with AI-agent MCP tools and editor LSP support.</description>
     <atom:link href="https://pain001.com/rss.xml" rel="self" type="application/rss+xml"/>
     <language>en</language>
-    <lastBuildDate>Fri, 11 Sep 2026 08:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 08:00:00 +0000</lastBuildDate>
     <copyright>© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT.</copyright>
     <item>
       <title>ISO 20022 example files — pain.001 and pain.008 samples per country and rail</title>
       <link>https://pain001.com/example-corpus/</link>
       <description>Download ISO 20022 pain.001 and pain.008 sample files built from the public scheme rulebooks per country and rail, each with a record of where it comes from and how it was checked, plus schema coverage files for every supported edition.</description>
       <guid isPermaLink="true">https://pain001.com/example-corpus/</guid>
-      <pubDate>Fri, 11 Sep 2026 08:00:00 +0000</pubDate>
+      <pubDate>Sat, 12 Sep 2026 08:00:00 +0000</pubDate>
       <author>contact@pain001.com (Sebastien Rousseau)</author>
       <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>
       <category>Technology</category>
@@ -30,7 +30,7 @@
       <link>https://pain001.com/example-corpus-coverage/</link>
       <description>Generated pain.001 and pain.008 files that between them use every element path and choice branch of each supported schema edition, each named after what it adds, with a zip per edition.</description>
       <guid isPermaLink="true">https://pain001.com/example-corpus-coverage/</guid>
-      <pubDate>Fri, 11 Sep 2026 08:00:00 +0000</pubDate>
+      <pubDate>Sat, 12 Sep 2026 08:00:00 +0000</pubDate>
       <author>contact@pain001.com (Sebastien Rousseau)</author>
       <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>
       <category>Technology</category>
