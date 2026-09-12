@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://pain001.com/de/corpus-be-sepa-sdd-core/sitemap.xml

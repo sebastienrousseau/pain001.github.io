@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-09-12T08:00:00+00:00"
+date: "2026-09-13T08:00:00+00:00"
 description: "Download ISO 20022 pain.001 and pain.008 sample files built from the public scheme rulebooks per country and rail, each with a record of where it comes from and how it was checked, plus schema coverage files for every supported edition."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.47)"
 item_description: "Download ISO 20022 pain.001 and pain.008 sample files built from the public scheme rulebooks per country and rail, each with a record of where it comes from and how it was checked, plus schema coverage files for every supported edition."
 item_guid: "https://pain001.com/example-corpus/"
 item_link: "https://pain001.com/example-corpus/"
-item_pub_date: "Sat, 12 Sep 2026 08:00:00 +0000"
+item_pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
 item_title: "ISO 20022 example files — pain.001 and pain.008 samples per country and rail"
-last_build_date: "Sat, 12 Sep 2026 08:00:00 +0000"
+last_build_date: "Sun, 13 Sep 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 12 Sep 2026 08:00:00 +0000"
+pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com

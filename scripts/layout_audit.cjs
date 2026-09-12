@@ -76,6 +76,7 @@ const PAGES = process.env.PAGES
       "/competitors-comparison/", "/executive-brief/", "/trust/", "/contact/",
       "/accessibility/", "/404/", "/fr/", "/fr/glossary/", "/ar/try/", "/ar/",
       "/tags/iso-20022/", "/iso20022-roadmap/", "/pain001-mcp/", "/languages/",
+      "/de/corpus-gb-fps-single/",
     ];
 
 function probe() {

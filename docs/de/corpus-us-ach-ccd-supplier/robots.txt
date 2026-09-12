@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://pain001.com/de/corpus-us-ach-ccd-supplier/sitemap.xml

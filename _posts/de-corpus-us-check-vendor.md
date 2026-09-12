@@ -1,0 +1,120 @@
+---
+author: "contact@pain001.com (Sebastien Rousseau)"
+banner_alt: "Bank-issued cheque to a vendor, mailed to the creditor. Eine validierte pain.001-Beispieldatei (Vereinigte Staaten, Schiene cheque), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
+banner_height: 500
+banner_width: 1200
+banner: "https://pain001.com/og/pain001-card.jpg"
+cdn: "https://pain001.com"
+changefreq: "monthly"
+charset: utf-8
+cname: pain001.com
+copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
+date: "2026-09-13T08:00:00+00:00"
+description: "Bank-issued cheque to a vendor, mailed to the creditor. Eine validierte pain.001-Beispieldatei (Vereinigte Staaten, Schiene cheque), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
+download: "https://pypi.org/project/pain001/"
+format-detection: telephone=no
+hreflang: "de"
+icon: "https://pain001.com/img/pain001.svg"
+id: "https://pain001.com/de/corpus-us-check-vendor/"
+image_alt: "Bank-issued cheque to a vendor, mailed to the creditor. Eine validierte pain.001-Beispieldatei (Vereinigte Staaten, Schiene cheque), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
+image_height: 120
+image_width: 120
+image: "https://pain001.com/img/pain001.svg"
+keywords: "pain.001 Beispiel Vereinigte Staaten, cheque Beispiel-XML, ISO 20022 Vereinigte Staaten Zahlungsdatei, us.check.vendor, pain001 Korpus"
+language: "de"
+layout: "page"
+locale: "de_DE"
+logo_alt: "Pain001 Logo"
+logo_height: 36
+logo_width: 36
+logo: "https://pain001.com/img/pain001.svg"
+menu: active
+name: Pain001
+permalink: "https://pain001.com/de/corpus-us-check-vendor/"
+rating: general
+referrer: no-referrer
+revisit-after: "7 days"
+robots: "index, follow"
+short_name: pain001
+subtitle: "Bank-issued cheque to a vendor, mailed to the creditor."
+tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
+theme_color: "#0b0e14"
+title: "us.check.vendor — ISO-20022-pain.001-Beispiel: Vereinigte Staaten (cheque)"
+url: "https://pain001.com/de/corpus-us-check-vendor/"
+viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
+atom_link: "https://pain001.com/de/corpus-us-check-vendor/"
+category: Technology
+docs: "https://validator.w3.org/feed/docs/rss2.html"
+generator: "Static Site Generator (SSG) (version 0.0.47)"
+item_description: "Bank-issued cheque to a vendor, mailed to the creditor. Eine validierte pain.001-Beispieldatei (Vereinigte Staaten, Schiene cheque), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
+item_guid: "https://pain001.com/de/corpus-us-check-vendor/"
+item_link: "https://pain001.com/de/corpus-us-check-vendor/"
+item_pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+item_title: "us.check.vendor — ISO-20022-pain.001-Beispiel: Vereinigte Staaten (cheque)"
+last_build_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+managing_editor: "contact@pain001.com (Sebastien Rousseau)"
+pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+ttl: 60
+type: website
+webmaster: contact@pain001.com
+apple_mobile_web_app_orientations: portrait
+apple_touch_icon_sizes: 192x192
+apple-mobile-web-app-capable: yes
+apple-mobile-web-app-status-bar-inset: black
+apple-mobile-web-app-status-bar-style: black-translucent
+apple-mobile-web-app-title: "us.check.vendor — ISO-20022-pain.001-Beispiel: Vereinigte Staaten (cheque)"
+apple-touch-fullscreen: yes
+msapplication-navbutton-color: "rgb(2, 132, 199)"
+twitter_card: summary_large_image
+twitter_creator: @wwdseb
+twitter_description: "Bank-issued cheque to a vendor, mailed to the creditor. Eine validierte pain.001-Beispieldatei (Vereinigte Staaten, Schiene cheque), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
+twitter_image: "https://pain001.com/og/pain001-card.jpg"
+twitter_image_alt: "Pain001 Logo"
+twitter_site: @wwdseb
+twitter_title: "us.check.vendor — ISO-20022-pain.001-Beispiel: Vereinigte Staaten (cheque)"
+twitter_url: "https://pain001.com/de/corpus-us-check-vendor/"
+author_website: "https://sebastienrousseau.com"
+author_twitter: @wwdseb
+author_location: "London, UK"
+thanks: "Thank you for using Pain001 Suite!"
+site_last_updated: 2026-07-26
+site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Atom, JSON-LD"
+site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
+site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
+eyebrow: "Beispielkorpus"
+excerpt: "Bank-issued cheque to a vendor, mailed to the creditor. Eine validierte pain.001-Beispieldatei (Vereinigte Staaten, Schiene cheque), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
+last_reviewed: "2026-07-26"
+
+
+---
+
+Szenariobeschreibung, zitiert aus dem Provenienzdatensatz (englischer Originaltext):
+
+> Bank-issued cheque to a vendor, mailed to the creditor.
+
+Eine Zahlungsinitiierungsdatei (**Vereinigte Staaten**, Schiene **cheque**), ausgeliefert in `pain.001.001.03`, `pain.001.001.09`, erzeugt und geprüft von pain001 0.0.70. Es handelt sich um ein synthetisches Beispiel aus den öffentlichen Regelwerken der Zahlungssysteme: keine reale Partei, kein reales Konto und keine Bankrichtlinie dahinter.
+
+## Dateien
+
+| Edition | Zahlungsdatei | ISO-20022-JSON-Zwilling | Provenienzdatensatz |
+| :--- | :--- | :--- | :--- |
+| `pain.001.001.03` | [us.check.vendor.pain.001.001.03.xml](/corpus/market/us/cheque/us.check.vendor.pain.001.001.03.xml) | [us.check.vendor.pain.001.001.03.iso.json](/corpus/market/us/cheque/us.check.vendor.pain.001.001.03.iso.json) | [us.check.vendor.pain.001.001.03.provenance.yaml](/corpus/market/us/cheque/us.check.vendor.pain.001.001.03.provenance.yaml) |
+| `pain.001.001.09` | [us.check.vendor.pain.001.001.09.xml](/corpus/market/us/cheque/us.check.vendor.pain.001.001.09.xml) | [us.check.vendor.pain.001.001.09.iso.json](/corpus/market/us/cheque/us.check.vendor.pain.001.001.09.iso.json) | [us.check.vendor.pain.001.001.09.provenance.yaml](/corpus/market/us/cheque/us.check.vendor.pain.001.001.09.provenance.yaml) |
+
+Der Zwilling ist dieselbe Zahlung in der JSON-Konvention der ISO-20022-Registrierungsstelle, in beide Richtungen verlustfrei; sein JSON-Schema (2020-12) wird je Edition veröffentlicht: [pain.001.001.03](/corpus/schemas/pain.001.001.03.schema.json), [pain.001.001.09](/corpus/schemas/pain.001.001.09.schema.json). Ein Agent kann einen Zwilling erzeugen, der gegen das Schema validiert, und ihn der Bibliothek zur XML-Erzeugung übergeben.
+
+## Wie die Bibliothek die Datei geprüft hat
+
+- **Offizielle XSD**: bestanden.
+- **ISO-Nachrichtendefinitionsregeln**: bestanden.
+- **Schienenprofil `anti-duplicate`**: bestanden.
+
+Konfidenz **angenommen**: ein Detail beruht auf einer Annahme, die der Datensatz benennt; behandeln Sie dieses Detail mit Vorsicht.
+
+## Woher der Inhalt stammt
+
+- ISO 20022 MDR Payments Initiation 2020-2021, cheque rules; Cross River pain.001.001.03 check sample (index) (gelesen am 2026-09-10)
+
+Der SHA-256-Wert jeder Datei steht in ihrem Provenienzdatensatz. Die eigene Nutzungsrichtlinie Ihrer Bank ist hier nicht abgebildet: [Wenden Sie sie privat an](/example-corpus/#your-bank-s-guideline) mit dem Overlay-Werkzeug der Bibliothek.
+
+[Zurück zum Beispielkorpus (EN)](/example-corpus/) · [Alle Zahlungsdateien nach Land (EN)](/example-corpus/#payment-files-by-country)

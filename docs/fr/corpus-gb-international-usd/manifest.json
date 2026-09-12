@@ -1,0 +1,19 @@
+{
+  "background_color": "#ffffff",
+  "description": "USD cross-border payment from a UK account to a US supplier. Un exemple pain.001 validé (Royaume-Uni, rail priority-paym",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any maskable",
+      "sizes": "512x512",
+      "src": "https://pain001.com/img/pain001.svg",
+      "type": "image/svg+xml"
+    }
+  ],
+  "name": "Pain001",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "pain001",
+  "start_url": ".",
+  "theme_color": null
+}

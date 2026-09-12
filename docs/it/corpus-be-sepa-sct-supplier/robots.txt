@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://pain001.com/it/corpus-be-sepa-sct-supplier/sitemap.xml

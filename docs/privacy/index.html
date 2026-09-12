@@ -193,7 +193,7 @@
           <div lang="en"><p>The short version: this site collects nothing, and the software processes everything locally.</p>
 <h2 id="this-website">This website<a class="heading-anchor" href="#this-website" aria-label="Link to section: This website">#</a></h2>
 <ul>
-<li><strong>Five interactions are counted, nobody is identified.</strong> The site sends a cookieless page view and five named events (a demo run, a demo XML download, a corpus zip download, a click through to PyPI, a contact form submission) to the project's own measurement host, <code>metrics.pain001.com</code>, which runs <a href="https://umami.is/">Umami</a> under the project's control. The record carries the page path, the referring site if it is not this one, your language, your screen size and the page title, and nothing else: no cookie, no fingerprint, no IP address kept, no identifier of any kind. If your browser sends Do-Not-Track or Global Privacy Control, nothing is sent at all. The script is served from this origin and its source is <a href="https://github.com/sebastienrousseau/pain001.github.io/blob/main/static/js/metrics.js">public</a>.</li>
+<li><strong>Five interactions are counted, nobody is identified.</strong> The site sends a cookieless page view and five named events (a demo run, a demo XML download, a corpus zip download, a click through to PyPI, a contact form submission) to the project's own measurement host, <code>metrics.pain001.com</code>, which is <a href="https://www.goatcounter.com/">GoatCounter</a>, an open-source, cookieless counter operated for the project under its published privacy policy. The record carries the page path, the referring site if it is not this one, your language, your screen size and the page title, and nothing else: no cookie, no fingerprint, no IP address kept, no identifier of any kind. If your browser sends Do-Not-Track or Global Privacy Control, nothing is sent at all. The script is served from this origin and its source is <a href="https://github.com/sebastienrousseau/pain001.github.io/blob/main/static/js/metrics.js">public</a>.</li>
 <li><strong>No third-party analytics scripts, no tracking pixels.</strong> The only state stored in your browser is your light/dark theme choice, kept in <code>localStorage</code> and never transmitted.</li>
 <li><strong>Hosting.</strong> The site is served as static files by GitHub Pages, which may log standard request metadata (IP address, user agent) under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">GitHub's privacy statement</a>.</li>
 <li><strong>Assets.</strong> Every asset — logo, fonts, styles, scripts, the demo's WebAssembly runtime and schemas — is served from this origin. Apart from the measurement beacon to the project's own <code>metrics.pain001.com</code>, the site makes <strong>no third-party requests at all</strong>; nothing on it can report your visit to anyone else.</li>
@@ -318,7 +318,7 @@
     </script>
 
     <script src="/_csp/197fcfccbee69bda.js" integrity="sha384-geygAAYoalTqpA6bIgsGUMRQupyTiF/rCnvMiGE5+G0s0ZOYAhHnkhzyMXN9yNxa" crossorigin="anonymous"></script>
-    <script type="module" src="/js/metrics.js" data-website-id="00000000-0000-0000-0000-000000000000" data-host-url="https://metrics.pain001.com"></script>
+    <script type="module" src="/js/metrics.js" data-enabled="false" data-host-url="https://metrics.pain001.com"></script>
   
 <!-- SSG Search Widget -->
 <div id="ssg-search-widget">

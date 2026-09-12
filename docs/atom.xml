@@ -4,13 +4,13 @@
   <link href="https://pain001.com/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://pain001.com"/>
   <id>https://pain001.com</id>
-  <updated>2026-09-12T08:00:00+00:00</updated>
+  <updated>2026-09-13T08:00:00+00:00</updated>
   <entry>
     <title>ae.uaefts.single — ISO 20022 pain.001 example for AE (priority-payment)</title>
     <link href="https://pain001.com/corpus-ae-uaefts-single/"/>
     <id>https://pain001.com/corpus-ae-uaefts-single/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code. A validated pain.001 sample for AE on the priority-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -18,8 +18,8 @@
     <title>be.sepa.sct-supplier — ISO 20022 pain.001 example for Belgium (sepa-credit-transfer)</title>
     <link href="https://pain001.com/corpus-be-sepa-sct-supplier/"/>
     <id>https://pain001.com/corpus-be-sepa-sct-supplier/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>SEPA credit transfer with a Belgian structured communication (BBA). A validated pain.001 sample for Belgium on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -27,8 +27,8 @@
     <title>be.sepa.sdd-core — ISO 20022 pain.001 example for Belgium (sepa-direct-debit)</title>
     <link href="https://pain001.com/corpus-be-sepa-sdd-core/"/>
     <id>https://pain001.com/corpus-be-sepa-sdd-core/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>SEPA Core direct debit, recurring, Belgian creditor identifier. A validated pain.001 sample for Belgium on the sepa-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -36,8 +36,8 @@
     <title>ch.international.usd — ISO 20022 pain.001 example for Switzerland (cross-border)</title>
     <link href="https://pain001.com/corpus-ch-international-usd/"/>
     <id>https://pain001.com/corpus-ch-international-usd/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>Cross-border USD payment from Switzerland (SPS payment type X). A validated pain.001 sample for Switzerland on the cross-border rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -45,8 +45,8 @@
     <title>ch.sepa.sct — ISO 20022 pain.001 example for Switzerland (sepa-credit-transfer)</title>
     <link href="https://pain001.com/corpus-ch-sepa-sct/"/>
     <id>https://pain001.com/corpus-ch-sepa-sct/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>SEPA credit transfer from Switzerland (SPS payment type S). A validated pain.001 sample for Switzerland on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -54,8 +54,8 @@
     <title>ch.sps.qr-bill — ISO 20022 pain.001 example for Switzerland (domestic-credit-transfer)</title>
     <link href="https://pain001.com/corpus-ch-sps-qr-bill/"/>
     <id>https://pain001.com/corpus-ch-sps-qr-bill/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>Swiss domestic credit transfer settling a QR-bill (QRR reference). A validated pain.001 sample for Switzerland on the domestic-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -63,8 +63,8 @@
     <title>ch.sps.scor — ISO 20022 pain.001 example for Switzerland (domestic-credit-transfer)</title>
     <link href="https://pain001.com/corpus-ch-sps-scor/"/>
     <id>https://pain001.com/corpus-ch-sps-scor/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>Swiss domestic credit transfer with an ISO 11649 creditor reference (SCOR). A validated pain.001 sample for Switzerland on the domestic-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -72,8 +72,8 @@
     <title>cz.certis.domestic — ISO 20022 pain.001 example for CZ (domestic-credit-transfer)</title>
     <link href="https://pain001.com/corpus-cz-certis-domestic/"/>
     <id>https://pain001.com/corpus-cz-certis-domestic/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>Czech domestic CZK transfer through CERTIS with VS/KS/SS payment symbols. A validated pain.001 sample for CZ on the domestic-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -81,8 +81,8 @@
     <title>cz.sepa.sct — ISO 20022 pain.001 example for CZ (sepa-credit-transfer)</title>
     <link href="https://pain001.com/corpus-cz-sepa-sct/"/>
     <id>https://pain001.com/corpus-cz-sepa-sct/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>SEPA credit transfer from a Czech EUR account to a German supplier. A validated pain.001 sample for CZ on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -90,8 +90,8 @@
     <title>de.axz.foreign — ISO 20022 pain.001 example for Germany (cross-border)</title>
     <link href="https://pain001.com/corpus-de-axz-foreign/"/>
     <id>https://pain001.com/corpus-de-axz-foreign/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>Foreign payment in USD from a German account, DK order type AXZ. A validated pain.001 sample for Germany on the cross-border rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -99,8 +99,8 @@
     <title>de.ccu.urgent — ISO 20022 pain.001 example for Germany (urgent-euro)</title>
     <link href="https://pain001.com/corpus-de-ccu-urgent/"/>
     <id>https://pain001.com/corpus-de-ccu-urgent/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>Urgent euro payment (TARGET) from a German account, DK order type CCU. A validated pain.001 sample for Germany on the urgent-euro rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -108,8 +108,8 @@
     <title>de.sepa.sct-inst — ISO 20022 pain.001 example for Germany (sepa-instant)</title>
     <link href="https://pain001.com/corpus-de-sepa-sct-inst/"/>
     <id>https://pain001.com/corpus-de-sepa-sct-inst/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>SEPA Instant credit transfer, single, INST at PmtInf. A validated pain.001 sample for Germany on the sepa-instant rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -117,8 +117,8 @@
     <title>de.sepa.sct-salary — ISO 20022 pain.001 example for Germany (sepa-credit-transfer)</title>
     <link href="https://pain001.com/corpus-de-sepa-sct-salary/"/>
     <id>https://pain001.com/corpus-de-sepa-sct-salary/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>SEPA SCT salary batch with structured and unstructured remittance. A validated pain.001 sample for Germany on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -126,8 +126,8 @@
     <title>de.sepa.sdd-b2b — ISO 20022 pain.001 example for Germany (sepa-direct-debit)</title>
     <link href="https://pain001.com/corpus-de-sepa-sdd-b2b/"/>
     <id>https://pain001.com/corpus-de-sepa-sdd-b2b/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>SEPA B2B direct debit, first collection. A validated pain.001 sample for Germany on the sepa-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -135,8 +135,8 @@
     <title>es.sepa.sct-single — ISO 20022 pain.001 example for Spain (sepa-credit-transfer)</title>
     <link href="https://pain001.com/corpus-es-sepa-sct-single/"/>
     <id>https://pain001.com/corpus-es-sepa-sct-single/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>SEPA credit transfer, single, initiating party identified by NIF. A validated pain.001 sample for Spain on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -144,8 +144,8 @@
     <title>es.sepa.sdd-core — ISO 20022 pain.001 example for Spain (sepa-direct-debit)</title>
     <link href="https://pain001.com/corpus-es-sepa-sdd-core/"/>
     <id>https://pain001.com/corpus-es-sepa-sdd-core/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>SEPA Core direct debit, recurring, Spanish creditor identifier. A validated pain.001 sample for Spain on the sepa-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -153,8 +153,8 @@
     <title>fr.sepa.sct-supplier — ISO 20022 pain.001 example for France (sepa-credit-transfer)</title>
     <link href="https://pain001.com/corpus-fr-sepa-sct-supplier/"/>
     <id>https://pain001.com/corpus-fr-sepa-sct-supplier/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>SEPA credit transfer, supplier invoice with an RF creditor reference. A validated pain.001 sample for France on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -162,8 +162,8 @@
     <title>fr.sepa.sdd-core — ISO 20022 pain.001 example for France (sepa-direct-debit)</title>
     <link href="https://pain001.com/corpus-fr-sepa-sdd-core/"/>
     <id>https://pain001.com/corpus-fr-sepa-sdd-core/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>SEPA Core direct debit, recurring collection on an amended mandate. A validated pain.001 sample for France on the sepa-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -171,8 +171,8 @@
     <title>gb.bacs-dd.collection — ISO 20022 pain.001 example for United Kingdom (bacs-direct-debit)</title>
     <link href="https://pain001.com/corpus-gb-bacs-dd-collection/"/>
     <id>https://pain001.com/corpus-gb-bacs-dd-collection/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>Bacs Direct Debit collection, first and recurring, SUN as creditor id. A validated pain.001 sample for United Kingdom on the bacs-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -180,8 +180,8 @@
     <title>gb.bacs.supplier-run — ISO 20022 pain.001 example for United Kingdom (bacs-direct-credit)</title>
     <link href="https://pain001.com/corpus-gb-bacs-supplier-run/"/>
     <id>https://pain001.com/corpus-gb-bacs-supplier-run/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>Bacs Direct Credit supplier run, two payments, SUN in the debtor id. A validated pain.001 sample for United Kingdom on the bacs-direct-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -189,8 +189,8 @@
     <title>gb.chaps.property-purchase — ISO 20022 pain.001 example for United Kingdom (priority-payment)</title>
     <link href="https://pain001.com/corpus-gb-chaps-property-purchase/"/>
     <id>https://pain001.com/corpus-gb-chaps-property-purchase/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>CHAPS same-day property completion with the BoE HLST purpose code. A validated pain.001 sample for United Kingdom on the priority-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -198,8 +198,8 @@
     <title>gb.fps.single — ISO 20022 pain.001 example for United Kingdom (faster-payment)</title>
     <link href="https://pain001.com/corpus-gb-fps-single/"/>
     <id>https://pain001.com/corpus-gb-fps-single/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>Faster Payments single supplier payment, sort code and account. A validated pain.001 sample for United Kingdom on the faster-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -207,8 +207,8 @@
     <title>gb.international.usd — ISO 20022 pain.001 example for United Kingdom (priority-payment)</title>
     <link href="https://pain001.com/corpus-gb-international-usd/"/>
     <id>https://pain001.com/corpus-gb-international-usd/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>USD cross-border payment from a UK account to a US supplier. A validated pain.001 sample for United Kingdom on the priority-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -216,8 +216,8 @@
     <title>hk.fps.single — ISO 20022 pain.001 example for HK (instant-payment)</title>
     <link href="https://pain001.com/corpus-hk-fps-single/"/>
     <id>https://pain001.com/corpus-hk-fps-single/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>Hong Kong FPS credit in HKD, clearing codes and account numbers. A validated pain.001 sample for HK on the instant-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -225,8 +225,8 @@
     <title>it.sepa.sct-single — ISO 20022 pain.001 example for Italy (sepa-credit-transfer)</title>
     <link href="https://pain001.com/corpus-it-sepa-sct-single/"/>
     <id>https://pain001.com/corpus-it-sepa-sct-single/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>SEPA credit transfer, single supplier payment. A validated pain.001 sample for Italy on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -234,8 +234,8 @@
     <title>lu.sepa.sct-single — ISO 20022 pain.001 example for Luxembourg (sepa-credit-transfer)</title>
     <link href="https://pain001.com/corpus-lu-sepa-sct-single/"/>
     <id>https://pain001.com/corpus-lu-sepa-sct-single/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>SEPA credit transfer, single supplier payment. A validated pain.001 sample for Luxembourg on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -243,8 +243,8 @@
     <title>my.duitnow.single — ISO 20022 pain.001 example for MY (instant-payment)</title>
     <link href="https://pain001.com/corpus-my-duitnow-single/"/>
     <id>https://pain001.com/corpus-my-duitnow-single/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>Malaysia DuitNow credit in MYR with a BNM purpose code. A validated pain.001 sample for MY on the instant-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -252,8 +252,8 @@
     <title>nl.sepa.sct-supplier — ISO 20022 pain.001 example for Netherlands (sepa-credit-transfer)</title>
     <link href="https://pain001.com/corpus-nl-sepa-sct-supplier/"/>
     <id>https://pain001.com/corpus-nl-sepa-sct-supplier/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>SEPA credit transfer with a Dutch payment reference (CUR). A validated pain.001 sample for Netherlands on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -261,8 +261,8 @@
     <title>nl.sepa.sdd-core — ISO 20022 pain.001 example for Netherlands (sepa-direct-debit)</title>
     <link href="https://pain001.com/corpus-nl-sepa-sdd-core/"/>
     <id>https://pain001.com/corpus-nl-sepa-sdd-core/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>SEPA Core direct debit, recurring collections under mandates. A validated pain.001 sample for Netherlands on the sepa-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -270,8 +270,8 @@
     <title>qa.qatch.single — ISO 20022 pain.001 example for QA (domestic-credit-transfer)</title>
     <link href="https://pain001.com/corpus-qa-qatch-single/"/>
     <id>https://pain001.com/corpus-qa-qatch-single/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>Qatar QATCH credit in QAR with the QCB purpose of payment. A validated pain.001 sample for QA on the domestic-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -279,8 +279,8 @@
     <title>se.bankgiro.salary — ISO 20022 pain.001 example for Sweden (salary)</title>
     <link href="https://pain001.com/corpus-se-bankgiro-salary/"/>
     <id>https://pain001.com/corpus-se-bankgiro-salary/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>Swedish salary batch (Bankgirot Löner), SALA, one debit. A validated pain.001 sample for Sweden on the salary rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -288,8 +288,8 @@
     <title>se.bankgiro.supplier — ISO 20022 pain.001 example for Sweden (bankgiro-credit)</title>
     <link href="https://pain001.com/corpus-se-bankgiro-supplier/"/>
     <id>https://pain001.com/corpus-se-bankgiro-supplier/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>Swedish Bankgiro supplier payment with an OCR reference. A validated pain.001 sample for Sweden on the bankgiro-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -297,8 +297,8 @@
     <title>se.plusgiro.supplier — ISO 20022 pain.001 example for Sweden (plusgiro-credit)</title>
     <link href="https://pain001.com/corpus-se-plusgiro-supplier/"/>
     <id>https://pain001.com/corpus-se-plusgiro-supplier/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>Swedish Plusgiro supplier payment with an invoice message. A validated pain.001 sample for Sweden on the plusgiro-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -306,8 +306,8 @@
     <title>se.rix.urgent — ISO 20022 pain.001 example for Sweden (priority-payment)</title>
     <link href="https://pain001.com/corpus-se-rix-urgent/"/>
     <id>https://pain001.com/corpus-se-rix-urgent/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>Swedish domestic high-value SEK payment through RIX, urgent, intra-group. A validated pain.001 sample for Sweden on the priority-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -315,8 +315,8 @@
     <title>sg.fast.single — ISO 20022 pain.001 example for SG (instant-payment)</title>
     <link href="https://pain001.com/corpus-sg-fast-single/"/>
     <id>https://pain001.com/corpus-sg-fast-single/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. A validated pain.001 sample for SG on the instant-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -324,8 +324,8 @@
     <title>us.ach.ccd-supplier — ISO 20022 pain.001 example for United States (ach-credit)</title>
     <link href="https://pain001.com/corpus-us-ach-ccd-supplier/"/>
     <id>https://pain001.com/corpus-us-ach-ccd-supplier/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>ACH CCD credit to a supplier with an addenda remittance line. A validated pain.001 sample for United States on the ach-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -333,8 +333,8 @@
     <title>us.ach.debit — ISO 20022 pain.001 example for United States (ach-debit)</title>
     <link href="https://pain001.com/corpus-us-ach-debit/"/>
     <id>https://pain001.com/corpus-us-ach-debit/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>ACH debit collection (CCD) with routing numbers. A validated pain.001 sample for United States on the ach-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -342,8 +342,8 @@
     <title>us.ach.ppd-payroll — ISO 20022 pain.001 example for United States (ach-credit)</title>
     <link href="https://pain001.com/corpus-us-ach-ppd-payroll/"/>
     <id>https://pain001.com/corpus-us-ach-ppd-payroll/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>ACH PPD payroll run, two employees. A validated pain.001 sample for United States on the ach-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -351,8 +351,8 @@
     <title>us.check.vendor — ISO 20022 pain.001 example for United States (cheque)</title>
     <link href="https://pain001.com/corpus-us-check-vendor/"/>
     <id>https://pain001.com/corpus-us-check-vendor/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>Bank-issued cheque to a vendor, mailed to the creditor. A validated pain.001 sample for United States on the cheque rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -360,8 +360,8 @@
     <title>us.eftps.tax — ISO 20022 pain.001 example for United States (ach-credit)</title>
     <link href="https://pain001.com/corpus-us-eftps-tax/"/>
     <id>https://pain001.com/corpus-us-eftps-tax/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>IRS EFTPS federal tax deposit, CCD with the TXP addenda string. A validated pain.001 sample for United States on the ach-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -369,8 +369,8 @@
     <title>us.rtp.single — ISO 20022 pain.001 example for United States (instant-payment)</title>
     <link href="https://pain001.com/corpus-us-rtp-single/"/>
     <id>https://pain001.com/corpus-us-rtp-single/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>RTP real-time payment, single. A validated pain.001 sample for United States on the instant-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
@@ -378,81 +378,81 @@
     <title>us.wire.domestic — ISO 20022 pain.001 example for United States (priority-payment)</title>
     <link href="https://pain001.com/corpus-us-wire-domestic/"/>
     <id>https://pain001.com/corpus-us-wire-domestic/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
     <summary>Fedwire domestic funds transfer, urgent. A validated pain.001 sample for United States on the priority-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
-    <title>Pain001 for regulated teams: supported channel, private profiles, integration help</title>
-    <link href="https://pain001.com/enterprise/"/>
-    <id>https://pain001.com/enterprise/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
-    <summary>The core stays free and permissively licensed. For teams that need a throat to choke: a supported release channel with an LTS line, private derivation of your bank&apos;s usage guideline into a validated profile, and integration recipes for your ERP or TMS. No prices on this page; one form.</summary>
+    <title>ae.uaefts.single — ISO-20022-pain.001-Beispiel: AE (priority-payment)</title>
+    <link href="https://pain001.com/de/corpus-ae-uaefts-single/"/>
+    <id>https://pain001.com/de/corpus-ae-uaefts-single/</id>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
+    <summary>UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code. Eine validierte pain.001-Beispieldatei (AE, Schiene priority-payment), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
-    <title>ISO 20022 schema coverage files — every element of every edition</title>
-    <link href="https://pain001.com/example-corpus-coverage/"/>
-    <id>https://pain001.com/example-corpus-coverage/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
-    <summary>Generated pain.001 and pain.008 files that between them use every element path and choice branch of each supported schema edition, each named after what it adds, with a zip per edition.</summary>
+    <title>be.sepa.sct-supplier — ISO-20022-pain.001-Beispiel: Belgien (sepa-credit-transfer)</title>
+    <link href="https://pain001.com/de/corpus-be-sepa-sct-supplier/"/>
+    <id>https://pain001.com/de/corpus-be-sepa-sct-supplier/</id>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
+    <summary>SEPA credit transfer with a Belgian structured communication (BBA). Eine validierte pain.001-Beispieldatei (Belgien, Schiene sepa-credit-transfer), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
-    <title>ISO 20022 example files — pain.001 and pain.008 samples per country and rail</title>
-    <link href="https://pain001.com/example-corpus/"/>
-    <id>https://pain001.com/example-corpus/</id>
-    <updated>2026-09-12T08:00:00+00:00</updated>
-    <published>2026-09-12T08:00:00+00:00</published>
-    <summary>Download ISO 20022 pain.001 and pain.008 sample files built from the public scheme rulebooks per country and rail, each with a record of where it comes from and how it was checked, plus schema coverage files for every supported edition.</summary>
+    <title>be.sepa.sdd-core — ISO-20022-pain.001-Beispiel: Belgien (sepa-direct-debit)</title>
+    <link href="https://pain001.com/de/corpus-be-sepa-sdd-core/"/>
+    <id>https://pain001.com/de/corpus-be-sepa-sdd-core/</id>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
+    <summary>SEPA Core direct debit, recurring, Belgian creditor identifier. Eine validierte pain.001-Beispieldatei (Belgien, Schiene sepa-direct-debit), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
-    <title>ISO 20022 in 2026: Deadlines, Data and What Comes Next</title>
-    <link href="https://pain001.com/2026-iso20022-migration-trends/"/>
-    <id>https://pain001.com/2026-iso20022-migration-trends/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>The post-migration landscape with primary sources: the 14 Nov 2026 structured address and MT101-relay deadlines, Fedwire and FedNow status, IPR and VoP, LEIs, and agentic AI.</summary>
+    <title>ch.international.usd — ISO-20022-pain.001-Beispiel: Schweiz (cross-border)</title>
+    <link href="https://pain001.com/de/corpus-ch-international-usd/"/>
+    <id>https://pain001.com/de/corpus-ch-international-usd/</id>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
+    <summary>Cross-border USD payment from Switzerland (SPS payment type X). Eine validierte pain.001-Beispieldatei (Schweiz, Schiene cross-border), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
-    <title>Page Not Found (404)</title>
-    <link href="https://pain001.com/404/"/>
-    <id>https://pain001.com/404/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>That address does not exist. Jump to the documentation, installation guide, FAQs, or glossary — or report the broken link on GitHub.</summary>
+    <title>ch.sepa.sct — ISO-20022-pain.001-Beispiel: Schweiz (sepa-credit-transfer)</title>
+    <link href="https://pain001.com/de/corpus-ch-sepa-sct/"/>
+    <id>https://pain001.com/de/corpus-ch-sepa-sct/</id>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
+    <summary>SEPA credit transfer from Switzerland (SPS payment type S). Eine validierte pain.001-Beispieldatei (Schweiz, Schiene sepa-credit-transfer), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
-    <title>Accessibility Statement</title>
-    <link href="https://pain001.com/accessibility/"/>
-    <id>https://pain001.com/accessibility/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>pain001.com targets WCAG 2.2 AAA, enforced as a build gate: measured 7:1 contrast in both themes, pa11y-verified pages, keyboard-first interaction, and an open channel for reports.</summary>
+    <title>ch.sps.qr-bill — ISO-20022-pain.001-Beispiel: Schweiz (domestic-credit-transfer)</title>
+    <link href="https://pain001.com/de/corpus-ch-sps-qr-bill/"/>
+    <id>https://pain001.com/de/corpus-ch-sps-qr-bill/</id>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
+    <summary>Swiss domestic credit transfer settling a QR-bill (QRR reference). Eine validierte pain.001-Beispieldatei (Schweiz, Schiene domestic-credit-transfer), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
-    <title>Pain001 — بدء المدفوعات ISO 20022 مفتوح المصدر</title>
-    <link href="https://pain001.com/ar/"/>
-    <id>https://pain001.com/ar/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>حزمة Python مفتوحة المصدر تُنتج ملفات pain.001 و pain.008 موثَّقة بمخططات XSD من CSV أو Excel أو SQLite أو JSON أو Parquet أو SWIFT MT101 — مع أدوات MCP لوكلاء الذكاء الاصطناعي وخادم LSP.</summary>
+    <title>ch.sps.scor — ISO-20022-pain.001-Beispiel: Schweiz (domestic-credit-transfer)</title>
+    <link href="https://pain001.com/de/corpus-ch-sps-scor/"/>
+    <id>https://pain001.com/de/corpus-ch-sps-scor/</id>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
+    <summary>Swiss domestic credit transfer with an ISO 11649 creditor reference (SCOR). Eine validierte pain.001-Beispieldatei (Schweiz, Schiene domestic-credit-transfer), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
   <entry>
-    <title>Architecture, Security and the Patent Landscape</title>
-    <link href="https://pain001.com/architecture-and-patents/"/>
-    <id>https://pain001.com/architecture-and-patents/</id>
-    <updated>2026-07-26T08:00:00+00:00</updated>
-    <published>2026-07-26T08:00:00+00:00</published>
-    <summary>Zero-trust XML parsing, decimal-exact arithmetic, validation as a hard gate, 100% branch coverage — and where Pain001 sits amid patented MT–MX transformation services.</summary>
+    <title>cz.certis.domestic — ISO-20022-pain.001-Beispiel: CZ (domestic-credit-transfer)</title>
+    <link href="https://pain001.com/de/corpus-cz-certis-domestic/"/>
+    <id>https://pain001.com/de/corpus-cz-certis-domestic/</id>
+    <updated>2026-09-13T08:00:00+00:00</updated>
+    <published>2026-09-13T08:00:00+00:00</published>
+    <summary>Czech domestic CZK transfer through CERTIS with VS/KS/SS payment symbols. Eine validierte pain.001-Beispieldatei (CZ, Schiene domestic-credit-transfer), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
 </feed>
