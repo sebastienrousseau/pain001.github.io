@@ -1,24 +1,22 @@
 /* pain001.com first-party measurement: cookieless, no identifiers, five named
-   events plus a page view, sent to the project's own metrics host. Off when
-   the id is unset, when Do-Not-Track or Global Privacy Control is on, and
-   silently no-op when the host is unreachable. */
-import { EVENTS, configured, optedOut, classify, payload } from "/js/metrics-core.js";
+   events plus a page view, sent as a GET to GoatCounter's /count on the
+   project's own host. Off unless the layout enables it, off under
+   Do-Not-Track and Global Privacy Control, and silently no-op when the host
+   is unreachable. */
+import { EVENTS, configured, optedOut, classify, countQuery } from "/js/metrics-core.js";
 
-const tag = document.querySelector('script[data-website-id][data-host-url]');
-const websiteId = tag ? tag.dataset.websiteId : "";
+const tag = document.querySelector("script[data-host-url][data-enabled]");
+const enabled = tag ? tag.dataset.enabled : "false";
 const hostUrl = tag ? tag.dataset.hostUrl.replace(/\/$/, "") : "";
 
 function send(name, label) {
-  if (!configured(websiteId, hostUrl) || optedOut(navigator)) return;
-  const body = payload({
-    websiteId, name, label, page: location, referrer: document.referrer,
-    language: navigator.language, screen: `${screen.width}x${screen.height}`, title: document.title,
+  if (!configured(enabled, hostUrl) || optedOut(navigator)) return;
+  const query = countQuery({
+    name, label, page: location, referrer: document.referrer,
+    screen: `${screen.width},${screen.height},${Math.round(window.devicePixelRatio || 1)}`, title: document.title,
   });
   try {
-    fetch(`${hostUrl}/api/send`, {
-      method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body), keepalive: true, credentials: "omit", mode: "cors",
-    }).catch(() => {});
+    fetch(`${hostUrl}/count?${query}`, { method: "GET", mode: "no-cors", keepalive: true, credentials: "omit" }).catch(() => {});
   } catch (_) { /* never surface measurement failures */ }
 }
 
