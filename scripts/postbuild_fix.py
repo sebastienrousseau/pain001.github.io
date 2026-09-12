@@ -1205,7 +1205,7 @@ def stamp_suite_version(site: Path) -> int:
         return 0
     import re as _re
     marker = '<span class="suite-version">'
-    note = f' &middot; <span class="suite-version">Generated against pain001 {version}</span>'
+    stamp = f'<p class="suite-version">Generated against pain001 {version}</p>'
     # the privacy link sits in every footer; its text is translated per locale
     link = _re.compile(r'<a href="/privacy/"[^>]*>[^<]*</a>')
     count = 0
@@ -1216,7 +1216,13 @@ def stamp_suite_version(site: Path) -> int:
         m = link.search(html)
         if not m:
             continue
-        page.write_text(html[:m.end()] + note + html[m.end():], encoding="utf-8")
+        # after the paragraph that holds the link, so translated footer
+        # fragments (locale table keys) stay byte-identical
+        end = html.find("</p>", m.end())
+        if end < 0:
+            continue
+        end += len("</p>")
+        page.write_text(html[:end] + stamp + html[end:], encoding="utf-8")
         count += 1
     return count
 
