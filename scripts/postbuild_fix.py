@@ -1203,17 +1203,20 @@ def stamp_suite_version(site: Path) -> int:
     version = _json.loads(index.read_text(encoding="utf-8")).get("pain001", "")
     if not version:
         return 0
+    import re as _re
     marker = '<span class="suite-version">'
-    note = (f' &middot; <span class="suite-version">Generated against pain001 {version}</span>')
+    note = f' &middot; <span class="suite-version">Generated against pain001 {version}</span>'
+    # the privacy link sits in every footer; its text is translated per locale
+    link = _re.compile(r'<a href="/privacy/"[^>]*>[^<]*</a>')
     count = 0
     for page in site.rglob("index.html"):
         html = page.read_text(encoding="utf-8")
         if marker in html or "<footer" not in html:
             continue
-        anchor = '<a href="/privacy/">Privacy</a>'
-        if anchor not in html:
+        m = link.search(html)
+        if not m:
             continue
-        page.write_text(html.replace(anchor, anchor + note, 1), encoding="utf-8")
+        page.write_text(html[:m.end()] + note + html[m.end():], encoding="utf-8")
         count += 1
     return count
 
