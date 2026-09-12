@@ -8,6 +8,972 @@
           "name": "contact@pain001.com (Sebastien Rousseau)"
         }
       ],
+      "content_html": "UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code. A validated pain.001 sample for AE on the priority-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-ae-uaefts-single/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "ae.uaefts.single — ISO 20022 pain.001 example for AE (priority-payment)",
+      "url": "https://pain001.com/corpus-ae-uaefts-single/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "SEPA credit transfer with a Belgian structured communication (BBA). A validated pain.001 sample for Belgium on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-be-sepa-sct-supplier/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "be.sepa.sct-supplier — ISO 20022 pain.001 example for Belgium (sepa-credit-transfer)",
+      "url": "https://pain001.com/corpus-be-sepa-sct-supplier/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "SEPA Core direct debit, recurring, Belgian creditor identifier. A validated pain.001 sample for Belgium on the sepa-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-be-sepa-sdd-core/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "be.sepa.sdd-core — ISO 20022 pain.001 example for Belgium (sepa-direct-debit)",
+      "url": "https://pain001.com/corpus-be-sepa-sdd-core/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Cross-border USD payment from Switzerland (SPS payment type X). A validated pain.001 sample for Switzerland on the cross-border rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-ch-international-usd/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "ch.international.usd — ISO 20022 pain.001 example for Switzerland (cross-border)",
+      "url": "https://pain001.com/corpus-ch-international-usd/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "SEPA credit transfer from Switzerland (SPS payment type S). A validated pain.001 sample for Switzerland on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-ch-sepa-sct/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "ch.sepa.sct — ISO 20022 pain.001 example for Switzerland (sepa-credit-transfer)",
+      "url": "https://pain001.com/corpus-ch-sepa-sct/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Swiss domestic credit transfer settling a QR-bill (QRR reference). A validated pain.001 sample for Switzerland on the domestic-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-ch-sps-qr-bill/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "ch.sps.qr-bill — ISO 20022 pain.001 example for Switzerland (domestic-credit-transfer)",
+      "url": "https://pain001.com/corpus-ch-sps-qr-bill/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Swiss domestic credit transfer with an ISO 11649 creditor reference (SCOR). A validated pain.001 sample for Switzerland on the domestic-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-ch-sps-scor/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "ch.sps.scor — ISO 20022 pain.001 example for Switzerland (domestic-credit-transfer)",
+      "url": "https://pain001.com/corpus-ch-sps-scor/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Czech domestic CZK transfer through CERTIS with VS/KS/SS payment symbols. A validated pain.001 sample for CZ on the domestic-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-cz-certis-domestic/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "cz.certis.domestic — ISO 20022 pain.001 example for CZ (domestic-credit-transfer)",
+      "url": "https://pain001.com/corpus-cz-certis-domestic/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "SEPA credit transfer from a Czech EUR account to a German supplier. A validated pain.001 sample for CZ on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-cz-sepa-sct/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "cz.sepa.sct — ISO 20022 pain.001 example for CZ (sepa-credit-transfer)",
+      "url": "https://pain001.com/corpus-cz-sepa-sct/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Foreign payment in USD from a German account, DK order type AXZ. A validated pain.001 sample for Germany on the cross-border rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-de-axz-foreign/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "de.axz.foreign — ISO 20022 pain.001 example for Germany (cross-border)",
+      "url": "https://pain001.com/corpus-de-axz-foreign/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Urgent euro payment (TARGET) from a German account, DK order type CCU. A validated pain.001 sample for Germany on the urgent-euro rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-de-ccu-urgent/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "de.ccu.urgent — ISO 20022 pain.001 example for Germany (urgent-euro)",
+      "url": "https://pain001.com/corpus-de-ccu-urgent/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "SEPA Instant credit transfer, single, INST at PmtInf. A validated pain.001 sample for Germany on the sepa-instant rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-de-sepa-sct-inst/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "de.sepa.sct-inst — ISO 20022 pain.001 example for Germany (sepa-instant)",
+      "url": "https://pain001.com/corpus-de-sepa-sct-inst/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "SEPA SCT salary batch with structured and unstructured remittance. A validated pain.001 sample for Germany on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-de-sepa-sct-salary/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "de.sepa.sct-salary — ISO 20022 pain.001 example for Germany (sepa-credit-transfer)",
+      "url": "https://pain001.com/corpus-de-sepa-sct-salary/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "SEPA B2B direct debit, first collection. A validated pain.001 sample for Germany on the sepa-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-de-sepa-sdd-b2b/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "de.sepa.sdd-b2b — ISO 20022 pain.001 example for Germany (sepa-direct-debit)",
+      "url": "https://pain001.com/corpus-de-sepa-sdd-b2b/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "SEPA credit transfer, single, initiating party identified by NIF. A validated pain.001 sample for Spain on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-es-sepa-sct-single/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "es.sepa.sct-single — ISO 20022 pain.001 example for Spain (sepa-credit-transfer)",
+      "url": "https://pain001.com/corpus-es-sepa-sct-single/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "SEPA Core direct debit, recurring, Spanish creditor identifier. A validated pain.001 sample for Spain on the sepa-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-es-sepa-sdd-core/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "es.sepa.sdd-core — ISO 20022 pain.001 example for Spain (sepa-direct-debit)",
+      "url": "https://pain001.com/corpus-es-sepa-sdd-core/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "SEPA credit transfer, supplier invoice with an RF creditor reference. A validated pain.001 sample for France on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-fr-sepa-sct-supplier/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "fr.sepa.sct-supplier — ISO 20022 pain.001 example for France (sepa-credit-transfer)",
+      "url": "https://pain001.com/corpus-fr-sepa-sct-supplier/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "SEPA Core direct debit, recurring collection on an amended mandate. A validated pain.001 sample for France on the sepa-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-fr-sepa-sdd-core/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "fr.sepa.sdd-core — ISO 20022 pain.001 example for France (sepa-direct-debit)",
+      "url": "https://pain001.com/corpus-fr-sepa-sdd-core/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Bacs Direct Debit collection, first and recurring, SUN as creditor id. A validated pain.001 sample for United Kingdom on the bacs-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-gb-bacs-dd-collection/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "gb.bacs-dd.collection — ISO 20022 pain.001 example for United Kingdom (bacs-direct-debit)",
+      "url": "https://pain001.com/corpus-gb-bacs-dd-collection/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Bacs Direct Credit supplier run, two payments, SUN in the debtor id. A validated pain.001 sample for United Kingdom on the bacs-direct-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-gb-bacs-supplier-run/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "gb.bacs.supplier-run — ISO 20022 pain.001 example for United Kingdom (bacs-direct-credit)",
+      "url": "https://pain001.com/corpus-gb-bacs-supplier-run/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "CHAPS same-day property completion with the BoE HLST purpose code. A validated pain.001 sample for United Kingdom on the priority-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-gb-chaps-property-purchase/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "gb.chaps.property-purchase — ISO 20022 pain.001 example for United Kingdom (priority-payment)",
+      "url": "https://pain001.com/corpus-gb-chaps-property-purchase/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Faster Payments single supplier payment, sort code and account. A validated pain.001 sample for United Kingdom on the faster-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-gb-fps-single/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "gb.fps.single — ISO 20022 pain.001 example for United Kingdom (faster-payment)",
+      "url": "https://pain001.com/corpus-gb-fps-single/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "USD cross-border payment from a UK account to a US supplier. A validated pain.001 sample for United Kingdom on the priority-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-gb-international-usd/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "gb.international.usd — ISO 20022 pain.001 example for United Kingdom (priority-payment)",
+      "url": "https://pain001.com/corpus-gb-international-usd/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Hong Kong FPS credit in HKD, clearing codes and account numbers. A validated pain.001 sample for HK on the instant-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-hk-fps-single/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "hk.fps.single — ISO 20022 pain.001 example for HK (instant-payment)",
+      "url": "https://pain001.com/corpus-hk-fps-single/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "SEPA credit transfer, single supplier payment. A validated pain.001 sample for Italy on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-it-sepa-sct-single/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "it.sepa.sct-single — ISO 20022 pain.001 example for Italy (sepa-credit-transfer)",
+      "url": "https://pain001.com/corpus-it-sepa-sct-single/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "SEPA credit transfer, single supplier payment. A validated pain.001 sample for Luxembourg on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-lu-sepa-sct-single/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "lu.sepa.sct-single — ISO 20022 pain.001 example for Luxembourg (sepa-credit-transfer)",
+      "url": "https://pain001.com/corpus-lu-sepa-sct-single/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Malaysia DuitNow credit in MYR with a BNM purpose code. A validated pain.001 sample for MY on the instant-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-my-duitnow-single/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "my.duitnow.single — ISO 20022 pain.001 example for MY (instant-payment)",
+      "url": "https://pain001.com/corpus-my-duitnow-single/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "SEPA credit transfer with a Dutch payment reference (CUR). A validated pain.001 sample for Netherlands on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-nl-sepa-sct-supplier/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "nl.sepa.sct-supplier — ISO 20022 pain.001 example for Netherlands (sepa-credit-transfer)",
+      "url": "https://pain001.com/corpus-nl-sepa-sct-supplier/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "SEPA Core direct debit, recurring collections under mandates. A validated pain.001 sample for Netherlands on the sepa-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-nl-sepa-sdd-core/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "nl.sepa.sdd-core — ISO 20022 pain.001 example for Netherlands (sepa-direct-debit)",
+      "url": "https://pain001.com/corpus-nl-sepa-sdd-core/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Qatar QATCH credit in QAR with the QCB purpose of payment. A validated pain.001 sample for QA on the domestic-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-qa-qatch-single/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "qa.qatch.single — ISO 20022 pain.001 example for QA (domestic-credit-transfer)",
+      "url": "https://pain001.com/corpus-qa-qatch-single/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Swedish salary batch (Bankgirot Löner), SALA, one debit. A validated pain.001 sample for Sweden on the salary rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-se-bankgiro-salary/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "se.bankgiro.salary — ISO 20022 pain.001 example for Sweden (salary)",
+      "url": "https://pain001.com/corpus-se-bankgiro-salary/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Swedish Bankgiro supplier payment with an OCR reference. A validated pain.001 sample for Sweden on the bankgiro-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-se-bankgiro-supplier/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "se.bankgiro.supplier — ISO 20022 pain.001 example for Sweden (bankgiro-credit)",
+      "url": "https://pain001.com/corpus-se-bankgiro-supplier/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Swedish Plusgiro supplier payment with an invoice message. A validated pain.001 sample for Sweden on the plusgiro-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-se-plusgiro-supplier/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "se.plusgiro.supplier — ISO 20022 pain.001 example for Sweden (plusgiro-credit)",
+      "url": "https://pain001.com/corpus-se-plusgiro-supplier/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Swedish domestic high-value SEK payment through RIX, urgent, intra-group. A validated pain.001 sample for Sweden on the priority-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-se-rix-urgent/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "se.rix.urgent — ISO 20022 pain.001 example for Sweden (priority-payment)",
+      "url": "https://pain001.com/corpus-se-rix-urgent/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. A validated pain.001 sample for SG on the instant-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-sg-fast-single/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "sg.fast.single — ISO 20022 pain.001 example for SG (instant-payment)",
+      "url": "https://pain001.com/corpus-sg-fast-single/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "ACH CCD credit to a supplier with an addenda remittance line. A validated pain.001 sample for United States on the ach-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-us-ach-ccd-supplier/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "us.ach.ccd-supplier — ISO 20022 pain.001 example for United States (ach-credit)",
+      "url": "https://pain001.com/corpus-us-ach-ccd-supplier/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "ACH debit collection (CCD) with routing numbers. A validated pain.001 sample for United States on the ach-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-us-ach-debit/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "us.ach.debit — ISO 20022 pain.001 example for United States (ach-debit)",
+      "url": "https://pain001.com/corpus-us-ach-debit/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "ACH PPD payroll run, two employees. A validated pain.001 sample for United States on the ach-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-us-ach-ppd-payroll/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "us.ach.ppd-payroll — ISO 20022 pain.001 example for United States (ach-credit)",
+      "url": "https://pain001.com/corpus-us-ach-ppd-payroll/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Bank-issued cheque to a vendor, mailed to the creditor. A validated pain.001 sample for United States on the cheque rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-us-check-vendor/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "us.check.vendor — ISO 20022 pain.001 example for United States (cheque)",
+      "url": "https://pain001.com/corpus-us-check-vendor/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "IRS EFTPS federal tax deposit, CCD with the TXP addenda string. A validated pain.001 sample for United States on the ach-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-us-eftps-tax/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "us.eftps.tax — ISO 20022 pain.001 example for United States (ach-credit)",
+      "url": "https://pain001.com/corpus-us-eftps-tax/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "RTP real-time payment, single. A validated pain.001 sample for United States on the instant-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-us-rtp-single/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "us.rtp.single — ISO 20022 pain.001 example for United States (instant-payment)",
+      "url": "https://pain001.com/corpus-us-rtp-single/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
+      "content_html": "Fedwire domestic funds transfer, urgent. A validated pain.001 sample for United States on the priority-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+      "date_modified": "2026-09-12T08:00:00+00:00",
+      "date_published": "2026-09-12T08:00:00+00:00",
+      "id": "https://pain001.com/corpus-us-wire-domestic/",
+      "language": "en-GB",
+      "tags": [
+        "ISO 20022",
+        "pain001",
+        "payments",
+        "python",
+        "banking",
+        "CBPR+",
+        "SEPA"
+      ],
+      "title": "us.wire.domestic — ISO 20022 pain.001 example for United States (priority-payment)",
+      "url": "https://pain001.com/corpus-us-wire-domestic/"
+    },
+    {
+      "authors": [
+        {
+          "name": "contact@pain001.com (Sebastien Rousseau)"
+        }
+      ],
       "content_html": "Generated pain.001 and pain.008 files that between them use every element path and choice branch of each supported schema edition, each named after what it adds, with a zip per edition.",
       "date_modified": "2026-09-12T08:00:00+00:00",
       "date_published": "2026-09-12T08:00:00+00:00",
@@ -185,972 +1151,6 @@
       ],
       "title": "Pain001 — ওপেন-সোর্স ISO 20022 পেমেন্ট সূচনা",
       "url": "https://pain001.com/bn/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Exactly what Pain001 supports: every message definition with generate/validate/migrate coverage, input formats, scheme rulebooks, address models, and the known limitations — verified against the shipped code.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/compatibility/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Compatibility Matrix",
-      "url": "https://pain001.com/compatibility/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Pain001 against Prowide, python-sepaxml, SWIFT Translator, XMLdation, Volante and the rest — what each does well, what it costs, and where the gaps are. Sources dated.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/competitors-comparison/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Pain001 vs Alternatives: an Honest Comparison",
-      "url": "https://pain001.com/competitors-comparison/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Where to report bugs, disclose security issues privately, and reach the maintainer — with what to include for the fastest possible fix.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/contact/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Contact Pain001: Support, Security and Enquiries",
-      "url": "https://pain001.com/contact/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Open-source sada v Pythonu generující XSD-validované soubory pain.001 a pain.008 z CSV, Excelu, SQLite, JSON, Parquet nebo SWIFT MT101 — s nástroji MCP pro AI agenty a LSP serverem.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/cs/",
-      "language": "cs",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Pain001 — open-source iniciace plateb ISO 20022",
-      "url": "https://pain001.com/cs/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Open-Source-Python-Suite zur Erzeugung XSD-validierter pain.001- und pain.008-Dateien aus CSV, Excel, SQLite, JSON, Parquet oder SWIFT MT101 — mit MCP-Tools für KI-Agenten und LSP-Server.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/de/",
-      "language": "de",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Pain001 — Open-Source-Zahlungsinitiierung nach ISO 20022",
-      "url": "https://pain001.com/de/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Complete reference for pain001 v0.0.70 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/documentation/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Pain001 Technical Reference: CLI, Python API and REST",
-      "url": "https://pain001.com/documentation/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Σουίτα Python ανοικτού κώδικα που παράγει αρχεία pain.001 και pain.008 επικυρωμένα με XSD από CSV, Excel, SQLite, JSON, Parquet ή SWIFT MT101 — με εργαλεία MCP για πράκτορες AI και διακομιστή LSP.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/el/",
-      "language": "el",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Pain001 — Έναρξη πληρωμών ISO 20022 ανοικτού κώδικα",
-      "url": "https://pain001.com/el/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Suite Python de código abierto para generar ficheros pain.001 y pain.008 validados por XSD desde CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101 — con herramientas MCP para agentes de IA y servidor LSP.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/es/",
-      "language": "es",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Pain001 — Iniciación de pagos ISO 20022 en código abierto",
-      "url": "https://pain001.com/es/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "One page for decision-makers: the rejected-file problem, the November 2026 (SR 2026) deadline, what Pain001 does, what it costs, the safety evidence, and the one ask — print-ready.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/executive-brief/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Pain001 Executive Brief",
-      "url": "https://pain001.com/executive-brief/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "مجموعهٔ متن‌باز Python برای تولید فایل‌های pain.001 و pain.008 اعتبارسنجی‌شده با XSD از CSV، Excel، SQLite، JSON، Parquet یا SWIFT MT101 — با ابزارهای MCP برای عامل‌های هوش مصنوعی و سرور LSP.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/fa/",
-      "language": "fa",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Pain001 — آغاز پرداخت ISO 20022 متن‌باز",
-      "url": "https://pain001.com/fa/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Why banks reject payment files, pain.001 vs pain.008, the November 2026 deadlines, streaming large batches, security posture, and audit reproducibility — answered plainly.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/faqs/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Pain001 FAQs for Treasury, Ops, Engineering and Audit",
-      "url": "https://pain001.com/faqs/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Open-source na Python suite na gumagawa ng XSD-validated na pain.001 at pain.008 na file mula sa CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101 — may MCP tools para sa AI agents at LSP server.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/fil/",
-      "language": "fil",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Pain001 — Open-source na pagsisimula ng bayad sa ISO 20022",
-      "url": "https://pain001.com/fil/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Suite Python open source pour générer des fichiers pain.001 et pain.008 validés par XSD à partir de CSV, Excel, SQLite, JSON, Parquet ou SWIFT MT101 — avec outils MCP pour agents IA et serveur LSP.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/fr/",
-      "language": "fr",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Pain001 — Initiation de paiements ISO 20022 en open source",
-      "url": "https://pain001.com/fr/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, hybrid addresses, control sums — the payments vocabulary defined for treasurers and operations teams, not just developers.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/glossary/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "ISO 20022 Payments Glossary in Plain English",
-      "url": "https://pain001.com/glossary/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Who maintains Pain001, how decisions are made, how it is funded, what mitigates single-maintainer risk, and the editorial and corrections policy — stated plainly, limitations included.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/governance/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Governance & Continuity",
-      "url": "https://pain001.com/governance/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Kunshin Python na buɗaɗɗen tushe da ke samar da fayilolin pain.001 da pain.008 da aka tabbatar da XSD daga CSV, Excel, SQLite, JSON, Parquet ko SWIFT MT101 — tare da kayan aikin MCP don wakilan AI da uwar garken LSP.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/ha/",
-      "language": "ha",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Pain001 — Fara biyan kuɗi na ISO 20022 a buɗaɗɗen tushe",
-      "url": "https://pain001.com/ha/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "חבילת Python בקוד פתוח המפיקה קובצי pain.001 ו-pain.008 מאומתי XSD מ-CSV, Excel, SQLite, JSON, Parquet או SWIFT MT101 — עם כלי MCP לסוכני AI ושרת LSP.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/he/",
-      "language": "he",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Pain001 — ייזום תשלומים ISO 20022 בקוד פתוח",
-      "url": "https://pain001.com/he/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "ओपन-सोर्स Python सुइट जो CSV, Excel, SQLite, JSON, Parquet या SWIFT MT101 से XSD-सत्यापित pain.001 और pain.008 फ़ाइलें बनाती है — AI एजेंटों के लिए MCP टूल और LSP सर्वर के साथ।",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/hi/",
-      "language": "hi",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Pain001 — ओपन-सोर्स ISO 20022 भुगतान आरंभ",
-      "url": "https://pain001.com/hi/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Nyílt forráskódú Python-csomag, amely XSD-validált pain.001 és pain.008 fájlokat készít CSV, Excel, SQLite, JSON, Parquet vagy SWIFT MT101 forrásból — MCP-eszközökkel AI-ügynökökhöz és LSP-szerverrel.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/hu/",
-      "language": "hu",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Pain001 — Nyílt forráskódú ISO 20022 fizetésindítás",
-      "url": "https://pain001.com/hu/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Suite Python sumber terbuka yang menghasilkan berkas pain.001 dan pain.008 tervalidasi XSD dari CSV, Excel, SQLite, JSON, Parquet, atau SWIFT MT101 — dengan perkakas MCP untuk agen AI dan server LSP.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/id/",
-      "language": "id",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Pain001 — Inisiasi pembayaran ISO 20022 sumber terbuka",
-      "url": "https://pain001.com/id/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Install the Pain001 suite on Python 3.10–3.12 via pip or Docker, add Excel and MT101 loaders, and produce your first bank-ready pain.001 file in three commands.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/installation/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Install Pain001: pip, Docker and First Validated File",
-      "url": "https://pain001.com/installation/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "What CBPR+ requires of your pain.001: BICFI agents, structured or hybrid addresses from 14 Nov 2026, charge bearers, purpose codes — with a worked xborder-ct example.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Cross-Border pain.001 Under CBPR+: a Field Guide",
-      "url": "https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "The living schedule of ISO 20022 mandates: 14 Nov 2026 structured addresses and MT101 retirement, 2027 CHAPS purpose codes and camt investigations, 2028 statement and direct-debit migration — primary-sourced and dated.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/iso20022-roadmap/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "ISO 20022 Roadmap: Every Deadline Through 2028",
-      "url": "https://pain001.com/iso20022-roadmap/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Suite Python open source per generare file pain.001 e pain.008 validati XSD da CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101 — con strumenti MCP per agenti IA e server LSP.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/it/",
-      "language": "it",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Pain001 — Iniziazione di pagamenti ISO 20022 open source",
-      "url": "https://pain001.com/it/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "CSV・Excel・SQLite・JSON・Parquet・SWIFT MT101 から XSD 検証済みの pain.001 / pain.008 ファイルを生成するオープンソース Python スイート。AI エージェント向け MCP ツールと LSP サーバーを同梱。",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/ja/",
-      "language": "ja",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Pain001 — オープンソースの ISO 20022 送金指図",
-      "url": "https://pain001.com/ja/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "CSV, Excel, SQLite, JSON, Parquet 또는 SWIFT MT101에서 XSD 검증을 마친 pain.001 및 pain.008 파일을 생성하는 오픈소스 Python 스위트 — AI 에이전트용 MCP 도구와 LSP 서버 포함.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/ko/",
-      "language": "ko",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Pain001 — 오픈소스 ISO 20022 지급 지시",
-      "url": "https://pain001.com/ko/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "The Pain001 overview — validation pipeline, the November 2026 (SR 2026) deadline, quickstart — translated into 34 languages, from Deutsch and 日本語 to العربية and Yorùbá, with correct hreflang and RTL support.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/languages/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Pain001 in 34 Languages",
-      "url": "https://pain001.com/languages/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "A Rust static site generator with security-first defaults, Markdown content, no JavaScript framework, and machine-readable surfaces from llms.txt to a CycloneDX SBOM.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/made-with-shokunin/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "Made with Shokunin: How This Site Is Built",
-      "url": "https://pain001.com/made-with-shokunin/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Element-by-element differences between consecutive ISO 20022 pain.001 versions, computed from the official schemas.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/message-spec-changes/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "What changed between pain.001 versions — element-level diffs",
-      "url": "https://pain001.com/message-spec-changes/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Every ISO 20022 payment-initiation code list with its complete value set and version coverage, generated from the official XSDs.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/message-spec-code-lists/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "ISO 20022 payment code lists — every value, every version",
-      "url": "https://pain001.com/message-spec-code-lists/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Complex types NameAndAddress10 – TaxRecordDetails1 in ISO 20022 pain.001.001.03, with elements, cardinality and constraints, generated from the official XSD.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/message-spec-pain.001.001.03-types-2/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "pain.001.001.03 type reference (part 2 of 2) — NameAndAddress10 – TaxRecordDetails1",
-      "url": "https://pain001.com/message-spec-pain.001.001.03-types-2/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Complex types AccountIdentification4Choice – LocalInstrument2Choice in ISO 20022 pain.001.001.03, with elements, cardinality and constraints, generated from the official XSD.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/message-spec-pain.001.001.03-types/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "pain.001.001.03 type reference (part 1 of 2) — AccountIdentification4Choice – LocalInstrument2Choice",
-      "url": "https://pain001.com/message-spec-pain.001.001.03-types/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Every element of ISO 20022 pain.001.001.03: XML path, cardinality, data type, length and pattern constraints, and code lists — generated from the official XSD.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/message-spec-pain.001.001.03/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "pain.001.001.03 — complete element reference",
-      "url": "https://pain001.com/message-spec-pain.001.001.03/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Complex types InstructionForCreditorAgent1 – TaxPeriod1 in ISO 20022 pain.001.001.04, with elements, cardinality and constraints, generated from the official XSD.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/message-spec-pain.001.001.04-types-2/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "pain.001.001.04 type reference (part 2 of 3) — InstructionForCreditorAgent1 – TaxPeriod1",
-      "url": "https://pain001.com/message-spec-pain.001.001.04-types-2/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Complex types TaxRecord1 – TaxRecordDetails1 in ISO 20022 pain.001.001.04, with elements, cardinality and constraints, generated from the official XSD.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/message-spec-pain.001.001.04-types-3/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "pain.001.001.04 type reference (part 3 of 3) — TaxRecord1 – TaxRecordDetails1",
-      "url": "https://pain001.com/message-spec-pain.001.001.04-types-3/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Complex types AccountIdentification4Choice – GroupHeader48 in ISO 20022 pain.001.001.04, with elements, cardinality and constraints, generated from the official XSD.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/message-spec-pain.001.001.04-types/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "pain.001.001.04 type reference (part 1 of 3) — AccountIdentification4Choice – GroupHeader48",
-      "url": "https://pain001.com/message-spec-pain.001.001.04-types/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Every element of ISO 20022 pain.001.001.04: XML path, cardinality, data type, length and pattern constraints, and code lists — generated from the official XSD.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/message-spec-pain.001.001.04/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "pain.001.001.04 — complete element reference",
-      "url": "https://pain001.com/message-spec-pain.001.001.04/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Complex types InstructionForCreditorAgent1 – TaxPeriod1 in ISO 20022 pain.001.001.05, with elements, cardinality and constraints, generated from the official XSD.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/message-spec-pain.001.001.05-types-2/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "pain.001.001.05 type reference (part 2 of 3) — InstructionForCreditorAgent1 – TaxPeriod1",
-      "url": "https://pain001.com/message-spec-pain.001.001.05-types-2/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Complex types TaxRecord1 – TaxRecordDetails1 in ISO 20022 pain.001.001.05, with elements, cardinality and constraints, generated from the official XSD.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/message-spec-pain.001.001.05-types-3/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "pain.001.001.05 type reference (part 3 of 3) — TaxRecord1 – TaxRecordDetails1",
-      "url": "https://pain001.com/message-spec-pain.001.001.05-types-3/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Complex types AccountIdentification4Choice – GroupHeader48 in ISO 20022 pain.001.001.05, with elements, cardinality and constraints, generated from the official XSD.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/message-spec-pain.001.001.05-types/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "pain.001.001.05 type reference (part 1 of 3) — AccountIdentification4Choice – GroupHeader48",
-      "url": "https://pain001.com/message-spec-pain.001.001.05-types/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Every element of ISO 20022 pain.001.001.05: XML path, cardinality, data type, length and pattern constraints, and code lists — generated from the official XSD.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/message-spec-pain.001.001.05/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "pain.001.001.05 — complete element reference",
-      "url": "https://pain001.com/message-spec-pain.001.001.05/"
-    },
-    {
-      "authors": [
-        {
-          "name": "contact@pain001.com (Sebastien Rousseau)"
-        }
-      ],
-      "content_html": "Complex types GenericOrganisationIdentification1 – TaxAuthorisation1 in ISO 20022 pain.001.001.06, with elements, cardinality and constraints, generated from the official XSD.",
-      "date_modified": "2026-07-26T08:00:00+00:00",
-      "date_published": "2026-07-26T08:00:00+00:00",
-      "id": "https://pain001.com/message-spec-pain.001.001.06-types-2/",
-      "language": "en-GB",
-      "tags": [
-        "ISO 20022",
-        "pain001",
-        "payments",
-        "python",
-        "banking",
-        "CBPR+",
-        "SEPA"
-      ],
-      "title": "pain.001.001.06 type reference (part 2 of 3) — GenericOrganisationIdentification1 – TaxAuthorisation1",
-      "url": "https://pain001.com/message-spec-pain.001.001.06-types-2/"
     }
   ],
   "language": "en-GB",

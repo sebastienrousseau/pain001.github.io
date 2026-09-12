@@ -23,6 +23,7 @@ checkout at Public/Python/pain001.
 """
 from __future__ import annotations
 
+import json
 import os
 import re
 import sys
@@ -163,6 +164,9 @@ def copy_market(files: list[dict], data: Path) -> None:
         dst.with_name(record["_sidecar"].name).write_text(
             record["_public_sidecar"], encoding="utf-8"
         )
+        twin = record["_xml"].with_name(record["_xml"].name.replace(".xml", ".iso.json"))
+        if twin.exists():
+            dst.with_name(twin.name).write_bytes(twin.read_bytes())
 
 
 def copy_coverage(editions: list[dict], data: Path) -> None:
@@ -285,6 +289,163 @@ def worked_example(files: list[dict]) -> list[str]:
         "",
     ]
     return lines
+
+
+def scenario_slug(sid: str) -> str:
+    """The page slug for a scenario id: dots become hyphens, prefixed."""
+    return "corpus-" + sid.replace(".", "-")
+
+
+def load_try_samples() -> dict[str, dict]:
+    """The demo's corpus samples by scenario id, when the file exists."""
+    path = STATIC / "try-samples.json"
+    if not path.exists():
+        return {}
+    data = json.loads(path.read_text(encoding="utf-8"))
+    return {s["id"]: s for s in data.get("samples", [])}
+
+
+def dataset_ld(sid: str, recs: list[dict], version: str, stamp: str) -> dict:
+    """schema.org Dataset markup for one scenario page."""
+    first = recs[0]
+    distribution = []
+    for r in recs:
+        base = f"https://pain001.com/corpus/market/{r['_rel']}"
+        distribution.append({"@type": "DataDownload", "encodingFormat": "application/xml",
+                             "name": f"{r['message_type']} XML", "contentUrl": base})
+        if r["_xml"].with_name(r["_xml"].name.replace(".xml", ".iso.json")).exists():
+            distribution.append({"@type": "DataDownload", "encodingFormat": "application/json",
+                                 "name": f"{r['message_type']} ISO 20022 JSON twin",
+                                 "contentUrl": base.replace(".xml", ".iso.json")})
+        distribution.append({"@type": "DataDownload", "encodingFormat": "application/yaml",
+                             "name": f"{r['message_type']} provenance record",
+                             "contentUrl": base.replace(".xml", ".provenance.yaml")})
+    profiles = [p for p in ((first.get("validation") or {}).get("profiles") or {}) if p != "anti-duplicate"]
+    return {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "name": f"{sid}: ISO 20022 pain.001 example ({first.get('country', '').upper()})",
+        "description": str(first.get("description", "")).strip(),
+        "url": f"https://pain001.com/{scenario_slug(sid)}/",
+        "identifier": sid,
+        "version": version,
+        "dateModified": stamp,
+        "license": "https://spdx.org/licenses/Apache-2.0.html",
+        "isAccessibleForFree": True,
+        "keywords": [k for k in ["ISO 20022", "pain.001", first.get("country", "").upper(), first.get("family", "")] + profiles if k],
+        "creator": {"@type": "Organization", "name": "Pain001", "url": "https://pain001.com/"},
+        "isPartOf": {"@type": "DataCatalog", "name": "pain001 example corpus", "url": "https://pain001.com/example-corpus/"},
+        "distribution": distribution,
+    }
+
+
+def scenario_page(sid: str, recs: list[dict], version: str, sample: dict | None) -> str:
+    """The body of one scenario's page: what it is, its files, how it was checked, where it comes from."""
+    first = recs[0]
+    country = first.get("country", "").upper()
+    prov = public_record(first).get("provenance") or {}
+    validation = first.get("validation") or {}
+    profiles = {p: v for p, v in (validation.get("profiles") or {}).items()}
+    sources = prov.get("sources", [])
+    lines = [
+        f"{first.get('description', '')}",
+        "",
+        f"A payment initiation file for **{COUNTRIES.get(first.get('country', ''), country)}** "
+        f"on the **{first.get('family', '')}** rail, shipped in "
+        f"{', '.join(f'`{r[chr(109)+chr(101)+chr(115)+chr(115)+chr(97)+chr(103)+chr(101)+chr(95)+chr(116)+chr(121)+chr(112)+chr(101)]}`' for r in recs)}, "
+        f"generated and checked by pain001 {version}. It is a synthetic example built from the "
+        "public scheme rulebooks: no real party, account or bank guideline behind it.",
+        "",
+        "## Files",
+        "",
+        "| Edition | Payment file | ISO 20022 JSON twin | Provenance record |",
+        "| :--- | :--- | :--- | :--- |",
+    ]
+    for r in recs:
+        rel = r["_rel"]
+        has_twin = r["_xml"].with_name(r["_xml"].name.replace(".xml", ".iso.json")).exists()
+        twin_md = (f"[{r['_xml'].name.replace('.xml', '.iso.json')}](/corpus/market/{rel.replace('.xml', '.iso.json')})"
+                   if has_twin else "— (twins cover pain.001 only)")
+        lines.append(
+            f"| `{r['message_type']}` | [{r['_xml'].name}](/corpus/market/{rel}) | {twin_md} | "
+            f"[{r['_sidecar'].name}](/corpus/market/{rel.replace('.xml', '.provenance.yaml')}) |"
+        )
+    if any(r["_xml"].with_name(r["_xml"].name.replace(".xml", ".iso.json")).exists() for r in recs):
+        lines += ["", "The twin is the same payment in the ISO 20022 Registration Authority's JSON convention, "
+                  "lossless in both directions; its JSON Schema is bundled with the library "
+                  "(`pain001/schemas/iso-json/`).", ""]
+    else:
+        lines.append("")
+    if sample:
+        lines += [
+            "## Run it in your browser",
+            "",
+            f"[Open this scenario in the demo](/try/?sample=corpus:{sid}): the pain001 library loads in a "
+            f"Python runtime in your browser, rebuilds the file from the {sample['records']} record(s) below, "
+            f"checks it against the `{sample['scheme']}` rulebook and the official XSD, and shows the JSON twin. "
+            "Nothing leaves your machine.",
+            "",
+            "The flat records the library rebuilds it from (the CSV pipeline's own column names):",
+            "",
+            "```csv",
+            sample["csv"].strip(),
+            "```",
+            "",
+        ]
+    lines += ["## How the library checked it", ""]
+    xsd = (validation.get("xsd") or {}).get("errors", 0)
+    mdr = (validation.get("mdr") or {}).get("errors", 0)
+    lines.append(f"- **Official XSD**: {'passed' if not xsd else f'{xsd} error(s)'}.")
+    lines.append(f"- **ISO message definition rules**: {'passed' if not mdr else f'{mdr} error(s)'}.")
+    for name, verdict in profiles.items():
+        errs = (verdict or {}).get("errors", 0); warns = (verdict or {}).get("warnings", 0)
+        lines.append(f"- **Rail profile `{name}`**: {'passed' if not errs else f'{errs} error(s)'}"
+                     + (f", {warns} warning(s)" if warns else "") + ".")
+    conf = prov.get("confidence", "unknown")
+    lines += ["", f"Confidence **{conf}**: {confidence_note(conf)}.", "",
+              "## Where the content comes from", ""]
+    if sources:
+        for src in sources:
+            title = str(src.get("title", "")).strip(); read = src.get("read") or src.get("retrieved") or ""
+            url = src.get("url") or ""
+            item = f"[{title}]({url})" if url else title
+            lines.append(f"- {item}" + (f" (read {read})" if read else ""))
+    else:
+        lines.append("- Public rulebook content only; see the corpus page for the method.")
+    lines += ["", f"SHA-256 of each file is in its provenance record. Your bank's own usage guideline is not "
+              "represented here: [apply it privately](/example-corpus/#your-bank-s-guideline) with the "
+              "library's overlay tooling.", "",
+              f"[Back to the example corpus](/example-corpus/) · [All payment files by country](/example-corpus/#payment-files-by-country)"]
+    return "\n".join(lines)
+
+
+def write_scenario_pages(files: list[dict], version: str) -> int:
+    """One page per scenario; returns how many were written. Also records the JSON-LD for post-build injection."""
+    scenarios: dict[str, list[dict]] = defaultdict(list)
+    for record in files:
+        scenarios[record["scenario"]].append(record)
+    samples = load_try_samples()
+    stamp = _dt.date.today().isoformat()
+    ld: dict[str, dict] = {}
+    for sid, recs in sorted(scenarios.items()):
+        first = recs[0]
+        slug = scenario_slug(sid)
+        country = COUNTRIES.get(first.get("country", ""), first.get("country", "").upper())
+        desc = str(first.get("description", "")).strip()
+        fm = load_frontmatter(
+            slug,
+            f"{sid} — ISO 20022 pain.001 example for {country} ({first.get('family', '')})",
+            f"{desc} A validated pain.001 sample for {country} on the {first.get('family', '')} rail, "
+            f"with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+            "Example corpus",
+            desc,
+            f"pain.001 example {country}, {first.get('family', '')} sample XML, ISO 20022 {country} payment file, "
+            f"{sid}, pain001 corpus",
+        )
+        write_post(slug, stamp_date(fm), scenario_page(sid, recs, version, samples.get(sid)))
+        ld[slug] = dataset_ld(sid, recs, version, stamp)
+    (HERE / "corpus_pages.json").write_text(json.dumps(ld, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    return len(ld)
 
 
 def render(files: list[dict], editions: list[dict], sizes: dict[str, int],
@@ -415,7 +576,7 @@ def render(files: list[dict], editions: list[dict], sizes: dict[str, int],
             prov = first.get("provenance") or {}
             confidence = prov.get("confidence", "unknown")
             body.append(
-                f"| `{sid}` | {esc(first.get('description', ''))} | "
+                f"| [`{sid}`](/{scenario_slug(sid)}/) | {esc(first.get('description', ''))} | "
                 f"{', '.join(f'`{p}`' for p in profiles) or 'base rules only'} | "
                 f"{editions_md} | {confidence} |")
         body.append("")
@@ -525,6 +686,7 @@ def main(argv: list[str] | None = None) -> int:
     copy_coverage(editions, data)
     sizes = write_zips(files, editions, data, version)
     body = render(files, editions, sizes, version)
+    pages = write_scenario_pages(files, version)
     fm = load_frontmatter(
         SLUG,
         "ISO 20022 example files — pain.001 and pain.008 samples per country and rail",
@@ -541,6 +703,7 @@ def main(argv: list[str] | None = None) -> int:
         "QR-bill pain.001, Bankgiro pain.001, test corpus",
     )
     write_post(SLUG, stamp_date(fm), body)
+    print(f"wrote {pages} scenario pages")
     coverage_fm = load_frontmatter(
         COVERAGE_SLUG,
         "ISO 20022 schema coverage files — every element of every edition",

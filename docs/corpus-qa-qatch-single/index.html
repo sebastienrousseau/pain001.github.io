@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta itemprop="datePublished" content="Sat, 12 Sep 2026 08:00:00 +0000" id="date" />
+    <meta itemprop="dateModified" content="Sat, 12 Sep 2026 08:00:00 +0000" id="last-modified" />
+    <title>qa.qatch.single — ISO 20022 pain.001 example for QA (domestic-credit-transfer)</title>
+
+    <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
+<meta name="description" content="Qatar QATCH credit in QAR with the QCB purpose of payment. A validated pain.001 sample for QA on the domestic-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.">
+<meta name="keywords" content="pain.001 example QA, domestic-credit-transfer sample XML, ISO 20022 QA payment file, qa.qatch.single, pain001 corpus">
+<meta property="og:image" content="https://pain001.com/og/pain001-card.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Qatar QATCH credit in QAR with the QCB purpose of payment. A validated pain.001 sample for QA on the domestic-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser." />
+    <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="qa.qatch.single — ISO 20022 pain.001 example for QA (domestic-credit-transfer)">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self' https://metrics.pain001.com; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    
+    
+
+    <link rel="alternate" href="https://pain001.com/corpus-qa-qatch-single/" hreflang="en" />
+    
+    <link rel="icon" type="image/svg+xml" href="/img/pain001.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="/img/pain001.svg" />
+    <link rel="preload" href="/fonts/source-serif-4-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <script src="/_csp/8145aa0ad262565d.js" integrity="sha384-xojGPg1xO/5JD2kzlGSV/j609dNSF7NoW5JDXbMhLV0On6hgrwS9Jd6K+uAidu1K" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/_csp/64d7bf8a80a09b01.css" integrity="sha384-hMew7+Ejvfkm0TCwqZIBOTSB3tnhU/x3ZFhFj+KoWxHPTbJAh4TLa7Vp19Rxr7iw" crossorigin="anonymous">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://pain001.com/atom.xml"/>
+  <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="qa.qatch.single — ISO 20022 pain.001 example for QA (domestic-credit-transfer)">
+<meta property="og:description" content="Qatar QATCH credit in QAR with the QCB purpose of payment. A validated pain.001 sample for QA on the domestic-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pain001.com/corpus-qa-qatch-single/">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="qa.qatch.single — ISO 20022 pain.001 example for QA (domestic-credit-transfer)">
+<meta name="twitter:description" content="Qatar QATCH credit in QAR with the QCB purpose of payment. A validated pain.001 sample for QA on the domestic-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.">
+<meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg">
+<link rel="canonical" href="https://pain001.com/corpus-qa-qatch-single/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
+<link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "qa.qatch.single: ISO 20022 pain.001 example (QA)", "description": "Qatar QATCH credit in QAR with the QCB purpose of payment.", "url": "https://pain001.com/corpus-qa-qatch-single/", "identifier": "qa.qatch.single", "version": "0.0.70", "dateModified": "2026-09-12", "license": "https://spdx.org/licenses/Apache-2.0.html", "isAccessibleForFree": true, "keywords": ["ISO 20022", "pain.001", "QA", "domestic-credit-transfer", "qa-qatch", "purpose-mandate-qa"], "creator": {"@type": "Organization", "name": "Pain001", "url": "https://pain001.com/"}, "isPartOf": {"@type": "DataCatalog", "name": "pain001 example corpus", "url": "https://pain001.com/example-corpus/"}, "distribution": [{"@type": "DataDownload", "encodingFormat": "application/xml", "name": "pain.001.001.03 XML", "contentUrl": "https://pain001.com/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.03.xml"}, {"@type": "DataDownload", "encodingFormat": "application/json", "name": "pain.001.001.03 ISO 20022 JSON twin", "contentUrl": "https://pain001.com/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.03.iso.json"}, {"@type": "DataDownload", "encodingFormat": "application/yaml", "name": "pain.001.001.03 provenance record", "contentUrl": "https://pain001.com/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.03.provenance.yaml"}, {"@type": "DataDownload", "encodingFormat": "application/xml", "name": "pain.001.001.09 XML", "contentUrl": "https://pain001.com/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.09.xml"}, {"@type": "DataDownload", "encodingFormat": "application/json", "name": "pain.001.001.09 ISO 20022 JSON twin", "contentUrl": "https://pain001.com/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.09.iso.json"}, {"@type": "DataDownload", "encodingFormat": "application/yaml", "name": "pain.001.001.09 provenance record", "contentUrl": "https://pain001.com/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.09.provenance.yaml"}]}</script>
+</head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="ap-nav">
+      <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Toggle navigation" />
+      <div class="wrap ap-nav-wrap">
+        <a class="ap-brand" href="/" aria-label="Pain001 home">
+          <img src="/img/pain001.svg" alt="Pain001" width="26" height="26" />
+          <span>Pain001</span>
+        </a>
+        <nav aria-label="Primary navigation" id="ap-primary-nav">
+          <ul class="ap-menu">
+            <li class="has-sub"><a href="/why/">Why Pain001</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-why" aria-label="Toggle Why Pain001 submenu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-why" class="ap-sub">
+                <li><a href="/solutions/">Who it&rsquo;s for</a></li>
+                <li><a href="/executive-brief/">Executive brief</a></li>
+                <li><a href="/competitors-comparison/">Comparison vs commercial tools</a></li>
+              </ul>
+            </li>
+            <li><a href="/try/">See it live</a></li>
+            <li class="has-sub"><a href="/documentation/">Docs</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-docs" aria-label="Toggle Docs submenu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-docs" class="ap-sub">
+                <li><a href="/installation/">Installation &amp; Docker</a></li>
+                <li><a href="/message-specs/">Message specifications</a></li>
+                <li><a href="/example-corpus/">Example corpus</a></li>
+                <li><a href="/glossary/">Glossary</a></li>
+                <li><a href="/faqs/">FAQs</a></li>
+                <li><a href="/pain002-reason-codes/">pain.002 reason codes</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/#suite-heading">Suite</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-suite" aria-label="Toggle Suite submenu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-suite" class="ap-sub">
+                <li><a href="/pain001-mcp/">AI agent tools (MCP)</a></li>
+                <li><a href="/pain001-lsp/">Editor integration (LSP)</a></li>
+                <li><a href="/pain001-loader-mt101/">MT101 loader</a></li>
+                <li><a href="/pain001-loader-xlsx/">Excel loader</a></li>
+                <li><a href="/architecture-and-patents/">Architecture &amp; security</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a href="/2026-iso20022-migration-trends/">Research</a>
+              <button type="button" class="ap-sub-toggle" aria-expanded="false" aria-controls="sub-research" aria-label="Toggle Research submenu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul id="sub-research" class="ap-sub">
+                <li><a href="/2026-iso20022-migration-trends/">2026 briefing</a></li>
+                <li><a href="/iso20022-roadmap/">ISO 20022 roadmap</a></li>
+                <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/">Cross-border guide</a></li>
+                <li><a href="/languages/">In 34 languages</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="ap-nav-right">
+          <button type="button" class="theme-toggle" aria-label="Switch to dark theme" aria-pressed="false" title="Switch theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+          <button type="button" class="ap-search-btn" aria-label="Search (Cmd or Ctrl + K)" title="Search (⌘K)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <kbd class="ap-search-kbd" aria-hidden="true">⌘K</kbd>
+          </button>
+          <div class="ap-lang" role="group" aria-label="Language">
+            <button type="button" class="ap-lang-toggle" aria-label="Change language" aria-expanded="false" aria-haspopup="menu" title="Change language">
+              <span class="ap-lang-globe" aria-hidden="true">🌐</span>
+              <span class="ap-lang-current">EN</span>
+            </button>
+            <div class="ap-lang-menu" role="menu" hidden>
+              <div class="ap-lang-menu-grid">
+                <a class="ap-lang-item" href="/" hreflang="en" lang="en" role="menuitem"><span aria-hidden="true">🇬🇧</span> English</a>
+                <a class="ap-lang-item" href="/fr/" hreflang="fr" lang="fr" role="menuitem"><span aria-hidden="true">🇫🇷</span> Français</a>
+                <a class="ap-lang-item" href="/de/" hreflang="de" lang="de" role="menuitem"><span aria-hidden="true">🇩🇪</span> Deutsch</a>
+                <a class="ap-lang-item" href="/es/" hreflang="es" lang="es" role="menuitem"><span aria-hidden="true">🇪🇸</span> Español</a>
+                <a class="ap-lang-item" href="/it/" hreflang="it" lang="it" role="menuitem"><span aria-hidden="true">🇮🇹</span> Italiano</a>
+                <a class="ap-lang-item" href="/pt-br/" hreflang="pt-BR" lang="pt-BR" role="menuitem"><span aria-hidden="true">🇧🇷</span> Português</a>
+                <a class="ap-lang-item" href="/nl/" hreflang="nl" lang="nl" role="menuitem"><span aria-hidden="true">🇳🇱</span> Nederlands</a>
+                <a class="ap-lang-item" href="/pl/" hreflang="pl" lang="pl" role="menuitem"><span aria-hidden="true">🇵🇱</span> Polski</a>
+                <a class="ap-lang-item" href="/sv/" hreflang="sv" lang="sv" role="menuitem"><span aria-hidden="true">🇸🇪</span> Svenska</a>
+                <a class="ap-lang-item" href="/cs/" hreflang="cs" lang="cs" role="menuitem"><span aria-hidden="true">🇨🇿</span> Čeština</a>
+                <a class="ap-lang-item" href="/ro/" hreflang="ro" lang="ro" role="menuitem"><span aria-hidden="true">🇷🇴</span> Română</a>
+                <a class="ap-lang-item" href="/hu/" hreflang="hu" lang="hu" role="menuitem"><span aria-hidden="true">🇭🇺</span> Magyar</a>
+                <a class="ap-lang-item" href="/el/" hreflang="el" lang="el" role="menuitem"><span aria-hidden="true">🇬🇷</span> Ελληνικά</a>
+                <a class="ap-lang-item" href="/tr/" hreflang="tr" lang="tr" role="menuitem"><span aria-hidden="true">🇹🇷</span> Türkçe</a>
+                <a class="ap-lang-item" href="/ru/" hreflang="ru" lang="ru" role="menuitem"><span aria-hidden="true">🇷🇺</span> Русский</a>
+                <a class="ap-lang-item" href="/uk/" hreflang="uk" lang="uk" role="menuitem"><span aria-hidden="true">🇺🇦</span> Українська</a>
+                <a class="ap-lang-item" href="/ar/" hreflang="ar" lang="ar" role="menuitem"><span aria-hidden="true">🇸🇦</span> العربية</a>
+                <a class="ap-lang-item" href="/he/" hreflang="he" lang="he" role="menuitem"><span aria-hidden="true">🇮🇱</span> עברית</a>
+                <a class="ap-lang-item" href="/fa/" hreflang="fa" lang="fa" role="menuitem"><span aria-hidden="true">🇮🇷</span> فارسی</a>
+                <a class="ap-lang-item" href="/hi/" hreflang="hi" lang="hi" role="menuitem"><span aria-hidden="true">🇮🇳</span> हिन्दी</a>
+                <a class="ap-lang-item" href="/bn/" hreflang="bn" lang="bn" role="menuitem"><span aria-hidden="true">🇧🇩</span> বাংলা</a>
+                <a class="ap-lang-item" href="/ta/" hreflang="ta" lang="ta" role="menuitem"><span aria-hidden="true">🇮🇳</span> தமிழ்</a>
+                <a class="ap-lang-item" href="/te/" hreflang="te" lang="te" role="menuitem"><span aria-hidden="true">🇮🇳</span> తెలుగు</a>
+                <a class="ap-lang-item" href="/mr/" hreflang="mr" lang="mr" role="menuitem"><span aria-hidden="true">🇮🇳</span> मराठी</a>
+                <a class="ap-lang-item" href="/th/" hreflang="th" lang="th" role="menuitem"><span aria-hidden="true">🇹🇭</span> ไทย</a>
+                <a class="ap-lang-item" href="/vi/" hreflang="vi" lang="vi" role="menuitem"><span aria-hidden="true">🇻🇳</span> Tiếng Việt</a>
+                <a class="ap-lang-item" href="/id/" hreflang="id" lang="id" role="menuitem"><span aria-hidden="true">🇮🇩</span> Indonesia</a>
+                <a class="ap-lang-item" href="/ms/" hreflang="ms" lang="ms" role="menuitem"><span aria-hidden="true">🇲🇾</span> Melayu</a>
+                <a class="ap-lang-item" href="/fil/" hreflang="fil" lang="fil" role="menuitem"><span aria-hidden="true">🇵🇭</span> Filipino</a>
+                <a class="ap-lang-item" href="/ja/" hreflang="ja" lang="ja" role="menuitem"><span aria-hidden="true">🇯🇵</span> 日本語</a>
+                <a class="ap-lang-item" href="/ko/" hreflang="ko" lang="ko" role="menuitem"><span aria-hidden="true">🇰🇷</span> 한국어</a>
+                <a class="ap-lang-item" href="/zh-hans/" hreflang="zh-Hans" lang="zh-Hans" role="menuitem"><span aria-hidden="true">🇨🇳</span> 简体中文</a>
+                <a class="ap-lang-item" href="/zh-hant/" hreflang="zh-Hant" lang="zh-Hant" role="menuitem"><span aria-hidden="true">🇹🇼</span> 繁體中文</a>
+                <a class="ap-lang-item" href="/ha/" hreflang="ha" lang="ha" role="menuitem"><span aria-hidden="true">🇳🇬</span> Hausa</a>
+                <a class="ap-lang-item" href="/yo/" hreflang="yo" lang="yo" role="menuitem"><span aria-hidden="true">🇳🇬</span> Yorùbá</a>
+              </div>
+            </div>
+          </div>
+          <a class="ap-cta-mini" href="/try/">Try the demo&nbsp;&rsaquo;</a>
+          <label class="ap-burger" for="ap-menu-toggle" aria-hidden="true"><span class="ap-burger-icon">☰</span></label>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <header class="page-header">
+        <div class="wrap">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li aria-current="page">qa.qatch.single — ISO 20022 pain.001 example for QA (domestic-credit-transfer)</li>
+            </ol>
+          </nav>
+          <p class="eyebrow">Example corpus</p>
+          <h1 class="page-title">qa.qatch.single — ISO 20022 pain.001 example for QA (domestic-credit-transfer)</h1>
+          <p class="deck">Qatar QATCH credit in QAR with the QCB purpose of payment.</p>
+          <div class="article-meta"><span>1 min read</span>
+            <span>Last reviewed <time datetime="2026-07-26">26 July 2026</time></span>
+          </div>
+        </div>
+      </header>
+
+      <div class="wrap content-shell">
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>Contents</h2><ol><li><a href="#files">Files</a></li><li><a href="#run-it-in-your-browser">Run it in your browser</a></li><li><a href="#how-the-library-checked-it">How the library checked it</a></li><li><a href="#where-the-content-comes-from">Where the content comes from</a></li></ol></nav>
+          <div lang="en"><p>Qatar QATCH credit in QAR with the QCB purpose of payment.</p>
+<p>A payment initiation file for <strong>QA</strong> on the <strong>domestic-credit-transfer</strong> rail, shipped in <code>pain.001.001.03</code>, <code>pain.001.001.09</code>, generated and checked by pain001 0.0.70. It is a synthetic example built from the public scheme rulebooks: no real party, account or bank guideline behind it.</p>
+<h2 id="files">Files<a class="heading-anchor" href="#files" aria-label="Link to section: Files">#</a></h2>
+<div class="table-responsive"><table class="table">
+<thead>
+<tr>
+<th>Edition</th>
+<th>Payment file</th>
+<th>ISO 20022 JSON twin</th>
+<th>Provenance record</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Edition" class="text-left"><code>pain.001.001.03</code></td>
+<td data-label="Payment file" class="text-left"><a href="/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.03.xml">qa.qatch.single.pain.001.001.03.xml</a></td>
+<td data-label="ISO 20022 JSON twin" class="text-left"><a href="/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.03.iso.json">qa.qatch.single.pain.001.001.03.iso.json</a></td>
+<td data-label="Provenance record" class="text-left"><a href="/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.03.provenance.yaml">qa.qatch.single.pain.001.001.03.provenance.yaml</a></td>
+</tr>
+<tr>
+<td data-label="Edition" class="text-left"><code>pain.001.001.09</code></td>
+<td data-label="Payment file" class="text-left"><a href="/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.09.xml">qa.qatch.single.pain.001.001.09.xml</a></td>
+<td data-label="ISO 20022 JSON twin" class="text-left"><a href="/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.09.iso.json">qa.qatch.single.pain.001.001.09.iso.json</a></td>
+<td data-label="Provenance record" class="text-left"><a href="/corpus/market/qa/domestic-credit-transfer/qa.qatch.single.pain.001.001.09.provenance.yaml">qa.qatch.single.pain.001.001.09.provenance.yaml</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>The twin is the same payment in the ISO 20022 Registration Authority's JSON convention, lossless in both directions; its JSON Schema is bundled with the library (<code>pain001/schemas/iso-json/</code>).</p>
+<h2 id="run-it-in-your-browser">Run it in your browser<a class="heading-anchor" href="#run-it-in-your-browser" aria-label="Link to section: Run it in your browser">#</a></h2>
+<p><a href="/try/?sample=corpus:qa.qatch.single">Open this scenario in the demo</a>: the pain001 library loads in a Python runtime in your browser, rebuilds the file from the 1 record(s) below, checks it against the <code>anti-duplicate</code> rulebook and the official XSD, and shows the JSON twin. Nothing leaves your machine.</p>
+<p>The flat records the library rebuilds it from (the CSV pipeline's own column names):</p>
+<pre><code class="language-csv">id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,creditor_account_IBAN,remittance_information,initiator_town_name,initiator_country_code,initiator_address_line,debtor_town_name,debtor_country_code,debtor_address_line,debtor_account_currency,creditor_town_name,creditor_country_code,purpose_code,payment_currency
+DMS-20260921-01,2026-09-21T08:30:00,1,92000.00,Doha Marine Supplies WLL,DMS-QATCH-260921-01,TRF,false,NURG,2026-09-22,Doha Marine Supplies WLL,QA58VDZTMHRMT3J8Z4KX3U36MI9SL,DKKFQAK0,SHAR,DMS-2026-0921-001,92000.00,QAR,MSNXQAS0,Gulf Engineering Services,QA17KWOYL77GFWYXAE267CIYE03FN,Contract 2026-14 milestone 1,Doha,QA,Al Corniche Street 5,Doha,QA,Al Corniche Street 5,QAR,Doha,QA,SUPP,QAR</code></pre>
+<h2 id="how-the-library-checked-it">How the library checked it<a class="heading-anchor" href="#how-the-library-checked-it" aria-label="Link to section: How the library checked it">#</a></h2>
+<ul>
+<li><strong>Official XSD</strong>: passed.</li>
+<li><strong>ISO message definition rules</strong>: passed.</li>
+<li><strong>Rail profile <code>qa-qatch</code></strong>: passed.</li>
+<li><strong>Rail profile <code>purpose-mandate-qa</code></strong>: passed.</li>
+<li><strong>Rail profile <code>anti-duplicate</code></strong>: passed.</li>
+</ul>
+<p>Confidence <strong>assumed</strong>: one detail rests on an assumption the record names; treat that detail with care.</p>
+<h2 id="where-the-content-comes-from">Where the content comes from<a class="heading-anchor" href="#where-the-content-comes-from" aria-label="Link to section: Where the content comes from">#</a></h2>
+<ul>
+<li>Qatar Central Bank, retail payment systems pages (QATCH) (read 2026-09-11)</li>
+<li>ClearingPost, QA-RTGS and QATCH message guide (public) (read 2026-09-11)</li>
+</ul>
+<p>SHA-256 of each file is in its provenance record. Your bank's own usage guideline is not represented here: <a href="/example-corpus/#your-bank-s-guideline">apply it privately</a> with the library's overlay tooling.</p>
+<p><a href="/example-corpus/">Back to the example corpus</a> · <a href="/example-corpus/#payment-files-by-country">All payment files by country</a></p>
+</div>
+        </article>
+      </div>
+    </main>
+
+    <button class="totop" id="toTop" type="button" hidden aria-label="Back to top">&uarr;</button>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-brand">Pain001</p>
+            <p class="footer-tagline">Open-source ISO 20022 payment initiation. Validated files, local processing, no lock-in.</p>
+          </div>
+          <div>
+            <h2 class="footer-heading">Documentation</h2>
+            <ul class="footer-links">
+              <li><a href="/try/">Try it in your browser</a></li>
+              <li><a href="/documentation/">Technical reference</a></li>
+              <li><a href="/installation/">Installation &amp; Docker</a></li>
+              <li><a href="/payments/">Payment pipelines</a></li>
+              <li><a href="/glossary/">Glossary</a></li>
+              <li><a href="/faqs/">FAQs</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Ecosystem</h2>
+            <ul class="footer-links">
+              <li><a href="/pain001-mcp/">pain001-mcp · AI agents</a></li>
+              <li><a href="/pain001-lsp/">pain001-lsp · editors</a></li>
+              <li><a href="/pain001-loader-mt101/">MT101 loader</a></li>
+              <li><a href="/pain001-loader-xlsx/">Excel loader</a></li>
+              <li><a href="https://github.com/sebastienrousseau/pain001" rel="external">GitHub</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Research &amp; trust</h2>
+            <ul class="footer-links">
+              <li><a href="/why/">Why Pain001</a></li>
+              <li><a href="/executive-brief/">Executive brief</a></li>
+              <li><a href="/iso20022-roadmap/">ISO 20022 roadmap</a></li>
+              <li><a href="/2026-iso20022-migration-trends/">2026 briefing</a></li>
+              <li><a href="/iso-20022-payment-initiation-for-cross-border-payments/">Cross-Border Guide</a></li>
+              <li><a href="/competitors-comparison/">Comparison vs commercial tools</a></li>
+              <li><a href="/architecture-and-patents/">Architecture &amp; patents</a></li>
+              <li><a href="/trust/">Trust Centre</a></li>
+              <li><a href="/compatibility/">Compatibility matrix</a></li>
+              <li><a href="/security.txt">security.txt</a></li>
+              <li><a href="/sbom.cdx.json">SBOM</a> · <a href="/llms.txt">llms.txt</a> · <a href="/rss.xml">RSS feed</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; 2023&ndash;2026 <a href="https://sebastienrousseau.com/" rel="external author">Sebastien Rousseau</a>. Core dual-licensed Apache-2.0 / MIT; companion packages Apache-2.0.</p>
+          <ul aria-label="This overview in other languages">
+            <li><a href="/languages/">This overview in 34 languages</a></li>
+          </ul>
+          <ul>
+            <li><a href="/accessibility/">Accessibility</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://pain001.com/corpus-qa-qatch-single/",
+          "url": "https://pain001.com/corpus-qa-qatch-single/",
+          "name": "qa.qatch.single — ISO 20022 pain.001 example for QA (domestic-credit-transfer)",
+          "description": "Qatar QATCH credit in QAR with the QCB purpose of payment. A validated pain.001 sample for QA on the domestic-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser.",
+          "inLanguage": "en-GB",
+          "dateModified": "2026-07-26",
+          "isPartOf": { "@id": "https://pain001.com/#website" },
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pain001.com/" },
+            { "@type": "ListItem", "position": 2, "name": "qa.qatch.single — ISO 20022 pain.001 example for QA (domestic-credit-transfer)" }
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pain001.com/#organization",
+          "name": "Pain001",
+          "url": "https://pain001.com/",
+          "logo": "/img/pain001.svg",
+          "founder": { "@type": "Person", "name": "Sebastien Rousseau", "url": "https://sebastienrousseau.com" },
+          "sameAs": [
+            "https://github.com/sebastienrousseau/pain001",
+            "https://pypi.org/project/pain001/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pain001.com/#website",
+          "url": "https://pain001.com/",
+          "name": "Pain001",
+          "publisher": { "@id": "https://pain001.com/#organization" }
+        }
+      ]
+    }
+    </script>
+
+    <script src="/_csp/197fcfccbee69bda.js" integrity="sha384-geygAAYoalTqpA6bIgsGUMRQupyTiF/rCnvMiGE5+G0s0ZOYAhHnkhzyMXN9yNxa" crossorigin="anonymous"></script>
+    <script type="module" src="/js/metrics.js" data-website-id="00000000-0000-0000-0000-000000000000" data-host-url="https://metrics.pain001.com"></script>
+  
+<!-- SSG Search Widget -->
+<div id="ssg-search-widget">
+
+<!-- Search trigger button -->
+<button id="ssg-search-btn" type="button" aria-label="Search">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<span>Search</span>
+<kbd>K</kbd>
+</button>
+<!-- Search modal -->
+<div id="ssg-search-overlay" role="dialog" aria-label="Search">
+<div id="ssg-search-box">
+<div id="ssg-search-header">
+<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<input id="ssg-search-input" type="search" placeholder="Search documentation..." autocomplete="off" aria-label="Search"/>
+</div>
+<div id="ssg-search-results" aria-live="polite"></div>
+<div id="ssg-sr-status" role="status" aria-live="polite" aria-atomic="true"></div>
+<div class="ssg-search-footer"><span><kbd>Esc</kbd> close</span><span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span><span><kbd>Enter</kbd> open</span></div>
+</div>
+</div>
+<script src="/_csp/61bc2fae7f71ccad.js" integrity="sha384-0oRzEmXgr9FJ6ttOmzhFx2dsSPgkO2fWLDzcLRT0sq5M9fYUce/wBPOMY7XmqkLT" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>
