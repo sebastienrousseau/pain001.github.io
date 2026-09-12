@@ -19,7 +19,7 @@
  * has been missed three times now: v8 is the layer-summary
  * translations, which reached all 34 locales while returning visitors
  * kept the English original. */
-const CACHE = "pain001-try-db69cd7f638f";
+const CACHE = "pain001-try-6c4110b63080";
 
 const CACHEABLE = [
   "/try/",

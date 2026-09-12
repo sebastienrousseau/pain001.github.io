@@ -1194,7 +1194,9 @@ def stamp_suite_version(site: Path) -> int:
     """Say in every footer which suite version the site was generated against.
 
     The version comes from the corpus index the generator wrote, so the
-    footer can never claim a version the corpus pages do not carry.
+    footer can never claim a version the corpus pages do not carry. The
+    stamp is its own paragraph just inside the closing footer tag, outside
+    <main>, so no locale table key (a leaf fragment of <main>) changes.
     """
     import json as _json
     index = Path(__file__).resolve().parent.parent / "static" / "corpus" / "index.json"
@@ -1203,27 +1205,17 @@ def stamp_suite_version(site: Path) -> int:
     version = _json.loads(index.read_text(encoding="utf-8")).get("pain001", "")
     if not version:
         return 0
-    import re as _re
-    marker = '<span class="suite-version">'
     stamp = f'<p class="suite-version">Generated against pain001 {version}</p>'
-    # the privacy link sits in every footer; its text is translated per locale
-    link = _re.compile(r'<a href="/privacy/"[^>]*>[^<]*</a>')
     count = 0
     for page in site.rglob("index.html"):
         html = page.read_text(encoding="utf-8")
-        if marker in html or "<footer" not in html:
+        if 'class="suite-version"' in html:
             continue
         start = html.find("<footer")
-        m = link.search(html, start) if start >= 0 else None
-        if not m:
+        close = html.find("</footer>", start) if start >= 0 else -1
+        if close < 0:
             continue
-        # after the footer paragraph that holds the link, so translated
-        # footer fragments (locale table keys) stay byte-identical
-        end = html.find("</p>", m.end())
-        if end < 0:
-            continue
-        end += len("</p>")
-        page.write_text(html[:end] + stamp + html[end:], encoding="utf-8")
+        page.write_text(html[:close] + stamp + html[close:], encoding="utf-8")
         count += 1
     return count
 
