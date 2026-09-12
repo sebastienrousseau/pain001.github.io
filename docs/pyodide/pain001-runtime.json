@@ -1,6 +1,6 @@
 {
  "pain001": "0.0.70",
- "pain001_source": "git:sebastienrousseau/pain001@3a5aa31f306c (poetry build; replace with the PyPI wheel at release)",
+ "pain001_source": "pypi:pain001==0.0.70 (sha256 verified against PyPI at vendoring)",
  "pyodide": "0.27.2",
  "runtime": [
   {
@@ -104,9 +104,9 @@
   },
   {
    "file": "pain001-0.0.70-py3-none-any.whl",
-   "bytes": 1111189,
-   "sha256": "aa47ee0954631f26f674f7750c1387eae422fb6350476fe34257e7bc4e14a1c6"
+   "bytes": 1110996,
+   "sha256": "2af72ea7c99865b77d530d3dbd0bc842e1eaf77fcd409334e7dd3342265a7d80"
   }
  ],
- "total_bytes": 18439720
+ "total_bytes": 18439527
 }
