@@ -1,5 +1,73 @@
 # Pain001
 
-> Open-source ISO 20022 pain.001 payment initiation suite: Python library, CLI, REST API, MCP server for AI agents, LSP server, and SWIFT MT101 / Excel loaders.
+> Open-source ISO 20022 payment initiation suite: a Python library and CLI that turn CSV, Excel, SQLite, JSON, Parquet or SWIFT MT101 into schema-validated pain.001 (and pain.008) XML, a REST API, an MCP server for agents, an LSP server for editors, and a validated example corpus with provenance. Suite version 0.0.70. Dual-licensed Apache-2.0 OR MIT.
 
-Language: en-GB
+## Install
+
+- `pip install pain001` (library and CLI); `pip install pain001-mcp` (MCP server, 21 tools); `pip install pain001-lsp` (language server)
+- MCP, Claude Code: `claude mcp add pain001 -- pain001-mcp`; other clients: command `pain001-mcp` over stdio (configuration blocks at https://pain001.com/pain001-mcp/)
+
+## Machine-readable data
+
+- Corpus index (every scenario, absolute URLs for XML, JSON twin, provenance, schema, demo): https://pain001.com/corpus/index.json
+- JSON Schema 2020-12 per pain.001 edition, for the ISO 20022 JSON twin convention: https://pain001.com/corpus/schemas/pain.001.001.09.schema.json (and .03 to .13)
+- Input column vocabulary (the flat rows the library reads): https://pain001.com/documentation/
+
+## Pages
+
+- Example corpus, downloads and method: https://pain001.com/example-corpus/
+- Schema coverage files per edition: https://pain001.com/example-corpus-coverage/
+- Browser demo running the library itself: https://pain001.com/try/
+- Technical reference (CLI, Python API, REST): https://pain001.com/documentation/
+- Message element references: https://pain001.com/message-specs/
+- MCP server: https://pain001.com/pain001-mcp/ ; LSP server: https://pain001.com/pain001-lsp/
+- Trust centre, privacy, governance: https://pain001.com/trust/ https://pain001.com/privacy/ https://pain001.com/governance/
+
+## Rules of use
+
+- Files are synthetic and built from public scheme rulebooks; no bank usage guideline is represented. Apply your bank's own guideline privately with the library's overlay tooling.
+
+## Scenarios
+
+- ae.uaefts.single (AE, priority-payment): UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code. https://pain001.com/corpus-ae-uaefts-single/
+- be.sepa.sct-supplier (BE, sepa-credit-transfer): SEPA credit transfer with a Belgian structured communication (BBA). https://pain001.com/corpus-be-sepa-sct-supplier/
+- be.sepa.sdd-core (BE, sepa-direct-debit): SEPA Core direct debit, recurring, Belgian creditor identifier. https://pain001.com/corpus-be-sepa-sdd-core/
+- ch.international.usd (CH, cross-border): Cross-border USD payment from Switzerland (SPS payment type X). https://pain001.com/corpus-ch-international-usd/
+- ch.sepa.sct (CH, sepa-credit-transfer): SEPA credit transfer from Switzerland (SPS payment type S). https://pain001.com/corpus-ch-sepa-sct/
+- ch.sps.qr-bill (CH, domestic-credit-transfer): Swiss domestic credit transfer settling a QR-bill (QRR reference). https://pain001.com/corpus-ch-sps-qr-bill/
+- ch.sps.scor (CH, domestic-credit-transfer): Swiss domestic credit transfer with an ISO 11649 creditor reference (SCOR). https://pain001.com/corpus-ch-sps-scor/
+- cz.certis.domestic (CZ, domestic-credit-transfer): Czech domestic CZK transfer through CERTIS with VS/KS/SS payment symbols. https://pain001.com/corpus-cz-certis-domestic/
+- cz.sepa.sct (CZ, sepa-credit-transfer): SEPA credit transfer from a Czech EUR account to a German supplier. https://pain001.com/corpus-cz-sepa-sct/
+- de.axz.foreign (DE, cross-border): Foreign payment in USD from a German account, DK order type AXZ. https://pain001.com/corpus-de-axz-foreign/
+- de.ccu.urgent (DE, urgent-euro): Urgent euro payment (TARGET) from a German account, DK order type CCU. https://pain001.com/corpus-de-ccu-urgent/
+- de.sepa.sct-inst (DE, sepa-instant): SEPA Instant credit transfer, single, INST at PmtInf. https://pain001.com/corpus-de-sepa-sct-inst/
+- de.sepa.sct-salary (DE, sepa-credit-transfer): SEPA SCT salary batch with structured and unstructured remittance. https://pain001.com/corpus-de-sepa-sct-salary/
+- de.sepa.sdd-b2b (DE, sepa-direct-debit): SEPA B2B direct debit, first collection. https://pain001.com/corpus-de-sepa-sdd-b2b/
+- es.sepa.sct-single (ES, sepa-credit-transfer): SEPA credit transfer, single, initiating party identified by NIF. https://pain001.com/corpus-es-sepa-sct-single/
+- es.sepa.sdd-core (ES, sepa-direct-debit): SEPA Core direct debit, recurring, Spanish creditor identifier. https://pain001.com/corpus-es-sepa-sdd-core/
+- fr.sepa.sct-supplier (FR, sepa-credit-transfer): SEPA credit transfer, supplier invoice with an RF creditor reference. https://pain001.com/corpus-fr-sepa-sct-supplier/
+- fr.sepa.sdd-core (FR, sepa-direct-debit): SEPA Core direct debit, recurring collection on an amended mandate. https://pain001.com/corpus-fr-sepa-sdd-core/
+- gb.bacs-dd.collection (GB, bacs-direct-debit): Bacs Direct Debit collection, first and recurring, SUN as creditor id. https://pain001.com/corpus-gb-bacs-dd-collection/
+- gb.bacs.supplier-run (GB, bacs-direct-credit): Bacs Direct Credit supplier run, two payments, SUN in the debtor id. https://pain001.com/corpus-gb-bacs-supplier-run/
+- gb.chaps.property-purchase (GB, priority-payment): CHAPS same-day property completion with the BoE HLST purpose code. https://pain001.com/corpus-gb-chaps-property-purchase/
+- gb.fps.single (GB, faster-payment): Faster Payments single supplier payment, sort code and account. https://pain001.com/corpus-gb-fps-single/
+- gb.international.usd (GB, priority-payment): USD cross-border payment from a UK account to a US supplier. https://pain001.com/corpus-gb-international-usd/
+- hk.fps.single (HK, instant-payment): Hong Kong FPS credit in HKD, clearing codes and account numbers. https://pain001.com/corpus-hk-fps-single/
+- it.sepa.sct-single (IT, sepa-credit-transfer): SEPA credit transfer, single supplier payment. https://pain001.com/corpus-it-sepa-sct-single/
+- lu.sepa.sct-single (LU, sepa-credit-transfer): SEPA credit transfer, single supplier payment. https://pain001.com/corpus-lu-sepa-sct-single/
+- my.duitnow.single (MY, instant-payment): Malaysia DuitNow credit in MYR with a BNM purpose code. https://pain001.com/corpus-my-duitnow-single/
+- nl.sepa.sct-supplier (NL, sepa-credit-transfer): SEPA credit transfer with a Dutch payment reference (CUR). https://pain001.com/corpus-nl-sepa-sct-supplier/
+- nl.sepa.sdd-core (NL, sepa-direct-debit): SEPA Core direct debit, recurring collections under mandates. https://pain001.com/corpus-nl-sepa-sdd-core/
+- qa.qatch.single (QA, domestic-credit-transfer): Qatar QATCH credit in QAR with the QCB purpose of payment. https://pain001.com/corpus-qa-qatch-single/
+- se.bankgiro.salary (SE, salary): Swedish salary batch (Bankgirot Löner), SALA, one debit. https://pain001.com/corpus-se-bankgiro-salary/
+- se.bankgiro.supplier (SE, bankgiro-credit): Swedish Bankgiro supplier payment with an OCR reference. https://pain001.com/corpus-se-bankgiro-supplier/
+- se.plusgiro.supplier (SE, plusgiro-credit): Swedish Plusgiro supplier payment with an invoice message. https://pain001.com/corpus-se-plusgiro-supplier/
+- se.rix.urgent (SE, priority-payment): Swedish domestic high-value SEK payment through RIX, urgent, intra-group. https://pain001.com/corpus-se-rix-urgent/
+- sg.fast.single (SG, instant-payment): Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. https://pain001.com/corpus-sg-fast-single/
+- us.ach.ccd-supplier (US, ach-credit): ACH CCD credit to a supplier with an addenda remittance line. https://pain001.com/corpus-us-ach-ccd-supplier/
+- us.ach.debit (US, ach-debit): ACH debit collection (CCD) with routing numbers. https://pain001.com/corpus-us-ach-debit/
+- us.ach.ppd-payroll (US, ach-credit): ACH PPD payroll run, two employees. https://pain001.com/corpus-us-ach-ppd-payroll/
+- us.check.vendor (US, cheque): Bank-issued cheque to a vendor, mailed to the creditor. https://pain001.com/corpus-us-check-vendor/
+- us.eftps.tax (US, ach-credit): IRS EFTPS federal tax deposit, CCD with the TXP addenda string. https://pain001.com/corpus-us-eftps-tax/
+- us.rtp.single (US, instant-payment): RTP real-time payment, single. https://pain001.com/corpus-us-rtp-single/
+- us.wire.domestic (US, priority-payment): Fedwire domestic funds transfer, urgent. https://pain001.com/corpus-us-wire-domestic/

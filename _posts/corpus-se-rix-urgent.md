@@ -99,7 +99,7 @@ A payment initiation file for **Sweden** on the **priority-payment** rail, shipp
 | `pain.001.001.03` | [se.rix.urgent.pain.001.001.03.xml](/corpus/market/se/priority-payment/se.rix.urgent.pain.001.001.03.xml) | [se.rix.urgent.pain.001.001.03.iso.json](/corpus/market/se/priority-payment/se.rix.urgent.pain.001.001.03.iso.json) | [se.rix.urgent.pain.001.001.03.provenance.yaml](/corpus/market/se/priority-payment/se.rix.urgent.pain.001.001.03.provenance.yaml) |
 | `pain.001.001.09` | [se.rix.urgent.pain.001.001.09.xml](/corpus/market/se/priority-payment/se.rix.urgent.pain.001.001.09.xml) | [se.rix.urgent.pain.001.001.09.iso.json](/corpus/market/se/priority-payment/se.rix.urgent.pain.001.001.09.iso.json) | [se.rix.urgent.pain.001.001.09.provenance.yaml](/corpus/market/se/priority-payment/se.rix.urgent.pain.001.001.09.provenance.yaml) |
 
-The twin is the same payment in the ISO 20022 Registration Authority's JSON convention, lossless in both directions; its JSON Schema is bundled with the library (`pain001/schemas/iso-json/`).
+The twin is the same payment in the ISO 20022 Registration Authority's JSON convention, lossless in both directions; its JSON Schema (2020-12) is published per edition: [pain.001.001.03](/corpus/schemas/pain.001.001.03.schema.json), [pain.001.001.09](/corpus/schemas/pain.001.001.09.schema.json). An agent can produce a twin that validates against the schema and hand it to the library to render the XML.
 
 ## Run it in your browser
 

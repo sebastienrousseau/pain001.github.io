@@ -205,6 +205,7 @@
 <p>CSV files are supported for diagnostics: <code>.csv</code> URIs are routed through a dedicated CSV validation path.</p>
 <p>The default message type is <code>pain.001.001.09</code>; all 11 supported definitions (<code>pain.001.001.03</code>–<code>.12</code>, <code>pain.008.001.02</code>) can be selected per workspace via <code>initializationOptions</code> or live via <code>workspace/didChangeConfiguration</code>.</p>
 <hr />
+<p><strong>Workspace commands for the example corpus.</strong> <code>pain001.corpus.list</code> lists the validated example files the library ships (market scenarios by country and rail, and the schema coverage sets) and <code>pain001.corpus.get</code> returns one file with its provenance record, so an editor or an agent driving the server can open a known-good file beside the one being written. The same files are published at <a href="/corpus/index.json">/corpus/index.json</a>.</p>
 <h2 id="02-setup">02. Setup<a class="heading-anchor" href="#02-setup" aria-label="Link to section: 02. Setup">#</a></h2>
 <pre><code class="language-bash">pip install pain001-lsp</code></pre>
 <p><strong>Neovim (0.11+):</strong></p>

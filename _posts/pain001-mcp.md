@@ -147,6 +147,33 @@ pip install pain001-mcp
 claude mcp add pain001 -- pain001-mcp
 ```
 
+**Cursor** (`~/.cursor/mcp.json`, or `.cursor/mcp.json` in a project):
+
+```json
+{
+  "mcpServers": {
+    "pain001": {
+      "command": "pain001-mcp"
+    }
+  }
+}
+```
+
+**VS Code** (`.vscode/mcp.json` in a workspace):
+
+```json
+{
+  "servers": {
+    "pain001": {
+      "type": "stdio",
+      "command": "pain001-mcp"
+    }
+  }
+}
+```
+
+Every block starts the same stdio server; only the file that carries it differs. The example corpus is reachable through `list_corpus_files`, `get_corpus_file` and `get_corpus_provenance`, and the same files are published for direct fetch at [/corpus/index.json](/corpus/index.json) with the JSON Schema per edition under `/corpus/schemas/`.
+
 A Docker image is published as `ghcr.io/sebastienrousseau/pain001-mcp` with build provenance attestation, and the server is listed in the MCP registry as `io.github.sebastienrousseau/pain001-mcp`.
 
 ---

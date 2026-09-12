@@ -183,7 +183,7 @@
           <p class="eyebrow">Example corpus</p>
           <h1 class="page-title">us.ach.ppd-payroll — ISO 20022 pain.001 example for United States (ach-credit)</h1>
           <p class="deck">ACH PPD payroll run, two employees.</p>
-          <div class="article-meta"><span>1 min read</span>
+          <div class="article-meta"><span>2 min read</span>
             <span>Last reviewed <time datetime="2026-07-26">26 July 2026</time></span>
           </div>
         </div>
@@ -218,7 +218,7 @@
 </tr>
 </tbody>
 </table></div>
-<p>The twin is the same payment in the ISO 20022 Registration Authority's JSON convention, lossless in both directions; its JSON Schema is bundled with the library (<code>pain001/schemas/iso-json/</code>).</p>
+<p>The twin is the same payment in the ISO 20022 Registration Authority's JSON convention, lossless in both directions; its JSON Schema (2020-12) is published per edition: <a href="/corpus/schemas/pain.001.001.03.schema.json">pain.001.001.03</a>, <a href="/corpus/schemas/pain.001.001.09.schema.json">pain.001.001.09</a>. An agent can produce a twin that validates against the schema and hand it to the library to render the XML.</p>
 <h2 id="run-it-in-your-browser">Run it in your browser<a class="heading-anchor" href="#run-it-in-your-browser" aria-label="Link to section: Run it in your browser">#</a></h2>
 <p><a href="/try/?sample=corpus:us.ach.ppd-payroll">Open this scenario in the demo</a>: the pain001 library loads in a Python runtime in your browser, rebuilds the file from the 2 record(s) below, checks it against the <code>us-ach</code> rulebook and the official XSD, and shows the JSON twin. Nothing leaves your machine.</p>
 <p>The flat records the library rebuilds it from (the CSV pipeline's own column names):</p>

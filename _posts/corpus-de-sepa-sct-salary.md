@@ -100,7 +100,7 @@ A payment initiation file for **Germany** on the **sepa-credit-transfer** rail, 
 | `pain.001.001.09` | [de.sepa.sct-salary.pain.001.001.09.xml](/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.09.xml) | [de.sepa.sct-salary.pain.001.001.09.iso.json](/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.09.iso.json) | [de.sepa.sct-salary.pain.001.001.09.provenance.yaml](/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.09.provenance.yaml) |
 | `pain.001.001.13` | [de.sepa.sct-salary.pain.001.001.13.xml](/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.13.xml) | [de.sepa.sct-salary.pain.001.001.13.iso.json](/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.13.iso.json) | [de.sepa.sct-salary.pain.001.001.13.provenance.yaml](/corpus/market/de/sepa-credit-transfer/de.sepa.sct-salary.pain.001.001.13.provenance.yaml) |
 
-The twin is the same payment in the ISO 20022 Registration Authority's JSON convention, lossless in both directions; its JSON Schema is bundled with the library (`pain001/schemas/iso-json/`).
+The twin is the same payment in the ISO 20022 Registration Authority's JSON convention, lossless in both directions; its JSON Schema (2020-12) is published per edition: [pain.001.001.03](/corpus/schemas/pain.001.001.03.schema.json), [pain.001.001.09](/corpus/schemas/pain.001.001.09.schema.json), [pain.001.001.13](/corpus/schemas/pain.001.001.13.schema.json). An agent can produce a twin that validates against the schema and hand it to the library to render the XML.
 
 ## Run it in your browser
 

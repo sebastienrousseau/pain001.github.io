@@ -108,6 +108,8 @@ The default message type is `pain.001.001.09`; all 11 supported definitions (`pa
 
 ---
 
+**Workspace commands for the example corpus.** `pain001.corpus.list` lists the validated example files the library ships (market scenarios by country and rail, and the schema coverage sets) and `pain001.corpus.get` returns one file with its provenance record, so an editor or an agent driving the server can open a known-good file beside the one being written. The same files are published at [/corpus/index.json](/corpus/index.json).
+
 ## 02. Setup
 
 ```bash

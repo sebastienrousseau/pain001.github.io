@@ -1129,6 +1129,66 @@ def inject_dataset_ld(site: Path) -> None:
         page.write_text(html.replace("</head>", block + "</head>", 1), encoding="utf-8")
 
 
+def write_llms(site: Path) -> None:
+    """Write llms.txt and llms-full.txt for agents that read the site.
+
+    Both point at things an agent can fetch and use in one step: the
+    corpus index, the per-edition JSON Schemas, the scenario pages, the
+    MCP and LSP setup blocks, and the reference pages. The full file adds
+    one line per scenario.
+    """
+    import json as _json
+    root = Path(__file__).resolve().parent.parent
+    index_path = root / "static" / "corpus" / "index.json"
+    index = _json.loads(index_path.read_text(encoding="utf-8")) if index_path.exists() else {"scenarios": []}
+    version = index.get("pain001", "")
+    head = [
+        "# Pain001",
+        "",
+        "> Open-source ISO 20022 payment initiation suite: a Python library and CLI that turn CSV, Excel, "
+        "SQLite, JSON, Parquet or SWIFT MT101 into schema-validated pain.001 (and pain.008) XML, a REST API, "
+        "an MCP server for agents, an LSP server for editors, and a validated example corpus with provenance. "
+        f"Suite version {version}. Dual-licensed Apache-2.0 OR MIT.",
+        "",
+        "## Install",
+        "",
+        "- `pip install pain001` (library and CLI); `pip install pain001-mcp` (MCP server, 21 tools); "
+        "`pip install pain001-lsp` (language server)",
+        "- MCP, Claude Code: `claude mcp add pain001 -- pain001-mcp`; other clients: command `pain001-mcp` over stdio "
+        "(configuration blocks at https://pain001.com/pain001-mcp/)",
+        "",
+        "## Machine-readable data",
+        "",
+        "- Corpus index (every scenario, absolute URLs for XML, JSON twin, provenance, schema, demo): "
+        "https://pain001.com/corpus/index.json",
+        "- JSON Schema 2020-12 per pain.001 edition, for the ISO 20022 JSON twin convention: "
+        "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json (and .03 to .13)",
+        "- Input column vocabulary (the flat rows the library reads): https://pain001.com/documentation/",
+        "",
+        "## Pages",
+        "",
+        "- Example corpus, downloads and method: https://pain001.com/example-corpus/",
+        "- Schema coverage files per edition: https://pain001.com/example-corpus-coverage/",
+        "- Browser demo running the library itself: https://pain001.com/try/",
+        "- Technical reference (CLI, Python API, REST): https://pain001.com/documentation/",
+        "- Message element references: https://pain001.com/message-specs/",
+        "- MCP server: https://pain001.com/pain001-mcp/ ; LSP server: https://pain001.com/pain001-lsp/",
+        "- Trust centre, privacy, governance: https://pain001.com/trust/ https://pain001.com/privacy/ https://pain001.com/governance/",
+        "",
+        "## Rules of use",
+        "",
+        "- Files are synthetic and built from public scheme rulebooks; no bank usage guideline is represented. "
+        "Apply your bank's own guideline privately with the library's overlay tooling.",
+        "",
+    ]
+    lines = [f"- {s['id']} ({(s.get('country') or '').upper()}, {s.get('family')}): {s.get('description')} "
+             f"{s['page']}" for s in index.get("scenarios", [])]
+    (site / "llms.txt").write_text("\n".join(head + ["## Scenarios", "", f"{len(lines)} validated payment scenarios; "
+                                                          "one line each in https://pain001.com/llms-full.txt", ""]),
+                                   encoding="utf-8")
+    (site / "llms-full.txt").write_text("\n".join(head + ["## Scenarios", ""] + lines + [""]), encoding="utf-8")
+
+
 def main() -> None:
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     site = Path(args[0] if args else "Pain001")
@@ -1170,6 +1230,7 @@ def main() -> None:
     gen_try_locales(site)
     gen_journey_locales(site)
     inject_dataset_ld(site)
+    write_llms(site)
     regen_sitemap(site)
     gen_legacy_redirects(site)  # after sitemap so stubs stay unindexed
 

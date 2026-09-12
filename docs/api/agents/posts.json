@@ -150,7 +150,7 @@
     ],
     "title": "ae.uaefts.single — ISO 20022 pain.001 example for AE (priority-payment)",
     "url": "https://pain001.com/corpus-ae-uaefts-single/",
-    "wordCount": 315
+    "wordCount": 337
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -167,7 +167,7 @@
     ],
     "title": "be.sepa.sct-supplier — ISO 20022 pain.001 example for Belgium (sepa-credit-transfer)",
     "url": "https://pain001.com/corpus-be-sepa-sct-supplier/",
-    "wordCount": 300
+    "wordCount": 322
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -201,7 +201,7 @@
     ],
     "title": "ch.international.usd — ISO 20022 pain.001 example for Switzerland (cross-border)",
     "url": "https://pain001.com/corpus-ch-international-usd/",
-    "wordCount": 304
+    "wordCount": 326
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -218,7 +218,7 @@
     ],
     "title": "ch.sepa.sct — ISO 20022 pain.001 example for Switzerland (sepa-credit-transfer)",
     "url": "https://pain001.com/corpus-ch-sepa-sct/",
-    "wordCount": 300
+    "wordCount": 322
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -235,7 +235,7 @@
     ],
     "title": "ch.sps.qr-bill — ISO 20022 pain.001 example for Switzerland (domestic-credit-transfer)",
     "url": "https://pain001.com/corpus-ch-sps-qr-bill/",
-    "wordCount": 317
+    "wordCount": 339
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -252,7 +252,7 @@
     ],
     "title": "ch.sps.scor — ISO 20022 pain.001 example for Switzerland (domestic-credit-transfer)",
     "url": "https://pain001.com/corpus-ch-sps-scor/",
-    "wordCount": 311
+    "wordCount": 333
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -269,7 +269,7 @@
     ],
     "title": "cz.certis.domestic — ISO 20022 pain.001 example for CZ (domestic-credit-transfer)",
     "url": "https://pain001.com/corpus-cz-certis-domestic/",
-    "wordCount": 310
+    "wordCount": 332
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -286,7 +286,7 @@
     ],
     "title": "cz.sepa.sct — ISO 20022 pain.001 example for CZ (sepa-credit-transfer)",
     "url": "https://pain001.com/corpus-cz-sepa-sct/",
-    "wordCount": 302
+    "wordCount": 324
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -303,7 +303,7 @@
     ],
     "title": "de.axz.foreign — ISO 20022 pain.001 example for Germany (cross-border)",
     "url": "https://pain001.com/corpus-de-axz-foreign/",
-    "wordCount": 228
+    "wordCount": 250
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -320,7 +320,7 @@
     ],
     "title": "de.ccu.urgent — ISO 20022 pain.001 example for Germany (urgent-euro)",
     "url": "https://pain001.com/corpus-de-ccu-urgent/",
-    "wordCount": 304
+    "wordCount": 326
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -337,7 +337,7 @@
     ],
     "title": "de.sepa.sct-inst — ISO 20022 pain.001 example for Germany (sepa-instant)",
     "url": "https://pain001.com/corpus-de-sepa-sct-inst/",
-    "wordCount": 289
+    "wordCount": 310
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -354,7 +354,7 @@
     ],
     "title": "de.sepa.sct-salary — ISO 20022 pain.001 example for Germany (sepa-credit-transfer)",
     "url": "https://pain001.com/corpus-de-sepa-sct-salary/",
-    "wordCount": 311
+    "wordCount": 334
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -388,7 +388,7 @@
     ],
     "title": "es.sepa.sct-single — ISO 20022 pain.001 example for Spain (sepa-credit-transfer)",
     "url": "https://pain001.com/corpus-es-sepa-sct-single/",
-    "wordCount": 299
+    "wordCount": 321
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -422,7 +422,7 @@
     ],
     "title": "fr.sepa.sct-supplier — ISO 20022 pain.001 example for France (sepa-credit-transfer)",
     "url": "https://pain001.com/corpus-fr-sepa-sct-supplier/",
-    "wordCount": 313
+    "wordCount": 335
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -473,7 +473,7 @@
     ],
     "title": "gb.bacs.supplier-run — ISO 20022 pain.001 example for United Kingdom (bacs-direct-credit)",
     "url": "https://pain001.com/corpus-gb-bacs-supplier-run/",
-    "wordCount": 313
+    "wordCount": 335
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -490,7 +490,7 @@
     ],
     "title": "gb.chaps.property-purchase — ISO 20022 pain.001 example for United Kingdom (priority-payment)",
     "url": "https://pain001.com/corpus-gb-chaps-property-purchase/",
-    "wordCount": 317
+    "wordCount": 339
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -507,7 +507,7 @@
     ],
     "title": "gb.fps.single — ISO 20022 pain.001 example for United Kingdom (faster-payment)",
     "url": "https://pain001.com/corpus-gb-fps-single/",
-    "wordCount": 301
+    "wordCount": 323
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -524,7 +524,7 @@
     ],
     "title": "gb.international.usd — ISO 20022 pain.001 example for United Kingdom (priority-payment)",
     "url": "https://pain001.com/corpus-gb-international-usd/",
-    "wordCount": 305
+    "wordCount": 327
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -541,7 +541,7 @@
     ],
     "title": "hk.fps.single — ISO 20022 pain.001 example for HK (instant-payment)",
     "url": "https://pain001.com/corpus-hk-fps-single/",
-    "wordCount": 322
+    "wordCount": 344
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -558,7 +558,7 @@
     ],
     "title": "it.sepa.sct-single — ISO 20022 pain.001 example for Italy (sepa-credit-transfer)",
     "url": "https://pain001.com/corpus-it-sepa-sct-single/",
-    "wordCount": 293
+    "wordCount": 315
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -575,7 +575,7 @@
     ],
     "title": "lu.sepa.sct-single — ISO 20022 pain.001 example for Luxembourg (sepa-credit-transfer)",
     "url": "https://pain001.com/corpus-lu-sepa-sct-single/",
-    "wordCount": 294
+    "wordCount": 316
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -592,7 +592,7 @@
     ],
     "title": "my.duitnow.single — ISO 20022 pain.001 example for MY (instant-payment)",
     "url": "https://pain001.com/corpus-my-duitnow-single/",
-    "wordCount": 317
+    "wordCount": 339
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -609,7 +609,7 @@
     ],
     "title": "nl.sepa.sct-supplier — ISO 20022 pain.001 example for Netherlands (sepa-credit-transfer)",
     "url": "https://pain001.com/corpus-nl-sepa-sct-supplier/",
-    "wordCount": 297
+    "wordCount": 319
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -643,7 +643,7 @@
     ],
     "title": "qa.qatch.single — ISO 20022 pain.001 example for QA (domestic-credit-transfer)",
     "url": "https://pain001.com/corpus-qa-qatch-single/",
-    "wordCount": 317
+    "wordCount": 339
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -660,7 +660,7 @@
     ],
     "title": "se.bankgiro.salary — ISO 20022 pain.001 example for Sweden (salary)",
     "url": "https://pain001.com/corpus-se-bankgiro-salary/",
-    "wordCount": 315
+    "wordCount": 337
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -677,7 +677,7 @@
     ],
     "title": "se.bankgiro.supplier — ISO 20022 pain.001 example for Sweden (bankgiro-credit)",
     "url": "https://pain001.com/corpus-se-bankgiro-supplier/",
-    "wordCount": 324
+    "wordCount": 346
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -694,7 +694,7 @@
     ],
     "title": "se.plusgiro.supplier — ISO 20022 pain.001 example for Sweden (plusgiro-credit)",
     "url": "https://pain001.com/corpus-se-plusgiro-supplier/",
-    "wordCount": 299
+    "wordCount": 321
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -711,7 +711,7 @@
     ],
     "title": "se.rix.urgent — ISO 20022 pain.001 example for Sweden (priority-payment)",
     "url": "https://pain001.com/corpus-se-rix-urgent/",
-    "wordCount": 302
+    "wordCount": 324
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -728,7 +728,7 @@
     ],
     "title": "sg.fast.single — ISO 20022 pain.001 example for SG (instant-payment)",
     "url": "https://pain001.com/corpus-sg-fast-single/",
-    "wordCount": 317
+    "wordCount": 339
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -745,7 +745,7 @@
     ],
     "title": "us.ach.ccd-supplier — ISO 20022 pain.001 example for United States (ach-credit)",
     "url": "https://pain001.com/corpus-us-ach-ccd-supplier/",
-    "wordCount": 317
+    "wordCount": 339
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -779,7 +779,7 @@
     ],
     "title": "us.ach.ppd-payroll — ISO 20022 pain.001 example for United States (ach-credit)",
     "url": "https://pain001.com/corpus-us-ach-ppd-payroll/",
-    "wordCount": 317
+    "wordCount": 339
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -796,7 +796,7 @@
     ],
     "title": "us.check.vendor — ISO 20022 pain.001 example for United States (cheque)",
     "url": "https://pain001.com/corpus-us-check-vendor/",
-    "wordCount": 217
+    "wordCount": 239
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -813,7 +813,7 @@
     ],
     "title": "us.eftps.tax — ISO 20022 pain.001 example for United States (ach-credit)",
     "url": "https://pain001.com/corpus-us-eftps-tax/",
-    "wordCount": 314
+    "wordCount": 336
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -830,7 +830,7 @@
     ],
     "title": "us.rtp.single — ISO 20022 pain.001 example for United States (instant-payment)",
     "url": "https://pain001.com/corpus-us-rtp-single/",
-    "wordCount": 306
+    "wordCount": 328
   },
   {
     "date": "2026-09-12T08:00:00+00:00",
@@ -847,7 +847,7 @@
     ],
     "title": "us.wire.domestic — ISO 20022 pain.001 example for United States (priority-payment)",
     "url": "https://pain001.com/corpus-us-wire-domestic/",
-    "wordCount": 316
+    "wordCount": 338
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -2462,7 +2462,7 @@
     ],
     "title": "pain001-lsp: ISO 20022 Diagnostics in Your Editor",
     "url": "https://pain001.com/pain001-lsp/",
-    "wordCount": 464
+    "wordCount": 525
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -2479,7 +2479,7 @@
     ],
     "title": "pain001-mcp: The MCP Server for ISO 20022 Payments",
     "url": "https://pain001.com/pain001-mcp/",
-    "wordCount": 725
+    "wordCount": 807
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
