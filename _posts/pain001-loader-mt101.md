@@ -37,7 +37,7 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "One function that parses legacy SWIFT MT101 into records that pass pain.001.001.09 validation — ready for the 14 November 2026 relay cutover."
+subtitle: "One function that parses legacy SWIFT MT101 into records that pass pain.001.001.09 validation — ready for the November 2026 (SR 2026) relay cutover."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
 title: "MT101 to pain.001 Conversion: pain001-loader-mt101"

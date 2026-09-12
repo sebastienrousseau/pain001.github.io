@@ -64,7 +64,7 @@
       <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Przełącz nawigację" />
       <div class="wrap ap-nav-wrap">
         <a class="ap-brand" href="/" aria-label="Pain001 home">
-          <img src="/img/pain001.svg" alt="" width="26" height="26" />
+          <img src="/img/pain001.svg" alt="Pain001" width="26" height="26" />
           <span>Pain001</span>
         </a>
         <nav aria-label="Primary navigation" id="ap-primary-nav">
@@ -198,7 +198,7 @@
 <p><strong>pain.008 — Customer Direct Debit Initiation.</strong> Bliźniak <code>pain.001</code> po stronie poboru: pobierają Państwo należne środki na podstawie mandatu, zamiast je wypychać na zewnątrz.</p>
 <p><strong>pacs.008 / pacs.009.</strong> Międzybankowe komunikaty rozliczeniowe, w które zamienia się Państwa instrukcja po przyjęciu przez bank. Korporacje nigdy ich nie tworzą; wymieniają je banki.</p>
 <p><strong>camt.052 / camt.053 / camt.054.</strong> Raportowanie rachunków: odpowiednio raport śróddzienny, wyciąg na koniec dnia i zawiadomienie o obciążeniu/uznaniu. <code>camt.053</code> to plik, z którego zespoły uzgodnień korzystają każdego ranka.</p>
-<p><strong>MT101.</strong> Historyczny komunikat tekstowy SWIFT „Request for Transfer”, zastępowany przez <code>pain.001</code>. Międzybankowy przekaz MT101 zostaje wycofany 14 listopada 2026 r. na rzecz <code>pain.001.001.09</code>; MT101 w relacji korporacja–bank utrzymuje się wyłącznie według uznania danego banku.</p>
+<p><strong>MT101.</strong> Historyczny komunikat tekstowy SWIFT „Request for Transfer”, zastępowany przez <code>pain.001</code>. Międzybankowy przekaz MT101 zostaje wycofany listopada 2026 (SR 2026; <a href="https://www.swift.com/standards/iso-20022">Swift ISO 20022 programme</a>) r. na rzecz <code>pain.001.001.09</code>; MT101 w relacji korporacja–bank utrzymuje się wyłącznie według uznania danego banku.</p>
 <h2 id="schemes-and-rulebooks">Systemy i zbiory reguł<a class="heading-anchor" href="#schemes-and-rulebooks" aria-label="Łącze do sekcji: Systemy i zbiory reguł">#</a></h2>
 <p><strong>SEPA SCT / SCT Inst.</strong> Systemy poleceń przelewu w euro (standardowy i natychmiastowy) regulowane zbiorami reguł European Payments Council. Przelewy natychmiastowe rozliczają się w sekundach, przez całą dobę.</p>
 <p><strong>SEPA SDD Core / B2B.</strong> Systemy poleceń zapłaty w euro — Core dla konsumentów (z prawem zwrotu), B2B dla firm (bez prawa zwrotu, ostrzejsze kontrole mandatów).</p>
@@ -211,7 +211,7 @@
 <p><strong>BIC / BICFI.</strong> Kod identyfikacyjny instytucji finansowej wg ISO 9362. Element XML to <code>&lt;BIC&gt;</code> w <code>pain.001.001.03</code>, ale <code>&lt;BICFI&gt;</code> od wersji 9 — zmiana nazwy, która powoduje rzeczywiste odrzucenia podczas aktualizacji wersji.</p>
 <p><strong>LEI.</strong> Legal Entity Identifier (ISO 17442) — 20-znakowy globalny identyfikator podmiotu. Aktywnych jest ponad 3 miliony, a regulatorzy coraz częściej wymagają ich w płatnościach.</p>
 <p><strong>UETR.</strong> Unique End-to-end Transaction Reference — UUID, dzięki któremu płatność można śledzić w całym łańcuchu banków korespondentów (SWIFT gpi).</p>
-<p><strong>Adres ustrukturyzowany / hybrydowy.</strong> Adresy pocztowe jako odrębne elementy XML (ulica, miejscowość, kod pocztowy, kraj) zamiast wierszy dowolnego tekstu. Od 14 listopada 2026 r. CBPR+ odrzuca adresy w pełni nieustrukturyzowane; format <em>hybrydowy</em> — ustrukturyzowana miejscowość i kraj plus maksymalnie dwa 70-znakowe wiersze adresu — pozostaje ważny.</p>
+<p><strong>Adres ustrukturyzowany / hybrydowy.</strong> Adresy pocztowe jako odrębne elementy XML (ulica, miejscowość, kod pocztowy, kraj) zamiast wierszy dowolnego tekstu. Od listopada 2026 (SR 2026) r. CBPR+ odrzuca adresy w pełni nieustrukturyzowane; format <em>hybrydowy</em> — ustrukturyzowana miejscowość i kraj plus maksymalnie dwa 70-znakowe wiersze adresu — pozostaje ważny.</p>
 <p><strong>NbOfTxs / CtrlSum.</strong> Sumy kontrolne nagłówka grupy: liczba transakcji i suma kwot. Banki przeliczają je same; jeśli Państwa wartości się różnią, plik wraca. Pain001 zawsze wyprowadza je ze zwalidowanych rekordów.</p>
 <p><strong>Podział opłat (charge bearer).</strong> Kto płaci prowizje: <code>DEBT</code> (nadawca), <code>CRED</code> (odbiorca), <code>SHAR</code> (podział), <code>SLEV</code> (wg reguł systemu). Historyczne MT <code>OUR</code>/<code>BEN</code>/<code>SHA</code> odpowiadają pierwszym trzem.</p>
 <p><strong>Informacje o płatności (remittance information).</strong> Pole „za co jest ta płatność” — dowolny tekst (140 znaków) lub ustrukturyzowane referencje. To pole, o którego rzetelne wypełnianie zespoły uzgodnień proszą wszystkich.</p>

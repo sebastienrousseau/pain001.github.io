@@ -50,9 +50,7 @@ def stamp_date(frontmatter: str) -> str:
     return frontmatter
 
 
-DEFAULT_LIB = Path(
-    os.environ.get("PAIN001_LIB") or HERE.parents[2] / "Python" / "pain001"
-)
+DEFAULT_LIB = Path(os.environ["PAIN001_LIB"]) if os.environ.get("PAIN001_LIB") else None
 STATIC = ROOT / "static" / "corpus"
 SLUG = "example-corpus"
 REPO = "https://github.com/sebastienrousseau/pain001"
@@ -510,6 +508,11 @@ def render_coverage_page(editions: list[dict], sizes: dict[str, int],
 def main(argv: list[str] | None = None) -> int:
     args = sys.argv[1:] if argv is None else argv
     lib = Path(args[0]).resolve() if args else DEFAULT_LIB
+    if lib is None:
+        sys.exit(
+            "usage: generate_corpus_page.py <pain001 checkout>  "
+            "(or set PAIN001_LIB); the library path is never guessed"
+        )
     data = lib / "pain001" / "corpus" / "data"
     if not data.is_dir():
         print(f"no corpus data at {data}", file=sys.stderr)

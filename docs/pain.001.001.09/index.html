@@ -64,7 +64,7 @@
       <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Toggle navigation" />
       <div class="wrap ap-nav-wrap">
         <a class="ap-brand" href="/" aria-label="Pain001 home">
-          <img src="/img/pain001.svg" alt="" width="26" height="26" />
+          <img src="/img/pain001.svg" alt="Pain001" width="26" height="26" />
           <span>Pain001</span>
         </a>
         <nav aria-label="Primary navigation" id="ap-primary-nav">
@@ -190,12 +190,12 @@
 
       <div class="wrap content-shell">
         <article class="content-body"><p class="version-requirement"><strong>Requires Pain001 v0.0.58 or later.</strong> Earlier versions do not carry the API shown on this page. Check what you have with <code class="tt-mono">pain001 --version</code>, and see <a href="https://github.com/sebastienrousseau/pain001/releases">the releases page</a> for what is published.</p>
-          <div lang="en"><p><code>pain.001.001.09</code> (2019) is the version CBPR+ selected for customer credit transfer initiation on the SWIFT network, and the mandated replacement for the interbank MT101 relay from <strong>14 November 2026</strong>. It is Pain001's default recommendation for any new cross-border integration, and the target shape of the <a href="/pain001-loader-mt101/">MT101 loader</a>.</p>
+          <div lang="en"><p><code>pain.001.001.09</code> (2019) is the version CBPR+ selected for customer credit transfer initiation on the SWIFT network, and the mandated replacement for the interbank MT101 relay from <strong>November 2026</strong> (Swift Standards Release 2026; <a href="https://www.swift.com/standards/iso-20022">Swift ISO 20022 programme</a>). It is Pain001's default recommendation for any new cross-border integration, and the target shape of the <a href="/pain001-loader-mt101/">MT101 loader</a>.</p>
 <h2 id="what-to-know-about-this-version">What to know about this version<a class="heading-anchor" href="#what-to-know-about-this-version" aria-label="Link to section: What to know about this version">#</a></h2>
 <ul>
 <li>Financial institutions are identified with <code>&lt;BICFI&gt;</code> (renamed from v03's <code>&lt;BIC&gt;</code>).</li>
 <li>The 2019 party and account structures add richer identification — including LEI — and proxy account support.</li>
-<li>Structured and hybrid postal addresses meet the 14 November 2026 CBPR+ address requirement; Pain001 emits both.</li>
+<li>Structured and hybrid postal addresses meet the November 2026 (SR 2026) CBPR+ address requirement; Pain001 emits both.</li>
 <li>UETR carriage supports end-to-end tracking through the correspondent chain.</li>
 </ul>
 <h2 id="element-structure-all-versions-share-this-skeleton">Element structure (all versions share this skeleton)<a class="heading-anchor" href="#element-structure-all-versions-share-this-skeleton" aria-label="Link to section: Element structure (all versions share this skeleton)">#</a></h2>

@@ -14,7 +14,7 @@
     ],
     "title": "ISO 20022 in 2026: Deadlines, Data and What Comes Next",
     "url": "https://pain001.com/2026-iso20022-migration-trends/",
-    "wordCount": 1257
+    "wordCount": 1266
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -99,7 +99,7 @@
     ],
     "title": "Compatibility Matrix",
     "url": "https://pain001.com/compatibility/",
-    "wordCount": 510
+    "wordCount": 515
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -171,7 +171,7 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Complete reference for pain001 v0.0.58 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.",
+    "description": "Complete reference for pain001 v0.0.69 — CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -256,7 +256,7 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "One page for decision-makers: the rejected-file problem, the fixed 14 November 2026 deadline, what Pain001 does, what it costs, the safety evidence, and the one ask — print-ready.",
+    "description": "One page for decision-makers: the rejected-file problem, the November 2026 (SR 2026) deadline, what Pain001 does, what it costs, the safety evidence, and the one ask — print-ready.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -269,7 +269,7 @@
     ],
     "title": "Pain001 Executive Brief",
     "url": "https://pain001.com/executive-brief/",
-    "wordCount": 290
+    "wordCount": 297
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -354,7 +354,7 @@
     ],
     "title": "ISO 20022 Payments Glossary in Plain English",
     "url": "https://pain001.com/glossary/",
-    "wordCount": 698
+    "wordCount": 710
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -456,7 +456,7 @@
     ],
     "title": "Pain001 — Inisiasi pembayaran ISO 20022 sumber terbuka",
     "url": "https://pain001.com/id/",
-    "wordCount": 245
+    "wordCount": 249
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -473,7 +473,7 @@
     ],
     "title": "Pain001: Open-Source ISO 20022 Payment Initiation Suite",
     "url": "https://pain001.com/index.html",
-    "wordCount": 147
+    "wordCount": 154
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -507,7 +507,7 @@
     ],
     "title": "Cross-Border pain.001 Under CBPR+: a Field Guide",
     "url": "https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/",
-    "wordCount": 485
+    "wordCount": 496
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -524,7 +524,7 @@
     ],
     "title": "ISO 20022 Roadmap: Every Deadline Through 2028",
     "url": "https://pain001.com/iso20022-roadmap/",
-    "wordCount": 737
+    "wordCount": 743
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -579,7 +579,7 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "The Pain001 overview — validation pipeline, the 14 November 2026 deadline, quickstart — translated into 34 languages, from Deutsch and 日本語 to العربية and Yorùbá, with correct hreflang and RTL support.",
+    "description": "The Pain001 overview — validation pipeline, the November 2026 (SR 2026) deadline, quickstart — translated into 34 languages, from Deutsch and 日本語 to العربية and Yorùbá, with correct hreflang and RTL support.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -592,7 +592,7 @@
     ],
     "title": "Pain001 in 34 Languages",
     "url": "https://pain001.com/languages/",
-    "wordCount": 250
+    "wordCount": 251
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -1476,7 +1476,7 @@
     ],
     "title": "Pain001 — Pemulaan pembayaran ISO 20022 sumber terbuka",
     "url": "https://pain001.com/ms/",
-    "wordCount": 250
+    "wordCount": 254
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -1629,7 +1629,7 @@
     ],
     "title": "pain.001.001.09 Reference: Generate and Validate",
     "url": "https://pain001.com/pain.001.001.09/",
-    "wordCount": 271
+    "wordCount": 279
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -1752,7 +1752,7 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "17 Model Context Protocol tools for AI agents — validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio.",
+    "description": "21 Model Context Protocol tools for AI agents — validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -1765,7 +1765,7 @@
     ],
     "title": "pain001-mcp: The MCP Server for ISO 20022 Payments",
     "url": "https://pain001.com/pain001-mcp/",
-    "wordCount": 655
+    "wordCount": 725
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -1918,7 +1918,7 @@
     ],
     "title": "Who Pain001 Is For",
     "url": "https://pain001.com/solutions/",
-    "wordCount": 353
+    "wordCount": 360
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -2126,7 +2126,7 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "What a rejected payment file costs, why 14 November 2026 is fixed, what Pain001 does about it, what it costs (nothing), and whether it is safe — each answer linked to its proof.",
+    "description": "What a rejected payment file costs, why the November 2026 (SR 2026) deadline is fixed, what Pain001 does about it, what it costs (nothing), and whether it is safe — each answer linked to its proof.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -2139,7 +2139,7 @@
     ],
     "title": "Why Pain001: the Business Case in Five Questions",
     "url": "https://pain001.com/why/",
-    "wordCount": 367
+    "wordCount": 368
   },
   {
     "date": "2026-07-26T08:00:00+00:00",

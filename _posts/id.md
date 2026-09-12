@@ -99,9 +99,9 @@ Setiap berkas melewati tiga lapis validasi sebelum ditulis: skema JSON per rekam
 
 Validasi batch contoh langsung di peramban Anda — tidak ada yang diunggah — dan buktikan hasilnya dengan skema XSD resmi: [coba Pain001](/try/). Berkas CSV contoh dapat diunduh sebagai templat untuk ekspor Anda sendiri.
 
-## Tenggat 14 November 2026
+## Tenggat November 2026 (SR 2026)
 
-Setelah koeksistensi MT–MX berakhir pada 22 November 2025, tenggat berikutnya adalah **14 November 2026**: alamat pos yang sepenuhnya tidak terstruktur akan ditolak dalam pembayaran CBPR+, dan relai antar-bank MT101 digantikan `pain.001` versi 9. Pain001 sudah menghasilkan alamat terstruktur dan hibrida hari ini — dan mengonversi MT101 dengan satu perintah.
+Setelah koeksistensi MT–MX berakhir pada 22 November 2025, tenggat berikutnya adalah **November 2026** (Swift Standards Release 2026): alamat pos yang sepenuhnya tidak terstruktur akan ditolak dalam pembayaran CBPR+, dan relai antar-bank MT101 digantikan `pain.001` versi 9. Pain001 sudah menghasilkan alamat terstruktur dan hibrida hari ini — dan mengonversi MT101 dengan satu perintah.
 
 ## Mulai
 

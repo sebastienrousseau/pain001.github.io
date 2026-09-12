@@ -73,6 +73,9 @@ jobs:
       - name: Link integrity (internal links, anchors, locale consistency)
         run: python3 scripts/validate_links.py docs
 
+      - name: Suite version currency (no page cites an older pain001)
+        run: python3 scripts/validate_versions.py
+
       - name: Documentation snippets reference real API
         run: |
           python3 -m pip install --quiet pain001

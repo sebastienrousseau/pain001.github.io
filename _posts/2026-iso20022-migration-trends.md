@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "A timeline of global ISO 20022 payment-system milestones converging on the 14 November 2026 CBPR+ deadlines for structured addresses and the MT101 relay."
+banner_alt: "A timeline of global ISO 20022 payment-system milestones converging on the November 2026 (SR 2026) CBPR+ deadlines for structured addresses and the MT101 relay."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -16,7 +16,7 @@ format-detection: telephone=no
 hreflang: en
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/2026-iso20022-migration-trends/"
-image_alt: "A timeline of global ISO 20022 payment-system milestones converging on the 14 November 2026 CBPR+ deadlines for structured addresses and the MT101 relay."
+image_alt: "A timeline of global ISO 20022 payment-system milestones converging on the November 2026 (SR 2026) CBPR+ deadlines for structured addresses and the MT101 relay."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -83,12 +83,12 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Research briefing"
-excerpt: "A primary-sourced briefing on ISO 20022 in mid-2026: the end of MT–MX coexistence, the 14 November 2026 structured-address and MT101-relay deadlines, Fedwire and FedNow after go-live, the Instant Payments Regulation and Verification of Payee in force, CHAPS purpose codes from 2027, LEI growth, fraud models, and the agentic-payments race."
+excerpt: "A primary-sourced briefing on ISO 20022 in mid-2026: the end of MT–MX coexistence, the November 2026 (SR 2026) structured-address and MT101-relay deadlines, Fedwire and FedNow after go-live, the Instant Payments Regulation and Verification of Payee in force, CHAPS purpose codes from 2027, LEI growth, fraud models, and the agentic-payments race."
 last_reviewed: "2026-07-26"
 
 ---
 
-> **Executive summary.** The great migration is over; the data era has begun. SWIFT ended MT–MX coexistence for cross-border payment instructions on 22 November 2025, Fedwire went ISO-native on 14 July 2025, and roughly 97% of cross-border payment instructions now travel as ISO 20022. Two hard deadlines dominate the next four months: on **14 November 2026**, fully unstructured postal addresses stop being accepted in CBPR+ payments, and the interbank MT101 relay is decommissioned in favour of `pain.001` version 9. Beyond that, the roadmap runs through 2028 — investigations, statements, and direct debits — while instant rails, LEIs, and agentic AI reshape what the standard is for. Every claim below carries a primary or corroborated source, verified 26 July 2026.
+> **Executive summary.** The great migration is over; the data era has begun. SWIFT ended MT–MX coexistence for cross-border payment instructions on 22 November 2025, Fedwire went ISO-native on 14 July 2025, and roughly 97% of cross-border payment instructions now travel as ISO 20022. Two hard deadlines dominate the next four months: on **November 2026** (Swift Standards Release 2026), fully unstructured postal addresses stop being accepted in CBPR+ payments, and the interbank MT101 relay is decommissioned in favour of `pain.001` version 9. Beyond that, the roadmap runs through 2028 — investigations, statements, and direct debits — while instant rails, LEIs, and agentic AI reshape what the standard is for. Every claim below carries a primary or corroborated source, verified 26 July 2026.
 
 ---
 
@@ -100,15 +100,15 @@ What did *not* end in November 2025 matters just as much. Corporate-to-bank traf
 
 Coexistence was a courtesy. It is over.
 
-## 02. 14 November 2026: structured addresses
+## 02. November 2026 (SR 2026): structured addresses
 
-From 14 November 2026, CBPR+ payment messages carrying **fully unstructured addresses are rejected** on the SWIFT network. The accepted forms are structured — or **hybrid**: town name and country in structured elements (`<TwnNm>`, `<Ctry>`), with up to two 70-character address lines for the remainder. Hybrid has been available since November 2025 and is codified in the Payments Market Practice Group's Hybrid Postal Address guideline v1.12 of 5 March 2026 ([SWIFT: removal of unstructured address](https://www.swift.com/standards/iso-20022/removal-unstructured-address "Swift structured address milestone"); [PMPG v1.12](https://www.swift.com/sites/default/files/files/pmpg-hybrid-postal-address-v1.12-05mar2026.pdf "PMPG Hybrid Postal Address v1.12")).
+From Swift Standards Release 2026 in November 2026, CBPR+ payment messages carrying **fully unstructured addresses are rejected** on the SWIFT network. The accepted forms are structured — or **hybrid**: town name and country in structured elements (`<TwnNm>`, `<Ctry>`), with up to two 70-character address lines for the remainder. Hybrid has been available since November 2025 and is codified in the Payments Market Practice Group's Hybrid Postal Address guideline v1.12 of 5 March 2026 ([SWIFT: removal of unstructured address](https://www.swift.com/standards/iso-20022/removal-unstructured-address "Swift structured address milestone"); [PMPG v1.12](https://www.swift.com/sites/default/files/files/pmpg-hybrid-postal-address-v1.12-05mar2026.pdf "PMPG Hybrid Postal Address v1.12")).
 
 Industry analysis in early 2026 still put the share of messages carrying unstructured addresses at roughly two-thirds ([NTT DATA](https://be.nttdata.com/insights/blog/swift-cbpr-address-data-compliance-risk-november-2026-deadline "NTT DATA on the November 2026 address deadline")). The bottleneck is not message formatting — it is customer master data. Pain001 generates structured and hybrid address elements today; the remediation work lives in your vendor files.
 
 Fix the data, and the format follows.
 
-## 03. 14 November 2026: MT101 relay becomes pain.001
+## 03. November 2026 (SR 2026): MT101 relay becomes pain.001
 
 The same date retires the interbank MT101 relay — the request-for-transfer flow between banks — replaced by CBPR+ **`pain.001` version 9**. Multi-transaction MT101s will be rejected outright; single-transaction messages get temporary contingency conversion with additional validation ([Swift call to action for November 2026](https://www.swift.com/standards/iso-20022/iso-20022-bytes/call-action-november-2026 "Swift: call to action November 2026")).
 

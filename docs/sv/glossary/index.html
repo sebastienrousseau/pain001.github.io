@@ -64,7 +64,7 @@
       <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Växla navigering" />
       <div class="wrap ap-nav-wrap">
         <a class="ap-brand" href="/" aria-label="Pain001 home">
-          <img src="/img/pain001.svg" alt="" width="26" height="26" />
+          <img src="/img/pain001.svg" alt="Pain001" width="26" height="26" />
           <span>Pain001</span>
         </a>
         <nav aria-label="Primary navigation" id="ap-primary-nav">
@@ -198,7 +198,7 @@
 <p><strong>pain.008 — Customer Direct Debit Initiation.</strong> Inkasseringssidans tvilling till <code>pain.001</code>: du drar in medel du har rätt till enligt ett medgivande i stället för att skicka ut medel.</p>
 <p><strong>pacs.008 / pacs.009.</strong> Interbankavvecklingsmeddelandena som din instruktion blir när banken har accepterat den. Företag författar aldrig dessa; banker utbyter dem.</p>
 <p><strong>camt.052 / camt.053 / camt.054.</strong> Kontorapportering: intradagsrapport, dagsslutsutdrag respektive debet-/kreditavisering. <code>camt.053</code> är vad avstämningsteam konsumerar varje morgon.</p>
-<p><strong>MT101.</strong> Det äldre SWIFT-textmeddelandet "Request for Transfer" som <code>pain.001</code> ersätter. Interbankrelän för MT101 avvecklas den 14 november 2026 till förmån för <code>pain.001.001.09</code>; MT101 företag-till-bank lever kvar endast efter varje banks eget gottfinnande.</p>
+<p><strong>MT101.</strong> Det äldre SWIFT-textmeddelandet "Request for Transfer" som <code>pain.001</code> ersätter. Interbankrelän för MT101 avvecklas den november 2026 (SR 2026; <a href="https://www.swift.com/standards/iso-20022">Swift ISO 20022 programme</a>) till förmån för <code>pain.001.001.09</code>; MT101 företag-till-bank lever kvar endast efter varje banks eget gottfinnande.</p>
 <h2 id="schemes-and-rulebooks">Scheman och regelverk<a class="heading-anchor" href="#schemes-and-rulebooks" aria-label="Länk till avsnitt: Scheman och regelverk">#</a></h2>
 <p><strong>SEPA SCT / SCT Inst.</strong> Eurogireringsschemana (standard och instant) som styrs av European Payments Councils regelverk. Instantöverföringar avvecklas på sekunder, dygnet runt.</p>
 <p><strong>SEPA SDD Core / B2B.</strong> Euroautogiroschemana — Core för konsumenter (med återbetalningsrätt), B2B för företag (ingen återbetalningsrätt, striktare medgivandekontroller).</p>
@@ -211,7 +211,7 @@
 <p><strong>BIC / BICFI.</strong> En finansinstitutions Business Identifier Code enligt ISO 9362. XML-elementet är <code>&lt;BIC&gt;</code> i <code>pain.001.001.03</code> men <code>&lt;BICFI&gt;</code> från version 9 — ett namnbyte som orsakar verkliga avvisningar vid versionsuppgraderingar.</p>
 <p><strong>LEI.</strong> Legal Entity Identifier (ISO 17442) — den 20 tecken långa globala företagsidentifieraren. Över 3 miljoner är aktiva, och tillsynsmyndigheter kräver dem allt oftare i betalningar.</p>
 <p><strong>UETR.</strong> Unique End-to-end Transaction Reference — UUID:t som gör att en betalning kan spåras genom hela korrespondentkedjan (SWIFT gpi).</p>
-<p><strong>Strukturerad/hybrid adress.</strong> Postadresser som separata XML-element (gata, ort, postnummer, land) i motsats till fritextrader. Från den 14 november 2026 avvisar CBPR+ helt ostrukturerade adresser; <em>hybrid</em> — strukturerad ort och strukturerat land plus upp till två adressrader om 70 tecken — förblir giltig.</p>
+<p><strong>Strukturerad/hybrid adress.</strong> Postadresser som separata XML-element (gata, ort, postnummer, land) i motsats till fritextrader. Från den november 2026 (SR 2026) avvisar CBPR+ helt ostrukturerade adresser; <em>hybrid</em> — strukturerad ort och strukturerat land plus upp till två adressrader om 70 tecken — förblir giltig.</p>
 <p><strong>NbOfTxs / CtrlSum.</strong> Grupphuvudets kontrollsummor: transaktionsantal och beloppssumma. Bankerna räknar om dem; stämmer dina inte, studsar filen. Pain001 härleder dem alltid från de validerade posterna.</p>
 <p><strong>Avgiftsbärare (charge bearer).</strong> Vem som betalar avgifterna: <code>DEBT</code> (avsändare), <code>CRED</code> (mottagare), <code>SHAR</code> (delat), <code>SLEV</code> (enligt schemats regler). Äldre MT <code>OUR</code>/<code>BEN</code>/<code>SHA</code> mappar till de tre första.</p>
 <p><strong>Remitteringsinformation.</strong> Fältet "vad betalningen avser" — fritext (140 tecken) eller strukturerade referenser. Det fält avstämningsteamen önskar att alla fyllde i ordentligt.</p>

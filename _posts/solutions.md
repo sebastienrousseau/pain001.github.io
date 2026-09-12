@@ -95,7 +95,7 @@ Your bank rejects files for reasons your ERP never warned you about: a transpose
 
 ## CFO & board
 
-Two numbers frame the decision. **14 November 2026**: the date cross-border payments with unstructured addresses start bouncing at network level — exposure that lives in your customer master data, not your bank connection. **€10,000–30,000 per year**: the public list price of the nearest commercial translation SDK, against Pain001's permanent zero at any scale under open licences. The governance questions — auditability, data locality, supply-chain evidence — are answered with artefacts, not assurances: published [SBOM](/sbom.cdx.json), [security policy](/security.txt), and processing that never leaves your infrastructure. The [one-page executive brief](/executive-brief/) is written to be forwarded.
+Two numbers frame the decision. **November 2026** (Swift Standards Release 2026; [Swift ISO 20022 programme](https://www.swift.com/standards/iso-20022)): the date cross-border payments with unstructured addresses start bouncing at network level — exposure that lives in your customer master data, not your bank connection. **€10,000–30,000 per year**: the public list price of the nearest commercial translation SDK, against Pain001's permanent zero at any scale under open licences. The governance questions — auditability, data locality, supply-chain evidence — are answered with artefacts, not assurances: published [SBOM](/sbom.cdx.json), [security policy](/security.txt), and processing that never leaves your infrastructure. The [one-page executive brief](/executive-brief/) is written to be forwarded.
 
 ## Payment operations
 

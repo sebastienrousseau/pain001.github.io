@@ -89,13 +89,13 @@ last_reviewed: "2026-07-26"
 
 ---
 
-`pain.001.001.09` (2019) is the version CBPR+ selected for customer credit transfer initiation on the SWIFT network, and the mandated replacement for the interbank MT101 relay from **14 November 2026**. It is Pain001's default recommendation for any new cross-border integration, and the target shape of the [MT101 loader](/pain001-loader-mt101/).
+`pain.001.001.09` (2019) is the version CBPR+ selected for customer credit transfer initiation on the SWIFT network, and the mandated replacement for the interbank MT101 relay from **November 2026** (Swift Standards Release 2026; [Swift ISO 20022 programme](https://www.swift.com/standards/iso-20022)). It is Pain001's default recommendation for any new cross-border integration, and the target shape of the [MT101 loader](/pain001-loader-mt101/).
 
 ## What to know about this version
 
 - Financial institutions are identified with `<BICFI>` (renamed from v03's `<BIC>`).
 - The 2019 party and account structures add richer identification — including LEI — and proxy account support.
-- Structured and hybrid postal addresses meet the 14 November 2026 CBPR+ address requirement; Pain001 emits both.
+- Structured and hybrid postal addresses meet the November 2026 (SR 2026) CBPR+ address requirement; Pain001 emits both.
 - UETR carriage supports end-to-end tracking through the correspondent chain.
 
 ## Element structure (all versions share this skeleton)

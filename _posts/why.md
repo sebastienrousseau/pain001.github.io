@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "What a rejected payment file costs, why 14 November 2026 is fixed, what Pain001 does about it, what it costs (nothing), and whether it is safe — each answer linked to its proof."
+description: "What a rejected payment file costs, why the November 2026 (SR 2026) deadline is fixed, what Pain001 does about it, what it costs (nothing), and whether it is safe — each answer linked to its proof."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "en"
@@ -47,7 +47,7 @@ atom_link: "https://pain001.com/why/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.47)"
-item_description: "What a rejected payment file costs, why 14 November 2026 is fixed, what Pain001 does about it, what it costs (nothing), and whether it is safe — each answer linked to its proof."
+item_description: "What a rejected payment file costs, why the November 2026 (SR 2026) deadline is fixed, what Pain001 does about it, what it costs (nothing), and whether it is safe — each answer linked to its proof."
 item_guid: "https://pain001.com/why/rss.xml"
 item_link: "https://pain001.com/why/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -68,7 +68,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: @wwdseb
-twitter_description: "What a rejected payment file costs, why 14 November 2026 is fixed, what Pain001 does about it, what it costs (nothing), and whether it is safe — each answer linked to its proof."
+twitter_description: "What a rejected payment file costs, why the November 2026 (SR 2026) deadline is fixed, what Pain001 does about it, what it costs (nothing), and whether it is safe — each answer linked to its proof."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: @wwdseb
@@ -83,7 +83,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "The business case"
-excerpt: "The executive case for Pain001 in five questions: the operational cost of a rejected payment file, the fixed 14 November 2026 CBPR+ deadline, what the suite does about both, why it costs nothing at any scale against a €10–30k/yr commercial reference point, and the verifiable safety posture — local processing, no telemetry, published SBOM, 100% branch coverage."
+excerpt: "The executive case for Pain001 in five questions: the operational cost of a rejected payment file, the fixed November 2026 (SR 2026) CBPR+ deadline, what the suite does about both, why it costs nothing at any scale against a €10–30k/yr commercial reference point, and the verifiable safety posture — local processing, no telemetry, published SBOM, 100% branch coverage."
 last_reviewed: "2026-07-26"
 
 
@@ -93,7 +93,7 @@ last_reviewed: "2026-07-26"
 
 A file the bank bounces does not fail quietly. Someone diagnoses the reason code, repairs the source data, regenerates, resubmits — and if the repair misses the day's cut-off, settlement slips. For payroll or supplier runs, a slipped day is a phone call you do not want to make. The [reason-code reference](/pain002-reason-codes/) lists what banks actually send back; almost every format-class entry on it is preventable before submission.
 
-## Why is 14 November 2026 non-negotiable?
+## Why is November 2026 (SR 2026) non-negotiable?
 
 Because it is enforced at network level, not by policy. From that date, cross-border payments (CBPR+) carrying fully unstructured postal addresses are rejected, and the interbank MT101 relay retires in favour of `pain.001` version 9. The dates come from SWIFT, not from us — every one is cited in the [2026 briefing](/2026-iso20022-migration-trends/), and the schedule continues to 2028 on the [living roadmap](/iso20022-roadmap/).
 

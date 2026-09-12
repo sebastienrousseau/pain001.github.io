@@ -8,7 +8,7 @@
     <title>pain001-mcp: The MCP Server for ISO 20022 Payments</title>
 
     <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
-<meta name="description" content="17 Model Context Protocol tools for AI agents — validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio.">
+<meta name="description" content="21 Model Context Protocol tools for AI agents — validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio.">
 <meta name="keywords" content="pain001-mcp, MCP server payments, ISO 20022 AI agent, Model Context Protocol finance, Claude payment tools, agentic payments, pain.001 generation AI">
 <meta property="og:image" content="https://pain001.com/og/pain001-card.jpg" />
     <meta property="og:image:width" content="1200" />
@@ -45,13 +45,13 @@
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="pain001-mcp: The MCP Server for ISO 20022 Payments">
-<meta property="og:description" content="17 Model Context Protocol tools for AI agents — validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio.">
+<meta property="og:description" content="21 Model Context Protocol tools for AI agents — validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://pain001.com/pain001-mcp/">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="pain001-mcp: The MCP Server for ISO 20022 Payments">
-<meta name="twitter:description" content="17 Model Context Protocol tools for AI agents — validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio.">
+<meta name="twitter:description" content="21 Model Context Protocol tools for AI agents — validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio.">
 <meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg">
 <link rel="canonical" href="https://pain001.com/pain001-mcp/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
 <link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"></head>
@@ -64,7 +64,7 @@
       <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Toggle navigation" />
       <div class="wrap ap-nav-wrap">
         <a class="ap-brand" href="/" aria-label="Pain001 home">
-          <img src="/img/pain001.svg" alt="" width="26" height="26" />
+          <img src="/img/pain001.svg" alt="Pain001" width="26" height="26" />
           <span>Pain001</span>
         </a>
         <nav aria-label="Primary navigation" id="ap-primary-nav">
@@ -189,11 +189,11 @@
       </header>
 
       <div class="wrap content-shell">
-        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>Contents</h2><ol><li><a href="#01-the-17-tools">The 17 tools</a></li><li><a href="#02-registration">Registration</a></li><li><a href="#03-design-decisions-that-matter-in-a-payments-context">Design decisions that matter in a payments context</a></li><li><a href="#faq">FAQ</a></li></ol></nav>
-          <div lang="en"><p><strong><code>pain001-mcp</code> v0.0.57</strong> exposes the Pain001 suite to AI agents as <strong>17 Model Context Protocol tools</strong>. Claude Desktop, Claude Code, Cursor, and any MCP-compatible orchestrator can validate IBANs, migrate message versions, convert SWIFT MT101, and generate schema-validated <code>pain.001</code> XML — inside a conversation, on your own machine.</p>
+        <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>Contents</h2><ol><li><a href="#01-the-21-tools">The 21 tools</a></li><li><a href="#02-registration">Registration</a></li><li><a href="#03-design-decisions-that-matter-in-a-payments-context">Design decisions that matter in a payments context</a></li><li><a href="#faq">FAQ</a></li></ol></nav>
+          <div lang="en"><p><strong><code>pain001-mcp</code> v0.0.69</strong> exposes the Pain001 suite to AI agents as <strong>21 Model Context Protocol tools</strong>. Claude Desktop, Claude Code, Cursor, and any MCP-compatible orchestrator can validate IBANs, migrate message versions, convert SWIFT MT101, and generate schema-validated <code>pain.001</code> XML — inside a conversation, on your own machine.</p>
 <p>Card networks and PSPs have built agentic <em>checkout</em> rails. The corporate payment-file layer — where credit transfers are actually initiated — had no agent interface. This server fills that gap. Payment data never leaves your machine: the transport is stdio, and every tool is annotated read-only and idempotent, so an agent can explore safely without side effects.</p>
 <hr />
-<h2 id="01-the-17-tools">01. The 17 tools<a class="heading-anchor" href="#01-the-17-tools" aria-label="Link to section: 01. The 17 tools">#</a></h2>
+<h2 id="01-the-21-tools">01. The 21 tools<a class="heading-anchor" href="#01-the-21-tools" aria-label="Link to section: 01. The 21 tools">#</a></h2>
 <div class="table-responsive"><table class="table">
 <thead>
 <tr>
@@ -270,6 +270,22 @@
 <td data-label="Tool" class="text-left"><code>convert_mt101</code></td>
 <td data-label="What it does" class="text-left">Convert a legacy SWIFT MT101 message into pain.001 records.</td>
 </tr>
+<tr>
+<td data-label="Tool" class="text-left"><code>list_corpus_files</code></td>
+<td data-label="What it does" class="text-left">List the validated example files pain001 ships: market scenarios by country and rail, and the schema coverage sets.</td>
+</tr>
+<tr>
+<td data-label="Tool" class="text-left"><code>get_corpus_file</code></td>
+<td data-label="What it does" class="text-left">Return the XML of one validated example file from the market corpus.</td>
+</tr>
+<tr>
+<td data-label="Tool" class="text-left"><code>get_corpus_provenance</code></td>
+<td data-label="What it does" class="text-left">Return the provenance sidecar of one example file: sources, retrieval dates, evidence state.</td>
+</tr>
+<tr>
+<td data-label="Tool" class="text-left"><code>get_corpus_coverage</code></td>
+<td data-label="What it does" class="text-left">Return the schema coverage verdict for one message type's coverage set.</td>
+</tr>
 </tbody>
 </table></div>
 <p>The server also publishes a <code>pain001://schema/{message_type}</code> resource and a <code>build_payment_batch</code> prompt. Shorthand aliases resolve sensibly: <code>pain.001</code> → <code>pain.001.001.09</code>, <code>pain.008</code> → <code>pain.008.001.02</code>.</p>
@@ -290,7 +306,7 @@
 <hr />
 <h2 id="03-design-decisions-that-matter-in-a-payments-context">03. Design decisions that matter in a payments context<a class="heading-anchor" href="#03-design-decisions-that-matter-in-a-payments-context" aria-label="Link to section: 03. Design decisions that matter in a payments context">#</a></h2>
 <ul>
-<li><strong>Read-only by contract.</strong> All 17 tools carry MCP <code>ToolAnnotations</code> with <code>readOnlyHint=true</code>, <code>destructiveHint=false</code>, and <code>idempotentHint=true</code>. The server never writes to your filesystem.</li>
+<li><strong>Read-only by contract.</strong> All 21 tools carry MCP <code>ToolAnnotations</code> with <code>readOnlyHint=true</code>, <code>destructiveHint=false</code>, and <code>idempotentHint=true</code>. The server never writes to your filesystem.</li>
 <li><strong>Errors are data, not crashes.</strong> Tools return structured <code>{"error": ...}</code> payloads instead of raising, so agent loops degrade gracefully.</li>
 <li><strong>Local-only transport.</strong> stdio only — no network listener, no credentials, no payment data leaving the host.</li>
 <li><strong>Validated output or nothing.</strong> <code>generate_message</code> runs the same JSON Schema → scheme rulebook → XSD pipeline as the CLI; an agent cannot produce a malformed file.</li>
@@ -380,7 +396,7 @@
           "@id": "https://pain001.com/pain001-mcp/",
           "url": "https://pain001.com/pain001-mcp/",
           "name": "pain001-mcp: The MCP Server for ISO 20022 Payments",
-          "description": "17 Model Context Protocol tools for AI agents — validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio.",
+          "description": "21 Model Context Protocol tools for AI agents — validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio.",
           "inLanguage": "en-GB",
           "dateModified": "2026-07-26",
           "isPartOf": { "@id": "https://pain001.com/#website" },

@@ -64,7 +64,7 @@
       <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Attiva/disattiva navigazione" />
       <div class="wrap ap-nav-wrap">
         <a class="ap-brand" href="/" aria-label="Pain001 home">
-          <img src="/img/pain001.svg" alt="" width="26" height="26" />
+          <img src="/img/pain001.svg" alt="Pain001" width="26" height="26" />
           <span>Pain001</span>
         </a>
         <nav aria-label="Primary navigation" id="ap-primary-nav">
@@ -198,7 +198,7 @@
 <p><strong>pain.008 — Customer Direct Debit Initiation.</strong> Il gemello lato incasso di <code>pain.001</code>: si prelevano fondi dovuti in forza di un mandato invece di trasferirli in uscita.</p>
 <p><strong>pacs.008 / pacs.009.</strong> I messaggi di regolamento interbancario in cui si trasforma la vostra istruzione una volta accettata dalla banca. Le aziende non li redigono mai; se li scambiano le banche.</p>
 <p><strong>camt.052 / camt.053 / camt.054.</strong> Reportistica di conto: rispettivamente report infragiornaliero, estratto conto di fine giornata e notifica di addebito/accredito. <code>camt.053</code> è ciò che i team di riconciliazione consumano ogni mattina.</p>
-<p><strong>MT101.</strong> Il messaggio testuale SWIFT legacy "Request for Transfer" che <code>pain.001</code> sostituisce. Il relay MT101 interbancario sarà dismesso il 14 novembre 2026 in favore di <code>pain.001.001.09</code>; l'MT101 corporate-to-bank sopravvive solo a discrezione di ciascuna banca.</p>
+<p><strong>MT101.</strong> Il messaggio testuale SWIFT legacy "Request for Transfer" che <code>pain.001</code> sostituisce. Il relay MT101 interbancario sarà dismesso il novembre 2026 (SR 2026; <a href="https://www.swift.com/standards/iso-20022">Swift ISO 20022 programme</a>) in favore di <code>pain.001.001.09</code>; l'MT101 corporate-to-bank sopravvive solo a discrezione di ciascuna banca.</p>
 <h2 id="schemes-and-rulebooks">Schemi e rulebook<a class="heading-anchor" href="#schemes-and-rulebooks" aria-label="Collegamento alla sezione: Schemi e rulebook">#</a></h2>
 <p><strong>SEPA SCT / SCT Inst.</strong> Gli schemi di bonifico in euro (standard e istantaneo) disciplinati dai rulebook dell'European Payments Council. I bonifici istantanei si regolano in pochi secondi, 24 ore su 24.</p>
 <p><strong>SEPA SDD Core / B2B.</strong> Gli schemi di addebito diretto in euro — Core per i consumatori (con diritto di rimborso), B2B per le imprese (nessun diritto di rimborso, controlli sul mandato più severi).</p>
@@ -211,7 +211,7 @@
 <p><strong>BIC / BICFI.</strong> Il Business Identifier Code ISO 9362 di un istituto finanziario. L'elemento XML è <code>&lt;BIC&gt;</code> in <code>pain.001.001.03</code> ma <code>&lt;BICFI&gt;</code> dalla versione 9 — una ridenominazione che causa rifiuti reali durante gli aggiornamenti di versione.</p>
 <p><strong>LEI.</strong> Legal Entity Identifier (ISO 17442) — l'identificativo societario globale di 20 caratteri. Ne sono attivi oltre 3 milioni e i regolatori li richiedono sempre più spesso nei pagamenti.</p>
 <p><strong>UETR.</strong> Unique End-to-end Transaction Reference — l'UUID che consente di tracciare un pagamento lungo la catena dei corrispondenti (SWIFT gpi).</p>
-<p><strong>Indirizzo strutturato / ibrido.</strong> Indirizzi postali come elementi XML discreti (via, località, CAP, paese) contrapposti a righe di testo libero. Dal 14 novembre 2026 CBPR+ rifiuta gli indirizzi completamente non strutturati; l'<em>ibrido</em> — località e paese strutturati più fino a due righe di indirizzo da 70 caratteri — resta valido.</p>
+<p><strong>Indirizzo strutturato / ibrido.</strong> Indirizzi postali come elementi XML discreti (via, località, CAP, paese) contrapposti a righe di testo libero. Dal novembre 2026 (SR 2026) CBPR+ rifiuta gli indirizzi completamente non strutturati; l'<em>ibrido</em> — località e paese strutturati più fino a due righe di indirizzo da 70 caratteri — resta valido.</p>
 <p><strong>NbOfTxs / CtrlSum.</strong> I totali di controllo dell'intestazione di gruppo: numero di transazioni e somma degli importi. Le banche li ricalcolano; se i vostri non coincidono, il file viene respinto. Pain001 li deriva sempre dai record validati.</p>
 <p><strong>Charge bearer.</strong> Chi paga le commissioni: <code>DEBT</code> (ordinante), <code>CRED</code> (beneficiario), <code>SHAR</code> (condivise), <code>SLEV</code> (secondo le regole dello schema). I codici MT legacy <code>OUR</code>/<code>BEN</code>/<code>SHA</code> corrispondono ai primi tre.</p>
 <p><strong>Informazioni di rimessa.</strong> Il campo "a cosa serve questo pagamento" — testo libero (140 caratteri) o riferimenti strutturati. Ciò che i team di riconciliazione vorrebbero che tutti compilassero correttamente.</p>

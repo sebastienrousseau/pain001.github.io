@@ -83,13 +83,13 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Living roadmap"
-excerpt: "A living roadmap of ISO 20022 mandates beyond the famous deadlines: what completed through 2025, the twin 14 November 2026 enforcement events, 2027's purpose-code and investigation mandates, the 2028 retirement of MT statements and direct debits, and the undated pressures — later pain.001 versions, LEIs, and agentic payments."
+excerpt: "A living roadmap of ISO 20022 mandates beyond the famous deadlines: what completed through 2025, the twin November 2026 (SR 2026) enforcement events, 2027's purpose-code and investigation mandates, the 2028 retirement of MT statements and direct debits, and the undated pressures — later pain.001 versions, LEIs, and agentic payments."
 last_reviewed: "2026-07-26"
 
 
 ---
 
-> **The migration was never a cliff — it is a schedule.** MT–MX coexistence ended in November 2025 and the next enforcement date is 14 November 2026, but the mandates keep landing through 2028: investigations, statements, direct debits, purpose codes, payee verification. This page is the living schedule, updated with each SWIFT Standards Release and re-verified against primary sources — last review 26 July 2026.
+> **The migration was never a cliff — it is a schedule.** MT–MX coexistence ended in November 2025 and the next enforcement date is November 2026 (SR 2026) ([Swift ISO 20022 programme](https://www.swift.com/standards/iso-20022)), but the mandates keep landing through 2028: investigations, statements, direct debits, purpose codes, payee verification. This page is the living schedule, updated with each SWIFT Standards Release and re-verified against primary sources — last review 26 July 2026.
 
 ## 01. Done — the rails are ISO-native
 
@@ -106,7 +106,7 @@ last_reviewed: "2026-07-26"
 | Nov 2025 | Japan BOJ-NET completes migration |
 | **22 Nov 2025** | **SWIFT MT–MX coexistence ends** — MT 1xx/2xx/9xx retired for cross-border payment instructions; ~97% of instructions now ISO 20022 |
 
-## 02. 14 November 2026 — the data-quality deadline
+## 02. November 2026 (SR 2026) — the data-quality deadline
 
 Two enforcement events land on the same day:
 

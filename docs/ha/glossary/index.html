@@ -64,7 +64,7 @@
       <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Kunna/kashe kewayawa" />
       <div class="wrap ap-nav-wrap">
         <a class="ap-brand" href="/" aria-label="Pain001 home">
-          <img src="/img/pain001.svg" alt="" width="26" height="26" />
+          <img src="/img/pain001.svg" alt="Pain001" width="26" height="26" />
           <span>Pain001</span>
         </a>
         <nav aria-label="Primary navigation" id="ap-primary-nav">
@@ -198,7 +198,7 @@
 <p><strong>pain.008 — Customer Direct Debit Initiation.</strong> Tagwayen <code>pain.001</code> a ɓangaren karɓar kuɗi: kana cire kuɗin da ake binka bisa izini maimakon fitar da kuɗi.</p>
 <p><strong>pacs.008 / pacs.009.</strong> Saƙonnin sasantawa tsakanin bankuna waɗanda umarninka ke zama bayan bankin ya karɓe shi. Kamfanoni ba sa rubuta waɗannan; bankuna ne ke musayarsu.</p>
 <p><strong>camt.052 / camt.053 / camt.054.</strong> Rahoton asusu: rahoton tsakiyar rana, bayanin ƙarshen rana, da sanarwar cirewa ko shigar kuɗi bi da bi. <code>camt.053</code> shi ne abin da ƙungiyoyin daidaita asusu ke amfani da shi kowace safiya.</p>
-<p><strong>MT101.</strong> Tsohon saƙon rubutu na SWIFT mai suna "Request for Transfer" wanda <code>pain.001</code> ke maye gurbinsa. Za a dakatar da isar da MT101 tsakanin bankuna a ranar 14 ga Nuwamba 2026 domin <code>pain.001.001.09</code>; MT101 daga kamfani zuwa banki zai ci gaba ne kawai bisa ra'ayin kowane banki.</p>
+<p><strong>MT101.</strong> Tsohon saƙon rubutu na SWIFT mai suna "Request for Transfer" wanda <code>pain.001</code> ke maye gurbinsa. Za a dakatar da isar da MT101 tsakanin bankuna a ranar Nuwamba 2026 (SR 2026; <a href="https://www.swift.com/standards/iso-20022">Swift ISO 20022 programme</a>) domin <code>pain.001.001.09</code>; MT101 daga kamfani zuwa banki zai ci gaba ne kawai bisa ra'ayin kowane banki.</p>
 <h2 id="schemes-and-rulebooks">Tsare-tsare da littattafan ƙa'ida<a class="heading-anchor" href="#schemes-and-rulebooks" aria-label="Haɗi zuwa sashe: Tsare-tsare da littattafan ƙa'ida">#</a></h2>
 <p><strong>SEPA SCT / SCT Inst.</strong> Tsare-tsaren tura kuɗi na Yuro (na yau da kullum da na gaggawa) waɗanda littattafan ƙa'ida na European Payments Council ke sarrafawa. Tura kuɗi na gaggawa yana sasantuwa cikin daƙiƙu, a kowane lokaci na rana da dare.</p>
 <p><strong>SEPA SDD Core / B2B.</strong> Tsare-tsaren cirar kuɗi kai tsaye na Yuro — Core ga masu amfani (tare da haƙƙin mayar da kuɗi), B2B ga kamfanoni (babu haƙƙin mayarwa, kuma an fi tsauri wajen duba izini).</p>
@@ -211,7 +211,7 @@
 <p><strong>BIC / BICFI.</strong> Lambar Ganewar Kasuwanci ta ISO 9362 ta wata cibiyar kuɗi. Sashen XML shi ne <code>&lt;BIC&gt;</code> a <code>pain.001.001.03</code> amma <code>&lt;BICFI&gt;</code> daga siga ta 9 — sauyin suna da ke haifar da ƙi na gaskiya yayin haɓaka siga.</p>
 <p><strong>LEI.</strong> Lambar Ganewar Ƙungiyar Shari'a (ISO 17442) — lambar kamfani ta duniya mai haruffa 20. Sama da miliyan 3 suna aiki, kuma masu tsara doka suna ƙara wajabta su a harkokin biyan kuɗi.</p>
 <p><strong>UETR.</strong> Nuni na Musamman na Mu'amala Daga Farko Zuwa Ƙarshe — UUID ɗin da ke ba da damar bin diddigin biyan kuɗi a sarƙar bankunan wakilci (SWIFT gpi).</p>
-<p><strong>Adireshi mai tsari / haɗaɗɗe.</strong> Adiresoshin gidan waya a matsayin sassa daban-daban na XML (titi, gari, lambar gidan waya, ƙasa) maimakon layukan rubutu kyauta. Daga 14 ga Nuwamba 2026, CBPR+ tana ƙin adiresoshi marasa tsari gaba ɗaya; <em>haɗaɗɗe</em> — gari da ƙasa masu tsari tare da layukan adireshi biyu na haruffa 70 — ya ci gaba da inganci.</p>
+<p><strong>Adireshi mai tsari / haɗaɗɗe.</strong> Adiresoshin gidan waya a matsayin sassa daban-daban na XML (titi, gari, lambar gidan waya, ƙasa) maimakon layukan rubutu kyauta. Daga Nuwamba 2026 (SR 2026), CBPR+ tana ƙin adiresoshi marasa tsari gaba ɗaya; <em>haɗaɗɗe</em> — gari da ƙasa masu tsari tare da layukan adireshi biyu na haruffa 70 — ya ci gaba da inganci.</p>
 <p><strong>NbOfTxs / CtrlSum.</strong> Jimillolin sarrafawa na kan rukunin saƙo: yawan mu'amaloli da jimillar kuɗi. Bankuna suna sake ƙidaya su; idan naka bai dace ba, fayil ɗin zai koma. Pain001 tana samo su koyaushe daga rikodin da aka tantance.</p>
 <p><strong>Mai ɗaukar kuɗin hidima.</strong> Wanda ke biyan kuɗaɗen hidima: <code>DEBT</code> (mai aikawa), <code>CRED</code> (mai karɓa), <code>SHAR</code> (a raba), <code>SLEV</code> (bisa ƙa'idar tsari). Tsofaffin MT <code>OUR</code>/<code>BEN</code>/<code>SHA</code> suna dacewa da ukun farko.</p>
 <p><strong>Bayanin dalilin biya.</strong> Filin "me ake biya" — rubutu kyauta (haruffa 140) ko nuni mai tsari. Abin da ƙungiyoyin daidaita asusu ke fatan kowa ya cika shi yadda ya kamata.</p>
