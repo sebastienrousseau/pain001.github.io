@@ -29,7 +29,6 @@ logo_height: 36
 logo_width: 36
 logo: "https://pain001.com/img/pain001.svg"
 menu: active
-measurementID: G-167B274ZWJ
 name: Pain001
 permalink: "https://pain001.com/fr/"
 rating: general

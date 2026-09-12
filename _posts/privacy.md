@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "No cookies, no analytics, no tracking. The website stores only your theme choice locally, and the Pain001 software processes all payment data on your own infrastructure."
+description: "No cookies, no third-party analytics, no tracking. The website stores only your theme choice locally, counts five interactions without identifying you, and the Pain001 software processes all payment data on your own infrastructure."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
@@ -29,7 +29,6 @@ logo_height: 36
 logo_width: 36
 logo: "https://pain001.com/img/pain001.svg"
 menu: active
-measurementID: G-167B274ZWJ
 name: Pain001
 permalink: "https://pain001.com/privacy/"
 rating: general
@@ -37,7 +36,7 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "No cookies, no analytics, no tracking. Your theme choice stays in your browser; your payment data stays on your machines."
+subtitle: "No cookies, no third-party analytics, no tracking. Your theme choice stays in your browser; your payment data stays on your machines; five interactions are counted without identifying you."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
 title: "Privacy: This Site Collects Nothing"
@@ -47,7 +46,7 @@ atom_link: "https://pain001.com/privacy/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.47)"
-item_description: "No cookies, no analytics, no tracking. The website stores only your theme choice locally, and the Pain001 software processes all payment data on your own infrastructure."
+item_description: "No cookies, no third-party analytics, no tracking. The website stores only your theme choice locally, counts five interactions without identifying you, and the Pain001 software processes all payment data on your own infrastructure."
 item_guid: "https://pain001.com/privacy/rss.xml"
 item_link: "https://pain001.com/privacy/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -68,7 +67,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: @wwdseb
-twitter_description: "No cookies, no analytics, no tracking. The website stores only your theme choice locally, and the Pain001 software processes all payment data on your own infrastructure."
+twitter_description: "No cookies, no third-party analytics, no tracking. The website stores only your theme choice locally, counts five interactions without identifying you, and the Pain001 software processes all payment data on your own infrastructure."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: @wwdseb
@@ -83,7 +82,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Legal"
-excerpt: "The privacy position of pain001.com and the Pain001 software, in full: the website sets no cookies and runs no analytics; GitHub Pages serves the static files; the software processes every payment record locally with no telemetry, no SaaS callback, and no data transmission of any kind."
+excerpt: "The privacy position of pain001.com and the Pain001 software, in full: the website sets no cookies and runs no third-party analytics; GitHub Pages serves the static files; the software processes every payment record locally with no telemetry, no SaaS callback, and no data transmission of any kind."
 last_reviewed: "2026-07-26"
 
 ---
@@ -92,9 +91,10 @@ The short version: this site collects nothing, and the software processes everyt
 
 ## This website
 
-- **No cookies, no analytics scripts, no tracking pixels.** The only state stored in your browser is your light/dark theme choice, kept in `localStorage` and never transmitted.
+- **Five interactions are counted, nobody is identified.** The site sends a cookieless page view and five named events (a demo run, a demo XML download, a corpus zip download, a click through to PyPI, a contact form submission) to the project's own measurement host, `metrics.pain001.com`, which runs [Umami](https://umami.is/) under the project's control. The record carries the page path, the referring site if it is not this one, your language, your screen size and the page title, and nothing else: no cookie, no fingerprint, no IP address kept, no identifier of any kind. If your browser sends Do-Not-Track or Global Privacy Control, nothing is sent at all. The script is served from this origin and its source is [public](https://github.com/sebastienrousseau/pain001.github.io/blob/main/static/js/metrics.js).
+- **No third-party analytics scripts, no tracking pixels.** The only state stored in your browser is your light/dark theme choice, kept in `localStorage` and never transmitted.
 - **Hosting.** The site is served as static files by GitHub Pages, which may log standard request metadata (IP address, user agent) under [GitHub's privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement).
-- **Assets.** Every asset — logo, fonts, styles, scripts, the demo's WebAssembly runtime and schemas — is served from this origin. The site makes **no third-party requests at all**; nothing on it can report your visit to anyone else.
+- **Assets.** Every asset — logo, fonts, styles, scripts, the demo's WebAssembly runtime and schemas — is served from this origin. Apart from the measurement beacon to the project's own `metrics.pain001.com`, the site makes **no third-party requests at all**; nothing on it can report your visit to anyone else.
 
 ## The Pain001 software
 
