@@ -17,6 +17,11 @@ on:
 permissions:
   contents: read
 
+env:
+  # The one ssg pin: the cache key and the install step both read it,
+  # so a bump can never update one and leave the other behind.
+  SSG_VERSION: 0.0.47
+
 jobs:
   build-and-audit:
     runs-on: ubuntu-latest
@@ -32,11 +37,11 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cargo/bin/ssg
-          key: ssg-0.0.47-${{ runner.os }}
+          key: ssg-${{ env.SSG_VERSION }}-${{ runner.os }}
 
-      - name: Install ssg 0.0.47
+      - name: Install ssg
         if: steps.cache-ssg.outputs.cache-hit != 'true'
-        run: cargo install ssg --locked --version 0.0.47
+        run: cargo install ssg --locked --version "$SSG_VERSION"
 
       - name: Set up Node (build samples, tests, pa11y)
         uses: actions/setup-node@v4
