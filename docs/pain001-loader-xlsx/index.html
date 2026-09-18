@@ -194,6 +194,7 @@
 <p>Install it and it just works: the loader registers under the <code>pain001.loaders</code> entry point and is auto-discovered — <code>pain001 -t pain.001.001.09 -d payments.xlsx -o out/</code> needs no further configuration.</p>
 <pre><code class="language-bash">pip install pain001 pain001-loader-xlsx</code></pre>
 <hr />
+<p>Coming from a spreadsheet for the first time? <a href="/excel-to-pain001/">From Excel to a validated pain.001 file</a> walks the one command and what it protects you from before this reference.</p>
 <h2 id="01-the-iban-safety-guard">01. The IBAN safety guard<a class="heading-anchor" href="#01-the-iban-safety-guard" aria-label="Link to section: 01. The IBAN safety guard">#</a></h2>
 <p>Excel converts anything that looks like a number into a number. An IBAN pasted into a <code>General</code>-formatted cell can lose structure before you ever export it — and a corrupted debtor account is exactly the kind of error that surfaces as a bank-side rejection days later.</p>
 <p>The loader refuses to let that happen. If any cell in the <code>debtor_account_IBAN</code>, <code>creditor_account_IBAN</code>, or <code>charge_account_IBAN</code> columns arrives as a numeric type, the load <strong>stops with a clear error</strong> telling you to re-format the column as Text. Matching is case-insensitive, and the failure happens before a single record is validated — fail fast, fail loud.</p>

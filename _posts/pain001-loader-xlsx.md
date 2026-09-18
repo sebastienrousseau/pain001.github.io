@@ -97,6 +97,8 @@ pip install pain001 pain001-loader-xlsx
 
 ---
 
+Coming from a spreadsheet for the first time? [From Excel to a validated pain.001 file](/excel-to-pain001/) walks the one command and what it protects you from before this reference.
+
 ## 01. The IBAN safety guard
 
 Excel converts anything that looks like a number into a number. An IBAN pasted into a `General`-formatted cell can lose structure before you ever export it — and a corrupted debtor account is exactly the kind of error that surfaces as a bank-side rejection days later.
