@@ -1,2 +1,0 @@
-User-agent: *
-Sitemap: https://pain001.com/nl/corpus-gb-bacs-supplier-run/sitemap.xml

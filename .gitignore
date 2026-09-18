@@ -10,8 +10,8 @@ src/.DS_Store
 tarpaulin-report.html
 .ssg-cache/
 .ssg-plugin-cache.json
-docs/.ssg-cache/
-docs/.ssg-plugin-cache.json
+# The built site. Deployed from ci.yml as a Pages artifact, never committed.
+docs/
 
 # Local-only accessibility tooling (see scripts/a11y_local.mjs)
 .a11y-tools/

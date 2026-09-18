@@ -1,2 +1,0 @@
-User-agent: *
-Sitemap: https://pain001.com/excel-to-pain001/sitemap.xml

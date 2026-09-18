@@ -6,6 +6,11 @@ release that produced them.
 
 ## 2026-09-18
 
+- The built site is no longer committed: `ci.yml` deploys `docs/` to GitHub
+  Pages from the run that passed every gate, the previous deploy's
+  fingerprinted assets are fetched from the live site instead of copied
+  from the tree, and the `docs/` merge conflicts are gone. CodeQL over the
+  first-party JavaScript and the Python scripts.
 - Site hygiene: icon links on the taxonomy pages, which had answered every
   visit with a 404 for `/favicon.ico`; lower layout cost on the corpus index;
   this README rewritten around the pipeline and the gates; this changelog.
