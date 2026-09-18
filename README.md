@@ -29,7 +29,7 @@ fronts the domain.
 | `_posts/` | Page content (Markdown + front matter), the source of truth. Corpus scenario pages (`corpus-*.md`, `<locale>-corpus-*.md`) and message-spec pages are **generated**; edit the generator, not the page |
 | `_layouts/` | HTML templates: `index`, `page`, `contact`, `try` (the demo). The CSP meta and the measurement beacon live here |
 | `static/` | Copied verbatim into the output: the demo's ES modules (`js/`), the vendored Pyodide runtime and wheels (`pyodide/`), corpus files, schemas and samples (`corpus/`), the service worker, the vendored analytics beacon |
-| `scripts/` | Generators, post-build repairs, translation tables and the validators CI runs (see below) |
+| `scripts/` | Generators, the post-build passes (listed below), translation tables and the validators CI runs |
 | `tests/` | Node tests: demo input handling and the browser engine integration run against the vendored runtime |
 | `docs/` | The built site. Committed, served by GitHub Pages, **never edited by hand** |
 | `.github/workflows/` | `ci.yml` (build and every gate on push and PR) and `regenerate.yml` (release-triggered regeneration, opens a PR) |
@@ -51,6 +51,27 @@ the governance page), `ssg build`, `scripts/postbuild_fix.py` (head and body
 repairs, tag pages, the 34-locale variants of the core pages, the six-locale
 corpus variants, Dataset JSON-LD, `llms.txt`, footer version stamp, sitemap),
 the `static/` copy, sample CSV generation, and the service-worker cache stamp.
+
+## The post-build passes
+
+`scripts/postbuild_fix.py` runs once over the ssg output before the
+`static/` copy, then once more with `--stamp-sw` after it. Each pass
+exists because a specific defect shipped without it; the script's
+docstrings say which.
+
+| Pass | What it does |
+| :--- | :--- |
+| Per-page repairs | Unescape the head metas and body markup ssg entity-escaped; drop duplicate `description` and `viewport` metas; re-escape inline `<code>` so element names read as text; add heading ids, anchors, a Contents block and a reading time; wrap tables for horizontal scroll and stamp their column labels; flatten nested `<pre>`; strip `align` attributes; move body stylesheets to the head |
+| `add_version_requirements` | Version literals on the package pages, before the locale copies are made |
+| `fix_tag_pages` | The taxonomy pages ssg emits outside the layouts: CSP, og:image, stylesheet, viewport, icon links and the measurement beacon |
+| `fix_social_descriptions`, `fix_double_encoded_meta`, `fix_manifest` | Share-card descriptions aligned with the page, doubled entities undone, the web-app manifest colour |
+| `fix_try_strip` | The status strip mirrored onto the demo page |
+| `localise_pages`, `gen_try_locales`, `gen_journey_locales` | The 34 locale variants of the home page, the demo and the journey and docs pages, from the translation tables in `scripts/*_i18n/` |
+| `relocate_corpus_locales` | The five-locale corpus scenario pages moved under `/<locale>/`, their six-way hreflang cluster, and the paths ssg derived from file names rewritten in feeds, tag pages and the search index |
+| `inject_dataset_ld`, `write_llms` | schema.org Dataset markup per scenario page from `scripts/corpus_pages.json`; `llms.txt` and `llms-full.txt` for agents |
+| `stamp_suite_version` | "Generated against pain001 X" inside every footer |
+| security.txt mirror, `regen_sitemap`, `gen_legacy_redirects` | `/.well-known/security.txt`, the sitemap from what was built, redirect stubs for the old localised-brief URLs |
+| `--stamp-sw` | The service worker's cache name derived from the bytes it caches, run after `static/` and the samples exist |
 
 ## Regenerating from a library release
 
