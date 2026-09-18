@@ -114,12 +114,12 @@ Figures refreshed at each site build from public sources (PyPI download statisti
 
 | Measure | Value | Source |
 | :--- | ---: | :--- |
-| pain001 downloads, last 30 days | 3,499 | PyPI |
-| pain001 downloads, last 7 days | 381 | PyPI |
+| pain001 downloads, last 30 days | 4,173 | PyPI |
+| pain001 downloads, last 7 days | 1,561 | PyPI |
 | GitHub stars | 49 | GitHub |
 | GitHub forks | 15 | GitHub |
 
-Refreshed 2026-09-12. Demo runs and corpus downloads will appear here once the site's [first-party measurement](/privacy/) is live.
+Refreshed 2026-09-18. Page views are counted by Cloudflare Web Analytics, cookieless and without identifiers ([privacy](/privacy/)); the browser demo is not measured, by design.
 <!-- traction:end -->
 
 ## Trademark

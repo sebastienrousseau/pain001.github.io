@@ -8,7 +8,7 @@
     <title>Privacy: This Site Collects Nothing</title>
 
     <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
-<meta name="description" content="No cookies, no third-party analytics, no tracking. The website stores only your theme choice locally, counts five interactions without identifying you, and the Pain001 software processes all payment data on your own infrastructure.">
+<meta name="description" content="No cookies, no tracking, no identifiers. The website stores only your theme choice locally, counts page views through Cloudflare Web Analytics without identifying you, and the Pain001 software processes all payment data on your own infrastructure.">
 <meta name="keywords" content="pain001 privacy policy, no tracking, local processing, payment data privacy">
 <meta property="og:image" content="https://pain001.com/og/pain001-card.jpg" />
     <meta property="og:image:width" content="1200" />
@@ -19,7 +19,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Privacy: This Site Collects Nothing">
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self' https://metrics.pain001.com; font-src 'self'; form-action 'self' https://formspree.io" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; script-src 'self'  'wasm-unsafe-eval'; connect-src 'self' https://cloudflareinsights.com; font-src 'self'; form-action 'self' https://formspree.io" />
     <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -45,13 +45,13 @@
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="Privacy: This Site Collects Nothing">
-<meta property="og:description" content="No cookies, no third-party analytics, no tracking. The website stores only your theme choice locally, counts five interactions without identifying you, and the Pain001 software processes all payment data on your own infrastructure.">
+<meta property="og:description" content="No cookies, no tracking, no identifiers. The website stores only your theme choice locally, counts page views through Cloudflare Web Analytics without identifying you, and the Pain001 software processes all payment data on your own infrastructure.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://pain001.com/privacy/">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Privacy: This Site Collects Nothing">
-<meta name="twitter:description" content="No cookies, no third-party analytics, no tracking. The website stores only your theme choice locally, counts five interactions without identifying you, and the Pain001 software processes all payment data on your own infrastructure.">
+<meta name="twitter:description" content="No cookies, no tracking, no identifiers. The website stores only your theme choice locally, counts page views through Cloudflare Web Analytics without identifying you, and the Pain001 software processes all payment data on your own infrastructure.">
 <meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg">
 <link rel="canonical" href="https://pain001.com/privacy/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
 <link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"></head>
@@ -181,7 +181,7 @@
           </nav>
           <p class="eyebrow">Legal</p>
           <h1 class="page-title">Privacy: This Site Collects Nothing</h1>
-          <p class="deck">No cookies, no third-party analytics, no tracking. Your theme choice stays in your browser; your payment data stays on your machines; five interactions are counted without identifying you.</p>
+          <p class="deck">No cookies, no tracking, no identifiers. Your theme choice stays in your browser; your payment data stays on your machines; page views are counted without identifying you.</p>
           <div class="article-meta"><span>1 min read</span>
             <span>Last reviewed <time datetime="2026-07-26">26 July 2026</time></span>
           </div>
@@ -193,10 +193,10 @@
           <div lang="en"><p>The short version: this site collects nothing, and the software processes everything locally.</p>
 <h2 id="this-website">This website<a class="heading-anchor" href="#this-website" aria-label="Link to section: This website">#</a></h2>
 <ul>
-<li><strong>Five interactions are counted, nobody is identified.</strong> The site sends a cookieless page view and five named events (a demo run, a demo XML download, a corpus zip download, a click through to PyPI, a contact form submission) to the project's own measurement host, <code>metrics.pain001.com</code>, which is <a href="https://www.goatcounter.com/">GoatCounter</a>, an open-source, cookieless counter operated for the project under its published privacy policy. The record carries the page path, the referring site if it is not this one, your language, your screen size and the page title, and nothing else: no cookie, no fingerprint, no IP address kept, no identifier of any kind. If your browser sends Do-Not-Track or Global Privacy Control, nothing is sent at all. The script is served from this origin and its source is <a href="https://github.com/sebastienrousseau/pain001.github.io/blob/main/static/js/metrics.js">public</a>.</li>
-<li><strong>No third-party analytics scripts, no tracking pixels.</strong> The only state stored in your browser is your light/dark theme choice, kept in <code>localStorage</code> and never transmitted.</li>
+<li><strong>Page views are counted, nobody is identified.</strong> Every page except the <a href="/try/">browser demo</a> loads <a href="https://www.cloudflare.com/web-analytics/">Cloudflare Web Analytics</a>, a cookieless beacon operated by Cloudflare, Inc., which already fronts this domain, under <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a>. It records the page path, the referring site, your country, your browser family and Core Web Vitals timings; it sets no cookie, stores no IP address, builds no fingerprint and assigns no identifier, so two visits by the same person cannot be joined. The beacon script itself is served from this origin (a vendored copy, so no third-party code is fetched); its one request goes to Cloudflare. It is absent from the demo page, whose "Verify it yourself" panel invites you to confirm that with DevTools open.</li>
+<li><strong>No tracking pixels, no advertising or session-replay scripts.</strong> The only state stored in your browser is your light/dark theme choice, kept in <code>localStorage</code> and never transmitted.</li>
 <li><strong>Hosting.</strong> The site is served as static files by GitHub Pages, which may log standard request metadata (IP address, user agent) under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">GitHub's privacy statement</a>.</li>
-<li><strong>Assets.</strong> Every asset — logo, fonts, styles, scripts, the demo's WebAssembly runtime and schemas — is served from this origin. Apart from the measurement beacon to the project's own <code>metrics.pain001.com</code>, the site makes <strong>no third-party requests at all</strong>; nothing on it can report your visit to anyone else.</li>
+<li><strong>Assets.</strong> Every asset — logo, fonts, styles, scripts, the demo's WebAssembly runtime and schemas — is served from this origin. Apart from the beacon's one request to Cloudflare named above, the site makes <strong>no third-party requests at all</strong>; on the demo page it makes none.</li>
 </ul>
 <h2 id="the-pain001-software">The Pain001 software<a class="heading-anchor" href="#the-pain001-software" aria-label="Link to section: The Pain001 software">#</a></h2>
 <ul>
@@ -281,7 +281,7 @@
           "@id": "https://pain001.com/privacy/",
           "url": "https://pain001.com/privacy/",
           "name": "Privacy: This Site Collects Nothing",
-          "description": "No cookies, no third-party analytics, no tracking. The website stores only your theme choice locally, counts five interactions without identifying you, and the Pain001 software processes all payment data on your own infrastructure.",
+          "description": "No cookies, no tracking, no identifiers. The website stores only your theme choice locally, counts page views through Cloudflare Web Analytics without identifying you, and the Pain001 software processes all payment data on your own infrastructure.",
           "inLanguage": "en-GB",
           "dateModified": "2026-07-26",
           "isPartOf": { "@id": "https://pain001.com/#website" },
@@ -318,7 +318,7 @@
     </script>
 
     <script src="/_csp/197fcfccbee69bda.js" integrity="sha384-geygAAYoalTqpA6bIgsGUMRQupyTiF/rCnvMiGE5+G0s0ZOYAhHnkhzyMXN9yNxa" crossorigin="anonymous"></script>
-    <script type="module" src="/js/metrics.js" data-enabled="false" data-host-url="https://metrics.pain001.com"></script>
+    <script defer src="/js/cf-beacon.min.js" data-cf-beacon='{"token": "7e7c74d9aa9046ff8d3bf7c56e5a510d"}'></script>
   
 <!-- SSG Search Widget -->
 <div id="ssg-search-widget">

@@ -49,7 +49,7 @@ jobs:
       - name: Audit gates (fail on warnings)
         run: ssg audit -f ssg.toml -o docs --severity warn --fail-on warn
 
-      - name: Unit tests (demo input handling, measurement)
+      - name: Unit tests (demo input handling)
         run: node --test tests/*.test.mjs
 
       - name: Browser engine runs the library (Node, vendored runtime)

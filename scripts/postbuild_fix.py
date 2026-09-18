@@ -53,7 +53,7 @@ CSP_META = (
     "object-src 'none'; img-src 'self' data:; "
     "style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; "
     "script-src 'self'  'wasm-unsafe-eval'; "
-    "connect-src 'self' https://metrics.pain001.com; font-src 'self'; "
+    "connect-src 'self' https://cloudflareinsights.com; font-src 'self'; "
     "form-action 'self' https://formspree.io\" "
     "http-equiv=Content-Security-Policy>"
 )
@@ -1007,6 +1007,7 @@ def add_version_requirements(site: Path) -> None:
 
 
 TAXONOMY_CSS = '<link rel="stylesheet" href="/css/taxonomy.css" />'
+BEACON_TAG = '<script defer src="/js/cf-beacon.min.js" data-cf-beacon=\'{"token": "7e7c74d9aa9046ff8d3bf7c56e5a510d"}\'></script>'
 TAXONOMY_VIEWPORT = (
     '<meta name="viewport" content="width=device-width, initial-scale=1" />'
 )
@@ -1062,6 +1063,10 @@ def fix_tag_pages(site: Path) -> None:
         if inject:
             page.write_text(html.replace("</head>", inject + "</head>", 1), encoding="utf-8")
             print(f"[postbuild] patched tag page: {page}")
+        html = page.read_text(encoding="utf-8")
+        if "cf-beacon.min.js" not in html and "</body>" in html:
+            # the same page-view beacon the layouts carry (see METRICS.md)
+            page.write_text(html.replace("</body>", BEACON_TAG + "</body>", 1), encoding="utf-8")
 
 
 def fix_manifest(site: Path) -> None:

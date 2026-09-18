@@ -1,46 +1,36 @@
-# Measurement: what is counted and how to switch it on
+# Measurement: what is counted and how
 
-pain001.com counts one page view and five interactions, cookieless and without
-identifiers, through GoatCounter at the project's own host. Nothing is sent
-until the layout enables it; until then the script is a no-op.
+pain001.com counts page views through [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/):
+cookieless, no IP address stored, no fingerprint, no identifier. Cloudflare already fronts the domain,
+so measurement adds no new processor.
 
 ## What is counted
 
-| Event | Fired by |
-| :--- | :--- |
-| page view | every page load |
-| `try_run` | the demo's "Run" button (`data-track` on `#run-btn`) |
-| `try_download_xml` | the demo's XML download button |
-| `corpus_zip_download` | any link to `/corpus/*.zip` |
-| `install_click` | any link to `https://pypi.org/project/pain001*` |
-| `contact_submit` | the contact form's submit |
+Page views, paths, referrers, country, browser family and Core Web Vitals, on every page **except
+`/try/`**. The browser demo carries no beacon: its "Verify it yourself" panel tells visitors there is no
+analytics script and invites them to confirm it with DevTools open, and that claim stays true.
 
-Do-Not-Track and Global Privacy Control switch everything off. The payload is
-the page path, the referrer when it is another site, language, screen size and
-title. Source: `static/js/metrics.js` and `static/js/metrics-core.js`; tests in
-`tests/metrics.test.mjs`.
+Custom events are not available in Cloudflare Web Analytics, so demo runs, downloads and PyPI clicks
+are not counted. PyPI download figures come from PyPI itself (`scripts/traction.py`).
 
-## Switching it on (one-time, maintainer)
+## Where it lives
 
-1. **Create a [GoatCounter](https://www.goatcounter.com/) site** (open source,
-   cookieless, no personal data; free for non-commercial use, paid plans for
-   commercial use). Choose the code `pain001`, so the site lives at
-   `pain001.goatcounter.com`.
-2. **Custom domain.** In GoatCounter's settings set the custom domain to
-   `metrics.pain001.com`, and add a DNS CNAME `metrics.pain001.com` →
-   `pain001.goatcounter.com`. GitHub Pages cannot proxy, so the beacon goes to
-   this subdomain directly; the site's Content-Security-Policy already allows
-   it in `connect-src`. (Without a custom domain, set `data-host-url` to
-   `https://pain001.goatcounter.com` and add that host to `connect-src` in
-   the four layouts and `scripts/postbuild_fix.py`.)
-3. **Enable.** In the four layouts (`_layouts/*.html`) change the metrics
-   script tag's `data-enabled="false"` to `"true"`.
-4. **Rebuild and deploy.** `./build.sh`, commit `docs/`. Page views appear in
-   GoatCounter immediately; the five events appear under Events, named
-   `try_run`, `try_download_xml`, `corpus_zip_download:<file>`,
-   `install_click:<package>` and `contact_submit:<form>`.
+- The beacon is **vendored** at `static/js/cf-beacon.min.js` (Cloudflare's `beacon.min.js`, version
+  2026.9.1, sha256 `08c4fd72f9d96a7aa554510dff2c293973b1b092dff1b9b282bce9111b50ef41`) and served from
+  this origin. Cloudflare publishes no SRI hash and replaces the file without notice, so loading it
+  from their CDN would either fail the audit's SRI gate or silently stop measuring on their next
+  release. Refresh it with `scripts/refresh_beacon.sh` and commit the new bytes.
+- The tag sits at the end of `_layouts/index.html`, `_layouts/page.html` and `_layouts/contact.html`
+  (not `_layouts/try.html`); `postbuild_fix.fix_tag_pages` adds the same tag to the taxonomy pages ssg
+  emits outside the layouts. The token is public by design; it identifies the site, not a visitor.
+- One Content-Security-Policy applies to every page: `script-src 'self'`, and `connect-src 'self'
+  https://cloudflareinsights.com` for the beacon's one POST to `/cdn-cgi/rum`. The demo page has the
+  same policy but no beacon, so it makes no such request.
+- The dashboard: Cloudflare, Team Rousseau account, Analytics & Logs, Web Analytics, site `pain001.com`,
+  set to "Enable with JS Snippet installation" so Cloudflare does not inject the beacon into every
+  response (which would put it on the demo page).
 
-GoatCounter's own `count.js` is not used: the site sends the same `/count`
-request from a first-party script, so no third-party code runs on the page.
-GoatCounter also honours Do-Not-Track on its side; the script never sends
-under Do-Not-Track or Global Privacy Control.
+## Switching it off
+
+Remove the three layout tags, the `fix_tag_pages` injection and the vendored file, and drop
+`https://cloudflareinsights.com` from `connect-src`; nothing else depends on it.
