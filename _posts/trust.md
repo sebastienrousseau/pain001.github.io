@@ -109,7 +109,7 @@ This page exists so that a security, vendor-risk, or audit reviewer can answer s
 ## 03. Data and privacy
 
 - **Product data flows** — every component (CLI, library, REST service, MCP server, LSP server) executes on your infrastructure. There is no telemetry, no SaaS callback, no network dependency for generation or validation. [Privacy position](/privacy/).
-- **Website** — no cookies, no third-party analytics, and no requests to third parties: every asset is served from this origin, and the only beacon goes to the project's own `metrics.pain001.com` (cookieless, five named events, off under Do-Not-Track and Global Privacy Control; see the [privacy page](/privacy/)). The [browser demo](/try/) reads files locally via the FileReader API; the "Verify it yourself" panel on that page shows how to falsify this with DevTools open.
+- **Website** — no cookies and no identifiers: every asset is served from this origin, and every script is served from this origin, and the one third-party request is the Cloudflare Web Analytics beacon's cookieless page-view count, which records without an IP address, fingerprint or identifier (see the [privacy page](/privacy/)). The demo page carries no beacon at all. The [browser demo](/try/) reads files locally via the FileReader API; the "Verify it yourself" panel on that page shows how to falsify this with DevTools open.
 - **Demo boundary** — the browser demo runs the pain001 library itself inside a Python runtime compiled to WebAssembly, served from this origin and cached by a service worker: records, generated XML and verdicts never leave the page, and after first load the demo works offline, which is the strongest proof no data leaves your machine.
 
 ## 04. Accessibility
