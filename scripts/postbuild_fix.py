@@ -1007,6 +1007,10 @@ def add_version_requirements(site: Path) -> None:
 
 
 TAXONOMY_CSS = '<link rel="stylesheet" href="/css/taxonomy.css" />'
+# The layouts carry these; the taxonomy pages did not, so every visit
+# to a tag page requested /favicon.ico and got a 404.
+TAXONOMY_ICONS = ('<link rel="icon" type="image/svg+xml" href="/img/pain001.svg" sizes="any" />'
+                  '<link rel="apple-touch-icon" href="/img/pain001.svg" />')
 BEACON_TAG = '<script defer src="/js/cf-beacon.min.js" data-cf-beacon=\'{"token": "7e7c74d9aa9046ff8d3bf7c56e5a510d"}\'></script>'
 TAXONOMY_VIEWPORT = (
     '<meta name="viewport" content="width=device-width, initial-scale=1" />'
@@ -1060,6 +1064,8 @@ def fix_tag_pages(site: Path) -> None:
             inject += TAXONOMY_CSS
         if 'name="viewport"' not in html:
             inject += TAXONOMY_VIEWPORT
+        if 'rel="icon"' not in html:
+            inject += TAXONOMY_ICONS
         if inject:
             page.write_text(html.replace("</head>", inject + "</head>", 1), encoding="utf-8")
             print(f"[postbuild] patched tag page: {page}")

@@ -586,6 +586,12 @@
 
       /* Print: the executive brief (and any page) prints as a clean
          document — chrome removed, links written out. */
+            /* Long reference pages (the corpus index carries twenty tables) pay
+         their layout cost up front. Below-the-fold tables render when
+         scrolled to; the placeholder height keeps scrollbars stable and
+         in-page anchors keep working. Print renders everything. */
+      .table-responsive { content-visibility: auto; contain-intrinsic-size: auto 320px; }
+
       @media print {
         .ap-nav, .footer, .breadcrumb, .totop, .progress, .skip-link,
         #themeToggle, .nav-cta, .heading-anchor, .status-strip,
