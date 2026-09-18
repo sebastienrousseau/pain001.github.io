@@ -25,7 +25,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 POSTS = ROOT / "_posts"
-VERSION = re.compile(r"\bv?0\.0\.(\d{2,3})\b")
+# One to three digits (v0.0.2 was a stale claim the two-digit form let
+# through), never inside a dotted quad such as the 0.0.0.0 bind address.
+VERSION = re.compile(r"(?<![\d.])v?0\.0\.(\d{1,3})(?![.\d])")
 HISTORY = re.compile(r"^generator:|min_pain001:|\bonward\b|\bsince\b|<!-- history -->")
 PYPI = "https://pypi.org/pypi/pain001/json"
 
