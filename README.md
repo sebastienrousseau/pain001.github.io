@@ -19,8 +19,8 @@ treasury engineer, an integrator or an AI agent into an installed user, and
 to hand a regulated buyer the evidence they need.
 
 Built with the [Shokunin Static Site Generator (ssg)][00] **0.0.47 exactly**
-and published to GitHub Pages from `docs/` on the default branch. Cloudflare
-fronts the domain.
+and deployed to GitHub Pages by `ci.yml` from the same run that passed every
+gate; the built tree is never committed. Cloudflare fronts the domain.
 
 ## Repository layout
 
@@ -31,8 +31,8 @@ fronts the domain.
 | `static/` | Copied verbatim into the output: the demo's ES modules (`js/`), the vendored Pyodide runtime and wheels (`pyodide/`), corpus files, schemas and samples (`corpus/`), the service worker, the vendored analytics beacon |
 | `scripts/` | Generators, the post-build passes (listed below), translation tables and the validators CI runs |
 | `tests/` | Node tests: demo input handling and the browser engine integration run against the vendored runtime |
-| `docs/` | The built site. Committed, served by GitHub Pages, **never edited by hand** |
-| `.github/workflows/` | `ci.yml` (build and every gate on push and PR) and `regenerate.yml` (release-triggered regeneration, opens a PR) |
+| `docs/` | The built site, produced by `build.sh`; ignored by git and uploaded by CI as the Pages artifact |
+| `.github/workflows/` | `ci.yml` (build, every gate, and on `main` the Pages deploy), `regenerate.yml` (release-triggered regeneration, opens a PR), `codeql.yml` |
 
 ## Build
 
@@ -72,6 +72,10 @@ docstrings say which.
 | `stamp_suite_version` | "Generated against pain001 X" inside every footer |
 | security.txt mirror, `regen_sitemap`, `gen_legacy_redirects` | `/.well-known/security.txt`, the sitemap from what was built, redirect stubs for the old localised-brief URLs |
 | `--stamp-sw` | The service worker's cache name derived from the bytes it caches, run after `static/` and the samples exist |
+
+`build.sh` also runs `scripts/carry_forward_assets.py`, which fetches the
+fingerprinted `/_csp/` assets the live pages still reference into the new
+build, so cached HTML keeps working through the CDN's ten-minute window.
 
 ## Regenerating from a library release
 
@@ -114,10 +118,9 @@ The layout, performance and accessibility gates need `docs/` served locally:
 ## Editing content
 
 Edit the Markdown in `_posts/`; keep `title`, `description` and `keywords`
-unique per page; run the build and the gates; commit the source **and** the
-regenerated `docs/`. Because `docs/` is committed, a branch that is behind
-`main` conflicts there on every merge: resolve by taking either side and
-rebuilding, never by hand-merging built HTML.
+unique per page; run the build and the gates; commit the source only. The
+built `docs/` is not tracked: CI rebuilds it on every push and deploys it
+from `main`, so there is nothing to merge by hand.
 
 Translated pages are produced at post-build from tables keyed by exact
 fragments of the built English HTML (`scripts/pages_i18n`, `docs_i18n`,

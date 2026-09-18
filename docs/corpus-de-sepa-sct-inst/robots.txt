@@ -1,2 +1,0 @@
-User-agent: *
-Sitemap: https://pain001.com/corpus-de-sepa-sct-inst/sitemap.xml

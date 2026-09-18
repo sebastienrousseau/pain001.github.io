@@ -62,8 +62,13 @@ python3 scripts/postbuild_fix.py Pain001 --stamp-sw
 if [ -d docs/_csp ]; then
   rsync -a --ignore-existing docs/_csp/ Pain001/_csp/
 fi
+# docs/ is no longer committed: in CI there is no previous build to copy
+# from, so the assets the live pages reference are fetched instead.
+python3 scripts/carry_forward_assets.py Pain001
 
 # Publish: replace docs/ content with the fresh build (keep the dir itself).
+# docs/ is untracked; CI uploads it as the Pages artifact.
+mkdir -p docs
 rsync -a --delete --exclude '.ssg-cache' Pain001/ docs/
 
 rm -rf output Pain001

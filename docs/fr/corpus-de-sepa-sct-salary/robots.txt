@@ -1,2 +1,0 @@
-User-agent: *
-Sitemap: https://pain001.com/fr/corpus-de-sepa-sct-salary/sitemap.xml
