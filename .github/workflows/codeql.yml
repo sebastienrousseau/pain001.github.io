@@ -25,7 +25,21 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [javascript-typescript, python]
+        # Per-language paths: the Python extractor treats every entry as a
+        # directory, so the service worker file belongs to the JavaScript
+        # config only. The vendored Pyodide runtime and the corpus data are
+        # not first-party code.
+        include:
+          - language: javascript-typescript
+            paths: |
+                - static/js
+                - static/sw.js
+                - scripts
+                - tests
+          - language: python
+            paths: |
+                - scripts
+                - tests
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
@@ -36,10 +50,7 @@ jobs:
           queries: +security-and-quality
           config: |
             paths:
-              - static/js
-              - static/sw.js
-              - scripts
-              - tests
+            ${{ matrix.paths }}
             paths-ignore:
               - static/pyodide
               - docs
