@@ -8,12 +8,12 @@
     <title>MT101 to pain.001 Conversion: pain001-loader-mt101</title>
 
     <meta name="author" content="contact@pain001.com (Sebastien Rousseau)">
-<meta name="description" content="Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict error handling, ready for the 14 Nov 2026 relay cutover.">
+<meta name="description" content="Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict error handling, ready for the Swift Standards Release 2026 (SR 2026) relay cutover.">
 <meta name="keywords" content="MT101 to pain.001, MT101 mapping, SWIFT MT101 converter, MT101 decommission 2026, request for transfer, MT-MX migration, pain.001.001.09">
 <meta property="og:image" content="https://pain001.com/og/pain001-card.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="A legacy SWIFT MT101 message beside its regenerated ISO 20022 pain.001 XML — the migration path for the November 2026 interbank relay decommission." />
+    <meta property="og:image:alt" content="A legacy SWIFT MT101 message beside its regenerated ISO 20022 pain.001 XML — the migration path for the Swift Standards Release 2026 interbank relay decommission." />
     <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
     <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -45,13 +45,13 @@
   <link rel="alternate" type="application/feed+json" title="JSON Feed" href="https://pain001.com/feed.json"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="mobile-web-app-capable" content="yes"><meta property="og:title" content="MT101 to pain.001 Conversion: pain001-loader-mt101">
-<meta property="og:description" content="Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict error handling, ready for the 14 Nov 2026 relay cutover.">
+<meta property="og:description" content="Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict error handling, ready for the Swift Standards Release 2026 (SR 2026) relay cutover.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://pain001.com/pain001-loader-mt101/">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MT101 to pain.001 Conversion: pain001-loader-mt101">
-<meta name="twitter:description" content="Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict error handling, ready for the 14 Nov 2026 relay cutover.">
+<meta name="twitter:description" content="Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict error handling, ready for the Swift Standards Release 2026 (SR 2026) relay cutover.">
 <meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg">
 <link rel="canonical" href="https://pain001.com/pain001-loader-mt101/"><link rel="sbom" type="application/vnd.cyclonedx+json" href="/sbom.cdx.json">
 <link rel="stylesheet" href="/_csp/3ae64e6558e84d20.css" integrity="sha384-f2Z0C5solrQefPCCmZjO/z9IJJNmd4HUMJ7B21K6ilPsXO9ToIfnWd4eZWgycVea" crossorigin="anonymous"></head>
@@ -190,9 +190,10 @@
 
       <div class="wrap content-shell">
         <article class="content-body"><nav class="article-toc" aria-label="Contents"><h2>Contents</h2><ol><li><a href="#01-one-function">One function</a></li><li><a href="#02-field-mapping-reference">Field mapping reference</a></li><li><a href="#03-strict-where-it-counts">Strict where it counts</a></li><li><a href="#faq">FAQ</a></li></ol></nav>
-          <div lang="en"><p><strong><code>pain001-loader-mt101</code> v0.0.2</strong> parses legacy SWIFT MT101 (Request for Transfer) messages into flat records that pass <code>pain.001.001.09</code> validation. One function, zero third-party dependencies, 100% branch-covered.</p>
+          <div lang="en"><p><strong><code>pain001-loader-mt101</code> v0.0.70</strong> parses legacy SWIFT MT101 (Request for Transfer) messages into flat records that pass <code>pain.001.001.09</code> validation. One function, zero third-party dependencies, 100% branch-covered.</p>
 <p>SWIFT retired the MT category 1, 2 and 9 payment messages on the FIN network for cross-border payment instructions in November 2025. Treasury systems, however, still hold years of MT101 templates, archives, and file-based bank integrations. This loader is the bridge: parse the MT, regenerate as MX, validate against the official XSD, move on.</p>
 <hr />
+<p>New to the migration? Start with <a href="/mt101-migration/">MT101 to pain.001: the migration path</a>, which explains the case and the three steps before this reference.</p>
 <h2 id="01-one-function">01. One function<a class="heading-anchor" href="#01-one-function" aria-label="Link to section: 01. One function">#</a></h2>
 <pre><code class="language-python">from pain001_loader_mt101 import parse_mt101
 
@@ -351,7 +352,7 @@ records = parse_mt101(mt101_text)   # one dict per Sequence B transaction</code>
           "@id": "https://pain001.com/pain001-loader-mt101/",
           "url": "https://pain001.com/pain001-loader-mt101/",
           "name": "MT101 to pain.001 Conversion: pain001-loader-mt101",
-          "description": "Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict error handling, ready for the 14 Nov 2026 relay cutover.",
+          "description": "Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict error handling, ready for the Swift Standards Release 2026 (SR 2026) relay cutover.",
           "inLanguage": "en-GB",
           "dateModified": "2026-07-26",
           "isPartOf": { "@id": "https://pain001.com/#website" },

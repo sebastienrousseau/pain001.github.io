@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "A legacy SWIFT MT101 message beside its regenerated ISO 20022 pain.001 XML — the migration path for the November 2026 interbank relay decommission."
+banner_alt: "A legacy SWIFT MT101 message beside its regenerated ISO 20022 pain.001 XML — the migration path for the Swift Standards Release 2026 interbank relay decommission."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -10,13 +10,13 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict error handling, ready for the 14 Nov 2026 relay cutover."
+description: "Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict error handling, ready for the Swift Standards Release 2026 (SR 2026) relay cutover."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/pain001-loader-mt101/"
-image_alt: "A legacy SWIFT MT101 message beside its regenerated ISO 20022 pain.001 XML — the migration path for the November 2026 interbank relay decommission."
+image_alt: "A legacy SWIFT MT101 message beside its regenerated ISO 20022 pain.001 XML — the migration path for the Swift Standards Release 2026 interbank relay decommission."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -46,7 +46,7 @@ atom_link: "https://pain001.com/pain001-loader-mt101/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.47)"
-item_description: "Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict error handling, ready for the 14 Nov 2026 relay cutover."
+item_description: "Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict error handling, ready for the Swift Standards Release 2026 (SR 2026) relay cutover."
 item_guid: "https://pain001.com/pain001-loader-mt101/rss.xml"
 item_link: "https://pain001.com/pain001-loader-mt101/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -67,7 +67,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: @wwdseb
-twitter_description: "Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict error handling, ready for the 14 Nov 2026 relay cutover."
+twitter_description: "Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict error handling, ready for the Swift Standards Release 2026 (SR 2026) relay cutover."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: @wwdseb
@@ -87,11 +87,13 @@ last_reviewed: "2026-07-26"
 
 ---
 
-**`pain001-loader-mt101` v0.0.2** parses legacy SWIFT MT101 (Request for Transfer) messages into flat records that pass `pain.001.001.09` validation. One function, zero third-party dependencies, 100% branch-covered.
+**`pain001-loader-mt101` v0.0.70** parses legacy SWIFT MT101 (Request for Transfer) messages into flat records that pass `pain.001.001.09` validation. One function, zero third-party dependencies, 100% branch-covered.
 
 SWIFT retired the MT category 1, 2 and 9 payment messages on the FIN network for cross-border payment instructions in November 2025. Treasury systems, however, still hold years of MT101 templates, archives, and file-based bank integrations. This loader is the bridge: parse the MT, regenerate as MX, validate against the official XSD, move on.
 
 ---
+
+New to the migration? Start with [MT101 to pain.001: the migration path](/mt101-migration/), which explains the case and the three steps before this reference.
 
 ## 01. One function
 

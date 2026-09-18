@@ -4,7 +4,25 @@
   <link href="https://pain001.com/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://pain001.com"/>
   <id>https://pain001.com</id>
-  <updated>2026-09-13T08:00:00+00:00</updated>
+  <updated>2026-09-18T08:00:00+00:00</updated>
+  <entry>
+    <title>From Excel to a validated pain.001 file</title>
+    <link href="https://pain001.com/excel-to-pain001/"/>
+    <id>https://pain001.com/excel-to-pain001/</id>
+    <updated>2026-09-18T08:00:00+00:00</updated>
+    <published>2026-09-18T08:00:00+00:00</published>
+    <summary>Read payment batches straight from .xlsx and .xlsm workbooks with pain001-loader-xlsx: no Save As CSV, numeric-IBAN corruption caught at load, one command to a schema-validated pain.001 file.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
+  <entry>
+    <title>MT101 to pain.001: the migration path</title>
+    <link href="https://pain001.com/mt101-migration/"/>
+    <id>https://pain001.com/mt101-migration/</id>
+    <updated>2026-09-18T08:00:00+00:00</updated>
+    <published>2026-09-18T08:00:00+00:00</published>
+    <summary>SWIFT ended MT and MX coexistence in November 2025. Keep the MT101 your systems already emit, parse it into validated records with pain001-loader-mt101, and produce pain.001 XML proven clean before submission.</summary>
+    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
+  </entry>
   <entry>
     <title>ae.uaefts.single — ISO 20022 pain.001 example for AE (priority-payment)</title>
     <link href="https://pain001.com/corpus-ae-uaefts-single/"/>
@@ -435,24 +453,6 @@
     <updated>2026-09-13T08:00:00+00:00</updated>
     <published>2026-09-13T08:00:00+00:00</published>
     <summary>Swiss domestic credit transfer settling a QR-bill (QRR reference). Eine validierte pain.001-Beispieldatei (Schweiz, Schiene domestic-credit-transfer), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>ch.sps.scor — ISO-20022-pain.001-Beispiel: Schweiz (domestic-credit-transfer)</title>
-    <link href="https://pain001.com/de/corpus-ch-sps-scor/"/>
-    <id>https://pain001.com/de/corpus-ch-sps-scor/</id>
-    <updated>2026-09-13T08:00:00+00:00</updated>
-    <published>2026-09-13T08:00:00+00:00</published>
-    <summary>Swiss domestic credit transfer with an ISO 11649 creditor reference (SCOR). Eine validierte pain.001-Beispieldatei (Schweiz, Schiene domestic-credit-transfer), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar.</summary>
-    <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
-  </entry>
-  <entry>
-    <title>cz.certis.domestic — ISO-20022-pain.001-Beispiel: CZ (domestic-credit-transfer)</title>
-    <link href="https://pain001.com/de/corpus-cz-certis-domestic/"/>
-    <id>https://pain001.com/de/corpus-cz-certis-domestic/</id>
-    <updated>2026-09-13T08:00:00+00:00</updated>
-    <published>2026-09-13T08:00:00+00:00</published>
-    <summary>Czech domestic CZK transfer through CERTIS with VS/KS/SS payment symbols. Eine validierte pain.001-Beispieldatei (CZ, Schiene domestic-credit-transfer), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar.</summary>
     <author><name>contact@pain001.com (Sebastien Rousseau)</name></author>
   </entry>
 </feed>

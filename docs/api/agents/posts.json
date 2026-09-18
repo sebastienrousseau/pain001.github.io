@@ -2414,6 +2414,23 @@
     "wordCount": 2416
   },
   {
+    "date": "2026-09-18T08:00:00+00:00",
+    "description": "Read payment batches straight from .xlsx and .xlsm workbooks with pain001-loader-xlsx: no Save As CSV, numeric-IBAN corruption caught at load, one command to a schema-validated pain.001 file.",
+    "locale": "en_GB",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "From Excel to a validated pain.001 file",
+    "url": "https://pain001.com/excel-to-pain001/",
+    "wordCount": 495
+  },
+  {
     "date": "2026-07-26T08:00:00+00:00",
     "description": "One page for decision-makers: the rejected-file problem, the November 2026 (SR 2026) deadline, what Pain001 does, what it costs, the safety evidence, and the one ask — print-ready.",
     "locale": "en_GB",
@@ -5066,6 +5083,23 @@
     "wordCount": 254
   },
   {
+    "date": "2026-09-18T08:00:00+00:00",
+    "description": "SWIFT ended MT and MX coexistence in November 2025. Keep the MT101 your systems already emit, parse it into validated records with pain001-loader-mt101, and produce pain.001 XML proven clean before submission.",
+    "locale": "en_GB",
+    "tags": [
+      "CBPR+",
+      "ISO 20022",
+      "SEPA",
+      "banking",
+      "pain001",
+      "payments",
+      "python"
+    ],
+    "title": "MT101 to pain.001: the migration path",
+    "url": "https://pain001.com/mt101-migration/",
+    "wordCount": 582
+  },
+  {
     "date": "2026-09-13T08:00:00+00:00",
     "description": "UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code. Een gevalideerd pain.001-voorbeeld (AE, rail priority-payment), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser.",
     "locale": "nl_NL",
@@ -6002,7 +6036,7 @@
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
-    "description": "Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict error handling, ready for the 14 Nov 2026 relay cutover.",
+    "description": "Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation — full field-mapping table, strict error handling, ready for the Swift Standards Release 2026 (SR 2026) relay cutover.",
     "locale": "en_GB",
     "tags": [
       "CBPR+",
@@ -6015,7 +6049,7 @@
     ],
     "title": "MT101 to pain.001 Conversion: pain001-loader-mt101",
     "url": "https://pain001.com/pain001-loader-mt101/",
-    "wordCount": 522
+    "wordCount": 545
   },
   {
     "date": "2026-07-26T08:00:00+00:00",
@@ -6032,7 +6066,7 @@
     ],
     "title": "Excel to pain.001: pain001-loader-xlsx",
     "url": "https://pain001.com/pain001-loader-xlsx/",
-    "wordCount": 434
+    "wordCount": 462
   },
   {
     "date": "2026-07-26T08:00:00+00:00",

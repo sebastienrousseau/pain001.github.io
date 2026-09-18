@@ -6,8 +6,42 @@
     <description>Generate schema-validated ISO 20022 pain.001 and pain.008 XML from CSV, Excel, SQLite, JSON, Parquet, or SWIFT MT101 — with AI-agent MCP tools and editor LSP support.</description>
     <atom:link href="https://pain001.com/rss.xml" rel="self" type="application/rss+xml"/>
     <language>en</language>
-    <lastBuildDate>Sun, 13 Sep 2026 08:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 08:00:00 +0000</lastBuildDate>
     <copyright>© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT.</copyright>
+    <item>
+      <title>From Excel to a validated pain.001 file</title>
+      <link>https://pain001.com/excel-to-pain001/</link>
+      <description>Read payment batches straight from .xlsx and .xlsm workbooks with pain001-loader-xlsx: no Save As CSV, numeric-IBAN corruption caught at load, one command to a schema-validated pain.001 file.</description>
+      <guid isPermaLink="true">https://pain001.com/excel-to-pain001/</guid>
+      <pubDate>Fri, 18 Sep 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
+    <item>
+      <title>MT101 to pain.001: the migration path</title>
+      <link>https://pain001.com/mt101-migration/</link>
+      <description>SWIFT ended MT and MX coexistence in November 2025. Keep the MT101 your systems already emit, parse it into validated records with pain001-loader-mt101, and produce pain.001 XML proven clean before submission.</description>
+      <guid isPermaLink="true">https://pain001.com/mt101-migration/</guid>
+      <pubDate>Fri, 18 Sep 2026 08:00:00 +0000</pubDate>
+      <author>contact@pain001.com (Sebastien Rousseau)</author>
+      <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>
+      <category>Technology</category>
+      <category>ISO 20022</category>
+      <category>pain001</category>
+      <category>payments</category>
+      <category>python</category>
+      <category>banking</category>
+      <category>CBPR+</category>
+      <category>SEPA</category>
+    </item>
     <item>
       <title>ISO 20022 example files — pain.001 and pain.008 samples per country and rail</title>
       <link>https://pain001.com/example-corpus/</link>
@@ -812,40 +846,6 @@
       <link>https://pain001.com/es/corpus-cz-certis-domestic/</link>
       <description>Czech domestic CZK transfer through CERTIS with VS/KS/SS payment symbols. Una muestra pain.001 validada (CZ, raíl domestic-credit-transfer), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador.</description>
       <guid isPermaLink="true">https://pain001.com/es/corpus-cz-certis-domestic/</guid>
-      <pubDate>Sun, 13 Sep 2026 08:00:00 +0000</pubDate>
-      <author>contact@pain001.com (Sebastien Rousseau)</author>
-      <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>
-      <category>Technology</category>
-      <category>ISO 20022</category>
-      <category>pain001</category>
-      <category>payments</category>
-      <category>python</category>
-      <category>banking</category>
-      <category>CBPR+</category>
-      <category>SEPA</category>
-    </item>
-    <item>
-      <title>cz.certis.domestic — esempio pain.001 ISO 20022: CZ (domestic-credit-transfer)</title>
-      <link>https://pain001.com/it/corpus-cz-certis-domestic/</link>
-      <description>Czech domestic CZK transfer through CERTIS with VS/KS/SS payment symbols. Un campione pain.001 validato (CZ, circuito domestic-credit-transfer), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser.</description>
-      <guid isPermaLink="true">https://pain001.com/it/corpus-cz-certis-domestic/</guid>
-      <pubDate>Sun, 13 Sep 2026 08:00:00 +0000</pubDate>
-      <author>contact@pain001.com (Sebastien Rousseau)</author>
-      <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>
-      <category>Technology</category>
-      <category>ISO 20022</category>
-      <category>pain001</category>
-      <category>payments</category>
-      <category>python</category>
-      <category>banking</category>
-      <category>CBPR+</category>
-      <category>SEPA</category>
-    </item>
-    <item>
-      <title>cz.certis.domestic — exemple pain.001 ISO 20022 : CZ (domestic-credit-transfer)</title>
-      <link>https://pain001.com/fr/corpus-cz-certis-domestic/</link>
-      <description>Czech domestic CZK transfer through CERTIS with VS/KS/SS payment symbols. Un exemple pain.001 validé (CZ, rail domestic-credit-transfer), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur.</description>
-      <guid isPermaLink="true">https://pain001.com/fr/corpus-cz-certis-domestic/</guid>
       <pubDate>Sun, 13 Sep 2026 08:00:00 +0000</pubDate>
       <author>contact@pain001.com (Sebastien Rousseau)</author>
       <enclosure url="https://pain001.com/og/pain001-card.jpg" type="image/jpeg" length="0"/>

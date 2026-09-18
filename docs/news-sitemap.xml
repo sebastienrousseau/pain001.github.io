@@ -1718,6 +1718,18 @@
   </news:news>
 </url>
 <url>
+  <loc>https://pain001.com/excel-to-pain001/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-18T08:00:00+00:00</news:publication_date>
+    <news:title>From Excel to a validated pain.001 file</news:title>
+    <news:keywords>Excel to pain.001, xlsx SEPA XML, Excel payment file ISO 20022, pain001 loader xlsx, spreadsheet to pain.001, treasury payment batch Excel</news:keywords>
+  </news:news>
+</url>
+<url>
   <loc>https://pain001.com/executive-brief/</loc>
   <news:news>
     <news:publication>
@@ -3575,6 +3587,18 @@
     <news:publication_date>2026-07-26T08:00:00+00:00</news:publication_date>
     <news:title>Pain001 — Pemulaan pembayaran ISO 20022 sumber terbuka</news:title>
     <news:keywords>pain001, ISO 20022, pain.001, SEPA, SWIFT, Python, Bahasa Melayu</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>https://pain001.com/mt101-migration/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>contact@pain001.com (Sebastien Rousseau)</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date>2026-09-18T08:00:00+00:00</news:publication_date>
+    <news:title>MT101 to pain.001: the migration path</news:title>
+    <news:keywords>MT101 migration, MT101 to pain.001, MT to MX migration, SWIFT MT101 converter, ISO 20022 cross-border payments, request for transfer, pain001</news:keywords>
   </news:news>
 </url>
 <url>
