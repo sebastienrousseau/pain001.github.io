@@ -125,6 +125,9 @@ The server also publishes a `pain001://schema/{message_type}` resource and a `bu
 
 ## 02. Registration
 
+The server is published in three places that agents and their clients browse. In the [official MCP registry](https://registry.modelcontextprotocol.io/v0/servers?search=io.github.sebastienrousseau/pain001-mcp) it is `io.github.sebastienrousseau/pain001-mcp`, published from the same tag as the PyPI release. The [Glama directory listing](https://glama.ai/mcp/servers/sebastienrousseau/pain001-mcp) carries its independent quality grades. The container image is `ghcr.io/sebastienrousseau/pain001-mcp`, tagged per release and multi-arch.
+
+
 ```bash
 pip install pain001-mcp
 ```
