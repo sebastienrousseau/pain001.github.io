@@ -104,27 +104,25 @@ jobs:
           echo '{"name":"pain001-a11y-tools","private":true}' > package.json
           PUPPETEER_SKIP_DOWNLOAD=1 npm install --silent --no-audit --no-fund puppeteer-core@23
           cd ..
-          (cd site && python3 -m http.server 8899 &)
-          sleep 2
+          nohup node scripts/serve_audit.mjs site 8899 > "$RUNNER_TEMP/pain001-audit-server.log" 2>&1 &
+          for _ in {1..20}; do
+            if curl --fail --silent http://127.0.0.1:8899/ > /dev/null; then
+              break
+            fi
+            sleep 0.25
+          done
+          curl --fail --silent http://127.0.0.1:8899/ > /dev/null
           node scripts/layout_audit.cjs
           node scripts/print_audit.cjs
 
       - name: Lighthouse 100% (mobile and desktop)
-        run: |
-          node scripts/serve_audit.mjs site 8898 &
-          sleep 2
-          CHROME_PATH=/usr/bin/google-chrome node scripts/perf_budget.mjs http://127.0.0.1:8898
+        run: CHROME_PATH=/usr/bin/google-chrome node scripts/perf_budget.mjs http://127.0.0.1:8899
 
       - name: Accessibility scan (pa11y-ci, WCAG2AAA)
-        run: |
-          (cd site && python3 -m http.server 8899 &)
-          sleep 2
-          npx -y pa11y-ci@4.1.1
+        run: npx -y pa11y-ci@4.1.1
 
       - name: Accessibility in system, light, and dark modes (axe)
         run: |
-          (cd site && python3 -m http.server 8899 &)
-          sleep 2
           npm install --prefix .a11y-tools --no-save --no-audit --no-fund puppeteer-core@23 @axe-core/puppeteer@4.10.2
           node scripts/a11y_modes.mjs
 
