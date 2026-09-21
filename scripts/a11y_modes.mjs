@@ -52,7 +52,9 @@ for (const path of pages) {
           const duplicates = [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index))];
           return { descendants, duplicates };
         });
-        const result = await new AxePuppeteer(page).analyze();
+        const result = await new AxePuppeteer(page)
+          .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa", "wcag2aaa"])
+          .analyze();
         const count = result.violations.length + structural.descendants + structural.duplicates.length;
         failures += count;
         console.log(`${count ? "FAIL" : " ok "} ${mode.padEnd(6)} ${path}`);

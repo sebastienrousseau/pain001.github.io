@@ -158,6 +158,10 @@ body.prism-theme :where(.hero, .page-header) .pill-ghost:hover {
   color: #ffffff;
 }
 
+body.prism-theme .hero .terminal-caption a {
+  color: #ffb49d;
+}
+
 .content-shell,
 .content-note,
 .guide-grid {
