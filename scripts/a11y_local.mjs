@@ -24,7 +24,7 @@
  * which otherwise downloads a Chromium that will not run here anyway.
  *
  * Usage:
- *   (cd docs && python3 -m http.server 8899 &)
+ *   (cd site && python3 -m http.server 8899 &)
  *   node scripts/a11y_local.mjs            # the .pa11yci URL list
  *   node scripts/a11y_local.mjs /fr/try/   # one or more paths
  */
@@ -75,7 +75,7 @@ for (const url of urls) {
     for (const i of res.issues) {
       console.log(`        ${i.code}`);
       console.log(`        ${i.selector}`);
-      console.log(`        ${i.message.slice(0, 120)}`);
+      console.log(`        ${i.message.slice(0, 500)}`);
     }
   } catch (e) {
     errored++;

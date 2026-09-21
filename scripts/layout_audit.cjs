@@ -53,11 +53,11 @@ const VIEWPORTS = [
 // that lengthens a string or adds a column fails here rather than overflowing.
 function longestCorpusPage() {
   try {
-    const docs = require("node:path").resolve(__dirname, "..", "docs");
-    const dirs = fs2.readdirSync(docs).filter((d) => d.startsWith("corpus-"));
+    const site = require("node:path").resolve(__dirname, "..", "site");
+    const dirs = fs2.readdirSync(site).filter((d) => d.startsWith("corpus-"));
     let best = null, size = -1;
     for (const d of dirs) {
-      const f = require("node:path").join(docs, d, "index.html");
+      const f = require("node:path").join(site, d, "index.html");
       if (!fs2.existsSync(f)) continue;
       const n = fs2.statSync(f).size;
       if (n > size) { size = n; best = `/${d}/`; }

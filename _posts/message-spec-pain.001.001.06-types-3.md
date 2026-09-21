@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/message-spec-pain.001.001.06-types-3/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.47)"
+generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "Complex types TaxInformation3 – TaxRecordDetails1 in ISO 20022 pain.001.001.06, with elements, cardinality and constraints, generated from the official XSD."
 item_guid: "https://pain001.com/message-spec-pain.001.001.06-types-3/"
 item_link: "https://pain001.com/message-spec-pain.001.001.06-types-3/"
@@ -66,15 +66,15 @@ apple-mobile-web-app-title: "pain.001.001.06 type reference (part 3 of 3) — Ta
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
-twitter_creator: @wwdseb
+twitter_creator: "@wwdseb"
 twitter_description: "Complex types TaxInformation3 – TaxRecordDetails1 in ISO 20022 pain.001.001.06, with elements, cardinality and constraints, generated from the official XSD."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
-twitter_site: @wwdseb
+twitter_site: "@wwdseb"
 twitter_title: "pain.001.001.06 type reference (part 3 of 3) — TaxInformation3 – TaxRecordDetails1"
 twitter_url: "https://pain001.com/message-spec-pain.001.001.06-types-3/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: @wwdseb
+author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
 site_last_updated: 2026-07-26

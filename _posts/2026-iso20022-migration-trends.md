@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/2026-iso20022-migration-trends/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.47)"
+generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "The post-migration landscape with primary sources: the 14 Nov 2026 structured address and MT101-relay deadlines, Fedwire and FedNow status, IPR and VoP, LEIs, and agentic AI."
 item_guid: "https://pain001.com/2026-iso20022-migration-trends/rss.xml"
 item_link: "https://pain001.com/2026-iso20022-migration-trends/rss.xml"
@@ -66,15 +66,15 @@ apple-mobile-web-app-title: "ISO 20022 in 2026: Deadlines, Data and What Comes N
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
-twitter_creator: @wwdseb
+twitter_creator: "@wwdseb"
 twitter_description: "The post-migration landscape with primary sources: the 14 Nov 2026 structured address and MT101-relay deadlines, Fedwire and FedNow status, IPR and VoP, LEIs, and agentic AI."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
-twitter_site: @wwdseb
+twitter_site: "@wwdseb"
 twitter_title: "ISO 20022 in 2026: Deadlines, Data and What Comes Next"
 twitter_url: "https://pain001.com/2026-iso20022-migration-trends/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: @wwdseb
+author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
 site_last_updated: 2026-07-26

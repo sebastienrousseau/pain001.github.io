@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/governance/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.47)"
+generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "Who maintains Pain001, how decisions are made, how it is funded, what mitigates single-maintainer risk, and the editorial and corrections policy — stated plainly, limitations included."
 item_guid: "https://pain001.com/governance/rss.xml"
 item_link: "https://pain001.com/governance/rss.xml"
@@ -66,15 +66,15 @@ apple-mobile-web-app-title: "Governance & Continuity"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
-twitter_creator: @wwdseb
+twitter_creator: "@wwdseb"
 twitter_description: "Who maintains Pain001, how decisions are made, how it is funded, what mitigates single-maintainer risk, and the editorial and corrections policy — stated plainly, limitations included."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
-twitter_site: @wwdseb
+twitter_site: "@wwdseb"
 twitter_title: "Governance & Continuity"
 twitter_url: "https://pain001.com/governance/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: @wwdseb
+author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
 site_last_updated: 2026-07-26

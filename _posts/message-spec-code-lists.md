@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/message-spec-code-lists/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.47)"
+generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "Every ISO 20022 payment-initiation code list with its complete value set and version coverage, generated from the official XSDs."
 item_guid: "https://pain001.com/message-spec-code-lists/"
 item_link: "https://pain001.com/message-spec-code-lists/"
@@ -66,15 +66,15 @@ apple-mobile-web-app-title: "ISO 20022 payment code lists — every value, every
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
-twitter_creator: @wwdseb
+twitter_creator: "@wwdseb"
 twitter_description: "Every ISO 20022 payment-initiation code list with its complete value set and version coverage, generated from the official XSDs."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
-twitter_site: @wwdseb
+twitter_site: "@wwdseb"
 twitter_title: "ISO 20022 payment code lists — every value, every version"
 twitter_url: "https://pain001.com/message-spec-code-lists/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: @wwdseb
+author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
 site_last_updated: 2026-07-26

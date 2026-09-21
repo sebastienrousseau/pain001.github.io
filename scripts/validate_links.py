@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Validate every link on every built page.
 
-Checks, for each docs/**/*.html page:
+Checks, for each site/**/*.html page:
 - every internal href/src resolves to a file in the site tree
 - every in-page anchor (#id) target exists on the destination page
 - hreflang alternate and canonical URLs resolve to existing pages
@@ -17,7 +17,7 @@ import sys
 from pathlib import Path
 from urllib.parse import urlparse, unquote
 
-site = Path(sys.argv[1] if len(sys.argv) > 1 else "docs")
+site = Path(sys.argv[1] if len(sys.argv) > 1 else "site")
 BASE = "https://pain001.com"
 
 pages = sorted(site.rglob("*.html"))
@@ -30,7 +30,7 @@ def page_ids(p: Path) -> set:
     return ids_cache[p]
 
 def resolve(path: str) -> Path | None:
-    """Map a site-absolute path to a file under docs/."""
+    """Map a site-absolute path to a file under site/."""
     path = unquote(path)
     if path.endswith("/"):
         cand = site / path.strip("/") / "index.html" if path != "/" else site / "index.html"

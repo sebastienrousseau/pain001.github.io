@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/ta/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.47)"
+generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "CSV, Excel, SQLite, JSON, Parquet அல்லது SWIFT MT101 இலிருந்து XSD-சரிபார்க்கப்பட்ட pain.001 மற்றும் pain.008 கோப்புகளை உருவாக்கும் திறந்த மூல Python தொகுப்பு — AI முகவர்களுக்கான MCP கருவிகள் மற்றும் LSP சேவையகத்துடன்."
 item_guid: "https://pain001.com/ta/rss.xml"
 item_link: "https://pain001.com/ta/rss.xml"
@@ -66,15 +66,15 @@ apple-mobile-web-app-title: "Pain001 — திறந்த மூல ISO 20022 
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
-twitter_creator: @wwdseb
+twitter_creator: "@wwdseb"
 twitter_description: "CSV, Excel, SQLite, JSON, Parquet அல்லது SWIFT MT101 இலிருந்து XSD-சரிபார்க்கப்பட்ட pain.001 மற்றும் pain.008 கோப்புகளை உருவாக்கும் திறந்த மூல Python தொகுப்பு — AI முகவர்களுக்கான MCP கருவிகள் மற்றும் LSP சேவையகத்துடன்."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
-twitter_site: @wwdseb
+twitter_site: "@wwdseb"
 twitter_title: "Pain001 — திறந்த மூல ISO 20022 கட்டணத் தொடக்கம்"
 twitter_url: "https://pain001.com/ta/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: @wwdseb
+author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
 site_last_updated: 2026-07-26

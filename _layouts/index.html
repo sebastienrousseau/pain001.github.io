@@ -290,6 +290,7 @@
         margin-bottom: 2.4rem;
       }
       .hero-cta { display: flex; gap: 0.9rem; flex-wrap: wrap; margin-bottom: 3.5rem; }
+      .hero-cta-last { margin-bottom: 0; }
       .pill {
         display: inline-flex; align-items: center; justify-content: center;
         min-height: 50px; padding: 0 1.8rem;
@@ -1011,9 +1012,12 @@
         border-color: var(--rule-strong) !important;
       }
     </style>
+    <link rel="stylesheet" href="/css/skeletonic-3.0.0.min.css" />
+    <link rel="stylesheet" href="/css/prism.css" />
+    <link rel="stylesheet" href="/css/pain001-prism.css" />
   </head>
 
-  <body>
+  <body class="prism-theme">
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <div class="progress" aria-hidden="true"></div>
 
@@ -1021,7 +1025,7 @@
       <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Toggle navigation" />
       <div class="wrap ap-nav-wrap">
         <a class="ap-brand" href="/" aria-label="Pain001 home">
-          <img src="/img/pain001.svg" alt="Pain001" width="26" height="26" />
+          <img src="/img/pain001.svg" alt="Blue circular Pain001 brand mark" width="26" height="26" />
           <span>Pain001</span>
         </a>
         <nav aria-label="Primary navigation" id="ap-primary-nav">
@@ -1040,6 +1044,7 @@
               <ul id="sub-docs" class="ap-sub">
                 <li><a href="/installation/">Installation &amp; Docker</a></li>
                 <li><a href="/message-specs/">Message specifications</a></li>
+                <li><a href="/compliance-toolkit/">Compliance toolkit</a></li>
                 <li><a href="/example-corpus/">Example corpus</a></li>
                 <li><a href="/glossary/">Glossary</a></li>
                 <li><a href="/faqs/">FAQs</a></li>
@@ -1068,9 +1073,10 @@
           </ul>
         </nav>
         <div class="ap-nav-right">
-          <button type="button" class="theme-toggle" aria-label="Switch to dark theme" aria-pressed="false" title="Switch theme">
-            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <button type="button" class="theme-toggle" id="mode-toggle" aria-label="System colour mode. Activate next mode." title="System colour mode">
+            <span class="visually-hidden">Colour theme:</span>
+            <span class="visually-hidden" id="mode-state">System colour mode</span>
+            <span class="theme-icon" aria-hidden="true"></span>
           </button>
           <button type="button" class="ap-search-btn" aria-label="Search (Cmd or Ctrl + K)" title="Search (⌘K)">
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
@@ -1502,7 +1508,7 @@ pain001 -t pain.001.001.09 -d payments.csv --scheme sepa-sct --dry-run</code></p
             <h2 id="community-heading" class="section-title">Built in the open. Improved by its users.</h2>
             <p class="section-sub">Development, issues, and releases are all public. If Pain001 runs in your payment pipeline, telling us makes the project better for everyone — and earns you a place on this page when we publish adopter stories.</p>
           </div>
-          <div class="hero-cta" style="margin-bottom: 0;">
+          <div class="hero-cta hero-cta-last">
             <a href="https://github.com/sebastienrousseau/pain001/issues" class="pill pill-ghost" rel="external">Report an issue</a>
             <a href="https://github.com/sebastienrousseau/pain001/issues/new?title=Adopter%20story%3A%20" class="pill pill-ghost" rel="external">Share your adoption story</a>
             <a href="/contact/" class="pill pill-ghost">Contact the maintainer</a>
@@ -1584,6 +1590,7 @@ pain001 -t pain.001.001.09 -d payments.csv --scheme sepa-sct --dry-run</code></p
           </ul>
         </div>
       </div>
+        <p class="footer-credit">Made with ❤️ in London. Built with <a href="https://static-site-generator.com/">SSG</a> and <a href="https://skeletonic.com/">Skeletonic CSS</a>.</p>
     </footer>
 
     <script type="application/ld+json">
@@ -1795,5 +1802,6 @@ pain001 -t pain.001.001.09 -d payments.csv --scheme sepa-sct --dry-run</code></p
       })();
     </script>
     <script defer src="/js/cf-beacon.min.js" data-cf-beacon='{"token": "7e7c74d9aa9046ff8d3bf7c56e5a510d"}'></script>
+    <script src="/js/pain001-prism.js" defer></script>
   </body>
 </html>

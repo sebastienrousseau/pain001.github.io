@@ -40,7 +40,7 @@ def fetch(url: str) -> bytes | None:
 def main(argv: list[str] | None = None) -> int:
     """Download every fingerprinted asset the live pages reference."""
     args = argv if argv is not None else sys.argv[1:]
-    out = Path(args[0]) if args else Path("docs")
+    out = Path(args[0]) if args else Path("site")
     site = "https://pain001.com"
     if "--site" in args:
         site = args[args.index("--site") + 1].rstrip("/")

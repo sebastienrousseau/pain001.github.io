@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/mt101-migration/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.47)"
+generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "SWIFT ended MT and MX coexistence in November 2025. Keep the MT101 your systems already emit, parse it into validated records with pain001-loader-mt101, and produce pain.001 XML proven clean before submission."
 item_guid: "https://pain001.com/mt101-migration/"
 item_link: "https://pain001.com/mt101-migration/"
@@ -66,15 +66,15 @@ apple-mobile-web-app-title: "MT101 to pain.001: the migration path"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
-twitter_creator: @wwdseb
+twitter_creator: "@wwdseb"
 twitter_description: "SWIFT ended MT and MX coexistence in November 2025. Keep the MT101 your systems already emit, parse it into validated records with pain001-loader-mt101, and produce pain.001 XML proven clean before submission."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
-twitter_site: @wwdseb
+twitter_site: "@wwdseb"
 twitter_title: "MT101 to pain.001: the migration path"
 twitter_url: "https://pain001.com/mt101-migration/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: @wwdseb
+author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
 site_last_updated: 2026-07-26

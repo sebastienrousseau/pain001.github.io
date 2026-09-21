@@ -56,11 +56,11 @@ jobs:
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: ~/.cargo/bin/ssg
-          key: ssg-0.0.47-${{ runner.os }}
+          key: ssg-0.0.63-${{ runner.os }}
 
-      - name: Install ssg 0.0.47
+      - name: Install ssg 0.0.63
         if: steps.cache-ssg.outputs.cache-hit != 'true'
-        run: cargo install ssg --version 0.0.47 --locked
+        run: cargo install ssg --version 0.0.63 --locked
 
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
@@ -77,12 +77,12 @@ jobs:
 
       - name: Gates
         run: |
-          ssg audit -f ssg.toml -o docs --severity warn --fail-on warn
+          ssg audit -f ssg.toml -o site --severity warn --fail-on warn
           node --test tests/*.test.mjs
           python3 scripts/validate_pages_i18n.py && python3 scripts/validate_runtime_i18n.py && python3 scripts/validate_try_i18n.py
           python3 scripts/validate_i18n_keys_live.py
           python3 scripts/validate_content_integrity.py
-          python3 scripts/validate_links.py docs
+          python3 scripts/validate_links.py site
           python3 scripts/validate_versions.py --current "${VERSION}"
 
       - name: Open the pull request

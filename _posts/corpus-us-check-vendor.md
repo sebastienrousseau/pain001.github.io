@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/corpus-us-check-vendor/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.47)"
+generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "Bank-issued cheque to a vendor, mailed to the creditor. A validated pain.001 sample for United States on the cheque rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
 item_guid: "https://pain001.com/corpus-us-check-vendor/"
 item_link: "https://pain001.com/corpus-us-check-vendor/"
@@ -66,15 +66,15 @@ apple-mobile-web-app-title: "us.check.vendor — ISO 20022 pain.001 example for 
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
-twitter_creator: @wwdseb
+twitter_creator: "@wwdseb"
 twitter_description: "Bank-issued cheque to a vendor, mailed to the creditor. A validated pain.001 sample for United States on the cheque rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
-twitter_site: @wwdseb
+twitter_site: "@wwdseb"
 twitter_title: "us.check.vendor — ISO 20022 pain.001 example for United States (cheque)"
 twitter_url: "https://pain001.com/corpus-us-check-vendor/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: @wwdseb
+author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
 site_last_updated: 2026-07-26

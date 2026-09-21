@@ -1,0 +1,12 @@
+Bundled third-party distribution
+
+The files covered by LicenseRef-ThirdParty are unmodified or mechanically
+vendored runtime distributions. They remain under their respective upstream
+licences and copyright notices; this identifier does not replace, modify, or
+relicense those terms.
+
+Package-level authorship and licence metadata is embedded in the distributions
+and summarised in THIRD_PARTY_NOTICES.md. The materials include Pyodide and its
+Python wheels, an official ISO 20022 schema, and Cloudflare's beacon runtime.
+Redistribution and use are permitted only under each component's applicable
+upstream terms.

@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/why/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.47)"
+generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "What a rejected payment file costs, why the November 2026 (SR 2026) deadline is fixed, what Pain001 does about it, what it costs (nothing), and whether it is safe — each answer linked to its proof."
 item_guid: "https://pain001.com/why/rss.xml"
 item_link: "https://pain001.com/why/rss.xml"
@@ -66,15 +66,15 @@ apple-mobile-web-app-title: "Why Pain001: the Business Case in Five Questions"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
-twitter_creator: @wwdseb
+twitter_creator: "@wwdseb"
 twitter_description: "What a rejected payment file costs, why the November 2026 (SR 2026) deadline is fixed, what Pain001 does about it, what it costs (nothing), and whether it is safe — each answer linked to its proof."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
-twitter_site: @wwdseb
+twitter_site: "@wwdseb"
 twitter_title: "Why Pain001: the Business Case in Five Questions"
 twitter_url: "https://pain001.com/why/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: @wwdseb
+author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
 site_last_updated: 2026-07-26

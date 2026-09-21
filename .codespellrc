@@ -1,0 +1,4 @@
+[codespell]
+skip = ./.git/*,./docs/*,./site/*,./static/pyodide/*,./static/corpus/*,./static/js/cf-beacon.min.js,./static/js/prism.js,./static/css/prism.css,./static/css/skeletonic-3.0.0.min.css,./_posts/*,./scripts/docs_i18n/*,./scripts/pages_i18n/*,./scripts/runtime_i18n/*,./scripts/try_i18n/*,./scripts/message_specs/*,./scripts/corpus_l10n.py,./scripts/locale_strings.py
+ignore-words-list = nd,crate,fo,ba,te,teh,ser,ist,ue,nam
+quiet-level = 2

@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/de/corpus-ch-sps-scor/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.47)"
+generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "Swiss domestic credit transfer with an ISO 11649 creditor reference (SCOR). Eine validierte pain.001-Beispieldatei (Schweiz, Schiene domestic-credit-transfer), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
 item_guid: "https://pain001.com/de/corpus-ch-sps-scor/"
 item_link: "https://pain001.com/de/corpus-ch-sps-scor/"
@@ -66,15 +66,15 @@ apple-mobile-web-app-title: "ch.sps.scor — ISO-20022-pain.001-Beispiel: Schwei
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
-twitter_creator: @wwdseb
+twitter_creator: "@wwdseb"
 twitter_description: "Swiss domestic credit transfer with an ISO 11649 creditor reference (SCOR). Eine validierte pain.001-Beispieldatei (Schweiz, Schiene domestic-credit-transfer), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
-twitter_site: @wwdseb
+twitter_site: "@wwdseb"
 twitter_title: "ch.sps.scor — ISO-20022-pain.001-Beispiel: Schweiz (domestic-credit-transfer)"
 twitter_url: "https://pain001.com/de/corpus-ch-sps-scor/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: @wwdseb
+author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
 site_last_updated: 2026-07-26

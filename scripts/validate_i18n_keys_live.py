@@ -11,7 +11,7 @@ brief's print note reached production untranslated in all 34 locales:
 postbuild rewrote the legacy /executive-brief-fr/ URLs inside them, and
 the keys captured before that rewrite stopped matching.
 
-Run against docs/ after a build. Fix a failure by re-running the
+Run against site/ after a build. Fix a failure by re-running the
 extractor and migrating the locale tables to the new key — never by
 deleting the key, which just restores the silence.
 """
@@ -23,9 +23,9 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SITE = ROOT / "docs"
+SITE = ROOT / "site"
 
-# table dir -> {page slug: built page path relative to docs/}
+# table dir -> {page slug: built page path relative to site/}
 TABLES = {
     "pages_i18n": None,   # page slugs are the directory names
     "docs_i18n": None,
@@ -73,7 +73,7 @@ def check_table(dirname: str) -> int:
 
 def main() -> int:
     if not SITE.is_dir():
-        print("docs/ not built; run ./build.sh first", file=sys.stderr)
+        print("site/ not built; run ./build.sh first", file=sys.stderr)
         return 1
     bad = sum(check_table(d) for d in TABLES)
     if bad:

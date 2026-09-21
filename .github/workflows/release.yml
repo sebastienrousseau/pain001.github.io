@@ -1,0 +1,100 @@
+name: Release
+
+on:
+  push:
+    tags: ["v[0-9]+.[0-9]+.[0-9]+"]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Build and attest without publishing a release"
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: read
+
+env:
+  SSG_VERSION: 0.0.63
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - uses: dtolnay/rust-toolchain@6bed0761d98439e5a578e2877258200ad565ba87 # stable
+
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        id: cache-ssg
+        with:
+          path: ~/.cargo/bin/ssg
+          key: ssg-${{ env.SSG_VERSION }}-${{ runner.os }}
+
+      - if: steps.cache-ssg.outputs.cache-hit != 'true'
+        run: cargo install ssg --locked --version "$SSG_VERSION"
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 22
+
+      - name: Verify signed tag and version
+        if: github.ref_type == 'tag'
+        run: |
+          git config gpg.format ssh
+          git config gpg.ssh.allowedSignersFile "$GITHUB_WORKSPACE/.github/allowed_signers"
+          git verify-tag "$GITHUB_REF_NAME"
+          ./scripts/verify_release_version.sh
+
+      - name: Build and test
+        run: |
+          ./build.sh
+          node --experimental-test-coverage --test-coverage-lines=100 --test-coverage-functions=100 --test-coverage-branches=100 --test tests/try-demo.test.mjs
+          ssg audit -f ssg.toml -o site --severity warn --fail-on warn
+          python3 scripts/validate_content_integrity.py
+          python3 scripts/validate_links.py site
+
+      - name: Package website, SBOM, and checksums
+        run: |
+          mkdir -p dist
+          version="$(tr -d '[:space:]' < VERSION)"
+          tar -czf "dist/pain001-site-v${version}.tar.gz" site LICENSE LICENSE-APACHE LICENSE-MIT THIRD_PARTY_NOTICES.md
+          cp site/sbom.cdx.json "dist/pain001-site-v${version}.cdx.json"
+          cd dist
+          sha256sum ./* > SHA256SUMS
+
+      - name: Attest website provenance
+        uses: actions/attest-build-provenance@43d14bc2b83dec42d39ecae14e916627a18bb661 # v3
+        with:
+          subject-path: "dist/pain001-site-v*.tar.gz"
+
+      - name: Attest SBOM
+        uses: actions/attest-sbom@c604332985a26aa8cf1bdc465b92731239ec6b9e # v4.1.0
+        with:
+          subject-path: "dist/pain001-site-v*.tar.gz"
+          sbom-path: "dist/pain001-site-v*.cdx.json"
+
+      - name: Upload dry-run artefacts
+        if: github.ref_type != 'tag' || inputs.dry_run
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: pain001-site-release-candidate
+          path: dist/
+
+      - name: Publish GitHub release
+        if: github.ref_type == 'tag'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          notes="docs/releases/${GITHUB_REF_NAME}.md"
+          if [[ -f "$notes" ]]; then
+            gh release create "$GITHUB_REF_NAME" dist/* --verify-tag --title "pain001.com $GITHUB_REF_NAME" --notes-file "$notes"
+          else
+            gh release create "$GITHUB_REF_NAME" dist/* --verify-tag --title "pain001.com $GITHUB_REF_NAME" --generate-notes
+          fi

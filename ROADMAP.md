@@ -14,7 +14,7 @@ changed what the binding constraint actually is, so this section
 re-orders by *what unblocks the most*, not by what is easiest.
 
 | # | Do this | Why it is here | Effort |
-|---|---|---|---:|
+| --- | --- | --- | ---: |
 | **1** | **Recruit a second maintainer** | The single highest-leverage action available. It is the sole blocker on OpenSSF badge silver (`bus_factor`) and gold (`two_person_review`, `contributors_unassociated`), and on Scorecard `Code-Review 0` and `Contributors 0`. Four separate scores, one cause. No amount of engineering moves any of them. | recruiting |
 | **2** | **Send the accessibility audit RFQ** | Drafted and ready in `AUDIT-RFQ.md` / `AUDIT-OUTREACH.md`; three vendors shortlisted. Nothing has been sent. An independent audit is the only external validation currently within reach. | one email |
 | **3** | **Ask three users to be named** | An institutional buyer looks for a reference customer before a feature list. Zero named adopters is a harder objection than any missing capability. | conversations |
@@ -32,7 +32,7 @@ their merits, but none of them changes that.
 ### What has been closed since this plan was written
 
 | Area | Then | Now |
-|---|---|---|
+| --- | --- | --- |
 | `pain.001.001.13` | not supported | shipped (Phase A) |
 | Release provenance | 2 of 5 artefacts, branch-bound | all 5, tag-bound, verified with `slsa-verifier` |
 | OpenSSF badge silver | 15% | 93% — `bus_factor` is the only gap |
@@ -60,7 +60,7 @@ The site ships 360 pages across 34 locales, with four translation table
 sets under `scripts/`:
 
 | Table set | Covers | Strings |
-|---|---|---|
+| --- | --- | --- |
 | `try_i18n/` | demo UI + nav/footer chrome | ~90 |
 | `pages_i18n/` | why, solutions, executive-brief | ~85 |
 | `docs_i18n/` | documentation, faqs, installation, glossary | ~180 |
@@ -181,7 +181,7 @@ the cheapest way to make the repositioning real.
 2. **Result summary component** replacing the single status line:
 
    | Layer | State |
-   |---|---|
+   | --- | --- |
    | ISO 20022 schema | Passed / n errors / Not run |
    | Scheme rulebook | Passed / n errors / No scheme selected |
    | Your bank's profile | **Not evaluated** — Pain001 ships no bank profiles |
@@ -349,7 +349,7 @@ not ship.
 ### Verification tiers
 
 | Tier | Meaning |
-|---|---|
+| --- | --- |
 | Community contributed | Submitted with source links, not yet reviewed |
 | Source verified | A maintainer checked every rule against the cited public source |
 | Test verified | Source verified, plus passing and failing vectors for every rule |
@@ -450,7 +450,7 @@ No amount of engineering substitutes for these, and they gate any claim
 of market leadership.
 
 | Item | Status | Next action |
-|---|---|---|
+| --- | --- | --- |
 | Independent accessibility audit | RFQ and vendor shortlist ready in `AUDIT-RFQ.md` / `AUDIT-OUTREACH.md` | Send one of the three drafted emails |
 | Independent security review | Not started | Scope after the accessibility audit lands |
 | Named adopters | None | Ask the first three real users for permission to name them |
@@ -469,7 +469,7 @@ is the single thing an institutional buyer looks for first.
 ## Sequencing and totals
 
 | Phase | Effort (person-days) | Depends on | Ship value |
-|---|---:|---|---|
+| --- | ---: | --- | --- |
 | ~~A — pain.001.001.13~~ | ~~5–8~~ | — | ✅ shipped in v0.0.58 |
 | B — layer-aware demo | 12–18 | — | Makes the new claim real |
 | C — rule engine | 20–30 | — | Prerequisite for D |

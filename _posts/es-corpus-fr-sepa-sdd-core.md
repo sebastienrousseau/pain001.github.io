@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/es/corpus-fr-sepa-sdd-core/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.47)"
+generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "SEPA Core direct debit, recurring collection on an amended mandate. Una muestra pain.001 validada (Francia, raíl sepa-direct-debit), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
 item_guid: "https://pain001.com/es/corpus-fr-sepa-sdd-core/"
 item_link: "https://pain001.com/es/corpus-fr-sepa-sdd-core/"
@@ -66,15 +66,15 @@ apple-mobile-web-app-title: "fr.sepa.sdd-core — ejemplo pain.001 ISO 20022: Fr
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
-twitter_creator: @wwdseb
+twitter_creator: "@wwdseb"
 twitter_description: "SEPA Core direct debit, recurring collection on an amended mandate. Una muestra pain.001 validada (Francia, raíl sepa-direct-debit), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
-twitter_site: @wwdseb
+twitter_site: "@wwdseb"
 twitter_title: "fr.sepa.sdd-core — ejemplo pain.001 ISO 20022: Francia (sepa-direct-debit)"
 twitter_url: "https://pain001.com/es/corpus-fr-sepa-sdd-core/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: @wwdseb
+author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
 site_last_updated: 2026-07-26

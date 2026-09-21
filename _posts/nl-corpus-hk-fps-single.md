@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/nl/corpus-hk-fps-single/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.47)"
+generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Een gevalideerd pain.001-voorbeeld (HK, rail instant-payment), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
 item_guid: "https://pain001.com/nl/corpus-hk-fps-single/"
 item_link: "https://pain001.com/nl/corpus-hk-fps-single/"
@@ -66,15 +66,15 @@ apple-mobile-web-app-title: "hk.fps.single — ISO 20022 pain.001-voorbeeld: HK 
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
-twitter_creator: @wwdseb
+twitter_creator: "@wwdseb"
 twitter_description: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Een gevalideerd pain.001-voorbeeld (HK, rail instant-payment), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
-twitter_site: @wwdseb
+twitter_site: "@wwdseb"
 twitter_title: "hk.fps.single — ISO 20022 pain.001-voorbeeld: HK (instant-payment)"
 twitter_url: "https://pain001.com/nl/corpus-hk-fps-single/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: @wwdseb
+author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
 site_last_updated: 2026-07-26

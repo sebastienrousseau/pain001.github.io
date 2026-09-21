@@ -1,3 +1,5 @@
+<!-- SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau -->
+<!-- SPDX-License-Identifier: Apache-2.0 OR MIT -->
 <!-- markdownlint-disable MD033 MD041 -->
 
 <img
@@ -12,15 +14,64 @@
 
 # pain001.com — Official Website 🌏
 
+[![CI](https://github.com/sebastienrousseau/pain001.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/sebastienrousseau/pain001.github.io/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/sebastienrousseau/pain001.github.io)](https://github.com/sebastienrousseau/pain001.github.io/releases)
+[![API documentation](https://img.shields.io/badge/API-reference-07172b)](https://pain001.com/documentation/)
+[![License: Apache-2.0 OR MIT](https://img.shields.io/badge/license-Apache--2.0%20OR%20MIT-blue)](LICENSE)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/sebastienrousseau/pain001.github.io/badge)](https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/pain001.github.io)
+[![SSG 0.0.63](https://img.shields.io/badge/SSG-0.0.63-8f341f)](https://static-site-generator.com/)
+
 The website for the [Pain001](https://github.com/sebastienrousseau/pain001)
 open-source ISO 20022 payment initiation suite: core library, MCP server for
 AI agents, LSP server, and the MT101 / Excel loaders. Its job is to convert a
 treasury engineer, an integrator or an AI agent into an installed user, and
 to hand a regulated buyer the evidence they need.
 
-Built with the [Shokunin Static Site Generator (ssg)][00] **0.0.47 exactly**
+Built with the [Shokunin Static Site Generator (ssg)][00] **0.0.63 exactly**
 and deployed to GitHub Pages by `ci.yml` from the same run that passed every
 gate; the built tree is never committed. Cloudflare fronts the domain.
+
+![Pain001.com using the PRISM theme](static/og/pain001-prism.webp)
+
+## Contents
+
+- [Install and quick start](#install-and-quick-start)
+- [Requirements and toolchain policy](#requirements-and-toolchain-policy)
+- [Repository layout](#repository-layout)
+- [Documentation](#documentation)
+- [Gates](#gates)
+- [When not to use this project](#when-not-to-use-this-project)
+- [Stability guarantees](#stability-guarantees)
+- [Security and hardening](#security-and-hardening)
+- [Licence](#licence)
+
+## Install and quick start
+
+This repository produces a website, not an installable binary. The shortest
+working path is:
+
+```shell
+git clone https://github.com/sebastienrousseau/pain001.github.io.git
+cd pain001.github.io
+cargo install ssg --locked --version 0.0.63
+make build
+make serve
+```
+
+Open <http://127.0.0.1:8099/>. `make verify` reproduces the non-network CI
+gates. Release archives are available from
+[GitHub Releases](https://github.com/sebastienrousseau/pain001.github.io/releases)
+for review or static hosting; there is intentionally no system-wide
+`make install` for a Pages site.
+
+## Requirements and toolchain policy
+
+The minimum supported build toolchain is SSG 0.0.63, Node.js 22, and Python
+3.10. Chrome or Chromium is required for browser gates. CI enforces the SSG
+pin and Node version. The minimum may rise only in a patch release when a
+security fix, parser correctness fix, or required generator feature demands
+it; the reason must appear in `CHANGELOG.md` and a migration guide. No distro
+LTS compatibility is claimed beyond those explicit floors.
 
 ## Repository layout
 
@@ -31,18 +82,27 @@ gate; the built tree is never committed. Cloudflare fronts the domain.
 | `static/` | Copied verbatim into the output: the demo's ES modules (`js/`), the vendored Pyodide runtime and wheels (`pyodide/`), corpus files, schemas and samples (`corpus/`), the service worker, the vendored analytics beacon |
 | `scripts/` | Generators, the post-build passes (listed below), translation tables and the validators CI runs |
 | `tests/` | Node tests: demo input handling and the browser engine integration run against the vendored runtime |
-| `docs/` | The built site, produced by `build.sh`; ignored by git and uploaded by CI as the Pages artifact |
+| `site/` | The built site, produced by `build.sh`; ignored by git and uploaded by CI as the Pages artifact |
 | `.github/workflows/` | `ci.yml` (build, every gate, and on `main` the Pages deploy), `regenerate.yml` (release-triggered regeneration, opens a PR), `codeql.yml` |
+
+## Documentation
+
+- [User manual and compliance hub](https://pain001.com/documentation/)
+- [API reference](https://pain001.com/documentation/)
+- [Developer documentation](DEVELOPMENT.md)
+- [Architecture](docs/ARCHITECTURE.md)
+- [Pain001 ecosystem map](docs/ECOSYSTEM.md)
+- [Release process](docs/RELEASES.md)
 
 ## Build
 
-Prerequisites: Rust toolchain with `cargo install ssg --locked --version 0.0.47`
-(newer ssg parses the posts' front matter differently and fails), Node 20+,
+Prerequisites: Rust toolchain with `cargo install ssg --locked --version 0.0.63`,
+Node 22+,
 Python 3.10+ with the `pain001` library installed for the generators and the
 snippet gate, and Chrome for the browser gates.
 
 ```shell
-./build.sh          # build, post-build repairs, publish to docs/
+./build.sh          # build, post-build repairs, publish to site/
 ./build.sh --audit  # same, then ssg's audit gates at warn severity
 ```
 
@@ -99,27 +159,27 @@ CI fails on any of these; run them locally before opening a PR.
 
 | Gate | Command |
 | :--- | :--- |
-| ssg audit, warnings fail | `ssg audit -f ssg.toml -o docs --severity warn --fail-on warn` |
+| ssg audit, warnings fail | `ssg audit -f ssg.toml -o site --severity warn --fail-on warn` |
 | Unit tests | `node --test tests/*.test.mjs` |
 | Browser engine runs the library | `npm i --no-save pyodide@0.27.2 && node tests/engine.integration.mjs` |
 | Translation table integrity | `scripts/validate_try_i18n.py`, `scripts/validate_pages_i18n.py pages_i18n`, `… docs_i18n` |
 | Translation keys still match the built pages | `scripts/validate_i18n_keys_live.py` |
 | Content integrity (no eaten markup, no double encoding) | `scripts/validate_content_integrity.py` |
-| Link integrity | `scripts/validate_links.py docs` |
+| Link integrity | `scripts/validate_links.py site` |
 | Suite version currency | `scripts/validate_versions.py` |
 | Documentation snippets reference the real API | `scripts/validate_snippets.py` (with `pain001` installed) |
 | Layout and print integrity, real Chrome | `node scripts/layout_audit.cjs`, `node scripts/print_audit.cjs` (needs `.a11y-tools/` with `puppeteer-core`, see the script headers) |
-| Performance budgets, Lighthouse mobile | `node scripts/perf_budget.mjs http://127.0.0.1:8899` |
+| Lighthouse 100%, mobile and desktop | `node scripts/perf_budget.mjs http://127.0.0.1:8899` |
 | Accessibility, WCAG 2 AAA | `npx -y pa11y-ci@4.1.1` against the `.pa11yci` list, or `node scripts/a11y_local.mjs` |
 
-The layout, performance and accessibility gates need `docs/` served locally:
-`(cd docs && python3 -m http.server 8899)`.
+The layout, performance and accessibility gates need `site/` served locally:
+`(cd site && python3 -m http.server 8899)`.
 
 ## Editing content
 
 Edit the Markdown in `_posts/`; keep `title`, `description` and `keywords`
 unique per page; run the build and the gates; commit the source only. The
-built `docs/` is not tracked: CI rebuilds it on every push and deploys it
+built `site/` is not tracked: CI rebuilds it on every push and deploys it
 from `main`, so there is nothing to merge by hand.
 
 Translated pages are produced at post-build from tables keyed by exact
@@ -135,9 +195,40 @@ this origin; the demo page carries none. What is counted, where the tag lives
 and how to switch it off is in [`METRICS.md`](METRICS.md). The privacy and
 trust pages state the same facts publicly.
 
+## When not to use this project
+
+Do not use this website as a bank connectivity service, legal or regulatory
+advice, a substitute for your bank's implementation guide, or proof that a
+file is eligible for a particular account and channel. The browser demo is a
+local validation aid and never submits payments. Use the separate Pain001
+library for production automation, and complete bank certification before
+going live.
+
+## Stability guarantees
+
+The website follows SemVer from v0.0.1. During the `0.x` series, a patch
+release may change content, design, generated markup, browser storage, and
+build tooling, but published URLs are preserved or redirected. A change to
+the validator's interpreted input or generated output is treated as breaking
+and belongs to the library's own version contract. Deprecated website URLs
+remain redirected for at least two patch releases. Tags and release assets
+are immutable.
+
+## Security and hardening
+
+Report vulnerabilities privately as described in [SECURITY.md](SECURITY.md),
+not in a public issue. The site uses a restrictive CSP, same-origin vendored
+runtime assets, non-networked payment-data processing, CodeQL, dependency
+review, Dependabot, OpenSSF Scorecard, signed tags, release attestations, and a
+CycloneDX SBOM. Input parsing lives in the separately fuzzed and tested core
+library; this repository replays browser integration and fixed regression
+cases on every push. Static assets are bounded by the browser demo's 2 MB
+input limit.
+
 ## Licence
 
-Dual-licensed under Apache-2.0 or MIT, at your option. See `LICENSE-APACHE`
-and `LICENSE-MIT`.
+Project-authored work is dual-licensed under Apache-2.0 or MIT, at your option.
+See `LICENSE-APACHE`, `LICENSE-MIT`, `REUSE.toml`, and
+`THIRD_PARTY_NOTICES.md` for vendored components.
 
 [00]: https://shokunin.one "Shokunin Static Site Generator (SSG)"

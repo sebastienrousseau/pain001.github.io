@@ -15,7 +15,7 @@ because the pages were valid HTML and every existing check passed:
 Both are invisible to a link checker, a schema validator and pa11y. The
 tell is structural, so that is what this checks.
 
-Run against docs/ after a build.
+Run against site/ after a build.
 """
 from __future__ import annotations
 
@@ -25,7 +25,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SITE = ROOT / "docs"
+SITE = ROOT / "site"
 
 # Elements a browser may legitimately encounter here. Anything else in
 # the output is markup that was meant to be text.
@@ -50,7 +50,7 @@ SWALLOWED_RE = re.compile(r"<code\b[^>]*>\s*</?[A-Za-z][\w.-]*>")
 
 def main() -> int:
     if not SITE.is_dir():
-        print("docs/ not built; run ./build.sh first", file=sys.stderr)
+        print("site/ not built; run ./build.sh first", file=sys.stderr)
         return 1
 
     unknown: collections.Counter[str] = collections.Counter()

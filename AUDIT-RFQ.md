@@ -8,7 +8,7 @@ price the templates and the localisation matrix, not the raw page count.*
 ## Scope
 
 - **Standard:** WCAG 2.2, Level AAA (full-site conformance claim intended).
-- **Property:** https://pain001.com — static site, no authentication, no
+- **Property:** <https://pain001.com> — static site, no authentication, no
   audio/video content (media AAA criteria expected to be recorded N/A).
 - **Routes:** 360 pages in total, reducible to ~14 distinct templates.
   In scope: all English pages (~50); the interactive validator at `/try/`
@@ -43,7 +43,7 @@ price the templates and the localisation matrix, not the raw page count.*
   remediation) suitable for direct import into GitHub issues.
 - A re-test of remediated findings (one round included in quote).
 - A dated conformance statement letter we may cite publicly and link from
-  https://pain001.com/accessibility/ — bank vendor-assessment teams weigh
+  <https://pain001.com/accessibility/> — bank vendor-assessment teams weigh
   a third-party report far above self-assessment.
 
 ## Context the vendor should know

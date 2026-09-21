@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/ha/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.47)"
+generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "Kunshin Python na buɗaɗɗen tushe da ke samar da fayilolin pain.001 da pain.008 da aka tabbatar da XSD daga CSV, Excel, SQLite, JSON, Parquet ko SWIFT MT101 — tare da kayan aikin MCP don wakilan AI da uwar garken LSP."
 item_guid: "https://pain001.com/ha/rss.xml"
 item_link: "https://pain001.com/ha/rss.xml"
@@ -66,15 +66,15 @@ apple-mobile-web-app-title: "Pain001 — Fara biyan kuɗi na ISO 20022 a buɗaɗ
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
-twitter_creator: @wwdseb
+twitter_creator: "@wwdseb"
 twitter_description: "Kunshin Python na buɗaɗɗen tushe da ke samar da fayilolin pain.001 da pain.008 da aka tabbatar da XSD daga CSV, Excel, SQLite, JSON, Parquet ko SWIFT MT101 — tare da kayan aikin MCP don wakilan AI da uwar garken LSP."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
-twitter_site: @wwdseb
+twitter_site: "@wwdseb"
 twitter_title: "Pain001 — Fara biyan kuɗi na ISO 20022 a buɗaɗɗen tushe"
 twitter_url: "https://pain001.com/ha/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: @wwdseb
+author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
 site_last_updated: 2026-07-26

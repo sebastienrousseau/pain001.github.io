@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Build pain001.com with Shokunin SSG, then publish the result to docs/
-# (GitHub Pages serves from docs/ on the default branch).
+# Build pain001.com with Shokunin SSG, then publish the result to site/
+# (GitHub Pages deploys this directory as the checked workflow artefact).
 #
 #   1. `ssg build -f ssg.toml` compiles _posts/ + _layouts/ into ./Pain001
 #      (ssg names the final directory after site_name, which also feeds the
-#      JSON-LD publisher and llms.txt title — hence "Pain001", not "docs").
+#      JSON-LD publisher and llms.txt title — hence "Pain001", not "site").
 #   2. The CNAME ssg emits is a DNS zone record; GitHub Pages requires the
 #      bare domain, so it is rewritten.
-#   3. ./Pain001 is synced into ./docs and the staging dirs are removed.
+#   3. ./Pain001 is synced into ./site and the staging dirs are removed.
 #
-# Usage: ./build.sh          (build + publish to docs/)
+# Usage: ./build.sh          (build + publish to site/)
 #        ./build.sh --audit  (build, publish, then run the ssg audit gates)
 
 cd "$(git rev-parse --show-toplevel)"
@@ -42,6 +42,11 @@ python3 scripts/postbuild_fix.py Pain001
 # demo-scoped service worker (/sw.js) that makes /try/ work offline.
 rsync -a static/ Pain001/
 
+# Preserve the authored Skeletonic/PRISM separation in source, but publish a
+# single SRI-protected stylesheet per layout to eliminate render-blocking
+# request chains on mobile.
+python3 scripts/postbuild_fix.py Pain001 --optimise-assets
+
 # Downloadable sample CSVs, generated from the demo module's SAMPLES so
 # the files users download are byte-identical to what "Load a sample"
 # loads — one source of truth, no drift.
@@ -59,22 +64,22 @@ python3 scripts/postbuild_fix.py Pain001 --stamp-sw
 # CDN edges cache HTML for up to ~10 minutes; if a rebuild deleted the old
 # /_csp/<hash> files, every cached page 404'd its CSS/JS during that
 # window on each deploy. Old hashes are tiny; keep them alongside the new.
-if [ -d docs/_csp ]; then
-  rsync -a --ignore-existing docs/_csp/ Pain001/_csp/
+if [ -d site/_csp ]; then
+  rsync -a --ignore-existing site/_csp/ Pain001/_csp/
 fi
-# docs/ is no longer committed: in CI there is no previous build to copy
+# site/ is no longer committed: in CI there is no previous build to copy
 # from, so the assets the live pages reference are fetched instead.
 python3 scripts/carry_forward_assets.py Pain001
 
-# Publish: replace docs/ content with the fresh build (keep the dir itself).
-# docs/ is untracked; CI uploads it as the Pages artifact.
-mkdir -p docs
-rsync -a --delete --exclude '.ssg-cache' Pain001/ docs/
+# Publish: replace site/ content with the fresh build (keep the dir itself).
+# site/ is untracked; CI uploads it as the Pages artifact.
+mkdir -p site
+rsync -a --delete --exclude '.ssg-cache' Pain001/ site/
 
 rm -rf output Pain001
 
 if [[ "$AUDIT" == "1" ]]; then
-  ssg audit -f ssg.toml -o docs --severity warn
+  ssg audit -f ssg.toml -o site --severity warn
 fi
 
-echo "Build published to docs/."
+echo "Build published to site/."

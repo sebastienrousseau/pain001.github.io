@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/fr/corpus-us-rtp-single/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.47)"
+generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "RTP real-time payment, single. Un exemple pain.001 validé (États-Unis, rail instant-payment), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur."
 item_guid: "https://pain001.com/fr/corpus-us-rtp-single/"
 item_link: "https://pain001.com/fr/corpus-us-rtp-single/"
@@ -66,15 +66,15 @@ apple-mobile-web-app-title: "us.rtp.single — exemple pain.001 ISO 20022 : Éta
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
-twitter_creator: @wwdseb
+twitter_creator: "@wwdseb"
 twitter_description: "RTP real-time payment, single. Un exemple pain.001 validé (États-Unis, rail instant-payment), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
-twitter_site: @wwdseb
+twitter_site: "@wwdseb"
 twitter_title: "us.rtp.single — exemple pain.001 ISO 20022 : États-Unis (instant-payment)"
 twitter_url: "https://pain001.com/fr/corpus-us-rtp-single/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: @wwdseb
+author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
 site_last_updated: 2026-07-26

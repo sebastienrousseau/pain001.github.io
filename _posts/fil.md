@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/fil/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.47)"
+generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "Open-source na Python suite na gumagawa ng XSD-validated na pain.001 at pain.008 na file mula sa CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101 — may MCP tools para sa AI agents at LSP server."
 item_guid: "https://pain001.com/fil/rss.xml"
 item_link: "https://pain001.com/fil/rss.xml"
@@ -66,15 +66,15 @@ apple-mobile-web-app-title: "Pain001 — Open-source na pagsisimula ng bayad sa 
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
-twitter_creator: @wwdseb
+twitter_creator: "@wwdseb"
 twitter_description: "Open-source na Python suite na gumagawa ng XSD-validated na pain.001 at pain.008 na file mula sa CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101 — may MCP tools para sa AI agents at LSP server."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
-twitter_site: @wwdseb
+twitter_site: "@wwdseb"
 twitter_title: "Pain001 — Open-source na pagsisimula ng bayad sa ISO 20022"
 twitter_url: "https://pain001.com/fil/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: @wwdseb
+author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
 site_last_updated: 2026-07-26

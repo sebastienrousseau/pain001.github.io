@@ -16,7 +16,7 @@ from pathlib import Path
 import sys
 
 ROOT = Path(__file__).resolve().parent.parent
-site = ROOT / "docs"
+site = ROOT / "site"
 # default: journey pages -> pages_i18n; pass a dir name + page slugs to
 # extract another set (e.g. docs_i18n documentation faqs installation glossary)
 OUT_DIR = sys.argv[1] if len(sys.argv) > 2 else "pages_i18n"

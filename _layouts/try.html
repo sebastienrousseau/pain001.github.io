@@ -759,15 +759,18 @@
       .status-strip strong { color: var(--ink-soft); font-weight: 650; margin-inline-end: 0.3rem; }
       @media (max-width: 720px) { .status-strip { display: none; } }
     </style>
+    <link rel="stylesheet" href="/css/skeletonic-3.0.0.min.css" />
+    <link rel="stylesheet" href="/css/prism.css" />
+    <link rel="stylesheet" href="/css/pain001-prism.css" />
   </head>
-  <body>
+  <body class="prism-theme">
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <header class="ap-nav">
       <input class="ap-toggle" id="ap-menu-toggle" type="checkbox" aria-label="Toggle navigation" />
       <div class="wrap ap-nav-wrap">
         <a class="ap-brand" href="/" aria-label="Pain001 home">
-          <img src="/img/pain001.svg" alt="Pain001" width="26" height="26" />
+          <img src="/img/pain001.svg" alt="Blue circular Pain001 brand mark" width="26" height="26" />
           <span>Pain001</span>
         </a>
         <nav aria-label="Primary navigation" id="ap-primary-nav">
@@ -786,6 +789,7 @@
               <ul id="sub-docs" class="ap-sub">
                 <li><a href="/installation/">Installation &amp; Docker</a></li>
                 <li><a href="/message-specs/">Message specifications</a></li>
+                <li><a href="/compliance-toolkit/">Compliance toolkit</a></li>
                 <li><a href="/example-corpus/">Example corpus</a></li>
                 <li><a href="/glossary/">Glossary</a></li>
                 <li><a href="/faqs/">FAQs</a></li>
@@ -814,9 +818,10 @@
           </ul>
         </nav>
         <div class="ap-nav-right">
-          <button type="button" class="theme-toggle" aria-label="Switch to dark theme" aria-pressed="false" title="Switch theme">
-            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <button type="button" class="theme-toggle" id="mode-toggle" aria-label="System colour mode. Activate next mode." title="System colour mode">
+            <span class="visually-hidden">Colour theme:</span>
+            <span class="visually-hidden" id="mode-state">System colour mode</span>
+            <span class="theme-icon" aria-hidden="true"></span>
           </button>
           <button type="button" class="ap-search-btn" aria-label="Search (Cmd or Ctrl + K)" title="Search (⌘K)">
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
@@ -1057,6 +1062,7 @@
       <div class="wrap">
         <p>&copy; 2023&ndash;2026 <a href="https://sebastienrousseau.com/" rel="external author">Sebastien Rousseau</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a> &middot; <a href="/">pain001.com</a></p>
       </div>
+        <p class="footer-credit">Made with ❤️ in London. Built with <a href="https://static-site-generator.com/">SSG</a> and <a href="https://skeletonic.com/">Skeletonic CSS</a>.</p>
     </footer>
 
     <script type="application/ld+json">
@@ -1202,5 +1208,6 @@
         });
       })();
     </script>
+    <script src="/js/pain001-prism.js" defer></script>
   </body>
 </html>
