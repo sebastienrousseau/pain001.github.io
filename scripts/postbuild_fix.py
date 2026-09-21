@@ -1043,7 +1043,7 @@ TAXONOMY_CSS = '<link rel="stylesheet" href="/css/taxonomy.css" />'
 # to a tag page requested /favicon.ico and got a 404.
 TAXONOMY_ICONS = ('<link rel="icon" type="image/svg+xml" href="/img/pain001.svg" sizes="any" />'
                   '<link rel="apple-touch-icon" href="/img/pain001.svg" />')
-BEACON_TAG = '<script defer src="/js/cf-beacon.min.js" data-cf-beacon=\'{"token": "7e7c74d9aa9046ff8d3bf7c56e5a510d"}\'></script>'
+BEACON_TAG = '<script defer src="/js/pain001-analytics.js" data-cf-token="7e7c74d9aa9046ff8d3bf7c56e5a510d"></script>'
 TAXONOMY_VIEWPORT = (
     '<meta name="viewport" content="width=device-width, initial-scale=1" />'
 )
@@ -1102,7 +1102,7 @@ def fix_tag_pages(site: Path) -> None:
             page.write_text(html.replace("</head>", inject + "</head>", 1), encoding="utf-8")
             print(f"[postbuild] patched tag page: {page}")
         html = page.read_text(encoding="utf-8")
-        if "cf-beacon.min.js" not in html and "</body>" in html:
+        if "pain001-analytics.js" not in html and "</body>" in html:
             # the same page-view beacon the layouts carry (see METRICS.md)
             page.write_text(html.replace("</body>", BEACON_TAG + "</body>", 1), encoding="utf-8")
 

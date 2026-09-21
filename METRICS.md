@@ -20,9 +20,11 @@ are not counted. PyPI download figures come from PyPI itself (`scripts/traction.
   this origin. Cloudflare publishes no SRI hash and replaces the file without notice, so loading it
   from their CDN would either fail the audit's SRI gate or silently stop measuring on their next
   release. Refresh it with `scripts/refresh_beacon.sh` and commit the new bytes.
-- The tag sits at the end of `_layouts/index.html`, `_layouts/page.html` and `_layouts/contact.html`
+- The loader tag sits at the end of `_layouts/index.html`, `_layouts/page.html` and `_layouts/contact.html`
   (not `_layouts/try.html`); `postbuild_fix.fix_tag_pages` adds the same tag to the taxonomy pages ssg
-  emits outside the layouts. The token is public by design; it identifies the site, not a visitor.
+  emits outside the layouts. `static/js/pain001-analytics.js` skips the beacon on localhost so CI and
+  local audits do not attempt an external RUM POST; deployed hosts load the vendored beacon. The token
+  is public by design; it identifies the site, not a visitor.
 - One Content-Security-Policy applies to every page: `script-src 'self'`, and `connect-src 'self'
   https://cloudflareinsights.com` for the beacon's one POST to `/cdn-cgi/rum`. The demo page has the
   same policy but no beacon, so it makes no such request.
