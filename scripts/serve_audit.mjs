@@ -2,9 +2,8 @@
 /* Production-like local server for Lighthouse: compression and immutable
  * asset caching match the behaviour expected from the Pages CDN. */
 import { createServer } from "node:http";
-import { createReadStream, existsSync, statSync } from "node:fs";
 import { gzipSync } from "node:zlib";
-import { extname, join, normalize, resolve } from "node:path";
+import { extname, join, normalize, resolve, sep } from "node:path";
 import { readFile } from "node:fs/promises";
 
 const root = resolve(process.argv[2] || "site");
@@ -24,9 +23,17 @@ const compressible = new Set([".css", ".html", ".js", ".json", ".svg", ".txt", "
 createServer(async (request, response) => {
   const pathname = decodeURIComponent(new URL(request.url, "http://localhost").pathname);
   const relative = normalize(pathname).replace(/^(\.\.(\/|\\|$))+/, "").replace(/^[/\\]+/, "");
-  let file = join(root, relative);
-  if (pathname.endsWith("/") || (existsSync(file) && statSync(file).isDirectory())) file = join(file, "index.html");
-  if (!file.startsWith(root) || !existsSync(file) || !statSync(file).isFile()) {
+  let file = resolve(root, relative);
+  if (pathname.endsWith("/")) file = join(file, "index.html");
+  if (file !== root && !file.startsWith(root + sep)) {
+    response.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
+    response.end("Not found\n");
+    return;
+  }
+  let payload;
+  try {
+    payload = await readFile(file);
+  } catch {
     response.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
     response.end("Not found\n");
     return;
@@ -38,13 +45,13 @@ createServer(async (request, response) => {
     "X-Content-Type-Options": "nosniff",
   };
   if (compressible.has(extension) && /\bgzip\b/.test(request.headers["accept-encoding"] || "")) {
-    const payload = gzipSync(await readFile(file), { level: 9 });
-    response.writeHead(200, { ...headers, "Content-Encoding": "gzip", Vary: "Accept-Encoding", "Content-Length": payload.length });
-    response.end(payload);
+    const compressed = gzipSync(payload, { level: 9 });
+    response.writeHead(200, { ...headers, "Content-Encoding": "gzip", Vary: "Accept-Encoding", "Content-Length": compressed.length });
+    response.end(compressed);
     return;
   }
-  response.writeHead(200, { ...headers, "Content-Length": statSync(file).size });
-  createReadStream(file).pipe(response);
+  response.writeHead(200, { ...headers, "Content-Length": payload.length });
+  response.end(payload);
 }).listen(port, "127.0.0.1", () => {
   console.log(`Audit server: http://127.0.0.1:${port}/ (${root})`);
 });

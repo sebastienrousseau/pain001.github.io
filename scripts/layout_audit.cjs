@@ -23,6 +23,8 @@ try {
   process.exit(2);
 }
 const fs = require("node:fs");
+const os = require("node:os");
+const pathModule = require("node:path");
 
 const fs2 = require("node:fs");
 // GitHub runners have Chrome at /usr/bin/google-chrome; macOS has the app
@@ -42,7 +44,8 @@ function findChrome() {
 }
 const CHROME = findChrome();
 const ORIGIN = process.env.SITE_ORIGIN ?? "http://127.0.0.1:8899";
-const OUT = process.env.OUT ?? "/tmp/layout.jsonl";
+const auditDirectory = fs.mkdtempSync(pathModule.join(os.tmpdir(), "pain001-layout-"));
+const OUT = pathModule.join(auditDirectory, "layout.jsonl");
 
 const VIEWPORTS = [
   [320, 640], [375, 812], [390, 844], [414, 896], [768, 1024],
@@ -268,6 +271,7 @@ function probe() {
   // check. These five invariants each correspond to a defect that
   // shipped and that no other gate could see.
   const rows = fs.readFileSync(OUT, "utf8").trim().split("\n").map(JSON.parse);
+  fs.rmSync(auditDirectory, { recursive: true, force: true });
   const g = rows.filter((r) => r.gutters);
   const counts = {
     errors: rows.filter((r) => r.error || r.fatal).length,

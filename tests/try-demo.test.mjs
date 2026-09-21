@@ -63,16 +63,6 @@ test("parseCsv: ragged rows reported, not silently dropped", () => {
   assert.equal(out.structural[0].rule, "row-shape");
 });
 
-/* ==== Validation rules ==== */
-
-function sampleRows() {
-  return parseCsv(SAMPLES["sepa-sct"].csv).rows;
-}
-
-
-
-
-
 /* ==== Control totals & XML ==== */
 
 

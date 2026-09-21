@@ -1376,16 +1376,16 @@ def write_llms(site: Path) -> None:
         "## Install",
         "",
         "- `pip install pain001` (library and CLI); `pip install pain001-mcp` (MCP server, 21 tools); "
-        "`pip install pain001-lsp` (language server)",
+        + "`pip install pain001-lsp` (language server)",
         "- MCP, Claude Code: `claude mcp add pain001 -- pain001-mcp`; other clients: command `pain001-mcp` over stdio "
-        "(configuration blocks at https://pain001.com/pain001-mcp/)",
+        + "(configuration blocks at https://pain001.com/pain001-mcp/)",
         "",
         "## Machine-readable data",
         "",
         "- Corpus index (every scenario, absolute URLs for XML, JSON twin, provenance, schema, demo): "
-        "https://pain001.com/corpus/index.json",
+        + "https://pain001.com/corpus/index.json",
         "- JSON Schema 2020-12 per pain.001 edition, for the ISO 20022 JSON twin convention: "
-        "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json (and .03 to .13)",
+        + "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json (and .03 to .13)",
         "- Input column vocabulary (the flat rows the library reads): https://pain001.com/documentation/",
         "",
         "## Pages",
@@ -1404,7 +1404,7 @@ def write_llms(site: Path) -> None:
         "## Rules of use",
         "",
         "- Files are synthetic and built from public scheme rulebooks; no bank usage guideline is represented. "
-        "Apply your bank's own guideline privately with the library's overlay tooling.",
+        + "Apply your bank's own guideline privately with the library's overlay tooling.",
         "",
     ]
     lines = [f"- {s['id']} ({(s.get('country') or '').upper()}, {s.get('family')}): {s.get('description')} "
