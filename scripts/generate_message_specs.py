@@ -545,7 +545,7 @@ def render_hub(specs: dict, index: dict) -> None:
         "- These pages describe the **base ISO standard**. A document that "
         "conforms here can still be rejected by a scheme rulebook, by your "
         "bank's own profile, or by the channel you submit it through — see "
-        "the [four-layer model](/#layers-heading).",
+        "the [four-layer model](/#standards-heading).",
         "- The reference is **English only**. It is generated data that "
         "grows with every ISO release, and the site's translated pages are "
         "parity-checked in CI; localising a growing generated surface into "

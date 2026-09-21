@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import json
 import sys
+from html import unescape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -55,7 +56,11 @@ def check_table(dirname: str) -> int:
         if main is None:
             print(f"SKIP {dirname}/{slug}: no built page")
             continue
-        missing = [k for k in payload.get("text", {}) if k not in main]
+        normalised_main = unescape(main)
+        missing = [
+            k for k in payload.get("text", {})
+            if k not in main and unescape(k) not in normalised_main
+        ]
         aria = [k for k in payload.get("aria", {})
                 if 'aria-label="%s"' % k not in main]
         if missing or aria:

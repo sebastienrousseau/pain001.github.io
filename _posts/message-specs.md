@@ -128,6 +128,6 @@ Complete, generated specifications for every ISO 20022 payment-initiation messag
 
 ## Scope and honesty
 
-- These pages describe the **base ISO standard**. A document that conforms here can still be rejected by a scheme rulebook, by your bank's own profile, or by the channel you submit it through — see the [four-layer model](/#layers-heading).
+- These pages describe the **base ISO standard**. A document that conforms here can still be rejected by a scheme rulebook, by your bank's own profile, or by the channel you submit it through — see the [four-layer model](/#standards-heading).
 - The reference is **English only**. It is generated data that grows with every ISO release, and the site's translated pages are parity-checked in CI; localising a growing generated surface into 34 languages is not a commitment that could be kept honestly.
 - Regenerate with `python3 scripts/extract_message_specs.py && python3 scripts/generate_message_specs.py` after a schema update.

@@ -160,7 +160,8 @@ def escape_inline_code(html: str) -> str:
 _H2_RE = re.compile(r"<h2>(.*?)</h2>", re.DOTALL)
 _TAG_RE = re.compile(r"<[^>]+>")
 _ARTICLE_RE = re.compile(
-    r"(<article class=\"?content-body\"?>)(.*?)(</article>)", re.DOTALL
+    r'(<article class="[^"]*\bcontent-body\b[^"]*">)(.*?)(</article>)',
+    re.DOTALL,
 )
 _META_RE = re.compile(r"(<div class=\"?article-meta\"?>)")
 
@@ -599,6 +600,20 @@ def retag_body_lang(html: str, code: str) -> str:
     return html.replace('<div lang="en">', '<div lang="%s">' % code)
 
 
+def retag_html_lang(html: str, code: str, rtl: bool = False) -> str:
+    """Set the document language without assuming `<html>` has no class.
+
+    PRISM carries `class="no-js"` on the root element, so the former exact
+    `<html lang="en-GB">` replacement no longer matched localized copies.
+    """
+    direction = ' dir="rtl"' if rtl else ""
+    return re.sub(
+        r'<html\b([^>]*?)\blang="en-GB"([^>]*)>',
+        lambda m: '<html' + m.group(1) + 'lang="%s"' % code
+        + m.group(2) + direction + '>',
+        html, count=1)
+
+
 def translate_status_strip(html: str, s: list) -> str:
     aria, milestone, addr, addr_v, relay, release, msgdefs, reviewed = s
     pairs = [
@@ -719,8 +734,9 @@ def gen_try_locales(site: Path) -> None:
         html = base
         # lang + direction
         dir_attr = ' dir="rtl"' if slug in RTL_LANGS else ""
-        html = html.replace('<html lang="en-GB">',
-                            '<html lang="%s"%s>' % (code, dir_attr), 1)
+        html = retag_html_lang(html, code, slug in RTL_LANGS)
+        html = html.replace('"inLanguage": "en-GB"',
+                            '"inLanguage": "%s"' % code)
         # metadata: title/description everywhere they appear, then URLs
         meta = d.get("meta", {})
         for key in ("title", "description"):
@@ -735,8 +751,14 @@ def gen_try_locales(site: Path) -> None:
         # anchor, so long keys fall back to raw substring replacement
         for k in sorted(d.get("text", {}), key=len, reverse=True):
             v = d["text"][k]
+            apostrophe_k = k.replace("&#x27;", "'").replace("&#39;", "'")
+            apostrophe_v = v.replace("&#x27;", "'").replace("&#39;", "'")
             if ">%s<" % k in html:
                 html = html.replace(">%s<" % k, ">%s<" % v)
+            elif apostrophe_k in html:
+                html = html.replace(apostrophe_k, apostrophe_v)
+            elif _html.unescape(k) in html:
+                html = html.replace(_html.unescape(k), _html.unescape(v))
             elif len(k) >= 30:
                 html = html.replace(k, v)
         for k, v in d.get("aria", {}).items():
@@ -808,8 +830,7 @@ def _gen_localized_pages(site: Path, pages: tuple, table_dir: str) -> None:
             pd = d[page_name]
             html = base
             dir_attr = ' dir="rtl"' if slug in RTL_LANGS else ""
-            html = html.replace('<html lang="en-GB">',
-                                '<html lang="%s"%s>' % (code, dir_attr), 1)
+            html = retag_html_lang(html, code, slug in RTL_LANGS)
             html = html.replace('"inLanguage": "en-GB"',
                                 '"inLanguage": "%s"' % code)
             # anchored meta swaps only — a raw global replace of the
@@ -829,8 +850,14 @@ def _gen_localized_pages(site: Path, pages: tuple, table_dir: str) -> None:
                                 + "</head>", 1)
             for k in sorted(pd.get("text", {}), key=len, reverse=True):
                 v = pd["text"][k]
+                apostrophe_k = k.replace("&#x27;", "'").replace("&#39;", "'")
+                apostrophe_v = v.replace("&#x27;", "'").replace("&#39;", "'")
                 if ">%s<" % k in html:
                     html = html.replace(">%s<" % k, ">%s<" % v)
+                elif apostrophe_k in html:
+                    html = html.replace(apostrophe_k, apostrophe_v)
+                elif _html.unescape(k) in html:
+                    html = html.replace(_html.unescape(k), _html.unescape(v))
                 elif len(k) >= 30:
                     html = html.replace(k, v)
             for k, v in pd.get("aria", {}).items():
@@ -1150,6 +1177,17 @@ def bundle_stylesheets(site: Path) -> None:
         if not hrefs or any(h.startswith(("http:", "https:", "//")) for h in hrefs):
             continue
         paths = [site / h.lstrip("/") for h in hrefs]
+        # SSG 0.0.63 fingerprints its generated syntax-highlighter asset but
+        # leaves the authored ``/highlight.css`` URL in HTML. Resolve that
+        # single generated file while assembling the final page bundle; the
+        # stale URL is then removed with the other individual stylesheet
+        # links instead of becoming a site-wide 404.
+        for index, (href, path) in enumerate(zip(hrefs, paths)):
+            if path.is_file() or href != "/highlight.css":
+                continue
+            candidates = sorted(site.glob("highlight.*.css"))
+            if len(candidates) == 1:
+                paths[index] = candidates[0]
         if not all(path.is_file() for path in paths):
             continue
         if hrefs not in bundles:
@@ -1419,9 +1457,9 @@ def stamp_suite_version(site: Path) -> int:
     """Say in every footer which suite version the site was generated against.
 
     The version comes from the corpus index the generator wrote, so the
-    footer can never claim a version the corpus pages do not carry. The
-    stamp is its own paragraph just inside the closing footer tag, outside
-    <main>, so no locale table key (a leaf fragment of <main>) changes.
+    footer can never claim a version the corpus pages do not carry. Keep the
+    stamp inside PRISM's ``footer-bottom`` container so it shares the footer's
+    width, spacing, and responsive alignment on every generated page.
     """
     import json as _json
     index = Path(__file__).resolve().parent.parent / "static" / "corpus" / "index.json"
@@ -1431,16 +1469,27 @@ def stamp_suite_version(site: Path) -> int:
     if not version:
         return 0
     stamp = f'<p class="suite-version">Generated against pain001 {version}</p>'
+    credit_re = re.compile(
+        r'(<p class="footer-credit">.*?</p>)', re.DOTALL)
+    existing_re = re.compile(
+        r'<p class="suite-version">.*?</p>', re.DOTALL)
     count = 0
     for page in site.rglob("index.html"):
         html = page.read_text(encoding="utf-8")
-        if 'class="suite-version"' in html:
-            continue
         start = html.find("<footer")
         close = html.find("</footer>", start) if start >= 0 else -1
         if close < 0:
             continue
-        page.write_text(html[:close] + stamp + html[close:], encoding="utf-8")
+        footer = html[start:close]
+        if 'class="suite-version"' in footer:
+            fixed_footer = existing_re.sub(stamp, footer, count=1)
+        else:
+            fixed_footer, replacements = credit_re.subn(
+                rf'\1\n      {stamp}', footer, count=1)
+            if replacements == 0:
+                continue
+        page.write_text(
+            html[:start] + fixed_footer + html[close:], encoding="utf-8")
         count += 1
     return count
 
@@ -1555,15 +1604,6 @@ _PRISM_LINKS = (
     '<link rel="stylesheet" href="/css/prism.css" />'
     '<link rel="stylesheet" href="/css/pain001-prism.css" />'
 )
-_MODE_BUTTON = (
-    '<button type="button" class="theme-toggle" id="mode-toggle" '
-    'aria-label="System colour mode. Activate next mode." '
-    'title="System colour mode">'
-    '<span class="visually-hidden">Colour theme:</span>'
-    '<span class="visually-hidden" id="mode-state">System colour mode</span>'
-    '<span class="theme-icon" aria-hidden="true"></span>'
-    '</button>'
-)
 _FOOTER_CREDIT = (
     '<p class="footer-credit">Made with ❤️ in London. Built with '
     '<a href="https://static-site-generator.com/">SSG</a> and '
@@ -1575,6 +1615,14 @@ def normalise_site_shell(site: Path) -> None:
     """Give authored, taxonomy, and redirect pages one security policy and
     one footer contract. Taxonomy pages are emitted outside the layouts, so
     add the PRISM assets and exact three-state control here as well."""
+    root_html = (site / "index.html").read_text(encoding="utf-8")
+    header_match = re.search(
+        r'<header class="site-header">.*?</header>', root_html, re.DOTALL)
+    footer_match = re.search(
+        r'<footer class="site-footer">.*?</footer>', root_html, re.DOTALL)
+    shared_header = header_match.group(0) if header_match else ""
+    shared_footer = footer_match.group(0) if footer_match else ""
+
     changed = 0
     for page in site.rglob("*.html"):
         html = page.read_text(encoding="utf-8")
@@ -1582,17 +1630,33 @@ def normalise_site_shell(site: Path) -> None:
         if count == 0 and "</head>" in fixed:
             fixed = fixed.replace("</head>", CSP_META + "</head>", 1)
 
-        if "/tags/" in "/" + page.relative_to(site).as_posix():
+        is_taxonomy = "/tags/" in "/" + page.relative_to(site).as_posix()
+        is_redirect = '<meta http-equiv="refresh"' in fixed
+        if is_taxonomy or is_redirect:
             if "skeletonic-3.0.0.min.css" not in fixed:
                 fixed = fixed.replace("</head>", _PRISM_LINKS + "</head>", 1)
             fixed = fixed.replace("<body>", '<body class="prism-theme">', 1)
-            fixed = fixed.replace('<header role="banner">', '<header class="ap-nav" role="banner">', 1)
-            fixed = fixed.replace('<footer role="contentinfo">', '<footer class="footer" role="contentinfo">', 1)
-            if 'id="mode-toggle"' not in fixed:
-                fixed = fixed.replace("</header>", _MODE_BUTTON + "</header>", 1)
-            if "pain001-prism.js" not in fixed:
+            if shared_header and "site-header" in fixed:
+                fixed = re.sub(
+                    r'<header\b[^>]*>.*?</header>', shared_header, fixed,
+                    count=1, flags=re.DOTALL)
+            elif shared_header and is_redirect:
                 fixed = fixed.replace(
-                    "</body>", '<script src="/js/pain001-prism.js" defer></script></body>', 1)
+                    '<body class="prism-theme">',
+                    '<body class="prism-theme">' + shared_header, 1)
+            if shared_footer and re.search(r'<footer\b', fixed):
+                fixed = re.sub(
+                    r'<footer\b[^>]*>.*?</footer>', shared_footer, fixed,
+                    count=1, flags=re.DOTALL)
+            elif shared_footer and is_redirect:
+                fixed = fixed.replace("</body>", shared_footer + "</body>", 1)
+            if "prism-theme-init.js" not in fixed:
+                fixed = fixed.replace(
+                    "</head>", '<script src="/js/prism-theme-init.js"></script></head>', 1)
+            if 'src="/js/prism.js"' not in fixed:
+                fixed = fixed.replace(
+                    "</body>", '<script src="/js/prism.js" defer></script>'
+                    '<script src="/js/pain001-prism.js" defer></script></body>', 1)
 
         if 'class="footer-credit"' not in fixed:
             if "</footer>" in fixed:

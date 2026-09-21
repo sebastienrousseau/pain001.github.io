@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- PRISM's shared shell. `no-js` is removed before first paint. -->
+<html lang="{{language}}" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta itemprop="datePublished" content="{{item_pub_date}}" id="date" />
+    <meta itemprop="dateModified" content="{{last_build_date}}" id="last-modified" />
+    <title>{{title}}</title>
+
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; connect-src 'self' https://cloudflareinsights.com; font-src 'self'; form-action 'self' https://formspree.io"
+    />
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(self), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    {{!primary}}
+    {{!opengraph}}
+    {{!twitter}}
+    {{!apple}}
+    {{!microsoft}}
+
+    <meta property="og:image" content="https://pain001.com/og/pain001-card.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="{{banner_alt}}" />
+    <meta name="twitter:image" content="https://pain001.com/og/pain001-card.jpg" />
+    <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
+
+    <link rel="alternate" href="{{url}}" hreflang="{{hreflang}}" />
+    <link rel="canonical" href="{{url}}" />
+    <link rel="alternate" type="application/rss+xml" title="Pain001 — RSS" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Pain001 — Atom" href="/atom.xml" />
+    <link rel="alternate" type="application/feed+json" title="Pain001 — JSON Feed" href="/feed.json" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="/img/pain001.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="/img/pain001.svg" />
+
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#0b192c" />
+    <meta name="view-transition" content="same-origin" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://pain001.com/#website",
+            "url": "https://pain001.com/",
+            "name": "Pain001",
+            "description": "{{description}}",
+            "inLanguage": "{{language}}"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "{{url}}#webpage",
+            "url": "{{url}}",
+            "name": "{{title}}",
+            "description": "{{description}}",
+            "inLanguage": "{{language}}",
+            "isPartOf": { "@id": "https://pain001.com/#website" },
+            "datePublished": "{{date}}"
+          }
+        ]
+      }
+    </script>
+
+    <!-- Unmodified PRISM and Skeletonic CSS 3.0.0, followed only by
+         Pain001 component extensions. -->
+    <link rel="stylesheet" href="/css/skeletonic-3.0.0.min.css" />
+    <link rel="stylesheet" href="/css/prism.css" />
+    <link rel="stylesheet" href="/css/pain001-prism.css" />
+    <script src="/js/prism-theme-init.js"></script>
+    {{#block "head"}}{{/block}}
+  </head>
+
+  <body class="prism-theme">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    {{> header}}
+
+    <main id="main-content">
+      {{#block "main"}}{{/block}}
+    </main>
+
+    {{> footer}}
+
+    <script src="/js/prism.js" defer></script>
+    <script src="/js/pain001-prism.js" defer></script>
+    <script defer src="/js/pain001-analytics.js" data-cf-token="7e7c74d9aa9046ff8d3bf7c56e5a510d"></script>
+    {{#block "scripts"}}{{/block}}
+  </body>
+</html>

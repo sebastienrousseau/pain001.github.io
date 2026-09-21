@@ -1,288 +1,164 @@
-/*
- * Pain001 adaptation of the PRISM SSG theme.
- *
- * PRISM and Skeletonic remain unmodified upstream assets. This adapter maps
- * Pain001's established, content-rich templates onto PRISM's visual tokens so
- * the validator and 385 documentation pages keep their tested semantics.
- */
+/* Pain001 extensions for the unmodified PRISM SSG theme. */
 
 :root {
-  --hero-bg: #07172b;
-  --hero-ink: #ffffff;
-  --hero-muted: #e6edf7;
+  /* Compatibility aliases used by the interactive validator and generated
+     documentation components. The values remain PRISM's audited tokens. */
   --bg-page: var(--bg);
   --bg-alt: var(--bg-soft);
   --bg-card: var(--surface);
   --ink-mute: var(--ink-muted);
   --rule: var(--line-soft);
   --rule-strong: var(--line);
+  --border: var(--line-soft);
+  --border-strong: var(--line);
   --link: var(--accent);
   --link-hover: var(--accent-hover);
   --ok: var(--green-text);
+  --bad: var(--burgundy-text);
+  --btn-bg: var(--accent);
+  --btn-text: var(--accent-ink);
+  --focus-ring: var(--focus);
+  --type-body: var(--font-body);
+  --type-mono: var(--font-mono);
+  --radius-sm: 0.5rem;
+  --radius-md: 0.85rem;
+  --radius-pill: 999px;
 }
 
-body {
-  background: var(--bg);
-  color: var(--ink);
-  font-family: var(--font-body);
+/* Avoid the physical-left -9999px pattern, which expands RTL documents by
+   9,999px. A transformed fixed link stays out of page geometry and returns
+   to view as soon as a keyboard user focuses it. */
+.skip-link {
+  inset-inline-start: 1rem;
+  left: auto;
+  position: fixed;
+  top: 1rem;
+  transform: translateY(-200%);
+}
+.skip-link:focus {
+  inset-inline-start: 1rem;
+  left: auto;
+  top: 1rem;
+  transform: none;
 }
 
-.wrap {
-  margin-inline: auto;
-  max-width: 84rem;
-  padding-inline: clamp(1rem, 3vw, 2rem);
-  width: 100%;
-}
+.brand { gap: 0.55rem; }
+.brand-mark { display: block; flex: 0 0 auto; }
 
-/* PRISM masthead mapped to the site's existing semantic navigation. */
-body.prism-theme .ap-nav {
-  background: var(--hero-bg) !important;
-  border-block-end: 1px solid rgb(255 255 255 / 20%);
-  color: var(--hero-ink);
-}
-
-.ap-brand,
-.ap-menu > li > a,
-.ap-nav .ap-sub-toggle,
-.ap-nav .ap-search-btn,
-.ap-nav .ap-lang-toggle,
-.ap-nav #mode-toggle {
-  color: #ffffff;
-}
-
-body.prism-theme .ap-brand > span { color: #ffffff; }
-body.prism-theme .ap-nav > nav > a { color: #ffffff; }
-
-.ap-brand span::after {
-  color: #ff9f80;
-  content: ".";
-}
-
-.ap-nav .ap-menu > li > a:hover,
-.ap-nav .ap-menu > li > a:focus-visible {
-  color: #ffffff;
-  text-decoration-color: #ff9f80;
-}
-
-body.prism-theme .ap-nav .ap-menu > li > a[aria-current="page"] {
-  color: #ffb49d;
-}
-
-body.prism-theme .ap-nav .ap-menu > li > a[aria-current="page"]::after {
-  background: #ffb49d;
-}
-
-.ap-sub,
-.ap-lang-menu {
-  background: var(--surface);
-  border-color: var(--border-strong);
-  box-shadow: var(--shadow-lg);
-  color: var(--ink);
-}
-
-.ap-sub a,
-.ap-lang-menu a {
-  color: var(--ink);
-}
-
-.ap-cta-mini,
-.pill-primary {
-  background: #b94e32;
-  border-color: #b94e32;
-  color: #ffffff;
-}
-
-.ap-cta-mini:hover,
-.pill-primary:hover {
-  background: #8f341f;
-  border-color: #8f341f;
-  color: #ffffff;
-}
-
-/* PRISM's navy, sloped hero treatment on every page. */
-.page-header,
-.hero {
-  background: var(--hero-bg);
-  border: 0;
-  color: var(--hero-ink);
-  overflow: hidden;
-  padding-block: clamp(3rem, 7vw, 6.5rem) clamp(4.5rem, 9vw, 8rem);
-  position: relative;
-}
-
-.page-header::after,
-.hero::after {
-  background: var(--bg);
-  bottom: -1px;
-  clip-path: polygon(0 100%, 100% 0, 100% 100%);
-  content: "";
-  height: clamp(2rem, 6vw, 5.5rem);
-  inset-inline: 0;
-  pointer-events: none;
-  position: absolute;
-}
-
-.page-header .wrap,
-.hero .wrap {
-  position: relative;
-  z-index: 1;
-}
-
-.page-header h1,
-.page-header .page-title,
-.page-header .deck,
-.page-header .article-meta,
-.page-header .eyebrow,
-.hero h1,
-.hero p {
-  color: var(--hero-ink);
-}
-
-.page-header .eyebrow,
-.hero .eyebrow {
-  color: #ffb49d;
-}
-
-.page-header .breadcrumb a,
-.page-header .breadcrumb li {
-  color: var(--hero-muted);
-}
-
-body.prism-theme :where(.hero, .page-header) .pill-ghost {
-  border-color: #dbe9ff;
-  color: #ffffff;
-}
-
-body.prism-theme :where(.hero, .page-header) .pill-ghost:hover {
-  border-color: #ffffff;
-  color: #ffffff;
-}
-
-body.prism-theme .hero .terminal-caption a {
-  color: #ffb49d;
-}
-
-.content-shell,
-.content-note,
-.guide-grid {
-  padding-block: clamp(2.5rem, 5vw, 5rem);
-}
-
-.content-body,
-.content-note article {
-  color: var(--ink-soft);
-}
-
-/* Consistent proportional bottom rhythm for every heading level. */
-.content-body :where(h1, h2, h3, h4, h5, h6),
-.content-note :where(h1, h2, h3, h4, h5, h6) {
-  color: var(--ink);
-  line-height: 1.16;
-  margin-block-start: 1.6em;
-}
-
-.content-body h1,
-.content-note h1 { margin-block-end: 0.65em; }
-.content-body h2,
-.content-note h2 { margin-block-end: 0.7em; padding-block-end: 0.22em; }
-.content-body h3,
-.content-note h3 { margin-block-end: 0.75em; }
-.content-body h4,
-.content-note h4 { margin-block-end: 0.8em; }
-.content-body h5,
-.content-note h5 { margin-block-end: 0.85em; }
-.content-body h6,
-.content-note h6 { margin-block-end: 0.9em; }
-
-.content-body :where(a, code),
-.content-note :where(a, code) {
-  overflow-wrap: anywhere;
-}
-
-/* Tables must contribute their real height to the accessibility tree and
-   document flow; an intrinsic placeholder can let off-screen rows overlap
-   the footer while automated and assistive technologies traverse them. */
-body.prism-theme .table-responsive {
-  contain-intrinsic-size: none !important;
-  content-visibility: visible !important;
-}
-
-.card,
-.demo-panel,
-.guide-block,
-.feature-card,
-.proof-card,
-.suite-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
-}
-
-body.prism-theme .footer {
-  background: var(--hero-bg) !important;
-  border: 0;
-  color: var(--hero-muted);
-}
-
-body.prism-theme .footer :where(h2, .footer-brand) { color: #ffffff; }
-body.prism-theme .footer :where(p, li) { color: var(--hero-muted); }
-body.prism-theme .footer a { color: #dbe9ff; }
-body.prism-theme .footer a:hover { color: #ffffff; }
-.footer-credit { margin-block-start: 1.5rem; }
-
-/* The exact PRISM three-state control, kept visible over the navy header. */
-#mode-toggle.theme-toggle {
-  align-items: center;
-  background: #ffffff;
-  border: 2px solid #ffffff;
-  border-radius: 999px;
-  color: #07172b;
-  display: inline-flex;
-  height: 2.75rem;
-  justify-content: center;
-  min-width: 2.75rem;
-  padding: 0;
-}
-
-#mode-toggle.theme-toggle:hover {
-  background: #e7eef8;
-  border-color: #e7eef8;
-}
-
-#mode-toggle .theme-icon::before { content: "🖥️"; font-size: 1.2rem; }
+/* PRISM's icon is intentionally drawn in CSS so the three states are
+   identical to every other published SSG theme. */
+#mode-toggle .theme-icon::before { content: "🖥️"; font-size: 1.15rem; }
 :root[data-theme="light"] #mode-toggle .theme-icon::before { content: "☀️"; }
 :root[data-theme="dark"] #mode-toggle .theme-icon::before { content: "🌙"; }
+
+.breadcrumb { color: var(--hero-ink-soft); font-size: 0.85rem; margin-block-end: 1.2rem; }
+.breadcrumb ol { display: flex; flex-wrap: wrap; gap: 0.45rem; list-style: none; margin: 0; padding: 0; }
+.breadcrumb li + li::before { content: "/"; margin-inline-end: 0.45rem; }
+.breadcrumb a { color: var(--hero-accent); }
+.article-meta { color: var(--hero-ink-soft); font-size: 0.875rem; margin-block-start: 1rem; }
 
 .bookmark-button {
   align-items: center;
   background: transparent;
-  border: 2px solid currentColor;
+  border: 2px solid var(--hero-line);
   border-radius: 999px;
   color: var(--hero-ink);
   display: inline-flex;
   font: inherit;
   font-weight: 700;
-  gap: 0.45rem;
+  margin-block-start: 1rem;
   min-height: 44px;
   padding: 0.55rem 1rem;
 }
+.bookmark-button:hover { border-color: var(--hero-ink); }
+.bookmark-button[aria-pressed="true"] { background: var(--hero-ink); color: var(--hero-bg); }
 
-.bookmark-button[aria-pressed="true"] { background: #ffffff; color: #07172b; }
+/* Generated long-form documentation. */
+.content-body { margin-inline: auto; min-width: 0; }
+.content-body :where(h1, h2, h3, h4, h5, h6) { scroll-margin-top: 6rem; }
+.content-body h1 { margin-block-end: 0.65em; }
+.content-body h2 { margin-block-end: 0.7em; padding-block-end: 0.22em; }
+.content-body h3 { margin-block-end: 0.75em; }
+.content-body h4 { margin-block-end: 0.8em; }
+.content-body h5 { margin-block-end: 0.85em; }
+.content-body h6 { margin-block-end: 0.9em; }
+.content-body :where(a, code, td, th) { overflow-wrap: anywhere; }
+
+.article-toc {
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-radius: 0.8rem;
+  margin-block: 0 2.25rem;
+  padding: 1.25rem 1.5rem;
+}
+.article-toc > p { font-weight: 800; margin: 0 0 0.7rem; }
+.article-toc ol { margin: 0; padding-inline-start: 1.25rem; }
+.heading-anchor { color: inherit; margin-inline-start: 0.35rem; text-decoration: none; }
+.heading-anchor:hover { color: var(--accent); }
+
+.table-responsive,
+.matrix-wrap,
+.error-table-wrap { max-width: 100%; overflow-x: auto; }
+.content-body table { border-collapse: collapse; inline-size: 100%; margin-block: 1.5rem 2rem; }
+.content-body :where(th, td) { border-block-end: 1px solid var(--line-soft); padding: 0.7rem; text-align: start; vertical-align: top; }
+.content-body th { background: var(--surface-soft); color: var(--ink); font-weight: 750; }
+.content-body pre { max-width: 100%; overflow-x: visible; }
+
+/* SSG appends its generated highlighter stylesheet after the authored theme.
+   Win that cascade explicitly so code reflows instead of creating an
+   unfocusable horizontal scroll region (WCAG 2.1.1 / axe). */
+.content-body pre.highlight {
+  overflow-x: visible;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.cta-centred { justify-content: center; }
+.hero code { color: inherit; }
+
+/* The Pain001 hero uses its own relevant share card under PRISM's solid
+   mock-ups. Covering the full stage prevents the former right-edge gap. */
+.hero-stage-photo { height: 100%; inset: 0; object-fit: cover; position: absolute; width: 100%; }
+
+/* The generated suite stamp is part of PRISM's shared footer metadata. */
+.suite-version { color: var(--ink-muted); font-size: var(--step--1); }
+
+/* Existing validator content is retained inside PRISM's page shell. */
+.guide-grid,
+.content-note,
+.fineprint { margin-inline: auto; max-width: 80rem; padding-inline: clamp(1rem, 3vw, 2rem); }
+.guide-grid { padding-block: clamp(2rem, 5vw, 4rem); }
+.content-note { padding-block: 2rem 4rem; }
+.content-note article { max-width: 72ch; }
 
 @media (max-width: 64rem) {
-  .ap-nav-wrap { background: var(--hero-bg); }
-  .ap-menu { background: var(--hero-bg); }
+  .brand-mark { height: 24px; width: 24px; }
 }
 
 @media (forced-colors: active) {
-  .page-header::after,
-  .hero::after { display: none; }
+  .bookmark-button { border: 2px solid ButtonText; }
 }
 
 @media print {
-  .page-header,
-  .hero { background: #ffffff !important; color: #000000 !important; }
-  .page-header::after,
-  .hero::after { display: none; }
+  .site-header,
+  .site-footer,
+  .bookmark-button,
+  .heading-anchor,
+  .article-toc { display: none !important; }
+  .page-hero { background: #fff !important; color: #000 !important; min-height: 0; padding: 0 0 1rem; }
+  .hero-slope { display: none; }
+  .table-responsive,
+  .matrix-wrap,
+  pre { max-width: 100% !important; overflow: visible !important; }
+  pre,
+  pre code { white-space: pre-wrap !important; word-break: break-word; }
+  h1,
+  h2,
+  h3,
+  h4,
+  tr,
+  img,
+  figure,
+  pre,
+  blockquote { break-inside: avoid; }
 }
