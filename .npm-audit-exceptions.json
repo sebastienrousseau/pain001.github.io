@@ -1,0 +1,24 @@
+{
+  "_comment": [
+    "Advisories accepted for the dev-only toolchain, reviewed at each expiry.",
+    "An advisory listed here still fails the gate once 'expires' has passed, so",
+    "an exception cannot be forgotten. Anything not listed fails immediately at",
+    "or above severityFloor. Production dependencies are never exempted: the",
+    "published site ships no npm code at all."
+  ],
+  "severityFloor": "high",
+  "exceptions": [
+    {
+      "advisory": "GHSA-jmr9-qjv8-65gv",
+      "package": "extract-zip",
+      "reason": "Reached only via pa11y-ci -> puppeteer -> @puppeteer/browsers when it extracts a Chrome build downloaded from Google's CDN during CI setup. No patched release exists: the advisory covers <=2.0.1 and 2.0.1 is the latest published version. The archive is not attacker-controlled, the code never runs in the published site, and npm's only remediation is a major downgrade of pa11y-ci.",
+      "expires": "2026-12-31"
+    },
+    {
+      "advisory": "GHSA-7pqw-9j4j-h8q3",
+      "package": "extract-zip",
+      "reason": "Same package, same reachability and same absence of a patched release as GHSA-jmr9-qjv8-65gv.",
+      "expires": "2026-12-31"
+    }
+  ]
+}

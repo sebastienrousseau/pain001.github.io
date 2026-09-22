@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/pl/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.47)"
+generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "Otwartoźródłowy pakiet Python generujący pliki pain.001 i pain.008 zwalidowane XSD z CSV, Excel, SQLite, JSON, Parquet lub SWIFT MT101 — z narzędziami MCP dla agentów AI i serwerem LSP."
 item_guid: "https://pain001.com/pl/rss.xml"
 item_link: "https://pain001.com/pl/rss.xml"
@@ -66,15 +66,15 @@ apple-mobile-web-app-title: "Pain001 — inicjowanie płatności ISO 20022 w ope
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
-twitter_creator: @wwdseb
+twitter_creator: "@wwdseb"
 twitter_description: "Otwartoźródłowy pakiet Python generujący pliki pain.001 i pain.008 zwalidowane XSD z CSV, Excel, SQLite, JSON, Parquet lub SWIFT MT101 — z narzędziami MCP dla agentów AI i serwerem LSP."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
-twitter_site: @wwdseb
+twitter_site: "@wwdseb"
 twitter_title: "Pain001 — inicjowanie płatności ISO 20022 w open source"
 twitter_url: "https://pain001.com/pl/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: @wwdseb
+author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
 site_last_updated: 2026-07-26

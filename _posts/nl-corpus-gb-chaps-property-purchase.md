@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/nl/corpus-gb-chaps-property-purchase/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.47)"
+generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "CHAPS same-day property completion with the BoE HLST purpose code. Een gevalideerd pain.001-voorbeeld (Verenigd Koninkrijk, rail priority-payment), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
 item_guid: "https://pain001.com/nl/corpus-gb-chaps-property-purchase/"
 item_link: "https://pain001.com/nl/corpus-gb-chaps-property-purchase/"
@@ -66,15 +66,15 @@ apple-mobile-web-app-title: "gb.chaps.property-purchase — ISO 20022 pain.001-v
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
-twitter_creator: @wwdseb
+twitter_creator: "@wwdseb"
 twitter_description: "CHAPS same-day property completion with the BoE HLST purpose code. Een gevalideerd pain.001-voorbeeld (Verenigd Koninkrijk, rail priority-payment), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
-twitter_site: @wwdseb
+twitter_site: "@wwdseb"
 twitter_title: "gb.chaps.property-purchase — ISO 20022 pain.001-voorbeeld: Verenigd Koninkrijk (priority-payment)"
 twitter_url: "https://pain001.com/nl/corpus-gb-chaps-property-purchase/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: @wwdseb
+author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
 site_last_updated: 2026-07-26

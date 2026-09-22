@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Post-build repairs for the ssg output, run by build.sh before publish.
 
-Local ssg builds (0.0.47) emit two entity-escaping artifacts, the same
+Local ssg builds (0.0.63) emit two entity-escaping artifacts, the same
 class of bug sebastienrousseau.github.io repairs in its postbuild:
 
 1. Head metas: the ``{{primary}}``/partial expansion right after
@@ -26,6 +26,7 @@ Idempotent: every pass is a no-op when its artifact is absent.
 from __future__ import annotations
 
 import hashlib
+import base64
 import html as _html
 import re
 import sys
@@ -159,7 +160,8 @@ def escape_inline_code(html: str) -> str:
 _H2_RE = re.compile(r"<h2>(.*?)</h2>", re.DOTALL)
 _TAG_RE = re.compile(r"<[^>]+>")
 _ARTICLE_RE = re.compile(
-    r"(<article class=\"?content-body\"?>)(.*?)(</article>)", re.DOTALL
+    r'(<article class="[^"]*\bcontent-body\b[^"]*">)(.*?)(</article>)',
+    re.DOTALL,
 )
 _META_RE = re.compile(r"(<div class=\"?article-meta\"?>)")
 
@@ -324,16 +326,47 @@ def stamp_table_labels(html: str) -> str:
 # pre and all span wrappers, keeping the text; the layouts style code
 # blocks with theme tokens.
 _CODE_BLOCK_RE = re.compile(r"(<pre><code[^>]*>)(.*?)(</code></pre>)", re.DOTALL)
+_ESCAPED_CODE_BLOCK_RE = re.compile(
+    r"<pre>(&lt;code\b.*?&gt;)(.*?)&lt;/code&gt;&lt;/pre&gt;", re.DOTALL
+)
+_ESCAPED_CODE_RE = re.compile(
+    r"&lt;code(.*?)&gt;(.*?)&lt;/code&gt;", re.DOTALL
+)
 _INNER_PRE_RE = re.compile(r"</?pre[^>]*>")
 _SPAN_RE = re.compile(r"</?span[^>]*>")
 
 
 def fix_code_blocks(html: str) -> str:
+    # ssg 0.0.63 can leave the structural code/pre delimiters encoded one
+    # level deeper than the syntax-highlight spans. Restore only those
+    # delimiters; code samples such as <BIC> must remain escaped text.
+    def restore(m: re.Match) -> str:
+        opening = _html.unescape(m.group(1))
+        inner = _INNER_PRE_RE.sub("", m.group(2)).strip("\n")
+        return f"<pre>{opening}{inner}</code></pre>"
+
+    html = _ESCAPED_CODE_BLOCK_RE.sub(restore, html)
+
     def unwrap(m: re.Match) -> str:
         inner = _SPAN_RE.sub("", _INNER_PRE_RE.sub("", m.group(2)))
         return m.group(1) + inner.strip("\n") + m.group(3)
 
     return _CODE_BLOCK_RE.sub(unwrap, html)
+
+
+def restore_encoded_code(html: str) -> str:
+    """Restore encoded code delimiters while leaving their payload escaped.
+
+    SSG 0.0.63 emits both inline and fenced code delimiters one entity level
+    deeper than the surrounding Markdown.  Unescaping only the delimiters
+    preserves examples such as ``<BIC>`` as text instead of creating unknown
+    HTML elements.
+    """
+    def restore(m: re.Match) -> str:
+        attrs = _html.unescape(m.group(1))
+        return f"<code{attrs}>{m.group(2)}</code>"
+
+    return _ESCAPED_CODE_RE.sub(restore, html)
 
 
 # ssg's markdown renderer emits presentational align attributes on table
@@ -567,6 +600,20 @@ def retag_body_lang(html: str, code: str) -> str:
     return html.replace('<div lang="en">', '<div lang="%s">' % code)
 
 
+def retag_html_lang(html: str, code: str, rtl: bool = False) -> str:
+    """Set the document language without assuming `<html>` has no class.
+
+    PRISM carries `class="no-js"` on the root element, so the former exact
+    `<html lang="en-GB">` replacement no longer matched localized copies.
+    """
+    direction = ' dir="rtl"' if rtl else ""
+    return re.sub(
+        r'<html\b([^>]*?)\blang="en-GB"([^>]*)>',
+        lambda m: '<html' + m.group(1) + 'lang="%s"' % code
+        + m.group(2) + direction + '>',
+        html, count=1)
+
+
 def translate_status_strip(html: str, s: list) -> str:
     aria, milestone, addr, addr_v, relay, release, msgdefs, reviewed = s
     pairs = [
@@ -687,8 +734,9 @@ def gen_try_locales(site: Path) -> None:
         html = base
         # lang + direction
         dir_attr = ' dir="rtl"' if slug in RTL_LANGS else ""
-        html = html.replace('<html lang="en-GB">',
-                            '<html lang="%s"%s>' % (code, dir_attr), 1)
+        html = retag_html_lang(html, code, slug in RTL_LANGS)
+        html = html.replace('"inLanguage": "en-GB"',
+                            '"inLanguage": "%s"' % code)
         # metadata: title/description everywhere they appear, then URLs
         meta = d.get("meta", {})
         for key in ("title", "description"):
@@ -703,8 +751,14 @@ def gen_try_locales(site: Path) -> None:
         # anchor, so long keys fall back to raw substring replacement
         for k in sorted(d.get("text", {}), key=len, reverse=True):
             v = d["text"][k]
+            apostrophe_k = k.replace("&#x27;", "'").replace("&#39;", "'")
+            apostrophe_v = v.replace("&#x27;", "'").replace("&#39;", "'")
             if ">%s<" % k in html:
                 html = html.replace(">%s<" % k, ">%s<" % v)
+            elif apostrophe_k in html:
+                html = html.replace(apostrophe_k, apostrophe_v)
+            elif _html.unescape(k) in html:
+                html = html.replace(_html.unescape(k), _html.unescape(v))
             elif len(k) >= 30:
                 html = html.replace(k, v)
         for k, v in d.get("aria", {}).items():
@@ -776,8 +830,7 @@ def _gen_localized_pages(site: Path, pages: tuple, table_dir: str) -> None:
             pd = d[page_name]
             html = base
             dir_attr = ' dir="rtl"' if slug in RTL_LANGS else ""
-            html = html.replace('<html lang="en-GB">',
-                                '<html lang="%s"%s>' % (code, dir_attr), 1)
+            html = retag_html_lang(html, code, slug in RTL_LANGS)
             html = html.replace('"inLanguage": "en-GB"',
                                 '"inLanguage": "%s"' % code)
             # anchored meta swaps only — a raw global replace of the
@@ -797,8 +850,14 @@ def _gen_localized_pages(site: Path, pages: tuple, table_dir: str) -> None:
                                 + "</head>", 1)
             for k in sorted(pd.get("text", {}), key=len, reverse=True):
                 v = pd["text"][k]
+                apostrophe_k = k.replace("&#x27;", "'").replace("&#39;", "'")
+                apostrophe_v = v.replace("&#x27;", "'").replace("&#39;", "'")
                 if ">%s<" % k in html:
                     html = html.replace(">%s<" % k, ">%s<" % v)
+                elif apostrophe_k in html:
+                    html = html.replace(apostrophe_k, apostrophe_v)
+                elif _html.unescape(k) in html:
+                    html = html.replace(_html.unescape(k), _html.unescape(v))
                 elif len(k) >= 30:
                     html = html.replace(k, v)
             for k, v in pd.get("aria", {}).items():
@@ -1011,7 +1070,7 @@ TAXONOMY_CSS = '<link rel="stylesheet" href="/css/taxonomy.css" />'
 # to a tag page requested /favicon.ico and got a 404.
 TAXONOMY_ICONS = ('<link rel="icon" type="image/svg+xml" href="/img/pain001.svg" sizes="any" />'
                   '<link rel="apple-touch-icon" href="/img/pain001.svg" />')
-BEACON_TAG = '<script defer src="/js/cf-beacon.min.js" data-cf-beacon=\'{"token": "7e7c74d9aa9046ff8d3bf7c56e5a510d"}\'></script>'
+BEACON_TAG = '<script defer src="/js/pain001-analytics.js" data-cf-token="7e7c74d9aa9046ff8d3bf7c56e5a510d"></script>'
 TAXONOMY_VIEWPORT = (
     '<meta name="viewport" content="width=device-width, initial-scale=1" />'
 )
@@ -1070,7 +1129,7 @@ def fix_tag_pages(site: Path) -> None:
             page.write_text(html.replace("</head>", inject + "</head>", 1), encoding="utf-8")
             print(f"[postbuild] patched tag page: {page}")
         html = page.read_text(encoding="utf-8")
-        if "cf-beacon.min.js" not in html and "</body>" in html:
+        if "pain001-analytics.js" not in html and "</body>" in html:
             # the same page-view beacon the layouts carry (see METRICS.md)
             page.write_text(html.replace("</body>", BEACON_TAG + "</body>", 1), encoding="utf-8")
 
@@ -1088,8 +1147,100 @@ def fix_manifest(site: Path) -> None:
         data["theme_color"] = "#0b0e14"
     if not isinstance(data.get("background_color"), str):
         data["background_color"] = "#ffffff"
+    for icon in data.get("icons", []):
+        if isinstance(icon, dict) and str(icon.get("src", "")).startswith(BASE_URL + "/"):
+            icon["src"] = icon["src"][len(BASE_URL):]
     path.write_text(json.dumps(data, indent=2), encoding="utf-8")
     print("[postbuild] manifest.json theme_color fixed")
+
+
+_STYLESHEET_RE = re.compile(
+    r'<link\b(?=[^>]*\brel="stylesheet")(?=[^>]*\bhref="([^"]+)")[^>]*>'
+)
+
+
+def bundle_stylesheets(site: Path) -> None:
+    """Collapse each page's local CSS chain into one immutable SRI asset.
+
+    The authored Skeletonic, PRISM, adapter, and layout styles remain separate
+    in the repository.  The published bundle removes four render-blocking
+    round trips on mobile without weakening the CSP or changing the cascade.
+    """
+    output = site / "css"
+    output.mkdir(exist_ok=True)
+    bundles: dict[tuple[str, ...], tuple[str, str]] = {}
+    pages = 0
+    for page in site.rglob("*.html"):
+        html = page.read_text(encoding="utf-8")
+        matches = list(_STYLESHEET_RE.finditer(html))
+        hrefs = tuple(m.group(1) for m in matches)
+        if not hrefs or any(h.startswith(("http:", "https:", "//")) for h in hrefs):
+            continue
+        paths = [site / h.lstrip("/") for h in hrefs]
+        # SSG 0.0.63 fingerprints its generated syntax-highlighter asset but
+        # leaves the authored ``/highlight.css`` URL in HTML. Resolve that
+        # single generated file while assembling the final page bundle; the
+        # stale URL is then removed with the other individual stylesheet
+        # links instead of becoming a site-wide 404.
+        for index, (href, path) in enumerate(zip(hrefs, paths)):
+            if path.is_file() or href != "/highlight.css":
+                continue
+            candidates = sorted(site.glob("highlight.*.css"))
+            if len(candidates) == 1:
+                paths[index] = candidates[0]
+        if not all(path.is_file() for path in paths):
+            continue
+        if hrefs not in bundles:
+            payload = ("\n".join(path.read_text(encoding="utf-8") for path in paths) + "\n").encode()
+            digest = hashlib.sha256(payload).hexdigest()[:16]
+            sri = base64.b64encode(hashlib.sha384(payload).digest()).decode()
+            name = f"site-{digest}.css"
+            (output / name).write_bytes(payload)
+            bundles[hrefs] = (f"/css/{name}", sri)
+        href, sri = bundles[hrefs]
+        replacement = (
+            f'<link rel="stylesheet" href="{href}" integrity="sha384-{sri}" '
+            'crossorigin="anonymous" />'
+        )
+        # Stylesheet links are interleaved with metadata in SSG's generated
+        # head. Replace links individually; replacing the whole first-to-last
+        # span would silently delete canonical, Open Graph, and feed tags.
+        parts: list[str] = []
+        cursor = 0
+        for index, match in enumerate(matches):
+            parts.append(html[cursor : match.start()])
+            if index == 0:
+                parts.append(replacement)
+            cursor = match.end()
+        parts.append(html[cursor:])
+        html = "".join(parts)
+        page.write_text(html, encoding="utf-8")
+        pages += 1
+    print(f"[postbuild] {len(bundles)} CSS bundle(s) linked from {pages} page(s)")
+
+
+def ensure_social_metadata(site: Path) -> None:
+    """Give every authored and generated page the minimum social card set."""
+    changed = 0
+    for page in site.rglob("*.html"):
+        html = page.read_text(encoding="utf-8")
+        title_match = re.search(r"<title>(.*?)</title>", html, re.DOTALL | re.IGNORECASE)
+        if not title_match or "</head>" not in html:
+            continue
+        title = _html.escape(_html.unescape(_TAG_RE.sub("", title_match.group(1))).strip(), quote=True)
+        tags = []
+        if not re.search(r'<meta\s+property=["\']og:title["\']', html, re.IGNORECASE):
+            tags.append(f'<meta property="og:title" content="{title}" />')
+        if not re.search(r'<meta\s+property=["\']og:type["\']', html, re.IGNORECASE):
+            tags.append('<meta property="og:type" content="website" />')
+        if not re.search(r'<meta\s+name=["\']twitter:card["\']', html, re.IGNORECASE):
+            tags.append('<meta name="twitter:card" content="summary_large_image" />')
+        if not tags:
+            continue
+        html = html.replace("</head>", "".join(tags) + "</head>", 1)
+        page.write_text(html, encoding="utf-8")
+        changed += 1
+    print(f"[postbuild] social card metadata on {changed} page(s)")
 
 
 def regen_sitemap(site: Path) -> None:
@@ -1263,16 +1414,16 @@ def write_llms(site: Path) -> None:
         "## Install",
         "",
         "- `pip install pain001` (library and CLI); `pip install pain001-mcp` (MCP server, 21 tools); "
-        "`pip install pain001-lsp` (language server)",
+        + "`pip install pain001-lsp` (language server)",
         "- MCP, Claude Code: `claude mcp add pain001 -- pain001-mcp`; other clients: command `pain001-mcp` over stdio "
-        "(configuration blocks at https://pain001.com/pain001-mcp/)",
+        + "(configuration blocks at https://pain001.com/pain001-mcp/)",
         "",
         "## Machine-readable data",
         "",
         "- Corpus index (every scenario, absolute URLs for XML, JSON twin, provenance, schema, demo): "
-        "https://pain001.com/corpus/index.json",
+        + "https://pain001.com/corpus/index.json",
         "- JSON Schema 2020-12 per pain.001 edition, for the ISO 20022 JSON twin convention: "
-        "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json (and .03 to .13)",
+        + "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json (and .03 to .13)",
         "- Input column vocabulary (the flat rows the library reads): https://pain001.com/documentation/",
         "",
         "## Pages",
@@ -1291,7 +1442,7 @@ def write_llms(site: Path) -> None:
         "## Rules of use",
         "",
         "- Files are synthetic and built from public scheme rulebooks; no bank usage guideline is represented. "
-        "Apply your bank's own guideline privately with the library's overlay tooling.",
+        + "Apply your bank's own guideline privately with the library's overlay tooling.",
         "",
     ]
     lines = [f"- {s['id']} ({(s.get('country') or '').upper()}, {s.get('family')}): {s.get('description')} "
@@ -1306,9 +1457,9 @@ def stamp_suite_version(site: Path) -> int:
     """Say in every footer which suite version the site was generated against.
 
     The version comes from the corpus index the generator wrote, so the
-    footer can never claim a version the corpus pages do not carry. The
-    stamp is its own paragraph just inside the closing footer tag, outside
-    <main>, so no locale table key (a leaf fragment of <main>) changes.
+    footer can never claim a version the corpus pages do not carry. Keep the
+    stamp inside PRISM's ``footer-bottom`` container so it shares the footer's
+    width, spacing, and responsive alignment on every generated page.
     """
     import json as _json
     index = Path(__file__).resolve().parent.parent / "static" / "corpus" / "index.json"
@@ -1318,16 +1469,27 @@ def stamp_suite_version(site: Path) -> int:
     if not version:
         return 0
     stamp = f'<p class="suite-version">Generated against pain001 {version}</p>'
+    credit_re = re.compile(
+        r'(<p class="footer-credit">.*?</p>)', re.DOTALL)
+    existing_re = re.compile(
+        r'<p class="suite-version">.*?</p>', re.DOTALL)
     count = 0
     for page in site.rglob("index.html"):
         html = page.read_text(encoding="utf-8")
-        if 'class="suite-version"' in html:
-            continue
         start = html.find("<footer")
         close = html.find("</footer>", start) if start >= 0 else -1
         if close < 0:
             continue
-        page.write_text(html[:close] + stamp + html[close:], encoding="utf-8")
+        footer = html[start:close]
+        if 'class="suite-version"' in footer:
+            fixed_footer = existing_re.sub(stamp, footer, count=1)
+        else:
+            fixed_footer, replacements = credit_re.subn(
+                rf'\1\n      {stamp}', footer, count=1)
+            if replacements == 0:
+                continue
+        page.write_text(
+            html[:start] + fixed_footer + html[close:], encoding="utf-8")
         count += 1
     return count
 
@@ -1343,18 +1505,30 @@ def main() -> None:
     if "--stamp-sw" in sys.argv:
         stamp_sw_cache_version(site)
         return
+    if "--optimise-assets" in sys.argv:
+        bundle_stylesheets(site)
+        return
     repaired = 0
     for page in site.rglob("*.html"):
         html = page.read_text(encoding="utf-8")
+        # Flatten the highlighter's invalid nested <pre> before protecting
+        # inline code.  Doing this in the opposite order makes the protector
+        # stop at the inner </pre>, after which the outer <code> delimiter is
+        # escaped and the browser treats the remainder of the article as one
+        # enormous code block.
         fixed = relocate_body_stylesheets(
-            fix_code_blocks(
-                strip_align_attrs(
-                    stamp_table_labels(
-                        wrap_tables(
+            strip_align_attrs(
+                stamp_table_labels(
+                    wrap_tables(
                         add_article_furniture(
                             escape_inline_code(
-                                fix_body(dedupe_head_metas(fix_head(html))))
-                        ))
+                                restore_encoded_code(
+                                    fix_code_blocks(
+                                        fix_body(dedupe_head_metas(fix_head(html)))
+                                    )
+                                )
+                            )
+                        )
                     )
                 )
             )
@@ -1382,6 +1556,8 @@ def main() -> None:
         (site / ".well-known" / "security.txt").write_bytes(sec.read_bytes())
     regen_sitemap(site)
     gen_legacy_redirects(site)  # after sitemap so stubs stay unindexed
+    normalise_site_shell(site)  # includes taxonomy and redirect pages
+    ensure_social_metadata(site)
 
 
 LEGACY_REDIRECTS = {
@@ -1419,6 +1595,80 @@ def gen_legacy_redirects(site: Path) -> None:
             stub % {"new": new, "base": BASE_URL, "csp": CSP_META},
             encoding="utf-8")
     print(f"[postbuild] {len(LEGACY_REDIRECTS)} legacy redirect stub(s)")
+
+
+_CSP_TAG_RE = re.compile(
+    r'<meta\b[^>]*Content-Security-Policy[^>]*>', re.IGNORECASE | re.DOTALL)
+_PRISM_LINKS = (
+    '<link rel="stylesheet" href="/css/skeletonic-3.0.0.min.css" />'
+    '<link rel="stylesheet" href="/css/prism.css" />'
+    '<link rel="stylesheet" href="/css/pain001-prism.css" />'
+)
+_FOOTER_CREDIT = (
+    '<p class="footer-credit">Made with ❤️ in London. Built with '
+    '<a href="https://static-site-generator.com/">SSG</a> and '
+    '<a href="https://skeletonic.com/">Skeletonic CSS</a>.</p>'
+)
+
+
+def normalise_site_shell(site: Path) -> None:
+    """Give authored, taxonomy, and redirect pages one security policy and
+    one footer contract. Taxonomy pages are emitted outside the layouts, so
+    add the PRISM assets and exact three-state control here as well."""
+    root_html = (site / "index.html").read_text(encoding="utf-8")
+    header_match = re.search(
+        r'<header class="site-header">.*?</header>', root_html, re.DOTALL)
+    footer_match = re.search(
+        r'<footer class="site-footer">.*?</footer>', root_html, re.DOTALL)
+    shared_header = header_match.group(0) if header_match else ""
+    shared_footer = footer_match.group(0) if footer_match else ""
+
+    changed = 0
+    for page in site.rglob("*.html"):
+        html = page.read_text(encoding="utf-8")
+        fixed, count = _CSP_TAG_RE.subn(CSP_META, html, count=1)
+        if count == 0 and "</head>" in fixed:
+            fixed = fixed.replace("</head>", CSP_META + "</head>", 1)
+
+        is_taxonomy = "/tags/" in "/" + page.relative_to(site).as_posix()
+        is_redirect = '<meta http-equiv="refresh"' in fixed
+        if is_taxonomy or is_redirect:
+            if "skeletonic-3.0.0.min.css" not in fixed:
+                fixed = fixed.replace("</head>", _PRISM_LINKS + "</head>", 1)
+            fixed = fixed.replace("<body>", '<body class="prism-theme">', 1)
+            if shared_header and "site-header" in fixed:
+                fixed = re.sub(
+                    r'<header\b[^>]*>.*?</header>', shared_header, fixed,
+                    count=1, flags=re.DOTALL)
+            elif shared_header and is_redirect:
+                fixed = fixed.replace(
+                    '<body class="prism-theme">',
+                    '<body class="prism-theme">' + shared_header, 1)
+            if shared_footer and re.search(r'<footer\b', fixed):
+                fixed = re.sub(
+                    r'<footer\b[^>]*>.*?</footer>', shared_footer, fixed,
+                    count=1, flags=re.DOTALL)
+            elif shared_footer and is_redirect:
+                fixed = fixed.replace("</body>", shared_footer + "</body>", 1)
+            if "prism-theme-init.js" not in fixed:
+                fixed = fixed.replace(
+                    "</head>", '<script src="/js/prism-theme-init.js"></script></head>', 1)
+            if 'src="/js/prism.js"' not in fixed:
+                fixed = fixed.replace(
+                    "</body>", '<script src="/js/prism.js" defer></script>'
+                    '<script src="/js/pain001-prism.js" defer></script></body>', 1)
+
+        if 'class="footer-credit"' not in fixed:
+            if "</footer>" in fixed:
+                fixed = fixed.replace("</footer>", _FOOTER_CREDIT + "</footer>", 1)
+            elif "</body>" in fixed:
+                fixed = fixed.replace(
+                    "</body>", '<footer class="footer">' + _FOOTER_CREDIT + "</footer></body>", 1)
+
+        if fixed != html:
+            page.write_text(fixed, encoding="utf-8")
+            changed += 1
+    print(f"[postbuild] normalised PRISM shell and CSP on {changed} page(s)")
 
 
 if __name__ == "__main__":

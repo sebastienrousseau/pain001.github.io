@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/solutions/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.47)"
+generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "Treasury, CFO and board, payment operations, engineering and AI — the problem in your vocabulary, what Pain001 changes, and your next click, in 150 words per role."
 item_guid: "https://pain001.com/solutions/rss.xml"
 item_link: "https://pain001.com/solutions/rss.xml"
@@ -66,15 +66,15 @@ apple-mobile-web-app-title: "Who Pain001 Is For"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
-twitter_creator: @wwdseb
+twitter_creator: "@wwdseb"
 twitter_description: "Treasury, CFO and board, payment operations, engineering and AI — the problem in your vocabulary, what Pain001 changes, and your next click, in 150 words per role."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
-twitter_site: @wwdseb
+twitter_site: "@wwdseb"
 twitter_title: "Who Pain001 Is For"
 twitter_url: "https://pain001.com/solutions/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: @wwdseb
+author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
 site_last_updated: 2026-07-26

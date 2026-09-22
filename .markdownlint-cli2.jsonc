@@ -1,0 +1,16 @@
+{
+  "globs": [
+    "*.md",
+    "docs/**/*.md",
+    ".github/**/*.md",
+    "!.git/**",
+    "!docs/releases/generated/**"
+  ],
+  "config": {
+    "default": true,
+    "MD013": false,
+    "MD024": false,
+    "MD033": false,
+    "MD041": false
+  }
+}

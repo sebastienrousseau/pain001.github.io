@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/message-specs/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.47)"
+generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "Complete element references for every supported ISO 20022 payment-initiation version: paths, cardinality, types, constraints and code lists, generated from the official schemas."
 item_guid: "https://pain001.com/message-specs/"
 item_link: "https://pain001.com/message-specs/"
@@ -66,15 +66,15 @@ apple-mobile-web-app-title: "ISO 20022 message specifications — generated from
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
-twitter_creator: @wwdseb
+twitter_creator: "@wwdseb"
 twitter_description: "Complete element references for every supported ISO 20022 payment-initiation version: paths, cardinality, types, constraints and code lists, generated from the official schemas."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
-twitter_site: @wwdseb
+twitter_site: "@wwdseb"
 twitter_title: "ISO 20022 message specifications — generated from the official XSDs"
 twitter_url: "https://pain001.com/message-specs/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: @wwdseb
+author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
 site_last_updated: 2026-07-26
@@ -128,6 +128,6 @@ Complete, generated specifications for every ISO 20022 payment-initiation messag
 
 ## Scope and honesty
 
-- These pages describe the **base ISO standard**. A document that conforms here can still be rejected by a scheme rulebook, by your bank's own profile, or by the channel you submit it through — see the [four-layer model](/#layers-heading).
+- These pages describe the **base ISO standard**. A document that conforms here can still be rejected by a scheme rulebook, by your bank's own profile, or by the channel you submit it through — see the [four-layer model](/#standards-heading).
 - The reference is **English only**. It is generated data that grows with every ISO release, and the site's translated pages are parity-checked in CI; localising a growing generated surface into 34 languages is not a commitment that could be kept honestly.
 - Regenerate with `python3 scripts/extract_message_specs.py && python3 scripts/generate_message_specs.py` after a schema update.

@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
   sniffDelimiter, splitCsvLine, normaliseHeader, parseCsv,
-  errorReportCsv, decodeBuffer, SAMPLES, SCENARIOS, REQUIRED_COLUMNS,
+  errorReportCsv, decodeBuffer, fillTemplate, SAMPLES, SCENARIOS, REQUIRED_COLUMNS,
 } from "../static/js/try-demo.js";
 
 
@@ -19,6 +19,7 @@ test("delimiter sniffing", () => {
   assert.equal(sniffDelimiter("a;b;c"), ";");
   assert.equal(sniffDelimiter("a\tb\tc"), "\t");
   assert.equal(sniffDelimiter("a;b;c,d"), ";");
+  assert.equal(sniffDelimiter("header"), ",");
 });
 
 test("quoted fields with embedded delimiters and quotes", () => {
@@ -26,12 +27,25 @@ test("quoted fields with embedded delimiters and quotes", () => {
     splitCsvLine('1,"Smith & Sons, Ltd","He said ""hi"""', ","),
     ["1", "Smith & Sons, Ltd", 'He said "hi"'],
   );
+  assert.deepEqual(splitCsvLine('ab"cd,ef', ","), ['ab"cd', "ef"]);
 });
 
 test("header normalisation is case-insensitive and reports unknowns", () => {
   const { headers, unknown } = normaliseHeader([" Payment_ID ", "CURRENCY", "custom_ref"]);
   assert.deepEqual(headers, ["payment_id", "currency", "custom_ref"]);
   assert.deepEqual(unknown, ["custom_ref"]);
+  assert.deepEqual(normaliseHeader([" "]).unknown, []);
+});
+
+test("parseCsv rejects input without both a header and record", () => {
+  assert.deepEqual(parseCsv("header-only"), {
+    error: "Need a header row and at least one record.",
+  });
+});
+
+test("message templates preserve unknown placeholders", () => {
+  assert.equal(fillTemplate("row {row}: {missing}", { row: 2 }), "row 2: {missing}");
+  assert.equal(fillTemplate("{value}", null), "{value}");
 });
 
 test("parseCsv: semicolon dialect and BOM", () => {
@@ -49,16 +63,6 @@ test("parseCsv: ragged rows reported, not silently dropped", () => {
   assert.equal(out.structural[0].rule, "row-shape");
 });
 
-/* ==== Validation rules ==== */
-
-function sampleRows() {
-  return parseCsv(SAMPLES["sepa-sct"].csv).rows;
-}
-
-
-
-
-
 /* ==== Control totals & XML ==== */
 
 
@@ -73,6 +77,7 @@ test("error report CSV quotes fields", () => {
   assert.ok(report.startsWith("row,column,rule,value,message\n"));
   assert.ok(report.includes('"X""Y"'));
   assert.ok(report.includes('"fails, badly"'));
+  assert.equal(errorReportCsv([]), "row,column,rule,value,message\n");
 });
 
 test("windows-1252 fallback decoding", () => {
@@ -108,4 +113,6 @@ test("every scenario changes the pristine sample (the library judges the result)
   for (const [key, scenario] of Object.entries(SCENARIOS)) {
     assert.notEqual(scenario.apply(base), base, key);
   }
+  const quoted = 'a,b,c,d,e,f\n"one,two",2,3,4,5,6';
+  assert.match(SCENARIOS["missing-column"].apply(quoted), /"one,two"/);
 });

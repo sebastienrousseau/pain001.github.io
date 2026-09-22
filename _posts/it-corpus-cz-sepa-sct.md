@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/it/corpus-cz-sepa-sct/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.47)"
+generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "SEPA credit transfer from a Czech EUR account to a German supplier. Un campione pain.001 validato (CZ, circuito sepa-credit-transfer), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser."
 item_guid: "https://pain001.com/it/corpus-cz-sepa-sct/"
 item_link: "https://pain001.com/it/corpus-cz-sepa-sct/"
@@ -66,15 +66,15 @@ apple-mobile-web-app-title: "cz.sepa.sct — esempio pain.001 ISO 20022: CZ (sep
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
-twitter_creator: @wwdseb
+twitter_creator: "@wwdseb"
 twitter_description: "SEPA credit transfer from a Czech EUR account to a German supplier. Un campione pain.001 validato (CZ, circuito sepa-credit-transfer), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
-twitter_site: @wwdseb
+twitter_site: "@wwdseb"
 twitter_title: "cz.sepa.sct — esempio pain.001 ISO 20022: CZ (sepa-credit-transfer)"
 twitter_url: "https://pain001.com/it/corpus-cz-sepa-sct/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: @wwdseb
+author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
 site_last_updated: 2026-07-26

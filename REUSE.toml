@@ -1,0 +1,29 @@
+version = 1
+
+[[annotations]]
+path = ["**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2023-2026 Sebastien Rousseau"
+SPDX-License-Identifier = "Apache-2.0 OR MIT"
+
+[[annotations]]
+path = [
+  "static/css/prism.css",
+  "static/js/prism-theme-init.js",
+  "static/js/prism.js"
+]
+precedence = "override"
+SPDX-FileCopyrightText = "2026 Sebastien Rousseau"
+SPDX-License-Identifier = "MIT"
+
+[[annotations]]
+path = ["static/css/skeletonic-3.0.0.min.css"]
+precedence = "override"
+SPDX-FileCopyrightText = "Skeletonic CSS contributors"
+SPDX-License-Identifier = "MIT"
+
+[[annotations]]
+path = ["static/pyodide/**", "static/js/cf-beacon.min.js"]
+precedence = "override"
+SPDX-FileCopyrightText = "See THIRD_PARTY_NOTICES.md and embedded package metadata"
+SPDX-License-Identifier = "LicenseRef-ThirdParty"

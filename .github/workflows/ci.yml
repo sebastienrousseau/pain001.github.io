@@ -3,7 +3,7 @@ name: CI
 # Every push and PR rebuilds the site and enforces the full quality bar:
 #   1. ssg's 15 audit gates (WCAG, JSON-LD, CSP/SRI, links, metadata,
 #      performance, feeds, AI discovery, ...) — failing on warnings.
-#   2. pa11y-ci at WCAG2AAA across 12 representative pages.
+#   2. pa11y-ci at WCAG2AAA across 19 representative pages.
 # The site is built in-job and, on main, deployed to GitHub Pages from
 # the same run as an artifact, so nothing reaches production that did not
 # pass every gate, and the built tree is never committed.
@@ -21,21 +21,21 @@ permissions:
 env:
   # The one ssg pin: the cache key and the install step both read it,
   # so a bump can never update one and leave the other behind.
-  SSG_VERSION: 0.0.47
+  SSG_VERSION: 0.0.63
 
 jobs:
   build-and-audit:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@6bed0761d98439e5a578e2877258200ad565ba87 # stable
 
       - name: Cache ssg binary
         id: cache-ssg
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: ~/.cargo/bin/ssg
           key: ssg-${{ env.SSG_VERSION }}-${{ runner.os }}
@@ -45,23 +45,25 @@ jobs:
         run: cargo install ssg --locked --version "$SSG_VERSION"
 
       - name: Set up Node (build samples, tests, pa11y)
-        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: 22
+          cache: npm
+
+      - name: Install Node toolchain from the lockfile
+        run: npm ci
 
       - name: Build site
         run: ./build.sh
 
       - name: Audit gates (fail on warnings)
-        run: ssg audit -f ssg.toml -o docs --severity warn --fail-on warn
+        run: ssg audit -f ssg.toml -o site --severity warn --fail-on warn
 
       - name: Unit tests (demo input handling)
-        run: node --test tests/*.test.mjs
+        run: node --experimental-test-coverage --test-coverage-lines=100 --test-coverage-functions=100 --test-coverage-branches=100 --test tests/try-demo.test.mjs
 
       - name: Browser engine runs the library (Node, vendored runtime)
-        run: |
-          npm i --no-save pyodide@0.27.2
-          node tests/engine.integration.mjs
+        run: node tests/engine.integration.mjs
 
       - name: Translation table integrity (key/tag/placeholder parity)
         run: |
@@ -82,7 +84,7 @@ jobs:
         run: python3 scripts/validate_content_integrity.py
 
       - name: Link integrity (internal links, anchors, locale consistency)
-        run: python3 scripts/validate_links.py docs
+        run: python3 scripts/validate_links.py site
 
       - name: Suite version currency (no page cites an older pain001)
         run: python3 scripts/validate_versions.py
@@ -104,28 +106,111 @@ jobs:
           echo '{"name":"pain001-a11y-tools","private":true}' > package.json
           PUPPETEER_SKIP_DOWNLOAD=1 npm install --silent --no-audit --no-fund puppeteer-core@23
           cd ..
-          (cd docs && python3 -m http.server 8899 &)
-          sleep 2
+          nohup node scripts/serve_audit.mjs site 8899 > "$RUNNER_TEMP/pain001-audit-server.log" 2>&1 &
+          for _ in {1..20}; do
+            if curl --fail --silent http://127.0.0.1:8899/ > /dev/null; then
+              break
+            fi
+            sleep 0.25
+          done
+          curl --fail --silent http://127.0.0.1:8899/ > /dev/null
           node scripts/layout_audit.cjs
           node scripts/print_audit.cjs
 
-      - name: Performance budgets (Lighthouse, mobile)
-        run: |
-          (cd docs && python3 -m http.server 8898 &)
-          sleep 2
-          CHROME_PATH=/usr/bin/google-chrome node scripts/perf_budget.mjs http://127.0.0.1:8898
+      - name: Lighthouse 100% (mobile and desktop)
+        run: CHROME_PATH=/usr/bin/google-chrome node scripts/perf_budget.mjs http://127.0.0.1:8899
 
       - name: Accessibility scan (pa11y-ci, WCAG2AAA)
+        run: npx pa11y-ci
+
+      - name: Accessibility in system, light, and dark modes (axe)
         run: |
-          (cd docs && python3 -m http.server 8899 &)
-          sleep 2
-          npx -y pa11y-ci@4.1.1
+          npm install --prefix .a11y-tools --no-save --no-audit --no-fund puppeteer-core@23 @axe-core/puppeteer@4.10.2
+          node scripts/a11y_modes.mjs
 
       - name: Upload the built site as the Pages artifact
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
-          path: docs
+          path: site
+
+  repository-quality:
+    name: Repository quality
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install Node toolchain from the lockfile
+        run: npm ci
+
+      - name: Workflow lint
+        uses: rhysd/actionlint@914e7df21a07ef503a81201c76d2b11c789d3fca # v1.7.12
+
+      - name: Documentation lint
+        run: |
+          npx --yes markdownlint-cli2@0.23.2
+          python -m pip install --quiet codespell==2.4.3
+          codespell
+
+      - name: README conforms to the workspace template
+        run: python3 scripts/validate_readme.py
+
+      - name: Dependency advisories (npm audit, documented exceptions only)
+        run: python3 scripts/audit_deps.py
+
+      - name: Release version consistency
+        run: ./scripts/verify_release_version.sh
+
+      - name: REUSE licence metadata
+        run: |
+          python -m pip install --quiet reuse==6.2.0
+          reuse lint
+
+  node-matrix:
+    name: Unit tests (Node ${{ matrix.node }})
+    runs-on: ubuntu-latest
+    # package.json declares engines >= 22, and the build job only ever proves
+    # Node 22. This backs the published floor on both supported majors: the
+    # class of defect it catches is module-resolution drift, where a change to
+    # package.json alters how Node parses the vendored CommonJS runtime.
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ["22", "24"]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+
+      - name: Install Node toolchain from the lockfile
+        run: npm ci
+
+      - name: Unit tests
+        run: npm test
+
+  dependency-review:
+    name: Dependency review
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/dependency-review-action@a1d282b36b6f3519aa1f3fc636f609c47dddb294 # v5.0.0
 
   deploy:
     name: Deploy to GitHub Pages

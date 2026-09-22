@@ -1,0 +1,13 @@
+repos:
+  - repo: local
+    hooks:
+      - id: repository-version
+        name: repository version consistency
+        entry: scripts/verify_release_version.sh
+        language: script
+        pass_filenames: false
+      - id: node-tests
+        name: browser-demo unit tests
+        entry: node --test tests/try-demo.test.mjs
+        language: system
+        pass_filenames: false

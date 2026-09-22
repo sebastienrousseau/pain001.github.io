@@ -46,7 +46,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/pain.001.001.11/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.47)"
+generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "pain.001.001.11 — recent maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001."
 item_guid: "https://pain001.com/pain.001.001.11/rss.xml"
 item_link: "https://pain001.com/pain.001.001.11/rss.xml"
@@ -67,15 +67,15 @@ apple-mobile-web-app-title: "pain.001.001.11 Reference: Generate and Validate"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
-twitter_creator: @wwdseb
+twitter_creator: "@wwdseb"
 twitter_description: "pain.001.001.11 — recent maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
-twitter_site: @wwdseb
+twitter_site: "@wwdseb"
 twitter_title: "pain.001.001.11 Reference: Generate and Validate"
 twitter_url: "https://pain001.com/pain.001.001.11/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: @wwdseb
+author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
 site_last_updated: 2026-07-26

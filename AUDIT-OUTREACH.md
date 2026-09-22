@@ -11,6 +11,7 @@ Prices are indicative only; none is a quote.
 ## Shortlist
 
 ### 1. Digital Accessibility Centre (DAC) — Swansea, UK
+
 - Sales: `team@daca11y.org` · General: `info@digitalaccessibilitycentre.org`
 - Phone: +44 (0)1792 815267
 - Site: <https://digitalaccessibilitycentre.org/>
@@ -23,6 +24,7 @@ Prices are indicative only; none is a quote.
   the level.
 
 ### 2. TetraLogical — London, UK
+
 - Email: `hello@tetralogical.com`
 - Phone: +44 (0)20 8895 6768
 - Site: <https://tetralogical.com/services/>
@@ -35,6 +37,7 @@ Prices are indicative only; none is a quote.
   explicitly.
 
 ### 3. AbilityNet — UK charity
+
 - Site: <https://abilitynet.org.uk/accessibility-services/products-and-services/accessibility-audit>
 - **Why them:** published price point (a Digital Accessibility Review is
   advertised around £4,950 + VAT), charity status, and consultants who
@@ -79,7 +82,7 @@ holding CPWA/WAS.
 >
 > Many thanks,
 > Sebastien Rousseau
-> https://pain001.com
+> <https://pain001.com>
 
 ## Email 2 — to TetraLogical (`hello@tetralogical.com`)
 
@@ -110,7 +113,7 @@ holding CPWA/WAS.
 >
 > Best regards,
 > Sebastien Rousseau
-> https://pain001.com
+> <https://pain001.com>
 
 ## Email 3 — to AbilityNet (via their contact form or enquiry address)
 
@@ -135,11 +138,11 @@ holding CPWA/WAS.
 >    script shaping)?
 >
 > I would also value your consultants' help reviewing the existing
-> accessibility statement at https://pain001.com/accessibility/.
+> accessibility statement at <https://pain001.com/accessibility/>.
 >
 > Kind regards,
 > Sebastien Rousseau
-> https://pain001.com
+> <https://pain001.com>
 
 ---
 

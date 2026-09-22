@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-site = ROOT / "docs"
+site = ROOT / "site"
 html = (site / "try" / "index.html").read_text(encoding="utf-8")
 
 main = html[html.find("<main"):html.find("</main>")]

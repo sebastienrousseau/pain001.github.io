@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/yo/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.47)"
+generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "Àkójọpọ̀ Python orísun-ìmọ̀ tí ó ń ṣe àwọn fáìlì pain.001 àti pain.008 tí a fọwọ́sí pẹ̀lú XSD láti CSV, Excel, SQLite, JSON, Parquet tàbí SWIFT MT101 — pẹ̀lú àwọn irinṣẹ́ MCP fún àwọn aṣojú AI àti olupin LSP."
 item_guid: "https://pain001.com/yo/rss.xml"
 item_link: "https://pain001.com/yo/rss.xml"
@@ -66,15 +66,15 @@ apple-mobile-web-app-title: "Pain001 — Ìbẹ̀rẹ̀ ìsanwó ISO 20022 orís
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
-twitter_creator: @wwdseb
+twitter_creator: "@wwdseb"
 twitter_description: "Àkójọpọ̀ Python orísun-ìmọ̀ tí ó ń ṣe àwọn fáìlì pain.001 àti pain.008 tí a fọwọ́sí pẹ̀lú XSD láti CSV, Excel, SQLite, JSON, Parquet tàbí SWIFT MT101 — pẹ̀lú àwọn irinṣẹ́ MCP fún àwọn aṣojú AI àti olupin LSP."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
-twitter_site: @wwdseb
+twitter_site: "@wwdseb"
 twitter_title: "Pain001 — Ìbẹ̀rẹ̀ ìsanwó ISO 20022 orísun-ìmọ̀"
 twitter_url: "https://pain001.com/yo/"
 author_website: "https://sebastienrousseau.com"
-author_twitter: @wwdseb
+author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
 site_last_updated: 2026-07-26
