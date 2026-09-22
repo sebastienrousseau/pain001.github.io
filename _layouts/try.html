@@ -1,5 +1,10 @@
 {{#extends "base"}}
 {{#block "head"}}
+    <!-- The demo is dense with IBANs, BICs and generated XML, so the mono
+         face is on the critical path here in a way it is not elsewhere.
+         Fetch it alongside the stylesheet instead of after it. -->
+    <link rel="preload" href="/fonts/jetbrains-mono-var-latin.woff2" as="font"
+          type="font/woff2" crossorigin />
     <style>
       /* ==== Overflow safety net ====
          Every layout gets this. The article rules live under
