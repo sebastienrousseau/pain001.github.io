@@ -64,6 +64,9 @@ jobs:
         run: |
           mkdir -p dist
           version="$(tr -d '[:space:]' < VERSION)"
+          # Exported because attest-sbom's sbom-path takes a literal path, not
+          # a glob, so the attestation step has to name the file exactly.
+          echo "RELEASE_VERSION=$version" >> "$GITHUB_ENV"
           tar -czf "dist/pain001-site-v${version}.tar.gz" site LICENSE LICENSE-APACHE LICENSE-MIT THIRD_PARTY_NOTICES.md
           cp site/sbom.cdx.json "dist/pain001-site-v${version}.cdx.json"
           cd dist
@@ -74,11 +77,14 @@ jobs:
         with:
           subject-path: "dist/pain001-site-v*.tar.gz"
 
+      # subject-path expands globs; sbom-path does not. v0.0.3 failed here with
+      # "SBOM file not found" while the identical glob resolved for the subject
+      # in this same step, so both paths are now spelled out in full.
       - name: Attest SBOM
         uses: actions/attest-sbom@c604332985a26aa8cf1bdc465b92731239ec6b9e # v4.1.0
         with:
-          subject-path: "dist/pain001-site-v*.tar.gz"
-          sbom-path: "dist/pain001-site-v*.cdx.json"
+          subject-path: "dist/pain001-site-v${{ env.RELEASE_VERSION }}.tar.gz"
+          sbom-path: "dist/pain001-site-v${{ env.RELEASE_VERSION }}.cdx.json"
 
       - name: Upload dry-run artefacts
         if: github.ref_type != 'tag' || inputs.dry_run
