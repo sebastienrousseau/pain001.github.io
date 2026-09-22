@@ -2,30 +2,35 @@
 <!-- SPDX-License-Identifier: Apache-2.0 OR MIT -->
 <!-- markdownlint-disable MD033 MD041 -->
 
-<img
-  align="right"
-  alt="Logo of Pain001"
-  height="261"
-  src="https://kura.pro/pain001/images/logos/pain001.webp"
-  width="261"
-  />
+<p align="center">
+  <img src="https://kura.pro/pain001/images/logos/pain001.webp" alt="Pain001 logo" width="128" />
+</p>
+
+<h1 align="center">Pain001</h1>
+
+<p align="center">
+  The official website for the Pain001 open-source ISO 20022 payment initiation suite.
+</p>
+
+<p align="center">
+  <a href="https://github.com/sebastienrousseau/pain001.github.io/actions/workflows/ci.yml"><img src="https://github.com/sebastienrousseau/pain001.github.io/actions/workflows/ci.yml/badge.svg" alt="Build" /></a>
+  <a href="https://github.com/sebastienrousseau/pain001.github.io/releases"><img src="https://img.shields.io/github/v/release/sebastienrousseau/pain001.github.io" alt="Release" /></a>
+  <a href="https://pain001.com/documentation/"><img src="https://img.shields.io/badge/API-reference-07172b" alt="Docs" /></a>
+  <a href="https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/pain001.github.io"><img src="https://img.shields.io/ossf-scorecard/github.com/sebastienrousseau/pain001.github.io?label=OpenSSF%20Scorecard&logo=openssf" alt="OpenSSF Scorecard" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0%20OR%20MIT-blue.svg" alt="License: Apache-2.0 OR MIT" /></a>
+  <a href="https://static-site-generator.com/"><img src="https://img.shields.io/badge/SSG-0.0.63-8f341f" alt="Minimum toolchain: SSG 0.0.63" /></a>
+</p>
 
 <!-- markdownlint-enable MD033 MD041 -->
 
-# pain001.com — Official Website 🌏
+---
 
-[![CI](https://github.com/sebastienrousseau/pain001.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/sebastienrousseau/pain001.github.io/actions/workflows/ci.yml)
-[![Release](https://img.shields.io/github/v/release/sebastienrousseau/pain001.github.io)](https://github.com/sebastienrousseau/pain001.github.io/releases)
-[![API documentation](https://img.shields.io/badge/API-reference-07172b)](https://pain001.com/documentation/)
-[![License: Apache-2.0 OR MIT](https://img.shields.io/badge/license-Apache--2.0%20OR%20MIT-blue)](LICENSE)
-[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/sebastienrousseau/pain001.github.io/badge)](https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/pain001.github.io)
-[![SSG 0.0.63](https://img.shields.io/badge/SSG-0.0.63-8f341f)](https://static-site-generator.com/)
-
-The website for the [Pain001](https://github.com/sebastienrousseau/pain001)
-open-source ISO 20022 payment initiation suite: core library, MCP server for
-AI agents, LSP server, and the MT101 / Excel loaders. Its job is to convert a
-treasury engineer, an integrator or an AI agent into an installed user, and
-to hand a regulated buyer the evidence they need.
+This repository builds <https://pain001.com>, the website for the
+[Pain001](https://github.com/sebastienrousseau/pain001) open-source ISO 20022
+payment initiation suite: core library, MCP server for AI agents, LSP server,
+and the MT101 / Excel loaders. Its job is to convert a treasury engineer, an
+integrator or an AI agent into an installed user, and to hand a regulated
+buyer the evidence they need.
 
 Built with the [Shokunin Static Site Generator (ssg)][00] **0.0.63 exactly**
 and deployed to GitHub Pages by `ci.yml` from the same run that passed every
@@ -33,73 +38,192 @@ gate; the built tree is never committed. Cloudflare fronts the domain.
 
 ![Pain001.com using the PRISM theme](static/og/pain001-prism.webp)
 
+---
+
 ## Contents
 
-- [Install and quick start](#install-and-quick-start)
-- [Requirements and toolchain policy](#requirements-and-toolchain-policy)
-- [Repository layout](#repository-layout)
-- [Documentation](#documentation)
-- [Gates](#gates)
-- [When not to use this project](#when-not-to-use-this-project)
-- [Stability guarantees](#stability-guarantees)
-- [Security and hardening](#security-and-hardening)
-- [Licence](#licence)
+<!-- The workspace README template groups these links under bold labels rather
+     than headings, so that only the real sections appear in the table of
+     contents. MD036 is suppressed for that block alone. -->
+<!-- markdownlint-disable MD036 -->
 
-## Install and quick start
+**Getting started**
 
-This repository produces a website, not an installable binary. The shortest
-working path is:
+- [Install](#install) — clone and pin the generator; there is no installable artifact
+- [Requirements](#requirements) — toolchain floor, platforms
+- [Quick Start](#quick-start) — build the site and serve it locally
+
+**The Pain001 ecosystem**
+
+- [The Pain001 ecosystem](#the-pain001-ecosystem) — the five packages this site documents
+
+**Reference**
+
+- [Capabilities at a glance](#capabilities-at-a-glance) — what the built site contains
+- [Ecosystem comparison](#ecosystem-comparison) — why the comparison lives in the library
+- [Benchmarks](#benchmarks) — the performance budgets CI enforces
+- [Features](#features) — repository layout and what each directory owns
+- [Configuration](#configuration) — `ssg.toml`, the generator pin, the compliance declaration
+- [Examples](#examples) — regenerating the site from a library release
+
+**Operational**
+
+- [When not to use Pain001](#when-not-to-use-pain001) — limitations
+- [Development](#development) — build, post-build passes, gates, content editing
+- [Security](#security) — reporting, hardening, supply chain
+- [Documentation](#documentation) — all reference docs
+- [Stability guarantees](#stability-guarantees) — SemVer axis, URL durability, toolchain discipline
+- [License](#license)
+
+<!-- markdownlint-enable MD036 -->
+
+---
+
+## Install
+
+This repository produces a website, not an installable binary or library.
+There is intentionally no system-wide `make install` for a Pages site.
 
 ```shell
 git clone https://github.com/sebastienrousseau/pain001.github.io.git
 cd pain001.github.io
 cargo install ssg --locked --version 0.0.63
-make build
-make serve
+npm ci
 ```
 
-Open <http://127.0.0.1:8099/>. `make verify` reproduces the non-network CI
-gates. Release archives are available from
+Release archives of the built site are available from
 [GitHub Releases](https://github.com/sebastienrousseau/pain001.github.io/releases)
-for review or static hosting; there is intentionally no system-wide
-`make install` for a Pages site.
+for review or static hosting.
 
-## Requirements and toolchain policy
+## Requirements
 
-The minimum supported build toolchain is SSG 0.0.63, Node.js 22, and Python
-3.10. Chrome or Chromium is required for browser gates. CI enforces the SSG
-pin and Node version. The minimum may rise only in a patch release when a
-security fix, parser correctness fix, or required generator feature demands
-it; the reason must appear in `CHANGELOG.md` and a migration guide. No distro
-LTS compatibility is claimed beyond those explicit floors.
+| Component | Floor | Enforced by |
+| :--- | :--- | :--- |
+| Shokunin SSG | 0.0.63 exactly | `SSG_VERSION` in `ci.yml`; the pin is the cache key |
+| Node.js | 22 (24 also tested) | `engines` in `package.json`; the `node-matrix` job runs the unit tests on both |
+| Python | 3.10 | generators and post-build passes |
+| Chrome or Chromium | any current | layout, print, accessibility and Lighthouse gates |
 
-## Repository layout
+The minimum may rise only in a patch release when a security fix, a parser
+correctness fix, or a required generator feature demands it; the reason must
+appear in `CHANGELOG.md` and a migration guide. No distro LTS compatibility is
+claimed beyond those explicit floors.
+
+## Quick Start
+
+```shell
+make build     # build, post-build repairs, publish to site/
+make serve     # serve site/ on http://127.0.0.1:8099/
+make verify    # reproduce the non-network CI gates
+make deps      # audit npm advisories against the documented exceptions
+```
+
+## The Pain001 ecosystem
+
+This site documents five packages, each with its own repository and release
+cadence. The full map is in [`docs/ECOSYSTEM.md`](docs/ECOSYSTEM.md).
+
+| Package | Role |
+| :--- | :--- |
+| `pain001` | Core library, CLI and REST API; the validation pipeline everything else calls |
+| `pain001-mcp` | MCP server exposing the pipeline as tools for AI agents |
+| `pain001-lsp` | Language server: diagnostics on payment files as you type |
+| `pain001-loader-mt101` | SWIFT MT101 bridge onto the ISO 20022 pipeline |
+| `pain001-loader-xlsx` | Excel on-ramp with the spreadsheet hazards handled |
+
+## Capabilities at a glance
+
+Measured on the current build.
+
+| Surface | Detail |
+| :--- | :--- |
+| Pages | 668 built pages; 662 URLs in the sitemap |
+| Locales | 34, with an hreflang cluster per localised page and RTL handling for 3 |
+| Browser demo | `/try/` runs the `pain001` library itself in WebAssembly, same-origin, offline-capable; payment data never leaves the browser |
+| Example corpus | 42 scenario pages with schema.org `Dataset` markup, downloadable inputs and expected output |
+| Agent discovery | `llms.txt`, `llms-full.txt`, `agents.txt`, an MCP descriptor and a search index |
+| Structured data | One JSON-LD graph per page: `Organization`, `WebSite`, `SoftwareApplication`, `FAQPage`, `Dataset` |
+
+## Ecosystem comparison
+
+Not applicable to this repository. A comparison against other ISO 20022
+tooling is a claim about the library, not about its website, so it is
+maintained with the library and published at
+<https://pain001.com/competitors-comparison/>. Reproducing it here would
+create a second copy to drift.
+
+## Benchmarks
+
+`scripts/perf_budget.mjs` gates every push. Five routes are measured under
+both mobile and desktop Lighthouse profiles, and **all four Lighthouse
+categories must score exactly 100** — performance, accessibility,
+best practices and SEO — in addition to a transferred-byte ceiling.
+
+| Route | Byte budget |
+| :--- | ---: |
+| `/` | 300 KiB |
+| `/documentation/` | 300 KiB |
+| `/compliance-toolkit/` | 300 KiB |
+| `/example-corpus/` | 300 KiB |
+| `/try/` | 400 KiB (before the WebAssembly runtime, which loads on intent) |
+
+Timing metrics such as LCP are reported but not gated: a shared CI runner
+makes them noisy, while scores and bytes are stable.
+
+## Features
 
 | Path | Purpose |
 | :--- | :--- |
 | `_posts/` | Page content (Markdown + front matter), the source of truth. Corpus scenario pages (`corpus-*.md`, `<locale>-corpus-*.md`) and message-spec pages are **generated**; edit the generator, not the page |
-| `_layouts/` | HTML templates: `index`, `page`, `contact`, `try` (the demo). The CSP meta and the measurement beacon live here |
+| `_layouts/` | HTML templates. `base` holds the head: the CSP meta, the security metas and the JSON-LD graph are declared once there and inherited by `index`, `page`, `contact` and `try` |
 | `static/` | Copied verbatim into the output: the demo's ES modules (`js/`), the vendored Pyodide runtime and wheels (`pyodide/`), corpus files, schemas and samples (`corpus/`), the service worker, the vendored analytics beacon |
-| `scripts/` | Generators, the post-build passes (listed below), translation tables and the validators CI runs |
+| `scripts/` | Generators, the post-build passes, translation tables and the validators CI runs |
 | `tests/` | Node tests: demo input handling and the browser engine integration run against the vendored runtime |
 | `site/` | The built site, produced by `build.sh`; ignored by git and uploaded by CI as the Pages artifact |
 | `.github/workflows/` | `ci.yml` (build, every gate, and on `main` the Pages deploy), `regenerate.yml` (release-triggered regeneration, opens a PR), `codeql.yml` |
 
-## Documentation
+## Configuration
 
-- [User manual and compliance hub](https://pain001.com/documentation/)
-- [API reference](https://pain001.com/documentation/)
-- [Developer documentation](DEVELOPMENT.md)
-- [Architecture](docs/ARCHITECTURE.md)
-- [Pain001 ecosystem map](docs/ECOSYSTEM.md)
-- [Release process](docs/RELEASES.md)
+| File | What it controls |
+| :--- | :--- |
+| `ssg.toml` | Site name, description, language, base URL, and the content, template and output directories |
+| `SSG_VERSION` in `.github/workflows/ci.yml` | The generator pin, single-sourced: it is both the install version and the binary cache key |
+| `.compliance.yml` | Declared compliance tier, criticality and owner, per the workspace standard |
+| `.pa11yci` | The URL list scanned at WCAG 2.2 AAA |
+| `scripts/perf_budget.mjs` | Routes, Lighthouse profiles and byte budgets |
 
-## Build
+## Examples
 
-Prerequisites: Rust toolchain with `cargo install ssg --locked --version 0.0.63`,
-Node 22+,
-Python 3.10+ with the `pain001` library installed for the generators and the
-snippet gate, and Chrome for the browser gates.
+Everything derived from the library is regenerated from the installed version:
+
+```shell
+python3 scripts/generate_try_samples.py                 # demo corpus samples
+python3 scripts/generate_corpus_page.py <path-to-pain001-checkout>
+python3 scripts/stamp_version.py <version>              # version literals on pages
+./build.sh
+```
+
+`regenerate.yml` does exactly this when the library's publish job sends a
+`repository_dispatch` (`suite-release`), or on `workflow_dispatch` with a
+version, and opens a `release/pain001-<version>` pull request. A human merges.
+The library needs the `SITE_DISPATCH_TOKEN` secret for the dispatch.
+
+## When not to use Pain001
+
+Do not use this website as a bank connectivity service, legal or regulatory
+advice, a substitute for your bank's implementation guide, or proof that a
+file is eligible for a particular account and channel. The browser demo is a
+local validation aid and never submits payments. Use the separate Pain001
+library for production automation, and complete bank certification before
+going live.
+
+## Development
+
+### Build
+
+Prerequisites: the Rust toolchain with `cargo install ssg --locked --version 0.0.63`,
+Node 22+, Python 3.10+ with the `pain001` library installed for the generators
+and the snippet gate, and Chrome for the browser gates.
 
 ```shell
 ./build.sh          # build, post-build repairs, publish to site/
@@ -112,7 +236,7 @@ repairs, tag pages, the 34-locale variants of the core pages, the six-locale
 corpus variants, Dataset JSON-LD, `llms.txt`, footer version stamp, sitemap),
 the `static/` copy, sample CSV generation, and the service-worker cache stamp.
 
-## The post-build passes
+### The post-build passes
 
 `scripts/postbuild_fix.py` runs once over the ssg output before the
 `static/` copy, then once more with `--stamp-sw` after it. Each pass
@@ -135,47 +259,34 @@ docstrings say which.
 
 `build.sh` also runs `scripts/carry_forward_assets.py`, which fetches the
 fingerprinted `/_csp/` assets the live pages still reference into the new
-build, so cached HTML keeps working through the CDN's ten-minute window.
+build, so cached HTML keeps working through the CDN's ten-minute window. It
+fetches only what the live pages reference, so the set stays bounded.
 
-## Regenerating from a library release
-
-Everything derived from the library is regenerated from the installed version:
-
-```shell
-python3 scripts/generate_try_samples.py                 # demo corpus samples
-python3 scripts/generate_corpus_page.py <path-to-pain001-checkout>
-python3 scripts/stamp_version.py <version>              # version literals on pages
-./build.sh
-```
-
-`regenerate.yml` does exactly this when the library's publish job sends a
-`repository_dispatch` (`suite-release`), or on `workflow_dispatch` with a
-version, and opens a `release/pain001-<version>` pull request. A human merges.
-The library needs the `SITE_DISPATCH_TOKEN` secret for the dispatch.
-
-## Gates
+### Gates
 
 CI fails on any of these; run them locally before opening a PR.
 
 | Gate | Command |
 | :--- | :--- |
 | ssg audit, warnings fail | `ssg audit -f ssg.toml -o site --severity warn --fail-on warn` |
-| Unit tests | `node --test tests/*.test.mjs` |
-| Browser engine runs the library | `npm i --no-save pyodide@0.27.2 && node tests/engine.integration.mjs` |
+| Unit tests, Node 22 and 24 | `npm test` |
+| Dependency advisories, documented exceptions only | `make deps` (`scripts/audit_deps.py`) |
+| README conforms to the workspace template | `make lint` (`scripts/validate_readme.py`) |
+| Browser engine runs the library | `node tests/engine.integration.mjs` |
 | Translation table integrity | `scripts/validate_try_i18n.py`, `scripts/validate_pages_i18n.py pages_i18n`, `… docs_i18n` |
 | Translation keys still match the built pages | `scripts/validate_i18n_keys_live.py` |
 | Content integrity (no eaten markup, no double encoding) | `scripts/validate_content_integrity.py` |
 | Link integrity | `scripts/validate_links.py site` |
 | Suite version currency | `scripts/validate_versions.py` |
 | Documentation snippets reference the real API | `scripts/validate_snippets.py` (with `pain001` installed) |
-| Layout and print integrity, real Chrome | `node scripts/layout_audit.cjs`, `node scripts/print_audit.cjs` (needs `.a11y-tools/` with `puppeteer-core`, see the script headers) |
-| Lighthouse 100%, mobile and desktop | `node scripts/perf_budget.mjs http://127.0.0.1:8899` |
-| Accessibility, WCAG 2 AAA | `npx -y pa11y-ci@4.1.1` against the `.pa11yci` list, or `node scripts/a11y_local.mjs` |
+| Layout and print integrity, real Chrome | `node scripts/layout_audit.cjs`, `node scripts/print_audit.cjs` |
+| Lighthouse 100 in all four categories, mobile and desktop | `node scripts/perf_budget.mjs http://127.0.0.1:8899` |
+| Accessibility, WCAG 2.2 AAA | `npx pa11y-ci` against the `.pa11yci` list, or `node scripts/a11y_local.mjs` |
 
 The layout, performance and accessibility gates need `site/` served locally:
 `(cd site && python3 -m http.server 8899)`.
 
-## Editing content
+### Editing content
 
 Edit the Markdown in `_posts/`; keep `title`, `description` and `keywords`
 unique per page; run the build and the gates; commit the source only. The
@@ -188,21 +299,47 @@ fragments of the built English HTML (`scripts/pages_i18n`, `docs_i18n`,
 to an English sentence on a localised page needs the key re-extracted and the
 34 tables migrated, or the live-key gate fails.
 
-## Measurement and privacy
+### Measurement and privacy
 
 Page views are counted by Cloudflare Web Analytics from a beacon served from
 this origin; the demo page carries none. What is counted, where the tag lives
 and how to switch it off is in [`METRICS.md`](METRICS.md). The privacy and
 trust pages state the same facts publicly.
 
-## When not to use this project
+## Security
 
-Do not use this website as a bank connectivity service, legal or regulatory
-advice, a substitute for your bank's implementation guide, or proof that a
-file is eligible for a particular account and channel. The browser demo is a
-local validation aid and never submits payments. Use the separate Pain001
-library for production automation, and complete bank certification before
-going live.
+Report vulnerabilities privately as described in [SECURITY.md](SECURITY.md),
+not in a public issue.
+
+The site uses a restrictive Content-Security-Policy, same-origin vendored
+runtime assets, non-networked payment-data processing, CodeQL, dependency
+review, Dependabot, OpenSSF Scorecard, signed tags, release attestations, and a
+CycloneDX SBOM. Every GitHub Action is pinned by commit SHA, and workflow
+tokens are read-only except on the job that needs write scope. Node
+dependencies are installed from a committed lockfile and audited in CI.
+
+Input parsing lives in the separately fuzzed and tested core library; this
+repository replays browser integration and fixed regression cases on every
+push. Static assets are bounded by the browser demo's 2 MB input limit.
+
+**Known gap.** The policy is delivered as a `<meta http-equiv>` element, where
+browsers ignore `frame-ancestors`; GitHub Pages cannot set response headers.
+Framing is therefore not restricted at the origin. The fix is a Cloudflare
+response-header Transform Rule adding `Content-Security-Policy:
+frame-ancestors 'none'`, which is configured in the Cloudflare dashboard
+rather than in this repository. The site holds no credentials, session state
+or authenticated actions, so the exposure is limited to UI redressing.
+
+## Documentation
+
+- [User manual and compliance hub](https://pain001.com/documentation/)
+- [API reference](https://pain001.com/documentation/)
+- [Developer documentation](DEVELOPMENT.md)
+- [Architecture](docs/ARCHITECTURE.md)
+- [Pain001 ecosystem map](docs/ECOSYSTEM.md)
+- [Release process](docs/RELEASES.md)
+- [Architecture decision records](docs/adr/)
+- [Migration guides](docs/migrations/)
 
 ## Stability guarantees
 
@@ -214,18 +351,7 @@ and belongs to the library's own version contract. Deprecated website URLs
 remain redirected for at least two patch releases. Tags and release assets
 are immutable.
 
-## Security and hardening
-
-Report vulnerabilities privately as described in [SECURITY.md](SECURITY.md),
-not in a public issue. The site uses a restrictive CSP, same-origin vendored
-runtime assets, non-networked payment-data processing, CodeQL, dependency
-review, Dependabot, OpenSSF Scorecard, signed tags, release attestations, and a
-CycloneDX SBOM. Input parsing lives in the separately fuzzed and tested core
-library; this repository replays browser integration and fixed regression
-cases on every push. Static assets are bounded by the browser demo's 2 MB
-input limit.
-
-## Licence
+## License
 
 Project-authored work is dual-licensed under Apache-2.0 or MIT, at your option.
 See `LICENSE-APACHE`, `LICENSE-MIT`, `REUSE.toml`, and

@@ -48,6 +48,10 @@ jobs:
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: 22
+          cache: npm
+
+      - name: Install Node toolchain from the lockfile
+        run: npm ci
 
       - name: Build site
         run: ./build.sh
@@ -59,9 +63,7 @@ jobs:
         run: node --experimental-test-coverage --test-coverage-lines=100 --test-coverage-functions=100 --test-coverage-branches=100 --test tests/try-demo.test.mjs
 
       - name: Browser engine runs the library (Node, vendored runtime)
-        run: |
-          npm i --no-save pyodide@0.27.2
-          node tests/engine.integration.mjs
+        run: node tests/engine.integration.mjs
 
       - name: Translation table integrity (key/tag/placeholder parity)
         run: |
@@ -119,7 +121,7 @@ jobs:
         run: CHROME_PATH=/usr/bin/google-chrome node scripts/perf_budget.mjs http://127.0.0.1:8899
 
       - name: Accessibility scan (pa11y-ci, WCAG2AAA)
-        run: npx -y pa11y-ci@4.1.1
+        run: npx pa11y-ci
 
       - name: Accessibility in system, light, and dark modes (axe)
         run: |
@@ -143,10 +145,14 @@ jobs:
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: 22
+          cache: npm
 
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: "3.12"
+
+      - name: Install Node toolchain from the lockfile
+        run: npm ci
 
       - name: Workflow lint
         uses: rhysd/actionlint@914e7df21a07ef503a81201c76d2b11c789d3fca # v1.7.12
@@ -157,6 +163,12 @@ jobs:
           python -m pip install --quiet codespell==2.4.3
           codespell
 
+      - name: README conforms to the workspace template
+        run: python3 scripts/validate_readme.py
+
+      - name: Dependency advisories (npm audit, documented exceptions only)
+        run: python3 scripts/audit_deps.py
+
       - name: Release version consistency
         run: ./scripts/verify_release_version.sh
 
@@ -164,6 +176,31 @@ jobs:
         run: |
           python -m pip install --quiet reuse==6.2.0
           reuse lint
+
+  node-matrix:
+    name: Unit tests (Node ${{ matrix.node }})
+    runs-on: ubuntu-latest
+    # package.json declares engines >= 22, and the build job only ever proves
+    # Node 22. This backs the published floor on both supported majors: the
+    # class of defect it catches is module-resolution drift, where a change to
+    # package.json alters how Node parses the vendored CommonJS runtime.
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ["22", "24"]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+
+      - name: Install Node toolchain from the lockfile
+        run: npm ci
+
+      - name: Unit tests
+        run: npm test
 
   dependency-review:
     name: Dependency review

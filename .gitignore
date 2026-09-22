@@ -15,3 +15,6 @@ site/
 
 # Local-only accessibility tooling (see scripts/a11y_local.mjs)
 .a11y-tools/
+
+# Installed from package-lock.json by `npm ci`; never committed.
+node_modules/

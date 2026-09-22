@@ -1,0 +1,25 @@
+# Workspace compliance declaration (AGENTS.md section 5.1).
+#
+# L2 is also the default for Public/, but the standard asks for the target to
+# be explicit rather than inferred, and criticality is never inferred at all.
+tier: L2
+criticality: standard
+owner: sebastienrousseau
+
+# Categories that do not apply to a static website, recorded here so an audit
+# gap is a stated decision rather than an oversight. AGENTS.md section 7.1
+# asks for the same treatment of README sections that do not apply.
+not_applicable:
+  C3.L2: >-
+    Shell completion generation. This repository publishes a website; it ships
+    no command-line binary for a shell to complete. The Makefile half of the
+    requirement is met.
+  C5.L2: >-
+    Container image and Repology tracking. The deliverable is a GitHub Pages
+    artifact served from a CDN, not a package a distribution would track or a
+    service an operator would run in a container.
+  C6.L2: >-
+    OS/toolchain test matrix and API documentation build. The build is a
+    single deterministic generator run pinned to one SSG version, and the
+    repository exposes no public API to document. Coverage is asserted
+    instead by the gates in ci.yml, which exercise the built site directly.

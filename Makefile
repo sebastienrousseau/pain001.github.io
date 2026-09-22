@@ -1,4 +1,4 @@
-.PHONY: all build test audit lint verify serve clean
+.PHONY: all build test audit lint deps verify serve clean
 
 all: verify
 
@@ -21,6 +21,11 @@ audit: build
 
 lint:
 	./scripts/verify_release_version.sh
+	python3 scripts/validate_readme.py
+
+# Separate from lint: this one talks to the npm registry.
+deps:
+	python3 scripts/audit_deps.py
 
 verify: lint test audit
 
