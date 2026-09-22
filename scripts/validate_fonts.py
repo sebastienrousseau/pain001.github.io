@@ -53,11 +53,26 @@ def main() -> int:
     font_files = sorted(SITE.rglob("*.woff2")) + sorted(SITE.rglob("*.woff"))
     total = sum(f.stat().st_size for f in font_files)
 
+    # Only the CSS the current pages actually link. build.sh carries the
+    # previous deploy's fingerprinted /_csp/ assets forward so that HTML
+    # still cached at the CDN keeps working through its ten-minute window;
+    # those bundles are deliberately stale and may reference fonts this
+    # build no longer ships. A browser holding that old HTML falls back to
+    # a system face for a few minutes, which is what font-display: swap is
+    # for. Checking them here would fail the build for working as designed.
+    linked: set[str] = set()
+    for page in SITE.rglob("*.html"):
+        body = page.read_text(encoding="utf-8", errors="replace")
+        for href in re.findall(r'<link[^>]+href="([^"]+\.css)"', body):
+            linked.add(Path(href).name)
+
     referenced: set[str] = set()
     declared: set[str] = set()
     used: set[str] = set()
     faces = 0
     for css in SITE.rglob("*.css"):
+        if css.name not in linked:
+            continue
         body = css.read_text(encoding="utf-8", errors="replace")
         blocks = FACE_RE.findall(body)
         for block in blocks:
@@ -89,7 +104,8 @@ def main() -> int:
     orphans = sorted(shipped - referenced)
     dangling = sorted(referenced - shipped)
 
-    print(f"scanned {len(font_files)} font file(s), {faces} @font-face block(s)")
+    print(f"scanned {len(font_files)} font file(s), {faces} @font-face block(s) "
+          f"in {len(linked)} linked stylesheet(s)")
     print(f"payload {total / 1024:.0f} KB of {MAX_FONT_BYTES / 1024:.0f} KB budget")
 
     bad = 0

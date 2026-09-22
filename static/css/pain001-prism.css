@@ -170,16 +170,10 @@
 /* --- Enterprise surfaces (v0.0.6) -------------------------------------
    The evidence grid and hero actions belong to PRISM proper; they live here
    until the token consolidation in v0.0.7 gives the theme a home for them. */
-.header-contact {
-  color: var(--ink-soft);
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-decoration: none;
-  padding-inline: 0.2rem;
-  white-space: nowrap;
-}
-.header-contact:hover,
-.header-contact:focus-visible { color: var(--accent); text-decoration: underline; }
+/* Carries .nav-link for the established header rhythm; this only keeps it
+   on one line and gives the sales route a little more weight than a
+   browsing link. */
+.header-contact { white-space: nowrap; font-weight: 600; }
 
 .hero-actions {
   display: flex;

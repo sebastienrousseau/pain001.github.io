@@ -286,8 +286,12 @@
 
     --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
       "Helvetica Neue", Arial, sans-serif;
-    --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
-      "Liberation Mono", monospace;
+    /* Display voice. Headings only for now; body prose stays on the UI
+       stack until a measured pass says the serif holds at body size. */
+    --font-display: "Source Serif 4", "Iowan Old Style", Palatino, Georgia,
+      "Times New Roman", serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono",
+      Menlo, Consolas, "Liberation Mono", monospace;
   }
 }
 
@@ -352,6 +356,62 @@
   }
 }
 
+/* Typefaces -----------------------------------------------------------
+ * Self-hosted: the Content-Security-Policy is `font-src 'self'`, so a
+ * Google Fonts link would be blocked with no visible error.
+ *
+ * Source Serif 4 carries the display voice. Every competitor in this
+ * market sets headlines in a neutral grotesque; a text serif is both
+ * differentiating and the register of the standards documents this
+ * software implements.
+ *
+ * JetBrains Mono is chosen for one functional reason: this product
+ * exists to catch a transposed character in an IBAN or a BIC. A face
+ * that renders 0/O or 1/l/I ambiguously would make the output harder to
+ * check than the problem it solves. Ligatures are disabled where it is
+ * used, so an operator in a rule expression never renders as a glyph
+ * nobody can type.
+ *
+ * The display face ships as a single 600 instance, not a variable
+ * range: headings are the only thing set in it, and they are all one
+ * weight, so a 400..600 range was 29 KB of axis nobody rendered. Four
+ * files, 69 KB, against 115 KB for the three static weights this
+ * replaces -- lighter than what was here before. Only the subset a
+ * page actually needs is fetched.
+ */
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts/source-serif-4-600-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts/source-serif-4-600-latin-ext.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(/fonts/jetbrains-mono-var-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(/fonts/jetbrains-mono-var-latin-ext.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
 @layer base {
   body {
     background: var(--bg);
@@ -363,11 +423,16 @@
 
   h1,
   h2,
-  h3 {
+  h3,
+  h4 {
+    font-family: var(--font-display);
     line-height: 1.12;
     text-wrap: balance;
     letter-spacing: -0.025em;
-    font-weight: 800;
+    /* The variable range tops out at 600; 800 would synthesise a fake
+       bold and lose the drawn weight the face actually has. */
+    font-weight: 600;
+    font-variant-numeric: lining-nums;
   }
 
   h1 {
@@ -2141,6 +2206,10 @@ html {
    only acts when a word genuinely does not fit, so it changes nothing for
    copy that already fits. */
 h1, h2, h3, h4, p, li, dd, dt, figcaption { overflow-wrap: break-word; }
+
+/* JetBrains Mono ships programming ligatures. In payment data a glyph
+   nobody can type is a liability, so they are off wherever it is used. */
+code, kbd, samp, pre, .mono, [class*="code-"] { font-variant-ligatures: none; }
 
 /* A grid or flex item's automatic minimum size is its min-content width, so
    one long word can push its track wider than the viewport however narrow

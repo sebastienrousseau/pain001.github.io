@@ -70,6 +70,10 @@
 
     <!-- Unmodified PRISM and Skeletonic CSS 3.0.0, followed only by
          Pain001 component extensions. -->
+    <!-- The display face is needed for the first heading painted, so it is
+         fetched in parallel with the stylesheet rather than after it. Only the
+         latin subset is preloaded; latin-ext is fetched on demand. -->
+    <link rel="preload" href="/fonts/source-serif-4-600-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/css/skeletonic-3.0.0.min.css" />
     <link rel="stylesheet" href="/css/prism.css" />
     <link rel="stylesheet" href="/css/pain001-prism.css" />
