@@ -1,0 +1,71 @@
+{{#extends "base"}}
+{{#block "main"}}
+<section class="page-hero">
+  <div class="container hero-copy">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol><li><a href="/">Home</a></li><li aria-current="page">{{headline}}</li></ol>
+    </nav>
+    <p class="eyebrow eyebrow-hero">{{eyebrow}}</p>
+    <h1>{{headline}}</h1>
+    <p class="lead hero-lead">{{subtitle}}</p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/contact/">Talk to us</a>
+      <a class="btn btn-secondary" href="/compliance-toolkit/">Compliance toolkit</a>
+    </div>
+
+    <div class="article-meta">Last reviewed <time datetime="{{last_reviewed}}">{{last_reviewed}}</time></div>
+  </div>
+  <div class="hero-slope" aria-hidden="true"></div>
+</section>
+
+<section class="section section-evidence">
+  <div class="container">
+    <h2 class="evidence-title">Evidence a reviewer can check without asking us</h2>
+    <p class="evidence-lede">
+      Every claim below resolves to an artefact you can fetch yourself. None of it
+      requires a call, an NDA, or our word for it.
+    </p>
+    <ul class="evidence-grid">
+      <li class="evidence-item">
+        <span class="evidence-label">Bill of materials</span>
+        <a class="evidence-link" href="/sbom.cdx.json">sbom.cdx.json</a>
+        <p>CycloneDX, generated at build time and published with every deploy.</p>
+      </li>
+      <li class="evidence-item">
+        <span class="evidence-label">Release integrity</span>
+        <a class="evidence-link" href="https://github.com/sebastienrousseau/pain001.github.io/releases">Signed tags &amp; checksums</a>
+        <p>Every release tag is SSH-signed and ships SHA256SUMS beside the archive.</p>
+      </li>
+      <li class="evidence-item">
+        <span class="evidence-label">Build provenance</span>
+        <a class="evidence-link" href="https://github.com/sebastienrousseau/pain001.github.io/attestations">Attestations</a>
+        <p>SLSA provenance and an SBOM attestation, signed through Sigstore.</p>
+      </li>
+      <li class="evidence-item">
+        <span class="evidence-label">Supply chain posture</span>
+        <a class="evidence-link" href="https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/pain001.github.io">OpenSSF Scorecard</a>
+        <p>Scored continuously; CodeQL, Dependabot and DCO run on every change.</p>
+      </li>
+      <li class="evidence-item">
+        <span class="evidence-label">Vulnerability reporting</span>
+        <a class="evidence-link" href="/.well-known/security.txt">security.txt</a>
+        <p>A published disclosure route, not an inbox someone forwards.</p>
+      </li>
+      <li class="evidence-item">
+        <span class="evidence-label">Accessibility</span>
+        <a class="evidence-link" href="/accessibility/">WCAG 2.2 AAA</a>
+        <p>Enforced in CI across representative pages and three colour modes.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <article class="prose content-body">
+      {{!content}}
+    </article>
+  </div>
+</section>
+{{/block}}

@@ -2298,15 +2298,19 @@ html { scroll-padding-block-start: 5.5rem; }
   white-space: nowrap;
   border: 0;
 }
-#mode-toggle .theme-icon { line-height: 1; }
-#mode-toggle .theme-icon::before { content: "🖥️"; font-size: 1.2rem; }
+#mode-toggle .theme-icon { line-height: 0; display: inline-flex; }
+/* Inline SVG glyphs, one per state, inheriting currentColor. */
+#mode-toggle .theme-glyph { display: none; }
+#mode-toggle .glyph-system { display: block; }
+:root[data-theme="light"] #mode-toggle .glyph-system,
+:root[data-theme="dark"] #mode-toggle .glyph-system { display: none; }
+:root[data-theme="light"] #mode-toggle .glyph-light { display: block; }
+:root[data-theme="dark"] #mode-toggle .glyph-dark { display: block; }
 :root[data-theme="light"] #mode-toggle.theme-toggle {
   border-color: #878d9b;
   background: #f3f4f6;
   color: #090a0f;
 }
-:root[data-theme="light"] #mode-toggle .theme-icon::before { content: "☀️"; }
-:root[data-theme="dark"] #mode-toggle .theme-icon::before { content: "🌙"; }
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) #mode-toggle.theme-toggle {
     border-color: #878d9b;

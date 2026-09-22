@@ -13,6 +13,9 @@ test: build
 	python3 scripts/validate_runtime_i18n.py
 	python3 scripts/validate_i18n_keys_live.py
 	python3 scripts/validate_content_integrity.py
+	python3 scripts/validate_headings.py
+	python3 scripts/validate_fonts.py
+	python3 scripts/validate_css_content.py
 	python3 scripts/validate_links.py site
 	python3 scripts/validate_versions.py
 

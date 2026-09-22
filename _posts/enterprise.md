@@ -22,7 +22,8 @@ image_width: 120
 image: "https://pain001.com/img/pain001.svg"
 keywords: "pain001 enterprise support, ISO 20022 LTS, bank usage guideline profile, pain.001 integration support, payment file validation support, SLA open source payments"
 language: en-GB
-layout: "page"
+headline: "Pain001 for regulated teams"
+layout: "enterprise"
 locale: en_GB
 logo_alt: "Pain001 Logo"
 logo_height: 36

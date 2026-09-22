@@ -83,6 +83,18 @@ jobs:
       - name: Content integrity (no eaten markup, no double encoding)
         run: python3 scripts/validate_content_integrity.py
 
+      # Three defects that every other gate passes: a headline that is really
+      # an SEO title, a typeface declared but never worn, and an emoji doing
+      # the job of an icon. Each one shipped before it had a gate.
+      - name: Headline sanity (ratchet)
+        run: python3 scripts/validate_headings.py
+
+      - name: Font declaration and budget
+        run: python3 scripts/validate_fonts.py
+
+      - name: No emoji in CSS content
+        run: python3 scripts/validate_css_content.py
+
       - name: Link integrity (internal links, anchors, locale consistency)
         run: python3 scripts/validate_links.py site
 

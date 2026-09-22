@@ -45,11 +45,15 @@
 .brand { gap: 0.55rem; }
 .brand-mark { display: block; flex: 0 0 auto; }
 
-/* PRISM's icon is intentionally drawn in CSS so the three states are
-   identical to every other published SSG theme. */
-#mode-toggle .theme-icon::before { content: "🖥️"; font-size: 1.15rem; }
-:root[data-theme="light"] #mode-toggle .theme-icon::before { content: "☀️"; }
-:root[data-theme="dark"] #mode-toggle .theme-icon::before { content: "🌙"; }
+/* Three states, drawn as inline SVG so the glyph inherits currentColor,
+   rasterises identically on every platform, and can take a focus colour.
+   Replaced emoji in `content`, which did none of those things. */
+#mode-toggle .theme-glyph { display: none; }
+#mode-toggle .glyph-system { display: block; }
+:root[data-theme="light"] #mode-toggle .glyph-system,
+:root[data-theme="dark"] #mode-toggle .glyph-system { display: none; }
+:root[data-theme="light"] #mode-toggle .glyph-light { display: block; }
+:root[data-theme="dark"] #mode-toggle .glyph-dark { display: block; }
 
 .breadcrumb { color: var(--hero-ink-soft); font-size: 0.85rem; margin-block-end: 1.2rem; }
 .breadcrumb ol { display: flex; flex-wrap: wrap; gap: 0.45rem; list-style: none; margin: 0; padding: 0; }
@@ -162,3 +166,65 @@
   pre,
   blockquote { break-inside: avoid; }
 }
+
+/* --- Enterprise surfaces (v0.0.6) -------------------------------------
+   The evidence grid and hero actions belong to PRISM proper; they live here
+   until the token consolidation in v0.0.7 gives the theme a home for them. */
+.header-contact {
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding-inline: 0.2rem;
+  white-space: nowrap;
+}
+.header-contact:hover,
+.header-contact:focus-visible { color: var(--accent); text-decoration: underline; }
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-block-start: 1.6rem;
+}
+
+.section-evidence { padding-block-start: 0; }
+.evidence-title { font-size: 1.3rem; margin-block-end: 0.5rem; }
+.evidence-lede { color: var(--ink-muted); max-width: 60ch; margin-block-end: 1.6rem; }
+
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.evidence-item {
+  background: var(--surface);
+  border: 1px solid var(--line-soft);
+  border-radius: 0.6rem;
+  padding: 1rem 1.1rem;
+}
+.evidence-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-block-end: 0.35rem;
+}
+.evidence-link { font-weight: 600; }
+.evidence-item p {
+  margin-block: 0.4rem 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  max-width: none;
+}
+
+/* postbuild injects "<span>N min read</span>" at the head of .article-meta,
+   directly against the "Last reviewed" text node that follows it, which
+   renders as "2 min readLast reviewed". The text node cannot be selected,
+   so the separator hangs off the span. */
+.article-meta > span::after { content: " \00B7 "; }
