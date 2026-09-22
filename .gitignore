@@ -18,3 +18,7 @@ site/
 
 # Installed from package-lock.json by `npm ci`; never committed.
 node_modules/
+
+# Release archive, SBOM copy and checksums, built by release.yml and by anyone
+# reproducing it locally. Published as release assets, never committed.
+dist/
