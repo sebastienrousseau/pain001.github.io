@@ -31,6 +31,11 @@ printf 'pain001.com\n' > Pain001/CNAME
 # paths — which 404s every fingerprinted /_csp/* asset. Opt out entirely.
 touch Pain001/.nojekyll
 
+# ssg's CycloneDX SBOM has no serialNumber, and GitHub's attestation action
+# refuses to recognise the format without one, which is what stopped v0.0.4
+# publishing. Derived, not random, so rebuilds stay byte-identical.
+python3 scripts/sbom_serial.py Pain001
+
 # Repair the ssg output: unescape entity-escaped head metas and content
 # bodies, patch CSP/og:image into the generated tag pages, and regenerate
 # the sitemap. See scripts/postbuild_fix.py for the why of each pass.
