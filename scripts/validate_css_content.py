@@ -37,8 +37,7 @@ CONTENT_RE = re.compile(r"content\s*:\s*(['\"])(.*?)\1", re.S)
 # typographic marks, which are legitimate in `content`.
 EMOJI_RE = re.compile(
     "["
-    "\U0001F300-\U0001FAFF"
-    "\U0001F000-\U0001F2FF"
+    "\U0001F000-\U0001FAFF"
     "☀-➿"
     "️"
     "]"

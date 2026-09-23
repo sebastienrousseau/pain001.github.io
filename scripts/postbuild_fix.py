@@ -560,7 +560,6 @@ def load_pages_i18n(slug: str) -> dict | None:
 
 
 def _load_i18n(dirname: str, slug: str) -> dict | None:
-    import json
 
     path = Path(__file__).parent / dirname / f"{slug}.json"
     if not path.exists():
@@ -1149,7 +1148,6 @@ def fix_tag_pages(site: Path) -> None:
 def fix_manifest(site: Path) -> None:
     """ssg emits "theme_color": null (it only understands the legacy RGB
     triple), which Chrome logs as an invalid-type warning. Pin valid hexes."""
-    import json
 
     path = site / "manifest.json"
     if not path.exists():

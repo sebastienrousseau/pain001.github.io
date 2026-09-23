@@ -164,10 +164,10 @@ def render_version(payload: dict, index: dict) -> None:
         f"**{payload['complex_type_count']} types** · "
         f"**{payload['code_list_count']} code lists**",
         "",
-        "Cardinality is shown as ISO writes it: `0..1` optional, "
+        ("Cardinality is shown as ISO writes it: `0..1` optional, "
         "`1..1` required, `0..*` repeating. Required elements are **bold**: "
         "those are the ones whose absence makes the document invalid "
-        "before any bank sees it.",
+        "before any bank sees it."),
         "",
         provenance_line(payload, CURRENT_VERSIONS),
         "",
@@ -280,8 +280,8 @@ def render_types(payload: dict) -> None:
         "party; here each type appears exactly once, which is what you want "
         "when mapping source fields or writing a transformer.",
         "",
-        "A **choice** type means the children are alternatives: supply "
-        "one, not all. Cardinality in **bold** is required.",
+        ("A **choice** type means the children are alternatives: supply "
+        "one, not all. Cardinality in **bold** is required."),
         "",
     ]
     for name in sorted(populated):
@@ -346,8 +346,8 @@ def render_types_chunked(payload: dict) -> list[str]:
             "every party; this view does not, which is what you want when "
             "mapping source fields.",
             "",
-            "A **choice** type means the children are alternatives: supply "
-            "one, not all. Cardinality in **bold** is required.",
+            ("A **choice** type means the children are alternatives: supply "
+            "one, not all. Cardinality in **bold** is required."),
             "",
         ]
         for name in chunk:
@@ -380,13 +380,13 @@ def render_types_chunked(payload: dict) -> list[str]:
 def render_code_lists(specs: dict, index: dict) -> None:
     cov = index["code_list_coverage"]
     body = [
-        "Every code list in the supported ISO 20022 payment-initiation "
+        ("Every code list in the supported ISO 20022 payment-initiation "
         "messages, with its full value set and the versions it appears in. "
-        "Generated from the official XSDs.",
+        "Generated from the official XSDs."),
         "",
-        "A code list is a closed set: a value outside it makes the document "
+        ("A code list is a closed set: a value outside it makes the document "
         "invalid against the schema, so these are the exact strings your "
-        "source data has to produce.",
+        "source data has to produce."),
         "",
         f"**{len(cov)} code lists** across "
         f"{len(index['versions'])} message versions.",
@@ -421,14 +421,14 @@ def render_code_lists(specs: dict, index: dict) -> None:
 
 def render_changes(index: dict) -> None:
     body = [
-        "What changed between consecutive ISO 20022 payment-initiation "
+        ("What changed between consecutive ISO 20022 payment-initiation "
         "versions, computed by diffing the official schemas element by "
         "element. This is the view the ISO catalogue does not provide: it "
-        "publishes each version, not the delta between them.",
+        "publishes each version, not the delta between them."),
         "",
-        "Paths are XML element paths. An added path means the element does "
+        ("Paths are XML element paths. An added path means the element does "
         "not exist in the earlier version, so a document using it will not "
-        "validate there.",
+        "validate there."),
         "",
     ]
     for pair, delta in index["deltas"].items():
@@ -472,19 +472,19 @@ def render_changes(index: dict) -> None:
 
 def render_hub(specs: dict, index: dict) -> None:
     body = [
-        "Complete, generated specifications for every ISO 20022 "
+        ("Complete, generated specifications for every ISO 20022 "
         "payment-initiation message Pain001 supports: element paths, "
-        "cardinality, data types, constraints and code lists.",
+        "cardinality, data types, constraints and code lists."),
         "",
-        "**Everything here is generated from the official ISO XSDs**, the "
+        ("**Everything here is generated from the official ISO XSDs**, the "
         "same files the validator enforces. Nothing is hand-transcribed, so "
         "the reference cannot drift from what the software actually does, "
-        "and every value can be checked against ISO's publication.",
+        "and every value can be checked against ISO's publication."),
         "",
         "## Versions",
         "",
-        "| Version | Elements | Required | Types | Code lists | "
-        "Schema generated | ISO source | Reference |",
+        ("| Version | Elements | Required | Types | Code lists | "
+        "Schema generated | ISO source | Reference |"),
         "| :--- | ---: | ---: | ---: | ---: | :--- | :--- | :--- |",
     ]
     for v in index["versions"]:
@@ -523,35 +523,35 @@ def render_hub(specs: dict, index: dict) -> None:
     body += [
         "## Also here",
         "",
-        "- **[Code lists](/message-spec-code-lists/)**: every closed value "
-        "set, with the versions each appears in.",
-        "- **[What changed between versions](/message-spec-changes/)**: "
-        "element-level diffs, which the ISO catalogue does not publish.",
+        ("- **[Code lists](/message-spec-code-lists/)**: every closed value "
+        "set, with the versions each appears in."),
+        ("- **[What changed between versions](/message-spec-changes/)**: "
+        "element-level diffs, which the ISO catalogue does not publish."),
         "",
         "## How to read the tables",
         "",
         "| Column | Meaning |",
         "| :--- | :--- |",
         "| Element | The XML tag, indented by its depth in the message |",
-        "| Path | The full path from the message root, for XPath and "
-        "mapping work |",
-        "| Card. | Cardinality as ISO writes it: `0..1` optional, `1..1` "
-        "required, `0..*` repeating. Required is shown in bold |",
+        ("| Path | The full path from the message root, for XPath and "
+        "mapping work |"),
+        ("| Card. | Cardinality as ISO writes it: `0..1` optional, `1..1` "
+        "required, `0..*` repeating. Required is shown in bold |"),
         "| Type | The ISO data type; simple types carry the constraints |",
         "| Constraints | Length, pattern, decimal places and code-list size |",
         "",
         "## Scope and honesty",
         "",
-        "- These pages describe the **base ISO standard**. A document that "
+        ("- These pages describe the **base ISO standard**. A document that "
         "conforms here can still be rejected by a scheme rulebook, by your "
         "bank's own profile, or by the channel you submit it through. See "
-        "the [four-layer model](/#standards-heading).",
-        "- The reference is **English only**. It is generated data that "
+        "the [four-layer model](/#standards-heading)."),
+        ("- The reference is **English only**. It is generated data that "
         "grows with every ISO release, and the site's translated pages are "
         "parity-checked in CI; localising a growing generated surface into "
-        "34 languages is not a commitment that could be kept honestly.",
-        "- Regenerate with `python3 scripts/extract_message_specs.py && "
-        "python3 scripts/generate_message_specs.py` after a schema update.",
+        "34 languages is not a commitment that could be kept honestly."),
+        ("- Regenerate with `python3 scripts/extract_message_specs.py && "
+        "python3 scripts/generate_message_specs.py` after a schema update."),
     ]
     fm = load_frontmatter(
         "message-specs",
