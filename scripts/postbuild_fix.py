@@ -1280,12 +1280,39 @@ def ensure_social_metadata(site: Path) -> None:
     print(f"[postbuild] social card metadata on {changed} page(s)")
 
 
+# Utility pages that must never be indexed: the not-found page (served
+# with a 200 at /404/ it was a textbook soft 404 in Search Console), the
+# service worker's offline fallback, and the form confirmation page. They
+# stay out of the sitemap and carry a robots noindex.
+NOINDEX_PAGES = ("404", "offline", "thanks")
+_ROBOTS_NOINDEX = '<meta name="robots" content="noindex" />'
+
+
+def mark_noindex_pages(site: Path) -> None:
+    """Add robots noindex to NOINDEX_PAGES and publish the not-found page
+    at /404.html, the only path GitHub Pages serves for a missing URL; as
+    /404/index.html alone it was never shown for one."""
+    marked = 0
+    for rel in NOINDEX_PAGES:
+        page = site / rel / "index.html"
+        if not page.is_file():
+            continue
+        html = page.read_text(encoding="utf-8")
+        if _ROBOTS_NOINDEX not in html:
+            html = html.replace("</head>", _ROBOTS_NOINDEX + "</head>", 1)
+            page.write_text(html, encoding="utf-8")
+            marked += 1
+        if rel == "404":
+            (site / "404.html").write_text(html, encoding="utf-8")
+    print(f"[postbuild] noindex on {marked} utility page(s); /404.html published")
+
+
 def regen_sitemap(site: Path) -> None:
     today = date.today().isoformat()
     urls = []
     for page in sorted(site.rglob("index.html")):
         rel = page.parent.relative_to(site).as_posix()
-        if rel.startswith(("api/", "_csp", ".")) or rel in ("404", "offline"):
+        if rel.startswith(("api/", "_csp", ".")) or rel in NOINDEX_PAGES:
             continue
         loc = BASE_URL + "/" if rel == "." else f"{BASE_URL}/{rel}/"
         urls.append(
@@ -1871,6 +1898,7 @@ def main() -> None:
     inject_dataset_ld(site)
     write_llms(site)
     stamp_suite_version(site)
+    mark_noindex_pages(site)  # before the sitemap, which skips the same pages
     regen_sitemap(site)
     gen_legacy_redirects(site)  # after sitemap so stubs stay unindexed
     normalise_site_shell(site)  # includes taxonomy and redirect pages
