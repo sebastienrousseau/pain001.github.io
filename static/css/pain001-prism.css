@@ -212,6 +212,15 @@
   pre { max-width: 100% !important; overflow: visible !important; }
   pre,
   pre code { white-space: pre-wrap !important; word-break: break-word; }
+  /* Paper has no horizontal scroll: the homepage gallery stacks, and tables
+     wrap to the printable width instead of scrolling (or breaking out)
+     past it. On screen they keep their natural widths. */
+  .gallery-track { grid-auto-flow: row; grid-auto-columns: auto; overflow: visible; }
+  .content-body .ssg-table-scroll,
+  .table-wrap { overflow: visible !important; max-inline-size: 100% !important; inline-size: auto !important; margin-inline: 0 !important; }
+  .content-body table { inline-size: 100% !important; max-inline-size: 100% !important; margin-inline: 0 !important; table-layout: fixed; }
+  .content-body th,
+  .content-body td { overflow-wrap: anywhere; }
   h1,
   h2,
   h3,
