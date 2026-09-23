@@ -784,7 +784,7 @@ def main(argv: list[str] | None = None) -> int:
     schemas = copy_schemas(lib)
     fm = load_frontmatter(
         SLUG,
-        "ISO 20022 example files — pain.001 and pain.008 samples per country and rail",
+        "ISO 20022 example files: pain.001 and pain.008 samples per country and rail",
         "Download ISO 20022 pain.001 and pain.008 sample files built from "
         "the public scheme rulebooks per country and rail, each with a "
         "record of where it comes from and how it was checked, plus schema "
@@ -801,7 +801,7 @@ def main(argv: list[str] | None = None) -> int:
     print(f"wrote {pages} scenario pages, corpus/index.json, {schemas} twin schemas")
     coverage_fm = load_frontmatter(
         COVERAGE_SLUG,
-        "ISO 20022 schema coverage files — every element of every edition",
+        "ISO 20022 schema coverage files: every element of every edition",
         "Generated pain.001 and pain.008 files that between them use every "
         "element path and choice branch of each supported schema edition, "
         "each named after what it adds, with a zip per edition.",

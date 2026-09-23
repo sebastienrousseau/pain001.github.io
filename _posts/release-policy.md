@@ -16,7 +16,7 @@ format-detection: telephone=no
 hreflang: en
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/release-policy/"
-image_alt: "A question-and-answer session on ISO 20022 payment file generation — the questions treasury, operations, engineering, and audit teams actually ask."
+image_alt: "A question-and-answer session on ISO 20022 payment file generation, covering the questions treasury, operations, engineering, and audit teams actually ask."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -90,24 +90,24 @@ last_reviewed: "2026-07-26"
 
 ## Versioning
 
-Pain001 is **pre-1.0** (`0.0.x`). Within that range, releases are frequent and may include breaking changes; every breaking change is documented in the [release notes](https://github.com/sebastienrousseau/pain001/releases). Companion packages (`pain001-mcp`, `pain001-lsp`, the loaders) version independently and declare their compatible core range in their dependency metadata — the resolver, not the version number, is the compatibility contract.
+Pain001 is **pre-1.0** (`0.0.x`). Within that range, releases are frequent and may include breaking changes; every breaking change is documented in the [release notes](https://github.com/sebastienrousseau/pain001/releases). Companion packages (`pain001-mcp`, `pain001-lsp`, the loaders) version independently and declare their compatible core range in their dependency metadata. The resolver, not the version number, is the compatibility contract.
 
 ## What "supported" means
 
-The honest pre-1.0 statement: **the latest release is the supported release.** Bug and security fixes ship as new releases rather than backports. If you need a frozen version, pin it (`pain001==0.0.70`) — pinned installs keep working because releases are never deleted or mutated on PyPI.
+The honest pre-1.0 statement: **the latest release is the supported release.** Bug and security fixes ship as new releases rather than backports. If you need a frozen version, pin it (`pain001==0.0.70`). Pinned installs keep working because releases are never deleted or mutated on PyPI.
 
 Security reports against older versions are still triaged: if the flaw exists in the latest release, it is fixed there with an advisory noting affected versions.
 
 ## Verifying a release
 
-- **Integrity** — install from PyPI with hash-checking (`pip install --require-hashes` against your lockfile).
-- **Provenance** — from v0.0.57 onward, releases carry a SLSA Build L3 attestation (`multiple.intoto.jsonl` on the GitHub release), verifiable with [`slsa-verifier`](https://github.com/slsa-framework/slsa-verifier) against `github.com/sebastienrousseau/pain001`.
-- **Inventory** — each core release build generates a CycloneDX SBOM for dependency review.
+- **Integrity**: install from PyPI with hash-checking (`pip install --require-hashes` against your lockfile).
+- **Provenance**: from v0.0.57 onward, releases carry a SLSA Build L3 attestation (`multiple.intoto.jsonl` on the GitHub release), verifiable with [`slsa-verifier`](https://github.com/slsa-framework/slsa-verifier) against `github.com/sebastienrousseau/pain001`.
+- **Inventory**: each core release build generates a CycloneDX SBOM for dependency review.
 
 ## Pinning and rollback
 
-Deployments should pin exact versions in a lockfile and treat upgrades as changes: run your own regression (a `--dry-run` over a representative batch is the natural smoke test) before promoting. Rollback is `pip install pain001==<previous>` — no migrations, no state, no server-side coupling; generated files from any version remain valid against the schemas they targeted.
+Deployments should pin exact versions in a lockfile and treat upgrades as changes: run your own regression (a `--dry-run` over a representative batch is the natural smoke test) before promoting. Rollback is `pip install pain001==<previous>`, with no migrations, no state, and no server-side coupling; generated files from any version remain valid against the schemas they targeted.
 
 ## Cadence and deprecation
 
-There is no fixed calendar cadence; releases ship when tested work is ready — historically multiple times per month ([release history](https://github.com/sebastienrousseau/pain001/releases)). Deprecations appear in release notes at least one release before removal. **The 1.0 commitment**, when made, will bring semantic-versioning guarantees: no breaking changes within a major version and a documented support window per major — that promise is deliberately not being made before it can be kept.
+There is no fixed calendar cadence; releases ship when tested work is ready, historically multiple times per month ([release history](https://github.com/sebastienrousseau/pain001/releases)). Deprecations appear in release notes at least one release before removal. **The 1.0 commitment**, when made, will bring semantic-versioning guarantees: no breaking changes within a major version and a documented support window per major. That promise is deliberately not being made before it can be kept.

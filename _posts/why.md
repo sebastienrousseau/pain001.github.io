@@ -10,13 +10,13 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "What a rejected payment file costs, why the November 2026 (SR 2026) deadline is fixed, what Pain001 does about it, what it costs (nothing), and whether it is safe — each answer linked to its proof."
+description: "What a rejected payment file costs, why structured payment data still matters now that Swift has deferred its deadline, what Pain001 does about it, what it costs (nothing), and whether it is safe, with each answer linked to its proof."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "en"
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/why/"
-image_alt: "A question-and-answer session on ISO 20022 payment file generation — the questions treasury, operations, engineering, and audit teams actually ask."
+image_alt: "A question-and-answer session on ISO 20022 payment file generation, covering the questions treasury, operations, engineering, and audit teams actually ask."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -36,7 +36,7 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "The five questions a CFO actually asks — answered in plain English, every claim linked to its evidence."
+subtitle: "The five questions a CFO actually asks, answered in plain English with every claim linked to its evidence."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
 title: "Why Pain001: the Business Case in Five Questions"
@@ -46,7 +46,7 @@ atom_link: "https://pain001.com/why/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "What a rejected payment file costs, why the November 2026 (SR 2026) deadline is fixed, what Pain001 does about it, what it costs (nothing), and whether it is safe — each answer linked to its proof."
+item_description: "What a rejected payment file costs, why structured payment data still matters now that Swift has deferred its deadline, what Pain001 does about it, what it costs (nothing), and whether it is safe, with each answer linked to its proof."
 item_guid: "https://pain001.com/why/rss.xml"
 item_link: "https://pain001.com/why/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -67,7 +67,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "What a rejected payment file costs, why the November 2026 (SR 2026) deadline is fixed, what Pain001 does about it, what it costs (nothing), and whether it is safe — each answer linked to its proof."
+twitter_description: "What a rejected payment file costs, why structured payment data still matters now that Swift has deferred its deadline, what Pain001 does about it, what it costs (nothing), and whether it is safe, with each answer linked to its proof."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
@@ -82,7 +82,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "The business case"
-excerpt: "The executive case for Pain001 in five questions: the operational cost of a rejected payment file, the fixed November 2026 (SR 2026) CBPR+ deadline, what the suite does about both, why it costs nothing at any scale against a €10–30k/yr commercial reference point, and the verifiable safety posture — local processing, no telemetry, published SBOM, 100% branch coverage."
+excerpt: "The executive case for Pain001 in five questions: the operational cost of a rejected payment file, the structured-address requirement Swift deferred in August 2026, what the suite does about both, why it costs nothing at any scale against a €10–30k/yr commercial reference point, and the verifiable safety posture: local processing, no telemetry, published SBOM, 100% branch coverage."
 last_reviewed: "2026-07-26"
 
 
@@ -90,19 +90,19 @@ last_reviewed: "2026-07-26"
 
 ## What does a rejected payment file cost?
 
-A file the bank bounces does not fail quietly. Someone diagnoses the reason code, repairs the source data, regenerates, resubmits — and if the repair misses the day's cut-off, settlement slips. For payroll or supplier runs, a slipped day is a phone call you do not want to make. The [reason-code reference](/pain002-reason-codes/) lists what banks actually send back; almost every format-class entry on it is preventable before submission.
+A file the bank bounces does not fail quietly. Someone diagnoses the reason code, repairs the source data, regenerates, resubmits. If the repair misses the day's cut-off, settlement slips. For payroll or supplier runs, a slipped day is a phone call you do not want to make. The [reason-code reference](/pain002-reason-codes/) lists what banks actually send back; almost every format-class entry on it is preventable before submission.
 
-## Why is November 2026 (SR 2026) non-negotiable?
+## Why act before Swift sets the new date?
 
-Because it is enforced at network level, not by policy. From that date, cross-border payments (CBPR+) carrying fully unstructured postal addresses are rejected, and the interbank MT101 relay retires in favour of `pain.001` version 9. The dates come from SWIFT, not from us — every one is cited in the [2026 briefing](/2026-iso20022-migration-trends/), and the schedule continues to 2028 on the [living roadmap](/iso20022-roadmap/).
+Because the requirement did not change, only its date. In August 2026 Swift deferred the rule that rejects fully unstructured postal addresses in cross-border payments (CBPR+), together with the move from MT101 to `pain.001` version 9 between banks, and it will publish the new timing by December 2026. The work behind both lives in your customer master data, and it takes longer than a release cycle. Other dates stand: June 2027 for investigations, November 2027 for CHAPS purpose codes and Fedwire's next release, November 2028 for statements. The sources are cited in the [2026 briefing](/2026-iso20022-migration-trends/) and the schedule on the [living roadmap](/iso20022-roadmap/).
 
 ## What does Pain001 do about it?
 
-Three things. It turns the data you already have — spreadsheets, ERP exports, legacy SWIFT files — into bank-ready ISO 20022 payment files. It proves each file clean before submission: validation against the bank's official rulebook (ISO 20022 XSD), the account-number checksum your bank runs (ISO 13616 mod-97), and control totals recalculated from the records, never trusted. And it does all of this on your own infrastructure — nothing is uploaded anywhere.
+Three things. It turns the data you already have (spreadsheets, ERP exports, legacy SWIFT files) into bank-ready ISO 20022 payment files. It proves each file clean before submission: validation against the bank's official rulebook (ISO 20022 XSD), the account-number checksum your bank runs (ISO 13616 mod-97), and control totals recalculated from the records, never trusted. And it does all of this on your own infrastructure, so nothing is uploaded anywhere.
 
 ## What does it cost?
 
-Nothing, at any scale, permanently. The core is dual-licensed (Apache-2.0 or MIT); companion packages are Apache-2.0. The nearest commercial reference point — SWIFT's translation SDK — is publicly listed at €10,000–30,000 per year before integration effort. The full landscape, including where commercial platforms genuinely win, is in the [comparison](/competitors-comparison/).
+Nothing, at any scale, permanently. The core is dual-licensed (Apache-2.0 or MIT); companion packages are Apache-2.0. The nearest commercial reference point, SWIFT's translation SDK, is publicly listed at €10,000–30,000 per year before integration effort. The full landscape, including where commercial platforms genuinely win, is in the [comparison](/competitors-comparison/).
 
 Optional and separate: a supported release channel, private profile derivation for your bank's guideline, and integration help, for teams that need a named party with obligations. See the [enterprise page](/enterprise/); the software itself stays free.
 
@@ -112,4 +112,4 @@ Check rather than trust: payment data [never leaves your machines](/privacy/), t
 
 ## What is the next step?
 
-Watch it work: the [60-second demo](/try/) validates a payment batch and proves it against the official schema, in your browser. Then hand your team the [executive brief](/executive-brief/) — one page, print-ready, available in [French](/fr/executive-brief/), [German](/de/executive-brief/), and [Spanish](/es/executive-brief/).
+Watch it work: the [60-second demo](/try/) validates a payment batch and proves it against the official schema, in your browser. Then hand your team the [executive brief](/executive-brief/): one page, print-ready, available in [French](/fr/executive-brief/), [German](/de/executive-brief/), and [Spanish](/es/executive-brief/).

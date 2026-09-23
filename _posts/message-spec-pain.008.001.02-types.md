@@ -36,10 +36,10 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "Types AccountIdentification4Choice – OrganisationIdentificationSchemeName1Choice in pain.008.001.02, defined once each — the view to use for field mapping."
+subtitle: "Types AccountIdentification4Choice – OrganisationIdentificationSchemeName1Choice in pain.008.001.02, defined once each. This is the view to use for field mapping."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "pain.008.001.02 type reference (part 1 of 2) — AccountIdentification4Choice – OrganisationIdentificationSchemeName1Choice"
+title: "pain.008.001.02 type reference (part 1 of 2): AccountIdentification4Choice – OrganisationIdentificationSchemeName1Choice"
 url: "https://pain001.com/message-spec-pain.008.001.02-types/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/message-spec-pain.008.001.02-types/"
@@ -50,7 +50,7 @@ item_description: "Complex types AccountIdentification4Choice – OrganisationId
 item_guid: "https://pain001.com/message-spec-pain.008.001.02-types/"
 item_link: "https://pain001.com/message-spec-pain.008.001.02-types/"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "pain.008.001.02 type reference (part 1 of 2) — AccountIdentification4Choice – OrganisationIdentificationSchemeName1Choice"
+item_title: "pain.008.001.02 type reference (part 1 of 2): AccountIdentification4Choice – OrganisationIdentificationSchemeName1Choice"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "pain.008.001.02 type reference (part 1 of 2) — AccountIdentification4Choice – OrganisationIdentificationSchemeName1Choice"
+apple-mobile-web-app-title: "pain.008.001.02 type reference (part 1 of 2): AccountIdentification4Choice – OrganisationIdentificationSchemeName1Choice"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,7 +71,7 @@ twitter_description: "Complex types AccountIdentification4Choice – Organisatio
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "pain.008.001.02 type reference (part 1 of 2) — AccountIdentification4Choice – OrganisationIdentificationSchemeName1Choice"
+twitter_title: "pain.008.001.02 type reference (part 1 of 2): AccountIdentification4Choice – OrganisationIdentificationSchemeName1Choice"
 twitter_url: "https://pain001.com/message-spec-pain.008.001.02-types/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -88,13 +88,13 @@ last_reviewed: "2026-07-26"
 
 ---
 
-Complex types in ISO 20022 `pain.008.001.02`, generated from the official XSD. **Part 1 of 2** — `AccountIdentification4Choice – OrganisationIdentificationSchemeName1Choice`.
+Complex types in ISO 20022 `pain.008.001.02`, generated from the official XSD. **Part 1 of 2**: `AccountIdentification4Choice – OrganisationIdentificationSchemeName1Choice`.
 
 **Part 1** · [Part 2](/message-spec-pain.008.001.02-types-2/)
 
 Each type is defined once here. The [message structure](/message-spec-pain.008.001.02/) repeats a party or address block under every party; this view does not, which is what you want when mapping source fields.
 
-A **choice** type means the children are alternatives — supply one, not all. Cardinality in **bold** is required.
+A **choice** type means the children are alternatives: supply one, not all. Cardinality in **bold** is required.
 
 ## `AccountIdentification4Choice`
 

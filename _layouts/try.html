@@ -26,12 +26,7 @@
       .back-link:hover { text-decoration: underline; }
 
       .page-header { padding: 3.5rem 0 2rem; }
-      .eyebrow { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--eyebrow); margin-bottom: 1rem; }
-      h1 {
-        font-family: var(--type-display); font-size: clamp(2.1rem, 4vw, 3rem);
-        font-weight: 700; letter-spacing: -0.015em; line-height: 1.14;
-        max-width: 26ch; margin-bottom: 1rem; text-wrap: balance;
-      }
+      /* Eyebrow and headline come from PRISM, like every other page hero. */
       .deck { font-size: 1.2rem; color: var(--ink-soft); max-width: 58ch; }
 
       .demo-grid {
@@ -44,7 +39,7 @@
         background: var(--bg-card); padding: 1.5rem; box-shadow: var(--shadow-sm);
         display: flex; flex-direction: column; gap: 1rem;
       }
-      .demo-panel h2 { font-size: 1.05rem; font-weight: 700; }
+      .demo-panel h2 { font-size: 1.05rem; font-weight: 600; }
       textarea {
         width: 100%; min-height: 260px;
         font-family: var(--type-mono); font-size: 0.85rem; line-height: 1.6;
@@ -66,7 +61,7 @@
       .pill-ghost:hover { border-color: var(--ink); }
 
       .status {
-        font-weight: 700; font-size: 0.95rem;
+        font-weight: 600; font-size: 0.95rem;
         padding: 0.6rem 1rem; border-radius: var(--radius-sm);
         border: 1px solid var(--rule);
       }
@@ -84,9 +79,9 @@
       .fineprint { color: var(--ink-mute); font-size: 0.9rem; max-width: 70ch; }
       .fineprint a { color: var(--link); }
 
-      /* Same trap as .guide-grid: also a .wrap, so a shorthand here
-         wipes the shell gutter and the note touches the screen edge. */
-      .content-note { padding: 1.5rem 1.75rem 3rem; }
+      /* The gutter comes from the container's width, not padding, so the
+         note starts on the hero's left edge. */
+      .content-note { padding: 1.5rem 0 3rem; }
       .content-note article { max-width: 68ch; color: var(--ink-soft); }
       .content-note article h1 { display: none; }
       .content-note article h2 { font-family: var(--type-display); font-size: 1.5rem; margin: 2rem 0 0.8rem; color: var(--ink); }
@@ -109,26 +104,25 @@
       .guide-grid {
         display: grid; grid-template-columns: minmax(280px, 1fr) 2fr;
         gap: 2rem;
-        /* Horizontal padding must be restated: this element is
-           also .wrap, and a four-value shorthand here wiped the
-           shell's 1.75rem gutter. The demo column sat flush
-           against the screen edge on every phone while the title
-           above it kept its inset. */
-        padding: 2.5rem 1.75rem 1.5rem;
+        /* No inline padding: the gutter is the container's width
+           (min(100% - 2rem, 76rem)), so the columns start on the
+           hero's left edge and still clear the screen edge on a
+           phone. */
+        padding: 2.5rem 0 1.5rem;
         align-items: start;
       }
       @media (max-width: 980px) { .guide-grid { grid-template-columns: 1fr; } }
       .guide-rail { display: flex; flex-direction: column; gap: 2rem; }
       .guide-block h2 {
         font-family: var(--type-display);
-        font-size: 1.35rem; font-weight: 700; letter-spacing: -0.01em;
+        font-size: 1.35rem; font-weight: 600; letter-spacing: -0.01em;
         margin-bottom: 1rem;
       }
       .check-list, .info-list { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; }
       .check-list li {
         display: flex; gap: 0.7rem; color: var(--ink-soft); line-height: 1.55;
       }
-      .check-list .tick { color: var(--ok); font-weight: 700; flex-shrink: 0; }
+      .check-list .tick { color: var(--ok); font-weight: 600; flex-shrink: 0; }
       /* A flex item defaults to min-width:auto, so the text beside the
          tick refused to wrap below its longest line and pushed the whole
          page 92px sideways at 320px. The tick keeps flex-shrink:0; the
@@ -157,7 +151,7 @@
         width: 32px; height: 32px; flex-shrink: 0;
         border-radius: 50%;
         background: var(--btn-bg); color: var(--btn-text);
-        font-weight: 700; font-size: 0.95rem;
+        font-weight: 600; font-size: 0.95rem;
       }
       .dropzone {
         border: 2px dashed var(--rule-strong);
@@ -192,11 +186,11 @@
       .pill-select:hover { border-color: var(--ink); }
       .dialect-note { color: var(--ink-mute); font-size: 0.85rem; margin: 0; }
       .dialect-note a { color: var(--link); }
-      .xml-placeholder { color: #9aa3b2; font-family: var(--type-body); font-style: italic; white-space: normal; display: block; }
+      .xml-placeholder { color: var(--code-comment); font-family: var(--type-body); font-style: italic; white-space: normal; display: block; }
 
       .verify-lede { color: var(--ink-soft); margin-bottom: 0.8rem; line-height: 1.55; }
       .verify-steps { margin: 0 0 0.8rem 1.3rem; display: flex; flex-direction: column; gap: 0.7rem; color: var(--ink-soft); line-height: 1.55; }
-      .verify-steps li::marker { color: var(--ink-mute); font-weight: 700; }
+      .verify-steps li::marker { color: var(--ink-mute); font-weight: 600; }
       .verify-steps a { color: var(--link); }
 
       .error-table-wrap { overflow-x: auto; }
@@ -206,8 +200,7 @@
         border-bottom: 1px solid var(--rule);
       }
       .error-table thead th {
-        font-size: 0.72rem; font-weight: 700;
-        letter-spacing: 0.08em; text-transform: uppercase;
+        font-size: 0.8125rem; font-weight: 500;
         color: var(--ink-mute);
         border-bottom: 2px solid var(--rule-strong);
       }
@@ -234,7 +227,7 @@
         font-size: 0.9rem;
       }
       .layer-summary caption {
-        text-align: left; font-weight: 650; color: var(--ink-soft);
+        text-align: left; font-weight: 600; color: var(--ink-soft);
         padding-bottom: 0.5rem;
       }
       .layer-summary th, .layer-summary td {
@@ -244,8 +237,8 @@
       .layer-summary th { font-weight: 600; white-space: nowrap; }
       .layer-hint { font-weight: 400; color: var(--ink-mute); }
       .layer-state { color: var(--ink-soft); }
-      .layer-state.is-pass { color: var(--ok); font-weight: 650; }
-      .layer-state.is-fail { color: var(--bad); font-weight: 650; }
+      .layer-state.is-pass { color: var(--ok); font-weight: 600; }
+      .layer-state.is-fail { color: var(--bad); font-weight: 600; }
       .layer-summary tr[data-layer="bank"] th,
       .layer-summary tr[data-layer="channel"] th,
       .layer-summary tr[data-layer="scheme"] th { color: var(--ink-mute); }
@@ -272,19 +265,21 @@
         white-space: nowrap;
       }
       .status-strip a:hover { color: var(--link); text-decoration: underline; }
-      .status-strip strong { color: var(--ink-soft); font-weight: 650; margin-inline-end: 0.3rem; }
+      .status-strip strong { color: var(--ink-soft); font-weight: 600; margin-inline-end: 0.3rem; }
       @media (max-width: 720px) { .status-strip { display: none; } }
     </style>
 
 {{/block}}
 {{#block "main"}}
       <section class="page-hero">
-        <div class="container">
-          <p class="eyebrow">{{eyebrow}}</p>
+        <div class="container hero-copy">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol><li><a href="/">Home</a></li><li aria-current="page">{{title}}</li></ol>
+          </nav>
+          <p class="eyebrow eyebrow-hero">{{eyebrow}}</p>
           <h1>{{title}}</h1>
           <p class="lead hero-lead">{{subtitle}}</p>
         </div>
-      <div class="hero-slope" aria-hidden="true"></div>
       </section>
 
       <div class="container guide-grid">
@@ -292,17 +287,17 @@
           <div class="guide-block">
             <h2>How this validator helps you</h2>
             <ul class="check-list">
-              <li><span class="tick" aria-hidden="true">✓</span><span>Test payment data against the checks banks apply — required fields, IBAN checksums, BIC structure, control totals</span></li>
+              <li><span class="tick" aria-hidden="true">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span></li>
               <li><span class="tick" aria-hidden="true">✓</span><span>Generate a working <code>pain.001.001.09</code> credit-transfer file you can inspect, copy, or download</span></li>
-              <li><span class="tick" aria-hidden="true">✓</span><span>Prove the result against the official ISO 20022 schema — the genuine XSD, validated in your browser</span></li>
+              <li><span class="tick" aria-hidden="true">✓</span><span>Prove the result against the official ISO 20022 schema, using the genuine XSD in your browser</span></li>
             </ul>
           </div>
           <div class="guide-block">
             <h2>Important information</h2>
             <ul class="info-list">
-              <li><strong>Nothing is uploaded.</strong> Your file is read by your own browser and never leaves your machine — there is no server, no storage, no telemetry. Safe for real data, though masked test data is always good practice.</li>
+              <li><strong>Nothing is uploaded.</strong> Your file is read by your own browser and never leaves your machine. There is no server, no storage, no telemetry. Safe for real data, though masked test data is always good practice.</li>
               <li><strong>Testing tool only.</strong> Files are never submitted for processing and no payments can result from anything you do here.</li>
-              <li><strong>Expected columns:</strong> <code>payment_id</code>, <code>payment_amount</code>, <code>currency</code>, debtor and creditor name / IBAN / BIC, <code>requested_execution_date</code> — comma, semicolon, and tab delimiters are auto-detected. Download a sample below to use as a template for your own export.</li>
+              <li><strong>Expected columns:</strong> <code>payment_id</code>, <code>payment_amount</code>, <code>currency</code>, debtor and creditor name / IBAN / BIC, <code>requested_execution_date</code>. Comma, semicolon, and tab delimiters are auto-detected. Download a sample below to use as a template for your own export.</li>
               <li><strong>No charges.</strong> This tool, and the <a href="/installation/">full toolchain</a> behind it, are free and open source.</li>
             </ul>
           </div>
@@ -310,19 +305,19 @@
             <h2>Verify it yourself</h2>
             <p class="verify-lede">"Nothing is uploaded" is a claim you can falsify in two minutes:</p>
             <ol class="verify-steps">
-              <li>Open DevTools&nbsp;&rarr;&nbsp;Network, then use the demo. The only requests are same-origin GETs for this page's assets, the WASM engine, and the schema — none carries your data.</li>
-              <li>Run the XSD gate once, then switch DevTools to <em>Offline</em> (or turn off Wi-Fi). The whole demo — including the official schema gate — still works: a service worker caches everything after first use.</li>
-              <li><a href="https://github.com/sebastienrousseau/pain001.github.io" rel="external">This page is open source too</a> — the demo logic is one dependency-free module you can read in full.</li>
+              <li>Open DevTools&nbsp;&rarr;&nbsp;Network, then use the demo. The only requests are same-origin GETs for this page's assets, the WASM engine, and the schema. None of them carries your data.</li>
+              <li>Run the XSD gate once, then switch DevTools to <em>Offline</em> (or turn off Wi-Fi). The whole demo, including the official schema gate, still works: a service worker caches everything after first use.</li>
+              <li><a href="https://github.com/sebastienrousseau/pain001.github.io" rel="external">This page is open source too</a>: the demo logic is one dependency-free module you can read in full.</li>
             </ol>
-            <p class="verify-lede">There is no analytics script, no error-reporting service, no third-party font, and no CSP report endpoint — reporting would itself be an outbound connection.</p>
+            <p class="verify-lede">There is no analytics script, no error-reporting service, no third-party font, and no CSP report endpoint, because reporting would itself be an outbound connection.</p>
           </div>
         </aside>
 
         <div class="tool-col">
           <section class="demo-panel" aria-labelledby="input-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">1</span><h2 id="input-heading">Add your payment data</h2></div>
-            <div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="Drag a CSV file here, or press Enter to browse your files">
-              <p><strong>Drag a CSV file here</strong> — or click to browse</p>
+            <div class="dropzone" id="dropzone" role="button" tabindex="0">
+              <p><strong>Drag a CSV file here</strong> or click to browse</p>
               <p class="hint">Maximum 2&nbsp;MB · read locally by your browser, never uploaded</p>
             </div>
             <input type="file" id="file-input" class="visually-hidden" accept=".csv,text/csv,text/plain" aria-label="Choose a CSV file of payment records" tabindex="-1" />
@@ -360,7 +355,7 @@
 
           <section class="demo-panel" aria-labelledby="output-heading">
             <div class="step-head"><span class="step-num" aria-hidden="true">2</span><h2 id="output-heading">Validation result &amp; generated XML</h2></div>
-            <p class="status" id="status" role="status">Add data in step 1 — validation runs automatically.</p>
+            <p class="status" id="status" role="status">Add data in step 1 and validation runs automatically.</p>
             <div class="xsd-progress" id="run-progress" hidden>
               <div class="xsd-progress-bar" id="run-progress-bar"></div>
             </div>
@@ -373,23 +368,23 @@
               <tbody>
                 <tr data-layer="iso">
                   <th scope="row">ISO 20022 schema</th>
-                  <td class="layer-state" id="layer-state-iso">—</td>
+                  <td class="layer-state" id="layer-state-iso">Not run yet</td>
                 </tr>
                 <tr data-layer="data">
                   <th scope="row">Data quality <span class="layer-hint">(beyond the schema)</span></th>
-                  <td class="layer-state" id="layer-state-data">—</td>
+                  <td class="layer-state" id="layer-state-data">Not run yet</td>
                 </tr>
                 <tr data-layer="scheme">
                   <th scope="row">Scheme rulebook</th>
-                  <td class="layer-state" id="layer-state-scheme">Not run — choose a scheme rulebook in step 1</td>
+                  <td class="layer-state" id="layer-state-scheme">Not run: choose a scheme rulebook in step 1</td>
                 </tr>
                 <tr data-layer="bank">
                   <th scope="row">Your bank&rsquo;s profile</th>
-                  <td class="layer-state">Not evaluated — Pain001 ships no bank profiles</td>
+                  <td class="layer-state">Not evaluated: Pain001 ships no bank profiles</td>
                 </tr>
                 <tr data-layer="channel">
                   <th scope="row">Channel and eligibility</th>
-                  <td class="layer-state">Not evaluated — decided by your bank, not the file</td>
+                  <td class="layer-state">Not evaluated: decided by your bank, not the file</td>
                 </tr>
               </tbody>
             </table>
@@ -407,7 +402,7 @@
               <button type="button" id="tab-xml" class="pill pill-primary" role="tab" aria-selected="true" aria-controls="xml-out">XML</button>
               <button type="button" id="tab-twin" class="pill pill-ghost" role="tab" aria-selected="false" aria-controls="xml-out" disabled title="Generate XML in step 2 first">JSON twin</button>
             </div>
-            <div class="xml-out" id="xml-out" tabindex="0" aria-label="Generated output"><span class="xml-placeholder">The validated pain.001.001.09 document will appear here — add data in step 1.</span></div>
+            <div class="xml-out" id="xml-out" tabindex="0" aria-label="Generated output"><span class="xml-placeholder">The validated pain.001.001.09 document will appear here once you add data in step 1.</span></div>
             <div class="demo-actions">
               <button type="button" id="copy-btn" class="pill pill-ghost" disabled title="Add valid data in step 1 first">Copy XML</button>
               <button type="button" id="download-btn" class="pill pill-ghost" disabled title="Add valid data in step 1 first">Download .xml</button>
@@ -429,7 +424,7 @@
             <div class="demo-actions">
               <button type="button" id="xsd-btn" class="pill pill-primary" disabled title="Generate XML in step 2 first">Re-run the official XSD gate&nbsp;&rsaquo;</button>
             </div>
-            <p class="status" id="xsd-status" role="status">Generate XML in step 2 first — the XSD gate runs on that output.</p>
+            <p class="status" id="xsd-status" role="status">Generate XML in step 2 first. The XSD gate runs on that output.</p>
             <div class="xsd-progress" id="xsd-progress" hidden>
               <div class="xsd-progress-bar" id="xsd-progress-bar"></div>
             </div>
@@ -441,13 +436,13 @@
 
       <div class="container">
         <p class="fineprint" id="demo-fineprint">
-          Everything on this page runs in your browser — nothing is uploaded, stored, or sent anywhere.
+          Everything on this page runs in your browser. Nothing is uploaded, stored, or sent anywhere.
           It runs the pain001 library itself, the same package you install with <code class="tt-inherit">pip</code>,
           inside a Python runtime compiled to WebAssembly: record validation, IBAN and BIC checks, the scheme
           rulebook you choose, XML generation with recomputed <code class="tt-inherit">NbOfTxs</code>/<code class="tt-inherit">CtrlSum</code>
           control totals, and the official XSD gate. What the CLI adds is scale and inputs: files of any size,
-          Excel, SQLite, JSON, Parquet and SWIFT MT101, and every message edition —
-          <a href="/installation/">install the CLI</a> for the complete pipeline.
+          Excel, SQLite, JSON, Parquet and SWIFT MT101, and every message edition.
+          <a href="/installation/">Install the CLI</a> for the complete pipeline.
         </p>
       </div>
 

@@ -36,10 +36,10 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "Message received — a reply is on its way to the address you provided."
+subtitle: "Message received. A reply is on its way to the address you provided."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Thank You — Message Received"
+title: "Thank You: Message Received"
 url: "https://pain001.com/thanks/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/thanks/rss.xml"
@@ -50,7 +50,7 @@ item_description: "Your message is on its way. Meanwhile: install Pain001, read 
 item_guid: "https://pain001.com/thanks/rss.xml"
 item_link: "https://pain001.com/thanks/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Thank You — Message Received"
+item_title: "Thank You: Message Received"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Thank You — Message Received"
+apple-mobile-web-app-title: "Thank You: Message Received"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,7 +71,7 @@ twitter_description: "Your message is on its way. Meanwhile: install Pain001, re
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Thank You — Message Received"
+twitter_title: "Thank You: Message Received"
 twitter_url: "https://pain001.com/thanks/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -87,10 +87,10 @@ last_reviewed: "2026-07-26"
 
 ---
 
-Your message is on its way. Expect a reply at the address you provided — usually within a few days for general enquiries, faster for security reports.
+Your message is on its way. Expect a reply at the address you provided, usually within a few days for general enquiries, faster for security reports.
 
 While you wait:
 
 - [Install Pain001](/installation/) and generate your first validated file in three commands.
-- Read the [2026 ISO 20022 briefing](/2026-iso20022-migration-trends/) — the deadlines, with sources.
-- Star the project on [GitHub](https://github.com/sebastienrousseau/pain001) — it genuinely helps others find it.
+- Read the [2026 ISO 20022 briefing](/2026-iso20022-migration-trends/) for the deadlines, with sources.
+- Star the project on [GitHub](https://github.com/sebastienrousseau/pain001). It genuinely helps others find it.

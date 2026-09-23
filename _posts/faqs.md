@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "A question-and-answer session on ISO 20022 payment file generation — the questions treasury, operations, engineering, and audit teams actually ask."
+banner_alt: "A question-and-answer session on ISO 20022 payment file generation, covering the questions treasury, operations, engineering, and audit teams actually ask."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -10,13 +10,13 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Why banks reject payment files, pain.001 vs pain.008, the November 2026 deadlines, streaming large batches, security posture, and audit reproducibility — answered plainly."
+description: "Why banks reject payment files, pain.001 vs pain.008, the structured-address requirement, streaming large batches, security posture, and audit reproducibility, all answered plainly."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/faqs/"
-image_alt: "A question-and-answer session on ISO 20022 payment file generation — the questions treasury, operations, engineering, and audit teams actually ask."
+image_alt: "A question-and-answer session on ISO 20022 payment file generation, covering the questions treasury, operations, engineering, and audit teams actually ask."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -36,7 +36,7 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "Straight answers for treasurers, payment operations, engineers, and auditors — phrased the way people actually ask."
+subtitle: "Straight answers for treasurers, payment operations, engineers, and auditors, phrased the way people actually ask."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
 title: "Pain001 FAQs for Treasury, Ops, Engineering and Audit"
@@ -46,7 +46,7 @@ atom_link: "https://pain001.com/faqs/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Why banks reject payment files, pain.001 vs pain.008, the November 2026 deadlines, streaming large batches, security posture, and audit reproducibility — answered plainly."
+item_description: "Why banks reject payment files, pain.001 vs pain.008, the structured-address requirement, streaming large batches, security posture, and audit reproducibility, all answered plainly."
 item_guid: "https://pain001.com/faqs/rss.xml"
 item_link: "https://pain001.com/faqs/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -67,7 +67,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Why banks reject payment files, pain.001 vs pain.008, the November 2026 deadlines, streaming large batches, security posture, and audit reproducibility — answered plainly."
+twitter_description: "Why banks reject payment files, pain.001 vs pain.008, the structured-address requirement, streaming large batches, security posture, and audit reproducibility, all answered plainly."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
@@ -82,7 +82,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Questions"
-excerpt: "Why banks reject payment files and how Pain001 prevents it; the difference between pain.001 and pain.008; what the November 2026 deadlines really require; streaming half-million-row batches; the security posture; audit reproducibility; and what any of it costs. Sixteen questions, answered plainly, grouped by the person asking."
+excerpt: "Why banks reject payment files and how Pain001 prevents it; the difference between pain.001 and pain.008; what the structured-address requirement really asks for; streaming half-million-row batches; the security posture; audit reproducibility; and what any of it costs. Sixteen questions, answered plainly, grouped by the person asking."
 last_reviewed: "2026-07-26"
 
 ---
@@ -95,19 +95,19 @@ Straight answers for treasurers, payment operations, engineers, and auditors. Qu
 
 **What is pain.001, in one paragraph?**
 
-`pain.001` is the ISO 20022 message a customer sends to its bank to initiate credit transfers — the XML successor to formats like SWIFT MT101 and domestic flat files. Your bank validates it against a schema and a scheme rulebook before accepting it. Pain001 (the software) produces those files from the data you already have and proves they are valid before you submit them.
+`pain.001` is the ISO 20022 message a customer sends to its bank to initiate credit transfers. It is the XML successor to formats like SWIFT MT101 and domestic flat files. Your bank validates it against a schema and a scheme rulebook before accepting it. Pain001 (the software) produces those files from the data you already have and proves they are valid before you submit them.
 
 **What is the difference between pain.001 and pain.008?**
 
-Direction of the pull. `pain.001` initiates credit transfers — you push money out. `pain.008` initiates direct debits — you collect money owed to you under a mandate. Pain001 generates both: ten versions of `pain.001` (`.001.03` through `.001.12`) and `pain.008.001.02`.
+Direction of the pull. `pain.001` initiates credit transfers: you push money out. `pain.008` initiates direct debits: you collect money owed to you under a mandate. Pain001 generates both: ten versions of `pain.001` (`.001.03` through `.001.12`) and `pain.008.001.02`.
 
 **We still send MT101 files. How urgent is migration?**
 
 Urgent. SWIFT retired MT category 1, 2 and 9 messages for cross-border interbank payment instructions in November 2025; corporate channels that still accept MT do so at each bank's discretion and on borrowed time. The [MT101 loader](/pain001-loader-mt101/) converts existing MT101 flows to validated `pain.001` without re-keying anything.
 
-**What does the November 2026 structured address deadline mean for us?**
+**What does the structured address requirement mean for us?**
 
-From the end of November 2026, fully unstructured postal addresses are no longer accepted in CBPR+ cross-border payments; addresses must be structured or hybrid — discrete elements such as town (`<TwnNm>`) and country (`<Ctry>`) instead of free-text lines. If your master data holds addresses as blobs, the work is in your data, not your bank connection. Start there. The [2026 briefing](/2026-iso20022-migration-trends/) covers the timeline in detail.
+Swift planned to stop accepting fully unstructured postal addresses in CBPR+ cross-border payments in November 2026. In August 2026 it deferred that date and will announce the new one by December 2026, but the rule is unchanged: addresses must be structured or hybrid, using discrete elements such as town (`<TwnNm>`) and country (`<Ctry>`) instead of free-text lines. If your master data holds addresses as blobs, the work is in your data, not your bank connection. Start there. The [2026 briefing](/2026-iso20022-migration-trends/) covers the timeline in detail.
 
 **What does Pain001 cost?**
 
@@ -123,7 +123,7 @@ Four recurring causes: schema violations (wrong element, wrong version, wrong na
 
 **Can we validate a file without generating anything?**
 
-Yes — `pain001 --dry-run` (or the `validate` subcommand, or `POST /api/v1/validate`). Exit code `0` means valid; `1` means validation failed with field-level errors. Wire it into CI or a pre-submission checklist.
+Yes. Use `pain001 --dry-run` (or the `validate` subcommand, or `POST /api/v1/validate`). Exit code `0` means valid; `1` means validation failed with field-level errors. Wire it into CI or a pre-submission checklist.
 
 **Which SEPA rulebooks are covered?**
 
@@ -131,7 +131,7 @@ Five scheme rulebooks ship built-in: SEPA Credit Transfer (`sepa-sct`), SEPA Ins
 
 **Our data lives in Excel. What is the catch?**
 
-Excel silently coerces IBAN-like strings into numbers. The [Excel loader](/pain001-loader-xlsx/) reads `.xlsx`/`.xlsm` directly and hard-stops if IBAN columns contain numeric cells — the corruption is caught at load, not at the bank.
+Excel silently coerces IBAN-like strings into numbers. The [Excel loader](/pain001-loader-xlsx/) reads `.xlsx`/`.xlsm` directly and hard-stops if IBAN columns contain numeric cells, so the corruption is caught at load, not at the bank.
 
 **How does it handle a 500,000-row batch?**
 
@@ -141,13 +141,13 @@ Excel silently coerces IBAN-like strings into numbers. The [Excel loader](/pain0
 
 ## For engineers and architects
 
-**How do we integrate it — library, CLI, or API?**
+**How do we integrate it: library, CLI, or API?**
 
 All three exist as first-class surfaces: a typed Python API, a CLI with CI-friendly exit codes, and a FastAPI microservice (`pain001 serve`) with sync, async-job, health, and Prometheus metrics endpoints. Same validation pipeline underneath, so results never diverge between surfaces.
 
 **Is the XML generation actually safe against float rounding?**
 
-Amounts are `decimal.Decimal` end-to-end in generation and scheme validation — parsed as exact decimals, summed as exact decimals, rendered without float representation. Control totals are recomputed from validated records, never trusted from input.
+Amounts are `decimal.Decimal` end-to-end in generation and scheme validation. They are parsed as exact decimals, summed as exact decimals, and rendered without float representation. Control totals are recomputed from validated records, never trusted from input.
 
 **What is the security posture?**
 
@@ -159,7 +159,7 @@ All XML parsing routes through `defusedxml` (blocking XXE and entity-expansion a
 
 **Can we extend it for a proprietary format?**
 
-Yes — four plugin entry-point groups (`pain001.loaders`, `pain001.validators`, `pain001.schemes`, `pain001.writers`). The Excel loader is itself a plugin using the public protocol, so it doubles as a reference implementation.
+Yes, through four plugin entry-point groups (`pain001.loaders`, `pain001.validators`, `pain001.schemes`, `pain001.writers`). The Excel loader is itself a plugin using the public protocol, so it doubles as a reference implementation.
 
 ---
 
@@ -167,11 +167,11 @@ Yes — four plugin entry-point groups (`pain001.loaders`, `pain001.validators`,
 
 **Can we reproduce a file that was generated last quarter?**
 
-Yes. Pin the package version, replay the same input, and the output is deterministic. Because the toolchain is open source, the audit trail extends into the code path itself — not just a vendor attestation.
+Yes. Pin the package version, replay the same input, and the output is deterministic. Because the toolchain is open source, the audit trail extends into the code path itself, not just a vendor attestation.
 
 **Does payment data leave our environment?**
 
-No. Every component — CLI, library, REST API, MCP server, LSP — executes locally. There is no telemetry, no SaaS callback, no external validation service. The MCP server speaks stdio only and all 17 of its tools are annotated read-only and idempotent.
+No. Every component (CLI, library, REST API, MCP server, LSP) executes locally. There is no telemetry, no SaaS callback, no external validation service. The MCP server speaks stdio only and all 17 of its tools are annotated read-only and idempotent.
 
 **Who maintains Pain001?**
 

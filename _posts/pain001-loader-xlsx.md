@@ -36,7 +36,7 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "Read payment batches straight from .xlsx and .xlsm — with a safety guard that stops Excel corrupting account numbers."
+subtitle: "Read payment batches straight from .xlsx and .xlsm, with a safety guard that stops Excel corrupting account numbers."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
 title: "Excel to pain.001: pain001-loader-xlsx"
@@ -82,14 +82,14 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Excel ingestion"
-excerpt: "pain001-loader-xlsx teaches the Pain001 core to ingest Excel workbooks directly: no CSV export step, cached formula values resolved, macros never executed, and streaming for very large sheets. Its IBAN safety guard halts the load if account-number columns arrive as numeric cells — catching Excel's silent coercion before it reaches a bank."
+excerpt: "pain001-loader-xlsx teaches the Pain001 core to ingest Excel workbooks directly: no CSV export step, cached formula values resolved, macros never executed, and streaming for very large sheets. Its IBAN safety guard halts the load if account-number columns arrive as numeric cells, catching Excel's silent coercion before it reaches a bank."
 last_reviewed: "2026-07-26"
 
 ---
 
 **`pain001-loader-xlsx` v0.0.70** teaches the Pain001 core to read payment batches straight from Excel `.xlsx` and `.xlsm` workbooks. No "Save As CSV" step, no encoding surprises, no silently corrupted account numbers.
 
-Install it and it just works: the loader registers under the `pain001.loaders` entry point and is auto-discovered — `pain001 -t pain.001.001.09 -d payments.xlsx -o out/` needs no further configuration.
+Install it and it just works: the loader registers under the `pain001.loaders` entry point and is auto-discovered, so `pain001 -t pain.001.001.09 -d payments.xlsx -o out/` needs no further configuration.
 
 ```bash
 pip install pain001 pain001-loader-xlsx
@@ -101,9 +101,9 @@ Coming from a spreadsheet for the first time? [From Excel to a validated pain.00
 
 ## 01. The IBAN safety guard
 
-Excel converts anything that looks like a number into a number. An IBAN pasted into a `General`-formatted cell can lose structure before you ever export it — and a corrupted debtor account is exactly the kind of error that surfaces as a bank-side rejection days later.
+Excel converts anything that looks like a number into a number. An IBAN pasted into a `General`-formatted cell can lose structure before you ever export it. A corrupted debtor account is exactly the kind of error that surfaces as a bank-side rejection days later.
 
-The loader refuses to let that happen. If any cell in the `debtor_account_IBAN`, `creditor_account_IBAN`, or `charge_account_IBAN` columns arrives as a numeric type, the load **stops with a clear error** telling you to re-format the column as Text. Matching is case-insensitive, and the failure happens before a single record is validated — fail fast, fail loud.
+The loader refuses to let that happen. If any cell in the `debtor_account_IBAN`, `creditor_account_IBAN`, or `charge_account_IBAN` columns arrives as a numeric type, the load **stops with a clear error** telling you to re-format the column as Text. Matching is case-insensitive, and the failure happens before a single record is validated: fail fast, fail loud.
 
 ---
 
@@ -112,14 +112,14 @@ The loader refuses to let that happen. If any cell in the `debtor_account_IBAN`,
 - **Formats:** `.xlsx` and `.xlsm`. Legacy `.xls` (BIFF) is not supported.
 - **Formulas:** resolved to their last-saved cached values (`data_only=True`); macros in `.xlsm` files are **never executed**.
 - **Structure:** first worksheet only; row 1 is the header, rows 2..N are records.
-- **Memory:** workbooks are opened read-only, and `load_streaming(path, chunk_size)` yields fixed-size chunks so multi-hundred-thousand-row batches never load fully into memory — pairing naturally with the core CLI's `--streaming` mode.
+- **Memory:** workbooks are opened read-only, and `load_streaming(path, chunk_size)` yields fixed-size chunks so multi-hundred-thousand-row batches never load fully into memory. This pairs naturally with the core CLI's `--streaming` mode.
 - **Failure modes:** a workbook with no sheets or a first sheet with no header row raises a precise `ValueError` rather than producing an empty batch.
 
 ---
 
 ## 03. A well-behaved plugin
 
-The loader conforms structurally to the core's `AbstractLoader` protocol — no subclassing, no tight coupling — and declares its plugin API version so the core can refuse incompatible combinations cleanly. Like every package in the suite, it is tested to 100% line and branch coverage in CI.
+The loader conforms structurally to the core's `AbstractLoader` protocol (no subclassing, no tight coupling) and declares its plugin API version so the core can refuse incompatible combinations cleanly. Like every package in the suite, it is tested to 100% line and branch coverage in CI.
 
 ---
 
@@ -131,7 +131,7 @@ CSV export is where leading zeros die and encodings drift. Reading the workbook 
 
 **Does it validate the IBANs themselves?**
 
-The guard is a type-level defence at ingestion. Full IBAN checksum validation (ISO 13616 mod-97) happens immediately afterwards in the [core validation pipeline](/documentation/) — two layers, each doing one job.
+The guard is a type-level defence at ingestion. Full IBAN checksum validation (ISO 13616 mod-97) happens immediately afterwards in the [core validation pipeline](/documentation/). Two layers, each doing one job.
 
 **What about multi-sheet workbooks?**
 

@@ -10,13 +10,13 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Everything a vendor-risk, security, or audit reviewer needs in one place: security posture, supply-chain evidence, data flows, accessibility conformance, governance, and release policy — each claim linked to its artefact."
+description: "Everything a vendor-risk, security, or audit reviewer needs in one place: security posture, supply-chain evidence, data flows, accessibility conformance, governance, and release policy, with each claim linked to its artefact."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/trust/"
-image_alt: "A question-and-answer session on ISO 20022 payment file generation — the questions treasury, operations, engineering, and audit teams actually ask."
+image_alt: "A question-and-answer session on ISO 20022 payment file generation, covering the questions treasury, operations, engineering, and audit teams actually ask."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -36,7 +36,7 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "The due-diligence page: security, supply chain, data flows, accessibility, governance, and support — every claim linked to the artefact that proves it."
+subtitle: "The due-diligence page: security, supply chain, data flows, accessibility, governance, and support, with every claim linked to the artefact that proves it."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
 title: "Trust Centre"
@@ -46,7 +46,7 @@ atom_link: "https://pain001.com/trust/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Everything a vendor-risk, security, or audit reviewer needs in one place: security posture, supply-chain evidence, data flows, accessibility conformance, governance, and release policy — each claim linked to its artefact."
+item_description: "Everything a vendor-risk, security, or audit reviewer needs in one place: security posture, supply-chain evidence, data flows, accessibility conformance, governance, and release policy, with each claim linked to its artefact."
 item_guid: "https://pain001.com/trust/rss.xml"
 item_link: "https://pain001.com/trust/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -67,7 +67,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Everything a vendor-risk, security, or audit reviewer needs in one place: security posture, supply-chain evidence, data flows, accessibility conformance, governance, and release policy — each claim linked to its artefact."
+twitter_description: "Everything a vendor-risk, security, or audit reviewer needs in one place: security posture, supply-chain evidence, data flows, accessibility conformance, governance, and release policy, with each claim linked to its artefact."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
@@ -88,37 +88,37 @@ last_reviewed: "2026-07-26"
 
 ---
 
-This page exists so that a security, vendor-risk, or audit reviewer can answer standard due-diligence questions **without emailing anyone**. Every claim links to the artefact that proves it. Where no formal certification exists, the wording is "supports assessment against" — never "compliant with".
+This page exists so that a security, vendor-risk, or audit reviewer can answer standard due-diligence questions **without emailing anyone**. Every claim links to the artefact that proves it. Where no formal certification exists, the wording is "supports assessment against", never "compliant with".
 
 ## 01. Security
 
-- **Zero-trust XML processing** — all parsing routes through `defusedxml` (XXE and entity-expansion defence); no `lxml` in the dependency tree; path-traversal validation on file inputs; non-root containers. Full detail with code-level references: [Architecture & security](/architecture-and-patents/).
-- **Responsible disclosure** — private vulnerability reporting via [GitHub Security](https://github.com/sebastienrousseau/pain001/security); machine-readable policy at [/security.txt](/security.txt). Reports are acknowledged and credited.
-- **Static analysis in CI** — CodeQL, Bandit, and pip-audit run on every change to the core.
+- **Zero-trust XML processing**: all parsing routes through `defusedxml` (XXE and entity-expansion defence); no `lxml` in the dependency tree; path-traversal validation on file inputs; non-root containers. Full detail with code-level references: [Architecture & security](/architecture-and-patents/).
+- **Responsible disclosure**: private vulnerability reporting via [GitHub Security](https://github.com/sebastienrousseau/pain001/security); machine-readable policy at [/security.txt](/security.txt). Reports are acknowledged and credited.
+- **Static analysis in CI**: CodeQL, Bandit, and pip-audit run on every change to the core.
 
 ## 02. Software supply chain
 
-- **Independently scored** — [OpenSSF Scorecard](https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/pain001) runs weekly and on every push; the score is published by the OpenSSF, not self-asserted.
-- **OpenSSF Best Practices badge** — the core repository holds the [passing badge](https://www.bestpractices.dev/projects/13858) (100% of the criteria), covering documented contribution and vulnerability-reporting processes, enforced test coverage, static and dynamic analysis, and signed release delivery.
-- **SBOM** — a CycloneDX software bill of materials is generated for core release builds ([this site's own SBOM](/sbom.cdx.json) is also published).
-- **Provenance** — SLSA Build L3 attestations are generated in the release pipeline itself; v0.0.57 onward carries a Sigstore-signed `multiple.intoto.jsonl` on the GitHub release, verifiable with `slsa-verifier` against the published wheel and sdist digests.
-- **Per-release artefacts** — every core release on [GitHub Releases](https://github.com/sebastienrousseau/pain001/releases) carries its wheel, its SLSA provenance (`multiple.intoto.jsonl`) and its SBOM; verify a wheel with `slsa-verifier verify-artifact pain001-<version>-py3-none-any.whl --provenance-path multiple.intoto.jsonl --source-uri github.com/sebastienrousseau/pain001 --source-tag v<version>`. The five packages share one version number; the [governance page](/governance/) lists the current one.
-- **Pinned CI** — every GitHub Action in the build pipeline is pinned to a full commit SHA; workflow tokens follow least privilege.
-- **Kill switch** — third-party plugin discovery can be disabled outright (`PAIN001_DISABLE_PLUGINS=1`), and every discovered plugin is auditable before first use (`pain001 plugins list`).
+- **Independently scored**: [OpenSSF Scorecard](https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/pain001) runs weekly and on every push; the score is published by the OpenSSF, not self-asserted.
+- **OpenSSF Best Practices badge**: the core repository holds the [passing badge](https://www.bestpractices.dev/projects/13858) (100% of the criteria), covering documented contribution and vulnerability-reporting processes, enforced test coverage, static and dynamic analysis, and signed release delivery.
+- **SBOM**: a CycloneDX software bill of materials is generated for core release builds ([this site's own SBOM](/sbom.cdx.json) is also published).
+- **Provenance**: SLSA Build L3 attestations are generated in the release pipeline itself; v0.0.57 onward carries a Sigstore-signed `multiple.intoto.jsonl` on the GitHub release, verifiable with `slsa-verifier` against the published wheel and sdist digests.
+- **Per-release artefacts**: every core release on [GitHub Releases](https://github.com/sebastienrousseau/pain001/releases) carries its wheel, its SLSA provenance (`multiple.intoto.jsonl`) and its SBOM; verify a wheel with `slsa-verifier verify-artifact pain001-<version>-py3-none-any.whl --provenance-path multiple.intoto.jsonl --source-uri github.com/sebastienrousseau/pain001 --source-tag v<version>`. The five packages share one version number; the [governance page](/governance/) lists the current one.
+- **Pinned CI**: every GitHub Action in the build pipeline is pinned to a full commit SHA; workflow tokens follow least privilege.
+- **Kill switch**: third-party plugin discovery can be disabled outright (`PAIN001_DISABLE_PLUGINS=1`), and every discovered plugin is auditable before first use (`pain001 plugins list`).
 
 ## 03. Data and privacy
 
-- **Product data flows** — every component (CLI, library, REST service, MCP server, LSP server) executes on your infrastructure. There is no telemetry, no SaaS callback, no network dependency for generation or validation. [Privacy position](/privacy/).
-- **Website** — no cookies and no identifiers: every asset is served from this origin, and every script is served from this origin, and the one third-party request is the Cloudflare Web Analytics beacon's cookieless page-view count, which records without an IP address, fingerprint or identifier (see the [privacy page](/privacy/)). The demo page carries no beacon at all. The [browser demo](/try/) reads files locally via the FileReader API; the "Verify it yourself" panel on that page shows how to falsify this with DevTools open.
-- **Demo boundary** — the browser demo runs the pain001 library itself inside a Python runtime compiled to WebAssembly, served from this origin and cached by a service worker: records, generated XML and verdicts never leave the page, and after first load the demo works offline, which is the strongest proof no data leaves your machine.
+- **Product data flows**: every component (CLI, library, REST service, MCP server, LSP server) executes on your infrastructure. There is no telemetry, no SaaS callback, no network dependency for generation or validation. [Privacy position](/privacy/).
+- **Website**: no cookies and no identifiers: every asset is served from this origin, and every script is served from this origin, and the one third-party request is the Cloudflare Web Analytics beacon's cookieless page-view count, which records without an IP address, fingerprint or identifier (see the [privacy page](/privacy/)). The demo page carries no beacon at all. The [browser demo](/try/) reads files locally via the FileReader API; the "Verify it yourself" panel on that page shows how to falsify this with DevTools open.
+- **Demo boundary**: the browser demo runs the pain001 library itself inside a Python runtime compiled to WebAssembly, served from this origin and cached by a service worker: records, generated XML and verdicts never leave the page, and after first load the demo works offline, which is the strongest proof no data leaves your machine.
 
 ## 04. Accessibility
 
-WCAG 2.2 AAA as a build gate: the generator's WCAG audit plus independent pa11y scans at the AAA standard, both themes, enforced in CI — with a manual keyboard pass per release and honest limitations stated. Full method and known limits: [Accessibility statement](/accessibility/). Independent assistive-technology testing is the named next step; the procurement scope for that audit is [published in the repository](https://github.com/sebastienrousseau/pain001.github.io/blob/main/AUDIT-RFQ.md).
+WCAG 2.2 AAA as a build gate: the generator's WCAG audit plus independent pa11y scans at the AAA standard, both themes, enforced in CI, with a manual keyboard pass per release and honest limitations stated. Full method and known limits: [Accessibility statement](/accessibility/). Independent assistive-technology testing is the named next step; the procurement scope for that audit is [published in the repository](https://github.com/sebastienrousseau/pain001.github.io/blob/main/AUDIT-RFQ.md).
 
 ## 05. Governance and continuity
 
-Who maintains Pain001, how decisions are made, how the project is funded, and what mitigates single-maintainer risk — stated plainly, including the parts that are genuinely limitations: [Governance & continuity](/governance/).
+Who maintains Pain001, how decisions are made, how the project is funded, and what mitigates single-maintainer risk, stated plainly and including the parts that are genuinely limitations: [Governance & continuity](/governance/).
 
 ## 06. Releases and support
 
@@ -138,4 +138,4 @@ No certification is claimed. The controls above **support assessment against**:
 
 ## 08. Contact
 
-Security: [private disclosure](https://github.com/sebastienrousseau/pain001/security) · General: [contact page](/contact/) · Corrections to anything on this site: [open an issue](https://github.com/sebastienrousseau/pain001.github.io/issues) — see the [corrections policy](/governance/#corrections-and-editorial-policy).
+Security: [private disclosure](https://github.com/sebastienrousseau/pain001/security) · General: [contact page](/contact/) · Corrections to anything on this site: [open an issue](https://github.com/sebastienrousseau/pain001.github.io/issues) (see the [corrections policy](/governance/#corrections-and-editorial-policy)).

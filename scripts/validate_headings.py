@@ -25,6 +25,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+from html import unescape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -41,7 +42,9 @@ TAGS_RE = re.compile(r"<[^>]+>")
 
 
 def text(markup: str) -> str:
-    return re.sub(r"\s+", " ", TAGS_RE.sub("", markup)).strip()
+    # Decode entities before counting: "ISO&nbsp;20022" is nine visible
+    # characters, not fourteen, and "&amp;" is one.
+    return re.sub(r"\s+", " ", unescape(TAGS_RE.sub("", markup))).strip()
 
 
 def main() -> int:

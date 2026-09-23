@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "Every element of ISO 20022 pain.001.001.12: XML path, cardinality, data type, length and pattern constraints, and code lists — generated from the official XSD."
+banner_alt: "Every element of ISO 20022 pain.001.001.12: XML path, cardinality, data type, length and pattern constraints, and code lists, generated from the official XSD."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -10,13 +10,13 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Every element of ISO 20022 pain.001.001.12: XML path, cardinality, data type, length and pattern constraints, and code lists — generated from the official XSD."
+description: "Every element of ISO 20022 pain.001.001.12: XML path, cardinality, data type, length and pattern constraints, and code lists, generated from the official XSD."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/message-spec-pain.001.001.12/"
-image_alt: "Every element of ISO 20022 pain.001.001.12: XML path, cardinality, data type, length and pattern constraints, and code lists — generated from the official XSD."
+image_alt: "Every element of ISO 20022 pain.001.001.12: XML path, cardinality, data type, length and pattern constraints, and code lists, generated from the official XSD."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "All 770 elements of pain.001.001.12 with cardinality, types and code lists, generated from the official ISO schema."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "pain.001.001.12 — complete element reference"
+title: "pain.001.001.12: complete element reference"
 url: "https://pain001.com/message-spec-pain.001.001.12/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/message-spec-pain.001.001.12/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Every element of ISO 20022 pain.001.001.12: XML path, cardinality, data type, length and pattern constraints, and code lists — generated from the official XSD."
+item_description: "Every element of ISO 20022 pain.001.001.12: XML path, cardinality, data type, length and pattern constraints, and code lists, generated from the official XSD."
 item_guid: "https://pain001.com/message-spec-pain.001.001.12/"
 item_link: "https://pain001.com/message-spec-pain.001.001.12/"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "pain.001.001.12 — complete element reference"
+item_title: "pain.001.001.12: complete element reference"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "pain.001.001.12 — complete element reference"
+apple-mobile-web-app-title: "pain.001.001.12: complete element reference"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Every element of ISO 20022 pain.001.001.12: XML path, cardinality, data type, length and pattern constraints, and code lists — generated from the official XSD."
+twitter_description: "Every element of ISO 20022 pain.001.001.12: XML path, cardinality, data type, length and pattern constraints, and code lists, generated from the official XSD."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "pain.001.001.12 — complete element reference"
+twitter_title: "pain.001.001.12: complete element reference"
 twitter_url: "https://pain001.com/message-spec-pain.001.001.12/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -82,19 +82,19 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Message specification"
-excerpt: "Every element of ISO 20022 pain.001.001.12: XML path, cardinality, data type, length and pattern constraints, and code lists — generated from the official XSD."
+excerpt: "Every element of ISO 20022 pain.001.001.12: XML path, cardinality, data type, length and pattern constraints, and code lists, generated from the official XSD."
 last_reviewed: "2026-07-26"
 
 
 ---
 
-This is the complete element reference for `pain.001.001.12`, generated directly from the official ISO 20022 XSD that Pain001 validates against — not transcribed by hand. Every cardinality, type and code value below can be checked against ISO's own publication.
+This is the complete element reference for `pain.001.001.12`, generated directly from the official ISO 20022 XSD that Pain001 validates against, not transcribed by hand. Every cardinality, type and code value below can be checked against ISO's own publication.
 
 **770 elements** · **141 required** · **97 types** · **17 code lists**
 
-Cardinality is shown as ISO writes it: `0..1` optional, `1..1` required, `0..*` repeating. Required elements are **bold** — those are the ones whose absence makes the document invalid before any bank sees it.
+Cardinality is shown as ISO writes it: `0..1` optional, `1..1` required, `0..*` repeating. Required elements are **bold**: those are the ones whose absence makes the document invalid before any bank sees it.
 
-**Schema provenance.** The shipped file carries the header *“Generated by Standards Editor on 2024 Feb 29”* — that is the schema generation timestamp, not necessarily ISO's publication date. Verify against the [ISO 20022 archive](https://www.iso20022.org/catalogue-messages/iso-20022-messages-archive?search=pain.001.001.12).
+**Schema provenance.** The shipped file carries the header *“Generated by Standards Editor on 2024 Feb 29”*. That is the schema generation timestamp, not necessarily ISO's publication date. Verify against the [ISO 20022 archive](https://www.iso20022.org/catalogue-messages/iso-20022-messages-archive?search=pain.001.001.12).
 
 ## CstmrCdtTrfInitn
 
@@ -104,7 +104,7 @@ Cardinality is shown as ISO writes it: `0..1` optional, `1..1` required, `0..*` 
 
 ## GrpHdr
 
-*Group Header — one per message*
+*Group Header, one per message*
 
 | Element | Path | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- | :--- |
@@ -130,11 +130,11 @@ Cardinality is shown as ISO writes it: `0..1` optional, `1..1` required, `0..*` 
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Prvdr` | `CstmrCdtTrfInitn/GrpHdr/InitnSrc/Prvdr` | 0..1 | `Max35Text` | length 1–35 |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Vrsn` | `CstmrCdtTrfInitn/GrpHdr/InitnSrc/Vrsn` | 0..1 | `Max35Text` | length 1–35 |
 
-*93 further nested elements sit below this depth — every one of them is defined in the type reference below, which lists each type once instead of repeating it under every party.*
+*93 further nested elements sit below this depth. Every one of them is defined in the type reference below, which lists each type once instead of repeating it under every party.*
 
 ## PmtInf
 
-*Payment Information — one per debtor account and execution date*
+*Payment Information, one per debtor account and execution date*
 
 | Element | Path | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- | :--- |
@@ -223,11 +223,11 @@ Cardinality is shown as ISO writes it: `0..1` optional, `1..1` required, `0..*` 
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`RmtInf` | `CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/RmtInf` | 0..1 | `RemittanceInformation22` |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`SplmtryData` | `CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/SplmtryData` | 0..* | `SupplementaryData1` |  |
 
-*568 further nested elements sit below this depth — every one of them is defined in the type reference below, which lists each type once instead of repeating it under every party.*
+*568 further nested elements sit below this depth. Every one of them is defined in the type reference below, which lists each type once instead of repeating it under every party.*
 
 ## SplmtryData
 
-*Supplementary Data — scheme-specific extensions*
+*Supplementary Data: scheme-specific extensions*
 
 | Element | Path | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- | :--- |
@@ -237,7 +237,7 @@ Cardinality is shown as ISO writes it: `0..1` optional, `1..1` required, `0..*` 
 
 ## Type reference
 
-Every complex type in this version is defined once on the [**pain.001.001.12 type reference**](/message-spec-pain.001.001.12-types/) — 95 types. The tree above repeats a party or address structure under each party; the type reference does not, which makes it the better page for mapping work.
+Every complex type in this version is defined once on the [**pain.001.001.12 type reference**](/message-spec-pain.001.001.12-types/), 95 types in all. The tree above repeats a party or address structure under each party; the type reference does not, which makes it the better page for mapping work.
 
 ## Code lists used by this version
 

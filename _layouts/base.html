@@ -31,15 +31,16 @@
 
     <link rel="alternate" href="{{url}}" hreflang="{{hreflang}}" />
     <link rel="canonical" href="{{url}}" />
-    <link rel="alternate" type="application/rss+xml" title="Pain001 — RSS" href="/rss.xml" />
-    <link rel="alternate" type="application/atom+xml" title="Pain001 — Atom" href="/atom.xml" />
-    <link rel="alternate" type="application/feed+json" title="Pain001 — JSON Feed" href="/feed.json" />
+    <link rel="alternate" type="application/rss+xml" title="Pain001 RSS" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Pain001 Atom" href="/atom.xml" />
+    <link rel="alternate" type="application/feed+json" title="Pain001 JSON Feed" href="/feed.json" />
     <link rel="manifest" href="/manifest.json" />
     <link rel="icon" type="image/svg+xml" href="/img/pain001.svg" sizes="any" />
     <link rel="apple-touch-icon" href="/img/pain001.svg" />
 
     <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#0b192c" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b0d14" media="(prefers-color-scheme: dark)" />
     <meta name="view-transition" content="same-origin" />
 
     <script type="application/ld+json">
@@ -68,13 +69,13 @@
       }
     </script>
 
-    <!-- Unmodified PRISM and Skeletonic CSS 3.0.0, followed only by
-         Pain001 component extensions. -->
-    <!-- The display face is needed for the first heading painted, so it is
+    <!-- PRISM, followed only by Pain001 component extensions. Skeletonic
+         CSS was retired in v0.0.6: it sat under PRISM with a second
+         container, spacing scale and set of element margins. -->
+    <!-- The interface face is needed for the first text painted, so it is
          fetched in parallel with the stylesheet rather than after it. Only the
          latin subset is preloaded; latin-ext is fetched on demand. -->
-    <link rel="preload" href="/fonts/source-serif-4-600-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="/css/skeletonic-3.0.0.min.css" />
+    <link rel="preload" href="/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/css/prism.css" />
     <link rel="stylesheet" href="/css/pain001-prism.css" />
     <script src="/js/prism-theme-init.js"></script>

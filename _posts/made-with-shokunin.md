@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "The build toolchain of pain001.com — Markdown sources compiled to hardened static HTML by the Shokunin static site generator."
+banner_alt: "The build toolchain of pain001.com: Markdown sources compiled to hardened static HTML by the Shokunin static site generator."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -16,7 +16,7 @@ format-detection: telephone=no
 hreflang: en
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/made-with-shokunin/"
-image_alt: "The build toolchain of pain001.com — Markdown sources compiled to hardened static HTML by the Shokunin static site generator."
+image_alt: "The build toolchain of pain001.com: Markdown sources compiled to hardened static HTML by the Shokunin static site generator."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -36,7 +36,7 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "Markdown in, hardened static HTML out — the toolchain behind this site."
+subtitle: "Markdown in, hardened static HTML out: the toolchain behind this site."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
 title: "Made with Shokunin: How This Site Is Built"
@@ -91,9 +91,9 @@ This site is compiled by [Shokunin (ssg)](https://github.com/sebastienrousseau/s
 
 The full stack, for the curious:
 
-- **Content** — Markdown with structured frontmatter, versioned in [Git](https://github.com/sebastienrousseau/pain001.github.io).
-- **Build** — `ssg` compiles content and layouts into static HTML; a small build script publishes to GitHub Pages.
-- **No runtime** — no JavaScript framework, no server, no database. The only client-side script is a few lines for theme switching and navigation.
-- **Machine-readable surfaces** — [llms.txt](/llms.txt), [sitemap.xml](/sitemap.xml), [RSS](/rss.xml), [Atom](/atom.xml), [JSON Feed](/feed.json), [security.txt](/security.txt), [humans.txt](/humans.txt), and a [CycloneDX SBOM](/sbom.cdx.json).
+- **Content**: Markdown with structured frontmatter, versioned in [Git](https://github.com/sebastienrousseau/pain001.github.io).
+- **Build**: `ssg` compiles content and layouts into static HTML; a small build script publishes to GitHub Pages.
+- **No runtime**: no JavaScript framework, no server, no database. The only client-side script is a few lines for theme switching and navigation.
+- **Machine-readable surfaces**: [llms.txt](/llms.txt), [sitemap.xml](/sitemap.xml), [RSS](/rss.xml), [Atom](/atom.xml), [JSON Feed](/feed.json), [security.txt](/security.txt), [humans.txt](/humans.txt), and a [CycloneDX SBOM](/sbom.cdx.json).
 
 The same philosophy as the Pain001 software: standards first, validation as a gate, nothing hidden.

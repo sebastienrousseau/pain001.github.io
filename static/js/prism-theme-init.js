@@ -17,4 +17,17 @@
   } catch (e) {
     /* Private browsing or blocked storage: fall back to the OS preference. */
   }
+  /* Motion: the footer toggle ("Reduce motion") stores "off"; the OS
+     setting is honoured as well. Only when neither asks for less motion
+     does `js-motion` switch the scroll reveals on, so a page never waits
+     on an animation it was told not to run. */
+  var motionOff = false;
+  try {
+    motionOff = localStorage.getItem('motion') === 'off';
+  } catch (e) {
+    /* Storage unavailable: the OS setting still applies. */
+  }
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (motionOff) root.classList.add('motion-off');
+  if (!motionOff && !reduce) root.classList.add('js-motion');
 })();

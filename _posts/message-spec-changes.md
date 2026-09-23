@@ -39,7 +39,7 @@ short_name: pain001
 subtitle: "The delta the ISO catalogue does not publish: exactly which elements each pain.001 version added and removed."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "What changed between pain.001 versions — element-level diffs"
+title: "What changed between pain.001 versions: element-level diffs"
 url: "https://pain001.com/message-spec-changes/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/message-spec-changes/"
@@ -50,7 +50,7 @@ item_description: "Element-by-element differences between consecutive ISO 20022 
 item_guid: "https://pain001.com/message-spec-changes/"
 item_link: "https://pain001.com/message-spec-changes/"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "What changed between pain.001 versions — element-level diffs"
+item_title: "What changed between pain.001 versions: element-level diffs"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "What changed between pain.001 versions — element-level diffs"
+apple-mobile-web-app-title: "What changed between pain.001 versions: element-level diffs"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,7 +71,7 @@ twitter_description: "Element-by-element differences between consecutive ISO 200
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "What changed between pain.001 versions — element-level diffs"
+twitter_title: "What changed between pain.001 versions: element-level diffs"
 twitter_url: "https://pain001.com/message-spec-changes/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"

@@ -1,4 +1,4 @@
-/* Pain001 browser demo — input handling.
+/* Pain001 browser demo: input handling.
  *
  * ES module, zero dependencies, hand-auditable by design: a security
  * reviewer should be able to read this file top to bottom and confirm

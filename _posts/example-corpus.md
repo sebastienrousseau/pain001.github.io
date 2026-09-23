@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-09-13T08:00:00+00:00"
+date: "2026-09-23T08:00:00+00:00"
 description: "Download ISO 20022 pain.001 and pain.008 sample files built from the public scheme rulebooks per country and rail, each with a record of where it comes from and how it was checked, plus schema coverage files for every supported edition."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -39,7 +39,7 @@ short_name: pain001
 subtitle: "Sample payment files for 17 countries and their payment rails, plus schema coverage files for every supported edition, each traceable to its public sources."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "ISO 20022 example files — pain.001 and pain.008 samples per country and rail"
+title: "ISO 20022 example files: pain.001 and pain.008 samples per country and rail"
 url: "https://pain001.com/example-corpus/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/example-corpus/"
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "Download ISO 20022 pain.001 and pain.008 sample files built from the public scheme rulebooks per country and rail, each with a record of where it comes from and how it was checked, plus schema coverage files for every supported edition."
 item_guid: "https://pain001.com/example-corpus/"
 item_link: "https://pain001.com/example-corpus/"
-item_pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
-item_title: "ISO 20022 example files — pain.001 and pain.008 samples per country and rail"
-last_build_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+item_pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+item_title: "ISO 20022 example files: pain.001 and pain.008 samples per country and rail"
+last_build_date: "Wed, 23 Sep 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "ISO 20022 example files — pain.001 and pain.008 samples per country and rail"
+apple-mobile-web-app-title: "ISO 20022 example files: pain.001 and pain.008 samples per country and rail"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,7 +71,7 @@ twitter_description: "Download ISO 20022 pain.001 and pain.008 sample files buil
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "ISO 20022 example files — pain.001 and pain.008 samples per country and rail"
+twitter_title: "ISO 20022 example files: pain.001 and pain.008 samples per country and rail"
 twitter_url: "https://pain001.com/example-corpus/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"

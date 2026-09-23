@@ -10,13 +10,13 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Who maintains Pain001, how decisions are made, how it is funded, what mitigates single-maintainer risk, and the editorial and corrections policy — stated plainly, limitations included."
+description: "Who maintains Pain001, how decisions are made, how it is funded, what mitigates single-maintainer risk, and the editorial and corrections policy, stated plainly and with limitations included."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/governance/"
-image_alt: "A question-and-answer session on ISO 20022 payment file generation — the questions treasury, operations, engineering, and audit teams actually ask."
+image_alt: "A question-and-answer session on ISO 20022 payment file generation, covering the questions treasury, operations, engineering, and audit teams actually ask."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -36,7 +36,7 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "Who is accountable, how decisions are made, and what happens if the maintainer disappears — the honest version."
+subtitle: "Who is accountable, how decisions are made, and what happens if the maintainer disappears: the honest version."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
 title: "Governance & Continuity"
@@ -46,7 +46,7 @@ atom_link: "https://pain001.com/governance/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Who maintains Pain001, how decisions are made, how it is funded, what mitigates single-maintainer risk, and the editorial and corrections policy — stated plainly, limitations included."
+item_description: "Who maintains Pain001, how decisions are made, how it is funded, what mitigates single-maintainer risk, and the editorial and corrections policy, stated plainly and with limitations included."
 item_guid: "https://pain001.com/governance/rss.xml"
 item_link: "https://pain001.com/governance/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -67,7 +67,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Who maintains Pain001, how decisions are made, how it is funded, what mitigates single-maintainer risk, and the editorial and corrections policy — stated plainly, limitations included."
+twitter_description: "Who maintains Pain001, how decisions are made, how it is funded, what mitigates single-maintainer risk, and the editorial and corrections policy, stated plainly and with limitations included."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
@@ -82,7 +82,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Governance"
-excerpt: "Pain001's governance disclosure: a single-maintainer project and the specific mitigations that make that risk assessable — permissive licences, reproducible pipeline, public development, protected supply chain — plus funding and conflict-of-interest disclosure, trademark position, and the editorial and corrections policy for this site."
+excerpt: "Pain001's governance disclosure: a single-maintainer project and the specific mitigations that make that risk assessable (permissive licences, reproducible pipeline, public development, protected supply chain), plus funding and conflict-of-interest disclosure, trademark position, and the editorial and corrections policy for this site."
 last_reviewed: "2026-07-26"
 
 
@@ -94,10 +94,10 @@ Pain001 is created and maintained by [Sebastien Rousseau](https://sebastienrouss
 
 **This is a single-maintainer project.** That is a real concentration risk, and pretending otherwise would undermine everything else on this page. What makes the risk *assessable* rather than disqualifying:
 
-- **Permissive licences with no CLA barrier** — the core is Apache-2.0 or MIT; any organisation can fork, patch, and redistribute indefinitely without permission.
-- **Reproducible pipeline** — pinned dependencies, deterministic builds, 100% branch-covered tests, and a fully documented build mean a competent team can take over maintenance from the repository alone.
-- **No hidden infrastructure** — there is no server, database, or service whose loss would strand users; everything runs from the published packages.
-- **Protected supply chain** — signed commits, SHA-pinned CI, least-privilege tokens, and release provenance limit what a compromised account could silently ship.
+- **Permissive licences with no CLA barrier**: the core is Apache-2.0 or MIT; any organisation can fork, patch, and redistribute indefinitely without permission.
+- **Reproducible pipeline**: pinned dependencies, deterministic builds, 100% branch-covered tests, and a fully documented build mean a competent team can take over maintenance from the repository alone.
+- **No hidden infrastructure**: there is no server, database, or service whose loss would strand users; everything runs from the published packages.
+- **Protected supply chain**: signed commits, SHA-pinned CI, least-privilege tokens, and release provenance limit what a compromised account could silently ship.
 
 ## Decision-making
 
@@ -114,12 +114,12 @@ Figures refreshed at each site build from public sources (PyPI download statisti
 
 | Measure | Value | Source |
 | :--- | ---: | :--- |
-| pain001 downloads, last 30 days | 3,065 | PyPI |
-| pain001 downloads, last 7 days | 501 | PyPI |
+| pain001 downloads, last 30 days | 2,958 | PyPI |
+| pain001 downloads, last 7 days | 464 | PyPI |
 | GitHub stars | 49 | GitHub |
 | GitHub forks | 15 | GitHub |
 
-Refreshed 2026-09-21. Page views are counted by Cloudflare Web Analytics, cookieless and without identifiers ([privacy](/privacy/)); the browser demo is not measured, by design.
+Refreshed 2026-09-23. Page views are counted by Cloudflare Web Analytics, cookieless and without identifiers ([privacy](/privacy/)); the browser demo is not measured, by design.
 <!-- traction:end -->
 
 ## Trademark
@@ -134,4 +134,4 @@ Every research page carries a "last reviewed" date, and regulatory claims cite p
 
 - Releases remain on [PyPI](https://pypi.org/project/pain001/) and GitHub independent of any infrastructure this project operates.
 - The website's full source, build pipeline, and content are [public](https://github.com/sebastienrousseau/pain001.github.io) and rebuildable with two open-source tools.
-- If the project is ever discontinued, the repositories will be archived in place — readable, forkable, and installable — rather than deleted.
+- If the project is ever discontinued, the repositories will be archived in place (readable, forkable, and installable) rather than deleted.

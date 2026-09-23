@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "Python-пакет з відкритим кодом: файли pain.001 і pain.008 з XSD-валідацією з CSV, Excel, SQLite, JSON, Parquet або SWIFT MT101 — з інструментами MCP для ШІ-агентів і LSP-сервером."
+banner_alt: "Python-пакет з відкритим кодом: файли pain.001 і pain.008 з XSD-валідацією з CSV, Excel, SQLite, JSON, Parquet або SWIFT MT101, а також інструменти MCP для ШІ-агентів і LSP-сервер."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -10,13 +10,13 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Python-пакет з відкритим кодом: файли pain.001 і pain.008 з XSD-валідацією з CSV, Excel, SQLite, JSON, Parquet або SWIFT MT101 — з інструментами MCP для ШІ-агентів і LSP-сервером."
+description: "Python-пакет з відкритим кодом: файли pain.001 і pain.008 з XSD-валідацією з CSV, Excel, SQLite, JSON, Parquet або SWIFT MT101, а також інструменти MCP для ШІ-агентів і LSP-сервер."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "uk"
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/uk/"
-image_alt: "A question-and-answer session on ISO 20022 payment file generation — the questions treasury, operations, engineering, and audit teams actually ask."
+image_alt: "A question-and-answer session on ISO 20022 payment file generation, covering the questions treasury, operations, engineering, and audit teams actually ask."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -36,21 +36,21 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "Пакет з відкритим кодом, що перетворює платіжні дані на валідований XML ISO 20022 — перевірений до того, як його побачить банк."
+subtitle: "Пакет з відкритим кодом, що перетворює платіжні дані на валідований XML ISO 20022, перевірений до того, як його побачить банк."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001 — ініціювання платежів ISO 20022 з відкритим кодом"
+title: "Pain001: ініціювання платежів ISO 20022 з відкритим кодом"
 url: "https://pain001.com/uk/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/uk/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Python-пакет з відкритим кодом: файли pain.001 і pain.008 з XSD-валідацією з CSV, Excel, SQLite, JSON, Parquet або SWIFT MT101 — з інструментами MCP для ШІ-агентів і LSP-сервером."
+item_description: "Python-пакет з відкритим кодом: файли pain.001 і pain.008 з XSD-валідацією з CSV, Excel, SQLite, JSON, Parquet або SWIFT MT101, а також інструменти MCP для ШІ-агентів і LSP-сервер."
 item_guid: "https://pain001.com/uk/rss.xml"
 item_link: "https://pain001.com/uk/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001 — ініціювання платежів ISO 20022 з відкритим кодом"
+item_title: "Pain001: ініціювання платежів ISO 20022 з відкритим кодом"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001 — ініціювання платежів ISO 20022 з відкритим кодом"
+apple-mobile-web-app-title: "Pain001: ініціювання платежів ISO 20022 з відкритим кодом"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Python-пакет з відкритим кодом: файли pain.001 і pain.008 з XSD-валідацією з CSV, Excel, SQLite, JSON, Parquet або SWIFT MT101 — з інструментами MCP для ШІ-агентів і LSP-сервером."
+twitter_description: "Python-пакет з відкритим кодом: файли pain.001 і pain.008 з XSD-валідацією з CSV, Excel, SQLite, JSON, Parquet або SWIFT MT101, а також інструменти MCP для ШІ-агентів і LSP-сервер."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001 — ініціювання платежів ISO 20022 з відкритим кодом"
+twitter_title: "Pain001: ініціювання платежів ISO 20022 з відкритим кодом"
 twitter_url: "https://pain001.com/uk/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -82,25 +82,25 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Pain001 українською"
-excerpt: "Python-пакет з відкритим кодом: файли pain.001 і pain.008 з XSD-валідацією з CSV, Excel, SQLite, JSON, Parquet або SWIFT MT101 — з інструментами MCP для ШІ-агентів і LSP-сервером."
-last_reviewed: "2026-07-26"
+excerpt: "Python-пакет з відкритим кодом: файли pain.001 і pain.008 з XSD-валідацією з CSV, Excel, SQLite, JSON, Parquet або SWIFT MT101, а також інструменти MCP для ШІ-агентів і LSP-сервер."
+last_reviewed: "2026-09-23"
 
 
 ---
 
 ## Знаходьте помилки в платіжних файлах раніше за банк
 
-**Pain001** — Python-пакет з відкритим кодом для ініціювання платежів ISO 20022. Він перетворює дані, які у вас уже є — CSV, Excel, SQLite, JSON, Parquet або застарілі повідомлення SWIFT MT101 — на XML `pain.001` (перекази) та `pain.008` (прямі дебети), валідований офіційними XSD-схемами.
+**Pain001** є Python-пакетом з відкритим кодом для ініціювання платежів ISO 20022. Він перетворює дані, які у вас уже є (CSV, Excel, SQLite, JSON, Parquet або застарілі повідомлення SWIFT MT101), на XML `pain.001` (перекази) та `pain.008` (прямі дебети), валідований офіційними XSD-схемами.
 
 Кожен файл проходить три рівні перевірки: JSON-схема для кожного запису (з контролем mod-97 для IBAN і структурою BIC), правила scheme (SEPA та транскордонний CBPR+) і фінальна XSD-валідація. Контрольні суми перераховуються, а не копіюються. Усе працює локально: платіжні дані не залишають вашу інфраструктуру.
 
 ## Спробуйте в браузері
 
-Перевірте зразковий пакет просто в браузері — нічого не завантажується на сервер — і підтвердіть результат офіційною XSD-схемою: [спробувати Pain001](/try/). Зразкові CSV-файли можна завантажити як шаблони для власних вивантажень.
+Перевірте зразковий пакет просто в браузері (нічого не завантажується на сервер) і підтвердіть результат офіційною XSD-схемою: [спробувати Pain001](/try/). Зразкові CSV-файли можна завантажити як шаблони для власних вивантажень.
 
-## Термін — 14 листопада 2026 року
+## Термін для структурованих адрес перенесено
 
-Після завершення співіснування MT–MX 22 листопада 2025 року наступний термін — **14 листопада 2026 року**: повністю неструктуровані поштові адреси відхилятимуться в платежах CBPR+, а міжбанківську трансляцію MT101 замінить `pain.001` версії 9. Pain001 уже генерує структуровані та гібридні адреси — і конвертує MT101 однією командою.
+Після завершення співіснування MT–MX 22 листопада 2025 року наступний етап було заплановано на 14 листопада 2026 року: CBPR+ мала почати відхиляти повністю неструктуровані поштові адреси, а міжбанківську трансляцію MT101 мав замінити `pain.001` версії 9. У серпні 2026 року Swift відклав обидві зміни й оголосить нові дати не пізніше грудня 2026 року; самі вимоги залишаються чинними. Pain001 уже підтримує структуровані та гібридні адреси й конвертує ваш MT101 однією командою.
 
 ## Початок роботи
 
@@ -109,4 +109,4 @@ pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run
 ```
 
-Далі: [посібник зі встановлення](/installation/), [технічний довідник](/documentation/), [дорожня карта ISO 20022 до 2028 року](/iso20022-roadmap/), [коди відхилення pain.002](/pain002-reason-codes/), [центр довіри](/trust/) та [резюме для керівництва](/executive-brief/). Повна документація англійською. Подвійна ліцензія Apache-2.0 / MIT — вільне комерційне використання в будь-якому масштабі.
+Далі: [посібник зі встановлення](/installation/), [технічний довідник](/documentation/), [дорожня карта ISO 20022 до 2028 року](/iso20022-roadmap/), [коди відхилення pain.002](/pain002-reason-codes/), [центр довіри](/trust/) та [резюме для керівництва](/executive-brief/). Повна документація англійською. Подвійна ліцензія Apache-2.0 / MIT: вільне комерційне використання в будь-якому масштабі.

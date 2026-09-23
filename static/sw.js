@@ -1,6 +1,6 @@
 /* Pain001 demo service worker.
  *
- * Purpose: make the /try/ validator — including the WASM XSD engine —
+ * Purpose: make the /try/ validator (including the WASM XSD engine)
  * work fully offline after one visit, so the "nothing leaves your
  * machine" claim is falsifiable: load the page once, go offline, and
  * everything still works.
@@ -15,7 +15,7 @@
 /* Bump this on ANY change to /try/, /<locale>/try/, or the assets
  * matched by cacheable() below. The worker is cache-first, so a
  * returning visitor is served the old page forever until the constant
- * changes — the update ships, CI is green, and nobody sees it. This
+ * changes: the update ships, CI is green, and nobody sees it. This
  * has been missed three times now: v8 is the layer-summary
  * translations, which reached all 34 locales while returning visitors
  * kept the English original. */

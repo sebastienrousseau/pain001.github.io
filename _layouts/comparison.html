@@ -1,0 +1,265 @@
+{{#extends "base"}}
+{{#block "main"}}
+<section class="page-hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol><li><a href="/">Home</a></li><li aria-current="page">Vendor evaluation</li></ol>
+      </nav>
+      <p class="eyebrow eyebrow-hero">Vendor evaluation</p>
+      <h1>Where Pain001 fits. <span class="h-muted">And where it does not.</span></h1>
+      <p class="lead hero-lead">The ISO 20022 payment-initiation landscape, open source and commercial, compared on deployment footprint, validation scope and licensing.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/enterprise/#ask">Book an architecture briefing</a>
+        <a class="btn btn-secondary" href="#decision">Decision paths</a>
+      </div>
+      <div class="article-meta">Last reviewed <time datetime="{{last_reviewed}}">{{last_reviewed}}</time></div>
+    </div>
+
+    <aside class="summary-card" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">The short version</h2>
+      <ul class="summary-list">
+        <li><strong>Unique in open source.</strong> No other open-source project combines multi-source ingestion, eleven <span class="nowrap">pain.001</span> editions plus <span class="nowrap">pain.008</span>, a mandatory XSD gate, scheme rulebooks, an AI-agent MCP server and an editor LSP.</li>
+        <li><strong>Commercial platforms go wider.</strong> More message families and bank connectivity, at enterprise prices and without source access.</li>
+        <li><strong>Different layers.</strong> Pain001 is the initiation and pre-submission layer, not a payment hub. It sits upstream of one.</li>
+      </ul>
+      <div class="summary-source">{{!content}}</div>
+    </aside>
+  </div>
+</section>
+
+<nav class="local-nav" aria-label="On this page" data-local-nav>
+  <div class="container local-nav-inner">
+    <a href="#matrix">At a glance</a>
+    <a href="#open-source">Open source</a>
+    <a href="#commercial">Commercial</a>
+    <a href="#decision">Decision paths</a>
+    <a href="#faq">FAQ</a>
+  </div>
+</nav>
+
+<section class="section" id="matrix" aria-labelledby="matrix-heading">
+  <div class="container">
+    <div class="section-split section-split-top">
+      <div class="section-head">
+        <p class="eyebrow">At a glance</p>
+        <h2 id="matrix-heading">Three kinds of tool. <span class="h-muted">Three different jobs.</span></h2>
+      </div>
+      <p class="lead">Compared by category rather than vendor by vendor: the per-project and per-platform detail, with sources, follows below.</p>
+    </div>
+    <div class="matrix-scroll" role="region" aria-label="Comparison matrix" tabindex="0">
+      <table class="matrix">
+        <caption class="visually-hidden">Pain001 compared with open-source libraries and commercial platforms</caption>
+        <thead>
+          <tr>
+            <td></td>
+            <th scope="col" class="is-primary"><span class="matrix-name">Pain001</span><span class="matrix-sub">Open-source suite</span></th>
+            <th scope="col"><span class="matrix-name">Open-source libraries</span><span class="matrix-sub">Prowide, python-sepaxml and others</span></th>
+            <th scope="col"><span class="matrix-name">Commercial platforms</span><span class="matrix-sub">SWIFT, Volante, XMLdation and others</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Deployment footprint</th>
+            <td class="is-primary"><span class="mark mark-yes" aria-hidden="true">✓</span>Inside your perimeter; runs air-gapped</td>
+            <td>A library inside your own code</td>
+            <td>Vendor platform, SaaS portal or licensed SDK</td>
+          </tr>
+          <tr>
+            <th scope="row">Validation scope</th>
+            <td class="is-primary"><span class="mark mark-yes" aria-hidden="true">✓</span>Official XSD and scheme rulebooks, as a hard gate</td>
+            <td>Varies: most have no XSD step and no rulebooks</td>
+            <td>Bank-specific rulesets and guaranteed bank rule coverage</td>
+          </tr>
+          <tr>
+            <th scope="row">Inputs</th>
+            <td class="is-primary"><span class="mark mark-yes" aria-hidden="true">✓</span>CSV, Excel, SQLite, JSON, Parquet, MT101</td>
+            <td>Objects or dictionaries in code; no file ingestion</td>
+            <td>Platform-dependent</td>
+          </tr>
+          <tr>
+            <th scope="row">Message coverage</th>
+            <td class="is-primary"><span class="nowrap">pain.001</span> .03–.13 and <span class="nowrap">pain.008</span>; parses <span class="nowrap">pain.002</span>, <span class="nowrap">camt.053</span>, MT101</td>
+            <td>From one SEPA edition to every MX family (Prowide)</td>
+            <td><span class="mark mark-yes" aria-hidden="true">✓</span>The full pacs and camt clearing families</td>
+          </tr>
+          <tr>
+            <th scope="row">Bank connectivity and 24/7 support</th>
+            <td class="is-primary"><span class="mark mark-no" aria-hidden="true">–</span>Not provided; a supported release channel is available</td>
+            <td><span class="mark mark-no" aria-hidden="true">–</span>Not provided</td>
+            <td><span class="mark mark-yes" aria-hidden="true">✓</span>Connectivity, managed infrastructure, contractual support</td>
+          </tr>
+          <tr>
+            <th scope="row">Source you can audit</th>
+            <td class="is-primary"><span class="mark mark-yes" aria-hidden="true">✓</span>Yes</td>
+            <td><span class="mark mark-yes" aria-hidden="true">✓</span>Yes</td>
+            <td><span class="mark mark-no" aria-hidden="true">–</span>No source access</td>
+          </tr>
+          <tr>
+            <th scope="row">AI-agent interface (MCP)</th>
+            <td class="is-primary"><span class="mark mark-yes" aria-hidden="true">✓</span><a href="/pain001-mcp/">pain001-mcp</a></td>
+            <td><span class="mark mark-no" aria-hidden="true">–</span>None</td>
+            <td><span class="mark mark-no" aria-hidden="true">–</span>None, as of mid-2026</td>
+          </tr>
+          <tr>
+            <th scope="row">Licensing</th>
+            <td class="is-primary">Apache-2.0 or MIT, free at any scale</td>
+            <td>Open source, per project</td>
+            <td>Commercial; SWIFT&rsquo;s translation SDK is listed at €10,000–30,000 a year</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft" id="open-source" aria-labelledby="oss-heading">
+  <div class="container">
+    <div class="section-split section-split-top">
+      <div class="section-head">
+        <p class="eyebrow">01 · Open-source landscape</p>
+        <h2 id="oss-heading">Libraries model messages. <span class="h-muted">Pain001 moves files.</span></h2>
+      </div>
+      <p class="lead">Prowide is excellent at what it does: if you need every MX message family in Java, use it. Pain001 optimises for getting operational payment data from spreadsheets, ERP exports and legacy MT into files banks accept, with validation as a gate rather than an option.</p>
+    </div>
+    <ul class="vendor-grid">
+      <li class="vendor-card">
+        <p class="vendor-top"><a class="vendor-name" href="https://github.com/prowide/prowide-iso20022" rel="external">Prowide ISO 20022</a><span class="tag">Java</span></p>
+        <p class="vendor-does">Full MX object model: parse and build every ISO 20022 message; annual standards releases.</p>
+        <p class="vendor-diff"><span>Where Pain001 differs</span>Model classes, not a workflow tool: no CSV or Excel ingestion, no CLI. Validation and MT↔MX translation sit in the commercial Prowide Integrator.</p>
+      </li>
+      <li class="vendor-card">
+        <p class="vendor-top"><a class="vendor-name" href="https://github.com/raphaelm/python-sepaxml" rel="external">python-sepaxml</a><span class="tag">Python</span></p>
+        <p class="vendor-does">Generates SEPA <span class="nowrap">pain.001</span> and <span class="nowrap">pain.008</span> from Python dictionaries.</p>
+        <p class="vendor-diff"><span>Where Pain001 differs</span>SEPA-only by design: no file ingestion, no XSD validation step, no scheme rulebooks, no MT101, no AI or editor tooling.</p>
+      </li>
+      <li class="vendor-card">
+        <p class="vendor-top"><a class="vendor-name" href="https://github.com/php-sepa-xml/php-sepa-xml" rel="external">php-sepa-xml</a><span class="tag">PHP</span></p>
+        <p class="vendor-does">Generates <span class="nowrap">pain.001.001.03</span> and <span class="nowrap">pain.008</span>.</p>
+        <p class="vendor-diff"><span>Where Pain001 differs</span>PHP, SEPA-only, v03-era editions.</p>
+      </li>
+      <li class="vendor-card">
+        <p class="vendor-top"><a class="vendor-name" href="https://github.com/moov-io/iso20022" rel="external">moov-io/iso20022</a><span class="tag">Go</span></p>
+        <p class="vendor-does">Reader, writer and HTTP API.</p>
+        <p class="vendor-diff"><span>Where Pain001 differs</span>Archived since 2023; Moov&rsquo;s active work targets Fedwire, not corporate initiation.</p>
+      </li>
+      <li class="vendor-card">
+        <p class="vendor-top"><a class="vendor-name" href="https://github.com/phoughton/pyiso20022" rel="external">pyiso20022</a><span class="tag">Python</span></p>
+        <p class="vendor-does">Generated dataclass bindings for pain, pacs and camt.</p>
+        <p class="vendor-diff"><span>Where Pain001 differs</span>Bindings, not a pipeline: no ingestion, validation or tooling layer.</p>
+      </li>
+      <li class="vendor-card">
+        <p class="vendor-top"><a class="vendor-name" href="https://github.com/inisos/bank4j" rel="external">bank4j</a><span class="tag">Java</span></p>
+        <p class="vendor-does">Generates <span class="nowrap">pain.001.001.03</span>.</p>
+        <p class="vendor-diff"><span>Where Pain001 differs</span>A single edition, no tooling.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="commercial" aria-labelledby="commercial-heading">
+  <div class="container">
+    <div class="section-split section-split-top">
+      <div class="section-head">
+        <p class="eyebrow">02 · Commercial platforms</p>
+        <h2 id="commercial-heading">Payment hubs go wider. <span class="h-muted">Pain001 goes upstream.</span></h2>
+      </div>
+      <p class="lead">These platforms solve problems Pain001 does not attempt. The useful question is which layer you need, not which product wins.</p>
+    </div>
+    <ul class="vendor-grid">
+      <li class="vendor-card"><p class="vendor-top"><span class="vendor-name">SWIFT MyStandards + Translator</span></p><p class="vendor-does">SDK licensing publicly listed at €10,000–30,000 a year, enterprise terms beyond.</p><p class="vendor-diff"><span>Typical fit</span>Bank-side standards management.</p></li>
+      <li class="vendor-card"><p class="vendor-top"><span class="vendor-name">Volante Technologies</span></p><p class="vendor-does">Enterprise payment-hub platform (2026 Gartner Magic Quadrant Leader, Banking Payment Hubs).</p><p class="vendor-diff"><span>Typical fit</span>Bank payment-hub replacement programmes.</p></li>
+      <li class="vendor-card"><p class="vendor-top"><span class="vendor-name">XMLdation</span></p><p class="vendor-does">SaaS validation with bank-specific rulesets.</p><p class="vendor-diff"><span>Typical fit</span>Bank and corporate file-testing portals.</p></li>
+      <li class="vendor-card"><p class="vendor-top"><span class="vendor-name">Payment Components</span><span class="tag">FINaplo · aplonHUB</span></p><p class="vendor-does">Commercial SDK and hub, with a GenAI chat assistant.</p><p class="vendor-diff"><span>Typical fit</span>Mid-tier bank message handling.</p></li>
+      <li class="vendor-card"><p class="vendor-top"><span class="vendor-name">Bottomline, Finastra, Fiserv</span></p><p class="vendor-does">Enterprise middleware and payment hubs.</p><p class="vendor-diff"><span>Typical fit</span>Full bank infrastructure.</p></li>
+      <li class="vendor-card"><p class="vendor-top"><span class="vendor-name">Kyriba and TMS vendors</span></p><p class="vendor-does">Treasury platforms with <span class="nowrap">pain.001</span> export.</p><p class="vendor-diff"><span>Typical fit</span>Corporates already on the TMS.</p></li>
+    </ul>
+    <div class="strengths">
+      <div class="strength">
+        <h3>What none of them offer</h3>
+        <p>Source you can audit, a licence you can run anywhere for free, processing that never leaves your infrastructure, or a native interface for AI agents. As of mid-2026 no bank, TMS or SDK vendor ships an MCP server for ISO 20022 payment-file work.</p>
+      </div>
+      <div class="strength">
+        <h3>What they offer that Pain001 does not</h3>
+        <p>Bank connectivity, managed infrastructure, contractual support, guaranteed bank-specific rule coverage, and the full pacs and camt clearing message families. Pain001 is the initiation layer, not a payment hub.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft" id="decision" aria-labelledby="decision-heading">
+  <div class="container">
+    <div class="section-split section-split-top">
+      <div class="section-head">
+        <p class="eyebrow">03 · Decision paths</p>
+        <h2 id="decision-heading">Start from the problem. <span class="h-muted">Not the product.</span></h2>
+      </div>
+      <p class="lead">Four common situations, and what to use in each, including the ones where the answer is not only Pain001.</p>
+    </div>
+    <ol class="paths">
+      <li class="path">
+        <p class="path-for">Corporate treasury</p>
+        <h3>An ERP or spreadsheet export, and a bank deadline</h3>
+        <p class="path-use"><span>Use</span>The Pain001 CLI: from install to validated XML in minutes, with <code>--dry-run</code> in CI.</p>
+        <a class="text-link" href="/installation/">Installation</a>
+      </li>
+      <li class="path">
+        <p class="path-for">Java engineering estate</p>
+        <h3>Every MX message family, in Java</h3>
+        <p class="path-use"><span>Use</span>Prowide, possibly alongside Pain001 for file-generation workflows.</p>
+        <a class="text-link" href="https://github.com/prowide/prowide-iso20022" rel="external">Prowide</a>
+      </li>
+      <li class="path">
+        <p class="path-for">Transaction banking</p>
+        <h3>Bank connectivity and 24/7 vendor support</h3>
+        <p class="path-use"><span>Use</span>A commercial hub, with Pain001 upstream as an independent pre-submission validator.</p>
+        <a class="text-link" href="/enterprise/">Supported channel</a>
+      </li>
+      <li class="path">
+        <p class="path-for">Automation and AI</p>
+        <h3>AI agents in the loop, with humans reviewing</h3>
+        <p class="path-use"><span>Use</span><code>pain001-mcp</code>, currently the only option in the category.</p>
+        <a class="text-link" href="/pain001-mcp/">pain001-mcp</a>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="faq" aria-labelledby="faq-heading">
+  <div class="container faq-wrap">
+    <div class="section-head">
+      <p class="eyebrow">FAQ</p>
+      <h2 id="faq-heading">Questions reviewers ask.</h2>
+    </div>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>Is this comparison fair? You wrote it.</summary>
+        <div class="faq-answer"><p>Every factual cell cites a public source, the strengths of alternatives are stated plainly, and the &ldquo;what they offer that Pain001 does not&rdquo; list is real. If something is wrong or stale, <a href="https://github.com/sebastienrousseau/pain001/issues" rel="external">open an issue</a> and it will be corrected.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Why is open source significant for payment files specifically?</summary>
+        <div class="faq-answer"><p>Payment file generation sits in most audit scopes. With Pain001, an auditor reads the exact code path that produced a file, pins the version, and reproduces the output byte for byte. Closed translators require trusting a vendor attestation instead.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>What does Pain001 cost at scale?</summary>
+        <div class="faq-answer"><p>Nothing, at any scale, under Apache-2.0 (the core is also available under MIT). The comparison point: SWIFT&rsquo;s translation SDK alone lists at €10,000–30,000 a year before integration effort. A supported release channel and private bank profiles are available for teams that need a named party; see <a href="/enterprise/">Enterprise</a>.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="container">
+    <div class="cta-banner">
+      <div>
+        <h2>Evaluate it inside your perimeter.</h2>
+        <p>Run the sandbox in your browser, or walk through deployment, bank profiles and review evidence with us.</p>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/enterprise/#ask">Book an architecture briefing</a>
+        <a class="btn btn-secondary" href="/try/">Try the sandbox</a>
+      </div>
+    </div>
+  </div>
+</section>
+{{/block}}

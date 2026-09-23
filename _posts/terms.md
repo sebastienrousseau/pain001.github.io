@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "The licensing and terms page for the Pain001 open-source suite — Apache-2.0 and MIT texts governing free commercial use."
+banner_alt: "The licensing and terms page for the Pain001 open-source suite, with the Apache-2.0 and MIT texts governing free commercial use."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -16,7 +16,7 @@ format-detection: telephone=no
 hreflang: en
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/terms/"
-image_alt: "The licensing and terms page for the Pain001 open-source suite — Apache-2.0 and MIT texts governing free commercial use."
+image_alt: "The licensing and terms page for the Pain001 open-source suite, with the Apache-2.0 and MIT texts governing free commercial use."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -36,7 +36,7 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "Apache-2.0 or MIT for the core, Apache-2.0 for the companions, and no warranty — the terms in plain sight."
+subtitle: "Apache-2.0 or MIT for the core, Apache-2.0 for the companions, and no warranty: the terms in plain sight."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
 title: "Terms: Licences, Warranty and Fair Use"
@@ -89,10 +89,10 @@ last_reviewed: "2026-07-26"
 
 ## Software licences
 
-- **`pain001` (core)** is dual-licensed under [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) **or** [MIT](https://opensource.org/license/mit) — your choice.
+- **`pain001` (core)** is dual-licensed under [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) **or** [MIT](https://opensource.org/license/mit). The choice is yours.
 - **Companion packages** (`pain001-mcp`, `pain001-lsp`, `pain001-loader-mt101`, `pain001-loader-xlsx`) are licensed under **Apache-2.0**.
 
-Both licences permit commercial use, modification, and redistribution. The software is provided **"as is", without warranty of any kind** — see the licence texts for the complete disclaimer of warranties and limitation of liability.
+Both licences permit commercial use, modification, and redistribution. The software is provided **"as is", without warranty of any kind**. See the licence texts for the complete disclaimer of warranties and limitation of liability.
 
 ## Website content
 

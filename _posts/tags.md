@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Every page tagged and grouped — ISO 20022 versions, SEPA rulebooks, SWIFT migration, AI tooling. Pick a topic and follow the thread."
+description: "Every page tagged and grouped: ISO 20022 versions, SEPA rulebooks, SWIFT migration, AI tooling. Pick a topic and follow the thread."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
@@ -46,7 +46,7 @@ atom_link: "https://pain001.com/tags/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Every page tagged and grouped — ISO 20022 versions, SEPA rulebooks, SWIFT migration, AI tooling. Pick a topic and follow the thread."
+item_description: "Every page tagged and grouped: ISO 20022 versions, SEPA rulebooks, SWIFT migration, AI tooling. Pick a topic and follow the thread."
 item_guid: "https://pain001.com/tags/rss.xml"
 item_link: "https://pain001.com/tags/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -67,7 +67,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Every page tagged and grouped — ISO 20022 versions, SEPA rulebooks, SWIFT migration, AI tooling. Pick a topic and follow the thread."
+twitter_description: "Every page tagged and grouped: ISO 20022 versions, SEPA rulebooks, SWIFT migration, AI tooling. Pick a topic and follow the thread."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
@@ -82,9 +82,9 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Topics"
-excerpt: "The topic index for pain001.com: browse documentation, references, and research briefings by tag — ISO 20022 message versions, SEPA and CBPR+ schemes, Python tooling, and AI-agent integration."
+excerpt: "The topic index for pain001.com: browse documentation, references, and research briefings by tag, covering ISO 20022 message versions, SEPA and CBPR+ schemes, Python tooling, and AI-agent integration."
 last_reviewed: "2026-07-26"
 
 ---
 
-Every page on this site is tagged. Pick a topic to see related documentation, references, and briefings — from ISO 20022 message versions to SEPA rulebooks to AI-agent tooling.
+Every page on this site is tagged. Pick a topic to see related documentation, references, and briefings, from ISO 20022 message versions to SEPA rulebooks to AI-agent tooling.

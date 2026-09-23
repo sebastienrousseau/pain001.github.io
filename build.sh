@@ -47,7 +47,13 @@ python3 scripts/postbuild_fix.py Pain001
 # demo-scoped service worker (/sw.js) that makes /try/ work offline.
 rsync -a static/ Pain001/
 
-# Preserve the authored Skeletonic/PRISM separation in source, but publish a
+# RFC 9116 location. static/security.txt replaces the generator's empty
+# file in the rsync above, so the .well-known copy is made here, after it;
+# made any earlier, it copied the empty file.
+mkdir -p Pain001/.well-known
+cp Pain001/security.txt Pain001/.well-known/security.txt
+
+# Preserve the authored PRISM/adapter separation in source, but publish a
 # single SRI-protected stylesheet per layout to eliminate render-blocking
 # request chains on mobile.
 python3 scripts/postbuild_fix.py Pain001 --optimise-assets

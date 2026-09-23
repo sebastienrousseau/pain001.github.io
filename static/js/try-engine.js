@@ -1,4 +1,4 @@
-/* Pain001 browser demo — the engine.
+/* Pain001 browser demo: the engine.
  *
  * Loads a Python runtime (Pyodide, WebAssembly) and the pain001 library
  * itself from this origin, then runs the library's own validation,

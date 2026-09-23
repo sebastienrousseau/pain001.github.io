@@ -36,10 +36,10 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "Element paths, cardinality, data types and code lists for every supported pain.001 and pain.008 version — generated, not transcribed."
+subtitle: "Element paths, cardinality, data types and code lists for every supported pain.001 and pain.008 version, generated rather than transcribed."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "ISO 20022 message specifications — generated from the official XSDs"
+title: "ISO 20022 message specifications, generated from the official XSDs"
 url: "https://pain001.com/message-specs/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/message-specs/"
@@ -50,7 +50,7 @@ item_description: "Complete element references for every supported ISO 20022 pay
 item_guid: "https://pain001.com/message-specs/"
 item_link: "https://pain001.com/message-specs/"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "ISO 20022 message specifications — generated from the official XSDs"
+item_title: "ISO 20022 message specifications, generated from the official XSDs"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "ISO 20022 message specifications — generated from the official XSDs"
+apple-mobile-web-app-title: "ISO 20022 message specifications, generated from the official XSDs"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,7 +71,7 @@ twitter_description: "Complete element references for every supported ISO 20022 
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "ISO 20022 message specifications — generated from the official XSDs"
+twitter_title: "ISO 20022 message specifications, generated from the official XSDs"
 twitter_url: "https://pain001.com/message-specs/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -88,7 +88,7 @@ last_reviewed: "2026-07-26"
 
 ---
 
-Complete, generated specifications for every ISO 20022 payment-initiation message Pain001 supports — element paths, cardinality, data types, constraints and code lists.
+Complete, generated specifications for every ISO 20022 payment-initiation message Pain001 supports: element paths, cardinality, data types, constraints and code lists.
 
 **Everything here is generated from the official ISO XSDs**, the same files the validator enforces. Nothing is hand-transcribed, so the reference cannot drift from what the software actually does, and every value can be checked against ISO's publication.
 
@@ -109,12 +109,12 @@ Complete, generated specifications for every ISO 20022 payment-initiation messag
 | `pain.001.001.13` | 771 | 142 | 100 | 17 | 2026 Mar 02 | [ISO 20022 catalogue](https://www.iso20022.org/iso-20022-message-definitions?search=pain.001.001.13) | [Element reference](/message-spec-pain.001.001.13/) |
 | `pain.008.001.02` | 488 | 90 | 63 | 15 | 2009 Jan 08 | [ISO 20022 catalogue](https://www.iso20022.org/iso-20022-message-definitions?search=pain.008.001.02) | [Element reference](/message-spec-pain.008.001.02/) |
 
-**On the dates.** *Schema generated* is the timestamp inside the shipped XSD, written by ISO's Standards Editor when the schema was produced. It is not the same as ISO's publication date and should not be read as one — pain.001.001.13 was generated on 2 March 2026 and published later that month. Four of the files shipped with Pain001 carry no header at all; those rows say so rather than showing a date that cannot be evidenced. Every row links to ISO's own page so the version can be checked at source.
+**On the dates.** *Schema generated* is the timestamp inside the shipped XSD, written by ISO's Standards Editor when the schema was produced. It is not the same as ISO's publication date and should not be read as one. pain.001.001.13 was generated on 2 March 2026 and published later that month. Four of the files shipped with Pain001 carry no header at all; those rows say so rather than showing a date that cannot be evidenced. Every row links to ISO's own page so the version can be checked at source.
 
 ## Also here
 
-- **[Code lists](/message-spec-code-lists/)** — every closed value set, with the versions each appears in.
-- **[What changed between versions](/message-spec-changes/)** — element-level diffs, which the ISO catalogue does not publish.
+- **[Code lists](/message-spec-code-lists/)**: every closed value set, with the versions each appears in.
+- **[What changed between versions](/message-spec-changes/)**: element-level diffs, which the ISO catalogue does not publish.
 
 ## How to read the tables
 
@@ -122,12 +122,12 @@ Complete, generated specifications for every ISO 20022 payment-initiation messag
 | :--- | :--- |
 | Element | The XML tag, indented by its depth in the message |
 | Path | The full path from the message root, for XPath and mapping work |
-| Card. | Cardinality as ISO writes it — `0..1` optional, `1..1` required, `0..*` repeating. Required is shown in bold |
+| Card. | Cardinality as ISO writes it: `0..1` optional, `1..1` required, `0..*` repeating. Required is shown in bold |
 | Type | The ISO data type; simple types carry the constraints |
 | Constraints | Length, pattern, decimal places and code-list size |
 
 ## Scope and honesty
 
-- These pages describe the **base ISO standard**. A document that conforms here can still be rejected by a scheme rulebook, by your bank's own profile, or by the channel you submit it through — see the [four-layer model](/#standards-heading).
+- These pages describe the **base ISO standard**. A document that conforms here can still be rejected by a scheme rulebook, by your bank's own profile, or by the channel you submit it through. See the [four-layer model](/#standards-heading).
 - The reference is **English only**. It is generated data that grows with every ISO release, and the site's translated pages are parity-checked in CI; localising a growing generated surface into 34 languages is not a commitment that could be kept honestly.
 - Regenerate with `python3 scripts/extract_message_specs.py && python3 scripts/generate_message_specs.py` after a schema update.

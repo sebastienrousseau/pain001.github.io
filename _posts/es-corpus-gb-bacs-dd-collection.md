@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-09-13T08:00:00+00:00"
+date: "2026-09-23T08:00:00+00:00"
 description: "Bacs Direct Debit collection, first and recurring, SUN as creditor id. Una muestra pain.001 validada (Reino Unido, raíl bacs-direct-debit), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -39,7 +39,7 @@ short_name: pain001
 subtitle: "Bacs Direct Debit collection, first and recurring, SUN as creditor id."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "gb.bacs-dd.collection — ejemplo pain.001 ISO 20022: Reino Unido (bacs-direct-debit)"
+title: "Ejemplo pain.001 ISO 20022 gb.bacs-dd.collection: Reino Unido (bacs-direct-debit)"
 url: "https://pain001.com/es/corpus-gb-bacs-dd-collection/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/es/corpus-gb-bacs-dd-collection/"
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "Bacs Direct Debit collection, first and recurring, SUN as creditor id. Una muestra pain.001 validada (Reino Unido, raíl bacs-direct-debit), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
 item_guid: "https://pain001.com/es/corpus-gb-bacs-dd-collection/"
 item_link: "https://pain001.com/es/corpus-gb-bacs-dd-collection/"
-item_pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
-item_title: "gb.bacs-dd.collection — ejemplo pain.001 ISO 20022: Reino Unido (bacs-direct-debit)"
-last_build_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+item_pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+item_title: "Ejemplo pain.001 ISO 20022 gb.bacs-dd.collection: Reino Unido (bacs-direct-debit)"
+last_build_date: "Wed, 23 Sep 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "gb.bacs-dd.collection — ejemplo pain.001 ISO 20022: Reino Unido (bacs-direct-debit)"
+apple-mobile-web-app-title: "Ejemplo pain.001 ISO 20022 gb.bacs-dd.collection: Reino Unido (bacs-direct-debit)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,7 +71,7 @@ twitter_description: "Bacs Direct Debit collection, first and recurring, SUN as 
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "gb.bacs-dd.collection — ejemplo pain.001 ISO 20022: Reino Unido (bacs-direct-debit)"
+twitter_title: "Ejemplo pain.001 ISO 20022 gb.bacs-dd.collection: Reino Unido (bacs-direct-debit)"
 twitter_url: "https://pain001.com/es/corpus-gb-bacs-dd-collection/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -98,8 +98,8 @@ Un archivo de iniciación de pagos (**Reino Unido**, raíl **bacs-direct-debit**
 
 | Edición | Archivo de pago | Gemelo JSON ISO 20022 | Registro de procedencia |
 | :--- | :--- | :--- | :--- |
-| `pain.008.001.02` | [gb.bacs-dd.collection.pain.008.001.02.xml](/corpus/market/gb/bacs-direct-debit/gb.bacs-dd.collection.pain.008.001.02.xml) | — (los gemelos solo cubren pain.001) | [gb.bacs-dd.collection.pain.008.001.02.provenance.yaml](/corpus/market/gb/bacs-direct-debit/gb.bacs-dd.collection.pain.008.001.02.provenance.yaml) |
-| `pain.008.001.08` | [gb.bacs-dd.collection.pain.008.001.08.xml](/corpus/market/gb/bacs-direct-debit/gb.bacs-dd.collection.pain.008.001.08.xml) | — (los gemelos solo cubren pain.001) | [gb.bacs-dd.collection.pain.008.001.08.provenance.yaml](/corpus/market/gb/bacs-direct-debit/gb.bacs-dd.collection.pain.008.001.08.provenance.yaml) |
+| `pain.008.001.02` | [gb.bacs-dd.collection.pain.008.001.02.xml](/corpus/market/gb/bacs-direct-debit/gb.bacs-dd.collection.pain.008.001.02.xml) | Ninguno (los gemelos solo cubren pain.001) | [gb.bacs-dd.collection.pain.008.001.02.provenance.yaml](/corpus/market/gb/bacs-direct-debit/gb.bacs-dd.collection.pain.008.001.02.provenance.yaml) |
+| `pain.008.001.08` | [gb.bacs-dd.collection.pain.008.001.08.xml](/corpus/market/gb/bacs-direct-debit/gb.bacs-dd.collection.pain.008.001.08.xml) | Ninguno (los gemelos solo cubren pain.001) | [gb.bacs-dd.collection.pain.008.001.08.provenance.yaml](/corpus/market/gb/bacs-direct-debit/gb.bacs-dd.collection.pain.008.001.08.provenance.yaml) |
 
 ## Cómo lo comprobó la biblioteca
 

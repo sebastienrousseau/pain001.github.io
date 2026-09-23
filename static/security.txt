@@ -1,0 +1,8 @@
+# Security contact for pain001.com and the pain001 packages (RFC 9116).
+# Served at /.well-known/security.txt and /security.txt.
+Contact: https://github.com/sebastienrousseau/pain001/security/advisories/new
+Contact: mailto:contact@pain001.com
+Expires: 2027-09-01T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://pain001.com/.well-known/security.txt
+Policy: https://github.com/sebastienrousseau/pain001/security/policy

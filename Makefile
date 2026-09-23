@@ -7,6 +7,7 @@ build:
 
 test: build
 	node --test tests/*.test.mjs
+	python3 scripts/css_minify.py
 	python3 scripts/validate_try_i18n.py
 	python3 scripts/validate_pages_i18n.py pages_i18n
 	python3 scripts/validate_pages_i18n.py docs_i18n
@@ -16,6 +17,9 @@ test: build
 	python3 scripts/validate_headings.py
 	python3 scripts/validate_fonts.py
 	python3 scripts/validate_css_content.py
+	python3 scripts/validate_contrast.py
+	python3 scripts/validate_proof.py
+	python3 scripts/validate_security_txt.py
 	python3 scripts/validate_links.py site
 	python3 scripts/validate_versions.py
 

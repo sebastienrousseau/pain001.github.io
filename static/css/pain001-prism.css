@@ -15,11 +15,17 @@
   --link-hover: var(--accent-hover);
   --ok: var(--green-text);
   --bad: var(--burgundy-text);
-  --btn-bg: var(--accent);
-  --btn-text: var(--accent-ink);
+  --btn-bg: var(--ink);
+  --btn-text: var(--bg);
   --focus-ring: var(--focus);
-  --type-body: var(--font-body);
+  /* --font-body never existed; the alias was invalid, so everything that
+     read --type-body (the taxonomy pages, parts of the demo) fell back to
+     the browser's default serif. */
+  --type-body: var(--font-sans);
   --type-mono: var(--font-mono);
+  /* The demo's XML panel read an undefined --code-text and inherited the
+     page ink instead of the code-window colour it sits on. */
+  --code-text: var(--code-plain);
   --radius-sm: 0.5rem;
   --radius-md: 0.85rem;
   --radius-pill: 999px;
@@ -61,24 +67,39 @@
 .breadcrumb a { color: var(--hero-accent); }
 .article-meta { color: var(--hero-ink-soft); font-size: 0.875rem; margin-block-start: 1rem; }
 
+/* Save page: a quiet control in the meta row, not a second call to
+   action under every headline. */
 .bookmark-button {
-  align-items: center;
-  background: transparent;
-  border: 2px solid var(--hero-line);
-  border-radius: 999px;
-  color: var(--hero-ink);
   display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  justify-self: start;
+  min-height: 2.75rem;
+  margin: 0;
+  padding: 0 0.9rem;
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-soft);
   font: inherit;
-  font-weight: 700;
-  margin-block-start: 1rem;
-  min-height: 44px;
-  padding: 0.55rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
-.bookmark-button:hover { border-color: var(--hero-ink); }
-.bookmark-button[aria-pressed="true"] { background: var(--hero-ink); color: var(--hero-bg); }
+.bookmark-button::before {
+  content: "";
+  inline-size: 0.7rem;
+  block-size: 0.9rem;
+  background: currentColor;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 72%, 0 100%);
+}
+.bookmark-button:hover { border-color: var(--line); color: var(--ink); }
+.bookmark-button[aria-pressed="true"] { border-color: var(--ink); color: var(--ink); }
+.bookmark-button[aria-pressed="false"]::before { background: none; box-shadow: inset 0 0 0 1.5px currentColor; }
 
 /* Generated long-form documentation. */
-.content-body { margin-inline: auto; min-width: 0; }
+/* Left-aligned to the container edge, where the page hero's headline
+   starts; a centred measure put the article on a third left edge. */
+.content-body { margin-inline: 0; min-width: 0; }
 .content-body :where(h1, h2, h3, h4, h5, h6) { scroll-margin-top: 6rem; }
 .content-body h1 { margin-block-end: 0.65em; }
 .content-body h2 { margin-block-end: 0.7em; padding-block-end: 0.22em; }
@@ -86,26 +107,63 @@
 .content-body h4 { margin-block-end: 0.8em; }
 .content-body h5 { margin-block-end: 0.85em; }
 .content-body h6 { margin-block-end: 0.9em; }
-.content-body :where(a, code, td, th) { overflow-wrap: anywhere; }
+/* Long tokens may break in running text, but not inside tables:
+   `anywhere` also lowers a cell's min-content width, so automatic table
+   layout squeezed columns to one or two characters ("Proje / ct",
+   "Pyt / hon"). In cells, `break-word` only breaks what cannot fit. */
+.content-body :where(a, code) { overflow-wrap: anywhere; }
+.content-body :where(td, th),
+.content-body :where(td, th) :where(a, code) { overflow-wrap: break-word; }
 
 .article-toc {
   background: var(--surface-soft);
-  border: 1px solid var(--line);
-  border-radius: 0.8rem;
-  margin-block: 0 2.25rem;
-  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+  margin-block: 0 var(--space-8);
+  padding: var(--space-4) var(--space-6);
 }
-.article-toc > p { font-weight: 800; margin: 0 0 0.7rem; }
+/* postbuild emits the label as an <h2>; the rule once matched a <p> that
+   no longer exists, so "Contents" rendered at full section-heading size. */
+.article-toc h2,
+.article-toc > p {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink-muted);
+  margin: 0 0 var(--space-2);
+  padding: 0;
+}
 .article-toc ol { margin: 0; padding-inline-start: 1.25rem; }
-.heading-anchor { color: inherit; margin-inline-start: 0.35rem; text-decoration: none; }
+/* The section link is there when it is wanted: on hover or keyboard
+   focus of the heading, not as a permanent "#" after every title. It keeps
+   the heading's colour: a muted "#" differs from its heading by colour
+   alone, which Lighthouse flags as link-in-text-block (WCAG 1.4.1). */
+.heading-anchor { color: inherit; margin-inline-start: 0.35rem; text-decoration: none; opacity: 0; }
+:where(h2, h3, h4):hover > .heading-anchor,
+.heading-anchor:focus-visible { opacity: 1; }
+@media (hover: none) { .heading-anchor { opacity: 1; } }
 .heading-anchor:hover { color: var(--accent); }
 
 .table-responsive,
 .matrix-wrap,
 .error-table-wrap { max-width: 100%; overflow-x: auto; }
-.content-body table { border-collapse: collapse; inline-size: 100%; margin-block: 1.5rem 2rem; }
-.content-body :where(th, td) { border-block-end: 1px solid var(--line-soft); padding: 0.7rem; text-align: start; vertical-align: top; }
-.content-body th { background: var(--surface-soft); color: var(--ink); font-weight: 750; }
+/* Tables escape the 68ch reading measure to the full container width.
+   The article column starts on the container's left edge, so the box
+   only needs to grow to the right; it still scrolls if a table is wider. */
+.content-body .table-responsive {
+  inline-size: min(76rem, 100vw - 2rem);
+  max-inline-size: none;
+  margin-block: var(--space-6) var(--space-8);
+}
+.content-body table { border-collapse: collapse; inline-size: 100%; margin-block: 1.5rem 2rem; font-size: 0.9375rem; }
+.content-body .table-responsive > table { margin: 0; }
+.content-body :where(th, td) { border-block-end: 1px solid var(--line-soft); padding: 0.875rem 1.25rem 0.875rem 0; text-align: start; vertical-align: top; line-height: 1.5; }
+.content-body :where(th, td):last-child { padding-inline-end: 0; }
+.content-body thead th { background: none; border-block-end-color: var(--ink); color: var(--ink-muted); font-size: 0.8125rem; font-weight: 500; }
+.content-body tbody th { color: var(--ink); font-weight: 600; }
+.content-body td { color: var(--ink-soft); }
 .content-body pre { max-width: 100%; overflow-x: visible; }
 
 /* SSG appends its generated highlighter stylesheet after the authored theme.
@@ -120,17 +178,16 @@
 .cta-centred { justify-content: center; }
 .hero code { color: inherit; }
 
-/* The Pain001 hero uses its own relevant share card under PRISM's solid
-   mock-ups. Covering the full stage prevents the former right-edge gap. */
-.hero-stage-photo { height: 100%; inset: 0; object-fit: cover; position: absolute; width: 100%; }
 
 /* The generated suite stamp is part of PRISM's shared footer metadata. */
 .suite-version { color: var(--ink-muted); font-size: var(--step--1); }
 
 /* Existing validator content is retained inside PRISM's page shell. */
+/* The same box as PRISM's .container, so the validator's columns start
+   on the page hero's left edge. */
 .guide-grid,
 .content-note,
-.fineprint { margin-inline: auto; max-width: 80rem; padding-inline: clamp(1rem, 3vw, 2rem); }
+.fineprint { margin-inline: auto; width: min(100% - 2rem, 76rem); max-width: none; padding-inline: 0; }
 .guide-grid { padding-block: clamp(2rem, 5vw, 4rem); }
 .content-note { padding-block: 2rem 4rem; }
 .content-note article { max-width: 72ch; }
@@ -150,7 +207,6 @@
   .heading-anchor,
   .article-toc { display: none !important; }
   .page-hero { background: #fff !important; color: #000 !important; min-height: 0; padding: 0 0 1rem; }
-  .hero-slope { display: none; }
   .table-responsive,
   .matrix-wrap,
   pre { max-width: 100% !important; overflow: visible !important; }
@@ -182,8 +238,7 @@
   margin-block-start: 1.6rem;
 }
 
-.section-evidence { padding-block-start: 0; }
-.evidence-title { font-size: 1.3rem; margin-block-end: 0.5rem; }
+.evidence-title { font-size: var(--step-2); margin-block-end: var(--space-2); }
 .evidence-lede { color: var(--ink-muted); max-width: 60ch; margin-block-end: 1.6rem; }
 
 .evidence-grid {
@@ -197,17 +252,15 @@
 .evidence-item {
   background: var(--surface);
   border: 1px solid var(--line-soft);
-  border-radius: 0.6rem;
-  padding: 1rem 1.1rem;
+  border-radius: 12px;
+  padding: var(--space-4) var(--space-4) var(--space-6);
 }
 .evidence-label {
   display: block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: 0.8125rem;
+  font-weight: 500;
   color: var(--ink-muted);
-  margin-block-end: 0.35rem;
+  margin-block-end: var(--space-1);
 }
 .evidence-link { font-weight: 600; }
 .evidence-item p {
@@ -220,5 +273,433 @@
 /* postbuild injects "<span>N min read</span>" at the head of .article-meta,
    directly against the "Last reviewed" text node that follows it, which
    renders as "2 min readLast reviewed". The text node cannot be selected,
-   so the separator hangs off the span. */
-.article-meta > span::after { content: " \00B7 "; }
+   so the separator hangs off the span. A space written after a CSS
+   escape is consumed as the escape's terminator, so the gap is margin,
+   not a trailing space in `content`. */
+.article-meta > span::after { content: "\00B7"; margin-inline: 0.45em; }
+
+/* The four validation layers. Monochrome on purpose: colour on this site
+   means pass or fail and nothing else, so a layer is identified by its
+   number and its name, never by a hue. */
+.layer {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--line-soft);
+  border-radius: 6px;
+  background: var(--surface-soft);
+  color: var(--ink);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.layer-num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-muted);
+}
+
+.layers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: var(--space-8);
+  margin: var(--space-12) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.layers li {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+  padding-block-start: var(--space-6);
+  border-block-start: 1px solid var(--ink);
+}
+
+.layers .layer {
+  justify-self: start;
+}
+
+.layers p {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--ink-soft);
+}
+
+.layer-verdict {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.layer-verdict.is-pass { color: var(--green-text); }
+
+.specimen-state { color: var(--green-text); font-weight: 500; }
+
+/* .hero-copy is a grid, so a lone button would stretch to the measure. */
+.page-hero .hero-copy > .bookmark-button { justify-self: start; }
+
+/* Enterprise hero: the reviewer's own verification, as commands. */
+.verify-steps {
+  margin: 0;
+  padding: var(--space-2) 0;
+  list-style: none;
+  counter-reset: verify;
+}
+
+.verify-steps li {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  counter-increment: verify;
+}
+
+.verify-steps li + li { border-block-start: 1px solid var(--line-soft); }
+
+.verify-label {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.verify-label::before {
+  content: counter(verify, decimal-leading-zero) "  ";
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+  white-space: pre;
+}
+
+.verify-steps pre {
+  margin: 0;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--line-soft);
+  border-radius: 8px;
+  background: var(--surface-soft);
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.verify-steps pre code { background: none; padding: 0; margin: 0; }
+
+.verify-steps .run-state { margin: 0; }
+
+/* Enterprise: the risk-review table. A real table, so the question stays
+   the row header for screen readers; at phone width each row stacks. */
+.review-table-wrap {
+  margin-block-start: var(--space-12);
+  border: 1px solid var(--edge);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: var(--lift);
+  overflow: hidden;
+}
+.review-table { width: 100%; border-collapse: collapse; }
+.review-table th,
+.review-table td {
+  padding: var(--space-4) var(--space-6);
+  border-block-end: 1px solid var(--line-soft);
+  text-align: start;
+  vertical-align: top;
+  font-size: 0.9375rem;
+}
+.review-table tbody tr:last-child > * { border-block-end: 0; }
+.review-table thead th {
+  background: var(--surface-soft);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--ink-muted);
+}
+.review-table tbody th { width: 30%; font-weight: 600; color: var(--ink); }
+.review-table td { color: var(--ink-soft); }
+.review-table td:last-child { width: 16%; white-space: nowrap; }
+.review-cta { margin-block-start: var(--space-8); }
+@media (max-width: 48rem) {
+  .review-table thead { display: none; }
+  .review-table tr { display: grid; padding: var(--space-4) var(--space-4); border-block-end: 1px solid var(--line-soft); }
+  .review-table tbody tr:last-child { border-block-end: 0; }
+  .review-table th, .review-table td { display: block; width: auto; padding: 0.2rem 0; border: 0; }
+  .review-table td:last-child { white-space: normal; }
+}
+
+/* ======================================================================
+   Vendor evaluation page (layout: comparison)
+   ====================================================================== */
+.nowrap { white-space: nowrap; }
+
+/* Hero summary: the short version, as a lifted card beside the headline. */
+.summary-card {
+  align-self: center;
+  padding: var(--space-6);
+  border: 1px solid var(--edge);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: var(--lift);
+}
+.summary-card h2 { font-size: var(--step-1); letter-spacing: -0.015em; padding: 0; margin: 0 0 var(--space-4); }
+.summary-list { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-4); }
+.summary-list li { padding-block-start: var(--space-4); border-block-start: 1px solid var(--line-soft); font-size: 0.9375rem; color: var(--ink-soft); line-height: 1.55; }
+.summary-list strong { display: block; color: var(--ink); margin-block-end: 0.15rem; }
+.summary-source { margin-block-start: var(--space-4); font-size: 0.8125rem; color: var(--ink-muted); }
+.summary-source p { margin: 0; }
+
+/* In-page navigation that pins under the header, the way a product page's
+   local nav does. The current section is marked with aria-current, so the
+   state is announced, not only shown. */
+.local-nav {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 40;
+  background: var(--bg);
+  border-block-end: 1px solid var(--line-soft);
+}
+.local-nav-inner {
+  display: flex;
+  gap: var(--space-1);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.local-nav a {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0 var(--space-3);
+  border-block-end: 2px solid transparent;
+  color: var(--ink-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.local-nav a:first-child { padding-inline-start: 0; }
+.local-nav a:hover { color: var(--ink); }
+.local-nav a[aria-current="location"] { color: var(--ink); border-block-end-color: var(--ink); }
+/* Anchored sections clear both sticky bars. */
+#matrix, #open-source, #commercial, #decision, #faq { scroll-margin-top: calc(var(--header-h) + 3.5rem); }
+
+/* The matrix: Pain001 in a pinned, rim-lit primary column. */
+.matrix-scroll { margin-block-start: var(--space-12); overflow-x: auto; }
+.matrix { width: 100%; min-width: 44rem; border-collapse: separate; border-spacing: 0; font-size: 0.9375rem; }
+.matrix th, .matrix td { padding: var(--space-4) var(--space-6); text-align: start; vertical-align: top; border-block-end: 1px solid var(--line-soft); line-height: 1.5; }
+.matrix thead th, .matrix thead td { border-block-end: 1px solid var(--ink); vertical-align: bottom; }
+.matrix tbody th { width: 22%; padding-inline-start: 0; color: var(--ink); font-weight: 600; }
+.matrix td { color: var(--ink-soft); }
+.matrix-name { display: block; color: var(--ink); font-size: 1rem; font-weight: 600; letter-spacing: -0.01em; }
+.matrix-sub { display: block; margin-block-start: 0.15rem; color: var(--ink-muted); font-size: 0.8125rem; font-weight: 400; }
+.matrix .is-primary { background: var(--surface-soft); color: var(--ink); border-inline: 1px solid var(--line-soft); }
+.matrix thead .is-primary { border-block-start: 1px solid var(--line-soft); border-start-start-radius: 14px; border-start-end-radius: 14px; }
+.matrix tbody tr:last-child .is-primary { border-end-start-radius: 14px; border-end-end-radius: 14px; }
+.mark { display: inline-block; inline-size: 1.25em; font-weight: 600; }
+.mark-yes { color: var(--green-text); }
+.mark-no { color: var(--ink-muted); }
+
+/* Project and platform cards. */
+.vendor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  gap: var(--space-4);
+  margin: var(--space-12) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.vendor-card {
+  display: grid;
+  align-content: start;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  border: 1px solid var(--edge);
+  border-radius: 14px;
+  background: var(--surface);
+}
+.vendor-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-2); margin: 0; }
+.vendor-top .tag { margin: 0; }
+.vendor-name { font-size: 1.0625rem; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); }
+a.vendor-name { color: var(--accent); }
+.vendor-does { margin: 0; font-size: 0.9375rem; color: var(--ink); line-height: 1.55; }
+.vendor-diff { margin: 0; padding-block-start: var(--space-3); border-block-start: 1px solid var(--line-soft); font-size: 0.875rem; color: var(--ink-soft); line-height: 1.55; }
+.vendor-diff > span { display: block; margin-block-end: 0.2rem; font-size: 0.8125rem; font-weight: 500; color: var(--ink-muted); }
+
+/* Both sides of the ledger, given equal weight. */
+.strengths { display: grid; gap: var(--space-4); margin-block-start: var(--space-8); }
+@media (min-width: 48rem) { .strengths { grid-template-columns: 1fr 1fr; } }
+.strength { padding-block-start: var(--space-6); border-block-start: 1px solid var(--ink); }
+.strength h3 { font-size: var(--step-1); padding: 0; margin-block-end: var(--space-2); }
+.strength p { color: var(--ink-soft); font-size: 0.9375rem; }
+
+/* Decision paths: four persona cards. */
+.paths {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: var(--space-4);
+  margin: var(--space-12) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.path {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  border: 1px solid var(--edge);
+  border-radius: 14px;
+  background: var(--surface);
+}
+.path-for { margin: 0; font-size: 0.8125rem; font-weight: 500; color: var(--ink-muted); }
+.path h3 { font-size: var(--step-1); padding: 0; }
+.path-use { margin: 0; font-size: 0.9375rem; color: var(--ink-soft); }
+.path-use > span { display: block; font-size: 0.8125rem; font-weight: 600; color: var(--ink); margin-block-end: 0.15rem; }
+.path .text-link { margin-block-start: auto; }
+
+/* FAQ: disclosures on hairlines, a plus that turns into a cross. The
+   height animates where the browser can interpolate to `auto`; elsewhere
+   it opens instantly, which is the correct fallback. */
+.faq-wrap { display: grid; gap: var(--space-8); }
+@media (min-width: 64rem) { .faq-wrap { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); } }
+.faq { border-block-start: 1px solid var(--line-soft); interpolate-size: allow-keywords; }
+.faq-item { border-block-end: 1px solid var(--line-soft); }
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-height: 2.75rem;
+  padding: var(--space-4) 0;
+  cursor: pointer;
+  list-style: none;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::marker { content: ""; }
+.faq-item summary::after {
+  content: "+";
+  flex: none;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--ink-muted);
+  transition: transform 200ms ease;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item::details-content { block-size: 0; overflow: hidden; transition: block-size 250ms ease, content-visibility 250ms allow-discrete; }
+.faq-item[open]::details-content { block-size: auto; }
+.faq-answer { padding-block-end: var(--space-6); }
+.faq-answer p { margin: 0; max-width: 64ch; font-size: 0.9375rem; line-height: 1.6; color: var(--ink-soft); }
+
+/* Closing banner. */
+.cta-banner {
+  display: grid;
+  gap: var(--space-6);
+  align-items: center;
+  padding: clamp(var(--space-8), 4vw, var(--space-12));
+  border-radius: 20px;
+  background: var(--accent-soft);
+}
+.cta-banner h2 { font-size: var(--step-2); padding: 0; }
+.cta-banner p { margin-block-start: var(--space-2); color: var(--ink-soft); }
+@media (min-width: 64rem) { .cta-banner { grid-template-columns: 1fr auto; } }
+
+/* On narrow screens the matrix scrolls sideways; its row labels stay
+   pinned so every value keeps its question in view. */
+@media (max-width: 48rem) {
+  .matrix { min-width: 38rem; }
+  .matrix tbody th,
+  .matrix thead td {
+    position: sticky;
+    inset-inline-start: 0;
+    z-index: 1;
+    width: 8.5rem;
+    background: var(--bg);
+    padding-inline-end: var(--space-3);
+  }
+  .matrix th, .matrix td { padding-inline: var(--space-3); }
+}
+.matrix-scroll:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; border-radius: 8px; }
+.path-use code { white-space: nowrap; }
+
+/* /tags/: the topic list, generated at build from the tag pages. */
+.topic-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr)); gap: var(--space-3); margin: var(--space-8) 0 0; padding: 0; list-style: none; }
+.topic-list a { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); min-height: 3.5rem; padding: var(--space-3) var(--space-4); border: 1px solid var(--edge); border-radius: 12px; background: var(--surface); color: var(--ink); font-weight: 600; text-decoration: none; }
+.topic-list a:hover { background: var(--surface-soft); }
+.topic-count { font-size: 0.8125rem; font-weight: 400; color: var(--ink-muted); }
+
+/* Article contents as a sticky rail beside the text from 72rem. Below
+   that it stays the box at the top of the article.
+
+   A real two-column grid, not an absolutely positioned rail: the first
+   version sat the rail beside a 68ch column and let tables widen past
+   that column, so tables ran underneath it. Here every article child is
+   placed in column 1 and the rail alone in column 2, so nothing can
+   occupy the rail's space. The current section is marked by the
+   local-nav script (aria-current="location"). */
+.article-toc a[aria-current="location"] { color: var(--ink); font-weight: 600; text-decoration: none; }
+@media (min-width: 72rem) {
+  .content-body:has(> .article-toc) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 15rem;
+    column-gap: var(--space-16);
+    align-items: start;
+    max-width: none;
+  }
+  .content-body:has(> .article-toc) > * { grid-column: 1; min-width: 0; max-width: 68ch; }
+  .content-body:has(> .article-toc) > :is(.table-responsive, div[lang]) { max-width: none; }
+  .content-body:has(> .article-toc) > div[lang] > :not(.table-responsive) { max-width: 68ch; }
+  .content-body > .article-toc {
+    grid-column: 2;
+    grid-row: 1 / span 999;
+    align-self: stretch;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+  }
+  .content-body > .article-toc .toc-inner {
+    position: sticky;
+    top: calc(var(--header-h) + var(--space-8));
+    max-block-size: calc(100vh - var(--header-h) - var(--space-16));
+    overflow-y: auto;
+    padding-inline-start: var(--space-4);
+    border-inline-start: 1px solid var(--line-soft);
+  }
+  .content-body > .article-toc ol { padding-inline-start: 1.1rem; font-size: 0.875rem; }
+  .content-body > .article-toc li + li { margin-block-start: var(--space-1); }
+  /* Tables fill the text column, never beyond it. */
+  .content-body:has(> .article-toc) .table-responsive { inline-size: 100%; }
+}
+
+/* Questions promoted from bold paragraphs keep the weight of a question,
+   not the size of a section heading. */
+.content-body .promoted { font-size: 1.125rem; letter-spacing: -0.01em; line-height: 1.35; margin-block: 1.8em 0.4em; padding: 0; }
+
+/* Footer motion toggle: a pressed state, not a changing label. */
+.motion-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.75rem;
+  padding: 0 0.9rem;
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-soft);
+  font: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+.motion-toggle::before { content: ""; inline-size: 0.6rem; block-size: 0.6rem; border-radius: 50%; box-shadow: inset 0 0 0 1.5px currentColor; }
+.motion-toggle[aria-pressed="true"] { border-color: var(--ink); color: var(--ink); }
+.motion-toggle[aria-pressed="true"]::before { background: currentColor; }
+.motion-toggle:hover { border-color: var(--line); }
+html.no-js .motion-toggle { display: none; }
+
+/* ssg's named, focusable table region is the element that should scroll;
+   left visible, an unnamed wrapper around it did the scrolling instead. */
+.content-body .ssg-table-scroll { overflow-x: auto; max-inline-size: 100%; }

@@ -10,13 +10,13 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Every pain.002 status code (RJCT, ACWC, PART…) and the ISO reason codes behind rejections — AC01, AM10, FF01, DU01, RR01 — with the typical cause and the practical fix for each."
+description: "Every pain.002 status code (RJCT, ACWC, PART…) and the ISO reason codes behind rejections (AC01, AM10, FF01, DU01, RR01), with the typical cause and the practical fix for each."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/pain002-reason-codes/"
-image_alt: "A question-and-answer session on ISO 20022 payment file generation — the questions treasury, operations, engineering, and audit teams actually ask."
+image_alt: "A question-and-answer session on ISO 20022 payment file generation, covering the questions treasury, operations, engineering, and audit teams actually ask."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -37,7 +37,7 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "The status and reason codes your bank sends back — decoded, with the typical cause and the practical fix for each."
+subtitle: "The status and reason codes your bank sends back, decoded, with the typical cause and the practical fix for each."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
 title: "pain.002 Reason Codes: Why Banks Reject Payment Files"
@@ -47,7 +47,7 @@ atom_link: "https://pain001.com/pain002-reason-codes/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Every pain.002 status code (RJCT, ACWC, PART…) and the ISO reason codes behind rejections — AC01, AM10, FF01, DU01, RR01 — with the typical cause and the practical fix for each."
+item_description: "Every pain.002 status code (RJCT, ACWC, PART…) and the ISO reason codes behind rejections (AC01, AM10, FF01, DU01, RR01), with the typical cause and the practical fix for each."
 item_guid: "https://pain001.com/pain002-reason-codes/rss.xml"
 item_link: "https://pain001.com/pain002-reason-codes/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -68,7 +68,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Every pain.002 status code (RJCT, ACWC, PART…) and the ISO reason codes behind rejections — AC01, AM10, FF01, DU01, RR01 — with the typical cause and the practical fix for each."
+twitter_description: "Every pain.002 status code (RJCT, ACWC, PART…) and the ISO reason codes behind rejections (AC01, AM10, FF01, DU01, RR01), with the typical cause and the practical fix for each."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
@@ -83,7 +83,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Reference"
-excerpt: "A working reference for pain.002 Customer Payment Status Reports: the nine status codes from RCVD to RJCT, and the ISO External Status Reason codes operations teams actually meet — format failures like FF01 and AM10, account failures like AC01 and AC04, mandate and regulatory codes — each with cause and fix, plus how to parse responses automatically."
+excerpt: "A working reference for pain.002 Customer Payment Status Reports: the nine status codes from RCVD to RJCT, and the ISO External Status Reason codes operations teams actually meet: format failures like FF01 and AM10, account failures like AC01 and AC04, and mandate and regulatory codes, each with cause and fix, plus how to parse responses automatically."
 last_reviewed: "2026-07-26"
 
 
@@ -91,30 +91,30 @@ last_reviewed: "2026-07-26"
 
 ## How to read a pain.002
 
-When your bank answers a `pain.001` or `pain.008`, the `pain.002` Customer Payment Status Report carries a **status** at up to three levels — group (`GrpSts`), payment information block (`PmtInfSts`), and individual transaction (`TxSts`) — plus zero or more **status reason codes** explaining any non-acceptance. The codes come from the ISO 20022 External Code Sets (`ExternalStatusReason1Code`), which is the canonical registry; this page covers the codes payment-operations teams actually meet, with the usual cause and the practical fix.
+When your bank answers a `pain.001` or `pain.008`, the `pain.002` Customer Payment Status Report carries a **status** at up to three levels: group (`GrpSts`), payment information block (`PmtInfSts`), and individual transaction (`TxSts`). It also carries zero or more **status reason codes** explaining any non-acceptance. The codes come from the ISO 20022 External Code Sets (`ExternalStatusReason1Code`), which is the canonical registry; this page covers the codes payment-operations teams actually meet, with the usual cause and the practical fix.
 
 ## 01. Status codes: how bad is it?
 
 | Status | Meaning | What to do |
 | :--- | :--- | :--- |
-| `RCVD` | Received — arrived, not yet checked | Nothing yet. |
-| `ACTC` | Accepted, technical validation passed | Nothing — syntax and schema are fine. |
+| `RCVD` | Received: arrived, not yet checked | Nothing yet. |
+| `ACTC` | Accepted, technical validation passed | Nothing. Syntax and schema are fine. |
 | `ACCP` | Accepted, customer profile checks passed | Nothing. |
 | `ACSP` | Accepted, settlement in process | Nothing. |
-| `ACSC` | Accepted, settlement completed | Done — reconcile against camt.053. |
-| `ACWC` | Accepted **with change** — the bank altered something | Read the changes; fix your source data so the bank stops "helping". |
-| `PART` | Partially accepted — some transactions rejected | Check per-transaction `TxSts`; resubmit only the rejected ones. |
-| `PDNG` | Pending — further checks ongoing | Wait; investigate only if it persists past the bank's stated window. |
+| `ACSC` | Accepted, settlement completed | Done. Reconcile against camt.053. |
+| `ACWC` | Accepted **with change** (the bank altered something) | Read the changes; fix your source data so the bank stops "helping". |
+| `PART` | Partially accepted: some transactions rejected | Check per-transaction `TxSts`; resubmit only the rejected ones. |
+| `PDNG` | Pending, with further checks ongoing | Wait; investigate only if it persists past the bank's stated window. |
 | `RJCT` | Rejected | Read the reason codes below; repair; resubmit. |
 
 ## 02. Format and schema failures
 
-The rejections Pain001 exists to make impossible — every one of these is caught by the [validation gate](/try/) before submission:
+The rejections Pain001 exists to make impossible. Every one of these is caught by the [validation gate](/try/) before submission:
 
 | Code | Name | Typical cause | Fix |
 | :--- | :--- | :--- | :--- |
 | `FF01` | Invalid file format | Wrong schema version, malformed XML, wrong namespace | Validate against the exact XSD your bank profiles (`pain001 --dry-run`). |
-| `AM10` | Invalid control sum | `CtrlSum` doesn't match the sum of amounts | Never hand-compute totals — Pain001 recomputes `NbOfTxs`/`CtrlSum` from the records. |
+| `AM10` | Invalid control sum | `CtrlSum` doesn't match the sum of amounts | Never hand-compute totals: Pain001 recomputes `NbOfTxs`/`CtrlSum` from the records. |
 | `AM01` | Zero amount | An amount of 0 slipped through | Filter zero rows at source. |
 | `AM02` | Amount not allowed | Above a scheme or account limit | Check scheme ceilings and account mandates. |
 | `AM03` | Currency not allowed | Currency not supported on the account/scheme | SEPA schemes are EUR-only; use the cross-border rulebook otherwise. |
@@ -128,7 +128,7 @@ The rejections Pain001 exists to make impossible — every one of these is caugh
 
 | Code | Name | Typical cause | Fix |
 | :--- | :--- | :--- | :--- |
-| `AC01` | Incorrect account number | IBAN fails validation or doesn't exist | Mod-97 check before submission — the [demo](/try/) shows this live. |
+| `AC01` | Incorrect account number | IBAN fails validation or doesn't exist | Mod-97 check before submission. The [demo](/try/) shows this live. |
 | `AC03` | Invalid creditor account | Creditor IBAN wrong or closed | Verify against the invoice/master data. |
 | `AC04` | Closed account | Account has been closed | Contact the counterparty for current details. |
 | `AC06` | Blocked account | Account blocked for this transaction type | Counterparty must resolve with their bank. |
@@ -141,11 +141,11 @@ The rejections Pain001 exists to make impossible — every one of these is caugh
 | Code | Name | Typical cause | Fix |
 | :--- | :--- | :--- | :--- |
 | `BE01` | Inconsistent with end customer | Name doesn't match the account | Fix creditor master data; this is what Verification of Payee checks pre-submission. |
-| `BE04` | Missing creditor address | Address absent where required | From 14 Nov 2026, CBPR+ requires structured or hybrid addresses — see the [roadmap](/iso20022-roadmap/). |
+| `BE04` | Missing creditor address | Address absent where required | CBPR+ will require structured or hybrid addresses; the date is due by December 2026 (see the [roadmap](/iso20022-roadmap/)). |
 | `BE05` | Unrecognised initiating party | Initiating party not authorised on the account | Check the bank mandate for the submitting entity. |
 | `MD01` | No mandate | Direct debit without a valid mandate | Collect/register the mandate before collecting funds. |
 | `MD02` | Missing mandate information | Mandate data incomplete in the pain.008 | Populate all mandate-related fields. |
-| `MD07` | End customer deceased | — | Close the mandate. |
+| `MD07` | End customer deceased | n/a | Close the mandate. |
 | `RR01`–`RR04` | Regulatory reasons | Missing debtor/creditor identification, name, address, or other regulatory data | Populate the party data your corridor requires; structured addresses solve most of these. |
 | `AM04` | Insufficient funds | Not a format problem | Treasury, not toolchain. |
 | `MS02` / `MS03` | Reason not specified (customer / bank generated) | The bank chose not to say | Call the bank; often accompanies sanctions or internal-policy holds. |
@@ -170,7 +170,7 @@ for tx in report["payment_statuses"]:
 
 ### Validating the response before you trust it
 
-The parser reads whichever pain.002 version your bank sends — it detects the namespace rather than assuming one. If you want the response checked against the official ISO schema first, pass `validate=True`:
+The parser reads whichever pain.002 version your bank sends. It detects the namespace rather than assuming one. If you want the response checked against the official ISO schema first, pass `validate=True`:
 
 ```python
 from pain001.pain002 import bundled_schema_versions, parse_pain002_report
@@ -182,4 +182,4 @@ Pain001 bundles the ISO schemas for `pain.002.001.03` (what SEPA banks commonly 
 
 The [MCP server](/pain001-mcp/) exposes the same parser to AI agents as `parse_pain002`, and the [payment-lifecycle guide](/payments/) shows where status handling sits in the full pipeline.
 
-> **Canonical source.** Code definitions live in the ISO 20022 External Code Sets, maintained at [iso20022.org/catalogue-messages/additional-content-messages/external-code-sets](https://www.iso20022.org/catalogue-messages/additional-content-messages/external-code-sets "ISO 20022 External Code Sets registry") and revised quarterly. Bank implementation guides may narrow — but not contradict — these meanings. Spot an inaccuracy? [Report it](https://github.com/sebastienrousseau/pain001.github.io/issues).
+> **Canonical source.** Code definitions live in the ISO 20022 External Code Sets, maintained at [iso20022.org/catalogue-messages/additional-content-messages/external-code-sets](https://www.iso20022.org/catalogue-messages/additional-content-messages/external-code-sets "ISO 20022 External Code Sets registry") and revised quarterly. Bank implementation guides may narrow, but not contradict, these meanings. Spot an inaccuracy? [Report it](https://github.com/sebastienrousseau/pain001.github.io/issues).

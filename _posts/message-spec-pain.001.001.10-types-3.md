@@ -36,10 +36,10 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "Types PostalAddress24 – TaxRecordDetails2 in pain.001.001.10, defined once each — the view to use for field mapping."
+subtitle: "Types PostalAddress24 – TaxRecordDetails2 in pain.001.001.10, defined once each. This is the view to use for field mapping."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "pain.001.001.10 type reference (part 3 of 3) — PostalAddress24 – TaxRecordDetails2"
+title: "pain.001.001.10 type reference (part 3 of 3): PostalAddress24 – TaxRecordDetails2"
 url: "https://pain001.com/message-spec-pain.001.001.10-types-3/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/message-spec-pain.001.001.10-types-3/"
@@ -50,7 +50,7 @@ item_description: "Complex types PostalAddress24 – TaxRecordDetails2 in ISO 20
 item_guid: "https://pain001.com/message-spec-pain.001.001.10-types-3/"
 item_link: "https://pain001.com/message-spec-pain.001.001.10-types-3/"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "pain.001.001.10 type reference (part 3 of 3) — PostalAddress24 – TaxRecordDetails2"
+item_title: "pain.001.001.10 type reference (part 3 of 3): PostalAddress24 – TaxRecordDetails2"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "pain.001.001.10 type reference (part 3 of 3) — PostalAddress24 – TaxRecordDetails2"
+apple-mobile-web-app-title: "pain.001.001.10 type reference (part 3 of 3): PostalAddress24 – TaxRecordDetails2"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,7 +71,7 @@ twitter_description: "Complex types PostalAddress24 – TaxRecordDetails2 in ISO
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "pain.001.001.10 type reference (part 3 of 3) — PostalAddress24 – TaxRecordDetails2"
+twitter_title: "pain.001.001.10 type reference (part 3 of 3): PostalAddress24 – TaxRecordDetails2"
 twitter_url: "https://pain001.com/message-spec-pain.001.001.10-types-3/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -88,13 +88,13 @@ last_reviewed: "2026-07-26"
 
 ---
 
-Complex types in ISO 20022 `pain.001.001.10`, generated from the official XSD. **Part 3 of 3** — `PostalAddress24 – TaxRecordDetails2`.
+Complex types in ISO 20022 `pain.001.001.10`, generated from the official XSD. **Part 3 of 3**: `PostalAddress24 – TaxRecordDetails2`.
 
 [Part 1](/message-spec-pain.001.001.10-types/) · [Part 2](/message-spec-pain.001.001.10-types-2/) · **Part 3**
 
 Each type is defined once here. The [message structure](/message-spec-pain.001.001.10/) repeats a party or address block under every party; this view does not, which is what you want when mapping source fields.
 
-A **choice** type means the children are alternatives — supply one, not all. Cardinality in **bold** is required.
+A **choice** type means the children are alternatives: supply one, not all. Cardinality in **bold** is required.
 
 ## `PostalAddress24`
 
@@ -124,14 +124,14 @@ A **choice** type means the children are alternatives — supply one, not all. C
 | `Tp` | 0..1 | `ProxyAccountType1Choice` |  |
 | `Id` | **1..1** | `Max2048Text` | length 1–2048 |
 
-## `ProxyAccountType1Choice` *(choice — supply one)*
+## `ProxyAccountType1Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
 | `Cd` | **1..1** | `ExternalProxyAccountType1Code` | length 1–4 |
 | `Prtry` | **1..1** | `Max35Text` | length 1–35 |
 
-## `Purpose2Choice` *(choice — supply one)*
+## `Purpose2Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
@@ -147,7 +147,7 @@ A **choice** type means the children are alternatives — supply one, not all. C
 | `RltdDt` | 0..1 | `ISODate` |  |
 | `LineDtls` | 0..* | `DocumentLineInformation1` |  |
 
-## `ReferredDocumentType3Choice` *(choice — supply one)*
+## `ReferredDocumentType3Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
@@ -220,7 +220,7 @@ A **choice** type means the children are alternatives — supply one, not all. C
 | `ElctrncAdr` | 0..1 | `Max2048Text` | length 1–2048 |
 | `PstlAdr` | 0..1 | `NameAndAddress16` |  |
 
-## `ServiceLevel8Choice` *(choice — supply one)*
+## `ServiceLevel8Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
@@ -274,7 +274,7 @@ A **choice** type means the children are alternatives — supply one, not all. C
 | `Tp` | 0..1 | `TaxAmountType1Choice` |  |
 | `Amt` | **1..1** | `ActiveOrHistoricCurrencyAndAmount` |  |
 
-## `TaxAmountType1Choice` *(choice — supply one)*
+## `TaxAmountType1Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
