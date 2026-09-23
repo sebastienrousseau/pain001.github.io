@@ -94,6 +94,11 @@ All notable changes to this website are documented here. The format follows
 
 ### Fixed
 
+- The tag pages laid out their 386 entries with CSS columns; balancing
+  them was a 270ms layout task on a tablet, and on a loaded CI runner
+  enough of it landed after first paint to score 99 and block the first
+  deploy of this release. The list is a grid now, and entries below the
+  fold are not laid out until scrolled to.
 - Deadline content corrected site-wide, in all 35 languages: on 27 August
   2026 Swift deferred every payments change in Standards Release 2026,
   including the 14 November 2026 rule against unstructured postal
