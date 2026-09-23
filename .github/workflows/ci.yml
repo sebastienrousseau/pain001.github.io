@@ -26,7 +26,10 @@ env:
 jobs:
   build-and-audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # The gate set takes about 32 minutes: Lighthouse over five profiles
+    # is 14 of them and the site-wide axe scan 11. The limit is headroom,
+    # not a target; at 30 the last step was cancelled mid-scan.
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
