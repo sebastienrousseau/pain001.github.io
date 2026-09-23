@@ -283,6 +283,8 @@ CI fails on any of these; run them locally before opening a PR.
 | Suite version currency | `scripts/validate_versions.py` |
 | Documentation snippets reference the real API | `scripts/validate_snippets.py` (with `pain001` installed) |
 | Layout and print integrity, real Chrome | `node scripts/layout_audit.cjs`, `node scripts/print_audit.cjs` |
+| Reading measure, real Chrome: no squashed column, title or paragraph, no sideways scroll, every page at four widths | `node scripts/measure_audit.cjs --all` |
+| Dated regulatory claims still match their primary sources (weekly, `dated-claims.yml`) | `python3 scripts/check_dated_claims.py` (`scripts/dated_claims.json`) |
 | Colour contrast 7:1 for text in both themes and Display P3 | `python3 scripts/validate_contrast.py` |
 | Every page in both themes, WAVE-documented rules plus axe AAA | `CONCURRENCY=2 node scripts/audit_site.mjs` |
 | Lighthouse 100 in all four categories: mobile, tablet, desktop, 4K and 8K | `node scripts/perf_budget.mjs http://127.0.0.1:8898` (gzip server: `node scripts/serve_audit.mjs`) |
@@ -340,7 +342,12 @@ browsers ignore `frame-ancestors`; GitHub Pages cannot set response headers.
 Framing is therefore not restricted at the origin. The fix is a Cloudflare
 response-header Transform Rule adding `Content-Security-Policy:
 frame-ancestors 'none'`, which is configured in the Cloudflare dashboard
-rather than in this repository. The site holds no credentials, session state
+rather than in this repository. Three more Cloudflare rules belong with it,
+because GitHub Pages behind the proxy answers 200 on every variant of a URL
+and Search Console then reports each as an alternative page: Always Use HTTPS
+(SSL/TLS, Edge Certificates), a 301 from `www.pain001.com` to the apex, and a
+redirect rule that sends `/index.html` and slash-less paths to the canonical
+trailing-slash URL. The site holds no credentials, session state
 or authenticated actions, so the exposure is limited to UI redressing.
 
 ## Documentation

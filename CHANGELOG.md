@@ -147,6 +147,36 @@ All notable changes to this website are documented here. The format follows
   inlined in the head under a CSP hash. Lighthouse had put a third of
   the mobile first paint on that request and scored 99 on the tablet
   and locale home pages.
+- Search Console coverage: `/404/` was served with a 200 and indexable (a
+  soft 404) and GitHub Pages never showed it for a missing URL; it is now
+  published as `/404.html` and, with the offline fallback and the form
+  confirmation page, carries robots noindex and stays out of the sitemap.
+  The README names the three Cloudflare rules (HTTPS, www, trailing slash)
+  that stop `http://`, `www.`, `/index.html` and slash-less URLs answering
+  200 as alternates of the canonical page.
+- Reference pages read as a squashed left column: the contents rail was
+  only built from four sections, so a three-section page had a 68ch column
+  and nothing beside it, and titles at the display step wrapped three to
+  six lines. The rail now starts at two sections and is 18rem wide, article
+  titles are one step smaller and span the container, and table columns
+  have a 9rem floor so a wide table scrolls instead of crushing a column
+  beside an unbreakable file name.
+- The 34 type-reference pages carried the span of type names in their
+  title (up to 120 characters, three lines on a laptop); the span stays in
+  the subtitle and description, and the headline ratchet drops from 292 to
+  258 over-long H1s.
+- ssg's search widget (button, dialog, placeholder and the Esc, arrow and
+  Enter hints) read "Search" in English on every translated page; it now
+  follows the locale string table.
+- Two enterprise sentences on the Why and Executive brief pages were English
+  in all 34 translations; the executive-brief eyebrow and title in six
+  languages, and a handful of table headers and labels, were untranslated.
+- `build.sh` takes a lock so two builds cannot run in the same tree, and
+  retries the staging clean-up once. ssg itself joins every thread before it
+  exits, so the transient "Directory not empty" seen once could only have
+  been a second writer in the tree.
+- The photo band at the top of a page is capped at 24rem tall from 64rem,
+  so on a laptop the headline no longer starts below the fold.
 - French pages fetched 36 KB of the latin-ext Inter subset for the
   single "œ" in "cœur": both subsets declared U+0153 and the later
   declaration wins. The ext faces are now declared first, so the
@@ -159,6 +189,20 @@ All notable changes to this website are documented here. The format follows
 
 ### Added
 
+- `scripts/check_dated_claims.py` and `dated-claims.yml`: the dated regulatory
+  claims the pitch depends on (Swift's Standards Release 2026 deferral and its
+  promised December update, the Fedwire release moved to November 2027, the
+  CHAPS purpose-code mandate) are listed in `scripts/dated_claims.json` with
+  the sentence each source must still contain and a review date. A weekly run
+  fails the moment a source changes or a review date passes. swift.com refuses
+  non-browser clients, so it is read through the Internet Archive after asking
+  it for a fresh capture.
+- `scripts/measure_audit.cjs`: every page at phone, tablet, laptop and desktop
+  widths in real Chrome, failing on a reading column under 55% of its
+  container, a title over three lines, a paragraph narrower than a phone, or
+  a page that scrolls sideways. The layout audit caught cropping; nothing
+  caught the opposite, and the reference pages shipped with the body on 60%
+  of the container and titles on three to six lines.
 - `scripts/validate_contrast.py`: every token pair, both schemes and both
   gamuts, at 7:1 for text and 3:1 for borders and focus; the two dark blocks
   must agree.
