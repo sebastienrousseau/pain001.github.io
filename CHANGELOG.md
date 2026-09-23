@@ -94,6 +94,11 @@ All notable changes to this website are documented here. The format follows
 
 ### Fixed
 
+- The first deploy of this release was invisible: a Cloudflare page rule
+  cached every page at the edge for seven days, so the live site kept
+  serving a four-day-old copy after a successful deploy. The edge TTL
+  override is removed (the edge now follows the origin's ten-minute
+  `max-age`) and the cache was purged; the README records the rule.
 - The element and type reference pages (up to 1,600 elements, five wide
   tables) lost the last Lighthouse point on a busy runner to layout work
   that landed after first paint. Tables below the fold are no longer laid

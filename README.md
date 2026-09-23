@@ -342,12 +342,17 @@ browsers ignore `frame-ancestors`; GitHub Pages cannot set response headers.
 Framing is therefore not restricted at the origin. The fix is a Cloudflare
 response-header Transform Rule adding `Content-Security-Policy:
 frame-ancestors 'none'`, which is configured in the Cloudflare dashboard
-rather than in this repository. Two more settings live there: Always Use
-HTTPS (SSL/TLS, Edge Certificates), and a redirect rule that sends any
+rather than in this repository. Three more settings live there: Always Use
+HTTPS (SSL/TLS, Edge Certificates); a redirect rule that sends any
 `/index.html` URL to its directory URL with a 301, because GitHub Pages serves
 both with a 200 and Search Console then lists one as an alternative of the
-other. GitHub Pages itself redirects `www` to the apex and slash-less paths
-to the trailing slash. The site holds no credentials, session state
+other; and a page rule on `pain001.com/*` that caches everything at the edge
+with a two-minute browser TTL and no edge TTL override, so the edge follows
+the origin's ten-minute `max-age`. Until 23 September 2026 that rule pinned
+the edge TTL to seven days, which kept every deploy invisible for up to a
+week; a deploy that does not appear within ten minutes means the rule has
+regained an edge TTL. GitHub Pages itself redirects `www` to the apex and
+slash-less paths to the trailing slash. The site holds no credentials, session state
 or authenticated actions, so the exposure is limited to UI redressing.
 
 ## Documentation
