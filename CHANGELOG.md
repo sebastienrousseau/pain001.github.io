@@ -101,10 +101,11 @@ All notable changes to this website are documented here. The format follows
   `max-age`) and the cache was purged; the README records the rule.
 - The element and type reference pages (up to 1,600 elements, five wide
   tables) lost the last Lighthouse point on a busy runner to layout work
-  that landed after first paint. Tables below the fold are no longer laid
-  out until scrolled to, and the gate measures a performance-only 99 a
-  second time, as Lighthouse recommends, so runner load cannot block a
-  deploy while a real regression still fails twice.
+  that landed after first paint. The gate now measures a performance-only
+  99 a second time, as Lighthouse recommends, so runner load cannot block
+  a deploy while a real regression still fails twice. (Skipping layout of
+  off-screen tables was tried and reverted: links inside them then have no
+  size and fail the touch-target audit.)
 - The tag pages laid out their 386 entries with CSS columns; balancing
   them was a 270ms layout task on a tablet, and on a loaded CI runner
   enough of it landed after first paint to score 99 and block the first

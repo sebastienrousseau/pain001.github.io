@@ -163,17 +163,6 @@
   max-inline-size: none;
   margin-block: var(--space-6) var(--space-8);
 }
-/* A reference page carries five wide tables and 1,600 elements; laying
-   them all out before first paint was the layout task that cost the last
-   Lighthouse point on a busy runner. Tables below the fold wait until
-   scrolled to. Screen only: print lays everything out, as its audit
-   expects. */
-@media screen {
-  .content-body .table-responsive {
-    content-visibility: auto;
-    contain-intrinsic-block-size: auto 30rem;
-  }
-}
 .content-body table { border-collapse: collapse; inline-size: 100%; margin-block: 1.5rem 2rem; font-size: 0.9375rem; }
 .content-body .table-responsive > table { margin: 0; }
 .content-body :where(th, td) { border-block-end: 1px solid var(--line-soft); padding: 0.875rem 1.25rem 0.875rem 0; text-align: start; vertical-align: top; line-height: 1.5; }
