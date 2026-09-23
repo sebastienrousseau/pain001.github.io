@@ -417,8 +417,12 @@ async function loadCorpusSamples() {
       group.appendChild(opt);
     }
     els.sampleSelect.appendChild(group);
-    // /try/?sample=corpus:<scenario id> opens a scenario page's example directly
-    const wanted = new URLSearchParams(location.search).get("sample");
+    // /try/#sample=corpus:<scenario id> opens a scenario page's example
+    // directly. The fragment is what the corpus pages link to (a query
+    // string made every scenario a separate URL for crawlers); the query
+    // form still works for links already out there.
+    const wanted = new URLSearchParams(location.hash.replace(/^#/, "")).get("sample")
+      || new URLSearchParams(location.search).get("sample");
     if (wanted && CORPUS.has(wanted)) {
       els.sampleSelect.value = wanted;
       els.sampleSelect.dispatchEvent(new Event("change"));

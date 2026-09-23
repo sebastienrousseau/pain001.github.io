@@ -120,7 +120,7 @@ Because conversion without validation is how malformed files reach banks. A conv
 
 2. **Parse the MT101 you already produce**, keep the records, and generate the XML with `pain001` for the edition and rail your bank names. The records are plain dictionaries, so the fields MT101 does not carry and the schema requires, which the loader synthesises with documented defaults, can be set from your own master data before generation.
 
-3. **Prove it before the first live file.** Run the result through the [browser demo](/try/?sample=corpus:gb.international.usd), which executes the real library in your browser and shows the three verdicts and the ISO 20022 JSON twin; nothing leaves your machine. The cross-border scenario loaded by that link is the shape most MT101 traffic takes.
+3. **Prove it before the first live file.** Run the result through the [browser demo](/try/#sample=corpus:gb.international.usd), which executes the real library in your browser and shows the three verdicts and the ISO 20022 JSON twin; nothing leaves your machine. The cross-border scenario loaded by that link is the shape most MT101 traffic takes.
 
 ## When to ask for help
 

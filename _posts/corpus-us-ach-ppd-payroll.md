@@ -103,7 +103,7 @@ The twin is the same payment in the ISO 20022 Registration Authority's JSON conv
 
 ## Run it in your browser
 
-[Open this scenario in the demo](/try/?sample=corpus:us.ach.ppd-payroll): the pain001 library loads in a Python runtime in your browser, rebuilds the file from the 2 record(s) below, checks it against the `us-ach` rulebook and the official XSD, and shows the JSON twin. Nothing leaves your machine.
+[Open this scenario in the demo](/try/#sample=corpus:us.ach.ppd-payroll): the pain001 library loads in a Python runtime in your browser, rebuilds the file from the 2 record(s) below, checks it against the `us-ach` rulebook and the official XSD, and shows the JSON twin. Nothing leaves your machine.
 
 The flat records the library rebuilds it from (the CSV pipeline's own column names):
 

@@ -105,7 +105,7 @@ Le jumeau est le même paiement dans la convention JSON de l'autorité d'enregis
 
 ## L'exécuter dans votre navigateur
 
-[Ouvrir ce scénario dans la démo](/fr/try/?sample=corpus:ch.international.usd) : la bibliothèque pain001 se charge dans un environnement Python de votre navigateur, reconstruit le fichier à partir des 1 enregistrement(s) ci-dessous, le vérifie contre les règles `cbpr-cross-border` et le XSD officiel, puis affiche le jumeau JSON. Rien ne quitte votre machine.
+[Ouvrir ce scénario dans la démo](/fr/try/#sample=corpus:ch.international.usd) : la bibliothèque pain001 se charge dans un environnement Python de votre navigateur, reconstruit le fichier à partir des 1 enregistrement(s) ci-dessous, le vérifie contre les règles `cbpr-cross-border` et le XSD officiel, puis affiche le jumeau JSON. Rien ne quitte votre machine.
 
 Les enregistrements à plat dont la bibliothèque repart (les noms de colonnes du pipeline CSV) :
 

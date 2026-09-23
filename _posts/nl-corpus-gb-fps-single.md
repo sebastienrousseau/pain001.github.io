@@ -105,7 +105,7 @@ De tweeling is dezelfde betaling in de JSON-conventie van de ISO 20022 Registrat
 
 ## Voer het uit in uw browser
 
-[Open dit scenario in de demo](/nl/try/?sample=corpus:gb.fps.single): de pain001-bibliotheek laadt in een Python-runtime in uw browser, bouwt het bestand opnieuw op uit de 1 record(s) hieronder, controleert het tegen het rulebook `uk-fps` en de officiële XSD, en toont de JSON-tweeling. Niets verlaat uw computer.
+[Open dit scenario in de demo](/nl/try/#sample=corpus:gb.fps.single): de pain001-bibliotheek laadt in een Python-runtime in uw browser, bouwt het bestand opnieuw op uit de 1 record(s) hieronder, controleert het tegen het rulebook `uk-fps` en de officiële XSD, en toont de JSON-tweeling. Niets verlaat uw computer.
 
 De platte records waaruit de bibliotheek het opnieuw opbouwt (de kolomnamen van de CSV-pipeline zelf):
 

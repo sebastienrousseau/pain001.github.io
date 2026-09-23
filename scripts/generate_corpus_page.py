@@ -392,7 +392,10 @@ def scenario_page(sid: str, recs: list[dict], version: str, sample: dict | None,
     else:
         lines.append("")
     if sample:
-        demo = f"/try/?sample=corpus:{sid}" if locale == "en" else f"/{locale}/try/?sample=corpus:{sid}"
+        # A fragment, not a query string: Search Console listed 41
+        # /try/?sample=… variants as alternates of /try/; a fragment is
+        # the same URL to a crawler and the demo reads either.
+        demo = f"/try/#sample=corpus:{sid}" if locale == "en" else f"/{locale}/try/#sample=corpus:{sid}"
         lines += [
             f"## {t['h_run']}",
             "",
@@ -479,7 +482,7 @@ def write_index(files: list[dict], version: str) -> None:
             "page": f"{base}/{scenario_slug(sid)}/",
             "confidence": (first.get("provenance") or {}).get("confidence"),
             "rails": [p for p in ((first.get("validation") or {}).get("profiles") or {}) if p != "anti-duplicate"],
-            "demo": f"{base}/try/?sample=corpus:{sid}" if sid in samples else None,
+            "demo": f"{base}/try/#sample=corpus:{sid}" if sid in samples else None,
             "editions": editions,
         })
     (STATIC / "index.json").write_text(json.dumps({

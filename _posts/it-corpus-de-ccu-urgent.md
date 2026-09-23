@@ -105,7 +105,7 @@ Il gemello è lo stesso pagamento nella convenzione JSON della Registration Auth
 
 ## Eseguilo nel tuo browser
 
-[Apri questo scenario nella demo](/it/try/?sample=corpus:de.ccu.urgent): la libreria pain001 si carica in un runtime Python nel tuo browser, ricostruisce il file dai 1 record qui sotto, lo verifica rispetto al regolamento `de-ccu` e all'XSD ufficiale e mostra il gemello JSON. Nulla lascia la tua macchina.
+[Apri questo scenario nella demo](/it/try/#sample=corpus:de.ccu.urgent): la libreria pain001 si carica in un runtime Python nel tuo browser, ricostruisce il file dai 1 record qui sotto, lo verifica rispetto al regolamento `de-ccu` e all'XSD ufficiale e mostra il gemello JSON. Nulla lascia la tua macchina.
 
 I record piatti da cui la libreria lo ricostruisce (i nomi di colonna della pipeline CSV):
 

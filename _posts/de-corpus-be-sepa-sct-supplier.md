@@ -105,7 +105,7 @@ Der Zwilling ist dieselbe Zahlung in der JSON-Konvention der ISO-20022-Registrie
 
 ## Im Browser ausführen
 
-[Dieses Szenario in der Demo öffnen](/de/try/?sample=corpus:be.sepa.sct-supplier): Die pain001-Bibliothek wird in einer Python-Laufzeit in Ihrem Browser geladen, baut die Datei aus den unten stehenden Datensätzen (1) neu auf, prüft sie gegen das Regelwerk `sepa-sct` und die offizielle XSD und zeigt den JSON-Zwilling. Nichts verlässt Ihren Rechner.
+[Dieses Szenario in der Demo öffnen](/de/try/#sample=corpus:be.sepa.sct-supplier): Die pain001-Bibliothek wird in einer Python-Laufzeit in Ihrem Browser geladen, baut die Datei aus den unten stehenden Datensätzen (1) neu auf, prüft sie gegen das Regelwerk `sepa-sct` und die offizielle XSD und zeigt den JSON-Zwilling. Nichts verlässt Ihren Rechner.
 
 Die flachen Datensätze, aus denen die Bibliothek die Datei neu aufbaut (die Spaltennamen der CSV-Pipeline):
 

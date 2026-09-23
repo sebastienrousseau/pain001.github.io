@@ -42,6 +42,15 @@ def resolve(path: str) -> Path | None:
     alt = site / path.strip("/") / "index.html"
     return alt if alt.exists() else None
 
+
+
+def demo_parameter(path: str, fragment: str) -> bool:
+    """The demo's deep link, /try/#sample=corpus:<id>, is a parameter the
+    page script reads, not an anchor: a fragment rather than a query string
+    so that 252 scenario links are one URL to a crawler, not 252."""
+    return fragment.startswith("sample=") and path.rstrip("/").endswith("/try")
+
+
 broken, anchor_bad, ext = [], [], set()
 for page in pages:
     rel = "/" + page.relative_to(site).as_posix()
@@ -67,7 +76,7 @@ for page in pages:
         target = resolve(u.path if u.path else "/")
         if target is None:
             broken.append((rel, ref))
-        elif u.fragment and u.fragment not in page_ids(target):
+        elif u.fragment and not demo_parameter(u.path, u.fragment) and u.fragment not in page_ids(target):
             anchor_bad.append((rel, ref))
 
 # locale-consistency: locale pages must not link the English demo

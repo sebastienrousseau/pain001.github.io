@@ -105,7 +105,7 @@ El gemelo es el mismo pago en la convención JSON de la Autoridad de Registro IS
 
 ## Ejecútelo en su navegador
 
-[Abrir este escenario en la demo](/es/try/?sample=corpus:hk.fps.single): la biblioteca pain001 se carga en un entorno Python dentro de su navegador, reconstruye el archivo a partir de los 1 registro(s) siguientes, lo comprueba contra el reglamento `hk-fps` y el XSD oficial, y muestra el gemelo JSON. Nada sale de su máquina.
+[Abrir este escenario en la demo](/es/try/#sample=corpus:hk.fps.single): la biblioteca pain001 se carga en un entorno Python dentro de su navegador, reconstruye el archivo a partir de los 1 registro(s) siguientes, lo comprueba contra el reglamento `hk-fps` y el XSD oficial, y muestra el gemelo JSON. Nada sale de su máquina.
 
 Los registros planos a partir de los cuales la biblioteca lo reconstruye (los nombres de columna del propio pipeline CSV):
 
