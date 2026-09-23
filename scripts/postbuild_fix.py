@@ -464,8 +464,19 @@ def translate_chrome(html: str, s: list) -> str:
     to exact chrome markup so translated body text is never touched."""
     (home, skip, minread, lastrev, contents, trydemo, why, see, docs,
      suite, research, tagline, fres, privacy, terms, contact, langline,
-     tognav, swdark, swlight, srch, chlang) = s
+     tognav, swdark, swlight, srch, chlang, srchdocs, kclose, knav, kopen) = s
     pairs = [
+        # ssg's search widget ships English only; every string it shows is
+        # anchored to its own markup so nothing in the body is touched.
+        ('<button id="ssg-search-btn" type="button" aria-label="Search">',
+         '<button id="ssg-search-btn" type="button" aria-label="%s">' % srch),
+        ('<div id="ssg-search-overlay" role="dialog" aria-label="Search">',
+         '<div id="ssg-search-overlay" role="dialog" aria-label="%s">' % srch),
+        ('placeholder="Search documentation..." autocomplete="off" aria-label="Search"',
+         'placeholder="%s" autocomplete="off" aria-label="%s"' % (srchdocs, srch)),
+        ('<span><kbd>Esc</kbd> close</span>', '<span><kbd>Esc</kbd> %s</span>' % kclose),
+        ('<kbd>&darr;</kbd> navigate</span>', '<kbd>&darr;</kbd> %s</span>' % knav),
+        ('<span><kbd>Enter</kbd> open</span>', '<span><kbd>Enter</kbd> %s</span>' % kopen),
         ('>Skip to main content<', '>%s<' % skip),
         ('aria-label="Toggle navigation"', 'aria-label="%s"' % tognav),
         ('>Why Pain001</a>', '>%s</a>' % why),
@@ -498,6 +509,9 @@ def translate_chrome(html: str, s: list) -> str:
     ]
     for old, new in pairs:
         html = html.replace(old, new)
+    # The visible label inside the widget's button, anchored to the button.
+    html = re.sub(r'(<button id="ssg-search-btn".*?)<span>Search</span>',
+                  lambda m: m.group(1) + '<span>%s</span>' % srch, html, count=1, flags=re.DOTALL)
     return html
 
 
