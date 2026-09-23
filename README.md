@@ -254,6 +254,8 @@ docstrings say which.
 | `relocate_corpus_locales` | The five-locale corpus scenario pages moved under `/<locale>/`, their six-way hreflang cluster, and the paths ssg derived from file names rewritten in feeds, tag pages and the search index |
 | `inject_dataset_ld`, `write_llms` | schema.org Dataset markup per scenario page from `scripts/corpus_pages.json`; `llms.txt` and `llms-full.txt` for agents |
 | `stamp_suite_version` | "Generated against pain001 X" inside every footer |
+| `add_page_photos` | The photo band at the top of every page hero and tag page, AVIF first with WebP as the fallback, from `scripts/page_photos.json` |
+| `mark_dated_content`, `retitle_tag_pages`, `defer_ssg_search` | Expired ribbons removed and timeline milestones marked by build date; ssg's tag-page titles rewritten; ssg's search script deferred off the first-paint path |
 | security.txt mirror, `regen_sitemap`, `gen_legacy_redirects` | `/.well-known/security.txt`, the sitemap from what was built, redirect stubs for the old localised-brief URLs |
 | `--stamp-sw` | The service worker's cache name derived from the bytes it caches, run after `static/` and the samples exist |
 
@@ -280,7 +282,9 @@ CI fails on any of these; run them locally before opening a PR.
 | Suite version currency | `scripts/validate_versions.py` |
 | Documentation snippets reference the real API | `scripts/validate_snippets.py` (with `pain001` installed) |
 | Layout and print integrity, real Chrome | `node scripts/layout_audit.cjs`, `node scripts/print_audit.cjs` |
-| Lighthouse 100 in all four categories, mobile and desktop | `node scripts/perf_budget.mjs http://127.0.0.1:8899` |
+| Colour contrast 7:1 for text in both themes and Display P3 | `python3 scripts/validate_contrast.py` |
+| Every page in both themes, WAVE-documented rules plus axe AAA | `CONCURRENCY=2 node scripts/audit_site.mjs` |
+| Lighthouse 100 in all four categories: mobile, tablet, desktop, 4K and 8K | `node scripts/perf_budget.mjs http://127.0.0.1:8898` (gzip server: `node scripts/serve_audit.mjs`) |
 | Accessibility, WCAG 2.2 AAA | `npx pa11y-ci` against the `.pa11yci` list, or `node scripts/a11y_local.mjs` |
 
 The layout, performance and accessibility gates need `site/` served locally:
@@ -298,6 +302,14 @@ fragments of the built English HTML (`scripts/pages_i18n`, `docs_i18n`,
 `try_i18n`, `runtime_i18n`, `locale_strings.py`, `corpus_l10n.py`). A change
 to an English sentence on a localised page needs the key re-extracted and the
 34 tables migrated, or the live-key gate fails.
+
+Photographs are assigned in `scripts/page_photos.json`: one per English
+page and homepage section, never repeated, landscape only. Run
+`uv run --with pillow python3 scripts/import_photos.py` after changing it;
+it crops each photo, holds every band to a per-width byte budget, writes
+AVIF and WebP, removes stale files and regenerates the credits in
+`THIRD_PARTY_NOTICES.md`. Unsplash and Pexels photos live in separate
+folders so REUSE annotates each under its own licence.
 
 ### Measurement and privacy
 
