@@ -1,0 +1,44 @@
+# The site's dated regulatory claims, checked weekly against the primary
+# sources they cite (scripts/dated_claims.json). Swift moved a deadline on
+# 27 August 2026 and the site repeated the old date for four weeks; this
+# run fails, and GitHub notifies the repository owner, the week a source
+# changes or a review date passes. Read-only: it writes nothing.
+name: Dated claims
+
+on:
+  schedule:
+    - cron: "17 6 * * 1" # Mondays, 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Sources still say what the site says
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Check every dated claim against its source
+        run: |
+          set -o pipefail
+          python3 scripts/check_dated_claims.py | tee dated-claims.txt
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo '## Dated claims'
+            echo
+            echo '```'
+            cat dated-claims.txt 2>/dev/null || echo 'no output'
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

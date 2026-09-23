@@ -141,6 +141,7 @@ jobs:
           curl --fail --silent http://127.0.0.1:8899/ > /dev/null
           node scripts/layout_audit.cjs
           node scripts/print_audit.cjs
+          node scripts/measure_audit.cjs --all
 
       - name: Lighthouse 100% (mobile, tablet, desktop, 4K, 8K)
         run: CHROME_PATH=/usr/bin/google-chrome node scripts/perf_budget.mjs http://127.0.0.1:8899
