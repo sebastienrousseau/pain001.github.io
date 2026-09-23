@@ -287,7 +287,7 @@ CI fails on any of these; run them locally before opening a PR.
 | Dated regulatory claims still match their primary sources (weekly, `dated-claims.yml`) | `python3 scripts/check_dated_claims.py` (`scripts/dated_claims.json`) |
 | Colour contrast 7:1 for text in both themes and Display P3 | `python3 scripts/validate_contrast.py` |
 | Every page in both themes, WAVE-documented rules plus axe AAA | `CONCURRENCY=2 node scripts/audit_site.mjs` |
-| Lighthouse 100 in all four categories: mobile, tablet, desktop, 4K and 8K | `node scripts/perf_budget.mjs http://127.0.0.1:8898` (gzip server: `node scripts/serve_audit.mjs`) |
+| Lighthouse 100 in all four categories: mobile, tablet, desktop, 4K and 8K (a performance-only 99 is measured once more; the second sample counts) | `node scripts/perf_budget.mjs http://127.0.0.1:8898` (gzip server: `node scripts/serve_audit.mjs`) |
 | Accessibility, WCAG 2.2 AAA | `npx pa11y-ci` against the `.pa11yci` list, or `node scripts/a11y_local.mjs` |
 
 The layout, performance and accessibility gates need `site/` served locally:
