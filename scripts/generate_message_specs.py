@@ -155,14 +155,14 @@ def render_version(payload: dict, index: dict) -> None:
     is_pain001 = v.startswith("pain.001")
 
     body = [
-        f"This is the complete element reference for `{v}`, generated "
+        (f"This is the complete element reference for `{v}`, generated "
         f"directly from the official ISO 20022 XSD that Pain001 validates "
         f"against, not transcribed by hand. Every cardinality, type and "
-        f"code value below can be checked against ISO's own publication.",
+        f"code value below can be checked against ISO's own publication."),
         "",
-        f"**{len(rows)} elements** · **{required} required** · "
+        (f"**{len(rows)} elements** · **{required} required** · "
         f"**{payload['complex_type_count']} types** · "
-        f"**{payload['code_list_count']} code lists**",
+        f"**{payload['code_list_count']} code lists**"),
         "",
         ("Cardinality is shown as ISO writes it: `0..1` optional, "
         "`1..1` required, `0..*` repeating. Required elements are **bold**: "
@@ -271,14 +271,14 @@ def render_types(payload: dict) -> None:
     if not populated:
         return
     body = [
-        f"Every complex type in ISO 20022 `{v}`, defined once, generated "
-        f"from the official XSD.",
+        (f"Every complex type in ISO 20022 `{v}`, defined once, generated "
+        f"from the official XSD."),
         "",
-        f"**{len(populated)} types.** This is how the schema is actually "
+        (f"**{len(populated)} types.** This is how the schema is actually "
         "organised. The [message structure]"
         f"(/message-spec-{v}/) repeats a party or address block under every "
         "party; here each type appears exactly once, which is what you want "
-        "when mapping source fields or writing a transformer.",
+        "when mapping source fields or writing a transformer."),
         "",
         ("A **choice** type means the children are alternatives: supply "
         "one, not all. Cardinality in **bold** is required."),
@@ -336,15 +336,15 @@ def render_types_chunked(payload: dict) -> list[str]:
             f"[Part {j + 1}](/{s}/)" if j != i else f"**Part {j + 1}**"
             for j, s in enumerate(slugs))
         body = [
-            f"Complex types in ISO 20022 `{v}`, generated from the official "
-            f"XSD. **Part {i + 1} of {len(chunks)}**: `{span}`.",
+            (f"Complex types in ISO 20022 `{v}`, generated from the official "
+            f"XSD. **Part {i + 1} of {len(chunks)}**: `{span}`."),
             "",
             nav if len(chunks) > 1 else "",
             "",
-            "Each type is defined once here. The [message structure]"
+            ("Each type is defined once here. The [message structure]"
             f"(/message-spec-{v}/) repeats a party or address block under "
             "every party; this view does not, which is what you want when "
-            "mapping source fields.",
+            "mapping source fields."),
             "",
             ("A **choice** type means the children are alternatives: supply "
             "one, not all. Cardinality in **bold** is required."),
@@ -388,8 +388,8 @@ def render_code_lists(specs: dict, index: dict) -> None:
         "invalid against the schema, so these are the exact strings your "
         "source data has to produce."),
         "",
-        f"**{len(cov)} code lists** across "
-        f"{len(index['versions'])} message versions.",
+        (f"**{len(cov)} code lists** across "
+        f"{len(index['versions'])} message versions."),
         "",
     ]
     for name in sorted(cov):

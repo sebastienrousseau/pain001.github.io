@@ -138,7 +138,10 @@ All notable changes to this website are documented here. The format follows
 - On translated docs pages the language menu's "English" entry pointed
   back to the translated page.
 - Legacy redirect stubs used a meta refresh (a WAVE error); they now
-  redirect with a same-origin script and keep the visible link.
+  redirect with a same-origin script and keep the visible link. The
+  script carries the retired-path map itself (stamped at build time)
+  rather than reading a destination from the page, so it can only
+  ever send a visitor to one of those paths.
 - 653 bold-only paragraphs (FAQ questions) are now real headings.
 - Identical "Table, scrollable horizontally" regions on translated docs
   pages are named after their section, so landmarks are unique.

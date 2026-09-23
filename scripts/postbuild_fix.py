@@ -744,7 +744,6 @@ def gen_try_locales(site: Path) -> None:
             continue
         html = base
         # lang + direction
-        dir_attr = ' dir="rtl"' if slug in RTL_LANGS else ""
         html = retag_html_lang(html, code, slug in RTL_LANGS)
         html = html.replace('"inLanguage": "en-GB"',
                             '"inLanguage": "%s"' % code)
@@ -840,7 +839,6 @@ def _gen_localized_pages(site: Path, pages: tuple, table_dir: str) -> None:
                 continue
             pd = d[page_name]
             html = base
-            dir_attr = ' dir="rtl"' if slug in RTL_LANGS else ""
             html = retag_html_lang(html, code, slug in RTL_LANGS)
             html = html.replace('"inLanguage": "en-GB"',
                                 '"inLanguage": "%s"' % code)
@@ -1790,6 +1788,7 @@ def main() -> None:
     # Called during the main pass it found no sw.js and silently did
     # nothing, which is the failure mode it exists to prevent.
     if "--stamp-sw" in sys.argv:
+        stamp_redirect_map(site)
         stamp_sw_cache_version(site)
         return
     if "--optimise-assets" in sys.argv:
@@ -1863,6 +1862,26 @@ LEGACY_REDIRECTS = {
 }
 
 
+def stamp_redirect_map(site: Path) -> None:
+    """Write LEGACY_REDIRECTS into the shipped /js/redirect.js. The script
+    looks its destination up by path in this map rather than reading it
+    from the page, so it can only redirect to these same-origin paths
+    (CodeQL js/xss-through-dom flagged the attribute read). Runs in the
+    --stamp-sw pass, after static/ is copied and before the service
+    worker's cache version is derived from the bytes."""
+    js = site / "js" / "redirect.js"
+    if not js.is_file():
+        return
+    table = {"/%s/" % old.strip("/"): new for old, new in LEGACY_REDIRECTS.items()}
+    text = js.read_text(encoding="utf-8")
+    stamped = text.replace("var REDIRECTS = {};",
+                           "var REDIRECTS = %s;" % json.dumps(table, sort_keys=True), 1)
+    if stamped == text:
+        raise SystemExit("[postbuild] redirect.js has no REDIRECTS placeholder to stamp")
+    js.write_text(stamped, encoding="utf-8")
+    print(f"[postbuild] redirect map stamped: {len(table)} path(s)")
+
+
 def gen_legacy_redirects(site: Path) -> None:
     """Redirect stubs for retired URLs (GitHub Pages has no server
     redirects). noindex + canonical point crawlers at the new location.
@@ -1876,7 +1895,7 @@ def gen_legacy_redirects(site: Path) -> None:
             '<meta name="viewport" content="width=device-width, initial-scale=1" />\n'
             '<meta name="robots" content="noindex" />\n'
             "%(csp)s\n"
-            '<script src="/js/redirect.js" data-redirect="%(new)s"></script>\n'
+            '<script src="/js/redirect.js"></script>\n'
             '<meta name="description" content="This page has moved to %(base)s%(new)s." />\n'
             '<meta property="og:title" content="Page moved: Pain001" />\n'
             '<meta property="og:type" content="website" />\n'
@@ -1933,7 +1952,7 @@ def normalise_site_shell(site: Path) -> None:
             fixed = fixed.replace("</head>", CSP_META + "</head>", 1)
 
         is_taxonomy = "/tags/" in "/" + page.relative_to(site).as_posix()
-        is_redirect = 'data-redirect="' in fixed
+        is_redirect = '<script src="/js/redirect.js"' in fixed
         if is_taxonomy or is_redirect:
             if "/css/prism.css" not in fixed:
                 fixed = fixed.replace("</head>", _PRISM_LINKS + "</head>", 1)

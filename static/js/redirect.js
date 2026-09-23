@@ -1,14 +1,15 @@
 /* Legacy-URL redirect for the stubs postbuild writes (see
    gen_legacy_redirects). Same-origin, so the stubs' CSP allows it; the
-   page's own link is the fallback without scripting. */
+   page's own link is the fallback without scripting.
+
+   The destinations are not read from the page: postbuild's --stamp-sw
+   pass writes LEGACY_REDIRECTS into the object below, so this script can
+   only ever send a visitor to one of those same-origin paths. */
 (function () {
   "use strict";
-  var to = document.currentScript && document.currentScript.getAttribute("data-redirect");
-  if (!to || to.charAt(0) !== "/" || to.charAt(1) === "/") return;
-  // Resolve against this origin and follow only a same-origin path, so the
-  // attribute can never send a visitor to another site or a javascript: URL.
-  var url = new URL(to, window.location.origin);
-  if (url.origin === window.location.origin) {
-    window.location.replace(url.pathname + url.search + url.hash);
-  }
+  var REDIRECTS = {};
+  var to = Object.prototype.hasOwnProperty.call(REDIRECTS, window.location.pathname)
+    ? REDIRECTS[window.location.pathname]
+    : null;
+  if (to) window.location.replace(to);
 })();

@@ -274,19 +274,19 @@ def worked_example(files: list[dict]) -> list[str]:
         )
     lines += [
         "",
-        "The provenance record answers the questions you would otherwise "
-        "have to ask us:",
+        ("The provenance record answers the questions you would otherwise "
+        "have to ask us:"),
         "",
         f"- **Where does the content come from?** {'; '.join(sources)}.",
-        f"- **How much can I trust it?** Confidence `{prov.get('confidence', '?')}`: "
-        f"{confidence_note(prov.get('confidence', ''))}.",
-        f"- **How was it checked?** By the library, against the schema, the "
+        (f"- **How much can I trust it?** Confidence `{prov.get('confidence', '?')}`: "
+        f"{confidence_note(prov.get('confidence', ''))}."),
+        (f"- **How was it checked?** By the library, against the schema, the "
         f"ISO rules and the {profiles} profile{'s' if ',' in profiles else ''}; "
-        "the record lists every finding, including warnings.",
+        "the record lists every finding, including warnings."),
         "- **Is it exactly this file?** Its SHA-256 is in the record.",
         "",
-        "What the record does not tell you is what *your* bank requires. "
-        "That is the subject of the next section.",
+        ("What the record does not tell you is what *your* bank requires. "
+        "That is the subject of the next section."),
         "",
     ]
     return lines
@@ -554,78 +554,78 @@ def render(files: list[dict], editions: list[dict], sizes: dict[str, int],
     full_zip = next(n for n in sizes if n.startswith("pain001-example-corpus-"))
 
     body = [
-        "If you are connecting a system to a bank, writing a parser, or "
+        ("If you are connecting a system to a bank, writing a parser, or "
         "testing a mapping, you need sample ISO 20022 files that are "
         "correct for your country and your rail. The ones passed around "
         "are usually old, hand-edited, or from somewhere else. This page "
         "gives you files built from the public rulebooks, with a record of "
-        "where each one comes from.",
+        "where each one comes from."),
         "",
         "**What you get**",
         "",
-        f"- **{len(scenarios)} realistic payments** across "
+        (f"- **{len(scenarios)} realistic payments** across "
         f"{len(by_country)} countries: a UK CHAPS property purchase, a Swiss "
         "QR-bill, a Swedish Bankgiro run, a US ACH payroll, a SEPA direct "
         "debit, and more, each rendered in the message editions you are "
-        "likely to meet.",
-        f"- **{coverage_files} schema coverage files** across "
+        "likely to meet."),
+        (f"- **{coverage_files} schema coverage files** across "
         f"{len(editions)} editions: deliberately exhaustive files that "
         "exercise the elements and choices of one schema edition, for "
         "testing a parser or a mapping against the whole schema rather "
-        "than the usual happy path.",
-        "- **A provenance record beside every payment file** saying where "
+        "than the usual happy path."),
+        ("- **A provenance record beside every payment file** saying where "
         "its content comes from, how far to trust it, and how the library "
-        "checked it.",
+        "checked it."),
         "",
         "**How to use it**",
         "",
-        "1. Download the complete bundle below, or pick single files from "
-        "the tables.",
-        "2. Open the `.xml` next to your own file and diff them; open the "
-        "`.provenance.yaml` to see what the differences mean.",
-        "3. Get your bank's usage guideline (see below) and apply it on top: "
+        ("1. Download the complete bundle below, or pick single files from "
+        "the tables."),
+        ("2. Open the `.xml` next to your own file and diff them; open the "
+        "`.provenance.yaml` to see what the differences mean."),
+        ("3. Get your bank's usage guideline (see below) and apply it on top: "
         "these files follow the public scheme rules, not any one bank's "
-        "profile.",
+        "profile."),
         "",
-        "Identifiers are synthetic: IBANs, BICs, LEIs and account numbers "
+        ("Identifiers are synthetic: IBANs, BICs, LEIs and account numbers "
         "pass their check digits but belong to nobody, and names and "
-        "addresses are invented. **Do not send these files to a bank.**",
+        "addresses are invented. **Do not send these files to a bank.**"),
         "",
         "## Download",
         "",
         "| Bundle | Contents | Size |",
         "| :--- | :--- | ---: |",
-        f"| [Complete corpus](/corpus/{full_zip}) | "
+        (f"| [Complete corpus](/corpus/{full_zip}) | "
         f"{len(files)} payment files with their provenance records, and "
         f"{coverage_files} schema coverage files across {len(editions)} "
-        f"editions | {kb(sizes[full_zip])} |",
-        f"| Coverage files per edition | one zip each, listed on the "
-        f"[coverage page](/{COVERAGE_SLUG}/) | 9 to 12 KB |",
+        f"editions | {kb(sizes[full_zip])} |"),
+        (f"| Coverage files per edition | one zip each, listed on the "
+        f"[coverage page](/{COVERAGE_SLUG}/) | 9 to 12 KB |"),
         "",
-        f"Everything here is generated from pain001 {version}'s own corpus, "
+        (f"Everything here is generated from pain001 {version}'s own corpus, "
         "which also ships inside the Python package (`pain001.corpus`) and "
-        f"in the [repository]({REPO}/tree/main/pain001/corpus/data).",
+        f"in the [repository]({REPO}/tree/main/pain001/corpus/data)."),
         "",
         *worked_example(files),
         "## Your bank's guideline",
         "",
-        "Every bank and clearing house publishes its own **message usage "
+        ("Every bank and clearing house publishes its own **message usage "
         "guideline**: which ISO 20022 elements it requires, which it "
         "ignores, and the values it accepts. Two banks on the same scheme "
         "can differ. Those guidelines are the bank's documentation, so "
         "they are not reproduced here: **download them from your bank or "
         "financial organisation**, typically from its client portal or "
         "from its collection on Swift MyStandards, and treat them as the "
-        "final word.",
+        "final word."),
         "",
-        "The library is built for that step. Its overlay grammar expresses "
+        ("The library is built for that step. Its overlay grammar expresses "
         "a guideline as a short list of rules (an element that must be "
         "present, one that must be absent, a value that must be one of a "
         "set), `scripts/derive_overlay.py` reads a guideline's schema and "
         "drafts those rules for you, and the corpus builder can then "
         "render any scenario on this page the way your bank wants it, "
         "privately, in your own environment. The "
-        f"[corpus guide]({REPO}/blob/main/docs/corpus.md) walks through it.",
+        f"[corpus guide]({REPO}/blob/main/docs/corpus.md) walks through it."),
         "",
         "## How the library checked these files",
         "",
@@ -635,15 +635,15 @@ def render(files: list[dict], editions: list[dict], sizes: dict[str, int],
     body += [f"| {name} | {what} |" for name, what in RUNGS]
     body += [
         "",
-        "These checks are the library's own; they are not a certification, "
+        ("These checks are the library's own; they are not a certification, "
         "and passing them does not mean a bank will accept the file. "
         "Channel rules, onboarding profiles, cut-off times and the bank's "
-        "guideline sit on top.",
+        "guideline sit on top."),
         "",
-        "**Reading the evidence column.** `verified` means "
+        ("**Reading the evidence column.** `verified` means "
         f"{confidence_note('verified')}. `derived` means "
         f"{confidence_note('derived')}. `assumed` means "
-        f"{confidence_note('assumed')}.",
+        f"{confidence_note('assumed')}."),
         "",
         "## Payment files by country",
         "",
@@ -677,13 +677,13 @@ def render(files: list[dict], editions: list[dict], sizes: dict[str, int],
     body += [
         "## Schema coverage files",
         "",
-        "Each edition has a small set of files built so that the elements "
+        ("Each edition has a small set of files built so that the elements "
         "and choice branches its schema declares each appear in at least "
         "one file. The first file is the baseline that carries every "
         "element once; each later file is named after the blocks it adds, "
         "so you can pick the one that exercises what you are testing. "
         f"The [coverage page](/{COVERAGE_SLUG}/) lists every file with what "
-        "it adds and a zip per edition.",
+        "it adds and a zip per edition."),
         "",
         "| Edition | Files |",
         "| :--- | ---: |",
@@ -696,16 +696,16 @@ def render(files: list[dict], editions: list[dict], sizes: dict[str, int],
         "",
         "## Notes",
         "",
-        "- The site publishes the generic files and their public sources. "
-        "Bank-specific material stays with the banks.",
-        "- The corpus is English only and grows with every release; it is "
-        "generated data, not a translated page.",
-        f"- The [corpus guide]({REPO}/blob/main/docs/corpus.md) explains the "
+        ("- The site publishes the generic files and their public sources. "
+        "Bank-specific material stays with the banks."),
+        ("- The corpus is English only and grows with every release; it is "
+        "generated data, not a translated page."),
+        (f"- The [corpus guide]({REPO}/blob/main/docs/corpus.md) explains the "
         "scenario format, the overlay grammar and how to add a country or a "
-        "rail. Corrections and new scenarios are welcome there.",
-        "- Regenerate this page and its downloads with "
+        "rail. Corrections and new scenarios are welcome there."),
+        ("- Regenerate this page and its downloads with "
         "`poetry run python3 scripts/generate_corpus_page.py` from the "
-        "pain001 checkout after a corpus change.",
+        "pain001 checkout after a corpus change."),
     ]
     return "\n".join(body)
 
@@ -713,14 +713,14 @@ def render(files: list[dict], editions: list[dict], sizes: dict[str, int],
 def render_coverage_page(editions: list[dict], sizes: dict[str, int],
                          version: str) -> str:
     body = [
-        "Schema coverage files are not realistic payments. Each set is "
+        ("Schema coverage files are not realistic payments. Each set is "
         "generated from the schema itself so that the element paths and "
         "choice branches of one edition each appear in at least one of its "
         "files, and every file is valid against the schema and the ISO "
         "message definition report rules. Use them to smoke-test a parser, "
-        "a mapping or a validator against the whole schema.",
+        "a mapping or a validator against the whole schema."),
         "",
-        "**How to pick a file.** The first file of every set is the "
+        ("**How to pick a file.** The first file of every set is the "
         "baseline: every element once, first branch of every choice. Each "
         "later file adds elements and choice branches the earlier files did "
         "not reach, and is named after the blocks most of that new content "
@@ -728,13 +728,13 @@ def render_coverage_page(editions: list[dict], sizes: dict[str, int],
         "the ultimate debtor, `ChqInstr` for cheque instructions, and so "
         "on). The recipe in the name says what kind of payment the file is: "
         "a credit transfer, a cheque delivered to the creditor agent, a "
-        "cheque with no creditor agent, or a direct debit collection.",
+        "cheque with no creditor agent, or a direct debit collection."),
         "",
-        "These files follow the ISO schema only. What your bank accepts is "
-        "in its usage guideline; get it from your bank.",
+        ("These files follow the ISO schema only. What your bank accepts is "
+        "in its usage guideline; get it from your bank."),
         "",
-        "The [example corpus](/example-corpus/) page has the realistic "
-        "payment files and the complete download.",
+        ("The [example corpus](/example-corpus/) page has the realistic "
+        "payment files and the complete download."),
         "",
     ]
     for edition in editions:
@@ -743,8 +743,8 @@ def render_coverage_page(editions: list[dict], sizes: dict[str, int],
         body += [
             f"## {mt}",
             "",
-            f"{len(edition['_files'])} files. "
-            f"[Download the set](/corpus/{name}) ({kb(sizes[name])}).",
+            (f"{len(edition['_files'])} files. "
+            f"[Download the set](/corpus/{name}) ({kb(sizes[name])})."),
             "",
             "| File | What it is for |",
             "| :--- | :--- |",

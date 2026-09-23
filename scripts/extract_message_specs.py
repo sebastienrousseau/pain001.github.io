@@ -279,7 +279,6 @@ def main() -> int:
     families: dict[str, list[str]] = {}
     for v in sorted(versions):
         families.setdefault(v.rsplit(".", 1)[0], []).append(v)
-    ordered = [v for fam in families.values() for v in fam]
     pairs = [(a, b) for fam in families.values()
              for a, b in zip(fam, fam[1:])]
     for prev, cur in pairs:
