@@ -342,12 +342,12 @@ browsers ignore `frame-ancestors`; GitHub Pages cannot set response headers.
 Framing is therefore not restricted at the origin. The fix is a Cloudflare
 response-header Transform Rule adding `Content-Security-Policy:
 frame-ancestors 'none'`, which is configured in the Cloudflare dashboard
-rather than in this repository. Three more Cloudflare rules belong with it,
-because GitHub Pages behind the proxy answers 200 on every variant of a URL
-and Search Console then reports each as an alternative page: Always Use HTTPS
-(SSL/TLS, Edge Certificates), a 301 from `www.pain001.com` to the apex, and a
-redirect rule that sends `/index.html` and slash-less paths to the canonical
-trailing-slash URL. The site holds no credentials, session state
+rather than in this repository. Two more settings live there: Always Use
+HTTPS (SSL/TLS, Edge Certificates), and a redirect rule that sends any
+`/index.html` URL to its directory URL with a 301, because GitHub Pages serves
+both with a 200 and Search Console then lists one as an alternative of the
+other. GitHub Pages itself redirects `www` to the apex and slash-less paths
+to the trailing slash. The site holds no credentials, session state
 or authenticated actions, so the exposure is limited to UI redressing.
 
 ## Documentation

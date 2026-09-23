@@ -151,9 +151,13 @@ All notable changes to this website are documented here. The format follows
   soft 404) and GitHub Pages never showed it for a missing URL; it is now
   published as `/404.html` and, with the offline fallback and the form
   confirmation page, carries robots noindex and stays out of the sitemap.
-  The README names the three Cloudflare rules (HTTPS, www, trailing slash)
-  that stop `http://`, `www.`, `/index.html` and slash-less URLs answering
-  200 as alternates of the canonical page.
+  A Cloudflare redirect rule (set on 23 September 2026, documented in the
+  README) sends any `/index.html` URL to its directory URL with a 301.
+- The 252 "Open this scenario in the demo" links used `/try/?sample=…`,
+  which made every scenario a separate URL to a crawler: Search Console
+  listed 41 of them as alternates of `/try/`. They now use a fragment,
+  `/try/#sample=…`, which the demo reads first (the query form still
+  works), and the link validator knows the fragment is a parameter.
 - Reference pages read as a squashed left column: the contents rail was
   only built from four sections, so a three-section page had a 68ch column
   and nothing beside it, and titles at the display step wrapped three to
