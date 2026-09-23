@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-09-13T08:00:00+00:00"
+date: "2026-09-23T08:00:00+00:00"
 description: "SEPA Core direct debit, recurring, Belgian creditor identifier. Eine validierte pain.001-Beispieldatei (Belgien, Schiene sepa-direct-debit), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -39,7 +39,7 @@ short_name: pain001
 subtitle: "SEPA Core direct debit, recurring, Belgian creditor identifier."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "be.sepa.sdd-core — ISO-20022-pain.001-Beispiel: Belgien (sepa-direct-debit)"
+title: "ISO-20022-pain.001-Beispiel be.sepa.sdd-core: Belgien (sepa-direct-debit)"
 url: "https://pain001.com/de/corpus-be-sepa-sdd-core/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/de/corpus-be-sepa-sdd-core/"
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "SEPA Core direct debit, recurring, Belgian creditor identifier. Eine validierte pain.001-Beispieldatei (Belgien, Schiene sepa-direct-debit), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
 item_guid: "https://pain001.com/de/corpus-be-sepa-sdd-core/"
 item_link: "https://pain001.com/de/corpus-be-sepa-sdd-core/"
-item_pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
-item_title: "be.sepa.sdd-core — ISO-20022-pain.001-Beispiel: Belgien (sepa-direct-debit)"
-last_build_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+item_pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+item_title: "ISO-20022-pain.001-Beispiel be.sepa.sdd-core: Belgien (sepa-direct-debit)"
+last_build_date: "Wed, 23 Sep 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "be.sepa.sdd-core — ISO-20022-pain.001-Beispiel: Belgien (sepa-direct-debit)"
+apple-mobile-web-app-title: "ISO-20022-pain.001-Beispiel be.sepa.sdd-core: Belgien (sepa-direct-debit)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,7 +71,7 @@ twitter_description: "SEPA Core direct debit, recurring, Belgian creditor identi
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "be.sepa.sdd-core — ISO-20022-pain.001-Beispiel: Belgien (sepa-direct-debit)"
+twitter_title: "ISO-20022-pain.001-Beispiel be.sepa.sdd-core: Belgien (sepa-direct-debit)"
 twitter_url: "https://pain001.com/de/corpus-be-sepa-sdd-core/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -98,8 +98,8 @@ Eine Zahlungsinitiierungsdatei (**Belgien**, Schiene **sepa-direct-debit**), aus
 
 | Edition | Zahlungsdatei | ISO-20022-JSON-Zwilling | Provenienzdatensatz |
 | :--- | :--- | :--- | :--- |
-| `pain.008.001.02` | [be.sepa.sdd-core.pain.008.001.02.xml](/corpus/market/be/sepa-direct-debit/be.sepa.sdd-core.pain.008.001.02.xml) | — (Zwillinge gibt es nur für pain.001) | [be.sepa.sdd-core.pain.008.001.02.provenance.yaml](/corpus/market/be/sepa-direct-debit/be.sepa.sdd-core.pain.008.001.02.provenance.yaml) |
-| `pain.008.001.08` | [be.sepa.sdd-core.pain.008.001.08.xml](/corpus/market/be/sepa-direct-debit/be.sepa.sdd-core.pain.008.001.08.xml) | — (Zwillinge gibt es nur für pain.001) | [be.sepa.sdd-core.pain.008.001.08.provenance.yaml](/corpus/market/be/sepa-direct-debit/be.sepa.sdd-core.pain.008.001.08.provenance.yaml) |
+| `pain.008.001.02` | [be.sepa.sdd-core.pain.008.001.02.xml](/corpus/market/be/sepa-direct-debit/be.sepa.sdd-core.pain.008.001.02.xml) | Keiner (Zwillinge gibt es nur für pain.001) | [be.sepa.sdd-core.pain.008.001.02.provenance.yaml](/corpus/market/be/sepa-direct-debit/be.sepa.sdd-core.pain.008.001.02.provenance.yaml) |
+| `pain.008.001.08` | [be.sepa.sdd-core.pain.008.001.08.xml](/corpus/market/be/sepa-direct-debit/be.sepa.sdd-core.pain.008.001.08.xml) | Keiner (Zwillinge gibt es nur für pain.001) | [be.sepa.sdd-core.pain.008.001.08.provenance.yaml](/corpus/market/be/sepa-direct-debit/be.sepa.sdd-core.pain.008.001.08.provenance.yaml) |
 
 ## Wie die Bibliothek die Datei geprüft hat
 

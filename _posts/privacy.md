@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "A privacy statement page for pain001.com — a static site that collects nothing, documenting software that processes everything locally."
+banner_alt: "A privacy statement page for pain001.com, a static site that collects nothing, documenting software that processes everything locally."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -16,7 +16,7 @@ format-detection: telephone=no
 hreflang: en
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/privacy/"
-image_alt: "A privacy statement page for pain001.com — a static site that collects nothing, documenting software that processes everything locally."
+image_alt: "A privacy statement page for pain001.com, a static site that collects nothing, documenting software that processes everything locally."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -94,11 +94,11 @@ The short version: this site collects nothing, and the software processes everyt
 - **Page views are counted, nobody is identified.** Every page except the [browser demo](/try/) loads [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/), a cookieless beacon operated by Cloudflare, Inc., which already fronts this domain, under [Cloudflare's privacy policy](https://www.cloudflare.com/privacypolicy/). It records the page path, the referring site, your country, your browser family and Core Web Vitals timings; it sets no cookie, stores no IP address, builds no fingerprint and assigns no identifier, so two visits by the same person cannot be joined. The beacon script itself is served from this origin (a vendored copy, so no third-party code is fetched); its one request goes to Cloudflare. It is absent from the demo page, whose "Verify it yourself" panel invites you to confirm that with DevTools open.
 - **No tracking pixels, no advertising or session-replay scripts.** The only state stored in your browser is your light/dark theme choice, kept in `localStorage` and never transmitted.
 - **Hosting.** The site is served as static files by GitHub Pages, which may log standard request metadata (IP address, user agent) under [GitHub's privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement).
-- **Assets.** Every asset — logo, fonts, styles, scripts, the demo's WebAssembly runtime and schemas — is served from this origin. Apart from the beacon's one request to Cloudflare named above, the site makes **no third-party requests at all**; on the demo page it makes none.
+- **Assets.** Every asset (logo, fonts, styles, scripts, the demo's WebAssembly runtime and schemas) is served from this origin. Apart from the beacon's one request to Cloudflare named above, the site makes **no third-party requests at all**; on the demo page it makes none.
 
 ## The Pain001 software
 
-- Every component — CLI, library, REST API, MCP server, LSP server — runs **entirely on your infrastructure**. There is no telemetry, no phone-home, no SaaS dependency.
+- Every component, whether CLI, library, REST API, MCP server, or LSP server, runs **entirely on your infrastructure**. There is no telemetry, no phone-home, no SaaS dependency.
 - Payment data you process with Pain001 is read from your files and written to your output directory. It is never transmitted anywhere by the software.
 
 Questions? [Contact us](/contact/).

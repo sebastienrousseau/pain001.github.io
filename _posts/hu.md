@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "Nyílt forráskódú Python-csomag, amely XSD-validált pain.001 és pain.008 fájlokat készít CSV, Excel, SQLite, JSON, Parquet vagy SWIFT MT101 forrásból — MCP-eszközökkel AI-ügynökökhöz és LSP-szerverrel."
+banner_alt: "Nyílt forráskódú Python-csomag, amely XSD-validált pain.001 és pain.008 fájlokat készít CSV, Excel, SQLite, JSON, Parquet vagy SWIFT MT101 forrásból, MCP-eszközökkel AI-ügynökökhöz és LSP-szerverrel."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -10,13 +10,13 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Nyílt forráskódú Python-csomag, amely XSD-validált pain.001 és pain.008 fájlokat készít CSV, Excel, SQLite, JSON, Parquet vagy SWIFT MT101 forrásból — MCP-eszközökkel AI-ügynökökhöz és LSP-szerverrel."
+description: "Nyílt forráskódú Python-csomag, amely XSD-validált pain.001 és pain.008 fájlokat készít CSV, Excel, SQLite, JSON, Parquet vagy SWIFT MT101 forrásból, MCP-eszközökkel AI-ügynökökhöz és LSP-szerverrel."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "hu"
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/hu/"
-image_alt: "A question-and-answer session on ISO 20022 payment file generation — the questions treasury, operations, engineering, and audit teams actually ask."
+image_alt: "A question-and-answer session on ISO 20022 payment file generation, covering the questions treasury, operations, engineering, and audit teams actually ask."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -36,21 +36,21 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "A nyílt forráskódú csomag, amely fizetési adatait validált ISO 20022 XML-lé alakítja — bizonyítottan hibátlanul, mielőtt a bankhoz érne."
+subtitle: "A nyílt forráskódú csomag, amely fizetési adatait validált ISO 20022 XML-lé alakítja, és bizonyítja, hogy hibátlan, mielőtt a bankhoz érne."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001 — Nyílt forráskódú ISO 20022 fizetésindítás"
+title: "Pain001: Nyílt forráskódú ISO 20022 fizetésindítás"
 url: "https://pain001.com/hu/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/hu/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Nyílt forráskódú Python-csomag, amely XSD-validált pain.001 és pain.008 fájlokat készít CSV, Excel, SQLite, JSON, Parquet vagy SWIFT MT101 forrásból — MCP-eszközökkel AI-ügynökökhöz és LSP-szerverrel."
+item_description: "Nyílt forráskódú Python-csomag, amely XSD-validált pain.001 és pain.008 fájlokat készít CSV, Excel, SQLite, JSON, Parquet vagy SWIFT MT101 forrásból, MCP-eszközökkel AI-ügynökökhöz és LSP-szerverrel."
 item_guid: "https://pain001.com/hu/rss.xml"
 item_link: "https://pain001.com/hu/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001 — Nyílt forráskódú ISO 20022 fizetésindítás"
+item_title: "Pain001: Nyílt forráskódú ISO 20022 fizetésindítás"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001 — Nyílt forráskódú ISO 20022 fizetésindítás"
+apple-mobile-web-app-title: "Pain001: Nyílt forráskódú ISO 20022 fizetésindítás"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Nyílt forráskódú Python-csomag, amely XSD-validált pain.001 és pain.008 fájlokat készít CSV, Excel, SQLite, JSON, Parquet vagy SWIFT MT101 forrásból — MCP-eszközökkel AI-ügynökökhöz és LSP-szerverrel."
+twitter_description: "Nyílt forráskódú Python-csomag, amely XSD-validált pain.001 és pain.008 fájlokat készít CSV, Excel, SQLite, JSON, Parquet vagy SWIFT MT101 forrásból, MCP-eszközökkel AI-ügynökökhöz és LSP-szerverrel."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001 — Nyílt forráskódú ISO 20022 fizetésindítás"
+twitter_title: "Pain001: Nyílt forráskódú ISO 20022 fizetésindítás"
 twitter_url: "https://pain001.com/hu/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -82,25 +82,25 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Pain001 magyarul"
-excerpt: "Nyílt forráskódú Python-csomag, amely XSD-validált pain.001 és pain.008 fájlokat készít CSV, Excel, SQLite, JSON, Parquet vagy SWIFT MT101 forrásból — MCP-eszközökkel AI-ügynökökhöz és LSP-szerverrel."
-last_reviewed: "2026-07-26"
+excerpt: "Nyílt forráskódú Python-csomag, amely XSD-validált pain.001 és pain.008 fájlokat készít CSV, Excel, SQLite, JSON, Parquet vagy SWIFT MT101 forrásból, MCP-eszközökkel AI-ügynökökhöz és LSP-szerverrel."
+last_reviewed: "2026-09-23"
 
 
 ---
 
 ## Találja meg a fizetési fájlok hibáit, mielőtt a bank tenné meg
 
-A **Pain001** nyílt forráskódú Python-csomag ISO 20022 fizetésindításhoz. A meglévő adatokat — CSV, Excel, SQLite, JSON, Parquet vagy régi SWIFT MT101 üzenetek — `pain.001` (átutalás) és `pain.008` (beszedés) XML-lé alakítja, a hivatalos XSD-sémákkal validálva.
+A **Pain001** nyílt forráskódú Python-csomag ISO 20022 fizetésindításhoz. A meglévő adatokat (CSV, Excel, SQLite, JSON, Parquet vagy régi SWIFT MT101 üzenetek) `pain.001` (átutalás) és `pain.008` (beszedés) XML-lé alakítja, a hivatalos XSD-sémákkal validálva.
 
 Minden fájl három validációs szinten megy át: rekordonkénti JSON-séma (IBAN mod-97 ellenőrzéssel és BIC-struktúrával), scheme-szabályok (SEPA és határon átnyúló CBPR+), végül XSD-validáció. Az ellenőrző összegek újraszámolódnak, sosem másolódnak. Minden helyben fut: fizetési adat nem hagyja el az infrastruktúrát.
 
 ## Próbálja ki a böngészőben
 
-Validáljon egy mintaköteget közvetlenül a böngészőben — semmi sem kerül feltöltésre —, és igazolja az eredményt a hivatalos XSD-sémával: [Pain001 kipróbálása](/try/). Minta-CSV-fájlok sablonként letölthetők saját exportokhoz.
+Validáljon egy mintaköteget közvetlenül a böngészőben (semmi sem kerül feltöltésre), és igazolja az eredményt a hivatalos XSD-sémával: [Pain001 kipróbálása](/try/). Minta-CSV-fájlok sablonként letölthetők saját exportokhoz.
 
-## A 2026. november 14-i határidő
+## Elhalasztották a strukturált címekre vonatkozó határidőt
 
-Az MT–MX együttélés 2025. november 22-i lezárulta után a következő határidő **2026. november 14.**: a teljesen strukturálatlan postai címeket elutasítják a CBPR+ fizetésekben, a bankközi MT101-továbbítást pedig a `pain.001` 9-es verziója váltja. A Pain001 már ma strukturált és hibrid címeket generál — az MT101-et pedig egyetlen paranccsal konvertálja.
+Az MT–MX együttélés 2025. november 22-i lezárulta után a következő mérföldkő 2026. november 14-re volt kitűzve: a CBPR+ elutasította volna a teljesen strukturálatlan postai címeket, a bankközi MT101-továbbítást pedig a `pain.001` 9-es verziója váltotta volna fel. 2026 augusztusában a Swift mindkét változást elhalasztotta, és legkésőbb 2026 decemberéig bejelenti az új dátumokat; maguk a követelmények érvényben maradnak. A Pain001 már most kezeli a strukturált és hibrid címeket, és egyetlen paranccsal konvertálja az Ön MT101-üzeneteit.
 
 ## Első lépések
 
@@ -109,4 +109,4 @@ pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run
 ```
 
-Tovább: [telepítési útmutató](/installation/), [technikai referencia](/documentation/), [ISO 20022 ütemterv 2028-ig](/iso20022-roadmap/), [pain.002 elutasítási kódok](/pain002-reason-codes/), [bizalmi központ](/trust/) és [vezetői összefoglaló](/executive-brief/). A teljes dokumentáció angol. Kettős licenc: Apache-2.0 / MIT — szabad kereskedelmi használat bármilyen léptékben.
+Tovább: [telepítési útmutató](/installation/), [technikai referencia](/documentation/), [ISO 20022 ütemterv 2028-ig](/iso20022-roadmap/), [pain.002 elutasítási kódok](/pain002-reason-codes/), [bizalmi központ](/trust/) és [vezetői összefoglaló](/executive-brief/). A teljes dokumentáció angol. Kettős licenc: Apache-2.0 / MIT. Szabad kereskedelmi használat bármilyen léptékben.

@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-09-13T08:00:00+00:00"
+date: "2026-09-23T08:00:00+00:00"
 description: "Swedish Plusgiro supplier payment with an invoice message. Una muestra pain.001 validada (Suecia, raíl plusgiro-credit), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -39,7 +39,7 @@ short_name: pain001
 subtitle: "Swedish Plusgiro supplier payment with an invoice message."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "se.plusgiro.supplier — ejemplo pain.001 ISO 20022: Suecia (plusgiro-credit)"
+title: "Ejemplo pain.001 ISO 20022 se.plusgiro.supplier: Suecia (plusgiro-credit)"
 url: "https://pain001.com/es/corpus-se-plusgiro-supplier/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/es/corpus-se-plusgiro-supplier/"
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "Swedish Plusgiro supplier payment with an invoice message. Una muestra pain.001 validada (Suecia, raíl plusgiro-credit), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
 item_guid: "https://pain001.com/es/corpus-se-plusgiro-supplier/"
 item_link: "https://pain001.com/es/corpus-se-plusgiro-supplier/"
-item_pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
-item_title: "se.plusgiro.supplier — ejemplo pain.001 ISO 20022: Suecia (plusgiro-credit)"
-last_build_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+item_pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+item_title: "Ejemplo pain.001 ISO 20022 se.plusgiro.supplier: Suecia (plusgiro-credit)"
+last_build_date: "Wed, 23 Sep 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "se.plusgiro.supplier — ejemplo pain.001 ISO 20022: Suecia (plusgiro-credit)"
+apple-mobile-web-app-title: "Ejemplo pain.001 ISO 20022 se.plusgiro.supplier: Suecia (plusgiro-credit)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,7 +71,7 @@ twitter_description: "Swedish Plusgiro supplier payment with an invoice message.
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "se.plusgiro.supplier — ejemplo pain.001 ISO 20022: Suecia (plusgiro-credit)"
+twitter_title: "Ejemplo pain.001 ISO 20022 se.plusgiro.supplier: Suecia (plusgiro-credit)"
 twitter_url: "https://pain001.com/es/corpus-se-plusgiro-supplier/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -105,7 +105,7 @@ El gemelo es el mismo pago en la convención JSON de la Autoridad de Registro IS
 
 ## Ejecútelo en su navegador
 
-[Abrir este escenario en la demo](/es/try/?sample=corpus:se.plusgiro.supplier): la biblioteca pain001 se carga en un entorno Python dentro de su navegador, reconstruye el archivo a partir de los 1 registro(s) siguientes, lo comprueba contra el reglamento `se-bankgiro` y el XSD oficial, y muestra el gemelo JSON. Nada sale de su máquina.
+[Abrir este escenario en la demo](/es/try/#sample=corpus:se.plusgiro.supplier): la biblioteca pain001 se carga en un entorno Python dentro de su navegador, reconstruye el archivo a partir de los 1 registro(s) siguientes, lo comprueba contra el reglamento `se-bankgiro` y el XSD oficial, y muestra el gemelo JSON. Nada sale de su máquina.
 
 Los registros planos a partir de los cuales la biblioteca lo reconstruye (los nombres de columna del propio pipeline CSV):
 

@@ -44,7 +44,12 @@ function findChrome() {
 }
 const CHROME = findChrome();
 const ORIGIN = process.env.SITE_ORIGIN ?? "http://127.0.0.1:8899";
-const OUT = process.env.OUT ?? "/tmp/print.jsonl";
+const os = require("node:os");
+const pathModule = require("node:path");
+// A private directory, not a fixed path under /tmp, so no other user on
+// the host can pre-create or swap the file (CodeQL js/insecure-temporary-file).
+const OUT = process.env.OUT
+  ?? pathModule.join(fs.mkdtempSync(pathModule.join(os.tmpdir(), "pain001-print-")), "print.jsonl");
 const MM = 96 / 25.4;
 const MARGIN_MM = Number(process.env.MARGIN_MM ?? 18);
 const CONTENT_PX = Math.round((210 - 2 * MARGIN_MM) * MM);

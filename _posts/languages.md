@@ -10,13 +10,13 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "The Pain001 overview — validation pipeline, the November 2026 (SR 2026) deadline, quickstart — translated into 34 languages, from Deutsch and 日本語 to العربية and Yorùbá, with correct hreflang and RTL support."
+description: "The Pain001 overview, covering the validation pipeline, the structured-address requirement, and quickstart. Translated into 34 languages, from Deutsch and 日本語 to العربية and Yorùbá, with correct hreflang and RTL support."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/languages/"
-image_alt: "A question-and-answer session on ISO 20022 payment file generation — the questions treasury, operations, engineering, and audit teams actually ask."
+image_alt: "A question-and-answer session on ISO 20022 payment file generation, covering the questions treasury, operations, engineering, and audit teams actually ask."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -36,7 +36,7 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "The overview in 34 languages — full documentation remains in English, and translation corrections are welcome."
+subtitle: "The overview in 34 languages. Full documentation remains in English, and translation corrections are welcome."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
 title: "Pain001 in 34 Languages"
@@ -46,7 +46,7 @@ atom_link: "https://pain001.com/languages/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "The Pain001 overview — validation pipeline, the November 2026 (SR 2026) deadline, quickstart — translated into 34 languages, from Deutsch and 日本語 to العربية and Yorùbá, with correct hreflang and RTL support."
+item_description: "The Pain001 overview, covering the validation pipeline, the structured-address requirement, and quickstart. Translated into 34 languages, from Deutsch and 日本語 to العربية and Yorùbá, with correct hreflang and RTL support."
 item_guid: "https://pain001.com/languages/rss.xml"
 item_link: "https://pain001.com/languages/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -67,7 +67,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "The Pain001 overview — validation pipeline, the November 2026 (SR 2026) deadline, quickstart — translated into 34 languages, from Deutsch and 日本語 to العربية and Yorùbá, with correct hreflang and RTL support."
+twitter_description: "The Pain001 overview, covering the validation pipeline, the structured-address requirement, and quickstart. Translated into 34 languages, from Deutsch and 日本語 to العربية and Yorùbá, with correct hreflang and RTL support."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
@@ -82,13 +82,13 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Languages"
-excerpt: "An index of the 34 localized Pain001 overview pages, each covering the validation pipeline, the November 2026 (SR 2026) CBPR+ deadline, and the quickstart, with correct lang metadata, right-to-left rendering where required, and a complete reciprocal hreflang cluster."
+excerpt: "An index of the 34 localized Pain001 overview pages, each covering the validation pipeline, the CBPR+ structured-address requirement, and the quickstart, with correct lang metadata, right-to-left rendering where required, and a complete reciprocal hreflang cluster."
 last_reviewed: "2026-07-26"
 
 
 ---
 
-The Pain001 overview — what the suite does, the three-layer validation pipeline, the November 2026 (SR 2026) deadline, and how to start — is available in **34 languages besides English**. Full documentation remains in [English](/).
+The Pain001 overview is available in **34 languages besides English**. It covers what the suite does, the three-layer validation pipeline, the structured-address requirement, and how to start. Full documentation remains in [English](/).
 
 - <a href="/ar/" hreflang="ar" lang="ar">العربية</a>
 - <a href="/bn/" hreflang="bn" lang="bn">বাংলা</a>
@@ -125,4 +125,4 @@ The Pain001 overview — what the suite does, the three-layer validation pipelin
 - <a href="/zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
 - <a href="/zh-hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
 
-Each page carries correct `lang` metadata, right-to-left rendering where the language requires it, and a complete reciprocal hreflang cluster so search engines serve readers the right language. Spot a translation that reads wrongly? [Corrections are welcome](https://github.com/sebastienrousseau/pain001.github.io/issues) — payment terminology deserves native precision.
+Each page carries correct `lang` metadata, right-to-left rendering where the language requires it, and a complete reciprocal hreflang cluster so search engines serve readers the right language. Spot a translation that reads wrongly? [Corrections are welcome](https://github.com/sebastienrousseau/pain001.github.io/issues), because payment terminology deserves native precision.

@@ -50,6 +50,9 @@ const OUT = pathModule.join(auditDirectory, "layout.jsonl");
 const VIEWPORTS = [
   [320, 640], [375, 812], [390, 844], [414, 896], [768, 1024],
   [1024, 768], [1280, 800], [1440, 900], [1920, 1080], [2560, 1440],
+  // 4K and 8K at a device pixel ratio of 1: the most CSS pixels a page
+  // will ever be laid out in.
+  [3840, 2160], [7680, 4320],
 ];
 
 // The longest generated corpus scenario page joins the probe, so a release
@@ -79,7 +82,7 @@ const PAGES = process.env.PAGES
       "/competitors-comparison/", "/executive-brief/", "/trust/", "/contact/",
       "/accessibility/", "/404/", "/fr/", "/fr/glossary/", "/ar/try/", "/ar/",
       "/tags/iso-20022/", "/iso20022-roadmap/", "/pain001-mcp/", "/languages/",
-      "/de/corpus-gb-fps-single/",
+      "/de/corpus-gb-fps-single/", "/enterprise/", "/why/", "/tags/",
     ];
 
 function probe() {
@@ -179,13 +182,22 @@ function probe() {
     // the intent — the article layout. Hero and demo copy is
     // deliberately left-aligned in a wider band, so measuring its
     // balance against the viewport says nothing.
+    // The article column shares the page container's start edge (where
+    // the headline starts) rather than being centred on its own, so a
+    // 68ch column is deliberately asymmetric. The invariants are: the
+    // container is centred, and the column starts on the container's
+    // start edge (right edge in right-to-left pages).
     const col = main.querySelector(".content-body");
-    if (col) {
+    const box = col && col.closest(".container");
+    if (col && box) {
       const c = col.getBoundingClientRect();
-      if (c.width > 1) {
-        gutters.colLeft = Math.round(c.left);
-        gutters.colRight = Math.round(vw - c.right);
-        gutters.delta = Math.round(Math.abs(c.left - (vw - c.right)));
+      const k = box.getBoundingClientRect();
+      if (c.width > 1 && k.width > 1) {
+        const rtl = getComputedStyle(col).direction === "rtl";
+        gutters.colLeft = Math.round(k.left);
+        gutters.colRight = Math.round(vw - k.right);
+        gutters.delta = Math.round(Math.abs(k.left - (vw - k.right)));
+        gutters.startOffset = Math.round(Math.abs(rtl ? k.right - c.right : c.left - k.left));
       }
     }
   }
@@ -196,14 +208,21 @@ function probe() {
   const strays = [];
   const col = main && main.querySelector(".content-body");
   if (col) {
-    const colLeft = col.getBoundingClientRect().left;
+    // The start edge, not the left: on a right-to-left page a block
+    // narrower than the column correctly sits on its right. The contents
+    // rail is the one block that belongs in a second column.
+    const rtl = getComputedStyle(col).direction === "rtl";
+    const cb = col.getBoundingClientRect();
+    const colStart = rtl ? cb.right : cb.left;
     for (const el of col.children) {
       const cs = getComputedStyle(el);
       if (cs.display === "none" || cs.float !== "none") continue;
+      if (el.matches(".article-toc") && cs.gridColumnStart === "2") continue;
       const b = el.getBoundingClientRect();
       if (b.width < 2 || b.height < 2) continue;
-      if (Math.abs(b.left - colLeft) > 2) {
-        strays.push({ sel: sel(el), left: Math.round(b.left), colLeft: Math.round(colLeft) });
+      const start = rtl ? b.right : b.left;
+      if (Math.abs(start - colStart) > 2) {
+        strays.push({ sel: sel(el), left: Math.round(start), colLeft: Math.round(colStart) });
       }
     }
   }
@@ -279,6 +298,7 @@ function probe() {
     cropped: rows.reduce((n, r) => n + (r.clipped?.length ?? 0), 0),
     tightGutter: g.filter((r) => r.gutters.min < 12).length,
     columnAsymmetry: g.filter((r) => "delta" in r.gutters && r.gutters.delta > 8).length,
+    columnOffStart: g.filter((r) => (r.gutters.startOffset ?? 0) > 2).length,
     leftEdgeStrays: rows.reduce((n, r) => n + (r.strays?.length ?? 0), 0),
     headerMisaligned: rows.filter((r) => (r.headerOffset ?? 0) > 2).length,
   };
@@ -292,6 +312,8 @@ function probe() {
       for (const st of r.strays ?? []) console.log(`  STRAY    ${r.path} @${r.vw} ${st.sel} left=${st.left} col=${st.colLeft}`);
       if ((r.headerOffset ?? 0) > 2) console.log(`  HEADER   ${r.path} @${r.vw} title offset ${r.headerOffset}px from the article`);
       if (r.gutters && r.gutters.min < 12) console.log(`  GUTTER   ${r.path} @${r.vw} only ${r.gutters.min}px`);
+      if (r.gutters && (r.gutters.delta ?? 0) > 8) console.log(`  ASYM     ${r.path} @${r.vw} container gutters ${r.gutters.colLeft}/${r.gutters.colRight}`);
+      if (r.gutters && (r.gutters.startOffset ?? 0) > 2) console.log(`  OFFSTART ${r.path} @${r.vw} column ${r.gutters.startOffset}px off the container edge`);
     }
   }
   console.log(bad ? `result: ${bad} problem(s)` : "result: CLEAN");

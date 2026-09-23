@@ -35,6 +35,7 @@ import importlib
 import inspect
 import re
 import sys
+from pathlib import Path
 
 PY_BLOCK = re.compile(r"```python\n(.*?)```", re.S)
 MIN_VERSION = re.compile(r'^min_pain001:\s*"?([\d.]+)"?\s*$', re.M)
@@ -46,7 +47,7 @@ def _parse(v: str) -> tuple[int, ...]:
 
 def _pending_minimum(path: str, installed: str) -> str | None:
     """The version this page needs, if it is newer than what is installed."""
-    m = MIN_VERSION.search(open(path, encoding="utf-8").read())
+    m = MIN_VERSION.search(Path(path).read_text(encoding="utf-8"))
     if not m:
         return None
     return m.group(1) if _parse(m.group(1)) > _parse(installed) else None
@@ -63,7 +64,7 @@ def main() -> int:
     checked = 0
 
     for path in sorted(glob.glob("_posts/*.md")):
-        text = open(path, encoding="utf-8").read()
+        text = Path(path).read_text(encoding="utf-8")
         for block in PY_BLOCK.findall(text):
             try:
                 tree = ast.parse(block)
@@ -171,7 +172,7 @@ def _check_migration_paths() -> list[str]:
         r'migrate_(?:rows|file)\(\s*[^,]+,\s*"([^"]+)"\s*,\s*"([^"]+)"',
         re.S)
     for path in sorted(glob.glob("_posts/*.md")):
-        text = open(path, encoding="utf-8").read()
+        text = Path(path).read_text(encoding="utf-8")
         for block in PY_BLOCK.findall(text):
             for src, dst in pat.findall(block):
                 try:

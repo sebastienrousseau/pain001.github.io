@@ -10,13 +10,13 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Upload or paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, recomputed control totals, and the official XSD — all in your browser."
+description: "Upload or paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, recomputed control totals, and the official XSD. Everything runs in your browser."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "en"
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/try/"
-image_alt: "A question-and-answer session on ISO 20022 payment file generation — the questions treasury, operations, engineering, and audit teams actually ask."
+image_alt: "A question-and-answer session on ISO 20022 payment file generation, covering the questions treasury, operations, engineering, and audit teams actually ask."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -36,7 +36,7 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "Drop in a CSV, use the sample, or paste your own records — validation runs instantly, entirely in your browser, and nothing ever leaves your machine."
+subtitle: "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
 title: "Try Pain001 in Your Browser"
@@ -46,7 +46,7 @@ atom_link: "https://pain001.com/try/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Upload or paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, recomputed control totals, and the official XSD — all in your browser."
+item_description: "Upload or paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, recomputed control totals, and the official XSD. Everything runs in your browser."
 item_guid: "https://pain001.com/try/rss.xml"
 item_link: "https://pain001.com/try/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -67,7 +67,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Upload or paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, recomputed control totals, and the official XSD — all in your browser."
+twitter_description: "Upload or paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, recomputed control totals, and the official XSD. Everything runs in your browser."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
@@ -88,17 +88,17 @@ last_reviewed: "2026-07-26"
 
 ---
 
-## What this demo shows — and what the real pipeline adds
+## What this demo shows, and what the real pipeline adds
 
-Each sample batch is also [downloadable as a CSV file](/samples/pain001-sample-sepa-sct.csv) to use as the template for your own ERP or spreadsheet export — the header row is the contract.
+Each sample batch is also [downloadable as a CSV file](/samples/pain001-sample-sepa-sct.csv) to use as the template for your own ERP or spreadsheet export. The header row is the contract.
 
-The demo above implements the *fail-fast* layer of the Pain001 pipeline: required-field checks, ISO 13616 mod-97 IBAN checksums, ISO 9362 BIC structure, amount and date formats, and control totals (`NbOfTxs`, `CtrlSum`) recomputed from the records rather than trusted. Try the "Introduce an error…" menu — each scenario plants exactly one realistic flaw (a flipped IBAN digit, a malformed BIC, a missing column, a European comma-decimal amount, an impossible date) and shows you the row-level finding a bank's gateway would otherwise report days later.
+The demo above implements the *fail-fast* layer of the Pain001 pipeline: required-field checks, ISO 13616 mod-97 IBAN checksums, ISO 9362 BIC structure, amount and date formats, and control totals (`NbOfTxs`, `CtrlSum`) recomputed from the records rather than trusted. Try the "Introduce an error…" menu. Each scenario plants exactly one realistic flaw (a flipped IBAN digit, a malformed BIC, a missing column, a European comma-decimal amount, an impossible date) and shows you the row-level finding a bank's gateway would otherwise report days later.
 
-The installed toolchain runs a much deeper gate: JSON Schema validation per record with field-alias normalisation, five scheme rulebooks (SEPA SCT, Instant, SDD Core, B2B, cross-border) with rule-by-rule `--explain` output, and final validation of the rendered document against the official ISO 20022 XSD before a single byte is written. Ten `pain.001` versions and `pain.008.001.02` are supported.
+The installed toolchain runs a much deeper gate: JSON Schema validation per record with field-alias normalisation, five scheme rulebooks (SEPA SCT, Instant, SDD Core, B2B, cross-border) with rule-by-rule `--explain` output, and final validation of the rendered document against the official ISO 20022 XSD before a single byte is written. Eleven `pain.001` versions and two `pain.008` versions (`.02` and `.08`) are supported.
 
 ```bash
 pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --scheme sepa-sct --dry-run
 ```
 
-Step 3 above is not a simulation: it boots a Python runtime in WebAssembly and runs [xmlschema](https://pypi.org/project/xmlschema/) against the official `pain.001.001.09` schema, served from this site — the same class of XSD gate the CLI applies. What remains CLI-only is the rest of the pipeline: JSON Schema normalisation, the five scheme rulebooks with `--explain`, and the other ten message definitions.
+Step 3 above is not a simulation: it boots a Python runtime in WebAssembly and runs [xmlschema](https://pypi.org/project/xmlschema/) against the official `pain.001.001.09` schema, served from this site. It is the same class of XSD gate the CLI applies. What remains CLI-only is the rest of the pipeline: JSON Schema normalisation, the five scheme rulebooks with `--explain`, and the other ten message definitions.

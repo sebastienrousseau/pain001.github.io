@@ -6,6 +6,220 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+### Changed
+
+- PRISM redesigned for institutional buyers. One typeface (Inter, self-hosted,
+  OFL-1.1) replaces the serif display face and the system UI stack; a
+  cobalt-on-warm-grey palette of its own (cobalt #1f3db0 links and
+  actions, periwinkle #a8b8ff in dark mode, energy orange kept for dated
+  signals; no teal or mint, so nothing reads as another network's brand),
+  every text pair at 7:1 in both themes and in Display P3; distinct light and dark themes (the header, hero and developer band
+  were navy in both); hairline cells, figures and columns in place of
+  tinted cards and gradient icon tiles.
+- Homepage: positioning around deterministic, air-gapped, auditable
+  validation; primary action "Book an architecture briefing"; the hero shows
+  three recorded CLI runs (clean, SEPA IBAN error, CBPR+ address and UETR
+  findings), captured with all network access denied, behind accessible
+  tabs; a proof band of figures counted from the corpus and specifications.
+- Header reduced to four sections, a ⌘K search field and one action;
+  language and theme controls moved to the footer. "Ecosystem" is now
+  "Products" and "Research" is "Insights".
+- Enterprise hero carries the reviewer's own verification: release download,
+  SHA256SUMS check and `gh attestation verify`, each run against the
+  published release.
+- Skeletonic CSS retired. It sat under PRISM with a second container width,
+  element margins and a 700 bold that the theme no longer ships.
+- Regulatory timeline (DORA 17 Jan 2025, MT–MX end 22 Nov 2025, CBPR+
+  structured addresses 14 Nov 2026, the roadmap to 2028) with what Pain001
+  does about each date, and an executive-briefing card, in place of the
+  closing prose. Enterprise gains a risk-review table whose answers are
+  limited to how the software works and what the page offers.
+- Material depth: an 8% hairline and a two-layer shadow on the lifted
+  panels, a soft light behind the hero panel, and a light code window in
+  the light theme.
+- The comparison page is a vendor evaluation: a category matrix with
+  Pain001 in a highlighted column, project and platform cards, both sides
+  of the ledger, four decision paths, an FAQ accordion and a sticky
+  in-page navigation that marks the current section.
+- Article tables use the full content width and hairline rows.
+- Homepage rebuilt in the product-page pattern: centred heads at a larger
+  type scale, a dated ribbon, a segmented
+  scenario switch, a figures band with a footnote, review tiles, the four
+  validation layers in a dark band, a pipeline
+  gallery, a packages bento with a real Python example and its real
+  output, copyable install commands, a specs strip and a dated timeline.
+- Articles get a sticky contents rail from 72rem that marks the current
+  section, and a quieter save control; `/try/` uses the shared page hero.
+- The homepage opens on a full-width photograph of the City of London with
+  the headline on a solid card over its lower edge; every other page,
+  including tag pages, opens on a photo band of its own: 149 pages and six
+  homepage sections, no photograph used twice, chosen for the page (the
+  country of each corpus scenario, London landmarks for the message
+  versions). `scripts/page_photos.json` is the single map; translations
+  share their English page's photo. Bands keep one 2:1 shape inside the
+  content column at every screen size (the homepage banner 21:9 in a
+  wider column), so a phone and an 8K screen see the same framing; only
+  landscape photos are used, cropped where the detail is, at
+  640/768/960/1280/1600px, AVIF first with WebP as the fallback. A band is
+  its page's largest paint, so each AVIF is held to a byte budget per
+  width (the importer steps quality down until it fits). Text never sits
+  on a photograph.
+- ssg's search script is deferred instead of blocking first paint, and
+  the /try/ upload area takes its accessible name from its visible text
+  (it previously announced different wording, WCAG 2.5.3).
+- Copy in every language drops the em dash: each sentence was rewritten
+  with the punctuation a native editor would use (commas, colons, full
+  stops, parentheses; full-width marks in Chinese and Japanese, the
+  Arabic comma in Arabic and Persian). Generated pages were fixed in
+  their generators (message specifications, corpus scenarios) and
+  regenerated; translation tables were re-keyed to the new English.
+- Photography on the homepage review tiles, the regulated-teams section,
+  the executive briefing and the enterprise page: Unsplash and Pexels
+  photographs, each under its own licence file and REUSE annotation,
+  copied into the site (never hotlinked, so the same-origin CSP holds),
+  cropped and re-encoded by `scripts/import_photos.py` at 480/800/1200px
+  (the homepage banner also at 1600/2400px), decorative and size-reserved;
+  banners load eagerly, everything below the fold lazily. Credits in
+  THIRD_PARTY_NOTICES.md.
+- Homepage-only behaviour moved to `/js/home.js`; the site scripts ship
+  without block comments, keeping the translated /try/ pages under ssg's
+  50 KB script budget.
+- A footer "Reduce motion" control (WCAG 2.3.3), stored on the device;
+  motion is transform-only so no text is ever sampled mid-fade.
+- Tag pages carry the site header, fonts and palette; `/tags/` lists the
+  topics; tag-list links declare the language of the page they name.
+- The published stylesheet bundle is minified (`scripts/css_minify.py`,
+  comments and whitespace only, doctested): 111 KiB to 81 KiB on the
+  homepage.
+
+### Fixed
+
+- Deadline content corrected site-wide, in all 35 languages: on 27 August
+  2026 Swift deferred every payments change in Standards Release 2026,
+  including the 14 November 2026 rule against unstructured postal
+  addresses and the interbank MT101 move to pain.001, with new timing due
+  by December 2026. The ribbon, homepage timeline, business pages, FAQs,
+  glossary, roadmap and the 2026 briefing now say so, cite Swift and the
+  Federal Reserve (Fedwire's November 2026 release moved to November
+  2027), and keep the dates that stand (12 June 2027, November 2027,
+  November 2028). The 2026 briefing was re-checked against primary
+  sources on 23 September 2026, correcting the ISO 20022 share (more
+  than 98%), MT category 9 (statements run to 2028), BOJ-NET, FedNow and
+  Aani figures, the TIPS date, the ACI forecast, and an unsupported claim
+  about MCP servers.
+- `/security.txt` was published empty and `/.well-known/security.txt`
+  returned 404: the generator wrote an empty file, the `.well-known` copy was
+  made before the real file arrived, and the Pages upload excluded
+  dot-directories. A real RFC 9116 file now ships at both paths.
+- The homepage terminal showed `pain001 validate payments.csv` and
+  `generate --type … --output …`, which pain001 0.0.70 rejects; the commands
+  now use `-d`, `-t` and `-o`.
+- Wide-gamut (Display P3) screens were repainted in the retired accent
+  colour by a stale P3 block.
+- Header and footer navigation, panel descriptions and footer lines were in
+  English on all 34 locale pages; they are now translated.
+- The fonts' REUSE annotation named files that did not exist.
+- "2 min read·Last reviewed" lost its space to a CSS escape terminator.
+- The article contents box set its label at full H2 size.
+- The article contents rail overlapped wide tables; rail pages now use a
+  two-column grid, and the site audit fails any overlap with the rail.
+- The hero's decorative glow widened the homepage past the viewport, and
+  long type names widened the tag pages at 320px.
+- The header's Products link pointed to a homepage anchor that no longer
+  existed, on every page.
+- Tables squeezed columns to one or two characters ("Proje / ct"):
+  `overflow-wrap: anywhere` on cells lowered their minimum width, and the
+  wrapper meant to let wide tables leave the reading measure had no CSS.
+- Stale capability counts: the comparison said ten `pain.001` versions
+  (.03–.12) and the reference said `versions` lists 11 definitions;
+  pain001 0.0.70 supports eleven `pain.001` versions and two `pain.008`.
+- `--type-body` pointed at a `--font-body` token that never existed, so
+  tag pages and parts of the demo rendered in the browser's serif.
+- On translated docs pages the language menu's "English" entry pointed
+  back to the translated page.
+- Legacy redirect stubs used a meta refresh (a WAVE error); they now
+  redirect with a same-origin script and keep the visible link. The
+  script carries the retired-path map itself (stamped at build time)
+  rather than reading a destination from the page, so it can only
+  ever send a visitor to one of those paths.
+- The theme script (stored theme and motion choice, applied before
+  first paint) was a render-blocking request on every page; it is now
+  inlined in the head under a CSP hash. Lighthouse had put a third of
+  the mobile first paint on that request and scored 99 on the tablet
+  and locale home pages.
+- Search Console coverage: `/404/` was served with a 200 and indexable (a
+  soft 404) and GitHub Pages never showed it for a missing URL; it is now
+  published as `/404.html` and, with the offline fallback and the form
+  confirmation page, carries robots noindex and stays out of the sitemap.
+  A Cloudflare redirect rule (set on 23 September 2026, documented in the
+  README) sends any `/index.html` URL to its directory URL with a 301.
+- The 252 "Open this scenario in the demo" links used `/try/?sample=…`,
+  which made every scenario a separate URL to a crawler: Search Console
+  listed 41 of them as alternates of `/try/`. They now use a fragment,
+  `/try/#sample=…`, which the demo reads first (the query form still
+  works), and the link validator knows the fragment is a parameter.
+- Reference pages read as a squashed left column: the contents rail was
+  only built from four sections, so a three-section page had a 68ch column
+  and nothing beside it, and titles at the display step wrapped three to
+  six lines. The rail now starts at two sections and is 18rem wide, article
+  titles are one step smaller and span the container, and table columns
+  have a 9rem floor so a wide table scrolls instead of crushing a column
+  beside an unbreakable file name.
+- The 34 type-reference pages carried the span of type names in their
+  title (up to 120 characters, three lines on a laptop); the span stays in
+  the subtitle and description, and the headline ratchet drops from 292 to
+  258 over-long H1s.
+- ssg's search widget (button, dialog, placeholder and the Esc, arrow and
+  Enter hints) read "Search" in English on every translated page; it now
+  follows the locale string table.
+- Two enterprise sentences on the Why and Executive brief pages were English
+  in all 34 translations; the executive-brief eyebrow and title in six
+  languages, and a handful of table headers and labels, were untranslated.
+- `build.sh` takes a lock so two builds cannot run in the same tree, and
+  retries the staging clean-up once. ssg itself joins every thread before it
+  exits, so the transient "Directory not empty" seen once could only have
+  been a second writer in the tree.
+- The photo band at the top of a page is capped at 24rem tall from 64rem,
+  so on a laptop the headline no longer starts below the fold.
+- French pages fetched 36 KB of the latin-ext Inter subset for the
+  single "œ" in "cœur": both subsets declared U+0153 and the later
+  declaration wins. The ext faces are now declared first, so the
+  glyph comes from the preloaded latin subset.
+- 653 bold-only paragraphs (FAQ questions) are now real headings.
+- Identical "Table, scrollable horizontally" regions on translated docs
+  pages are named after their section, so landmarks are unique.
+- The demo's XML panel read an undefined `--code-text` and inherited the
+  page ink instead of the code-window colour.
+
+### Added
+
+- `scripts/check_dated_claims.py` and `dated-claims.yml`: the dated regulatory
+  claims the pitch depends on (Swift's Standards Release 2026 deferral and its
+  promised December update, the Fedwire release moved to November 2027, the
+  CHAPS purpose-code mandate) are listed in `scripts/dated_claims.json` with
+  the sentence each source must still contain and a review date. A weekly run
+  fails the moment a source changes or a review date passes. swift.com refuses
+  non-browser clients, so it is read through the Internet Archive after asking
+  it for a fresh capture.
+- `scripts/measure_audit.cjs`: every page at phone, tablet, laptop and desktop
+  widths in real Chrome, failing on a reading column under 55% of its
+  container, a title over three lines, a paragraph narrower than a phone, or
+  a page that scrolls sideways. The layout audit caught cropping; nothing
+  caught the opposite, and the reference pages shipped with the body on 60%
+  of the container and titles on three to six lines.
+- `scripts/validate_contrast.py`: every token pair, both schemes and both
+  gamuts, at 7:1 for text and 3:1 for borders and focus; the two dark blocks
+  must agree.
+- `scripts/validate_proof.py`: each homepage figure must equal its source.
+- `scripts/validate_security_txt.py`: both copies present, identical, with
+  Contact, a single Expires within a year, and Canonical.
+- `scripts/validate_headings.py` now decodes entities before counting.
+- `scripts/audit_site.mjs`: every built page, WAVE's documented error and
+  alert rules plus the full axe rule set, light and dark; in CI.
+- The Lighthouse gate covers 13 routes (every layout, both text
+  directions) on mobile, tablet, desktop, 4K and 8K; the layout audit
+  adds 4K and 8K viewports.
+
 ## [0.0.5] - 2026-09-22
 
 ### Fixed

@@ -1,4 +1,4 @@
-/* Pain001 browser demo — page wiring.
+/* Pain001 browser demo: page wiring.
  *
  * Input handling lives in ./try-demo.js (pure, unit-tested); the
  * verdicts come from the pain001 library itself, loaded into a Python
@@ -34,7 +34,7 @@ function tFinding(f) {
 /* ==== State machine ====
  * empty → loaded → running → valid | invalid. The engine has its own
  * state (idle → loading → ready | failed) and every control's enabled
- * state derives from the two — nothing toggles buttons ad hoc. */
+ * state derives from the two; nothing toggles buttons ad hoc. */
 
 const state = {
   phase: "empty",        // empty | loaded | running | valid | invalid
@@ -139,7 +139,7 @@ function updateLayerSummary(findings) {
   } else if (isoIssues > 0) {
     setLayerState(els.layerIso, "fail", t("{n} issue(s) the schema would reject", { n: isoIssues }));
   } else {
-    setLayerState(els.layerIso, null, t("Not reached — fix the findings above first"));
+    setLayerState(els.layerIso, null, t("Not reached: fix the findings above first"));
   }
 
   setLayerState(els.layerData, dataIssues ? "fail" : "pass",
@@ -149,7 +149,7 @@ function updateLayerSummary(findings) {
 
   const verdict = state.schemeVerdict;
   if (!verdict) {
-    setLayerState(els.layerScheme, null, t("Not run — choose a scheme rulebook in step 1"));
+    setLayerState(els.layerScheme, null, t("Not run: choose a scheme rulebook in step 1"));
   } else if (verdict.valid) {
     setLayerState(els.layerScheme, "pass", t("Passed {scheme}", { scheme: verdict.scheme }));
   } else {
@@ -171,7 +171,7 @@ function showFindings(findings) {
      ["td", f.value, "cell-value"], ["td", tFinding(f), "cell-problem"]]
       .forEach(([tag, text, cls]) => {
         const td = document.createElement(tag);
-        td.textContent = text === undefined || text === "" ? "—" : String(text);
+        td.textContent = text === undefined || text === "" ? "" : String(text);
         if (cls) td.className = cls;
         tr.appendChild(td);
       });
@@ -180,7 +180,7 @@ function showFindings(findings) {
   els.tableWrap.hidden = false;
   const rest = findings.length - MAX_VISIBLE_ERRORS;
   els.overflow.hidden = rest <= 0;
-  if (rest > 0) els.overflow.textContent = t("…and {n} more — download the full error report below.", { n: rest });
+  if (rest > 0) els.overflow.textContent = t("…and {n} more. Download the full error report below.", { n: rest });
 }
 
 function setXml(xml, twin) {
@@ -194,8 +194,8 @@ function setXml(xml, twin) {
     const span = document.createElement("span");
     span.className = "xml-placeholder";
     span.textContent = state.phase === "invalid"
-      ? t("No XML generated — validation is a hard gate. Fix the findings above and re-validate.")
-      : t("The validated pain.001.001.09 document will appear here — add data in step 1.");
+      ? t("No XML generated: validation is a hard gate. Fix the findings above and re-validate.")
+      : t("The validated pain.001.001.09 document will appear here once you add data in step 1.");
     els.xmlOut.appendChild(span);
   }
 }
@@ -215,7 +215,7 @@ function reportProgress(p) {
   const mb = (n) => (n / 1e6).toFixed(1);
   if (p.phase === "download") {
     setRunProgress(p.total ? Math.round((p.done / p.total) * 100) : 0);
-    els.status.textContent = t("Starting a private Python runtime in your browser — {done} of {total} MB; nothing leaves your machine.",
+    els.status.textContent = t("Starting a private Python runtime in your browser: {done} of {total} MB. Nothing leaves your machine.",
       { done: mb(p.done), total: mb(p.total) });
   } else if (p.phase === "boot") {
     els.status.textContent = t("Booting Python runtime…");
@@ -244,7 +244,7 @@ function ensureEngine() {
     setRunProgress(null);
     try {
       const hex = engine.py.runPython(`xsd_sha256(${JSON.stringify(MESSAGE_TYPE)})`);
-      els.xsdHash.textContent = t("Schema SHA-256: {hex} — compare it against the copy published for pain.001.001.09.", { hex });
+      els.xsdHash.textContent = t("Schema SHA-256: {hex}. Compare it against the copy published for pain.001.001.09.", { hex });
     } catch (_) { /* informational only */ }
     return engine;
   })();
@@ -264,7 +264,7 @@ function showXsd(errors, secs) {
   } else {
     state.xsdVerdict = "invalid";
     els.xsdStatus.className = "status fail";
-    els.xsdStatus.textContent = t("✗ Official schema rejected the document — {n} error(s) ({s}s).", { n: errors.length, s: secs });
+    els.xsdStatus.textContent = t("✗ Official schema rejected the document: {n} error(s) ({s}s).", { n: errors.length, s: secs });
     for (const e of errors) {
       const li = document.createElement("li");
       li.textContent = e;
@@ -278,7 +278,7 @@ async function runValidation() {
   state.schemeVerdict = null;
   els.xsdErrors.innerHTML = "";
   els.xsdStatus.className = "status";
-  els.xsdStatus.textContent = t("Generate XML in step 2 first — the XSD gate runs on that output.");
+  els.xsdStatus.textContent = t("Generate XML in step 2 first. The XSD gate runs on that output.");
   const parsed = parseCsv(els.input.value);
   if (parsed.error) {
     state.phase = "invalid";
@@ -296,7 +296,7 @@ async function runValidation() {
   const notes = [t("Detected: {delim}-delimited", { delim: t(DELIMITER_NAMES[parsed.delimiter]) }),
     t("{n} record(s)", { n: parsed.rows.length })];
   if (parsed.unknown.length) notes.push(t("ignored column(s): {cols}", { cols: parsed.unknown.join(", ") }));
-  if (parsed.rows.length > MAX_ROWS_WARN) notes.push(t("large batch — the CLI streams batches of any size"));
+  if (parsed.rows.length > MAX_ROWS_WARN) notes.push(t("large batch; the CLI streams batches of any size"));
   els.dialectNote.textContent = notes.join(" · ");
 
   state.phase = "running";
@@ -336,14 +336,14 @@ async function runValidation() {
 
   if (findings.length) {
     state.phase = "invalid";
-    els.status.textContent = t("✗ Validation failed — {n} issue(s). This file would be rejected.", { n: findings.length });
+    els.status.textContent = t("✗ Validation failed: {n} issue(s). This file would be rejected.", { n: findings.length });
     els.status.className = "status fail";
     setXml("");
   } else {
     state.phase = "valid";
     setXml(out.xml, out.twin);
     showXsd(out.xsd_errors, secs);
-    els.status.textContent = t("✓ {n} record(s) valid — pain001 {version} generated the file and the official XSD accepted it ({s}s).",
+    els.status.textContent = t("✓ {n} record(s) valid. pain001 {version} generated the file and the official XSD accepted it ({s}s).",
       { n: out.records, version: out.version, s: secs });
     els.status.className = "status pass";
   }
@@ -367,7 +367,7 @@ function loadData(text, opts) {
 function readFile(file) {
   if (!file) return;
   if (file.size > MAX_FILE_BYTES) {
-    els.status.textContent = t("✗ File is larger than 2 MB — this demo caps input size; the CLI streams batches of any size.");
+    els.status.textContent = t("✗ File is larger than 2 MB. This demo caps input size; the CLI streams batches of any size.");
     els.status.className = "status fail";
     return;
   }
@@ -417,8 +417,12 @@ async function loadCorpusSamples() {
       group.appendChild(opt);
     }
     els.sampleSelect.appendChild(group);
-    // /try/?sample=corpus:<scenario id> opens a scenario page's example directly
-    const wanted = new URLSearchParams(location.search).get("sample");
+    // /try/#sample=corpus:<scenario id> opens a scenario page's example
+    // directly. The fragment is what the corpus pages link to (a query
+    // string made every scenario a separate URL for crawlers); the query
+    // form still works for links already out there.
+    const wanted = new URLSearchParams(location.hash.replace(/^#/, "")).get("sample")
+      || new URLSearchParams(location.search).get("sample");
     if (wanted && CORPUS.has(wanted)) {
       els.sampleSelect.value = wanted;
       els.sampleSelect.dispatchEvent(new Event("change"));
@@ -597,4 +601,6 @@ if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/sw.js").catch(() => {});
 }
 
-render();
+/* The first validation fills the result tables, all below the fold. It
+   runs after the first paint so the page and its photo do not wait on it. */
+requestAnimationFrame(() => setTimeout(render, 0));

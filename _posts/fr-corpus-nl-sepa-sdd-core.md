@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-09-13T08:00:00+00:00"
+date: "2026-09-23T08:00:00+00:00"
 description: "SEPA Core direct debit, recurring collections under mandates. Un exemple pain.001 validé (Pays-Bas, rail sepa-direct-debit), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -39,7 +39,7 @@ short_name: pain001
 subtitle: "SEPA Core direct debit, recurring collections under mandates."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "nl.sepa.sdd-core — exemple pain.001 ISO 20022 : Pays-Bas (sepa-direct-debit)"
+title: "Exemple pain.001 ISO 20022 nl.sepa.sdd-core : Pays-Bas (sepa-direct-debit)"
 url: "https://pain001.com/fr/corpus-nl-sepa-sdd-core/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/fr/corpus-nl-sepa-sdd-core/"
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "SEPA Core direct debit, recurring collections under mandates. Un exemple pain.001 validé (Pays-Bas, rail sepa-direct-debit), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur."
 item_guid: "https://pain001.com/fr/corpus-nl-sepa-sdd-core/"
 item_link: "https://pain001.com/fr/corpus-nl-sepa-sdd-core/"
-item_pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
-item_title: "nl.sepa.sdd-core — exemple pain.001 ISO 20022 : Pays-Bas (sepa-direct-debit)"
-last_build_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+item_pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+item_title: "Exemple pain.001 ISO 20022 nl.sepa.sdd-core : Pays-Bas (sepa-direct-debit)"
+last_build_date: "Wed, 23 Sep 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "nl.sepa.sdd-core — exemple pain.001 ISO 20022 : Pays-Bas (sepa-direct-debit)"
+apple-mobile-web-app-title: "Exemple pain.001 ISO 20022 nl.sepa.sdd-core : Pays-Bas (sepa-direct-debit)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,7 +71,7 @@ twitter_description: "SEPA Core direct debit, recurring collections under mandat
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "nl.sepa.sdd-core — exemple pain.001 ISO 20022 : Pays-Bas (sepa-direct-debit)"
+twitter_title: "Exemple pain.001 ISO 20022 nl.sepa.sdd-core : Pays-Bas (sepa-direct-debit)"
 twitter_url: "https://pain001.com/fr/corpus-nl-sepa-sdd-core/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -98,8 +98,8 @@ Un fichier d'initiation de paiement (**Pays-Bas**, rail **sepa-direct-debit**), 
 
 | Édition | Fichier de paiement | Jumeau JSON ISO 20022 | Fiche de provenance |
 | :--- | :--- | :--- | :--- |
-| `pain.008.001.02` | [nl.sepa.sdd-core.pain.008.001.02.xml](/corpus/market/nl/sepa-direct-debit/nl.sepa.sdd-core.pain.008.001.02.xml) | — (les jumeaux ne couvrent que pain.001) | [nl.sepa.sdd-core.pain.008.001.02.provenance.yaml](/corpus/market/nl/sepa-direct-debit/nl.sepa.sdd-core.pain.008.001.02.provenance.yaml) |
-| `pain.008.001.08` | [nl.sepa.sdd-core.pain.008.001.08.xml](/corpus/market/nl/sepa-direct-debit/nl.sepa.sdd-core.pain.008.001.08.xml) | — (les jumeaux ne couvrent que pain.001) | [nl.sepa.sdd-core.pain.008.001.08.provenance.yaml](/corpus/market/nl/sepa-direct-debit/nl.sepa.sdd-core.pain.008.001.08.provenance.yaml) |
+| `pain.008.001.02` | [nl.sepa.sdd-core.pain.008.001.02.xml](/corpus/market/nl/sepa-direct-debit/nl.sepa.sdd-core.pain.008.001.02.xml) | Aucun (les jumeaux ne couvrent que pain.001) | [nl.sepa.sdd-core.pain.008.001.02.provenance.yaml](/corpus/market/nl/sepa-direct-debit/nl.sepa.sdd-core.pain.008.001.02.provenance.yaml) |
+| `pain.008.001.08` | [nl.sepa.sdd-core.pain.008.001.08.xml](/corpus/market/nl/sepa-direct-debit/nl.sepa.sdd-core.pain.008.001.08.xml) | Aucun (les jumeaux ne couvrent que pain.001) | [nl.sepa.sdd-core.pain.008.001.08.provenance.yaml](/corpus/market/nl/sepa-direct-debit/nl.sepa.sdd-core.pain.008.001.08.provenance.yaml) |
 
 ## Comment la bibliothèque l'a vérifié
 

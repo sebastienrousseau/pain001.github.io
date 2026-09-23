@@ -16,7 +16,7 @@ format-detection: telephone=no
 hreflang: "ja"
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/ja/"
-image_alt: "A question-and-answer session on ISO 20022 payment file generation — the questions treasury, operations, engineering, and audit teams actually ask."
+image_alt: "A question-and-answer session on ISO 20022 payment file generation, covering the questions treasury, operations, engineering, and audit teams actually ask."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -36,10 +36,10 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "支払いデータを検証済み ISO 20022 XML に変換するオープンソーススイート — 銀行に届く前に正しさを証明します。"
+subtitle: "支払いデータを検証済み ISO 20022 XML に変換し、銀行に届く前に正しさを証明するオープンソーススイートです。"
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001 — オープンソースの ISO 20022 送金指図"
+title: "Pain001：オープンソースの ISO 20022 送金指図"
 url: "https://pain001.com/ja/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/ja/rss.xml"
@@ -50,7 +50,7 @@ item_description: "CSV・Excel・SQLite・JSON・Parquet・SWIFT MT101 から XS
 item_guid: "https://pain001.com/ja/rss.xml"
 item_link: "https://pain001.com/ja/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001 — オープンソースの ISO 20022 送金指図"
+item_title: "Pain001：オープンソースの ISO 20022 送金指図"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001 — オープンソースの ISO 20022 送金指図"
+apple-mobile-web-app-title: "Pain001：オープンソースの ISO 20022 送金指図"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,7 +71,7 @@ twitter_description: "CSV・Excel・SQLite・JSON・Parquet・SWIFT MT101 から
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001 — オープンソースの ISO 20022 送金指図"
+twitter_title: "Pain001：オープンソースの ISO 20022 送金指図"
 twitter_url: "https://pain001.com/ja/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -83,24 +83,24 @@ site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-x
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "日本語版 Pain001"
 excerpt: "CSV・Excel・SQLite・JSON・Parquet・SWIFT MT101 から XSD 検証済みの pain.001 / pain.008 ファイルを生成するオープンソース Python スイート。AI エージェント向け MCP ツールと LSP サーバーを同梱。"
-last_reviewed: "2026-07-26"
+last_reviewed: "2026-09-23"
 
 
 ---
 
 ## 銀行より先に支払いファイルのエラーを見つける
 
-**Pain001** は ISO 20022 送金指図のためのオープンソース Python スイートです。手元にあるデータ — CSV、Excel、SQLite、JSON、Parquet、旧来の SWIFT MT101 メッセージ — を、公式 XSD スキーマで検証済みの `pain.001`(振込)および `pain.008`(口座振替)XML に変換します。
+**Pain001** は ISO 20022 送金指図のためのオープンソース Python スイートです。手元にあるデータ(CSV、Excel、SQLite、JSON、Parquet、旧来の SWIFT MT101 メッセージ)を、公式 XSD スキーマで検証済みの `pain.001`(振込)および `pain.008`(口座振替)XML に変換します。
 
 各ファイルは書き出される前に 3 段階の検証を通過します。レコードごとの JSON スキーマ(IBAN の mod-97 チェックと BIC 構造を含む)、スキームルール(SEPA および国際送金 CBPR+)、最終 XSD 検証です。コントロール合計は必ず再計算され、コピーされることはありません。すべてローカルで動作し、支払いデータがインフラの外に出ることはありません。
 
 ## ブラウザで試す
 
-サンプルバッチをブラウザ内で直接検証できます — 何もアップロードされません — 結果は公式 XSD スキーマで証明されます:[Pain001 を試す](/try/)。サンプル CSV は自社エクスポートのテンプレートとしてダウンロード可能です。
+サンプルバッチをブラウザ内で直接検証し、結果を公式 XSD スキーマで証明できます(何もアップロードされません):[Pain001 を試す](/try/)。サンプル CSV は自社エクスポートのテンプレートとしてダウンロード可能です。
 
-## 2026 年 11 月 14 日の期限
+## 構造化住所の期限は延期に
 
-2025 年 11 月 22 日に MT–MX 共存期間が終了し、次の期限は **2026 年 11 月 14 日**です。完全に非構造化の住所は CBPR+ 送金で拒否され、銀行間 MT101 リレーは `pain.001` バージョン 9 に置き換えられます。Pain001 は構造化住所・ハイブリッド住所を今日から生成でき、MT101 も 1 コマンドで変換します。
+2025 年 11 月 22 日に MT–MX 共存期間が終了した後、次の節目は 2026 年 11 月 14 日の予定でした。CBPR+ は完全に非構造化の郵便住所を拒否し、銀行間 MT101 リレーは `pain.001` バージョン 9 に置き換えられるはずでした。2026 年 8 月、Swift はこの 2 つの変更をいずれも延期し、新しい日程を 2026 年 12 月までに発表するとしていますが、要件そのものは変わりません。Pain001 はすでに構造化住所とハイブリッド住所に対応しており、MT101 も 1 コマンドで変換します。
 
 ## はじめに
 

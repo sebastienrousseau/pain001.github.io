@@ -26,7 +26,10 @@ env:
 jobs:
   build-and-audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # The gate set takes about 32 minutes: Lighthouse over five profiles
+    # is 14 of them and the site-wide axe scan 11. The limit is headroom,
+    # not a target; at 30 the last step was cancelled mid-scan.
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
@@ -83,6 +86,31 @@ jobs:
       - name: Content integrity (no eaten markup, no double encoding)
         run: python3 scripts/validate_content_integrity.py
 
+      # Three defects that every other gate passes: a headline that is really
+      # an SEO title, a typeface declared but never worn, and an emoji doing
+      # the job of an icon. Each one shipped before it had a gate.
+      - name: Headline sanity (ratchet)
+        run: python3 scripts/validate_headings.py
+
+      - name: Font declaration and budget
+        run: python3 scripts/validate_fonts.py
+
+      - name: No emoji in CSS content
+        run: python3 scripts/validate_css_content.py
+
+      # Computed from the token blocks, not sampled from rendered pages, so
+      # a pair no audited page paints is still held to AAA.
+      - name: Token contrast (AAA text, 3:1 non-text)
+        run: python3 scripts/validate_contrast.py
+
+      # The homepage proof band is only worth showing if every figure is
+      # the count of something a reviewer can open.
+      - name: Proof figures match their sources
+        run: python3 scripts/validate_proof.py
+
+      - name: security.txt is published and current (RFC 9116)
+        run: python3 scripts/validate_security_txt.py
+
       - name: Link integrity (internal links, anchors, locale consistency)
         run: python3 scripts/validate_links.py site
 
@@ -116,8 +144,9 @@ jobs:
           curl --fail --silent http://127.0.0.1:8899/ > /dev/null
           node scripts/layout_audit.cjs
           node scripts/print_audit.cjs
+          node scripts/measure_audit.cjs --all
 
-      - name: Lighthouse 100% (mobile and desktop)
+      - name: Lighthouse 100% (mobile, tablet, desktop, 4K, 8K)
         run: CHROME_PATH=/usr/bin/google-chrome node scripts/perf_budget.mjs http://127.0.0.1:8899
 
       - name: Accessibility scan (pa11y-ci, WCAG2AAA)
@@ -128,11 +157,29 @@ jobs:
           npm install --prefix .a11y-tools --no-save --no-audit --no-fund puppeteer-core@23 @axe-core/puppeteer@4.10.2
           node scripts/a11y_modes.mjs
 
+      # Every built page, not a sample: WAVE's documented error and alert
+      # rules plus the full axe rule set (AAA contrast included), in light
+      # and dark. The taxonomy pages shipped unstyled because no sampled
+      # URL was one of them.
+      - name: Every page, WAVE rules and axe (light and dark)
+        run: node scripts/audit_site.mjs
+
+      # The upload drops dot-paths unless told otherwise, which is why
+      # /.well-known/security.txt 404'd in production. Include them, after
+      # removing the generator's build-only dotfiles so they are not
+      # published with it.
+      - name: Prune build-only dotfiles
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          rm -rf site/.meta site/.ssg-plugin-cache.json
+          find site -name .DS_Store -delete
+
       - name: Upload the built site as the Pages artifact
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: site
+          include-hidden-files: true
 
   repository-quality:
     name: Repository quality

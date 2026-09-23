@@ -1,0 +1,109 @@
+{{#extends "base"}}
+{{#block "main"}}
+<section class="page-hero">
+  <div class="container hero-inner">
+  <div class="hero-copy">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol><li><a href="/">Home</a></li><li aria-current="page">{{headline}}</li></ol>
+    </nav>
+    <p class="eyebrow eyebrow-hero">{{eyebrow}}</p>
+    <h1>{{headline}}</h1>
+    <p class="lead hero-lead">{{subtitle}}</p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#ask">Book an architecture briefing</a>
+      <a class="btn btn-secondary" href="/compliance-toolkit/">Compliance toolkit</a>
+    </div>
+
+    <div class="article-meta">Last reviewed <time datetime="{{last_reviewed}}">{{last_reviewed}}</time></div>
+  </div>
+
+  <figure class="run-panel verify-panel">
+    <figcaption class="run-bar"><span class="run-title">Verify this site&rsquo;s release yourself</span><span class="run-net">No account, no NDA</span></figcaption>
+    <ol class="verify-steps">
+      <li><p class="verify-label">Fetch the release and its checksums</p><pre><code>gh release download -p '*' \
+  -R sebastienrousseau/pain001.github.io</code></pre></li>
+      <li><p class="verify-label">Check every file against SHA256SUMS</p><pre><code>shasum -a 256 -c SHA256SUMS</code></pre><p class="run-state is-pass"><span aria-hidden="true">✓</span> OK for every file</p></li>
+      <li><p class="verify-label">Verify the build provenance (Sigstore)</p><pre><code>gh attestation verify pain001-site-*.tar.gz \
+  -R sebastienrousseau/pain001.github.io</code></pre><p class="run-state is-pass"><span aria-hidden="true">✓</span> Exit 0</p></li>
+    </ol>
+    <p class="run-foot">Commands and results checked against the published release. The CycloneDX SBOM is also served at <a href="/sbom.cdx.json">/sbom.cdx.json</a>.</p>
+  </figure>
+  </div>
+</section>
+
+<section class="section section-evidence" id="evidence">
+  <div class="container">
+    <h2 class="evidence-title">Evidence a reviewer can check without asking us</h2>
+    <p class="evidence-lede">
+      Every claim below resolves to an artefact you can fetch yourself. None of it
+      requires a call, an NDA, or our word for it.
+    </p>
+    <ul class="evidence-grid">
+      <li class="evidence-item">
+        <span class="evidence-label">Bill of materials</span>
+        <a class="evidence-link" href="/sbom.cdx.json">sbom.cdx.json</a>
+        <p>CycloneDX, generated at build time and published with every deploy.</p>
+      </li>
+      <li class="evidence-item">
+        <span class="evidence-label">Release integrity</span>
+        <a class="evidence-link" href="https://github.com/sebastienrousseau/pain001.github.io/releases">Signed tags &amp; checksums</a>
+        <p>Every release tag is SSH-signed and ships SHA256SUMS beside the archive.</p>
+      </li>
+      <li class="evidence-item">
+        <span class="evidence-label">Build provenance</span>
+        <a class="evidence-link" href="https://github.com/sebastienrousseau/pain001.github.io/attestations">Attestations</a>
+        <p>SLSA provenance and an SBOM attestation, signed through Sigstore.</p>
+      </li>
+      <li class="evidence-item">
+        <span class="evidence-label">Supply chain posture</span>
+        <a class="evidence-link" href="https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/pain001.github.io">OpenSSF Scorecard</a>
+        <p>Scored continuously; CodeQL, Dependabot and DCO run on every change.</p>
+      </li>
+      <li class="evidence-item">
+        <span class="evidence-label">Vulnerability reporting</span>
+        <a class="evidence-link" href="/.well-known/security.txt">security.txt</a>
+        <p>A published disclosure route, not an inbox someone forwards.</p>
+      </li>
+      <li class="evidence-item">
+        <span class="evidence-label">Accessibility</span>
+        <a class="evidence-link" href="/accessibility/">WCAG 2.2 AAA</a>
+        <p>Enforced in CI across representative pages and three colour modes.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section-soft" aria-labelledby="review-heading">
+  <div class="container">
+    <div class="section-split section-split-top">
+      <div class="section-head">
+        <p class="eyebrow">For risk and procurement</p>
+        <h2 id="review-heading">What a risk review asks. <span class="h-muted">Where the answer is.</span></h2>
+      </div>
+      <p class="lead">Each answer describes how the software works or what is offered on this page. None of it is a certification, and none of it replaces your own assessment.</p>
+    </div>
+    <div class="review-table-wrap">
+      <table class="review-table">
+        <thead><tr><th scope="col">The question</th><th scope="col">The answer</th><th scope="col">Where to check</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Where does payment data go?</th><td>Nowhere. Validation runs inside your infrastructure and makes no network calls; there is no hosted service holding your files.</td><td><a href="/privacy/">Data handling</a></td></tr>
+          <tr><th scope="row">Can we assess the software supply chain? (DORA ICT third-party risk)</th><td>A CycloneDX SBOM, signed release tags with checksums, and build provenance attested through Sigstore, all verifiable without contacting us.</td><td><a href="#evidence">Evidence above</a></td></tr>
+          <tr><th scope="row">What if the maintainer stops?</th><td>The source is Apache-2.0 or MIT: you can build, run and fork it indefinitely. A designated long-term-support line is available under the supported channel.</td><td><a href="#01-supported-release-channel">Supported channel</a></td></tr>
+          <tr><th scope="row">How are defects and vulnerabilities handled?</th><td>Private vulnerability reporting and a published security.txt for everyone; written response targets under the supported channel.</td><td><a href="/.well-known/security.txt">security.txt</a></td></tr>
+          <tr><th scope="row">Does it know our bank&rsquo;s rules?</th><td>Not out of the box. A private profile can be derived from your bank&rsquo;s guideline under NDA, without the guideline leaving your control.</td><td><a href="#02-private-profile-derivation">Private profiles</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="cta-row review-cta"><a class="btn btn-primary" href="#ask">Book an architecture briefing</a><a class="text-link" href="/architecture-and-patents/">Architecture &amp; security</a></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <article class="prose content-body">
+      {{!content}}
+    </article>
+  </div>
+</section>
+{{/block}}

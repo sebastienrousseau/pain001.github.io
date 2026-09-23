@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-09-13T08:00:00+00:00"
+date: "2026-09-23T08:00:00+00:00"
 description: "SEPA SCT salary batch with structured and unstructured remittance. Eine validierte pain.001-Beispieldatei (Deutschland, Schiene sepa-credit-transfer), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -39,7 +39,7 @@ short_name: pain001
 subtitle: "SEPA SCT salary batch with structured and unstructured remittance."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "de.sepa.sct-salary — ISO-20022-pain.001-Beispiel: Deutschland (sepa-credit-transfer)"
+title: "ISO-20022-pain.001-Beispiel de.sepa.sct-salary: Deutschland (sepa-credit-transfer)"
 url: "https://pain001.com/de/corpus-de-sepa-sct-salary/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/de/corpus-de-sepa-sct-salary/"
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "SEPA SCT salary batch with structured and unstructured remittance. Eine validierte pain.001-Beispieldatei (Deutschland, Schiene sepa-credit-transfer), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
 item_guid: "https://pain001.com/de/corpus-de-sepa-sct-salary/"
 item_link: "https://pain001.com/de/corpus-de-sepa-sct-salary/"
-item_pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
-item_title: "de.sepa.sct-salary — ISO-20022-pain.001-Beispiel: Deutschland (sepa-credit-transfer)"
-last_build_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+item_pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+item_title: "ISO-20022-pain.001-Beispiel de.sepa.sct-salary: Deutschland (sepa-credit-transfer)"
+last_build_date: "Wed, 23 Sep 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "de.sepa.sct-salary — ISO-20022-pain.001-Beispiel: Deutschland (sepa-credit-transfer)"
+apple-mobile-web-app-title: "ISO-20022-pain.001-Beispiel de.sepa.sct-salary: Deutschland (sepa-credit-transfer)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,7 +71,7 @@ twitter_description: "SEPA SCT salary batch with structured and unstructured rem
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "de.sepa.sct-salary — ISO-20022-pain.001-Beispiel: Deutschland (sepa-credit-transfer)"
+twitter_title: "ISO-20022-pain.001-Beispiel de.sepa.sct-salary: Deutschland (sepa-credit-transfer)"
 twitter_url: "https://pain001.com/de/corpus-de-sepa-sct-salary/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -106,7 +106,7 @@ Der Zwilling ist dieselbe Zahlung in der JSON-Konvention der ISO-20022-Registrie
 
 ## Im Browser ausführen
 
-[Dieses Szenario in der Demo öffnen](/de/try/?sample=corpus:de.sepa.sct-salary): Die pain001-Bibliothek wird in einer Python-Laufzeit in Ihrem Browser geladen, baut die Datei aus den unten stehenden Datensätzen (2) neu auf, prüft sie gegen das Regelwerk `sepa-sct` und die offizielle XSD und zeigt den JSON-Zwilling. Nichts verlässt Ihren Rechner.
+[Dieses Szenario in der Demo öffnen](/de/try/#sample=corpus:de.sepa.sct-salary): Die pain001-Bibliothek wird in einer Python-Laufzeit in Ihrem Browser geladen, baut die Datei aus den unten stehenden Datensätzen (2) neu auf, prüft sie gegen das Regelwerk `sepa-sct` und die offizielle XSD und zeigt den JSON-Zwilling. Nichts verlässt Ihren Rechner.
 
 Die flachen Datensätze, aus denen die Bibliothek die Datei neu aufbaut (die Spaltennamen der CSV-Pipeline):
 

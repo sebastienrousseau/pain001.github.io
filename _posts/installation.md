@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "A clean terminal session installing Pain001 from PyPI and generating a first validated pain.001 file — three commands from zero to bank-ready."
+banner_alt: "A clean terminal session installing Pain001 from PyPI and generating a first validated pain.001 file: three commands from zero to bank-ready."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -16,7 +16,7 @@ format-detection: telephone=no
 hreflang: en
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/installation/"
-image_alt: "A clean terminal session installing Pain001 from PyPI and generating a first validated pain.001 file — three commands from zero to bank-ready."
+image_alt: "A clean terminal session installing Pain001 from PyPI and generating a first validated pain.001 file: three commands from zero to bank-ready."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -82,7 +82,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Get started"
-excerpt: "Install the Pain001 suite from PyPI with exactly the extras you need — REST API, Parquet, GPG, Redis, OpenTelemetry — or run the multi-architecture Docker image as a non-root user. Companion loaders for Excel and SWIFT MT101 install separately, and locked-down environments get a plugin kill switch and auditable plugin listing."
+excerpt: "Install the Pain001 suite from PyPI with exactly the extras you need (REST API, Parquet, GPG, Redis, OpenTelemetry) or run the multi-architecture Docker image as a non-root user. Companion loaders for Excel and SWIFT MT101 install separately, and locked-down environments get a plugin kill switch and auditable plugin listing."
 last_reviewed: "2026-07-26"
 
 ---
@@ -159,6 +159,6 @@ pain001 init pain.001.001.09 -o work/
 pain001 -t pain.001.001.09 -d work/template.csv -o work/ --dry-run
 ```
 
-`--dry-run` validates against the JSON Schema, the XSD, and (with `--scheme`) a SEPA or cross-border rulebook without writing output — exit code `0` means the file passed those checks: the schema, and the scheme rulebook where selected. Your bank's own profile and channel rules are separate, and still require bank testing. Drop `--dry-run` to write the XML.
+`--dry-run` validates against the JSON Schema, the XSD, and (with `--scheme`) a SEPA or cross-border rulebook without writing output. Exit code `0` means the file passed those checks: the schema, and the scheme rulebook where selected. Your bank's own profile and channel rules are separate, and still require bank testing. Drop `--dry-run` to write the XML.
 
 Continue to the [Technical Reference](/documentation/) for every flag and endpoint, or the [Quickstart FAQ](/faqs/) for operational questions.

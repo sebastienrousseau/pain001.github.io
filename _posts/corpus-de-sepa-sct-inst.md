@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-09-13T08:00:00+00:00"
+date: "2026-09-23T08:00:00+00:00"
 description: "SEPA Instant credit transfer, single, INST at PmtInf. A validated pain.001 sample for Germany on the sepa-instant rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -39,7 +39,7 @@ short_name: pain001
 subtitle: "SEPA Instant credit transfer, single, INST at PmtInf."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "de.sepa.sct-inst — ISO 20022 pain.001 example for Germany (sepa-instant)"
+title: "de.sepa.sct-inst: ISO 20022 pain.001 example for Germany (sepa-instant)"
 url: "https://pain001.com/corpus-de-sepa-sct-inst/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/corpus-de-sepa-sct-inst/"
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "SEPA Instant credit transfer, single, INST at PmtInf. A validated pain.001 sample for Germany on the sepa-instant rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
 item_guid: "https://pain001.com/corpus-de-sepa-sct-inst/"
 item_link: "https://pain001.com/corpus-de-sepa-sct-inst/"
-item_pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
-item_title: "de.sepa.sct-inst — ISO 20022 pain.001 example for Germany (sepa-instant)"
-last_build_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+item_pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+item_title: "de.sepa.sct-inst: ISO 20022 pain.001 example for Germany (sepa-instant)"
+last_build_date: "Wed, 23 Sep 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "de.sepa.sct-inst — ISO 20022 pain.001 example for Germany (sepa-instant)"
+apple-mobile-web-app-title: "de.sepa.sct-inst: ISO 20022 pain.001 example for Germany (sepa-instant)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,7 +71,7 @@ twitter_description: "SEPA Instant credit transfer, single, INST at PmtInf. A va
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "de.sepa.sct-inst — ISO 20022 pain.001 example for Germany (sepa-instant)"
+twitter_title: "de.sepa.sct-inst: ISO 20022 pain.001 example for Germany (sepa-instant)"
 twitter_url: "https://pain001.com/corpus-de-sepa-sct-inst/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -102,7 +102,7 @@ The twin is the same payment in the ISO 20022 Registration Authority's JSON conv
 
 ## Run it in your browser
 
-[Open this scenario in the demo](/try/?sample=corpus:de.sepa.sct-inst): the pain001 library loads in a Python runtime in your browser, rebuilds the file from the 1 record(s) below, checks it against the `sepa-inst` rulebook and the official XSD, and shows the JSON twin. Nothing leaves your machine.
+[Open this scenario in the demo](/try/#sample=corpus:de.sepa.sct-inst): the pain001 library loads in a Python runtime in your browser, rebuilds the file from the 1 record(s) below, checks it against the `sepa-inst` rulebook and the official XSD, and shows the JSON twin. Nothing leaves your machine.
 
 The flat records the library rebuilds it from (the CSV pipeline's own column names):
 

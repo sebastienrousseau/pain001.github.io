@@ -36,10 +36,10 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "Types EquivalentAmount2 – PersonIdentificationSchemeName1Choice in pain.001.001.11, defined once each — the view to use for field mapping."
+subtitle: "Types EquivalentAmount2 – PersonIdentificationSchemeName1Choice in pain.001.001.11, defined once each. This is the view to use for field mapping."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "pain.001.001.11 type reference (part 2 of 3) — EquivalentAmount2 – PersonIdentificationSchemeName1Choice"
+title: "pain.001.001.11 type reference (part 2 of 3)"
 url: "https://pain001.com/message-spec-pain.001.001.11-types-2/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/message-spec-pain.001.001.11-types-2/"
@@ -50,7 +50,7 @@ item_description: "Complex types EquivalentAmount2 – PersonIdentificationSchem
 item_guid: "https://pain001.com/message-spec-pain.001.001.11-types-2/"
 item_link: "https://pain001.com/message-spec-pain.001.001.11-types-2/"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "pain.001.001.11 type reference (part 2 of 3) — EquivalentAmount2 – PersonIdentificationSchemeName1Choice"
+item_title: "pain.001.001.11 type reference (part 2 of 3)"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "pain.001.001.11 type reference (part 2 of 3) — EquivalentAmount2 – PersonIdentificationSchemeName1Choice"
+apple-mobile-web-app-title: "pain.001.001.11 type reference (part 2 of 3)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,7 +71,7 @@ twitter_description: "Complex types EquivalentAmount2 – PersonIdentificationSc
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "pain.001.001.11 type reference (part 2 of 3) — EquivalentAmount2 – PersonIdentificationSchemeName1Choice"
+twitter_title: "pain.001.001.11 type reference (part 2 of 3)"
 twitter_url: "https://pain001.com/message-spec-pain.001.001.11-types-2/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -88,13 +88,13 @@ last_reviewed: "2026-07-26"
 
 ---
 
-Complex types in ISO 20022 `pain.001.001.11`, generated from the official XSD. **Part 2 of 3** — `EquivalentAmount2 – PersonIdentificationSchemeName1Choice`.
+Complex types in ISO 20022 `pain.001.001.11`, generated from the official XSD. **Part 2 of 3**: `EquivalentAmount2 – PersonIdentificationSchemeName1Choice`.
 
 [Part 1](/message-spec-pain.001.001.11-types/) · **Part 2** · [Part 3](/message-spec-pain.001.001.11-types-3/)
 
 Each type is defined once here. The [message structure](/message-spec-pain.001.001.11/) repeats a party or address block under every party; this view does not, which is what you want when mapping source fields.
 
-A **choice** type means the children are alternatives — supply one, not all. Cardinality in **bold** is required.
+A **choice** type means the children are alternatives: supply one, not all. Cardinality in **bold** is required.
 
 ## `EquivalentAmount2`
 
@@ -112,7 +112,7 @@ A **choice** type means the children are alternatives — supply one, not all. C
 | `RateTp` | 0..1 | `ExchangeRateType1Code` | 3 codes |
 | `CtrctId` | 0..1 | `Max35Text` | length 1–35 |
 
-## `FinancialIdentificationSchemeName1Choice` *(choice — supply one)*
+## `FinancialIdentificationSchemeName1Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
@@ -130,7 +130,7 @@ A **choice** type means the children are alternatives — supply one, not all. C
 | `PstlAdr` | 0..1 | `PostalAddress24` |  |
 | `Othr` | 0..1 | `GenericFinancialIdentification1` |  |
 
-## `Frequency36Choice` *(choice — supply one)*
+## `Frequency36Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
@@ -172,7 +172,7 @@ A **choice** type means the children are alternatives — supply one, not all. C
 | `CdOrPrtry` | **1..1** | `GarnishmentType1Choice` |  |
 | `Issr` | 0..1 | `Max35Text` | length 1–35 |
 
-## `GarnishmentType1Choice` *(choice — supply one)*
+## `GarnishmentType1Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
@@ -246,21 +246,21 @@ A **choice** type means the children are alternatives — supply one, not all. C
 | `Cd` | 0..1 | `ExternalDebtorAgentInstruction1Code` | length 1–4 |
 | `InstrInf` | 0..1 | `Max140Text` | length 1–140 |
 
-## `LocalInstrument2Choice` *(choice — supply one)*
+## `LocalInstrument2Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
 | `Cd` | **1..1** | `ExternalLocalInstrument1Code` | length 1–35 |
 | `Prtry` | **1..1** | `Max35Text` | length 1–35 |
 
-## `MandateClassification1Choice` *(choice — supply one)*
+## `MandateClassification1Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
 | `Cd` | **1..1** | `MandateClassification1Code` | 3 codes |
 | `Prtry` | **1..1** | `Max35Text` | length 1–35 |
 
-## `MandateSetupReason1Choice` *(choice — supply one)*
+## `MandateSetupReason1Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
@@ -291,7 +291,7 @@ A **choice** type means the children are alternatives — supply one, not all. C
 | `LEI` | 0..1 | `LEIIdentifier` | pattern `[A-Z0-9]{18,18}[0-9]{2,2}` |
 | `Othr` | 0..* | `GenericOrganisationIdentification1` |  |
 
-## `OrganisationIdentificationSchemeName1Choice` *(choice — supply one)*
+## `OrganisationIdentificationSchemeName1Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
@@ -305,7 +305,7 @@ A **choice** type means the children are alternatives — supply one, not all. C
 | `ChanlTp` | **1..1** | `Max4Text` | length 1–4 |
 | `Id` | 0..1 | `Max128Text` | length 1–128 |
 
-## `Party38Choice` *(choice — supply one)*
+## `Party38Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
@@ -378,7 +378,7 @@ A **choice** type means the children are alternatives — supply one, not all. C
 | `DtAndPlcOfBirth` | 0..1 | `DateAndPlaceOfBirth1` |  |
 | `Othr` | 0..* | `GenericPersonIdentification1` |  |
 
-## `PersonIdentificationSchemeName1Choice` *(choice — supply one)*
+## `PersonIdentificationSchemeName1Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |

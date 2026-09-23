@@ -36,10 +36,10 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "Types Garnishment1 – StructuredRegulatoryReporting3 in pain.001.001.08, defined once each — the view to use for field mapping."
+subtitle: "Types Garnishment1 – StructuredRegulatoryReporting3 in pain.001.001.08, defined once each. This is the view to use for field mapping."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "pain.001.001.08 type reference (part 2 of 3) — Garnishment1 – StructuredRegulatoryReporting3"
+title: "pain.001.001.08 type reference (part 2 of 3)"
 url: "https://pain001.com/message-spec-pain.001.001.08-types-2/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/message-spec-pain.001.001.08-types-2/"
@@ -50,7 +50,7 @@ item_description: "Complex types Garnishment1 – StructuredRegulatoryReporting3
 item_guid: "https://pain001.com/message-spec-pain.001.001.08-types-2/"
 item_link: "https://pain001.com/message-spec-pain.001.001.08-types-2/"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "pain.001.001.08 type reference (part 2 of 3) — Garnishment1 – StructuredRegulatoryReporting3"
+item_title: "pain.001.001.08 type reference (part 2 of 3)"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "pain.001.001.08 type reference (part 2 of 3) — Garnishment1 – StructuredRegulatoryReporting3"
+apple-mobile-web-app-title: "pain.001.001.08 type reference (part 2 of 3)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,7 +71,7 @@ twitter_description: "Complex types Garnishment1 – StructuredRegulatoryReporti
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "pain.001.001.08 type reference (part 2 of 3) — Garnishment1 – StructuredRegulatoryReporting3"
+twitter_title: "pain.001.001.08 type reference (part 2 of 3)"
 twitter_url: "https://pain001.com/message-spec-pain.001.001.08-types-2/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -88,13 +88,13 @@ last_reviewed: "2026-07-26"
 
 ---
 
-Complex types in ISO 20022 `pain.001.001.08`, generated from the official XSD. **Part 2 of 3** — `Garnishment1 – StructuredRegulatoryReporting3`.
+Complex types in ISO 20022 `pain.001.001.08`, generated from the official XSD. **Part 2 of 3**: `Garnishment1 – StructuredRegulatoryReporting3`.
 
 [Part 1](/message-spec-pain.001.001.08-types/) · **Part 2** · [Part 3](/message-spec-pain.001.001.08-types-3/)
 
 Each type is defined once here. The [message structure](/message-spec-pain.001.001.08/) repeats a party or address block under every party; this view does not, which is what you want when mapping source fields.
 
-A **choice** type means the children are alternatives — supply one, not all. Cardinality in **bold** is required.
+A **choice** type means the children are alternatives: supply one, not all. Cardinality in **bold** is required.
 
 ## `Garnishment1`
 
@@ -116,7 +116,7 @@ A **choice** type means the children are alternatives — supply one, not all. C
 | `CdOrPrtry` | **1..1** | `GarnishmentType1Choice` |  |
 | `Issr` | 0..1 | `Max35Text` | length 1–35 |
 
-## `GarnishmentType1Choice` *(choice — supply one)*
+## `GarnishmentType1Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
@@ -174,7 +174,7 @@ A **choice** type means the children are alternatives — supply one, not all. C
 | `Cd` | 0..1 | `Instruction3Code` | 4 codes |
 | `InstrInf` | 0..1 | `Max140Text` | length 1–140 |
 
-## `LocalInstrument2Choice` *(choice — supply one)*
+## `LocalInstrument2Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
@@ -195,14 +195,14 @@ A **choice** type means the children are alternatives — supply one, not all. C
 | `AnyBIC` | 0..1 | `AnyBICIdentifier` | pattern `[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3…` |
 | `Othr` | 0..* | `GenericOrganisationIdentification1` |  |
 
-## `OrganisationIdentificationSchemeName1Choice` *(choice — supply one)*
+## `OrganisationIdentificationSchemeName1Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
 | `Cd` | **1..1** | `ExternalOrganisationIdentification1Code` | length 1–4 |
 | `Prtry` | **1..1** | `Max35Text` | length 1–35 |
 
-## `Party11Choice` *(choice — supply one)*
+## `Party11Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
@@ -265,7 +265,7 @@ A **choice** type means the children are alternatives — supply one, not all. C
 | `DtAndPlcOfBirth` | 0..1 | `DateAndPlaceOfBirth` |  |
 | `Othr` | 0..* | `GenericPersonIdentification1` |  |
 
-## `PersonIdentificationSchemeName1Choice` *(choice — supply one)*
+## `PersonIdentificationSchemeName1Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
@@ -287,7 +287,7 @@ A **choice** type means the children are alternatives — supply one, not all. C
 | `Ctry` | 0..1 | `CountryCode` | pattern `[A-Z]{2,2}` |
 | `AdrLine` | 0..7 | `Max70Text` | length 1–70 |
 
-## `Purpose2Choice` *(choice — supply one)*
+## `Purpose2Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
@@ -303,7 +303,7 @@ A **choice** type means the children are alternatives — supply one, not all. C
 | `RltdDt` | 0..1 | `ISODate` |  |
 | `LineDtls` | 0..* | `DocumentLineInformation1` |  |
 
-## `ReferredDocumentType3Choice` *(choice — supply one)*
+## `ReferredDocumentType3Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
@@ -376,7 +376,7 @@ A **choice** type means the children are alternatives — supply one, not all. C
 | `ElctrncAdr` | 0..1 | `Max2048Text` | length 1–2048 |
 | `PstlAdr` | 0..1 | `NameAndAddress10` |  |
 
-## `ServiceLevel8Choice` *(choice — supply one)*
+## `ServiceLevel8Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |

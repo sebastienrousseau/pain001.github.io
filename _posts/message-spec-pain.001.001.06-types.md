@@ -36,10 +36,10 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "Types AccountIdentification4Choice – GenericFinancialIdentification1 in pain.001.001.06, defined once each — the view to use for field mapping."
+subtitle: "Types AccountIdentification4Choice – GenericFinancialIdentification1 in pain.001.001.06, defined once each. This is the view to use for field mapping."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "pain.001.001.06 type reference (part 1 of 3) — AccountIdentification4Choice – GenericFinancialIdentification1"
+title: "pain.001.001.06 type reference (part 1 of 3)"
 url: "https://pain001.com/message-spec-pain.001.001.06-types/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/message-spec-pain.001.001.06-types/"
@@ -50,7 +50,7 @@ item_description: "Complex types AccountIdentification4Choice – GenericFinanci
 item_guid: "https://pain001.com/message-spec-pain.001.001.06-types/"
 item_link: "https://pain001.com/message-spec-pain.001.001.06-types/"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "pain.001.001.06 type reference (part 1 of 3) — AccountIdentification4Choice – GenericFinancialIdentification1"
+item_title: "pain.001.001.06 type reference (part 1 of 3)"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "pain.001.001.06 type reference (part 1 of 3) — AccountIdentification4Choice – GenericFinancialIdentification1"
+apple-mobile-web-app-title: "pain.001.001.06 type reference (part 1 of 3)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,7 +71,7 @@ twitter_description: "Complex types AccountIdentification4Choice – GenericFina
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "pain.001.001.06 type reference (part 1 of 3) — AccountIdentification4Choice – GenericFinancialIdentification1"
+twitter_title: "pain.001.001.06 type reference (part 1 of 3)"
 twitter_url: "https://pain001.com/message-spec-pain.001.001.06-types/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -88,36 +88,36 @@ last_reviewed: "2026-07-26"
 
 ---
 
-Complex types in ISO 20022 `pain.001.001.06`, generated from the official XSD. **Part 1 of 3** — `AccountIdentification4Choice – GenericFinancialIdentification1`.
+Complex types in ISO 20022 `pain.001.001.06`, generated from the official XSD. **Part 1 of 3**: `AccountIdentification4Choice – GenericFinancialIdentification1`.
 
 **Part 1** · [Part 2](/message-spec-pain.001.001.06-types-2/) · [Part 3](/message-spec-pain.001.001.06-types-3/)
 
 Each type is defined once here. The [message structure](/message-spec-pain.001.001.06/) repeats a party or address block under every party; this view does not, which is what you want when mapping source fields.
 
-A **choice** type means the children are alternatives — supply one, not all. Cardinality in **bold** is required.
+A **choice** type means the children are alternatives: supply one, not all. Cardinality in **bold** is required.
 
-## `AccountIdentification4Choice` *(choice — supply one)*
+## `AccountIdentification4Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
 | `IBAN` | **1..1** | `IBAN2007Identifier` | pattern `[A-Z]{2,2}[0-9]{2,2}[a-zA-Z0-9]{1,30}` |
 | `Othr` | **1..1** | `GenericAccountIdentification1` |  |
 
-## `AccountSchemeName1Choice` *(choice — supply one)*
+## `AccountSchemeName1Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
 | `Cd` | **1..1** | `ExternalAccountIdentification1Code` | length 1–4 |
 | `Prtry` | **1..1** | `Max35Text` | length 1–35 |
 
-## `AmountType4Choice` *(choice — supply one)*
+## `AmountType4Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
 | `InstdAmt` | **1..1** | `ActiveOrHistoricCurrencyAndAmount` |  |
 | `EqvtAmt` | **1..1** | `EquivalentAmount2` |  |
 
-## `Authorisation1Choice` *(choice — supply one)*
+## `Authorisation1Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
@@ -148,14 +148,14 @@ A **choice** type means the children are alternatives — supply one, not all. C
 | `Ccy` | 0..1 | `ActiveOrHistoricCurrencyCode` | pattern `[A-Z]{3,3}` |
 | `Nm` | 0..1 | `Max70Text` | length 1–70 |
 
-## `CashAccountType2Choice` *(choice — supply one)*
+## `CashAccountType2Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
 | `Cd` | **1..1** | `ExternalCashAccountType1Code` | length 1–4 |
 | `Prtry` | **1..1** | `Max35Text` | length 1–35 |
 
-## `CategoryPurpose1Choice` *(choice — supply one)*
+## `CategoryPurpose1Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
@@ -179,14 +179,14 @@ A **choice** type means the children are alternatives — supply one, not all. C
 | `PrtLctn` | 0..1 | `Max35Text` | length 1–35 |
 | `Sgntr` | 0..5 | `Max70Text` | length 1–70 |
 
-## `ChequeDeliveryMethod1Choice` *(choice — supply one)*
+## `ChequeDeliveryMethod1Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
 | `Cd` | **1..1** | `ChequeDelivery1Code` | 12 codes |
 | `Prtry` | **1..1** | `Max35Text` | length 1–35 |
 
-## `ClearingSystemIdentification2Choice` *(choice — supply one)*
+## `ClearingSystemIdentification2Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
@@ -250,7 +250,7 @@ A **choice** type means the children are alternatives — supply one, not all. C
 | `Tp` | 0..1 | `CreditorReferenceType2` |  |
 | `Ref` | 0..1 | `Max35Text` | length 1–35 |
 
-## `CreditorReferenceType1Choice` *(choice — supply one)*
+## `CreditorReferenceType1Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
@@ -295,7 +295,7 @@ A **choice** type means the children are alternatives — supply one, not all. C
 | `Tp` | 0..1 | `DiscountAmountType1Choice` |  |
 | `Amt` | **1..1** | `ActiveOrHistoricCurrencyAndAmount` |  |
 
-## `DiscountAmountType1Choice` *(choice — supply one)*
+## `DiscountAmountType1Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
@@ -333,7 +333,7 @@ A **choice** type means the children are alternatives — supply one, not all. C
 | `RateTp` | 0..1 | `ExchangeRateType1Code` | 3 codes |
 | `CtrctId` | 0..1 | `Max35Text` | length 1–35 |
 
-## `FinancialIdentificationSchemeName1Choice` *(choice — supply one)*
+## `FinancialIdentificationSchemeName1Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |
@@ -370,7 +370,7 @@ A **choice** type means the children are alternatives — supply one, not all. C
 | `CdOrPrtry` | **1..1** | `GarnishmentType1Choice` |  |
 | `Issr` | 0..1 | `Max35Text` | length 1–35 |
 
-## `GarnishmentType1Choice` *(choice — supply one)*
+## `GarnishmentType1Choice` *(choice: supply one)*
 
 | Element | Card. | Type | Constraints |
 | :--- | :--- | :--- | :--- |

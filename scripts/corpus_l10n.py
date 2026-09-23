@@ -27,7 +27,7 @@ CORPUS_LOCALES: dict[str, tuple[str, str]] = {
 STRINGS: dict[str, dict] = {
     "en": {
         "eyebrow": "Example corpus",
-        "title": "{sid} — ISO 20022 pain.001 example for {country} ({family})",
+        "title": "{sid}: ISO 20022 pain.001 example for {country} ({family})",
         "meta_desc": "{desc} A validated pain.001 sample for {country} on the {family} rail, "
                      "with its ISO 20022 JSON twin and provenance record; run it in the browser.",
         "keywords": "pain.001 example {country}, {family} sample XML, ISO 20022 {country} payment file, "
@@ -39,7 +39,7 @@ STRINGS: dict[str, dict] = {
         "h_files": "Files",
         "th_edition": "Edition", "th_file": "Payment file",
         "th_twin": "ISO 20022 JSON twin", "th_prov": "Provenance record",
-        "no_twin": "— (twins cover pain.001 only)",
+        "no_twin": "None (twins cover pain.001 only)",
         "twin_para": "The twin is the same payment in the ISO 20022 Registration Authority's JSON convention, "
                      "lossless in both directions; its JSON Schema (2020-12) is published per edition: "
                      "{schemas}. An agent can produce a twin that validates against the schema and hand it "
@@ -79,7 +79,7 @@ STRINGS: dict[str, dict] = {
     },
     "de": {
         "eyebrow": "Beispielkorpus",
-        "title": "{sid} — ISO-20022-pain.001-Beispiel: {country} ({family})",
+        "title": "ISO-20022-pain.001-Beispiel {sid}: {country} ({family})",
         "meta_desc": "{desc} Eine validierte pain.001-Beispieldatei ({country}, Schiene {family}), "
                      "mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar.",
         "keywords": "pain.001 Beispiel {country}, {family} Beispiel-XML, ISO 20022 {country} Zahlungsdatei, "
@@ -92,7 +92,7 @@ STRINGS: dict[str, dict] = {
         "h_files": "Dateien",
         "th_edition": "Edition", "th_file": "Zahlungsdatei",
         "th_twin": "ISO-20022-JSON-Zwilling", "th_prov": "Provenienzdatensatz",
-        "no_twin": "— (Zwillinge gibt es nur für pain.001)",
+        "no_twin": "Keiner (Zwillinge gibt es nur für pain.001)",
         "twin_para": "Der Zwilling ist dieselbe Zahlung in der JSON-Konvention der ISO-20022-Registrierungsstelle, "
                      "in beide Richtungen verlustfrei; sein JSON-Schema (2020-12) wird je Edition veröffentlicht: "
                      "{schemas}. Ein Agent kann einen Zwilling erzeugen, der gegen das Schema validiert, und ihn "
@@ -134,7 +134,7 @@ STRINGS: dict[str, dict] = {
     },
     "fr": {
         "eyebrow": "Corpus d'exemples",
-        "title": "{sid} — exemple pain.001 ISO 20022 : {country} ({family})",
+        "title": "Exemple pain.001 ISO 20022 {sid} : {country} ({family})",
         "meta_desc": "{desc} Un exemple pain.001 validé ({country}, rail {family}), avec son jumeau JSON "
                      "ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur.",
         "keywords": "exemple pain.001 {country}, XML exemple {family}, fichier de paiement ISO 20022 {country}, "
@@ -147,7 +147,7 @@ STRINGS: dict[str, dict] = {
         "h_files": "Fichiers",
         "th_edition": "Édition", "th_file": "Fichier de paiement",
         "th_twin": "Jumeau JSON ISO 20022", "th_prov": "Fiche de provenance",
-        "no_twin": "— (les jumeaux ne couvrent que pain.001)",
+        "no_twin": "Aucun (les jumeaux ne couvrent que pain.001)",
         "twin_para": "Le jumeau est le même paiement dans la convention JSON de l'autorité d'enregistrement "
                      "ISO 20022, sans perte dans les deux sens ; son schéma JSON (2020-12) est publié par "
                      "édition : {schemas}. Un agent peut produire un jumeau valide contre le schéma et le "
@@ -189,7 +189,7 @@ STRINGS: dict[str, dict] = {
     },
     "es": {
         "eyebrow": "Corpus de ejemplos",
-        "title": "{sid} — ejemplo pain.001 ISO 20022: {country} ({family})",
+        "title": "Ejemplo pain.001 ISO 20022 {sid}: {country} ({family})",
         "meta_desc": "{desc} Una muestra pain.001 validada ({country}, raíl {family}), con su gemelo JSON "
                      "ISO 20022 y su registro de procedencia; ejecútela en el navegador.",
         "keywords": "ejemplo pain.001 {country}, XML de muestra {family}, archivo de pago ISO 20022 {country}, "
@@ -202,7 +202,7 @@ STRINGS: dict[str, dict] = {
         "h_files": "Archivos",
         "th_edition": "Edición", "th_file": "Archivo de pago",
         "th_twin": "Gemelo JSON ISO 20022", "th_prov": "Registro de procedencia",
-        "no_twin": "— (los gemelos solo cubren pain.001)",
+        "no_twin": "Ninguno (los gemelos solo cubren pain.001)",
         "twin_para": "El gemelo es el mismo pago en la convención JSON de la Autoridad de Registro ISO 20022, "
                      "sin pérdidas en ambos sentidos; su JSON Schema (2020-12) se publica por edición: "
                      "{schemas}. Un agente puede producir un gemelo que valide contra el esquema y entregarlo "
@@ -244,7 +244,7 @@ STRINGS: dict[str, dict] = {
     },
     "it": {
         "eyebrow": "Corpus di esempi",
-        "title": "{sid} — esempio pain.001 ISO 20022: {country} ({family})",
+        "title": "Esempio pain.001 ISO 20022 {sid}: {country} ({family})",
         "meta_desc": "{desc} Un campione pain.001 validato ({country}, circuito {family}), con il suo gemello "
                      "JSON ISO 20022 e il record di provenienza; eseguibile nel browser.",
         "keywords": "esempio pain.001 {country}, XML di esempio {family}, file di pagamento ISO 20022 {country}, "
@@ -257,7 +257,7 @@ STRINGS: dict[str, dict] = {
         "h_files": "File",
         "th_edition": "Edizione", "th_file": "File di pagamento",
         "th_twin": "Gemello JSON ISO 20022", "th_prov": "Record di provenienza",
-        "no_twin": "— (i gemelli coprono solo pain.001)",
+        "no_twin": "Nessuno (i gemelli coprono solo pain.001)",
         "twin_para": "Il gemello è lo stesso pagamento nella convenzione JSON della Registration Authority "
                      "ISO 20022, senza perdite in entrambe le direzioni; il suo JSON Schema (2020-12) è "
                      "pubblicato per edizione: {schemas}. Un agente può produrre un gemello valido rispetto allo "
@@ -298,7 +298,7 @@ STRINGS: dict[str, dict] = {
     },
     "nl": {
         "eyebrow": "Voorbeeldcorpus",
-        "title": "{sid} — ISO 20022 pain.001-voorbeeld: {country} ({family})",
+        "title": "ISO 20022 pain.001-voorbeeld {sid}: {country} ({family})",
         "meta_desc": "{desc} Een gevalideerd pain.001-voorbeeld ({country}, rail {family}), met zijn ISO 20022 "
                      "JSON-tweeling en herkomstrecord; uitvoerbaar in de browser.",
         "keywords": "pain.001 voorbeeld {country}, {family} voorbeeld-XML, ISO 20022 {country} betaalbestand, "
@@ -311,7 +311,7 @@ STRINGS: dict[str, dict] = {
         "h_files": "Bestanden",
         "th_edition": "Editie", "th_file": "Betaalbestand",
         "th_twin": "ISO 20022 JSON-tweeling", "th_prov": "Herkomstrecord",
-        "no_twin": "— (tweelingen bestaan alleen voor pain.001)",
+        "no_twin": "Geen (tweelingen bestaan alleen voor pain.001)",
         "twin_para": "De tweeling is dezelfde betaling in de JSON-conventie van de ISO 20022 Registration "
                      "Authority, verliesvrij in beide richtingen; het JSON Schema (2020-12) wordt per editie "
                      "gepubliceerd: {schemas}. Een agent kan een tweeling maken die tegen het schema valideert "

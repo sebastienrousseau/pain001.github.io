@@ -1,0 +1,9 @@
+{
+  "_comment": [
+    "Ratchet for scripts/validate_headings.py. overlong_h1 is the number of",
+    "pages whose H1 runs past 60 characters, which happens because",
+    "_layouts/page.html renders the SEO title as the headline.",
+    "Lower this as pages gain a real `headline`; never raise it."
+  ],
+  "overlong_h1": 258
+}

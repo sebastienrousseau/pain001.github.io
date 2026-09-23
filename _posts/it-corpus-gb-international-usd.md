@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-09-13T08:00:00+00:00"
+date: "2026-09-23T08:00:00+00:00"
 description: "USD cross-border payment from a UK account to a US supplier. Un campione pain.001 validato (Regno Unito, circuito priority-payment), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -39,7 +39,7 @@ short_name: pain001
 subtitle: "USD cross-border payment from a UK account to a US supplier."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "gb.international.usd — esempio pain.001 ISO 20022: Regno Unito (priority-payment)"
+title: "Esempio pain.001 ISO 20022 gb.international.usd: Regno Unito (priority-payment)"
 url: "https://pain001.com/it/corpus-gb-international-usd/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/it/corpus-gb-international-usd/"
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "USD cross-border payment from a UK account to a US supplier. Un campione pain.001 validato (Regno Unito, circuito priority-payment), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser."
 item_guid: "https://pain001.com/it/corpus-gb-international-usd/"
 item_link: "https://pain001.com/it/corpus-gb-international-usd/"
-item_pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
-item_title: "gb.international.usd — esempio pain.001 ISO 20022: Regno Unito (priority-payment)"
-last_build_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+item_pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+item_title: "Esempio pain.001 ISO 20022 gb.international.usd: Regno Unito (priority-payment)"
+last_build_date: "Wed, 23 Sep 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "gb.international.usd — esempio pain.001 ISO 20022: Regno Unito (priority-payment)"
+apple-mobile-web-app-title: "Esempio pain.001 ISO 20022 gb.international.usd: Regno Unito (priority-payment)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,7 +71,7 @@ twitter_description: "USD cross-border payment from a UK account to a US supplie
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "gb.international.usd — esempio pain.001 ISO 20022: Regno Unito (priority-payment)"
+twitter_title: "Esempio pain.001 ISO 20022 gb.international.usd: Regno Unito (priority-payment)"
 twitter_url: "https://pain001.com/it/corpus-gb-international-usd/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -105,7 +105,7 @@ Il gemello è lo stesso pagamento nella convenzione JSON della Registration Auth
 
 ## Eseguilo nel tuo browser
 
-[Apri questo scenario nella demo](/it/try/?sample=corpus:gb.international.usd): la libreria pain001 si carica in un runtime Python nel tuo browser, ricostruisce il file dai 1 record qui sotto, lo verifica rispetto al regolamento `cbpr-cross-border` e all'XSD ufficiale e mostra il gemello JSON. Nulla lascia la tua macchina.
+[Apri questo scenario nella demo](/it/try/#sample=corpus:gb.international.usd): la libreria pain001 si carica in un runtime Python nel tuo browser, ricostruisce il file dai 1 record qui sotto, lo verifica rispetto al regolamento `cbpr-cross-border` e all'XSD ufficiale e mostra il gemello JSON. Nulla lascia la tua macchina.
 
 I record piatti da cui la libreria lo ricostruisce (i nomi di colonna della pipeline CSV):
 

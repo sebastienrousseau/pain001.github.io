@@ -1,4 +1,4 @@
-/* Pain001 browser demo — input handling.
+/* Pain001 browser demo: input handling.
  *
  * ES module, zero dependencies, hand-auditable by design: a security
  * reviewer should be able to read this file top to bottom and confirm
@@ -141,10 +141,12 @@ export const SAMPLES = {
       const rows = [];
       for (let i = 1; i <= 20; i++) {
         const amt = (100 + i * 7) + "." + String((i * 13) % 100).padStart(2, "0");
-        rows.push(i + ",2026-08-01,Acme Global Corp,BATCH-" + String(i).padStart(3, "0") +
-          ",2026-08-07," + amt + ",EUR,Acme Global Corp," +
-          "DE89370400440532013000,DEUTDEFFXXX,Payee " + i +
-          ",FR1420041010050500013M02606,BNPAFRPPXXX,BATCH-INV-" + i);
+        rows.push([
+          i, "2026-08-01", "Acme Global Corp", "BATCH-" + String(i).padStart(3, "0"),
+          "2026-08-07", amt, "EUR", "Acme Global Corp",
+          "DE89370400440532013000", "DEUTDEFFXXX", "Payee " + i,
+          "FR1420041010050500013M02606", "BNPAFRPPXXX", "BATCH-INV-" + i,
+        ].join(","));
       }
       return HEADER + "\n" + rows.join("\n");
     },

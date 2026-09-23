@@ -113,7 +113,7 @@ After the load, every record goes through the same three checks as any other inp
 
 ## Try it before you install anything
 
-The [browser demo](/try/?sample=corpus:de.sepa.sct-salary) runs the real `pain001` library in your browser on a salary batch from the [example corpus](/example-corpus/): the same flat records a workbook produces, validated in three layers, with the ISO 20022 JSON twin beside the XML. Paste your own rows, in the same columns, and break it on purpose; the verdicts are the library's own words. Nothing is uploaded.
+The [browser demo](/try/#sample=corpus:de.sepa.sct-salary) runs the real `pain001` library in your browser on a salary batch from the [example corpus](/example-corpus/): the same flat records a workbook produces, validated in three layers, with the ISO 20022 JSON twin beside the XML. Paste your own rows, in the same columns, and break it on purpose; the verdicts are the library's own words. Nothing is uploaded.
 
 ## What comes next
 

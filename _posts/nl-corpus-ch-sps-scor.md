@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-09-13T08:00:00+00:00"
+date: "2026-09-23T08:00:00+00:00"
 description: "Swiss domestic credit transfer with an ISO 11649 creditor reference (SCOR). Een gevalideerd pain.001-voorbeeld (Zwitserland, rail domestic-credit-transfer), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -39,7 +39,7 @@ short_name: pain001
 subtitle: "Swiss domestic credit transfer with an ISO 11649 creditor reference (SCOR)."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "ch.sps.scor — ISO 20022 pain.001-voorbeeld: Zwitserland (domestic-credit-transfer)"
+title: "ISO 20022 pain.001-voorbeeld ch.sps.scor: Zwitserland (domestic-credit-transfer)"
 url: "https://pain001.com/nl/corpus-ch-sps-scor/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/nl/corpus-ch-sps-scor/"
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "Swiss domestic credit transfer with an ISO 11649 creditor reference (SCOR). Een gevalideerd pain.001-voorbeeld (Zwitserland, rail domestic-credit-transfer), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
 item_guid: "https://pain001.com/nl/corpus-ch-sps-scor/"
 item_link: "https://pain001.com/nl/corpus-ch-sps-scor/"
-item_pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
-item_title: "ch.sps.scor — ISO 20022 pain.001-voorbeeld: Zwitserland (domestic-credit-transfer)"
-last_build_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+item_pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+item_title: "ISO 20022 pain.001-voorbeeld ch.sps.scor: Zwitserland (domestic-credit-transfer)"
+last_build_date: "Wed, 23 Sep 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "ch.sps.scor — ISO 20022 pain.001-voorbeeld: Zwitserland (domestic-credit-transfer)"
+apple-mobile-web-app-title: "ISO 20022 pain.001-voorbeeld ch.sps.scor: Zwitserland (domestic-credit-transfer)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,7 +71,7 @@ twitter_description: "Swiss domestic credit transfer with an ISO 11649 creditor 
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "ch.sps.scor — ISO 20022 pain.001-voorbeeld: Zwitserland (domestic-credit-transfer)"
+twitter_title: "ISO 20022 pain.001-voorbeeld ch.sps.scor: Zwitserland (domestic-credit-transfer)"
 twitter_url: "https://pain001.com/nl/corpus-ch-sps-scor/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -105,7 +105,7 @@ De tweeling is dezelfde betaling in de JSON-conventie van de ISO 20022 Registrat
 
 ## Voer het uit in uw browser
 
-[Open dit scenario in de demo](/nl/try/?sample=corpus:ch.sps.scor): de pain001-bibliotheek laadt in een Python-runtime in uw browser, bouwt het bestand opnieuw op uit de 2 record(s) hieronder, controleert het tegen het rulebook `ch-domestic` en de officiële XSD, en toont de JSON-tweeling. Niets verlaat uw computer.
+[Open dit scenario in de demo](/nl/try/#sample=corpus:ch.sps.scor): de pain001-bibliotheek laadt in een Python-runtime in uw browser, bouwt het bestand opnieuw op uit de 2 record(s) hieronder, controleert het tegen het rulebook `ch-domestic` en de officiële XSD, en toont de JSON-tweeling. Niets verlaat uw computer.
 
 De platte records waaruit de bibliotheek het opnieuw opbouwt (de kolomnamen van de CSV-pipeline zelf):
 

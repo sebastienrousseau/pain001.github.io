@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "A code editor showing red diagnostics under an invalid IBAN in a payment JSON file — pain001-lsp validating ISO 20022 data as it is typed."
+banner_alt: "A code editor showing red diagnostics under an invalid IBAN in a payment JSON file, with pain001-lsp validating ISO 20022 data as it is typed."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -16,7 +16,7 @@ format-detection: telephone=no
 hreflang: en
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/pain001-lsp/"
-image_alt: "A code editor showing red diagnostics under an invalid IBAN in a payment JSON file — pain001-lsp validating ISO 20022 data as it is typed."
+image_alt: "A code editor showing red diagnostics under an invalid IBAN in a payment JSON file, with pain001-lsp validating ISO 20022 data as it is typed."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -82,12 +82,12 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Editor tooling"
-excerpt: "pain001-lsp brings the Language Server Protocol to payment data authoring: as-you-type schema validation, IBAN checksum and BIC diagnostics, field completion, hover documentation, a quick-fix that inserts missing required fields, formatting, and document symbols for large batches — built on pygls and tested to 100% branch coverage."
+excerpt: "pain001-lsp brings the Language Server Protocol to payment data authoring: as-you-type schema validation, IBAN checksum and BIC diagnostics, field completion, hover documentation, a quick-fix that inserts missing required fields, formatting, and document symbols for large batches. Built on pygls and tested to 100% branch coverage."
 last_reviewed: "2026-07-26"
 
 ---
 
-**`pain001-lsp` v0.0.70** is a Language Server Protocol implementation for payment-data authoring. It validates payment JSON against ISO 20022 message schemas as you type — in VS Code, Neovim, Helix, Emacs, or any LSP-compliant editor.
+**`pain001-lsp` v0.0.70** is a Language Server Protocol implementation for payment-data authoring. It validates payment JSON against ISO 20022 message schemas as you type in VS Code, Neovim, Helix, Emacs, or any LSP-compliant editor.
 
 A malformed batch discovered at the bank gateway costs a repair cycle, a cut-off time, and sometimes a settlement day. The same error discovered as a red squiggle while typing costs nothing. That is the entire premise.
 
@@ -97,7 +97,7 @@ A malformed batch discovered at the bank gateway costs a repair cycle, a cut-off
 
 - **Live diagnostics.** Each record in a payment JSON file is validated against the selected message type's JSON Schema on open and on every change. Dedicated checks cover IBAN checksums (ISO 13616 mod-97) and BIC structure (ISO 9362) across debtor, creditor, charge, and forwarding-agent fields.
 - **Completion.** Field-name and message-type suggestions with inline documentation.
-- **Hover.** Schema descriptions for the field under the cursor — lengths, formats, requirements.
+- **Hover.** Schema descriptions for the field under the cursor: lengths, formats, requirements.
 - **Quick-fix code action.** "Add missing required fields" inserts type-correct placeholders, multi-record aware.
 - **Formatting.** Re-serialises payment JSON with 2-space indentation and a trailing newline; malformed JSON is left untouched rather than mangled.
 - **Document symbols.** One symbol per payment record, so editor outlines and breadcrumbs navigate large batches.
@@ -141,11 +141,11 @@ The server is a single auditable module built on [pygls](https://github.com/open
 
 **Why validate payment files in an editor at all?**
 
-Because most corporate payment batches still begin life as a file a human assembles or reviews. Editor-time validation moves rejection-class errors — a transposed IBAN digit, a missing `requested_execution_date` — from the bank's gateway to the keystroke where they happen.
+Because most corporate payment batches still begin life as a file a human assembles or reviews. Editor-time validation moves rejection-class errors (a transposed IBAN digit, a missing `requested_execution_date`) from the bank's gateway to the keystroke where they happen.
 
 **Does it validate the final XML?**
 
-The LSP validates the *input records*. XSD validation of the rendered XML happens in the [core library](/documentation/) at generation time — the same dual gate the CLI and REST API apply.
+The LSP validates the *input records*. XSD validation of the rendered XML happens in the [core library](/documentation/) at generation time. This is the same dual gate the CLI and REST API apply.
 
 **Which file types does it understand?**
 

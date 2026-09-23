@@ -36,10 +36,10 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "The network is unreachable — this page is served from your device's cache."
+subtitle: "The network is unreachable, so this page is served from your device's cache."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Offline — Cached Copy Shown"
+title: "Offline: Cached Copy Shown"
 url: "https://pain001.com/offline/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/offline/rss.xml"
@@ -50,7 +50,7 @@ item_description: "The network is unreachable, so this page is served from cache
 item_guid: "https://pain001.com/offline/rss.xml"
 item_link: "https://pain001.com/offline/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Offline — Cached Copy Shown"
+item_title: "Offline: Cached Copy Shown"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Offline — Cached Copy Shown"
+apple-mobile-web-app-title: "Offline: Cached Copy Shown"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,7 +71,7 @@ twitter_description: "The network is unreachable, so this page is served from ca
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Offline — Cached Copy Shown"
+twitter_title: "Offline: Cached Copy Shown"
 twitter_url: "https://pain001.com/offline/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -89,6 +89,6 @@ last_reviewed: "2026-07-26"
 
 This page is served from your device's cache because the network is unreachable.
 
-Pages you have already visited may still be available — try the [home page](/) or use your browser's back button. Everything else will load the moment your connection returns.
+Pages you have already visited may still be available. Try the [home page](/) or use your browser's back button. Everything else will load the moment your connection returns.
 
 Fittingly, the Pain001 software itself never needs a network: generation and validation run entirely offline.

@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "The ISO 20022 pain.001.001.06 message structure — group header, payment information, and credit transfer transaction blocks rendered as validated XML."
+banner_alt: "The ISO 20022 pain.001.001.06 message structure: group header, payment information, and credit transfer transaction blocks rendered as validated XML."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -10,13 +10,13 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "pain.001.001.06 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001."
+description: "pain.001.001.06: maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/pain.001.001.06/"
-image_alt: "The ISO 20022 pain.001.001.06 message structure — group header, payment information, and credit transfer transaction blocks rendered as validated XML."
+image_alt: "The ISO 20022 pain.001.001.06 message structure: group header, payment information, and credit transfer transaction blocks rendered as validated XML."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -36,7 +36,7 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "pain.001.001.06 — a maintenance release some TMS platforms export. Element structure, version notes, and version migration."
+subtitle: "pain.001.001.06 is a maintenance release some TMS platforms export. Element structure, version notes, and version migration."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
 title: "pain.001.001.06 Reference: Generate and Validate"
@@ -46,7 +46,7 @@ atom_link: "https://pain001.com/pain.001.001.06/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "pain.001.001.06 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001."
+item_description: "pain.001.001.06: maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001."
 item_guid: "https://pain001.com/pain.001.001.06/rss.xml"
 item_link: "https://pain001.com/pain.001.001.06/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -67,7 +67,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "pain.001.001.06 — maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001."
+twitter_description: "pain.001.001.06: maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
@@ -96,9 +96,9 @@ last_reviewed: "2026-07-26"
 
 ## Element structure (all versions share this skeleton)
 
-- **`<GrpHdr>` Group Header** — message id, creation timestamp, `NbOfTxs`, `CtrlSum`, initiating party. Pain001 recomputes the control totals from validated records.
-- **`<PmtInf>` Payment Information** — debtor, debtor account and agent, requested execution date, payment method, charge bearer; one block can carry many transactions.
-- **`<CdtTrfTxInf>` Credit Transfer Transaction** — amount and currency, creditor, creditor account and agent, remittance information, end-to-end reference.
+- **`<GrpHdr>` Group Header**: message id, creation timestamp, `NbOfTxs`, `CtrlSum`, initiating party. Pain001 recomputes the control totals from validated records.
+- **`<PmtInf>` Payment Information**: debtor, debtor account and agent, requested execution date, payment method, charge bearer; one block can carry many transactions.
+- **`<CdtTrfTxInf>` Credit Transfer Transaction**: amount and currency, creditor, creditor account and agent, remittance information, end-to-end reference.
 
 ## Generate and inspect
 

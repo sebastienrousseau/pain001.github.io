@@ -8,7 +8,7 @@
   "identifier": "ae.uaefts.single",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -77,7 +77,7 @@
   "identifier": "ae.uaefts.single",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -146,7 +146,7 @@
   "identifier": "ae.uaefts.single",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -215,7 +215,7 @@
   "identifier": "ae.uaefts.single",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -284,7 +284,7 @@
   "identifier": "ae.uaefts.single",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -353,7 +353,7 @@
   "identifier": "ae.uaefts.single",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -422,7 +422,7 @@
   "identifier": "be.sepa.sct-supplier",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -490,7 +490,7 @@
   "identifier": "be.sepa.sct-supplier",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -558,7 +558,7 @@
   "identifier": "be.sepa.sct-supplier",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -626,7 +626,7 @@
   "identifier": "be.sepa.sct-supplier",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -694,7 +694,7 @@
   "identifier": "be.sepa.sct-supplier",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -762,7 +762,7 @@
   "identifier": "be.sepa.sct-supplier",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -830,7 +830,7 @@
   "identifier": "be.sepa.sdd-core",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -886,7 +886,7 @@
   "identifier": "be.sepa.sdd-core",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -942,7 +942,7 @@
   "identifier": "be.sepa.sdd-core",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -998,7 +998,7 @@
   "identifier": "be.sepa.sdd-core",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -1054,7 +1054,7 @@
   "identifier": "be.sepa.sdd-core",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -1110,7 +1110,7 @@
   "identifier": "be.sepa.sdd-core",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -1166,7 +1166,7 @@
   "identifier": "ch.international.usd",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -1234,7 +1234,7 @@
   "identifier": "ch.international.usd",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -1302,7 +1302,7 @@
   "identifier": "ch.international.usd",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -1370,7 +1370,7 @@
   "identifier": "ch.international.usd",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -1438,7 +1438,7 @@
   "identifier": "ch.international.usd",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -1506,7 +1506,7 @@
   "identifier": "ch.international.usd",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -1574,7 +1574,7 @@
   "identifier": "ch.sepa.sct",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -1642,7 +1642,7 @@
   "identifier": "ch.sepa.sct",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -1710,7 +1710,7 @@
   "identifier": "ch.sepa.sct",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -1778,7 +1778,7 @@
   "identifier": "ch.sepa.sct",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -1846,7 +1846,7 @@
   "identifier": "ch.sepa.sct",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -1914,7 +1914,7 @@
   "identifier": "ch.sepa.sct",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -1982,7 +1982,7 @@
   "identifier": "ch.sps.qr-bill",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -2050,7 +2050,7 @@
   "identifier": "ch.sps.qr-bill",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -2118,7 +2118,7 @@
   "identifier": "ch.sps.qr-bill",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -2186,7 +2186,7 @@
   "identifier": "ch.sps.qr-bill",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -2254,7 +2254,7 @@
   "identifier": "ch.sps.qr-bill",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -2322,7 +2322,7 @@
   "identifier": "ch.sps.qr-bill",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -2390,7 +2390,7 @@
   "identifier": "ch.sps.scor",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -2458,7 +2458,7 @@
   "identifier": "ch.sps.scor",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -2526,7 +2526,7 @@
   "identifier": "ch.sps.scor",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -2594,7 +2594,7 @@
   "identifier": "ch.sps.scor",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -2662,7 +2662,7 @@
   "identifier": "ch.sps.scor",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -2730,7 +2730,7 @@
   "identifier": "ch.sps.scor",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -2798,7 +2798,7 @@
   "identifier": "cz.certis.domestic",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -2865,7 +2865,7 @@
   "identifier": "cz.certis.domestic",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -2932,7 +2932,7 @@
   "identifier": "cz.certis.domestic",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -2999,7 +2999,7 @@
   "identifier": "cz.certis.domestic",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -3066,7 +3066,7 @@
   "identifier": "cz.certis.domestic",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -3133,7 +3133,7 @@
   "identifier": "cz.certis.domestic",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -3200,7 +3200,7 @@
   "identifier": "cz.sepa.sct",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -3268,7 +3268,7 @@
   "identifier": "cz.sepa.sct",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -3336,7 +3336,7 @@
   "identifier": "cz.sepa.sct",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -3404,7 +3404,7 @@
   "identifier": "cz.sepa.sct",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -3472,7 +3472,7 @@
   "identifier": "cz.sepa.sct",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -3540,7 +3540,7 @@
   "identifier": "cz.sepa.sct",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -3608,7 +3608,7 @@
   "identifier": "de.axz.foreign",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -3676,7 +3676,7 @@
   "identifier": "de.axz.foreign",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -3744,7 +3744,7 @@
   "identifier": "de.axz.foreign",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -3812,7 +3812,7 @@
   "identifier": "de.axz.foreign",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -3880,7 +3880,7 @@
   "identifier": "de.axz.foreign",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -3948,7 +3948,7 @@
   "identifier": "de.axz.foreign",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -4016,7 +4016,7 @@
   "identifier": "de.ccu.urgent",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -4084,7 +4084,7 @@
   "identifier": "de.ccu.urgent",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -4152,7 +4152,7 @@
   "identifier": "de.ccu.urgent",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -4220,7 +4220,7 @@
   "identifier": "de.ccu.urgent",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -4288,7 +4288,7 @@
   "identifier": "de.ccu.urgent",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -4356,7 +4356,7 @@
   "identifier": "de.ccu.urgent",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -4424,7 +4424,7 @@
   "identifier": "de.sepa.sct-inst",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -4474,7 +4474,7 @@
   "identifier": "de.sepa.sct-inst",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -4524,7 +4524,7 @@
   "identifier": "de.sepa.sct-inst",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -4574,7 +4574,7 @@
   "identifier": "de.sepa.sct-inst",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -4624,7 +4624,7 @@
   "identifier": "de.sepa.sct-inst",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -4674,7 +4674,7 @@
   "identifier": "de.sepa.sct-inst",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -4724,7 +4724,7 @@
   "identifier": "de.sepa.sct-salary",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -4810,7 +4810,7 @@
   "identifier": "de.sepa.sct-salary",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -4896,7 +4896,7 @@
   "identifier": "de.sepa.sct-salary",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -4982,7 +4982,7 @@
   "identifier": "de.sepa.sct-salary",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -5068,7 +5068,7 @@
   "identifier": "de.sepa.sct-salary",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -5154,7 +5154,7 @@
   "identifier": "de.sepa.sct-salary",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -5240,7 +5240,7 @@
   "identifier": "de.sepa.sdd-b2b",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -5296,7 +5296,7 @@
   "identifier": "de.sepa.sdd-b2b",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -5352,7 +5352,7 @@
   "identifier": "de.sepa.sdd-b2b",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -5408,7 +5408,7 @@
   "identifier": "de.sepa.sdd-b2b",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -5464,7 +5464,7 @@
   "identifier": "de.sepa.sdd-b2b",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -5520,7 +5520,7 @@
   "identifier": "de.sepa.sdd-b2b",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -5576,7 +5576,7 @@
   "identifier": "es.sepa.sct-single",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -5644,7 +5644,7 @@
   "identifier": "es.sepa.sct-single",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -5712,7 +5712,7 @@
   "identifier": "es.sepa.sct-single",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -5780,7 +5780,7 @@
   "identifier": "es.sepa.sct-single",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -5848,7 +5848,7 @@
   "identifier": "es.sepa.sct-single",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -5916,7 +5916,7 @@
   "identifier": "es.sepa.sct-single",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -5984,7 +5984,7 @@
   "identifier": "es.sepa.sdd-core",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -6040,7 +6040,7 @@
   "identifier": "es.sepa.sdd-core",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -6096,7 +6096,7 @@
   "identifier": "es.sepa.sdd-core",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -6152,7 +6152,7 @@
   "identifier": "es.sepa.sdd-core",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -6208,7 +6208,7 @@
   "identifier": "es.sepa.sdd-core",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -6264,7 +6264,7 @@
   "identifier": "es.sepa.sdd-core",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -6320,7 +6320,7 @@
   "identifier": "fr.sepa.sct-supplier",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -6388,7 +6388,7 @@
   "identifier": "fr.sepa.sct-supplier",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -6456,7 +6456,7 @@
   "identifier": "fr.sepa.sct-supplier",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -6524,7 +6524,7 @@
   "identifier": "fr.sepa.sct-supplier",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -6592,7 +6592,7 @@
   "identifier": "fr.sepa.sct-supplier",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -6660,7 +6660,7 @@
   "identifier": "fr.sepa.sct-supplier",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -6728,7 +6728,7 @@
   "identifier": "fr.sepa.sdd-core",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -6784,7 +6784,7 @@
   "identifier": "fr.sepa.sdd-core",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -6840,7 +6840,7 @@
   "identifier": "fr.sepa.sdd-core",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -6896,7 +6896,7 @@
   "identifier": "fr.sepa.sdd-core",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -6952,7 +6952,7 @@
   "identifier": "fr.sepa.sdd-core",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -7008,7 +7008,7 @@
   "identifier": "fr.sepa.sdd-core",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -7064,7 +7064,7 @@
   "identifier": "gb.bacs-dd.collection",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -7120,7 +7120,7 @@
   "identifier": "gb.bacs-dd.collection",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -7176,7 +7176,7 @@
   "identifier": "gb.bacs-dd.collection",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -7232,7 +7232,7 @@
   "identifier": "gb.bacs-dd.collection",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -7288,7 +7288,7 @@
   "identifier": "gb.bacs-dd.collection",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -7344,7 +7344,7 @@
   "identifier": "gb.bacs-dd.collection",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -7400,7 +7400,7 @@
   "identifier": "gb.bacs.supplier-run",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -7468,7 +7468,7 @@
   "identifier": "gb.bacs.supplier-run",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -7536,7 +7536,7 @@
   "identifier": "gb.bacs.supplier-run",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -7604,7 +7604,7 @@
   "identifier": "gb.bacs.supplier-run",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -7672,7 +7672,7 @@
   "identifier": "gb.bacs.supplier-run",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -7740,7 +7740,7 @@
   "identifier": "gb.bacs.supplier-run",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -7808,7 +7808,7 @@
   "identifier": "gb.chaps.property-purchase",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -7877,7 +7877,7 @@
   "identifier": "gb.chaps.property-purchase",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -7946,7 +7946,7 @@
   "identifier": "gb.chaps.property-purchase",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -8015,7 +8015,7 @@
   "identifier": "gb.chaps.property-purchase",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -8084,7 +8084,7 @@
   "identifier": "gb.chaps.property-purchase",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -8153,7 +8153,7 @@
   "identifier": "gb.chaps.property-purchase",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -8222,7 +8222,7 @@
   "identifier": "gb.fps.single",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -8290,7 +8290,7 @@
   "identifier": "gb.fps.single",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -8358,7 +8358,7 @@
   "identifier": "gb.fps.single",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -8426,7 +8426,7 @@
   "identifier": "gb.fps.single",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -8494,7 +8494,7 @@
   "identifier": "gb.fps.single",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -8562,7 +8562,7 @@
   "identifier": "gb.fps.single",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -8630,7 +8630,7 @@
   "identifier": "gb.international.usd",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -8698,7 +8698,7 @@
   "identifier": "gb.international.usd",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -8766,7 +8766,7 @@
   "identifier": "gb.international.usd",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -8834,7 +8834,7 @@
   "identifier": "gb.international.usd",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -8902,7 +8902,7 @@
   "identifier": "gb.international.usd",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -8970,7 +8970,7 @@
   "identifier": "gb.international.usd",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -9038,7 +9038,7 @@
   "identifier": "hk.fps.single",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -9107,7 +9107,7 @@
   "identifier": "hk.fps.single",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -9176,7 +9176,7 @@
   "identifier": "hk.fps.single",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -9245,7 +9245,7 @@
   "identifier": "hk.fps.single",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -9314,7 +9314,7 @@
   "identifier": "hk.fps.single",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -9383,7 +9383,7 @@
   "identifier": "hk.fps.single",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -9452,7 +9452,7 @@
   "identifier": "it.sepa.sct-single",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -9520,7 +9520,7 @@
   "identifier": "it.sepa.sct-single",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -9588,7 +9588,7 @@
   "identifier": "it.sepa.sct-single",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -9656,7 +9656,7 @@
   "identifier": "it.sepa.sct-single",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -9724,7 +9724,7 @@
   "identifier": "it.sepa.sct-single",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -9792,7 +9792,7 @@
   "identifier": "it.sepa.sct-single",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -9860,7 +9860,7 @@
   "identifier": "lu.sepa.sct-single",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -9928,7 +9928,7 @@
   "identifier": "lu.sepa.sct-single",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -9996,7 +9996,7 @@
   "identifier": "lu.sepa.sct-single",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -10064,7 +10064,7 @@
   "identifier": "lu.sepa.sct-single",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -10132,7 +10132,7 @@
   "identifier": "lu.sepa.sct-single",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -10200,7 +10200,7 @@
   "identifier": "lu.sepa.sct-single",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -10268,7 +10268,7 @@
   "identifier": "my.duitnow.single",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -10337,7 +10337,7 @@
   "identifier": "my.duitnow.single",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -10406,7 +10406,7 @@
   "identifier": "my.duitnow.single",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -10475,7 +10475,7 @@
   "identifier": "my.duitnow.single",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -10544,7 +10544,7 @@
   "identifier": "my.duitnow.single",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -10613,7 +10613,7 @@
   "identifier": "my.duitnow.single",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -10682,7 +10682,7 @@
   "identifier": "nl.sepa.sct-supplier",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -10750,7 +10750,7 @@
   "identifier": "nl.sepa.sct-supplier",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -10818,7 +10818,7 @@
   "identifier": "nl.sepa.sct-supplier",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -10886,7 +10886,7 @@
   "identifier": "nl.sepa.sct-supplier",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -10954,7 +10954,7 @@
   "identifier": "nl.sepa.sct-supplier",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -11022,7 +11022,7 @@
   "identifier": "nl.sepa.sct-supplier",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -11090,7 +11090,7 @@
   "identifier": "nl.sepa.sdd-core",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -11146,7 +11146,7 @@
   "identifier": "nl.sepa.sdd-core",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -11202,7 +11202,7 @@
   "identifier": "nl.sepa.sdd-core",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -11258,7 +11258,7 @@
   "identifier": "nl.sepa.sdd-core",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -11314,7 +11314,7 @@
   "identifier": "nl.sepa.sdd-core",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -11370,7 +11370,7 @@
   "identifier": "nl.sepa.sdd-core",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -11426,7 +11426,7 @@
   "identifier": "qa.qatch.single",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -11495,7 +11495,7 @@
   "identifier": "qa.qatch.single",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -11564,7 +11564,7 @@
   "identifier": "qa.qatch.single",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -11633,7 +11633,7 @@
   "identifier": "qa.qatch.single",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -11702,7 +11702,7 @@
   "identifier": "qa.qatch.single",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -11771,7 +11771,7 @@
   "identifier": "qa.qatch.single",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -11840,7 +11840,7 @@
   "identifier": "se.bankgiro.salary",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -11908,7 +11908,7 @@
   "identifier": "se.bankgiro.salary",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -11976,7 +11976,7 @@
   "identifier": "se.bankgiro.salary",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -12044,7 +12044,7 @@
   "identifier": "se.bankgiro.salary",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -12112,7 +12112,7 @@
   "identifier": "se.bankgiro.salary",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -12180,7 +12180,7 @@
   "identifier": "se.bankgiro.salary",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -12248,7 +12248,7 @@
   "identifier": "se.bankgiro.supplier",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -12316,7 +12316,7 @@
   "identifier": "se.bankgiro.supplier",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -12384,7 +12384,7 @@
   "identifier": "se.bankgiro.supplier",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -12452,7 +12452,7 @@
   "identifier": "se.bankgiro.supplier",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -12520,7 +12520,7 @@
   "identifier": "se.bankgiro.supplier",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -12588,7 +12588,7 @@
   "identifier": "se.bankgiro.supplier",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -12656,7 +12656,7 @@
   "identifier": "se.plusgiro.supplier",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -12724,7 +12724,7 @@
   "identifier": "se.plusgiro.supplier",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -12792,7 +12792,7 @@
   "identifier": "se.plusgiro.supplier",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -12860,7 +12860,7 @@
   "identifier": "se.plusgiro.supplier",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -12928,7 +12928,7 @@
   "identifier": "se.plusgiro.supplier",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -12996,7 +12996,7 @@
   "identifier": "se.plusgiro.supplier",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -13064,7 +13064,7 @@
   "identifier": "se.rix.urgent",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -13131,7 +13131,7 @@
   "identifier": "se.rix.urgent",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -13198,7 +13198,7 @@
   "identifier": "se.rix.urgent",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -13265,7 +13265,7 @@
   "identifier": "se.rix.urgent",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -13332,7 +13332,7 @@
   "identifier": "se.rix.urgent",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -13399,7 +13399,7 @@
   "identifier": "se.rix.urgent",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -13466,7 +13466,7 @@
   "identifier": "sg.fast.single",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -13534,7 +13534,7 @@
   "identifier": "sg.fast.single",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -13602,7 +13602,7 @@
   "identifier": "sg.fast.single",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -13670,7 +13670,7 @@
   "identifier": "sg.fast.single",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -13738,7 +13738,7 @@
   "identifier": "sg.fast.single",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -13806,7 +13806,7 @@
   "identifier": "sg.fast.single",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -13874,7 +13874,7 @@
   "identifier": "us.ach.ccd-supplier",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -13942,7 +13942,7 @@
   "identifier": "us.ach.ccd-supplier",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -14010,7 +14010,7 @@
   "identifier": "us.ach.ccd-supplier",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -14078,7 +14078,7 @@
   "identifier": "us.ach.ccd-supplier",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -14146,7 +14146,7 @@
   "identifier": "us.ach.ccd-supplier",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -14214,7 +14214,7 @@
   "identifier": "us.ach.ccd-supplier",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -14282,7 +14282,7 @@
   "identifier": "us.ach.debit",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -14338,7 +14338,7 @@
   "identifier": "us.ach.debit",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -14394,7 +14394,7 @@
   "identifier": "us.ach.debit",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -14450,7 +14450,7 @@
   "identifier": "us.ach.debit",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -14506,7 +14506,7 @@
   "identifier": "us.ach.debit",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -14562,7 +14562,7 @@
   "identifier": "us.ach.debit",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -14618,7 +14618,7 @@
   "identifier": "us.ach.ppd-payroll",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -14686,7 +14686,7 @@
   "identifier": "us.ach.ppd-payroll",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -14754,7 +14754,7 @@
   "identifier": "us.ach.ppd-payroll",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -14822,7 +14822,7 @@
   "identifier": "us.ach.ppd-payroll",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -14890,7 +14890,7 @@
   "identifier": "us.ach.ppd-payroll",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -14958,7 +14958,7 @@
   "identifier": "us.ach.ppd-payroll",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -15026,7 +15026,7 @@
   "identifier": "us.check.vendor",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -15093,7 +15093,7 @@
   "identifier": "us.check.vendor",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -15160,7 +15160,7 @@
   "identifier": "us.check.vendor",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -15227,7 +15227,7 @@
   "identifier": "us.check.vendor",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -15294,7 +15294,7 @@
   "identifier": "us.check.vendor",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -15361,7 +15361,7 @@
   "identifier": "us.check.vendor",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -15428,7 +15428,7 @@
   "identifier": "us.eftps.tax",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -15496,7 +15496,7 @@
   "identifier": "us.eftps.tax",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -15564,7 +15564,7 @@
   "identifier": "us.eftps.tax",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -15632,7 +15632,7 @@
   "identifier": "us.eftps.tax",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -15700,7 +15700,7 @@
   "identifier": "us.eftps.tax",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -15768,7 +15768,7 @@
   "identifier": "us.eftps.tax",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -15836,7 +15836,7 @@
   "identifier": "us.rtp.single",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -15904,7 +15904,7 @@
   "identifier": "us.rtp.single",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -15972,7 +15972,7 @@
   "identifier": "us.rtp.single",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -16040,7 +16040,7 @@
   "identifier": "us.rtp.single",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -16108,7 +16108,7 @@
   "identifier": "us.rtp.single",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -16176,7 +16176,7 @@
   "identifier": "us.rtp.single",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -16244,7 +16244,7 @@
   "identifier": "us.wire.domestic",
   "inLanguage": "en-GB",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -16312,7 +16312,7 @@
   "identifier": "us.wire.domestic",
   "inLanguage": "de",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -16380,7 +16380,7 @@
   "identifier": "us.wire.domestic",
   "inLanguage": "fr",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -16448,7 +16448,7 @@
   "identifier": "us.wire.domestic",
   "inLanguage": "es",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -16516,7 +16516,7 @@
   "identifier": "us.wire.domestic",
   "inLanguage": "it",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [
@@ -16584,7 +16584,7 @@
   "identifier": "us.wire.domestic",
   "inLanguage": "nl",
   "version": "0.0.70",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-23",
   "license": "https://spdx.org/licenses/Apache-2.0.html",
   "isAccessibleForFree": true,
   "keywords": [

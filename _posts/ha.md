@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "Kunshin Python na buɗaɗɗen tushe da ke samar da fayilolin pain.001 da pain.008 da aka tabbatar da XSD daga CSV, Excel, SQLite, JSON, Parquet ko SWIFT MT101 — tare da kayan aikin MCP don wakilan AI da uwar garken LSP."
+banner_alt: "Kunshin Python na buɗaɗɗen tushe da ke samar da fayilolin pain.001 da pain.008 da aka tabbatar da XSD daga CSV, Excel, SQLite, JSON, Parquet ko SWIFT MT101, tare da kayan aikin MCP don wakilan AI da uwar garken LSP."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -10,13 +10,13 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Kunshin Python na buɗaɗɗen tushe da ke samar da fayilolin pain.001 da pain.008 da aka tabbatar da XSD daga CSV, Excel, SQLite, JSON, Parquet ko SWIFT MT101 — tare da kayan aikin MCP don wakilan AI da uwar garken LSP."
+description: "Kunshin Python na buɗaɗɗen tushe da ke samar da fayilolin pain.001 da pain.008 da aka tabbatar da XSD daga CSV, Excel, SQLite, JSON, Parquet ko SWIFT MT101, tare da kayan aikin MCP don wakilan AI da uwar garken LSP."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "ha"
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/ha/"
-image_alt: "A question-and-answer session on ISO 20022 payment file generation — the questions treasury, operations, engineering, and audit teams actually ask."
+image_alt: "A question-and-answer session on ISO 20022 payment file generation, covering the questions treasury, operations, engineering, and audit teams actually ask."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -36,21 +36,21 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "Kunshin buɗaɗɗen tushe da ke mai da bayanan biyanku zuwa XML na ISO 20022 da aka tabbatar — an tabbatar da daidai kafin ya isa banki."
+subtitle: "Kunshin buɗaɗɗen tushe da ke mai da bayanan biyanku zuwa XML na ISO 20022 da aka tabbatar, kuma an tabbatar da daidai kafin ya isa banki."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001 — Fara biyan kuɗi na ISO 20022 a buɗaɗɗen tushe"
+title: "Pain001: Fara biyan kuɗi na ISO 20022 a buɗaɗɗen tushe"
 url: "https://pain001.com/ha/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/ha/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Kunshin Python na buɗaɗɗen tushe da ke samar da fayilolin pain.001 da pain.008 da aka tabbatar da XSD daga CSV, Excel, SQLite, JSON, Parquet ko SWIFT MT101 — tare da kayan aikin MCP don wakilan AI da uwar garken LSP."
+item_description: "Kunshin Python na buɗaɗɗen tushe da ke samar da fayilolin pain.001 da pain.008 da aka tabbatar da XSD daga CSV, Excel, SQLite, JSON, Parquet ko SWIFT MT101, tare da kayan aikin MCP don wakilan AI da uwar garken LSP."
 item_guid: "https://pain001.com/ha/rss.xml"
 item_link: "https://pain001.com/ha/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001 — Fara biyan kuɗi na ISO 20022 a buɗaɗɗen tushe"
+item_title: "Pain001: Fara biyan kuɗi na ISO 20022 a buɗaɗɗen tushe"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001 — Fara biyan kuɗi na ISO 20022 a buɗaɗɗen tushe"
+apple-mobile-web-app-title: "Pain001: Fara biyan kuɗi na ISO 20022 a buɗaɗɗen tushe"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Kunshin Python na buɗaɗɗen tushe da ke samar da fayilolin pain.001 da pain.008 da aka tabbatar da XSD daga CSV, Excel, SQLite, JSON, Parquet ko SWIFT MT101 — tare da kayan aikin MCP don wakilan AI da uwar garken LSP."
+twitter_description: "Kunshin Python na buɗaɗɗen tushe da ke samar da fayilolin pain.001 da pain.008 da aka tabbatar da XSD daga CSV, Excel, SQLite, JSON, Parquet ko SWIFT MT101, tare da kayan aikin MCP don wakilan AI da uwar garken LSP."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001 — Fara biyan kuɗi na ISO 20022 a buɗaɗɗen tushe"
+twitter_title: "Pain001: Fara biyan kuɗi na ISO 20022 a buɗaɗɗen tushe"
 twitter_url: "https://pain001.com/ha/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -82,25 +82,25 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Pain001 a Hausa"
-excerpt: "Kunshin Python na buɗaɗɗen tushe da ke samar da fayilolin pain.001 da pain.008 da aka tabbatar da XSD daga CSV, Excel, SQLite, JSON, Parquet ko SWIFT MT101 — tare da kayan aikin MCP don wakilan AI da uwar garken LSP."
-last_reviewed: "2026-07-26"
+excerpt: "Kunshin Python na buɗaɗɗen tushe da ke samar da fayilolin pain.001 da pain.008 da aka tabbatar da XSD daga CSV, Excel, SQLite, JSON, Parquet ko SWIFT MT101, tare da kayan aikin MCP don wakilan AI da uwar garken LSP."
+last_reviewed: "2026-09-23"
 
 
 ---
 
 ## Gano kurakuran fayilolin biyan kuɗi kafin bankinku ya gano su
 
-**Pain001** kunshin Python ne na buɗaɗɗen tushe don fara biyan kuɗi bisa ISO 20022. Yana mai da bayanan da kuke da su — CSV, Excel, SQLite, JSON, Parquet ko tsofaffin saƙonnin SWIFT MT101 — zuwa XML na `pain.001` (canja wurin kuɗi) da `pain.008` (cire kuɗi kai tsaye), waɗanda aka tabbatar da su da tsare-tsaren XSD na hukuma.
+**Pain001** kunshin Python ne na buɗaɗɗen tushe don fara biyan kuɗi bisa ISO 20022. Yana mai da bayanan da kuke da su (CSV, Excel, SQLite, JSON, Parquet ko tsofaffin saƙonnin SWIFT MT101) zuwa XML na `pain.001` (canja wurin kuɗi) da `pain.008` (cire kuɗi kai tsaye), waɗanda aka tabbatar da su da tsare-tsaren XSD na hukuma.
 
 Kowane fayil yana wuce matakan tabbatarwa uku kafin a rubuta shi: tsarin JSON ga kowane rikodi (har da bincika mod-97 na IBAN da tsarin BIC), dokokin scheme (SEPA da CBPR+ na ƙetare) da tabbatarwar XSD ta ƙarshe. Ana sake lissafa jimillar sarrafawa koyaushe, ba a taɓa kwafa su ba. Komai yana gudana a cikin na'urarku: babu bayanan biyan kuɗi da ke fita daga kayan aikinku.
 
 ## Gwada a cikin browser
 
-Tabbatar da rukunin misali kai tsaye a cikin browser ɗinku — ba a loda komai ba — kuma ku tabbatar da sakamakon da tsarin XSD na hukuma: [gwada Pain001](/try/). Ana iya sauke fayilolin CSV na misali a matsayin samfura don fitarwar ku.
+Tabbatar da rukunin misali kai tsaye a cikin browser ɗinku, ba tare da loda komai ba, kuma ku tabbatar da sakamakon da tsarin XSD na hukuma: [gwada Pain001](/try/). Ana iya sauke fayilolin CSV na misali a matsayin samfura don fitarwar ku.
 
-## Ranar ƙarshe: 14 ga Nuwamba 2026
+## Wa'adin adireshi mai tsari, an ɗage shi
 
-Bayan zaman tare na MT–MX ya ƙare a ranar 22 ga Nuwamba 2025, rana ta gaba ita ce **14 ga Nuwamba 2026**: za a ƙi adiresoshin gidan waya marasa tsari gaba ɗaya a cikin biyan kuɗi na CBPR+, kuma `pain.001` sigar 9 za ta maye gurbin MT101 tsakanin bankuna. Pain001 yana samar da adiresoshin da aka tsara da na gauraye tun yau — kuma yana mai da MT101 da umarni ɗaya.
+Tun bayan da zaman tare na MT–MX ya ƙare a ranar 22 ga Nuwamba 2025, mataki na gaba ya kamata ya zo a ranar 14 ga Nuwamba 2026: CBPR+ za ta ƙi adiresoshin gidan waya marasa tsari gaba ɗaya, kuma `pain.001` sigar 9 za ta maye gurbin MT101 tsakanin bankuna. A watan Agusta 2026 Swift ta ɗage duka sauye-sauyen biyu kuma za ta sanar da sababbin ranaku kafin ƙarshen Disamba 2026; buƙatun kansu suna nan yadda suke. Pain001 ya riga ya sarrafa adiresoshin da aka tsara da na gauraye, kuma yana mai da MT101 ɗinku da umarni ɗaya.
 
 ## Fara
 
@@ -109,4 +109,4 @@ pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run
 ```
 
-Gaba: [jagorar shigarwa](/installation/), [bayanin fasaha](/documentation/), [taswirar ISO 20022 zuwa 2028](/iso20022-roadmap/), [lambobin ƙi na pain.002](/pain002-reason-codes/), [cibiyar aminci](/trust/) da [taƙaitawa ga shugabanni](/executive-brief/). Cikakken bayani yana Turanci. Lasisi biyu Apache-2.0 / MIT — amfani na kasuwanci kyauta a kowane girma.
+Gaba: [jagorar shigarwa](/installation/), [bayanin fasaha](/documentation/), [taswirar ISO 20022 zuwa 2028](/iso20022-roadmap/), [lambobin ƙi na pain.002](/pain002-reason-codes/), [cibiyar aminci](/trust/) da [taƙaitawa ga shugabanni](/executive-brief/). Cikakken bayani yana Turanci. Lasisi biyu Apache-2.0 / MIT: amfani na kasuwanci kyauta a kowane girma.

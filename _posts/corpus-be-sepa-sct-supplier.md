@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-09-13T08:00:00+00:00"
+date: "2026-09-23T08:00:00+00:00"
 description: "SEPA credit transfer with a Belgian structured communication (BBA). A validated pain.001 sample for Belgium on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -39,7 +39,7 @@ short_name: pain001
 subtitle: "SEPA credit transfer with a Belgian structured communication (BBA)."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "be.sepa.sct-supplier — ISO 20022 pain.001 example for Belgium (sepa-credit-transfer)"
+title: "be.sepa.sct-supplier: ISO 20022 pain.001 example for Belgium (sepa-credit-transfer)"
 url: "https://pain001.com/corpus-be-sepa-sct-supplier/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/corpus-be-sepa-sct-supplier/"
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "SEPA credit transfer with a Belgian structured communication (BBA). A validated pain.001 sample for Belgium on the sepa-credit-transfer rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
 item_guid: "https://pain001.com/corpus-be-sepa-sct-supplier/"
 item_link: "https://pain001.com/corpus-be-sepa-sct-supplier/"
-item_pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
-item_title: "be.sepa.sct-supplier — ISO 20022 pain.001 example for Belgium (sepa-credit-transfer)"
-last_build_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+item_pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+item_title: "be.sepa.sct-supplier: ISO 20022 pain.001 example for Belgium (sepa-credit-transfer)"
+last_build_date: "Wed, 23 Sep 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "be.sepa.sct-supplier — ISO 20022 pain.001 example for Belgium (sepa-credit-transfer)"
+apple-mobile-web-app-title: "be.sepa.sct-supplier: ISO 20022 pain.001 example for Belgium (sepa-credit-transfer)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,7 +71,7 @@ twitter_description: "SEPA credit transfer with a Belgian structured communicati
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "be.sepa.sct-supplier — ISO 20022 pain.001 example for Belgium (sepa-credit-transfer)"
+twitter_title: "be.sepa.sct-supplier: ISO 20022 pain.001 example for Belgium (sepa-credit-transfer)"
 twitter_url: "https://pain001.com/corpus-be-sepa-sct-supplier/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -103,7 +103,7 @@ The twin is the same payment in the ISO 20022 Registration Authority's JSON conv
 
 ## Run it in your browser
 
-[Open this scenario in the demo](/try/?sample=corpus:be.sepa.sct-supplier): the pain001 library loads in a Python runtime in your browser, rebuilds the file from the 1 record(s) below, checks it against the `sepa-sct` rulebook and the official XSD, and shows the JSON twin. Nothing leaves your machine.
+[Open this scenario in the demo](/try/#sample=corpus:be.sepa.sct-supplier): the pain001 library loads in a Python runtime in your browser, rebuilds the file from the 1 record(s) below, checks it against the `sepa-sct` rulebook and the official XSD, and shows the JSON twin. Nothing leaves your machine.
 
 The flat records the library rebuilds it from (the CSV pipeline's own column names):
 

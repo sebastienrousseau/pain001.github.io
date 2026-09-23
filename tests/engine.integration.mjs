@@ -3,7 +3,7 @@
  * package (npm i --no-save pyodide@0.27.2). Prints one JSON line per
  * case and exits non-zero on any failure. */
 import { readFile } from "node:fs/promises";
-import { fileURLToPath, pathToFileURL } from "node:url";
+import { fileURLToPath } from "node:url";
 import path from "node:path";
 import { createRequire } from "node:module";
 import { loadEngine, runEngine } from "../static/js/try-engine.js";

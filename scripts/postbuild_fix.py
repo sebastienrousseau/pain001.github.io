@@ -28,10 +28,14 @@ from __future__ import annotations
 import hashlib
 import base64
 import html as _html
+import json
 import re
 import sys
 from datetime import date
 from pathlib import Path
+
+from css_minify import minify_css, strip_js_comments  # sibling module; scripts/ is on sys.path
+from import_photos import band_path  # the band folder names the licence
 
 BASE_URL = "https://pain001.com"
 
@@ -53,15 +57,27 @@ CSP_META = (
     "<meta content=\"default-src 'self'; base-uri 'self'; "
     "object-src 'none'; img-src 'self' data:; "
     "style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; "
-    "script-src 'self'  'wasm-unsafe-eval'; "
+    "script-src 'self' 'sha256-%s' 'wasm-unsafe-eval'; "
     "connect-src 'self' https://cloudflareinsights.com; font-src 'self'; "
     "form-action 'self' https://formspree.io\" "
     "http-equiv=Content-Security-Policy>"
 )
+# The theme script must run before first paint, and as a separate file it
+# was a render-blocking request on every page: Lighthouse put a third of
+# the mobile first paint on it and scored 99 on the tablet and locale
+# home pages. It is inlined instead, allowed by the hash above, and the
+# file under /js/ stays as the source of truth.
+_THEME_INIT_SRC = Path(__file__).resolve().parent.parent / "static" / "js" / "prism-theme-init.js"
+_THEME_INIT_JS = strip_js_comments(_THEME_INIT_SRC.read_text(encoding="utf-8")).strip()
+assert "</script" not in _THEME_INIT_JS.lower()
+_THEME_INIT_TAG = "<script>%s</script>" % _THEME_INIT_JS
+_THEME_INIT_LINK = '<script src="/js/prism-theme-init.js"></script>'
+CSP_META = CSP_META % base64.b64encode(
+    hashlib.sha256(_THEME_INIT_JS.encode("utf-8")).digest()).decode("ascii")
 OG_IMAGE_META = (
     '<meta property="og:image" '
     'content="https://pain001.com/og/pain001-card.jpg" />'
-    '<meta property="og:image:alt" content="Pain001 — catch payment-file errors before your bank does" />'
+    '<meta property="og:image:alt" content="Pain001 catches payment-file errors before your bank does" />'
 )
 
 
@@ -204,7 +220,10 @@ def add_article_furniture(html: str) -> str:
 
     body = _H2_RE.sub(anchor, body)
 
-    if len(entries) >= 4:
+    # Two sections are enough to earn the rail: from 72rem it is what
+    # fills the right of the container beside the 68ch text column, and
+    # without it a short reference page read as a squashed left column.
+    if len(entries) >= 2:
         # The TOC list already numbers entries (decimal-leading-zero), so a
         # heading's own "01. " prefix would double up — strip it here only.
         strip_num = re.compile(r"^\d{1,2}\. ")
@@ -213,8 +232,8 @@ def add_article_furniture(html: str) -> str:
             for slug, label in entries
         )
         toc = (
-            '<nav class="article-toc" aria-label="Contents">'
-            "<h2>Contents</h2><ol>" + items + "</ol></nav>"
+            '<nav class="article-toc" aria-label="Contents" data-local-nav>'
+            '<div class="toc-inner"><h2>Contents</h2><ol>' + items + "</ol></div></nav>"
         )
         body = toc + body
 
@@ -258,7 +277,10 @@ def wrap_tables(html: str) -> str:
         if "<table" in m.group(0)[6:]:
             print("[postbuild] WARNING: nested table left unwrapped")
             continue
-        if "table-responsive" in body[max(0, m.start() - 80):m.start()]:
+        before = body[max(0, m.start() - 200):m.start()]
+        # Already wrapped, by us or by ssg's own scroll region: a second
+        # box inside ssg's region duplicated its landmark.
+        if "table-responsive" in before[-80:] or "ssg-table-scroll" in before:
             continue
         out.append(body[pos:m.start()])
         out.append('<div class="table-responsive">')
@@ -442,8 +464,19 @@ def translate_chrome(html: str, s: list) -> str:
     to exact chrome markup so translated body text is never touched."""
     (home, skip, minread, lastrev, contents, trydemo, why, see, docs,
      suite, research, tagline, fres, privacy, terms, contact, langline,
-     tognav, swdark, swlight, srch, chlang) = s
+     tognav, swdark, swlight, srch, chlang, srchdocs, kclose, knav, kopen) = s
     pairs = [
+        # ssg's search widget ships English only; every string it shows is
+        # anchored to its own markup so nothing in the body is touched.
+        ('<button id="ssg-search-btn" type="button" aria-label="Search">',
+         '<button id="ssg-search-btn" type="button" aria-label="%s">' % srch),
+        ('<div id="ssg-search-overlay" role="dialog" aria-label="Search">',
+         '<div id="ssg-search-overlay" role="dialog" aria-label="%s">' % srch),
+        ('placeholder="Search documentation..." autocomplete="off" aria-label="Search"',
+         'placeholder="%s" autocomplete="off" aria-label="%s"' % (srchdocs, srch)),
+        ('<span><kbd>Esc</kbd> close</span>', '<span><kbd>Esc</kbd> %s</span>' % kclose),
+        ('<kbd>&darr;</kbd> navigate</span>', '<kbd>&darr;</kbd> %s</span>' % knav),
+        ('<span><kbd>Enter</kbd> open</span>', '<span><kbd>Enter</kbd> %s</span>' % kopen),
         ('>Skip to main content<', '>%s<' % skip),
         ('aria-label="Toggle navigation"', 'aria-label="%s"' % tognav),
         ('>Why Pain001</a>', '>%s</a>' % why),
@@ -476,6 +509,9 @@ def translate_chrome(html: str, s: list) -> str:
     ]
     for old, new in pairs:
         html = html.replace(old, new)
+    # The visible label inside the widget's button, anchored to the button.
+    html = re.sub(r'(<button id="ssg-search-btn".*?)<span>Search</span>',
+                  lambda m: m.group(1) + '<span>%s</span>' % srch, html, count=1, flags=re.DOTALL)
     return html
 
 
@@ -553,7 +589,6 @@ def load_pages_i18n(slug: str) -> dict | None:
 
 
 def _load_i18n(dirname: str, slug: str) -> dict | None:
-    import json
 
     path = Path(__file__).parent / dirname / f"{slug}.json"
     if not path.exists():
@@ -681,9 +716,14 @@ EN_ONLY_SUB = (
 
 
 def retarget_journey_nav(html: str, slug: str) -> str:
-    """Nav/footer/body links to localized pages stay in-locale."""
+    """Nav/footer/body links to localized pages stay in-locale.
+
+    The language menu's English entry is the one link that must leave the
+    locale: rewriting it too sent "English" on /fr/documentation/ back to
+    /fr/documentation/ (and gave WAVE two adjacent links to one URL)."""
     for p in JOURNEY_PAGES + DOCS_PAGES:
-        html = html.replace('href="/%s/"' % p, 'href="/%s/%s/"' % (slug, p))
+        html = re.sub(r'href="/%s/"(?! hreflang="en")' % re.escape(p),
+                      'href="/%s/%s/"' % (slug, p), html)
     return html
 
 
@@ -733,7 +773,6 @@ def gen_try_locales(site: Path) -> None:
             continue
         html = base
         # lang + direction
-        dir_attr = ' dir="rtl"' if slug in RTL_LANGS else ""
         html = retag_html_lang(html, code, slug in RTL_LANGS)
         html = html.replace('"inLanguage": "en-GB"',
                             '"inLanguage": "%s"' % code)
@@ -829,7 +868,6 @@ def _gen_localized_pages(site: Path, pages: tuple, table_dir: str) -> None:
                 continue
             pd = d[page_name]
             html = base
-            dir_attr = ' dir="rtl"' if slug in RTL_LANGS else ""
             html = retag_html_lang(html, code, slug in RTL_LANGS)
             html = html.replace('"inLanguage": "en-GB"',
                                 '"inLanguage": "%s"' % code)
@@ -1137,7 +1175,6 @@ def fix_tag_pages(site: Path) -> None:
 def fix_manifest(site: Path) -> None:
     """ssg emits "theme_color": null (it only understands the legacy RGB
     triple), which Chrome logs as an invalid-type warning. Pin valid hexes."""
-    import json
 
     path = site / "manifest.json"
     if not path.exists():
@@ -1162,7 +1199,7 @@ _STYLESHEET_RE = re.compile(
 def bundle_stylesheets(site: Path) -> None:
     """Collapse each page's local CSS chain into one immutable SRI asset.
 
-    The authored Skeletonic, PRISM, adapter, and layout styles remain separate
+    The authored PRISM, adapter, and layout styles remain separate
     in the repository.  The published bundle removes four render-blocking
     round trips on mobile without weakening the CSP or changing the cascade.
     """
@@ -1191,7 +1228,7 @@ def bundle_stylesheets(site: Path) -> None:
         if not all(path.is_file() for path in paths):
             continue
         if hrefs not in bundles:
-            payload = ("\n".join(path.read_text(encoding="utf-8") for path in paths) + "\n").encode()
+            payload = (minify_css("\n".join(path.read_text(encoding="utf-8") for path in paths)) + "\n").encode()
             digest = hashlib.sha256(payload).hexdigest()[:16]
             sri = base64.b64encode(hashlib.sha384(payload).digest()).decode()
             name = f"site-{digest}.css"
@@ -1243,12 +1280,39 @@ def ensure_social_metadata(site: Path) -> None:
     print(f"[postbuild] social card metadata on {changed} page(s)")
 
 
+# Utility pages that must never be indexed: the not-found page (served
+# with a 200 at /404/ it was a textbook soft 404 in Search Console), the
+# service worker's offline fallback, and the form confirmation page. They
+# stay out of the sitemap and carry a robots noindex.
+NOINDEX_PAGES = ("404", "offline", "thanks")
+_ROBOTS_NOINDEX = '<meta name="robots" content="noindex" />'
+
+
+def mark_noindex_pages(site: Path) -> None:
+    """Add robots noindex to NOINDEX_PAGES and publish the not-found page
+    at /404.html, the only path GitHub Pages serves for a missing URL; as
+    /404/index.html alone it was never shown for one."""
+    marked = 0
+    for rel in NOINDEX_PAGES:
+        page = site / rel / "index.html"
+        if not page.is_file():
+            continue
+        html = page.read_text(encoding="utf-8")
+        if _ROBOTS_NOINDEX not in html:
+            html = html.replace("</head>", _ROBOTS_NOINDEX + "</head>", 1)
+            page.write_text(html, encoding="utf-8")
+            marked += 1
+        if rel == "404":
+            (site / "404.html").write_text(html, encoding="utf-8")
+    print(f"[postbuild] noindex on {marked} utility page(s); /404.html published")
+
+
 def regen_sitemap(site: Path) -> None:
     today = date.today().isoformat()
     urls = []
     for page in sorted(site.rglob("index.html")):
         rel = page.parent.relative_to(site).as_posix()
-        if rel.startswith(("api/", "_csp", ".")) or rel in ("404", "offline"):
+        if rel.startswith(("api/", "_csp", ".")) or rel in NOINDEX_PAGES:
             continue
         loc = BASE_URL + "/" if rel == "." else f"{BASE_URL}/{rel}/"
         urls.append(
@@ -1494,6 +1558,283 @@ def stamp_suite_version(site: Path) -> int:
     return count
 
 
+_HTML_LANG_RE = re.compile(r'<html\b[^>]*\blang="([^"]+)"([^>]*)>')
+_TAXO_LINK_RE = re.compile(r'<a href="(/[^"#?]*)">')
+
+
+def taxonomy_language_and_index(site: Path) -> None:
+    """Two gaps on the generated taxonomy pages.
+
+    1. A tag page lists every page by its own title, so one English page
+       carries titles in Arabic, Hindi, Hausa, Italian and 30 other
+       languages with no ``lang`` on them: WCAG 3.1.2 (Language of Parts)
+       fails and a screen reader reads Arabic with English phonetics.
+       Each link takes the ``lang`` (and ``dir``) its target page declares.
+    2. /tags/ said "pick a topic" and listed none. The list is built here
+       from the generated tag pages, so it cannot drift from them.
+    """
+    langs: dict[str, tuple[str, str]] = {}
+
+    def target_lang(href: str) -> tuple[str, str] | None:
+        if href not in langs:
+            page = site / href.strip("/") / "index.html"
+            found = ("", "")
+            if page.is_file():
+                m = _HTML_LANG_RE.search(page.read_text(encoding="utf-8", errors="ignore")[:600])
+                if m:
+                    d = re.search(r'\bdir="(rtl|ltr)"', m.group(2))
+                    found = (m.group(1), d.group(1) if d else "")
+            langs[href] = found
+        return langs[href] if langs[href][0] else None
+
+    tagged = 0
+    topics = []
+    for page in sorted(site.glob("tags/*/index.html")):
+        html = page.read_text(encoding="utf-8")
+        own = _HTML_LANG_RE.search(html)
+        own_lang = own.group(1).lower() if own else "en"
+        start = html.find('class="taxonomy-page-list"')
+        end = html.find("</ul>", start)
+        if start == -1 or end == -1:
+            continue
+
+        def mark(m: re.Match) -> str:
+            nonlocal tagged
+            t = target_lang(m.group(1))
+            if not t or t[0].lower().split("-")[0] == own_lang.split("-")[0]:
+                return m.group(0)
+            tagged += 1
+            attrs = f' lang="{t[0]}"' + (f' dir="{t[1]}"' if t[1] == "rtl" else "")
+            return f'<a href="{m.group(1)}"{attrs}>'
+
+        body = _TAXO_LINK_RE.sub(mark, html[start:end])
+        html = html[:start] + body + html[end:]
+        page.write_text(html, encoding="utf-8")
+        name = re.search(r'<span class="tag-name">([^<]+)</span>', html)
+        count = re.search(r'class="taxonomy-meta">(\d+)', html)
+        if name:
+            topics.append((name.group(1), page.parent.name, count.group(1) if count else ""))
+
+    index = site / "tags" / "index.html"
+    if topics and index.is_file():
+        html = index.read_text(encoding="utf-8")
+        if 'class="topic-list"' not in html:
+            items = "".join(
+                f'<li><a href="/tags/{slug}/"><span>{label}</span>'
+                f'<span class="topic-count">{n} pages</span></a></li>'
+                for label, slug, n in topics)
+            block = f'<ul class="topic-list" aria-label="Topics">{items}</ul>'
+            html = html.replace("</article>", block + "</article>", 1)
+            index.write_text(html, encoding="utf-8")
+    print(f"[postbuild] taxonomy: lang on {tagged} link(s), {len(topics)} topic(s) indexed")
+
+
+_SSG_TABLE_REGION = 'aria-label="Table, scrollable horizontally"'
+_HEADING_TEXT_RE = re.compile(r"<h([2-4])\b[^>]*>(.*?)</h\1>", re.DOTALL)
+
+
+def name_table_regions(site: Path) -> None:
+    """ssg wraps some tables in a focusable `role="region"`, every one with
+    the same English label. Several on one page break axe's
+    landmark-unique rule, and on a translated page the label is in the
+    wrong language. Each region is named after the heading above it (in
+    the page's own language), numbered only when two would collide."""
+    pages = 0
+    for page in site.rglob("*.html"):
+        html = page.read_text(encoding="utf-8")
+        if _SSG_TABLE_REGION not in html:
+            continue
+        out, pos, used = [], 0, {}
+        for m in re.finditer(re.escape(_SSG_TABLE_REGION), html):
+            heads = list(_HEADING_TEXT_RE.finditer(html, 0, m.start()))
+            label = _html.unescape(re.sub(r"<[^>]+>", "", heads[-1].group(2))).strip() if heads else ""
+            label = re.sub(r"\s*#\s*$", "", label) or "Table"
+            # The heading usually also names the section around the table,
+            # so the table's first column header (in the page's language)
+            # is added to keep the two landmarks distinct.
+            th = re.search(r"<th\b[^>]*>(.*?)</th>", html[m.end():m.end() + 4000], re.DOTALL)
+            if th:
+                col = _html.unescape(re.sub(r"<[^>]+>", "", th.group(1))).strip()
+                if col:
+                    label = f"{label}: {col}"
+            used[label] = used.get(label, 0) + 1
+            if used[label] > 1:
+                label = f"{label} ({used[label]})"
+            out.append(html[pos:m.start()])
+            out.append('aria-label="%s"' % _html.escape(label, quote=True))
+            pos = m.end()
+        out.append(html[pos:])
+        page.write_text("".join(out), encoding="utf-8")
+        pages += 1
+    print(f"[postbuild] named table regions on {pages} page(s)")
+
+
+_BOLD_PARA_RE = re.compile(r"<p>\s*<(strong|b)>([^<]{1,200})</\1>\s*</p>")
+_ANY_HEADING_RE = re.compile(r"<h([1-6])\b")
+
+
+def promote_bold_questions(site: Path) -> None:
+    """A paragraph that is nothing but bold text is a heading written as
+    formatting ("**What does Pain001 cost?**" in FAQ-style sections, and
+    its translations). Screen-reader users cannot jump to it, and WAVE
+    reports each one as a possible heading. It becomes a real heading one
+    level below the nearest authored heading above it, so levels never
+    skip, and consecutive questions stay siblings."""
+    promoted = 0
+    for page in site.rglob("index.html"):
+        html = page.read_text(encoding="utf-8")
+        start, end = html.find("<main"), html.find("</main>")
+        if start == -1 or end == -1 or "<strong>" not in html[start:end]:
+            continue
+        body = html[start:end]
+        out, pos, n = [], 0, 0
+        for m in _BOLD_PARA_RE.finditer(body):
+            text = m.group(2).strip()
+            if not text or text.endswith((".", ",", ";")) and len(text) >= 50:
+                continue
+            authored = [int(h.group(1)) for h in _ANY_HEADING_RE.finditer(body, 0, m.start())]
+            # Skip the headings this pass created (marked with the class).
+            prior = [l for l, h in zip(authored, _ANY_HEADING_RE.finditer(body, 0, m.start()))
+                     if 'class="promoted"' not in body[h.start():h.start() + 40]]
+            level = min((prior[-1] if prior else 1) + 1, 6)
+            out.append(body[pos:m.start()])
+            # The <strong> stays inside the heading: translation keys for
+            # these questions are written with it, and matching them is how
+            # every locale gets its translation.
+            out.append(f'<h{level} class="promoted"><{m.group(1)}>{text}</{m.group(1)}></h{level}>')
+            pos = m.end()
+            n += 1
+        if n:
+            out.append(body[pos:])
+            html = html[:start] + "".join(out) + html[end:]
+            page.write_text(html, encoding="utf-8")
+            promoted += n
+    print(f"[postbuild] promoted {promoted} bold paragraph(s) to headings")
+
+
+_MILESTONE_RE = re.compile(r'<li class="milestone[^"]*">(.*?)</li>', re.DOTALL)
+
+
+def mark_dated_content(site: Path) -> None:
+    """Build-time state for dated content, so the output is deterministic
+    for its build date: a `[data-expires]` element past its date is
+    removed, and each timeline item is marked past or next. The page
+    script re-checks against the visitor's clock for stale builds."""
+    today = date.today().isoformat()
+    for page in site.rglob("index.html"):
+        html = page.read_text(encoding="utf-8")
+        if "data-timeline" not in html and "data-expires" not in html:
+            continue
+        html = re.sub(r'<div class="ribbon" data-expires="(\d{4}-\d{2}-\d{2})">.*?</div>',
+                      lambda m: "" if m.group(1) < today else m.group(0), html, flags=re.DOTALL)
+        found = False
+
+        def mark(m: re.Match) -> str:
+            nonlocal found
+            inner = m.group(1)
+            t = re.search(r'<time datetime="(\d{4}-\d{2}-\d{2})"', inner)
+            past = bool(t) and t.group(1) < today
+            nxt = not past and not found
+            found = found or nxt
+            cls = "milestone" + (" is-past" if past else "") + (" is-next" if nxt else "")
+            inner = re.sub(r'<span class="milestone-flag"( hidden)?>',
+                           '<span class="milestone-flag">' if nxt else '<span class="milestone-flag" hidden>', inner)
+            return f'<li class="{cls}">{inner}</li>'
+
+        html = _MILESTONE_RE.sub(mark, html)
+        page.write_text(html, encoding="utf-8")
+    print(f"[postbuild] dated content marked for {today}")
+
+
+# One photograph per page, never repeated: scripts/page_photos.json maps each
+# English page path to a stock photo; translations use their English page's.
+PAGE_PHOTO_MAP = Path(__file__).resolve().parent / "page_photos.json"
+_PAGE_HERO_OPEN = '<section class="page-hero">'
+
+
+def page_key(rel: str) -> str:
+    parts = [p for p in rel.split("/") if p and p != "index.html"]
+    if parts and parts[0] in LOCALES:
+        parts = parts[1:]
+    return "/".join(parts)
+
+
+def add_page_photos(site: Path) -> None:
+    """A photograph band at the top of every page hero, chosen by page
+    family, as institutional sites carry one on every page. Decorative
+    (alt=""), size-reserved, and fetched eagerly because it is the first
+    thing painted. Text is never set on it."""
+    photos = json.loads(PAGE_PHOTO_MAP.read_text(encoding="utf-8"))["pages"]
+    n, unmapped = 0, set()
+    for page in site.rglob("index.html"):
+        html = page.read_text(encoding="utf-8")
+        if 'class="page-photo"' in html:
+            continue
+        # Taxonomy pages have no page hero; the band opens their article.
+        anchor = _PAGE_HERO_OPEN if _PAGE_HERO_OPEN in html else (
+            '<article class="taxonomy-page' if '<article class="taxonomy-page' in html else None)
+        if anchor is None:
+            continue
+        key = page_key(page.relative_to(site).as_posix())
+        if key not in photos:
+            unmapped.add(key)
+            continue
+        base = band_path(photos[key])
+        sizes = "(min-width: 78rem) 76rem, calc(100vw - 2rem)"
+        widths = (640, 768, 960, 1280, 1600)
+        srcset = lambda ext: ", ".join(f"{base}-{w}.{ext} {w}w" for w in widths)
+        img = (f'<picture class="page-photo-frame">'
+               f'<source type="image/avif" srcset="{srcset("avif")}" sizes="{sizes}" />'
+               f'<img class="page-photo" src="{base}-960.webp" srcset="{srcset("webp")}" '
+               f'sizes="{sizes}" width="1600" height="800" '
+               f'alt="" fetchpriority="high" /></picture>')
+        html = html.replace(anchor, img + anchor, 1)
+        page.write_text(html, encoding="utf-8")
+        n += 1
+    print(f"[postbuild] page photo on {n} page(s)")
+    if unmapped:
+        # A new page ships without a band rather than borrowing another
+        # page's photo; add it to page_photos.json and re-run the importer.
+        print(f"[postbuild] WARNING no photo mapped for: {sorted(unmapped)}")
+
+
+# ssg's taxonomy template titles a tag page "Tag: X — <site title>". The
+# site's copy carries no em dashes in any language, so the title is
+# rewritten here, in the pages and in the search index built from them.
+_TAG_TITLE = re.compile(r"Tag: ([^<\"]+?) \u2014 Pain001: ISO 20022 Payment Initiation Suite")
+
+
+def retitle_tag_pages(site: Path) -> None:
+    n = 0
+    for page in [*(site / "tags").rglob("index.html"), site / "search-index.json"]:
+        if not page.exists():
+            continue
+        text = page.read_text(encoding="utf-8")
+        new = _TAG_TITLE.sub(r"Pages tagged \1 on Pain001", text)
+        if new != text:
+            page.write_text(new, encoding="utf-8")
+            n += 1
+    print(f"[postbuild] tag titles rewritten in {n} file(s)")
+
+
+# ssg moves its search widget's inline script to /_csp/<hash>.js and loads
+# it synchronously at the end of <body>. It only wires up the search
+# overlay, whose elements precede it, so `defer` is equivalent and takes
+# it off the first-paint path (Lighthouse counted it as render-blocking).
+_CSP_SCRIPT = re.compile(r'<script src="(/_csp/[0-9a-f]+\.js)"(?![^>]*\bdefer\b)')
+
+
+def defer_ssg_search(site: Path) -> None:
+    n = 0
+    for page in site.rglob("*.html"):
+        text = page.read_text(encoding="utf-8")
+        new = _CSP_SCRIPT.sub(r'<script defer src="\1"', text)
+        if new != text:
+            page.write_text(new, encoding="utf-8")
+            n += 1
+    print(f"[postbuild] search script deferred on {n} page(s)")
+
+
 def main() -> None:
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     site = Path(args[0] if args else "Pain001")
@@ -1503,10 +1844,17 @@ def main() -> None:
     # Called during the main pass it found no sw.js and silently did
     # nothing, which is the failure mode it exists to prevent.
     if "--stamp-sw" in sys.argv:
+        stamp_redirect_map(site)
         stamp_sw_cache_version(site)
         return
     if "--optimise-assets" in sys.argv:
         bundle_stylesheets(site)
+        # Our hand-written scripts ship without their block comments: the
+        # translated /try/ pages sit close to ssg's 50 KB script budget.
+        for name in ("prism.js", "pain001-prism.js", "home.js", "prism-theme-init.js"):
+            js = site / "js" / name
+            if js.is_file():
+                js.write_text(strip_js_comments(js.read_text(encoding="utf-8")), encoding="utf-8")
         return
     repaired = 0
     for page in site.rglob("*.html"):
@@ -1550,13 +1898,17 @@ def main() -> None:
     inject_dataset_ld(site)
     write_llms(site)
     stamp_suite_version(site)
-    sec = site / "security.txt"
-    if sec.exists():
-        (site / ".well-known").mkdir(exist_ok=True)
-        (site / ".well-known" / "security.txt").write_bytes(sec.read_bytes())
+    mark_noindex_pages(site)  # before the sitemap, which skips the same pages
     regen_sitemap(site)
     gen_legacy_redirects(site)  # after sitemap so stubs stay unindexed
     normalise_site_shell(site)  # includes taxonomy and redirect pages
+    taxonomy_language_and_index(site)
+    name_table_regions(site)
+    promote_bold_questions(site)
+    mark_dated_content(site)
+    add_page_photos(site)
+    retitle_tag_pages(site)
+    defer_ssg_search(site)
     ensure_social_metadata(site)
 
 
@@ -1567,23 +1919,48 @@ LEGACY_REDIRECTS = {
 }
 
 
+def stamp_redirect_map(site: Path) -> None:
+    """Write LEGACY_REDIRECTS into the shipped /js/redirect.js. The script
+    looks its destination up by path in this map rather than reading it
+    from the page, so it can only redirect to these same-origin paths
+    (CodeQL js/xss-through-dom flagged the attribute read). Runs in the
+    --stamp-sw pass, after static/ is copied and before the service
+    worker's cache version is derived from the bytes."""
+    js = site / "js" / "redirect.js"
+    if not js.is_file():
+        return
+    table = {"/%s/" % old.strip("/"): new for old, new in LEGACY_REDIRECTS.items()}
+    text = js.read_text(encoding="utf-8")
+    stamped = text.replace("var REDIRECTS = {};",
+                           "var REDIRECTS = %s;" % json.dumps(table, sort_keys=True), 1)
+    if stamped == text:
+        raise SystemExit("[postbuild] redirect.js has no REDIRECTS placeholder to stamp")
+    js.write_text(stamped, encoding="utf-8")
+    print(f"[postbuild] redirect map stamped: {len(table)} path(s)")
+
+
 def gen_legacy_redirects(site: Path) -> None:
-    """Meta-refresh stubs for retired URLs (GitHub Pages has no server
-    redirects). noindex + canonical point crawlers at the new location."""
+    """Redirect stubs for retired URLs (GitHub Pages has no server
+    redirects). noindex + canonical point crawlers at the new location.
+
+    Not a meta refresh: WAVE reports every `<meta http-equiv="refresh">`
+    as an error (WCAG 2.2.1 / 3.2.5), whatever its delay. A same-origin
+    script redirects at once, and the visible link is the fallback when
+    scripting is off."""
     stub = ('<!DOCTYPE html>\n<html lang="en">\n<head>\n'
             '<meta charset="utf-8" />\n'
             '<meta name="viewport" content="width=device-width, initial-scale=1" />\n'
             '<meta name="robots" content="noindex" />\n'
             "%(csp)s\n"
-            '<meta http-equiv="refresh" content="0; url=%(new)s" />\n'
+            '<script src="/js/redirect.js"></script>\n'
             '<meta name="description" content="This page has moved to %(base)s%(new)s." />\n'
-            '<meta property="og:title" content="Moved — Pain001" />\n'
+            '<meta property="og:title" content="Page moved: Pain001" />\n'
             '<meta property="og:type" content="website" />\n'
             '<meta property="og:url" content="%(base)s%(new)s" />\n'
             '<meta property="og:image" content="%(base)s/og/pain001-card.jpg" />\n'
             '<meta name="twitter:card" content="summary" />\n'
             '<link rel="canonical" href="%(base)s%(new)s" />\n'
-            "<title>Moved — Pain001</title>\n</head>\n<body>\n"
+            "<title>Page moved: Pain001</title>\n</head>\n<body>\n"
             '<main id="main-content">\n'
             "<h1>This page has moved</h1>\n"
             '<p>Continue to <a href="%(new)s">%(base)s%(new)s</a>.</p>\n'
@@ -1600,14 +1977,15 @@ def gen_legacy_redirects(site: Path) -> None:
 _CSP_TAG_RE = re.compile(
     r'<meta\b[^>]*Content-Security-Policy[^>]*>', re.IGNORECASE | re.DOTALL)
 _PRISM_LINKS = (
-    '<link rel="stylesheet" href="/css/skeletonic-3.0.0.min.css" />'
     '<link rel="stylesheet" href="/css/prism.css" />'
     '<link rel="stylesheet" href="/css/pain001-prism.css" />'
+    # Same preload base.html gives every other page, so the text face is
+    # not discovered only after the stylesheet has been parsed.
+    '<link rel="preload" href="/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin />'
 )
 _FOOTER_CREDIT = (
-    '<p class="footer-credit">Made with ❤️ in London. Built with '
-    '<a href="https://static-site-generator.com/">SSG</a> and '
-    '<a href="https://skeletonic.com/">Skeletonic CSS</a>.</p>'
+    '<p class="footer-credit">Made in London. Built with '
+    '<a href="https://static-site-generator.com/">SSG</a>.</p>'
 )
 
 
@@ -1631,12 +2009,15 @@ def normalise_site_shell(site: Path) -> None:
             fixed = fixed.replace("</head>", CSP_META + "</head>", 1)
 
         is_taxonomy = "/tags/" in "/" + page.relative_to(site).as_posix()
-        is_redirect = '<meta http-equiv="refresh"' in fixed
+        is_redirect = '<script src="/js/redirect.js"' in fixed
         if is_taxonomy or is_redirect:
-            if "skeletonic-3.0.0.min.css" not in fixed:
+            if "/css/prism.css" not in fixed:
                 fixed = fixed.replace("</head>", _PRISM_LINKS + "</head>", 1)
             fixed = fixed.replace("<body>", '<body class="prism-theme">', 1)
-            if shared_header and "site-header" in fixed:
+            # Taxonomy pages arrive with their own bare `<header role=banner>`
+            # (a single home link, no class), so they never matched the
+            # `site-header` test and shipped without the site navigation.
+            if shared_header and ("site-header" in fixed or is_taxonomy):
                 fixed = re.sub(
                     r'<header\b[^>]*>.*?</header>', shared_header, fixed,
                     count=1, flags=re.DOTALL)
@@ -1650,13 +2031,21 @@ def normalise_site_shell(site: Path) -> None:
                     count=1, flags=re.DOTALL)
             elif shared_footer and is_redirect:
                 fixed = fixed.replace("</body>", shared_footer + "</body>", 1)
-            if "prism-theme-init.js" not in fixed:
-                fixed = fixed.replace(
-                    "</head>", '<script src="/js/prism-theme-init.js"></script></head>', 1)
+            # ssg's taxonomy template ships an inline <style> (skip link,
+            # focus ring, list-link targets). The CSP blocks it, which logs
+            # a console error on every tag page; prism.css and taxonomy.css
+            # already style all three, so the block is dropped.
+            if is_taxonomy:
+                fixed = re.sub(r"<style>.*?</style>", "", fixed, count=1, flags=re.DOTALL)
+            if is_taxonomy and "<html" in fixed and 'class="no-js"' not in fixed:
+                fixed = re.sub(r"<html\b", '<html class="no-js"', fixed, count=1)
+            if _THEME_INIT_LINK not in fixed and _THEME_INIT_TAG not in fixed:
+                fixed = fixed.replace("</head>", _THEME_INIT_LINK + "</head>", 1)
             if 'src="/js/prism.js"' not in fixed:
                 fixed = fixed.replace(
                     "</body>", '<script src="/js/prism.js" defer></script>'
                     '<script src="/js/pain001-prism.js" defer></script></body>', 1)
+        fixed = fixed.replace(_THEME_INIT_LINK, _THEME_INIT_TAG, 1)
 
         if 'class="footer-credit"' not in fixed:
             if "</footer>" in fixed:

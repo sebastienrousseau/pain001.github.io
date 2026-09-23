@@ -22,7 +22,8 @@ image_width: 120
 image: "https://pain001.com/img/pain001.svg"
 keywords: "pain001 enterprise support, ISO 20022 LTS, bank usage guideline profile, pain.001 integration support, payment file validation support, SLA open source payments"
 language: en-GB
-layout: "page"
+headline: "Pain001 for regulated teams"
+layout: "enterprise"
 locale: en_GB
 logo_alt: "Pain001 Logo"
 logo_height: 36
@@ -124,7 +125,7 @@ Say which rail and country, the volume you expect, and the date you are working 
   <p><label for="ent-volume">Files or payments per month, roughly</label><br /><input type="text" id="ent-volume" name="volume" /></p>
   <p><label for="ent-deadline">Date you are working to</label><br /><input type="text" id="ent-deadline" name="deadline" placeholder="YYYY-MM" /></p>
   <p><label for="ent-need">Which of the three, and what would make it useful</label><br /><textarea id="ent-need" name="message" rows="5"></textarea></p>
-  <p><button type="submit" class="pill pill-primary">Send the enquiry</button></p>
+  <p><button type="submit" class="btn btn-primary">Send the enquiry</button></p>
 </form>
 
 Prefer email? [contact@pain001.com](mailto:contact@pain001.com) with "enterprise" in the subject reaches the same place.

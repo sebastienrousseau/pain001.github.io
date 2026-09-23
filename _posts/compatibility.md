@@ -10,13 +10,13 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Exactly what Pain001 supports: every message definition with generate/validate/migrate coverage, input formats, scheme rulebooks, address models, and the known limitations — verified against the shipped code."
+description: "Exactly what Pain001 supports: every message definition with generate/validate/migrate coverage, input formats, scheme rulebooks, address models, and the known limitations, all verified against the shipped code."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/compatibility/"
-image_alt: "A question-and-answer session on ISO 20022 payment file generation — the questions treasury, operations, engineering, and audit teams actually ask."
+image_alt: "A question-and-answer session on ISO 20022 payment file generation, covering the questions treasury, operations, engineering, and audit teams actually ask."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -36,7 +36,7 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "The exact support surface — message versions, formats, schemes, and the limitations — verified against shipped code, not marketing."
+subtitle: "The exact support surface (message versions, formats, schemes, and the limitations), verified against shipped code, not marketing."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
 title: "Compatibility Matrix"
@@ -46,7 +46,7 @@ atom_link: "https://pain001.com/compatibility/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Exactly what Pain001 supports: every message definition with generate/validate/migrate coverage, input formats, scheme rulebooks, address models, and the known limitations — verified against the shipped code."
+item_description: "Exactly what Pain001 supports: every message definition with generate/validate/migrate coverage, input formats, scheme rulebooks, address models, and the known limitations, all verified against the shipped code."
 item_guid: "https://pain001.com/compatibility/rss.xml"
 item_link: "https://pain001.com/compatibility/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -67,7 +67,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Exactly what Pain001 supports: every message definition with generate/validate/migrate coverage, input formats, scheme rulebooks, address models, and the known limitations — verified against the shipped code."
+twitter_description: "Exactly what Pain001 supports: every message definition with generate/validate/migrate coverage, input formats, scheme rulebooks, address models, and the known limitations, all verified against the shipped code."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
@@ -88,7 +88,7 @@ last_reviewed: "2026-07-26"
 
 ---
 
-Everything on this page is verified against the shipped code of **pain001 v0.0.70** and its companions — the same discipline as the [technical reference](/documentation/). If a cell says no, that is a statement, not an omission.
+Everything on this page is verified against the shipped code of **pain001 v0.0.70** and its companions, held to the same discipline as the [technical reference](/documentation/). If a cell says no, that is a statement, not an omission.
 
 ## 01. Message definitions
 
@@ -99,9 +99,9 @@ Everything on this page is verified against the shipped code of **pain001 v0.0.7
 | pain.001.001.09 | Yes | Yes | Yes | CBPR+ version; MT101-relay successor; `<BICFI>` |
 | pain.001.001.10 – .12 | Yes | Yes | Yes | Post-2019 refinements |
 | pain.001.001.13 | Yes | Yes | Yes | Published by ISO 19 Mar 2026. Adds optional `UnqTxIdr` (UETR) and `DbtCdtRptgInd`. Generated and XSD-validated; **no bank channel we track accepts it yet** |
-| pain.008.001.02 | Yes | Yes | — | The only pain.008 version supported — others are not |
-| pain.002 (responses) | No | — | — | **Parsed**, not generated-for-submission: status/reason extraction |
-| camt.053 (statements) | No | — | — | **Parsed** for reconciliation |
+| pain.008.001.02 | Yes | Yes | n/a | The only pain.008 version supported (others are not) |
+| pain.002 (responses) | No | n/a | n/a | **Parsed**, not generated-for-submission: status/reason extraction |
+| camt.053 (statements) | No | n/a | n/a | **Parsed** for reconciliation |
 
 ## 02. Input formats
 
@@ -117,19 +117,19 @@ Everything on this page is verified against the shipped code of **pain001 v0.0.7
 
 ## 03. Scheme rulebooks
 
-`sepa-sct` (SEPA Credit Transfer) · `sepa-inst` (SEPA Instant) · `sepa-sdd` (SEPA Direct Debit Core) · `sepa-b2b` (SEPA B2B) · `xborder-ct` (cross-border credit transfer). Each supports `--explain` rule-by-rule output. Bank-*specific* profile packs beyond these five do not exist yet — that is the roadmap's rule-pack architecture, not a shipped feature.
+`sepa-sct` (SEPA Credit Transfer) · `sepa-inst` (SEPA Instant) · `sepa-sdd` (SEPA Direct Debit Core) · `sepa-b2b` (SEPA B2B) · `xborder-ct` (cross-border credit transfer). Each supports `--explain` rule-by-rule output. Bank-*specific* profile packs beyond these five do not exist yet. That is the roadmap's rule-pack architecture, not a shipped feature.
 
 ## 04. Address models
 
-Structured and hybrid postal address elements are generated today, meeting the [November 2026 (SR 2026) ([Swift ISO 20022 programme](https://www.swift.com/standards/iso-20022)) CBPR+ requirement](/iso20022-roadmap/). Unstructured `AdrLine` output remains available for channels that still accept it.
+Structured and hybrid postal address elements are generated today, meeting the [CBPR+ structured-address requirement](/iso20022-roadmap/), whose November 2026 date Swift has deferred. Unstructured `AdrLine` output remains available for channels that still accept it.
 
 ## 05. Known limitations
 
-- **No bank connectivity** — Pain001 stops at the validated file; submission is your channel (by design — see [scope](/competitors-comparison/)).
-- **pain.008 is one version** — `.001.02` only.
-- **MT101 loader excludes** `:23E:`, `:25:`, `:28D:`, `:33B:`, `:36:`, `:21F:`, `:56a:`, `:51A:`, `:77B:`, `:25A:` — instruction codes and FX routing need human judgement.
-- **Streaming semantics** — `--streaming` emits one independently valid file per chunk with recomputed totals, not a single monolithic document.
-- **Python 3.10–3.12** — nothing newer is CI-tested yet.
+- **No bank connectivity**: Pain001 stops at the validated file; submission is your channel (by design, as explained under [scope](/competitors-comparison/)).
+- **pain.008 is one version**: `.001.02` only.
+- **MT101 loader excludes** `:23E:`, `:25:`, `:28D:`, `:33B:`, `:36:`, `:21F:`, `:56a:`, `:51A:`, `:77B:`, `:25A:`, because instruction codes and FX routing need human judgement.
+- **Streaming semantics**: `--streaming` emits one independently valid file per chunk with recomputed totals, not a single monolithic document.
+- **Python 3.10–3.12**: nothing newer is CI-tested yet.
 - **The browser demo** implements the fail-fast layer plus the official XSD gate for v09; the full JSON-Schema/rulebook pipeline is CLI-side.
 
-Corrections welcome — this page follows the [corrections policy](/governance/#corrections-and-editorial-policy).
+Corrections are welcome. This page follows the [corrections policy](/governance/#corrections-and-editorial-policy).

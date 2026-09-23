@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-09-13T08:00:00+00:00"
+date: "2026-09-23T08:00:00+00:00"
 description: "SEPA credit transfer from a Czech EUR account to a German supplier. Un exemple pain.001 validé (CZ, rail sepa-credit-transfer), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -39,7 +39,7 @@ short_name: pain001
 subtitle: "SEPA credit transfer from a Czech EUR account to a German supplier."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "cz.sepa.sct — exemple pain.001 ISO 20022 : CZ (sepa-credit-transfer)"
+title: "Exemple pain.001 ISO 20022 cz.sepa.sct : CZ (sepa-credit-transfer)"
 url: "https://pain001.com/fr/corpus-cz-sepa-sct/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/fr/corpus-cz-sepa-sct/"
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "SEPA credit transfer from a Czech EUR account to a German supplier. Un exemple pain.001 validé (CZ, rail sepa-credit-transfer), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur."
 item_guid: "https://pain001.com/fr/corpus-cz-sepa-sct/"
 item_link: "https://pain001.com/fr/corpus-cz-sepa-sct/"
-item_pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
-item_title: "cz.sepa.sct — exemple pain.001 ISO 20022 : CZ (sepa-credit-transfer)"
-last_build_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+item_pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+item_title: "Exemple pain.001 ISO 20022 cz.sepa.sct : CZ (sepa-credit-transfer)"
+last_build_date: "Wed, 23 Sep 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sun, 13 Sep 2026 08:00:00 +0000"
+pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "cz.sepa.sct — exemple pain.001 ISO 20022 : CZ (sepa-credit-transfer)"
+apple-mobile-web-app-title: "Exemple pain.001 ISO 20022 cz.sepa.sct : CZ (sepa-credit-transfer)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,7 +71,7 @@ twitter_description: "SEPA credit transfer from a Czech EUR account to a German 
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "cz.sepa.sct — exemple pain.001 ISO 20022 : CZ (sepa-credit-transfer)"
+twitter_title: "Exemple pain.001 ISO 20022 cz.sepa.sct : CZ (sepa-credit-transfer)"
 twitter_url: "https://pain001.com/fr/corpus-cz-sepa-sct/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -105,7 +105,7 @@ Le jumeau est le même paiement dans la convention JSON de l'autorité d'enregis
 
 ## L'exécuter dans votre navigateur
 
-[Ouvrir ce scénario dans la démo](/fr/try/?sample=corpus:cz.sepa.sct) : la bibliothèque pain001 se charge dans un environnement Python de votre navigateur, reconstruit le fichier à partir des 1 enregistrement(s) ci-dessous, le vérifie contre les règles `sepa-sct` et le XSD officiel, puis affiche le jumeau JSON. Rien ne quitte votre machine.
+[Ouvrir ce scénario dans la démo](/fr/try/#sample=corpus:cz.sepa.sct) : la bibliothèque pain001 se charge dans un environnement Python de votre navigateur, reconstruit le fichier à partir des 1 enregistrement(s) ci-dessous, le vérifie contre les règles `sepa-sct` et le XSD officiel, puis affiche le jumeau JSON. Rien ne quitte votre machine.
 
 Les enregistrements à plat dont la bibliothèque repart (les noms de colonnes du pipeline CSV) :
 

@@ -1,0 +1,56 @@
+{
+  "_comment": "Dated regulatory claims the site makes, each tied to the primary source it cites. scripts/check_dated_claims.py fetches every source and fails when an anchor sentence is gone (the source changed) or a review date has passed (the source promised an update). Swift blocks non-browser clients, so swift.com is read through the Internet Archive after asking it for a fresh capture.",
+  "claims": [
+    {
+      "id": "swift-sr2026-deferral",
+      "claim": "On 27 August 2026 Swift deferred all payments changes in Standards Release 2026, including the structured-address requirement, and will provide new timing by December 2026.",
+      "cited_on": ["/", "/2026-iso20022-migration-trends/", "/iso20022-roadmap/", "/executive-brief/", "/why/"],
+      "source": "https://www.swift.com/news-events/news/swift-accepts-community-request-extend-structured-address-migration-iso-20022-payment-messages",
+      "via": "wayback",
+      "expect": [
+        "Swift will defer all payments changes",
+        "It will provide an update by December, at the latest"
+      ],
+      "review_by": "2026-12-31",
+      "review_note": "Swift promised new timing by December 2026 and the homepage ribbon expires on 31 December 2026: re-read the source, update the ribbon and the briefing, and move this date."
+    },
+    {
+      "id": "swift-call-to-action-nov-2026",
+      "claim": "Standards Release 2026 would have removed unstructured postal addresses after 14 November 2026 and let corporates keep sending MT101; the page still describes the original plan.",
+      "cited_on": ["/2026-iso20022-migration-trends/"],
+      "source": "https://www.swift.com/standards/iso-20022/iso-20022-bytes/call-action-november-2026",
+      "via": "wayback",
+      "expect": [
+        "After 14 November 2026, unstructured addresses will be removed",
+        "corporates can continue sending MT101 initiation messages"
+      ],
+      "review_by": "2026-12-31",
+      "review_note": "When Swift publishes the new timing this page will change or be replaced: re-check the sentences the briefing quotes."
+    },
+    {
+      "id": "fedwire-release-nov-2027",
+      "claim": "The Fedwire Funds Service November 2026 release was rescheduled to November 2027 on 27 August 2026.",
+      "cited_on": ["/2026-iso20022-migration-trends/", "/why/", "/iso20022-roadmap/"],
+      "source": "https://www.frbservices.org/news/communications/082726-fedwire-november-release-rescheduled",
+      "via": "direct",
+      "expect": [
+        "November 2026 release rescheduled to November 2027",
+        "August 27, 2026"
+      ],
+      "review_by": "2027-06-30",
+      "review_note": "Six months before the rescheduled release: confirm the Fed has not moved it again."
+    },
+    {
+      "id": "chaps-purpose-codes-nov-2027",
+      "claim": "From November 2027 the Bank of England mandates purpose codes on all CHAPS payments.",
+      "cited_on": ["/2026-iso20022-migration-trends/", "/why/", "/executive-brief/", "/iso20022-roadmap/"],
+      "source": "https://www.bankofengland.co.uk/paper/2025/ps/expanding-mandatory-iso-20022-enhanced-data-in-chaps-from-2027",
+      "via": "direct",
+      "expect": [
+        "From November 2027, we are expanding mandatory requirements for Purpose Codes to all CHAPS payments"
+      ],
+      "review_by": "2027-06-30",
+      "review_note": "Six months before the mandate: confirm the Bank has not revised the policy statement."
+    }
+  ]
+}

@@ -47,6 +47,20 @@ DOUBLE_ENC_RE = re.compile(r"&amp;(?:amp|lt|gt|quot|#\d+|#x[0-9a-fA-F]+);")
 # An element name that survived into the markup inside a code span.
 SWALLOWED_RE = re.compile(r"<code\b[^>]*>\s*</?[A-Za-z][\w.-]*>")
 
+# A backslash escape written into raw markup renders as two visible
+# characters. Code samples show escape sequences on purpose, so <code>,
+# <pre>, <script> and <style> are removed before looking.
+NON_PROSE_RE = re.compile(
+    r"<(script|style|code|pre|textarea)\b[^>]*>.*?</\1>", re.S | re.I
+)
+TAGS_RE = re.compile(r"<[^>]+>")
+LITERAL_ESCAPE_RE = re.compile(r"\\[nrt]")
+
+
+def prose(markup: str) -> str:
+    """Visible prose only: no code samples, no scripts, no tags."""
+    return TAGS_RE.sub(" ", NON_PROSE_RE.sub(" ", markup))
+
 
 def main() -> int:
     if not SITE.is_dir():
@@ -57,6 +71,7 @@ def main() -> int:
     unknown_pages: set[str] = set()
     doubled: list[str] = []
     swallowed: list[str] = []
+    escapes: list[str] = []
 
     pages = sorted(SITE.rglob("*.html"))
     for page in pages:
@@ -71,6 +86,12 @@ def main() -> int:
             doubled.append(rel)
         if SWALLOWED_RE.search(html):
             swallowed.append(rel)
+        # A backslash-n written into raw markup renders as the two visible
+        # characters "\n", not a line break. It shipped that way on /try/ and
+        # all 34 locale copies of it: valid HTML, so wcag, html5, links and
+        # metadata all passed it, and only looking at the page caught it.
+        if LITERAL_ESCAPE_RE.search(prose(html)):
+            escapes.append(rel)
 
     print(f"scanned {len(pages)} page(s)")
     bad = 0
@@ -83,6 +104,11 @@ def main() -> int:
         bad += 1
         print(f"FAIL element name eaten by the parser inside <code> on "
               f"{len(swallowed)} page(s): {swallowed[:4]}")
+    if escapes:
+        bad += 1
+        print(f"FAIL literal \\n in rendered text on {len(escapes)} "
+              f"page(s): {escapes[:4]}")
+        print("     an escape sequence written into markup shows as text")
     if doubled:
         bad += 1
         print(f"FAIL double-encoded entity in <head> on {len(doubled)} "

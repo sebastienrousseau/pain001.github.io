@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "21 Model Context Protocol tools for AI agents — validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio."
+description: "21 Model Context Protocol tools for AI agents: validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
@@ -36,7 +36,7 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "Seventeen read-only tools that let AI agents validate, migrate, convert, and generate ISO 20022 payment files — locally, over stdio."
+subtitle: "Seventeen read-only tools that let AI agents validate, migrate, convert, and generate ISO 20022 payment files locally, over stdio."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
 title: "pain001-mcp: The MCP Server for ISO 20022 Payments"
@@ -46,7 +46,7 @@ atom_link: "https://pain001.com/pain001-mcp/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "21 Model Context Protocol tools for AI agents — validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio."
+item_description: "21 Model Context Protocol tools for AI agents: validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio."
 item_guid: "https://pain001.com/pain001-mcp/rss.xml"
 item_link: "https://pain001.com/pain001-mcp/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -67,7 +67,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "21 Model Context Protocol tools for AI agents — validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio."
+twitter_description: "21 Model Context Protocol tools for AI agents: validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
@@ -87,9 +87,9 @@ last_reviewed: "2026-07-26"
 
 ---
 
-**`pain001-mcp` v0.0.70** exposes the Pain001 suite to AI agents as **21 Model Context Protocol tools**. Claude Desktop, Claude Code, Cursor, and any MCP-compatible orchestrator can validate IBANs, migrate message versions, convert SWIFT MT101, and generate schema-validated `pain.001` XML — inside a conversation, on your own machine.
+**`pain001-mcp` v0.0.70** exposes the Pain001 suite to AI agents as **21 Model Context Protocol tools**. Claude Desktop, Claude Code, Cursor, and any MCP-compatible orchestrator can validate IBANs, migrate message versions, convert SWIFT MT101, and generate schema-validated `pain.001` XML inside a conversation, on your own machine.
 
-Card networks and PSPs have built agentic *checkout* rails. The corporate payment-file layer — where credit transfers are actually initiated — had no agent interface. This server fills that gap. Payment data never leaves your machine: the transport is stdio, and every tool is annotated read-only and idempotent, so an agent can explore safely without side effects.
+Card networks and PSPs have built agentic *checkout* rails. The corporate payment-file layer, where credit transfers are actually initiated, had no agent interface. This server fills that gap. Payment data never leaves your machine: the transport is stdio, and every tool is annotated read-only and idempotent, so an agent can explore safely without side effects.
 
 ---
 
@@ -185,7 +185,7 @@ A Docker image is published as `ghcr.io/sebastienrousseau/pain001-mcp` with buil
 
 - **Read-only by contract.** All 21 tools carry MCP `ToolAnnotations` with `readOnlyHint=true`, `destructiveHint=false`, and `idempotentHint=true`. The server never writes to your filesystem.
 - **Errors are data, not crashes.** Tools return structured `{"error": ...}` payloads instead of raising, so agent loops degrade gracefully.
-- **Local-only transport.** stdio only — no network listener, no credentials, no payment data leaving the host.
+- **Local-only transport.** stdio only: no network listener, no credentials, no payment data leaving the host.
 - **Validated output or nothing.** `generate_message` runs the same JSON Schema → scheme rulebook → XSD pipeline as the CLI; an agent cannot produce a malformed file.
 
 Note the distinction: `pain001 mcp` (the core library's built-in server) exposes a minimal 5-tool surface. The full 17-tool surface documented here is the standalone `pain001-mcp` package.
@@ -196,7 +196,7 @@ Note the distinction: `pain001 mcp` (the core library's built-in server) exposes
 
 **Can an AI agent actually submit payments with this?**
 
-No. The server generates and validates payment *files*; it has no bank connectivity and no tool with side effects beyond returning XML as text. Submission to your bank channel remains a human-controlled step — by design.
+No. The server generates and validates payment *files*; it has no bank connectivity and no tool with side effects beyond returning XML as text. Submission to your bank channel remains, by design, a human-controlled step.
 
 **Does it work with agentic-payment protocols like AP2?**
 

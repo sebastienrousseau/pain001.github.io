@@ -1,160 +1,362 @@
 {{#extends "base"}}
 {{#block "main"}}
-<section class="hero" aria-labelledby="hero-heading">
-  <div class="container hero-inner">
-    <div class="hero-copy">
-      <p class="eyebrow eyebrow-hero">Open source · ISO 20022 · CBPR+ ready</p>
-      <h1 id="hero-heading">Catch payment-file errors before your bank does.</h1>
-      <p class="lead hero-lead">Pain001 turns the data you already have — CSV, Excel, SQLite, JSON, Parquet, legacy SWIFT MT101 — into <code>pain.001</code> and <code>pain.008</code> XML, checked against the ISO 20022 schema and the scheme rulebooks, on your machine. Every finding names the rule it came from.</p>
+<div class="ribbon" data-expires="2026-12-31"><p class="container">Swift has deferred its structured-address deadline and will set a new date by December 2026. <a class="text-link" href="/2026-iso20022-migration-trends/">See what changed</a></p></div>
+
+<section class="hero-banner" id="overview" aria-labelledby="hero-heading">
+  <picture><source type="image/avif" srcset="/img/photos/hero-city-800.avif 800w, /img/photos/hero-city-1200.avif 1200w, /img/photos/hero-city-1600.avif 1600w, /img/photos/hero-city-2400.avif 2400w" sizes="(min-width: 102rem) 100rem, calc(100vw - 2rem)" /><img class="hero-banner-photo" src="/img/photos/hero-city-1200.webp" srcset="/img/photos/hero-city-800.webp 800w, /img/photos/hero-city-1200.webp 1200w, /img/photos/hero-city-1600.webp 1600w, /img/photos/hero-city-2400.webp 2400w" sizes="(min-width: 102rem) 100rem, calc(100vw - 2rem)" width="2400" height="1029" alt="" fetchpriority="high" decoding="async" /></picture>
+  <div class="container hero-banner-inner">
+    <div class="hero-card">
+      <p class="eyebrow">ISO 20022 pre-flight validation</p>
+      <h1 id="hero-heading">Deterministic ISO&nbsp;20022 validation. <span class="h-muted">Inside your perimeter.</span></h1>
+      <p class="lead hero-lead">Every pain.001 and pain.008 file checked against the official schema and the scheme rulebooks on infrastructure you control, before your bank sees it.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="/try/">Validate a payment file</a>
-        <a class="btn btn-hero-secondary" href="/why/">Why Pain001</a>
-      </div>
-    </div>
-
-    <div class="hero-stage" aria-hidden="true">
-      <div class="hero-glow" aria-hidden="true"></div>
-      <div class="mock mock-treasury">
-        <div class="mock-row">
-          <span class="mock-chip" aria-hidden="true"></span>
-          <svg class="mock-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="m9 12 2 2 4-4" /></svg>
-        </div>
-        <p class="mock-label">Validation pipeline</p>
-        <strong class="mock-amount">12 checks passed</strong>
-        <div class="mock-row"><span class="mock-mono">pain.001.001.09</span><span class="mock-pill">XSD valid</span></div>
-      </div>
-      <div class="mock mock-growth">
-        <p class="mock-label mock-label-clay">Control totals</p>
-        <strong class="mock-amount">£248,400 <span class="mock-pill">4 payments</span></strong>
-        <svg class="mock-chart" viewBox="0 0 300 95" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M0 80 Q 40 65, 80 70 T 160 45 T 230 35 T 300 12 L 300 95 L 0 95 Z" fill="#2d6a4f" fill-opacity="0.16" />
-          <path d="M0 80 Q 40 65, 80 70 T 160 45 T 230 35 T 300 12" fill="none" stroke="#2d6a4f" stroke-width="3" stroke-linecap="round" />
-          <circle cx="294.5" cy="12" r="4.5" fill="#2d6a4f" />
-        </svg>
-      </div>
-      <div class="mock mock-phone">
-        <span class="mock-notch" aria-hidden="true"></span>
-        <div class="mock-notice"><p class="mock-notice-title">Bank-ready XML</p><strong class="mock-notice-amount">Generated locally</strong><p class="mock-notice-meta">No upload · No telemetry</p></div>
+        <a class="btn btn-primary" href="/enterprise/#ask">Book an architecture briefing</a>
+        <a class="text-link" href="/documentation/">Read the documentation</a>
       </div>
     </div>
   </div>
-  <div class="hero-slope" aria-hidden="true"></div>
 </section>
 
-<section class="section section-partners" aria-labelledby="standards-heading">
+<section class="hero hero-centred" aria-labelledby="run-heading">
+  <div class="container hero-stack">
+    <p class="eyebrow">See a real run</p>
+    <h2 id="run-heading">Every finding names the rule it came from.</h2>
+  </div>
+
+  <div class="container stage stage-wide" data-settle>
+    <div class="stage-glow" aria-hidden="true"></div>
+    <figure class="run-panel" data-tabs>
+      <figcaption class="run-bar">
+        <span class="run-title">pain001 validate</span>
+        <span class="run-net"><span class="run-net-dot" aria-hidden="true"></span>Network access denied</span>
+      </figcaption>
+      <div class="segmented" role="tablist" aria-label="Recorded validation runs">
+        <button class="run-tab" type="button" role="tab" id="run-tab-clean" aria-controls="run-clean" aria-selected="true">SEPA · clean</button>
+        <button class="run-tab" type="button" role="tab" id="run-tab-iban" aria-controls="run-iban" aria-selected="false" tabindex="-1">SEPA · wrong IBAN</button>
+        <button class="run-tab" type="button" role="tab" id="run-tab-cbpr" aria-controls="run-cbpr" aria-selected="false" tabindex="-1">CBPR+ cross-border</button>
+      </div>
+      <div class="run-view" role="tabpanel" id="run-clean" aria-labelledby="run-tab-clean">
+        <p class="run-cmd"><code>--scheme sepa-sct · 5 payments</code><span class="run-exit is-pass">exit 0</span></p>
+        <ol class="run-layers">
+          <li><span class="layer"><span class="layer-num">01</span> ISO 20022 schema</span><span class="run-state is-pass"><span aria-hidden="true">✓</span> Passed</span></li>
+          <li><span class="layer"><span class="layer-num">02</span> Scheme rulebook</span><span class="run-state is-pass"><span aria-hidden="true">✓</span> Passed</span></li>
+          <li><span class="layer"><span class="layer-num">03</span> Bank profile</span><span class="run-state">Your bank&rsquo;s guide</span></li>
+          <li><span class="layer"><span class="layer-num">04</span> Channel</span><span class="run-state">Your bank&rsquo;s channel</span></li>
+        </ol>
+      </div>
+
+      <div class="run-view" role="tabpanel" id="run-iban" aria-labelledby="run-tab-iban" hidden>
+        <p class="run-cmd"><code>--scheme sepa-sct · 5 payments</code><span class="run-exit is-fail">exit 1</span></p>
+        <ol class="run-layers">
+          <li><span class="layer"><span class="layer-num">01</span> ISO 20022 schema</span><span class="run-state is-pass"><span aria-hidden="true">✓</span> Passed</span></li>
+          <li><span class="layer"><span class="layer-num">02</span> Scheme rulebook</span><span class="run-state is-fail"><span aria-hidden="true">✗</span> 1 finding</span>
+            <p class="run-finding"><code>row 1 · SEPA-CDTR-IBAN</code>creditor_account_IBAN must be a valid IBAN (ISO 13616 / mod-97)</p></li>
+          <li><span class="layer"><span class="layer-num">03</span> Bank profile</span><span class="run-state">Your bank&rsquo;s guide</span></li>
+          <li><span class="layer"><span class="layer-num">04</span> Channel</span><span class="run-state">Your bank&rsquo;s channel</span></li>
+        </ol>
+      </div>
+
+      <div class="run-view" role="tabpanel" id="run-cbpr" aria-labelledby="run-tab-cbpr" hidden>
+        <p class="run-cmd"><code>--scheme cbpr-cross-border · 1 payment</code><span class="run-exit is-fail">exit 1</span></p>
+        <ol class="run-layers">
+          <li><span class="layer"><span class="layer-num">01</span> ISO 20022 schema</span><span class="run-state is-pass"><span aria-hidden="true">✓</span> Passed</span></li>
+          <li><span class="layer"><span class="layer-num">02</span> Scheme rulebook</span><span class="run-state is-fail"><span aria-hidden="true">✗</span> 3 findings</span>
+            <p class="run-finding"><code>row 0 · CBPR-ADDR</code>Swift CBPR+ cross-border requires the debtor address with town and country (structured or hybrid)</p>
+            <p class="run-finding"><code>row 0 · CBPR-ADDR</code>Swift CBPR+ cross-border requires the creditor address with town and country (structured or hybrid)</p>
+            <p class="run-finding"><code>row 0 · CBPR-UETR</code>Swift CBPR+ cross-border expects a UETR on every transaction</p></li>
+          <li><span class="layer"><span class="layer-num">03</span> Bank profile</span><span class="run-state">Your bank&rsquo;s guide</span></li>
+          <li><span class="layer"><span class="layer-num">04</span> Channel</span><span class="run-state">Your bank&rsquo;s channel</span></li>
+        </ol>
+      </div>
+      <p class="run-foot">Recorded from the pain001 CLI with all network access denied by the operating system. Nothing was uploaded.</p>
+    </figure>
+  </div>
+
+  <div class="container hero-notes">
+    <p class="egress"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="11" width="14" height="10" rx="2" /><path d="M8 11V8a4 4 0 0 1 8 0v3" /></svg><span><strong>Zero data egress.</strong> Validation makes no network calls, keeps no copy of your files and sends no telemetry.</span></p>
+    <p class="spec-line">pain.001 · pain.008 · SEPA · CBPR+ · CHAPS · Bacs · FPS · FedNow · ACH · MT101 migration</p>
+    <a class="text-link" href="/try/">Try the browser sandbox</a>
+  </div>
+</section>
+
+<section class="section proof" id="numbers" aria-labelledby="numbers-heading">
   <div class="container">
-    <h2 class="section-label" id="standards-heading">One suite, verifiable at every layer</h2>
-    <ul class="partners">
-      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 3v18" /></svg><span>12 message definitions</span></li>
-      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg><span>Official XSD gate</span></li>
-      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="4 17 10 11 4 5" /><line x1="12" y1="19" x2="20" y2="19" /></svg><span>Python API + CLI</span></li>
-      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3" /><line x1="3" y1="9" x2="21" y2="9" /></svg><span>34 languages</span></li>
-      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" /></svg><span>Local processing</span></li>
-      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg><span>100% test coverage</span></li>
-    </ul>
+    <div class="section-head section-head-centred">
+      <p class="eyebrow">Pain001 by the numbers</p>
+      <h2 id="numbers-heading">Tested against the real world.<sup class="fn-ref"><a href="#footnote-1" id="fnref-1" aria-label="Footnote 1: how these figures are counted">1</a></sup></h2>
+    </div>
+    <dl class="proof-grid" data-proof>
+      <div class="proof-item" data-reveal><dt><strong>Bank scenarios</strong> <span>Each passing the official ISO 20022 XSD</span></dt><dd data-proof-key="scenarios">42</dd></div>
+      <div class="proof-item" data-reveal><dt><strong>Countries</strong> <span>Covered by those scenarios</span></dt><dd data-proof-key="countries">17</dd></div>
+      <div class="proof-item" data-reveal><dt><strong>Message editions</strong> <span>Specified field by field</span></dt><dd data-proof-key="editions">12</dd></div>
+      <div class="proof-item" data-reveal><dt><strong>Languages</strong> <span>This site is translated into</span></dt><dd data-proof-key="languages">34</dd></div>
+    </dl>
   </div>
 </section>
 
-<section class="section" id="workflow" aria-labelledby="workflow-heading">
-  <div class="container stack">
-    <div class="section-head">
+<section class="section section-soft" id="pillars" aria-labelledby="pillars-heading">
+  <div class="container">
+    <div class="section-head section-head-centred">
+      <p class="eyebrow">What reviewers check first</p>
+      <h2 id="pillars-heading">Built for the review. <span class="h-muted">Not the demo.</span></h2>
+      <p class="lead">The questions a CIO, a CISO and a payments operations lead ask first, answered by how the software works.</p>
+    </div>
+    <div class="tiles tiles-3">
+      <article class="tile" data-reveal>
+        <picture><source type="image/avif" srcset="/img/photos/facade-grid-480.avif 480w, /img/photos/facade-grid-800.avif 800w, /img/photos/facade-grid-1200.avif 1200w" sizes="(min-width: 64rem) 24rem, (min-width: 40rem) 45vw, 92vw" /><img class="tile-photo" src="/img/photos/facade-grid-800.webp" srcset="/img/photos/facade-grid-480.webp 480w, /img/photos/facade-grid-800.webp 800w, /img/photos/facade-grid-1200.webp 1200w" sizes="(min-width: 64rem) 24rem, (min-width: 40rem) 45vw, 92vw" width="1200" height="800" alt="" loading="lazy" decoding="async" /></picture>
+        <h3>Deterministic</h3>
+        <p>The same input produces the same XML and the same findings on every run. Findings are structured data your controls can store beside the payment file.</p>
+        <a class="text-link" href="/architecture-and-patents/">Architecture</a>
+      </article>
+      <article class="tile" data-reveal>
+        <picture><source type="image/avif" srcset="/img/photos/data-centre-480.avif 480w, /img/photos/data-centre-800.avif 800w, /img/photos/data-centre-1200.avif 1200w" sizes="(min-width: 64rem) 24rem, (min-width: 40rem) 45vw, 92vw" /><img class="tile-photo" src="/img/photos/data-centre-800.webp" srcset="/img/photos/data-centre-480.webp 480w, /img/photos/data-centre-800.webp 800w, /img/photos/data-centre-1200.webp 1200w" sizes="(min-width: 64rem) 24rem, (min-width: 40rem) 45vw, 92vw" width="1200" height="800" alt="" loading="lazy" decoding="async" /></picture>
+        <h3>Air-gapped</h3>
+        <p>Validation needs no network. The runs above were recorded with all network access denied. No payment data is uploaded and there is no telemetry.</p>
+        <a class="text-link" href="/privacy/">Data handling</a>
+      </article>
+      <article class="tile" data-reveal>
+        <picture><source type="image/avif" srcset="/img/photos/columns-480.avif 480w, /img/photos/columns-800.avif 800w, /img/photos/columns-1200.avif 1200w" sizes="(min-width: 64rem) 24rem, (min-width: 40rem) 45vw, 92vw" /><img class="tile-photo" src="/img/photos/columns-800.webp" srcset="/img/photos/columns-480.webp 480w, /img/photos/columns-800.webp 800w, /img/photos/columns-1200.webp 1200w" sizes="(min-width: 64rem) 24rem, (min-width: 40rem) 45vw, 92vw" width="1200" height="800" alt="" loading="lazy" decoding="async" /></picture>
+        <h3>Auditable</h3>
+        <p>Open source under Apache-2.0 or MIT, with signed releases, a published SBOM and build provenance. Your reviewers read the code, not a brochure.</p>
+        <a class="text-link" href="/enterprise/">Evidence for reviewers</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section theme-dark layers-section" id="validation" aria-labelledby="standards-heading">
+  <div class="layers-track">
+    <div class="container layers-sticky">
+      <div class="section-head section-head-centred">
+        <p class="eyebrow">The validation model</p>
+        <h2 id="standards-heading">Four layers decide whether a bank accepts a file. <span class="h-muted">Pain001 checks two, and says so.</span></h2>
+      </div>
+      <ol class="gates">
+        <li class="gate is-checked" data-step="1"><span class="gate-mark" aria-hidden="true"></span><span class="layer"><span class="layer-num">01</span> ISO 20022 schema</span><p><span class="layer-verdict is-pass">Checked.</span> The official XSD for the message edition accepts the document, or it does not.</p></li>
+        <li class="gate is-checked" data-step="2"><span class="gate-mark" aria-hidden="true"></span><span class="layer"><span class="layer-num">02</span> Scheme rulebook</span><p><span class="layer-verdict is-pass">Checked.</span> SEPA, CBPR+, CHAPS, Bacs, Faster Payments, FedNow, ACH and more, each finding named by its rule.</p></li>
+        <li class="gate is-yours" data-step="3"><span class="gate-mark" aria-hidden="true"></span><span class="layer"><span class="layer-num">03</span> Bank profile</span><p><span class="layer-verdict">Yours to confirm.</span> Pain001 ships no bank profiles; your bank&rsquo;s implementation guide still applies.</p></li>
+        <li class="gate is-yours" data-step="4"><span class="gate-mark" aria-hidden="true"></span><span class="layer"><span class="layer-num">04</span> Channel</span><p><span class="layer-verdict">Yours to confirm.</span> Whether the file can be sent is decided by your bank, not by the file.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pipeline" aria-labelledby="workflow-heading">
+  <div class="container">
+    <div class="section-head section-head-centred">
       <p class="eyebrow">One deterministic pipeline</p>
-      <h2 id="workflow-heading">From the files you have to the XML your bank expects.</h2>
+      <h2 id="workflow-heading">From the files you have. <span class="h-muted">To the XML your bank expects.</span></h2>
       <p class="lead">Validate early, generate once, and keep the evidence beside the payment run.</p>
     </div>
-    <div class="grid grid-3">
-      <article class="card"><span class="icon-badge badge-blue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 3h16v18H4z" /><path d="M4 9h16M10 3v18" /></svg></span><h3>1. Load your data</h3><p>Read CSV, Excel, SQLite, JSON, Parquet, or SWIFT MT101 without rekeying it into another platform.</p><a class="card-link" href="/installation/">See supported inputs</a></article>
-      <article class="card"><span class="icon-badge badge-gold" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="m9 12 2 2 4-4" /></svg></span><h3>2. Validate every layer</h3><p>Apply JSON Schema, identifier checks, scheme rulebooks, recomputed totals, and the official ISO 20022 XSD.</p><a class="card-link" href="/compliance-toolkit/">Inspect the evidence</a></article>
-      <article class="card"><span class="icon-badge badge-green" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /></svg></span><h3>3. Generate bank-ready XML</h3><p>Write a deterministic pain.001 or pain.008 document and retain machine-readable findings for review.</p><a class="card-link" href="/try/">Run it in your browser</a></article>
+    <div class="gallery" data-gallery>
+      <ol class="gallery-track" tabindex="0" aria-label="Pipeline, three steps">
+        <li class="gallery-slide">
+          <div class="slide-visual formats" aria-hidden="true"><span>CSV</span><span>Excel</span><span>SQLite</span><span>JSON</span><span>Parquet</span><span>MT101</span></div>
+          <p class="step-num">Step 1 of 3</p>
+          <h3>Load your data</h3>
+          <p>Read CSV, Excel, SQLite, JSON, Parquet, or SWIFT MT101 without rekeying it into another platform.</p>
+          <a class="text-link" href="/installation/">Supported inputs</a>
+        </li>
+        <li class="gallery-slide">
+          <div class="slide-visual mini-gates" aria-hidden="true"><span class="is-pass">01 Schema</span><span class="is-pass">02 Rulebook</span><span>03 Bank</span><span>04 Channel</span></div>
+          <p class="step-num">Step 2 of 3</p>
+          <h3>Validate every layer</h3>
+          <p>Apply JSON Schema, identifier checks, scheme rulebooks, recomputed totals, and the official ISO 20022 XSD.</p>
+          <a class="text-link" href="/compliance-toolkit/">Inspect the evidence</a>
+        </li>
+        <li class="gallery-slide">
+          <figure class="specimen">
+        <figcaption class="specimen-bar"><span class="specimen-cmd">pain.001.001.09.xml</span><span class="specimen-state"><span aria-hidden="true">✓</span> XSD valid</span></figcaption>
+        <pre><code><span class="sp-tag">&lt;CdtTrfTxInf&gt;</span>
+  <span class="sp-tag">&lt;PmtId&gt;&lt;EndToEndId&gt;</span>PaymentID6789<span class="sp-tag">&lt;/EndToEndId&gt;&lt;/PmtId&gt;</span>
+  <span class="sp-tag">&lt;Amt&gt;&lt;InstdAmt Ccy="EUR"&gt;</span>150.00<span class="sp-tag">&lt;/InstdAmt&gt;&lt;/Amt&gt;</span>
+  <span class="sp-tag">&lt;CdtrAgt&gt;&lt;FinInstnId&gt;&lt;BICFI&gt;</span>DEUTDEFFXXX<span class="sp-tag">&lt;/BICFI&gt;&lt;/FinInstnId&gt;&lt;/CdtrAgt&gt;</span>
+  <span class="sp-tag">&lt;Cdtr&gt;&lt;Nm&gt;</span>Global Tech<span class="sp-tag">&lt;/Nm&gt;&lt;/Cdtr&gt;</span>
+  <span class="sp-tag">&lt;CdtrAcct&gt;&lt;Id&gt;&lt;IBAN&gt;</span>DE36210501700024690959<span class="sp-tag">&lt;/IBAN&gt;&lt;/Id&gt;&lt;/CdtrAcct&gt;</span>
+  <span class="sp-tag">&lt;RmtInf&gt;&lt;Ustrd&gt;</span>Payment for Invoice-98765<span class="sp-tag">&lt;/Ustrd&gt;&lt;/RmtInf&gt;</span>
+<span class="sp-tag">&lt;/CdtTrfTxInf&gt;</span></code></pre>
+        <p class="specimen-note">One credit transfer from a generated document, nesting collapsed for reading.</p>
+      </figure>
+          <p class="step-num">Step 3 of 3</p>
+          <h3>Generate bank-ready XML</h3>
+          <p>Write a deterministic pain.001 or pain.008 document and retain machine-readable findings for review.</p>
+          <a class="text-link" href="/try/">Run it in your browser</a>
+        </li>
+      </ol>
+      <div class="gallery-controls">
+        <button class="gallery-arrow" type="button" data-gallery-prev aria-label="Previous step"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m15 6-6 6 6 6" /></svg></button>
+        <div class="gallery-dots">
+          <button type="button" data-gallery-to="0" aria-label="Go to step 1 of 3" aria-current="true"></button>
+          <button type="button" data-gallery-to="1" aria-label="Go to step 2 of 3"></button>
+          <button type="button" data-gallery-to="2" aria-label="Go to step 3 of 3"></button>
+        </div>
+        <button class="gallery-arrow" type="button" data-gallery-next aria-label="Next step"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 6 6 6-6 6" /></svg></button>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section section-soft" id="suite-heading" aria-labelledby="suite-title">
-  <div class="container stack">
-    <div class="section-head">
+<section class="section section-soft" id="packages" aria-labelledby="suite-title">
+  <div class="container">
+    <div class="section-head section-head-centred">
       <p class="eyebrow">The Pain001 suite</p>
-      <h2 id="suite-title">Five focused packages. One validation model.</h2>
-      <p class="lead">Use the core directly, add agent or editor tooling, and bring legacy treasury inputs with you.</p>
+      <h2 id="suite-title">Five focused packages. <span class="h-muted">One validation model.</span></h2>
     </div>
-    <div class="grid grid-3">
-      <article class="card"><p class="tag tag-blue">Core</p><h3>Pain001</h3><p>Typed Python API, CLI, REST service, rulebooks, schemas, and deterministic XML generation.</p><a class="card-link" href="/documentation/">Technical reference</a></article>
-      <article class="card"><p class="tag tag-green">AI agents</p><h3>pain001-mcp</h3><p>Seventeen local, read-only Model Context Protocol tools with human review kept in the loop.</p><a class="card-link" href="/pain001-mcp/">Explore MCP tools</a></article>
-      <article class="card"><p class="tag tag-gold">Editors</p><h3>pain001-lsp</h3><p>Diagnostics and payment-rule feedback while a human is still editing the source data.</p><a class="card-link" href="/pain001-lsp/">Explore editor support</a></article>
-      <article class="card"><p class="tag tag-clay">Legacy migration</p><h3>MT101 loader</h3><p>Move SWIFT request-for-transfer workflows to pain.001.001.09 with explicit conversion findings.</p><a class="card-link" href="/pain001-loader-mt101/">Plan an MT101 migration</a></article>
-      <article class="card"><p class="tag tag-green">Treasury teams</p><h3>Excel loader</h3><p>Turn governed payment workbooks into validated records without copy-and-paste operations.</p><a class="card-link" href="/pain001-loader-xlsx/">Use the Excel loader</a></article>
-      <article class="card"><p class="tag tag-blue">Evidence</p><h3>Example corpus</h3><p>Reproducible payment scenarios across schemes, countries, currencies, and message editions.</p><a class="card-link" href="/example-corpus/">Browse the corpus</a></article>
+    <div class="bento">
+      <article class="tile tile-core" data-reveal>
+        <div class="tile-core-copy">
+          <p class="tile-eyebrow">Core</p>
+          <h3>Pain001</h3>
+          <p>Typed Python API, CLI, REST service, rulebooks, schemas, and deterministic XML generation.</p>
+          <a class="text-link" href="/documentation/">Technical reference</a>
+        </div>
+        <figure class="code-card">
+          <figcaption class="code-card-bar">check.py</figcaption>
+          <pre><code><span class="sp-tag">import</span> csv
+<span class="sp-tag">from</span> pain001 <span class="sp-tag">import</span> validate_scheme
+
+rows = list(csv.DictReader(open("payments.csv")))
+result = validate_scheme(rows, profile="sepa-sct")
+<span class="sp-tag">for</span> v <span class="sp-tag">in</span> result.violations:
+    print(v.index, v.rule, v.message)</code></pre>
+          <p class="code-card-out"><span>Output</span> <code>1 SEPA-CDTR-IBAN creditor_account_IBAN must be a valid IBAN (ISO 13616 / mod-97)</code></p>
+        </figure>
+      </article>
+      <article class="tile tile-half" data-reveal><p class="tile-eyebrow">AI agents</p><h3>pain001-mcp</h3><p>Seventeen local, read-only Model Context Protocol tools with human review kept in the loop.</p><a class="text-link" href="/pain001-mcp/">MCP tools</a></article>
+      <article class="tile tile-half" data-reveal><p class="tile-eyebrow">Editors</p><h3>pain001-lsp</h3><p>Diagnostics and payment-rule feedback while a human is still editing the source data.</p><a class="text-link" href="/pain001-lsp/">Editor support</a></article>
+      <article class="tile tile-third" data-reveal><p class="tile-eyebrow">Legacy migration</p><h3>MT101 loader</h3><p>Move SWIFT request-for-transfer workflows to pain.001.001.09 with explicit conversion findings.</p><a class="text-link" href="/pain001-loader-mt101/">MT101 migration</a></article>
+      <article class="tile tile-third" data-reveal><p class="tile-eyebrow">Treasury teams</p><h3>Excel loader</h3><p>Turn governed payment workbooks into validated records without copy-and-paste operations.</p><a class="text-link" href="/pain001-loader-xlsx/">Excel loader</a></article>
+      <article class="tile tile-third" data-reveal><p class="tile-eyebrow">Evidence</p><h3>Example corpus</h3><p>Reproducible payment scenarios across schemes, countries, currencies, and message editions.</p><a class="text-link" href="/example-corpus/">Browse the corpus</a></article>
     </div>
   </div>
 </section>
 
-<section class="section section-dark" id="developers" aria-labelledby="dev-heading">
+<section class="section" id="install" aria-labelledby="dev-heading">
   <div class="container dev-grid">
-    <div class="dev-copy stack">
-      <p class="eyebrow eyebrow-clay">Developer first</p>
-      <h2 id="dev-heading">Install, validate, and generate in a few explicit lines.</h2>
+    <div class="dev-copy">
+      <p class="eyebrow">For engineering teams</p>
+      <h2 id="dev-heading">Install, validate and generate. <span class="h-muted">In a few explicit lines.</span></h2>
       <p class="lead dev-lead">The CLI and Python API run the same checks. Exit codes are meaningful, findings identify their rule, and payment data stays on your machine.</p>
-      <ul class="pills" aria-label="Supported interfaces"><li class="pill">Python 3.10+</li><li class="pill">CLI</li><li class="pill">REST</li><li class="pill">MCP</li><li class="pill">LSP</li></ul>
-      <div class="cta-row"><a class="btn btn-hero-primary" href="/installation/">Install Pain001</a></div>
+      <p class="spec-line">Python 3.10+ · CLI · REST · MCP · LSP</p>
+      <div class="cta-row"><a class="btn btn-secondary" href="/installation/">Install Pain001</a></div>
     </div>
-    <figure class="code-window">
-      <figcaption class="code-titlebar"><span class="traffic" aria-hidden="true"><span></span><span></span><span></span></span><span class="code-filename">terminal — validate and generate</span></figcaption>
-      <pre class="code-body"><code><span class="syn-comment"># Install the complete CLI</span>
-<span class="syn-variable">python</span> -m pip install <span class="syn-string">pain001</span>
-
-<span class="syn-comment"># Validate source data with a scheme rulebook</span>
-<span class="syn-variable">pain001</span> validate payments.csv \
-  --scheme <span class="syn-string">sepa-sct</span> --explain
-
-<span class="syn-comment"># Generate and pass the official XSD gate</span>
-<span class="syn-variable">pain001</span> generate payments.csv \
-  --type <span class="syn-string">pain.001.001.09</span> \
-  --output payment.xml</code></pre>
+    <figure class="code-window" data-copy-group>
+      <figcaption class="code-titlebar"><span class="traffic" aria-hidden="true"><span></span><span></span><span></span></span><span class="code-filename">terminal</span></figcaption>
+      <div class="cmd-block">
+        <p class="cmd-label syn-comment"># Install the complete CLI</p>
+        <pre class="code-body"><code id="cmd-install"><span class="syn-variable">python</span> -m pip install <span class="syn-string">pain001</span></code></pre>
+        <button class="copy-btn" type="button" data-copy="cmd-install" aria-label="Copy the install command">Copy</button>
+      </div>
+      <div class="cmd-block">
+        <p class="cmd-label syn-comment"># Validate source data with a scheme rulebook</p>
+        <pre class="code-body"><code id="cmd-validate"><span class="syn-variable">pain001</span> validate -d payments.csv \
+  -t <span class="syn-string">pain.001.001.09</span> \
+  --scheme <span class="syn-string">sepa-sct</span> --explain</code></pre>
+        <button class="copy-btn" type="button" data-copy="cmd-validate" aria-label="Copy the validate command">Copy</button>
+      </div>
+      <div class="cmd-block">
+        <p class="cmd-label syn-comment"># Generate and pass the official XSD gate</p>
+        <pre class="code-body"><code id="cmd-generate"><span class="syn-variable">pain001</span> generate -d payments.csv \
+  -t <span class="syn-string">pain.001.001.09</span> \
+  -o out/</code></pre>
+        <button class="copy-btn" type="button" data-copy="cmd-generate" aria-label="Copy the generate command">Copy</button>
+      </div>
+      <p class="visually-hidden" aria-live="polite" data-copy-status></p>
     </figure>
   </div>
 </section>
 
-<section class="section" id="governance" aria-labelledby="governance-heading">
+<section class="section section-soft" id="governance" aria-labelledby="governance-heading">
   <div class="container">
-    <div class="card governance-card">
-      <div class="stack">
-        <div class="eyebrow eyebrow-green">Controls you can inspect</div>
-        <h2 id="governance-heading">Open infrastructure for governed payment operations.</h2>
-        <p class="lead">No payment data leaves your environment. The code, schemas, tests, release attestations, and compliance evidence are available for review.</p>
-        <p>Pain001 is a generation and validation toolkit, not a bank connection and not a substitute for your bank’s implementation guide or certification.</p>
-        <div class="cta-row"><a class="btn btn-primary" href="/architecture-and-patents/">Review the architecture</a></div>
+    <div class="feature-split">
+      <div class="section-head">
+        <p class="eyebrow">For regulated teams</p>
+        <h2 id="governance-heading">Free at any scale. <span class="h-muted">A named party with obligations when you need one.</span></h2>
+        <p class="lead">The software stays Apache-2.0 or MIT, with no feature held back. Add a supported release line, private bank profiles derived under NDA, and integration recipes for your ERP or TMS.</p>
       </div>
-      <dl class="metrics">
-        <div class="metric"><dt>Core line and branch coverage</dt><dd>100%</dd></div>
-        <div class="metric"><dt>Website accessibility target</dt><dd>WCAG 2.2 AAA</dd></div>
-        <div class="metric"><dt>Payment-data processing</dt><dd>Local only</dd></div>
-        <div class="metric"><dt>Core licence</dt><dd>Apache-2.0 / MIT</dd></div>
-      </dl>
+      <picture><source type="image/avif" srcset="/img/photos/bank-of-england-480.avif 480w, /img/photos/bank-of-england-800.avif 800w, /img/photos/bank-of-england-1200.avif 1200w" sizes="(min-width: 64rem) 36rem, 92vw" /><img class="feature-photo" src="/img/photos/bank-of-england-800.webp" srcset="/img/photos/bank-of-england-480.webp 480w, /img/photos/bank-of-england-800.webp 800w, /img/photos/bank-of-england-1200.webp 1200w" sizes="(min-width: 64rem) 36rem, 92vw" width="1200" height="900" alt="" loading="lazy" decoding="async" /></picture>
     </div>
-  </div>
-</section>
-
-<section class="section section-soft" id="readiness" aria-labelledby="readiness-heading">
-  <div class="container stack">
-    <div class="section-head section-head-centred">
-      <p class="eyebrow">2026 readiness</p>
-      <h2 id="readiness-heading">The cutover is done. Data quality is the next deadline.</h2>
-      <p class="lead mx-auto">Structured addresses, pain.001.001.09, scheme rules, and explainable findings are already in the pipeline.</p>
-    </div>
-    <dl class="grid grid-4 stats">
-      <div class="stat"><dt>CBPR+ milestone</dt><dd>14 Nov 2026</dd></div>
-      <div class="stat"><dt>Supported message definitions</dt><dd>12</dd></div>
-      <div class="stat"><dt>Localised overviews</dt><dd>34</dd></div>
-      <div class="stat"><dt>Upload required</dt><dd>0</dd></div>
+    <dl class="spec-strip">
+      <div><dt>Core line and branch coverage</dt><dd>100%</dd></div>
+      <div><dt>Website accessibility target</dt><dd>WCAG 2.2 AAA</dd></div>
+      <div><dt>Payment-data processing</dt><dd>Local only</dd></div>
+      <div><dt>Core licence</dt><dd>Apache-2.0 / MIT</dd></div>
     </dl>
-    <div class="cta-row cta-centred"><a class="btn btn-primary" href="/2026-iso20022-migration-trends/">Read the 2026 briefing</a><a class="btn btn-secondary" href="/iso20022-roadmap/">View the roadmap</a></div>
+    <div class="cta-row cta-centred">
+      <a class="btn btn-primary" href="/enterprise/#ask">Book an architecture briefing</a>
+      <a class="text-link" href="/enterprise/">What is offered</a>
+    </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="container stack">
-    <div class="prose">{{!content}}</div>
-    <div class="cta-row"><a class="btn btn-primary" href="/try/">Validate a payment file</a><a class="btn btn-secondary" href="/documentation/">Read the documentation</a></div>
+<section class="section" id="timeline" aria-labelledby="readiness-heading">
+  <div class="container">
+    <div class="section-head section-head-centred">
+      <p class="eyebrow">Regulatory timeline</p>
+      <h2 id="readiness-heading">The cutover is done. <span class="h-muted">Data quality is the next deadline.</span></h2>
+      <p class="lead">Four dates a payments or risk committee is working to, and what Pain001 does about each one today.</p>
+    </div>
+    <ol class="timeline" data-timeline>
+      <li class="milestone">
+        <span class="milestone-dot" aria-hidden="true"></span>
+        <p class="milestone-date"><span class="milestone-flag" hidden>Next</span> <time datetime="2025-01-17">17 Jan 2025</time></p>
+        <h3>DORA applies across the EU</h3>
+        <p>ICT risk reviews now reach the software in the payment chain.</p>
+        <p class="milestone-answer">SBOM, signed releases and build provenance, verifiable without asking us. <a href="/enterprise/">Review evidence</a></p>
+      </li>
+      <li class="milestone">
+        <span class="milestone-dot" aria-hidden="true"></span>
+        <p class="milestone-date"><span class="milestone-flag" hidden>Next</span> <time datetime="2025-11-22">22 Nov 2025</time></p>
+        <h3>MT–MX coexistence ends on Swift</h3>
+        <p>Cross-border instructions travel as ISO 20022.</p>
+        <p class="milestone-answer">pain.001.001.09 generated and checked against the official XSD. <a href="/message-specs/">Message specifications</a></p>
+      </li>
+      <li class="milestone">
+        <span class="milestone-dot" aria-hidden="true"></span>
+        <p class="milestone-date"><span class="milestone-flag">Next</span> By <time datetime="2026-12-31">Dec 2026</time></p>
+        <h3>Swift sets the new structured-address date</h3>
+        <p>The rule against unstructured addresses, and the move from MT101 to pain.001 between banks, were deferred in August 2026.</p>
+        <p class="milestone-answer">Structured and hybrid addresses, the CBPR-ADDR rule, and one-command MT101 conversion. <a href="/2026-iso20022-migration-trends/">2026 briefing</a></p>
+      </li>
+      <li class="milestone">
+        <span class="milestone-dot" aria-hidden="true"></span>
+        <p class="milestone-date"><span class="milestone-flag" hidden>Next</span> Through 2028</p>
+        <h3>Purpose codes, investigations, statements</h3>
+        <p>camt investigations and statement migration follow the payment messages.</p>
+        <p class="milestone-answer">Tracked with primary sources in the living roadmap. <a href="/iso20022-roadmap/">ISO 20022 roadmap</a></p>
+      </li>
+    </ol>
   </div>
 </section>
+
+<section class="section section-soft" aria-labelledby="briefing-heading">
+  <div class="container">
+    <article class="briefing">
+      <div class="briefing-body">
+        <p class="eyebrow" id="briefing-heading">Executive briefing</p>
+        <div class="prose">{{!content}}</div>
+        <div class="cta-row"><a class="btn btn-primary" href="/enterprise/#ask">Book an architecture briefing</a><a class="text-link" href="/documentation/">Read the documentation</a></div>
+      </div>
+      <div class="briefing-side">
+        <picture><source type="image/avif" srcset="/img/photos/city-blue-hour-480.avif 480w, /img/photos/city-blue-hour-800.avif 800w, /img/photos/city-blue-hour-1200.avif 1200w" sizes="(min-width: 64rem) 28rem, 92vw" /><img class="briefing-photo" src="/img/photos/city-blue-hour-800.webp" srcset="/img/photos/city-blue-hour-480.webp 480w, /img/photos/city-blue-hour-800.webp 800w, /img/photos/city-blue-hour-1200.webp 1200w" sizes="(min-width: 64rem) 28rem, 92vw" width="1200" height="675" alt="" loading="lazy" decoding="async" /></picture>
+      <nav class="briefing-links" aria-label="Further reading">
+        <a class="briefing-link" href="/2026-iso20022-migration-trends/"><span>2026 migration briefing</span><span class="briefing-link-desc">This year&rsquo;s deadlines, with primary sources</span></a>
+        <a class="briefing-link" href="/iso20022-roadmap/"><span>Living ISO 20022 roadmap</span><span class="briefing-link-desc">The schedule through 2028</span></a>
+        <a class="briefing-link" href="/competitors-comparison/"><span>How Pain001 compares</span><span class="briefing-link-desc">Including where commercial platforms win</span></a>
+        <a class="briefing-link" href="/installation/"><span>Installation guide</span><span class="briefing-link-desc">Python, CLI and Docker</span></a>
+      </nav>
+      </div>
+    </article>
+  </div>
+</section>
+
+<aside class="section footnotes" aria-labelledby="footnotes-heading">
+  <div class="container">
+    <h2 class="visually-hidden" id="footnotes-heading">Footnotes</h2>
+    <ol>
+      <li id="footnote-1">Counted from the <a href="/example-corpus/">example corpus</a> and the <a href="/message-specs/">message specifications</a> when this site is built; a figure that drifts from its source fails the build. <a href="#fnref-1">Back to the figures</a></li>
+    </ol>
+  </div>
+</aside>
+<script src="/js/home.js" defer></script>
 {{/block}}
