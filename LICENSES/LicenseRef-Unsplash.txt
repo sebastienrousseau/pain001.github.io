@@ -1,0 +1,15 @@
+Unsplash License
+
+The photographs in static/img/photos/ are published on Unsplash
+(https://unsplash.com) and used under the Unsplash License:
+https://unsplash.com/license
+
+Unsplash grants an irrevocable, nonexclusive, worldwide copyright license
+to download, copy, modify, distribute, perform, and use photos from
+Unsplash for free, including for commercial purposes, without permission
+from or attributing the photographer or Unsplash. This license does not
+include the right to compile photos from Unsplash to replicate a similar
+or competing service.
+
+Each file's photographer and Unsplash photo ID are listed in
+scripts/import_photos.py and THIRD_PARTY_NOTICES.md.
