@@ -257,7 +257,8 @@ docstrings say which.
 | `add_page_photos` | The photo band at the top of every page hero and tag page, AVIF first with WebP as the fallback, from `scripts/page_photos.json` |
 | `mark_dated_content`, `retitle_tag_pages`, `defer_ssg_search` | Expired ribbons removed and timeline milestones marked by build date; ssg's tag-page titles rewritten; ssg's search script deferred off the first-paint path |
 | security.txt mirror, `regen_sitemap`, `gen_legacy_redirects` | `/.well-known/security.txt`, the sitemap from what was built, redirect stubs for the old localised-brief URLs |
-| `--stamp-sw` | The service worker's cache name derived from the bytes it caches, run after `static/` and the samples exist |
+| `normalise_site_shell` | One CSP on every page, carrying the hash of the theme script it inlines into the head (stored theme and motion choice applied before first paint, with no render-blocking request); taxonomy and redirect pages given the site header, footer and stylesheet |
+| `--stamp-sw` | The legacy redirect map written into `/js/redirect.js` (the script redirects only to those paths), then the service worker's cache name derived from the bytes it caches, run after `static/` and the samples exist |
 
 `build.sh` also runs `scripts/carry_forward_assets.py`, which fetches the
 fingerprinted `/_csp/` assets the live pages still reference into the new

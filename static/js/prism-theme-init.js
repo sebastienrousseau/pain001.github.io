@@ -1,6 +1,8 @@
-/*!
- * Runs before first paint (loaded synchronously in <head>) so the stored
- * theme is applied without a flash of the wrong palette.
+/*
+ * Runs before first paint so the stored theme is applied without a flash
+ * of the wrong palette. postbuild_fix.py inlines this file into every
+ * page's <head> (its hash is in the CSP), so the page does not pay a
+ * render-blocking request for 1 KB; this file remains the source.
  *
  * Only an explicit user choice is stamped onto <html>. When no choice has
  * been stored the attribute is deliberately left off, so the stylesheet's

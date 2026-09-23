@@ -57,11 +57,23 @@ CSP_META = (
     "<meta content=\"default-src 'self'; base-uri 'self'; "
     "object-src 'none'; img-src 'self' data:; "
     "style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; "
-    "script-src 'self'  'wasm-unsafe-eval'; "
+    "script-src 'self' 'sha256-%s' 'wasm-unsafe-eval'; "
     "connect-src 'self' https://cloudflareinsights.com; font-src 'self'; "
     "form-action 'self' https://formspree.io\" "
     "http-equiv=Content-Security-Policy>"
 )
+# The theme script must run before first paint, and as a separate file it
+# was a render-blocking request on every page: Lighthouse put a third of
+# the mobile first paint on it and scored 99 on the tablet and locale
+# home pages. It is inlined instead, allowed by the hash above, and the
+# file under /js/ stays as the source of truth.
+_THEME_INIT_SRC = Path(__file__).resolve().parent.parent / "static" / "js" / "prism-theme-init.js"
+_THEME_INIT_JS = strip_js_comments(_THEME_INIT_SRC.read_text(encoding="utf-8")).strip()
+assert "</script" not in _THEME_INIT_JS.lower()
+_THEME_INIT_TAG = "<script>%s</script>" % _THEME_INIT_JS
+_THEME_INIT_LINK = '<script src="/js/prism-theme-init.js"></script>'
+CSP_META = CSP_META % base64.b64encode(
+    hashlib.sha256(_THEME_INIT_JS.encode("utf-8")).digest()).decode("ascii")
 OG_IMAGE_META = (
     '<meta property="og:image" '
     'content="https://pain001.com/og/pain001-card.jpg" />'
@@ -1982,13 +1994,13 @@ def normalise_site_shell(site: Path) -> None:
                 fixed = re.sub(r"<style>.*?</style>", "", fixed, count=1, flags=re.DOTALL)
             if is_taxonomy and "<html" in fixed and 'class="no-js"' not in fixed:
                 fixed = re.sub(r"<html\b", '<html class="no-js"', fixed, count=1)
-            if "prism-theme-init.js" not in fixed:
-                fixed = fixed.replace(
-                    "</head>", '<script src="/js/prism-theme-init.js"></script></head>', 1)
+            if _THEME_INIT_LINK not in fixed and _THEME_INIT_TAG not in fixed:
+                fixed = fixed.replace("</head>", _THEME_INIT_LINK + "</head>", 1)
             if 'src="/js/prism.js"' not in fixed:
                 fixed = fixed.replace(
                     "</body>", '<script src="/js/prism.js" defer></script>'
                     '<script src="/js/pain001-prism.js" defer></script></body>', 1)
+        fixed = fixed.replace(_THEME_INIT_LINK, _THEME_INIT_TAG, 1)
 
         if 'class="footer-credit"' not in fixed:
             if "</footer>" in fixed:

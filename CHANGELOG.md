@@ -142,6 +142,15 @@ All notable changes to this website are documented here. The format follows
   script carries the retired-path map itself (stamped at build time)
   rather than reading a destination from the page, so it can only
   ever send a visitor to one of those paths.
+- The theme script (stored theme and motion choice, applied before
+  first paint) was a render-blocking request on every page; it is now
+  inlined in the head under a CSP hash. Lighthouse had put a third of
+  the mobile first paint on that request and scored 99 on the tablet
+  and locale home pages.
+- French pages fetched 36 KB of the latin-ext Inter subset for the
+  single "œ" in "cœur": both subsets declared U+0153 and the later
+  declaration wins. The ext faces are now declared first, so the
+  glyph comes from the preloaded latin subset.
 - 653 bold-only paragraphs (FAQ questions) are now real headings.
 - Identical "Table, scrollable horizontally" regions on translated docs
   pages are named after their section, so landmarks are unique.
