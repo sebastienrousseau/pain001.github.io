@@ -365,7 +365,9 @@ def render_types_chunked(payload: dict) -> list[str]:
         part = f" (part {i + 1} of {len(chunks)})" if len(chunks) > 1 else ""
         fm = load_frontmatter(
             slug,
-            f"{v} type reference{part}: {span}",
+            # The span of type names stays in the subtitle and description;
+            # in the title it made a 120-character H1 that wrapped three lines.
+            f"{v} type reference{part}",
             f"Complex types {span} in ISO 20022 {v}, with elements, "
             f"cardinality and constraints, generated from the official XSD.",
             "Message specification",

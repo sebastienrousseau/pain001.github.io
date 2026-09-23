@@ -39,7 +39,7 @@ short_name: pain001
 subtitle: "Types SupplementaryData1 – TaxRecordDetails1 in pain.001.001.07, defined once each. This is the view to use for field mapping."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "pain.001.001.07 type reference (part 3 of 3): SupplementaryData1 – TaxRecordDetails1"
+title: "pain.001.001.07 type reference (part 3 of 3)"
 url: "https://pain001.com/message-spec-pain.001.001.07-types-3/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/message-spec-pain.001.001.07-types-3/"
@@ -50,7 +50,7 @@ item_description: "Complex types SupplementaryData1 – TaxRecordDetails1 in ISO
 item_guid: "https://pain001.com/message-spec-pain.001.001.07-types-3/"
 item_link: "https://pain001.com/message-spec-pain.001.001.07-types-3/"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "pain.001.001.07 type reference (part 3 of 3): SupplementaryData1 – TaxRecordDetails1"
+item_title: "pain.001.001.07 type reference (part 3 of 3)"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "pain.001.001.07 type reference (part 3 of 3): SupplementaryData1 – TaxRecordDetails1"
+apple-mobile-web-app-title: "pain.001.001.07 type reference (part 3 of 3)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,7 +71,7 @@ twitter_description: "Complex types SupplementaryData1 – TaxRecordDetails1 in 
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "pain.001.001.07 type reference (part 3 of 3): SupplementaryData1 – TaxRecordDetails1"
+twitter_title: "pain.001.001.07 type reference (part 3 of 3)"
 twitter_url: "https://pain001.com/message-spec-pain.001.001.07-types-3/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"

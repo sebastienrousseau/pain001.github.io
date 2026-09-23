@@ -1189,6 +1189,26 @@
     max-width: 48rem;
   }
 
+  /* Article titles at the display step wrapped three to six lines on a
+     laptop (the corpus scenario names run to 75 characters). One step
+     down, and across the whole container rather than the 48rem measure of
+     the lead below, they hold to two. */
+  .page-hero .container.hero-copy > h1,
+  .page-hero .hero-inner > .hero-copy > h1 {
+    max-width: none;
+    font-size: var(--step-3);
+  }
+
+  /* The same for the grid variant (`.hero-inner > .hero-copy`, the
+     comparison layout), whose copy block carried the 44rem cap itself. */
+  .page-hero .hero-inner > .hero-copy {
+    max-width: none;
+  }
+
+  .page-hero .hero-inner > .hero-copy > :not(h1) {
+    max-width: 48rem;
+  }
+
   .hero-inner {
     display: grid;
     gap: clamp(2rem, 1rem + 4vw, 4rem);
@@ -3480,3 +3500,8 @@ picture:has(> .tile-photo, > .feature-photo, > .briefing-photo, > .hero-banner-p
   border-radius: 20px;
   background: var(--surface-soft);
 }
+/* On a laptop the 2 : 1 band at 76rem is about 600px tall and pushes the
+   page headline below the fold; from 64rem cap the height and let
+   object-fit keep the crop. The aspect-ratio still sizes the box before
+   the image arrives, so nothing shifts. */
+@media (min-width: 64rem) { .page-photo { max-block-size: 24rem; } }

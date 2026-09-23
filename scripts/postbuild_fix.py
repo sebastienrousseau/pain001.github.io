@@ -220,7 +220,10 @@ def add_article_furniture(html: str) -> str:
 
     body = _H2_RE.sub(anchor, body)
 
-    if len(entries) >= 4:
+    # Two sections are enough to earn the rail: from 72rem it is what
+    # fills the right of the container beside the 68ch text column, and
+    # without it a short reference page read as a squashed left column.
+    if len(entries) >= 2:
         # The TOC list already numbers entries (decimal-leading-zero), so a
         # heading's own "01. " prefix would double up — strip it here only.
         strip_num = re.compile(r"^\d{1,2}\. ")

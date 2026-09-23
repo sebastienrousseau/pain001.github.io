@@ -5,5 +5,5 @@
     "_layouts/page.html renders the SEO title as the headline.",
     "Lower this as pages gain a real `headline`; never raise it."
   ],
-  "overlong_h1": 292
+  "overlong_h1": 258
 }

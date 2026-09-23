@@ -114,6 +114,12 @@
 .content-body :where(a, code) { overflow-wrap: anywhere; }
 .content-body :where(td, th),
 .content-body :where(td, th) :where(a, code) { overflow-wrap: break-word; }
+/* A column is never narrower than 9rem on screen. Without a floor the
+   table algorithm gives an unbreakable file name its full width and
+   crushes the column beside it to 110px of wrapped fragments; with it the
+   table grows past its wrapper and scrolls sideways, which the wrapper is
+   for. Print keeps the fitted layout the print audit checks. */
+@media screen { :where(.content-body, .review-table) :where(td, th) { min-inline-size: 9rem; } }
 
 .article-toc {
   background: var(--surface-soft);
@@ -652,7 +658,7 @@ a.vendor-name { color: var(--accent); }
 @media (min-width: 72rem) {
   .content-body:has(> .article-toc) {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 15rem;
+    grid-template-columns: minmax(0, 1fr) 18rem;
     column-gap: var(--space-16);
     align-items: start;
     max-width: none;
