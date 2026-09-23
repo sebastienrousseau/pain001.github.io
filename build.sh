@@ -19,7 +19,24 @@ cd "$(git rev-parse --show-toplevel)"
 AUDIT=0
 [[ "${1:-}" == "--audit" ]] && AUDIT=1
 
-rm -rf output Pain001
+# One build at a time. ssg deletes Pain001/ and renames output/ onto it,
+# and nothing inside it writes after it exits (its threads are joined), so
+# the only way `rm -rf` here or ssg's own remove can fail with "Directory
+# not empty" is a second writer in the same tree: a build started twice,
+# or Finder and Spotlight dropping .DS_Store into a directory being
+# removed. The lock stops the first; the retry below absorbs the second.
+LOCK=.build.lock
+if ! mkdir "$LOCK" 2>/dev/null; then
+  echo "build.sh: another build holds $LOCK (remove it if no build is running)" >&2
+  exit 1
+fi
+trap 'rmdir "$LOCK" 2>/dev/null || true' EXIT
+
+clean_staging() {
+  rm -rf output Pain001 2>/dev/null || { sleep 1; rm -rf output Pain001; }
+}
+
+clean_staging
 
 python3 scripts/traction.py
 ssg build -f ssg.toml
@@ -87,7 +104,7 @@ python3 scripts/carry_forward_assets.py Pain001
 mkdir -p site
 rsync -a --delete --exclude '.ssg-cache' Pain001/ site/
 
-rm -rf output Pain001
+clean_staging
 
 if [[ "$AUDIT" == "1" ]]; then
   ssg audit -f ssg.toml -o site --severity warn
