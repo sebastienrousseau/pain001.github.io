@@ -3,8 +3,8 @@
 ## System context
 
 Pain001.com is a static documentation and browser-tool site. Authors edit
-Markdown, HTML templates, CSS, and dependency-free JavaScript. Shokunin SSG
-0.0.63 produces HTML; deterministic post-build passes add locale variants,
+Markdown, HTML templates, CSS, and dependency-free JavaScript. The Static
+Site Generator (ssg) 0.0.63 produces HTML; deterministic post-build passes add locale variants,
 search metadata, accessibility affordances, and downloadable artefacts.
 GitHub Actions runs all gates and deploys the exact checked Pages artefact.
 
@@ -14,7 +14,7 @@ GitHub Actions runs all gates and deploys the exact checked Pages artefact.
 _posts + _layouts + ssg.toml
               |
               v
-       Shokunin SSG 0.0.63
+         ssg 0.0.63
               |
               v
      Pain001/ generated tree

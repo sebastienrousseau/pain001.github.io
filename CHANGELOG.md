@@ -8,6 +8,9 @@ All notable changes to this website are documented here. The format follows
 
 ### Fixed
 
+- The README, architecture and packaging docs, pull-request template and
+  build comments name the generator as the Static Site Generator (ssg) and
+  link its documentation at <https://docs.static-site-generator.com/ssg/>.
 - README: the logo pointed at an external host that now returns 404; it
   uses the site's own logo. The screenshot showed the pre-redesign theme;
   it is now a light and dark pair captured from the live homepage and

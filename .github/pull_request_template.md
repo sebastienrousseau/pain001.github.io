@@ -4,7 +4,7 @@
 
 ## Verification
 
-- [ ] Built locally with Shokunin SSG 0.0.63
+- [ ] Built locally with ssg 0.0.63
 - [ ] `make verify` passes
 - [ ] WCAG 2.2 AAA browser scan has zero findings
 - [ ] Lighthouse mobile and desktop scores are 100/100/100/100

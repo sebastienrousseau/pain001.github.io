@@ -32,7 +32,7 @@ and the MT101 / Excel loaders. Its job is to convert a treasury engineer, an
 integrator or an AI agent into an installed user, and to hand a regulated
 buyer the evidence they need.
 
-Built with the [Shokunin Static Site Generator (ssg)][00] **0.0.63 exactly**
+Built with the [Static Site Generator (ssg)][00] **0.0.63 exactly**
 and deployed to GitHub Pages by `ci.yml` from the same run that passed every
 gate; the built tree is never committed. Cloudflare fronts the domain.
 
@@ -104,7 +104,7 @@ for review or static hosting.
 
 | Component | Floor | Enforced by |
 | :--- | :--- | :--- |
-| Shokunin SSG | 0.0.63 exactly | `SSG_VERSION` in `ci.yml`; the pin is the cache key |
+| Static Site Generator (ssg) | 0.0.63 exactly | `SSG_VERSION` in `ci.yml`; the pin is the cache key |
 | Node.js | 22 (24 also tested) | `engines` in `package.json`; the `node-matrix` job runs the unit tests on both |
 | Python | 3.12 | `python-version` in `ci.yml`; generators, post-build passes and validators |
 | Chrome or Chromium | any current | layout, print, accessibility and Lighthouse gates |
@@ -391,4 +391,4 @@ Project-authored work is dual-licensed under Apache-2.0 or MIT, at your option.
 See `LICENSE-APACHE`, `LICENSE-MIT`, `REUSE.toml`, and
 `THIRD_PARTY_NOTICES.md` for vendored components.
 
-[00]: https://shokunin.one "Shokunin Static Site Generator (SSG)"
+[00]: https://docs.static-site-generator.com/ssg/ "Static Site Generator (ssg)"

@@ -1,4 +1,4 @@
-# ssg (Shokunin Static Site Generator) configuration — pain001.com
+# Static Site Generator (ssg) configuration — pain001.com
 # Fixes the "MySsgSite" / http://127.0.0.1:8000 defaults that leaked into
 # generated artifacts (llms.txt, JSON-LD, robots.txt) when no config existed.
 
