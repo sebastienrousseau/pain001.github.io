@@ -44,15 +44,21 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  /* One column until two genuinely fit: a fixed 26rem column width is
-     wider than a 320px screen. */
-  columns: 1;
+  /* A grid, not CSS columns: balancing 386 entries across two columns
+     was a 270ms layout task on a tablet (Lighthouse's whole blocking-time
+     budget on a loaded runner). One column until two genuinely fit: a
+     fixed 26rem column is wider than a 320px screen. */
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
   column-gap: var(--space-12);
 }
 
 .taxonomy-page-list li {
-  break-inside: avoid;
   border-block-end: 1px solid var(--line-soft);
+  /* Entries below the fold are not laid out until scrolled to; the
+     intrinsic size keeps the scrollbar honest. */
+  content-visibility: auto;
+  contain-intrinsic-block-size: auto 4rem;
 }
 
 /* Block, not flex: a flex item cannot shrink below its longest word, and
@@ -73,7 +79,7 @@
 }
 
 @media (min-width: 60rem) {
-  .taxonomy-page-list { columns: 2; }
+  .taxonomy-page-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 /* Photo band above the taxonomy article, matching every other page. */

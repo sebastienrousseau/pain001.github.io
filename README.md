@@ -287,7 +287,7 @@ CI fails on any of these; run them locally before opening a PR.
 | Dated regulatory claims still match their primary sources (weekly, `dated-claims.yml`) | `python3 scripts/check_dated_claims.py` (`scripts/dated_claims.json`) |
 | Colour contrast 7:1 for text in both themes and Display P3 | `python3 scripts/validate_contrast.py` |
 | Every page in both themes, WAVE-documented rules plus axe AAA | `CONCURRENCY=2 node scripts/audit_site.mjs` |
-| Lighthouse 100 in all four categories: mobile, tablet, desktop, 4K and 8K | `node scripts/perf_budget.mjs http://127.0.0.1:8898` (gzip server: `node scripts/serve_audit.mjs`) |
+| Lighthouse 100 in all four categories: mobile, tablet, desktop, 4K and 8K (a performance-only 99 is measured once more; the second sample counts) | `node scripts/perf_budget.mjs http://127.0.0.1:8898` (gzip server: `node scripts/serve_audit.mjs`) |
 | Accessibility, WCAG 2.2 AAA | `npx pa11y-ci` against the `.pa11yci` list, or `node scripts/a11y_local.mjs` |
 
 The layout, performance and accessibility gates need `site/` served locally:
@@ -342,12 +342,17 @@ browsers ignore `frame-ancestors`; GitHub Pages cannot set response headers.
 Framing is therefore not restricted at the origin. The fix is a Cloudflare
 response-header Transform Rule adding `Content-Security-Policy:
 frame-ancestors 'none'`, which is configured in the Cloudflare dashboard
-rather than in this repository. Two more settings live there: Always Use
-HTTPS (SSL/TLS, Edge Certificates), and a redirect rule that sends any
+rather than in this repository. Three more settings live there: Always Use
+HTTPS (SSL/TLS, Edge Certificates); a redirect rule that sends any
 `/index.html` URL to its directory URL with a 301, because GitHub Pages serves
 both with a 200 and Search Console then lists one as an alternative of the
-other. GitHub Pages itself redirects `www` to the apex and slash-less paths
-to the trailing slash. The site holds no credentials, session state
+other; and a page rule on `pain001.com/*` that caches everything at the edge
+with a two-minute browser TTL and no edge TTL override, so the edge follows
+the origin's ten-minute `max-age`. Until 23 September 2026 that rule pinned
+the edge TTL to seven days, which kept every deploy invisible for up to a
+week; a deploy that does not appear within ten minutes means the rule has
+regained an edge TTL. GitHub Pages itself redirects `www` to the apex and
+slash-less paths to the trailing slash. The site holds no credentials, session state
 or authenticated actions, so the exposure is limited to UI redressing.
 
 ## Documentation
