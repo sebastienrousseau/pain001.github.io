@@ -3,7 +3,7 @@
 <!-- markdownlint-disable MD033 MD041 -->
 
 <p align="center">
-  <img src="static/img/pain001.svg" alt="Pain001 logo" width="128" />
+  <img src="https://pain001.com/img/pain001.svg" alt="Pain001 logo" width="128" />
 </p>
 
 <h1 align="center">Pain001</h1>
@@ -38,8 +38,8 @@ gate; the built tree is never committed. Cloudflare fronts the domain.
 
 <!-- markdownlint-disable MD033 -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/pain001-home-dark.webp" />
-  <img src="docs/assets/pain001-home-light.webp" alt="The pain001.com homepage: the deferred-deadline ribbon, a photograph of the City of London, and the headline 'Deterministic ISO 20022 validation. Inside your perimeter.'" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://pain001.com/img/readme/pain001-home-dark.webp" />
+  <img src="https://pain001.com/img/readme/pain001-home-light.webp" alt="The pain001.com homepage: the deferred-deadline ribbon, a photograph of the City of London, and the headline 'Deterministic ISO 20022 validation. Inside your perimeter.'" />
 </picture>
 <!-- markdownlint-enable MD033 -->
 
