@@ -6,6 +6,22 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+### Fixed
+
+- README: the logo pointed at an external host that now returns 404; it
+  uses the site's own logo. The screenshot showed the pre-redesign theme;
+  it is now a light and dark pair captured from the live homepage and
+  published with the site (`static/img/readme/`), and the old image is
+  removed. Every README image is an absolute pain001.com URL, so it also
+  renders where the README is shown outside GitHub. Claims
+  corrected against the repository: the Lighthouse gate (13 routes, five
+  profiles, timing metrics gated through the performance score, not
+  five routes with timing ungated), the JSON-LD types actually emitted,
+  agent files (`agents.txt` and an MCP descriptor were listed and do not
+  exist), the Python floor CI runs (3.12, not 3.10), the seven workflows,
+  the full build order and post-build passes, one local serving command,
+  and framing, which Cloudflare already restricts at the edge.
+
 ### Removed
 
 - pa11y-ci, and with it the only open Dependabot alerts: two high

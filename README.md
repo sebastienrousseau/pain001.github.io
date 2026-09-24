@@ -3,7 +3,7 @@
 <!-- markdownlint-disable MD033 MD041 -->
 
 <p align="center">
-  <img src="https://kura.pro/pain001/images/logos/pain001.webp" alt="Pain001 logo" width="128" />
+  <img src="https://pain001.com/img/pain001.svg" alt="Pain001 logo" width="128" />
 </p>
 
 <h1 align="center">Pain001</h1>
@@ -36,7 +36,12 @@ Built with the [Shokunin Static Site Generator (ssg)][00] **0.0.63 exactly**
 and deployed to GitHub Pages by `ci.yml` from the same run that passed every
 gate; the built tree is never committed. Cloudflare fronts the domain.
 
-![Pain001.com using the PRISM theme](static/og/pain001-prism.webp)
+<!-- markdownlint-disable MD033 -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://pain001.com/img/readme/pain001-home-dark.webp" />
+  <img src="https://pain001.com/img/readme/pain001-home-light.webp" alt="The pain001.com homepage: the deferred-deadline ribbon, a photograph of the City of London, and the headline 'Deterministic ISO 20022 validation. Inside your perimeter.'" />
+</picture>
+<!-- markdownlint-enable MD033 -->
 
 ---
 
@@ -101,7 +106,7 @@ for review or static hosting.
 | :--- | :--- | :--- |
 | Shokunin SSG | 0.0.63 exactly | `SSG_VERSION` in `ci.yml`; the pin is the cache key |
 | Node.js | 22 (24 also tested) | `engines` in `package.json`; the `node-matrix` job runs the unit tests on both |
-| Python | 3.10 | generators and post-build passes |
+| Python | 3.12 | `python-version` in `ci.yml`; generators, post-build passes and validators |
 | Chrome or Chromium | any current | layout, print, accessibility and Lighthouse gates |
 
 The minimum may rise only in a patch release when a security fix, a parser
@@ -137,12 +142,12 @@ Measured on the current build.
 
 | Surface | Detail |
 | :--- | :--- |
-| Pages | 668 built pages; 662 URLs in the sitemap |
+| Pages | 668 built pages; 661 URLs in the sitemap (utility pages such as the 404, offline and form-confirmation pages are noindexed and left out) |
 | Locales | 34, with an hreflang cluster per localised page and RTL handling for 3 |
 | Browser demo | `/try/` runs the `pain001` library itself in WebAssembly, same-origin, offline-capable; payment data never leaves the browser |
-| Example corpus | 42 scenario pages with schema.org `Dataset` markup, downloadable inputs and expected output |
-| Agent discovery | `llms.txt`, `llms-full.txt`, `agents.txt`, an MCP descriptor and a search index |
-| Structured data | One JSON-LD graph per page: `Organization`, `WebSite`, `SoftwareApplication`, `FAQPage`, `Dataset` |
+| Example corpus | 42 scenarios, each on an English page and five translated pages (252 in all), with schema.org `Dataset` markup, downloadable inputs and expected output |
+| Agent discovery | `llms.txt`, `llms-full.txt` and a JSON search index |
+| Structured data | JSON-LD on every page: `WebSite` and `WebPage`; the corpus scenario pages add `Dataset`, `DataCatalog`, `DataDownload` and `Organization` |
 
 ## Ecosystem comparison
 
@@ -154,21 +159,19 @@ create a second copy to drift.
 
 ## Benchmarks
 
-`scripts/perf_budget.mjs` gates every push. Five routes are measured under
-both mobile and desktop Lighthouse profiles, and **all four Lighthouse
-categories must score exactly 100** — performance, accessibility,
-best practices and SEO — in addition to a transferred-byte ceiling.
+`scripts/perf_budget.mjs` gates every push. Thirteen routes, one per layout
+and generator, are measured under five Lighthouse profiles (mobile, tablet,
+desktop, 4K and 8K), and **all four categories must score exactly 100**:
+performance, accessibility, best practices and SEO. The performance score is
+computed from the timing metrics (LCP, FCP, total blocking time, CLS, speed
+index), so they are gated through it. A performance-only 99 is measured once
+more and the second sample counts, because a shared CI runner makes single
+samples noisy; a real regression fails both.
 
-| Route | Byte budget |
+| Routes | Byte budget |
 | :--- | ---: |
-| `/` | 300 KiB |
-| `/documentation/` | 300 KiB |
-| `/compliance-toolkit/` | 300 KiB |
-| `/example-corpus/` | 300 KiB |
-| `/try/` | 400 KiB (before the WebAssembly runtime, which loads on intent) |
-
-Timing metrics such as LCP are reported but not gated: a shared CI runner
-makes them noisy, while scores and bytes are stable.
+| `/`, `/documentation/`, `/compliance-toolkit/`, `/example-corpus/`, `/why/`, `/enterprise/`, `/competitors-comparison/`, `/corpus-gb-fps-single/`, `/tags/iso-20022/`, `/fr/`, `/ar/` | 300 KiB |
+| `/try/` (before the WebAssembly runtime, which loads on intent), `/message-spec-pain.001.001.09/` | 400 KiB |
 
 ## Features
 
@@ -180,7 +183,7 @@ makes them noisy, while scores and bytes are stable.
 | `scripts/` | Generators, the post-build passes, translation tables and the validators CI runs |
 | `tests/` | Node tests: demo input handling and the browser engine integration run against the vendored runtime |
 | `site/` | The built site, produced by `build.sh`; ignored by git and uploaded by CI as the Pages artifact |
-| `.github/workflows/` | `ci.yml` (build, every gate, and on `main` the Pages deploy), `regenerate.yml` (release-triggered regeneration, opens a PR), `codeql.yml` |
+| `.github/workflows/` | `ci.yml` (build, every gate, and on `main` the Pages deploy), `release.yml` (signed-tag release: archive, SBOM, attestations), `regenerate.yml` (library-release regeneration, opens a PR), `dated-claims.yml` (weekly check of dated regulatory claims), `codeql.yml`, `scorecard.yml`, `dco.yml` |
 
 ## Configuration
 
@@ -221,7 +224,7 @@ going live.
 ### Build
 
 Prerequisites: the Rust toolchain with `cargo install ssg --locked --version 0.0.63`,
-Node 22+, Python 3.10+ with the `pain001` library installed for the generators
+Node 22+, Python 3.12 with the `pain001` library installed for the generators
 and the snippet gate, and Chrome for the browser gates.
 
 ```shell
@@ -229,16 +232,18 @@ and the snippet gate, and Chrome for the browser gates.
 ./build.sh --audit  # same, then ssg's audit gates at warn severity
 ```
 
-`build.sh` runs, in order: `scripts/traction.py` (PyPI and GitHub figures into
-the governance page), `ssg build`, `scripts/postbuild_fix.py` (head and body
-repairs, tag pages, the 34-locale variants of the core pages, the six-locale
-corpus variants, Dataset JSON-LD, `llms.txt`, footer version stamp, sitemap),
-the `static/` copy, sample CSV generation, and the service-worker cache stamp.
+`build.sh` takes a lock, then runs, in order: `scripts/traction.py` (PyPI and
+GitHub figures into the governance page), `ssg build`, `scripts/sbom_serial.py`
+(a deterministic `serialNumber` for the SBOM), `scripts/postbuild_fix.py` (the
+passes below), the `static/` copy, `postbuild_fix.py --optimise-assets` (one
+SRI-protected stylesheet bundle per layout, comments stripped from the site's
+own scripts), sample CSV generation, `postbuild_fix.py --stamp-sw`, and
+`scripts/carry_forward_assets.py`, then publishes the result to `site/`.
 
 ### The post-build passes
 
 `scripts/postbuild_fix.py` runs once over the ssg output before the
-`static/` copy, then once more with `--stamp-sw` after it. Each pass
+`static/` copy, then with `--optimise-assets` and `--stamp-sw` after it. Each pass
 exists because a specific defect shipped without it; the script's
 docstrings say which.
 
@@ -254,9 +259,11 @@ docstrings say which.
 | `inject_dataset_ld`, `write_llms` | schema.org Dataset markup per scenario page from `scripts/corpus_pages.json`; `llms.txt` and `llms-full.txt` for agents |
 | `stamp_suite_version` | "Generated against pain001 X" inside every footer |
 | `add_page_photos` | The photo band at the top of every page hero and tag page, AVIF first with WebP as the fallback, from `scripts/page_photos.json` |
-| `mark_dated_content`, `retitle_tag_pages`, `defer_ssg_search` | Expired ribbons removed and timeline milestones marked by build date; ssg's tag-page titles rewritten; ssg's search script deferred off the first-paint path |
-| security.txt mirror, `regen_sitemap`, `gen_legacy_redirects` | `/.well-known/security.txt`, the sitemap from what was built, redirect stubs for the old localised-brief URLs |
+| `mark_dated_content`, `retitle_tag_pages`, `defer_ssg_search`, `ensure_social_metadata` | Expired ribbons removed and timeline milestones marked by build date; ssg's tag-page titles rewritten; ssg's search script deferred off the first-paint path; share-card metadata on any page missing it |
+| `mark_noindex_pages`, `regen_sitemap`, `gen_legacy_redirects` | The 404 page published at `/404.html` and noindexed with the offline and form-confirmation pages; the sitemap from what was built, without them; redirect stubs for the old localised-brief URLs |
+| `taxonomy_language_and_index`, `name_table_regions`, `promote_bold_questions` | Language attributes and an index on the tag pages; an accessible name for each scrollable table region; bold-only question paragraphs promoted to headings |
 | `normalise_site_shell` | One CSP on every page, carrying the hash of the theme script it inlines into the head (stored theme and motion choice applied before first paint, with no render-blocking request); taxonomy and redirect pages given the site header, footer and stylesheet |
+| `--optimise-assets` | Each layout's stylesheets merged into one SRI-protected bundle, and block comments stripped from the site's own scripts |
 | `--stamp-sw` | The legacy redirect map written into `/js/redirect.js` (the script redirects only to those paths), then the service worker's cache name derived from the bytes it caches, run after `static/` and the samples exist |
 
 `build.sh` also runs `scripts/carry_forward_assets.py`, which fetches the
@@ -286,11 +293,13 @@ CI fails on any of these; run them locally before opening a PR.
 | Dated regulatory claims still match their primary sources (weekly, `dated-claims.yml`) | `python3 scripts/check_dated_claims.py` (`scripts/dated_claims.json`) |
 | Colour contrast 7:1 for text in both themes and Display P3 | `python3 scripts/validate_contrast.py` |
 | Every page in both themes, WAVE-documented rules plus axe AAA | `CONCURRENCY=2 node scripts/audit_site.mjs` |
-| Lighthouse 100 in all four categories: mobile, tablet, desktop, 4K and 8K (a performance-only 99 is measured once more; the second sample counts) | `node scripts/perf_budget.mjs http://127.0.0.1:8898` (gzip server: `node scripts/serve_audit.mjs`) |
+| Lighthouse 100 in all four categories: mobile, tablet, desktop, 4K and 8K (a performance-only 99 is measured once more; the second sample counts) | `node scripts/perf_budget.mjs http://127.0.0.1:8899` |
 | Accessibility, WCAG 2.2 AAA, in system, light and dark modes on 13 key pages | `node scripts/a11y_modes.mjs` |
 
-The layout, performance and accessibility gates need `site/` served locally:
-`(cd site && python3 -m http.server 8899)`.
+The browser gates need `site/` served the way CI serves it, with compression
+and CDN-like caching: `node scripts/serve_audit.mjs site 8899`. They also need
+`puppeteer-core@23` and `@axe-core/puppeteer` in `.a11y-tools/` (see the
+Layout step in `ci.yml`).
 
 ### Editing content
 
@@ -334,14 +343,15 @@ dependencies are installed from a committed lockfile and audited in CI.
 
 Input parsing lives in the separately fuzzed and tested core library; this
 repository replays browser integration and fixed regression cases on every
-push. Static assets are bounded by the browser demo's 2 MB input limit.
+push. The browser demo refuses input files larger than 2 MB.
 
-**Known gap.** The policy is delivered as a `<meta http-equiv>` element, where
-browsers ignore `frame-ancestors`; GitHub Pages cannot set response headers.
-Framing is therefore not restricted at the origin. The fix is a Cloudflare
-response-header Transform Rule adding `Content-Security-Policy:
-frame-ancestors 'none'`, which is configured in the Cloudflare dashboard
-rather than in this repository. Three more settings live there: Always Use
+**Framing.** The policy is delivered as a `<meta http-equiv>` element, where
+browsers ignore `frame-ancestors`, and GitHub Pages cannot set response
+headers. Cloudflare adds them at the edge: every response carries
+`Content-Security-Policy: frame-ancestors 'none'` and `X-Frame-Options: DENY`.
+That rule lives in the Cloudflare dashboard, not in this repository, so the
+headers are the thing to check after any change there. Three more settings
+live there: Always Use
 HTTPS (SSL/TLS, Edge Certificates); a redirect rule that sends any
 `/index.html` URL to its directory URL with a 301, because GitHub Pages serves
 both with a 200 and Search Console then lists one as an alternative of the
@@ -351,13 +361,13 @@ the origin's ten-minute `max-age`. Until 23 September 2026 that rule pinned
 the edge TTL to seven days, which kept every deploy invisible for up to a
 week; a deploy that does not appear within ten minutes means the rule has
 regained an edge TTL. GitHub Pages itself redirects `www` to the apex and
-slash-less paths to the trailing slash. The site holds no credentials, session state
-or authenticated actions, so the exposure is limited to UI redressing.
+slash-less paths to the trailing slash. The site holds no credentials, session
+state or authenticated actions.
 
 ## Documentation
 
 - [User manual and compliance hub](https://pain001.com/documentation/)
-- [API reference](https://pain001.com/documentation/)
+- [Library API reference](https://docs.pain001.com/)
 - [Developer documentation](DEVELOPMENT.md)
 - [Architecture](docs/ARCHITECTURE.md)
 - [Pain001 ecosystem map](docs/ECOSYSTEM.md)
