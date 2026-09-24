@@ -6,7 +6,16 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
-Nothing yet.
+### Removed
+
+- pa11y-ci, and with it the only open Dependabot alerts: two high
+  advisories in `extract-zip`, reached through pa11y-ci's bundled
+  puppeteer, with no patched release. pa11y scanned 19 sampled pages; the
+  site-wide scan (WAVE's rules plus axe AAA on every page, light and dark)
+  already covered all of them, and the audit-exception list is now empty.
+  The accessibility statement, trust page, audit brief and outreach text
+  now name the scan that runs; the statement had also still said twelve
+  pages where the list held nineteen.
 
 ## [0.0.6] - 2026-09-24
 

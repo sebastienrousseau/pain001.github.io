@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Fail on npm advisories that are not explicitly and currently excepted.
 
-`npm audit` alone is unusable as a gate here: pa11y-ci reaches extract-zip,
-which has no patched release, so a plain `npm audit --audit-level=high`
-would fail on every run and be switched off within a week. `--audit-level=
+A plain `npm audit` gate is switched off the first week an advisory has no
+patched release (pa11y-ci's transitive extract-zip was the case that
+prompted this, until pa11y-ci was removed in v0.0.7), and `--audit-level=
 critical` would hide genuinely actionable high findings instead.
 
 This gate keeps the floor at high and requires every accepted advisory to be

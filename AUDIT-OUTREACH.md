@@ -66,7 +66,7 @@ holding CPWA/WAS.
 > I would like a quote for an independent audit at **WCAG 2.2 Level AAA**,
 > with testing by your disabled testers on real assistive technology. The
 > site already passes automated gates in CI (Lighthouse accessibility 100,
-> pa11y at WCAG2AAA with zero errors, both light and dark themes,
+> axe at AAA with zero findings on every page, both light and dark themes,
 > including RTL and CJK locales), so I am specifically buying the manual
 > and AT layer that tooling cannot reach.
 >
@@ -98,7 +98,7 @@ holding CPWA/WAS.
 > entirely in the browser (WebAssembly, with live-region status updates).
 >
 > I would like this assessed at **WCAG 2.2 Level AAA**. The site currently
-> passes its own CI gates (pa11y at WCAG2AAA, zero errors across both
+> passes its own CI gates (axe at AAA, zero findings on every page across both
 > themes and across RTL and CJK locales), so the value I am buying is your
 > manual expertise and testing with disabled people — particularly around
 > the validator's live regions, the language switcher, and RTL mirroring.

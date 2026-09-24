@@ -114,7 +114,7 @@ This page exists so that a security, vendor-risk, or audit reviewer can answer s
 
 ## 04. Accessibility
 
-WCAG 2.2 AAA as a build gate: the generator's WCAG audit plus independent pa11y scans at the AAA standard, both themes, enforced in CI, with a manual keyboard pass per release and honest limitations stated. Full method and known limits: [Accessibility statement](/accessibility/). Independent assistive-technology testing is the named next step; the procurement scope for that audit is [published in the repository](https://github.com/sebastienrousseau/pain001.github.io/blob/main/AUDIT-RFQ.md).
+WCAG 2.2 AAA as a build gate: the generator's WCAG audit plus an axe scan of every page at the AAA standard, both themes, enforced in CI, with a manual keyboard pass per release and honest limitations stated. Full method and known limits: [Accessibility statement](/accessibility/). Independent assistive-technology testing is the named next step; the procurement scope for that audit is [published in the repository](https://github.com/sebastienrousseau/pain001.github.io/blob/main/AUDIT-RFQ.md).
 
 ## 05. Governance and continuity
 

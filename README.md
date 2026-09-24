@@ -189,7 +189,6 @@ makes them noisy, while scores and bytes are stable.
 | `ssg.toml` | Site name, description, language, base URL, and the content, template and output directories |
 | `SSG_VERSION` in `.github/workflows/ci.yml` | The generator pin, single-sourced: it is both the install version and the binary cache key |
 | `.compliance.yml` | Declared compliance tier, criticality and owner, per the workspace standard |
-| `.pa11yci` | The URL list scanned at WCAG 2.2 AAA |
 | `scripts/perf_budget.mjs` | Routes, Lighthouse profiles and byte budgets |
 
 ## Examples
@@ -288,7 +287,7 @@ CI fails on any of these; run them locally before opening a PR.
 | Colour contrast 7:1 for text in both themes and Display P3 | `python3 scripts/validate_contrast.py` |
 | Every page in both themes, WAVE-documented rules plus axe AAA | `CONCURRENCY=2 node scripts/audit_site.mjs` |
 | Lighthouse 100 in all four categories: mobile, tablet, desktop, 4K and 8K (a performance-only 99 is measured once more; the second sample counts) | `node scripts/perf_budget.mjs http://127.0.0.1:8898` (gzip server: `node scripts/serve_audit.mjs`) |
-| Accessibility, WCAG 2.2 AAA | `npx pa11y-ci` against the `.pa11yci` list, or `node scripts/a11y_local.mjs` |
+| Accessibility, WCAG 2.2 AAA, in system, light and dark modes on 13 key pages | `node scripts/a11y_modes.mjs` |
 
 The layout, performance and accessibility gates need `site/` served locally:
 `(cd site && python3 -m http.server 8899)`.

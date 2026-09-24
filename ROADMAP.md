@@ -223,7 +223,7 @@ that the snippet validator caught elsewhere.
   the corpus.
 - `node --test tests/*.test.mjs` still green (currently 19 tests;
   expect ~35 after).
-- pa11y WCAG2AAA zero errors on `/try/` and on a localised demo page;
+- axe AAA zero findings on `/try/` and on a localised demo page;
   the summary must be readable by screen reader — the layer states go
   in the existing live region, not a colour-only indicator.
 

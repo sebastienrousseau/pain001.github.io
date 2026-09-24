@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "pain001.com targets WCAG 2.2 AAA, enforced as a build gate: measured 7:1 contrast in both themes, pa11y-verified pages, keyboard-first interaction, and an open channel for reports."
+description: "pain001.com targets WCAG 2.2 AAA, enforced as a build gate: measured 7:1 contrast in both themes, every page scanned with axe at AAA, keyboard-first interaction, and an open channel for reports."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
@@ -20,7 +20,7 @@ image_alt: "A question-and-answer session on ISO 20022 payment file generation, 
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
-keywords: "accessibility statement, WCAG 2.2 AAA, pa11y, contrast ratio, keyboard navigation, inclusive design, a11y"
+keywords: "accessibility statement, WCAG 2.2 AAA, axe, contrast ratio, keyboard navigation, inclusive design, a11y"
 language: en-GB
 layout: page
 locale: en_GB
@@ -46,7 +46,7 @@ atom_link: "https://pain001.com/accessibility/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "pain001.com targets WCAG 2.2 AAA, enforced as a build gate: measured 7:1 contrast in both themes, pa11y-verified pages, keyboard-first interaction, and an open channel for reports."
+item_description: "pain001.com targets WCAG 2.2 AAA, enforced as a build gate: measured 7:1 contrast in both themes, every page scanned with axe at AAA, keyboard-first interaction, and an open channel for reports."
 item_guid: "https://pain001.com/accessibility/rss.xml"
 item_link: "https://pain001.com/accessibility/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -67,7 +67,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "pain001.com targets WCAG 2.2 AAA, enforced as a build gate: measured 7:1 contrast in both themes, pa11y-verified pages, keyboard-first interaction, and an open channel for reports."
+twitter_description: "pain001.com targets WCAG 2.2 AAA, enforced as a build gate: measured 7:1 contrast in both themes, every page scanned with axe at AAA, keyboard-first interaction, and an open channel for reports."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
@@ -82,7 +82,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Accessibility"
-excerpt: "The accessibility statement for pain001.com: WCAG 2.2 AAA conformance enforced in continuous integration through the generator's WCAG gates, independent pa11y scans at the AAA standard in both themes, and manual keyboard passes, with known limitations stated plainly and a public channel for reports."
+excerpt: "The accessibility statement for pain001.com: WCAG 2.2 AAA conformance enforced in continuous integration through the generator's WCAG gates, an axe scan of every page at the AAA standard in both themes, and manual keyboard passes, with known limitations stated plainly and a public channel for reports."
 last_reviewed: "2026-07-26"
 
 
@@ -107,7 +107,7 @@ All pages of pain001.com are built to conform to WCAG 2.2 AAA. Concretely:
 Three layers, run on every build via [continuous integration](https://github.com/sebastienrousseau/pain001.github.io/blob/main/.github/workflows/ci.yml):
 
 1. **Build gates**: the site generator's WCAG audit runs across all pages on every build and fails the build on any finding.
-2. **Independent automated scan**: [pa11y](https://pa11y.org/) 4.1.1 at the **WCAG2AAA** standard across twelve representative pages (home, documentation, installation, demo, MCP, briefing, FAQs, glossary, comparison, contact, French, 404), in **both light and dark themes**. Current result: zero errors.
+2. **Independent automated scan of every page**: the full [axe](https://github.com/dequelabs/axe-core) rule set, including the AAA 7:1 contrast rule, plus WAVE's documented error and alert rules, run against **every published page** (all languages, both text directions) in **both light and dark themes**, and axe again in system, light and dark modes on thirteen key pages. Current result: zero findings.
 3. **Manual keyboard pass**: tab-order walk, skip-link operation, focus-visibility check, and keyboard operation of the demo and FAQ widgets, performed on the current release (last performed: 26 July 2026).
 
 Fixes found by this process are applied at the source or in the build pipeline, including repairs to third-party components (the search widget's injected styles and the markdown renderer's presentational attributes were both corrected at build time to meet AAA).

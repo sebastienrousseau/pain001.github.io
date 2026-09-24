@@ -5,7 +5,8 @@
  *
  * Why this exists
  * ---------------
- * pa11y-ci and a11y_modes.mjs audit 19 and 13 representative URLs. The
+ * a11y_modes.mjs audits 13 representative URLs (pa11y-ci audited 19 until
+ * v0.0.7, when this scan replaced it). The
  * taxonomy pages shipped with no site header and a browser-default serif
  * because no audited URL was a taxonomy page. The bar for this site is
  * "every page, zero WAVE errors or alerts, AAA", so the audit has to open
