@@ -48,12 +48,12 @@ price the templates and the localisation matrix, not the raw page count.*
 
 ## Context the vendor should know
 
-- The site enforces its own gates in CI (ssg WCAG gate, pa11y-ci at
-  WCAG2AAA, both themes, plus link-integrity and translation-parity
+- The site enforces its own gates in CI (ssg WCAG gate, axe at AAA plus
+  WAVE's rules on every page, both themes, plus link-integrity and translation-parity
   gates) — the audit's value is the manual/AT layer, which tooling
   cannot reach.
-- Current self-assessed position: Lighthouse accessibility 100 and pa11y
-  WCAG2AAA zero errors on every page sampled, in both themes, including
+- Current self-assessed position: Lighthouse accessibility 100 and axe
+  AAA zero findings on every page, in both themes, including
   RTL and CJK locales. We are explicitly asking you to find what those
   tools miss.
 - Design tokens document measured contrast ratios inline; the accessibility

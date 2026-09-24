@@ -3,7 +3,8 @@ name: CI
 # Every push and PR rebuilds the site and enforces the full quality bar:
 #   1. ssg's 15 audit gates (WCAG, JSON-LD, CSP/SRI, links, metadata,
 #      performance, feeds, AI discovery, ...) — failing on warnings.
-#   2. pa11y-ci at WCAG2AAA across 19 representative pages.
+#   2. WAVE's documented rules plus axe AAA on every built page, light and
+#      dark, and axe in system, light and dark modes on 13 key pages.
 # The site is built in-job and, on main, deployed to GitHub Pages from
 # the same run as an artifact, so nothing reaches production that did not
 # pass every gate, and the built tree is never committed.
@@ -47,7 +48,7 @@ jobs:
         if: steps.cache-ssg.outputs.cache-hit != 'true'
         run: cargo install ssg --locked --version "$SSG_VERSION"
 
-      - name: Set up Node (build samples, tests, pa11y)
+      - name: Set up Node (build samples, tests, audits)
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: 22
@@ -148,9 +149,6 @@ jobs:
 
       - name: Lighthouse 100% (mobile, tablet, desktop, 4K, 8K)
         run: CHROME_PATH=/usr/bin/google-chrome node scripts/perf_budget.mjs http://127.0.0.1:8899
-
-      - name: Accessibility scan (pa11y-ci, WCAG2AAA)
-        run: npx pa11y-ci
 
       - name: Accessibility in system, light, and dark modes (axe)
         run: |

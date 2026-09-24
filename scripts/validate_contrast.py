@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Compute every PRISM colour-token pair and fail under its WCAG floor.
 
-pa11y samples rendered pages; it only sees the pairs a sampled page
+A page scan checks rendered pages; it only sees the pairs a page
 happens to paint. This gate reads the token blocks in
 ``static/css/prism.css`` directly and checks each declared pairing in
 both colour schemes, so a token that no audited page currently uses is
