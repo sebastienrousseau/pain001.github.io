@@ -6,7 +6,15 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
-Nothing yet.
+### Changed
+
+- Roadmap: Phase C, the declarative rule engine, is deferred. The library
+  already has 23 of its 29 profiles as data and a shipped declarative
+  overlay grammar, and issue #184 proposes a CEL policy language, so
+  building Phase C as planned would add a fourth rule format. Its first
+  step is now an ADR in the library choosing one format; it reopens once
+  the library's v0.0.71 release has landed and profile maintenance can
+  be staffed beyond one person.
 
 ## [0.0.8] - 2026-09-25
 

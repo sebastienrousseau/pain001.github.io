@@ -1,7 +1,8 @@
 # Implementation plan — completing the 2026 audit backlog
 
-**Written:** 28 July 2026 · **Revised:** 30 July 2026
-**Status:** Phases A and B shipped. Phases C–G open, ordered below.
+**Written:** 28 July 2026 · **Revised:** 25 September 2026
+**Status:** Phases A and B shipped. Phase C deferred on 25 September 2026
+(see its section). Phases D–G open, ordered below.
 **Covers:** everything from the July 2026 audit that is still open, after
 the claim-architecture and defect work already merged.
 
@@ -19,7 +20,7 @@ re-orders by *what unblocks the most*, not by what is easiest.
 | **2** | **Send the accessibility audit RFQ** | Drafted and ready in `AUDIT-RFQ.md` / `AUDIT-OUTREACH.md`; three vendors shortlisted. Nothing has been sent. An independent audit is the only external validation currently within reach. | one email |
 | **3** | **Ask three users to be named** | An institutional buyer looks for a reference customer before a feature list. Zero named adopters is a harder objection than any missing capability. | conversations |
 | **4** | ~~Phase B — layer-aware demo~~ ✅ shipped | See Phase B below. | — |
-| **5** | **Phase C — rule engine** | Prerequisite for D. Committing to C implies committing to D. | 20–30 d |
+| **5** | **Phase C — rule engine** (deferred 25 Sep 2026) | Prerequisite for D. Committing to C implies committing to D. First step is now a format decision, not code: see Phase C. | ADR first |
 | **6** | **Phase D — profile registry** | The genuine differentiator, and an indefinite freshness obligation. Do not start until profile maintenance can be staffed beyond one person — which is item 1 again. | 40–70 d + ongoing |
 | **7** | **Phase E — Readiness Lab** | Flagship, but every component is written twice if it precedes C. | 30–50 d |
 | **8** | **Phase F — enterprise packaging** | Demand-led. Only with a named pipeline. | 30–60 d |
@@ -250,6 +251,46 @@ orchestration, not a rebuild.
 ---
 
 ## Phase C — declarative rule format and evaluator
+
+### Decision, 25 September 2026: deferred, with a new first step
+
+Re-read against the library as it is, not as it was in July:
+
+- **The rules are no longer five hand-written rulebooks.** The library
+  ships 29 profiles. 23 of them are already data: `Rail` records in
+  `pain001/validation/rails.py`, evaluated by one generic `RailProfile`.
+  Only six are hand-written classes (SEPA SCT, SDD Core, SDD B2B, SCT
+  Inst, cross-border, anti-duplicate), in `schemes.py` (999 lines in the
+  0.0.70 release; split into `_scheme_rules.py` on the in-flight
+  v0.0.71 branch).
+- **A declarative grammar already exists.** The overlay grammar in
+  `pain001/corpus/rules/overlays.py` has a closed vocabulary
+  (`required`, `forbidden`, `equals`, `one_of`, `max_length`,
+  `matches`, `charset`, `if:`), locators by element path, and severity.
+  The corpus builder uses it, and it reads the rule files of the
+  bank-profile MCP server and the readiness suite unchanged.
+- **A third format is proposed.** Issue #184 (P1) asks for a YAML
+  policy DSL on CEL, aimed at company payment policy rather than bank
+  guidelines.
+
+Building Phase C as written below would add a fourth rule format. So
+Phase C does not start with code. It starts with an ADR in the library
+that picks one format for bank and scheme rules and says how the other
+two relate to it. The likely answer is to extend the overlay grammar,
+which is already declarative, reviewable and in use, rather than to
+invent a new one. CEL may still earn a separate place for policy rules.
+The ADR also has to say how the six hand-written profiles would be
+expressed, since that is the real expressiveness test now.
+
+**Conditions to reopen:** the library's v0.0.71 release has landed, so
+the validation core is not being reshaped in parallel; the ADR is
+agreed; and, because C commits to D, there is a credible plan to staff
+profile maintenance beyond one person (priority item 1).
+
+### The original plan
+
+The plan below is kept as written in July. Its counts ("five existing
+scheme rulebooks", "777 lines") describe the code at that time.
 
 **Why this is the hinge:** everything valuable in Phase D depends on
 rules being data. This phase adds no user-visible feature, which makes
@@ -494,9 +535,9 @@ estimate included, and it reuses far more of the existing architecture
 (the violation record, the i18n pipelines, the CI gates) than a
 from-scratch plan would assume.
 
-**With A and B shipped, C is the next engineering item, and it is a
-commitment, not a sprint** (see below). Items 1–3 in the priority table
-at the top would move more than any of it.
+**With A and B shipped, the next engineering step is the Phase C format
+ADR in the library, not Phase C itself** (see Phase C). Items 1–3 in the
+priority table at the top would move more than any engineering.
 
 **C is the decision point.** Committing to C implies committing to D,
 and D implies an indefinite freshness obligation. That is a genuine
