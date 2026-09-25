@@ -1986,8 +1986,8 @@ _PRISM_LINKS = (
     '<link rel="preload" href="/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin />'
 )
 _FOOTER_CREDIT = (
-    '<p class="footer-credit">Made in London. Built with '
-    '<a href="https://static-site-generator.com/">SSG</a>.</p>'
+    '<p class="footer-credit">Made in London. Built with the '
+    '<a href="https://docs.static-site-generator.com/ssg/">Static Site Generator (ssg)</a>.</p>'
 )
 
 

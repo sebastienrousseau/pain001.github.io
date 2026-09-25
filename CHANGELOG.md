@@ -6,7 +6,37 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
-Nothing yet.
+### Added
+
+- The demo's downloadable error report carries the same layers as the
+  on-screen summary. It opens with one row per layer (ISO 20022 schema,
+  data quality, scheme rulebook, your bank's profile, channel and
+  eligibility) stating what that layer concluded, in the visitor's own
+  language, including the two layers Pain001 never evaluates; every
+  finding then names its layer. Before, the report was a flat list with
+  no layer and no record of what was not checked.
+
+### Fixed
+
+- The explainer under the demo said the scheme rulebooks were CLI-only
+  and that the demo implemented only the "fail-fast" layer. The demo runs
+  the pain001 library itself, including the scheme rulebook you choose and
+  the XSD gate; the text now says so, lists what the CLI adds (any file
+  size, Excel, SQLite, JSON, Parquet and MT101 input, all 29 scheme
+  profiles where the demo offers 16, `--explain`, every edition), and is
+  retranslated in all 34 languages.
+- Seven demo status strings had never been translated in any of the 34
+  languages, including the scheme verdicts ("Passed {scheme}", "{n}
+  violation(s) against {scheme}") that the layer summary and the report
+  show; a French visitor saw them in English. All seven are translated.
+  Finding messages remain in English: the pain001 library emits them.
+- Every page's footer credit reads "Built with the Static Site Generator
+  (ssg)" and links its documentation, in place of "Built with SSG" and
+  static-site-generator.com.
+- The local audit server (`scripts/serve_audit.mjs`) served `.wasm` as
+  `application/octet-stream`, so the demo's Python runtime never compiled
+  under it and every browser audit of `/try/` saw only the page before
+  validation. It now sends the content types GitHub Pages sends.
 
 ## [0.0.7] - 2026-09-25
 
