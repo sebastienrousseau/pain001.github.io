@@ -536,8 +536,23 @@ for (const [el, view] of [[els.tabXml, "xml"], [els.tabTwin, "twin"]]) {
   });
 }
 
+/* The layer summary as the visitor sees it (already in their language):
+ * pass and fail from the cell's class; bank and channel are never
+ * evaluated locally; anything else was not run. */
+function layerSummaryRows() {
+  if (!els.layerSummary) return [];
+  return [...els.layerSummary.querySelectorAll("tr[data-layer]")].map((tr) => {
+    const cell = tr.querySelector(".layer-state");
+    const layer = tr.dataset.layer;
+    const state = cell.classList.contains("is-pass") ? "pass"
+      : cell.classList.contains("is-fail") ? "fail"
+      : (layer === "bank" || layer === "channel") ? "not-evaluated" : "not-run";
+    return { layer, state, text: cell.textContent.trim() };
+  });
+}
+
 els.reportBtn.addEventListener("click", () => {
-  downloadBlob(errorReportCsv(state.findings), "text/csv",
+  downloadBlob(errorReportCsv(state.findings, layerSummaryRows()), "text/csv",
     "pain001-error-report-" + new Date().toISOString().slice(0, 10) + ".csv");
 });
 

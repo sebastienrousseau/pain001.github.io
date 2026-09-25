@@ -186,12 +186,21 @@ export const SCENARIOS = {
 
 /* ==== Error report export ==== */
 
-export function errorReportCsv(findings) {
-  const head = "row,column,rule,value,message";
-  const q = (v) => '"' + String(v).replace(/"/g, '""') + '"';
-  return head + "\n" + findings.map((f) =>
-    [f.row, q(f.column), q(f.rule), q(f.value), q(f.message)].join(",")
-  ).join("\n");
+/* The report carries the same layer structure as the on-screen summary,
+ * so a downloaded file keeps the boundary with it: the first rows state
+ * what each layer concluded (rule "summary", the state in the value
+ * column, the visitor's own wording in the message column), including
+ * the bank and channel layers that no local tool can evaluate. Each
+ * finding then names its layer. `summary` is [{layer, state, text}]. */
+export function errorReportCsv(findings, summary = []) {
+  const head = "layer,row,column,rule,value,message";
+  const q = (v) => '"' + String(v ?? "").replace(/"/g, '""') + '"';
+  const lines = summary.map((s) =>
+    [q(s.layer), "", "", q("summary"), q(s.state), q(s.text)].join(","));
+  for (const f of findings) {
+    lines.push([q(f.layer), f.row, q(f.column), q(f.rule), q(f.value), q(f.message)].join(","));
+  }
+  return head + "\n" + lines.join("\n");
 }
 
 /* ==== Text decoding (UTF-8 with Windows-1252 fallback) ==== */
