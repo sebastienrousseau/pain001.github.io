@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "The build toolchain of pain001.com: Markdown sources compiled to hardened static HTML by the Shokunin static site generator."
+banner_alt: "The build toolchain of pain001.com: Markdown sources compiled to hardened static HTML by the Static Site Generator (ssg)."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -15,12 +15,12 @@ download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
 icon: "https://pain001.com/img/pain001.svg"
-id: "https://pain001.com/made-with-shokunin/"
-image_alt: "The build toolchain of pain001.com: Markdown sources compiled to hardened static HTML by the Shokunin static site generator."
+id: "https://pain001.com/made-with-ssg/"
+image_alt: "The build toolchain of pain001.com: Markdown sources compiled to hardened static HTML by the Static Site Generator (ssg)."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
-keywords: "shokunin, static site generator rust, ssg, llms.txt, static site security"
+keywords: "static site generator, ssg, rust, llms.txt, static site security"
 language: en-GB
 layout: page
 locale: en_GB
@@ -30,7 +30,7 @@ logo_width: 36
 logo: "https://pain001.com/img/pain001.svg"
 menu: active
 name: Pain001
-permalink: "https://pain001.com/made-with-shokunin/"
+permalink: "https://pain001.com/made-with-ssg/"
 rating: general
 referrer: no-referrer
 revisit-after: "7 days"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "Markdown in, hardened static HTML out: the toolchain behind this site."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Made with Shokunin: How This Site Is Built"
-url: "https://pain001.com/made-with-shokunin/"
+title: "Made with ssg: How This Site Is Built"
+url: "https://pain001.com/made-with-ssg/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
-atom_link: "https://pain001.com/made-with-shokunin/rss.xml"
+atom_link: "https://pain001.com/made-with-ssg/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "A Rust static site generator with security-first defaults, Markdown content, no JavaScript framework, and machine-readable surfaces from llms.txt to a CycloneDX SBOM."
-item_guid: "https://pain001.com/made-with-shokunin/rss.xml"
-item_link: "https://pain001.com/made-with-shokunin/rss.xml"
+item_guid: "https://pain001.com/made-with-ssg/rss.xml"
+item_link: "https://pain001.com/made-with-ssg/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Made with Shokunin: How This Site Is Built"
+item_title: "Made with ssg: How This Site Is Built"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Made with Shokunin: How This Site Is Built"
+apple-mobile-web-app-title: "Made with ssg: How This Site Is Built"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,8 +71,8 @@ twitter_description: "A Rust static site generator with security-first defaults,
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Made with Shokunin: How This Site Is Built"
-twitter_url: "https://pain001.com/made-with-shokunin/"
+twitter_title: "Made with ssg: How This Site Is Built"
+twitter_url: "https://pain001.com/made-with-ssg/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
 author_location: "London, UK"
@@ -82,18 +82,18 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Colophon"
-excerpt: "How pain001.com is built: the Shokunin static site generator compiles Markdown and layouts into static HTML with security-first defaults, a small build script repairs and publishes the output, and the result ships machine-readable surfaces from llms.txt to a CycloneDX SBOM with no runtime, framework, or database."
+excerpt: "How pain001.com is built: the Static Site Generator (ssg) compiles Markdown and layouts into static HTML with security-first defaults, a small build script repairs and publishes the output, and the result ships machine-readable surfaces from llms.txt to a CycloneDX SBOM with no runtime, framework, or database."
 last_reviewed: "2026-07-26"
 
 ---
 
-This site is compiled by [Shokunin (ssg)](https://github.com/sebastienrousseau/shokunin), a static site generator written in Rust with a security-first default posture: WCAG validation, CSP metadata, SBOM generation, and AI-discovery files (`llms.txt`) built into the toolchain.
+This site is compiled by the [Static Site Generator (ssg)](https://docs.static-site-generator.com/ssg/), written in Rust with a security-first default posture: WCAG validation, CSP metadata, SBOM generation, and AI-discovery files (`llms.txt`) built into the toolchain.
 
 The full stack, for the curious:
 
 - **Content**: Markdown with structured frontmatter, versioned in [Git](https://github.com/sebastienrousseau/pain001.github.io).
-- **Build**: `ssg` compiles content and layouts into static HTML; a small build script publishes to GitHub Pages.
-- **No runtime**: no JavaScript framework, no server, no database. The only client-side script is a few lines for theme switching and navigation.
+- **Build**: `ssg` compiles content and layouts into static HTML; a build script repairs, localises and checks the output, and CI publishes it to GitHub Pages.
+- **No runtime**: no JavaScript framework, no server, no database. The scripts are small and same-origin: theme and motion preferences, navigation, search, and a cookie-free page-view beacon. The one exception is the [browser demo](/try/), which loads a WebAssembly Python runtime on request and runs the library locally.
 - **Machine-readable surfaces**: [llms.txt](/llms.txt), [sitemap.xml](/sitemap.xml), [RSS](/rss.xml), [Atom](/atom.xml), [JSON Feed](/feed.json), [security.txt](/security.txt), [humans.txt](/humans.txt), and a [CycloneDX SBOM](/sbom.cdx.json).
 
 The same philosophy as the Pain001 software: standards first, validation as a gate, nothing hidden.

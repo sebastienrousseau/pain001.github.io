@@ -1916,6 +1916,8 @@ LEGACY_REDIRECTS = {
     "executive-brief-fr": "/fr/executive-brief/",
     "executive-brief-de": "/de/executive-brief/",
     "executive-brief-es": "/es/executive-brief/",
+    # Renamed in v0.0.7: the generator is the Static Site Generator (ssg).
+    "made-with-shokunin": "/made-with-ssg/",
 }
 
 

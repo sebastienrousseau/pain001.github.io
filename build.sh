@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Build pain001.com with Shokunin SSG, then publish the result to site/
+# Build pain001.com with the Static Site Generator (ssg), then publish the result to site/
 # (GitHub Pages deploys this directory as the checked workflow artefact).
 #
 #   1. `ssg build -f ssg.toml` compiles _posts/ + _layouts/ into ./Pain001
