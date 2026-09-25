@@ -92,13 +92,13 @@ last_reviewed: "2026-07-26"
 
 Each sample batch is also [downloadable as a CSV file](/samples/pain001-sample-sepa-sct.csv) to use as the template for your own ERP or spreadsheet export. The header row is the contract.
 
-The demo above implements the *fail-fast* layer of the Pain001 pipeline: required-field checks, ISO 13616 mod-97 IBAN checksums, ISO 9362 BIC structure, amount and date formats, and control totals (`NbOfTxs`, `CtrlSum`) recomputed from the records rather than trusted. Try the "Introduce an error…" menu. Each scenario plants exactly one realistic flaw (a flipped IBAN digit, a malformed BIC, a missing column, a European comma-decimal amount, an impossible date) and shows you the row-level finding a bank's gateway would otherwise report days later.
+The demo above runs the pain001 library itself, not an imitation of it: required-field checks, ISO 13616 mod-97 IBAN checksums, ISO 9362 BIC structure, amount and date formats, control totals (`NbOfTxs`, `CtrlSum`) recomputed from the records rather than trusted, the scheme rulebook you choose, and the official XSD gate. Try the "Introduce an error…" menu. Each scenario plants exactly one realistic flaw (a flipped IBAN digit, a malformed BIC, a missing column, a European comma-decimal amount, an impossible date) and shows you the row-level finding a bank's gateway would otherwise report days later.
 
-The installed toolchain runs a much deeper gate: JSON Schema validation per record with field-alias normalisation, five scheme rulebooks (SEPA SCT, Instant, SDD Core, B2B, cross-border) with rule-by-rule `--explain` output, and final validation of the rendered document against the official ISO 20022 XSD before a single byte is written. Eleven `pain.001` versions and two `pain.008` versions (`.02` and `.08`) are supported.
+The installed toolchain adds what a browser tab cannot: files of any size; input from Excel, SQLite, JSON, Parquet and SWIFT MT101; all 29 scheme profiles, including direct debits and purpose-code mandates (the demo offers 16), with rule-by-rule `--explain` output; and every supported edition, eleven `pain.001` versions and two `pain.008` versions (`.02` and `.08`).
 
 ```bash
 pip install pain001
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --scheme sepa-sct --dry-run
 ```
 
-Step 3 above is not a simulation: it boots a Python runtime in WebAssembly and runs [xmlschema](https://pypi.org/project/xmlschema/) against the official `pain.001.001.09` schema, served from this site. It is the same class of XSD gate the CLI applies. What remains CLI-only is the rest of the pipeline: JSON Schema normalisation, the five scheme rulebooks with `--explain`, and the other ten message definitions.
+Step 3 re-runs the schema gate on its own, so you can edit the XML above and check it again: [xmlschema](https://pypi.org/project/xmlschema/) against the official `pain.001.001.09` schema, served from this site. It is the same class of XSD gate the CLI applies.

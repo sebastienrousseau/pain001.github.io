@@ -1,7 +1,7 @@
 # Implementation plan — completing the 2026 audit backlog
 
 **Written:** 28 July 2026 · **Revised:** 30 July 2026
-**Status:** Phase A shipped. Phases B–G open, ordered below.
+**Status:** Phases A and B shipped. Phases C–G open, ordered below.
 **Covers:** everything from the July 2026 audit that is still open, after
 the claim-architecture and defect work already merged.
 
@@ -18,7 +18,7 @@ re-orders by *what unblocks the most*, not by what is easiest.
 | **1** | **Recruit a second maintainer** | The single highest-leverage action available. It is the sole blocker on OpenSSF badge silver (`bus_factor`) and gold (`two_person_review`, `contributors_unassociated`), and on Scorecard `Code-Review 0` and `Contributors 0`. Four separate scores, one cause. No amount of engineering moves any of them. | recruiting |
 | **2** | **Send the accessibility audit RFQ** | Drafted and ready in `AUDIT-RFQ.md` / `AUDIT-OUTREACH.md`; three vendors shortlisted. Nothing has been sent. An independent audit is the only external validation currently within reach. | one email |
 | **3** | **Ask three users to be named** | An institutional buyer looks for a reference customer before a feature list. Zero named adopters is a harder objection than any missing capability. | conversations |
-| **4** | **Phase B — layer-aware demo** | Makes the four-layer claim tangible where visitors actually land. No maintenance commitment, no dependency on C. | 12–18 d |
+| **4** | ~~Phase B — layer-aware demo~~ ✅ shipped | See Phase B below. | — |
 | **5** | **Phase C — rule engine** | Prerequisite for D. Committing to C implies committing to D. | 20–30 d |
 | **6** | **Phase D — profile registry** | The genuine differentiator, and an indefinite freshness obligation. Do not start until profile maintenance can be staffed beyond one person — which is item 1 again. | 40–70 d + ongoing |
 | **7** | **Phase E — Readiness Lab** | Flagship, but every component is written twice if it precedes C. | 30–50 d |
@@ -159,7 +159,17 @@ like an oversight.
 
 ---
 
-## Phase B — layer-aware results in the demo
+## Phase B — layer-aware results in the demo ✅ SHIPPED
+
+**Closed in v0.0.8 (September 2026).** Every finding carries a layer
+(`iso`, `data`, `scheme`, `input`); the five-row summary appears on every
+run, with the bank and channel rows permanently "not evaluated"; the
+scheme selector offers 16 of the library's 29 profiles; and the
+downloadable report opens with the same five layer rows before the
+findings. The parity trap below no longer applies: the demo does not
+reimplement the rules, it runs the pain001 library itself in WebAssembly,
+so the browser and the CLI evaluate the same code. The original plan
+follows for the record.
 
 **Why second:** the homepage now *states* the four-layer model, but
 `/try/` still returns a flat verdict. Until the demo demonstrates the
@@ -471,12 +481,12 @@ is the single thing an institutional buyer looks for first.
 | Phase | Effort (person-days) | Depends on | Ship value |
 | --- | ---: | --- | --- |
 | ~~A — pain.001.001.13~~ | ~~5–8~~ | — | ✅ shipped in v0.0.58 |
-| B — layer-aware demo | 12–18 | — | Makes the new claim real |
+| ~~B — layer-aware demo~~ | ~~12–18~~ | — | ✅ shipped in v0.0.8 |
 | C — rule engine | 20–30 | — | Prerequisite for D |
 | D — profile registry | 40–70 + ongoing | C | The differentiator |
 | E — Readiness Lab | 30–50 | B, C, D | Flagship product |
 | F — enterprise packaging | 30–60 | demand | Regulated adoption |
-| **Remaining (B–F)** | **132–228** | | |
+| **Remaining (C–F)** | **120–210** | | |
 
 That is meaningfully below the audit's 365–625 estimate, for two
 reasons: it excludes the team-building and marketing workstreams that
@@ -484,10 +494,9 @@ estimate included, and it reuses far more of the existing architecture
 (the violation record, the i18n pipelines, the CI gates) than a
 from-scratch plan would assume.
 
-**With A shipped, B is the next engineering item.** If only two weeks
-are available, do B: it makes the repositioning tangible and creates no
-maintenance commitment. But see the priority table at the top — two
-weeks spent on items 1–3 would move more.
+**With A and B shipped, C is the next engineering item, and it is a
+commitment, not a sprint** (see below). Items 1–3 in the priority table
+at the top would move more than any of it.
 
 **C is the decision point.** Committing to C implies committing to D,
 and D implies an indefinite freshness obligation. That is a genuine

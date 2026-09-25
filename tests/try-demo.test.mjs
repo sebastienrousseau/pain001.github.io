@@ -70,14 +70,33 @@ test("parseCsv: ragged rows reported, not silently dropped", () => {
 
 /* ==== Report + decoding ==== */
 
-test("error report CSV quotes fields", () => {
+test("error report CSV quotes fields and names each finding's layer", () => {
   const report = errorReportCsv([
-    { row: 3, column: "debtor_account_IBAN", rule: "iban-checksum", value: 'X"Y', message: "fails, badly" },
+    { layer: "data", row: 3, column: "debtor_account_IBAN", rule: "iban-checksum", value: 'X"Y', message: "fails, badly" },
   ]);
-  assert.ok(report.startsWith("row,column,rule,value,message\n"));
+  assert.ok(report.startsWith("layer,row,column,rule,value,message\n"));
+  assert.ok(report.includes('"data",3,"debtor_account_IBAN"'));
   assert.ok(report.includes('"X""Y"'));
   assert.ok(report.includes('"fails, badly"'));
-  assert.equal(errorReportCsv([]), "row,column,rule,value,message\n");
+  assert.equal(errorReportCsv([]), "layer,row,column,rule,value,message\n");
+});
+
+test("error report leads with the layer summary, including the layers Pain001 cannot evaluate", () => {
+  const summary = [
+    { layer: "iso", state: "fail", text: "1 issue(s) the schema would reject" },
+    { layer: "data", state: "pass", text: "No identifier or format problems found" },
+    { layer: "scheme", state: "not-run", text: "Not run: choose a scheme rulebook in step 1" },
+    { layer: "bank", state: "not-evaluated", text: 'Not evaluated: "no" bank profiles' },
+    { layer: "channel", state: "not-evaluated", text: "Not evaluated: decided by your bank, not the file" },
+  ];
+  const finding = { layer: "iso", row: 2, column: "currency", rule: "required", value: undefined, message: "missing" };
+  const lines = errorReportCsv([finding], summary).split("\n");
+  assert.equal(lines.length, 1 + summary.length + 1);
+  assert.equal(lines[1], '"iso",,,"summary","fail","1 issue(s) the schema would reject"');
+  assert.equal(lines[4], '"bank",,,"summary","not-evaluated","Not evaluated: ""no"" bank profiles"');
+  assert.equal(lines[5], '"channel",,,"summary","not-evaluated","Not evaluated: decided by your bank, not the file"');
+  // a finding follows the summary; a missing value is an empty field, not "undefined"
+  assert.equal(lines[6], '"iso",2,"currency","required","","missing"');
 });
 
 test("windows-1252 fallback decoding", () => {

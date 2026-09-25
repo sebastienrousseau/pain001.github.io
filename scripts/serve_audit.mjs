@@ -17,6 +17,21 @@ const types = {
   ".txt": "text/plain; charset=utf-8",
   ".webmanifest": "application/manifest+json",
   ".xml": "application/xml; charset=utf-8",
+  // The rest match what GitHub Pages sends. Without `.wasm` the demo's
+  // Python runtime cannot compile (browsers require application/wasm for
+  // streaming compilation), so every audit of /try/ saw only the page
+  // before validation, never a result.
+  ".wasm": "application/wasm",
+  ".avif": "image/avif",
+  ".webp": "image/webp",
+  ".png": "image/png",
+  ".jpg": "image/jpeg",
+  ".ico": "image/x-icon",
+  ".woff2": "font/woff2",
+  ".csv": "text/csv; charset=utf-8",
+  ".xsd": "application/xml; charset=utf-8",
+  ".zip": "application/zip",
+  ".whl": "application/zip",
 };
 const compressible = new Set([".css", ".html", ".js", ".json", ".svg", ".txt", ".webmanifest", ".xml"]);
 
