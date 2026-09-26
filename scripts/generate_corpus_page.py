@@ -74,11 +74,31 @@ def lib_version(lib: Path) -> str:
     return m.group(1) if m else "unknown"
 
 
-def add_to_zip(zf: zipfile.ZipFile, path: Path, arcname: str) -> None:
-    info = zipfile.ZipInfo(arcname, date_time=ZIP_TIME)
-    info.compress_type = zipfile.ZIP_DEFLATED
-    info.external_attr = 0o644 << 16
-    zf.writestr(info, path.read_bytes())
+def write_zip(target: Path, entries: list[tuple[str, bytes]]) -> None:
+    """Write ``entries`` as a zip, unless ``target`` already holds exactly them.
+
+    The fixed timestamp makes a zip reproducible on one machine, but DEFLATE
+    output depends on the zlib build: the same bytes compress differently
+    on the macOS and Linux runners, so a regeneration that changed nothing
+    still rewrote five zips. When the existing file has the same members,
+    metadata and uncompressed bytes, it is kept as it is.
+    """
+    if target.is_file():
+        try:
+            with zipfile.ZipFile(target) as old:
+                listed = [(i.filename, i.date_time, i.external_attr, i.compress_type)
+                          for i in old.infolist()]
+                wanted = [(name, ZIP_TIME, 0o644 << 16, zipfile.ZIP_DEFLATED) for name, _ in entries]
+                if listed == wanted and all(old.read(name) == data for name, data in entries):
+                    return
+        except zipfile.BadZipFile:
+            pass
+    with zipfile.ZipFile(target, "w") as zf:
+        for name, data in entries:
+            info = zipfile.ZipInfo(name, date_time=ZIP_TIME)
+            info.compress_type = zipfile.ZIP_DEFLATED
+            info.external_attr = 0o644 << 16
+            zf.writestr(info, data)
 
 
 def kb(n: int) -> str:
@@ -183,29 +203,27 @@ def copy_coverage(editions: list[dict], data: Path) -> None:
 def write_zips(
     files: list[dict], editions: list[dict], data: Path, version: str
 ) -> dict[str, int]:
-    for old in STATIC.glob("*.zip"):
-        old.unlink()
-    sizes: dict[str, int] = {}
-    full = STATIC / f"pain001-example-corpus-{version}.zip"
-    with zipfile.ZipFile(full, "w") as zf:
-        for record in files:
-            add_to_zip(zf, record["_xml"], "market/" + record["_rel"])
-            info = zipfile.ZipInfo(
-                "market/" + record["_rel"].replace(".xml", ".provenance.yaml"),
-                date_time=ZIP_TIME,
-            )
-            info.compress_type = zipfile.ZIP_DEFLATED
-            info.external_attr = 0o644 << 16
-            zf.writestr(info, record["_public_sidecar"].encode("utf-8"))
-        for edition in editions:
-            for src in [edition["_dir"] / "coverage.json", *edition["_files"]]:
-                add_to_zip(zf, src, "coverage/" + src.relative_to(data / "coverage").as_posix())
-    sizes[full.name] = full.stat().st_size
+    archives: dict[str, list[tuple[str, bytes]]] = {}
+    full: list[tuple[str, bytes]] = []
+    for record in files:
+        full.append(("market/" + record["_rel"], record["_xml"].read_bytes()))
+        full.append(("market/" + record["_rel"].replace(".xml", ".provenance.yaml"),
+                     record["_public_sidecar"].encode("utf-8")))
     for edition in editions:
-        name = f"pain001-coverage-{edition['message_type']}-{version}.zip"
-        with zipfile.ZipFile(STATIC / name, "w") as zf:
-            for src in [edition["_dir"] / "coverage.json", *edition["_files"]]:
-                add_to_zip(zf, src, src.name)
+        for src in [edition["_dir"] / "coverage.json", *edition["_files"]]:
+            full.append(("coverage/" + src.relative_to(data / "coverage").as_posix(), src.read_bytes()))
+    archives[f"pain001-example-corpus-{version}.zip"] = full
+    for edition in editions:
+        archives[f"pain001-coverage-{edition['message_type']}-{version}.zip"] = [
+            (src.name, src.read_bytes())
+            for src in [edition["_dir"] / "coverage.json", *edition["_files"]]
+        ]
+    for old in STATIC.glob("*.zip"):
+        if old.name not in archives:
+            old.unlink()
+    sizes: dict[str, int] = {}
+    for name, entries in archives.items():
+        write_zip(STATIC / name, entries)
         sizes[name] = (STATIC / name).stat().st_size
     return sizes
 

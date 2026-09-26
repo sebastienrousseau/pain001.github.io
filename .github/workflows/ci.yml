@@ -26,7 +26,7 @@ env:
 
 jobs:
   build-and-audit:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     # The gate set takes about 32 minutes: Lighthouse over five profiles
     # is 14 of them and the site-wide axe scan 11. The limit is headroom,
     # not a target; at 30 the last step was cancelled mid-scan.
@@ -70,7 +70,7 @@ jobs:
         run: ssg audit -f ssg.toml -o site --severity warn --fail-on warn
 
       - name: Unit tests (demo input handling)
-        run: node --experimental-test-coverage --test-coverage-lines=100 --test-coverage-functions=100 --test-coverage-branches=100 --test tests/try-demo.test.mjs
+        run: node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --experimental-test-coverage --test-coverage-lines=100 --test-coverage-functions=100 --test-coverage-branches=100 --test tests/try-demo.test.mjs
 
       - name: Browser engine runs the library (Node, vendored runtime)
         run: node tests/engine.integration.mjs
@@ -186,7 +186,7 @@ jobs:
 
   repository-quality:
     name: Repository quality
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -231,7 +231,7 @@ jobs:
 
   node-matrix:
     name: Unit tests (Node ${{ matrix.node }})
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     # package.json declares engines >= 22, and the build job only ever proves
     # Node 22. This backs the published floor on both supported majors: the
     # class of defect it catches is module-resolution drift, where a change to
@@ -257,7 +257,7 @@ jobs:
   dependency-review:
     name: Dependency review
     if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
     steps:
@@ -268,7 +268,7 @@ jobs:
     name: Deploy to GitHub Pages
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: build-and-audit
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       pages: write
       id-token: write

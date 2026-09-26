@@ -38,7 +38,7 @@ permissions:
 
 jobs:
   target:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 5
     outputs:
       version: ${{ steps.pick.outputs.version }}
@@ -64,7 +64,7 @@ jobs:
   regenerate:
     needs: target
     if: needs.target.outputs.version != ''
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: write
       pull-requests: write
@@ -150,7 +150,7 @@ jobs:
       - name: Gates
         run: |
           ssg audit -f ssg.toml -o site --severity warn --fail-on warn
-          node --test tests/*.test.mjs tests/*.test.js
+          npm test
           python3 scripts/validate_pages_i18n.py && python3 scripts/validate_runtime_i18n.py && python3 scripts/validate_try_i18n.py
           python3 scripts/validate_i18n_keys_live.py
           python3 scripts/validate_content_integrity.py
