@@ -26,8 +26,25 @@ All notable changes to this website are documented here. The format follows
   inline styles under the CSP, the LICENSE pointer). Each test was seen
   to fail without the fix it guards. `make test` and CI run it, from the
   hash-pinned `requirements/test.txt`.
+- `docs/assurance-case.md`: the site's security requirements, trust
+  boundaries, design principles and the weaknesses it counters.
+- `docs/security-review-2026-09.md`: a review against that case with
+  seven findings and their status. It is not independent: the
+  maintainer did it with an AI assistant.
+- Coding standards, named in `DEVELOPMENT.md` and enforced in CI: ruff
+  for Python (`ruff.toml`) and ESLint for JavaScript
+  (`eslint.config.mjs`). `make lint` runs every linter.
+- Every source file carries its own SPDX copyright and licence header,
+  checked by `scripts/validate_spdx_headers.py` in CI.
 
 ### Changed
+
+- Release archives are reproducible. The release workflow pins every
+  timestamp to the tagged commit (`SOURCE_DATE_EPOCH`), packages the
+  site deterministically, builds it again from a clean tree and refuses
+  to release unless the release files are byte-identical.
+- `SECURITY.md` sets out how a report is handled, from acknowledgement
+  to advisory, and credits reporters unless they ask not to be.
 
 - `CONTRIBUTING.md` states the test policy the project already follows:
   new or changed behaviour comes with tests, and a fix with a test that
@@ -35,6 +52,9 @@ All notable changes to this website are documented here. The format follows
 
 ### Fixed
 
+- The build no longer publishes 385 invalid per-page
+  `news-sitemap.xml` files that ssg wrote beside every page, each with
+  an empty `<loc>` and the build time. The root news sitemap is kept.
 - CodeQL flagged an empty `except` in the corpus-zip check added in
   0.0.9 (`py/empty-except`). The check is now a function that returns
   whether an existing zip already holds the entries, and a damaged zip
