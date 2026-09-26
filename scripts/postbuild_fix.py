@@ -32,6 +32,7 @@ import base64
 import html as _html
 import json
 import re
+import shutil
 import sys
 from datetime import date
 from pathlib import Path
@@ -1913,25 +1914,41 @@ def main() -> None:
     retitle_tag_pages(site)
     defer_ssg_search(site)
     ensure_social_metadata(site)
-    remove_stray_news_sitemaps(site)
+    remove_stray_per_page_files(site)
 
 
-def remove_stray_news_sitemaps(site: Path) -> int:
-    """Delete the per-page news-sitemap.xml files ssg writes beside pages.
+# Files ssg writes into every page directory as well as the root. Only the
+# root copies are real: every page links /rss.xml, /sitemap.xml and
+# /manifest.json, and crawlers read only /robots.txt.
+STRAY_PER_PAGE_FILES = ("news-sitemap.xml", "sitemap.xml", "robots.txt", "rss.xml", "manifest.json")
 
-    ssg writes one into every page directory, not just the root. Those
-    copies are invalid (an empty <loc>, "Unnamed Publication", "Untitled
-    Article"), nothing links to them, and each carries the build time as
-    its publication date, which alone made two builds of one commit
-    differ in 385 files. The root /news-sitemap.xml is the real one and
-    is kept.
+
+def remove_stray_per_page_files(site: Path) -> int:
+    """Delete the per-directory copies of site-wide files, and /404/.
+
+    ssg writes a news-sitemap.xml, sitemap.xml, robots.txt, rss.xml and
+    manifest.json beside every page. None is linked: pages reference the
+    root copies. They were publicly served all the same: 385 of each, the
+    news sitemaps invalid and stamped with the build time (which made two
+    builds differ), the sitemaps empty, and each robots.txt pointing at its
+    own empty sitemap.
+
+    /404/ goes too. GitHub Pages serves /404.html (written by
+    mark_noindex_pages) for any missing URL with a 404 status; /404/ itself
+    was a second copy served with 200, which Search Console reported as a
+    soft 404.
     """
     removed = 0
-    for stray in site.rglob("news-sitemap.xml"):
-        if stray.parent != site:
-            stray.unlink()
-            removed += 1
-    print(f"[postbuild] removed {removed} stray per-page news sitemap(s)")
+    for name in STRAY_PER_PAGE_FILES:
+        for stray in site.rglob(name):
+            if stray.parent != site:
+                stray.unlink()
+                removed += 1
+    not_found = site / "404"
+    if (site / "404.html").is_file() and not_found.is_dir():
+        shutil.rmtree(not_found)
+        removed += 1
+    print(f"[postbuild] removed {removed} stray per-page file(s) and the /404/ copy")
     return removed
 
 
