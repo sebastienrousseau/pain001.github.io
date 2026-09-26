@@ -11,6 +11,10 @@ All notable changes to this website are documented here. The format follows
 - `CONTRIBUTING.md` sets out the code-review standard every pull request
   is checked against, and the pull request template links it. It also
   points newcomers to the good-first-issue tasks.
+- Tests for the legacy-URL redirect as the build stamps it: a retired
+  path is sent to its new page, other paths stay put, and names such as
+  `toString` or `constructor` never redirect. `redirect.js` now has 100%
+  branch coverage, up from 50% (#53).
 - Tests for the SPDX header gate (`scripts/validate_spdx_headers.py`):
   what it accepts, what it reports, which paths it exempts, and that it
   reads only the first ten lines of a file (#51).
