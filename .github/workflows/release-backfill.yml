@@ -1,0 +1,149 @@
+# Complete the GitHub release of an existing signed tag.
+#
+# v0.0.1 and v0.0.2 predate release.yml, so their releases carry notes but
+# no assets; v0.0.3 and v0.0.4 were tagged but their release runs failed on
+# SBOM attestation (fixed in v0.0.5). This gives such a tag what release.yml
+# gives a new one: the site archive, its CycloneDX SBOM, SHA256SUMS, build
+# provenance and SBOM attestations, and a title and notes in the release
+# format (scripts/release_notes.py). The tag itself is never touched.
+#
+# A release that already carries SHA256SUMS keeps its assets: they are
+# downloaded and checked against it, and only the title and notes are
+# rewritten. Running this on any tag is therefore safe, and a second run
+# changes nothing.
+#
+# What the archive holds is the site as published at that tag: the tag's
+# own build.sh output for tags that have release.yml (v0.0.3 onwards), and
+# otherwise the committed docs/ tree GitHub Pages served (v0.0.1, v0.0.2).
+# scripts/release_backfill.py packages it reproducibly.
+#
+# Run by hand, once per tag: Actions > Release backfill > tag.
+name: Release backfill
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing signed release tag, e.g. v0.0.3"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
+    env:
+      TAG: ${{ inputs.tag }}
+      SSG_VERSION: 0.0.63
+    steps:
+      - name: Accept only a release tag name
+        run: '[[ "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]'
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Verify the tag's signature
+        run: |
+          git config gpg.format ssh
+          git config gpg.ssh.allowedSignersFile "$GITHUB_WORKSPACE/.github/allowed_signers"
+          git verify-tag "$TAG"
+          echo "TAG_TIME=$(git log -1 --format=%ct "${TAG}^{commit}")" >> "$GITHUB_ENV"
+
+      - name: Keep the assets a release already has
+        id: existing
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "$TAG" --json assets -q '.assets[].name' 2>/dev/null | grep -qx SHA256SUMS; then
+            gh release download "$TAG" --dir dist
+            (cd dist && sha256sum --check SHA256SUMS)
+            echo "assets=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "assets=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check out the tag's own tree
+        if: steps.existing.outputs.assets != 'true'
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ inputs.tag }}
+          path: src
+          persist-credentials: false
+
+      - name: Does the tag build its site, or commit it?
+        if: steps.existing.outputs.assets != 'true'
+        id: kind
+        run: |
+          if [[ -f src/build.sh && -f src/.github/workflows/release.yml ]]; then
+            echo "build=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "build=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - if: steps.kind.outputs.build == 'true'
+        uses: dtolnay/rust-toolchain@6bed0761d98439e5a578e2877258200ad565ba87 # stable
+
+      - if: steps.kind.outputs.build == 'true'
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        id: cache-ssg
+        with:
+          path: ~/.cargo/bin/ssg
+          key: ssg-${{ env.SSG_VERSION }}-${{ runner.os }}
+
+      - if: steps.kind.outputs.build == 'true' && steps.cache-ssg.outputs.cache-hit != 'true'
+        run: cargo install ssg --locked --version "$SSG_VERSION"
+
+      - if: steps.kind.outputs.build == 'true'
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 22
+
+      - name: Build the tag with its own build.sh
+        if: steps.kind.outputs.build == 'true'
+        working-directory: src
+        run: |
+          npm ci
+          ./build.sh
+
+      - name: Package the site, SBOM and checksums
+        if: steps.existing.outputs.assets != 'true'
+        run: python3 scripts/release_backfill.py --src src --tag "$TAG" --out dist --mtime "$TAG_TIME"
+
+      - name: Attest website provenance
+        if: steps.existing.outputs.assets != 'true'
+        uses: actions/attest-build-provenance@977bb373ede98d70efdf65b84cb5f73e068dcc2a # v3
+        with:
+          subject-path: "dist/pain001-site-${{ inputs.tag }}.tar.gz"
+
+      - name: Attest SBOM
+        if: steps.existing.outputs.assets != 'true'
+        uses: actions/attest-sbom@c604332985a26aa8cf1bdc465b92731239ec6b9e # v4.1.0
+        with:
+          subject-path: "dist/pain001-site-${{ inputs.tag }}.tar.gz"
+          sbom-path: "dist/pain001-site-${{ inputs.tag }}.cdx.json"
+
+      - name: Publish or complete the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BUILT: ${{ steps.existing.outputs.assets != 'true' }}
+        run: |
+          notes="$RUNNER_TEMP/notes.md"
+          title="$(python3 scripts/release_notes.py --tag "$TAG" --title)"
+          python3 scripts/release_notes.py --tag "$TAG" --sums dist/SHA256SUMS --out "$notes"
+          if gh release view "$TAG" > /dev/null 2>&1; then
+            if [[ "$BUILT" == "true" ]]; then
+              gh release upload "$TAG" dist/*
+            fi
+            gh release edit "$TAG" --title "$title" --notes-file "$notes"
+          else
+            gh release create "$TAG" dist/* --verify-tag --latest=false --title "$title" --notes-file "$notes"
+          fi

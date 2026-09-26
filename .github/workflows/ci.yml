@@ -216,6 +216,9 @@ jobs:
       - name: README conforms to the workspace template
         run: python3 scripts/validate_readme.py
 
+      - name: Release Highlights are in the release-page format
+        run: python3 scripts/release_notes.py --check
+
       - name: Dependency advisories (npm audit, documented exceptions only)
         run: python3 scripts/audit_deps.py
 
