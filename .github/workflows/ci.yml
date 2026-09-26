@@ -37,6 +37,12 @@ jobs:
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@6bed0761d98439e5a578e2877258200ad565ba87 # stable
 
+      - name: Cache the demo runtime (fetched and hash-verified by build.sh)
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.cache/pain001-runtime
+          key: pain001-runtime-${{ hashFiles('static/pyodide/pain001-runtime.json') }}
+
       - name: Cache ssg binary
         id: cache-ssg
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
@@ -120,7 +126,7 @@ jobs:
 
       - name: Documentation snippets reference real API
         run: |
-          python3 -m pip install --quiet pain001
+          python3 -m pip install --quiet --require-hashes -r requirements/snippets.txt
           python3 scripts/validate_snippets.py
 
       # Layout and print defects produce valid, accessible, well-linked
@@ -130,11 +136,11 @@ jobs:
       # screenshot. These assert the invariants instead.
       - name: Layout and print integrity (real Chrome)
         run: |
+          # The audit toolchain is pinned by tools/a11y/package-lock.json;
+          # the runner's own Chrome is used, so no browser is downloaded.
           mkdir -p .a11y-tools
-          cd .a11y-tools
-          echo '{"name":"pain001-a11y-tools","private":true}' > package.json
-          PUPPETEER_SKIP_DOWNLOAD=1 npm install --silent --no-audit --no-fund puppeteer-core@23
-          cd ..
+          cp tools/a11y/package.json tools/a11y/package-lock.json .a11y-tools/
+          PUPPETEER_SKIP_DOWNLOAD=1 npm ci --prefix .a11y-tools --no-audit --no-fund
           nohup node scripts/serve_audit.mjs site 8899 > "$RUNNER_TEMP/pain001-audit-server.log" 2>&1 &
           for _ in {1..20}; do
             if curl --fail --silent http://127.0.0.1:8899/ > /dev/null; then
@@ -152,7 +158,6 @@ jobs:
 
       - name: Accessibility in system, light, and dark modes (axe)
         run: |
-          npm install --prefix .a11y-tools --no-save --no-audit --no-fund puppeteer-core@23 @axe-core/puppeteer@4.10.2
           node scripts/a11y_modes.mjs
 
       # Every built page, not a sample: WAVE's documented error and alert
@@ -205,11 +210,14 @@ jobs:
       - name: Documentation lint
         run: |
           npx --yes markdownlint-cli2@0.23.2
-          python -m pip install --quiet codespell==2.4.3
+          python -m pip install --quiet --require-hashes -r requirements/lint.txt
           codespell
 
       - name: README conforms to the workspace template
         run: python3 scripts/validate_readme.py
+
+      - name: Release Highlights are in the release-page format
+        run: python3 scripts/release_notes.py --check
 
       - name: Dependency advisories (npm audit, documented exceptions only)
         run: python3 scripts/audit_deps.py
@@ -219,7 +227,6 @@ jobs:
 
       - name: REUSE licence metadata
         run: |
-          python -m pip install --quiet reuse==6.2.0
           reuse lint
 
   node-matrix:

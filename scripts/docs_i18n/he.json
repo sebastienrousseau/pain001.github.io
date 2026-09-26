@@ -2,9 +2,9 @@
  "documentation": {
   "meta": {
    "title": "מדריך טכני של Pain001: CLI, Python API ו-REST",
-   "description": "מדריך מלא ל-pain001 v0.0.56: תת-פקודות ודגלים ב-CLI, Python API, נקודות קצה REST תחת /api/v1, ספרי כללי מסלולים, נרמול קלט וארכיטקטורת תוספים.",
+   "description": "מדריך מלא ל-pain001 v0.0.71: תת-פקודות ודגלים ב-CLI, Python API, נקודות קצה REST תחת /api/v1, ספרי כללי מסלולים, נרמול קלט וארכיטקטורת תוספים.",
    "eyebrow": "מדריך עזר",
-   "deck": "כל דגל, כל נקודת קצה וכל התנהגות של pain001 v0.0.56, מתוך הקוד שנשלח בפועל, לא מתוך שאיפות."
+   "deck": "כל דגל, כל נקודת קצה וכל התנהגות של pain001 v0.0.71, מתוך הקוד שנשלח בפועל, לא מתוך שאיפות."
   },
   "text": {
    "<a href=\"/\">Home</a>": "<a href=\"/\">דף הבית</a>",
@@ -16,7 +16,7 @@
    "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">נרמול קלט</a>",
    "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">ארכיטקטורת תוספים</a>",
    "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">שערי איכות</a>",
-   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.70</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "מדריך זה מתעד את ממשק שורת הפקודה, את ה-Python API, את מיקרו-שירות ה-REST ואת צינור האימות של <strong>pain001 v0.0.70</strong>. כל דגל, כל נקודת קצה וכל התנהגות המפורטים כאן נלקחו מהקוד שנשלח בפועל, ולא משאיפות.",
+   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.71</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "מדריך זה מתעד את ממשק שורת הפקודה, את ה-Python API, את מיקרו-שירות ה-REST ואת צינור האימות של <strong>pain001 v0.0.71</strong>. כל דגל, כל נקודת קצה וכל התנהגות המפורטים כאן נלקחו מהקוד שנשלח בפועל, ולא משאיפות.",
    "Pain001 supports <strong>12 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).": "Pain001 תומכת ב<strong>12 הגדרות הודעה של ISO 20022</strong>: מ-<code>pain.001.001.03</code> ועד <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, אחת עשרה גרסאות) ו-<code>pain.008.001.02</code> (Customer Direct Debit Initiation).",
    "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. ממשק שורת הפקודה<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
    "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "קובץ ההרצה <code>pain001</code> מארגן את הפונקציונליות שלו בתת-פקודות. הרצה עם דגלי יצירה בלבד מפעילה את <code>generate</code> באופן משתמע, כך שאוטומציות קיימות ממשיכות לפעול.",

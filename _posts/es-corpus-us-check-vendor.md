@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-09-23T08:00:00+00:00"
+date: "2026-09-26T08:00:00+00:00"
 description: "Bank-issued cheque to a vendor, mailed to the creditor. Una muestra pain.001 validada (Estados Unidos, raíl cheque), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "Bank-issued cheque to a vendor, mailed to the creditor. Una muestra pain.001 validada (Estados Unidos, raíl cheque), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
 item_guid: "https://pain001.com/es/corpus-us-check-vendor/"
 item_link: "https://pain001.com/es/corpus-us-check-vendor/"
-item_pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+item_pub_date: "Sat, 26 Sep 2026 08:00:00 +0000"
 item_title: "Ejemplo pain.001 ISO 20022 us.check.vendor: Estados Unidos (cheque)"
-last_build_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+last_build_date: "Sat, 26 Sep 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+pub_date: "Sat, 26 Sep 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Descripción del escenario, citada del registro de procedencia (texto original e
 
 > Bank-issued cheque to a vendor, mailed to the creditor.
 
-Un archivo de iniciación de pagos (**Estados Unidos**, raíl **cheque**), entregado en `pain.001.001.03`, `pain.001.001.09`, generado y comprobado por pain001 0.0.70. Es un ejemplo sintético construido a partir de los reglamentos públicos de los esquemas de pago: no hay detrás ninguna parte real, ninguna cuenta real ni ninguna guía bancaria.
+Un archivo de iniciación de pagos (**Estados Unidos**, raíl **cheque**), entregado en `pain.001.001.03`, `pain.001.001.09`, generado y comprobado por pain001 0.0.71. Es un ejemplo sintético construido a partir de los reglamentos públicos de los esquemas de pago: no hay detrás ninguna parte real, ninguna cuenta real ni ninguna guía bancaria.
 
 ## Archivos
 

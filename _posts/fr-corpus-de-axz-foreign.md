@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-09-23T08:00:00+00:00"
+date: "2026-09-26T08:00:00+00:00"
 description: "Foreign payment in USD from a German account, DK order type AXZ. Un exemple pain.001 validé (Allemagne, rail cross-border), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "Foreign payment in USD from a German account, DK order type AXZ. Un exemple pain.001 validé (Allemagne, rail cross-border), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur."
 item_guid: "https://pain001.com/fr/corpus-de-axz-foreign/"
 item_link: "https://pain001.com/fr/corpus-de-axz-foreign/"
-item_pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+item_pub_date: "Sat, 26 Sep 2026 08:00:00 +0000"
 item_title: "Exemple pain.001 ISO 20022 de.axz.foreign : Allemagne (cross-border)"
-last_build_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+last_build_date: "Sat, 26 Sep 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+pub_date: "Sat, 26 Sep 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Description du scénario, citée depuis la fiche de provenance (texte original e
 
 > Foreign payment in USD from a German account, DK order type AXZ.
 
-Un fichier d'initiation de paiement (**Allemagne**, rail **cross-border**), livré en `pain.001.001.03`, `pain.001.001.09`, généré et vérifié par pain001 0.0.70. C'est un exemple synthétique construit à partir des règles publiques des schémas de paiement : aucune partie réelle, aucun compte réel, aucune directive bancaire derrière lui.
+Un fichier d'initiation de paiement (**Allemagne**, rail **cross-border**), livré en `pain.001.001.03`, `pain.001.001.09`, généré et vérifié par pain001 0.0.71. C'est un exemple synthétique construit à partir des règles publiques des schémas de paiement : aucune partie réelle, aucun compte réel, aucune directive bancaire derrière lui.
 
 ## Fichiers
 

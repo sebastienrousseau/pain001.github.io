@@ -30,8 +30,9 @@ _posts + _layouts + ssg.toml
         GitHub Pages deployment
 ```
 
-The `/try/` tool loads only same-origin, vendored Pyodide, schema, and wheel
-assets. Payment data stays in the browser. Cloudflare measurement is excluded
+The `/try/` tool loads only same-origin Pyodide, schema, and wheel assets,
+fetched at build time and verified against the SHA-256 pins in
+`static/pyodide/pain001-runtime.json`. Payment data stays in the browser. Cloudflare measurement is excluded
 from the demo. The content security policy blocks arbitrary third-party code.
 
 ## Theme

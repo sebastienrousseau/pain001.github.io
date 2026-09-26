@@ -2,9 +2,9 @@
  "documentation": {
   "meta": {
    "title": "Pain001 Teknik Referans: CLI, Python API ve REST",
-   "description": "pain001 v0.0.56 için tam referans: CLI alt komutları ve bayrakları, Python API, /api/v1 altındaki REST uç noktaları, şema kural kitapları, girdi normalizasyonu ve eklenti mimarisi.",
+   "description": "pain001 v0.0.71 için tam referans: CLI alt komutları ve bayrakları, Python API, /api/v1 altındaki REST uç noktaları, şema kural kitapları, girdi normalizasyonu ve eklenti mimarisi.",
    "eyebrow": "Referans",
-   "deck": "pain001 v0.0.56'nın her bayrağı, uç noktası ve davranışı; hedeflerden değil, yayımlanan koddan alınmıştır."
+   "deck": "pain001 v0.0.71'nın her bayrağı, uç noktası ve davranışı; hedeflerden değil, yayımlanan koddan alınmıştır."
   },
   "text": {
    "<a href=\"/\">Home</a>": "<a href=\"/\">Ana Sayfa</a>",
@@ -16,7 +16,7 @@
    "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">Girdi Normalizasyonu</a>",
    "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">Eklenti Mimarisi</a>",
    "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">Kalite Kapıları</a>",
-   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.70</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Bu referans, <strong>pain001 v0.0.70</strong> için komut satırı arayüzünü, Python API'sini, REST mikroservisini ve doğrulama hattını belgeler. Burada listelenen her bayrak, uç nokta ve davranış hedeflerden değil, yayımlanan koddan alınmıştır.",
+   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.71</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Bu referans, <strong>pain001 v0.0.71</strong> için komut satırı arayüzünü, Python API'sini, REST mikroservisini ve doğrulama hattını belgeler. Burada listelenen her bayrak, uç nokta ve davranış hedeflerden değil, yayımlanan koddan alınmıştır.",
    "Pain001 supports <strong>12 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).": "Pain001, <strong>12 ISO 20022 mesaj tanımını</strong> destekler: <code>pain.001.001.03</code>'ten <code>pain.001.001.13</code>'e kadar (Customer Credit Transfer Initiation, on bir sürüm) ve <code>pain.008.001.02</code> (Customer Direct Debit Initiation).",
    "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. Komut Satırı Arayüzü<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
    "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "<code>pain001</code> çalıştırılabilir dosyası işlevselliğini alt komutlar halinde gruplar. Yalnızca üretim bayraklarıyla çalıştırıldığında <code>generate</code> örtük olarak çağrılır; böylece mevcut otomasyonlar çalışmaya devam eder.",

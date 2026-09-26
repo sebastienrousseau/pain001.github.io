@@ -2,9 +2,9 @@
   "documentation": {
     "meta": {
       "title": "Referensi Teknis Pain001: CLI, Python API, dan REST",
-      "description": "Referensi lengkap pain001 v0.0.56: subperintah dan flag CLI, Python API, endpoint REST di /api/v1, rulebook skema, normalisasi input, dan arsitektur plugin.",
+      "description": "Referensi lengkap pain001 v0.0.71: subperintah dan flag CLI, Python API, endpoint REST di /api/v1, rulebook skema, normalisasi input, dan arsitektur plugin.",
       "eyebrow": "Referensi",
-      "deck": "Setiap flag, endpoint, dan perilaku pain001 v0.0.56, diambil dari kode yang dirilis, bukan dari harapan semata."
+      "deck": "Setiap flag, endpoint, dan perilaku pain001 v0.0.71, diambil dari kode yang dirilis, bukan dari harapan semata."
     },
     "text": {
       "<a href=\"/\">Home</a>": "<a href=\"/\">Beranda</a>",
@@ -16,7 +16,7 @@
       "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">Normalisasi Input</a>",
       "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">Arsitektur Plugin</a>",
       "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">Gerbang Kualitas</a>",
-      "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.70</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Referensi ini mendokumentasikan antarmuka baris perintah, Python API, layanan mikro REST, dan alur validasi untuk <strong>pain001 v0.0.70</strong>. Setiap flag, endpoint, dan perilaku yang tercantum di sini diambil dari kode yang dirilis, bukan dari harapan semata.",
+      "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.71</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Referensi ini mendokumentasikan antarmuka baris perintah, Python API, layanan mikro REST, dan alur validasi untuk <strong>pain001 v0.0.71</strong>. Setiap flag, endpoint, dan perilaku yang tercantum di sini diambil dari kode yang dirilis, bukan dari harapan semata.",
       "Pain001 supports <strong>12 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).": "Pain001 mendukung <strong>12 definisi pesan ISO 20022</strong>: <code>pain.001.001.03</code> hingga <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, sebelas versi) dan <code>pain.008.001.02</code> (Customer Direct Debit Initiation).",
       "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. Antarmuka Baris Perintah<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
       "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "Berkas eksekusi <code>pain001</code> mengelompokkan fungsinya ke dalam subperintah. Menjalankannya hanya dengan flag pembuatan akan memanggil <code>generate</code> secara implisit, sehingga otomatisasi yang sudah ada tetap berfungsi.",

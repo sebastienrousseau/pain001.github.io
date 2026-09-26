@@ -2,9 +2,9 @@
  "documentation": {
   "meta": {
    "title": "Pain001 : référence technique CLI, API Python et REST",
-   "description": "Référence complète de pain001 v0.0.56 : sous-commandes et options CLI, API Python, points d'accès REST sous /api/v1, recueils de règles, normalisation des entrées et plugins.",
+   "description": "Référence complète de pain001 v0.0.71 : sous-commandes et options CLI, API Python, points d'accès REST sous /api/v1, recueils de règles, normalisation des entrées et plugins.",
    "eyebrow": "Référence",
-   "deck": "Chaque option, point d'accès et comportement de pain001 v0.0.56, tirés du code livré et non d'aspirations."
+   "deck": "Chaque option, point d'accès et comportement de pain001 v0.0.71, tirés du code livré et non d'aspirations."
   },
   "text": {
    "<a href=\"/\">Home</a>": "<a href=\"/\">Accueil</a>",
@@ -16,7 +16,7 @@
    "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">Normalisation des entrées</a>",
    "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">Architecture de plugins</a>",
    "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">Contrôles qualité</a>",
-   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.70</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Cette référence documente l'interface en ligne de commande, l'API Python, le microservice REST et le pipeline de validation de <strong>pain001 v0.0.70</strong>. Chaque option, point d'accès et comportement listé ici est tiré du code livré, non d'aspirations.",
+   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.71</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Cette référence documente l'interface en ligne de commande, l'API Python, le microservice REST et le pipeline de validation de <strong>pain001 v0.0.71</strong>. Chaque option, point d'accès et comportement listé ici est tiré du code livré, non d'aspirations.",
    "Pain001 supports <strong>12 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).": "Pain001 prend en charge <strong>12 définitions de message ISO 20022</strong> : <code>pain.001.001.03</code> à <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, onze versions) et <code>pain.008.001.02</code> (Customer Direct Debit Initiation).",
    "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. Interface en ligne de commande<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
    "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "L'exécutable <code>pain001</code> regroupe ses fonctionnalités en sous-commandes. Lancé avec les seules options de génération, il invoque implicitement <code>generate</code>, si bien que l'automatisation existante continue de fonctionner.",

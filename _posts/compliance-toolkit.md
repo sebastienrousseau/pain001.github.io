@@ -110,7 +110,7 @@ Use the [browser validator and message builder](/try/) for a same-origin,
 local demonstration, or install the CLI for repeatable pipeline gates:
 
 ```sh
-pip install pain001==0.0.70
+pip install pain001==0.0.71
 pain001 -t pain.001.001.09 -d payments.csv --scheme sepa-sct --dry-run
 ```
 
@@ -168,7 +168,7 @@ For each controlled run, retain a manifest similar to this:
 ```json
 {
   "tool": "pain001",
-  "tool_version": "0.0.70",
+  "tool_version": "0.0.71",
   "message": "pain.001.001.09",
   "scheme": "sepa-sct",
   "input_sha256": "<sha256>",

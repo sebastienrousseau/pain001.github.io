@@ -2,9 +2,9 @@
  "documentation": {
   "meta": {
    "title": "Pain001: مرجع فنی برای CLI، رابط Python و REST",
-   "description": "مرجع کامل pain001 v0.0.56: زیرفرمان‌ها و پرچم‌های CLI، رابط Python، نقاط انتهایی REST زیر /api/v1، آیین‌نامه طرح‌ها، یکسان‌سازی ورودی و معماری افزونه‌ها.",
+   "description": "مرجع کامل pain001 v0.0.71: زیرفرمان‌ها و پرچم‌های CLI، رابط Python، نقاط انتهایی REST زیر /api/v1، آیین‌نامه طرح‌ها، یکسان‌سازی ورودی و معماری افزونه‌ها.",
    "eyebrow": "مرجع",
-   "deck": "هر پرچم، نقطه انتهایی و رفتار pain001 v0.0.56، برگرفته از کدِ منتشرشده، نه از آرزو."
+   "deck": "هر پرچم، نقطه انتهایی و رفتار pain001 v0.0.71، برگرفته از کدِ منتشرشده، نه از آرزو."
   },
   "text": {
    "<a href=\"/\">Home</a>": "<a href=\"/\">خانه</a>",
@@ -16,7 +16,7 @@
    "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">یکسان‌سازی ورودی</a>",
    "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">معماری افزونه</a>",
    "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">دروازه‌های کیفیت</a>",
-   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.70</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "این مرجع، رابط خط فرمان، رابط برنامه‌نویسی Python، ریزخدمت REST و خط لوله اعتبارسنجی <strong>pain001 v0.0.70</strong> را مستند می‌کند. هر پرچم، نقطه انتهایی و رفتاری که در اینجا آمده است از کدِ منتشرشده گرفته شده، نه از آرزو.",
+   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.71</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "این مرجع، رابط خط فرمان، رابط برنامه‌نویسی Python، ریزخدمت REST و خط لوله اعتبارسنجی <strong>pain001 v0.0.71</strong> را مستند می‌کند. هر پرچم، نقطه انتهایی و رفتاری که در اینجا آمده است از کدِ منتشرشده گرفته شده، نه از آرزو.",
    "Pain001 supports <strong>12 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).": "Pain001 از <strong>12 تعریف پیام ISO 20022</strong> پشتیبانی می‌کند: <code>pain.001.001.03</code> تا <code>pain.001.001.13</code> (آغاز انتقال اعتباری مشتری، یازده نسخه) و <code>pain.008.001.02</code> (آغاز برداشت مستقیم مشتری).",
    "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. رابط خط فرمان<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
    "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "فایل اجرایی <code>pain001</code> قابلیت‌های خود را در قالب زیرفرمان‌ها سازمان می‌دهد. اجرای آن تنها با پرچم‌های تولید، به‌طور ضمنی <code>generate</code> را فرا می‌خواند تا خودکارسازی‌های موجود بدون تغییر به کار خود ادامه دهند.",

@@ -2,9 +2,9 @@
  "documentation": {
   "meta": {
    "title": "Pain001 तांत्रिक संदर्भ: CLI, Python API व REST",
-   "description": "pain001 v0.0.56 चा संपूर्ण संदर्भ: CLI उपआदेश व फ्लॅग, Python API, /api/v1 अंतर्गत REST एंडपॉइंट, स्कीम नियमपुस्तिका, इनपुट सामान्यीकरण आणि प्लगइन आर्किटेक्चर.",
+   "description": "pain001 v0.0.71 चा संपूर्ण संदर्भ: CLI उपआदेश व फ्लॅग, Python API, /api/v1 अंतर्गत REST एंडपॉइंट, स्कीम नियमपुस्तिका, इनपुट सामान्यीकरण आणि प्लगइन आर्किटेक्चर.",
    "eyebrow": "संदर्भ",
-   "deck": "pain001 v0.0.56 चा प्रत्येक फ्लॅग, एंडपॉइंट आणि वर्तन, प्रत्यक्ष शिप केलेल्या कोडमधून घेतलेले, आकांक्षेतून नव्हे."
+   "deck": "pain001 v0.0.71 चा प्रत्येक फ्लॅग, एंडपॉइंट आणि वर्तन, प्रत्यक्ष शिप केलेल्या कोडमधून घेतलेले, आकांक्षेतून नव्हे."
   },
   "text": {
    "<a href=\"/\">Home</a>": "<a href=\"/\">मुख्यपृष्ठ</a>",
@@ -16,7 +16,7 @@
    "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">इनपुट सामान्यीकरण</a>",
    "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">प्लगइन आर्किटेक्चर</a>",
    "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">गुणवत्ता निकष</a>",
-   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.70</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "हा संदर्भ <strong>pain001 v0.0.70</strong> च्या कमांड-लाइन इंटरफेस, Python API, REST मायक्रोसर्व्हिस आणि प्रमाणीकरण पाइपलाइनचे दस्तऐवजीकरण करतो. येथे नमूद केलेला प्रत्येक फ्लॅग, एंडपॉइंट आणि वर्तन प्रत्यक्ष शिप केलेल्या कोडमधून घेतलेले आहे, आकांक्षेतून नव्हे.",
+   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.71</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "हा संदर्भ <strong>pain001 v0.0.71</strong> च्या कमांड-लाइन इंटरफेस, Python API, REST मायक्रोसर्व्हिस आणि प्रमाणीकरण पाइपलाइनचे दस्तऐवजीकरण करतो. येथे नमूद केलेला प्रत्येक फ्लॅग, एंडपॉइंट आणि वर्तन प्रत्यक्ष शिप केलेल्या कोडमधून घेतलेले आहे, आकांक्षेतून नव्हे.",
    "Pain001 supports <strong>12 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).": "Pain001 <strong>12 ISO 20022 संदेश व्याख्यांना</strong> समर्थन देते: <code>pain.001.001.03</code> पासून <code>pain.001.001.13</code> पर्यंत (Customer Credit Transfer Initiation, अकरा आवृत्त्या) आणि <code>pain.008.001.02</code> (Customer Direct Debit Initiation).",
    "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. कमांड-लाइन इंटरफेस<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
    "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "<code>pain001</code> एक्झिक्युटेबल आपली कार्यक्षमता उपआदेशांमध्ये विभागते. केवळ निर्मिती फ्लॅगसह ते चालवल्यास <code>generate</code> अप्रत्यक्षपणे कार्यान्वित होते, त्यामुळे विद्यमान ऑटोमेशन पूर्ववत चालू राहते.",

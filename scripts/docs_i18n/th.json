@@ -2,9 +2,9 @@
  "documentation": {
   "meta": {
    "title": "เอกสารอ้างอิงทางเทคนิค Pain001: CLI, Python API และ REST",
-   "description": "เอกสารอ้างอิงฉบับสมบูรณ์ของ pain001 v0.0.56: คำสั่งย่อยและแฟล็ก CLI, Python API, REST endpoint ที่ /api/v1, กฎเกณฑ์ของสกีม, การปรับข้อมูลนำเข้า และสถาปัตยกรรมปลั๊กอิน",
+   "description": "เอกสารอ้างอิงฉบับสมบูรณ์ของ pain001 v0.0.71: คำสั่งย่อยและแฟล็ก CLI, Python API, REST endpoint ที่ /api/v1, กฎเกณฑ์ของสกีม, การปรับข้อมูลนำเข้า และสถาปัตยกรรมปลั๊กอิน",
    "eyebrow": "อ้างอิง",
-   "deck": "ทุกแฟล็ก ทุก endpoint และทุกพฤติกรรมของ pain001 v0.0.56 นำมาจากโค้ดที่เผยแพร่จริง ไม่ใช่จากความคาดหวัง"
+   "deck": "ทุกแฟล็ก ทุก endpoint และทุกพฤติกรรมของ pain001 v0.0.71 นำมาจากโค้ดที่เผยแพร่จริง ไม่ใช่จากความคาดหวัง"
   },
   "text": {
    "<a href=\"/\">Home</a>": "<a href=\"/\">หน้าแรก</a>",
@@ -16,7 +16,7 @@
    "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">การปรับข้อมูลนำเข้าให้เป็นมาตรฐาน</a>",
    "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">สถาปัตยกรรมปลั๊กอิน</a>",
    "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">เกณฑ์คุณภาพ</a>",
-   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.70</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "เอกสารอ้างอิงนี้อธิบายอินเทอร์เฟซบรรทัดคำสั่ง Python API ไมโครเซอร์วิส REST และไปป์ไลน์การตรวจสอบความถูกต้องของ <strong>pain001 v0.0.70</strong> ทุกแฟล็ก ทุก endpoint และทุกพฤติกรรมที่ระบุไว้ที่นี่นำมาจากโค้ดที่เผยแพร่จริง ไม่ใช่จากความคาดหวัง",
+   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.71</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "เอกสารอ้างอิงนี้อธิบายอินเทอร์เฟซบรรทัดคำสั่ง Python API ไมโครเซอร์วิส REST และไปป์ไลน์การตรวจสอบความถูกต้องของ <strong>pain001 v0.0.71</strong> ทุกแฟล็ก ทุก endpoint และทุกพฤติกรรมที่ระบุไว้ที่นี่นำมาจากโค้ดที่เผยแพร่จริง ไม่ใช่จากความคาดหวัง",
    "Pain001 supports <strong>12 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).": "Pain001 รองรับ<strong>นิยามข้อความ ISO 20022 จำนวน 12 รายการ</strong> ได้แก่ <code>pain.001.001.03</code> ถึง <code>pain.001.001.13</code> (Customer Credit Transfer Initiation จำนวนสิบเอ็ดเวอร์ชัน) และ <code>pain.008.001.02</code> (Customer Direct Debit Initiation)",
    "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. อินเทอร์เฟซบรรทัดคำสั่ง<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
    "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "ไฟล์ปฏิบัติการ <code>pain001</code> จัดกลุ่มความสามารถไว้เป็นคำสั่งย่อย หากเรียกใช้ด้วยแฟล็กสำหรับการสร้างไฟล์เพียงอย่างเดียว ระบบจะเรียก <code>generate</code> โดยปริยาย ระบบอัตโนมัติที่มีอยู่เดิมจึงทำงานได้ต่อไป",

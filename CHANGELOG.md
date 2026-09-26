@@ -6,8 +6,34 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+### Added
+
+- Property-based fuzzing of the demo's input handling: eight fast-check
+  properties run with the unit tests on every push, covering the CSV
+  splitter and parser, the delimiter sniffer, the error-report writer,
+  byte decoding and message templates.
+- A release backfill workflow. It gives an existing signed tag the
+  archive, SBOM, checksums and attestations a release carries, keeps the
+  assets a release already has, and never touches the tag.
+- `scripts/release_notes.py` composes every release page in one format:
+  title `pain001.com X.Y.Z`, hand-written Highlights from
+  `docs/releases/`, GitHub's generated What's Changed and New
+  Contributors, the checksums and the Full Changelog link. CI and
+  `make lint` check the Highlights files.
+
 ### Changed
 
+- The site is regenerated for pain001 0.0.71, and the browser demo runs
+  the 0.0.71 wheel.
+- The demo's WebAssembly runtime is no longer committed. `build.sh`
+  downloads each of its 18 binaries from the Pyodide CDN or PyPI and
+  refuses any file whose SHA-256 differs from
+  `static/pyodide/pain001-runtime.json`.
+- Every dependency the workflows install is pinned: Python tools by hash
+  from `requirements/`, the browser-audit tools from a committed
+  lockfile, and a new library release by the digest PyPI publishes for
+  it. The audit tools move to puppeteer-core 25.12.0 and axe-core 4.13.0.
+- Release notes in `docs/releases/` hold the Highlights only.
 - Roadmap: Phase C, the declarative rule engine, is deferred. The library
   already has 23 of its 29 profiles as data and a shipped declarative
   overlay grammar, and issue #184 proposes a CEL policy language, so
@@ -15,6 +41,13 @@ All notable changes to this website are documented here. The format follows
   step is now an ADR in the library choosing one format; it reopens once
   the library's v0.0.71 release has landed and profile maintenance can
   be staffed beyond one person.
+
+### Fixed
+
+- The version stamper now updates the translation tables too. The
+  documentation page's English key quotes the library version, so the
+  0.0.71 regeneration failed its live-key gate, and 35 locales still
+  described pain001 v0.0.56 in that page's metadata.
 
 ## [0.0.8] - 2026-09-25
 

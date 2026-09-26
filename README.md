@@ -179,9 +179,9 @@ samples noisy; a real regression fails both.
 | :--- | :--- |
 | `_posts/` | Page content (Markdown + front matter), the source of truth. Corpus scenario pages (`corpus-*.md`, `<locale>-corpus-*.md`) and message-spec pages are **generated**; edit the generator, not the page |
 | `_layouts/` | HTML templates. `base` holds the head: the CSP meta, the security metas and the JSON-LD graph are declared once there and inherited by `index`, `page`, `contact` and `try` |
-| `static/` | Copied verbatim into the output: the demo's ES modules (`js/`), the vendored Pyodide runtime and wheels (`pyodide/`), corpus files, schemas and samples (`corpus/`), the service worker, the vendored analytics beacon |
+| `static/` | Copied verbatim into the output: the demo's ES modules (`js/`), the Pyodide runtime manifest (`pyodide/pain001-runtime.json`; the runtime and wheels it pins are fetched and hash-verified by `scripts/fetch_runtime.py` at build time, never committed), corpus files, schemas and samples (`corpus/`), the service worker, the vendored analytics beacon |
 | `scripts/` | Generators, the post-build passes, translation tables and the validators CI runs |
-| `tests/` | Node tests: demo input handling and the browser engine integration run against the vendored runtime |
+| `tests/` | Node tests: demo input handling and the browser engine integration run against the fetched runtime |
 | `site/` | The built site, produced by `build.sh`; ignored by git and uploaded by CI as the Pages artifact |
 | `.github/workflows/` | `ci.yml` (build, every gate, and on `main` the Pages deploy), `release.yml` (signed-tag release: archive, SBOM, attestations), `regenerate.yml` (library-release regeneration, opens a PR), `dated-claims.yml` (weekly check of dated regulatory claims), `codeql.yml`, `scorecard.yml`, `dco.yml` |
 

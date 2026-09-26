@@ -2,9 +2,9 @@
  "documentation": {
   "meta": {
    "title": "Pain001 technická reference: CLI, Python API a REST",
-   "description": "Úplná reference pain001 v0.0.56: příkazy a přepínače CLI, Python API, REST endpointy pod /api/v1, pravidla schémat, normalizace vstupů a architektura pluginů.",
+   "description": "Úplná reference pain001 v0.0.71: příkazy a přepínače CLI, Python API, REST endpointy pod /api/v1, pravidla schémat, normalizace vstupů a architektura pluginů.",
    "eyebrow": "Reference",
-   "deck": "Každý přepínač, endpoint i chování pain001 v0.0.56, převzato z dodávaného kódu, nikoli z přání."
+   "deck": "Každý přepínač, endpoint i chování pain001 v0.0.71, převzato z dodávaného kódu, nikoli z přání."
   },
   "text": {
    "<a href=\"/\">Home</a>": "<a href=\"/\">Domů</a>",
@@ -16,7 +16,7 @@
    "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">Normalizace vstupů</a>",
    "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">Architektura pluginů</a>",
    "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">Kontrola kvality</a>",
-   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.70</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Tato reference popisuje rozhraní příkazové řádky, Python API, REST mikroslužbu a validační pipeline nástroje <strong>pain001 v0.0.70</strong>. Každý zde uvedený přepínač, endpoint i chování je převzato z dodávaného kódu, nikoli z přání.",
+   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.71</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Tato reference popisuje rozhraní příkazové řádky, Python API, REST mikroslužbu a validační pipeline nástroje <strong>pain001 v0.0.71</strong>. Každý zde uvedený přepínač, endpoint i chování je převzato z dodávaného kódu, nikoli z přání.",
    "Pain001 supports <strong>12 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).": "Pain001 podporuje <strong>12 definic zpráv ISO 20022</strong>: <code>pain.001.001.03</code> až <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, jedenáct verzí) a <code>pain.008.001.02</code> (Customer Direct Debit Initiation).",
    "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. Rozhraní příkazové řádky<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
    "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "Spustitelný soubor <code>pain001</code> člení svou funkcionalitu do podpříkazů. Spustíte-li jej pouze s přepínači pro generování, vyvolá se implicitně <code>generate</code>, takže stávající automatizace funguje dál.",

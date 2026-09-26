@@ -29,6 +29,7 @@ audit: build
 lint:
 	./scripts/verify_release_version.sh
 	python3 scripts/validate_readme.py
+	python3 scripts/release_notes.py --check
 
 # Separate from lint: this one talks to the npm registry.
 deps:

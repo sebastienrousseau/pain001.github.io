@@ -2,9 +2,9 @@
  "documentation": {
   "meta": {
    "title": "Pain001 – dokumentacja techniczna: CLI, API Python i REST",
-   "description": "Kompletny opis pain001 v0.0.56: podkomendy i flagi CLI, API Python, endpointy REST pod /api/v1, reguły schematów, normalizacja danych wejściowych i architektura wtyczek.",
+   "description": "Kompletny opis pain001 v0.0.71: podkomendy i flagi CLI, API Python, endpointy REST pod /api/v1, reguły schematów, normalizacja danych wejściowych i architektura wtyczek.",
    "eyebrow": "Dokumentacja",
-   "deck": "Każda flaga, endpoint i zachowanie pain001 v0.0.56, opisane na podstawie dostarczonego kodu, nie deklaracji."
+   "deck": "Każda flaga, endpoint i zachowanie pain001 v0.0.71, opisane na podstawie dostarczonego kodu, nie deklaracji."
   },
   "text": {
    "<a href=\"/\">Home</a>": "<a href=\"/\">Strona główna</a>",
@@ -16,7 +16,7 @@
    "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">Normalizacja danych wejściowych</a>",
    "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">Architektura wtyczek</a>",
    "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">Bramki jakości</a>",
-   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.70</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Niniejsza dokumentacja opisuje interfejs wiersza poleceń, API Python, mikrousługę REST oraz potok walidacji dla <strong>pain001 v0.0.70</strong>. Każda wymieniona tu flaga, endpoint i zachowanie pochodzi z dostarczonego kodu, a nie z planów.",
+   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.71</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Niniejsza dokumentacja opisuje interfejs wiersza poleceń, API Python, mikrousługę REST oraz potok walidacji dla <strong>pain001 v0.0.71</strong>. Każda wymieniona tu flaga, endpoint i zachowanie pochodzi z dostarczonego kodu, a nie z planów.",
    "Pain001 supports <strong>12 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).": "Pain001 obsługuje <strong>12 definicji komunikatów ISO 20022</strong>: od <code>pain.001.001.03</code> do <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, jedenaście wersji) oraz <code>pain.008.001.02</code> (Customer Direct Debit Initiation).",
    "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. Interfejs wiersza poleceń<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
    "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "Program <code>pain001</code> grupuje funkcje w podkomendy. Uruchomienie go wyłącznie z flagami generowania wywołuje niejawnie <code>generate</code>, dzięki czemu istniejąca automatyzacja działa bez zmian.",

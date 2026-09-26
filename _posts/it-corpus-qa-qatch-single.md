@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-09-23T08:00:00+00:00"
+date: "2026-09-26T08:00:00+00:00"
 description: "Qatar QATCH credit in QAR with the QCB purpose of payment. Un campione pain.001 validato (QA, circuito domestic-credit-transfer), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "Qatar QATCH credit in QAR with the QCB purpose of payment. Un campione pain.001 validato (QA, circuito domestic-credit-transfer), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser."
 item_guid: "https://pain001.com/it/corpus-qa-qatch-single/"
 item_link: "https://pain001.com/it/corpus-qa-qatch-single/"
-item_pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+item_pub_date: "Sat, 26 Sep 2026 08:00:00 +0000"
 item_title: "Esempio pain.001 ISO 20022 qa.qatch.single: QA (domestic-credit-transfer)"
-last_build_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+last_build_date: "Sat, 26 Sep 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+pub_date: "Sat, 26 Sep 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Descrizione dello scenario, citata dal record di provenienza (testo originale in
 
 > Qatar QATCH credit in QAR with the QCB purpose of payment.
 
-Un file di disposizione di pagamento (**QA**, circuito **domestic-credit-transfer**), fornito in `pain.001.001.03`, `pain.001.001.09`, generato e verificato da pain001 0.0.70. È un esempio sintetico costruito dai regolamenti pubblici degli schemi di pagamento: nessuna parte reale, nessun conto reale, nessuna linea guida bancaria dietro di esso.
+Un file di disposizione di pagamento (**QA**, circuito **domestic-credit-transfer**), fornito in `pain.001.001.03`, `pain.001.001.09`, generato e verificato da pain001 0.0.71. È un esempio sintetico costruito dai regolamenti pubblici degli schemi di pagamento: nessuna parte reale, nessun conto reale, nessuna linea guida bancaria dietro di esso.
 
 ## File
 

@@ -2,9 +2,9 @@
  "documentation": {
   "meta": {
    "title": "Pain001 技術リファレンス:CLI・Python API・REST",
-   "description": "pain001 v0.0.56 の完全リファレンス：CLI サブコマンドとフラグ、Python API、/api/v1 配下の REST エンドポイント、スキームルールブック、入力正規化、プラグインアーキテクチャ。",
+   "description": "pain001 v0.0.71 の完全リファレンス：CLI サブコマンドとフラグ、Python API、/api/v1 配下の REST エンドポイント、スキームルールブック、入力正規化、プラグインアーキテクチャ。",
    "eyebrow": "リファレンス",
-   "deck": "pain001 v0.0.56 のすべてのフラグ・エンドポイント・挙動を、願望ではなく出荷済みコードに基づいて解説します。"
+   "deck": "pain001 v0.0.71 のすべてのフラグ・エンドポイント・挙動を、願望ではなく出荷済みコードに基づいて解説します。"
   },
   "text": {
    "<a href=\"/\">Home</a>": "<a href=\"/\">ホーム</a>",
@@ -16,7 +16,7 @@
    "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">入力の正規化</a>",
    "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">プラグインアーキテクチャ</a>",
    "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">品質ゲート</a>",
-   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.70</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "本リファレンスは、<strong>pain001 v0.0.70</strong> のコマンドラインインターフェース、Python API、REST マイクロサービス、検証パイプラインを文書化しています。ここに記載されているフラグ・エンドポイント・挙動はすべて、願望ではなく出荷済みコードに基づいています。",
+   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.71</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "本リファレンスは、<strong>pain001 v0.0.71</strong> のコマンドラインインターフェース、Python API、REST マイクロサービス、検証パイプラインを文書化しています。ここに記載されているフラグ・エンドポイント・挙動はすべて、願望ではなく出荷済みコードに基づいています。",
    "Pain001 supports <strong>12 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).": "Pain001 は <strong>12 種類の ISO 20022 メッセージ定義</strong>をサポートしています:<code>pain.001.001.03</code> から <code>pain.001.001.13</code> まで(Customer Credit Transfer Initiation、11 バージョン)および <code>pain.008.001.02</code>(Customer Direct Debit Initiation)です。",
    "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. コマンドラインインターフェース<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
    "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "<code>pain001</code> 実行ファイルは、機能をサブコマンドにまとめています。生成用フラグのみで実行すると暗黙的に <code>generate</code> が呼び出されるため、既存の自動化はそのまま動作し続けます。",

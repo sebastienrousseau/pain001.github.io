@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-09-23T08:00:00+00:00"
+date: "2026-09-26T08:00:00+00:00"
 description: "ACH CCD credit to a supplier with an addenda remittance line. A validated pain.001 sample for United States on the ach-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "ACH CCD credit to a supplier with an addenda remittance line. A validated pain.001 sample for United States on the ach-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
 item_guid: "https://pain001.com/corpus-us-ach-ccd-supplier/"
 item_link: "https://pain001.com/corpus-us-ach-ccd-supplier/"
-item_pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+item_pub_date: "Sat, 26 Sep 2026 08:00:00 +0000"
 item_title: "us.ach.ccd-supplier: ISO 20022 pain.001 example for United States (ach-credit)"
-last_build_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+last_build_date: "Sat, 26 Sep 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+pub_date: "Sat, 26 Sep 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -90,7 +90,7 @@ last_reviewed: "2026-07-26"
 
 ACH CCD credit to a supplier with an addenda remittance line.
 
-A payment initiation file for **United States** on the **ach-credit** rail, shipped in `pain.001.001.03`, `pain.001.001.09`, generated and checked by pain001 0.0.70. It is a synthetic example built from the public scheme rulebooks: no real party, account or bank guideline behind it.
+A payment initiation file for **United States** on the **ach-credit** rail, shipped in `pain.001.001.03`, `pain.001.001.09`, generated and checked by pain001 0.0.71. It is a synthetic example built from the public scheme rulebooks: no real party, account or bank guideline behind it.
 
 ## Files
 
