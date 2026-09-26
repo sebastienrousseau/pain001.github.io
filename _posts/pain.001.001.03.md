@@ -89,6 +89,8 @@ last_reviewed: "2026-07-26"
 
 `pain.001.001.03` (2009) is the version the world standardised on. The SEPA credit transfer implementation guidelines and the CGI-MP corporate templates were built against it, SAP and Oracle ERP payment formats target it, and most bank corporate channels still accept it today. If your bank documentation says simply “pain.001”, it usually means this.
 
+New to the format? [What is pain.001?](/pain-001/) explains the message, its structure and every version.
+
 ## What to know about this version
 
 - Financial institutions are identified with `<BIC>`. Note that from version 9 the element is renamed `<BICFI>`, a frequent cause of rejection when upgrading.

@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## Depistați erorile din fișierele de plată înaintea băncii
 
-**Pain001** este o suită Python open source pentru inițierea plăților ISO 20022. Convertește datele pe care le aveți deja (CSV, Excel, SQLite, JSON, Parquet sau mesaje SWIFT MT101) în XML `pain.001` (transferuri) și `pain.008` (debitări directe), validate cu schemele XSD oficiale.
+**Pain001** este o suită Python open source pentru inițierea plăților ISO 20022. Convertește datele pe care le aveți deja (CSV, Excel, SQLite, JSON, Parquet sau mesaje SWIFT MT101) în XML [`pain.001`](/ro/pain-001/) (transferuri) și `pain.008` (debitări directe), validate cu schemele XSD oficiale.
 
 Fiecare fișier trece prin trei niveluri de validare: schema JSON per înregistrare (cu verificarea mod-97 a IBAN-ului și structura BIC), regulile de scheme (SEPA și CBPR+ transfrontalier) și validarea XSD finală. Totalurile de control sunt recalculate, niciodată copiate. Totul rulează local: nicio dată de plată nu părăsește infrastructura dumneavoastră.
 

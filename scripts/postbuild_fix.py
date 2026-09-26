@@ -32,6 +32,7 @@ import base64
 import html as _html
 import json
 import re
+import shutil
 import sys
 from datetime import date
 from pathlib import Path
@@ -702,7 +703,7 @@ def retarget_lang_menu_to_try(html: str) -> str:
     return retarget_lang_menu(html, "try/")
 
 
-JOURNEY_PAGES = ("why", "solutions", "executive-brief")
+JOURNEY_PAGES = ("why", "solutions", "executive-brief", "pain-001")
 DOCS_PAGES = ("documentation", "faqs", "installation", "glossary")
 
 # Submenu targets that exist only in English get a visible cue on
@@ -1433,6 +1434,55 @@ def relocate_corpus_locales(site: Path) -> None:
           f"/<locale>/; stale paths rewritten in {rewritten} file(s)")
 
 
+def inject_article_ld(site: Path, page: str) -> int:
+    """Describe a reference page as a TechArticle about its ISO 20022 term.
+
+    Runs after the locale pages exist, so every language version carries
+    structured data in its own language: headline and description are read
+    from that page's <title> and meta description, inLanguage from <html
+    lang>, and the URL from its canonical link.
+    """
+    import json as _json
+
+    written = 0
+    for html_path in [site / page / "index.html"] + [site / loc / page / "index.html" for loc in sorted(LOCALES)]:
+        if not html_path.is_file():
+            continue
+        html = html_path.read_text(encoding="utf-8")
+        if '"@type": "TechArticle"' in html:
+            continue
+        title = re.search(r"<title>(.*?)</title>", html, re.S)
+        desc = re.search(r'<meta name="description" content="([^"]*)"', html)
+        lang = re.search(r'<html[^>]*\blang="([^"]+)"', html)
+        canon = re.search(r'<link rel="canonical" href="([^"]+)"', html)
+        if not (title and canon):
+            continue
+        ld = {
+            "@context": "https://schema.org",
+            "@type": "TechArticle",
+            "headline": _html.unescape(title.group(1).strip()),
+            "description": _html.unescape(desc.group(1)) if desc else "",
+            "inLanguage": lang.group(1) if lang else "en",
+            "url": canon.group(1),
+            "mainEntityOfPage": canon.group(1),
+            "datePublished": "2026-09-26",
+            "author": {"@type": "Organization", "name": "Pain001", "url": BASE_URL + "/"},
+            "publisher": {"@type": "Organization", "name": "Pain001", "url": BASE_URL + "/"},
+            "about": {
+                "@type": "DefinedTerm",
+                "name": "pain.001",
+                "alternateName": "Customer Credit Transfer Initiation",
+                "inDefinedTermSet": "ISO 20022",
+            },
+        }
+        block = '<script type="application/ld+json">%s</script>' % _json.dumps(
+            ld, ensure_ascii=False).replace("<", "\\u003c")
+        html_path.write_text(html.replace("</head>", block + "</head>", 1), encoding="utf-8")
+        written += 1
+    print(f"[postbuild] TechArticle structured data on {written} /{page}/ page(s)")
+    return written
+
+
 def inject_dataset_ld(site: Path) -> None:
     """Add schema.org Dataset markup to the corpus scenario pages.
 
@@ -1899,6 +1949,7 @@ def main() -> None:
     gen_journey_locales(site)
     relocate_corpus_locales(site)  # before the Dataset markup, which is keyed by final path
     inject_dataset_ld(site)
+    inject_article_ld(site, "pain-001")
     write_llms(site)
     stamp_suite_version(site)
     mark_noindex_pages(site)  # before the sitemap, which skips the same pages
@@ -1913,25 +1964,56 @@ def main() -> None:
     retitle_tag_pages(site)
     defer_ssg_search(site)
     ensure_social_metadata(site)
-    remove_stray_news_sitemaps(site)
+    remove_stray_per_page_files(site)
 
 
-def remove_stray_news_sitemaps(site: Path) -> int:
-    """Delete the per-page news-sitemap.xml files ssg writes beside pages.
+# Files ssg writes into every page directory as well as the root. Only the
+# root copies are real: every page links /rss.xml, /sitemap.xml and
+# /manifest.json, and crawlers read only /robots.txt.
+STRAY_PER_PAGE_FILES = ("news-sitemap.xml", "sitemap.xml", "robots.txt", "rss.xml", "manifest.json")
 
-    ssg writes one into every page directory, not just the root. Those
-    copies are invalid (an empty <loc>, "Unnamed Publication", "Untitled
-    Article"), nothing links to them, and each carries the build time as
-    its publication date, which alone made two builds of one commit
-    differ in 385 files. The root /news-sitemap.xml is the real one and
-    is kept.
+
+def remove_stray_per_page_files(site: Path) -> int:
+    """Delete the per-directory copies of site-wide files, and /404/.
+
+    ssg writes a news-sitemap.xml, sitemap.xml, robots.txt, rss.xml and
+    manifest.json beside every page. None is linked: pages reference the
+    root copies. They were publicly served all the same: 385 of each, the
+    news sitemaps invalid and stamped with the build time (which made two
+    builds differ), the sitemaps empty, and each robots.txt pointing at its
+    own empty sitemap.
+
+    /404/ goes too. GitHub Pages serves /404.html (written by
+    mark_noindex_pages) for any missing URL with a 404 status; /404/ itself
+    was a second copy served with 200, which Search Console reported as a
+    soft 404.
     """
     removed = 0
-    for stray in site.rglob("news-sitemap.xml"):
-        if stray.parent != site:
-            stray.unlink()
-            removed += 1
-    print(f"[postbuild] removed {removed} stray per-page news sitemap(s)")
+    for name in STRAY_PER_PAGE_FILES:
+        for stray in site.rglob(name):
+            if stray.parent != site:
+                stray.unlink()
+                removed += 1
+    not_found = site / "404"
+    page_404 = site / "404.html"
+    if page_404.is_file() and not_found.is_dir():
+        shutil.rmtree(not_found)
+        removed += 1
+        # /404.html still carried /404/'s canonical, hreflang and og:url.
+        # A noindex not-found page needs no canonical or alternates; its
+        # remaining self-references (og:url, JSON-LD) name /404.html.
+        html = page_404.read_text(encoding="utf-8")
+        html = re.sub(r'<link rel="(?:canonical|alternate)" href="%s/404/"[^>]*>\s*' % re.escape(BASE_URL), "", html)
+        html = html.replace("%s/404/" % BASE_URL, "%s/404.html" % BASE_URL)
+        page_404.write_text(html, encoding="utf-8")
+    # Tag archives listed the noindex utility pages as tagged articles.
+    listed = re.compile(r'<li><a href="/(?:%s)/">[^<]*</a></li>\s*' % "|".join(map(re.escape, NOINDEX_PAGES)))
+    for tag_page in site.glob("tags/*/index.html"):
+        html = tag_page.read_text(encoding="utf-8")
+        fixed = listed.sub("", html)
+        if fixed != html:
+            tag_page.write_text(fixed, encoding="utf-8")
+    print(f"[postbuild] removed {removed} stray per-page file(s) and the /404/ copy")
     return removed
 
 

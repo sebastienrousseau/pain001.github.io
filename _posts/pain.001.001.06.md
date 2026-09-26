@@ -89,6 +89,8 @@ last_reviewed: "2026-07-26"
 
 `pain.001.001.06` is a stepping-stone version between the 2009 classic and the 2019 rework. Some treasury management systems export it natively, which is the main reason to generate it.
 
+New to the format? [What is pain.001?](/pain-001/) explains the message, its structure and every version.
+
 ## What to know about this version
 
 - Supported end-to-end: JSON Schema, Jinja2 template, official XSD, scheme rulebooks.

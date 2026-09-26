@@ -22,7 +22,7 @@ site = ROOT / "site"
 # default: journey pages -> pages_i18n; pass a dir name + page slugs to
 # extract another set (e.g. docs_i18n documentation faqs installation glossary)
 OUT_DIR = sys.argv[1] if len(sys.argv) > 2 else "pages_i18n"
-PAGES = tuple(sys.argv[2:]) if len(sys.argv) > 2 else ("why", "solutions", "executive-brief")
+PAGES = tuple(sys.argv[2:]) if len(sys.argv) > 2 else ("why", "solutions", "executive-brief", "pain-001")
 
 out = {}
 for page in PAGES:

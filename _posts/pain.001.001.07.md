@@ -89,6 +89,8 @@ last_reviewed: "2026-07-26"
 
 `pain.001.001.07` refines structured remittance and party identification ahead of the 2019 message set. It is a channel-specific choice rather than a market default.
 
+New to the format? [What is pain.001?](/pain-001/) explains the message, its structure and every version.
+
 ## What to know about this version
 
 - Useful when a bank's implementation guide pins this exact schema.
