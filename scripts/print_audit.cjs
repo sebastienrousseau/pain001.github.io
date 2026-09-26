@@ -39,7 +39,7 @@ function findChrome() {
     "/usr/bin/chromium-browser",
     "/usr/bin/chromium",
   ].filter(Boolean);
-  for (const c of candidates) { try { if (fs2.existsSync(c)) return c; } catch {} }
+  for (const c of candidates) { try { if (fs2.existsSync(c)) return c; } catch { /* unreadable path: try the next candidate */ } }
   throw new Error("no Chrome found; set CHROME_PATH");
 }
 const CHROME = findChrome();

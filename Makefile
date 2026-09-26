@@ -40,6 +40,11 @@ lint:
 	./scripts/verify_release_version.sh
 	python3 scripts/validate_readme.py
 	python3 scripts/release_notes.py --check
+	ruff check scripts tests
+	npm run lint
+	npx --no-install markdownlint-cli2
+	codespell
+	reuse lint
 
 # Separate from lint: this one talks to the npm registry.
 deps:

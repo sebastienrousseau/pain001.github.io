@@ -16,7 +16,7 @@
     if (saved === 'dark' || saved === 'light') {
       root.setAttribute('data-theme', saved);
     }
-  } catch (e) {
+  } catch {
     /* Private browsing or blocked storage: fall back to the OS preference. */
   }
   /* Motion: the footer toggle ("Reduce motion") stores "off"; the OS
@@ -26,7 +26,7 @@
   var motionOff = false;
   try {
     motionOff = localStorage.getItem('motion') === 'off';
-  } catch (e) {
+  } catch {
     /* Storage unavailable: the OS setting still applies. */
   }
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;

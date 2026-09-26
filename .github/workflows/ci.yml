@@ -218,6 +218,9 @@ jobs:
       - name: Python coding standard (ruff, see ruff.toml)
         run: ruff check scripts tests
 
+      - name: JavaScript coding standard (ESLint, see eslint.config.mjs)
+        run: npm run lint
+
       - name: README conforms to the workspace template
         run: python3 scripts/validate_readme.py
 
