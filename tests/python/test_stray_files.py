@@ -54,3 +54,32 @@ def test_404_directory_is_kept_without_404_html(tmp_path):
     (site / "404.html").unlink()
     pb.remove_stray_per_page_files(site)
     assert (site / "404" / "index.html").is_file()
+
+
+def test_404_html_no_longer_points_at_404_dir(tmp_path):
+    site = _site(tmp_path)
+    (site / "404.html").write_text(
+        '<link rel="canonical" href="https://pain001.com/404/">'
+        '<link rel="alternate" href="https://pain001.com/404/" hreflang="en" />'
+        '<meta property="og:url" content="https://pain001.com/404/">', encoding="utf-8")
+    pb.remove_stray_per_page_files(site)
+    html = (site / "404.html").read_text(encoding="utf-8")
+    assert "pain001.com/404/" not in html
+    assert 'rel="canonical"' not in html
+    assert 'content="https://pain001.com/404.html"' in html
+
+
+def test_tag_pages_stop_listing_utility_pages(tmp_path):
+    site = _site(tmp_path)
+    tag = site / "tags" / "sepa"
+    tag.mkdir(parents=True)
+    (tag / "index.html").write_text(
+        '<ul><li><a href="/why/">Why</a></li>'
+        '<li><a href="/404/">Page Not Found (404)</a></li>'
+        '<li><a href="/offline/">Offline</a></li>'
+        '<li><a href="/thanks/">Thanks</a></li></ul>', encoding="utf-8")
+    pb.remove_stray_per_page_files(site)
+    html = (tag / "index.html").read_text(encoding="utf-8")
+    assert 'href="/why/"' in html
+    for page in pb.NOINDEX_PAGES:
+        assert 'href="/%s/"' % page not in html

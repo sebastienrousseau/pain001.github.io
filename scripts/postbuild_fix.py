@@ -1945,9 +1945,24 @@ def remove_stray_per_page_files(site: Path) -> int:
                 stray.unlink()
                 removed += 1
     not_found = site / "404"
-    if (site / "404.html").is_file() and not_found.is_dir():
+    page_404 = site / "404.html"
+    if page_404.is_file() and not_found.is_dir():
         shutil.rmtree(not_found)
         removed += 1
+        # /404.html still carried /404/'s canonical, hreflang and og:url.
+        # A noindex not-found page needs no canonical or alternates; its
+        # remaining self-references (og:url, JSON-LD) name /404.html.
+        html = page_404.read_text(encoding="utf-8")
+        html = re.sub(r'<link rel="(?:canonical|alternate)" href="%s/404/"[^>]*>\s*' % re.escape(BASE_URL), "", html)
+        html = html.replace("%s/404/" % BASE_URL, "%s/404.html" % BASE_URL)
+        page_404.write_text(html, encoding="utf-8")
+    # Tag archives listed the noindex utility pages as tagged articles.
+    listed = re.compile(r'<li><a href="/(?:%s)/">[^<]*</a></li>\s*' % "|".join(map(re.escape, NOINDEX_PAGES)))
+    for tag_page in site.glob("tags/*/index.html"):
+        html = tag_page.read_text(encoding="utf-8")
+        fixed = listed.sub("", html)
+        if fixed != html:
+            tag_page.write_text(fixed, encoding="utf-8")
     print(f"[postbuild] removed {removed} stray per-page file(s) and the /404/ copy")
     return removed
 
