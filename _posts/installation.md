@@ -108,7 +108,7 @@ Companion packages install separately and are versioned independently:
 ```bash
 pip install pain001-loader-xlsx    # Excel ingestion (auto-discovered plugin)
 pip install pain001-loader-mt101   # SWIFT MT101 parsing library
-pip install pain001-mcp            # Full 17-tool MCP server for AI agents
+pip install pain001-mcp            # Full 23-tool MCP server for AI agents
 pip install pain001-lsp            # Full six-feature editor language server
 ```
 
