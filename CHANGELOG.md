@@ -11,6 +11,11 @@ All notable changes to this website are documented here. The format follows
 - `CONTRIBUTING.md` sets out the code-review standard every pull request
   is checked against, and the pull request template links it. It also
   points newcomers to the good-first-issue tasks.
+- Tests for the demo's service worker, `static/sw.js`: which requests it
+  caches, cache-first serving, storing a clone of a good response and
+  never a failed one, and activation deleting stale caches before claiming
+  clients. The coverage gate now includes `sw.js`, at 100% of lines and
+  branches (#52).
 - Tests for the legacy-URL redirect as the build stamps it: a retired
   path is sent to its new page, other paths stay put, and names such as
   `toString` or `constructor` never redirect. `redirect.js` now has 100%

@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test tests/*.test.mjs tests/*.test.js",
-    "coverage": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --experimental-test-coverage --test-coverage-include='static/js/**' --test-coverage-exclude='static/js/cf-beacon.min.js' --test-coverage-lines=90 --test-coverage-branches=80 --test tests/*.test.mjs tests/*.test.js",
+    "coverage": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --experimental-test-coverage --test-coverage-include='static/js/**' --test-coverage-include='static/sw.js' --test-coverage-exclude='static/js/cf-beacon.min.js' --test-coverage-lines=90 --test-coverage-branches=80 --test tests/*.test.mjs tests/*.test.js",
     "test:engine": "node tests/engine.integration.mjs",
     "audit:deps": "npm audit --audit-level=high",
     "audit:a11y": "node scripts/audit_site.mjs",
