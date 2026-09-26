@@ -1,6 +1,6 @@
 # Implementation plan — completing the 2026 audit backlog
 
-**Written:** 28 July 2026 · **Revised:** 25 September 2026
+**Written:** 28 July 2026 · **Revised:** 26 September 2026
 **Status:** Phases A and B shipped. Phase C deferred on 25 September 2026
 (see its section). Phases D–G open, ordered below.
 **Covers:** everything from the July 2026 audit that is still open, after
@@ -287,6 +287,11 @@ the validation core is not being reshaped in parallel; the ADR is
 agreed; and, because C commits to D, there is a credible plan to staff
 profile maintenance beyond one person (priority item 1).
 
+**Status, 26 September 2026:** the first condition is met. The library
+released v0.0.71 on 25 September, and the site was regenerated for it the
+next day. The ADR and the staffing plan are still open, so Phase C stays
+deferred; the ADR is now the next engineering step.
+
 ### The original plan
 
 The plan below is kept as written in July. Its counts ("five existing
@@ -458,7 +463,7 @@ The audit's flagship recommendation. With Phases B–D done, this is
 mostly assembly: XML upload and paste, MT101 input, context selection
 (country, rail, bank, channel, message version, effective date), the
 layered result model, migration compatibility reporting, address
-readiness scoring for the November 2026 deadline, and report export.
+readiness scoring for the structured-address change, and report export.
 
 **Effort: 30–50 person-days** on top of B–D. Deliberately last: every
 one of its parts is cheaper once the layer model, the rule engine and
@@ -470,8 +475,10 @@ Two specifics worth pulling forward if the deadline pressure is real:
 - **Address readiness checker.** Upload an ERP customer extract, get a
   structured/hybrid/unstructured classification and a remediation list.
   This is master-data remediation *before* XML generation, it maps
-  directly to the 14 November 2026 deadline the site already leads on,
-  and it can ship standalone before the rest of the Lab.
+  directly to the structured-address change the site leads on, and it
+  can ship standalone before the rest of the Lab. Swift deferred that
+  change from 14 November 2026 on 27 August 2026 and will set new timing
+  by December, which lowers the urgency but not the need.
 - **MT101 migration decision tree.** The audit correctly notes that
   MT101 migration is segmented — SWIFT treats MT101 multiple and single
   differently — and the site should stop implying one rule fits every

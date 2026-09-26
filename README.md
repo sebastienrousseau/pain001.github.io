@@ -183,7 +183,7 @@ samples noisy; a real regression fails both.
 | `scripts/` | Generators, the post-build passes, translation tables and the validators CI runs |
 | `tests/` | Node tests: demo input handling and the browser engine integration run against the fetched runtime |
 | `site/` | The built site, produced by `build.sh`; ignored by git and uploaded by CI as the Pages artifact |
-| `.github/workflows/` | `ci.yml` (build, every gate, and on `main` the Pages deploy), `release.yml` (signed-tag release: archive, SBOM, attestations), `regenerate.yml` (library-release regeneration, opens a PR), `dated-claims.yml` (weekly check of dated regulatory claims), `codeql.yml`, `scorecard.yml`, `dco.yml` |
+| `.github/workflows/` | `ci.yml` (build, every gate, and on `main` the Pages deploy), `release.yml` (signed-tag release: archive, SBOM, attestations), `release-backfill.yml` (completes the release of an existing tag: archive, SBOM, attestations), `regenerate.yml` (library-release regeneration, opens a PR), `dated-claims.yml` (weekly check of dated regulatory claims), `codeql.yml`, `scorecard.yml`, `dco.yml` |
 
 ## Configuration
 
@@ -205,10 +205,14 @@ python3 scripts/stamp_version.py <version>              # version literals on pa
 ./build.sh
 ```
 
-`regenerate.yml` does exactly this when the library's publish job sends a
-`repository_dispatch` (`suite-release`), or on `workflow_dispatch` with a
-version, and opens a `release/pain001-<version>` pull request. A human merges.
-The library needs the `SITE_DISPATCH_TOKEN` secret for the dispatch.
+`regenerate.yml` does exactly this, pins the demo's pain001 wheel with
+`scripts/library_release.py`, runs the gates, and opens a
+`release/pain001-<version>` pull request with CI running on it. A human
+merges. It runs every six hours when PyPI has a release newer than the one
+the demo pins, with no token. The library's publish job can also send a
+`repository_dispatch` (`suite-release`) to start it at once, which needs a
+`SITE_DISPATCH_TOKEN` secret in the library repository. It can also be run
+by hand, for a version or as a dry run.
 
 ## When not to use Pain001
 
@@ -341,9 +345,12 @@ CycloneDX SBOM. Every GitHub Action is pinned by commit SHA, and workflow
 tokens are read-only except on the job that needs write scope. Node
 dependencies are installed from a committed lockfile and audited in CI.
 
-Input parsing lives in the separately fuzzed and tested core library; this
-repository replays browser integration and fixed regression cases on every
-push. The browser demo refuses input files larger than 2 MB.
+Payment-file validation lives in the separately fuzzed and tested core
+library. The demo's own input handling (CSV splitting and parsing,
+delimiter detection, byte decoding and the error-report writer) is fuzzed
+here with fast-check property tests on every push, alongside browser
+integration and fixed regression cases. The browser demo refuses input files
+larger than 2 MB.
 
 **Framing.** The policy is delivered as a `<meta http-equiv>` element, where
 browsers ignore `frame-ancestors`, and GitHub Pages cannot set response

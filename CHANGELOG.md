@@ -34,6 +34,20 @@ All notable changes to this website are documented here. The format follows
   lockfile, and a new library release by the digest PyPI publishes for
   it. The audit tools move to puppeteer-core 25.12.0 and axe-core 4.13.0.
 - Release notes in `docs/releases/` hold the Highlights only.
+- The MCP page and installation guide describe 23 tools in pain001-mcp,
+  including `suggest_record_fix` and `simulate_payment_batch`, and the
+  page's subtitle no longer says seventeen.
+- The SBOM attestation in both release workflows uses `actions/attest`,
+  which replaces the deprecated `actions/attest-sbom` with the same inputs.
+- Every workflow job runs on `ubuntu-24.04` instead of `ubuntu-latest`,
+  which moves to Ubuntu 26 on 19 October 2026; the image is now changed
+  deliberately, after the builds are tested on it.
+- The README lists the release backfill workflow, describes how
+  regeneration is triggered now, and says the demo's input handling is
+  fuzzed here.
+- The roadmap records that Phase C's first reopening condition, the
+  library's v0.0.71 release, is met, and no longer calls 14 November
+  2026 a live deadline.
 - Roadmap: Phase C, the declarative rule engine, is deferred. The library
   already has 23 of its 29 profiles as data and a shipped declarative
   overlay grammar, and issue #184 proposes a CEL policy language, so
@@ -44,6 +58,12 @@ All notable changes to this website are documented here. The format follows
 
 ### Fixed
 
+- A regeneration that changes nothing no longer rewrites corpus zips.
+  DEFLATE output differs between zlib builds, so the Linux runner
+  re-compressed five zips the macOS build had produced. An existing zip
+  whose members, metadata and bytes all match is now kept.
+- The tests no longer print Node's module-type warning for the demo's
+  ES module, which `package.json` deliberately leaves untyped.
 - The site regenerates for every pain001 release again. The library's
   notification needed a `SITE_DISPATCH_TOKEN` secret that was never
   created, so no release since the workflow was added regenerated the
