@@ -6,12 +6,20 @@
  * generated input rather than hand-picked cases: arbitrary text must never
  * throw, and what the report writer quotes must parse back exactly. These
  * run with the unit tests (`npm test`) on every push. */
-import { test } from "node:test";
-import assert from "node:assert/strict";
-import fc from "fast-check";
-import {
-  splitCsvLine, parseCsv, sniffDelimiter, errorReportCsv, decodeBuffer, fillTemplate,
-} from "../static/js/try-demo.js";
+//
+// CommonJS in a .js file on purpose: OpenSSF Scorecard's Fuzzing check
+// recognises fast-check only in *.js/*.ts files, and package.json has no
+// "type" (see its "//type" note), so a .js test parses as CommonJS. The
+// demo module is ESM and is loaded once with a dynamic import.
+"use strict";
+const { test, before } = require("node:test");
+const assert = require("node:assert/strict");
+const fc = require("fast-check");
+
+let demo;
+before(async () => {
+  demo = await import("../static/js/try-demo.js");
+});
 
 const RUNS = { numRuns: 500 };
 const DELIMITERS = [",", ";", "\t"];
@@ -22,7 +30,7 @@ const quote = (s) => '"' + s.replace(/"/g, '""') + '"';
 
 test("splitting any line never throws and yields at least one field", () => {
   fc.assert(fc.property(fc.string({ unit: "binary", maxLength: 200 }), delimiter, (line, d) => {
-    const cells = splitCsvLine(line, d);
+    const cells = demo.splitCsvLine(line, d);
     assert.ok(Array.isArray(cells) && cells.length >= 1);
     assert.ok(cells.every((c) => typeof c === "string"));
   }), RUNS);
@@ -30,13 +38,13 @@ test("splitting any line never throws and yields at least one field", () => {
 
 test("fields quoted the RFC 4180 way split back to exactly the same fields", () => {
   fc.assert(fc.property(fc.array(lineText, { minLength: 1, maxLength: 12 }), delimiter, (fields, d) => {
-    assert.deepEqual(splitCsvLine(fields.map(quote).join(d), d), fields);
+    assert.deepEqual(demo.splitCsvLine(fields.map(quote).join(d), d), fields);
   }), RUNS);
 });
 
 test("parsing any pasted text never throws, and every accepted row matches the header", () => {
   fc.assert(fc.property(fc.string({ unit: "binary", maxLength: 400 }), (text) => {
-    const out = parseCsv(text);
+    const out = demo.parseCsv(text);
     if (out.error) return;
     assert.ok(DELIMITERS.includes(out.delimiter));
     for (const row of out.rows) assert.equal(typeof row, "object");
@@ -50,7 +58,7 @@ test("CSV-shaped input: rows either match the header or are reported, never drop
     fc.tuple(fc.constant(d), fc.array(fc.array(lineText, { minLength: 1, maxLength: width + 1 }), { minLength: 2, maxLength: 8 })));
   fc.assert(fc.property(table, ([d, lines]) => {
     const text = lines.map((cells) => cells.map(quote).join(d)).join("\n");
-    const out = parseCsv(text);
+    const out = demo.parseCsv(text);
     if (out.error) return;
     const records = text.split("\n").filter((l) => l.trim() !== "").length - 1;
     assert.equal(out.rows.length + out.structural.length, records,
@@ -60,7 +68,7 @@ test("CSV-shaped input: rows either match the header or are reported, never drop
 
 test("the delimiter sniffer only ever answers comma, semicolon or tab", () => {
   fc.assert(fc.property(fc.string({ unit: "binary", maxLength: 200 }), (header) => {
-    assert.ok(DELIMITERS.includes(sniffDelimiter(header)));
+    assert.ok(DELIMITERS.includes(demo.sniffDelimiter(header)));
   }), RUNS);
 });
 
@@ -76,13 +84,13 @@ test("every error-report line parses back to the six fields that were written", 
     text: lineText,
   });
   fc.assert(fc.property(fc.array(finding, { maxLength: 8 }), fc.array(summary, { maxLength: 5 }), (findings, rows) => {
-    const lines = errorReportCsv(findings, rows).split("\n");
-    assert.deepEqual(splitCsvLine(lines[0], ","), ["layer", "row", "column", "rule", "value", "message"]);
+    const lines = demo.errorReportCsv(findings, rows).split("\n");
+    assert.deepEqual(demo.splitCsvLine(lines[0], ","), ["layer", "row", "column", "rule", "value", "message"]);
     rows.forEach((s, i) => {
-      assert.deepEqual(splitCsvLine(lines[1 + i], ","), [s.layer, "", "", "summary", s.state, s.text]);
+      assert.deepEqual(demo.splitCsvLine(lines[1 + i], ","), [s.layer, "", "", "summary", s.state, s.text]);
     });
     findings.forEach((f, i) => {
-      assert.deepEqual(splitCsvLine(lines[1 + rows.length + i], ","),
+      assert.deepEqual(demo.splitCsvLine(lines[1 + rows.length + i], ","),
         [f.layer, String(f.row), f.column, f.rule, f.value ?? "", f.message]);
     });
   }), RUNS);
@@ -90,7 +98,7 @@ test("every error-report line parses back to the six fields that were written", 
 
 test("decoding any uploaded bytes never throws and always yields text", () => {
   fc.assert(fc.property(fc.uint8Array({ maxLength: 300 }), (bytes) => {
-    const out = decodeBuffer(bytes.buffer);
+    const out = demo.decodeBuffer(bytes.buffer);
     assert.equal(typeof out.text, "string");
     assert.equal(typeof out.converted, "boolean");
   }), RUNS);
@@ -98,7 +106,7 @@ test("decoding any uploaded bytes never throws and always yields text", () => {
 
 test("filling a message template never throws and leaves unknown placeholders intact", () => {
   fc.assert(fc.property(lineText, fc.dictionary(fc.string({ minLength: 1, maxLength: 8 }), lineText), (tpl, params) => {
-    const out = fillTemplate(tpl + " {definitely_missing_key}", params);
+    const out = demo.fillTemplate(tpl + " {definitely_missing_key}", params);
     assert.ok(out.endsWith("{definitely_missing_key}"));
   }), RUNS);
 });

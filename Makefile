@@ -6,7 +6,7 @@ build:
 	./build.sh
 
 test: build
-	node --test tests/*.test.mjs
+	node --test tests/*.test.mjs tests/*.test.js
 	python3 scripts/css_minify.py
 	python3 scripts/validate_try_i18n.py
 	python3 scripts/validate_pages_i18n.py pages_i18n

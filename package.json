@@ -9,7 +9,7 @@
     "node": ">=22"
   },
   "scripts": {
-    "test": "node --test tests/*.test.mjs",
+    "test": "node --test tests/*.test.mjs tests/*.test.js",
     "test:engine": "node tests/engine.integration.mjs",
     "audit:deps": "npm audit --audit-level=high",
     "audit:a11y": "node scripts/audit_site.mjs",
