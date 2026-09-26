@@ -1,6 +1,6 @@
 {
   "name": "pain001-website",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "private": true,
   "description": "Build and quality gates for pain001.com, the website of the Pain001 ISO 20022 payment initiation suite.",
   "license": "Apache-2.0 OR MIT",
