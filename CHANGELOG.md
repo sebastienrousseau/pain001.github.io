@@ -8,6 +8,8 @@ All notable changes to this website are documented here. The format follows
 
 ### Added
 
+- The README links the OpenSSF Best Practices passing badge the
+  project earned on 26 September 2026.
 - Tests for every script the site ships, run in a jsdom page with fake
   runtimes: the theme and motion boot script, the analytics loader, the
   legacy redirect, the navigation and theme control, the Pain001 chrome
@@ -39,6 +41,9 @@ All notable changes to this website are documented here. The format follows
 
 ### Changed
 
+- Build provenance is attested with `actions/attest` v4.2.2, the action
+  `actions/attest-build-provenance` v4 wraps; this supersedes Dependabot's
+  bump in #50.
 - Release archives are reproducible. The release workflow pins every
   timestamp to the tagged commit (`SOURCE_DATE_EPOCH`), packages the
   site deterministically, builds it again from a clean tree and refuses

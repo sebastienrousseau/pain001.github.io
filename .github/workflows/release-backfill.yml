@@ -122,7 +122,9 @@ jobs:
 
       - name: Attest website provenance
         if: steps.existing.outputs.assets != 'true'
-        uses: actions/attest-build-provenance@977bb373ede98d70efdf65b84cb5f73e068dcc2a # v3
+        # actions/attest-build-provenance v4 is a wrapper over actions/attest;
+        # with no sbom-path or predicate, actions/attest writes SLSA provenance.
+        uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6 # v4.2.2
         with:
           subject-path: "dist/pain001-site-${{ inputs.tag }}.tar.gz"
 
