@@ -703,7 +703,7 @@ def retarget_lang_menu_to_try(html: str) -> str:
     return retarget_lang_menu(html, "try/")
 
 
-JOURNEY_PAGES = ("why", "solutions", "executive-brief")
+JOURNEY_PAGES = ("why", "solutions", "executive-brief", "pain-001")
 DOCS_PAGES = ("documentation", "faqs", "installation", "glossary")
 
 # Submenu targets that exist only in English get a visible cue on
@@ -1434,6 +1434,55 @@ def relocate_corpus_locales(site: Path) -> None:
           f"/<locale>/; stale paths rewritten in {rewritten} file(s)")
 
 
+def inject_article_ld(site: Path, page: str) -> int:
+    """Describe a reference page as a TechArticle about its ISO 20022 term.
+
+    Runs after the locale pages exist, so every language version carries
+    structured data in its own language: headline and description are read
+    from that page's <title> and meta description, inLanguage from <html
+    lang>, and the URL from its canonical link.
+    """
+    import json as _json
+
+    written = 0
+    for html_path in [site / page / "index.html"] + [site / loc / page / "index.html" for loc in sorted(LOCALES)]:
+        if not html_path.is_file():
+            continue
+        html = html_path.read_text(encoding="utf-8")
+        if '"@type": "TechArticle"' in html:
+            continue
+        title = re.search(r"<title>(.*?)</title>", html, re.S)
+        desc = re.search(r'<meta name="description" content="([^"]*)"', html)
+        lang = re.search(r'<html[^>]*\blang="([^"]+)"', html)
+        canon = re.search(r'<link rel="canonical" href="([^"]+)"', html)
+        if not (title and canon):
+            continue
+        ld = {
+            "@context": "https://schema.org",
+            "@type": "TechArticle",
+            "headline": _html.unescape(title.group(1).strip()),
+            "description": _html.unescape(desc.group(1)) if desc else "",
+            "inLanguage": lang.group(1) if lang else "en",
+            "url": canon.group(1),
+            "mainEntityOfPage": canon.group(1),
+            "datePublished": "2026-09-26",
+            "author": {"@type": "Organization", "name": "Pain001", "url": BASE_URL + "/"},
+            "publisher": {"@type": "Organization", "name": "Pain001", "url": BASE_URL + "/"},
+            "about": {
+                "@type": "DefinedTerm",
+                "name": "pain.001",
+                "alternateName": "Customer Credit Transfer Initiation",
+                "inDefinedTermSet": "ISO 20022",
+            },
+        }
+        block = '<script type="application/ld+json">%s</script>' % _json.dumps(
+            ld, ensure_ascii=False).replace("<", "\\u003c")
+        html_path.write_text(html.replace("</head>", block + "</head>", 1), encoding="utf-8")
+        written += 1
+    print(f"[postbuild] TechArticle structured data on {written} /{page}/ page(s)")
+    return written
+
+
 def inject_dataset_ld(site: Path) -> None:
     """Add schema.org Dataset markup to the corpus scenario pages.
 
@@ -1900,6 +1949,7 @@ def main() -> None:
     gen_journey_locales(site)
     relocate_corpus_locales(site)  # before the Dataset markup, which is keyed by final path
     inject_dataset_ld(site)
+    inject_article_ld(site, "pain-001")
     write_llms(site)
     stamp_suite_version(site)
     mark_noindex_pages(site)  # before the sitemap, which skips the same pages
