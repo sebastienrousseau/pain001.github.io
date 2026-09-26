@@ -23,8 +23,8 @@
 
 | ID | Severity | Finding | Status |
 | --- | --- | --- | --- |
-| SR-1 | Medium | Private vulnerability reporting is disabled on the repository, while `SECURITY.md` directs reporters to it. Reporters fall back to e-mail, which works but is not what the policy promises. | Open: the owner enables it in the repository settings. |
-| SR-2 | Low | Secret scanning and push protection are disabled. A scan of all 128 commits for common credential patterns found nothing, and the site stores no long-lived secrets. | Open: the owner enables both in the repository settings. |
+| SR-1 | Medium | Private vulnerability reporting is disabled on the repository, while `SECURITY.md` directs reporters to it. Reporters fall back to e-mail, which works but is not what the policy promises. | Fixed on 26 September 2026: private vulnerability reporting is enabled. |
+| SR-2 | Low | Secret scanning and push protection are disabled. A scan of all 128 commits for common credential patterns found nothing, and the site stores no long-lived secrets. | Fixed on 26 September 2026: secret scanning and push protection are enabled, with no alerts. |
 | SR-3 | Low | `scripts/carry_forward_assets.py` republishes the previous deploy's assets downloaded from the live site without an integrity check; their fingerprints are not content hashes. The source is the site's own origin over HTTPS, and the files are reached only by HTML cached for about ten minutes. | Accepted for deploys. Release builds (`SOURCE_DATE_EPOCH` set) no longer fetch anything. |
 | SR-4 | Low | ssg writes an invalid `news-sitemap.xml` into every page directory, 385 files publicly served with an empty `<loc>` and the build time, which also made builds non-reproducible. | Fixed: the post-build pass removes them; the root news sitemap is kept. |
 | SR-5 | Low | The SBOM's `metadata.timestamp` was the build time, so the SBOM differed between two builds of one commit. | Fixed: it is set to `SOURCE_DATE_EPOCH` or the commit time. |
