@@ -19,7 +19,7 @@ env:
 
 jobs:
   release:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: write
       id-token: write
@@ -74,7 +74,7 @@ jobs:
         run: |
           mkdir -p dist
           version="$(tr -d '[:space:]' < VERSION)"
-          # Exported because attest-sbom's sbom-path takes a literal path, not
+          # Exported because the SBOM attestation's sbom-path takes a literal path, not
           # a glob, so the attestation step has to name the file exactly.
           echo "RELEASE_VERSION=$version" >> "$GITHUB_ENV"
           tar -czf "dist/pain001-site-v${version}.tar.gz" site LICENSE LICENSE-APACHE LICENSE-MIT THIRD_PARTY_NOTICES.md
@@ -91,7 +91,9 @@ jobs:
       # "SBOM file not found" while the identical glob resolved for the subject
       # in this same step, so both paths are now spelled out in full.
       - name: Attest SBOM
-        uses: actions/attest-sbom@c604332985a26aa8cf1bdc465b92731239ec6b9e # v4.1.0
+        # actions/attest replaces the deprecated actions/attest-sbom with the
+        # same inputs; giving it sbom-path is what selects the SBOM mode.
+        uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6 # v4.2.2
         with:
           subject-path: "dist/pain001-site-v${{ env.RELEASE_VERSION }}.tar.gz"
           sbom-path: "dist/pain001-site-v${{ env.RELEASE_VERSION }}.cdx.json"
