@@ -6,7 +6,12 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
-Nothing yet.
+### Fixed
+
+- CodeQL flagged an empty `except` in the corpus-zip check added in
+  0.0.9 (`py/empty-except`). The check is now a function that returns
+  whether an existing zip already holds the entries, and a damaged zip
+  answers no, so it is replaced.
 
 ## [0.0.9] - 2026-09-26
 

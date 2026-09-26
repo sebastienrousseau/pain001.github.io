@@ -74,6 +74,22 @@ def lib_version(lib: Path) -> str:
     return m.group(1) if m else "unknown"
 
 
+def zip_holds(target: Path, entries: list[tuple[str, bytes]]) -> bool:
+    """True when ``target`` is a zip of exactly ``entries`` as write_zip writes them."""
+    if not target.is_file():
+        return False
+    try:
+        with zipfile.ZipFile(target) as old:
+            listed = [(i.filename, i.date_time, i.external_attr, i.compress_type)
+                      for i in old.infolist()]
+            wanted = [(name, ZIP_TIME, 0o644 << 16, zipfile.ZIP_DEFLATED) for name, _ in entries]
+            return listed == wanted and all(old.read(name) == data for name, data in entries)
+    except zipfile.BadZipFile:
+        # A damaged or truncated zip does not hold the entries; write_zip
+        # replaces it.
+        return False
+
+
 def write_zip(target: Path, entries: list[tuple[str, bytes]]) -> None:
     """Write ``entries`` as a zip, unless ``target`` already holds exactly them.
 
@@ -83,16 +99,8 @@ def write_zip(target: Path, entries: list[tuple[str, bytes]]) -> None:
     still rewrote five zips. When the existing file has the same members,
     metadata and uncompressed bytes, it is kept as it is.
     """
-    if target.is_file():
-        try:
-            with zipfile.ZipFile(target) as old:
-                listed = [(i.filename, i.date_time, i.external_attr, i.compress_type)
-                          for i in old.infolist()]
-                wanted = [(name, ZIP_TIME, 0o644 << 16, zipfile.ZIP_DEFLATED) for name, _ in entries]
-                if listed == wanted and all(old.read(name) == data for name, data in entries):
-                    return
-        except zipfile.BadZipFile:
-            pass
+    if zip_holds(target, entries):
+        return
     with zipfile.ZipFile(target, "w") as zf:
         for name, data in entries:
             info = zipfile.ZipInfo(name, date_time=ZIP_TIME)
