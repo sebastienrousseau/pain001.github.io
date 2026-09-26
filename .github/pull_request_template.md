@@ -4,6 +4,8 @@
 
 ## Verification
 
+- [ ] Reviewed against the checklist in CONTRIBUTING.md, "Reviewing changes"
+- [ ] New or changed behaviour has tests; a fix has a test that fails without it
 - [ ] Built locally with ssg 0.0.63
 - [ ] `make verify` passes
 - [ ] WCAG 2.2 AAA browser scan has zero findings

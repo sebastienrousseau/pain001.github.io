@@ -8,6 +8,9 @@ All notable changes to this website are documented here. The format follows
 
 ### Added
 
+- `CONTRIBUTING.md` sets out the code-review standard every pull request
+  is checked against, and the pull request template links it. It also
+  points newcomers to the good-first-issue tasks.
 - The README links the OpenSSF Best Practices passing badge the
   project earned on 26 September 2026.
 - Tests for every script the site ships, run in a jsdom page with fake
