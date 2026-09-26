@@ -16,6 +16,7 @@
     "validate:readme": "python3 scripts/validate_readme.py"
   },
   "devDependencies": {
+    "fast-check": "4.10.2",
     "pyodide": "0.27.2"
   }
 }
