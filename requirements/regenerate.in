@@ -1,0 +1,17 @@
+attrs
+click
+defusedxml
+elementpath
+jinja2
+jsonschema
+jsonschema-specifications
+markdown-it-py
+markupsafe
+mdurl
+pygments
+pyyaml
+referencing
+rich
+rpds-py
+typing-extensions
+xmlschema

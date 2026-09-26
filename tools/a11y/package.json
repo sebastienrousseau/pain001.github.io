@@ -1,0 +1,10 @@
+{
+  "name": "pain001-a11y-tools",
+  "private": true,
+  "description": "Browser-audit toolchain for CI (layout, print, measure and axe audits). Installed with npm ci into .a11y-tools/ so every version is pinned by the lockfile.",
+  "license": "Apache-2.0 OR MIT",
+  "dependencies": {
+    "@axe-core/puppeteer": "4.13.0",
+    "puppeteer-core": "25.12.0"
+  }
+}
