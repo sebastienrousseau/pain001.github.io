@@ -8,6 +8,12 @@ All notable changes to this website are documented here. The format follows
 
 ### Added
 
+- A "What is pain.001?" reference page at `/pain-001/`, in all 35
+  languages: what the message is, its structure, a complete example
+  that validates against the official XSD, every version from .03 to
+  .13, how it compares with pain.002, pain.008, pacs.008 and MT101, and
+  how to create one. It carries TechArticle structured data in each
+  language.
 - `CONTRIBUTING.md` sets out the code-review standard every pull request
   is checked against, and the pull request template links it. It also
   points newcomers to the good-first-issue tasks.
@@ -56,6 +62,9 @@ All notable changes to this website are documented here. The format follows
 
 ### Changed
 
+- The new page is linked from the Developers menu and the footer on
+  every page, from each language's homepage, and from every version
+  page. The English homepage title now names pain.001.
 - Build provenance is attested with `actions/attest` v4.2.2, the action
   `actions/attest-build-provenance` v4 wraps; this supersedes Dependabot's
   bump in #50.
@@ -72,6 +81,11 @@ All notable changes to this website are documented here. The format follows
 
 ### Fixed
 
+- The site no longer publishes 1,931 stray per-page files that ssg wrote
+  beside every page (empty sitemaps, robots.txt files pointing at them,
+  RSS and manifest copies, timestamped news sitemaps), nor the `/404/`
+  copy Search Console reported as a soft 404. Tag archives no longer
+  list the not-found, offline and thanks pages.
 - A deploy no longer risks publishing a CDN challenge or error page as a
   stylesheet or script. `scripts/carry_forward_assets.py` keeps a file it
   downloads from the live site only when it is served as CSS or

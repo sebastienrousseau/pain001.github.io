@@ -90,6 +90,8 @@ last_reviewed: "2026-07-26"
 
 `pain.001.001.12` was the newest version until ISO published [`pain.001.001.13`](/pain.001.001.13/) on 19 March 2026. It is fully supported: generated, migrated, and validated against the official ISO schema.
 
+New to the format? [What is pain.001?](/pain-001/) explains the message, its structure and every version.
+
 ## What to know about this version
 
 - Ideal for future-proofing internal formats: generate `.12` internally, down-convert per bank with `migrate_records`.

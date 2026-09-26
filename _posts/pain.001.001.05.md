@@ -89,6 +89,8 @@ last_reviewed: "2026-07-26"
 
 `pain.001.001.05` continues the incremental refinement of the message. Like version 4, it is encountered mostly in specific bank channels rather than as a market-wide choice. Pain001 bundles its official XSD and template so files validate byte-for-byte against what such channels expect.
 
+New to the format? [What is pain.001?](/pain-001/) explains the message, its structure and every version.
+
 ## What to know about this version
 
 - Introduced refinements to party and account structures on the road to the 2019 rework.

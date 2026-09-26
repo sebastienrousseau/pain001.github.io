@@ -39,7 +39,7 @@ short_name: pain001
 subtitle: "The open-source suite that turns the payment data you already have into schema-validated ISO 20022 XML, proven clean before your bank ever sees it."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001: Open-Source ISO 20022 Payment Initiation Suite"
+title: "Pain001: Open-Source pain.001 and ISO 20022 Payments"
 url: "https://pain001.com/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/rss.xml"
@@ -50,7 +50,7 @@ item_description: "Generate schema-validated ISO 20022 pain.001 and pain.008 XML
 item_guid: "https://pain001.com/rss.xml"
 item_link: "https://pain001.com/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: Open-Source ISO 20022 Payment Initiation Suite"
+item_title: "Pain001: Open-Source pain.001 and ISO 20022 Payments"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: Open-Source ISO 20022 Payment Initiation Suite"
+apple-mobile-web-app-title: "Pain001: Open-Source pain.001 and ISO 20022 Payments"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,7 +71,7 @@ twitter_description: "Generate schema-validated ISO 20022 pain.001 and pain.008 
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001: Open-Source ISO 20022 Payment Initiation Suite"
+twitter_title: "Pain001: Open-Source pain.001 and ISO 20022 Payments"
 twitter_url: "https://pain001.com/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"

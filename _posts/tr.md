@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## Ödeme dosyası hatalarını bankanızdan önce yakalayın
 
-**Pain001**, ISO 20022 ödeme başlatma için açık kaynaklı bir Python paketidir. Elinizdeki verileri (CSV, Excel, SQLite, JSON, Parquet veya eski SWIFT MT101 mesajları) resmi XSD şemalarıyla doğrulanmış `pain.001` (havale) ve `pain.008` (otomatik ödeme) XML'ine dönüştürür.
+**Pain001**, ISO 20022 ödeme başlatma için açık kaynaklı bir Python paketidir. Elinizdeki verileri (CSV, Excel, SQLite, JSON, Parquet veya eski SWIFT MT101 mesajları) resmi XSD şemalarıyla doğrulanmış [`pain.001`](/tr/pain-001/) (havale) ve `pain.008` (otomatik ödeme) XML'ine dönüştürür.
 
 Her dosya yazılmadan önce üç doğrulama katmanından geçer: kayıt başına JSON şeması (IBAN mod-97 kontrolü ve BIC yapısı dahil), scheme kuralları (SEPA ve sınır ötesi CBPR+) ve son XSD doğrulaması. Kontrol toplamları yeniden hesaplanır, asla kopyalanmaz. Her şey yerelde çalışır: hiçbir ödeme verisi altyapınızdan çıkmaz.
 

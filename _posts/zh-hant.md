@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## 在銀行發現之前先找出付款檔案中的錯誤
 
-**Pain001** 是用於 ISO 20022 付款發起的開源 Python 套件。它將您既有的資料（CSV、Excel、SQLite、JSON、Parquet 或舊式 SWIFT MT101 報文）轉換為經官方 XSD 結構描述驗證的 `pain.001`(信用轉帳)與 `pain.008`(直接扣款)XML。
+**Pain001** 是用於 ISO 20022 付款發起的開源 Python 套件。它將您既有的資料（CSV、Excel、SQLite、JSON、Parquet 或舊式 SWIFT MT101 報文）轉換為經官方 XSD 結構描述驗證的 [`pain.001`](/zh-hant/pain-001/)(信用轉帳)與 `pain.008`(直接扣款)XML。
 
 每個檔案在寫出前都須通過三層驗證:逐筆記錄的 JSON 結構描述(含 IBAN 的 mod-97 檢查與 BIC 結構)、清算規則(SEPA 與跨境 CBPR+),以及最終的 XSD 驗證。控制總數一律重新計算,絕不複製。一切皆在本機執行:任何付款資料都不會離開您的基礎設施。
 

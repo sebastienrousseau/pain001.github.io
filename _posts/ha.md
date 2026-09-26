@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## Gano kurakuran fayilolin biyan kuɗi kafin bankinku ya gano su
 
-**Pain001** kunshin Python ne na buɗaɗɗen tushe don fara biyan kuɗi bisa ISO 20022. Yana mai da bayanan da kuke da su (CSV, Excel, SQLite, JSON, Parquet ko tsofaffin saƙonnin SWIFT MT101) zuwa XML na `pain.001` (canja wurin kuɗi) da `pain.008` (cire kuɗi kai tsaye), waɗanda aka tabbatar da su da tsare-tsaren XSD na hukuma.
+**Pain001** kunshin Python ne na buɗaɗɗen tushe don fara biyan kuɗi bisa ISO 20022. Yana mai da bayanan da kuke da su (CSV, Excel, SQLite, JSON, Parquet ko tsofaffin saƙonnin SWIFT MT101) zuwa XML na [`pain.001`](/ha/pain-001/) (canja wurin kuɗi) da `pain.008` (cire kuɗi kai tsaye), waɗanda aka tabbatar da su da tsare-tsaren XSD na hukuma.
 
 Kowane fayil yana wuce matakan tabbatarwa uku kafin a rubuta shi: tsarin JSON ga kowane rikodi (har da bincika mod-97 na IBAN da tsarin BIC), dokokin scheme (SEPA da CBPR+ na ƙetare) da tabbatarwar XSD ta ƙarshe. Ana sake lissafa jimillar sarrafawa koyaushe, ba a taɓa kwafa su ba. Komai yana gudana a cikin na'urarku: babu bayanan biyan kuɗi da ke fita daga kayan aikinku.
 

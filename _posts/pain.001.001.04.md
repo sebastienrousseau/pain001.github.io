@@ -89,6 +89,8 @@ last_reviewed: "2026-07-26"
 
 `pain.001.001.04` is the first maintenance update of the 2009 baseline. It saw limited standalone adoption (most implementations either stayed on version 3 or jumped ahead), but it appears in some bank channels and archives, and Pain001 supports it fully for exactly that reason.
 
+New to the format? [What is pain.001?](/pain-001/) explains the message, its structure and every version.
+
 ## What to know about this version
 
 - Functionally close to version 3; the differences are element-cardinality refinements rather than headline features.

@@ -90,6 +90,8 @@ last_reviewed: "2026-07-26"
 
 `pain.001.001.13` is the newest Customer Credit Transfer Initiation version in the ISO 20022 catalogue, published on **19 March 2026**. Pain001 generates and validates it against the official schema. However, no bank channel we track accepts it yet, so treat it as forward-looking format work rather than something to submit.
 
+New to the format? [What is pain.001?](/pain-001/) explains the message, its structure and every version.
+
 ## What to know about this version
 
 - Ideal for future-proofing internal formats: generate `.12` internally, down-convert per bank with `migrate_records`.

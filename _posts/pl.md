@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## Wykryj błędy w plikach płatności, zanim zrobi to bank
 
-**Pain001** to otwartoźródłowy pakiet Python do inicjowania płatności ISO 20022. Przekształca dane, które już masz (CSV, Excel, SQLite, JSON, Parquet lub komunikaty SWIFT MT101) w XML `pain.001` (przelewy) i `pain.008` (polecenia zapłaty), walidowany oficjalnymi schematami XSD.
+**Pain001** to otwartoźródłowy pakiet Python do inicjowania płatności ISO 20022. Przekształca dane, które już masz (CSV, Excel, SQLite, JSON, Parquet lub komunikaty SWIFT MT101) w XML [`pain.001`](/pl/pain-001/) (przelewy) i `pain.008` (polecenia zapłaty), walidowany oficjalnymi schematami XSD.
 
 Każdy plik przechodzi trzy poziomy walidacji: schemat JSON dla każdego rekordu (z kontrolą mod-97 IBAN i strukturą BIC), reguły scheme (SEPA i transgraniczne CBPR+) oraz końcową walidację XSD. Sumy kontrolne są przeliczane, nigdy kopiowane. Wszystko działa lokalnie: żadne dane płatnicze nie opuszczają Twojej infrastruktury.
 

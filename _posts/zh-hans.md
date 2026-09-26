@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## 在银行发现之前先找出支付文件中的错误
 
-**Pain001** 是用于 ISO 20022 支付发起的开源 Python 套件。它将您已有的数据（CSV、Excel、SQLite、JSON、Parquet 或旧式 SWIFT MT101 报文）转换为经官方 XSD 模式校验的 `pain.001`(贷记转账)和 `pain.008`(直接借记)XML。
+**Pain001** 是用于 ISO 20022 支付发起的开源 Python 套件。它将您已有的数据（CSV、Excel、SQLite、JSON、Parquet 或旧式 SWIFT MT101 报文）转换为经官方 XSD 模式校验的 [`pain.001`](/zh-hans/pain-001/)(贷记转账)和 `pain.008`(直接借记)XML。
 
 每个文件在写出前都要通过三层校验:逐条记录的 JSON 模式(含 IBAN 的 mod-97 校验和 BIC 结构)、清算规则(SEPA 及跨境 CBPR+)以及最终的 XSD 校验。控制合计始终重新计算,绝不复制。一切都在本地运行:任何支付数据都不会离开您的基础设施。
 

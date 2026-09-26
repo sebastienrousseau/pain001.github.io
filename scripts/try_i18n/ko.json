@@ -142,7 +142,9 @@
   "System": "시스템",
   "All 34 languages": "34개 언어 전체",
   "Reduce motion": "동작 줄이기",
-  "Save page": "페이지 저장"
+  "Save page": "페이지 저장",
+  "What is pain.001?": "pain.001이란?",
+  "The message, its structure, versions and an example.": "메시지, 구조, 버전 및 예시."
  },
  "chrome_aria": {
   "Toggle Why Pain001 submenu": "Pain001을 선택하는 이유 하위 메뉴 열기/닫기",

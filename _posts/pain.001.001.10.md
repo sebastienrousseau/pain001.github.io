@@ -90,6 +90,8 @@ last_reviewed: "2026-07-26"
 
 `pain.001.001.10` carries the 2019 rework forward with incremental maintenance. Market infrastructures largely standardised on version 9, so version 10 is generated mainly where a specific platform or bank profile requests it.
 
+New to the format? [What is pain.001?](/pain-001/) explains the message, its structure and every version.
+
 ## What to know about this version
 
 - Same modern element names (`<BICFI>`, structured addresses) as version 9.
