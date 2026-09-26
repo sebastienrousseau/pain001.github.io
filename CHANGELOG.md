@@ -44,6 +44,13 @@ All notable changes to this website are documented here. The format follows
 
 ### Fixed
 
+- Scorecard's Fuzzing check still scored 0 after the property tests
+  landed: it looks for fast-check only in `*.js` and `*.ts` files, and
+  the tests were `.mjs`. They are now a CommonJS `.js` file, and
+  `npm test` runs both kinds.
+- The regenerate workflow reads PyPI's wheel digest in Python instead
+  of piping `curl` into `python`, which Scorecard reported as an
+  unpinned download-then-run.
 - The version stamper now updates the translation tables too. The
   documentation page's English key quotes the library version, so the
   0.0.71 regeneration failed its live-key gate, and 35 locales still
