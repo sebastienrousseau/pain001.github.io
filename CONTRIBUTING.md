@@ -8,9 +8,14 @@ Thank you for improving Pain001's documentation website.
    patch after the latest release.
 3. Follow [DEVELOPMENT.md](DEVELOPMENT.md), run `make verify`, and update the
    changelog for user-visible work.
-4. Commit with both a cryptographic signature and the DCO trailer:
+4. Add tests with every new or changed behaviour: unit or property tests
+   under `tests/` for the demo's code, or a validator under `scripts/` wired
+   into `make test` and CI for a site-wide rule. A fix comes with a test that
+   fails without it. Pull requests that add functionality without tests are
+   not merged.
+5. Commit with both a cryptographic signature and the DCO trailer:
    `git commit -S -s`.
-5. Open a pull request. Do not merge until all required checks are green.
+6. Open a pull request. Do not merge until all required checks are green.
 
 Generated corpus and locale pages identify their source generator in the
 README. Edit that generator, not the derived file. Report vulnerabilities

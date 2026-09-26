@@ -6,6 +6,12 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+### Changed
+
+- `CONTRIBUTING.md` states the test policy the project already follows:
+  new or changed behaviour comes with tests, and a fix with a test that
+  fails without it.
+
 ### Fixed
 
 - CodeQL flagged an empty `except` in the corpus-zip check added in
