@@ -44,6 +44,12 @@ All notable changes to this website are documented here. The format follows
 
 ### Fixed
 
+- The site regenerates for every pain001 release again. The library's
+  notification needed a `SITE_DISPATCH_TOKEN` secret that was never
+  created, so no release since the workflow was added regenerated the
+  site. The regenerate workflow now also checks PyPI every six hours and
+  runs when a newer release appears, with no token. It pins the demo's
+  pain001 wheel itself, and starts CI on the pull request it opens.
 - Scorecard's Fuzzing check still scored 0 after the property tests
   landed: it looks for fast-check only in `*.js` and `*.ts` files, and
   the tests were `.mjs`. They are now a CommonJS `.js` file, and

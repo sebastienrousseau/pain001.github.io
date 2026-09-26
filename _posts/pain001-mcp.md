@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "21 Model Context Protocol tools for AI agents: validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio."
+description: "23 Model Context Protocol tools for AI agents: validate IBANs, pre-flight batches, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
@@ -36,7 +36,7 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "Seventeen read-only tools that let AI agents validate, migrate, convert, and generate ISO 20022 payment files locally, over stdio."
+subtitle: "Twenty-three read-only tools that let AI agents validate, pre-flight, migrate, convert, and generate ISO 20022 payment files locally, over stdio."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
 title: "pain001-mcp: The MCP Server for ISO 20022 Payments"
@@ -46,7 +46,7 @@ atom_link: "https://pain001.com/pain001-mcp/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "21 Model Context Protocol tools for AI agents: validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio."
+item_description: "23 Model Context Protocol tools for AI agents: validate IBANs, pre-flight batches, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio."
 item_guid: "https://pain001.com/pain001-mcp/rss.xml"
 item_link: "https://pain001.com/pain001-mcp/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -67,7 +67,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "21 Model Context Protocol tools for AI agents: validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio."
+twitter_description: "23 Model Context Protocol tools for AI agents: validate IBANs, pre-flight batches, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
@@ -87,13 +87,13 @@ last_reviewed: "2026-07-26"
 
 ---
 
-**`pain001-mcp` v0.0.71** exposes the Pain001 suite to AI agents as **21 Model Context Protocol tools**. Claude Desktop, Claude Code, Cursor, and any MCP-compatible orchestrator can validate IBANs, migrate message versions, convert SWIFT MT101, and generate schema-validated `pain.001` XML inside a conversation, on your own machine.
+**`pain001-mcp` v0.0.71** exposes the Pain001 suite to AI agents as **23 Model Context Protocol tools**. Claude Desktop, Claude Code, Cursor, and any MCP-compatible orchestrator can validate IBANs, migrate message versions, convert SWIFT MT101, and generate schema-validated `pain.001` XML inside a conversation, on your own machine.
 
 Card networks and PSPs have built agentic *checkout* rails. The corporate payment-file layer, where credit transfers are actually initiated, had no agent interface. This server fills that gap. Payment data never leaves your machine: the transport is stdio, and every tool is annotated read-only and idempotent, so an agent can explore safely without side effects.
 
 ---
 
-## 01. The 21 tools
+## 01. The 23 tools
 
 | Tool | What it does |
 | :--- | :--- |
@@ -101,6 +101,7 @@ Card networks and PSPs have built agentic *checkout* rails. The corporate paymen
 | `get_required_fields` | Return the required input fields for a message type. |
 | `get_input_schema` | Return the full JSON Schema for a message type. |
 | `validate_records` | Validate flat payment records against the input schema. |
+| `suggest_record_fix` | Suggest deterministic, review-only fixes to non-financial fields. |
 | `validate_identifier` | Check a single IBAN (ISO 13616 mod-97) or BIC (ISO 9362). |
 | `generate_message` | Generate XSD-validated pain XML from in-memory records. |
 | `generate_message_async` | Off-event-loop generation for large batches. |
@@ -110,6 +111,7 @@ Card networks and PSPs have built agentic *checkout* rails. The corporate paymen
 | `parse_pain002` | Parse a pain.002 payment status report. |
 | `inspect_template` | Show the CSV column headers of a bundled template. |
 | `validate_payment_scheme` | Enforce a scheme rulebook: SEPA SCT, Instant, SDD Core, B2B, or cross-border. |
+| `simulate_payment_batch` | Pre-flight and simulate a payment batch: aggregate currency sums, count accounts, and detect intra-batch duplicates. |
 | `migrate_records` | Migrate records between pain.001 versions (e.g. `.03` → `.09`). |
 | `validate_xml_against_schema` | Validate raw XML against the bundled official XSD. |
 | `sanitize_to_iso20022_charset` | Transliterate text to the ISO 20022 Latin character set. |
