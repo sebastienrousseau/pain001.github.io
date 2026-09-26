@@ -11,6 +11,9 @@ All notable changes to this website are documented here. The format follows
 - `CONTRIBUTING.md` sets out the code-review standard every pull request
   is checked against, and the pull request template links it. It also
   points newcomers to the good-first-issue tasks.
+- Tests for the SPDX header gate (`scripts/validate_spdx_headers.py`):
+  what it accepts, what it reports, which paths it exempts, and that it
+  reads only the first ten lines of a file (#51).
 - The README links the OpenSSF Best Practices passing badge the
   project earned on 26 September 2026.
 - Tests for every script the site ships, run in a jsdom page with fake
