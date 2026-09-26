@@ -41,6 +41,9 @@ All notable changes to this website are documented here. The format follows
 
 ### Changed
 
+- Build provenance is attested with `actions/attest` v4.2.2, the action
+  `actions/attest-build-provenance` v4 wraps; this supersedes Dependabot's
+  bump in #50.
 - Release archives are reproducible. The release workflow pins every
   timestamp to the tagged commit (`SOURCE_DATE_EPOCH`), packages the
   site deterministically, builds it again from a clean tree and refuses
