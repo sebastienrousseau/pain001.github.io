@@ -4,12 +4,12 @@
   "private": true,
   "description": "Build and quality gates for pain001.com, the website of the Pain001 ISO 20022 payment initiation suite.",
   "license": "Apache-2.0 OR MIT",
-  "//type": "Deliberately no \"type\" field: forcing ESM would make Node parse the vendored CommonJS static/pyodide/pyodide.asm.js as a module (ERR_AMBIGUOUS_MODULE_SYNTAX). This repo's own ESM files use .mjs, so Node's automatic syntax detection resolves each .js file correctly.",
+  "//type": "Deliberately no \"type\" field: forcing ESM would make Node parse the vendored CommonJS static/pyodide/pyodide.asm.js as a module (ERR_AMBIGUOUS_MODULE_SYNTAX). This repo's own ESM files use .mjs, so Node's automatic syntax detection resolves each .js file correctly. Node warns (MODULE_TYPELESS_PACKAGE_JSON) each time it re-parses such a file as ESM; the test commands silence exactly that warning.",
   "engines": {
     "node": ">=22"
   },
   "scripts": {
-    "test": "node --test tests/*.test.mjs tests/*.test.js",
+    "test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test tests/*.test.mjs tests/*.test.js",
     "test:engine": "node tests/engine.integration.mjs",
     "audit:deps": "npm audit --audit-level=high",
     "audit:a11y": "node scripts/audit_site.mjs",

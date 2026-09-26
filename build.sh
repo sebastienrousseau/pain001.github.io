@@ -83,7 +83,7 @@ python3 scripts/postbuild_fix.py Pain001 --optimise-assets
 # Downloadable sample CSVs, generated from the demo module's SAMPLES so
 # the files users download are byte-identical to what "Load a sample"
 # loads — one source of truth, no drift.
-node scripts/gen_samples.mjs Pain001/samples
+node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/gen_samples.mjs Pain001/samples
 
 # Derive the service worker's cache name from the bytes it caches,
 # so a change to /try/ can never be invisible to a returning visitor.

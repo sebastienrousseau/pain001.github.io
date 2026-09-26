@@ -70,7 +70,7 @@ jobs:
         run: ssg audit -f ssg.toml -o site --severity warn --fail-on warn
 
       - name: Unit tests (demo input handling)
-        run: node --experimental-test-coverage --test-coverage-lines=100 --test-coverage-functions=100 --test-coverage-branches=100 --test tests/try-demo.test.mjs
+        run: node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --experimental-test-coverage --test-coverage-lines=100 --test-coverage-functions=100 --test-coverage-branches=100 --test tests/try-demo.test.mjs
 
       - name: Browser engine runs the library (Node, vendored runtime)
         run: node tests/engine.integration.mjs
