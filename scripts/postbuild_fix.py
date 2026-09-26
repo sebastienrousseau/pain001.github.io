@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 """Post-build repairs for the ssg output, run by build.sh before publish.
 
 Local ssg builds (0.0.63) emit two entity-escaping artifacts, the same

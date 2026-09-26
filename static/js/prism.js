@@ -1,3 +1,7 @@
+/*
+ * SPDX-FileCopyrightText: 2026 Sebastien Rousseau
+ * SPDX-License-Identifier: MIT
+ */
 /*!
  * Prism behaviour: a navigation disclosure, a mega-menu of disclosure
  * panels, and a theme toggle.

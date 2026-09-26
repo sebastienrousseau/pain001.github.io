@@ -41,7 +41,7 @@ each push and pull request.
 | Markdown | markdownlint's default rules as configured in `.markdownlint-cli2.jsonc` | `markdownlint-cli2` |
 | GitHub Actions | actionlint | `rhysd/actionlint` |
 | Spelling | codespell | `codespell` |
-| Licensing | REUSE 3.3, with an SPDX header in every source file | `reuse lint` |
+| Licensing | REUSE 3.3, with an SPDX header in every source file | `reuse lint` and `scripts/validate_spdx_headers.py` |
 
 Run them locally with `make lint`.
 

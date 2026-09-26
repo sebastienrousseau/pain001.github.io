@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 # Workspace compliance declaration (AGENTS.md section 5.1).
 #
 # L2 is also the default for Public/, but the standard asks for the target to

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 """Give the generated CycloneDX SBOM a serialNumber.
 
 ssg's sbom plugin emits a valid CycloneDX 1.5 document, but without the

@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 name: CI
 
 # Every push and PR rebuilds the site and enforces the full quality bar:
@@ -220,6 +222,9 @@ jobs:
 
       - name: JavaScript coding standard (ESLint, see eslint.config.mjs)
         run: npm run lint
+
+      - name: Every source file carries its own SPDX header
+        run: python3 scripts/validate_spdx_headers.py
 
       - name: README conforms to the workspace template
         run: python3 scripts/validate_readme.py

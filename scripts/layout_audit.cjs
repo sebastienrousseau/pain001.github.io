@@ -1,3 +1,5 @@
+// SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+// SPDX-License-Identifier: Apache-2.0 OR MIT
 /*
  * Layout audit: horizontal overflow, cropped content and gutter balance
  * across viewports, in real Chrome.

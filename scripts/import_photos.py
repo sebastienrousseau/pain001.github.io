@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 """Import the site's photographs from the local stock library into
 static/img/photos/, cropped and re-encoded for this site's budgets.
 

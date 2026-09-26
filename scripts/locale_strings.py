@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 # Chrome strings for the locale landing pages, applied by postbuild.
 # Order per locale:
 #  0 home        1 skip-link          2 "min read"        3 "Last reviewed"

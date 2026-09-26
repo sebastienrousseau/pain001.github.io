@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 """Generate the example-corpus page and its downloads from the library.
 
 Everything here is copied or derived from ``pain001/corpus/data`` in the

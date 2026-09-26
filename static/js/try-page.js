@@ -1,3 +1,7 @@
+/*
+ * SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+ * SPDX-License-Identifier: Apache-2.0 OR MIT
+ */
 /* Pain001 browser demo: page wiring.
  *
  * Input handling lives in ./try-demo.js (pure, unit-tested); the

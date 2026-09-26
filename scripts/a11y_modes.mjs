@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+// SPDX-License-Identifier: Apache-2.0 OR MIT
 /* Axe + structural checks in system, light, and dark colour modes. */
 import { createRequire } from "node:module";
 import { existsSync } from "node:fs";

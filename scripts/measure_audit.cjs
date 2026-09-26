@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+// SPDX-License-Identifier: Apache-2.0 OR MIT
 /* Reading-measure audit: every built page, in real Chrome, at phone,
  * tablet, laptop and desktop widths. The layout audit catches cropping,
  * overflow and misalignment; this one catches the opposite failure, a

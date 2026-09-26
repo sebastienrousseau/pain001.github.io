@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 """Stamp every page to a released pain001 version.
 
 Rewrites version literals (``0.0.NN`` / ``v0.0.NN``) in ``_posts/`` to the

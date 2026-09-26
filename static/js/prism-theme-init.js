@@ -1,4 +1,8 @@
 /*
+ * SPDX-FileCopyrightText: 2026 Sebastien Rousseau
+ * SPDX-License-Identifier: MIT
+ */
+/*
  * Runs before first paint so the stored theme is applied without a flash
  * of the wrong palette. postbuild_fix.py inlines this file into every
  * page's <head> (its hash is in the CSP), so the page does not pay a

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 """Fonts must be declared, used, and within budget.
 
 The build ships 128 KB of Source Serif 4 into site/fonts/, but the

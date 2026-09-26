@@ -30,3 +30,6 @@ dist/
 
 # Local virtualenv for `make pytest`, built from requirements/test.txt.
 .venv-test/
+
+# Local agent worktrees
+.claude/

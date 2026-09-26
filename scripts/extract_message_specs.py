@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 """Extract message specifications from the official ISO 20022 XSDs.
 
 Everything this produces is derived from the schemas shipped in the

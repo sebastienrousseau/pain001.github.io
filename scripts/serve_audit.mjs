@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+// SPDX-License-Identifier: Apache-2.0 OR MIT
 /* Production-like local server for Lighthouse: compression and immutable
  * asset caching match the behaviour expected from the Pages CDN. */
 import { createServer } from "node:http";

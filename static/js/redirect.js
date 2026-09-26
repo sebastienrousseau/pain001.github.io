@@ -1,3 +1,7 @@
+/*
+ * SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+ * SPDX-License-Identifier: Apache-2.0 OR MIT
+ */
 /* Legacy-URL redirect for the stubs postbuild writes (see
    gen_legacy_redirects). Same-origin, so the stubs' CSP allows it; the
    page's own link is the fallback without scripting.

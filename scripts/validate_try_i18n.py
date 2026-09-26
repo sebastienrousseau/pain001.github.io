@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 """Validate the per-locale try_i18n tables against en.json:
 key parity per section, HTML-tag preservation, and a warning for
 values left identical to the English source."""

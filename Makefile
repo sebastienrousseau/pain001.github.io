@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 .PHONY: all build test pytest audit lint deps verify serve clean
 
 all: verify
@@ -45,6 +47,7 @@ lint:
 	npx --no-install markdownlint-cli2
 	codespell
 	reuse lint
+	python3 scripts/validate_spdx_headers.py
 
 # Separate from lint: this one talks to the npm registry.
 deps:

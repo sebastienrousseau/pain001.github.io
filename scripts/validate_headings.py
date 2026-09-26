@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 """Headings must be headlines, not SEO titles.
 
 `_layouts/page.html` renders `<h1>{{title}}</h1>`, so every page's H1 is

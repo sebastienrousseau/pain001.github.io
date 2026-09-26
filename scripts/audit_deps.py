@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 """Fail on npm advisories that are not explicitly and currently excepted.
 
 A plain `npm audit` gate is switched off the first week an advisory has no

@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 set -euo pipefail
 
 # Build pain001.com with the Static Site Generator (ssg), then publish the result to site/

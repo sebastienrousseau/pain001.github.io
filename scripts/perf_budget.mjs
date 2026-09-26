@@ -1,3 +1,5 @@
+// SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+// SPDX-License-Identifier: Apache-2.0 OR MIT
 /* Lighthouse quality gate for every PRISM page type.
  *
  * Every audited route must score exactly 100 in all four public Lighthouse

@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+// SPDX-License-Identifier: Apache-2.0 OR MIT
 /*
  * Every built page, not a sample: WAVE's error, contrast and alert rules
  * plus the full axe rule set, in light and dark.

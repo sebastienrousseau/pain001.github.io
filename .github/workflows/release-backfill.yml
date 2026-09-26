@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 # Complete the GitHub release of an existing signed tag.
 #
 # v0.0.1 and v0.0.2 predate release.yml, so their releases carry notes but

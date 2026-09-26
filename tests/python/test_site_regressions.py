@@ -93,5 +93,7 @@ def test_layouts_use_no_inline_style_attributes():
 def test_license_points_to_the_dual_grant():
     text = (ROOT / "LICENSE").read_text(encoding="utf-8")
     assert "LICENSE-APACHE" in text and "LICENSE-MIT" in text
+    # REUSE-IgnoreStart
     assert "SPDX-License-Identifier: Apache-2.0 OR MIT" in text
+    # REUSE-IgnoreEnd
     assert (ROOT / "LICENSE-APACHE").is_file() and (ROOT / "LICENSE-MIT").is_file()
