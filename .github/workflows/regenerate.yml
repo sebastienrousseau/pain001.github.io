@@ -1,33 +1,78 @@
 name: Regenerate for a pain001 release
 
-# Fired by the library's publish job (repository_dispatch, event
-# `suite-release`) or by hand. Installs the released version, regenerates
-# every page and file derived from the library (corpus pages, scenario
-# pages, demo samples, twin schemas, version stamps), rebuilds the site,
-# runs the same gates as CI, and opens a pull request. Nothing deploys
-# without a human merging that pull request.
+# Installs a released pain001 version, regenerates every page and file
+# derived from the library (corpus pages, scenario pages, demo samples,
+# twin schemas, version stamps, the demo's pinned wheel), rebuilds the
+# site, runs the same gates as CI, and opens a pull request. Nothing
+# deploys without a human merging that pull request.
+#
+# Three triggers, so a release is never missed:
+# - schedule: every six hours, scripts/library_release.py compares the
+#   newest release on PyPI with the one the demo's runtime manifest pins,
+#   and regenerates only when PyPI is ahead and no release branch for it
+#   exists yet. This needs no token, and is what keeps the site current.
+# - repository_dispatch (`suite-release`): the library's publish job
+#   sends it when the library repository has a SITE_DISPATCH_TOKEN secret,
+#   which only makes the update immediate.
+# - workflow_dispatch: by hand, for any version.
 
 on:
+  schedule:
+    - cron: "23 */6 * * *"
   repository_dispatch:
     types: [suite-release]
   workflow_dispatch:
     inputs:
       version:
-        description: "pain001 version on PyPI, e.g. 0.0.71"
-        required: true
+        description: "pain001 version on PyPI, e.g. 0.0.71; empty = the newest, if the site is behind"
+        required: false
+        default: ""
+      dry_run:
+        description: "Regenerate and run the gates, but open no pull request"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: read
 
 jobs:
+  target:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      version: ${{ steps.pick.outputs.version }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Pick the release to regenerate for
+        id: pick
+        env:
+          REQUESTED: ${{ github.event.inputs.version || github.event.client_payload.version }}
+        run: |
+          version="$(python3 scripts/library_release.py target "$REQUESTED")"
+          if [[ -n "$version" && -z "$REQUESTED" ]] \
+            && git ls-remote --exit-code --heads origin "release/pain001-${version}" > /dev/null; then
+            echo "release/pain001-${version} already has a pull request branch; nothing to do"
+            version=""
+          fi
+          echo "version=${version}" >> "$GITHUB_OUTPUT"
+          echo "target: ${version:-none (the site is current)}"
+
   regenerate:
+    needs: target
+    if: needs.target.outputs.version != ''
     runs-on: ubuntu-latest
     permissions:
       contents: write
       pull-requests: write
+      actions: write # start CI on the pull request branch (see the last step)
     timeout-minutes: 40
     env:
-      VERSION: ${{ github.event.inputs.version || github.event.client_payload.version }}
+      VERSION: ${{ needs.target.outputs.version }}
+      HAS_PAT: ${{ secrets.SITE_DISPATCH_TOKEN != '' }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
@@ -93,6 +138,7 @@ jobs:
           python3 scripts/generate_try_samples.py
           python3 scripts/generate_corpus_page.py "$PWD/.pain001"
           python3 scripts/stamp_version.py "${VERSION}"
+          python3 scripts/library_release.py pin "${VERSION}"
 
       - name: Build site
         run: ./build.sh
@@ -108,8 +154,10 @@ jobs:
           python3 scripts/validate_versions.py --current "${VERSION}"
 
       - name: Open the pull request
+        id: pr
         env:
           GH_TOKEN: ${{ secrets.SITE_DISPATCH_TOKEN || github.token }}
+          DRY_RUN: ${{ inputs.dry_run || false }}
         run: |
           set -euo pipefail
           git config user.name "pain001 release bot"
@@ -118,9 +166,29 @@ jobs:
           git checkout -B "$branch"
           rm -rf .pain001
           git add -A
-          git commit -s -m "chore(release): regenerate for pain001 ${VERSION}" -m "Corpus pages, scenario pages, demo samples, twin schemas and version stamps regenerated from the released library; site rebuilt; gates run in this workflow."
+          if git diff --cached --quiet; then
+            echo "pain001 ${VERSION}: regeneration changed nothing; no pull request"
+            exit 0
+          fi
+          git diff --cached --stat | tail -1
+          if [[ "$DRY_RUN" == "true" ]]; then
+            echo "dry run: stopping before the commit"
+            exit 0
+          fi
+          git commit -s -m "chore(release): regenerate for pain001 ${VERSION}" -m "Corpus pages, scenario pages, demo samples, twin schemas, version stamps and the demo's pinned wheel regenerated from the released library; site rebuilt; gates run in this workflow."
           git push -f origin "$branch"
           gh pr create --base main --head "$branch" \
             --title "chore(release): regenerate for pain001 ${VERSION}" \
-            --body "Generated by the regenerate workflow for pain001 ${VERSION}: corpus pages, scenario pages, demo samples, twin schemas and version stamps from the released library, site rebuilt, all gates run in the workflow. The demo's runtime is not swapped automatically; update static/pyodide/pain001-runtime.json (file, size, SHA-256 and URL of each binary) when the runtime set changes, and build.sh fetches and verifies it." \
+            --body "Generated by the regenerate workflow for pain001 ${VERSION}: corpus pages, scenario pages, demo samples, twin schemas, version stamps and the demo's pinned pain001 wheel, from the released library; site rebuilt; all gates run in the workflow. The demo's other wheels are not changed; if this run logged a core-dependency warning, update them in static/pyodide/pain001-runtime.json, and build.sh fetches and verifies them." \
             || gh pr edit "$branch" --title "chore(release): regenerate for pain001 ${VERSION}"
+          echo "opened=true" >> "$GITHUB_OUTPUT"
+
+      # A pull request opened with the workflow's own token starts no
+      # workflows, so without a personal token CI would never report on
+      # it. workflow_dispatch is the documented exception: CI runs on the
+      # branch and its checks attach to the pull request's head commit.
+      - name: Run CI on the pull request
+        if: steps.pr.outputs.opened == 'true' && env.HAS_PAT != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run ci.yml --ref "release/pain001-${VERSION}"
