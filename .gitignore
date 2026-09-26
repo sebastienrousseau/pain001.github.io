@@ -15,6 +15,11 @@ site/
 
 # Local-only accessibility tooling (see scripts/a11y_local.mjs)
 .a11y-tools/
+# Fetched and hash-verified at build time by scripts/fetch_runtime.py from
+# the URLs pinned in static/pyodide/pain001-runtime.json; never committed.
+static/pyodide/*.whl
+static/pyodide/*.wasm
+static/pyodide/python_stdlib.zip
 
 # Installed from package-lock.json by `npm ci`; never committed.
 node_modules/

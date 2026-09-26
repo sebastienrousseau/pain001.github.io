@@ -38,6 +38,11 @@ clean_staging() {
 
 clean_staging
 
+# The demo's WebAssembly runtime and wheels are not committed: fetch them
+# from their upstream URLs and refuse any byte that does not match the
+# SHA-256 pinned in static/pyodide/pain001-runtime.json (see the script).
+python3 scripts/fetch_runtime.py
+
 python3 scripts/traction.py
 ssg build -f ssg.toml
 

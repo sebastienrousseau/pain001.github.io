@@ -31,6 +31,12 @@ jobs:
 
       - uses: dtolnay/rust-toolchain@6bed0761d98439e5a578e2877258200ad565ba87 # stable
 
+      - name: Cache the demo runtime (fetched and hash-verified by build.sh)
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.cache/pain001-runtime
+          key: pain001-runtime-${{ hashFiles('static/pyodide/pain001-runtime.json') }}
+
       - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         id: cache-ssg
         with:

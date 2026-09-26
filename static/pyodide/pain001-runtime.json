@@ -6,7 +6,8 @@
   {
    "file": "pyodide.asm.wasm",
    "bytes": 10102467,
-   "sha256": "7936ef6019d80723adce4bd86666b84534d071362839f1cf9b2b80bed917c812"
+   "sha256": "7936ef6019d80723adce4bd86666b84534d071362839f1cf9b2b80bed917c812",
+   "url": "https://cdn.jsdelivr.net/pyodide/v0.27.2/full/pyodide.asm.wasm"
   },
   {
    "file": "pyodide.asm.js",
@@ -16,7 +17,8 @@
   {
    "file": "python_stdlib.zip",
    "bytes": 2358641,
-   "sha256": "7a4edf94cc3d937ba29078adb857d1646d9ce064ad93e795645d124e212eb5a1"
+   "sha256": "7a4edf94cc3d937ba29078adb857d1646d9ce064ad93e795645d124e212eb5a1",
+   "url": "https://cdn.jsdelivr.net/pyodide/v0.27.2/full/python_stdlib.zip"
   },
   {
    "file": "pyodide.js",
@@ -28,84 +30,100 @@
   {
    "file": "MarkupSafe-2.1.5-cp312-cp312-pyodide_2024_0_wasm32.whl",
    "bytes": 31671,
-   "sha256": "d7e66ed044fd7ec0e33cf9f2ec6ecc0590ee09863fa61cca27ba2824858bb795"
+   "sha256": "d7e66ed044fd7ec0e33cf9f2ec6ecc0590ee09863fa61cca27ba2824858bb795",
+   "url": "https://cdn.jsdelivr.net/pyodide/v0.27.2/full/MarkupSafe-2.1.5-cp312-cp312-pyodide_2024_0_wasm32.whl"
   },
   {
    "file": "PyYAML-6.0.2-cp312-cp312-pyodide_2024_0_wasm32.whl",
    "bytes": 502836,
-   "sha256": "4f6d4fd462caf96fdce9171287b143dd1e68c88648ede044a531dd35d9c3ca78"
+   "sha256": "4f6d4fd462caf96fdce9171287b143dd1e68c88648ede044a531dd35d9c3ca78",
+   "url": "https://cdn.jsdelivr.net/pyodide/v0.27.2/full/PyYAML-6.0.2-cp312-cp312-pyodide_2024_0_wasm32.whl"
   },
   {
    "file": "rpds_py-0.18.0-cp312-cp312-pyodide_2024_0_wasm32.whl",
    "bytes": 426963,
-   "sha256": "a3f26d0f7a2eb06781e2d2c6cc4c13bca3a66d667601620c679c6978e661a07f"
+   "sha256": "a3f26d0f7a2eb06781e2d2c6cc4c13bca3a66d667601620c679c6978e661a07f",
+   "url": "https://cdn.jsdelivr.net/pyodide/v0.27.2/full/rpds_py-0.18.0-cp312-cp312-pyodide_2024_0_wasm32.whl"
   },
   {
    "file": "pyrsistent-0.20.0-cp312-cp312-pyodide_2024_0_wasm32.whl",
    "bytes": 217557,
-   "sha256": "a8c1ffcbbc2d2cb0e874ab125228436d1feab02a25b19fa55ca9c906fa684062"
+   "sha256": "a8c1ffcbbc2d2cb0e874ab125228436d1feab02a25b19fa55ca9c906fa684062",
+   "url": "https://cdn.jsdelivr.net/pyodide/v0.27.2/full/pyrsistent-0.20.0-cp312-cp312-pyodide_2024_0_wasm32.whl"
   },
   {
    "file": "attrs-23.2.0-py3-none-any.whl",
    "bytes": 209507,
-   "sha256": "a23f168e4d416843171974929b5a9d546bd4a6dd9f7632cc8b1a46fa43236fc9"
+   "sha256": "a23f168e4d416843171974929b5a9d546bd4a6dd9f7632cc8b1a46fa43236fc9",
+   "url": "https://cdn.jsdelivr.net/pyodide/v0.27.2/full/attrs-23.2.0-py3-none-any.whl"
   },
   {
    "file": "six-1.16.0-py2.py3-none-any.whl",
    "bytes": 38737,
-   "sha256": "9a9c3ac3a9305de225a2c8001171387acca73aa0a5c355a2ad49a8adbc6170db"
+   "sha256": "9a9c3ac3a9305de225a2c8001171387acca73aa0a5c355a2ad49a8adbc6170db",
+   "url": "https://cdn.jsdelivr.net/pyodide/v0.27.2/full/six-1.16.0-py2.py3-none-any.whl"
   },
   {
    "file": "typing_extensions-4.11.0-py3-none-any.whl",
    "bytes": 140469,
-   "sha256": "0de4dc28ee755d5ee6b946e8df60360d68ccb772a076c04277677646467425a9"
+   "sha256": "0de4dc28ee755d5ee6b946e8df60360d68ccb772a076c04277677646467425a9",
+   "url": "https://cdn.jsdelivr.net/pyodide/v0.27.2/full/typing_extensions-4.11.0-py3-none-any.whl"
   },
   {
    "file": "referencing-0.34.0-py3-none-any.whl",
    "bytes": 60038,
-   "sha256": "85a54b89cffad1552bb4c7f5c2cb5a69e8476cb1f331fe7b816bcf61361cd421"
+   "sha256": "85a54b89cffad1552bb4c7f5c2cb5a69e8476cb1f331fe7b816bcf61361cd421",
+   "url": "https://cdn.jsdelivr.net/pyodide/v0.27.2/full/referencing-0.34.0-py3-none-any.whl"
   },
   {
    "file": "jsonschema_specifications-2023.12.1-py3-none-any.whl",
    "bytes": 51191,
-   "sha256": "b4a840c945a4af3580c086935b1f0ada771752a72044d86a86175f6bfb88d32d"
+   "sha256": "b4a840c945a4af3580c086935b1f0ada771752a72044d86a86175f6bfb88d32d",
+   "url": "https://cdn.jsdelivr.net/pyodide/v0.27.2/full/jsonschema_specifications-2023.12.1-py3-none-any.whl"
   },
   {
    "file": "jsonschema-4.21.1-py3-none-any.whl",
    "bytes": 279581,
-   "sha256": "119305091e05dd548496debb4b13474049790bbff15450b41eea4c44d09a7141"
+   "sha256": "119305091e05dd548496debb4b13474049790bbff15450b41eea4c44d09a7141",
+   "url": "https://cdn.jsdelivr.net/pyodide/v0.27.2/full/jsonschema-4.21.1-py3-none-any.whl"
   },
   {
    "file": "click-8.1.7-py3-none-any.whl",
    "bytes": 356349,
-   "sha256": "c2b9604d1a4f4aa2d4bc1f3a23b9e86b125256705a8d067981df75f118112626"
+   "sha256": "c2b9604d1a4f4aa2d4bc1f3a23b9e86b125256705a8d067981df75f118112626",
+   "url": "https://cdn.jsdelivr.net/pyodide/v0.27.2/full/click-8.1.7-py3-none-any.whl"
   },
   {
    "file": "Jinja2-3.1.3-py3-none-any.whl",
    "bytes": 494179,
-   "sha256": "ae75cf520f1fee73c9315c6c1472fdaf0f312b328efc06d37e2eadb71d2ce363"
+   "sha256": "ae75cf520f1fee73c9315c6c1472fdaf0f312b328efc06d37e2eadb71d2ce363",
+   "url": "https://cdn.jsdelivr.net/pyodide/v0.27.2/full/Jinja2-3.1.3-py3-none-any.whl"
   }
  ],
  "wheels": [
   {
    "file": "defusedxml-0.7.1-py2.py3-none-any.whl",
    "bytes": 25604,
-   "sha256": "a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61"
+   "sha256": "a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61",
+   "url": "https://files.pythonhosted.org/packages/py2.py3/d/defusedxml/defusedxml-0.7.1-py2.py3-none-any.whl"
   },
   {
    "file": "elementpath-5.1.3-py3-none-any.whl",
    "bytes": 260297,
-   "sha256": "c46f5e0e36c149b892308843e1e394bdee17ceafbc18cfa39250403dd8475a4e"
+   "sha256": "c46f5e0e36c149b892308843e1e394bdee17ceafbc18cfa39250403dd8475a4e",
+   "url": "https://files.pythonhosted.org/packages/py3/e/elementpath/elementpath-5.1.3-py3-none-any.whl"
   },
   {
    "file": "xmlschema-4.3.2-py3-none-any.whl",
    "bytes": 504613,
-   "sha256": "cf5c970a30f6ebcb3da35260e694704cc0b6794d8ace46125bb2a95e38ed9307"
+   "sha256": "cf5c970a30f6ebcb3da35260e694704cc0b6794d8ace46125bb2a95e38ed9307",
+   "url": "https://files.pythonhosted.org/packages/py3/x/xmlschema/xmlschema-4.3.2-py3-none-any.whl"
   },
   {
    "file": "pain001-0.0.70-py3-none-any.whl",
    "bytes": 1110996,
-   "sha256": "2af72ea7c99865b77d530d3dbd0bc842e1eaf77fcd409334e7dd3342265a7d80"
+   "sha256": "2af72ea7c99865b77d530d3dbd0bc842e1eaf77fcd409334e7dd3342265a7d80",
+   "url": "https://files.pythonhosted.org/packages/py3/p/pain001/pain001-0.0.70-py3-none-any.whl"
   }
  ],
  "total_bytes": 18439527
