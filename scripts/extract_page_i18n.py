@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 """Extract translatable strings from the core journey pages
 (why, solutions, executive-brief) into scripts/pages_i18n/en.json.
 

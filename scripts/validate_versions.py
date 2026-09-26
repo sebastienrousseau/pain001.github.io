@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 """Fail when a page cites a suite version older than the released one.
 
 The pain001 suite ships one version number across its five packages.

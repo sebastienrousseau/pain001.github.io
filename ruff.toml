@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
+#
+# The Python coding standard for this repository: PEP 8 as checked by
+# ruff's pycodestyle (E, W) rules, plus Pyflakes (F) and flake8-bugbear
+# (B). Line length (E501) is not enforced: the build scripts embed long
+# URLs, regular expressions and literal page text. CI runs `ruff check`.
+target-version = "py312"
+line-length = 120
+
+[lint]
+select = ["E", "W", "F", "B"]
+ignore = ["E501"]

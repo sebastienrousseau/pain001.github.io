@@ -1,3 +1,7 @@
+/*
+ * SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+ * SPDX-License-Identifier: Apache-2.0 OR MIT
+ */
 /* Pain001 behaviour layered on the unmodified PRISM interaction script. */
 (function () {
   "use strict";
@@ -59,7 +63,7 @@
         if (off) document.querySelectorAll("[data-reveal], [data-settle]").forEach(function (el) { el.classList.add("is-visible"); });
         try {
           if (off) localStorage.setItem("motion", "off"); else localStorage.removeItem("motion");
-        } catch (e) {}
+        } catch { /* Storage unavailable: the choice applies for this page only. */ }
       });
     }
 
@@ -92,7 +96,7 @@
 
     var key = "pain001:bookmarks";
     var saved = [];
-    try { saved = JSON.parse(localStorage.getItem(key) || "[]"); } catch (error) {}
+    try { saved = JSON.parse(localStorage.getItem(key) || "[]"); } catch { /* Storage unavailable: nothing is saved. */ }
 
     function paint() {
       var active = saved.some(function (item) { return item.url === path; });
@@ -106,7 +110,7 @@
       var index = saved.findIndex(function (item) { return item.url === path; });
       if (index >= 0) saved.splice(index, 1);
       else saved.push({ url: path, title: document.title });
-      try { localStorage.setItem(key, JSON.stringify(saved)); } catch (error) {}
+      try { localStorage.setItem(key, JSON.stringify(saved)); } catch { /* Storage unavailable: nothing is saved. */ }
       paint();
     });
   });

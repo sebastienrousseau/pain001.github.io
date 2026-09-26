@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 """Check that Python snippets in _posts/ reference real pain001 API.
 
 The ten pain.001 version pages shipped a snippet calling

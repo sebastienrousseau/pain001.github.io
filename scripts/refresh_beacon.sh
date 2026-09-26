@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 set -euo pipefail
 # Refresh the vendored Cloudflare Web Analytics beacon (see METRICS.md).
 # Served from this origin so the CSP keeps script-src 'self' and the audit's

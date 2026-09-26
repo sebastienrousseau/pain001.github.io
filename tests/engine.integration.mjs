@@ -1,3 +1,5 @@
+// SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+// SPDX-License-Identifier: Apache-2.0 OR MIT
 /* Integration check for the browser engine, run in Node against the
  * vendored runtime under static/pyodide/. Needs the `pyodide` npm
  * package (npm i --no-save pyodide@0.27.2). Prints one JSON line per

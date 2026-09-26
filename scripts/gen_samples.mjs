@@ -1,3 +1,5 @@
+// SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+// SPDX-License-Identifier: Apache-2.0 OR MIT
 /* Write the demo's sample batches as downloadable CSV files.
  *
  * Single source of truth: static/js/try-demo.js exports SAMPLES; this

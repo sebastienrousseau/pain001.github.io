@@ -1,3 +1,7 @@
+/*
+ * SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+ * SPDX-License-Identifier: Apache-2.0 OR MIT
+ */
 /* Homepage behaviour: recorded-run tabs, scroll reveals, the pipeline
    gallery, copy buttons, and dated content. Loaded only by the homepage
    layout, so the other 667 pages (the /try/ demo above all, which has a

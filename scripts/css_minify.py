@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 """A deliberately small CSS minifier for the published stylesheet bundle.
 
 Lighthouse reported ~10 KB of avoidable bytes in the render-blocking

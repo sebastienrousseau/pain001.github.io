@@ -1,3 +1,5 @@
+// SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+// SPDX-License-Identifier: Apache-2.0 OR MIT
 /*
  * Layout audit: horizontal overflow, cropped content and gutter balance
  * across viewports, in real Chrome.
@@ -39,7 +41,7 @@ function findChrome() {
     "/usr/bin/chromium-browser",
     "/usr/bin/chromium",
   ].filter(Boolean);
-  for (const c of candidates) { try { if (fs2.existsSync(c)) return c; } catch {} }
+  for (const c of candidates) { try { if (fs2.existsSync(c)) return c; } catch { /* unreadable path: try the next candidate */ } }
   throw new Error("no Chrome found; set CHROME_PATH");
 }
 const CHROME = findChrome();

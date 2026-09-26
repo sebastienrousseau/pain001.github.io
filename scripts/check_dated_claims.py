@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 """Check the site's dated regulatory claims against their primary sources.
 
 The site gates every version string, link and snippet, but the dates the

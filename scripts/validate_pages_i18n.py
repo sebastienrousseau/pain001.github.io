@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 """Validate scripts/pages_i18n/<slug>.json against en.json:
 page/section/key parity, HTML-tag preservation, untranslated warnings."""
 import json

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 """Every figure in the homepage proof band must equal its source.
 
 The proof band is the site's answer to a named-customer wall: four

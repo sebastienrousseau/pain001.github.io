@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 """No emoji doing structural work in CSS.
 
 The theme toggle renders its icon with `content: "☀️"` and

@@ -1,3 +1,7 @@
+/*
+ * SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+ * SPDX-License-Identifier: Apache-2.0 OR MIT
+ */
 /* Pain001 browser demo: page wiring.
  *
  * Input handling lives in ./try-demo.js (pure, unit-tested); the
@@ -245,7 +249,7 @@ function ensureEngine() {
     try {
       const hex = engine.py.runPython(`xsd_sha256(${JSON.stringify(MESSAGE_TYPE)})`);
       els.xsdHash.textContent = t("Schema SHA-256: {hex}. Compare it against the copy published for pain.001.001.09.", { hex });
-    } catch (_) { /* informational only */ }
+    } catch { /* informational only */ }
     return engine;
   })();
   engineReady.catch(() => { engineReady = null; state.engine = "failed"; setRunProgress(null); });
@@ -427,7 +431,7 @@ async function loadCorpusSamples() {
       els.sampleSelect.value = wanted;
       els.sampleSelect.dispatchEvent(new Event("change"));
     }
-  } catch (_) { /* the built-in samples remain */ }
+  } catch { /* the built-in samples remain */ }
 }
 void loadCorpusSamples();
 

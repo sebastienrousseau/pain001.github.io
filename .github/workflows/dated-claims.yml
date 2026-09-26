@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 # The site's dated regulatory claims, checked weekly against the primary
 # sources they cite (scripts/dated_claims.json). Swift moved a deadline on
 # 27 August 2026 and the site repeated the old date for four weeks; this

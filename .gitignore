@@ -27,3 +27,9 @@ node_modules/
 # Release archive, SBOM copy and checksums, built by release.yml and by anyone
 # reproducing it locally. Published as release assets, never committed.
 dist/
+
+# Local virtualenv for `make pytest`, built from requirements/test.txt.
+.venv-test/
+
+# Local agent worktrees
+.claude/

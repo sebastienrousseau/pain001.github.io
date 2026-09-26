@@ -1,3 +1,5 @@
+// SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+// SPDX-License-Identifier: Apache-2.0 OR MIT
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import {

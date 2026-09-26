@@ -1,3 +1,7 @@
+/*
+ * SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+ * SPDX-License-Identifier: Apache-2.0 OR MIT
+ */
 /* Pain001 browser demo: input handling.
  *
  * ES module, zero dependencies, hand-auditable by design: a security
@@ -80,7 +84,7 @@ export function normaliseHeader(rawHeaders) {
 }
 
 export function parseCsv(text) {
-  const clean = String(text).replace(/^﻿/, "");
+  const clean = String(text).replace(/^\uFEFF/, "");
   const lines = clean.split(/\r\n|\r|\n/).filter((l) => l.trim() !== "");
   if (lines.length < 2) {
     return { error: "Need a header row and at least one record." };
@@ -168,7 +172,7 @@ export const SCENARIOS = {
   },
   "missing-column": {
     label: "Missing required column (execution date)",
-    apply: (csv) => csv.split("\n").map((line, i) => {
+    apply: (csv) => csv.split("\n").map((line) => {
       const cells = splitCsvLine(line, ",");
       cells.splice(4, 1);
       return cells.map((c) => (/[,"]/.test(c) ? '"' + c.replace(/"/g, '""') + '"' : c)).join(",");
@@ -211,7 +215,7 @@ export function decodeBuffer(buffer) {
       text: new TextDecoder("utf-8", { fatal: true }).decode(buffer),
       converted: false,
     };
-  } catch (e) {
+  } catch {
     return {
       text: new TextDecoder("windows-1252").decode(buffer),
       converted: true,

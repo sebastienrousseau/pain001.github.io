@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 """Generate the example-corpus page and its downloads from the library.
 
 Everything here is copied or derived from ``pain001/corpus/data`` in the
@@ -74,6 +76,22 @@ def lib_version(lib: Path) -> str:
     return m.group(1) if m else "unknown"
 
 
+def zip_holds(target: Path, entries: list[tuple[str, bytes]]) -> bool:
+    """True when ``target`` is a zip of exactly ``entries`` as write_zip writes them."""
+    if not target.is_file():
+        return False
+    try:
+        with zipfile.ZipFile(target) as old:
+            listed = [(i.filename, i.date_time, i.external_attr, i.compress_type)
+                      for i in old.infolist()]
+            wanted = [(name, ZIP_TIME, 0o644 << 16, zipfile.ZIP_DEFLATED) for name, _ in entries]
+            return listed == wanted and all(old.read(name) == data for name, data in entries)
+    except zipfile.BadZipFile:
+        # A damaged or truncated zip does not hold the entries; write_zip
+        # replaces it.
+        return False
+
+
 def write_zip(target: Path, entries: list[tuple[str, bytes]]) -> None:
     """Write ``entries`` as a zip, unless ``target`` already holds exactly them.
 
@@ -83,16 +101,8 @@ def write_zip(target: Path, entries: list[tuple[str, bytes]]) -> None:
     still rewrote five zips. When the existing file has the same members,
     metadata and uncompressed bytes, it is kept as it is.
     """
-    if target.is_file():
-        try:
-            with zipfile.ZipFile(target) as old:
-                listed = [(i.filename, i.date_time, i.external_attr, i.compress_type)
-                          for i in old.infolist()]
-                wanted = [(name, ZIP_TIME, 0o644 << 16, zipfile.ZIP_DEFLATED) for name, _ in entries]
-                if listed == wanted and all(old.read(name) == data for name, data in entries):
-                    return
-        except zipfile.BadZipFile:
-            pass
+    if zip_holds(target, entries):
+        return
     with zipfile.ZipFile(target, "w") as zf:
         for name, data in entries:
             info = zipfile.ZipInfo(name, date_time=ZIP_TIME)
@@ -436,7 +446,8 @@ def scenario_page(sid: str, recs: list[dict], version: str, sample: dict | None,
     lines.append(f"- **{t['xsd']}**: {verdict(xsd)}.")
     lines.append(f"- **{t['mdr']}**: {verdict(mdr)}.")
     for name, v in profiles.items():
-        errs = (v or {}).get("errors", 0); warns = (v or {}).get("warnings", 0)
+        errs = (v or {}).get("errors", 0)
+        warns = (v or {}).get("warnings", 0)
         lines.append(f"- **{t['profile']} `{name}`**: {verdict(errs)}"
                      + (", " + t["warnings"].format(n=warns) if warns else "") + ".")
     conf = prov.get("confidence", "unknown")
@@ -445,7 +456,8 @@ def scenario_page(sid: str, recs: list[dict], version: str, sample: dict | None,
               f"## {t['h_sources']}", ""]
     if sources:
         for src in sources:
-            title = str(src.get("title", "")).strip(); read = src.get("read") or src.get("retrieved") or ""
+            title = str(src.get("title", "")).strip()
+            read = src.get("read") or src.get("retrieved") or ""
             url = src.get("url") or ""
             item = f"[{title}]({url})" if url else title
             lines.append(f"- {item}" + (" " + t["read"].format(date=read) if read else ""))

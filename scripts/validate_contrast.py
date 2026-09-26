@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 """Compute every PRISM colour-token pair and fail under its WCAG floor.
 
 A page scan checks rendered pages; it only sees the pairs a page

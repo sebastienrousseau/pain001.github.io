@@ -1,3 +1,7 @@
+/*
+ * SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+ * SPDX-License-Identifier: Apache-2.0 OR MIT
+ */
 /* Load the vendored Cloudflare beacon only on deployed hosts. Local preview
  * and CI audits must not attempt the external RUM POST. */
 (() => {

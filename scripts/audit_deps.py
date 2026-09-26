@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 """Fail on npm advisories that are not explicitly and currently excepted.
 
 A plain `npm audit` gate is switched off the first week an advisory has no
@@ -90,7 +92,7 @@ def main() -> int:
                 f"{severity:8} {package}: exception for {advisory} expired on {accepted[advisory]}"
             )
 
-    for advisory, expires in accepted.items():
+    for advisory in accepted:
         if advisory not in seen:
             problems.append(f"exception {advisory} no longer matches any advisory; remove it")
 

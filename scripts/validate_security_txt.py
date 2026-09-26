@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 """The published security.txt must be a usable RFC 9116 file.
 
 Production served /security.txt as a 200 with zero bytes, and

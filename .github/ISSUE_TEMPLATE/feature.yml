@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 name: Feature request
 description: Propose a focused improvement to the website or documentation.
 title: "feat: "

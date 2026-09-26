@@ -1,3 +1,7 @@
+/*
+ * SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+ * SPDX-License-Identifier: Apache-2.0 OR MIT
+ */
 /* Pain001 demo service worker.
  *
  * Purpose: make the /try/ validator (including the WASM XSD engine)
@@ -12,13 +16,11 @@
  * would not have made itself.
  */
 
-/* Bump this on ANY change to /try/, /<locale>/try/, or the assets
- * matched by cacheable() below. The worker is cache-first, so a
- * returning visitor is served the old page forever until the constant
- * changes: the update ships, CI is green, and nobody sees it. This
- * has been missed three times now: v8 is the layer-summary
- * translations, which reached all 34 locales while returning visitors
- * kept the English original. */
+/* The build replaces this name with a hash of everything the worker
+ * caches (scripts/postbuild_fix.py, stamp_sw_cache_version), so a change
+ * to /try/, its scripts, samples or runtime reaches returning visitors
+ * without a manual bump. Hand-bumping it was forgotten three times before
+ * that; the value below is only what an unbuilt checkout shows. */
 const CACHE = "pain001-try-v8";
 
 const CACHEABLE = [
@@ -37,7 +39,7 @@ function cacheable(url) {
   return CACHEABLE.includes(u.pathname);
 }
 
-self.addEventListener("install", (event) => {
+self.addEventListener("install", () => {
   self.skipWaiting();
 });
 

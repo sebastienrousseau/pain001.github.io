@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
 # SPDX-License-Identifier: Apache-2.0 OR MIT
 """Keep the previous deploy's fingerprinted assets alongside the new ones.
 
@@ -11,9 +12,14 @@ live pages and downloaded into the new build. Old hashes are tiny.
 
 Usage: carry_forward_assets.py <output-dir> [--site https://pain001.com]
 Never fails the build: an unreachable site means nothing to carry.
+
+Skipped when SOURCE_DATE_EPOCH is set. That marks a reproducible (release)
+build, whose output must depend only on the commit, not on what happens to
+be deployed; the carried files matter only to a live deploy.
 """
 from __future__ import annotations
 
+import os
 import re
 import sys
 import urllib.error
@@ -41,6 +47,9 @@ def main(argv: list[str] | None = None) -> int:
     """Download every fingerprinted asset the live pages reference."""
     args = argv if argv is not None else sys.argv[1:]
     out = Path(args[0]) if args else Path("site")
+    if os.environ.get("SOURCE_DATE_EPOCH"):
+        print("[carry-forward] SOURCE_DATE_EPOCH set: reproducible build, nothing carried")
+        return 0
     site = "https://pain001.com"
     if "--site" in args:
         site = args[args.index("--site") + 1].rstrip("/")

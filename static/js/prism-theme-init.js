@@ -1,4 +1,8 @@
 /*
+ * SPDX-FileCopyrightText: 2026 Sebastien Rousseau
+ * SPDX-License-Identifier: MIT
+ */
+/*
  * Runs before first paint so the stored theme is applied without a flash
  * of the wrong palette. postbuild_fix.py inlines this file into every
  * page's <head> (its hash is in the CSP), so the page does not pay a
@@ -16,7 +20,7 @@
     if (saved === 'dark' || saved === 'light') {
       root.setAttribute('data-theme', saved);
     }
-  } catch (e) {
+  } catch {
     /* Private browsing or blocked storage: fall back to the OS preference. */
   }
   /* Motion: the footer toggle ("Reduce motion") stores "off"; the OS
@@ -26,7 +30,7 @@
   var motionOff = false;
   try {
     motionOff = localStorage.getItem('motion') === 'off';
-  } catch (e) {
+  } catch {
     /* Storage unavailable: the OS setting still applies. */
   }
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;

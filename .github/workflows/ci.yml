@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 name: CI
 
 # Every push and PR rebuilds the site and enforces the full quality bar:
@@ -69,8 +71,10 @@ jobs:
       - name: Audit gates (fail on warnings)
         run: ssg audit -f ssg.toml -o site --severity warn --fail-on warn
 
-      - name: Unit tests (demo input handling)
-        run: node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --experimental-test-coverage --test-coverage-lines=100 --test-coverage-functions=100 --test-coverage-branches=100 --test tests/try-demo.test.mjs
+      # Every script the site ships (static/js, less the vendored beacon):
+      # unit, property and jsdom tests, gated at 90% lines and 80% branches.
+      - name: Unit tests and coverage gate (shipped JavaScript)
+        run: npm run coverage
 
       - name: Browser engine runs the library (Node, vendored runtime)
         run: node tests/engine.integration.mjs
@@ -213,11 +217,25 @@ jobs:
           python -m pip install --quiet --require-hashes -r requirements/lint.txt
           codespell
 
+      - name: Python coding standard (ruff, see ruff.toml)
+        run: ruff check scripts tests
+
+      - name: JavaScript coding standard (ESLint, see eslint.config.mjs)
+        run: npm run lint
+
+      - name: Every source file carries its own SPDX header
+        run: python3 scripts/validate_spdx_headers.py
+
       - name: README conforms to the workspace template
         run: python3 scripts/validate_readme.py
 
       - name: Release Highlights are in the release-page format
         run: python3 scripts/release_notes.py --check
+
+      - name: Regression tests for the build and release scripts (pytest)
+        run: |
+          python -m pip install --quiet --require-hashes -r requirements/test.txt
+          python -m pytest tests/python -q -p no:cacheprovider
 
       - name: Dependency advisories (npm audit, documented exceptions only)
         run: python3 scripts/audit_deps.py

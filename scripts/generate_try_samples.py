@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
 """Turn the example corpus into one-click inputs for the browser demo.
 
 For every market file of the demo's edition, the records twin gives the

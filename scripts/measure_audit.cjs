@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+// SPDX-License-Identifier: Apache-2.0 OR MIT
 /* Reading-measure audit: every built page, in real Chrome, at phone,
  * tablet, laptop and desktop widths. The layout audit catches cropping,
  * overflow and misalignment; this one catches the opposite failure, a
@@ -21,7 +23,7 @@ catch { console.error("puppeteer-core not found under .a11y-tools; see layout_au
 function findChrome() {
   for (const c of [process.env.CHROME_PATH, "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
     "/usr/bin/google-chrome", "/usr/bin/google-chrome-stable", "/usr/bin/chromium-browser", "/usr/bin/chromium"]) {
-    try { if (c && fs.existsSync(c)) return c; } catch {}
+    try { if (c && fs.existsSync(c)) return c; } catch { /* unreadable path: try the next candidate */ }
   }
   console.error("No Chrome found; set CHROME_PATH"); process.exit(2);
 }

@@ -1,3 +1,7 @@
+/*
+ * SPDX-FileCopyrightText: 2026 Sebastien Rousseau
+ * SPDX-License-Identifier: MIT
+ */
 /*!
  * Prism behaviour: a navigation disclosure, a mega-menu of disclosure
  * panels, and a theme toggle.
@@ -253,14 +257,14 @@
           root.removeAttribute('data-theme');
           try {
             localStorage.removeItem('theme');
-          } catch (e) {
+          } catch {
             /* Storage unavailable: the choice applies for this page only. */
           }
         } else {
           root.setAttribute('data-theme', next);
           try {
             localStorage.setItem('theme', next);
-          } catch (e) {
+          } catch {
             /* Storage unavailable: the choice applies for this page only. */
           }
         }

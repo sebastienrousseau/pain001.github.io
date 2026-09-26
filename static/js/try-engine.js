@@ -1,3 +1,7 @@
+/*
+ * SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+ * SPDX-License-Identifier: Apache-2.0 OR MIT
+ */
 /* Pain001 browser demo: the engine.
  *
  * Loads a Python runtime (Pyodide, WebAssembly) and the pain001 library
