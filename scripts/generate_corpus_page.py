@@ -444,7 +444,8 @@ def scenario_page(sid: str, recs: list[dict], version: str, sample: dict | None,
     lines.append(f"- **{t['xsd']}**: {verdict(xsd)}.")
     lines.append(f"- **{t['mdr']}**: {verdict(mdr)}.")
     for name, v in profiles.items():
-        errs = (v or {}).get("errors", 0); warns = (v or {}).get("warnings", 0)
+        errs = (v or {}).get("errors", 0)
+        warns = (v or {}).get("warnings", 0)
         lines.append(f"- **{t['profile']} `{name}`**: {verdict(errs)}"
                      + (", " + t["warnings"].format(n=warns) if warns else "") + ".")
     conf = prov.get("confidence", "unknown")
@@ -453,7 +454,8 @@ def scenario_page(sid: str, recs: list[dict], version: str, sample: dict | None,
               f"## {t['h_sources']}", ""]
     if sources:
         for src in sources:
-            title = str(src.get("title", "")).strip(); read = src.get("read") or src.get("retrieved") or ""
+            title = str(src.get("title", "")).strip()
+            read = src.get("read") or src.get("retrieved") or ""
             url = src.get("url") or ""
             item = f"[{title}]({url})" if url else title
             lines.append(f"- {item}" + (" " + t["read"].format(date=read) if read else ""))

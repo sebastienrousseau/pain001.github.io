@@ -213,6 +213,9 @@ jobs:
           python -m pip install --quiet --require-hashes -r requirements/lint.txt
           codespell
 
+      - name: Python coding standard (ruff, see ruff.toml)
+        run: ruff check scripts tests
+
       - name: README conforms to the workspace template
         run: python3 scripts/validate_readme.py
 

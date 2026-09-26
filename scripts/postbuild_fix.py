@@ -455,7 +455,7 @@ def hreflang_cluster(self_lang: str) -> str:
     for slug, code in sorted(LOCALES.items()):
         links.append('<link rel="alternate" hreflang="%s" href="%s/%s/" />'
                      % (code, BASE_URL, slug))
-    return "".join(l for l in links if 'hreflang="%s"' % self_lang not in l)
+    return "".join(link for link in links if 'hreflang="%s"' % self_lang not in link)
 
 
 def translate_chrome(html: str, s: list) -> str:
@@ -677,7 +677,7 @@ def path_hreflang_cluster(path: str, self_lang: str) -> str:
     for slug, code in sorted(LOCALES.items()):
         links.append('<link rel="alternate" hreflang="%s" href="%s/%s/%s" />'
                      % (code, BASE_URL, slug, path))
-    return "".join(l for l in links if 'hreflang="%s"' % self_lang not in l)
+    return "".join(link for link in links if 'hreflang="%s"' % self_lang not in link)
 
 
 def try_hreflang_cluster(self_lang: str) -> str:
@@ -945,7 +945,7 @@ def localise_pages(site: Path) -> None:
                 and "status-strip" not in html):
             strip = status_strip_html(STATUS_STRIP[slug], strip_vals)
             html = re.sub(r'<main id="?main-content"?>',
-                          lambda m: m.group(0) + strip, html, count=1)
+                          lambda m, strip=strip: m.group(0) + strip, html, count=1)
         d = load_try_i18n(slug)
         if d:
             html = apply_chrome_extra(html, d)
@@ -1219,7 +1219,7 @@ def bundle_stylesheets(site: Path) -> None:
         # single generated file while assembling the final page bundle; the
         # stale URL is then removed with the other individual stylesheet
         # links instead of becoming a site-wide 404.
-        for index, (href, path) in enumerate(zip(hrefs, paths)):
+        for index, (href, path) in enumerate(zip(hrefs, paths, strict=False)):
             if path.is_file() or href != "/highlight.css":
                 continue
             candidates = sorted(site.glob("highlight.*.css"))
@@ -1353,7 +1353,7 @@ def corpus_hreflang_cluster(slug: str, self_lang: str) -> str:
     for loc in CORPUS_LOCALES:
         links.append('<link rel="alternate" hreflang="%s" href="%s/%s/%s/" />'
                      % (LOCALES[loc], BASE_URL, loc, slug))
-    return "".join(l for l in links if 'hreflang="%s"' % self_lang not in l)
+    return "".join(link for link in links if 'hreflang="%s"' % self_lang not in link)
 
 
 def retarget_lang_menu_corpus(html: str, slug: str) -> str:
@@ -1598,7 +1598,7 @@ def taxonomy_language_and_index(site: Path) -> None:
         if start == -1 or end == -1:
             continue
 
-        def mark(m: re.Match) -> str:
+        def mark(m: re.Match, own_lang: str = own_lang) -> str:
             nonlocal tagged
             t = target_lang(m.group(1))
             if not t or t[0].lower().split("-")[0] == own_lang.split("-")[0]:
@@ -1694,7 +1694,7 @@ def promote_bold_questions(site: Path) -> None:
                 continue
             authored = [int(h.group(1)) for h in _ANY_HEADING_RE.finditer(body, 0, m.start())]
             # Skip the headings this pass created (marked with the class).
-            prior = [l for l, h in zip(authored, _ANY_HEADING_RE.finditer(body, 0, m.start()))
+            prior = [lvl for lvl, h in zip(authored, _ANY_HEADING_RE.finditer(body, 0, m.start()), strict=False)
                      if 'class="promoted"' not in body[h.start():h.start() + 40]]
             level = min((prior[-1] if prior else 1) + 1, 6)
             out.append(body[pos:m.start()])
@@ -1782,7 +1782,8 @@ def add_page_photos(site: Path) -> None:
         base = band_path(photos[key])
         sizes = "(min-width: 78rem) 76rem, calc(100vw - 2rem)"
         widths = (640, 768, 960, 1280, 1600)
-        srcset = lambda ext: ", ".join(f"{base}-{w}.{ext} {w}w" for w in widths)
+        def srcset(ext: str, base: str = base, widths: tuple[int, ...] = widths) -> str:
+            return ", ".join(f"{base}-{w}.{ext} {w}w" for w in widths)
         img = (f'<picture class="page-photo-frame">'
                f'<source type="image/avif" srcset="{srcset("avif")}" sizes="{sizes}" />'
                f'<img class="page-photo" src="{base}-960.webp" srcset="{srcset("webp")}" '

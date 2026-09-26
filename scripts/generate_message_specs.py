@@ -330,7 +330,7 @@ def render_types_chunked(payload: dict) -> list[str]:
     slugs = [f"message-spec-{v}-types"
              + ("" if i == 0 else f"-{i + 1}") for i in range(len(chunks))]
 
-    for i, (chunk, slug) in enumerate(zip(chunks, slugs)):
+    for i, (chunk, slug) in enumerate(zip(chunks, slugs, strict=False)):
         span = f"{chunk[0]} – {chunk[-1]}"
         nav = " · ".join(
             f"[Part {j + 1}](/{s}/)" if j != i else f"**Part {j + 1}**"
@@ -585,7 +585,7 @@ def main() -> int:
         families.setdefault(v.rsplit(".", 1)[0], []).append(v)
     CURRENT_VERSIONS.update(sorted(f)[-1] for f in families.values())
 
-    for v, payload in specs.items():
+    for payload in specs.values():
         render_version(payload, index)
         render_types_chunked(payload)
     render_code_lists(specs, index)

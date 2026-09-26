@@ -280,7 +280,7 @@ def main() -> int:
     for v in sorted(versions):
         families.setdefault(v.rsplit(".", 1)[0], []).append(v)
     pairs = [(a, b) for fam in families.values()
-             for a, b in zip(fam, fam[1:])]
+             for a, b in zip(fam, fam[1:], strict=False)]
     for prev, cur in pairs:
         a = {e["path"] for e in versions[prev]["elements"]}
         b = {e["path"] for e in versions[cur]["elements"]}

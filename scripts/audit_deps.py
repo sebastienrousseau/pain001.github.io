@@ -90,7 +90,7 @@ def main() -> int:
                 f"{severity:8} {package}: exception for {advisory} expired on {accepted[advisory]}"
             )
 
-    for advisory, expires in accepted.items():
+    for advisory in accepted:
         if advisory not in seen:
             problems.append(f"exception {advisory} no longer matches any advisory; remove it")
 
