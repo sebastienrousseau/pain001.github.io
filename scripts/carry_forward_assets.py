@@ -16,6 +16,11 @@ Never fails the build: an unreachable site means nothing to carry.
 Skipped when SOURCE_DATE_EPOCH is set. That marks a reproducible (release)
 build, whose output must depend only on the commit, not on what happens to
 be deployed; the carried files matter only to a live deploy.
+
+A downloaded file is kept only when it is what its name says: served as
+CSS or JavaScript, and not an HTML page. The fingerprints are not content
+hashes, so they cannot be checked; this stops a CDN challenge or error page
+from being published as a stylesheet or script (security review SR-3).
 """
 from __future__ import annotations
 
@@ -28,19 +33,31 @@ from pathlib import Path
 
 PAGES = ("/", "/try/", "/documentation/", "/example-corpus/")
 ASSET = re.compile(r"/_csp/[0-9a-f]{8,}\.(?:css|js)")
+EXPECTED_TYPES = {
+    ".css": {"text/css"},
+    ".js": {"application/javascript", "text/javascript"},
+}
 
 
-def fetch(url: str) -> bytes | None:
-    """Return the body at ``url`` or None on any failure."""
+def fetch(url: str) -> tuple[bytes, str] | None:
+    """Return the body at ``url`` and its Content-Type, or None on any failure."""
     # The CDN answers a bare urllib user agent with a challenge page.
     request = urllib.request.Request(
         url, headers={"User-Agent": "pain001-site-build/1 (+https://pain001.com)"}
     )
     try:
         with urllib.request.urlopen(request, timeout=20) as r:  # noqa: S310
-            return r.read()
+            return r.read(), r.headers.get("Content-Type", "")
     except (urllib.error.URLError, TimeoutError, ValueError):
         return None
+
+
+def is_asset(path: str, body: bytes, content_type: str) -> bool:
+    """True when a download is the stylesheet or script its path names."""
+    mime = content_type.split(";", 1)[0].strip().lower()
+    if mime not in EXPECTED_TYPES.get(Path(path).suffix, set()):
+        return False
+    return not body.lstrip().startswith(b"<")
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -55,20 +72,27 @@ def main(argv: list[str] | None = None) -> int:
         site = args[args.index("--site") + 1].rstrip("/")
     wanted: set[str] = set()
     for page in PAGES:
-        body = fetch(site + page)
-        if body:
-            wanted.update(ASSET.findall(body.decode("utf-8", "replace")))
-    carried = 0
+        got = fetch(site + page)
+        if got:
+            wanted.update(ASSET.findall(got[0].decode("utf-8", "replace")))
+    carried = skipped = 0
     for path in sorted(wanted):
         target = out / path.lstrip("/")
         if target.exists():
             continue
-        body = fetch(site + path)
-        if body:
-            target.parent.mkdir(parents=True, exist_ok=True)
-            target.write_bytes(body)
-            carried += 1
-    print(f"[carry-forward] {len(wanted)} live asset(s) referenced, {carried} carried into {out}")
+        got = fetch(site + path)
+        if not got or not got[0]:
+            continue
+        body, content_type = got
+        if not is_asset(path, body, content_type):
+            print(f"[carry-forward] skipped {path}: served as {content_type or 'no type'}, not the asset it names")
+            skipped += 1
+            continue
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(body)
+        carried += 1
+    print(f"[carry-forward] {len(wanted)} live asset(s) referenced, {carried} carried into {out}, "
+          f"{skipped} skipped as not CSS or JavaScript")
     return 0
 
 

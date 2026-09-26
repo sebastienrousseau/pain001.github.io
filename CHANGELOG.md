@@ -72,6 +72,11 @@ All notable changes to this website are documented here. The format follows
 
 ### Fixed
 
+- A deploy no longer risks publishing a CDN challenge or error page as a
+  stylesheet or script. `scripts/carry_forward_assets.py` keeps a file it
+  downloads from the live site only when it is served as CSS or
+  JavaScript to match its name and is not an HTML page, and logs what it
+  skipped (security review finding SR-3, #54).
 - The build no longer publishes 385 invalid per-page
   `news-sitemap.xml` files that ssg wrote beside every page, each with
   an empty `<loc>` and the build time. The root news sitemap is kept.
