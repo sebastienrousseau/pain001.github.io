@@ -2,9 +2,9 @@
  "documentation": {
   "meta": {
    "title": "Pain001 தொழில்நுட்பக் குறிப்பு: CLI, Python API, REST",
-   "description": "pain001 v0.0.56 முழுக் குறிப்பு: CLI கட்டளைகளும் ஃபிளாக்குகளும், Python API, /api/v1 REST எண்ட்பாயிண்ட்கள், திட்ட விதிநூல்கள், உள்ளீட்டு இயல்பாக்கம், செருகுநிரல் கட்டமைப்பு.",
+   "description": "pain001 v0.0.71 முழுக் குறிப்பு: CLI கட்டளைகளும் ஃபிளாக்குகளும், Python API, /api/v1 REST எண்ட்பாயிண்ட்கள், திட்ட விதிநூல்கள், உள்ளீட்டு இயல்பாக்கம், செருகுநிரல் கட்டமைப்பு.",
    "eyebrow": "குறிப்பு",
-   "deck": "pain001 v0.0.56-ன் ஒவ்வொரு ஃபிளாக், எண்ட்பாயிண்ட், நடத்தை, வெளியிடப்பட்ட நிரலிலிருந்து எடுக்கப்பட்டவை, எதிர்பார்ப்புகளிலிருந்து அல்ல."
+   "deck": "pain001 v0.0.71-ன் ஒவ்வொரு ஃபிளாக், எண்ட்பாயிண்ட், நடத்தை, வெளியிடப்பட்ட நிரலிலிருந்து எடுக்கப்பட்டவை, எதிர்பார்ப்புகளிலிருந்து அல்ல."
   },
   "text": {
    "<a href=\"/\">Home</a>": "<a href=\"/\">முகப்பு</a>",
@@ -16,7 +16,7 @@
    "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">உள்ளீட்டு இயல்பாக்கம்</a>",
    "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">செருகுநிரல் கட்டமைப்பு</a>",
    "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">தர நுழைவாயில்கள்</a>",
-   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.70</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "இந்தக் குறிப்பு <strong>pain001 v0.0.70</strong>-ன் கட்டளை-வரி இடைமுகம், Python API, REST நுண்சேவை, சரிபார்ப்புத் தொடர்வரிசை ஆகியவற்றை ஆவணப்படுத்துகிறது. இங்கு பட்டியலிடப்பட்டுள்ள ஒவ்வொரு ஃபிளாக், எண்ட்பாயிண்ட், நடத்தையும் வெளியிடப்பட்ட நிரலிலிருந்து எடுக்கப்பட்டவை, எதிர்பார்ப்புகளிலிருந்து அல்ல.",
+   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.71</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "இந்தக் குறிப்பு <strong>pain001 v0.0.71</strong>-ன் கட்டளை-வரி இடைமுகம், Python API, REST நுண்சேவை, சரிபார்ப்புத் தொடர்வரிசை ஆகியவற்றை ஆவணப்படுத்துகிறது. இங்கு பட்டியலிடப்பட்டுள்ள ஒவ்வொரு ஃபிளாக், எண்ட்பாயிண்ட், நடத்தையும் வெளியிடப்பட்ட நிரலிலிருந்து எடுக்கப்பட்டவை, எதிர்பார்ப்புகளிலிருந்து அல்ல.",
    "Pain001 supports <strong>12 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).": "Pain001 <strong>12 ISO 20022 செய்தி வரையறைகளை</strong> ஆதரிக்கிறது: <code>pain.001.001.03</code> முதல் <code>pain.001.001.13</code> வரை (Customer Credit Transfer Initiation, பதினொரு பதிப்புகள்) மற்றும் <code>pain.008.001.02</code> (Customer Direct Debit Initiation).",
    "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. கட்டளை-வரி இடைமுகம்<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
    "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "<code>pain001</code> இயங்குகோப்பு தனது செயல்பாடுகளைத் துணைக்கட்டளைகளாகத் தொகுக்கிறது. உருவாக்க ஃபிளாக்குகளை மட்டும் கொடுத்து இயக்கினால் <code>generate</code> தானாகவே செயல்படுத்தப்படுகிறது; எனவே தற்போதைய தன்னியக்கமுறைகள் தொடர்ந்து இயங்கும்.",

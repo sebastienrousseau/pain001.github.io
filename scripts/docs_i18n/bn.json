@@ -2,9 +2,9 @@
  "documentation": {
   "meta": {
    "title": "Pain001 প্রযুক্তিগত রেফারেন্স: CLI, Python API ও REST",
-   "description": "pain001 v0.0.56-এর সম্পূর্ণ রেফারেন্স: CLI সাবকমান্ড ও ফ্ল্যাগ, Python API, /api/v1-এর অধীন REST এন্ডপয়েন্ট, স্কিম রুলবুক, ইনপুট নর্মালাইজেশন ও প্লাগইন আর্কিটেকচার।",
+   "description": "pain001 v0.0.71-এর সম্পূর্ণ রেফারেন্স: CLI সাবকমান্ড ও ফ্ল্যাগ, Python API, /api/v1-এর অধীন REST এন্ডপয়েন্ট, স্কিম রুলবুক, ইনপুট নর্মালাইজেশন ও প্লাগইন আর্কিটেকচার।",
    "eyebrow": "রেফারেন্স",
-   "deck": "pain001 v0.0.56-এর প্রতিটি ফ্ল্যাগ, এন্ডপয়েন্ট ও আচরণ, যা শিপ করা কোড থেকে নেওয়া, আকাঙ্ক্ষা থেকে নয়।"
+   "deck": "pain001 v0.0.71-এর প্রতিটি ফ্ল্যাগ, এন্ডপয়েন্ট ও আচরণ, যা শিপ করা কোড থেকে নেওয়া, আকাঙ্ক্ষা থেকে নয়।"
   },
   "text": {
    "<a href=\"/\">Home</a>": "<a href=\"/\">হোম</a>",
@@ -16,7 +16,7 @@
    "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">ইনপুট নর্মালাইজেশন</a>",
    "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">প্লাগইন আর্কিটেকচার</a>",
    "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">গুণমান গেট</a>",
-   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.70</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "এই রেফারেন্সে <strong>pain001 v0.0.70</strong>-এর কমান্ড-লাইন ইন্টারফেস, Python API, REST মাইক্রোসার্ভিস ও ভ্যালিডেশন পাইপলাইনের বিবরণ রয়েছে। এখানে তালিকাভুক্ত প্রতিটি ফ্ল্যাগ, এন্ডপয়েন্ট ও আচরণ শিপ করা কোড থেকে নেওয়া, আকাঙ্ক্ষা থেকে নয়।",
+   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.71</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "এই রেফারেন্সে <strong>pain001 v0.0.71</strong>-এর কমান্ড-লাইন ইন্টারফেস, Python API, REST মাইক্রোসার্ভিস ও ভ্যালিডেশন পাইপলাইনের বিবরণ রয়েছে। এখানে তালিকাভুক্ত প্রতিটি ফ্ল্যাগ, এন্ডপয়েন্ট ও আচরণ শিপ করা কোড থেকে নেওয়া, আকাঙ্ক্ষা থেকে নয়।",
    "Pain001 supports <strong>12 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).": "Pain001 <strong>12টি ISO 20022 মেসেজ ডেফিনিশন</strong> সমর্থন করে: <code>pain.001.001.03</code> থেকে <code>pain.001.001.13</code> পর্যন্ত (Customer Credit Transfer Initiation, এগারোটি সংস্করণ) এবং <code>pain.008.001.02</code> (Customer Direct Debit Initiation)।",
    "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. কমান্ড-লাইন ইন্টারফেস<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
    "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "<code>pain001</code> এক্সিকিউটেবলটি তার কার্যকারিতা সাবকমান্ডে সাজিয়ে রাখে। কেবল জেনারেশন ফ্ল্যাগ দিয়ে চালালে <code>generate</code> স্বয়ংক্রিয়ভাবে আহ্বান করা হয়, ফলে বিদ্যমান অটোমেশন অপরিবর্তিতভাবে কাজ করতে থাকে।",

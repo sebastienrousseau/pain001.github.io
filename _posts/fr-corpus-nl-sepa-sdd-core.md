@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-09-23T08:00:00+00:00"
+date: "2026-09-26T08:00:00+00:00"
 description: "SEPA Core direct debit, recurring collections under mandates. Un exemple pain.001 validé (Pays-Bas, rail sepa-direct-debit), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "SEPA Core direct debit, recurring collections under mandates. Un exemple pain.001 validé (Pays-Bas, rail sepa-direct-debit), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur."
 item_guid: "https://pain001.com/fr/corpus-nl-sepa-sdd-core/"
 item_link: "https://pain001.com/fr/corpus-nl-sepa-sdd-core/"
-item_pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+item_pub_date: "Sat, 26 Sep 2026 08:00:00 +0000"
 item_title: "Exemple pain.001 ISO 20022 nl.sepa.sdd-core : Pays-Bas (sepa-direct-debit)"
-last_build_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+last_build_date: "Sat, 26 Sep 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+pub_date: "Sat, 26 Sep 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Description du scénario, citée depuis la fiche de provenance (texte original e
 
 > SEPA Core direct debit, recurring collections under mandates.
 
-Un fichier d'initiation de paiement (**Pays-Bas**, rail **sepa-direct-debit**), livré en `pain.008.001.02`, `pain.008.001.08`, généré et vérifié par pain001 0.0.70. C'est un exemple synthétique construit à partir des règles publiques des schémas de paiement : aucune partie réelle, aucun compte réel, aucune directive bancaire derrière lui.
+Un fichier d'initiation de paiement (**Pays-Bas**, rail **sepa-direct-debit**), livré en `pain.008.001.02`, `pain.008.001.08`, généré et vérifié par pain001 0.0.71. C'est un exemple synthétique construit à partir des règles publiques des schémas de paiement : aucune partie réelle, aucun compte réel, aucune directive bancaire derrière lui.
 
 ## Fichiers
 

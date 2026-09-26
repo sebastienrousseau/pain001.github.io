@@ -2,9 +2,9 @@
  "documentation": {
   "meta": {
    "title": "Pain001 műszaki referencia: CLI, Python API és REST",
-   "description": "Teljes referencia a pain001 v0.0.56-hoz: CLI-alparancsok és kapcsolók, Python API, REST végpontok az /api/v1 alatt, sémaszabályok, normalizálás, bővítmények.",
+   "description": "Teljes referencia a pain001 v0.0.71-hoz: CLI-alparancsok és kapcsolók, Python API, REST végpontok az /api/v1 alatt, sémaszabályok, normalizálás, bővítmények.",
    "eyebrow": "Referencia",
-   "deck": "A pain001 v0.0.56 minden kapcsolója, végpontja és viselkedése, a leszállított kódból véve, nem tervekből."
+   "deck": "A pain001 v0.0.71 minden kapcsolója, végpontja és viselkedése, a leszállított kódból véve, nem tervekből."
   },
   "text": {
    "<a href=\"/\">Home</a>": "<a href=\"/\">Kezdőlap</a>",
@@ -16,7 +16,7 @@
    "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">Bemenet normalizálása</a>",
    "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">Bővítményarchitektúra</a>",
    "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">Minőségi kapuk</a>",
-   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.70</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Ez a referencia a <strong>pain001 v0.0.70</strong> parancssori felületét, Python API-ját, REST mikroszolgáltatását és validálási folyamatát dokumentálja. Az itt felsorolt összes kapcsoló, végpont és viselkedés a leszállított kódból származik, nem tervekből.",
+   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.71</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Ez a referencia a <strong>pain001 v0.0.71</strong> parancssori felületét, Python API-ját, REST mikroszolgáltatását és validálási folyamatát dokumentálja. Az itt felsorolt összes kapcsoló, végpont és viselkedés a leszállított kódból származik, nem tervekből.",
    "Pain001 supports <strong>12 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).": "A Pain001 <strong>12 ISO 20022 üzenetdefiníciót</strong> támogat: a <code>pain.001.001.03</code> verziótól a <code>pain.001.001.13</code> verzióig (Customer Credit Transfer Initiation, tizenegy verzió), valamint a <code>pain.008.001.02</code> üzenetet (Customer Direct Debit Initiation).",
    "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. Parancssori felület<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
    "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "A <code>pain001</code> futtatható állomány alparancsokba szervezi a funkcióit. Ha csak generálási kapcsolókkal futtatja, implicit módon a <code>generate</code> alparancsot hívja meg, így a meglévő automatizmusok továbbra is működnek.",

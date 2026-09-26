@@ -2,9 +2,9 @@
  "documentation": {
   "meta": {
    "title": "Tài liệu kỹ thuật Pain001: CLI, Python API và REST",
-   "description": "Tài liệu tham khảo đầy đủ về pain001 v0.0.56: lệnh con và cờ CLI, Python API, điểm cuối REST dưới /api/v1, bộ quy tắc scheme, chuẩn hoá đầu vào và kiến trúc plugin.",
+   "description": "Tài liệu tham khảo đầy đủ về pain001 v0.0.71: lệnh con và cờ CLI, Python API, điểm cuối REST dưới /api/v1, bộ quy tắc scheme, chuẩn hoá đầu vào và kiến trúc plugin.",
    "eyebrow": "Tài liệu tham khảo",
-   "deck": "Mọi cờ lệnh, điểm cuối và hành vi của pain001 v0.0.56, lấy từ mã nguồn đã phát hành, không phải từ kỳ vọng."
+   "deck": "Mọi cờ lệnh, điểm cuối và hành vi của pain001 v0.0.71, lấy từ mã nguồn đã phát hành, không phải từ kỳ vọng."
   },
   "text": {
    "<a href=\"/\">Home</a>": "<a href=\"/\">Trang chủ</a>",
@@ -16,7 +16,7 @@
    "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">Chuẩn hoá dữ liệu đầu vào</a>",
    "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">Kiến trúc plugin</a>",
    "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">Cổng chất lượng</a>",
-   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.70</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Tài liệu tham khảo này mô tả giao diện dòng lệnh, Python API, vi dịch vụ REST và quy trình xác thực của <strong>pain001 v0.0.70</strong>. Mọi cờ lệnh, điểm cuối và hành vi được liệt kê tại đây đều lấy từ mã nguồn đã phát hành, không phải từ kỳ vọng.",
+   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.71</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Tài liệu tham khảo này mô tả giao diện dòng lệnh, Python API, vi dịch vụ REST và quy trình xác thực của <strong>pain001 v0.0.71</strong>. Mọi cờ lệnh, điểm cuối và hành vi được liệt kê tại đây đều lấy từ mã nguồn đã phát hành, không phải từ kỳ vọng.",
    "Pain001 supports <strong>12 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).": "Pain001 hỗ trợ <strong>12 định nghĩa thông điệp ISO 20022</strong>: từ <code>pain.001.001.03</code> đến <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, tức khởi tạo chuyển khoản tín dụng của khách hàng; mười một phiên bản) và <code>pain.008.001.02</code> (Customer Direct Debit Initiation, tức khởi tạo ghi nợ trực tiếp của khách hàng).",
    "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. Giao diện dòng lệnh<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
    "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "Tệp thực thi <code>pain001</code> nhóm các chức năng thành những lệnh con. Khi chạy chỉ với các cờ tạo tệp, lệnh <code>generate</code> được gọi ngầm định, nên các quy trình tự động hoá hiện có vẫn tiếp tục hoạt động.",

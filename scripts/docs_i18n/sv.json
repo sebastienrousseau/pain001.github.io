@@ -2,9 +2,9 @@
  "documentation": {
   "meta": {
    "title": "Pain001 teknisk referens: CLI, Python-API och REST",
-   "description": "Komplett referens för pain001 v0.0.56: CLI-kommandon och flaggor, Python-API, REST-endpoints under /api/v1, regelverk, normalisering av indata och pluginarkitektur.",
+   "description": "Komplett referens för pain001 v0.0.71: CLI-kommandon och flaggor, Python-API, REST-endpoints under /api/v1, regelverk, normalisering av indata och pluginarkitektur.",
    "eyebrow": "Referens",
-   "deck": "Varje flagga, endpoint och beteende i pain001 v0.0.56, hämtat från den levererade koden, inte från ambitioner."
+   "deck": "Varje flagga, endpoint och beteende i pain001 v0.0.71, hämtat från den levererade koden, inte från ambitioner."
   },
   "text": {
    "<a href=\"/\">Home</a>": "<a href=\"/\">Startsida</a>",
@@ -16,7 +16,7 @@
    "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">Normalisering av indata</a>",
    "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">Pluginarkitektur</a>",
    "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">Kvalitetsgrindar</a>",
-   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.70</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Denna referens dokumenterar kommandoradsgränssnittet, Python-API:et, REST-mikrotjänsten och valideringspipelinen för <strong>pain001 v0.0.70</strong>. Varje flagga, endpoint och beteende som listas här är hämtat från den levererade koden, inte från ambitioner.",
+   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.71</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Denna referens dokumenterar kommandoradsgränssnittet, Python-API:et, REST-mikrotjänsten och valideringspipelinen för <strong>pain001 v0.0.71</strong>. Varje flagga, endpoint och beteende som listas här är hämtat från den levererade koden, inte från ambitioner.",
    "Pain001 supports <strong>12 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).": "Pain001 stöder <strong>12 ISO 20022-meddelandedefinitioner</strong>: <code>pain.001.001.03</code> till och med <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, elva versioner) samt <code>pain.008.001.02</code> (Customer Direct Debit Initiation).",
    "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. Kommandoradsgränssnitt<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
    "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "Programmet <code>pain001</code> grupperar sin funktionalitet i underkommandon. Körs det med enbart genereringsflaggor anropas <code>generate</code> implicit, så befintlig automation fortsätter att fungera.",

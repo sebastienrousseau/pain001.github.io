@@ -2,9 +2,9 @@
  "documentation": {
   "meta": {
    "title": "Pain001 तकनीकी संदर्भ: CLI, Python API और REST",
-   "description": "pain001 v0.0.56 का संपूर्ण संदर्भ: CLI सबकमांड और फ़्लैग, Python API, /api/v1 के REST एंडपॉइंट, स्कीम नियमपुस्तिकाएँ, इनपुट सामान्यीकरण और प्लगइन आर्किटेक्चर।",
+   "description": "pain001 v0.0.71 का संपूर्ण संदर्भ: CLI सबकमांड और फ़्लैग, Python API, /api/v1 के REST एंडपॉइंट, स्कीम नियमपुस्तिकाएँ, इनपुट सामान्यीकरण और प्लगइन आर्किटेक्चर।",
    "eyebrow": "संदर्भ",
-   "deck": "pain001 v0.0.56 का हर फ़्लैग, एंडपॉइंट और व्यवहार, शिप किए गए कोड से लिया गया, आकांक्षा से नहीं।"
+   "deck": "pain001 v0.0.71 का हर फ़्लैग, एंडपॉइंट और व्यवहार, शिप किए गए कोड से लिया गया, आकांक्षा से नहीं।"
   },
   "text": {
    "<a href=\"/\">Home</a>": "<a href=\"/\">होम</a>",
@@ -16,7 +16,7 @@
    "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">इनपुट सामान्यीकरण</a>",
    "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">प्लगइन आर्किटेक्चर</a>",
    "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">गुणवत्ता गेट</a>",
-   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.70</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "यह संदर्भ <strong>pain001 v0.0.70</strong> के कमांड-लाइन इंटरफ़ेस, Python API, REST माइक्रोसर्विस और सत्यापन पाइपलाइन का दस्तावेज़ीकरण है। यहाँ सूचीबद्ध हर फ़्लैग, एंडपॉइंट और व्यवहार शिप किए गए कोड से लिया गया है, आकांक्षा से नहीं।",
+   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.71</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "यह संदर्भ <strong>pain001 v0.0.71</strong> के कमांड-लाइन इंटरफ़ेस, Python API, REST माइक्रोसर्विस और सत्यापन पाइपलाइन का दस्तावेज़ीकरण है। यहाँ सूचीबद्ध हर फ़्लैग, एंडपॉइंट और व्यवहार शिप किए गए कोड से लिया गया है, आकांक्षा से नहीं।",
    "Pain001 supports <strong>12 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).": "Pain001 <strong>12 ISO 20022 संदेश परिभाषाओं</strong> का समर्थन करता है: <code>pain.001.001.03</code> से <code>pain.001.001.13</code> तक (Customer Credit Transfer Initiation, ग्यारह संस्करण) और <code>pain.008.001.02</code> (Customer Direct Debit Initiation)।",
    "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. कमांड-लाइन इंटरफ़ेस<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
    "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "<code>pain001</code> एग्ज़िक्यूटेबल अपनी कार्यक्षमता को सबकमांड में समूहित करता है। केवल जनरेशन फ़्लैग के साथ चलाने पर <code>generate</code> स्वतः लागू हो जाता है, इसलिए मौजूदा ऑटोमेशन काम करता रहता है।",

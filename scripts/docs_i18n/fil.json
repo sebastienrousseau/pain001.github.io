@@ -2,9 +2,9 @@
   "documentation": {
     "meta": {
       "title": "Pain001 Teknikal na Sanggunian: CLI, Python API at REST",
-      "description": "Kumpletong sanggunian para sa pain001 v0.0.56: mga CLI subcommand at flag, Python API, REST endpoint sa ilalim ng /api/v1, mga scheme rulebook, normalisasyon ng input, at plugin architecture.",
+      "description": "Kumpletong sanggunian para sa pain001 v0.0.71: mga CLI subcommand at flag, Python API, REST endpoint sa ilalim ng /api/v1, mga scheme rulebook, normalisasyon ng input, at plugin architecture.",
       "eyebrow": "Sanggunian",
-      "deck": "Bawat flag, endpoint, at gawi ng pain001 v0.0.56, na kinuha mula sa inilabas na code at hindi mula sa hangarin."
+      "deck": "Bawat flag, endpoint, at gawi ng pain001 v0.0.71, na kinuha mula sa inilabas na code at hindi mula sa hangarin."
     },
     "text": {
       "<a href=\"/\">Home</a>": "<a href=\"/\">Tahanan</a>",
@@ -16,7 +16,7 @@
       "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">Normalisasyon ng Input</a>",
       "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>",
       "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">Mga Quality Gate</a>",
-      "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.70</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Idinodokumento ng sanggunian na ito ang command-line interface, Python API, REST microservice, at validation pipeline para sa <strong>pain001 v0.0.70</strong>. Bawat flag, endpoint, at gawing nakalista rito ay kinuha mula sa inilabas na code, hindi mula sa hangarin.",
+      "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.71</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Idinodokumento ng sanggunian na ito ang command-line interface, Python API, REST microservice, at validation pipeline para sa <strong>pain001 v0.0.71</strong>. Bawat flag, endpoint, at gawing nakalista rito ay kinuha mula sa inilabas na code, hindi mula sa hangarin.",
       "Pain001 supports <strong>12 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).": "Sinusuportahan ng Pain001 ang <strong>12 ISO 20022 message definition</strong>: <code>pain.001.001.03</code> hanggang <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, labing-isang bersyon) at <code>pain.008.001.02</code> (Customer Direct Debit Initiation).",
       "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
       "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "Pinapangkat ng <code>pain001</code> executable ang mga kakayahan nito sa mga subcommand. Kapag pinatakbo ito nang may mga generation flag lamang, tinatawag nito nang implicit ang <code>generate</code>, kaya patuloy na gumagana ang umiiral na automation.",

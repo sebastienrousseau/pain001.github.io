@@ -2,9 +2,9 @@
  "documentation": {
   "meta": {
    "title": "Pain001 సాంకేతిక సూచిక: CLI, Python API, REST",
-   "description": "pain001 v0.0.56 సంపూర్ణ సూచిక: CLI సబ్‌కమాండ్లు, ఫ్లాగ్‌లు, Python API, /api/v1 కింది REST ఎండ్‌పాయింట్లు, స్కీమ్ రూల్‌బుక్‌లు, ఇన్‌పుట్ సాధారణీకరణ, ప్లగిన్ నిర్మాణం.",
+   "description": "pain001 v0.0.71 సంపూర్ణ సూచిక: CLI సబ్‌కమాండ్లు, ఫ్లాగ్‌లు, Python API, /api/v1 కింది REST ఎండ్‌పాయింట్లు, స్కీమ్ రూల్‌బుక్‌లు, ఇన్‌పుట్ సాధారణీకరణ, ప్లగిన్ నిర్మాణం.",
    "eyebrow": "సూచిక",
-   "deck": "pain001 v0.0.56 యొక్క ప్రతి ఫ్లాగ్, ఎండ్‌పాయింట్, ప్రవర్తన. ఆకాంక్ష నుండి కాదు, షిప్ అయిన కోడ్ నుండి తీసుకున్నవి."
+   "deck": "pain001 v0.0.71 యొక్క ప్రతి ఫ్లాగ్, ఎండ్‌పాయింట్, ప్రవర్తన. ఆకాంక్ష నుండి కాదు, షిప్ అయిన కోడ్ నుండి తీసుకున్నవి."
   },
   "text": {
    "<a href=\"/\">Home</a>": "<a href=\"/\">హోమ్</a>",
@@ -16,7 +16,7 @@
    "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">ఇన్‌పుట్ సాధారణీకరణ</a>",
    "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">ప్లగిన్ నిర్మాణం</a>",
    "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">నాణ్యతా గేట్లు</a>",
-   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.70</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "ఈ సూచిక <strong>pain001 v0.0.70</strong> యొక్క కమాండ్-లైన్ ఇంటర్‌ఫేస్, Python API, REST మైక్రోసర్వీస్, ధృవీకరణ పైప్‌లైన్‌లను నమోదు చేస్తుంది. ఇక్కడ పేర్కొన్న ప్రతి ఫ్లాగ్, ఎండ్‌పాయింట్, ప్రవర్తన షిప్ అయిన కోడ్ నుండి తీసుకున్నవే, ఆకాంక్ష నుండి కాదు.",
+   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.71</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "ఈ సూచిక <strong>pain001 v0.0.71</strong> యొక్క కమాండ్-లైన్ ఇంటర్‌ఫేస్, Python API, REST మైక్రోసర్వీస్, ధృవీకరణ పైప్‌లైన్‌లను నమోదు చేస్తుంది. ఇక్కడ పేర్కొన్న ప్రతి ఫ్లాగ్, ఎండ్‌పాయింట్, ప్రవర్తన షిప్ అయిన కోడ్ నుండి తీసుకున్నవే, ఆకాంక్ష నుండి కాదు.",
    "Pain001 supports <strong>12 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).": "Pain001 <strong>12 ISO 20022 సందేశ నిర్వచనాలకు</strong> మద్దతిస్తుంది: <code>pain.001.001.03</code> నుండి <code>pain.001.001.13</code> వరకు (Customer Credit Transfer Initiation, పదకొండు వెర్షన్లు) మరియు <code>pain.008.001.02</code> (Customer Direct Debit Initiation).",
    "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. కమాండ్-లైన్ ఇంటర్‌ఫేస్<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
    "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "<code>pain001</code> ఎగ్జిక్యూటబుల్ తన కార్యాచరణను సబ్‌కమాండ్లుగా విభజిస్తుంది. కేవలం జనరేషన్ ఫ్లాగ్‌లతో నడిపితే <code>generate</code> అవ్యక్తంగా అమలవుతుంది, కాబట్టి ఇప్పటికే ఉన్న ఆటోమేషన్ యథావిధిగా పనిచేస్తుంది.",

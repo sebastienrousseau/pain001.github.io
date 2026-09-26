@@ -2,9 +2,9 @@
  "documentation": {
   "meta": {
    "title": "Jagorar Fasaha ta Pain001: CLI, Python API da REST",
-   "description": "Cikakken jagora ga pain001 v0.0.56: umarnan CLI da tutoci, Python API, endpoints na REST a /api/v1, littattafan ƙa'ida, daidaita shigarwa da plugins.",
+   "description": "Cikakken jagora ga pain001 v0.0.71: umarnan CLI da tutoci, Python API, endpoints na REST a /api/v1, littattafan ƙa'ida, daidaita shigarwa da plugins.",
    "eyebrow": "Jagora",
-   "deck": "Kowace tuta, endpoint da hali na pain001 v0.0.56, daga lambar da aka fitar, ba daga buri ba."
+   "deck": "Kowace tuta, endpoint da hali na pain001 v0.0.71, daga lambar da aka fitar, ba daga buri ba."
   },
   "text": {
    "<a href=\"/\">Home</a>": "<a href=\"/\">Gida</a>",
@@ -16,7 +16,7 @@
    "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">Daidaita Bayanan Shigarwa</a>",
    "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">Gine-ginen Plugin</a>",
    "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">Ƙofofin Inganci</a>",
-   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.70</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Wannan jagorar tana bayyana mahaɗar layin umarni, Python API, ƙaramar hidimar REST, da kuma tsarin tantancewa na <strong>pain001 v0.0.70</strong>. Kowace tuta, endpoint da hali da aka lissafa a nan an ɗauko su ne daga lambar da aka fitar, ba daga buri ba.",
+   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.71</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Wannan jagorar tana bayyana mahaɗar layin umarni, Python API, ƙaramar hidimar REST, da kuma tsarin tantancewa na <strong>pain001 v0.0.71</strong>. Kowace tuta, endpoint da hali da aka lissafa a nan an ɗauko su ne daga lambar da aka fitar, ba daga buri ba.",
    "Pain001 supports <strong>12 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).": "Pain001 tana goyon bayan <strong>ma'anonin saƙo 12 na ISO 20022</strong>: daga <code>pain.001.001.03</code> zuwa <code>pain.001.001.13</code> (fara tura kuɗi na abokin ciniki, sigogi goma sha ɗaya) da kuma <code>pain.008.001.02</code> (fara cirar kuɗi kai tsaye na abokin ciniki).",
    "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. Mahaɗar Layin Umarni<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
    "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "Fayil ɗin aiwatarwa na <code>pain001</code> yana tara ayyukansa cikin ƙananan umarni. Idan ka gudanar da shi da tutocin ƙirƙira kaɗai, yana kiran <code>generate</code> a fakaice, don haka tsarin sarrafa kai da kake da shi zai ci gaba da aiki.",

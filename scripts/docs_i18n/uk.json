@@ -2,9 +2,9 @@
  "documentation": {
   "meta": {
    "title": "Pain001: технічний довідник CLI, Python API та REST",
-   "description": "Повний довідник pain001 v0.0.56: підкоманди та прапорці CLI, Python API, REST-ендпоінти під /api/v1, збірники правил схем, нормалізація вхідних даних і архітектура плагінів.",
+   "description": "Повний довідник pain001 v0.0.71: підкоманди та прапорці CLI, Python API, REST-ендпоінти під /api/v1, збірники правил схем, нормалізація вхідних даних і архітектура плагінів.",
    "eyebrow": "Довідник",
-   "deck": "Кожен прапорець, ендпоінт і поведінка pain001 v0.0.56, узяті з випущеного коду, а не з планів."
+   "deck": "Кожен прапорець, ендпоінт і поведінка pain001 v0.0.71, узяті з випущеного коду, а не з планів."
   },
   "text": {
    "<a href=\"/\">Home</a>": "<a href=\"/\">Головна</a>",
@@ -16,7 +16,7 @@
    "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">Нормалізація вхідних даних</a>",
    "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">Архітектура плагінів</a>",
    "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">Контроль якості</a>",
-   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.70</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Цей довідник описує інтерфейс командного рядка, Python API, REST-мікросервіс і конвеєр валідації для <strong>pain001 v0.0.70</strong>. Кожен прапорець, ендпоінт і поведінка, наведені тут, узяті з випущеного коду, а не з планів.",
+   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.71</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Цей довідник описує інтерфейс командного рядка, Python API, REST-мікросервіс і конвеєр валідації для <strong>pain001 v0.0.71</strong>. Кожен прапорець, ендпоінт і поведінка, наведені тут, узяті з випущеного коду, а не з планів.",
    "Pain001 supports <strong>12 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).": "Pain001 підтримує <strong>12 визначень повідомлень ISO 20022</strong>: від <code>pain.001.001.03</code> до <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, одинадцять версій) та <code>pain.008.001.02</code> (Customer Direct Debit Initiation).",
    "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. Інтерфейс командного рядка<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
    "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "Виконуваний файл <code>pain001</code> групує функціональність за підкомандами. Запуск лише з прапорцями генерації неявно викликає <code>generate</code>, тому наявна автоматизація продовжує працювати.",

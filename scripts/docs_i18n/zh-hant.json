@@ -2,9 +2,9 @@
  "documentation": {
   "meta": {
    "title": "Pain001 技術參考：CLI、Python API 與 REST",
-   "description": "pain001 v0.0.56 完整參考：CLI 子命令與旗標、Python API、/api/v1 下的 REST 端點、方案規則手冊、輸入正規化與外掛架構。",
+   "description": "pain001 v0.0.71 完整參考：CLI 子命令與旗標、Python API、/api/v1 下的 REST 端點、方案規則手冊、輸入正規化與外掛架構。",
    "eyebrow": "參考",
-   "deck": "pain001 v0.0.56 的每個旗標、端點與行為，皆取自實際釋出的程式碼，而非願景。"
+   "deck": "pain001 v0.0.71 的每個旗標、端點與行為，皆取自實際釋出的程式碼，而非願景。"
   },
   "text": {
    "<a href=\"/\">Home</a>": "<a href=\"/\">首頁</a>",
@@ -16,7 +16,7 @@
    "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">輸入正規化</a>",
    "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">外掛架構</a>",
    "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">品質關卡</a>",
-   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.70</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "本參考文件說明 <strong>pain001 v0.0.70</strong> 的命令列介面、Python API、REST 微服務與驗證管線。此處列出的每個旗標、端點與行為皆取自實際釋出的程式碼，而非願景。",
+   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.71</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "本參考文件說明 <strong>pain001 v0.0.71</strong> 的命令列介面、Python API、REST 微服務與驗證管線。此處列出的每個旗標、端點與行為皆取自實際釋出的程式碼，而非願景。",
    "Pain001 supports <strong>12 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).": "Pain001 支援 <strong>12 種 ISO 20022 電文定義</strong>：<code>pain.001.001.03</code> 至 <code>pain.001.001.13</code>（客戶貸記轉帳發動，共十一個版本）以及 <code>pain.008.001.02</code>（客戶直接扣款發動）。",
    "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. 命令列介面<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
    "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "<code>pain001</code> 執行檔將功能劃分為多個子命令。僅帶產生旗標執行時會隱含呼叫 <code>generate</code>，因此既有的自動化流程可照常運作。",

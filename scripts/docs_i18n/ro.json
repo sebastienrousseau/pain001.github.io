@@ -2,9 +2,9 @@
  "documentation": {
   "meta": {
    "title": "Pain001 – referință tehnică: CLI, API Python și REST",
-   "description": "Referință completă pentru pain001 v0.0.56: subcomenzi și flaguri CLI, API Python, endpointuri REST sub /api/v1, reguli de schemă, normalizare și plugin-uri.",
+   "description": "Referință completă pentru pain001 v0.0.71: subcomenzi și flaguri CLI, API Python, endpointuri REST sub /api/v1, reguli de schemă, normalizare și plugin-uri.",
    "eyebrow": "Referință",
-   "deck": "Fiecare flag, endpoint și comportament al pain001 v0.0.56, preluate din codul livrat, nu din intenții."
+   "deck": "Fiecare flag, endpoint și comportament al pain001 v0.0.71, preluate din codul livrat, nu din intenții."
   },
   "text": {
    "<a href=\"/\">Home</a>": "<a href=\"/\">Acasă</a>",
@@ -16,7 +16,7 @@
    "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">Normalizarea datelor de intrare</a>",
    "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">Arhitectura de plugin-uri</a>",
    "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">Praguri de calitate</a>",
-   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.70</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Această referință documentează interfața de linie de comandă, API-ul Python, microserviciul REST și fluxul de validare pentru <strong>pain001 v0.0.70</strong>. Fiecare flag, endpoint și comportament enumerat aici este preluat din codul livrat, nu din intenții.",
+   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.71</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Această referință documentează interfața de linie de comandă, API-ul Python, microserviciul REST și fluxul de validare pentru <strong>pain001 v0.0.71</strong>. Fiecare flag, endpoint și comportament enumerat aici este preluat din codul livrat, nu din intenții.",
    "Pain001 supports <strong>12 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> (Customer Direct Debit Initiation).": "Pain001 acceptă <strong>12 definiții de mesaje ISO 20022</strong>: de la <code>pain.001.001.03</code> la <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, unsprezece versiuni) și <code>pain.008.001.02</code> (Customer Direct Debit Initiation).",
    "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. Interfața de linie de comandă<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
    "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "Executabilul <code>pain001</code> își grupează funcționalitatea în subcomenzi. Rulat doar cu flagurile de generare, invocă implicit <code>generate</code>, astfel încât automatizările existente continuă să funcționeze.",

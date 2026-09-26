@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-09-23T08:00:00+00:00"
+date: "2026-09-26T08:00:00+00:00"
 description: "Download ISO 20022 pain.001 and pain.008 sample files built from the public scheme rulebooks per country and rail, each with a record of where it comes from and how it was checked, plus schema coverage files for every supported edition."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.63)"
 item_description: "Download ISO 20022 pain.001 and pain.008 sample files built from the public scheme rulebooks per country and rail, each with a record of where it comes from and how it was checked, plus schema coverage files for every supported edition."
 item_guid: "https://pain001.com/example-corpus/"
 item_link: "https://pain001.com/example-corpus/"
-item_pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+item_pub_date: "Sat, 26 Sep 2026 08:00:00 +0000"
 item_title: "ISO 20022 example files: pain.001 and pain.008 samples per country and rail"
-last_build_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+last_build_date: "Sat, 26 Sep 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Wed, 23 Sep 2026 08:00:00 +0000"
+pub_date: "Sat, 26 Sep 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -108,10 +108,10 @@ Identifiers are synthetic: IBANs, BICs, LEIs and account numbers pass their chec
 
 | Bundle | Contents | Size |
 | :--- | :--- | ---: |
-| [Complete corpus](/corpus/pain001-example-corpus-0.0.70.zip) | 84 payment files with their provenance records, and 131 schema coverage files across 13 editions | 313 KB |
+| [Complete corpus](/corpus/pain001-example-corpus-0.0.71.zip) | 84 payment files with their provenance records, and 131 schema coverage files across 13 editions | 313 KB |
 | Coverage files per edition | one zip each, listed on the [coverage page](/example-corpus-coverage/) | 9 to 12 KB |
 
-Everything here is generated from pain001 0.0.70's own corpus, which also ships inside the Python package (`pain001.corpus`) and in the [repository](https://github.com/sebastienrousseau/pain001/tree/main/pain001/corpus/data).
+Everything here is generated from pain001 0.0.71's own corpus, which also ships inside the Python package (`pain001.corpus`) and in the [repository](https://github.com/sebastienrousseau/pain001/tree/main/pain001/corpus/data).
 
 ## One scenario, end to end
 
