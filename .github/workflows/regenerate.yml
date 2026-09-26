@@ -133,6 +133,10 @@ jobs:
         with:
           node-version: "22"
 
+      # The gates run the unit and property tests, which need fast-check.
+      - name: Install Node toolchain from the lockfile
+        run: npm ci
+
       - name: Regenerate from the library
         run: |
           python3 scripts/generate_try_samples.py
