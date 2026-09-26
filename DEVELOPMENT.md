@@ -13,7 +13,12 @@
 make build
 make test
 make audit
+npm run coverage
 ```
+
+`npm run coverage` runs the unit, property and jsdom tests with the
+coverage gate CI applies to the shipped JavaScript in `static/js/`:
+90% of lines and 80% of branches.
 
 `make serve` serves the generated `site/` tree at
 <http://127.0.0.1:8099/>. Generated output is ignored; edit `_posts/`,

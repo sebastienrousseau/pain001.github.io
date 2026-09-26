@@ -71,7 +71,8 @@ jobs:
       - name: Build and test
         run: |
           ./build.sh
-          node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --experimental-test-coverage --test-coverage-lines=100 --test-coverage-functions=100 --test-coverage-branches=100 --test tests/try-demo.test.mjs
+          npm ci
+          npm run coverage
           ssg audit -f ssg.toml -o site --severity warn --fail-on warn
           python3 scripts/validate_content_integrity.py
           python3 scripts/validate_links.py site

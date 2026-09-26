@@ -6,6 +6,19 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+### Added
+
+- Tests for every script the site ships, run in a jsdom page with fake
+  runtimes: the theme and motion boot script, the analytics loader, the
+  legacy redirect, the navigation and theme control, the Pain001 chrome
+  layer, the homepage, and the demo's engine and page wiring. A coverage
+  gate, `npm run coverage`, holds `static/js/` (less the vendored
+  Cloudflare beacon) at 90% of lines and 80% of branches in CI and in
+  the release workflow; it measures 99.76% of lines, 96.63% of branches
+  and 99.39% of functions. A guard test fails if a new script in
+  `static/js/` has no test, since the report only lists files a test
+  loads.
+
 ### Changed
 
 - `CONTRIBUTING.md` states the test policy the project already follows:

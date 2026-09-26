@@ -69,8 +69,10 @@ jobs:
       - name: Audit gates (fail on warnings)
         run: ssg audit -f ssg.toml -o site --severity warn --fail-on warn
 
-      - name: Unit tests (demo input handling)
-        run: node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --experimental-test-coverage --test-coverage-lines=100 --test-coverage-functions=100 --test-coverage-branches=100 --test tests/try-demo.test.mjs
+      # Every script the site ships (static/js, less the vendored beacon):
+      # unit, property and jsdom tests, gated at 90% lines and 80% branches.
+      - name: Unit tests and coverage gate (shipped JavaScript)
+        run: npm run coverage
 
       - name: Browser engine runs the library (Node, vendored runtime)
         run: node tests/engine.integration.mjs
