@@ -1911,6 +1911,26 @@ def main() -> None:
     retitle_tag_pages(site)
     defer_ssg_search(site)
     ensure_social_metadata(site)
+    remove_stray_news_sitemaps(site)
+
+
+def remove_stray_news_sitemaps(site: Path) -> int:
+    """Delete the per-page news-sitemap.xml files ssg writes beside pages.
+
+    ssg writes one into every page directory, not just the root. Those
+    copies are invalid (an empty <loc>, "Unnamed Publication", "Untitled
+    Article"), nothing links to them, and each carries the build time as
+    its publication date, which alone made two builds of one commit
+    differ in 385 files. The root /news-sitemap.xml is the real one and
+    is kept.
+    """
+    removed = 0
+    for stray in site.rglob("news-sitemap.xml"):
+        if stray.parent != site:
+            stray.unlink()
+            removed += 1
+    print(f"[postbuild] removed {removed} stray per-page news sitemap(s)")
+    return removed
 
 
 LEGACY_REDIRECTS = {

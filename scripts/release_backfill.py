@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 # SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
 # SPDX-License-Identifier: Apache-2.0 OR MIT
-"""Package the release assets for a tag that was published without them.
+"""Package a release's assets reproducibly.
+
+release.yml packages every release with this script, and packages each
+release twice from clean builds to prove the archive is reproducible.
+release-backfill.yml uses it for tags that were published without assets.
 
 v0.0.1 and v0.0.2 predate the release workflow; v0.0.3 and v0.0.4 were
 tagged but their release runs failed on SBOM attestation (fixed in v0.0.5).

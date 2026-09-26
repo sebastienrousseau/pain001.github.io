@@ -62,6 +62,12 @@ jobs:
           test -f "docs/releases/${GITHUB_REF_NAME}.md"
           python3 scripts/release_notes.py --check
 
+      # Reproducible build: every timestamp the build writes (archive
+      # entries, the SBOM's metadata.timestamp) is the tagged commit's time,
+      # and nothing is fetched from the live site. See the check below.
+      - name: Pin the build time to the commit
+        run: echo "SOURCE_DATE_EPOCH=$(git log -1 --format=%ct)" >> "$GITHUB_ENV"
+
       - name: Build and test
         run: |
           ./build.sh
@@ -77,10 +83,19 @@ jobs:
           # Exported because the SBOM attestation's sbom-path takes a literal path, not
           # a glob, so the attestation step has to name the file exactly.
           echo "RELEASE_VERSION=$version" >> "$GITHUB_ENV"
-          tar -czf "dist/pain001-site-v${version}.tar.gz" site LICENSE LICENSE-APACHE LICENSE-MIT THIRD_PARTY_NOTICES.md
-          cp site/sbom.cdx.json "dist/pain001-site-v${version}.cdx.json"
-          cd dist
-          sha256sum ./* > SHA256SUMS
+          # Sorted entries, owner 0, every mtime the commit time, gzip
+          # header time 0: the archive is a function of the commit.
+          python3 scripts/release_backfill.py --src . --tag "v${version}" --out dist --mtime "$SOURCE_DATE_EPOCH"
+
+      - name: Prove the archive is reproducible
+        run: |
+          # Build the same commit again from a clean tree and require
+          # byte-identical release files.
+          rm -rf site Pain001
+          ./build.sh > /dev/null
+          python3 scripts/release_backfill.py --src . --tag "v${RELEASE_VERSION}" --out "$RUNNER_TEMP/rebuild" --mtime "$SOURCE_DATE_EPOCH"
+          diff dist/SHA256SUMS "$RUNNER_TEMP/rebuild/SHA256SUMS"
+          echo "reproducible: two clean builds gave identical release files"
 
       - name: Attest website provenance
         uses: actions/attest-build-provenance@977bb373ede98d70efdf65b84cb5f73e068dcc2a # v3
