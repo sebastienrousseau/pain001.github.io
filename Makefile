@@ -1,11 +1,11 @@
-.PHONY: all build test audit lint deps verify serve clean
+.PHONY: all build test pytest audit lint deps verify serve clean
 
 all: verify
 
 build:
 	./build.sh
 
-test: build
+test: build pytest
 	npm test
 	python3 scripts/css_minify.py
 	python3 scripts/validate_try_i18n.py
@@ -22,6 +22,16 @@ test: build
 	python3 scripts/validate_security_txt.py
 	python3 scripts/validate_links.py site
 	python3 scripts/validate_versions.py
+
+# Regression tests for the build and release scripts. They run in their own
+# virtualenv, built once from the hash-pinned requirements/test.txt.
+.venv-test/.installed: requirements/test.txt
+	python3 -m venv .venv-test
+	.venv-test/bin/python -m pip install --quiet --require-hashes -r requirements/test.txt
+	touch $@
+
+pytest: .venv-test/.installed
+	.venv-test/bin/python -m pytest tests/python -q -p no:cacheprovider
 
 audit: build
 	ssg audit -f ssg.toml -o site --severity warn --fail-on warn

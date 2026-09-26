@@ -18,6 +18,14 @@ All notable changes to this website are documented here. The format follows
   and 99.39% of functions. A guard test fails if a new script in
   `static/js/` has no test, since the report only lists files a test
   loads.
+- A pytest suite under `tests/python/` of regression tests for the
+  build and release scripts: the version stamper, the corpus zips, the
+  release-notes composer, the library-release trigger, the runtime
+  fetcher, release packaging and the SBOM serial, plus earlier site
+  fixes (the service-worker cache version, legacy redirect stubs,
+  inline styles under the CSP, the LICENSE pointer). Each test was seen
+  to fail without the fix it guards. `make test` and CI run it, from the
+  hash-pinned `requirements/test.txt`.
 
 ### Changed
 

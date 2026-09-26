@@ -20,6 +20,10 @@ npm run coverage
 coverage gate CI applies to the shipped JavaScript in `static/js/`:
 90% of lines and 80% of branches.
 
+`make test` also runs the Python regression tests (`make pytest`) in a
+local `.venv-test/` virtualenv, built on first use from the hash-pinned
+`requirements/test.txt`.
+
 `make serve` serves the generated `site/` tree at
 <http://127.0.0.1:8099/>. Generated output is ignored; edit `_posts/`,
 `_layouts/`, `static/`, or `scripts/` instead.
