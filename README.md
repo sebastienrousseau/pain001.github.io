@@ -341,7 +341,8 @@ not in a public issue.
 The site uses a restrictive Content-Security-Policy, same-origin vendored
 runtime assets, non-networked payment-data processing, CodeQL, dependency
 review, Dependabot, OpenSSF Scorecard, signed tags, release attestations, and a
-CycloneDX SBOM. Every GitHub Action is pinned by commit SHA, and workflow
+CycloneDX SBOM. The project holds the
+[OpenSSF Best Practices passing badge](https://www.bestpractices.dev/projects/14961). Every GitHub Action is pinned by commit SHA, and workflow
 tokens are read-only except on the job that needs write scope. Node
 dependencies are installed from a committed lockfile and audited in CI.
 
