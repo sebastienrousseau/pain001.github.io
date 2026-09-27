@@ -11,6 +11,11 @@ All notable changes to this website are documented here. The format follows
 - `docs/seo/`: an outreach pack (curated-list entries, Stack Overflow
   drafts with disclosure, Bing Webmaster Tools steps) and a case-study
   template with a permission request, for the maintainer to send.
+- A weekly Search Console scoreboard (`scripts/seo_scoreboard.py`,
+  `.github/workflows/seo-scoreboard.yml`): the last 28 days against the
+  previous 28 for the site, the queries its content targets, and the top
+  pages and countries. It needs a read-only service account; until one is
+  set up it reports "not configured" (see `DEVELOPMENT.md`).
 - IndexNow: after each deploy of `main`, CI submits every sitemap URL so
   Bing, Yandex, Seznam, Naver and the other participating engines recrawl
   within hours. Ownership is proven by a key file at the site root; no
