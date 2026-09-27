@@ -18,8 +18,9 @@ npm run coverage
 ```
 
 `npm run coverage` runs the unit, property and jsdom tests with the
-coverage gate CI applies to the shipped JavaScript in `static/js/`:
-90% of lines and 80% of branches.
+coverage gate CI applies to the shipped JavaScript in `static/js/` and
+the demo's service worker, `static/sw.js`: 90% of lines and 80% of
+branches.
 
 `make test` also runs the Python regression tests (`make pytest`) in a
 local `.venv-test/` virtualenv, built on first use from the hash-pinned

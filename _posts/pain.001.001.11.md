@@ -90,6 +90,8 @@ last_reviewed: "2026-07-26"
 
 `pain.001.001.11` continues post-2019 maintenance with further structured-data refinements. Adoption is led by newer platform builds; most bank channels map it onto their version-9 processing.
 
+New to the format? [What is pain.001?](/pain-001/) explains the message, its structure and every version.
+
 ## What to know about this version
 
 - Choose it when a counterpart explicitly profiles against it; otherwise `.09` maximises interoperability.

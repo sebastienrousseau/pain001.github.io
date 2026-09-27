@@ -142,7 +142,9 @@
   "System": "システム",
   "All 34 languages": "全34言語",
   "Reduce motion": "動きを減らす",
-  "Save page": "ページを保存"
+  "Save page": "ページを保存",
+  "What is pain.001?": "pain.001 とは？",
+  "The message, its structure, versions and an example.": "メッセージの概要、構造、バージョン、そして実例。"
  },
  "chrome_aria": {
   "Toggle Why Pain001 submenu": "「Pain001 を選ぶ理由」サブメニューを開閉する",

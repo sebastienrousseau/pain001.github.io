@@ -89,6 +89,8 @@ last_reviewed: "2026-07-26"
 
 `pain.001.001.08` closes the first generation of the message. Its structures sit closest to version 9 while retaining the older element names, which occasionally makes it a low-friction stop in staged migrations.
 
+New to the format? [What is pain.001?](/pain-001/) explains the message, its structure and every version.
+
 ## What to know about this version
 
 - A pragmatic halfway house when moving a v03-era integration towards CBPR+ alignment in two steps.

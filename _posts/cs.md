@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## Odhalte chyby v platebních souborech dřív než banka
 
-**Pain001** je open-source sada v Pythonu pro iniciaci plateb ISO 20022. Převádí data, která už máte (CSV, Excel, SQLite, JSON, Parquet nebo starší zprávy SWIFT MT101), na XML `pain.001` (úhrady) a `pain.008` (inkasa), validované oficiálními schématy XSD.
+**Pain001** je open-source sada v Pythonu pro iniciaci plateb ISO 20022. Převádí data, která už máte (CSV, Excel, SQLite, JSON, Parquet nebo starší zprávy SWIFT MT101), na XML [`pain.001`](/cs/pain-001/) (úhrady) a `pain.008` (inkasa), validované oficiálními schématy XSD.
 
 Každý soubor projde třemi vrstvami validace: JSON schéma pro každý záznam (včetně kontroly mod-97 IBAN a struktury BIC), pravidla scheme (SEPA a přeshraniční CBPR+) a závěrečná validace XSD. Kontrolní součty se přepočítávají, nikdy nekopírují. Vše běží lokálně: žádná platební data neopouštějí vaši infrastrukturu.
 

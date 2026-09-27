@@ -8,9 +8,27 @@ All notable changes to this website are documented here. The format follows
 
 ### Added
 
+- A "What is pain.001?" reference page at `/pain-001/`, in all 35
+  languages: what the message is, its structure, a complete example
+  that validates against the official XSD, every version from .03 to
+  .13, how it compares with pain.002, pain.008, pacs.008 and MT101, and
+  how to create one. It carries TechArticle structured data in each
+  language.
 - `CONTRIBUTING.md` sets out the code-review standard every pull request
   is checked against, and the pull request template links it. It also
   points newcomers to the good-first-issue tasks.
+- Tests for the demo's service worker, `static/sw.js`: which requests it
+  caches, cache-first serving, storing a clone of a good response and
+  never a failed one, and activation deleting stale caches before claiming
+  clients. The coverage gate now includes `sw.js`, at 100% of lines and
+  branches (#52).
+- Tests for the legacy-URL redirect as the build stamps it: a retired
+  path is sent to its new page, other paths stay put, and names such as
+  `toString` or `constructor` never redirect. `redirect.js` now has 100%
+  branch coverage, up from 50% (#53).
+- Tests for the SPDX header gate (`scripts/validate_spdx_headers.py`):
+  what it accepts, what it reports, which paths it exempts, and that it
+  reads only the first ten lines of a file (#51).
 - The README links the OpenSSF Best Practices passing badge the
   project earned on 26 September 2026.
 - Tests for every script the site ships, run in a jsdom page with fake
@@ -44,6 +62,9 @@ All notable changes to this website are documented here. The format follows
 
 ### Changed
 
+- The new page is linked from the Developers menu and the footer on
+  every page, from each language's homepage, and from every version
+  page. The English homepage title now names pain.001.
 - Build provenance is attested with `actions/attest` v4.2.2, the action
   `actions/attest-build-provenance` v4 wraps; this supersedes Dependabot's
   bump in #50.
@@ -60,6 +81,16 @@ All notable changes to this website are documented here. The format follows
 
 ### Fixed
 
+- The site no longer publishes 1,931 stray per-page files that ssg wrote
+  beside every page (empty sitemaps, robots.txt files pointing at them,
+  RSS and manifest copies, timestamped news sitemaps), nor the `/404/`
+  copy Search Console reported as a soft 404. Tag archives no longer
+  list the not-found, offline and thanks pages.
+- A deploy no longer risks publishing a CDN challenge or error page as a
+  stylesheet or script. `scripts/carry_forward_assets.py` keeps a file it
+  downloads from the live site only when it is served as CSS or
+  JavaScript to match its name and is not an HTML page, and logs what it
+  skipped (security review finding SR-3, #54).
 - The build no longer publishes 385 invalid per-page
   `news-sitemap.xml` files that ssg wrote beside every page, each with
   an empty `<loc>` and the build time. The root news sitemap is kept.

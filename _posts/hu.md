@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## Találja meg a fizetési fájlok hibáit, mielőtt a bank tenné meg
 
-A **Pain001** nyílt forráskódú Python-csomag ISO 20022 fizetésindításhoz. A meglévő adatokat (CSV, Excel, SQLite, JSON, Parquet vagy régi SWIFT MT101 üzenetek) `pain.001` (átutalás) és `pain.008` (beszedés) XML-lé alakítja, a hivatalos XSD-sémákkal validálva.
+A **Pain001** nyílt forráskódú Python-csomag ISO 20022 fizetésindításhoz. A meglévő adatokat (CSV, Excel, SQLite, JSON, Parquet vagy régi SWIFT MT101 üzenetek) [`pain.001`](/hu/pain-001/) (átutalás) és `pain.008` (beszedés) XML-lé alakítja, a hivatalos XSD-sémákkal validálva.
 
 Minden fájl három validációs szinten megy át: rekordonkénti JSON-séma (IBAN mod-97 ellenőrzéssel és BIC-struktúrával), scheme-szabályok (SEPA és határon átnyúló CBPR+), végül XSD-validáció. Az ellenőrző összegek újraszámolódnak, sosem másolódnak. Minden helyben fut: fizetési adat nem hagyja el az infrastruktúrát.
 

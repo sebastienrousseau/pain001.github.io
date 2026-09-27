@@ -12,7 +12,7 @@ export default [
     ignores: [
       "static/js/cf-beacon.min.js", // vendored Cloudflare beacon
       "static/pyodide/**", // fetched runtime, never committed
-      "site/**", "Pain001/**", "output/**", "public/**", "node_modules/**", ".claude/**", ".a11y-tools/**",
+      "site/**", "Pain001/**", "output/**", "public/**", "node_modules/**", ".claude/**", ".a11y-tools/**", ".venv-test/**",
     ],
   },
   js.configs.recommended,

@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## Fehler in Zahlungsdateien finden, bevor es Ihre Bank tut
 
-**Pain001** ist eine Open-Source-Python-Suite für die ISO-20022-Zahlungsinitiierung. Sie wandelt vorhandene Daten (CSV, Excel, SQLite, JSON, Parquet oder Alt-SWIFT-MT101) in `pain.001`- (Überweisungen) und `pain.008`-XML (Lastschriften) um, validiert gegen die offiziellen XSD-Schemata.
+**Pain001** ist eine Open-Source-Python-Suite für die ISO-20022-Zahlungsinitiierung. Sie wandelt vorhandene Daten (CSV, Excel, SQLite, JSON, Parquet oder Alt-SWIFT-MT101) in [`pain.001`](/de/pain-001/)- (Überweisungen) und `pain.008`-XML (Lastschriften) um, validiert gegen die offiziellen XSD-Schemata.
 
 Jede Datei durchläuft drei Prüfebenen, bevor sie geschrieben wird: JSON-Schema je Datensatz (inklusive IBAN-Prüfziffern nach mod-97 und BIC-Struktur), Scheme-Regelwerke (SEPA SCT, SEPA Instant, Lastschrift Core und B2B, grenzüberschreitende CBPR+-Überweisungen) und abschließende XSD-Validierung. Kontrollsummen (`NbOfTxs`, `CtrlSum`) werden neu berechnet und nie aus der Quelle übernommen. Alles läuft lokal: Keine Zahlungsdaten verlassen Ihre Infrastruktur.
 

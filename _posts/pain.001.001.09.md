@@ -90,6 +90,8 @@ last_reviewed: "2026-07-26"
 
 `pain.001.001.09` (2019) is the version CBPR+ selected for customer credit transfer initiation on the SWIFT network, and the planned replacement for the interbank MT101 relay, a change Swift deferred in August 2026 ([Swift](https://www.swift.com/news-events/news/swift-accepts-community-request-extend-structured-address-migration-iso-20022-payment-messages)). It is Pain001's default recommendation for any new cross-border integration, and the target shape of the [MT101 loader](/pain001-loader-mt101/).
 
+New to the format? [What is pain.001?](/pain-001/) explains the message, its structure and every version.
+
 ## What to know about this version
 
 - Financial institutions are identified with `<BICFI>` (renamed from v03's `<BIC>`).

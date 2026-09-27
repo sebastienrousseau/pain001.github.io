@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## Temukan kesalahan berkas pembayaran sebelum bank Anda menemukannya
 
-**Pain001** adalah suite Python sumber terbuka untuk inisiasi pembayaran ISO 20022. Ia mengubah data yang sudah Anda miliki (CSV, Excel, SQLite, JSON, Parquet, atau pesan SWIFT MT101 lama) menjadi XML `pain.001` (transfer kredit) dan `pain.008` (debit langsung), tervalidasi dengan skema XSD resmi.
+**Pain001** adalah suite Python sumber terbuka untuk inisiasi pembayaran ISO 20022. Ia mengubah data yang sudah Anda miliki (CSV, Excel, SQLite, JSON, Parquet, atau pesan SWIFT MT101 lama) menjadi XML [`pain.001`](/id/pain-001/) (transfer kredit) dan `pain.008` (debit langsung), tervalidasi dengan skema XSD resmi.
 
 Setiap berkas melewati tiga lapis validasi sebelum ditulis: skema JSON per rekaman (termasuk pemeriksaan mod-97 IBAN dan struktur BIC), aturan scheme (SEPA dan CBPR+ lintas batas), serta validasi XSD akhir. Total kontrol selalu dihitung ulang, tidak pernah disalin. Semuanya berjalan lokal: tidak ada data pembayaran yang keluar dari infrastruktur Anda.
 

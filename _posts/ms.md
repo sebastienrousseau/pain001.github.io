@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## Kesan ralat fail pembayaran sebelum bank anda mengesannya
 
-**Pain001** ialah suite Python sumber terbuka untuk pemulaan pembayaran ISO 20022. Ia menukar data sedia ada anda (CSV, Excel, SQLite, JSON, Parquet atau mesej SWIFT MT101 lama) kepada XML `pain.001` (pindahan kredit) dan `pain.008` (debit terus), disahkan dengan skema XSD rasmi.
+**Pain001** ialah suite Python sumber terbuka untuk pemulaan pembayaran ISO 20022. Ia menukar data sedia ada anda (CSV, Excel, SQLite, JSON, Parquet atau mesej SWIFT MT101 lama) kepada XML [`pain.001`](/ms/pain-001/) (pindahan kredit) dan `pain.008` (debit terus), disahkan dengan skema XSD rasmi.
 
 Setiap fail melalui tiga lapisan pengesahan sebelum ditulis: skema JSON bagi setiap rekod (termasuk semakan mod-97 IBAN dan struktur BIC), peraturan scheme (SEPA dan CBPR+ rentas sempadan) serta pengesahan XSD akhir. Jumlah kawalan sentiasa dikira semula, tidak pernah disalin. Semuanya berjalan secara setempat: tiada data pembayaran meninggalkan infrastruktur anda.
 

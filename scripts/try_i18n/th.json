@@ -142,7 +142,9 @@
   "System": "ตามระบบ",
   "All 34 languages": "ทั้ง 34 ภาษา",
   "Reduce motion": "ลดการเคลื่อนไหว",
-  "Save page": "บันทึกหน้า"
+  "Save page": "บันทึกหน้า",
+  "What is pain.001?": "pain.001 คืออะไร?",
+  "The message, its structure, versions and an example.": "ข้อความ โครงสร้าง เวอร์ชัน และตัวอย่าง"
  },
  "chrome_aria": {
   "Toggle Why Pain001 submenu": "สลับเมนูย่อย ทำไมต้อง Pain001",

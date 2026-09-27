@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## Tìm ra lỗi tệp thanh toán trước khi ngân hàng của bạn phát hiện
 
-**Pain001** là bộ công cụ Python mã nguồn mở cho khởi tạo thanh toán ISO 20022. Nó chuyển dữ liệu bạn đang có (CSV, Excel, SQLite, JSON, Parquet hoặc thông điệp SWIFT MT101 cũ) thành XML `pain.001` (chuyển khoản) và `pain.008` (ghi nợ trực tiếp), được xác thực bằng các lược đồ XSD chính thức.
+**Pain001** là bộ công cụ Python mã nguồn mở cho khởi tạo thanh toán ISO 20022. Nó chuyển dữ liệu bạn đang có (CSV, Excel, SQLite, JSON, Parquet hoặc thông điệp SWIFT MT101 cũ) thành XML [`pain.001`](/vi/pain-001/) (chuyển khoản) và `pain.008` (ghi nợ trực tiếp), được xác thực bằng các lược đồ XSD chính thức.
 
 Mỗi tệp phải qua ba lớp xác thực trước khi được ghi: lược đồ JSON cho từng bản ghi (gồm kiểm tra mod-97 của IBAN và cấu trúc BIC), quy tắc scheme (SEPA và CBPR+ xuyên biên giới) và xác thực XSD cuối cùng. Tổng kiểm soát luôn được tính lại, không bao giờ sao chép. Mọi thứ chạy cục bộ: không dữ liệu thanh toán nào rời khỏi hạ tầng của bạn.
 

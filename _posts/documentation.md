@@ -122,6 +122,13 @@ The `pain001` executable groups its functionality into subcommands. Running it w
 | `--explain --scheme-format {text,json}` | Report each scheme rule that passed or failed, human- or machine-readable. |
 | `--streaming` / `--chunk-size <N>` | Memory-bounded chunked processing for large batches (default 1,000 transactions per chunk; each chunk becomes its own XML file with recomputed `NbOfTxs` and `CtrlSum`). |
 | `--emit-metrics` | Emit machine-readable run metrics for observability pipelines. |
+| `--envelop-bah` | Wrap generated payment XML into an ISO 20022 Business Application Header (`head.001.001.03`) and `BizData` (`head.003.001.01`) envelope. |
+| `--bah-sender <BIC/ID>` | Sender financial institution BIC or organisation identifier for BAH `<Fr>`. |
+| `--bah-receiver <BIC/ID>` | Receiver financial institution BIC or organisation identifier for BAH `<To>`. |
+| `--bah-msg-id <ID>` | Business Message Identifier for BAH `<BizMsgIdr>` (defaults to generated UUID). |
+| `--xml-sign-key <FILE>` | PEM RSA private key for W3C XML Digital Signature (XML-DSig RSA-SHA256). |
+| `--xml-sign-cert <FILE>` | Optional PEM X.509 certificate to embed in XML-DSig `<ds:KeyInfo>`. |
+| `--xml-sign-passphrase-env <VAR>` | Environment variable holding passphrase to decrypt the RSA private key. |
 
 Exit codes are CI-friendly: `0` success, `1` validation failure, `2` usage error.
 
@@ -139,6 +146,9 @@ process_files(
     xsd_schema_file_path="schema.xsd",
     data_file_path="payments.csv",
     output_dir="out",
+    envelop_bah=True,
+    xml_sign_key=private_key_pem,
+    xml_sign_cert=certificate_pem,
 )
 ```
 
@@ -182,6 +192,7 @@ Interactive documentation is served at `/api/docs` (Swagger UI), `/api/redoc`, a
 
 Pain001 coerces real-world exports into valid records before validation:
 
+- **Formula injection shielding**: cells starting with formula trigger prefixes (`=`, `+`, `-`, `@`, `\t`, `\r`, `\n`) are sanitized with single-quote escaping to prevent CSV injection (CWE-1236) in spreadsheet applications.
 - **Field aliases**: common ERP column names map onto canonical fields (for example `amount` → `payment_amount`).
 - **IBAN / BIC normalisation**: whitespace stripped, case folded, then checked (ISO 13616 mod-97 for IBANs, ISO 9362 structure for BICs).
 - **Dates**: ISO 8601 `YYYY-MM-DD` parsing for execution dates.

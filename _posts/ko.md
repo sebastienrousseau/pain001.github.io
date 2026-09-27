@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## 은행보다 먼저 지급 파일 오류를 찾아내세요
 
-**Pain001**은 ISO 20022 지급 지시를 위한 오픈소스 Python 스위트입니다. 이미 보유한 데이터(CSV, Excel, SQLite, JSON, Parquet 또는 기존 SWIFT MT101 메시지)를 공식 XSD 스키마로 검증된 `pain.001`(계좌이체) 및 `pain.008`(자동이체) XML로 변환합니다.
+**Pain001**은 ISO 20022 지급 지시를 위한 오픈소스 Python 스위트입니다. 이미 보유한 데이터(CSV, Excel, SQLite, JSON, Parquet 또는 기존 SWIFT MT101 메시지)를 공식 XSD 스키마로 검증된 [`pain.001`](/ko/pain-001/)(계좌이체) 및 `pain.008`(자동이체) XML로 변환합니다.
 
 모든 파일은 기록되기 전에 세 단계 검증을 거칩니다. 레코드별 JSON 스키마(IBAN mod-97 검사와 BIC 구조 포함), 스킴 규칙(SEPA 및 국경 간 CBPR+), 최종 XSD 검증입니다. 컨트롤 합계는 항상 재계산되며 복사되지 않습니다. 모든 것이 로컬에서 실행되어 결제 데이터가 인프라 밖으로 나가지 않습니다.
 

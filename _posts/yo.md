@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## Ẹ ṣàwárí àwọn àṣìṣe inú fáìlì ìsanwó kí báńkì yín tó rí wọn
 
-**Pain001** jẹ́ àkójọpọ̀ Python orísun-ìmọ̀ fún ìbẹ̀rẹ̀ ìsanwó ISO 20022. Ó ń yí dátà tí ẹ ní tẹ́lẹ̀ padà (CSV, Excel, SQLite, JSON, Parquet tàbí àwọn ìránṣẹ́ SWIFT MT101 àtijọ́) sí XML `pain.001` (ìfiránṣẹ́ owó) àti `pain.008` (ìyọkúrò tààrà), tí a fọwọ́sí pẹ̀lú àwọn àgbékalẹ̀ XSD aláṣẹ.
+**Pain001** jẹ́ àkójọpọ̀ Python orísun-ìmọ̀ fún ìbẹ̀rẹ̀ ìsanwó ISO 20022. Ó ń yí dátà tí ẹ ní tẹ́lẹ̀ padà (CSV, Excel, SQLite, JSON, Parquet tàbí àwọn ìránṣẹ́ SWIFT MT101 àtijọ́) sí XML [`pain.001`](/yo/pain-001/) (ìfiránṣẹ́ owó) àti `pain.008` (ìyọkúrò tààrà), tí a fọwọ́sí pẹ̀lú àwọn àgbékalẹ̀ XSD aláṣẹ.
 
 Fáìlì kọ̀ọ̀kan ń kọjá àwọn ìpele ìfọwọ́sí mẹ́ta kí a tó kọ ọ́: àgbékalẹ̀ JSON fún àkọsílẹ̀ kọ̀ọ̀kan (pẹ̀lú àyẹ̀wò mod-97 fún IBAN àti ìgbékalẹ̀ BIC), àwọn òfin scheme (SEPA àti CBPR+ ti ìkọjá ààlà) àti ìfọwọ́sí XSD ìkẹyìn. A máa ń tún àpapọ̀ ìdarí ṣírò, a kì í ṣe àdàkọ wọn láé. Gbogbo rẹ̀ ń ṣiṣẹ́ ní ibi yín: kò sí dátà ìsanwó tí ó ń kúrò ní ètò yín.
 

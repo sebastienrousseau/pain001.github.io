@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## Hitta felen i betalfilerna innan din bank gör det
 
-**Pain001** är en Python-svit med öppen källkod för ISO 20022-betalningsinitiering. Den omvandlar data du redan har (CSV, Excel, SQLite, JSON, Parquet eller äldre SWIFT MT101-meddelanden) till `pain.001`- (betalningar) och `pain.008`-XML (autogiro), validerad mot de officiella XSD-schemana.
+**Pain001** är en Python-svit med öppen källkod för ISO 20022-betalningsinitiering. Den omvandlar data du redan har (CSV, Excel, SQLite, JSON, Parquet eller äldre SWIFT MT101-meddelanden) till [`pain.001`](/sv/pain-001/)- (betalningar) och `pain.008`-XML (autogiro), validerad mot de officiella XSD-schemana.
 
 Varje fil passerar tre valideringsnivåer innan den skrivs: JSON-schema per post (med mod-97-kontroll av IBAN och BIC-struktur), scheme-regler (SEPA och gränsöverskridande CBPR+) samt slutlig XSD-validering. Kontrollsummor räknas om, kopieras aldrig. Allt körs lokalt: inga betalningsdata lämnar din infrastruktur.
 
