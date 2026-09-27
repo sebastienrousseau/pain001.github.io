@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Àkójọpọ̀ Python orísun-ìmọ̀ tí ó ń ṣe àwọn fáìlì pain.001 àti pain.008 tí a fọwọ́sí pẹ̀lú XSD láti CSV, Excel, SQLite, JSON, Parquet tàbí SWIFT MT101, pẹ̀lú àwọn irinṣẹ́ MCP fún àwọn aṣojú AI àti olupin LSP."
+description: "Ṣẹ̀dá kí o sì yẹ XML pain.001 àti pain.008 wò gẹ́gẹ́ bí XSD òṣìṣẹ́ ISO 20022. Ọ̀fẹ́, orísun ṣíṣí, ó ń ṣiṣẹ́ lórí kọ̀ǹpútà rẹ."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "yo"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "Àkójọpọ̀ orísun-ìmọ̀ tí ó ń yí dátà ìsanwó yín padà sí XML ISO 20022 tí a fọwọ́sí, tí a sì fi ìdí rẹ̀ múlẹ̀ kí ó tó dé báńkì."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001: Ìbẹ̀rẹ̀ ìsanwó ISO 20022 orísun-ìmọ̀"
+title: "Pain001: fáìlì pain.001 àti ìsanwó ISO 20022"
 url: "https://pain001.com/yo/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/yo/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Àkójọpọ̀ Python orísun-ìmọ̀ tí ó ń ṣe àwọn fáìlì pain.001 àti pain.008 tí a fọwọ́sí pẹ̀lú XSD láti CSV, Excel, SQLite, JSON, Parquet tàbí SWIFT MT101, pẹ̀lú àwọn irinṣẹ́ MCP fún àwọn aṣojú AI àti olupin LSP."
+item_description: "Ṣẹ̀dá kí o sì yẹ XML pain.001 àti pain.008 wò gẹ́gẹ́ bí XSD òṣìṣẹ́ ISO 20022. Ọ̀fẹ́, orísun ṣíṣí, ó ń ṣiṣẹ́ lórí kọ̀ǹpútà rẹ."
 item_guid: "https://pain001.com/yo/rss.xml"
 item_link: "https://pain001.com/yo/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: Ìbẹ̀rẹ̀ ìsanwó ISO 20022 orísun-ìmọ̀"
+item_title: "Pain001: fáìlì pain.001 àti ìsanwó ISO 20022"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: Ìbẹ̀rẹ̀ ìsanwó ISO 20022 orísun-ìmọ̀"
+apple-mobile-web-app-title: "Pain001: fáìlì pain.001 àti ìsanwó ISO 20022"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Àkójọpọ̀ Python orísun-ìmọ̀ tí ó ń ṣe àwọn fáìlì pain.001 àti pain.008 tí a fọwọ́sí pẹ̀lú XSD láti CSV, Excel, SQLite, JSON, Parquet tàbí SWIFT MT101, pẹ̀lú àwọn irinṣẹ́ MCP fún àwọn aṣojú AI àti olupin LSP."
+twitter_description: "Ṣẹ̀dá kí o sì yẹ XML pain.001 àti pain.008 wò gẹ́gẹ́ bí XSD òṣìṣẹ́ ISO 20022. Ọ̀fẹ́, orísun ṣíṣí, ó ń ṣiṣẹ́ lórí kọ̀ǹpútà rẹ."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001: Ìbẹ̀rẹ̀ ìsanwó ISO 20022 orísun-ìmọ̀"
+twitter_title: "Pain001: fáìlì pain.001 àti ìsanwó ISO 20022"
 twitter_url: "https://pain001.com/yo/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"

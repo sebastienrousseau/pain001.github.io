@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "Wypróbuj Pain001 w przeglądarce",
-  "description": "Prześlij lub wklej dane płatności CSV i zobacz bramkę walidacji w akcji: IBAN mod-97, struktura BIC, pola wymagane, sumy kontrolne i oficjalny XSD, wszystko w przeglądarce."
+  "title": "Generator i walidator pain.001 w przeglądarce",
+  "description": "Zamień dane płatności z CSV na XML pain.001 i zwaliduj je oficjalnym XSD ISO 20022 oraz regułami schematu. Bezpłatnie, w przeglądarce, bez wysyłania."
  },
  "text": {
   "Interactive demo": "Interaktywne demo",
-  "Try Pain001 in Your Browser": "Wypróbuj Pain001 w przeglądarce",
+  "pain.001 Generator and Validator in Your Browser": "Generator i walidator pain.001 w przeglądarce",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "Upuść plik CSV, użyj przykładu lub wklej własne rekordy. Walidacja uruchamia się natychmiast, w całości w przeglądarce, a żadne dane nigdy nie opuszczają komputera.",
   "How this validator helps you": "Jak ten walidator może pomóc",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Testuj dane płatności pod kątem kontroli stosowanych przez banki: pola wymagane, cyfry kontrolne IBAN, struktura BIC, sumy kontrolne</span>",

@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Nyílt forráskódú Python-csomag, amely XSD-validált pain.001 és pain.008 fájlokat készít CSV, Excel, SQLite, JSON, Parquet vagy SWIFT MT101 forrásból, MCP-eszközökkel AI-ügynökökhöz és LSP-szerverrel."
+description: "Hozzon létre és ellenőrizzen pain.001 és pain.008 XML-t a hivatalos ISO 20022 XSD szerint. Ingyenes, nyílt forráskódú, a saját gépén fut."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "hu"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "A nyílt forráskódú csomag, amely fizetési adatait validált ISO 20022 XML-lé alakítja, és bizonyítja, hogy hibátlan, mielőtt a bankhoz érne."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001: Nyílt forráskódú ISO 20022 fizetésindítás"
+title: "Pain001: pain.001 és SEPA XML fájlok ISO 20022 szerint"
 url: "https://pain001.com/hu/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/hu/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Nyílt forráskódú Python-csomag, amely XSD-validált pain.001 és pain.008 fájlokat készít CSV, Excel, SQLite, JSON, Parquet vagy SWIFT MT101 forrásból, MCP-eszközökkel AI-ügynökökhöz és LSP-szerverrel."
+item_description: "Hozzon létre és ellenőrizzen pain.001 és pain.008 XML-t a hivatalos ISO 20022 XSD szerint. Ingyenes, nyílt forráskódú, a saját gépén fut."
 item_guid: "https://pain001.com/hu/rss.xml"
 item_link: "https://pain001.com/hu/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: Nyílt forráskódú ISO 20022 fizetésindítás"
+item_title: "Pain001: pain.001 és SEPA XML fájlok ISO 20022 szerint"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: Nyílt forráskódú ISO 20022 fizetésindítás"
+apple-mobile-web-app-title: "Pain001: pain.001 és SEPA XML fájlok ISO 20022 szerint"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Nyílt forráskódú Python-csomag, amely XSD-validált pain.001 és pain.008 fájlokat készít CSV, Excel, SQLite, JSON, Parquet vagy SWIFT MT101 forrásból, MCP-eszközökkel AI-ügynökökhöz és LSP-szerverrel."
+twitter_description: "Hozzon létre és ellenőrizzen pain.001 és pain.008 XML-t a hivatalos ISO 20022 XSD szerint. Ingyenes, nyílt forráskódú, a saját gépén fut."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001: Nyílt forráskódú ISO 20022 fizetésindítás"
+twitter_title: "Pain001: pain.001 és SEPA XML fájlok ISO 20022 szerint"
 twitter_url: "https://pain001.com/hu/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"

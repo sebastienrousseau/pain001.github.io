@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Python-svit med öppen källkod som genererar XSD-validerade pain.001- och pain.008-filer från CSV, Excel, SQLite, JSON, Parquet eller SWIFT MT101, med MCP-verktyg för AI-agenter och LSP-server."
+description: "Skapa och validera pain.001- och pain.008-XML mot den officiella ISO 20022-XSD:n, från CSV, Excel eller MT101. Gratis, öppen källkod, körs lokalt."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "sv"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "Sviten med öppen källkod som förvandlar dina betalningsdata till validerad ISO 20022-XML, bevisat korrekt innan banken ser den."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001: ISO 20022-betalningsinitiering med öppen källkod"
+title: "Pain001: pain.001-filer och SEPA-XML enligt ISO 20022"
 url: "https://pain001.com/sv/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/sv/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Python-svit med öppen källkod som genererar XSD-validerade pain.001- och pain.008-filer från CSV, Excel, SQLite, JSON, Parquet eller SWIFT MT101, med MCP-verktyg för AI-agenter och LSP-server."
+item_description: "Skapa och validera pain.001- och pain.008-XML mot den officiella ISO 20022-XSD:n, från CSV, Excel eller MT101. Gratis, öppen källkod, körs lokalt."
 item_guid: "https://pain001.com/sv/rss.xml"
 item_link: "https://pain001.com/sv/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: ISO 20022-betalningsinitiering med öppen källkod"
+item_title: "Pain001: pain.001-filer och SEPA-XML enligt ISO 20022"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: ISO 20022-betalningsinitiering med öppen källkod"
+apple-mobile-web-app-title: "Pain001: pain.001-filer och SEPA-XML enligt ISO 20022"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Python-svit med öppen källkod som genererar XSD-validerade pain.001- och pain.008-filer från CSV, Excel, SQLite, JSON, Parquet eller SWIFT MT101, med MCP-verktyg för AI-agenter och LSP-server."
+twitter_description: "Skapa och validera pain.001- och pain.008-XML mot den officiella ISO 20022-XSD:n, från CSV, Excel eller MT101. Gratis, öppen källkod, körs lokalt."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001: ISO 20022-betalningsinitiering med öppen källkod"
+twitter_title: "Pain001: pain.001-filer och SEPA-XML enligt ISO 20022"
 twitter_url: "https://pain001.com/sv/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"

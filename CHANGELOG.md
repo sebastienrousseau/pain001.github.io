@@ -8,6 +8,18 @@ All notable changes to this website are documented here. The format follows
 
 ### Added
 
+- `docs/seo/`: an outreach pack (curated-list entries, Stack Overflow
+  drafts with disclosure, Bing Webmaster Tools steps) and a case-study
+  template with a permission request, for the maintainer to send.
+- A weekly Search Console scoreboard (`scripts/seo_scoreboard.py`,
+  `.github/workflows/seo-scoreboard.yml`): the last 28 days against the
+  previous 28 for the site, the queries its content targets, and the top
+  pages and countries. It needs a read-only service account; until one is
+  set up it reports "not configured" (see `DEVELOPMENT.md`).
+- IndexNow: after each deploy of `main`, CI submits every sitemap URL so
+  Bing, Yandex, Seznam, Naver and the other participating engines recrawl
+  within hours. Ownership is proven by a key file at the site root; no
+  account or secret is involved, and a failed submission never fails CI.
 - A "What is pain.001?" reference page at `/pain-001/`, in all 35
   languages: what the message is, its structure, a complete example
   that validates against the official XSD, every version from .03 to
@@ -62,6 +74,25 @@ All notable changes to this website are documented here. The format follows
 
 ### Changed
 
+- The eleven pain.001 version pages lead with what searchers look for:
+  each title names the XSD, an example and the format (and, for
+  `.09`, the in-browser validator), and a new section links the
+  official ISO schema, the element reference generated from it, and
+  XSD-valid example files for that version. The `.12` page no longer
+  calls itself the newest supported version.
+- The pain.002 page is titled for the status report as well as its
+  reason codes, and the message-specification hub for the XSD element
+  reference it is.
+- The translated corpus scenario pages (`/<locale>/corpus-*/`, 210 in
+  five languages) carry `noindex, follow` and leave the sitemap and every
+  hreflang cluster. Search Console listed them as discovered or crawled
+  but not indexed; they stay published for visitors, and the English
+  scenario pages stay indexable.
+- Search titles and descriptions for every language's homepage and
+  for the browser demo match how people search: each homepage title
+  now names pain.001 (and SEPA-XML where that market searches for it),
+  the demo is titled as a pain.001 generator and validator, and every
+  description stays within 155 characters.
 - The new page is linked from the Developers menu and the footer on
   every page, from each language's homepage, and from every version
   page. The English homepage title now names pain.001.

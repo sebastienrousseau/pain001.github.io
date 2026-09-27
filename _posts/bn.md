@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "ওপেন-সোর্স Python স্যুট যা CSV, Excel, SQLite, JSON, Parquet বা SWIFT MT101 থেকে XSD-যাচাইকৃত pain.001 ও pain.008 ফাইল তৈরি করে, সঙ্গে রয়েছে AI এজেন্টের জন্য MCP টুল ও LSP সার্ভার।"
+description: "অফিসিয়াল ISO 20022 XSD অনুযায়ী pain.001 ও pain.008 XML তৈরি ও যাচাই করুন। বিনামূল্যে, ওপেন-সোর্স, আপনার নিজের কম্পিউটারে চলে।"
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "bn"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "ওপেন-সোর্স স্যুট যা আপনার পেমেন্ট ডেটাকে যাচাইকৃত ISO 20022 XML-এ রূপান্তরিত করে এবং ব্যাংকে পৌঁছানোর আগেই তা সঠিক বলে প্রমাণ করে।"
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001: ওপেন-সোর্স ISO 20022 পেমেন্ট সূচনা"
+title: "Pain001: pain.001 ফাইল ও ISO 20022 পেমেন্ট, ওপেন-সোর্স"
 url: "https://pain001.com/bn/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/bn/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "ওপেন-সোর্স Python স্যুট যা CSV, Excel, SQLite, JSON, Parquet বা SWIFT MT101 থেকে XSD-যাচাইকৃত pain.001 ও pain.008 ফাইল তৈরি করে, সঙ্গে রয়েছে AI এজেন্টের জন্য MCP টুল ও LSP সার্ভার।"
+item_description: "অফিসিয়াল ISO 20022 XSD অনুযায়ী pain.001 ও pain.008 XML তৈরি ও যাচাই করুন। বিনামূল্যে, ওপেন-সোর্স, আপনার নিজের কম্পিউটারে চলে।"
 item_guid: "https://pain001.com/bn/rss.xml"
 item_link: "https://pain001.com/bn/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: ওপেন-সোর্স ISO 20022 পেমেন্ট সূচনা"
+item_title: "Pain001: pain.001 ফাইল ও ISO 20022 পেমেন্ট, ওপেন-সোর্স"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: ওপেন-সোর্স ISO 20022 পেমেন্ট সূচনা"
+apple-mobile-web-app-title: "Pain001: pain.001 ফাইল ও ISO 20022 পেমেন্ট, ওপেন-সোর্স"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "ওপেন-সোর্স Python স্যুট যা CSV, Excel, SQLite, JSON, Parquet বা SWIFT MT101 থেকে XSD-যাচাইকৃত pain.001 ও pain.008 ফাইল তৈরি করে, সঙ্গে রয়েছে AI এজেন্টের জন্য MCP টুল ও LSP সার্ভার।"
+twitter_description: "অফিসিয়াল ISO 20022 XSD অনুযায়ী pain.001 ও pain.008 XML তৈরি ও যাচাই করুন। বিনামূল্যে, ওপেন-সোর্স, আপনার নিজের কম্পিউটারে চলে।"
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001: ওপেন-সোর্স ISO 20022 পেমেন্ট সূচনা"
+twitter_title: "Pain001: pain.001 ফাইল ও ISO 20022 পেমেন্ট, ওপেন-সোর্স"
 twitter_url: "https://pain001.com/bn/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"

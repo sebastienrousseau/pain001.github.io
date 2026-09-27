@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "Dùng thử Pain001 ngay trong trình duyệt của bạn",
-  "description": "Tải lên hoặc dán dữ liệu CSV thanh toán: IBAN mod-97, cấu trúc BIC, trường bắt buộc, tổng kiểm soát và XSD chính thức, tất cả đều ngay trong trình duyệt của bạn."
+  "title": "Trình tạo và kiểm tra pain.001 trên trình duyệt",
+  "description": "Chuyển dữ liệu thanh toán CSV thành XML pain.001 và kiểm tra theo XSD chính thức của ISO 20022 cùng quy tắc chương trình. Miễn phí, trên trình duyệt."
  },
  "text": {
   "Interactive demo": "Bản demo tương tác",
-  "Try Pain001 in Your Browser": "Dùng thử Pain001 ngay trong trình duyệt của bạn",
+  "pain.001 Generator and Validator in Your Browser": "Trình tạo và kiểm tra pain.001 trên trình duyệt",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "Kéo thả tệp CSV, dùng dữ liệu mẫu hoặc dán bản ghi của riêng bạn. Quá trình kiểm tra chạy tức thì, hoàn toàn trong trình duyệt của bạn, và không có gì rời khỏi máy của bạn.",
   "How this validator helps you": "Công cụ kiểm tra này giúp bạn như thế nào",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Kiểm thử dữ liệu thanh toán với các phép kiểm tra mà ngân hàng áp dụng: trường bắt buộc, số kiểm tra IBAN, cấu trúc BIC, tổng kiểm soát</span>",

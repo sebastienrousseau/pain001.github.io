@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Suite Python sumber terbuka yang menghasilkan berkas pain.001 dan pain.008 tervalidasi XSD dari CSV, Excel, SQLite, JSON, Parquet, atau SWIFT MT101, dengan perkakas MCP untuk agen AI dan server LSP."
+description: "Buat dan validasi XML pain.001 dan pain.008 sesuai XSD resmi ISO 20022, dari CSV, Excel, atau MT101. Gratis, open source, berjalan di komputer Anda."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "id"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "Suite sumber terbuka yang mengubah data pembayaran Anda menjadi XML ISO 20022 tervalidasi dan terbukti benar sebelum sampai ke bank."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001: Inisiasi pembayaran ISO 20022 sumber terbuka"
+title: "Pain001: file pain.001 dan pembayaran ISO 20022"
 url: "https://pain001.com/id/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/id/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Suite Python sumber terbuka yang menghasilkan berkas pain.001 dan pain.008 tervalidasi XSD dari CSV, Excel, SQLite, JSON, Parquet, atau SWIFT MT101, dengan perkakas MCP untuk agen AI dan server LSP."
+item_description: "Buat dan validasi XML pain.001 dan pain.008 sesuai XSD resmi ISO 20022, dari CSV, Excel, atau MT101. Gratis, open source, berjalan di komputer Anda."
 item_guid: "https://pain001.com/id/rss.xml"
 item_link: "https://pain001.com/id/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: Inisiasi pembayaran ISO 20022 sumber terbuka"
+item_title: "Pain001: file pain.001 dan pembayaran ISO 20022"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: Inisiasi pembayaran ISO 20022 sumber terbuka"
+apple-mobile-web-app-title: "Pain001: file pain.001 dan pembayaran ISO 20022"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Suite Python sumber terbuka yang menghasilkan berkas pain.001 dan pain.008 tervalidasi XSD dari CSV, Excel, SQLite, JSON, Parquet, atau SWIFT MT101, dengan perkakas MCP untuk agen AI dan server LSP."
+twitter_description: "Buat dan validasi XML pain.001 dan pain.008 sesuai XSD resmi ISO 20022, dari CSV, Excel, atau MT101. Gratis, open source, berjalan di komputer Anda."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001: Inisiasi pembayaran ISO 20022 sumber terbuka"
+twitter_title: "Pain001: file pain.001 dan pembayaran ISO 20022"
 twitter_url: "https://pain001.com/id/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"

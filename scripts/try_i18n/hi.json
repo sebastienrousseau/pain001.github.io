@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "Pain001 को अपने ब्राउज़र में आज़माएँ",
-  "description": "भुगतान CSV डेटा अपलोड या पेस्ट करें और सत्यापन गेट को काम करते देखें: IBAN mod-97, BIC संरचना, अनिवार्य फ़ील्ड, नियंत्रण योग और आधिकारिक XSD, सब आपके ब्राउज़र में।"
+  "title": "ब्राउज़र में pain.001 जनरेटर और वैलिडेटर",
+  "description": "CSV भुगतान डेटा को pain.001 XML में बदलें और आधिकारिक ISO 20022 XSD व स्कीम नियमों से जाँचें। मुफ़्त, ब्राउज़र में, कुछ भी अपलोड नहीं होता।"
  },
  "text": {
   "Interactive demo": "इंटरैक्टिव डेमो",
-  "Try Pain001 in Your Browser": "Pain001 को अपने ब्राउज़र में आज़माएँ",
+  "pain.001 Generator and Validator in Your Browser": "ब्राउज़र में pain.001 जनरेटर और वैलिडेटर",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "कोई CSV फ़ाइल डालें, नमूना इस्तेमाल करें या अपने रिकॉर्ड पेस्ट करें। सत्यापन तुरंत, पूरी तरह आपके ब्राउज़र में चलता है, और कुछ भी आपकी मशीन से कभी बाहर नहीं जाता।",
   "How this validator helps you": "यह सत्यापक आपकी कैसे मदद करता है",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>भुगतान डेटा को उन्हीं जाँचों पर परखें जो बैंक लागू करते हैं: अनिवार्य फ़ील्ड, IBAN चेकसम, BIC संरचना, नियंत्रण योग</span>",

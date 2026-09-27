@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "Próbálja ki a Pain001-et a böngészőjében",
-  "description": "Töltsön fel vagy illesszen be fizetési CSV-adatokat: IBAN mod-97, BIC-szerkezet, kötelező mezők, kontrollösszegek és a hivatalos XSD. Mindez a böngészőjében."
+  "title": "pain.001 generátor és validátor a böngészőben",
+  "description": "Alakítsa CSV fizetési adatait pain.001 XML-lé, és ellenőrizze a hivatalos ISO 20022 XSD és a séma szabályai szerint. Ingyenes, feltöltés nélkül."
  },
  "text": {
   "Interactive demo": "Interaktív bemutató",
-  "Try Pain001 in Your Browser": "Próbálja ki a Pain001-et a böngészőjében",
+  "pain.001 Generator and Validator in Your Browser": "pain.001 generátor és validátor a böngészőben",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "Húzzon be egy CSV-fájlt, használja a mintát, vagy illessze be saját tételeit. Az ellenőrzés azonnal, teljes egészében a böngészőjében fut le, és semmi sem hagyja el a gépét.",
   "How this validator helps you": "Miben segít Önnek ez az ellenőrző eszköz",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Tesztelje fizetési adatait a bankok által alkalmazott ellenőrzésekkel: kötelező mezők, IBAN-ellenőrzőszámok, BIC-szerkezet, kontrollösszegek</span>",

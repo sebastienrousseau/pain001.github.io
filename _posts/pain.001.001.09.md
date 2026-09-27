@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "pain.001.001.09: the CBPR+ cross-border version. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001."
+description: "pain.001.001.09, the CBPR+ cross-border version: official XSD, element reference, XSD-valid example files and a free in-browser validator."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
@@ -40,18 +40,18 @@ short_name: pain001
 subtitle: "pain.001.001.09 is the CBPR+ version for cross-border payments. Element structure, version notes, and version migration."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "pain.001.001.09 Reference: Generate and Validate"
+title: "pain.001.001.09: XSD, Example, Format and Validator"
 url: "https://pain001.com/pain.001.001.09/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/pain.001.001.09/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "pain.001.001.09: the CBPR+ cross-border version. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001."
+item_description: "pain.001.001.09, the CBPR+ cross-border version: official XSD, element reference, XSD-valid example files and a free in-browser validator."
 item_guid: "https://pain001.com/pain.001.001.09/rss.xml"
 item_link: "https://pain001.com/pain.001.001.09/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "pain.001.001.09 Reference: Generate and Validate"
+item_title: "pain.001.001.09: XSD, Example, Format and Validator"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -63,16 +63,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "pain.001.001.09 Reference: Generate and Validate"
+apple-mobile-web-app-title: "pain.001.001.09: XSD, Example, Format and Validator"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "pain.001.001.09: the CBPR+ cross-border version. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001."
+twitter_description: "pain.001.001.09, the CBPR+ cross-border version: official XSD, element reference, XSD-valid example files and a free in-browser validator."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "pain.001.001.09 Reference: Generate and Validate"
+twitter_title: "pain.001.001.09: XSD, Example, Format and Validator"
 twitter_url: "https://pain001.com/pain.001.001.09/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -104,6 +104,13 @@ New to the format? [What is pain.001?](/pain-001/) explains the message, its str
 - **`<GrpHdr>` Group Header**: message id, creation timestamp, `NbOfTxs`, `CtrlSum`, initiating party. Pain001 recomputes the control totals from validated records.
 - **`<PmtInf>` Payment Information**: debtor, debtor account and agent, requested execution date, payment method, charge bearer; one block can carry many transactions.
 - **`<CdtTrfTxInf>` Credit Transfer Transaction**: amount and currency, creditor, creditor account and agent, remittance information, end-to-end reference.
+
+## XSD, element reference and examples
+
+- **Official XSD:** ISO publishes the `pain.001.001.09` schema in its [message catalogue](https://www.iso20022.org/catalogue-messages/iso-20022-messages-archive?search=pain.001.001.09). The open-source pain001 library ships the same XSD and validates every file it generates against it.
+- **Element reference:** every path, type, cardinality and code list, generated from that XSD: [pain.001.001.09 element reference](/message-spec-pain.001.001.09/).
+- **Example files:** XSD-valid files covering this version's elements, in the [example corpus](/example-corpus-coverage/#pain-001-001-09).
+- **Validate in your browser:** the [demo](/try/) builds a `pain.001.001.09` file from CSV and checks it against the official XSD and your chosen scheme rulebook, without uploading anything.
 
 ## Generate and inspect
 

@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "ทดลองใช้ Pain001 ในเบราว์เซอร์ของคุณ",
-  "description": "อัปโหลดหรือวางข้อมูล CSV การชำระเงินแล้วดูการตรวจสอบทำงาน: IBAN mod-97 โครงสร้าง BIC ฟิลด์ที่จำเป็น ยอดรวมควบคุม และ XSD ทางการ ทั้งหมดทำงานในเบราว์เซอร์ของคุณ"
+  "title": "ตัวสร้างและตรวจสอบ pain.001 ในเบราว์เซอร์",
+  "description": "แปลงข้อมูลการชำระเงิน CSV เป็น XML ของ pain.001 และตรวจสอบกับ XSD ทางการของ ISO 20022 และกฎของโครงการ ฟรี ทำงานในเบราว์เซอร์ ไม่มีการอัปโหลด"
  },
  "text": {
   "Interactive demo": "เดโมแบบอินเทอร์แอกทีฟ",
-  "Try Pain001 in Your Browser": "ทดลองใช้ Pain001 ในเบราว์เซอร์ของคุณ",
+  "pain.001 Generator and Validator in Your Browser": "ตัวสร้างและตรวจสอบ pain.001 ในเบราว์เซอร์",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "ลากไฟล์ CSV มาวาง ใช้ตัวอย่าง หรือวางระเบียนของคุณเอง การตรวจสอบทำงานทันที ทั้งหมดในเบราว์เซอร์ของคุณ และไม่มีข้อมูลใดออกจากเครื่องของคุณ",
   "How this validator helps you": "เครื่องมือตรวจสอบนี้ช่วยคุณอย่างไร",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>ทดสอบข้อมูลการชำระเงินกับการตรวจสอบที่ธนาคารใช้ ได้แก่ ฟิลด์ที่จำเป็น เช็กซัม IBAN โครงสร้าง BIC ยอดรวมควบคุม</span>",

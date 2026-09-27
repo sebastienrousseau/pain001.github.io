@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "开源 Python 套件,可从 CSV、Excel、SQLite、JSON、Parquet 或 SWIFT MT101 生成经 XSD 校验的 pain.001 和 pain.008 文件，并附带面向 AI 代理的 MCP 工具和 LSP 服务器。"
+description: "依据官方 ISO 20022 XSD 生成并校验 pain.001 和 pain.008 XML，支持 CSV、Excel 与 MT101。免费开源，在您自己的计算机上运行。"
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "zh-hans"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "将您的支付数据转换为经过校验的 ISO 20022 XML 的开源套件，在到达银行之前即证明其正确性。"
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001：开源 ISO 20022 支付发起"
+title: "Pain001：pain.001 与 ISO 20022 支付文件，开源"
 url: "https://pain001.com/zh-hans/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/zh-hans/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "开源 Python 套件,可从 CSV、Excel、SQLite、JSON、Parquet 或 SWIFT MT101 生成经 XSD 校验的 pain.001 和 pain.008 文件，并附带面向 AI 代理的 MCP 工具和 LSP 服务器。"
+item_description: "依据官方 ISO 20022 XSD 生成并校验 pain.001 和 pain.008 XML，支持 CSV、Excel 与 MT101。免费开源，在您自己的计算机上运行。"
 item_guid: "https://pain001.com/zh-hans/rss.xml"
 item_link: "https://pain001.com/zh-hans/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001：开源 ISO 20022 支付发起"
+item_title: "Pain001：pain.001 与 ISO 20022 支付文件，开源"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001：开源 ISO 20022 支付发起"
+apple-mobile-web-app-title: "Pain001：pain.001 与 ISO 20022 支付文件，开源"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "开源 Python 套件,可从 CSV、Excel、SQLite、JSON、Parquet 或 SWIFT MT101 生成经 XSD 校验的 pain.001 和 pain.008 文件，并附带面向 AI 代理的 MCP 工具和 LSP 服务器。"
+twitter_description: "依据官方 ISO 20022 XSD 生成并校验 pain.001 和 pain.008 XML，支持 CSV、Excel 与 MT101。免费开源，在您自己的计算机上运行。"
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001：开源 ISO 20022 支付发起"
+twitter_title: "Pain001：pain.001 与 ISO 20022 支付文件，开源"
 twitter_url: "https://pain001.com/zh-hans/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"

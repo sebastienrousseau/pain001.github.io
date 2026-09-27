@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "在瀏覽器中試用 Pain001",
-  "description": "上傳或貼上付款 CSV 資料，觀察驗證關卡的運作：IBAN mod-97、BIC 結構、必填欄位、重新計算的控制總額與官方 XSD，全部在您的瀏覽器中完成。"
+  "title": "在瀏覽器中使用的 pain.001 產生與驗證工具",
+  "description": "將 CSV 付款資料轉換為 pain.001 XML，並依官方 ISO 20022 XSD 與規則集驗證。免費，在瀏覽器中執行，資料不會上傳。"
  },
  "text": {
   "Interactive demo": "互動式示範",
-  "Try Pain001 in Your Browser": "在瀏覽器中試用 Pain001",
+  "pain.001 Generator and Validator in Your Browser": "在瀏覽器中使用的 pain.001 產生與驗證工具",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "拖入 CSV 檔案、使用範例或貼上您自己的紀錄。驗證即時執行，完全在您的瀏覽器中進行，任何資料都不會離開您的裝置。",
   "How this validator helps you": "此驗證工具如何為您服務",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>依照銀行所採用的檢查測試付款資料：必填欄位、IBAN 檢查碼、BIC 結構、控制總額</span>",

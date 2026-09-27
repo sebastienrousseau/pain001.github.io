@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "Спробуйте Pain001 у своєму браузері",
-  "description": "Завантажте чи вставте дані CSV і побачите валідацію в дії: IBAN mod-97, структура BIC, обов’язкові поля, контрольні підсумки, офіційна XSD. Усе у вашому браузері."
+  "title": "Генератор і валідатор pain.001 у браузері",
+  "description": "Перетворіть платіжні дані CSV на XML pain.001 і перевірте за офіційною XSD ISO 20022 та правилами схеми. Безкоштовно, у браузері, без завантаження."
  },
  "text": {
   "Interactive demo": "Інтерактивна демонстрація",
-  "Try Pain001 in Your Browser": "Спробуйте Pain001 у своєму браузері",
+  "pain.001 Generator and Validator in Your Browser": "Генератор і валідатор pain.001 у браузері",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "Перетягніть файл CSV, скористайтеся зразком або вставте власні записи. Валідація виконується миттєво, повністю у вашому браузері, і жодні дані не залишають ваш комп’ютер.",
   "How this validator helps you": "Чим цей валідатор корисний вам",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Перевіряйте платіжні дані за тими самими правилами, що їх застосовують банки: обов’язкові поля, контрольні суми IBAN, структура BIC, контрольні підсумки</span>",

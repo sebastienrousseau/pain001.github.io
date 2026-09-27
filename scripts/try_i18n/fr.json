@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "Essayez Pain001 dans votre navigateur",
-  "description": "Importez ou collez vos données CSV : validation IBAN mod-97, structure BIC, champs obligatoires, totaux de contrôle et XSD officiel, le tout dans votre navigateur."
+  "title": "Générateur et validateur pain.001 dans le navigateur",
+  "description": "Transformez vos paiements CSV en XML pain.001 validé par le XSD officiel ISO 20022 et les règles du scheme. Gratuit, dans le navigateur, sans envoi."
  },
  "text": {
   "Interactive demo": "Démo interactive",
-  "Try Pain001 in Your Browser": "Essayez Pain001 dans votre navigateur",
+  "pain.001 Generator and Validator in Your Browser": "Générateur et validateur pain.001 dans le navigateur",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "Déposez un fichier CSV, utilisez l’exemple ou collez vos propres enregistrements. La validation s’exécute instantanément, entièrement dans votre navigateur, et rien ne quitte jamais votre machine.",
   "How this validator helps you": "Ce que ce validateur vous apporte",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Testez vos données de paiement avec les contrôles appliqués par les banques : champs obligatoires, sommes de contrôle IBAN, structure BIC, totaux de contrôle</span>",

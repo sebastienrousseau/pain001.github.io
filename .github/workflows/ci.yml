@@ -300,3 +300,21 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
+
+  # IndexNow: tell Bing, Yandex, Seznam, Naver and the other participating
+  # engines that the site changed. No account or secret is involved: the
+  # key file static/<key>.txt proves ownership. Never fails the pipeline.
+  indexnow:
+    name: Notify IndexNow
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: deploy
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Submit the deployed sitemap's URLs
+        run: python3 scripts/indexnow.py --sitemap https://pain001.com/sitemap.xml

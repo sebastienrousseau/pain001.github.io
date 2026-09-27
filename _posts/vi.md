@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Bộ công cụ Python mã nguồn mở tạo tệp pain.001 và pain.008 được xác thực XSD từ CSV, Excel, SQLite, JSON, Parquet hoặc SWIFT MT101, kèm công cụ MCP cho tác tử AI và máy chủ LSP."
+description: "Tạo và kiểm tra XML pain.001 và pain.008 theo XSD chính thức của ISO 20022, từ CSV, Excel hoặc MT101. Miễn phí, mã nguồn mở, chạy trên máy của bạn."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "vi"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "Bộ công cụ mã nguồn mở biến dữ liệu thanh toán của bạn thành XML ISO 20022 đã xác thực, được chứng minh đúng trước khi đến ngân hàng."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001: Khởi tạo thanh toán ISO 20022 mã nguồn mở"
+title: "Pain001: tệp pain.001 và thanh toán ISO 20022 mã nguồn mở"
 url: "https://pain001.com/vi/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/vi/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Bộ công cụ Python mã nguồn mở tạo tệp pain.001 và pain.008 được xác thực XSD từ CSV, Excel, SQLite, JSON, Parquet hoặc SWIFT MT101, kèm công cụ MCP cho tác tử AI và máy chủ LSP."
+item_description: "Tạo và kiểm tra XML pain.001 và pain.008 theo XSD chính thức của ISO 20022, từ CSV, Excel hoặc MT101. Miễn phí, mã nguồn mở, chạy trên máy của bạn."
 item_guid: "https://pain001.com/vi/rss.xml"
 item_link: "https://pain001.com/vi/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: Khởi tạo thanh toán ISO 20022 mã nguồn mở"
+item_title: "Pain001: tệp pain.001 và thanh toán ISO 20022 mã nguồn mở"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: Khởi tạo thanh toán ISO 20022 mã nguồn mở"
+apple-mobile-web-app-title: "Pain001: tệp pain.001 và thanh toán ISO 20022 mã nguồn mở"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Bộ công cụ Python mã nguồn mở tạo tệp pain.001 và pain.008 được xác thực XSD từ CSV, Excel, SQLite, JSON, Parquet hoặc SWIFT MT101, kèm công cụ MCP cho tác tử AI và máy chủ LSP."
+twitter_description: "Tạo và kiểm tra XML pain.001 và pain.008 theo XSD chính thức của ISO 20022, từ CSV, Excel hoặc MT101. Miễn phí, mã nguồn mở, chạy trên máy của bạn."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001: Khởi tạo thanh toán ISO 20022 mã nguồn mở"
+twitter_title: "Pain001: tệp pain.001 và thanh toán ISO 20022 mã nguồn mở"
 twitter_url: "https://pain001.com/vi/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
