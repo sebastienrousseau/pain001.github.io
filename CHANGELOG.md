@@ -74,6 +74,11 @@ All notable changes to this website are documented here. The format follows
 - The pain.002 page is titled for the status report as well as its
   reason codes, and the message-specification hub for the XSD element
   reference it is.
+- The translated corpus scenario pages (`/<locale>/corpus-*/`, 210 in
+  five languages) carry `noindex, follow` and leave the sitemap and every
+  hreflang cluster. Search Console listed them as discovered or crawled
+  but not indexed; they stay published for visitors, and the English
+  scenario pages stay indexable.
 - The new page is linked from the Developers menu and the footer on
   every page, from each language's homepage, and from every version
   page. The English homepage title now names pain.001.

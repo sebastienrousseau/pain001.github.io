@@ -1315,7 +1315,7 @@ def regen_sitemap(site: Path) -> None:
     urls = []
     for page in sorted(site.rglob("index.html")):
         rel = page.parent.relative_to(site).as_posix()
-        if rel.startswith(("api/", "_csp", ".")) or rel in NOINDEX_PAGES:
+        if rel.startswith(("api/", "_csp", ".")) or rel in NOINDEX_PAGES or is_translated_corpus(rel):
             continue
         loc = BASE_URL + "/" if rel == "." else f"{BASE_URL}/{rel}/"
         urls.append(
@@ -1351,12 +1351,39 @@ _MONTHS = ("January", "February", "March", "April", "May", "June", "July",
 
 
 def corpus_hreflang_cluster(slug: str, self_lang: str) -> str:
+    """The English scenario page's hreflang: itself and x-default only.
+
+    The translated variants are noindex (see noindex_translated_corpus), and
+    a noindex page must not be an hreflang alternate, so the cluster no
+    longer lists them.
+    """
     links = ['<link rel="alternate" hreflang="en" href="%s/%s/" />' % (BASE_URL, slug),
              '<link rel="alternate" hreflang="x-default" href="%s/%s/" />' % (BASE_URL, slug)]
-    for loc in CORPUS_LOCALES:
-        links.append('<link rel="alternate" hreflang="%s" href="%s/%s/%s/" />'
-                     % (LOCALES[loc], BASE_URL, loc, slug))
     return "".join(link for link in links if 'hreflang="%s"' % self_lang not in link)
+
+
+# Search Console listed the translated scenario pages as "Discovered" (178)
+# or "Crawled" (21) and "currently not indexed": template translations of
+# the English page that Google declines to index, which dilute the site.
+# They stay published for visitors but carry noindex and leave the sitemap
+# and every hreflang cluster.
+_ROBOTS_META_RE = re.compile(r'<meta name="robots" content="[^"]*"\s*/?>')
+_HREFLANG_LINK_RE = re.compile(r'<link rel="alternate"[^>]*\bhreflang="[^"]*"[^>]*>\s*')
+_CORPUS_NOINDEX = '<meta name="robots" content="noindex, follow" />'
+
+
+def noindex_translated_corpus(html: str) -> str:
+    """Mark a translated corpus page noindex and drop its hreflang links."""
+    html = _HREFLANG_LINK_RE.sub("", html)
+    if _ROBOTS_META_RE.search(html):
+        return _ROBOTS_META_RE.sub(_CORPUS_NOINDEX, html)
+    return html.replace("</head>", _CORPUS_NOINDEX + "</head>", 1)
+
+
+def is_translated_corpus(rel: str) -> bool:
+    """True for a site-relative path like "de/corpus-de-sepa-sct-salary"."""
+    parts = rel.split("/")
+    return len(parts) == 2 and parts[0] in CORPUS_LOCALES and parts[1].startswith("corpus-")
 
 
 def retarget_lang_menu_corpus(html: str, slug: str) -> str:
@@ -1404,7 +1431,7 @@ def relocate_corpus_locales(site: Path) -> None:
             html = (dest / "index.html").read_text(encoding="utf-8")
             code = LOCALES[loc]
             html = html.replace("/%s-%s/" % (loc, slug), "/%s/%s/" % (loc, slug))
-            html = html.replace("</head>", corpus_hreflang_cluster(slug, code) + "</head>", 1)
+            html = noindex_translated_corpus(html)
             td = load_try_i18n(loc)
             if td:
                 html = apply_chrome_extra(html, td)
