@@ -6,7 +6,14 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
-Nothing yet.
+### Security
+
+- The Search Console scoreboard authenticates without a stored key.
+  Workload Identity Federation exchanges the job's GitHub OIDC token for
+  a one-hour Google token, and the provider accepts only this repository
+  and only `seo-scoreboard.yml`. The service-account key and the
+  `GSC_SERVICE_ACCOUNT_JSON` secret are deleted, so the site again keeps
+  no long-lived credentials.
 
 ## [0.0.10] - 2026-09-27
 
