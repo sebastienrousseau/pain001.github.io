@@ -2,9 +2,13 @@
 # SPDX-License-Identifier: Apache-2.0 OR MIT
 # Weekly Search Console scoreboard: the last 28 days against the previous
 # 28, for the site, the queries its content targets, and the top pages and
-# countries, written to the run's summary. Read-only. It needs the
-# GSC_SERVICE_ACCOUNT_JSON secret (see DEVELOPMENT.md); without it the run
-# reports "not configured" and succeeds.
+# countries, written to the run's summary. Read-only.
+#
+# Keyless: Workload Identity Federation exchanges this job's GitHub OIDC
+# token for a one-hour token of a Search Console service account. The
+# provider accepts only this repository and only this workflow file, and
+# no secret is stored. On a fork the step is skipped and the run reports
+# "not configured". Setup: DEVELOPMENT.md.
 name: SEO scoreboard
 
 on:
@@ -20,6 +24,9 @@ jobs:
     name: Search Console, last 28 days
     runs-on: ubuntu-24.04
     timeout-minutes: 10
+    permissions:
+      contents: read
+      id-token: write # the OIDC token Google exchanges; nothing else
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -32,7 +39,13 @@ jobs:
       - name: Install the hash-pinned client
         run: python -m pip install --quiet --require-hashes -r requirements/seo.txt
 
+      - name: Authenticate to Google Cloud (Workload Identity Federation)
+        if: github.repository == 'sebastienrousseau/pain001.github.io'
+        uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093 # v3.0.0
+        with:
+          workload_identity_provider: projects/116272232197/locations/global/workloadIdentityPools/github/providers/pain001-github-io
+          service_account: pain001-seo-scoreboard@teamrousseau.iam.gserviceaccount.com
+          create_credentials_file: true
+
       - name: Build the scoreboard
-        env:
-          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
         run: python scripts/seo_scoreboard.py
