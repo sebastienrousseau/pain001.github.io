@@ -27,7 +27,7 @@
    "Show the required and optional fields for a message type.": "Fi àwọn pápá tí ó pọn dandan àti àwọn tí ó jẹ́ àṣàyàn hàn fún irú ìránṣẹ́ kan.",
    "Scaffold a starter CSV template for a message type.": "Ṣẹ̀dá àwòṣe CSV ìbẹ̀rẹ̀ fún irú ìránṣẹ́ kan.",
    "Launch the FastAPI REST microservice (requires the <code>api</code> extra).": "Tú iṣẹ́ kékeré REST FastAPI jáde (ó nílò àfikún <code>api</code>).",
-   "Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "Tú olùpèsè Model Context Protocol tí ó wà nínú kóòdù jáde (irinṣẹ́ 5; olùpèsè kíkún tí ó ní irinṣẹ́ 17 wà gẹ́gẹ́ bí <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).",
+   "Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "Tú olùpèsè Model Context Protocol tí ó wà nínú kóòdù jáde (irinṣẹ́ 5; olùpèsè kíkún tí ó ní irinṣẹ́ 22 wà gẹ́gẹ́ bí <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).",
    "Inspect and manage discovered loader, validator, scheme, and writer plugins.": "Ṣàyẹ̀wò kí ẹ sì ṣàkóso àwọn plugin loader, validator, scheme, àti writer tí a ti ṣàwárí.",
    "<code>generate</code> options": "Àwọn àṣàyàn <code>generate</code>",
    "Flag": "Àsíá",

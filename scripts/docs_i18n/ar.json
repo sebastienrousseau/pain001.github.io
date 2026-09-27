@@ -27,7 +27,7 @@
    "Show the required and optional fields for a message type.": "عرض الحقول الإلزامية والاختيارية لنوع رسالة.",
    "Scaffold a starter CSV template for a message type.": "إنشاء قالب CSV مبدئي لنوع رسالة.",
    "Launch the FastAPI REST microservice (requires the <code>api</code> extra).": "تشغيل خدمة REST المصغّرة المبنية على FastAPI (تتطلب الإضافة <code>api</code>).",
-   "Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "تشغيل خادم Model Context Protocol المضمّن في الشجرة (5 أدوات؛ الخادم الكامل ذو الأدوات الـ 17 يُشحن باسم <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).",
+   "Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "تشغيل خادم Model Context Protocol المضمّن في الشجرة (5 أدوات؛ الخادم الكامل ذو الأدوات الـ 22 يُشحن باسم <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).",
    "Inspect and manage discovered loader, validator, scheme, and writer plugins.": "فحص وإدارة إضافات المحمّلات والمدقّقات والأنظمة والكتّاب المكتشفة.",
    "<code>generate</code> options": "خيارات <code>generate</code>",
    "Flag": "الخيار",

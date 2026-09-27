@@ -27,7 +27,7 @@
    "Show the required and optional fields for a message type.": "显示某报文类型的必填与可选字段。",
    "Scaffold a starter CSV template for a message type.": "为报文类型生成入门 CSV 模板。",
    "Launch the FastAPI REST microservice (requires the <code>api</code> extra).": "启动 FastAPI REST 微服务（需安装 <code>api</code> 附加依赖）。",
-   "Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "启动内置的 Model Context Protocol 服务器（5 个工具；完整的 17 工具服务器以 <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a> 形式发布）。",
+   "Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "启动内置的 Model Context Protocol 服务器（5 个工具；完整的 22 工具服务器以 <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a> 形式发布）。",
    "Inspect and manage discovered loader, validator, scheme, and writer plugins.": "查看并管理已发现的加载器、校验器、方案与写入器插件。",
    "<code>generate</code> options": "<code>generate</code> 选项",
    "Flag": "标志",

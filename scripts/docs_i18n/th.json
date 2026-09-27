@@ -27,7 +27,7 @@
    "Show the required and optional fields for a message type.": "แสดงฟิลด์ที่จำเป็นและฟิลด์ทางเลือกของข้อความแต่ละประเภท",
    "Scaffold a starter CSV template for a message type.": "สร้างเทมเพลต CSV ตั้งต้นสำหรับข้อความแต่ละประเภท",
    "Launch the FastAPI REST microservice (requires the <code>api</code> extra).": "เริ่มไมโครเซอร์วิส REST ที่พัฒนาด้วย FastAPI (ต้องติดตั้งส่วนเสริม <code>api</code>)",
-   "Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "เริ่มเซิร์ฟเวอร์ Model Context Protocol ที่มาพร้อมในตัว (5 เครื่องมือ ส่วนเซิร์ฟเวอร์ฉบับเต็ม 17 เครื่องมือเผยแพร่ในชื่อ <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>)",
+   "Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "เริ่มเซิร์ฟเวอร์ Model Context Protocol ที่มาพร้อมในตัว (5 เครื่องมือ ส่วนเซิร์ฟเวอร์ฉบับเต็ม 22 เครื่องมือเผยแพร่ในชื่อ <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>)",
    "Inspect and manage discovered loader, validator, scheme, and writer plugins.": "ตรวจสอบและจัดการปลั๊กอินประเภท loader, validator, scheme และ writer ที่ค้นพบ",
    "<code>generate</code> options": "ตัวเลือกของ <code>generate</code>",
    "Flag": "แฟล็ก",

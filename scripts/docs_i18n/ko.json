@@ -27,7 +27,7 @@
    "Show the required and optional fields for a message type.": "메시지 유형의 필수 필드와 선택 필드를 표시합니다.",
    "Scaffold a starter CSV template for a message type.": "메시지 유형에 맞는 시작용 CSV 템플릿을 생성합니다.",
    "Launch the FastAPI REST microservice (requires the <code>api</code> extra).": "FastAPI REST 마이크로서비스를 실행합니다(<code>api</code> 엑스트라 필요).",
-   "Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "코어에 내장된 Model Context Protocol 서버를 실행합니다(도구 5개이며, 도구 17개를 갖춘 전체 서버는 <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>로 제공됩니다).",
+   "Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "코어에 내장된 Model Context Protocol 서버를 실행합니다(도구 5개이며, 도구 22개를 갖춘 전체 서버는 <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>로 제공됩니다).",
    "Inspect and manage discovered loader, validator, scheme, and writer plugins.": "탐지된 로더, 검증기, 스킴, 라이터 플러그인을 확인하고 관리합니다.",
    "<code>generate</code> options": "<code>generate</code> 옵션",
    "Flag": "플래그",

@@ -27,7 +27,7 @@
       "Show the required and optional fields for a message type.": "Mostra i campi obbligatori e facoltativi di un tipo di messaggio.",
       "Scaffold a starter CSV template for a message type.": "Genera un modello CSV iniziale per un tipo di messaggio.",
       "Launch the FastAPI REST microservice (requires the <code>api</code> extra).": "Avvia il microservizio REST FastAPI (richiede l'extra <code>api</code>).",
-      "Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "Avvia il server Model Context Protocol integrato (5 strumenti; il server completo con 17 strumenti è distribuito come <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).",
+      "Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "Avvia il server Model Context Protocol integrato (5 strumenti; il server completo con 22 strumenti è distribuito come <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).",
       "Inspect and manage discovered loader, validator, scheme, and writer plugins.": "Ispeziona e gestisce i plugin individuati di tipo loader, validator, scheme e writer.",
       "<code>generate</code> options": "Opzioni di <code>generate</code>",
       "Flag": "Opzione",

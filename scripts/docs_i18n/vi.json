@@ -27,7 +27,7 @@
    "Show the required and optional fields for a message type.": "Hiển thị các trường bắt buộc và tuỳ chọn của một loại thông điệp.",
    "Scaffold a starter CSV template for a message type.": "Tạo sẵn một mẫu CSV khởi đầu cho một loại thông điệp.",
    "Launch the FastAPI REST microservice (requires the <code>api</code> extra).": "Khởi chạy vi dịch vụ REST FastAPI (yêu cầu phần mở rộng <code>api</code>).",
-   "Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "Khởi chạy máy chủ Model Context Protocol tích hợp sẵn (5 công cụ; máy chủ đầy đủ 17 công cụ được phát hành dưới tên <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).",
+   "Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "Khởi chạy máy chủ Model Context Protocol tích hợp sẵn (5 công cụ; máy chủ đầy đủ 22 công cụ được phát hành dưới tên <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).",
    "Inspect and manage discovered loader, validator, scheme, and writer plugins.": "Kiểm tra và quản lý các plugin loader, validator, scheme và writer đã được phát hiện.",
    "<code>generate</code> options": "Tuỳ chọn của <code>generate</code>",
    "Flag": "Cờ",

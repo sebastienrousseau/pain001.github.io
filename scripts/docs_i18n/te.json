@@ -27,7 +27,7 @@
    "Show the required and optional fields for a message type.": "ఒక సందేశ రకానికి అవసరమైన మరియు ఐచ్ఛిక ఫీల్డ్‌లను చూపుతుంది.",
    "Scaffold a starter CSV template for a message type.": "ఒక సందేశ రకానికి ప్రారంభ CSV టెంప్లేట్‌ను సిద్ధం చేస్తుంది.",
    "Launch the FastAPI REST microservice (requires the <code>api</code> extra).": "FastAPI REST మైక్రోసర్వీస్‌ను ప్రారంభిస్తుంది (<code>api</code> ఎక్స్‌ట్రా అవసరం).",
-   "Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "ఇన్-ట్రీ Model Context Protocol సర్వర్‌ను ప్రారంభిస్తుంది (5 సాధనాలు; పూర్తి 17-సాధనాల సర్వర్ <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>గా అందుబాటులో ఉంది).",
+   "Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "ఇన్-ట్రీ Model Context Protocol సర్వర్‌ను ప్రారంభిస్తుంది (5 సాధనాలు; పూర్తి 22-సాధనాల సర్వర్ <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>గా అందుబాటులో ఉంది).",
    "Inspect and manage discovered loader, validator, scheme, and writer plugins.": "కనుగొనబడిన లోడర్, వాలిడేటర్, స్కీమ్, రైటర్ ప్లగిన్‌లను పరిశీలించి నిర్వహిస్తుంది.",
    "<code>generate</code> options": "<code>generate</code> ఎంపికలు",
    "Flag": "ఫ్లాగ్",

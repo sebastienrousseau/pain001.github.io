@@ -27,7 +27,7 @@
    "Show the required and optional fields for a message type.": "メッセージタイプの必須フィールドと任意フィールドを表示します。",
    "Scaffold a starter CSV template for a message type.": "メッセージタイプ用のスターター CSV テンプレートを生成します。",
    "Launch the FastAPI REST microservice (requires the <code>api</code> extra).": "FastAPI REST マイクロサービスを起動します(<code>api</code> エクストラが必要です)。",
-   "Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "ツリー内の Model Context Protocol サーバーを起動します(5 ツール。全 17 ツール版のサーバーは <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a> として提供されます)。",
+   "Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "ツリー内の Model Context Protocol サーバーを起動します(5 ツール。全 22 ツール版のサーバーは <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a> として提供されます)。",
    "Inspect and manage discovered loader, validator, scheme, and writer plugins.": "検出されたローダー、バリデーター、スキーム、ライターの各プラグインを確認・管理します。",
    "<code>generate</code> options": "<code>generate</code> のオプション",
    "Flag": "フラグ",

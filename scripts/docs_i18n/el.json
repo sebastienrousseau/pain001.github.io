@@ -27,7 +27,7 @@
    "Show the required and optional fields for a message type.": "Εμφανίζει τα υποχρεωτικά και τα προαιρετικά πεδία ενός τύπου μηνύματος.",
    "Scaffold a starter CSV template for a message type.": "Δημιουργεί ένα αρχικό πρότυπο CSV για έναν τύπο μηνύματος.",
    "Launch the FastAPI REST microservice (requires the <code>api</code> extra).": "Εκκινεί τη μικροϋπηρεσία REST FastAPI (απαιτεί το extra <code>api</code>).",
-   "Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "Εκκινεί τον ενσωματωμένο διακομιστή Model Context Protocol (5 εργαλεία· ο πλήρης διακομιστής με 17 εργαλεία διατίθεται ως <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).",
+   "Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "Εκκινεί τον ενσωματωμένο διακομιστή Model Context Protocol (5 εργαλεία· ο πλήρης διακομιστής με 22 εργαλεία διατίθεται ως <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).",
    "Inspect and manage discovered loader, validator, scheme, and writer plugins.": "Επιθεωρεί και διαχειρίζεται τα εντοπισμένα πρόσθετα φόρτωσης, επικύρωσης, συστημάτων και εγγραφής.",
    "<code>generate</code> options": "Επιλογές του <code>generate</code>",
    "Flag": "Σημαία",
