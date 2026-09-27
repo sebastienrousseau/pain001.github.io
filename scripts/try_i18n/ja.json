@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "ブラウザで Pain001 を試す",
-  "description": "決済 CSV データをアップロードまたは貼り付けて、検証ゲートの動作をご確認ください: IBAN mod-97、BIC 構造、必須項目、再計算されたコントロール合計、公式 XSD。すべてブラウザ内で実行されます。"
+  "title": "ブラウザで使える pain.001 ジェネレーター＆バリデーター",
+  "description": "CSV の支払データから pain.001 XML を作成し、公式の ISO 20022 XSD とスキームのルールで検証。無料、ブラウザ内で完結し、データはアップロードされません。"
  },
  "text": {
   "Interactive demo": "インタラクティブデモ",
-  "Try Pain001 in Your Browser": "ブラウザで Pain001 を試す",
+  "pain.001 Generator and Validator in Your Browser": "ブラウザで使える pain.001 ジェネレーター＆バリデーター",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "CSV をドロップするか、サンプルを使うか、ご自身のレコードを貼り付けてください。検証はすべてブラウザ内で即座に実行され、データがお使いの端末の外に出ることは一切ありません。",
   "How this validator helps you": "このバリデーターがお役に立つ場面",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>銀行が適用するチェックに対して決済データをテストできます：必須項目、IBAN チェックサム、BIC 構造、コントロール合計</span>",

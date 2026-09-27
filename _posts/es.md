@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Suite Python de código abierto para generar ficheros pain.001 y pain.008 validados por XSD desde CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101, con herramientas MCP para agentes de IA y servidor LSP."
+description: "Genere y valide XML pain.001 y pain.008 con el XSD oficial de ISO 20022, a partir de CSV, Excel o MT101. Gratuito, de código abierto y local."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "es"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "La suite de código abierto que convierte sus datos de pago en XML ISO 20022 validado y probado antes de llegar al banco."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001: iniciación de pagos ISO 20022 en código abierto"
+title: "Pain001: ficheros pain.001 y SEPA XML en ISO 20022"
 url: "https://pain001.com/es/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/es/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Suite Python de código abierto para generar ficheros pain.001 y pain.008 validados por XSD desde CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101, con herramientas MCP para agentes de IA y servidor LSP."
+item_description: "Genere y valide XML pain.001 y pain.008 con el XSD oficial de ISO 20022, a partir de CSV, Excel o MT101. Gratuito, de código abierto y local."
 item_guid: "https://pain001.com/es/rss.xml"
 item_link: "https://pain001.com/es/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: iniciación de pagos ISO 20022 en código abierto"
+item_title: "Pain001: ficheros pain.001 y SEPA XML en ISO 20022"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: iniciación de pagos ISO 20022 en código abierto"
+apple-mobile-web-app-title: "Pain001: ficheros pain.001 y SEPA XML en ISO 20022"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Suite Python de código abierto para generar ficheros pain.001 y pain.008 validados por XSD desde CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101, con herramientas MCP para agentes de IA y servidor LSP."
+twitter_description: "Genere y valide XML pain.001 y pain.008 con el XSD oficial de ISO 20022, a partir de CSV, Excel o MT101. Gratuito, de código abierto y local."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001: iniciación de pagos ISO 20022 en código abierto"
+twitter_title: "Pain001: ficheros pain.001 y SEPA XML en ISO 20022"
 twitter_url: "https://pain001.com/es/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"

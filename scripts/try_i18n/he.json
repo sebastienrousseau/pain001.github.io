@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "נסו את Pain001 בדפדפן שלכם",
-  "description": "העלו או הדביקו נתוני תשלומים ב-CSV וצפו בשער האימות בפעולה: IBAN mod-97, מבנה BIC, שדות חובה, סכומי בקרה מחושבים מחדש ו-XSD הרשמי, הכול בדפדפן שלכם."
+  "title": "מחולל ומאמת pain.001 בדפדפן",
+  "description": "המירו נתוני תשלום בפורמט CSV ל-XML מסוג pain.001 ואמתו אותם מול ה-XSD הרשמי של ISO 20022 וכללי המערכת. חינם, בדפדפן, בלי העלאה."
  },
  "text": {
   "Interactive demo": "הדגמה אינטראקטיבית",
-  "Try Pain001 in Your Browser": "נסו את Pain001 בדפדפן שלכם",
+  "pain.001 Generator and Validator in Your Browser": "מחולל ומאמת pain.001 בדפדפן",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "גררו קובץ CSV, השתמשו בדוגמה או הדביקו רשומות משלכם. האימות רץ מיידית, כולו בדפדפן שלכם, ושום דבר לעולם אינו עוזב את המחשב שלכם.",
   "How this validator helps you": "כיצד המאמת הזה מסייע לכם",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>בדקו נתוני תשלומים מול הבדיקות שהבנקים מפעילים: שדות חובה, ספרות ביקורת IBAN, מבנה BIC, סכומי בקרה</span>",

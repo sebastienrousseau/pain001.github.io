@@ -88,6 +88,11 @@ All notable changes to this website are documented here. The format follows
   hreflang cluster. Search Console listed them as discovered or crawled
   but not indexed; they stay published for visitors, and the English
   scenario pages stay indexable.
+- Search titles and descriptions for every language's homepage and
+  for the browser demo match how people search: each homepage title
+  now names pain.001 (and SEPA-XML where that market searches for it),
+  the demo is titled as a pain.001 generator and validator, and every
+  description stays within 155 characters.
 - The new page is linked from the Developers menu and the footer on
   every page, from each language's homepage, and from every version
   page. The English homepage title now names pain.001.

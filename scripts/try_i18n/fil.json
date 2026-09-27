@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "Subukan ang Pain001 sa Inyong Browser",
-  "description": "I-upload o i-paste ang CSV ng pagbabayad at panoorin ang validation sa inyong browser: IBAN mod-97, BIC, kinakailangang field, control total, at opisyal na XSD."
+  "title": "pain.001 generator at validator sa inyong browser",
+  "description": "Gawing pain.001 XML ang CSV na datos ng bayad at i-validate sa opisyal na ISO 20022 XSD at mga panuntunan ng scheme. Libre, sa browser, walang upload."
  },
  "text": {
   "Interactive demo": "Interaktibong demo",
-  "Try Pain001 in Your Browser": "Subukan ang Pain001 sa Inyong Browser",
+  "pain.001 Generator and Validator in Your Browser": "pain.001 generator at validator sa inyong browser",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "Mag-drop ng CSV, gamitin ang sample, o i-paste ang sarili ninyong mga rekord. Agad na tumatakbo ang validation, ganap na nasa inyong browser, at walang datos na umaalis sa inyong makina.",
   "How this validator helps you": "Paano kayo tinutulungan ng validator na ito",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Subukan ang datos ng pagbabayad laban sa mga pagsusuring ginagamit ng mga bangko: mga kinakailangang field, checksum ng IBAN, istruktura ng BIC, mga control total</span>",

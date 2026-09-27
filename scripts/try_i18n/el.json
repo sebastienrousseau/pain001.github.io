@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "Δοκιμάστε το Pain001 στον περιηγητή σας",
-  "description": "Μεταφορτώστε ή επικολλήστε CSV πληρωμών και δείτε τους ελέγχους: IBAN mod-97, δομή BIC, υποχρεωτικά πεδία, σύνολα ελέγχου, επίσημο XSD. Όλα εκτελούνται στον περιηγητή σας."
+  "title": "Γεννήτρια και επικυρωτής pain.001 στον περιηγητή",
+  "description": "Μετατρέψτε δεδομένα πληρωμών CSV σε XML pain.001 και επικυρώστε τα με το επίσημο XSD του ISO 20022 και τους κανόνες σχήματος. Δωρεάν, χωρίς αποστολή."
  },
  "text": {
   "Interactive demo": "Διαδραστική επίδειξη",
-  "Try Pain001 in Your Browser": "Δοκιμάστε το Pain001 στον περιηγητή σας",
+  "pain.001 Generator and Validator in Your Browser": "Γεννήτρια και επικυρωτής pain.001 στον περιηγητή",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "Σύρετε ένα αρχείο CSV, χρησιμοποιήστε το δείγμα ή επικολλήστε τις δικές σας εγγραφές. Η επικύρωση εκτελείται αμέσως, εξ ολοκλήρου στον περιηγητή σας, και τίποτα δεν φεύγει ποτέ από τον υπολογιστή σας.",
   "How this validator helps you": "Πώς σας βοηθά αυτό το εργαλείο επικύρωσης",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Δοκιμάστε τα δεδομένα πληρωμών σας με τους ελέγχους που εφαρμόζουν οι τράπεζες: υποχρεωτικά πεδία, ψηφία ελέγχου IBAN, δομή BIC, σύνολα ελέγχου</span>",

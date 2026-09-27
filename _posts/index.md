@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Generate schema-validated ISO 20022 pain.001 and pain.008 XML from CSV, Excel, SQLite, JSON, Parquet, or SWIFT MT101, with AI-agent MCP tools and editor LSP support."
+description: "Generate and validate ISO 20022 pain.001 and pain.008 XML against the official XSD, from CSV, Excel or MT101. Free, open source, runs on your machine."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
@@ -46,7 +46,7 @@ atom_link: "https://pain001.com/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Generate schema-validated ISO 20022 pain.001 and pain.008 XML from CSV, Excel, SQLite, JSON, Parquet, or SWIFT MT101, with AI-agent MCP tools and editor LSP support."
+item_description: "Generate and validate ISO 20022 pain.001 and pain.008 XML against the official XSD, from CSV, Excel or MT101. Free, open source, runs on your machine."
 item_guid: "https://pain001.com/rss.xml"
 item_link: "https://pain001.com/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -67,7 +67,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Generate schema-validated ISO 20022 pain.001 and pain.008 XML from CSV, Excel, SQLite, JSON, Parquet, or SWIFT MT101, with AI-agent MCP tools and editor LSP support."
+twitter_description: "Generate and validate ISO 20022 pain.001 and pain.008 XML against the official XSD, from CSV, Excel or MT101. Free, open source, runs on your machine."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"

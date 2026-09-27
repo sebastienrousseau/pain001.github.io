@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "Pain001’i Tarayıcınızda Deneyin",
-  "description": "Ödeme CSV verinizi yükleyin veya yapıştırın: IBAN mod-97, BIC yapısı, zorunlu alanlar, kontrol toplamları ve resmî XSD. Tümü tarayıcınızda doğrulanır."
+  "title": "Tarayıcıda pain.001 oluşturucu ve doğrulayıcı",
+  "description": "CSV ödeme verilerini pain.001 XML'e dönüştürün, resmi ISO 20022 XSD'si ve şema kurallarıyla doğrulayın. Ücretsiz, tarayıcıda, hiçbir şey yüklenmez."
  },
  "text": {
   "Interactive demo": "Etkileşimli demo",
-  "Try Pain001 in Your Browser": "Pain001’i Tarayıcınızda Deneyin",
+  "pain.001 Generator and Validator in Your Browser": "Tarayıcıda pain.001 oluşturucu ve doğrulayıcı",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "Bir CSV bırakın, örneği kullanın veya kendi kayıtlarınızı yapıştırın; doğrulama anında ve tamamen tarayıcınızda çalışır; hiçbir veri makinenizden dışarı çıkmaz.",
   "How this validator helps you": "Bu doğrulayıcı size nasıl yardımcı olur",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Ödeme verilerinizi bankaların uyguladığı kontrollerle sınayın: zorunlu alanlar, IBAN sağlama toplamları, BIC yapısı, kontrol toplamları</span>",

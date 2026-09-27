@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "Pain001-ஐ உங்கள் உலாவியில் முயற்சிக்கவும்",
-  "description": "CSV பணத் தரவை ஒட்டி அல்லது பதிவேற்றி சரிபார்க்கவும்: IBAN mod-97, BIC அமைப்பு, தேவையான புலங்கள், கட்டுப்பாட்டு மொத்தங்கள், அதிகாரப்பூர்வ XSD, அனைத்தும் உங்கள் உலாவியில்."
+  "title": "உலாவியில் pain.001 உருவாக்கி, சரிபார்ப்பி",
+  "description": "CSV கட்டணத் தரவை pain.001 XML-ஆக மாற்றி அதிகாரப்பூர்வ ISO 20022 XSD, திட்ட விதிகளின்படி சரிபார்க்கவும். இலவசம், உலாவியில், பதிவேற்றம் இல்லை."
  },
  "text": {
   "Interactive demo": "ஊடாடும் செயல்விளக்கம்",
-  "Try Pain001 in Your Browser": "Pain001-ஐ உங்கள் உலாவியில் முயற்சிக்கவும்",
+  "pain.001 Generator and Validator in Your Browser": "உலாவியில் pain.001 உருவாக்கி, சரிபார்ப்பி",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "ஒரு CSV கோப்பை இடவும், மாதிரியைப் பயன்படுத்தவும் அல்லது உங்கள் சொந்தப் பதிவுகளை ஒட்டவும். சரிபார்ப்பு உடனடியாக, முழுவதுமாக உங்கள் உலாவியிலேயே இயங்கும்; எதுவும் உங்கள் கணினியை விட்டு வெளியேறாது.",
   "How this validator helps you": "இந்தச் சரிபார்ப்புக் கருவி உங்களுக்கு எவ்வாறு உதவுகிறது",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>வங்கிகள் பயன்படுத்தும் சோதனைகளுக்கு எதிராகப் பணம் செலுத்தும் தரவைச் சோதிக்கவும்: தேவையான புலங்கள், IBAN சரிகாண் தொகைகள், BIC அமைப்பு, கட்டுப்பாட்டு மொத்தங்கள்</span>",

@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "Gbìyànjú Pain001 Nínú Aṣàwákiri Yín",
-  "description": "Ẹ gbé tàbí lẹ dátà ìsanwó CSV kí ẹ sì wo bí àyẹ̀wò ṣe ń ṣiṣẹ́: IBAN mod-97, ìhun BIC, àwọn àyè dandan, àpapọ̀ ìṣàkóso àti XSD ti àṣẹ, gbogbo rẹ̀ nínú aṣàwákiri yín."
+  "title": "Olùṣẹ̀dá àti olùyẹ̀wò pain.001 nínú aṣàwákiri",
+  "description": "Yí dátà ìsanwó CSV padà sí XML pain.001 kí o sì yẹ̀ ẹ́ wò pẹ̀lú XSD òṣìṣẹ́ ISO 20022 àti òfin ètò. Ọ̀fẹ́, nínú aṣàwákiri, kò sí ìgbéjáde."
  },
  "text": {
   "Interactive demo": "Àfihàn ìbáṣepọ̀",
-  "Try Pain001 in Your Browser": "Gbìyànjú Pain001 Nínú Aṣàwákiri Yín",
+  "pain.001 Generator and Validator in Your Browser": "Olùṣẹ̀dá àti olùyẹ̀wò pain.001 nínú aṣàwákiri",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "Ẹ fi fáìlì CSV sínú rẹ̀, ẹ lo àpẹẹrẹ, tàbí kí ẹ lẹ àwọn àkọsílẹ̀ yín. Àyẹ̀wò ń ṣiṣẹ́ lẹ́sẹ̀kẹsẹ̀, pátápátá nínú aṣàwákiri yín, kò sì sí ohunkóhun tí yóò kúrò ní ẹ̀rọ yín láé.",
   "How this validator helps you": "Bí ohun-èlò àyẹ̀wò yìí ṣe ń ràn yín lọ́wọ́",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Ẹ dán dátà ìsanwó wò lórí àwọn àyẹ̀wò tí àwọn báńkì ń lò: àwọn àyè dandan, àyẹ̀wò ìṣirò IBAN, ìhun BIC, àpapọ̀ ìṣàkóso</span>",

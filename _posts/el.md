@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Σουίτα Python ανοικτού κώδικα που παράγει αρχεία pain.001 και pain.008 επικυρωμένα με XSD από CSV, Excel, SQLite, JSON, Parquet ή SWIFT MT101, με εργαλεία MCP για πράκτορες AI και διακομιστή LSP."
+description: "Δημιουργήστε και επικυρώστε XML pain.001 και pain.008 με βάση το επίσημο XSD του ISO 20022. Δωρεάν, ανοικτού κώδικα, τρέχει στον υπολογιστή σας."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "el"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "Η σουίτα ανοικτού κώδικα που μετατρέπει τα δεδομένα πληρωμών σας σε επικυρωμένο XML ISO 20022, αποδεδειγμένα σωστό πριν φτάσει στην τράπεζα."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001: Έναρξη πληρωμών ISO 20022 ανοικτού κώδικα"
+title: "Pain001: αρχεία pain.001 και SEPA XML κατά ISO 20022"
 url: "https://pain001.com/el/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/el/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Σουίτα Python ανοικτού κώδικα που παράγει αρχεία pain.001 και pain.008 επικυρωμένα με XSD από CSV, Excel, SQLite, JSON, Parquet ή SWIFT MT101, με εργαλεία MCP για πράκτορες AI και διακομιστή LSP."
+item_description: "Δημιουργήστε και επικυρώστε XML pain.001 και pain.008 με βάση το επίσημο XSD του ISO 20022. Δωρεάν, ανοικτού κώδικα, τρέχει στον υπολογιστή σας."
 item_guid: "https://pain001.com/el/rss.xml"
 item_link: "https://pain001.com/el/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: Έναρξη πληρωμών ISO 20022 ανοικτού κώδικα"
+item_title: "Pain001: αρχεία pain.001 και SEPA XML κατά ISO 20022"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: Έναρξη πληρωμών ISO 20022 ανοικτού κώδικα"
+apple-mobile-web-app-title: "Pain001: αρχεία pain.001 και SEPA XML κατά ISO 20022"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Σουίτα Python ανοικτού κώδικα που παράγει αρχεία pain.001 και pain.008 επικυρωμένα με XSD από CSV, Excel, SQLite, JSON, Parquet ή SWIFT MT101, με εργαλεία MCP για πράκτορες AI και διακομιστή LSP."
+twitter_description: "Δημιουργήστε και επικυρώστε XML pain.001 και pain.008 με βάση το επίσημο XSD του ISO 20022. Δωρεάν, ανοικτού κώδικα, τρέχει στον υπολογιστή σας."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001: Έναρξη πληρωμών ISO 20022 ανοικτού κώδικα"
+twitter_title: "Pain001: αρχεία pain.001 και SEPA XML κατά ISO 20022"
 twitter_url: "https://pain001.com/el/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"

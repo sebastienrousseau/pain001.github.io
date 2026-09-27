@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "Probeer Pain001 in uw browser",
-  "description": "Upload of plak CSV-betaalgegevens en zie de validatie werken: IBAN mod-97, BIC-structuur, verplichte velden, controletotalen en de officiële XSD, alles in uw browser."
+  "title": "pain.001-generator en -validator in uw browser",
+  "description": "Zet CSV-betaalgegevens om in pain.001-XML en valideer die tegen de officiële ISO 20022-XSD en de schemaregels. Gratis, in uw browser, zonder upload."
  },
  "text": {
   "Interactive demo": "Interactieve demo",
-  "Try Pain001 in Your Browser": "Probeer Pain001 in uw browser",
+  "pain.001 Generator and Validator in Your Browser": "pain.001-generator en -validator in uw browser",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "Sleep een CSV-bestand naar binnen, gebruik het voorbeeld of plak uw eigen records. De validatie draait direct, volledig in uw browser, en niets verlaat ooit uw computer.",
   "How this validator helps you": "Hoe deze validator u helpt",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test betaalgegevens tegen de controles die banken toepassen: verplichte velden, IBAN-controlegetallen, BIC-structuur, controletotalen</span>",

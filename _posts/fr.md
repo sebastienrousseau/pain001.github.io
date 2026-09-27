@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Suite Python open source pour générer des fichiers pain.001 et pain.008 validés par XSD à partir de CSV, Excel, SQLite, JSON, Parquet ou SWIFT MT101, avec outils MCP pour agents IA et serveur LSP."
+description: "Générez et validez des fichiers XML pain.001 et pain.008 selon le XSD officiel ISO 20022, depuis CSV, Excel ou MT101. Gratuit, open source, en local."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "fr"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "La suite open source qui transforme vos données de paiement en XML ISO 20022 validé, prouvé conforme avant même d'atteindre votre banque."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001 : initiation de paiements ISO 20022 en open source"
+title: "Pain001 : fichiers pain.001 et virements SEPA ISO 20022"
 url: "https://pain001.com/fr/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/fr/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Suite Python open source pour générer des fichiers pain.001 et pain.008 validés par XSD à partir de CSV, Excel, SQLite, JSON, Parquet ou SWIFT MT101, avec outils MCP pour agents IA et serveur LSP."
+item_description: "Générez et validez des fichiers XML pain.001 et pain.008 selon le XSD officiel ISO 20022, depuis CSV, Excel ou MT101. Gratuit, open source, en local."
 item_guid: "https://pain001.com/fr/rss.xml"
 item_link: "https://pain001.com/fr/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001 : initiation de paiements ISO 20022 en open source"
+item_title: "Pain001 : fichiers pain.001 et virements SEPA ISO 20022"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001 : initiation de paiements ISO 20022 en open source"
+apple-mobile-web-app-title: "Pain001 : fichiers pain.001 et virements SEPA ISO 20022"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Suite Python open source pour générer des fichiers pain.001 et pain.008 validés par XSD à partir de CSV, Excel, SQLite, JSON, Parquet ou SWIFT MT101, avec outils MCP pour agents IA et serveur LSP."
+twitter_description: "Générez et validez des fichiers XML pain.001 et pain.008 selon le XSD officiel ISO 20022, depuis CSV, Excel ou MT101. Gratuit, open source, en local."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001 : initiation de paiements ISO 20022 en open source"
+twitter_title: "Pain001 : fichiers pain.001 et virements SEPA ISO 20022"
 twitter_url: "https://pain001.com/fr/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"

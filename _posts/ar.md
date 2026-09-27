@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "حزمة Python مفتوحة المصدر تُنتج ملفات pain.001 و pain.008 موثَّقة بمخططات XSD من CSV أو Excel أو SQLite أو JSON أو Parquet أو SWIFT MT101، مع أدوات MCP لوكلاء الذكاء الاصطناعي وخادم LSP."
+description: "أنشئ ملفات pain.001 وpain.008 بصيغة XML وتحقق منها وفق مخطط XSD الرسمي لمعيار ISO 20022. مجاني ومفتوح المصدر ويعمل على جهازك."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "ar"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "الحزمة مفتوحة المصدر التي تحوِّل بيانات مدفوعاتك إلى XML موثَّق وفق ISO 20022 ومُثبت الصحة قبل أن يصل إلى البنك."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001: بدء المدفوعات ISO 20022 مفتوح المصدر"
+title: "Pain001: ملفات pain.001 ومدفوعات ISO 20022 مفتوحة المصدر"
 url: "https://pain001.com/ar/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/ar/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "حزمة Python مفتوحة المصدر تُنتج ملفات pain.001 و pain.008 موثَّقة بمخططات XSD من CSV أو Excel أو SQLite أو JSON أو Parquet أو SWIFT MT101، مع أدوات MCP لوكلاء الذكاء الاصطناعي وخادم LSP."
+item_description: "أنشئ ملفات pain.001 وpain.008 بصيغة XML وتحقق منها وفق مخطط XSD الرسمي لمعيار ISO 20022. مجاني ومفتوح المصدر ويعمل على جهازك."
 item_guid: "https://pain001.com/ar/rss.xml"
 item_link: "https://pain001.com/ar/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: بدء المدفوعات ISO 20022 مفتوح المصدر"
+item_title: "Pain001: ملفات pain.001 ومدفوعات ISO 20022 مفتوحة المصدر"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: بدء المدفوعات ISO 20022 مفتوح المصدر"
+apple-mobile-web-app-title: "Pain001: ملفات pain.001 ومدفوعات ISO 20022 مفتوحة المصدر"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "حزمة Python مفتوحة المصدر تُنتج ملفات pain.001 و pain.008 موثَّقة بمخططات XSD من CSV أو Excel أو SQLite أو JSON أو Parquet أو SWIFT MT101، مع أدوات MCP لوكلاء الذكاء الاصطناعي وخادم LSP."
+twitter_description: "أنشئ ملفات pain.001 وpain.008 بصيغة XML وتحقق منها وفق مخطط XSD الرسمي لمعيار ISO 20022. مجاني ومفتوح المصدر ويعمل على جهازك."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001: بدء المدفوعات ISO 20022 مفتوح المصدر"
+twitter_title: "Pain001: ملفات pain.001 ومدفوعات ISO 20022 مفتوحة المصدر"
 twitter_url: "https://pain001.com/ar/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"

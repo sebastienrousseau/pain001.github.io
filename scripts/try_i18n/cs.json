@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "Vyzkoušejte Pain001 ve svém prohlížeči",
-  "description": "Nahrajte nebo vložte platební data CSV a sledujte validační bránu v akci: IBAN mod-97, struktura BIC, povinná pole, kontrolní součty a oficiální XSD, vše v prohlížeči."
+  "title": "Generátor a validátor pain.001 v prohlížeči",
+  "description": "Převeďte platební data z CSV na XML pain.001 a ověřte je podle oficiálního XSD ISO 20022 a pravidel schématu. Zdarma, v prohlížeči, nic se nenahrává."
  },
  "text": {
   "Interactive demo": "Interaktivní demo",
-  "Try Pain001 in Your Browser": "Vyzkoušejte Pain001 ve svém prohlížeči",
+  "pain.001 Generator and Validator in Your Browser": "Generátor a validátor pain.001 v prohlížeči",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "Přetáhněte CSV, použijte ukázku nebo vložte vlastní záznamy. Validace proběhne okamžitě, výhradně ve vašem prohlížeči, a nic nikdy neopustí váš počítač.",
   "How this validator helps you": "Jak vám tento validátor pomůže",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Otestujte platební data proti kontrolám, které uplatňují banky: povinná pole, kontrolní číslice IBAN, struktura BIC, kontrolní součty</span>",

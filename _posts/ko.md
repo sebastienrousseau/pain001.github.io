@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "CSV, Excel, SQLite, JSON, Parquet 또는 SWIFT MT101에서 XSD 검증을 마친 pain.001 및 pain.008 파일을 생성하는 오픈소스 Python 스위트로, AI 에이전트용 MCP 도구와 LSP 서버를 포함합니다."
+description: "공식 ISO 20022 XSD에 따라 pain.001 및 pain.008 XML을 생성하고 검증합니다. CSV, Excel, MT101 지원. 무료 오픈소스이며 내 컴퓨터에서 실행됩니다."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "ko"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "결제 데이터를 검증된 ISO 20022 XML로 변환하는 오픈소스 스위트. 은행에 도달하기 전에 정확성이 증명됩니다."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001: 오픈소스 ISO 20022 지급 지시"
+title: "Pain001: pain.001 및 ISO 20022 지급 파일, 오픈소스"
 url: "https://pain001.com/ko/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/ko/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "CSV, Excel, SQLite, JSON, Parquet 또는 SWIFT MT101에서 XSD 검증을 마친 pain.001 및 pain.008 파일을 생성하는 오픈소스 Python 스위트로, AI 에이전트용 MCP 도구와 LSP 서버를 포함합니다."
+item_description: "공식 ISO 20022 XSD에 따라 pain.001 및 pain.008 XML을 생성하고 검증합니다. CSV, Excel, MT101 지원. 무료 오픈소스이며 내 컴퓨터에서 실행됩니다."
 item_guid: "https://pain001.com/ko/rss.xml"
 item_link: "https://pain001.com/ko/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: 오픈소스 ISO 20022 지급 지시"
+item_title: "Pain001: pain.001 및 ISO 20022 지급 파일, 오픈소스"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: 오픈소스 ISO 20022 지급 지시"
+apple-mobile-web-app-title: "Pain001: pain.001 및 ISO 20022 지급 파일, 오픈소스"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "CSV, Excel, SQLite, JSON, Parquet 또는 SWIFT MT101에서 XSD 검증을 마친 pain.001 및 pain.008 파일을 생성하는 오픈소스 Python 스위트로, AI 에이전트용 MCP 도구와 LSP 서버를 포함합니다."
+twitter_description: "공식 ISO 20022 XSD에 따라 pain.001 및 pain.008 XML을 생성하고 검증합니다. CSV, Excel, MT101 지원. 무료 오픈소스이며 내 컴퓨터에서 실행됩니다."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001: 오픈소스 ISO 20022 지급 지시"
+twitter_title: "Pain001: pain.001 및 ISO 20022 지급 파일, 오픈소스"
 twitter_url: "https://pain001.com/ko/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
