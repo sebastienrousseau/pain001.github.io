@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "23 Model Context Protocol tools for AI agents: validate IBANs, pre-flight batches, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio."
+description: "26 Model Context Protocol tools for AI agents: validate IBANs, pre-flight batches, simulate clearing rails, enforce dual-control commit, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
@@ -36,7 +36,7 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "Twenty-three read-only tools that let AI agents validate, pre-flight, migrate, convert, and generate ISO 20022 payment files locally, over stdio."
+subtitle: "Twenty-six tools that let AI agents validate, pre-flight, migrate, convert, simulate, and generate ISO 20022 payment files locally, over stdio."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
 title: "pain001-mcp: The MCP Server for ISO 20022 Payments"
@@ -46,7 +46,7 @@ atom_link: "https://pain001.com/pain001-mcp/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "23 Model Context Protocol tools for AI agents: validate IBANs, pre-flight batches, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio."
+item_description: "26 Model Context Protocol tools for AI agents: validate IBANs, pre-flight batches, simulate clearing rails, enforce dual-control commit, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio."
 item_guid: "https://pain001.com/pain001-mcp/rss.xml"
 item_link: "https://pain001.com/pain001-mcp/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -120,6 +120,9 @@ Card networks and PSPs have built agentic *checkout* rails. The corporate paymen
 | `get_corpus_file` | Return the XML of one validated example file from the market corpus. |
 | `get_corpus_provenance` | Return the provenance sidecar of one example file: sources, retrieval dates, evidence state. |
 | `get_corpus_coverage` | Return the schema coverage verdict for one message type's coverage set. |
+| `stage_payment_batch` | Stage a payment batch with zero initial fund movement: compute fee estimates, multi-factor risk assessment (LOW/MED/HIGH), duplicate detection, and issue dual-control authorization tokens. |
+| `simulate_clearing` | Simulate clearing network execution and settlement windows across EPC-SEPA, FedNow, US-ACH, SWIFT-MX, CHAPS, and BACS payment rails. |
+| `commit_payment_batch` | Authorize and execute a staged payment batch using constant-time cryptographic confirmation tokens, writing validated XML. |
 
 The server also publishes a `pain001://schema/{message_type}` resource and a `build_payment_batch` prompt. Shorthand aliases resolve sensibly: `pain.001` → `pain.001.001.09`, `pain.008` → `pain.008.001.02`.
 
@@ -185,12 +188,13 @@ A Docker image is published as `ghcr.io/sebastienrousseau/pain001-mcp` with buil
 
 ## 03. Design decisions that matter in a payments context
 
-- **Read-only by contract.** All 21 tools carry MCP `ToolAnnotations` with `readOnlyHint=true`, `destructiveHint=false`, and `idempotentHint=true`. The server never writes to your filesystem.
+- **Dual-control simulation and human authorization.** Autonomous LLM operations are governed by three safe stages: `stage_payment_batch` stages orders in memory with zero fund movement and emits an unguessable confirmation token; `simulate_clearing` tests clearing network settlement rules across SEPA, FedNow, US-ACH, SWIFT, CHAPS, and BACS; `commit_payment_batch` verifies the secret confirmation token using constant-time cryptographic equality before finalizing XML generation.
+- **Read-only by contract.** Compute and validation tools carry MCP `ToolAnnotations` with `readOnlyHint=true`, `destructiveHint=false`, and `idempotentHint=true`. File writing occurs exclusively when explicitly targeted by an authorized `commit_payment_batch` or `generate_message_from_file` call.
 - **Errors are data, not crashes.** Tools return structured `{"error": ...}` payloads instead of raising, so agent loops degrade gracefully.
 - **Local-only transport.** stdio only: no network listener, no credentials, no payment data leaving the host.
 - **Validated output or nothing.** `generate_message` runs the same JSON Schema → scheme rulebook → XSD pipeline as the CLI; an agent cannot produce a malformed file.
 
-Note the distinction: `pain001 mcp` (the core library's built-in server) exposes a minimal 5-tool surface. The full 17-tool surface documented here is the standalone `pain001-mcp` package.
+Note the distinction: `pain001 mcp` (the core library's built-in server) exposes a minimal 5-tool surface. The full 26-tool surface documented here is the standalone `pain001-mcp` package.
 
 ---
 
