@@ -11,6 +11,10 @@ All notable changes to this website are documented here. The format follows
 - `docs/seo/`: an outreach pack (curated-list entries, Stack Overflow
   drafts with disclosure, Bing Webmaster Tools steps) and a case-study
   template with a permission request, for the maintainer to send.
+- IndexNow: after each deploy of `main`, CI submits every sitemap URL so
+  Bing, Yandex, Seznam, Naver and the other participating engines recrawl
+  within hours. Ownership is proven by a key file at the site root; no
+  account or secret is involved, and a failed submission never fails CI.
 - A "What is pain.001?" reference page at `/pain-001/`, in all 35
   languages: what the message is, its structure, a complete example
   that validates against the official XSD, every version from .03 to

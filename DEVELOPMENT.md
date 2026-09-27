@@ -46,6 +46,18 @@ each push and pull request.
 
 Run them locally with `make lint`.
 
+## Search engine notification (IndexNow)
+
+After every deploy of `main`, CI's `indexnow` job runs
+`scripts/indexnow.py`, which submits every URL in the live sitemap to
+[IndexNow](https://www.indexnow.org/). Bing, Yandex, Seznam, Naver and the
+other participating engines then recrawl within hours. No account or
+secret is needed: ownership is proven by the key file
+`static/06f658eb7c2b6f1a8e600692727ce56a.txt`, served at `https://pain001.com/06f658eb7c2b6f1a8e600692727ce56a.txt`. Keep that
+file; renaming it means publishing a new key. The script never fails the
+pipeline. Try it locally with
+`python3 scripts/indexnow.py --sitemap site/sitemap.xml --dry-run`.
+
 ## Commit policy
 
 Create a `feat/vX.Y.Z` branch, increment only the patch component, sign the
