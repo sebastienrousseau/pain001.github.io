@@ -8,6 +8,9 @@ All notable changes to this website are documented here. The format follows
 
 ### Added
 
+- `docs/seo/`: an outreach pack (curated-list entries, Stack Overflow
+  drafts with disclosure, Bing Webmaster Tools steps) and a case-study
+  template with a permission request, for the maintainer to send.
 - A "What is pain.001?" reference page at `/pain-001/`, in all 35
   languages: what the message is, its structure, a complete example
   that validates against the official XSD, every version from .03 to
@@ -62,6 +65,15 @@ All notable changes to this website are documented here. The format follows
 
 ### Changed
 
+- The eleven pain.001 version pages lead with what searchers look for:
+  each title names the XSD, an example and the format (and, for
+  `.09`, the in-browser validator), and a new section links the
+  official ISO schema, the element reference generated from it, and
+  XSD-valid example files for that version. The `.12` page no longer
+  calls itself the newest supported version.
+- The pain.002 page is titled for the status report as well as its
+  reason codes, and the message-specification hub for the XSD element
+  reference it is.
 - The new page is linked from the Developers menu and the footer on
   every page, from each language's homepage, and from every version
   page. The English homepage title now names pain.001.
