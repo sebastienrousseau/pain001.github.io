@@ -559,7 +559,7 @@ def render_hub(specs: dict, index: dict) -> None:
     ]
     fm = load_frontmatter(
         "message-specs",
-        "ISO 20022 message specifications, generated from the official XSDs",
+        "pain.001 and pain.008 XSD Element Reference, All Versions",
         "Complete element references for every supported ISO 20022 "
         "payment-initiation version: paths, cardinality, types, constraints "
         "and code lists, generated from the official schemas.",

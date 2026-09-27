@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Python-пакет с открытым кодом: файлы pain.001 и pain.008 с XSD-валидацией из CSV, Excel, SQLite, JSON, Parquet или SWIFT MT101, с инструментами MCP для ИИ-агентов и LSP-сервером."
+description: "Создавайте и проверяйте XML pain.001 и pain.008 по официальной XSD-схеме ISO 20022. Бесплатно, открытый код, работает на вашем компьютере."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "ru"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "Пакет с открытым кодом, превращающий платёжные данные в валидированный XML ISO 20022, проверенный до того, как его увидит банк."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001: инициирование платежей ISO 20022 с открытым кодом"
+title: "Pain001: файлы pain.001 и платежи ISO 20022, открытый код"
 url: "https://pain001.com/ru/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/ru/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Python-пакет с открытым кодом: файлы pain.001 и pain.008 с XSD-валидацией из CSV, Excel, SQLite, JSON, Parquet или SWIFT MT101, с инструментами MCP для ИИ-агентов и LSP-сервером."
+item_description: "Создавайте и проверяйте XML pain.001 и pain.008 по официальной XSD-схеме ISO 20022. Бесплатно, открытый код, работает на вашем компьютере."
 item_guid: "https://pain001.com/ru/rss.xml"
 item_link: "https://pain001.com/ru/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: инициирование платежей ISO 20022 с открытым кодом"
+item_title: "Pain001: файлы pain.001 и платежи ISO 20022, открытый код"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: инициирование платежей ISO 20022 с открытым кодом"
+apple-mobile-web-app-title: "Pain001: файлы pain.001 и платежи ISO 20022, открытый код"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Python-пакет с открытым кодом: файлы pain.001 и pain.008 с XSD-валидацией из CSV, Excel, SQLite, JSON, Parquet или SWIFT MT101, с инструментами MCP для ИИ-агентов и LSP-сервером."
+twitter_description: "Создавайте и проверяйте XML pain.001 и pain.008 по официальной XSD-схеме ISO 20022. Бесплатно, открытый код, работает на вашем компьютере."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001: инициирование платежей ISO 20022 с открытым кодом"
+twitter_title: "Pain001: файлы pain.001 и платежи ISO 20022, открытый код"
 twitter_url: "https://pain001.com/ru/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## Находите ошибки в платёжных файлах раньше банка
 
-**Pain001** представляет собой Python-пакет с открытым исходным кодом для инициирования платежей ISO 20022. Он преобразует данные, которые у вас уже есть (CSV, Excel, SQLite, JSON, Parquet или устаревшие сообщения SWIFT MT101), в XML `pain.001` (переводы) и `pain.008` (прямые дебеты), валидированный официальными XSD-схемами.
+**Pain001** представляет собой Python-пакет с открытым исходным кодом для инициирования платежей ISO 20022. Он преобразует данные, которые у вас уже есть (CSV, Excel, SQLite, JSON, Parquet или устаревшие сообщения SWIFT MT101), в XML [`pain.001`](/ru/pain-001/) (переводы) и `pain.008` (прямые дебеты), валидированный официальными XSD-схемами.
 
 Каждый файл проходит три уровня проверки: JSON-схема для каждой записи (включая контроль mod-97 для IBAN и структуру BIC), правила scheme (SEPA и трансграничный CBPR+) и итоговую XSD-валидацию. Контрольные суммы пересчитываются, а не копируются. Всё работает локально: платёжные данные не покидают вашу инфраструктуру.
 

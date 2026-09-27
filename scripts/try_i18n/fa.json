@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "Pain001 را در مرورگر خود امتحان کنید",
-  "description": "داده‌های پرداخت CSV را بارگذاری یا جای‌گذاری کنید و دروازه اعتبارسنجی را ببینید: IBAN mod-97، ساختار BIC، فیلدهای الزامی، جمع‌های کنترلی و XSD رسمی، همه در مرورگر شما."
+  "title": "تولیدکننده و اعتبارسنج pain.001 در مرورگر",
+  "description": "داده‌های پرداخت CSV را به XML pain.001 تبدیل و با XSD رسمی ISO 20022 و قواعد طرح اعتبارسنجی کنید. رایگان، در مرورگر، بدون بارگذاری."
  },
  "text": {
   "Interactive demo": "دموی تعاملی",
-  "Try Pain001 in Your Browser": "Pain001 را در مرورگر خود امتحان کنید",
+  "pain.001 Generator and Validator in Your Browser": "تولیدکننده و اعتبارسنج pain.001 در مرورگر",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "یک فایل CSV رها کنید، از نمونه استفاده کنید یا رکوردهای خود را جای‌گذاری کنید. اعتبارسنجی بلافاصله و به‌طور کامل در مرورگر شما اجرا می‌شود و هیچ‌چیز هرگز از دستگاه شما خارج نمی‌شود.",
   "How this validator helps you": "این اعتبارسنج چگونه به شما کمک می‌کند",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>داده‌های پرداخت را با همان بررسی‌هایی بیازمایید که بانک‌ها اعمال می‌کنند: فیلدهای الزامی، ارقام کنترلی IBAN، ساختار BIC، جمع‌های کنترلی</span>",
@@ -142,7 +142,9 @@
   "System": "سیستم",
   "All 34 languages": "همهٔ 34 زبان",
   "Reduce motion": "کاهش حرکت",
-  "Save page": "ذخیرهٔ صفحه"
+  "Save page": "ذخیرهٔ صفحه",
+  "What is pain.001?": "pain.001 چیست؟",
+  "The message, its structure, versions and an example.": "پیام، ساختار آن، نسخه‌ها و یک نمونه."
  },
  "chrome_aria": {
   "Toggle Why Pain001 submenu": "باز و بسته کردن زیرمنوی چرا Pain001",

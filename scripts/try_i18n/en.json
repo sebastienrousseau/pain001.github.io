@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "Try Pain001 in Your Browser",
-  "description": "Upload or paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, recomputed control totals, and the official XSD. Everything runs in your browser."
+  "title": "pain.001 Generator and Validator in Your Browser",
+  "description": "Turn CSV payment data into pain.001 XML and validate it against the official ISO 20022 XSD and scheme rules. Free, in your browser, nothing uploaded."
  },
  "text": {
   "Interactive demo": "Interactive demo",
-  "Try Pain001 in Your Browser": "Try Pain001 in Your Browser",
+  "pain.001 Generator and Validator in Your Browser": "pain.001 Generator and Validator in Your Browser",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.",
   "How this validator helps you": "How this validator helps you",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>",
@@ -142,7 +142,9 @@
   "System": "System",
   "All 34 languages": "All 34 languages",
   "Reduce motion": "Reduce motion",
-  "Save page": "Save page"
+  "Save page": "Save page",
+  "What is pain.001?": "What is pain.001?",
+  "The message, its structure, versions and an example.": "The message, its structure, versions and an example."
  },
  "chrome_aria": {
   "Toggle Why Pain001 submenu": "Toggle Why Pain001 submenu",

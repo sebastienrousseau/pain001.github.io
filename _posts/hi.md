@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "ओपन-सोर्स Python सुइट जो CSV, Excel, SQLite, JSON, Parquet या SWIFT MT101 से XSD-सत्यापित pain.001 और pain.008 फ़ाइलें बनाती है, साथ में AI एजेंटों के लिए MCP टूल और LSP सर्वर भी देती है।"
+description: "आधिकारिक ISO 20022 XSD के अनुसार pain.001 और pain.008 XML बनाएँ और जाँचें। मुफ़्त, ओपन-सोर्स, आपकी अपनी मशीन पर चलता है।"
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "hi"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "वह ओपन-सोर्स सुइट जो आपके भुगतान डेटा को सत्यापित ISO 20022 XML में बदलती है और बैंक तक पहुँचने से पहले ही उसे सही सिद्ध करती है।"
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001: ओपन-सोर्स ISO 20022 भुगतान आरंभ"
+title: "Pain001: pain.001 फ़ाइलें और ISO 20022 भुगतान, ओपन-सोर्स"
 url: "https://pain001.com/hi/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/hi/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "ओपन-सोर्स Python सुइट जो CSV, Excel, SQLite, JSON, Parquet या SWIFT MT101 से XSD-सत्यापित pain.001 और pain.008 फ़ाइलें बनाती है, साथ में AI एजेंटों के लिए MCP टूल और LSP सर्वर भी देती है।"
+item_description: "आधिकारिक ISO 20022 XSD के अनुसार pain.001 और pain.008 XML बनाएँ और जाँचें। मुफ़्त, ओपन-सोर्स, आपकी अपनी मशीन पर चलता है।"
 item_guid: "https://pain001.com/hi/rss.xml"
 item_link: "https://pain001.com/hi/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: ओपन-सोर्स ISO 20022 भुगतान आरंभ"
+item_title: "Pain001: pain.001 फ़ाइलें और ISO 20022 भुगतान, ओपन-सोर्स"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: ओपन-सोर्स ISO 20022 भुगतान आरंभ"
+apple-mobile-web-app-title: "Pain001: pain.001 फ़ाइलें और ISO 20022 भुगतान, ओपन-सोर्स"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "ओपन-सोर्स Python सुइट जो CSV, Excel, SQLite, JSON, Parquet या SWIFT MT101 से XSD-सत्यापित pain.001 और pain.008 फ़ाइलें बनाती है, साथ में AI एजेंटों के लिए MCP टूल और LSP सर्वर भी देती है।"
+twitter_description: "आधिकारिक ISO 20022 XSD के अनुसार pain.001 और pain.008 XML बनाएँ और जाँचें। मुफ़्त, ओपन-सोर्स, आपकी अपनी मशीन पर चलता है।"
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001: ओपन-सोर्स ISO 20022 भुगतान आरंभ"
+twitter_title: "Pain001: pain.001 फ़ाइलें और ISO 20022 भुगतान, ओपन-सोर्स"
 twitter_url: "https://pain001.com/hi/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## भुगतान फ़ाइल की त्रुटियाँ आपके बैंक से पहले पकड़ें
 
-**Pain001** ISO 20022 भुगतान आरंभ के लिए एक ओपन-सोर्स Python सुइट है। यह आपके मौजूदा डेटा (CSV, Excel, SQLite, JSON, Parquet या पुराने SWIFT MT101 संदेश) को आधिकारिक XSD स्कीमा से सत्यापित `pain.001` (क्रेडिट ट्रांसफ़र) और `pain.008` (डायरेक्ट डेबिट) XML में बदलती है।
+**Pain001** ISO 20022 भुगतान आरंभ के लिए एक ओपन-सोर्स Python सुइट है। यह आपके मौजूदा डेटा (CSV, Excel, SQLite, JSON, Parquet या पुराने SWIFT MT101 संदेश) को आधिकारिक XSD स्कीमा से सत्यापित [`pain.001`](/hi/pain-001/) (क्रेडिट ट्रांसफ़र) और `pain.008` (डायरेक्ट डेबिट) XML में बदलती है।
 
 हर फ़ाइल लिखे जाने से पहले तीन स्तरों के सत्यापन से गुज़रती है: प्रति रिकॉर्ड JSON स्कीमा (IBAN की mod-97 जाँच और BIC संरचना सहित), scheme नियम (SEPA और सीमा-पार CBPR+) और अंतिम XSD सत्यापन। नियंत्रण योग हमेशा फिर से गिने जाते हैं, कभी कॉपी नहीं किए जाते। सब कुछ स्थानीय रूप से चलता है: कोई भुगतान डेटा आपकी अवसंरचना से बाहर नहीं जाता।
 

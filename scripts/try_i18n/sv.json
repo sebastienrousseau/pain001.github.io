@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "Testa Pain001 i webbläsaren",
-  "description": "Ladda upp eller klistra in CSV-betalningsdata och se valideringen: IBAN mod-97, BIC-struktur, obligatoriska fält, kontrollsummor och officiell XSD, direkt i din webbläsare."
+  "title": "pain.001-generator och -validator i webbläsaren",
+  "description": "Gör om CSV-betalningsdata till pain.001-XML och validera mot den officiella ISO 20022-XSD:n och schemats regler. Gratis, i webbläsaren, utan uppladdning."
  },
  "text": {
   "Interactive demo": "Interaktiv demo",
-  "Try Pain001 in Your Browser": "Testa Pain001 i webbläsaren",
+  "pain.001 Generator and Validator in Your Browser": "pain.001-generator och -validator i webbläsaren",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "Släpp en CSV-fil, använd exemplet eller klistra in egna poster. Valideringen körs direkt, helt i din webbläsare, och ingenting lämnar någonsin din dator.",
   "How this validator helps you": "Så hjälper valideraren dig",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Testa betalningsdata mot de kontroller banker tillämpar: obligatoriska fält, IBAN-kontrollsiffror, BIC-struktur, kontrollsummor</span>",
@@ -142,7 +142,9 @@
   "System": "System",
   "All 34 languages": "Alla 34 språk",
   "Reduce motion": "Minska rörelse",
-  "Save page": "Spara sidan"
+  "Save page": "Spara sidan",
+  "What is pain.001?": "Vad är pain.001?",
+  "The message, its structure, versions and an example.": "Meddelandet, dess struktur, versioner och ett exempel."
  },
  "chrome_aria": {
   "Toggle Why Pain001 submenu": "Växla undermenyn Varför Pain001",

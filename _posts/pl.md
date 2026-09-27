@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Otwartoźródłowy pakiet Python generujący pliki pain.001 i pain.008 zwalidowane XSD z CSV, Excel, SQLite, JSON, Parquet lub SWIFT MT101, z narzędziami MCP dla agentów AI i serwerem LSP."
+description: "Twórz i waliduj pliki XML pain.001 i pain.008 według oficjalnego XSD ISO 20022, z CSV, Excela lub MT101. Bezpłatnie, open source, lokalnie."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "pl"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "Otwartoźródłowy pakiet, który zamienia dane płatnicze w zwalidowany XML ISO 20022. Sprawdzony, zanim trafi do banku."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001: inicjowanie płatności ISO 20022 w open source"
+title: "Pain001: pliki pain.001 i przelewy SEPA XML w ISO 20022"
 url: "https://pain001.com/pl/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/pl/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Otwartoźródłowy pakiet Python generujący pliki pain.001 i pain.008 zwalidowane XSD z CSV, Excel, SQLite, JSON, Parquet lub SWIFT MT101, z narzędziami MCP dla agentów AI i serwerem LSP."
+item_description: "Twórz i waliduj pliki XML pain.001 i pain.008 według oficjalnego XSD ISO 20022, z CSV, Excela lub MT101. Bezpłatnie, open source, lokalnie."
 item_guid: "https://pain001.com/pl/rss.xml"
 item_link: "https://pain001.com/pl/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: inicjowanie płatności ISO 20022 w open source"
+item_title: "Pain001: pliki pain.001 i przelewy SEPA XML w ISO 20022"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: inicjowanie płatności ISO 20022 w open source"
+apple-mobile-web-app-title: "Pain001: pliki pain.001 i przelewy SEPA XML w ISO 20022"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Otwartoźródłowy pakiet Python generujący pliki pain.001 i pain.008 zwalidowane XSD z CSV, Excel, SQLite, JSON, Parquet lub SWIFT MT101, z narzędziami MCP dla agentów AI i serwerem LSP."
+twitter_description: "Twórz i waliduj pliki XML pain.001 i pain.008 według oficjalnego XSD ISO 20022, z CSV, Excela lub MT101. Bezpłatnie, open source, lokalnie."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001: inicjowanie płatności ISO 20022 w open source"
+twitter_title: "Pain001: pliki pain.001 i przelewy SEPA XML w ISO 20022"
 twitter_url: "https://pain001.com/pl/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## Wykryj błędy w plikach płatności, zanim zrobi to bank
 
-**Pain001** to otwartoźródłowy pakiet Python do inicjowania płatności ISO 20022. Przekształca dane, które już masz (CSV, Excel, SQLite, JSON, Parquet lub komunikaty SWIFT MT101) w XML `pain.001` (przelewy) i `pain.008` (polecenia zapłaty), walidowany oficjalnymi schematami XSD.
+**Pain001** to otwartoźródłowy pakiet Python do inicjowania płatności ISO 20022. Przekształca dane, które już masz (CSV, Excel, SQLite, JSON, Parquet lub komunikaty SWIFT MT101) w XML [`pain.001`](/pl/pain-001/) (przelewy) i `pain.008` (polecenia zapłaty), walidowany oficjalnymi schematami XSD.
 
 Każdy plik przechodzi trzy poziomy walidacji: schemat JSON dla każdego rekordu (z kontrolą mod-97 IBAN i strukturą BIC), reguły scheme (SEPA i transgraniczne CBPR+) oraz końcową walidację XSD. Sumy kontrolne są przeliczane, nigdy kopiowane. Wszystko działa lokalnie: żadne dane płatnicze nie opuszczają Twojej infrastruktury.
 

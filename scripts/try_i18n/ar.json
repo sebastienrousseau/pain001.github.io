@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "جرّب Pain001 في متصفحك",
-  "description": "حمّل أو الصق بيانات مدفوعات CSV وشاهد بوابة التحقق تعمل: IBAN mod-97 وبنية BIC والحقول الإلزامية والمجاميع الضابطة المعاد حسابها وXSD الرسمي، وكل ذلك داخل متصفحك."
+  "title": "مولّد ومدقق pain.001 في متصفحك",
+  "description": "حوّل بيانات الدفع بصيغة CSV إلى XML pain.001 وتحقق منها وفق مخطط XSD الرسمي لمعيار ISO 20022 وقواعد النظام. مجاني ويعمل في متصفحك دون رفع أي بيانات."
  },
  "text": {
   "Interactive demo": "عرض توضيحي تفاعلي",
-  "Try Pain001 in Your Browser": "جرّب Pain001 في متصفحك",
+  "pain.001 Generator and Validator in Your Browser": "مولّد ومدقق pain.001 في متصفحك",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "أسقط ملف CSV، أو استخدم النموذج، أو الصق سجلاتك الخاصة. يعمل التحقق فورياً وبالكامل داخل متصفحك، ولا يغادر أي شيء جهازك أبداً.",
   "How this validator helps you": "كيف يساعدك هذا المدقق",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>اختبر بيانات المدفوعات وفق الفحوص التي تطبقها البنوك: الحقول الإلزامية، ومجاميع تحقق IBAN، وبنية BIC، والمجاميع الضابطة</span>",
@@ -142,7 +142,9 @@
   "System": "النظام",
   "All 34 languages": "جميع اللغات الـ34",
   "Reduce motion": "تقليل الحركة",
-  "Save page": "حفظ الصفحة"
+  "Save page": "حفظ الصفحة",
+  "What is pain.001?": "ما هو pain.001؟",
+  "The message, its structure, versions and an example.": "الرسالة وبنيتها وإصداراتها ومثال عليها."
  },
  "chrome_aria": {
   "Toggle Why Pain001 submenu": "تبديل القائمة الفرعية لماذا Pain001",

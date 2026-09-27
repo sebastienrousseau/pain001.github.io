@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "Încercați Pain001 în browser",
-  "description": "Încărcați sau lipiți date de plată CSV și urmăriți validarea: IBAN mod-97, structura BIC, câmpuri obligatorii, totaluri de control și XSD-ul oficial, totul în browser."
+  "title": "Generator și validator pain.001 în browser",
+  "description": "Transformați datele de plată CSV în XML pain.001 și validați-le cu XSD-ul oficial ISO 20022 și regulile schemei. Gratuit, în browser, fără încărcare."
  },
  "text": {
   "Interactive demo": "Demo interactiv",
-  "Try Pain001 in Your Browser": "Încercați Pain001 în browserul dumneavoastră",
+  "pain.001 Generator and Validator in Your Browser": "Generator și validator pain.001 în browser",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "Trageți un fișier CSV, folosiți exemplul sau lipiți propriile înregistrări. Validarea rulează instantaneu, integral în browserul dumneavoastră, și nimic nu vă părăsește vreodată calculatorul.",
   "How this validator helps you": "Cum vă ajută acest validator",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Testați datele de plată față de verificările aplicate de bănci: câmpuri obligatorii, cifre de control IBAN, structura BIC, totaluri de control</span>",
@@ -142,7 +142,9 @@
   "System": "Sistem",
   "All 34 languages": "Toate cele 34 de limbi",
   "Reduce motion": "Reduceți mișcarea",
-  "Save page": "Salvați pagina"
+  "Save page": "Salvați pagina",
+  "What is pain.001?": "Ce este pain.001?",
+  "The message, its structure, versions and an example.": "Mesajul, structura sa, versiunile și un exemplu."
  },
  "chrome_aria": {
   "Toggle Why Pain001 submenu": "Comutați submeniul De ce Pain001",

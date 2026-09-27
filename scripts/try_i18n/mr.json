@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "Pain001 तुमच्या ब्राउझरमध्ये वापरून पहा",
-  "description": "पेमेंट CSV डेटा पेस्ट किंवा अपलोड करा आणि पडताळणी पहा: IBAN mod-97, BIC रचना, आवश्यक फील्ड, नियंत्रण बेरजा, अधिकृत XSD, हे सर्व तुमच्या ब्राउझरमध्ये."
+  "title": "ब्राउझरमध्ये pain.001 जनरेटर आणि व्हॅलिडेटर",
+  "description": "CSV पेमेंट डेटा pain.001 XML मध्ये बदला आणि अधिकृत ISO 20022 XSD व स्कीम नियमांनुसार तपासा. मोफत, ब्राउझरमध्ये, काहीही अपलोड होत नाही."
  },
  "text": {
   "Interactive demo": "परस्परसंवादी डेमो",
-  "Try Pain001 in Your Browser": "Pain001 तुमच्या ब्राउझरमध्ये वापरून पहा",
+  "pain.001 Generator and Validator in Your Browser": "ब्राउझरमध्ये pain.001 जनरेटर आणि व्हॅलिडेटर",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "CSV फाइल टाका, नमुना वापरा किंवा तुमच्या स्वतःच्या नोंदी पेस्ट करा. पडताळणी त्वरित, पूर्णपणे तुमच्या ब्राउझरमध्येच चालते; काहीही तुमच्या संगणकाबाहेर जात नाही.",
   "How this validator helps you": "हे पडताळणी साधन तुम्हाला कशी मदत करते",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>बँका लागू करत असलेल्या तपासण्यांविरुद्ध पेमेंट डेटाची चाचणी करा: आवश्यक फील्ड, IBAN चेकसम, BIC रचना, नियंत्रण बेरजा</span>",
@@ -142,7 +142,9 @@
   "System": "सिस्टम",
   "All 34 languages": "सर्व 34 भाषा",
   "Reduce motion": "हालचाल कमी करा",
-  "Save page": "पृष्ठ जतन करा"
+  "Save page": "पृष्ठ जतन करा",
+  "What is pain.001?": "pain.001 म्हणजे काय?",
+  "The message, its structure, versions and an example.": "संदेश, त्याची रचना, आवृत्त्या आणि एक उदाहरण."
  },
  "chrome_aria": {
   "Toggle Why Pain001 submenu": "Pain001 का हा उपमेनू टॉगल करा",

@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Suite Python sumber terbuka yang menjana fail pain.001 dan pain.008 disahkan XSD daripada CSV, Excel, SQLite, JSON, Parquet atau SWIFT MT101, dengan alat MCP untuk ejen AI dan pelayan LSP."
+description: "Jana dan sahkan XML pain.001 dan pain.008 mengikut XSD rasmi ISO 20022, daripada CSV, Excel atau MT101. Percuma, sumber terbuka, di komputer anda."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "ms"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "Suite sumber terbuka yang menukar data pembayaran anda kepada XML ISO 20022 yang disahkan dan terbukti betul sebelum sampai ke bank."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001: Pemulaan pembayaran ISO 20022 sumber terbuka"
+title: "Pain001: fail pain.001 dan pembayaran ISO 20022"
 url: "https://pain001.com/ms/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/ms/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Suite Python sumber terbuka yang menjana fail pain.001 dan pain.008 disahkan XSD daripada CSV, Excel, SQLite, JSON, Parquet atau SWIFT MT101, dengan alat MCP untuk ejen AI dan pelayan LSP."
+item_description: "Jana dan sahkan XML pain.001 dan pain.008 mengikut XSD rasmi ISO 20022, daripada CSV, Excel atau MT101. Percuma, sumber terbuka, di komputer anda."
 item_guid: "https://pain001.com/ms/rss.xml"
 item_link: "https://pain001.com/ms/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: Pemulaan pembayaran ISO 20022 sumber terbuka"
+item_title: "Pain001: fail pain.001 dan pembayaran ISO 20022"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: Pemulaan pembayaran ISO 20022 sumber terbuka"
+apple-mobile-web-app-title: "Pain001: fail pain.001 dan pembayaran ISO 20022"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Suite Python sumber terbuka yang menjana fail pain.001 dan pain.008 disahkan XSD daripada CSV, Excel, SQLite, JSON, Parquet atau SWIFT MT101, dengan alat MCP untuk ejen AI dan pelayan LSP."
+twitter_description: "Jana dan sahkan XML pain.001 dan pain.008 mengikut XSD rasmi ISO 20022, daripada CSV, Excel atau MT101. Percuma, sumber terbuka, di komputer anda."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001: Pemulaan pembayaran ISO 20022 sumber terbuka"
+twitter_title: "Pain001: fail pain.001 dan pembayaran ISO 20022"
 twitter_url: "https://pain001.com/ms/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## Kesan ralat fail pembayaran sebelum bank anda mengesannya
 
-**Pain001** ialah suite Python sumber terbuka untuk pemulaan pembayaran ISO 20022. Ia menukar data sedia ada anda (CSV, Excel, SQLite, JSON, Parquet atau mesej SWIFT MT101 lama) kepada XML `pain.001` (pindahan kredit) dan `pain.008` (debit terus), disahkan dengan skema XSD rasmi.
+**Pain001** ialah suite Python sumber terbuka untuk pemulaan pembayaran ISO 20022. Ia menukar data sedia ada anda (CSV, Excel, SQLite, JSON, Parquet atau mesej SWIFT MT101 lama) kepada XML [`pain.001`](/ms/pain-001/) (pindahan kredit) dan `pain.008` (debit terus), disahkan dengan skema XSD rasmi.
 
 Setiap fail melalui tiga lapisan pengesahan sebelum ditulis: skema JSON bagi setiap rekod (termasuk semakan mod-97 IBAN dan struktur BIC), peraturan scheme (SEPA dan CBPR+ rentas sempadan) serta pengesahan XSD akhir. Jumlah kawalan sentiasa dikira semula, tidak pernah disalin. Semuanya berjalan secara setempat: tiada data pembayaran meninggalkan infrastruktur anda.
 

@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Kunshin Python na buɗaɗɗen tushe da ke samar da fayilolin pain.001 da pain.008 da aka tabbatar da XSD daga CSV, Excel, SQLite, JSON, Parquet ko SWIFT MT101, tare da kayan aikin MCP don wakilan AI da uwar garken LSP."
+description: "Ƙirƙiri kuma ka tabbatar da XML na pain.001 da pain.008 bisa XSD na hukuma na ISO 20022. Kyauta, buɗaɗɗen tushe, yana gudana a kwamfutarka."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "ha"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "Kunshin buɗaɗɗen tushe da ke mai da bayanan biyanku zuwa XML na ISO 20022 da aka tabbatar, kuma an tabbatar da daidai kafin ya isa banki."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001: Fara biyan kuɗi na ISO 20022 a buɗaɗɗen tushe"
+title: "Pain001: fayilolin pain.001 da biyan kuɗi na ISO 20022"
 url: "https://pain001.com/ha/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/ha/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Kunshin Python na buɗaɗɗen tushe da ke samar da fayilolin pain.001 da pain.008 da aka tabbatar da XSD daga CSV, Excel, SQLite, JSON, Parquet ko SWIFT MT101, tare da kayan aikin MCP don wakilan AI da uwar garken LSP."
+item_description: "Ƙirƙiri kuma ka tabbatar da XML na pain.001 da pain.008 bisa XSD na hukuma na ISO 20022. Kyauta, buɗaɗɗen tushe, yana gudana a kwamfutarka."
 item_guid: "https://pain001.com/ha/rss.xml"
 item_link: "https://pain001.com/ha/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: Fara biyan kuɗi na ISO 20022 a buɗaɗɗen tushe"
+item_title: "Pain001: fayilolin pain.001 da biyan kuɗi na ISO 20022"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: Fara biyan kuɗi na ISO 20022 a buɗaɗɗen tushe"
+apple-mobile-web-app-title: "Pain001: fayilolin pain.001 da biyan kuɗi na ISO 20022"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Kunshin Python na buɗaɗɗen tushe da ke samar da fayilolin pain.001 da pain.008 da aka tabbatar da XSD daga CSV, Excel, SQLite, JSON, Parquet ko SWIFT MT101, tare da kayan aikin MCP don wakilan AI da uwar garken LSP."
+twitter_description: "Ƙirƙiri kuma ka tabbatar da XML na pain.001 da pain.008 bisa XSD na hukuma na ISO 20022. Kyauta, buɗaɗɗen tushe, yana gudana a kwamfutarka."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001: Fara biyan kuɗi na ISO 20022 a buɗaɗɗen tushe"
+twitter_title: "Pain001: fayilolin pain.001 da biyan kuɗi na ISO 20022"
 twitter_url: "https://pain001.com/ha/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## Gano kurakuran fayilolin biyan kuɗi kafin bankinku ya gano su
 
-**Pain001** kunshin Python ne na buɗaɗɗen tushe don fara biyan kuɗi bisa ISO 20022. Yana mai da bayanan da kuke da su (CSV, Excel, SQLite, JSON, Parquet ko tsofaffin saƙonnin SWIFT MT101) zuwa XML na `pain.001` (canja wurin kuɗi) da `pain.008` (cire kuɗi kai tsaye), waɗanda aka tabbatar da su da tsare-tsaren XSD na hukuma.
+**Pain001** kunshin Python ne na buɗaɗɗen tushe don fara biyan kuɗi bisa ISO 20022. Yana mai da bayanan da kuke da su (CSV, Excel, SQLite, JSON, Parquet ko tsofaffin saƙonnin SWIFT MT101) zuwa XML na [`pain.001`](/ha/pain-001/) (canja wurin kuɗi) da `pain.008` (cire kuɗi kai tsaye), waɗanda aka tabbatar da su da tsare-tsaren XSD na hukuma.
 
 Kowane fayil yana wuce matakan tabbatarwa uku kafin a rubuta shi: tsarin JSON ga kowane rikodi (har da bincika mod-97 na IBAN da tsarin BIC), dokokin scheme (SEPA da CBPR+ na ƙetare) da tabbatarwar XSD ta ƙarshe. Ana sake lissafa jimillar sarrafawa koyaushe, ba a taɓa kwafa su ba. Komai yana gudana a cikin na'urarku: babu bayanan biyan kuɗi da ke fita daga kayan aikinku.
 

@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Open-Source-Python-Suite zur Erzeugung XSD-validierter pain.001- und pain.008-Dateien aus CSV, Excel, SQLite, JSON, Parquet oder SWIFT MT101, mit MCP-Tools für KI-Agenten und LSP-Server."
+description: "pain.001- und pain.008-XML (SEPA-XML) erzeugen und gegen das offizielle ISO-20022-XSD prüfen. Kostenlos, Open Source, läuft auf Ihrem Rechner."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "de"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "Die Open-Source-Suite, die Ihre Zahlungsdaten in validiertes ISO-20022-XML verwandelt: nachweislich korrekt, bevor die Bank es je sieht."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001: Open-Source-Zahlungsinitiierung nach ISO 20022"
+title: "Pain001: pain.001 und SEPA-XML nach ISO 20022, Open Source"
 url: "https://pain001.com/de/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/de/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Open-Source-Python-Suite zur Erzeugung XSD-validierter pain.001- und pain.008-Dateien aus CSV, Excel, SQLite, JSON, Parquet oder SWIFT MT101, mit MCP-Tools für KI-Agenten und LSP-Server."
+item_description: "pain.001- und pain.008-XML (SEPA-XML) erzeugen und gegen das offizielle ISO-20022-XSD prüfen. Kostenlos, Open Source, läuft auf Ihrem Rechner."
 item_guid: "https://pain001.com/de/rss.xml"
 item_link: "https://pain001.com/de/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: Open-Source-Zahlungsinitiierung nach ISO 20022"
+item_title: "Pain001: pain.001 und SEPA-XML nach ISO 20022, Open Source"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: Open-Source-Zahlungsinitiierung nach ISO 20022"
+apple-mobile-web-app-title: "Pain001: pain.001 und SEPA-XML nach ISO 20022, Open Source"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Open-Source-Python-Suite zur Erzeugung XSD-validierter pain.001- und pain.008-Dateien aus CSV, Excel, SQLite, JSON, Parquet oder SWIFT MT101, mit MCP-Tools für KI-Agenten und LSP-Server."
+twitter_description: "pain.001- und pain.008-XML (SEPA-XML) erzeugen und gegen das offizielle ISO-20022-XSD prüfen. Kostenlos, Open Source, läuft auf Ihrem Rechner."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001: Open-Source-Zahlungsinitiierung nach ISO 20022"
+twitter_title: "Pain001: pain.001 und SEPA-XML nach ISO 20022, Open Source"
 twitter_url: "https://pain001.com/de/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## Fehler in Zahlungsdateien finden, bevor es Ihre Bank tut
 
-**Pain001** ist eine Open-Source-Python-Suite für die ISO-20022-Zahlungsinitiierung. Sie wandelt vorhandene Daten (CSV, Excel, SQLite, JSON, Parquet oder Alt-SWIFT-MT101) in `pain.001`- (Überweisungen) und `pain.008`-XML (Lastschriften) um, validiert gegen die offiziellen XSD-Schemata.
+**Pain001** ist eine Open-Source-Python-Suite für die ISO-20022-Zahlungsinitiierung. Sie wandelt vorhandene Daten (CSV, Excel, SQLite, JSON, Parquet oder Alt-SWIFT-MT101) in [`pain.001`](/de/pain-001/)- (Überweisungen) und `pain.008`-XML (Lastschriften) um, validiert gegen die offiziellen XSD-Schemata.
 
 Jede Datei durchläuft drei Prüfebenen, bevor sie geschrieben wird: JSON-Schema je Datensatz (inklusive IBAN-Prüfziffern nach mod-97 und BIC-Struktur), Scheme-Regelwerke (SEPA SCT, SEPA Instant, Lastschrift Core und B2B, grenzüberschreitende CBPR+-Überweisungen) und abschließende XSD-Validierung. Kontrollsummen (`NbOfTxs`, `CtrlSum`) werden neu berechnet und nie aus der Quelle übernommen. Alles läuft lokal: Keine Zahlungsdaten verlassen Ihre Infrastruktur.
 

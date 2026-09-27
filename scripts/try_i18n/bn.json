@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "আপনার ব্রাউজারে Pain001 ব্যবহার করে দেখুন",
-  "description": "পেমেন্ট CSV ডেটা আপলোড বা পেস্ট করুন এবং ভ্যালিডেশন গেট কাজ করতে দেখুন: IBAN mod-97, BIC কাঠামো, আবশ্যিক ফিল্ড, নিয়ন্ত্রণ যোগফল ও অফিসিয়াল XSD। সবই চলে আপনার ব্রাউজারে।"
+  "title": "ব্রাউজারে pain.001 জেনারেটর ও যাচাইকারী",
+  "description": "CSV পেমেন্ট ডেটা থেকে pain.001 XML তৈরি করে অফিসিয়াল ISO 20022 XSD ও স্কিম নিয়মে যাচাই করুন। বিনামূল্যে, ব্রাউজারেই চলে, কিছু আপলোড হয় না।"
  },
  "text": {
   "Interactive demo": "ইন্টারেক্টিভ ডেমো",
-  "Try Pain001 in Your Browser": "আপনার ব্রাউজারে Pain001 ব্যবহার করে দেখুন",
+  "pain.001 Generator and Validator in Your Browser": "ব্রাউজারে pain.001 জেনারেটর ও যাচাইকারী",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "একটি CSV ফাইল ফেলুন, নমুনাটি ব্যবহার করুন বা নিজের রেকর্ড পেস্ট করুন। ভ্যালিডেশন তাৎক্ষণিকভাবে, সম্পূর্ণ আপনার ব্রাউজারে চলে, এবং কোনো কিছুই কখনো আপনার মেশিন ছেড়ে যায় না।",
   "How this validator helps you": "এই ভ্যালিডেটর আপনাকে কীভাবে সাহায্য করে",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>ব্যাংকগুলি যে যাচাইগুলি প্রয়োগ করে সেগুলির বিপরীতে পেমেন্ট ডেটা পরীক্ষা করুন: আবশ্যিক ফিল্ড, IBAN চেকসাম, BIC কাঠামো, নিয়ন্ত্রণ যোগফল</span>",
@@ -142,7 +142,9 @@
   "System": "সিস্টেম",
   "All 34 languages": "সব 34টি ভাষা",
   "Reduce motion": "গতি কমান",
-  "Save page": "পৃষ্ঠা সংরক্ষণ করুন"
+  "Save page": "পৃষ্ঠা সংরক্ষণ করুন",
+  "What is pain.001?": "pain.001 কী?",
+  "The message, its structure, versions and an example.": "বার্তাটি, এর কাঠামো, সংস্করণ এবং একটি উদাহরণ।"
  },
  "chrome_aria": {
   "Toggle Why Pain001 submenu": "কেন Pain001 সাবমেনু টগল করুন",

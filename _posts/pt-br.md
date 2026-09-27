@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Suíte Python de código aberto para gerar arquivos pain.001 e pain.008 validados por XSD a partir de CSV, Excel, SQLite, JSON, Parquet ou SWIFT MT101, com ferramentas MCP para agentes de IA e servidor LSP."
+description: "Gere e valide XML pain.001 e pain.008 com o XSD oficial da ISO 20022, a partir de CSV, Excel ou MT101. Gratuito, código aberto e roda localmente."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "pt-br"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "A suíte de código aberto que transforma seus dados de pagamento em XML ISO 20022 validado e comprovado antes de chegar ao banco."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001: Iniciação de pagamentos ISO 20022 em código aberto"
+title: "Pain001: arquivos pain.001 e XML SEPA no ISO 20022"
 url: "https://pain001.com/pt-br/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/pt-br/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Suíte Python de código aberto para gerar arquivos pain.001 e pain.008 validados por XSD a partir de CSV, Excel, SQLite, JSON, Parquet ou SWIFT MT101, com ferramentas MCP para agentes de IA e servidor LSP."
+item_description: "Gere e valide XML pain.001 e pain.008 com o XSD oficial da ISO 20022, a partir de CSV, Excel ou MT101. Gratuito, código aberto e roda localmente."
 item_guid: "https://pain001.com/pt-br/rss.xml"
 item_link: "https://pain001.com/pt-br/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: Iniciação de pagamentos ISO 20022 em código aberto"
+item_title: "Pain001: arquivos pain.001 e XML SEPA no ISO 20022"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: Iniciação de pagamentos ISO 20022 em código aberto"
+apple-mobile-web-app-title: "Pain001: arquivos pain.001 e XML SEPA no ISO 20022"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Suíte Python de código aberto para gerar arquivos pain.001 e pain.008 validados por XSD a partir de CSV, Excel, SQLite, JSON, Parquet ou SWIFT MT101, com ferramentas MCP para agentes de IA e servidor LSP."
+twitter_description: "Gere e valide XML pain.001 e pain.008 com o XSD oficial da ISO 20022, a partir de CSV, Excel ou MT101. Gratuito, código aberto e roda localmente."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001: Iniciação de pagamentos ISO 20022 em código aberto"
+twitter_title: "Pain001: arquivos pain.001 e XML SEPA no ISO 20022"
 twitter_url: "https://pain001.com/pt-br/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## Encontre os erros dos arquivos de pagamento antes do seu banco
 
-**Pain001** é uma suíte Python de código aberto para iniciação de pagamentos ISO 20022. Ela converte os dados que você já tem (CSV, Excel, SQLite, JSON, Parquet ou mensagens SWIFT MT101 legadas) em XML `pain.001` (transferências) e `pain.008` (débitos diretos), validados contra os esquemas XSD oficiais.
+**Pain001** é uma suíte Python de código aberto para iniciação de pagamentos ISO 20022. Ela converte os dados que você já tem (CSV, Excel, SQLite, JSON, Parquet ou mensagens SWIFT MT101 legadas) em XML [`pain.001`](/pt-br/pain-001/) (transferências) e `pain.008` (débitos diretos), validados contra os esquemas XSD oficiais.
 
 Cada arquivo passa por três camadas de validação antes de ser gravado: esquema JSON por registro (com verificação mod-97 do IBAN e estrutura do BIC), regras de scheme (SEPA e CBPR+ internacional) e validação XSD final. Os totais de controle são recalculados, nunca copiados. Tudo roda localmente: nenhum dado de pagamento sai da sua infraestrutura.
 

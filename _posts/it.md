@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Suite Python open source per generare file pain.001 e pain.008 validati XSD da CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101, con strumenti MCP per agenti IA e server LSP."
+description: "Genera e valida XML pain.001 e pain.008 con lo XSD ufficiale ISO 20022, da CSV, Excel o MT101. Gratuito, open source, in locale sul tuo computer."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "it"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "La suite open source che trasforma i vostri dati di pagamento in XML ISO 20022 validato e verificato prima di raggiungere la banca."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001: iniziazione di pagamenti ISO 20022 open source"
+title: "Pain001: file pain.001 e SEPA XML ISO 20022, open source"
 url: "https://pain001.com/it/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/it/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Suite Python open source per generare file pain.001 e pain.008 validati XSD da CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101, con strumenti MCP per agenti IA e server LSP."
+item_description: "Genera e valida XML pain.001 e pain.008 con lo XSD ufficiale ISO 20022, da CSV, Excel o MT101. Gratuito, open source, in locale sul tuo computer."
 item_guid: "https://pain001.com/it/rss.xml"
 item_link: "https://pain001.com/it/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: iniziazione di pagamenti ISO 20022 open source"
+item_title: "Pain001: file pain.001 e SEPA XML ISO 20022, open source"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: iniziazione di pagamenti ISO 20022 open source"
+apple-mobile-web-app-title: "Pain001: file pain.001 e SEPA XML ISO 20022, open source"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Suite Python open source per generare file pain.001 e pain.008 validati XSD da CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101, con strumenti MCP per agenti IA e server LSP."
+twitter_description: "Genera e valida XML pain.001 e pain.008 con lo XSD ufficiale ISO 20022, da CSV, Excel o MT101. Gratuito, open source, in locale sul tuo computer."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001: iniziazione di pagamenti ISO 20022 open source"
+twitter_title: "Pain001: file pain.001 e SEPA XML ISO 20022, open source"
 twitter_url: "https://pain001.com/it/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## Individuate gli errori nei file di pagamento prima della vostra banca
 
-**Pain001** è una suite Python open source per l'iniziazione di pagamenti ISO 20022. Converte i dati che avete già (CSV, Excel, SQLite, JSON, Parquet o messaggi SWIFT MT101) in XML `pain.001` (bonifici) e `pain.008` (addebiti diretti), validati con gli schemi XSD ufficiali.
+**Pain001** è una suite Python open source per l'iniziazione di pagamenti ISO 20022. Converte i dati che avete già (CSV, Excel, SQLite, JSON, Parquet o messaggi SWIFT MT101) in XML [`pain.001`](/it/pain-001/) (bonifici) e `pain.008` (addebiti diretti), validati con gli schemi XSD ufficiali.
 
 Ogni file supera tre livelli di validazione prima di essere scritto: schema JSON per record (con verifica mod-97 dell'IBAN e struttura del BIC), regole di scheme (SEPA e CBPR+ transfrontaliero) e validazione XSD finale. I totali di controllo vengono ricalcolati, mai copiati. Tutto gira in locale: nessun dato di pagamento lascia la vostra infrastruttura.
 

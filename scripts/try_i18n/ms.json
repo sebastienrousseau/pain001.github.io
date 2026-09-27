@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "Cuba Pain001 dalam Pelayar Anda",
-  "description": "Muat naik atau tampal data CSV pembayaran dan lihat pengesahannya: IBAN mod-97, struktur BIC, medan wajib, jumlah kawalan dan XSD rasmi, semuanya dalam pelayar anda."
+  "title": "Penjana dan pengesah pain.001 dalam pelayar anda",
+  "description": "Tukar data pembayaran CSV kepada XML pain.001 dan sahkan dengan XSD rasmi ISO 20022 serta peraturan skim. Percuma, dalam pelayar, tiada muat naik."
  },
  "text": {
   "Interactive demo": "Demo interaktif",
-  "Try Pain001 in Your Browser": "Cuba Pain001 dalam Pelayar Anda",
+  "pain.001 Generator and Validator in Your Browser": "Penjana dan pengesah pain.001 dalam pelayar anda",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "Letakkan fail CSV, gunakan sampel, atau tampal rekod anda sendiri. Pengesahan berjalan serta-merta, sepenuhnya dalam pelayar anda, dan tiada data yang keluar dari peranti anda.",
   "How this validator helps you": "Bagaimana pengesah ini membantu anda",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Uji data pembayaran terhadap semakan yang dilaksanakan bank: medan wajib, checksum IBAN, struktur BIC, jumlah kawalan</span>",
@@ -142,7 +142,9 @@
   "System": "Sistem",
   "All 34 languages": "Semua 34 bahasa",
   "Reduce motion": "Kurangkan gerakan",
-  "Save page": "Simpan halaman"
+  "Save page": "Simpan halaman",
+  "What is pain.001?": "Apakah pain.001?",
+  "The message, its structure, versions and an example.": "Mesej, strukturnya, versinya dan satu contoh."
  },
  "chrome_aria": {
   "Toggle Why Pain001 submenu": "Togol submenu Mengapa Pain001",

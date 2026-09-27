@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Upload or paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, recomputed control totals, and the official XSD. Everything runs in your browser."
+description: "Turn CSV payment data into pain.001 XML and validate it against the official ISO 20022 XSD and scheme rules. Free, in your browser, nothing uploaded."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "en"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Try Pain001 in Your Browser"
+title: "pain.001 Generator and Validator in Your Browser"
 url: "https://pain001.com/try/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/try/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Upload or paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, recomputed control totals, and the official XSD. Everything runs in your browser."
+item_description: "Turn CSV payment data into pain.001 XML and validate it against the official ISO 20022 XSD and scheme rules. Free, in your browser, nothing uploaded."
 item_guid: "https://pain001.com/try/rss.xml"
 item_link: "https://pain001.com/try/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Try Pain001 in Your Browser"
+item_title: "pain.001 Generator and Validator in Your Browser"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Try Pain001 in Your Browser"
+apple-mobile-web-app-title: "pain.001 Generator and Validator in Your Browser"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Upload or paste payment CSV data and watch the validation gate work: IBAN mod-97, BIC structure, required fields, recomputed control totals, and the official XSD. Everything runs in your browser."
+twitter_description: "Turn CSV payment data into pain.001 XML and validate it against the official ISO 20022 XSD and scheme rules. Free, in your browser, nothing uploaded."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Try Pain001 in Your Browser"
+twitter_title: "pain.001 Generator and Validator in Your Browser"
 twitter_url: "https://pain001.com/try/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"

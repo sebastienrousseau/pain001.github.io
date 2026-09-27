@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "Coba Pain001 di Browser Anda",
-  "description": "Unggah atau tempel data CSV pembayaran dan lihat validasinya: IBAN mod-97, struktur BIC, kolom wajib, total kontrol, dan XSD resmi, semuanya di browser Anda."
+  "title": "Generator dan validator pain.001 di browser Anda",
+  "description": "Ubah data pembayaran CSV menjadi XML pain.001 dan validasi dengan XSD resmi ISO 20022 serta aturan skema. Gratis, di browser, tanpa unggahan."
  },
  "text": {
   "Interactive demo": "Demo interaktif",
-  "Try Pain001 in Your Browser": "Coba Pain001 di Browser Anda",
+  "pain.001 Generator and Validator in Your Browser": "Generator dan validator pain.001 di browser Anda",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "Masukkan file CSV, gunakan contoh, atau tempel data Anda sendiri. Validasi berjalan seketika, sepenuhnya di browser Anda, dan tidak ada data yang keluar dari perangkat Anda.",
   "How this validator helps you": "Cara validator ini membantu Anda",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Uji data pembayaran terhadap pemeriksaan yang diterapkan bank: kolom wajib, checksum IBAN, struktur BIC, total kontrol</span>",
@@ -142,7 +142,9 @@
   "System": "Sistem",
   "All 34 languages": "Semua 34 bahasa",
   "Reduce motion": "Kurangi gerakan",
-  "Save page": "Simpan halaman"
+  "Save page": "Simpan halaman",
+  "What is pain.001?": "Apa itu pain.001?",
+  "The message, its structure, versions and an example.": "Pesannya, strukturnya, versinya, dan sebuah contoh."
  },
  "chrome_aria": {
   "Toggle Why Pain001 submenu": "Buka/tutup submenu Mengapa Pain001",

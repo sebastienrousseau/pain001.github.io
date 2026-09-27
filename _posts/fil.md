@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Open-source na Python suite na gumagawa ng XSD-validated na pain.001 at pain.008 na file mula sa CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101, kasama ang MCP tools para sa AI agents at LSP server."
+description: "Gumawa at mag-validate ng pain.001 at pain.008 XML ayon sa opisyal na ISO 20022 XSD. Libre, open source, at tumatakbo sa sarili ninyong computer."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "fil"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "Ang open-source suite na ginagawang validated na ISO 20022 XML ang inyong payment data, at napatunayang tama bago pa umabot sa bangko."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001: Open-source na pagsisimula ng bayad sa ISO 20022"
+title: "Pain001: mga pain.001 file at bayad sa ISO 20022"
 url: "https://pain001.com/fil/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/fil/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Open-source na Python suite na gumagawa ng XSD-validated na pain.001 at pain.008 na file mula sa CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101, kasama ang MCP tools para sa AI agents at LSP server."
+item_description: "Gumawa at mag-validate ng pain.001 at pain.008 XML ayon sa opisyal na ISO 20022 XSD. Libre, open source, at tumatakbo sa sarili ninyong computer."
 item_guid: "https://pain001.com/fil/rss.xml"
 item_link: "https://pain001.com/fil/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: Open-source na pagsisimula ng bayad sa ISO 20022"
+item_title: "Pain001: mga pain.001 file at bayad sa ISO 20022"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: Open-source na pagsisimula ng bayad sa ISO 20022"
+apple-mobile-web-app-title: "Pain001: mga pain.001 file at bayad sa ISO 20022"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Open-source na Python suite na gumagawa ng XSD-validated na pain.001 at pain.008 na file mula sa CSV, Excel, SQLite, JSON, Parquet o SWIFT MT101, kasama ang MCP tools para sa AI agents at LSP server."
+twitter_description: "Gumawa at mag-validate ng pain.001 at pain.008 XML ayon sa opisyal na ISO 20022 XSD. Libre, open source, at tumatakbo sa sarili ninyong computer."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001: Open-source na pagsisimula ng bayad sa ISO 20022"
+twitter_title: "Pain001: mga pain.001 file at bayad sa ISO 20022"
 twitter_url: "https://pain001.com/fil/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## Matukoy ang mga error sa payment file bago ito matukoy ng inyong bangko
 
-Ang **Pain001** ay open-source na Python suite para sa pagsisimula ng bayad sa ISO 20022. Kinokonberte nito ang data na mayroon na kayo (CSV, Excel, SQLite, JSON, Parquet o lumang SWIFT MT101 na mensahe) sa `pain.001` (credit transfer) at `pain.008` (direct debit) XML, validated laban sa mga opisyal na XSD schema.
+Ang **Pain001** ay open-source na Python suite para sa pagsisimula ng bayad sa ISO 20022. Kinokonberte nito ang data na mayroon na kayo (CSV, Excel, SQLite, JSON, Parquet o lumang SWIFT MT101 na mensahe) sa [`pain.001`](/fil/pain-001/) (credit transfer) at `pain.008` (direct debit) XML, validated laban sa mga opisyal na XSD schema.
 
 Bawat file ay dumadaan sa tatlong antas ng validation bago isulat: JSON schema kada record (kasama ang mod-97 check ng IBAN at istruktura ng BIC), mga panuntunan ng scheme (SEPA at cross-border CBPR+), at panghuling XSD validation. Laging muling kinakalkula ang control totals, hindi kailanman kinokopya. Lahat ay tumatakbo nang lokal: walang payment data na lumalabas sa inyong imprastraktura.
 

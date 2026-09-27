@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "pain.001.001.11: recent maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001."
+description: "pain.001.001.11, a recent maintenance release: official XSD, element reference, XSD-valid example files, and how to generate and validate it with pain001."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
@@ -40,18 +40,18 @@ short_name: pain001
 subtitle: "pain.001.001.11 is a recent maintenance release. Element structure, version notes, and version migration."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "pain.001.001.11 Reference: Generate and Validate"
+title: "pain.001.001.11: XSD, Example and Format Reference"
 url: "https://pain001.com/pain.001.001.11/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/pain.001.001.11/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "pain.001.001.11: recent maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001."
+item_description: "pain.001.001.11, a recent maintenance release: official XSD, element reference, XSD-valid example files, and how to generate and validate it with pain001."
 item_guid: "https://pain001.com/pain.001.001.11/rss.xml"
 item_link: "https://pain001.com/pain.001.001.11/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "pain.001.001.11 Reference: Generate and Validate"
+item_title: "pain.001.001.11: XSD, Example and Format Reference"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -63,16 +63,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "pain.001.001.11 Reference: Generate and Validate"
+apple-mobile-web-app-title: "pain.001.001.11: XSD, Example and Format Reference"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "pain.001.001.11: recent maintenance release. Element structure, version-specific notes, generation and inspection commands, and version migration with Pain001."
+twitter_description: "pain.001.001.11, a recent maintenance release: official XSD, element reference, XSD-valid example files, and how to generate and validate it with pain001."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "pain.001.001.11 Reference: Generate and Validate"
+twitter_title: "pain.001.001.11: XSD, Example and Format Reference"
 twitter_url: "https://pain001.com/pain.001.001.11/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -90,6 +90,8 @@ last_reviewed: "2026-07-26"
 
 `pain.001.001.11` continues post-2019 maintenance with further structured-data refinements. Adoption is led by newer platform builds; most bank channels map it onto their version-9 processing.
 
+New to the format? [What is pain.001?](/pain-001/) explains the message, its structure and every version.
+
 ## What to know about this version
 
 - Choose it when a counterpart explicitly profiles against it; otherwise `.09` maximises interoperability.
@@ -100,6 +102,12 @@ last_reviewed: "2026-07-26"
 - **`<GrpHdr>` Group Header**: message id, creation timestamp, `NbOfTxs`, `CtrlSum`, initiating party. Pain001 recomputes the control totals from validated records.
 - **`<PmtInf>` Payment Information**: debtor, debtor account and agent, requested execution date, payment method, charge bearer; one block can carry many transactions.
 - **`<CdtTrfTxInf>` Credit Transfer Transaction**: amount and currency, creditor, creditor account and agent, remittance information, end-to-end reference.
+
+## XSD, element reference and examples
+
+- **Official XSD:** ISO publishes the `pain.001.001.11` schema in its [message catalogue](https://www.iso20022.org/catalogue-messages/iso-20022-messages-archive?search=pain.001.001.11). The open-source pain001 library ships the same XSD and validates every file it generates against it.
+- **Element reference:** every path, type, cardinality and code list, generated from that XSD: [pain.001.001.11 element reference](/message-spec-pain.001.001.11/).
+- **Example files:** XSD-valid files covering this version's elements, in the [example corpus](/example-corpus-coverage/#pain-001-001-11).
 
 ## Generate and inspect
 

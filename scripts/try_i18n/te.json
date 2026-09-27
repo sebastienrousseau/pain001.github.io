@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "Pain001-ను మీ బ్రౌజర్‌లో ప్రయత్నించండి",
-  "description": "చెల్లింపు CSV డేటాను అతికించి లేదా అప్‌లోడ్ చేసి ధృవీకరించండి: IBAN mod-97, BIC నిర్మాణం, తప్పనిసరి ఫీల్డ్‌లు, నియంత్రణ మొత్తాలు, అధికారిక XSD, అన్నీ మీ బ్రౌజర్‌లోనే."
+  "title": "బ్రౌజర్‌లో pain.001 జనరేటర్, వాలిడేటర్",
+  "description": "CSV చెల్లింపు డేటాను pain.001 XMLగా మార్చి అధికారిక ISO 20022 XSD, స్కీమ్ నియమాలతో ధృవీకరించండి. ఉచితం, బ్రౌజర్‌లోనే, అప్‌లోడ్ ఉండదు."
  },
  "text": {
   "Interactive demo": "ఇంటరాక్టివ్ డెమో",
-  "Try Pain001 in Your Browser": "Pain001-ను మీ బ్రౌజర్‌లో ప్రయత్నించండి",
+  "pain.001 Generator and Validator in Your Browser": "బ్రౌజర్‌లో pain.001 జనరేటర్, వాలిడేటర్",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "ఒక CSV ఫైల్‌ను వదలండి, నమూనాను ఉపయోగించండి లేదా మీ సొంత రికార్డులను అతికించండి. ధృవీకరణ తక్షణమే, పూర్తిగా మీ బ్రౌజర్‌లోనే జరుగుతుంది; ఏదీ మీ కంప్యూటర్‌ను విడిచి వెళ్లదు.",
   "How this validator helps you": "ఈ ధృవీకరణ సాధనం మీకు ఎలా సహాయపడుతుంది",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>బ్యాంకులు వర్తింపజేసే తనిఖీలకు వ్యతిరేకంగా చెల్లింపు డేటాను పరీక్షించండి: తప్పనిసరి ఫీల్డ్‌లు, IBAN చెక్‌సమ్‌లు, BIC నిర్మాణం, నియంత్రణ మొత్తాలు</span>",
@@ -142,7 +142,9 @@
   "System": "సిస్టమ్",
   "All 34 languages": "మొత్తం 34 భాషలు",
   "Reduce motion": "చలనాన్ని తగ్గించండి",
-  "Save page": "పేజీని సేవ్ చేయండి"
+  "Save page": "పేజీని సేవ్ చేయండి",
+  "What is pain.001?": "pain.001 అంటే ఏమిటి?",
+  "The message, its structure, versions and an example.": "సందేశం, దాని నిర్మాణం, వెర్షన్‌లు మరియు ఒక ఉదాహరణ."
  },
  "chrome_aria": {
   "Toggle Why Pain001 submenu": "Pain001 ఎందుకు అనే ఉపమెనూను టోగుల్ చేయండి",

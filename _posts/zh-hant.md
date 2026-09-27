@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "開源 Python 套件,可從 CSV、Excel、SQLite、JSON、Parquet 或 SWIFT MT101 產生經 XSD 驗證的 pain.001 與 pain.008 檔案，並附有供 AI 代理使用的 MCP 工具與 LSP 伺服器。"
+description: "依據官方 ISO 20022 XSD 產生並驗證 pain.001 與 pain.008 XML，支援 CSV、Excel 與 MT101。免費開源，在您自己的電腦上執行。"
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "zh-hant"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "將您的付款資料轉換為經驗證的 ISO 20022 XML 的開源套件，在送達銀行之前即證明其正確性。"
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001：開源 ISO 20022 付款發起"
+title: "Pain001：pain.001 與 ISO 20022 付款檔案，開源"
 url: "https://pain001.com/zh-hant/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/zh-hant/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "開源 Python 套件,可從 CSV、Excel、SQLite、JSON、Parquet 或 SWIFT MT101 產生經 XSD 驗證的 pain.001 與 pain.008 檔案，並附有供 AI 代理使用的 MCP 工具與 LSP 伺服器。"
+item_description: "依據官方 ISO 20022 XSD 產生並驗證 pain.001 與 pain.008 XML，支援 CSV、Excel 與 MT101。免費開源，在您自己的電腦上執行。"
 item_guid: "https://pain001.com/zh-hant/rss.xml"
 item_link: "https://pain001.com/zh-hant/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001：開源 ISO 20022 付款發起"
+item_title: "Pain001：pain.001 與 ISO 20022 付款檔案，開源"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001：開源 ISO 20022 付款發起"
+apple-mobile-web-app-title: "Pain001：pain.001 與 ISO 20022 付款檔案，開源"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "開源 Python 套件,可從 CSV、Excel、SQLite、JSON、Parquet 或 SWIFT MT101 產生經 XSD 驗證的 pain.001 與 pain.008 檔案，並附有供 AI 代理使用的 MCP 工具與 LSP 伺服器。"
+twitter_description: "依據官方 ISO 20022 XSD 產生並驗證 pain.001 與 pain.008 XML，支援 CSV、Excel 與 MT101。免費開源，在您自己的電腦上執行。"
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001：開源 ISO 20022 付款發起"
+twitter_title: "Pain001：pain.001 與 ISO 20022 付款檔案，開源"
 twitter_url: "https://pain001.com/zh-hant/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## 在銀行發現之前先找出付款檔案中的錯誤
 
-**Pain001** 是用於 ISO 20022 付款發起的開源 Python 套件。它將您既有的資料（CSV、Excel、SQLite、JSON、Parquet 或舊式 SWIFT MT101 報文）轉換為經官方 XSD 結構描述驗證的 `pain.001`(信用轉帳)與 `pain.008`(直接扣款)XML。
+**Pain001** 是用於 ISO 20022 付款發起的開源 Python 套件。它將您既有的資料（CSV、Excel、SQLite、JSON、Parquet 或舊式 SWIFT MT101 報文）轉換為經官方 XSD 結構描述驗證的 [`pain.001`](/zh-hant/pain-001/)(信用轉帳)與 `pain.008`(直接扣款)XML。
 
 每個檔案在寫出前都須通過三層驗證:逐筆記錄的 JSON 結構描述(含 IBAN 的 mod-97 檢查與 BIC 結構)、清算規則(SEPA 與跨境 CBPR+),以及最終的 XSD 驗證。控制總數一律重新計算,絕不複製。一切皆在本機執行:任何付款資料都不會離開您的基礎設施。
 

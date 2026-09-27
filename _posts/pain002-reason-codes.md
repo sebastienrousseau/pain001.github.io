@@ -40,7 +40,7 @@ short_name: pain001
 subtitle: "The status and reason codes your bank sends back, decoded, with the typical cause and the practical fix for each."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "pain.002 Reason Codes: Why Banks Reject Payment Files"
+title: "pain.002 Status Report and Reason Codes Explained"
 url: "https://pain001.com/pain002-reason-codes/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/pain002-reason-codes/rss.xml"
@@ -51,7 +51,7 @@ item_description: "Every pain.002 status code (RJCT, ACWC, PART…) and the ISO 
 item_guid: "https://pain001.com/pain002-reason-codes/rss.xml"
 item_link: "https://pain001.com/pain002-reason-codes/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "pain.002 Reason Codes: Why Banks Reject Payment Files"
+item_title: "pain.002 Status Report and Reason Codes Explained"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -63,7 +63,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "pain.002 Reason Codes: Why Banks Reject Payment Files"
+apple-mobile-web-app-title: "pain.002 Status Report and Reason Codes Explained"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -72,7 +72,7 @@ twitter_description: "Every pain.002 status code (RJCT, ACWC, PART…) and the I
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "pain.002 Reason Codes: Why Banks Reject Payment Files"
+twitter_title: "pain.002 Status Report and Reason Codes Explained"
 twitter_url: "https://pain001.com/pain002-reason-codes/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"

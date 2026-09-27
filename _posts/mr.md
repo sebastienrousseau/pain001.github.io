@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "CSV, Excel, SQLite, JSON, Parquet किंवा SWIFT MT101 मधून XSD-पडताळलेल्या pain.001 आणि pain.008 फाइल्स तयार करणारे ओपन-सोर्स Python सूट, AI एजंटसाठी MCP साधने आणि LSP सर्व्हरसह."
+description: "अधिकृत ISO 20022 XSD नुसार pain.001 आणि pain.008 XML तयार करा आणि तपासा. मोफत, ओपन-सोर्स, तुमच्याच संगणकावर चालते."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "mr"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "तुमचा पेमेंट डेटा पडताळलेल्या ISO 20022 XML मध्ये रूपांतरित करणारे ओपन-सोर्स सूट, बँकेपर्यंत पोहोचण्यापूर्वीच अचूक सिद्ध."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001: ओपन-सोर्स ISO 20022 पेमेंट आरंभ"
+title: "Pain001: pain.001 फाइल्स आणि ISO 20022 पेमेंट, ओपन-सोर्स"
 url: "https://pain001.com/mr/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/mr/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "CSV, Excel, SQLite, JSON, Parquet किंवा SWIFT MT101 मधून XSD-पडताळलेल्या pain.001 आणि pain.008 फाइल्स तयार करणारे ओपन-सोर्स Python सूट, AI एजंटसाठी MCP साधने आणि LSP सर्व्हरसह."
+item_description: "अधिकृत ISO 20022 XSD नुसार pain.001 आणि pain.008 XML तयार करा आणि तपासा. मोफत, ओपन-सोर्स, तुमच्याच संगणकावर चालते."
 item_guid: "https://pain001.com/mr/rss.xml"
 item_link: "https://pain001.com/mr/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: ओपन-सोर्स ISO 20022 पेमेंट आरंभ"
+item_title: "Pain001: pain.001 फाइल्स आणि ISO 20022 पेमेंट, ओपन-सोर्स"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: ओपन-सोर्स ISO 20022 पेमेंट आरंभ"
+apple-mobile-web-app-title: "Pain001: pain.001 फाइल्स आणि ISO 20022 पेमेंट, ओपन-सोर्स"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "CSV, Excel, SQLite, JSON, Parquet किंवा SWIFT MT101 मधून XSD-पडताळलेल्या pain.001 आणि pain.008 फाइल्स तयार करणारे ओपन-सोर्स Python सूट, AI एजंटसाठी MCP साधने आणि LSP सर्व्हरसह."
+twitter_description: "अधिकृत ISO 20022 XSD नुसार pain.001 आणि pain.008 XML तयार करा आणि तपासा. मोफत, ओपन-सोर्स, तुमच्याच संगणकावर चालते."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001: ओपन-सोर्स ISO 20022 पेमेंट आरंभ"
+twitter_title: "Pain001: pain.001 फाइल्स आणि ISO 20022 पेमेंट, ओपन-सोर्स"
 twitter_url: "https://pain001.com/mr/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## पेमेंट फाइलमधील त्रुटी तुमच्या बँकेच्या आधीच शोधा
 
-**Pain001** हे ISO 20022 पेमेंट आरंभासाठी ओपन-सोर्स Python सूट आहे. तुमच्याकडे आधीच असलेला डेटा (CSV, Excel, SQLite, JSON, Parquet किंवा जुने SWIFT MT101 संदेश) अधिकृत XSD स्कीमांनी पडताळलेल्या `pain.001` (क्रेडिट ट्रान्सफर) आणि `pain.008` (डायरेक्ट डेबिट) XML मध्ये रूपांतरित करते.
+**Pain001** हे ISO 20022 पेमेंट आरंभासाठी ओपन-सोर्स Python सूट आहे. तुमच्याकडे आधीच असलेला डेटा (CSV, Excel, SQLite, JSON, Parquet किंवा जुने SWIFT MT101 संदेश) अधिकृत XSD स्कीमांनी पडताळलेल्या [`pain.001`](/mr/pain-001/) (क्रेडिट ट्रान्सफर) आणि `pain.008` (डायरेक्ट डेबिट) XML मध्ये रूपांतरित करते.
 
 प्रत्येक फाइल लिहिण्यापूर्वी तीन पडताळणी स्तरांतून जाते: प्रत्येक नोंदीसाठी JSON स्कीमा (IBAN ची mod-97 तपासणी आणि BIC रचना यासह), scheme नियम (SEPA आणि सीमापार CBPR+) आणि अंतिम XSD पडताळणी. नियंत्रण बेरजा नेहमी पुन्हा मोजल्या जातात, कधीही कॉपी होत नाहीत. सर्व काही स्थानिक चालते: कोणताही पेमेंट डेटा तुमच्या पायाभूत सुविधेबाहेर जात नाही.
 

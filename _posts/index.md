@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Generate schema-validated ISO 20022 pain.001 and pain.008 XML from CSV, Excel, SQLite, JSON, Parquet, or SWIFT MT101, with AI-agent MCP tools and editor LSP support."
+description: "Generate and validate ISO 20022 pain.001 and pain.008 XML against the official XSD, from CSV, Excel or MT101. Free, open source, runs on your machine."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "The open-source suite that turns the payment data you already have into schema-validated ISO 20022 XML, proven clean before your bank ever sees it."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001: Open-Source ISO 20022 Payment Initiation Suite"
+title: "Pain001: Open-Source pain.001 and ISO 20022 Payments"
 url: "https://pain001.com/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Generate schema-validated ISO 20022 pain.001 and pain.008 XML from CSV, Excel, SQLite, JSON, Parquet, or SWIFT MT101, with AI-agent MCP tools and editor LSP support."
+item_description: "Generate and validate ISO 20022 pain.001 and pain.008 XML against the official XSD, from CSV, Excel or MT101. Free, open source, runs on your machine."
 item_guid: "https://pain001.com/rss.xml"
 item_link: "https://pain001.com/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: Open-Source ISO 20022 Payment Initiation Suite"
+item_title: "Pain001: Open-Source pain.001 and ISO 20022 Payments"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: Open-Source ISO 20022 Payment Initiation Suite"
+apple-mobile-web-app-title: "Pain001: Open-Source pain.001 and ISO 20022 Payments"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Generate schema-validated ISO 20022 pain.001 and pain.008 XML from CSV, Excel, SQLite, JSON, Parquet, or SWIFT MT101, with AI-agent MCP tools and editor LSP support."
+twitter_description: "Generate and validate ISO 20022 pain.001 and pain.008 XML against the official XSD, from CSV, Excel or MT101. Free, open source, runs on your machine."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001: Open-Source ISO 20022 Payment Initiation Suite"
+twitter_title: "Pain001: Open-Source pain.001 and ISO 20022 Payments"
 twitter_url: "https://pain001.com/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"

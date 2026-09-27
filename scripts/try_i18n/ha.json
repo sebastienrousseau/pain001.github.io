@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "Gwada Pain001 a Burauzarku",
-  "description": "Ɗora ko liƙa bayanan biyan kuɗi na CSV ku ga tantancewa a aikace: IBAN mod-97, tsarin BIC, filayen dole, jimillolin sarrafawa da XSD na hukuma. Duk a burauzarku."
+  "title": "Mai samarwa da tabbatar da pain.001 a burauza",
+  "description": "Mayar da bayanan biyan kuɗi na CSV zuwa XML na pain.001 kuma ka tabbatar da shi da XSD na ISO 20022 da dokokin tsari. Kyauta, a burauza, babu lodawa."
  },
  "text": {
   "Interactive demo": "Nuni mai hulɗa",
-  "Try Pain001 in Your Browser": "Gwada Pain001 a Burauzarku",
+  "pain.001 Generator and Validator in Your Browser": "Mai samarwa da tabbatar da pain.001 a burauza",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "Saka fayil ɗin CSV, yi amfani da samfurin, ko liƙa bayanan naku. Tantancewa na gudana nan take, gaba ɗaya a cikin burauzarku, kuma babu abin da zai taɓa barin na'urarku.",
   "How this validator helps you": "Yadda wannan kayan tantancewa ke taimaka muku",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Gwada bayanan biyan kuɗi bisa gwaje-gwajen da bankuna ke amfani da su: filayen dole, lambobin tantance IBAN, tsarin BIC, jimillolin sarrafawa</span>",
@@ -142,7 +142,9 @@
   "System": "Na tsarin",
   "All 34 languages": "Dukkan harsuna 34",
   "Reduce motion": "Rage motsi",
-  "Save page": "Ajiye shafi"
+  "Save page": "Ajiye shafi",
+  "What is pain.001?": "Menene pain.001?",
+  "The message, its structure, versions and an example.": "Saƙon, tsarinsa, sigoginsa da misali."
  },
  "chrome_aria": {
   "Toggle Why Pain001 submenu": "Buɗe ko rufe ƙaramin menu na Dalilin Pain001",

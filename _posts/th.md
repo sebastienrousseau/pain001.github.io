@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "ชุดเครื่องมือ Python โอเพนซอร์สที่สร้างไฟล์ pain.001 และ pain.008 ที่ผ่านการตรวจสอบ XSD จาก CSV, Excel, SQLite, JSON, Parquet หรือ SWIFT MT101 พร้อมเครื่องมือ MCP สำหรับ AI เอเจนต์และเซิร์ฟเวอร์ LSP"
+description: "สร้างและตรวจสอบ XML ของ pain.001 และ pain.008 ตาม XSD ทางการของ ISO 20022 ใช้ฟรี โอเพนซอร์ส และทำงานบนเครื่องของคุณเอง"
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "th"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "ชุดเครื่องมือโอเพนซอร์สที่เปลี่ยนข้อมูลการชำระเงินของคุณเป็น XML ISO 20022 ที่ผ่านการตรวจสอบ และพิสูจน์ความถูกต้องก่อนถึงธนาคาร"
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001: การเริ่มต้นการชำระเงิน ISO 20022 แบบโอเพนซอร์ส"
+title: "Pain001: ไฟล์ pain.001 และการชำระเงิน ISO 20022"
 url: "https://pain001.com/th/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/th/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "ชุดเครื่องมือ Python โอเพนซอร์สที่สร้างไฟล์ pain.001 และ pain.008 ที่ผ่านการตรวจสอบ XSD จาก CSV, Excel, SQLite, JSON, Parquet หรือ SWIFT MT101 พร้อมเครื่องมือ MCP สำหรับ AI เอเจนต์และเซิร์ฟเวอร์ LSP"
+item_description: "สร้างและตรวจสอบ XML ของ pain.001 และ pain.008 ตาม XSD ทางการของ ISO 20022 ใช้ฟรี โอเพนซอร์ส และทำงานบนเครื่องของคุณเอง"
 item_guid: "https://pain001.com/th/rss.xml"
 item_link: "https://pain001.com/th/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: การเริ่มต้นการชำระเงิน ISO 20022 แบบโอเพนซอร์ส"
+item_title: "Pain001: ไฟล์ pain.001 และการชำระเงิน ISO 20022"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: การเริ่มต้นการชำระเงิน ISO 20022 แบบโอเพนซอร์ส"
+apple-mobile-web-app-title: "Pain001: ไฟล์ pain.001 และการชำระเงิน ISO 20022"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "ชุดเครื่องมือ Python โอเพนซอร์สที่สร้างไฟล์ pain.001 และ pain.008 ที่ผ่านการตรวจสอบ XSD จาก CSV, Excel, SQLite, JSON, Parquet หรือ SWIFT MT101 พร้อมเครื่องมือ MCP สำหรับ AI เอเจนต์และเซิร์ฟเวอร์ LSP"
+twitter_description: "สร้างและตรวจสอบ XML ของ pain.001 และ pain.008 ตาม XSD ทางการของ ISO 20022 ใช้ฟรี โอเพนซอร์ส และทำงานบนเครื่องของคุณเอง"
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001: การเริ่มต้นการชำระเงิน ISO 20022 แบบโอเพนซอร์ส"
+twitter_title: "Pain001: ไฟล์ pain.001 และการชำระเงิน ISO 20022"
 twitter_url: "https://pain001.com/th/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## ตรวจพบข้อผิดพลาดในไฟล์การชำระเงินก่อนที่ธนาคารของคุณจะตรวจพบ
 
-**Pain001** คือชุดเครื่องมือ Python โอเพนซอร์สสำหรับการเริ่มต้นการชำระเงินตามมาตรฐาน ISO 20022 แปลงข้อมูลที่คุณมีอยู่แล้ว (CSV, Excel, SQLite, JSON, Parquet หรือข้อความ SWIFT MT101 แบบเดิม) เป็น XML `pain.001` (โอนเงิน) และ `pain.008` (หักบัญชีอัตโนมัติ) ที่ตรวจสอบด้วยสคีมา XSD อย่างเป็นทางการ
+**Pain001** คือชุดเครื่องมือ Python โอเพนซอร์สสำหรับการเริ่มต้นการชำระเงินตามมาตรฐาน ISO 20022 แปลงข้อมูลที่คุณมีอยู่แล้ว (CSV, Excel, SQLite, JSON, Parquet หรือข้อความ SWIFT MT101 แบบเดิม) เป็น XML [`pain.001`](/th/pain-001/) (โอนเงิน) และ `pain.008` (หักบัญชีอัตโนมัติ) ที่ตรวจสอบด้วยสคีมา XSD อย่างเป็นทางการ
 
 ทุกไฟล์ผ่านการตรวจสอบสามชั้นก่อนถูกเขียน: สคีมา JSON ต่อระเบียน (รวมการตรวจ mod-97 ของ IBAN และโครงสร้าง BIC) กฎ scheme (SEPA และ CBPR+ ข้ามพรมแดน) และการตรวจสอบ XSD ขั้นสุดท้าย ยอดรวมควบคุมถูกคำนวณใหม่เสมอ ไม่เคยคัดลอก ทุกอย่างทำงานในเครื่องของคุณ: ไม่มีข้อมูลการชำระเงินใดออกจากโครงสร้างพื้นฐานของคุณ
 

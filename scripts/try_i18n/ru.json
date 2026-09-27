@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "Попробуйте Pain001 в браузере",
-  "description": "Загрузите или вставьте платёжные CSV-данные: проверка IBAN mod-97, структуры BIC, обязательных полей, контрольных итогов и официальной XSD прямо в вашем браузере."
+  "title": "Генератор и валидатор pain.001 в браузере",
+  "description": "Преобразуйте платёжные данные CSV в XML pain.001 и проверьте их по официальной XSD ISO 20022 и правилам схемы. Бесплатно, в браузере, без загрузки."
  },
  "text": {
   "Interactive demo": "Интерактивная демонстрация",
-  "Try Pain001 in Your Browser": "Попробуйте Pain001 в браузере",
+  "pain.001 Generator and Validator in Your Browser": "Генератор и валидатор pain.001 в браузере",
   "Drop in a CSV, use the sample, or paste your own records. Validation runs instantly, entirely in your browser, and nothing ever leaves your machine.": "Перетащите CSV-файл, воспользуйтесь готовым примером или вставьте собственные записи. Проверка выполняется мгновенно, полностью в вашем браузере, и данные никогда не покидают ваш компьютер.",
   "How this validator helps you": "Чем этот валидатор вам полезен",
   "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Test payment data against the checks banks apply: required fields, IBAN checksums, BIC structure, control totals</span>": "<span class=\"tick\" aria-hidden=\"true\">✓</span><span>Проверьте платёжные данные по тем же критериям, которые применяют банки: обязательные поля, контрольные суммы IBAN, структура BIC, контрольные итоги</span>",
@@ -142,7 +142,9 @@
   "System": "Системная",
   "All 34 languages": "Все 34 языка",
   "Reduce motion": "Уменьшить движение",
-  "Save page": "Сохранить страницу"
+  "Save page": "Сохранить страницу",
+  "What is pain.001?": "Что такое pain.001?",
+  "The message, its structure, versions and an example.": "Сообщение, его структура, версии и пример."
  },
  "chrome_aria": {
   "Toggle Why Pain001 submenu": "Открыть или закрыть подменю „Почему Pain001“",

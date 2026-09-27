@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Open-source sada v Pythonu generující XSD-validované soubory pain.001 a pain.008 z CSV, Excelu, SQLite, JSON, Parquet nebo SWIFT MT101, s nástroji MCP pro AI agenty a LSP serverem."
+description: "Vytvářejte a ověřujte XML pain.001 a pain.008 podle oficiálního XSD standardu ISO 20022. Zdarma, open source, běží ve vašem počítači."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "cs"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "Open-source sada, která promění vaše platební data ve validované XML ISO 20022, prokazatelně správné dřív, než je uvidí banka."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001: open-source iniciace plateb ISO 20022"
+title: "Pain001: soubory pain.001 a SEPA XML podle ISO 20022"
 url: "https://pain001.com/cs/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/cs/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.63)"
-item_description: "Open-source sada v Pythonu generující XSD-validované soubory pain.001 a pain.008 z CSV, Excelu, SQLite, JSON, Parquet nebo SWIFT MT101, s nástroji MCP pro AI agenty a LSP serverem."
+item_description: "Vytvářejte a ověřujte XML pain.001 a pain.008 podle oficiálního XSD standardu ISO 20022. Zdarma, open source, běží ve vašem počítači."
 item_guid: "https://pain001.com/cs/rss.xml"
 item_link: "https://pain001.com/cs/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Pain001: open-source iniciace plateb ISO 20022"
+item_title: "Pain001: soubory pain.001 a SEPA XML podle ISO 20022"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001: open-source iniciace plateb ISO 20022"
+apple-mobile-web-app-title: "Pain001: soubory pain.001 a SEPA XML podle ISO 20022"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Open-source sada v Pythonu generující XSD-validované soubory pain.001 a pain.008 z CSV, Excelu, SQLite, JSON, Parquet nebo SWIFT MT101, s nástroji MCP pro AI agenty a LSP serverem."
+twitter_description: "Vytvářejte a ověřujte XML pain.001 a pain.008 podle oficiálního XSD standardu ISO 20022. Zdarma, open source, běží ve vašem počítači."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001: open-source iniciace plateb ISO 20022"
+twitter_title: "Pain001: soubory pain.001 a SEPA XML podle ISO 20022"
 twitter_url: "https://pain001.com/cs/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -90,7 +90,7 @@ last_reviewed: "2026-09-23"
 
 ## Odhalte chyby v platebních souborech dřív než banka
 
-**Pain001** je open-source sada v Pythonu pro iniciaci plateb ISO 20022. Převádí data, která už máte (CSV, Excel, SQLite, JSON, Parquet nebo starší zprávy SWIFT MT101), na XML `pain.001` (úhrady) a `pain.008` (inkasa), validované oficiálními schématy XSD.
+**Pain001** je open-source sada v Pythonu pro iniciaci plateb ISO 20022. Převádí data, která už máte (CSV, Excel, SQLite, JSON, Parquet nebo starší zprávy SWIFT MT101), na XML [`pain.001`](/cs/pain-001/) (úhrady) a `pain.008` (inkasa), validované oficiálními schématy XSD.
 
 Každý soubor projde třemi vrstvami validace: JSON schéma pro každý záznam (včetně kontroly mod-97 IBAN a struktury BIC), pravidla scheme (SEPA a přeshraniční CBPR+) a závěrečná validace XSD. Kontrolní součty se přepočítávají, nikdy nekopírují. Vše běží lokálně: žádná platební data neopouštějí vaši infrastrukturu.
 
