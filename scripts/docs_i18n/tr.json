@@ -27,7 +27,7 @@
    "Show the required and optional fields for a message type.": "Bir mesaj türü için zorunlu ve isteğe bağlı alanları gösterir.",
    "Scaffold a starter CSV template for a message type.": "Bir mesaj türü için başlangıç CSV şablonu oluşturur.",
    "Launch the FastAPI REST microservice (requires the <code>api</code> extra).": "FastAPI REST mikroservisini başlatır (<code>api</code> ekstrasını gerektirir).",
-   "Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "Ağaç içi Model Context Protocol sunucusunu başlatır (5 araç; 17 araçlı tam sunucu <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a> olarak yayımlanır).",
+   "Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "Ağaç içi Model Context Protocol sunucusunu başlatır (5 araç; 22 araçlı tam sunucu <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a> olarak yayımlanır).",
    "Inspect and manage discovered loader, validator, scheme, and writer plugins.": "Keşfedilen yükleyici, doğrulayıcı, şema ve yazıcı eklentilerini inceler ve yönetir.",
    "<code>generate</code> options": "<code>generate</code> seçenekleri",
    "Flag": "Bayrak",

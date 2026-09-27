@@ -27,7 +27,7 @@
       "Show the required and optional fields for a message type.": "Ipakita ang mga kinakailangan at opsyonal na field para sa isang uri ng mensahe.",
       "Scaffold a starter CSV template for a message type.": "Bumuo ng panimulang CSV template para sa isang uri ng mensahe.",
       "Launch the FastAPI REST microservice (requires the <code>api</code> extra).": "Ilunsad ang FastAPI REST microservice (nangangailangan ng <code>api</code> extra).",
-      "Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "Ilunsad ang in-tree na Model Context Protocol server (5 tool; ang buong 17-tool na server ay inilalabas bilang <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).",
+      "Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "Ilunsad ang in-tree na Model Context Protocol server (5 tool; ang buong 22-tool na server ay inilalabas bilang <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).",
       "Inspect and manage discovered loader, validator, scheme, and writer plugins.": "Suriin at pamahalaan ang mga natuklasang loader, validator, scheme, at writer plugin.",
       "<code>generate</code> options": "Mga opsyon ng <code>generate</code>",
       "Flag": "Flag",

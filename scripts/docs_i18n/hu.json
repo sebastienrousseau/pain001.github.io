@@ -27,7 +27,7 @@
    "Show the required and optional fields for a message type.": "Egy üzenettípus kötelező és opcionális mezőinek megjelenítése.",
    "Scaffold a starter CSV template for a message type.": "Kiinduló CSV sablon létrehozása egy üzenettípushoz.",
    "Launch the FastAPI REST microservice (requires the <code>api</code> extra).": "A FastAPI REST mikroszolgáltatás indítása (az <code>api</code> extra szükséges hozzá).",
-   "Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "A projektbe épített Model Context Protocol kiszolgáló indítása (5 eszköz; a teljes, 17 eszközt tartalmazó kiszolgáló <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a> néven érhető el).",
+   "Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "A projektbe épített Model Context Protocol kiszolgáló indítása (5 eszköz; a teljes, 22 eszközt tartalmazó kiszolgáló <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a> néven érhető el).",
    "Inspect and manage discovered loader, validator, scheme, and writer plugins.": "A felismert betöltő-, validátor-, séma- és írómodulok áttekintése és kezelése.",
    "<code>generate</code> options": "A <code>generate</code> beállításai",
    "Flag": "Kapcsoló",

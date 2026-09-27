@@ -27,7 +27,7 @@
       "Show the required and optional fields for a message type.": "Memaparkan medan wajib dan medan pilihan bagi sesuatu jenis mesej.",
       "Scaffold a starter CSV template for a message type.": "Menjana rangka templat CSV permulaan bagi sesuatu jenis mesej.",
       "Launch the FastAPI REST microservice (requires the <code>api</code> extra).": "Melancarkan perkhidmatan mikro REST FastAPI (memerlukan ekstra <code>api</code>).",
-      "Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "Melancarkan pelayan Model Context Protocol terbina dalam (5 alat; pelayan penuh 17 alat dikeluarkan sebagai <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).",
+      "Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "Melancarkan pelayan Model Context Protocol terbina dalam (5 alat; pelayan penuh 22 alat dikeluarkan sebagai <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).",
       "Inspect and manage discovered loader, validator, scheme, and writer plugins.": "Memeriksa dan mengurus plugin loader, validator, scheme dan writer yang ditemui.",
       "<code>generate</code> options": "Pilihan <code>generate</code>",
       "Flag": "Pilihan",

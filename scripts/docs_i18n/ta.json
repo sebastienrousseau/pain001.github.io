@@ -27,7 +27,7 @@
    "Show the required and optional fields for a message type.": "ஒரு செய்தி வகைக்கான கட்டாய மற்றும் விருப்பப் புலங்களைக் காட்டுகிறது.",
    "Scaffold a starter CSV template for a message type.": "ஒரு செய்தி வகைக்கான தொடக்க CSV வார்ப்புருவை உருவாக்குகிறது.",
    "Launch the FastAPI REST microservice (requires the <code>api</code> extra).": "FastAPI REST நுண்சேவையைத் தொடங்குகிறது (<code>api</code> கூடுதல் தேவை).",
-   "Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "உள்ளமைந்த Model Context Protocol சேவையகத்தைத் தொடங்குகிறது (5 கருவிகள்; முழுமையான 17-கருவி சேவையகம் <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a> ஆக வழங்கப்படுகிறது).",
+   "Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "உள்ளமைந்த Model Context Protocol சேவையகத்தைத் தொடங்குகிறது (5 கருவிகள்; முழுமையான 22-கருவி சேவையகம் <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a> ஆக வழங்கப்படுகிறது).",
    "Inspect and manage discovered loader, validator, scheme, and writer plugins.": "கண்டறியப்பட்ட லோடர், சரிபார்ப்பான், திட்டம், ரைட்டர் செருகுநிரல்களை ஆய்வு செய்து நிர்வகிக்கிறது.",
    "<code>generate</code> options": "<code>generate</code> விருப்பங்கள்",
    "Flag": "ஃபிளாக்",

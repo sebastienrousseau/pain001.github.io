@@ -27,7 +27,7 @@
    "Show the required and optional fields for a message type.": "הצגת השדות הנדרשים והאופציונליים עבור סוג הודעה.",
    "Scaffold a starter CSV template for a message type.": "יצירת תבנית CSV התחלתית עבור סוג הודעה.",
    "Launch the FastAPI REST microservice (requires the <code>api</code> extra).": "הפעלת מיקרו-שירות ה-REST מבוסס FastAPI (מחייב את התוספת <code>api</code>).",
-   "Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "הפעלת שרת Model Context Protocol המובנה (5 כלים; השרת המלא בעל 17 הכלים נשלח כ-<a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).",
+   "Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "הפעלת שרת Model Context Protocol המובנה (5 כלים; השרת המלא בעל 22 הכלים נשלח כ-<a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).",
    "Inspect and manage discovered loader, validator, scheme, and writer plugins.": "בדיקה וניהול של תוספי טעינה, אימות, מסלולים וכתיבה שאותרו.",
    "<code>generate</code> options": "אפשרויות <code>generate</code>",
    "Flag": "דגל",

@@ -27,7 +27,7 @@
    "Show the required and optional fields for a message type.": "একটি মেসেজ টাইপের আবশ্যিক ও ঐচ্ছিক ফিল্ডগুলি দেখায়।",
    "Scaffold a starter CSV template for a message type.": "একটি মেসেজ টাইপের জন্য প্রারম্ভিক CSV টেমপ্লেট তৈরি করে।",
    "Launch the FastAPI REST microservice (requires the <code>api</code> extra).": "FastAPI REST মাইক্রোসার্ভিস চালু করে (<code>api</code> এক্সট্রা প্রয়োজন)।",
-   "Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "ইন-ট্রি Model Context Protocol সার্ভার চালু করে (5টি টুল; সম্পূর্ণ 17-টুল সার্ভারটি <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a> হিসেবে সরবরাহ করা হয়)।",
+   "Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "ইন-ট্রি Model Context Protocol সার্ভার চালু করে (5টি টুল; সম্পূর্ণ 22-টুল সার্ভারটি <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a> হিসেবে সরবরাহ করা হয়)।",
    "Inspect and manage discovered loader, validator, scheme, and writer plugins.": "আবিষ্কৃত লোডার, ভ্যালিডেটর, স্কিম ও রাইটার প্লাগইন পরিদর্শন ও পরিচালনা করে।",
    "<code>generate</code> options": "<code>generate</code> অপশন",
    "Flag": "ফ্ল্যাগ",

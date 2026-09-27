@@ -27,7 +27,7 @@
    "Show the required and optional fields for a message type.": "संदेश प्रकारासाठी आवश्यक व पर्यायी फील्ड दर्शवते.",
    "Scaffold a starter CSV template for a message type.": "संदेश प्रकारासाठी प्रारंभिक CSV टेम्पलेट तयार करते.",
    "Launch the FastAPI REST microservice (requires the <code>api</code> extra).": "FastAPI REST मायक्रोसर्व्हिस सुरू करते (<code>api</code> एक्स्ट्रा आवश्यक).",
-   "Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "अंतर्भूत Model Context Protocol सर्व्हर सुरू करते (5 साधने; संपूर्ण 17-साधनी सर्व्हर <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a> म्हणून उपलब्ध आहे).",
+   "Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "अंतर्भूत Model Context Protocol सर्व्हर सुरू करते (5 साधने; संपूर्ण 22-साधनी सर्व्हर <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a> म्हणून उपलब्ध आहे).",
    "Inspect and manage discovered loader, validator, scheme, and writer plugins.": "शोधलेले लोडर, व्हॅलिडेटर, स्कीम आणि रायटर प्लगइन तपासते व व्यवस्थापित करते.",
    "<code>generate</code> options": "<code>generate</code> पर्याय",
    "Flag": "फ्लॅग",

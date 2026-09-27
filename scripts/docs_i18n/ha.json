@@ -27,7 +27,7 @@
    "Show the required and optional fields for a message type.": "Nuna filayen wajibi da na zaɓi ga wani nau'in saƙo.",
    "Scaffold a starter CSV template for a message type.": "Ƙirƙiri samfurin CSV na farawa ga wani nau'in saƙo.",
    "Launch the FastAPI REST microservice (requires the <code>api</code> extra).": "Ƙaddamar da ƙaramar hidimar REST ta FastAPI (tana buƙatar ƙarin <code>api</code>).",
-   "Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "Ƙaddamar da sabar Model Context Protocol da ke cikin lambar (kayan aiki 5; cikakkiyar sabar mai kayan aiki 17 tana zuwa a matsayin <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).",
+   "Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "Ƙaddamar da sabar Model Context Protocol da ke cikin lambar (kayan aiki 5; cikakkiyar sabar mai kayan aiki 22 tana zuwa a matsayin <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).",
    "Inspect and manage discovered loader, validator, scheme, and writer plugins.": "Duba da sarrafa plugins na loader, validator, scheme da writer da aka gano.",
    "<code>generate</code> options": "Zaɓuɓɓukan <code>generate</code>",
    "Flag": "Tuta",

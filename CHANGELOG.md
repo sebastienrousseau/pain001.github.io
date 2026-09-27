@@ -60,6 +60,12 @@ All notable changes to this website are documented here. The format follows
 
 ### Fixed
 
+- The technical reference and the MCP page describe what is released:
+  pain001 0.0.71 and pain001-mcp 0.0.71, with 22 MCP tools (the pages
+  had said 17, 21, 23 and 26 in different places). The Business
+  Application Header, XML-DSig and formula-injection options and the
+  four dual-control MCP tools, which are not in any release yet, are
+  documented in "In the next release" sections instead.
 - The build no longer publishes 385 invalid per-page
   `news-sitemap.xml` files that ssg wrote beside every page, each with
   an empty `<loc>` and the build time. The root news sitemap is kept.

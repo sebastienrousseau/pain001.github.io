@@ -27,7 +27,7 @@
    "Show the required and optional fields for a message type.": "Afișează câmpurile obligatorii și opționale pentru un tip de mesaj.",
    "Scaffold a starter CSV template for a message type.": "Generează un șablon CSV inițial pentru un tip de mesaj.",
    "Launch the FastAPI REST microservice (requires the <code>api</code> extra).": "Pornește microserviciul REST FastAPI (necesită extra-ul <code>api</code>).",
-   "Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "Pornește serverul Model Context Protocol inclus în proiect (5 instrumente; serverul complet, cu 17 instrumente, se livrează ca <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).",
+   "Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "Pornește serverul Model Context Protocol inclus în proiect (5 instrumente; serverul complet, cu 22 instrumente, se livrează ca <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).",
    "Inspect and manage discovered loader, validator, scheme, and writer plugins.": "Inspectați și gestionați plugin-urile de încărcare, validare, scheme și scriere care au fost detectate.",
    "<code>generate</code> options": "Opțiuni <code>generate</code>",
    "Flag": "Flag",

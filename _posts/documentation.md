@@ -105,7 +105,7 @@ The `pain001` executable groups its functionality into subcommands. Running it w
 | `inspect <type> [--json]` | Show the required and optional fields for a message type. |
 | `init <type> [-o DIR]` | Scaffold a starter CSV template for a message type. |
 | `serve [--host] [--port] [--reload]` | Launch the FastAPI REST microservice (requires the `api` extra). |
-| `mcp` | Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as [`pain001-mcp`](/pain001-mcp/)). |
+| `mcp` | Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as [`pain001-mcp`](/pain001-mcp/)). |
 | `plugins list / show / disable` | Inspect and manage discovered loader, validator, scheme, and writer plugins. |
 
 ### `generate` options
@@ -122,6 +122,17 @@ The `pain001` executable groups its functionality into subcommands. Running it w
 | `--explain --scheme-format {text,json}` | Report each scheme rule that passed or failed, human- or machine-readable. |
 | `--streaming` / `--chunk-size <N>` | Memory-bounded chunked processing for large batches (default 1,000 transactions per chunk; each chunk becomes its own XML file with recomputed `NbOfTxs` and `CtrlSum`). |
 | `--emit-metrics` | Emit machine-readable run metrics for observability pipelines. |
+
+Exit codes are CI-friendly: `0` success, `1` validation failure, `2` usage error.
+
+### In the next release
+
+These features are in development for the next pain001 release. They
+are **not in pain001 0.0.71**, the version this reference documents, and
+their names may change before they ship.
+
+| Flag | Description |
+| :--- | :--- |
 | `--envelop-bah` | Wrap generated payment XML into an ISO 20022 Business Application Header (`head.001.001.03`) and `BizData` (`head.003.001.01`) envelope. |
 | `--bah-sender <BIC/ID>` | Sender financial institution BIC or organisation identifier for BAH `<Fr>`. |
 | `--bah-receiver <BIC/ID>` | Receiver financial institution BIC or organisation identifier for BAH `<To>`. |
@@ -130,7 +141,13 @@ The `pain001` executable groups its functionality into subcommands. Running it w
 | `--xml-sign-cert <FILE>` | Optional PEM X.509 certificate to embed in XML-DSig `<ds:KeyInfo>`. |
 | `--xml-sign-passphrase-env <VAR>` | Environment variable holding passphrase to decrypt the RSA private key. |
 
-Exit codes are CI-friendly: `0` success, `1` validation failure, `2` usage error.
+The Python API gains the matching `process_files` parameters:
+`envelop_bah`, `xml_sign_key` and `xml_sign_cert`.
+
+Input normalisation gains **formula injection shielding**: cells starting
+with a formula trigger (`=`, `+`, `-`, `@`, tab, carriage return or line
+feed) are escaped with a leading single quote, preventing CSV injection
+(CWE-1236) when a file is opened in a spreadsheet.
 
 ---
 
@@ -146,9 +163,6 @@ process_files(
     xsd_schema_file_path="schema.xsd",
     data_file_path="payments.csv",
     output_dir="out",
-    envelop_bah=True,
-    xml_sign_key=private_key_pem,
-    xml_sign_cert=certificate_pem,
 )
 ```
 
@@ -192,7 +206,6 @@ Interactive documentation is served at `/api/docs` (Swagger UI), `/api/redoc`, a
 
 Pain001 coerces real-world exports into valid records before validation:
 
-- **Formula injection shielding**: cells starting with formula trigger prefixes (`=`, `+`, `-`, `@`, `\t`, `\r`, `\n`) are sanitized with single-quote escaping to prevent CSV injection (CWE-1236) in spreadsheet applications.
 - **Field aliases**: common ERP column names map onto canonical fields (for example `amount` → `payment_amount`).
 - **IBAN / BIC normalisation**: whitespace stripped, case folded, then checked (ISO 13616 mod-97 for IBANs, ISO 9362 structure for BICs).
 - **Dates**: ISO 8601 `YYYY-MM-DD` parsing for execution dates.

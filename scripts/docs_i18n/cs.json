@@ -27,7 +27,7 @@
    "Show the required and optional fields for a message type.": "Zobrazí povinná a volitelná pole pro daný typ zprávy.",
    "Scaffold a starter CSV template for a message type.": "Vygeneruje výchozí šablonu CSV pro daný typ zprávy.",
    "Launch the FastAPI REST microservice (requires the <code>api</code> extra).": "Spustí REST mikroslužbu na FastAPI (vyžaduje doplněk <code>api</code>).",
-   "Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "Spustí vestavěný server Model Context Protocol (5 nástrojů; plný server se 17 nástroji se dodává jako <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).",
+   "Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "Spustí vestavěný server Model Context Protocol (5 nástrojů; plný server se 22 nástroji se dodává jako <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).",
    "Inspect and manage discovered loader, validator, scheme, and writer plugins.": "Prohlédne a spravuje nalezené pluginy typu loader, validator, scheme a writer.",
    "<code>generate</code> options": "Volby příkazu <code>generate</code>",
    "Flag": "Přepínač",

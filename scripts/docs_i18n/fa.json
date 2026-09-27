@@ -27,7 +27,7 @@
    "Show the required and optional fields for a message type.": "نمایش فیلدهای الزامی و اختیاری یک نوع پیام.",
    "Scaffold a starter CSV template for a message type.": "ساخت قالب CSV آغازین برای یک نوع پیام.",
    "Launch the FastAPI REST microservice (requires the <code>api</code> extra).": "راه‌اندازی ریزخدمت REST مبتنی بر FastAPI (نیازمند افزودنی <code>api</code>).",
-   "Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "راه‌اندازی سرور درون‌مخزنی Model Context Protocol (5 ابزار؛ سرور کامل با 17 ابزار به‌صورت <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a> عرضه می‌شود).",
+   "Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "راه‌اندازی سرور درون‌مخزنی Model Context Protocol (5 ابزار؛ سرور کامل با 22 ابزار به‌صورت <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a> عرضه می‌شود).",
    "Inspect and manage discovered loader, validator, scheme, and writer plugins.": "بررسی و مدیریت افزونه‌های شناسایی‌شده در نقش بارگذار، اعتبارسنج، طرح و نویسنده.",
    "<code>generate</code> options": "گزینه‌های <code>generate</code>",
    "Flag": "پرچم",

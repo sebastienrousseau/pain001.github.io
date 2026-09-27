@@ -27,7 +27,7 @@
    "Show the required and optional fields for a message type.": "Visar obligatoriska och valfria fält för en meddelandetyp.",
    "Scaffold a starter CSV template for a message type.": "Skapar en CSV-startmall för en meddelandetyp.",
    "Launch the FastAPI REST microservice (requires the <code>api</code> extra).": "Startar FastAPI-REST-mikrotjänsten (kräver extran <code>api</code>).",
-   "Launch the in-tree Model Context Protocol server (5 tools; the full 17-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "Startar den inbyggda Model Context Protocol-servern (5 verktyg; den fullständiga servern med 17 verktyg levereras som <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).",
+   "Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).": "Startar den inbyggda Model Context Protocol-servern (5 verktyg; den fullständiga servern med 22 verktyg levereras som <a href=\"/pain001-mcp/\"><code>pain001-mcp</code></a>).",
    "Inspect and manage discovered loader, validator, scheme, and writer plugins.": "Inspekterar och hanterar upptäckta plugins för inläsare, validerare, regelverk och skrivare.",
    "<code>generate</code> options": "Alternativ för <code>generate</code>",
    "Flag": "Flagga",
