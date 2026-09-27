@@ -39,7 +39,7 @@ short_name: pain001
 subtitle: "Element paths, cardinality, data types and code lists for every supported pain.001 and pain.008 version, generated rather than transcribed."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "ISO 20022 message specifications, generated from the official XSDs"
+title: "pain.001 and pain.008 XSD Element Reference, All Versions"
 url: "https://pain001.com/message-specs/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/message-specs/"
@@ -50,7 +50,7 @@ item_description: "Complete element references for every supported ISO 20022 pay
 item_guid: "https://pain001.com/message-specs/"
 item_link: "https://pain001.com/message-specs/"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "ISO 20022 message specifications, generated from the official XSDs"
+item_title: "pain.001 and pain.008 XSD Element Reference, All Versions"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,7 +62,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "ISO 20022 message specifications, generated from the official XSDs"
+apple-mobile-web-app-title: "pain.001 and pain.008 XSD Element Reference, All Versions"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -71,7 +71,7 @@ twitter_description: "Complete element references for every supported ISO 20022 
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "ISO 20022 message specifications, generated from the official XSDs"
+twitter_title: "pain.001 and pain.008 XSD Element Reference, All Versions"
 twitter_url: "https://pain001.com/message-specs/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
