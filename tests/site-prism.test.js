@@ -184,6 +184,58 @@ test("prism: a page without the chrome does nothing and clicks are harmless", ()
   dom.window.document.getElementById("p").click();
 });
 
+test("prism: setNav defensive guard returns early when navigation toggle or menu is missing", () => {
+  const domNoToggle = makeDom(`<nav id="navMenu"><ul><li>Link</li></ul></nav>`);
+  runScript(domNoToggle, "prism.js");
+  const menu = domNoToggle.window.document.getElementById("navMenu");
+  assert.equal(menu.hasAttribute("data-open"), false);
+  assert.doesNotThrow(() => {
+    domNoToggle.setMedia(WIDE, true);
+  });
+  assert.equal(menu.hasAttribute("data-open"), false);
+
+  const domNoMenu = makeDom(`<button id="navToggle" aria-expanded="false">Menu</button>`);
+  runScript(domNoMenu, "prism.js");
+  const toggle = domNoMenu.window.document.getElementById("navToggle");
+  assert.equal(toggle.getAttribute("aria-expanded"), "false");
+  assert.doesNotThrow(() => {
+    domNoMenu.setMedia(WIDE, true);
+  });
+  assert.equal(toggle.getAttribute("aria-expanded"), "false");
+});
+
+test("prism: openPanel defensive guard returns early when button or panel is missing", () => {
+  const { dom, $, click } = chrome({ media: { [WIDE]: true, [HOVER]: true } });
+  const [a, b] = ["item-a", "item-b"].map($);
+  const btnA = a.querySelector(".nav-disclosure");
+  const btnB = b.querySelector(".nav-disclosure");
+  const panelA = a.querySelector(".nav-panel");
+  const panelB = b.querySelector(".nav-panel");
+
+  click(btnA);
+  assert.equal(btnA.getAttribute("aria-expanded"), "true");
+  assert.equal(panelA.hidden, false);
+  assert.ok(a.classList.contains("is-open"));
+
+  panelB.remove();
+  assert.doesNotThrow(() => {
+    btnB.dispatchEvent(new dom.window.MouseEvent("click", { bubbles: false }));
+  });
+  assert.equal(btnA.getAttribute("aria-expanded"), "true", "panel A remains open");
+  assert.equal(panelA.hidden, false);
+  assert.ok(a.classList.contains("is-open"));
+  assert.equal(btnB.getAttribute("aria-expanded"), "false");
+  assert.equal(b.classList.contains("is-open"), false);
+
+  btnB.remove();
+  assert.doesNotThrow(() => {
+    b.dispatchEvent(new dom.window.MouseEvent("mouseenter"));
+  });
+  assert.equal(btnA.getAttribute("aria-expanded"), "true", "panel A still remains open");
+  assert.equal(panelA.hidden, false);
+  assert.ok(a.classList.contains("is-open"));
+});
+
 /* ---------------- pain001-prism.js ---------------- */
 
 const LAYER = `
