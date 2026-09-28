@@ -37,7 +37,9 @@ Visitor's browser ── HTTPS ──> Cloudflare ──> GitHub Pages (static f
    └── enterprise form ──> formspree.io (only what the visitor submits)
 
 Maintainer ── signed commits / PRs ──> GitHub ──> Actions ──> Pages deploy
-                                                   └──> signed release + attestations
+                                                   ├──> signed release + attestations
+                                                   └──> Search Console API, read-only
+                                                        (OIDC -> one-hour token, no key)
 Build inputs: this repository, ssg (pinned), PyPI and npm (hash/lockfile),
 the Pyodide CDN (SHA-256 per file)
 ```
@@ -59,7 +61,10 @@ only when the visitor submits it.
   DENY`, `frame-ancestors 'none'`).
 - **Least privilege:** every workflow token is read-only by default; write
   scopes (`contents`, `pages`, `id-token`, `attestations`) are granted per
-  job and only where needed. No workflow runs untrusted pull-request code
+  job and only where needed. The one Google Cloud identity, a read-only
+  Search Console service account, has no keys: only this repository's
+  `seo-scoreboard.yml` can obtain its one-hour tokens, through Workload
+  Identity Federation. No workflow runs untrusted pull-request code
   with secrets (`pull_request_target` is not used).
 - **Complete mediation of dependencies:** Python packages install with
   `--require-hashes`, Node packages from a committed lockfile, every
@@ -82,7 +87,7 @@ only when the visitor submits it.
 | CWE-829 untrusted functionality | Third-party scripts | Only the vendored Cloudflare beacon, loaded from this origin and only on the deployed host. |
 | CWE-400 resource exhaustion | Demo input | Input files over 2 MB are refused before parsing. |
 | CWE-200 information exposure | Payment data in the demo | Processed in the browser only; the demo makes no request carrying it. |
-| CWE-522 credential exposure | Repository and CI | No long-lived secrets are stored for the site; workflows use the short-lived `GITHUB_TOKEN`. |
+| CWE-522 credential exposure | Repository and CI | No long-lived secrets are stored for the site; workflows use the short-lived `GITHUB_TOKEN`, and the Search Console scoreboard exchanges GitHub's OIDC token for a one-hour Google token instead of holding a key. |
 
 ## 6. Evidence
 

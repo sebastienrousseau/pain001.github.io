@@ -12,11 +12,13 @@ to the job summary ($GITHUB_STEP_SUMMARY).
 Search Console data lags by about three days, so both windows end three
 days ago.
 
-Credentials: a Google Cloud service account that has been added as a user
-on the Search Console property, passed as its JSON key text in the
-GSC_SERVICE_ACCOUNT_JSON environment variable (the repository secret of
-the same name in CI). Without it, the script says so and exits 0. See
-DEVELOPMENT.md for the one-time setup.
+Credentials: Google Application Default Credentials for a service account
+that has been added as a user on the Search Console property, found through
+GOOGLE_APPLICATION_CREDENTIALS. In CI that file is written by
+google-github-actions/auth through Workload Identity Federation: GitHub's
+short-lived OIDC token is exchanged for a one-hour Google token, so no key
+is stored anywhere. Without credentials, the script says so and exits 0.
+See DEVELOPMENT.md for the setup.
 
 Usage: python3 scripts/seo_scoreboard.py
 """
@@ -24,7 +26,6 @@ Usage: python3 scripts/seo_scoreboard.py
 from __future__ import annotations
 
 import datetime as dt
-import json
 import os
 import sys
 import urllib.parse
@@ -41,8 +42,8 @@ TRACKED = (
 )
 TOP = 10
 NOT_CONFIGURED = (
-    "Search Console scoreboard not configured: set GSC_SERVICE_ACCOUNT_JSON to a service "
-    "account's JSON key (see DEVELOPMENT.md). Nothing to report."
+    "Search Console scoreboard not configured: GOOGLE_APPLICATION_CREDENTIALS is not set "
+    "(see DEVELOPMENT.md). Nothing to report."
 )
 
 Post = Callable[[dict], dict]
@@ -150,12 +151,12 @@ def render(report: dict) -> str:
     return "\n".join(lines) + "\n"
 
 
-def authorized_post(info: dict) -> Post:
-    """A POST function authenticated as the service account."""
+def authorized_post() -> Post:
+    """A POST function authenticated with Application Default Credentials."""
+    import google.auth
     from google.auth.transport.requests import AuthorizedSession
-    from google.oauth2 import service_account
 
-    credentials = service_account.Credentials.from_service_account_info(info, scopes=[SCOPE])
+    credentials, _ = google.auth.default(scopes=[SCOPE])
     session = AuthorizedSession(credentials)
     url = API.format(urllib.parse.quote(PROPERTY, safe=""))
 
@@ -169,11 +170,10 @@ def authorized_post(info: dict) -> Post:
 
 def main(argv: list[str] | None = None, today: dt.date | None = None, post: Post | None = None) -> int:
     if post is None:
-        raw = os.environ.get("GSC_SERVICE_ACCOUNT_JSON", "").strip()
-        if not raw:
+        if not os.environ.get("GOOGLE_APPLICATION_CREDENTIALS", "").strip():
             print(NOT_CONFIGURED)
             return 0
-        post = authorized_post(json.loads(raw))
+        post = authorized_post()
     markdown = render(collect(post, today or dt.date.today()))
     print(markdown)
     summary = os.environ.get("GITHUB_STEP_SUMMARY")

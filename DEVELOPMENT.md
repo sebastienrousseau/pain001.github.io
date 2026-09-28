@@ -65,23 +65,35 @@ every Monday and on demand. It compares the last 28 days of Search Console
 data with the 28 days before, for the whole site, the tracked queries
 (`pain.001`, `pain001`, `001.001`, the version and XSD queries, `pain.002`
 and others), and the top pages and countries, and writes the result to the
-run's summary. Until the secret below exists, it reports "not configured"
-and succeeds.
+run's summary.
 
-One-time setup, for the owner of the Search Console property:
+It authenticates without a stored key. Workload Identity Federation
+exchanges the job's GitHub OIDC token for a one-hour token of the service
+account `pain001-seo-scoreboard@teamrousseau.iam.gserviceaccount.com`, which
+is a **Restricted** (read-only) user on the `pain001.com` Search Console
+property and has no Google Cloud roles. There is no secret to rotate. On a
+fork the authentication step is skipped and the run reports "not
+configured".
 
-1. In Google Cloud, create or pick a project, enable the **Google Search
-   Console API**, and create a **service account** with no project roles.
-2. Create a JSON key for the service account and download it.
-3. In Search Console, open the `pain001.com` domain property, go to
-   **Settings > Users and permissions**, and add the service account's
-   e-mail address as a user with **Restricted** permission (read-only).
-4. In this repository, go to **Settings > Secrets and variables > Actions**
-   and add the key file's full JSON text as the secret
-   `GSC_SERVICE_ACCOUNT_JSON`. Then delete the downloaded file.
+The Google Cloud side, in project `teamrousseau`, for reference or rebuild:
+
+1. Enable the **Google Search Console API** and the **IAM Service Account
+   Credentials API**.
+2. Create the workload identity pool `github` with the OIDC provider
+   `pain001-github-io`: issuer `https://token.actions.githubusercontent.com`,
+   default audience, mappings `google.subject=assertion.sub` and
+   `attribute.repository_id=assertion.repository_id`, and the condition
+   `assertion.repository_id == '654513234' &&
+   assertion.job_workflow_ref.startsWith('sebastienrousseau/pain001.github.io/.github/workflows/seo-scoreboard.yml@')`.
+3. On the service account, grant **Workload Identity User** to
+   `principalSet://iam.googleapis.com/projects/116272232197/locations/global/workloadIdentityPools/github/attribute.repository_id/654513234`.
+   Create no keys.
 
 To run it locally, install `requirements/seo.txt` with `--require-hashes`
-and set `GSC_SERVICE_ACCOUNT_JSON` to the key's JSON text.
+and point `GOOGLE_APPLICATION_CREDENTIALS` at Application Default
+Credentials that can read the property, for example from
+`gcloud auth application-default login
+--impersonate-service-account=pain001-seo-scoreboard@teamrousseau.iam.gserviceaccount.com`.
 
 ## Commit policy
 

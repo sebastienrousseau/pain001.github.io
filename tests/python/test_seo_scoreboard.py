@@ -72,10 +72,20 @@ def test_pages_are_ranked_by_clicks_and_shown_as_paths():
 
 
 def test_not_configured_exits_zero(monkeypatch, capsys):
-    monkeypatch.delenv("GSC_SERVICE_ACCOUNT_JSON", raising=False)
+    monkeypatch.delenv("GOOGLE_APPLICATION_CREDENTIALS", raising=False)
     assert sb.main([]) == 0
     assert "not configured" in capsys.readouterr().out
 
+
+
+def test_application_default_credentials_are_used_when_set(monkeypatch, capsys):
+    # In CI, google-github-actions/auth sets GOOGLE_APPLICATION_CREDENTIALS
+    # to a Workload Identity Federation config; no key is involved.
+    monkeypatch.setenv("GOOGLE_APPLICATION_CREDENTIALS", "/tmp/wif-config.json")
+    monkeypatch.delenv("GITHUB_STEP_SUMMARY", raising=False)
+    monkeypatch.setattr(sb, "authorized_post", lambda: fake_post)
+    assert sb.main([], today=TODAY) == 0
+    assert "| `pain.001` | 40 (+26) |" in capsys.readouterr().out
 
 def test_report_is_written_to_the_job_summary(tmp_path, monkeypatch):
     summary = tmp_path / "summary.md"
