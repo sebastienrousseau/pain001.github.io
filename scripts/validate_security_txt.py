@@ -38,13 +38,19 @@ def fields(text: str) -> dict[str, list[str]]:
     return out
 
 
-def main() -> int:
+def main(site: Path | str | None = None) -> int:
+    if site is not None:
+        target = Path(site)
+    elif len(sys.argv) > 1:
+        target = Path(sys.argv[1])
+    else:
+        target = SITE
     failures = []
-    paths = [SITE / ".well-known" / "security.txt", SITE / "security.txt"]
+    paths = [target / ".well-known" / "security.txt", target / "security.txt"]
     bodies = []
     for p in paths:
         if not p.exists() or p.stat().st_size == 0:
-            failures.append(f"{p.relative_to(SITE)}: missing or empty")
+            failures.append(f"{p.relative_to(target)}: missing or empty")
         else:
             bodies.append(p.read_bytes())
     if len(bodies) == 2 and bodies[0] != bodies[1]:
