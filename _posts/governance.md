@@ -115,7 +115,7 @@ Figures refreshed at each site build from public sources (PyPI download statisti
 | Measure | Value | Source |
 | :--- | ---: | :--- |
 | pain001 downloads, last 30 days | 3,045 | PyPI |
-| pain001 downloads, last 7 days | 398 | PyPI |
+| pain001 downloads, last 7 days | 706 | PyPI |
 | GitHub stars | 49 | GitHub |
 | GitHub forks | 15 | GitHub |
 
