@@ -33,3 +33,9 @@ dist/
 
 # Local agent worktrees
 .claude/
+
+# Python bytecode written when the build and gate scripts import each other.
+# regenerate.yml commits with `git add -A`, so without this the release
+# pull request carries scripts/__pycache__/*.pyc.
+__pycache__/
+*.py[cod]
