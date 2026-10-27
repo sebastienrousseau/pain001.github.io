@@ -6,17 +6,9 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
-### Fixed
+Nothing yet.
 
-- The weekly dated-claims check retries a refused or timed-out connection
-  (three attempts, with backoff) before it reports a source as unreadable.
-  It failed three of its last five runs on the Internet Archive refusing
-  or timing out the runner, while every claim held when read again. An
-  HTTP error answer is not retried, and a source that stays unreadable
-  still fails the check. The job's limit rises from 15 to 30 minutes to
-  leave room for the retries.
-
-## [0.0.11] - 2026-09-28
+## [0.0.11] - 2026-10-27
 
 ### Added
 
@@ -25,6 +17,27 @@ All notable changes to this website are documented here. The format follows
   zero-allocation validators, multi-core Rayon batch processing exceeding
   50,000 tx/s, and seamless pure Python fallbacks.
 - Updated governance telemetry counts.
+
+### Changed
+
+- `KEYS.asc` and `.github/allowed_signers` trust a second maintainer signing
+  key, `SHA256:kIOPAavp1TCEauTr1tTIN3cv+tSs6F9m/4lZjuM9tqk` (rousseau-mbp-m1),
+  so release tags can be signed on either maintainer machine.
+
+### Fixed
+
+- `KEYS.asc` is now in OpenSSH allowed-signers format, so
+  `git -c gpg.ssh.allowedSignersFile=KEYS.asc tag -v <tag>` verifies release
+  tags. It previously held a bare public-key line that Git rejected as
+  "invalid key". `KEYS.md` documents the command and lists each key's
+  fingerprint.
+- The weekly dated-claims check retries a refused or timed-out connection
+  (three attempts, with backoff) before it reports a source as unreadable.
+  It failed three of its last five runs on the Internet Archive refusing
+  or timing out the runner, while every claim held when read again. An
+  HTTP error answer is not retried, and a source that stays unreadable
+  still fails the check. The job's limit rises from 15 to 30 minutes to
+  leave room for the retries.
 
 ### Security
 
