@@ -6,6 +6,24 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+Nothing yet.
+
+## [0.0.11] - 2026-10-27
+
+### Added
+
+- Documentation article for `pain001-fast`, the high-throughput PyO3 native
+  extension engine for ISO 20022 payments: architecture, sub-25ns
+  zero-allocation validators, multi-core Rayon batch processing exceeding
+  50,000 tx/s, and seamless pure Python fallbacks.
+- Updated governance telemetry counts.
+
+### Changed
+
+- `KEYS.asc` and `.github/allowed_signers` trust a second maintainer signing
+  key, `SHA256:kIOPAavp1TCEauTr1tTIN3cv+tSs6F9m/4lZjuM9tqk` (rousseau-mbp-m1),
+  so release tags can be signed on either maintainer machine.
+
 ### Fixed
 
 - `KEYS.asc` is now in OpenSSH allowed-signers format, so
@@ -20,22 +38,6 @@ All notable changes to this website are documented here. The format follows
   HTTP error answer is not retried, and a source that stays unreadable
   still fails the check. The job's limit rises from 15 to 30 minutes to
   leave room for the retries.
-
-### Changed
-
-- `KEYS.asc` and `.github/allowed_signers` trust a second maintainer signing
-  key, `SHA256:kIOPAavp1TCEauTr1tTIN3cv+tSs6F9m/4lZjuM9tqk` (rousseau-mbp-m1),
-  so release tags can be signed on either maintainer machine.
-
-## [0.0.11] - 2026-09-28
-
-### Added
-
-- Documentation article for `pain001-fast`, the high-throughput PyO3 native
-  extension engine for ISO 20022 payments: architecture, sub-25ns
-  zero-allocation validators, multi-core Rayon batch processing exceeding
-  50,000 tx/s, and seamless pure Python fallbacks.
-- Updated governance telemetry counts.
 
 ### Security
 
