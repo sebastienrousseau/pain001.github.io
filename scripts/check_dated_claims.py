@@ -38,6 +38,7 @@ import html
 import json
 import re
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -49,15 +50,31 @@ CLAIMS = ROOT / "scripts" / "dated_claims.json"
 USER_AGENT = "pain001.com dated-claims check (+https://pain001.com/security.txt)"
 WAYBACK_SAVE = "https://web.archive.org/save/"
 WAYBACK_RAW = "https://web.archive.org/web/2id_/"  # latest capture, raw body
+# A refused or timed-out connection is retried: the Internet Archive refuses
+# runners intermittently. An HTTP error answer is not; it is the answer.
+ATTEMPTS = 3
+BACKOFF_SECONDS = 20
 
 
-def _get(url: str, timeout: int = 60) -> tuple[str, str]:
-    """Return (final_url, text) for a URL, decoding gzip and deflate."""
+def _open(url: str, timeout: int, attempts: int) -> tuple[bytes, str, str]:
+    """Read a URL, retrying a refused or timed-out connection."""
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "text/html"})
-    with urllib.request.urlopen(request, timeout=timeout) as response:  # nosec B310
-        raw = response.read()
-        final = response.url
-        encoding = response.headers.get("Content-Encoding", "")
+    for attempt in range(1, attempts + 1):
+        try:
+            with urllib.request.urlopen(request, timeout=timeout) as response:  # nosec B310
+                return response.read(), response.url, response.headers.get("Content-Encoding", "")
+        except urllib.error.HTTPError:
+            raise
+        except (urllib.error.URLError, TimeoutError, ConnectionError):
+            if attempt == attempts:
+                raise
+            time.sleep(BACKOFF_SECONDS * attempt)
+    raise AssertionError("unreachable")  # pragma: no cover
+
+
+def _get(url: str, timeout: int = 60, attempts: int = ATTEMPTS) -> tuple[str, str]:
+    """Return (final_url, text) for a URL, decoding gzip and deflate."""
+    raw, final, encoding = _open(url, timeout, attempts)
     if raw[:2] == b"\x1f\x8b":
         raw = gzip.decompress(raw)
     elif encoding == "deflate":
@@ -85,7 +102,7 @@ def fetch_wayback(url: str) -> tuple[str, str]:
     rate-limited and may refuse), then reads the latest capture and names
     its date so a stale archive is visible in the report."""
     try:
-        _get(WAYBACK_SAVE + url, timeout=90)
+        _get(WAYBACK_SAVE + url, timeout=90, attempts=1)
     except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, OSError):
         pass  # no fresh capture; the latest existing one is still checked
     final, page = _get(WAYBACK_RAW + url, timeout=90)

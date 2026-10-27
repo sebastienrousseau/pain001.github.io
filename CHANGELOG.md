@@ -13,6 +13,13 @@ All notable changes to this website are documented here. The format follows
   tags. It previously held a bare public-key line that Git rejected as
   "invalid key". `KEYS.md` documents the command and lists each key's
   fingerprint.
+- The weekly dated-claims check retries a refused or timed-out connection
+  (three attempts, with backoff) before it reports a source as unreadable.
+  It failed three of its last five runs on the Internet Archive refusing
+  or timing out the runner, while every claim held when read again. An
+  HTTP error answer is not retried, and a source that stays unreadable
+  still fails the check. The job's limit rises from 15 to 30 minutes to
+  leave room for the retries.
 
 ### Changed
 
