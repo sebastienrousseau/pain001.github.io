@@ -6,7 +6,21 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
-Nothing yet.
+### Fixed
+
+- Pages that are noindex no longer name themselves canonical. Search
+  Console listed the translated corpus scenario pages (for example
+  `/es/corpus-cz-sepa-sct/`) as excluded by noindex while each one's
+  canonical pointed at itself; `/offline/` and `/thanks/` did the same.
+  The noindex stays (the translations are deliberately kept out of the
+  index, sitemap and hreflang clusters); the canonical link goes.
+  `scripts/validate_sitemap.py` now checks every build: each sitemap URL
+  is a built, indexable, self-canonical page.
+
+### Security
+
+- `package.json` overrides minimatch to `^11.0.1`
+  (GHSA-g3hv-75wg-m249), which eslint still pulls in at `^10`.
 
 ## [0.0.12] - 2026-10-29
 

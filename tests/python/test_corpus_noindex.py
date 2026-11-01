@@ -5,8 +5,8 @@
 Search Console listed the translated corpus scenario pages
 (/<locale>/corpus-*/) as "Discovered" or "Crawled", "currently not
 indexed". They stay published for visitors, but carry noindex, leave the
-sitemap and leave every hreflang cluster, while the English scenario pages
-stay indexable.
+sitemap, every hreflang cluster and their own canonical link, while the
+English scenario pages stay indexable.
 """
 
 import postbuild_fix as pb
@@ -29,7 +29,13 @@ def test_translated_page_gets_a_single_noindex():
 def test_translated_page_loses_its_hreflang_links():
     html = pb.noindex_translated_corpus(HEAD)
     assert "hreflang=" not in html
-    assert '<link rel="canonical" href="https://pain001.com/de/corpus-x/">' in html
+
+
+def test_translated_page_loses_its_self_canonical():
+    # Search Console: a page that is noindex yet names itself canonical
+    # sends contradictory signals. The noindex page carries no canonical.
+    html = pb.noindex_translated_corpus(HEAD)
+    assert 'rel="canonical"' not in html
 
 
 def test_noindex_is_added_when_no_robots_meta_exists():
@@ -56,3 +62,18 @@ def test_sitemap_skips_translated_corpus_pages(tmp_path):
     assert "https://pain001.com/de/why/" in sitemap
     assert "/de/corpus-x/" not in sitemap
     assert "/fr/corpus-x/" not in sitemap
+
+
+def test_utility_pages_lose_their_self_canonical(tmp_path):
+    # /offline/ and /thanks/ were noindex yet canonical to themselves.
+    for rel in pb.NOINDEX_PAGES:
+        d = tmp_path / rel
+        d.mkdir()
+        (d / "index.html").write_text(
+            '<head><link rel="canonical" href="https://pain001.com/%s/" /></head>' % rel,
+            encoding="utf-8")
+    pb.mark_noindex_pages(tmp_path)
+    for rel in pb.NOINDEX_PAGES:
+        html = (tmp_path / rel / "index.html").read_text(encoding="utf-8")
+        assert 'name="robots" content="noindex"' in html
+        assert 'rel="canonical"' not in html

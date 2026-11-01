@@ -22,6 +22,7 @@ test: build pytest
 	python3 scripts/validate_contrast.py
 	python3 scripts/validate_proof.py
 	python3 scripts/validate_security_txt.py
+	python3 scripts/validate_sitemap.py
 	python3 scripts/validate_links.py site
 	python3 scripts/validate_versions.py
 

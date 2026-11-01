@@ -122,6 +122,9 @@ jobs:
       - name: security.txt is published and current (RFC 9116)
         run: python3 scripts/validate_security_txt.py
 
+      - name: Sitemap lists only canonical, indexable pages
+        run: python3 scripts/validate_sitemap.py
+
       - name: Link integrity (internal links, anchors, locale consistency)
         run: python3 scripts/validate_links.py site
 
