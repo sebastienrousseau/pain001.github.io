@@ -275,6 +275,22 @@ jobs:
       - name: Unit tests
         run: npm test
 
+  node-matrix-all:
+    # Branch protection requires this check by name. It stands for every
+    # leg of the node-matrix matrix, so adding or dropping a version never
+    # renames a required check.
+    name: Unit tests (all)
+    if: always()
+    needs: node-matrix
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions: {}
+    steps:
+      - name: Every leg of the matrix passed
+        env:
+          RESULT: ${{ needs.node-matrix.result }}
+        run: test "$RESULT" = success
+
   dependency-review:
     name: Dependency review
     if: github.event_name == 'pull_request'
