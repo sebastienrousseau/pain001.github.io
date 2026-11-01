@@ -6,7 +6,7 @@
 
 - [ ] Reviewed against the checklist in CONTRIBUTING.md, "Reviewing changes"
 - [ ] New or changed behaviour has tests; a fix has a test that fails without it
-- [ ] Built locally with ssg 0.0.63
+- [ ] Built locally with the latest ssg release
 - [ ] `make verify` passes
 - [ ] WCAG 2.2 AAA browser scan has zero findings
 - [ ] Lighthouse mobile and desktop scores are 100/100/100/100

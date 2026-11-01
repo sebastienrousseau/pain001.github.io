@@ -38,6 +38,11 @@ on:
 permissions:
   contents: read
 
+env:
+  # Same pin as ci.yml: the latest ssg release, read by the cache key
+  # and the install step together.
+  SSG_VERSION: 0.0.72
+
 jobs:
   target:
     runs-on: ubuntu-24.04
@@ -125,11 +130,11 @@ jobs:
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: ~/.cargo/bin/ssg
-          key: ssg-0.0.63-${{ runner.os }}
+          key: ssg-${{ env.SSG_VERSION }}-${{ runner.os }}
 
-      - name: Install ssg 0.0.63
+      - name: Install ssg
         if: steps.cache-ssg.outputs.cache-hit != 'true'
-        run: cargo install ssg --version 0.0.63 --locked
+        run: cargo install ssg --locked --version "$SSG_VERSION"
 
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:

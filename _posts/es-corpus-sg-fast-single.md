@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/es/corpus-sg-fast-single/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. Una muestra pain.001 validada (SG, raíl instant-payment), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
 item_guid: "https://pain001.com/es/corpus-sg-fast-single/"
 item_link: "https://pain001.com/es/corpus-sg-fast-single/"

@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/nl/corpus-gb-chaps-property-purchase/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "CHAPS same-day property completion with the BoE HLST purpose code. Een gevalideerd pain.001-voorbeeld (Verenigd Koninkrijk, rail priority-payment), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
 item_guid: "https://pain001.com/nl/corpus-gb-chaps-property-purchase/"
 item_link: "https://pain001.com/nl/corpus-gb-chaps-property-purchase/"

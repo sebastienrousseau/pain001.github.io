@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/pain-001/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "pain.001 is the ISO 20022 XML message a company sends its bank to order credit transfers: its structure, versions .03 to .13, a validated example and pain.002."
 item_guid: "https://pain001.com/pain-001/rss.xml"
 item_link: "https://pain001.com/pain-001/rss.xml"

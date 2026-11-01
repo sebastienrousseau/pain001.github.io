@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/de/corpus-my-duitnow-single/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Malaysia DuitNow credit in MYR with a BNM purpose code. Eine validierte pain.001-Beispieldatei (MY, Schiene instant-payment), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
 item_guid: "https://pain001.com/de/corpus-my-duitnow-single/"
 item_link: "https://pain001.com/de/corpus-my-duitnow-single/"

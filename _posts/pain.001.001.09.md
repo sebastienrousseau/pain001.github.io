@@ -46,7 +46,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/pain.001.001.09/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "pain.001.001.09, the CBPR+ cross-border version: official XSD, element reference, XSD-valid example files and a free in-browser validator."
 item_guid: "https://pain001.com/pain.001.001.09/rss.xml"
 item_link: "https://pain001.com/pain.001.001.09/rss.xml"

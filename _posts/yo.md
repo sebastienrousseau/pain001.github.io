@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/yo/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Ṣẹ̀dá kí o sì yẹ XML pain.001 àti pain.008 wò gẹ́gẹ́ bí XSD òṣìṣẹ́ ISO 20022. Ọ̀fẹ́, orísun ṣíṣí, ó ń ṣiṣẹ́ lórí kọ̀ǹpútà rẹ."
 item_guid: "https://pain001.com/yo/rss.xml"
 item_link: "https://pain001.com/yo/rss.xml"

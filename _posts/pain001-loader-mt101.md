@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/pain001-loader-mt101/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation, with a full field-mapping table and strict error handling, ready for the move from MT101 to pain.001 between banks."
 item_guid: "https://pain001.com/pain001-loader-mt101/rss.xml"
 item_link: "https://pain001.com/pain001-loader-mt101/rss.xml"
