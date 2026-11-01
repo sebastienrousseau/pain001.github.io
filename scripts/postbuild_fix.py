@@ -1286,9 +1286,12 @@ def ensure_social_metadata(site: Path) -> None:
 # Utility pages that must never be indexed: the not-found page (served
 # with a 200 at /404/ it was a textbook soft 404 in Search Console), the
 # service worker's offline fallback, and the form confirmation page. They
-# stay out of the sitemap and carry a robots noindex.
+# stay out of the sitemap and carry a robots noindex, and no canonical
+# link: a noindex page naming itself canonical is a contradiction Search
+# Console reports.
 NOINDEX_PAGES = ("404", "offline", "thanks")
 _ROBOTS_NOINDEX = '<meta name="robots" content="noindex" />'
+_CANONICAL_LINK_RE = re.compile(r'<link rel="canonical"[^>]*>\s*')
 
 
 def mark_noindex_pages(site: Path) -> None:
@@ -1300,11 +1303,11 @@ def mark_noindex_pages(site: Path) -> None:
         page = site / rel / "index.html"
         if not page.is_file():
             continue
-        html = page.read_text(encoding="utf-8")
+        html = _CANONICAL_LINK_RE.sub("", page.read_text(encoding="utf-8"))
         if _ROBOTS_NOINDEX not in html:
             html = html.replace("</head>", _ROBOTS_NOINDEX + "</head>", 1)
-            page.write_text(html, encoding="utf-8")
             marked += 1
+        page.write_text(html, encoding="utf-8")
         if rel == "404":
             (site / "404.html").write_text(html, encoding="utf-8")
     print(f"[postbuild] noindex on {marked} utility page(s); /404.html published")
@@ -1366,15 +1369,18 @@ def corpus_hreflang_cluster(slug: str, self_lang: str) -> str:
 # or "Crawled" (21) and "currently not indexed": template translations of
 # the English page that Google declines to index, which dilute the site.
 # They stay published for visitors but carry noindex and leave the sitemap
-# and every hreflang cluster.
+# and every hreflang cluster. They also drop their canonical link: Search
+# Console then listed them as "Excluded by noindex" while each named
+# itself canonical, two contradictory signals for one URL.
 _ROBOTS_META_RE = re.compile(r'<meta name="robots" content="[^"]*"\s*/?>')
 _HREFLANG_LINK_RE = re.compile(r'<link rel="alternate"[^>]*\bhreflang="[^"]*"[^>]*>\s*')
 _CORPUS_NOINDEX = '<meta name="robots" content="noindex, follow" />'
 
 
 def noindex_translated_corpus(html: str) -> str:
-    """Mark a translated corpus page noindex and drop its hreflang links."""
+    """Mark a translated corpus page noindex; drop its hreflang and canonical."""
     html = _HREFLANG_LINK_RE.sub("", html)
+    html = _CANONICAL_LINK_RE.sub("", html)
     if _ROBOTS_META_RE.search(html):
         return _ROBOTS_META_RE.sub(_CORPUS_NOINDEX, html)
     return html.replace("</head>", _CORPUS_NOINDEX + "</head>", 1)
