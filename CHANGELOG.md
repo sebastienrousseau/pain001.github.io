@@ -24,6 +24,9 @@ All notable changes to this website are documented here. The format follows
   collapsed to a centred zero-width rule (138 layout-audit strays).
   The rail layout now gives a direct-child rule zero inline margins,
   and the dead `div[lang]` selectors are gone.
+- CI adds a gate job after each versioned test matrix (for example
+  `Unit tests (all)`), so branch protection can require one check name
+  that survives Python, Node and Rust version bumps (#85).
 
 ### Fixed
 
