@@ -1,3 +1,7 @@
 # The Search Console scoreboard (scripts/seo_scoreboard.py).
 google-auth==2.58.1
 requests==2.34.2
+# Transitive (google-auth via pyasn1-modules). Floor clears
+# GHSA-2qm8-x737-gmw5, GHSA-mm57-4v3p-rchx, GHSA-9m75-vc3g-4x39 and
+# GHSA-fm9c-5rcf-2q5p (all fixed in 0.6.5).
+pyasn1>=0.6.5
