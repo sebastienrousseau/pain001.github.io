@@ -6,6 +6,23 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+### Changed
+
+- Built with ssg 0.0.72, the latest release, up from 0.0.63. Every
+  workflow that installs ssg (`ci.yml`, `release.yml`,
+  `release-backfill.yml`, `regenerate.yml`) reads one `SSG_VERSION`
+  for its cache key and install step; `regenerate.yml` no longer
+  hard-codes the version twice. The pages' `generator` metadata, the
+  devcontainer and the setup docs name 0.0.72. ssg 0.0.72 no longer
+  emits the entity-escaped metas, bodies and code delimiters or the
+  stale `/highlight.css` link that `scripts/postbuild_fix.py` repairs;
+  those passes stay as no-op guards.
+- ssg 0.0.72 no longer wraps each page body in `<div lang>`, so on
+  pages with the contents rail every `<hr>` became a grid item and
+  collapsed to a centred zero-width rule (138 layout-audit strays).
+  The rail layout now gives a direct-child rule zero inline margins,
+  and the dead `div[lang]` selectors are gone.
+
 ### Fixed
 
 - Pages that are noindex no longer name themselves canonical. Search
@@ -21,6 +38,9 @@ All notable changes to this website are documented here. The format follows
 
 - `package.json` overrides minimatch to `^11.0.1`
   (GHSA-g3hv-75wg-m249), which eslint still pulls in at `^10`.
+- `requirements/seo.in` floors pyasn1 at 0.6.5, and the hashed
+  `requirements/seo.txt` moves 0.6.4 to 0.6.5 (GHSA-2qm8-x737-gmw5,
+  GHSA-mm57-4v3p-rchx, GHSA-9m75-vc3g-4x39, GHSA-fm9c-5rcf-2q5p).
 
 ## [0.0.12] - 2026-10-29
 

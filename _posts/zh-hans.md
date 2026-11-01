@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/zh-hans/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "依据官方 ISO 20022 XSD 生成并校验 pain.001 和 pain.008 XML，支持 CSV、Excel 与 MT101。免费开源，在您自己的计算机上运行。"
 item_guid: "https://pain001.com/zh-hans/rss.xml"
 item_link: "https://pain001.com/zh-hans/rss.xml"

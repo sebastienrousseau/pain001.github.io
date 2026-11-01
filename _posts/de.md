@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/de/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "pain.001- und pain.008-XML (SEPA-XML) erzeugen und gegen das offizielle ISO-20022-XSD prüfen. Kostenlos, Open Source, läuft auf Ihrem Rechner."
 item_guid: "https://pain001.com/de/rss.xml"
 item_link: "https://pain001.com/de/rss.xml"

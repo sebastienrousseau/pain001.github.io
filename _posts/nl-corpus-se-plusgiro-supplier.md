@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/nl/corpus-se-plusgiro-supplier/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Swedish Plusgiro supplier payment with an invoice message. Een gevalideerd pain.001-voorbeeld (Zweden, rail plusgiro-credit), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
 item_guid: "https://pain001.com/nl/corpus-se-plusgiro-supplier/"
 item_link: "https://pain001.com/nl/corpus-se-plusgiro-supplier/"

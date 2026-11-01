@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/contact/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Where to report bugs, disclose security issues privately, and reach the maintainer, with what to include for the fastest possible fix."
 item_guid: "https://pain001.com/contact/rss.xml"
 item_link: "https://pain001.com/contact/rss.xml"

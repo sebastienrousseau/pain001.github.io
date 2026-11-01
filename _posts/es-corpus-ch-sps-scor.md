@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/es/corpus-ch-sps-scor/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Swiss domestic credit transfer with an ISO 11649 creditor reference (SCOR). Una muestra pain.001 validada (Suiza, raíl domestic-credit-transfer), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
 item_guid: "https://pain001.com/es/corpus-ch-sps-scor/"
 item_link: "https://pain001.com/es/corpus-ch-sps-scor/"

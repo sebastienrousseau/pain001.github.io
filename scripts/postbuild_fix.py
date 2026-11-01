@@ -3,8 +3,9 @@
 # SPDX-License-Identifier: Apache-2.0 OR MIT
 """Post-build repairs for the ssg output, run by build.sh before publish.
 
-Local ssg builds (0.0.63) emit two entity-escaping artifacts, the same
-class of bug sebastienrousseau.github.io repairs in its postbuild:
+ssg 0.0.63 emitted two entity-escaping artifacts, the same class of bug
+sebastienrousseau.github.io repairs in its postbuild. ssg 0.0.72 emits
+neither, so passes 1 and 2 are no-ops on its output, kept as guards:
 
 1. Head metas: the ``{{primary}}``/partial expansion right after
    ``<title>`` ships entity-escaped (``&lt;meta ...&gt;``), which browsers
@@ -362,8 +363,8 @@ _SPAN_RE = re.compile(r"</?span[^>]*>")
 
 
 def fix_code_blocks(html: str) -> str:
-    # ssg 0.0.63 can leave the structural code/pre delimiters encoded one
-    # level deeper than the syntax-highlight spans. Restore only those
+    # ssg 0.0.63 left the structural code/pre delimiters encoded one
+    # level deeper than the syntax-highlight spans (0.0.72 does not). Restore only those
     # delimiters; code samples such as <BIC> must remain escaped text.
     def restore(m: re.Match) -> str:
         opening = _html.unescape(m.group(1))
@@ -382,8 +383,8 @@ def fix_code_blocks(html: str) -> str:
 def restore_encoded_code(html: str) -> str:
     """Restore encoded code delimiters while leaving their payload escaped.
 
-    SSG 0.0.63 emits both inline and fenced code delimiters one entity level
-    deeper than the surrounding Markdown.  Unescaping only the delimiters
+    SSG 0.0.63 emitted both inline and fenced code delimiters one entity level
+    deeper than the surrounding Markdown (0.0.72 does not).  Unescaping only the delimiters
     preserves examples such as ``<BIC>`` as text instead of creating unknown
     HTML elements.
     """
@@ -1217,8 +1218,9 @@ def bundle_stylesheets(site: Path) -> None:
         if not hrefs or any(h.startswith(("http:", "https:", "//")) for h in hrefs):
             continue
         paths = [site / h.lstrip("/") for h in hrefs]
-        # SSG 0.0.63 fingerprints its generated syntax-highlighter asset but
-        # leaves the authored ``/highlight.css`` URL in HTML. Resolve that
+        # SSG 0.0.63 fingerprinted its generated syntax-highlighter asset but
+        # left the authored ``/highlight.css`` URL in HTML (0.0.72 links
+        # the fingerprinted file itself). Resolve that
         # single generated file while assembling the final page bundle; the
         # stale URL is then removed with the other individual stylesheet
         # links instead of becoming a site-wide 404.

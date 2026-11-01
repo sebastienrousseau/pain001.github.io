@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/release-policy/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "How Pain001 versions, what 'supported' means before 1.0, how security fixes ship, how releases are signed and attested, and how to roll back safely."
 item_guid: "https://pain001.com/release-policy/rss.xml"
 item_link: "https://pain001.com/release-policy/rss.xml"

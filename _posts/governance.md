@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/governance/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Who maintains Pain001, how decisions are made, how it is funded, what mitigates single-maintainer risk, and the editorial and corrections policy, stated plainly and with limitations included."
 item_guid: "https://pain001.com/governance/rss.xml"
 item_link: "https://pain001.com/governance/rss.xml"
@@ -115,11 +115,11 @@ Figures refreshed at each site build from public sources (PyPI download statisti
 | Measure | Value | Source |
 | :--- | ---: | :--- |
 | pain001 downloads, last 30 days | 3,517 | PyPI |
-| pain001 downloads, last 7 days | 1,084 | PyPI |
+| pain001 downloads, last 7 days | 924 | PyPI |
 | GitHub stars | 49 | GitHub |
-| GitHub forks | 15 | GitHub |
+| GitHub forks | 16 | GitHub |
 
-Refreshed 2026-10-27. Page views are counted by Cloudflare Web Analytics, cookieless and without identifiers ([privacy](/privacy/)); the browser demo is not measured, by design.
+Refreshed 2026-11-01. Page views are counted by Cloudflare Web Analytics, cookieless and without identifiers ([privacy](/privacy/)); the browser demo is not measured, by design.
 <!-- traction:end -->
 
 ## Trademark

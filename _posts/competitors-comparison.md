@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/competitors-comparison/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Pain001 against Prowide, python-sepaxml, SWIFT Translator, XMLdation, Volante and the rest: what each does well, what it costs, and where the gaps are. Sources dated."
 item_guid: "https://pain001.com/competitors-comparison/rss.xml"
 item_link: "https://pain001.com/competitors-comparison/rss.xml"

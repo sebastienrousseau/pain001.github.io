@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/solutions/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Treasury, CFO and board, payment operations, engineering and AI: the problem in your vocabulary, what Pain001 changes, and your next click, in 150 words per role."
 item_guid: "https://pain001.com/solutions/rss.xml"
 item_link: "https://pain001.com/solutions/rss.xml"

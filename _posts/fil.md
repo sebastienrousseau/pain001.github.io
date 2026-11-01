@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/fil/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Gumawa at mag-validate ng pain.001 at pain.008 XML ayon sa opisyal na ISO 20022 XSD. Libre, open source, at tumatakbo sa sarili ninyong computer."
 item_guid: "https://pain001.com/fil/rss.xml"
 item_link: "https://pain001.com/fil/rss.xml"

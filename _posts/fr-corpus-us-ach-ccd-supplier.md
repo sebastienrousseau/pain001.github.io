@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/fr/corpus-us-ach-ccd-supplier/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "ACH CCD credit to a supplier with an addenda remittance line. Un exemple pain.001 validé (États-Unis, rail ach-credit), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur."
 item_guid: "https://pain001.com/fr/corpus-us-ach-ccd-supplier/"
 item_link: "https://pain001.com/fr/corpus-us-ach-ccd-supplier/"
