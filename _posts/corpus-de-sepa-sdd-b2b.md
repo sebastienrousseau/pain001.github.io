@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/corpus-de-sepa-sdd-b2b/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "SEPA B2B direct debit, first collection. A validated pain.001 sample for Germany on the sepa-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
 item_guid: "https://pain001.com/corpus-de-sepa-sdd-b2b/"
 item_link: "https://pain001.com/corpus-de-sepa-sdd-b2b/"

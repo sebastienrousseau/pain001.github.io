@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/it/corpus-ch-sepa-sct/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "SEPA credit transfer from Switzerland (SPS payment type S). Un campione pain.001 validato (Svizzera, circuito sepa-credit-transfer), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser."
 item_guid: "https://pain001.com/it/corpus-ch-sepa-sct/"
 item_link: "https://pain001.com/it/corpus-ch-sepa-sct/"

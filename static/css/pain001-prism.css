@@ -666,8 +666,11 @@ a.vendor-name { color: var(--accent); }
     max-width: none;
   }
   .content-body:has(> .article-toc) > * { grid-column: 1; min-width: 0; max-width: 68ch; }
-  .content-body:has(> .article-toc) > :is(.table-responsive, div[lang]) { max-width: none; }
-  .content-body:has(> .article-toc) > div[lang] > :not(.table-responsive) { max-width: 68ch; }
+  .content-body:has(> .article-toc) > .table-responsive { max-width: none; }
+  /* ssg 0.0.72 no longer wraps the body in <div lang>, so a rule is a
+     grid item itself; its default auto inline margins would centre it
+     at zero width instead of letting it span the text column. */
+  .content-body:has(> .article-toc) > hr { margin-inline: 0; }
   .content-body > .article-toc {
     grid-column: 2;
     grid-row: 1 / span 999;

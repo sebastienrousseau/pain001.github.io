@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/fr/corpus-ch-sps-qr-bill/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Swiss domestic credit transfer settling a QR-bill (QRR reference). Un exemple pain.001 validé (Suisse, rail domestic-credit-transfer), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur."
 item_guid: "https://pain001.com/fr/corpus-ch-sps-qr-bill/"
 item_link: "https://pain001.com/fr/corpus-ch-sps-qr-bill/"

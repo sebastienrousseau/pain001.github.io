@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/it/corpus-se-bankgiro-salary/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Swedish salary batch (Bankgirot Löner), SALA, one debit. Un campione pain.001 validato (Svezia, circuito salary), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser."
 item_guid: "https://pain001.com/it/corpus-se-bankgiro-salary/"
 item_link: "https://pain001.com/it/corpus-se-bankgiro-salary/"

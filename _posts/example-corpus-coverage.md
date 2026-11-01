@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/example-corpus-coverage/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Generated pain.001 and pain.008 files that between them use every element path and choice branch of each supported schema edition, each named after what it adds, with a zip per edition."
 item_guid: "https://pain001.com/example-corpus-coverage/"
 item_link: "https://pain001.com/example-corpus-coverage/"

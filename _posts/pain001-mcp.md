@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/pain001-mcp/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "22 Model Context Protocol tools for AI agents: validate IBANs, migrate pain.001 versions, convert MT101, and generate XSD-validated payment XML locally over stdio."
 item_guid: "https://pain001.com/pain001-mcp/rss.xml"
 item_link: "https://pain001.com/pain001-mcp/rss.xml"

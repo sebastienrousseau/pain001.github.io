@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/message-spec-pain.001.001.11-types/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Complex types AccountIdentification4Choice – DocumentLineType1Choice in ISO 20022 pain.001.001.11, with elements, cardinality and constraints, generated from the official XSD."
 item_guid: "https://pain001.com/message-spec-pain.001.001.11-types/"
 item_link: "https://pain001.com/message-spec-pain.001.001.11-types/"

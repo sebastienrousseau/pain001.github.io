@@ -46,7 +46,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/enterprise/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.63)"
+generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "The core stays free and permissively licensed. For teams that need a throat to choke: a supported release channel with an LTS line, private derivation of your bank's usage guideline into a validated profile, and integration recipes for your ERP or TMS. No prices on this page; one form."
 item_guid: "https://pain001.com/enterprise/"
 item_link: "https://pain001.com/enterprise/"
