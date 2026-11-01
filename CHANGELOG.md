@@ -17,6 +17,11 @@ All notable changes to this website are documented here. The format follows
   emits the entity-escaped metas, bodies and code delimiters or the
   stale `/highlight.css` link that `scripts/postbuild_fix.py` repairs;
   those passes stay as no-op guards.
+- ssg 0.0.72 no longer wraps each page body in `<div lang>`, so on
+  pages with the contents rail every `<hr>` became a grid item and
+  collapsed to a centred zero-width rule (138 layout-audit strays).
+  The rail layout now gives a direct-child rule zero inline margins,
+  and the dead `div[lang]` selectors are gone.
 
 ### Fixed
 
