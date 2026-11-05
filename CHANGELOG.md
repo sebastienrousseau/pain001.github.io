@@ -6,6 +6,18 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+### Fixed
+
+- The weekly Dated claims check failed on 26 October and 2 November while
+  every claim held: the Internet Archive refused the runner's connections
+  for longer than the retries waited, and answered `503` or `429` when it
+  was throttling, which the check treated as final. Throttling answers
+  (`429`, `502`, `503`, `504`) are now retried like a refused connection,
+  honouring `Retry-After` up to 120 s; the check makes four attempts per
+  source with a 30 s backoff, and the job's timeout moves to 50 minutes to
+  fit. A source that stays unreadable, or any other HTTP error, still
+  fails the check.
+
 ## [0.0.13] - 2026-11-01
 
 ### Changed
