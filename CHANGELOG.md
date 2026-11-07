@@ -6,6 +6,16 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.0.14] - 2026-11-07
+
+### Changed
+
+- Regenerated for pain001 0.0.78, up from 0.0.75 (0.0.76 and 0.0.77
+  were never deployed): corpus pages, scenario pages, demo samples,
+  localized corpus strings, version stamps, the corpus archives and the
+  demo's pinned pain001 wheel, from the regenerate workflow's run for
+  0.0.78.
+
 ### Fixed
 
 - The weekly Dated claims check failed on 26 October and 2 November while
