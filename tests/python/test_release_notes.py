@@ -9,6 +9,7 @@ lists its commits in the same shape. Before it, titles carried a "v" and
 some releases (v0.0.5) shipped without their checksums in the notes.
 """
 
+import hashlib
 import json
 
 import pytest
@@ -76,7 +77,10 @@ def test_compose_orders_sections_and_puts_checksums_before_the_changelog(notes_d
     headings = [line for line in body.splitlines() if line.startswith("## ")]
     assert headings == ["## Highlights ⭐️", "## What's Changed", "## New Contributors", "## Checksums"]
     assert body.index("## Checksums") < body.index("**Full Changelog**")
-    assert "```\nabc123  ./pain001-site-v0.0.8.tar.gz\ndef456" in body
+    assert "## Checksums\n\nSHA-256 of every asset attached to this release:\n\n```text\n" in body
+    assert "\nabc123  pain001-site-v0.0.8.tar.gz\ndef456  pain001-site-v0.0.8.cdx.json\n" in body
+    assert "./" not in body
+    assert f"\n{hashlib.sha256(SUMS.encode()).hexdigest()}  SHA256SUMS\n```\n" in body
     assert body.rstrip().splitlines()[-1].startswith("**Full Changelog**: ")
 
 
