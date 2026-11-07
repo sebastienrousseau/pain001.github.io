@@ -6,6 +6,14 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+### Fixed
+
+- Release pages list their checksums in the portfolio's shape: the
+  `SHA-256 of every asset attached to this release:` lead-in, a `text`
+  fence, asset names without the `./` that `SHA256SUMS` carries, and
+  the digest of `SHA256SUMS` itself, which is an asset too. v0.0.13
+  and v0.0.14 shipped without them and were corrected by hand.
+
 ## [0.0.14] - 2026-11-07
 
 ### Changed
