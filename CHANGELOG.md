@@ -14,6 +14,15 @@ All notable changes to this website are documented here. The format follows
   0.0.72, now names 0.0.75. `AGENTS.md` points at the `SSG_VERSION`
   pin instead of repeating the number.
 
+### Added
+
+- Message specifications for `pain.008.001.08`, which pain001 has
+  generated since 0.0.67: the element reference, its type pages, its
+  code lists and the `pain.008.001.02` to `.08` changes, produced by
+  `scripts/extract_message_specs.py` and
+  `scripts/generate_message_specs.py` from the XSD the library ships.
+  The home page's message-edition figure moves from 12 to 13 with it.
+
 ### Fixed
 
 - Release pages list their checksums in the portfolio's shape: the

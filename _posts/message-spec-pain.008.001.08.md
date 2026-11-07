@@ -1,0 +1,257 @@
+---
+author: "contact@pain001.com (Sebastien Rousseau)"
+banner_alt: "Every element of ISO 20022 pain.008.001.08: XML path, cardinality, data type, length and pattern constraints, and code lists, generated from the official XSD."
+banner_height: 500
+banner_width: 1200
+banner: "https://pain001.com/og/pain001-card.jpg"
+cdn: "https://pain001.com"
+changefreq: "monthly"
+charset: utf-8
+cname: pain001.com
+copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
+date: "2026-07-26T08:00:00+00:00"
+description: "Every element of ISO 20022 pain.008.001.08: XML path, cardinality, data type, length and pattern constraints, and code lists, generated from the official XSD."
+download: "https://pypi.org/project/pain001/"
+format-detection: telephone=no
+hreflang: en
+icon: "https://pain001.com/img/pain001.svg"
+id: "https://pain001.com/message-spec-pain.008.001.08/"
+image_alt: "Every element of ISO 20022 pain.008.001.08: XML path, cardinality, data type, length and pattern constraints, and code lists, generated from the official XSD."
+image_height: 120
+image_width: 120
+image: "https://pain001.com/img/pain001.svg"
+keywords: "pain.008.001.08, ISO 20022, element reference, cardinality, code lists, XML path, message specification, pain.001"
+language: en-GB
+layout: "page"
+locale: en_GB
+logo_alt: "Pain001 Logo"
+logo_height: 36
+logo_width: 36
+logo: "https://pain001.com/img/pain001.svg"
+menu: active
+name: Pain001
+permalink: "https://pain001.com/message-spec-pain.008.001.08/"
+rating: general
+referrer: no-referrer
+revisit-after: "7 days"
+robots: "index, follow"
+short_name: pain001
+subtitle: "All 660 elements of pain.008.001.08 with cardinality, types and code lists, generated from the official ISO schema."
+tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
+theme_color: "#0b0e14"
+title: "pain.008.001.08: complete element reference"
+url: "https://pain001.com/message-spec-pain.008.001.08/"
+viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
+atom_link: "https://pain001.com/message-spec-pain.008.001.08/"
+category: Technology
+docs: "https://validator.w3.org/feed/docs/rss2.html"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
+item_description: "Every element of ISO 20022 pain.008.001.08: XML path, cardinality, data type, length and pattern constraints, and code lists, generated from the official XSD."
+item_guid: "https://pain001.com/message-spec-pain.008.001.08/"
+item_link: "https://pain001.com/message-spec-pain.008.001.08/"
+item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
+item_title: "pain.008.001.08: complete element reference"
+last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
+managing_editor: "contact@pain001.com (Sebastien Rousseau)"
+pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
+ttl: 60
+type: website
+webmaster: contact@pain001.com
+apple_mobile_web_app_orientations: portrait
+apple_touch_icon_sizes: 192x192
+apple-mobile-web-app-capable: yes
+apple-mobile-web-app-status-bar-inset: black
+apple-mobile-web-app-status-bar-style: black-translucent
+apple-mobile-web-app-title: "pain.008.001.08: complete element reference"
+apple-touch-fullscreen: yes
+msapplication-navbutton-color: "rgb(2, 132, 199)"
+twitter_card: summary_large_image
+twitter_creator: "@wwdseb"
+twitter_description: "Every element of ISO 20022 pain.008.001.08: XML path, cardinality, data type, length and pattern constraints, and code lists, generated from the official XSD."
+twitter_image: "https://pain001.com/og/pain001-card.jpg"
+twitter_image_alt: "Pain001 Logo"
+twitter_site: "@wwdseb"
+twitter_title: "pain.008.001.08: complete element reference"
+twitter_url: "https://pain001.com/message-spec-pain.008.001.08/"
+author_website: "https://sebastienrousseau.com"
+author_twitter: "@wwdseb"
+author_location: "London, UK"
+thanks: "Thank you for using Pain001 Suite!"
+site_last_updated: 2026-07-26
+site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Atom, JSON-LD"
+site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
+site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
+eyebrow: "Message specification"
+excerpt: "Every element of ISO 20022 pain.008.001.08: XML path, cardinality, data type, length and pattern constraints, and code lists, generated from the official XSD."
+last_reviewed: "2026-07-26"
+
+
+---
+
+This is the complete element reference for `pain.008.001.08`, generated directly from the official ISO 20022 XSD that Pain001 validates against, not transcribed by hand. Every cardinality, type and code value below can be checked against ISO's own publication.
+
+**660 elements** · **114 required** · **88 types** · **15 code lists**
+
+Cardinality is shown as ISO writes it: `0..1` optional, `1..1` required, `0..*` repeating. Required elements are **bold**: those are the ones whose absence makes the document invalid before any bank sees it.
+
+**Schema provenance.** The shipped file carries the header *“Generated by Standards Editor on 2019 Feb 14”*. That is the schema generation timestamp, not necessarily ISO's publication date. Verify against the [ISO 20022 catalogue](https://www.iso20022.org/iso-20022-message-definitions?search=pain.008.001.08).
+
+## CstmrDrctDbtInitn
+
+| Element | Path | Card. | Type | Constraints |
+| :--- | :--- | :--- | :--- | :--- |
+| `CstmrDrctDbtInitn` | `CstmrDrctDbtInitn` | **1..1** | `CustomerDirectDebitInitiationV08` |  |
+
+## GrpHdr
+
+*Group Header, one per message*
+
+| Element | Path | Card. | Type | Constraints |
+| :--- | :--- | :--- | :--- | :--- |
+| &nbsp;&nbsp;`GrpHdr` | `CstmrDrctDbtInitn/GrpHdr` | **1..1** | `GroupHeader83` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;`MsgId` | `CstmrDrctDbtInitn/GrpHdr/MsgId` | **1..1** | `Max35Text` | length 1–35 |
+| &nbsp;&nbsp;&nbsp;&nbsp;`CreDtTm` | `CstmrDrctDbtInitn/GrpHdr/CreDtTm` | **1..1** | `ISODateTime` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;`Authstn` | `CstmrDrctDbtInitn/GrpHdr/Authstn` | 0..2 | `Authorisation1Choice` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Cd` | `CstmrDrctDbtInitn/GrpHdr/Authstn/Cd` | **1..1** | `Authorisation1Code` | 4 codes |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Prtry` | `CstmrDrctDbtInitn/GrpHdr/Authstn/Prtry` | **1..1** | `Max128Text` | length 1–128 |
+| &nbsp;&nbsp;&nbsp;&nbsp;`NbOfTxs` | `CstmrDrctDbtInitn/GrpHdr/NbOfTxs` | **1..1** | `Max15NumericText` | pattern `[0-9]{1,15}` |
+| &nbsp;&nbsp;&nbsp;&nbsp;`CtrlSum` | `CstmrDrctDbtInitn/GrpHdr/CtrlSum` | 0..1 | `DecimalNumber` | 17 decimals max |
+| &nbsp;&nbsp;&nbsp;&nbsp;`InitgPty` | `CstmrDrctDbtInitn/GrpHdr/InitgPty` | **1..1** | `PartyIdentification135` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Nm` | `CstmrDrctDbtInitn/GrpHdr/InitgPty/Nm` | 0..1 | `Max140Text` | length 1–140 |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`PstlAdr` | `CstmrDrctDbtInitn/GrpHdr/InitgPty/PstlAdr` | 0..1 | `PostalAddress24` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Id` | `CstmrDrctDbtInitn/GrpHdr/InitgPty/Id` | 0..1 | `Party38Choice` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`CtryOfRes` | `CstmrDrctDbtInitn/GrpHdr/InitgPty/CtryOfRes` | 0..1 | `CountryCode` | pattern `[A-Z]{2,2}` |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`CtctDtls` | `CstmrDrctDbtInitn/GrpHdr/InitgPty/CtctDtls` | 0..1 | `Contact4` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;`FwdgAgt` | `CstmrDrctDbtInitn/GrpHdr/FwdgAgt` | 0..1 | `BranchAndFinancialInstitutionIdentification6` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`FinInstnId` | `CstmrDrctDbtInitn/GrpHdr/FwdgAgt/FinInstnId` | **1..1** | `FinancialInstitutionIdentification18` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`BrnchId` | `CstmrDrctDbtInitn/GrpHdr/FwdgAgt/BrnchId` | 0..1 | `BranchData3` |  |
+
+*86 further nested elements sit below this depth. Every one of them is defined in the type reference below, which lists each type once instead of repeating it under every party.*
+
+## PmtInf
+
+*Payment Information, one per debtor account and execution date*
+
+| Element | Path | Card. | Type | Constraints |
+| :--- | :--- | :--- | :--- | :--- |
+| &nbsp;&nbsp;`PmtInf` | `CstmrDrctDbtInitn/PmtInf` | **1..*** | `PaymentInstruction29` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;`PmtInfId` | `CstmrDrctDbtInitn/PmtInf/PmtInfId` | **1..1** | `Max35Text` | length 1–35 |
+| &nbsp;&nbsp;&nbsp;&nbsp;`PmtMtd` | `CstmrDrctDbtInitn/PmtInf/PmtMtd` | **1..1** | `PaymentMethod2Code` | 1 codes |
+| &nbsp;&nbsp;&nbsp;&nbsp;`BtchBookg` | `CstmrDrctDbtInitn/PmtInf/BtchBookg` | 0..1 | `BatchBookingIndicator` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;`NbOfTxs` | `CstmrDrctDbtInitn/PmtInf/NbOfTxs` | 0..1 | `Max15NumericText` | pattern `[0-9]{1,15}` |
+| &nbsp;&nbsp;&nbsp;&nbsp;`CtrlSum` | `CstmrDrctDbtInitn/PmtInf/CtrlSum` | 0..1 | `DecimalNumber` | 17 decimals max |
+| &nbsp;&nbsp;&nbsp;&nbsp;`PmtTpInf` | `CstmrDrctDbtInitn/PmtInf/PmtTpInf` | 0..1 | `PaymentTypeInformation29` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`InstrPrty` | `CstmrDrctDbtInitn/PmtInf/PmtTpInf/InstrPrty` | 0..1 | `Priority2Code` | 2 codes |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`SvcLvl` | `CstmrDrctDbtInitn/PmtInf/PmtTpInf/SvcLvl` | 0..* | `ServiceLevel8Choice` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`LclInstrm` | `CstmrDrctDbtInitn/PmtInf/PmtTpInf/LclInstrm` | 0..1 | `LocalInstrument2Choice` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`SeqTp` | `CstmrDrctDbtInitn/PmtInf/PmtTpInf/SeqTp` | 0..1 | `SequenceType3Code` | 5 codes |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`CtgyPurp` | `CstmrDrctDbtInitn/PmtInf/PmtTpInf/CtgyPurp` | 0..1 | `CategoryPurpose1Choice` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;`ReqdColltnDt` | `CstmrDrctDbtInitn/PmtInf/ReqdColltnDt` | **1..1** | `ISODate` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;`Cdtr` | `CstmrDrctDbtInitn/PmtInf/Cdtr` | **1..1** | `PartyIdentification135` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Nm` | `CstmrDrctDbtInitn/PmtInf/Cdtr/Nm` | 0..1 | `Max140Text` | length 1–140 |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`PstlAdr` | `CstmrDrctDbtInitn/PmtInf/Cdtr/PstlAdr` | 0..1 | `PostalAddress24` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Id` | `CstmrDrctDbtInitn/PmtInf/Cdtr/Id` | 0..1 | `Party38Choice` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`CtryOfRes` | `CstmrDrctDbtInitn/PmtInf/Cdtr/CtryOfRes` | 0..1 | `CountryCode` | pattern `[A-Z]{2,2}` |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`CtctDtls` | `CstmrDrctDbtInitn/PmtInf/Cdtr/CtctDtls` | 0..1 | `Contact4` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;`CdtrAcct` | `CstmrDrctDbtInitn/PmtInf/CdtrAcct` | **1..1** | `CashAccount38` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Id` | `CstmrDrctDbtInitn/PmtInf/CdtrAcct/Id` | **1..1** | `AccountIdentification4Choice` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Tp` | `CstmrDrctDbtInitn/PmtInf/CdtrAcct/Tp` | 0..1 | `CashAccountType2Choice` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Ccy` | `CstmrDrctDbtInitn/PmtInf/CdtrAcct/Ccy` | 0..1 | `ActiveOrHistoricCurrencyCode` | pattern `[A-Z]{3,3}` |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Nm` | `CstmrDrctDbtInitn/PmtInf/CdtrAcct/Nm` | 0..1 | `Max70Text` | length 1–70 |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Prxy` | `CstmrDrctDbtInitn/PmtInf/CdtrAcct/Prxy` | 0..1 | `ProxyAccountIdentification1` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;`CdtrAgt` | `CstmrDrctDbtInitn/PmtInf/CdtrAgt` | **1..1** | `BranchAndFinancialInstitutionIdentification6` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`FinInstnId` | `CstmrDrctDbtInitn/PmtInf/CdtrAgt/FinInstnId` | **1..1** | `FinancialInstitutionIdentification18` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`BrnchId` | `CstmrDrctDbtInitn/PmtInf/CdtrAgt/BrnchId` | 0..1 | `BranchData3` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;`CdtrAgtAcct` | `CstmrDrctDbtInitn/PmtInf/CdtrAgtAcct` | 0..1 | `CashAccount38` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Id` | `CstmrDrctDbtInitn/PmtInf/CdtrAgtAcct/Id` | **1..1** | `AccountIdentification4Choice` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Tp` | `CstmrDrctDbtInitn/PmtInf/CdtrAgtAcct/Tp` | 0..1 | `CashAccountType2Choice` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Ccy` | `CstmrDrctDbtInitn/PmtInf/CdtrAgtAcct/Ccy` | 0..1 | `ActiveOrHistoricCurrencyCode` | pattern `[A-Z]{3,3}` |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Nm` | `CstmrDrctDbtInitn/PmtInf/CdtrAgtAcct/Nm` | 0..1 | `Max70Text` | length 1–70 |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Prxy` | `CstmrDrctDbtInitn/PmtInf/CdtrAgtAcct/Prxy` | 0..1 | `ProxyAccountIdentification1` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;`UltmtCdtr` | `CstmrDrctDbtInitn/PmtInf/UltmtCdtr` | 0..1 | `PartyIdentification135` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Nm` | `CstmrDrctDbtInitn/PmtInf/UltmtCdtr/Nm` | 0..1 | `Max140Text` | length 1–140 |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`PstlAdr` | `CstmrDrctDbtInitn/PmtInf/UltmtCdtr/PstlAdr` | 0..1 | `PostalAddress24` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Id` | `CstmrDrctDbtInitn/PmtInf/UltmtCdtr/Id` | 0..1 | `Party38Choice` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`CtryOfRes` | `CstmrDrctDbtInitn/PmtInf/UltmtCdtr/CtryOfRes` | 0..1 | `CountryCode` | pattern `[A-Z]{2,2}` |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`CtctDtls` | `CstmrDrctDbtInitn/PmtInf/UltmtCdtr/CtctDtls` | 0..1 | `Contact4` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;`ChrgBr` | `CstmrDrctDbtInitn/PmtInf/ChrgBr` | 0..1 | `ChargeBearerType1Code` | 4 codes |
+| &nbsp;&nbsp;&nbsp;&nbsp;`ChrgsAcct` | `CstmrDrctDbtInitn/PmtInf/ChrgsAcct` | 0..1 | `CashAccount38` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Id` | `CstmrDrctDbtInitn/PmtInf/ChrgsAcct/Id` | **1..1** | `AccountIdentification4Choice` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Tp` | `CstmrDrctDbtInitn/PmtInf/ChrgsAcct/Tp` | 0..1 | `CashAccountType2Choice` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Ccy` | `CstmrDrctDbtInitn/PmtInf/ChrgsAcct/Ccy` | 0..1 | `ActiveOrHistoricCurrencyCode` | pattern `[A-Z]{3,3}` |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Nm` | `CstmrDrctDbtInitn/PmtInf/ChrgsAcct/Nm` | 0..1 | `Max70Text` | length 1–70 |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Prxy` | `CstmrDrctDbtInitn/PmtInf/ChrgsAcct/Prxy` | 0..1 | `ProxyAccountIdentification1` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;`ChrgsAcctAgt` | `CstmrDrctDbtInitn/PmtInf/ChrgsAcctAgt` | 0..1 | `BranchAndFinancialInstitutionIdentification6` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`FinInstnId` | `CstmrDrctDbtInitn/PmtInf/ChrgsAcctAgt/FinInstnId` | **1..1** | `FinancialInstitutionIdentification18` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`BrnchId` | `CstmrDrctDbtInitn/PmtInf/ChrgsAcctAgt/BrnchId` | 0..1 | `BranchData3` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;`CdtrSchmeId` | `CstmrDrctDbtInitn/PmtInf/CdtrSchmeId` | 0..1 | `PartyIdentification135` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Nm` | `CstmrDrctDbtInitn/PmtInf/CdtrSchmeId/Nm` | 0..1 | `Max140Text` | length 1–140 |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`PstlAdr` | `CstmrDrctDbtInitn/PmtInf/CdtrSchmeId/PstlAdr` | 0..1 | `PostalAddress24` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Id` | `CstmrDrctDbtInitn/PmtInf/CdtrSchmeId/Id` | 0..1 | `Party38Choice` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`CtryOfRes` | `CstmrDrctDbtInitn/PmtInf/CdtrSchmeId/CtryOfRes` | 0..1 | `CountryCode` | pattern `[A-Z]{2,2}` |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`CtctDtls` | `CstmrDrctDbtInitn/PmtInf/CdtrSchmeId/CtctDtls` | 0..1 | `Contact4` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;`DrctDbtTxInf` | `CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf` | **1..*** | `DirectDebitTransactionInformation23` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`PmtId` | `CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/PmtId` | **1..1** | `PaymentIdentification6` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`PmtTpInf` | `CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/PmtTpInf` | 0..1 | `PaymentTypeInformation29` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`InstdAmt` | `CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/InstdAmt` | **1..1** | `ActiveOrHistoricCurrencyAndAmount` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`ChrgBr` | `CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/ChrgBr` | 0..1 | `ChargeBearerType1Code` | 4 codes |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`DrctDbtTx` | `CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/DrctDbtTx` | 0..1 | `DirectDebitTransaction10` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`UltmtCdtr` | `CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/UltmtCdtr` | 0..1 | `PartyIdentification135` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`DbtrAgt` | `CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/DbtrAgt` | **1..1** | `BranchAndFinancialInstitutionIdentification6` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`DbtrAgtAcct` | `CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/DbtrAgtAcct` | 0..1 | `CashAccount38` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dbtr` | `CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/Dbtr` | **1..1** | `PartyIdentification135` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`DbtrAcct` | `CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/DbtrAcct` | **1..1** | `CashAccount38` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`UltmtDbtr` | `CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/UltmtDbtr` | 0..1 | `PartyIdentification135` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`InstrForCdtrAgt` | `CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/InstrForCdtrAgt` | 0..1 | `Max140Text` | length 1–140 |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Purp` | `CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/Purp` | 0..1 | `Purpose2Choice` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`RgltryRptg` | `CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/RgltryRptg` | 0..10 | `RegulatoryReporting3` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Tax` | `CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/Tax` | 0..1 | `TaxInformation8` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`RltdRmtInf` | `CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/RltdRmtInf` | 0..10 | `RemittanceLocation7` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`RmtInf` | `CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/RmtInf` | 0..1 | `RemittanceInformation16` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`SplmtryData` | `CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/SplmtryData` | 0..* | `SupplementaryData1` |  |
+
+*478 further nested elements sit below this depth. Every one of them is defined in the type reference below, which lists each type once instead of repeating it under every party.*
+
+## SplmtryData
+
+*Supplementary Data: scheme-specific extensions*
+
+| Element | Path | Card. | Type | Constraints |
+| :--- | :--- | :--- | :--- | :--- |
+| &nbsp;&nbsp;`SplmtryData` | `CstmrDrctDbtInitn/SplmtryData` | 0..* | `SupplementaryData1` |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;`PlcAndNm` | `CstmrDrctDbtInitn/SplmtryData/PlcAndNm` | 0..1 | `Max350Text` | length 1–350 |
+| &nbsp;&nbsp;&nbsp;&nbsp;`Envlp` | `CstmrDrctDbtInitn/SplmtryData/Envlp` | **1..1** | `SupplementaryDataEnvelope1` |  |
+
+## Type reference
+
+Every complex type in this version is defined once on the [**pain.008.001.08 type reference**](/message-spec-pain.008.001.08-types/), 86 types in all. The tree above repeats a party or address structure under each party; the type reference does not, which makes it the better page for mapping work.
+
+## Code lists used by this version
+
+| Code list | Values |
+| :--- | :--- |
+| `AddressType2Code` | `ADDR`, `PBOX`, `HOME`, `BIZZ`, `MLTO`, `DLVY` |
+| `Authorisation1Code` | `AUTH`, `FDET`, `FSUM`, `ILEV` |
+| `ChargeBearerType1Code` | `DEBT`, `CRED`, `SHAR`, `SLEV` |
+| `CreditDebitCode` | `CRDT`, `DBIT` |
+| `DocumentType3Code` | `RADM`, `RPIN`, `FXDR`, `DISP`, `PUOR`, `SCOR` |
+| `DocumentType6Code` | `MSIN`, `CNFA`, `DNFA`, `CINV`, `CREN`, `DEBN`, `HIRI`, `SBIN`, `CMCN`, `SOAC`, `DISP`, `BOLD`, `VCHR`, `AROI` *(+2 more)* |
+| `Frequency6Code` | `YEAR`, `MNTH`, `QURT`, `MIAN`, `WEEK`, `DAIL`, `ADHO`, `INDA`, `FRTN` |
+| `NamePrefix2Code` | `DOCT`, `MADM`, `MISS`, `MIST`, `MIKS` |
+| `PaymentMethod2Code` | `DD` |
+| `PreferredContactMethod1Code` | `LETT`, `MAIL`, `PHON`, `FAXX`, `CELL` |
+| `Priority2Code` | `HIGH`, `NORM` |
+| `RegulatoryReportingType1Code` | `CRED`, `DEBT`, `BOTH` |
+| `RemittanceLocationMethod2Code` | `FAXI`, `EDIC`, `URID`, `EMAL`, `POST`, `SMSM` |
+| `SequenceType3Code` | `FRST`, `RCUR`, `FNAL`, `OOFF`, `RPRE` |
+| `TaxRecordPeriod1Code` | `MM01`, `MM02`, `MM03`, `MM04`, `MM05`, `MM06`, `MM07`, `MM08`, `MM09`, `MM10`, `MM11`, `MM12`, `QTR1`, `QTR2` *(+4 more)* |
+
+The full value set for every list is on the [code lists page](/message-spec-code-lists/).
+
+## Generate and validate this version
+
+```bash
+pain001 -t pain.008.001.08 -d payments.csv -o out/ --dry-run
+```
+
+See the [compatibility matrix](/compatibility/) for supported input formats and gates.

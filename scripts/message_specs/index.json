@@ -11,7 +11,8 @@
   "pain.001.001.11",
   "pain.001.001.12",
   "pain.001.001.13",
-  "pain.008.001.02"
+  "pain.008.001.02",
+  "pain.008.001.08"
  ],
  "skipped": [],
  "deltas": {
@@ -342,6 +343,212 @@
    "removed": [
     "CstmrCdtTrfInitn/PmtInf/CdtTrfTxInf/RgltryRptg/Dtls/Cd"
    ]
+  },
+  "pain.008.001.02->pain.008.001.08": {
+   "added": [
+    "CstmrDrctDbtInitn/GrpHdr/FwdgAgt/BrnchId/LEI",
+    "CstmrDrctDbtInitn/GrpHdr/FwdgAgt/BrnchId/PstlAdr/BldgNm",
+    "CstmrDrctDbtInitn/GrpHdr/FwdgAgt/BrnchId/PstlAdr/DstrctNm",
+    "CstmrDrctDbtInitn/GrpHdr/FwdgAgt/BrnchId/PstlAdr/Flr",
+    "CstmrDrctDbtInitn/GrpHdr/FwdgAgt/BrnchId/PstlAdr/PstBx",
+    "CstmrDrctDbtInitn/GrpHdr/FwdgAgt/BrnchId/PstlAdr/Room",
+    "CstmrDrctDbtInitn/GrpHdr/FwdgAgt/BrnchId/PstlAdr/TwnLctnNm",
+    "CstmrDrctDbtInitn/GrpHdr/FwdgAgt/FinInstnId/BICFI",
+    "CstmrDrctDbtInitn/GrpHdr/FwdgAgt/FinInstnId/LEI",
+    "CstmrDrctDbtInitn/GrpHdr/FwdgAgt/FinInstnId/PstlAdr/BldgNm",
+    "CstmrDrctDbtInitn/GrpHdr/FwdgAgt/FinInstnId/PstlAdr/DstrctNm",
+    "CstmrDrctDbtInitn/GrpHdr/FwdgAgt/FinInstnId/PstlAdr/Flr",
+    "CstmrDrctDbtInitn/GrpHdr/FwdgAgt/FinInstnId/PstlAdr/PstBx",
+    "CstmrDrctDbtInitn/GrpHdr/FwdgAgt/FinInstnId/PstlAdr/Room",
+    "CstmrDrctDbtInitn/GrpHdr/FwdgAgt/FinInstnId/PstlAdr/TwnLctnNm",
+    "CstmrDrctDbtInitn/GrpHdr/InitgPty/CtctDtls/Dept",
+    "CstmrDrctDbtInitn/GrpHdr/InitgPty/CtctDtls/EmailPurp",
+    "CstmrDrctDbtInitn/GrpHdr/InitgPty/CtctDtls/JobTitl",
+    "CstmrDrctDbtInitn/GrpHdr/InitgPty/CtctDtls/Othr/ChanlTp",
+    "CstmrDrctDbtInitn/GrpHdr/InitgPty/CtctDtls/Othr/Id",
+    "CstmrDrctDbtInitn/GrpHdr/InitgPty/CtctDtls/PrefrdMtd",
+    "CstmrDrctDbtInitn/GrpHdr/InitgPty/CtctDtls/Rspnsblty",
+    "CstmrDrctDbtInitn/GrpHdr/InitgPty/Id/OrgId/AnyBIC",
+    "CstmrDrctDbtInitn/GrpHdr/InitgPty/Id/OrgId/LEI",
+    "CstmrDrctDbtInitn/GrpHdr/InitgPty/PstlAdr/AdrTp/Cd",
+    "CstmrDrctDbtInitn/GrpHdr/InitgPty/PstlAdr/AdrTp/Prtry",
+    "CstmrDrctDbtInitn/GrpHdr/InitgPty/PstlAdr/BldgNm",
+    "CstmrDrctDbtInitn/GrpHdr/InitgPty/PstlAdr/DstrctNm",
+    "CstmrDrctDbtInitn/GrpHdr/InitgPty/PstlAdr/Flr",
+    "CstmrDrctDbtInitn/GrpHdr/InitgPty/PstlAdr/PstBx",
+    "CstmrDrctDbtInitn/GrpHdr/InitgPty/PstlAdr/Room",
+    "CstmrDrctDbtInitn/GrpHdr/InitgPty/PstlAdr/TwnLctnNm",
+    "CstmrDrctDbtInitn/PmtInf/Cdtr/CtctDtls/Dept",
+    "CstmrDrctDbtInitn/PmtInf/Cdtr/CtctDtls/EmailPurp",
+    "CstmrDrctDbtInitn/PmtInf/Cdtr/CtctDtls/JobTitl",
+    "CstmrDrctDbtInitn/PmtInf/Cdtr/CtctDtls/Othr/ChanlTp",
+    "CstmrDrctDbtInitn/PmtInf/Cdtr/CtctDtls/Othr/Id",
+    "CstmrDrctDbtInitn/PmtInf/Cdtr/CtctDtls/PrefrdMtd",
+    "CstmrDrctDbtInitn/PmtInf/Cdtr/CtctDtls/Rspnsblty",
+    "CstmrDrctDbtInitn/PmtInf/Cdtr/Id/OrgId/AnyBIC",
+    "CstmrDrctDbtInitn/PmtInf/Cdtr/Id/OrgId/LEI",
+    "CstmrDrctDbtInitn/PmtInf/Cdtr/PstlAdr/AdrTp/Cd",
+    "CstmrDrctDbtInitn/PmtInf/Cdtr/PstlAdr/AdrTp/Prtry",
+    "CstmrDrctDbtInitn/PmtInf/Cdtr/PstlAdr/BldgNm",
+    "CstmrDrctDbtInitn/PmtInf/Cdtr/PstlAdr/DstrctNm",
+    "CstmrDrctDbtInitn/PmtInf/Cdtr/PstlAdr/Flr",
+    "CstmrDrctDbtInitn/PmtInf/Cdtr/PstlAdr/PstBx",
+    "CstmrDrctDbtInitn/PmtInf/Cdtr/PstlAdr/Room",
+    "CstmrDrctDbtInitn/PmtInf/Cdtr/PstlAdr/TwnLctnNm",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAcct/Prxy",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAcct/Prxy/Id",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAcct/Prxy/Tp",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAcct/Prxy/Tp/Cd",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAcct/Prxy/Tp/Prtry",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAgt/BrnchId/LEI",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAgt/BrnchId/PstlAdr/BldgNm",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAgt/BrnchId/PstlAdr/DstrctNm",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAgt/BrnchId/PstlAdr/Flr",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAgt/BrnchId/PstlAdr/PstBx",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAgt/BrnchId/PstlAdr/Room",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAgt/BrnchId/PstlAdr/TwnLctnNm",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAgt/FinInstnId/BICFI",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAgt/FinInstnId/LEI",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAgt/FinInstnId/PstlAdr/BldgNm",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAgt/FinInstnId/PstlAdr/DstrctNm",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAgt/FinInstnId/PstlAdr/Flr",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAgt/FinInstnId/PstlAdr/PstBx",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAgt/FinInstnId/PstlAdr/Room",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAgt/FinInstnId/PstlAdr/TwnLctnNm",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAgtAcct/Prxy",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAgtAcct/Prxy/Id",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAgtAcct/Prxy/Tp",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAgtAcct/Prxy/Tp/Cd",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAgtAcct/Prxy/Tp/Prtry",
+    "CstmrDrctDbtInitn/PmtInf/CdtrSchmeId/CtctDtls/Dept",
+    "CstmrDrctDbtInitn/PmtInf/CdtrSchmeId/CtctDtls/EmailPurp",
+    "CstmrDrctDbtInitn/PmtInf/CdtrSchmeId/CtctDtls/JobTitl",
+    "CstmrDrctDbtInitn/PmtInf/CdtrSchmeId/CtctDtls/Othr/ChanlTp",
+    "CstmrDrctDbtInitn/PmtInf/CdtrSchmeId/CtctDtls/Othr/Id",
+    "CstmrDrctDbtInitn/PmtInf/CdtrSchmeId/CtctDtls/PrefrdMtd",
+    "CstmrDrctDbtInitn/PmtInf/CdtrSchmeId/CtctDtls/Rspnsblty",
+    "CstmrDrctDbtInitn/PmtInf/CdtrSchmeId/Id/OrgId/AnyBIC",
+    "CstmrDrctDbtInitn/PmtInf/CdtrSchmeId/Id/OrgId/LEI",
+    "CstmrDrctDbtInitn/PmtInf/CdtrSchmeId/PstlAdr/AdrTp/Cd",
+    "CstmrDrctDbtInitn/PmtInf/CdtrSchmeId/PstlAdr/AdrTp/Prtry",
+    "CstmrDrctDbtInitn/PmtInf/CdtrSchmeId/PstlAdr/BldgNm",
+    "CstmrDrctDbtInitn/PmtInf/CdtrSchmeId/PstlAdr/DstrctNm",
+    "CstmrDrctDbtInitn/PmtInf/CdtrSchmeId/PstlAdr/Flr",
+    "CstmrDrctDbtInitn/PmtInf/CdtrSchmeId/PstlAdr/PstBx",
+    "CstmrDrctDbtInitn/PmtInf/CdtrSchmeId/PstlAdr/Room",
+    "CstmrDrctDbtInitn/PmtInf/CdtrSchmeId/PstlAdr/TwnLctnNm",
+    "CstmrDrctDbtInitn/PmtInf/ChrgsAcct/Prxy",
+    "CstmrDrctDbtInitn/PmtInf/ChrgsAcct/Prxy/Id",
+    "CstmrDrctDbtInitn/PmtInf/ChrgsAcct/Prxy/Tp",
+    "CstmrDrctDbtInitn/PmtInf/ChrgsAcct/Prxy/Tp/Cd",
+    "CstmrDrctDbtInitn/PmtInf/ChrgsAcct/Prxy/Tp/Prtry",
+    "CstmrDrctDbtInitn/PmtInf/ChrgsAcctAgt/BrnchId/LEI",
+    "CstmrDrctDbtInitn/PmtInf/ChrgsAcctAgt/BrnchId/PstlAdr/BldgNm",
+    "CstmrDrctDbtInitn/PmtInf/ChrgsAcctAgt/BrnchId/PstlAdr/DstrctNm",
+    "CstmrDrctDbtInitn/PmtInf/ChrgsAcctAgt/BrnchId/PstlAdr/Flr",
+    "CstmrDrctDbtInitn/PmtInf/ChrgsAcctAgt/BrnchId/PstlAdr/PstBx",
+    "CstmrDrctDbtInitn/PmtInf/ChrgsAcctAgt/BrnchId/PstlAdr/Room",
+    "CstmrDrctDbtInitn/PmtInf/ChrgsAcctAgt/BrnchId/PstlAdr/TwnLctnNm",
+    "CstmrDrctDbtInitn/PmtInf/ChrgsAcctAgt/FinInstnId/BICFI",
+    "CstmrDrctDbtInitn/PmtInf/ChrgsAcctAgt/FinInstnId/LEI",
+    "CstmrDrctDbtInitn/PmtInf/ChrgsAcctAgt/FinInstnId/PstlAdr/BldgNm",
+    "CstmrDrctDbtInitn/PmtInf/ChrgsAcctAgt/FinInstnId/PstlAdr/DstrctNm",
+    "CstmrDrctDbtInitn/PmtInf/ChrgsAcctAgt/FinInstnId/PstlAdr/Flr",
+    "CstmrDrctDbtInitn/PmtInf/ChrgsAcctAgt/FinInstnId/PstlAdr/PstBx",
+    "CstmrDrctDbtInitn/PmtInf/ChrgsAcctAgt/FinInstnId/PstlAdr/Room",
+    "CstmrDrctDbtInitn/PmtInf/ChrgsAcctAgt/FinInstnId/PstlAdr/TwnLctnNm",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/Dbtr/CtctDtls/Dept",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/Dbtr/CtctDtls/EmailPurp",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/Dbtr/CtctDtls/JobTitl",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/Dbtr/CtctDtls/PrefrdMtd",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/Dbtr/CtctDtls/Rspnsblty",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/Dbtr/PstlAdr/BldgNm",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/Dbtr/PstlAdr/DstrctNm",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/Dbtr/PstlAdr/Flr",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/Dbtr/PstlAdr/PstBx",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/Dbtr/PstlAdr/Room",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/Dbtr/PstlAdr/TwnLctnNm",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/DbtrAcct/Prxy",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/DbtrAcct/Prxy/Id",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/DbtrAcct/Prxy/Tp",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/DbtrAgt/BrnchId/LEI",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/DbtrAgt/FinInstnId/BICFI",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/DbtrAgt/FinInstnId/LEI",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/DbtrAgtAcct/Prxy",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/DbtrAgtAcct/Prxy/Id",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/DbtrAgtAcct/Prxy/Tp",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/DrctDbtTx/MndtRltdInf/Rsn",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/DrctDbtTx/MndtRltdInf/TrckgDays",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/PmtId/UETR",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/RltdRmtInf/RmtLctnDtls",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/RltdRmtInf/RmtLctnDtls/ElctrncAdr",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/RltdRmtInf/RmtLctnDtls/Mtd",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/RltdRmtInf/RmtLctnDtls/PstlAdr",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/RmtInf/Strd/GrnshmtRmt",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/RmtInf/Strd/TaxRmt",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/SplmtryData",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/SplmtryData/Envlp",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/SplmtryData/PlcAndNm",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/Tax/AdmstnZone",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/UltmtCdtr/CtctDtls/Dept",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/UltmtCdtr/CtctDtls/EmailPurp",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/UltmtCdtr/CtctDtls/JobTitl",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/UltmtCdtr/CtctDtls/PrefrdMtd",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/UltmtCdtr/CtctDtls/Rspnsblty",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/UltmtCdtr/PstlAdr/BldgNm",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/UltmtCdtr/PstlAdr/DstrctNm",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/UltmtCdtr/PstlAdr/Flr",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/UltmtCdtr/PstlAdr/PstBx",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/UltmtCdtr/PstlAdr/Room",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/UltmtCdtr/PstlAdr/TwnLctnNm",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/UltmtDbtr/CtctDtls/Dept",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/UltmtDbtr/CtctDtls/EmailPurp",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/UltmtDbtr/CtctDtls/JobTitl",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/UltmtDbtr/CtctDtls/PrefrdMtd",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/UltmtDbtr/CtctDtls/Rspnsblty",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/UltmtDbtr/PstlAdr/BldgNm",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/UltmtDbtr/PstlAdr/DstrctNm",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/UltmtDbtr/PstlAdr/Flr",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/UltmtDbtr/PstlAdr/PstBx",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/UltmtDbtr/PstlAdr/Room",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/UltmtDbtr/PstlAdr/TwnLctnNm",
+    "CstmrDrctDbtInitn/PmtInf/UltmtCdtr/CtctDtls/Dept",
+    "CstmrDrctDbtInitn/PmtInf/UltmtCdtr/CtctDtls/EmailPurp",
+    "CstmrDrctDbtInitn/PmtInf/UltmtCdtr/CtctDtls/JobTitl",
+    "CstmrDrctDbtInitn/PmtInf/UltmtCdtr/CtctDtls/Othr/ChanlTp",
+    "CstmrDrctDbtInitn/PmtInf/UltmtCdtr/CtctDtls/Othr/Id",
+    "CstmrDrctDbtInitn/PmtInf/UltmtCdtr/CtctDtls/PrefrdMtd",
+    "CstmrDrctDbtInitn/PmtInf/UltmtCdtr/CtctDtls/Rspnsblty",
+    "CstmrDrctDbtInitn/PmtInf/UltmtCdtr/Id/OrgId/AnyBIC",
+    "CstmrDrctDbtInitn/PmtInf/UltmtCdtr/Id/OrgId/LEI",
+    "CstmrDrctDbtInitn/PmtInf/UltmtCdtr/PstlAdr/AdrTp/Cd",
+    "CstmrDrctDbtInitn/PmtInf/UltmtCdtr/PstlAdr/AdrTp/Prtry",
+    "CstmrDrctDbtInitn/PmtInf/UltmtCdtr/PstlAdr/BldgNm",
+    "CstmrDrctDbtInitn/PmtInf/UltmtCdtr/PstlAdr/DstrctNm",
+    "CstmrDrctDbtInitn/PmtInf/UltmtCdtr/PstlAdr/Flr",
+    "CstmrDrctDbtInitn/PmtInf/UltmtCdtr/PstlAdr/PstBx",
+    "CstmrDrctDbtInitn/PmtInf/UltmtCdtr/PstlAdr/Room",
+    "CstmrDrctDbtInitn/PmtInf/UltmtCdtr/PstlAdr/TwnLctnNm",
+    "CstmrDrctDbtInitn/SplmtryData",
+    "CstmrDrctDbtInitn/SplmtryData/Envlp",
+    "CstmrDrctDbtInitn/SplmtryData/PlcAndNm"
+   ],
+   "removed": [
+    "CstmrDrctDbtInitn/GrpHdr/FwdgAgt/FinInstnId/BIC",
+    "CstmrDrctDbtInitn/GrpHdr/InitgPty/Id/OrgId/BICOrBEI",
+    "CstmrDrctDbtInitn/PmtInf/Cdtr/Id/OrgId/BICOrBEI",
+    "CstmrDrctDbtInitn/PmtInf/CdtrAgt/FinInstnId/BIC",
+    "CstmrDrctDbtInitn/PmtInf/CdtrSchmeId/Id/OrgId/BICOrBEI",
+    "CstmrDrctDbtInitn/PmtInf/ChrgsAcctAgt/FinInstnId/BIC",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/DbtrAgt/FinInstnId/BIC",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/RltdRmtInf/RmtLctnElctrncAdr",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/RltdRmtInf/RmtLctnMtd",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/RltdRmtInf/RmtLctnPstlAdr",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/RltdRmtInf/RmtLctnPstlAdr/Adr",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/RltdRmtInf/RmtLctnPstlAdr/Nm",
+    "CstmrDrctDbtInitn/PmtInf/DrctDbtTxInf/Tax/AdmstnZn",
+    "CstmrDrctDbtInitn/PmtInf/UltmtCdtr/Id/OrgId/BICOrBEI"
+   ]
   }
  },
  "code_list_coverage": {
@@ -358,7 +565,8 @@
     "pain.001.001.11",
     "pain.001.001.12",
     "pain.001.001.13",
-    "pain.008.001.02"
+    "pain.008.001.02",
+    "pain.008.001.08"
    ],
    "codes": [
     "ADDR",
@@ -382,7 +590,8 @@
     "pain.001.001.11",
     "pain.001.001.12",
     "pain.001.001.13",
-    "pain.008.001.02"
+    "pain.008.001.02",
+    "pain.008.001.08"
    ],
    "codes": [
     "AUTH",
@@ -428,7 +637,8 @@
     "pain.001.001.11",
     "pain.001.001.12",
     "pain.001.001.13",
-    "pain.008.001.02"
+    "pain.008.001.02",
+    "pain.008.001.08"
    ],
    "codes": [
     "DEBT",
@@ -501,7 +711,8 @@
     "pain.001.001.11",
     "pain.001.001.12",
     "pain.001.001.13",
-    "pain.008.001.02"
+    "pain.008.001.02",
+    "pain.008.001.08"
    ],
    "codes": [
     "CRDT",
@@ -519,7 +730,8 @@
     "pain.001.001.09",
     "pain.001.001.10",
     "pain.001.001.11",
-    "pain.008.001.02"
+    "pain.008.001.02",
+    "pain.008.001.08"
    ],
    "codes": [
     "RADM",
@@ -642,7 +854,8 @@
     "pain.001.001.11",
     "pain.001.001.12",
     "pain.001.001.13",
-    "pain.008.001.02"
+    "pain.008.001.02",
+    "pain.008.001.08"
    ],
    "codes": [
     "HIGH",
@@ -662,7 +875,8 @@
     "pain.001.001.11",
     "pain.001.001.12",
     "pain.001.001.13",
-    "pain.008.001.02"
+    "pain.008.001.02",
+    "pain.008.001.08"
    ],
    "codes": [
     "CRED",
@@ -683,7 +897,8 @@
     "pain.001.001.11",
     "pain.001.001.12",
     "pain.001.001.13",
-    "pain.008.001.02"
+    "pain.008.001.02",
+    "pain.008.001.08"
    ],
    "codes": [
     "FAXI",
@@ -707,7 +922,8 @@
     "pain.001.001.11",
     "pain.001.001.12",
     "pain.001.001.13",
-    "pain.008.001.02"
+    "pain.008.001.02",
+    "pain.008.001.08"
    ],
    "codes": [
     "MM01",
@@ -737,7 +953,8 @@
     "pain.001.001.08",
     "pain.001.001.09",
     "pain.001.001.10",
-    "pain.001.001.11"
+    "pain.001.001.11",
+    "pain.008.001.08"
    ],
    "codes": [
     "MSIN",
@@ -764,7 +981,8 @@
     "pain.001.001.10",
     "pain.001.001.11",
     "pain.001.001.12",
-    "pain.001.001.13"
+    "pain.001.001.13",
+    "pain.008.001.08"
    ],
    "codes": [
     "DOCT",
@@ -778,7 +996,8 @@
    "versions": [
     "pain.001.001.09",
     "pain.001.001.10",
-    "pain.001.001.11"
+    "pain.001.001.11",
+    "pain.008.001.08"
    ],
    "codes": [
     "LETT",
@@ -805,7 +1024,8 @@
     "pain.001.001.10",
     "pain.001.001.11",
     "pain.001.001.12",
-    "pain.001.001.13"
+    "pain.001.001.13",
+    "pain.008.001.08"
    ],
    "codes": [
     "YEAR",
@@ -863,7 +1083,8 @@
   },
   "PaymentMethod2Code": {
    "versions": [
-    "pain.008.001.02"
+    "pain.008.001.02",
+    "pain.008.001.08"
    ],
    "codes": [
     "DD"
@@ -878,6 +1099,18 @@
     "RCUR",
     "FNAL",
     "OOFF"
+   ]
+  },
+  "SequenceType3Code": {
+   "versions": [
+    "pain.008.001.08"
+   ],
+   "codes": [
+    "FRST",
+    "RCUR",
+    "FNAL",
+    "OOFF",
+    "RPRE"
    ]
   }
  }
