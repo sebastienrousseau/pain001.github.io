@@ -194,6 +194,14 @@ pre.highlight code span {
   background-color: transparent !important;
 }
 
+/* The same stylesheet also sets the block's own text colour under
+   prefers-color-scheme: dark (#e6edf3). With the light theme chosen on a
+   dark system, that near-white text sat on the light code ground at 1.07:1
+   (axe, /try/). The block takes the theme's code colour instead. */
+pre.highlight {
+  color: var(--code-plain) !important;
+}
+
 .cta-centred { justify-content: center; }
 .hero code { color: inherit; }
 

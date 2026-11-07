@@ -25,6 +25,11 @@ All notable changes to this website are documented here. The format follows
 
 ### Fixed
 
+- Code blocks keep a readable text colour with the light theme chosen on
+  a dark system. ssg's highlighter stylesheet sets the block's text to
+  `#e6edf3` under `prefers-color-scheme: dark`, which the theme toggle
+  cannot override, so the `/try/` command block read at 1.07:1 on the
+  light code ground. The block now takes the theme's `--code-plain`.
 - Release pages list their checksums in the portfolio's shape: the
   `SHA-256 of every asset attached to this release:` lead-in, a `text`
   fence, asset names without the `./` that `SHA256SUMS` carries, and
