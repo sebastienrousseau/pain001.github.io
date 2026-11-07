@@ -41,7 +41,7 @@ permissions:
 env:
   # Same pin as ci.yml: the latest ssg release, read by the cache key
   # and the install step together.
-  SSG_VERSION: 0.0.72
+  SSG_VERSION: 0.0.74
 
 jobs:
   target:

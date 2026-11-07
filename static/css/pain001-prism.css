@@ -183,6 +183,17 @@
   white-space: pre-wrap;
 }
 
+/* ssg 0.0.73 gave its highlight.css token colours (a light palette, and a
+   dark one under prefers-color-scheme only) at up to nine classes of
+   specificity. They ignore the theme toggle, so the dark theme on a light
+   system put light-palette tokens on a dark ground (axe AAA, /try/). This
+   site's code blocks were never token-coloured: every token takes its
+   block's colour, which follows the theme. */
+pre.highlight code span {
+  color: inherit !important;
+  background-color: transparent !important;
+}
+
 .cta-centred { justify-content: center; }
 .hero code { color: inherit; }
 

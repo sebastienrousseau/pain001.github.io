@@ -6,6 +6,39 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.0.14] - 2026-11-07
+
+### Changed
+
+- Regenerated for pain001 0.0.78, up from 0.0.75 (0.0.76 and 0.0.77
+  were never deployed): corpus pages, scenario pages, demo samples,
+  localized corpus strings, version stamps, the corpus archives and the
+  demo's pinned pain001 wheel, from the regenerate workflow's run for
+  0.0.78.
+- Built with ssg 0.0.74, the latest release, up from 0.0.72. Every
+  workflow's `SSG_VERSION`, the devcontainer and the setup docs name
+  0.0.74. ssg 0.0.73 gave the generated `highlight.css` token colours
+  that switch on `prefers-color-scheme` only, so with the dark theme
+  chosen on a light system the code tokens on `/try/` failed AAA
+  contrast; the adapter makes every token take its block's colour,
+  which follows the theme toggle, as the code blocks did before.
+- PRISM is current with the theme suite: the footer's ssg credit link
+  carries the `made-with-ssg` class that ssg's quality gate looks for
+  (ssg-themes `ceaf3cb`, the one theme change since this site adopted
+  PRISM).
+
+### Fixed
+
+- The weekly Dated claims check failed on 26 October and 2 November while
+  every claim held: the Internet Archive refused the runner's connections
+  for longer than the retries waited, and answered `503` or `429` when it
+  was throttling, which the check treated as final. Throttling answers
+  (`429`, `502`, `503`, `504`) are now retried like a refused connection,
+  honouring `Retry-After` up to 120 s; the check makes four attempts per
+  source with a 30 s backoff, and the job's timeout moves to 50 minutes to
+  fit. A source that stays unreadable, or any other HTTP error, still
+  fails the check.
+
 ## [0.0.13] - 2026-11-01
 
 ### Changed

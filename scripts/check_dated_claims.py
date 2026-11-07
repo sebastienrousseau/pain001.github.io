@@ -51,9 +51,13 @@ USER_AGENT = "pain001.com dated-claims check (+https://pain001.com/security.txt)
 WAYBACK_SAVE = "https://web.archive.org/save/"
 WAYBACK_RAW = "https://web.archive.org/web/2id_/"  # latest capture, raw body
 # A refused or timed-out connection is retried: the Internet Archive refuses
-# runners intermittently. An HTTP error answer is not; it is the answer.
-ATTEMPTS = 3
-BACKOFF_SECONDS = 20
+# runners intermittently. So is a throttling answer (429, or a 502/503/504
+# from an overloaded front end), waiting as long as Retry-After asks, up to a
+# cap. Any other HTTP error is not retried; it is the answer.
+ATTEMPTS = 4
+BACKOFF_SECONDS = 30
+MAX_WAIT_SECONDS = 120
+TRANSIENT_HTTP = frozenset({429, 502, 503, 504})
 
 
 def _open(url: str, timeout: int, attempts: int) -> tuple[bytes, str, str]:
@@ -63,13 +67,23 @@ def _open(url: str, timeout: int, attempts: int) -> tuple[bytes, str, str]:
         try:
             with urllib.request.urlopen(request, timeout=timeout) as response:  # nosec B310
                 return response.read(), response.url, response.headers.get("Content-Encoding", "")
-        except urllib.error.HTTPError:
-            raise
+        except urllib.error.HTTPError as exc:
+            if exc.code not in TRANSIENT_HTTP or attempt == attempts:
+                raise
+            wait = _retry_after(exc, BACKOFF_SECONDS * attempt)
         except (urllib.error.URLError, TimeoutError, ConnectionError):
             if attempt == attempts:
                 raise
-            time.sleep(BACKOFF_SECONDS * attempt)
+            wait = BACKOFF_SECONDS * attempt
+        time.sleep(wait)
     raise AssertionError("unreachable")  # pragma: no cover
+
+
+def _retry_after(error: urllib.error.HTTPError, default: int) -> int:
+    """Seconds a throttling answer asks us to wait, capped; else ``default``."""
+    value = (error.headers or {}).get("Retry-After", "")
+    seconds = int(value) if str(value).strip().isdigit() else default
+    return min(seconds, MAX_WAIT_SECONDS)
 
 
 def _get(url: str, timeout: int = 60, attempts: int = ATTEMPTS) -> tuple[str, str]:
