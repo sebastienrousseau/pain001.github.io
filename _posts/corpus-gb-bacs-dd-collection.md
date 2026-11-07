@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/corpus-gb-bacs-dd-collection/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Bacs Direct Debit collection, first and recurring, SUN as creditor id. A validated pain.001 sample for United Kingdom on the bacs-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
 item_guid: "https://pain001.com/corpus-gb-bacs-dd-collection/"
 item_link: "https://pain001.com/corpus-gb-bacs-dd-collection/"

@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/de/corpus-cz-sepa-sct/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "SEPA credit transfer from a Czech EUR account to a German supplier. Eine validierte pain.001-Beispieldatei (CZ, Schiene sepa-credit-transfer), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
 item_guid: "https://pain001.com/de/corpus-cz-sepa-sct/"
 item_link: "https://pain001.com/de/corpus-cz-sepa-sct/"

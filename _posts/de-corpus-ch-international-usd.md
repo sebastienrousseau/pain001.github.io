@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/de/corpus-ch-international-usd/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Cross-border USD payment from Switzerland (SPS payment type X). Eine validierte pain.001-Beispieldatei (Schweiz, Schiene cross-border), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
 item_guid: "https://pain001.com/de/corpus-ch-international-usd/"
 item_link: "https://pain001.com/de/corpus-ch-international-usd/"

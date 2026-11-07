@@ -2,8 +2,9 @@
 
 - Read `README.md`, `DEVELOPMENT.md`, and `/Users/seb/Code/REPO-STANDARD.md`
   before changing this repository.
-- Build with the latest `ssg` release (0.0.74), locally and in CI; never
-  pin an older one. Move `SSG_VERSION` in every workflow when ssg releases.
+- Build with the latest `ssg` release, locally and in CI; never pin an
+  older one. The pin is `SSG_VERSION` in `.github/workflows/ci.yml`; move
+  it, and the same key in every other workflow, when ssg releases.
 - Never edit generated `docs/` or generated corpus/locale pages directly.
 - Preserve WCAG 2.2 AAA, zero accessibility findings, and 100 Lighthouse
   scores on mobile and desktop.

@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/it/corpus-be-sepa-sct-supplier/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "SEPA credit transfer with a Belgian structured communication (BBA). Un campione pain.001 validato (Belgio, circuito sepa-credit-transfer), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser."
 item_guid: "https://pain001.com/it/corpus-be-sepa-sct-supplier/"
 item_link: "https://pain001.com/it/corpus-be-sepa-sct-supplier/"

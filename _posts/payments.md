@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/payments/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "From ERP export to pain.002 acknowledgement to camt.053 reconciliation: designing batch, streaming, and API payment pipelines around validation gates that stop rejections."
 item_guid: "https://pain001.com/payments/rss.xml"
 item_link: "https://pain001.com/payments/rss.xml"

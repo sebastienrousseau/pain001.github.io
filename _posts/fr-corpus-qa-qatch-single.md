@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/fr/corpus-qa-qatch-single/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Qatar QATCH credit in QAR with the QCB purpose of payment. Un exemple pain.001 validé (QA, rail domestic-credit-transfer), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur."
 item_guid: "https://pain001.com/fr/corpus-qa-qatch-single/"
 item_link: "https://pain001.com/fr/corpus-qa-qatch-single/"

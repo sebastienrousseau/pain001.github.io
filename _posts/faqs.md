@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/faqs/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Why banks reject payment files, pain.001 vs pain.008, the structured-address requirement, streaming large batches, security posture, and audit reproducibility, all answered plainly."
 item_guid: "https://pain001.com/faqs/rss.xml"
 item_link: "https://pain001.com/faqs/rss.xml"

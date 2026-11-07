@@ -26,7 +26,7 @@ env:
   # same key in release.yml, release-backfill.yml and regenerate.yml).
   # The cache key and the install step both read it, so a bump can never
   # update one and leave the other behind.
-  SSG_VERSION: 0.0.74
+  SSG_VERSION: 0.0.75
 
 jobs:
   build-and-audit:

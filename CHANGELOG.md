@@ -6,6 +6,14 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+### Changed
+
+- Built with ssg 0.0.75, the latest release, up from 0.0.74. Every
+  workflow's `SSG_VERSION`, the devcontainer and the setup docs name
+  0.0.75, and the pages' `generator` metadata, which still named
+  0.0.72, now names 0.0.75. `AGENTS.md` points at the `SSG_VERSION`
+  pin instead of repeating the number.
+
 ### Fixed
 
 - Release pages list their checksums in the portfolio's shape: the

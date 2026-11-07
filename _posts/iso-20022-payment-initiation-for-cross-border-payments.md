@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "What CBPR+ requires of your pain.001: BICFI agents, structured or hybrid addresses (deadline deferred, new date due by December 2026), charge bearers, purpose codes, with a worked xborder-ct example."
 item_guid: "https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/rss.xml"
 item_link: "https://pain001.com/iso-20022-payment-initiation-for-cross-border-payments/rss.xml"

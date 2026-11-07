@@ -18,7 +18,7 @@
   <a href="https://pain001.com/documentation/"><img src="https://img.shields.io/badge/API-reference-07172b" alt="Docs" /></a>
   <a href="https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/pain001.github.io"><img src="https://img.shields.io/ossf-scorecard/github.com/sebastienrousseau/pain001.github.io?label=OpenSSF%20Scorecard&logo=openssf" alt="OpenSSF Scorecard" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0%20OR%20MIT-blue.svg" alt="License: Apache-2.0 OR MIT" /></a>
-  <a href="https://static-site-generator.com/"><img src="https://img.shields.io/badge/SSG-0.0.74-8f341f" alt="Toolchain: SSG 0.0.74" /></a>
+  <a href="https://static-site-generator.com/"><img src="https://img.shields.io/badge/SSG-0.0.75-8f341f" alt="Toolchain: SSG 0.0.75" /></a>
 </p>
 
 <!-- markdownlint-enable MD033 MD041 -->
@@ -32,7 +32,7 @@ and the MT101 / Excel loaders. Its job is to convert a treasury engineer, an
 integrator or an AI agent into an installed user, and to hand a regulated
 buyer the evidence they need.
 
-Built with the latest [Static Site Generator (ssg)][00] release, **0.0.74**,
+Built with the latest [Static Site Generator (ssg)][00] release, **0.0.75**,
 and deployed to GitHub Pages by `ci.yml` from the same run that passed every
 gate; the built tree is never committed. Cloudflare fronts the domain.
 
@@ -92,7 +92,7 @@ There is intentionally no system-wide `make install` for a Pages site.
 ```shell
 git clone https://github.com/sebastienrousseau/pain001.github.io.git
 cd pain001.github.io
-cargo install ssg --locked --version 0.0.74
+cargo install ssg --locked --version 0.0.75
 npm ci
 ```
 
@@ -104,7 +104,7 @@ for review or static hosting.
 
 | Component | Floor | Enforced by |
 | :--- | :--- | :--- |
-| Static Site Generator (ssg) | 0.0.74, the latest release | `SSG_VERSION` in `ci.yml`; the pin is the cache key |
+| Static Site Generator (ssg) | 0.0.75, the latest release | `SSG_VERSION` in `ci.yml`; the pin is the cache key |
 | Node.js | 22 (24 also tested) | `engines` in `package.json`; the `node-matrix` job runs the unit tests on both |
 | Python | 3.12 | `python-version` in `ci.yml`; generators, post-build passes and validators |
 | Chrome or Chromium | any current | layout, print, accessibility and Lighthouse gates |
@@ -227,7 +227,7 @@ going live.
 
 ### Build
 
-Prerequisites: the Rust toolchain with `cargo install ssg --locked --version 0.0.74`,
+Prerequisites: the Rust toolchain with `cargo install ssg --locked --version 0.0.75`,
 Node 22+, Python 3.12 with the `pain001` library installed for the generators
 and the snippet gate, and Chrome for the browser gates.
 

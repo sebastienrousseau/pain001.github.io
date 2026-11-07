@@ -46,7 +46,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/pain.001.001.13/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "pain.001.001.13, the newest supported version: official XSD, element reference, XSD-valid example files, and how to generate and validate it with pain001."
 item_guid: "https://pain001.com/pain.001.001.13/rss.xml"
 item_link: "https://pain001.com/pain.001.001.13/rss.xml"

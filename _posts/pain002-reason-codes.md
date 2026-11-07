@@ -46,7 +46,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/pain002-reason-codes/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Every pain.002 status code (RJCT, ACWC, PART…) and the ISO reason codes behind rejections (AC01, AM10, FF01, DU01, RR01), with the typical cause and the practical fix for each."
 item_guid: "https://pain001.com/pain002-reason-codes/rss.xml"
 item_link: "https://pain001.com/pain002-reason-codes/rss.xml"

@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/corpus-se-rix-urgent/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Swedish domestic high-value SEK payment through RIX, urgent, intra-group. A validated pain.001 sample for Sweden on the priority-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
 item_guid: "https://pain001.com/corpus-se-rix-urgent/"
 item_link: "https://pain001.com/corpus-se-rix-urgent/"

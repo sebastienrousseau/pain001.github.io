@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/it/corpus-us-ach-debit/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "ACH debit collection (CCD) with routing numbers. Un campione pain.001 validato (Stati Uniti, circuito ach-debit), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser."
 item_guid: "https://pain001.com/it/corpus-us-ach-debit/"
 item_link: "https://pain001.com/it/corpus-us-ach-debit/"

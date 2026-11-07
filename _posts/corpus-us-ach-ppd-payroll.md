@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/corpus-us-ach-ppd-payroll/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "ACH PPD payroll run, two employees. A validated pain.001 sample for United States on the ach-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
 item_guid: "https://pain001.com/corpus-us-ach-ppd-payroll/"
 item_link: "https://pain001.com/corpus-us-ach-ppd-payroll/"

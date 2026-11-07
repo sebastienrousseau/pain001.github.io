@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/ha/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Ƙirƙiri kuma ka tabbatar da XML na pain.001 da pain.008 bisa XSD na hukuma na ISO 20022. Kyauta, buɗaɗɗen tushe, yana gudana a kwamfutarka."
 item_guid: "https://pain001.com/ha/rss.xml"
 item_link: "https://pain001.com/ha/rss.xml"

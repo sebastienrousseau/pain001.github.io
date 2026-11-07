@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/es/corpus-lu-sepa-sct-single/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "SEPA credit transfer, single supplier payment. Una muestra pain.001 validada (Luxemburgo, raíl sepa-credit-transfer), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
 item_guid: "https://pain001.com/es/corpus-lu-sepa-sct-single/"
 item_link: "https://pain001.com/es/corpus-lu-sepa-sct-single/"

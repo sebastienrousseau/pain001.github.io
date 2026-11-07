@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/de/corpus-cz-certis-domestic/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Czech domestic CZK transfer through CERTIS with VS/KS/SS payment symbols. Eine validierte pain.001-Beispieldatei (CZ, Schiene domestic-credit-transfer), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
 item_guid: "https://pain001.com/de/corpus-cz-certis-domestic/"
 item_link: "https://pain001.com/de/corpus-cz-certis-domestic/"

@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/message-spec-code-lists/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Every ISO 20022 payment-initiation code list with its complete value set and version coverage, generated from the official XSDs."
 item_guid: "https://pain001.com/message-spec-code-lists/"
 item_link: "https://pain001.com/message-spec-code-lists/"

@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/message-specs/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Complete element references for every supported ISO 20022 payment-initiation version: paths, cardinality, types, constraints and code lists, generated from the official schemas."
 item_guid: "https://pain001.com/message-specs/"
 item_link: "https://pain001.com/message-specs/"

@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/executive-brief/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "One page for decision-makers: the rejected-file problem, the structured-address requirement and its new timing, what Pain001 does, what it costs, the safety evidence, and the one ask. Print-ready."
 item_guid: "https://pain001.com/executive-brief/rss.xml"
 item_link: "https://pain001.com/executive-brief/rss.xml"

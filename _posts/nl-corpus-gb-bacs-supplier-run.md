@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/nl/corpus-gb-bacs-supplier-run/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Bacs Direct Credit supplier run, two payments, SUN in the debtor id. Een gevalideerd pain.001-voorbeeld (Verenigd Koninkrijk, rail bacs-direct-credit), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
 item_guid: "https://pain001.com/nl/corpus-gb-bacs-supplier-run/"
 item_link: "https://pain001.com/nl/corpus-gb-bacs-supplier-run/"

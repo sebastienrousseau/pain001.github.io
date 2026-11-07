@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/corpus-us-check-vendor/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Bank-issued cheque to a vendor, mailed to the creditor. A validated pain.001 sample for United States on the cheque rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
 item_guid: "https://pain001.com/corpus-us-check-vendor/"
 item_link: "https://pain001.com/corpus-us-check-vendor/"

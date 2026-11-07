@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/trust/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Everything a vendor-risk, security, or audit reviewer needs in one place: security posture, supply-chain evidence, data flows, accessibility conformance, governance, and release policy, with each claim linked to its artefact."
 item_guid: "https://pain001.com/trust/rss.xml"
 item_link: "https://pain001.com/trust/rss.xml"

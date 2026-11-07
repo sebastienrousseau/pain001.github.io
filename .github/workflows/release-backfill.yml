@@ -43,7 +43,7 @@ jobs:
       attestations: write
     env:
       TAG: ${{ inputs.tag }}
-      SSG_VERSION: 0.0.74
+      SSG_VERSION: 0.0.75
     steps:
       - name: Accept only a release tag name
         run: '[[ "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]'

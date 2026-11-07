@@ -4,7 +4,7 @@
 
 Pain001.com is a static documentation and browser-tool site. Authors edit
 Markdown, HTML templates, CSS, and dependency-free JavaScript. The Static
-Site Generator (ssg) 0.0.74 produces HTML; deterministic post-build passes add locale variants,
+Site Generator (ssg) 0.0.75 produces HTML; deterministic post-build passes add locale variants,
 search metadata, accessibility affordances, and downloadable artefacts.
 GitHub Actions runs all gates and deploys the exact checked Pages artefact.
 
@@ -14,7 +14,7 @@ GitHub Actions runs all gates and deploys the exact checked Pages artefact.
 _posts + _layouts + ssg.toml
               |
               v
-         ssg 0.0.74
+         ssg 0.0.75
               |
               v
      Pain001/ generated tree

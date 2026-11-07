@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/installation/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Install the Pain001 suite on Python 3.10–3.12 via pip or Docker, add Excel and MT101 loaders, and produce your first bank-ready pain.001 file in three commands."
 item_guid: "https://pain001.com/installation/rss.xml"
 item_link: "https://pain001.com/installation/rss.xml"

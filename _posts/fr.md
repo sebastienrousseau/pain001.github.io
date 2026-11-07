@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/fr/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Générez et validez des fichiers XML pain.001 et pain.008 selon le XSD officiel ISO 20022, depuis CSV, Excel ou MT101. Gratuit, open source, en local."
 item_guid: "https://pain001.com/fr/rss.xml"
 item_link: "https://pain001.com/fr/rss.xml"

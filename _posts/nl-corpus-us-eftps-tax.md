@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/nl/corpus-us-eftps-tax/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "IRS EFTPS federal tax deposit, CCD with the TXP addenda string. Een gevalideerd pain.001-voorbeeld (Verenigde Staten, rail ach-credit), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
 item_guid: "https://pain001.com/nl/corpus-us-eftps-tax/"
 item_link: "https://pain001.com/nl/corpus-us-eftps-tax/"

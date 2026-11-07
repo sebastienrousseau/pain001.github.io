@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/iso20022-roadmap/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "The living schedule of ISO 20022 mandates: the deferred structured-address and MT101 changes, June 2027 investigations, November 2027 CHAPS purpose codes, 2028 statements and direct debits, each primary-sourced and dated."
 item_guid: "https://pain001.com/iso20022-roadmap/rss.xml"
 item_link: "https://pain001.com/iso20022-roadmap/rss.xml"
