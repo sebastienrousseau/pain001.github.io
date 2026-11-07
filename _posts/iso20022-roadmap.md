@@ -140,7 +140,7 @@ Pain001 ships both requirements today: structured and hybrid address elements in
 
 ## 05. No date, steady pressure
 
-- **pain.001 v10–v12 adoption**: market infrastructures standardised on v9; later versions arrive channel by channel. Pain001 [generates all ten versions](/documentation/) and migrates records between them, so a version switch is a parameter, not a project.
+- **pain.001 v10–v12 adoption**: market infrastructures standardised on v9; later versions arrive channel by channel. Pain001 [generates every version from .03 to .13](/documentation/) and migrates records between them, so a version switch is a parameter, not a project.
 - **LEIs in payments**: 3 million+ active LEIs; already mandatory in scoped CHAPS payments, recommended in CBPR+ party identification.
 - **Agentic payments**: Mastercard, Visa, Google (AP2), and the Linux Foundation's x402 are building agent-authorisation rails; the payment-*file* layer they ultimately need is the one [pain001-mcp](/pain001-mcp/) already serves.
 

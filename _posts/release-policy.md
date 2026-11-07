@@ -90,7 +90,7 @@ last_reviewed: "2026-07-26"
 
 ## Versioning
 
-Pain001 is **pre-1.0** (`0.0.x`). Within that range, releases are frequent and may include breaking changes; every breaking change is documented in the [release notes](https://github.com/sebastienrousseau/pain001/releases). Companion packages (`pain001-mcp`, `pain001-lsp`, the loaders) version independently and declare their compatible core range in their dependency metadata. The resolver, not the version number, is the compatibility contract.
+Pain001 is **pre-1.0** (`0.0.x`). Within that range, releases are frequent and may include breaking changes; every breaking change is documented in the [release notes](https://github.com/sebastienrousseau/pain001/releases). Companion packages (`pain001-mcp`, `pain001-lsp`, the loaders) ship in lockstep with the core: each companion release carries the core's version number and requires that core release or later in its dependency metadata.
 
 ## What "supported" means
 

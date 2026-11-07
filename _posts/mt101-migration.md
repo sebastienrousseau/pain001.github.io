@@ -112,7 +112,7 @@ Because conversion without validation is how malformed files reach banks. A conv
 
 ## The migration in three steps
 
-1. **Install both packages** (Python 3.10 or later, no other dependency):
+1. **Install both packages** (Python 3.11 or later):
 
    ```bash
    pip install pain001 pain001-loader-mt101

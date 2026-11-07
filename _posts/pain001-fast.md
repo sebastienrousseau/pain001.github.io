@@ -11,7 +11,6 @@ cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-09-27T08:00:00+00:00"
 description: "High-throughput native Rust acceleration core for ISO 20022 payments: zero-allocation IBAN mod-97, BIC routing checks, and 50,000+ tx/s batch validation."
-download: "https://pypi.org/project/pain001-fast/"
 format-detection: telephone=no
 hreflang: en
 icon: "https://pain001.com/img/pain001.svg"
@@ -64,17 +63,15 @@ apple_mobile_web_app_orientations: portrait
 
 `pain001-fast` is an optional, high-throughput native acceleration core written in Rust with PyO3 bindings. Designed for corporate treasury backbones, high-frequency clearing hubs, and payment service providers, it offloads CPU-intensive validation loops from the Python Global Interpreter Lock (GIL) to parallel multi-core hardware.
 
-```bash
-pip install pain001-fast
-```
+**Status: an unreleased experiment.** `pain001-fast` is not published on PyPI or any other registry; its source is on [GitHub](https://github.com/sebastienrousseau/pain001-fast).
 
-When installed, `pain001` core automatically promotes IBAN, BIC, and character set validations to native machine speed without requiring any configuration or API changes.
+When the `pain001_fast` module is importable, `pain001` core uses it for IBAN, BIC, and character set validation without any configuration or API changes; when it is not, `pain001` uses its own Python routines.
 
 ---
 
 ## Performance Characteristics
 
-Micro-benchmarked on modern 64-bit multi-core hardware:
+Micro-benchmarked by the project on Apple Silicon (M-series), release build; these figures have not been reproduced independently:
 
 | Benchmark Scenario | Standard Pure Python | pain001-fast (Rust) | Speedup Factor |
 | :--- | :--- | :--- | :--- |

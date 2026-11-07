@@ -111,8 +111,8 @@ New to the format? [What is pain.001?](/pain-001/) explains the message, its str
 ## Generate and inspect
 
 ```bash
-pain001 init pain.001.001.05 -o work/         # scaffold a starter CSV
-pain001 inspect pain.001.001.05               # list required + optional fields
+pain001 init pain.001.001.05 -o payments.csv  # write a starter CSV
+pain001 inspect pain.001.001.05               # template, schema, input formats
 pain001 -t pain.001.001.05 -d payments.csv -o out/ --dry-run
 ```
 

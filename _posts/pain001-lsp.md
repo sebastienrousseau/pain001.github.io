@@ -77,13 +77,13 @@ author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
-site_last_updated: 2026-07-26
+site_last_updated: 2026-11-07
 site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Atom, JSON-LD"
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Editor tooling"
 excerpt: "pain001-lsp brings the Language Server Protocol to payment data authoring: as-you-type schema validation, IBAN checksum and BIC diagnostics, field completion, hover documentation, a quick-fix that inserts missing required fields, formatting, and document symbols for large batches. Built on pygls and tested to 100% branch coverage."
-last_reviewed: "2026-07-26"
+last_reviewed: "2026-11-07"
 
 ---
 
@@ -104,11 +104,13 @@ A malformed batch discovered at the bank gateway costs a repair cycle, a cut-off
 
 CSV files are supported for diagnostics: `.csv` URIs are routed through a dedicated CSV validation path.
 
-The default message type is `pain.001.001.09`; all 11 supported definitions (`pain.001.001.03`–`.12`, `pain.008.001.02`) can be selected per workspace via `initializationOptions` or live via `workspace/didChangeConfiguration`.
+The default message type is `pain.001.001.09`; every definition the installed core supports (`pain.001.001.03`–`.13`, `pain.008.001.02` and `pain.008.001.08`) can be selected per workspace via `initializationOptions` or live via `workspace/didChangeConfiguration`.
 
 ---
 
 **Workspace commands for the example corpus.** `pain001.corpus.list` lists the validated example files the library ships (market scenarios by country and rail, and the schema coverage sets) and `pain001.corpus.get` returns one file with its provenance record, so an editor or an agent driving the server can open a known-good file beside the one being written. The same files are published at [/corpus/index.json](/corpus/index.json).
+
+**Workspace commands for faces.** `pain001.faces.list` names each face and the binding keys it accepts, and `pain001.faces.project` takes the pain.001 document in the editor's buffer and returns its UK Open Banking v4.0.1, Berlin Group NextGenPSD2 v1.3.16 or ISO 20022 element-name projection, with a loss report of every element not carried.
 
 ## 02. Setup
 

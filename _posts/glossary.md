@@ -141,7 +141,7 @@ Plain-English definitions of the terms that appear across this site and in your 
 
 **XSD validation.** Checking XML against the official ISO 20022 schema definition. Pain001 treats it as a hard gate before any file is written.
 
-**MCP: Model Context Protocol.** The open standard through which AI assistants call external tools. [`pain001-mcp`](/pain001-mcp/) exposes 17 payment tools to any MCP client, locally over stdio.
+**MCP: Model Context Protocol.** The open standard through which AI assistants call external tools. [`pain001-mcp`](/pain001-mcp/) exposes the Pain001 pipeline as tools to any MCP client, locally over stdio by default.
 
 **LSP: Language Server Protocol.** The editor-integration standard behind IDE diagnostics. [`pain001-lsp`](/pain001-lsp/) uses it to validate payment files as you type.
 

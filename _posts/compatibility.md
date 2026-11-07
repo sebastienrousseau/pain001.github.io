@@ -77,13 +77,13 @@ author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
-site_last_updated: 2026-07-26
+site_last_updated: 2026-11-07
 site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Atom, JSON-LD"
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Compatibility"
-excerpt: "Pain001's compatibility matrix: twelve message definitions with per-capability coverage for generation, validation, and migration; seven input formats and their gates; five scheme rulebooks; structured and hybrid address support; response-side parsers; and the known limitations stated as plainly as the capabilities."
-last_reviewed: "2026-07-26"
+excerpt: "Pain001's compatibility matrix: every supported message definition with per-capability coverage for generation, validation, and migration; seven input formats and their gates; the scheme rulebooks; structured and hybrid address support; response-side parsers; and the known limitations stated as plainly as the capabilities."
+last_reviewed: "2026-11-07"
 
 
 ---
@@ -99,8 +99,9 @@ Everything on this page is verified against the shipped code of **pain001 v0.0.7
 | pain.001.001.09 | Yes | Yes | Yes | CBPR+ version; MT101-relay successor; `<BICFI>` |
 | pain.001.001.10 – .12 | Yes | Yes | Yes | Post-2019 refinements |
 | pain.001.001.13 | Yes | Yes | Yes | Published by ISO 19 Mar 2026. Adds optional `UnqTxIdr` (UETR) and `DbtCdtRptgInd`. Generated and XSD-validated; **no bank channel we track accepts it yet** |
-| pain.008.001.02 | Yes | Yes | n/a | The only pain.008 version supported (others are not) |
-| pain.002 (responses) | No | n/a | n/a | **Parsed**, not generated-for-submission: status/reason extraction |
+| pain.008.001.02 | Yes | Yes | n/a | The 2009 direct debit version many SEPA channels still take |
+| pain.008.001.08 | Yes | Yes | n/a | The 2019 version the EPC 2025 SEPA Direct Debit rulebooks and CBPR+ carry |
+| pain.002 (responses) | Test reports only | n/a | n/a | **Parsed** for status and reason extraction; the generator builds reports for testing your own handling, since a real pain.002 comes from the bank |
 | camt.053 (statements) | No | n/a | n/a | **Parsed** for reconciliation |
 
 ## 02. Input formats
@@ -117,19 +118,29 @@ Everything on this page is verified against the shipped code of **pain001 v0.0.7
 
 ## 03. Scheme rulebooks
 
-`sepa-sct` (SEPA Credit Transfer) · `sepa-inst` (SEPA Instant) · `sepa-sdd` (SEPA Direct Debit Core) · `sepa-b2b` (SEPA B2B) · `xborder-ct` (cross-border credit transfer). Each supports `--explain` rule-by-rule output. Bank-*specific* profile packs beyond these five do not exist yet. That is the roadmap's rule-pack architecture, not a shipped feature.
+SEPA (`sepa-sct`, `sepa-inst`, `sepa-sdd`, `sepa-b2b`), Swift CBPR+ (`cbpr-cross-border`), generic cross-border (`xborder-ct`), national rails (UK Faster Payments, CHAPS and Bacs; US ACH, RTP and wires; Swiss, German, Swedish, Hong Kong, Singapore, Malaysian, Qatari and UAE rails), purpose-code mandates and cross-record duplicate detection (`anti-duplicate`). `pain001 plugins list` names every rulebook the installed build carries, with its source. Each supports `--explain`, which prints a remediation hint for every violation. These are public rail rules; a profile derived from your own bank's guideline is not shipped.
 
-## 04. Address models
+## 04. Outputs beyond the XML file
+
+| Output | Support | Notes |
+| :--- | :--- | :--- |
+| Business Application Header envelope | `--envelop-bah` | `head.001.001.03` header with `head.003.001.01` `BizData` |
+| XML Digital Signature | `--xml-sign-key` | RSA-SHA256 XML-DSig; needs the `cryptography` package |
+| Faces (JSON projections) | `pain001 face` | UK Open Banking v4.0.1 domestic payment, Berlin Group NextGenPSD2 v1.3.16, ISO 20022 element names; refuses rather than invents a missing required element |
+| SFTP delivery | `pain001 upload` | `pain001[upload]` extra; host key trusted explicitly, atomic rename on the server |
+| Schematron business rules | `--schematron` | `sepa`, `fednow` and `cbpr` presets, or your own `.sch` file |
+
+## 05. Address models
 
 Structured and hybrid postal address elements are generated today, meeting the [CBPR+ structured-address requirement](/iso20022-roadmap/), whose November 2026 date Swift has deferred. Unstructured `AdrLine` output remains available for channels that still accept it.
 
-## 05. Known limitations
+## 06. Known limitations
 
-- **No bank connectivity**: Pain001 stops at the validated file; submission is your channel (by design, as explained under [scope](/competitors-comparison/)).
-- **pain.008 is one version**: `.001.02` only.
+- **No bank connectivity beyond SFTP delivery**: `pain001 upload` delivers a file to an SFTP server you have trusted; EBICS, FileAct and bank portals are your channel (by design, as explained under [scope](/competitors-comparison/)).
+- **pain.008 is two versions**: `.001.02` and `.001.08`.
 - **MT101 loader excludes** `:23E:`, `:25:`, `:28D:`, `:33B:`, `:36:`, `:21F:`, `:56a:`, `:51A:`, `:77B:`, `:25A:`, because instruction codes and FX routing need human judgement.
 - **Streaming semantics**: `--streaming` emits one independently valid file per chunk with recomputed totals, not a single monolithic document.
-- **Python 3.10–3.12**: nothing newer is CI-tested yet.
+- **Python 3.11 or later**: CI tests 3.11 through 3.14.
 - **The browser demo** implements the fail-fast layer plus the official XSD gate for v09; the full JSON-Schema/rulebook pipeline is CLI-side.
 
 Corrections are welcome. This page follows the [corrections policy](/governance/#corrections-and-editorial-policy).

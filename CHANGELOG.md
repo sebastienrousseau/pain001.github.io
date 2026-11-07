@@ -25,6 +25,39 @@ All notable changes to this website are documented here. The format follows
 
 ### Fixed
 
+- Library facts checked against pain001 0.0.78 and its siblings and
+  corrected across the site:
+  - Python 3.11 or later (CI tests 3.11 to 3.14), not 3.10 to 3.12.
+  - Thirteen message types, including `pain.008.001.08`.
+  - `pain001-mcp` has 28 tools, not 17 or 22. It also serves HTTP on
+    request, and `commit_payment_batch` writes the XML to the path the
+    caller gives, so "all read-only" and "never writes" are gone.
+  - The scheme rulebooks go well beyond the five SEPA and
+    cross-border ones.
+  - lxml is the optional `fast` extra, not absent.
+  - `pain001 upload` delivers to SFTP, so "stops at the file" is
+    narrowed.
+  - The companions are lockstep and dual-licensed.
+  - The BAH and XML-DSig flags shipped in 0.0.72, not "the next
+    release".
+  - CSV formula cells are kept as supplied by default.
+  - `process_files` takes `output_path`, not `output_dir`.
+  - `xborder-ct` checks no charge bearer.
+- The technical reference documents `pain001 face`, `pain001 upload`,
+  the faces REST endpoints, `PAIN001_API_KEY`, and every `generate`
+  flag the CLI has.
+- The "first file in three commands" recipe works: `init -o` takes a
+  file, so it writes `payments.csv`, which the next command reads.
+  The version pages' snippets match.
+- `pain001-fast` is marked as an unreleased experiment. The
+  `pip install pain001-fast` line and the PyPI download link are
+  removed; neither resolves.
+- The compliance toolkit no longer links GitHub Discussions, which the
+  repository does not have.
+- 20 changed English fragments, and the installation page's
+  description and subtitle, are migrated in all 34 locale tables under
+  `scripts/docs_i18n/` and `scripts/pages_i18n/`, with their
+  translations updated.
 - Code blocks keep a readable text colour with the light theme chosen on
   a dark system. ssg's highlighter stylesheet sets the block's text to
   `#e6edf3` under `prefers-color-scheme: dark`, which the theme toggle

@@ -95,7 +95,7 @@ How Pain001 is engineered, why its guarantees hold, and where it sits in a messa
 
 Payment files are an attack surface. Pain001 treats every input as hostile:
 
-- **XXE and entity-expansion defence.** All XML parsing (pain.002 status reports, camt.053 statements, XSD validation input) routes through `defusedxml`, blocking external entity injection and "billion laughs" expansion attacks. There is no `lxml` anywhere in the dependency tree.
+- **XXE and entity-expansion defence.** All XML parsing (pain.002 status reports, camt.053 statements, XSD validation input) routes through `defusedxml`, blocking external entity injection and "billion laughs" expansion attacks. The optional `fast` extra adds `lxml` as a faster XSD gate; its parser runs with entity resolution, DTD loading and network access switched off, and a document it rejects is checked again by `xmlschema`, whose verdict is final.
 - **Path-traversal validation.** File paths pass a dedicated security validator before any read or write.
 - **Charset containment.** Text is transliterated to the ISO 20022 Latin character set accepted by SWIFT and SEPA before serialisation, so injection-adjacent characters never reach the wire format.
 - **Plugin kill switch.** `PAIN001_DISABLE_PLUGINS=1` disables third-party plugin discovery for locked-down deployments, and `pain001 plugins list` makes every active extension auditable.
@@ -106,9 +106,9 @@ IEEE 754 floats cannot represent most decimal amounts exactly; payment files bui
 
 ## 03. Validation as a gate, not an option
 
-Every generation path, whether CLI, Python API, REST, or MCP, runs the same three-layer pipeline: JSON Schema per record, optional scheme rulebook (SEPA SCT / Instant / SDD Core / B2B, cross-border), then XSD validation of the rendered document against the official ISO 20022 schema **before writing**. Surfaces cannot diverge because there is one pipeline.
+Every generation path, whether CLI, Python API, REST, or MCP, runs the same three-layer pipeline: JSON Schema per record, optional scheme rulebook (SEPA, national rails such as Faster Payments, CHAPS and ACH, or Swift CBPR+), then XSD validation of the rendered document against the official ISO 20022 schema **before writing**. Surfaces cannot diverge because there is one pipeline.
 
-Quality is enforced the same way: 100% line **and** branch coverage as a hard CI gate on the core (3,828 lines, 926 branches), strict mypy, Bandit and pip-audit, CodeQL, and a CycloneDX SBOM per release build. The Docker image runs as a dedicated non-root user.
+Quality is enforced the same way: 100% line **and** branch coverage as a hard CI gate on the core, strict mypy, Bandit and pip-audit, CodeQL, and a CycloneDX SBOM per release build. The Docker image runs as a dedicated non-root user.
 
 ## 04. The patent landscape and the open alternative
 
@@ -136,10 +136,10 @@ Pain001's position is deliberate: implement the **published, open ISO 20022 stan
                                        ▼
                         XSD validation (official ISO 20022 schema)
                                        ▼
-              pain.001.001.03 – .12  /  pain.008.001.02 XML
+        pain.001.001.03 – .13  /  pain.008.001.02, .08 XML
 ```
 
-One pipeline, four entry surfaces (CLI, library, REST, MCP), four plugin extension points (`loaders`, `validators`, `schemes`, `writers`). The [Technical Reference](/documentation/) documents every stage.
+One pipeline, five entry surfaces (CLI, library, REST, MCP, LSP), four plugin extension points (`loaders`, `validators`, `schemes`, `writers`). The [Technical Reference](/documentation/) documents every stage.
 
 ---
 
@@ -147,7 +147,7 @@ One pipeline, four entry surfaces (CLI, library, REST, MCP), four plugin extensi
 
 **Is "100% coverage" a real gate or a badge?**
 
-A hard gate: CI fails below 100% line and branch coverage on the core, and the repository's coverage report is verifiable (3,828 of 3,828 lines, 926 of 926 branches). Coverage does not prove correctness (the XSD validation against official schemas is what does that), but it proves every branch is exercised.
+A hard gate: CI fails below 100% line and branch coverage on the core, so every line and branch the release ships is exercised by a test. Coverage does not prove correctness (the XSD validation against official schemas is what does that), but it proves every branch is exercised.
 
 **Does using Pain001 infringe the transformation patents above?**
 

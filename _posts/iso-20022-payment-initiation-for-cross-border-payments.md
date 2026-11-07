@@ -99,7 +99,7 @@ CBPR+ (Cross-Border Payments and Reporting Plus) is the set of usage guidelines 
 
 - **Agents as BICs.** Identify debtor and creditor agents with a BIC (`<BICFI>` from v09 onward). The element name change from v03's `<BIC>` is a classic rejection cause when switching versions.
 - **Structured or hybrid addresses.** Swift will reject fully free-text addresses in CBPR+; the November 2026 date was deferred and the new one is due by December 2026. Minimum viable: structured town and country, with up to two 70-character address lines (hybrid). Pain001 emits both forms.
-- **Charge bearer.** `SHAR` is the SEPA norm; cross-border flows may need `DEBT` or `CRED`. Pain001's `xborder-ct` scheme rulebook checks consistency (and its MT101 loader maps legacy `OUR`/`BEN`/`SHA` automatically).
+- **Charge bearer.** `SHAR` is the SEPA norm; cross-border flows may need `DEBT` or `CRED`. Set it in your data for each batch; Pain001's MT101 loader maps legacy `OUR`/`BEN`/`SHA` automatically.
 - **Purpose codes and remittance data.** Increasingly mandated downstream (the Bank of England extends mandatory purpose codes to all CHAPS payments from November 2027) and the raw material for the CPMI's harmonised cross-border data requirements.
 - **Character set.** The ISO 20022 Latin subset only; Pain001 transliterates before rendering so a `ß` or `ø` in a beneficiary name never becomes a NAK.
 
@@ -109,7 +109,7 @@ CBPR+ (Cross-Border Payments and Reporting Plus) is the set of usage guidelines 
 pain001 -t pain.001.001.09 -d suppliers.csv -o out/ --scheme xborder-ct --explain
 ```
 
-The `--explain` report lists every cross-border rule evaluated (currency/BIC consistency, identifier validity, amount bounds) before the XSD gate renders the final verdict. Exit `0` means the file is structurally ready for your bank's channel; what remains (sanctions, funding, cut-offs) is banking, not formatting.
+`xborder-ct` checks an ISO 4217 currency, valid IBANs, a creditor agent BIC, the amount and the ISO 20022 character set and lengths on every row, and `--explain` prints a remediation hint for each violation before the XSD gate renders the final verdict. Keep each file to one currency: the generator writes every row into one payment-information block, and its control sum adds the amounts as they are. For Swift CBPR+ rules such as structured addresses and the UETR, use `--scheme cbpr-cross-border`. Exit `0` means the file is structurally ready for your bank's channel; what remains (sanctions, funding, cut-offs) is banking, not formatting.
 
 ---
 
