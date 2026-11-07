@@ -15,6 +15,17 @@ All notable changes to this website are documented here. The format follows
   localized corpus strings, version stamps, the corpus archives and the
   demo's pinned pain001 wheel, from the regenerate workflow's run for
   0.0.78.
+- Built with ssg 0.0.74, the latest release, up from 0.0.72. Every
+  workflow's `SSG_VERSION`, the devcontainer and the setup docs name
+  0.0.74. ssg 0.0.73 gave the generated `highlight.css` token colours
+  that switch on `prefers-color-scheme` only, so with the dark theme
+  chosen on a light system the code tokens on `/try/` failed AAA
+  contrast; the adapter makes every token take its block's colour,
+  which follows the theme toggle, as the code blocks did before.
+- PRISM is current with the theme suite: the footer's ssg credit link
+  carries the `made-with-ssg` class that ssg's quality gate looks for
+  (ssg-themes `ceaf3cb`, the one theme change since this site adopted
+  PRISM).
 
 ### Fixed
 
