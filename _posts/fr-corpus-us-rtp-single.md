@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-07T08:00:00+00:00"
+date: "2026-11-08T08:00:00+00:00"
 description: "RTP real-time payment, single. Un exemple pain.001 validé (États-Unis, rail instant-payment), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "RTP real-time payment, single. Un exemple pain.001 validé (États-Unis, rail instant-payment), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur."
 item_guid: "https://pain001.com/fr/corpus-us-rtp-single/"
 item_link: "https://pain001.com/fr/corpus-us-rtp-single/"
-item_pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+item_pub_date: "Sun, 08 Nov 2026 08:00:00 +0000"
 item_title: "Exemple pain.001 ISO 20022 us.rtp.single : États-Unis (instant-payment)"
-last_build_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+last_build_date: "Sun, 08 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+pub_date: "Sun, 08 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Description du scénario, citée depuis la fiche de provenance (texte original e
 
 > RTP real-time payment, single.
 
-Un fichier d'initiation de paiement (**États-Unis**, rail **instant-payment**), livré en `pain.001.001.03`, `pain.001.001.09`, généré et vérifié par pain001 0.0.78. C'est un exemple synthétique construit à partir des règles publiques des schémas de paiement : aucune partie réelle, aucun compte réel, aucune directive bancaire derrière lui.
+Un fichier d'initiation de paiement (**États-Unis**, rail **instant-payment**), livré en `pain.001.001.03`, `pain.001.001.09`, généré et vérifié par pain001 0.0.81. C'est un exemple synthétique construit à partir des règles publiques des schémas de paiement : aucune partie réelle, aucun compte réel, aucune directive bancaire derrière lui.
 
 ## Fichiers
 
@@ -126,7 +126,7 @@ Confiance **dérivé** : construit à partir du règlement public ou du guide d'
 ## D'où vient le contenu
 
 - The Clearing House RTP network rules (per-item limit) (lu le 2026-09-10)
-- Cross River RTP pain.001 input specification (local instrument rtp) (lu le 2026-09-10)
+- A US bank's public RTP pain.001 input specification (local instrument rtp) (lu le 2026-09-10)
 
 Le SHA-256 de chaque fichier figure dans sa fiche de provenance. La directive d'utilisation propre à votre banque n'est pas représentée ici : [appliquez-la en privé](/example-corpus/#your-bank-s-guideline) avec l'outil d'overlay de la bibliothèque.
 

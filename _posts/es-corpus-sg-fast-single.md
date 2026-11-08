@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-07T08:00:00+00:00"
+date: "2026-11-08T08:00:00+00:00"
 description: "Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. Una muestra pain.001 validada (SG, raíl instant-payment), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. Una muestra pain.001 validada (SG, raíl instant-payment), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
 item_guid: "https://pain001.com/es/corpus-sg-fast-single/"
 item_link: "https://pain001.com/es/corpus-sg-fast-single/"
-item_pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+item_pub_date: "Sun, 08 Nov 2026 08:00:00 +0000"
 item_title: "Ejemplo pain.001 ISO 20022 sg.fast.single: SG (instant-payment)"
-last_build_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+last_build_date: "Sun, 08 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+pub_date: "Sun, 08 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Descripción del escenario, citada del registro de procedencia (texto original e
 
 > Singapore FAST credit in SGD, bank and branch codes, addresses on both parties.
 
-Un archivo de iniciación de pagos (**SG**, raíl **instant-payment**), entregado en `pain.001.001.03`, `pain.001.001.09`, generado y comprobado por pain001 0.0.78. Es un ejemplo sintético construido a partir de los reglamentos públicos de los esquemas de pago: no hay detrás ninguna parte real, ninguna cuenta real ni ninguna guía bancaria.
+Un archivo de iniciación de pagos (**SG**, raíl **instant-payment**), entregado en `pain.001.001.03`, `pain.001.001.09`, generado y comprobado por pain001 0.0.81. Es un ejemplo sintético construido a partir de los reglamentos públicos de los esquemas de pago: no hay detrás ninguna parte real, ninguna cuenta real ni ninguna guía bancaria.
 
 ## Archivos
 
@@ -126,7 +126,7 @@ Confianza **supuesto**: un detalle se apoya en una suposición que el registro n
 ## De dónde procede el contenido
 
 - Association of Banks in Singapore, FAST service description (S$200,000 per transaction) (leído el 2026-09-11)
-- UOB, OCBC and DBS ISO 20022 pain.001 pages (public) (leído el 2026-09-11)
+- Three Singapore banks' public ISO 20022 pain.001 pages (leído el 2026-09-11)
 
 El SHA-256 de cada archivo está en su registro de procedencia. La guía de uso propia de su banco no está representada aquí: [aplíquela en privado](/example-corpus/#your-bank-s-guideline) con la herramienta de overlays de la biblioteca.
 

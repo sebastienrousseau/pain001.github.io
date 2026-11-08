@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-07T08:00:00+00:00"
+date: "2026-11-08T08:00:00+00:00"
 description: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Un campione pain.001 validato (HK, circuito instant-payment), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Un campione pain.001 validato (HK, circuito instant-payment), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser."
 item_guid: "https://pain001.com/it/corpus-hk-fps-single/"
 item_link: "https://pain001.com/it/corpus-hk-fps-single/"
-item_pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+item_pub_date: "Sun, 08 Nov 2026 08:00:00 +0000"
 item_title: "Esempio pain.001 ISO 20022 hk.fps.single: HK (instant-payment)"
-last_build_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+last_build_date: "Sun, 08 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+pub_date: "Sun, 08 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Descrizione dello scenario, citata dal record di provenienza (testo originale in
 
 > Hong Kong FPS credit in HKD, clearing codes and account numbers.
 
-Un file di disposizione di pagamento (**HK**, circuito **instant-payment**), fornito in `pain.001.001.03`, `pain.001.001.09`, generato e verificato da pain001 0.0.78. È un esempio sintetico costruito dai regolamenti pubblici degli schemi di pagamento: nessuna parte reale, nessun conto reale, nessuna linea guida bancaria dietro di esso.
+Un file di disposizione di pagamento (**HK**, circuito **instant-payment**), fornito in `pain.001.001.03`, `pain.001.001.09`, generato e verificato da pain001 0.0.81. È un esempio sintetico costruito dai regolamenti pubblici degli schemi di pagamento: nessuna parte reale, nessun conto reale, nessuna linea guida bancaria dietro di esso.
 
 ## File
 
@@ -127,7 +127,7 @@ Confidenza **presunto**: un dettaglio si basa su un'ipotesi che il record indica
 ## Da dove proviene il contenuto
 
 - Hong Kong Interbank Clearing Limited, Faster Payment System rules and clearing-code list (letto il 2026-09-11)
-- East West Bank HK, ISO 20022 FPS file specification (public) (letto il 2026-09-11)
+- A Hong Kong bank's public ISO 20022 FPS file specification (letto il 2026-09-11)
 
 Lo SHA-256 di ogni file è nel suo record di provenienza. La linea guida d'uso della tua banca non è rappresentata qui: [applicala in privato](/example-corpus/#your-bank-s-guideline) con lo strumento di overlay della libreria.
 

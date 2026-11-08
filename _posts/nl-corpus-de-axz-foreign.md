@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-07T08:00:00+00:00"
+date: "2026-11-08T08:00:00+00:00"
 description: "Foreign payment in USD from a German account, DK order type AXZ. Een gevalideerd pain.001-voorbeeld (Duitsland, rail cross-border), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Foreign payment in USD from a German account, DK order type AXZ. Een gevalideerd pain.001-voorbeeld (Duitsland, rail cross-border), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
 item_guid: "https://pain001.com/nl/corpus-de-axz-foreign/"
 item_link: "https://pain001.com/nl/corpus-de-axz-foreign/"
-item_pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+item_pub_date: "Sun, 08 Nov 2026 08:00:00 +0000"
 item_title: "ISO 20022 pain.001-voorbeeld de.axz.foreign: Duitsland (cross-border)"
-last_build_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+last_build_date: "Sun, 08 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+pub_date: "Sun, 08 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Scenariobeschrijving, geciteerd uit het herkomstrecord (oorspronkelijke Engelse 
 
 > Foreign payment in USD from a German account, DK order type AXZ.
 
-Een betaalinitiatiebestand (**Duitsland**, rail **cross-border**), geleverd in `pain.001.001.03`, `pain.001.001.09`, gegenereerd en gecontroleerd door pain001 0.0.78. Het is een synthetisch voorbeeld, opgebouwd uit de openbare rulebooks van de betaalschema's: geen echte partij, geen echte rekening en geen bankrichtlijn erachter.
+Een betaalinitiatiebestand (**Duitsland**, rail **cross-border**), geleverd in `pain.001.001.03`, `pain.001.001.09`, gegenereerd en gecontroleerd door pain001 0.0.81. Het is een synthetisch voorbeeld, opgebouwd uit de openbare rulebooks van de betaalschema's: geen echte partij, geen echte rekening en geen bankrichtlijn erachter.
 
 ## Bestanden
 
@@ -115,7 +115,7 @@ Betrouwbaarheid **aangenomen**: één detail berust op een aanname die het recor
 ## Waar de inhoud vandaan komt
 
 - DK DFUE-Abkommen Anlage 3 V3.8, order type AXZ (gelezen op 2026-09-10)
-- DZ BANK, AXZ product description (AWV reporting) (gelezen op 2026-09-10)
+- A German bank's public AXZ product description (AWV reporting) (gelezen op 2026-09-10)
 
 De SHA-256 van elk bestand staat in zijn herkomstrecord. De eigen gebruiksrichtlijn van uw bank is hier niet weergegeven: [pas die privé toe](/example-corpus/#your-bank-s-guideline) met de overlay-tooling van de bibliotheek.
 
