@@ -13,6 +13,9 @@ All notable changes to this website are documented here. The format follows
 ### Fixed
 
 - Export regenerated website sources as a checksummed review patch. Keep repository permissions read-only and apply updates through the approved suite iteration instead of creating and force-pushing a separate bot branch.
+- A manual run of CI on `main` now deploys to GitHub Pages, as a push
+  does. On 2026-11-09 GitHub's Actions outage dropped the deploy job
+  from the 0.0.83 merge run, which then could not be retried.
 
 ## [0.0.83] - 2026-11-09
 
