@@ -11,7 +11,8 @@ two contradictory signals for one URL.
 Checks, against the built site/:
   1. every <loc> in sitemap.xml is a page in the build, carries no robots
      noindex, and its canonical link names that same URL;
-  2. no noindex page carries a canonical link to its own URL.
+  2. no noindex page carries a canonical link to its own URL;
+  3. the homepage is listed (a "." prefix filter once dropped it).
 """
 
 from __future__ import annotations
@@ -71,6 +72,8 @@ def problems(site: Path) -> list[str]:
     urls = [loc.text or "" for loc in root.iter(f"{NS}loc")]
     found = [check_sitemap_url(site, url) for url in urls]
     found += [check_noindex_page(site, p) for p in sorted(site.rglob("index.html"))]
+    if BASE_URL + "/" not in urls:
+        found.append(f"{BASE_URL}/: the homepage is not in the sitemap")
     return [p for p in found if p]
 
 

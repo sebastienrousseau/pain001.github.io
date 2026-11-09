@@ -34,6 +34,8 @@ All notable changes to this website are documented here. The format follows
   sources (its post, layout and locale table) instead of the build
   date stamped on all 493 URLs at every deploy. CI's build job now
   checks out full history for it.
+- The sitemap lists the homepage. It never had: the filter that skips
+  dot-directories also matched the homepage's own path, `.`.
 
 ## [0.0.83] - 2026-11-09
 

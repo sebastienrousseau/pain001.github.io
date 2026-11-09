@@ -65,3 +65,18 @@ def test_without_history_the_build_date_is_kept(tmp_path):
     root = _repo(tmp_path)
     assert pb.source_dates(root) is None  # not a repository
     assert pb.page_lastmod(root, ".", None, "2026-11-09") == "2026-11-09"
+
+
+def test_the_homepage_is_listed(tmp_path):
+    """The `.` prefix filter meant for dot-directories also matched the
+    homepage's own relative path, ".", so the sitemap never listed it."""
+    site = tmp_path / "site"
+    for rel in ("index.html", "about/index.html", ".well-known/index.html", "404/index.html"):
+        page = site / rel
+        page.parent.mkdir(parents=True, exist_ok=True)
+        page.write_text("<html></html>", encoding="utf-8")
+    pb.regen_sitemap(site)
+    sitemap = (site / "sitemap.xml").read_text(encoding="utf-8")
+    assert "<loc>https://pain001.com/</loc>" in sitemap
+    assert "<loc>https://pain001.com/about/</loc>" in sitemap
+    assert ".well-known" not in sitemap and "/404/" not in sitemap

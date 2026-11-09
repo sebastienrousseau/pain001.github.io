@@ -1386,7 +1386,9 @@ def regen_sitemap(site: Path) -> None:
     urls = []
     for page in sorted(site.rglob("index.html")):
         rel = page.parent.relative_to(site).as_posix()
-        if rel.startswith(("api/", "_csp", ".")) or rel in NOINDEX_PAGES or is_translated_corpus(rel):
+        # "." is the homepage itself; only dot-directories are skipped.
+        if rel.startswith(("api/", "_csp")) or (rel != "." and rel.startswith(".")) \
+                or rel in NOINDEX_PAGES or is_translated_corpus(rel):
             continue
         loc = BASE_URL + "/" if rel == "." else f"{BASE_URL}/{rel}/"
         urls.append(
