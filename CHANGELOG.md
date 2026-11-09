@@ -10,6 +10,10 @@ All notable changes to this website are documented here. The format follows
 
 - Audit all nine pain001 repositories and their publication channels daily, after release workflows and after the main deployment completes. Use the shared read-only checker pinned to a core commit and retain its JSON evidence.
 
+### Fixed
+
+- Export regenerated website sources as a checksummed review patch. Keep repository permissions read-only and apply updates through the approved suite iteration instead of creating and force-pushing a separate bot branch.
+
 ## [0.0.83] - 2026-11-09
 
 ### Changed
