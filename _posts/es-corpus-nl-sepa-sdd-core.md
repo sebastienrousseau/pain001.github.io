@@ -92,7 +92,7 @@ Descripción del escenario, citada del registro de procedencia (texto original e
 
 > SEPA Core direct debit, recurring collections under mandates.
 
-Un archivo de iniciación de pagos (**Países Bajos**, raíl **sepa-direct-debit**), entregado en `pain.008.001.02`, `pain.008.001.08`, generado y comprobado por pain001 0.0.83. Es un ejemplo sintético construido a partir de los reglamentos públicos de los esquemas de pago: no hay detrás ninguna parte real, ninguna cuenta real ni ninguna guía bancaria.
+Un archivo de iniciación de pagos (**Países Bajos**, raíl **sepa-direct-debit**), entregado en `pain.008.001.02`, `pain.008.001.08`, generado y comprobado por pain001 0.0.84. Es un ejemplo sintético construido a partir de los reglamentos públicos de los esquemas de pago: no hay detrás ninguna parte real, ninguna cuenta real ni ninguna guía bancaria.
 
 ## Archivos
 

@@ -92,7 +92,7 @@ Scenariobeschrijving, geciteerd uit het herkomstrecord (oorspronkelijke Engelse 
 
 > SEPA SCT salary batch with structured and unstructured remittance.
 
-Een betaalinitiatiebestand (**Duitsland**, rail **sepa-credit-transfer**), geleverd in `pain.001.001.03`, `pain.001.001.09`, `pain.001.001.13`, gegenereerd en gecontroleerd door pain001 0.0.83. Het is een synthetisch voorbeeld, opgebouwd uit de openbare rulebooks van de betaalschema's: geen echte partij, geen echte rekening en geen bankrichtlijn erachter.
+Een betaalinitiatiebestand (**Duitsland**, rail **sepa-credit-transfer**), geleverd in `pain.001.001.03`, `pain.001.001.09`, `pain.001.001.13`, gegenereerd en gecontroleerd door pain001 0.0.84. Het is een synthetisch voorbeeld, opgebouwd uit de openbare rulebooks van de betaalschema's: geen echte partij, geen echte rekening en geen bankrichtlijn erachter.
 
 ## Bestanden
 

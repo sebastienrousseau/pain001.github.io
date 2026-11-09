@@ -188,7 +188,7 @@ samples noisy; a real regression fails both.
 | `scripts/` | Generators, the post-build passes, translation tables and the validators CI runs |
 | `tests/` | Node tests: demo input handling and the browser engine integration run against the fetched runtime |
 | `site/` | The built site, produced by `build.sh`; ignored by git and uploaded by CI as the Pages artifact |
-| `.github/workflows/` | `ci.yml` (build, every gate, and on `main` the Pages deploy), `release.yml` (signed-tag release: archive, SBOM, attestations), `release-backfill.yml` (completes the release of an existing tag: archive, SBOM, attestations), `regenerate.yml` (library-release regeneration, opens a PR), `dated-claims.yml` (weekly check of dated regulatory claims), `codeql.yml`, `scorecard.yml`, `dco.yml` |
+| `.github/workflows/` | `ci.yml` (build, every gate, and on `main` the Pages deploy), `release.yml` (signed-tag release: archive, SBOM, attestations), `release-backfill.yml` (completes the release of an existing tag: archive, SBOM, attestations), `regenerate.yml` (library-release regeneration, exports a source patch), `dated-claims.yml` (weekly check of dated regulatory claims), `codeql.yml`, `scorecard.yml`, `dco.yml` |
 
 ## Configuration
 
@@ -211,13 +211,14 @@ python3 scripts/stamp_version.py <version>              # version literals on pa
 ```
 
 `regenerate.yml` does exactly this, pins the demo's pain001 wheel with
-`scripts/library_release.py`, runs the gates, and opens a
-`release/pain001-<version>` pull request with CI running on it. A human
-merges. It runs every six hours when PyPI has a release newer than the one
-the demo pins, with no token. The library's publish job can also send a
-`repository_dispatch` (`suite-release`) to start it at once, which needs a
-`SITE_DISPATCH_TOKEN` secret in the library repository. It can also be run
-by hand, for a version or as a dry run.
+`scripts/library_release.py`, runs the gates, and uploads a source patch
+with its SHA-256 checksum. Review and apply that patch in the existing
+`feat/v<version>` suite iteration PR, then SSH-sign and DCO-sign the commit.
+The workflow has read-only repository access and creates no additional PR.
+It runs every six hours when PyPI is ahead of the demo. The library can also
+send a `repository_dispatch` (`suite-release`) using its configured dispatch
+token, or a maintainer can request a version manually. Every invocation
+produces review artifacts; the legacy `dry_run` input remains accepted.
 
 ## When not to use Pain001
 

@@ -92,7 +92,7 @@ Description du scénario, citée depuis la fiche de provenance (texte original e
 
 > UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code.
 
-Un fichier d'initiation de paiement (**AE**, rail **priority-payment**), livré en `pain.001.001.03`, `pain.001.001.09`, généré et vérifié par pain001 0.0.83. C'est un exemple synthétique construit à partir des règles publiques des schémas de paiement : aucune partie réelle, aucun compte réel, aucune directive bancaire derrière lui.
+Un fichier d'initiation de paiement (**AE**, rail **priority-payment**), livré en `pain.001.001.03`, `pain.001.001.09`, généré et vérifié par pain001 0.0.84. C'est un exemple synthétique construit à partir des règles publiques des schémas de paiement : aucune partie réelle, aucun compte réel, aucune directive bancaire derrière lui.
 
 ## Fichiers
 

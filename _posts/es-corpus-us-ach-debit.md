@@ -92,7 +92,7 @@ Descripción del escenario, citada del registro de procedencia (texto original e
 
 > ACH debit collection (CCD) with routing numbers.
 
-Un archivo de iniciación de pagos (**Estados Unidos**, raíl **ach-debit**), entregado en `pain.008.001.02`, `pain.008.001.08`, generado y comprobado por pain001 0.0.83. Es un ejemplo sintético construido a partir de los reglamentos públicos de los esquemas de pago: no hay detrás ninguna parte real, ninguna cuenta real ni ninguna guía bancaria.
+Un archivo de iniciación de pagos (**Estados Unidos**, raíl **ach-debit**), entregado en `pain.008.001.02`, `pain.008.001.08`, generado y comprobado por pain001 0.0.84. Es un ejemplo sintético construido a partir de los reglamentos públicos de los esquemas de pago: no hay detrás ninguna parte real, ninguna cuenta real ni ninguna guía bancaria.
 
 ## Archivos
 

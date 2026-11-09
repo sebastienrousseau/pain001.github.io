@@ -92,7 +92,7 @@ Descrizione dello scenario, citata dal record di provenienza (testo originale in
 
 > SEPA Core direct debit, recurring collections under mandates.
 
-Un file di disposizione di pagamento (**Paesi Bassi**, circuito **sepa-direct-debit**), fornito in `pain.008.001.02`, `pain.008.001.08`, generato e verificato da pain001 0.0.83. È un esempio sintetico costruito dai regolamenti pubblici degli schemi di pagamento: nessuna parte reale, nessun conto reale, nessuna linea guida bancaria dietro di esso.
+Un file di disposizione di pagamento (**Paesi Bassi**, circuito **sepa-direct-debit**), fornito in `pain.008.001.02`, `pain.008.001.08`, generato e verificato da pain001 0.0.84. È un esempio sintetico costruito dai regolamenti pubblici degli schemi di pagamento: nessuna parte reale, nessun conto reale, nessuna linea guida bancaria dietro di esso.
 
 ## File
 

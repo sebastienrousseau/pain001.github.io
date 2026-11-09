@@ -92,7 +92,7 @@ Description du scénario, citée depuis la fiche de provenance (texte original e
 
 > SEPA B2B direct debit, first collection.
 
-Un fichier d'initiation de paiement (**Allemagne**, rail **sepa-direct-debit**), livré en `pain.008.001.02`, `pain.008.001.08`, généré et vérifié par pain001 0.0.83. C'est un exemple synthétique construit à partir des règles publiques des schémas de paiement : aucune partie réelle, aucun compte réel, aucune directive bancaire derrière lui.
+Un fichier d'initiation de paiement (**Allemagne**, rail **sepa-direct-debit**), livré en `pain.008.001.02`, `pain.008.001.08`, généré et vérifié par pain001 0.0.84. C'est un exemple synthétique construit à partir des règles publiques des schémas de paiement : aucune partie réelle, aucun compte réel, aucune directive bancaire derrière lui.
 
 ## Fichiers
 

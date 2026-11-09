@@ -90,7 +90,7 @@ last_reviewed: "2026-11-07"
 
 Swiss domestic credit transfer with an ISO 11649 creditor reference (SCOR).
 
-A payment initiation file for **Switzerland** on the **domestic-credit-transfer** rail, shipped in `pain.001.001.03`, `pain.001.001.09`, generated and checked by pain001 0.0.83. It is a synthetic example built from the public scheme rulebooks: no real party, account or bank guideline behind it.
+A payment initiation file for **Switzerland** on the **domestic-credit-transfer** rail, shipped in `pain.001.001.03`, `pain.001.001.09`, generated and checked by pain001 0.0.84. It is a synthetic example built from the public scheme rulebooks: no real party, account or bank guideline behind it.
 
 ## Files
 

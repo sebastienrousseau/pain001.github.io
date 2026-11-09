@@ -4,6 +4,25 @@ All notable changes to this website are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+## [0.0.84] - 2026-11-09
+
+### Added
+
+- Audit all nine pain001 repositories and their publication channels daily, after release workflows and after the main deployment completes. Use the shared read-only checker pinned to a core commit and retain its JSON evidence.
+
+### Fixed
+
+- Export regenerated website sources as a checksummed review patch. Keep repository permissions read-only and apply updates through the approved suite iteration instead of creating and force-pushing a separate bot branch.
+- A manual run of CI on `main` now deploys to GitHub Pages, as a push
+  does. On 2026-11-09 GitHub's Actions outage dropped the deploy job
+  from the 0.0.83 merge run, which then could not be retried.
+
+### Changed
+
+- Release the website with pain001 0.0.84. Pin the browser runtime to the published core wheel and regenerate the corpus pages, versioned downloads, demo samples and translations from the merged core release.
+
 ## [0.0.83] - 2026-11-09
 
 ### Changed
