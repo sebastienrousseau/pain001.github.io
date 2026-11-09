@@ -36,6 +36,8 @@ All notable changes to this website are documented here. The format follows
   checks out full history for it.
 - The sitemap lists the homepage. It never had: the filter that skips
   dot-directories also matched the homepage's own path, `.`.
+- `llms.txt` no longer says the MCP server has 21 tools (0.0.83 ships
+  30); it links the MCP page instead of a hand-typed count.
 
 ## [0.0.83] - 2026-11-09
 

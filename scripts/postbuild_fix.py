@@ -1778,7 +1778,7 @@ def write_llms(site: Path) -> None:
         "",
         "## Install",
         "",
-        "- `pip install pain001` (library and CLI); `pip install pain001-mcp` (MCP server, 21 tools); "
+        "- `pip install pain001` (library and CLI); `pip install pain001-mcp` (MCP server; its tools are listed at https://pain001.com/pain001-mcp/); "
         + "`pip install pain001-lsp` (language server)",
         "- MCP, Claude Code: `claude mcp add pain001 -- pain001-mcp`; other clients: command `pain001-mcp` over stdio "
         + "(configuration blocks at https://pain001.com/pain001-mcp/)",
