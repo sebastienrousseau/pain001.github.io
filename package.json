@@ -26,9 +26,12 @@
     "markdownlint-cli2": "0.23.3",
     "pyodide": "0.27.2"
   },
-  "//overrides": "GHSA-g3hv-75wg-m249: minimatch < 11.0.1 is vulnerable, and eslint (through @eslint/config-array) still asks for ^10. The override keeps every affected minimatch from resolving. markdown-it is held at patched 14.3.3 for GHSA-r7fv-28h4-cvq7, GHSA-vfgh-jcmw-g37q and GHSA-gfr2-rv44-r23c.",
+  "//overrides": "Advisory floors prevent affected minimatch, markdown-it, smol-toml, katex and js-yaml releases from resolving in the development toolchain. See the locked dependency audit.",
   "overrides": {
     "minimatch": "^11.0.1",
-    "markdown-it": "14.3.3"
+    "markdown-it": ">=14.3.3 <15",
+    "smol-toml": ">=1.9.1 <2",
+    "katex": ">=0.18.2 <0.19",
+    "js-yaml": ">=5.4.3 <6"
   }
 }
