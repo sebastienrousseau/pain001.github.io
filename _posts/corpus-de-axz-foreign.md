@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-07T08:00:00+00:00"
+date: "2026-11-09T08:00:00+00:00"
 description: "Foreign payment in USD from a German account, DK order type AXZ. A validated pain.001 sample for Germany on the cross-border rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Foreign payment in USD from a German account, DK order type AXZ. A validated pain.001 sample for Germany on the cross-border rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
 item_guid: "https://pain001.com/corpus-de-axz-foreign/"
 item_link: "https://pain001.com/corpus-de-axz-foreign/"
-item_pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+item_pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 item_title: "de.axz.foreign: ISO 20022 pain.001 example for Germany (cross-border)"
-last_build_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+last_build_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -90,7 +90,7 @@ last_reviewed: "2026-07-26"
 
 Foreign payment in USD from a German account, DK order type AXZ.
 
-A payment initiation file for **Germany** on the **cross-border** rail, shipped in `pain.001.001.03`, `pain.001.001.09`, generated and checked by pain001 0.0.78. It is a synthetic example built from the public scheme rulebooks: no real party, account or bank guideline behind it.
+A payment initiation file for **Germany** on the **cross-border** rail, shipped in `pain.001.001.03`, `pain.001.001.09`, generated and checked by pain001 0.0.82. It is a synthetic example built from the public scheme rulebooks: no real party, account or bank guideline behind it.
 
 ## Files
 
@@ -113,7 +113,7 @@ Confidence **assumed**: one detail rests on an assumption the record names; trea
 ## Where the content comes from
 
 - DK DFUE-Abkommen Anlage 3 V3.8, order type AXZ (read 2026-09-10)
-- DZ BANK, AXZ product description (AWV reporting) (read 2026-09-10)
+- A German bank's public AXZ product description (AWV reporting) (read 2026-09-10)
 
 SHA-256 of each file is in its provenance record. Your bank's own usage guideline is not represented here: [apply it privately](/example-corpus/#your-bank-s-guideline) with the library's overlay tooling.
 

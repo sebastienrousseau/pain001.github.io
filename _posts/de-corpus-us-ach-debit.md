@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-07T08:00:00+00:00"
+date: "2026-11-09T08:00:00+00:00"
 description: "ACH debit collection (CCD) with routing numbers. Eine validierte pain.001-Beispieldatei (Vereinigte Staaten, Schiene ach-debit), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "ACH debit collection (CCD) with routing numbers. Eine validierte pain.001-Beispieldatei (Vereinigte Staaten, Schiene ach-debit), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
 item_guid: "https://pain001.com/de/corpus-us-ach-debit/"
 item_link: "https://pain001.com/de/corpus-us-ach-debit/"
-item_pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+item_pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 item_title: "ISO-20022-pain.001-Beispiel us.ach.debit: Vereinigte Staaten (ach-debit)"
-last_build_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+last_build_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Szenariobeschreibung, zitiert aus dem Provenienzdatensatz (englischer Originalte
 
 > ACH debit collection (CCD) with routing numbers.
 
-Eine Zahlungsinitiierungsdatei (**Vereinigte Staaten**, Schiene **ach-debit**), ausgeliefert in `pain.008.001.02`, `pain.008.001.08`, erzeugt und geprüft von pain001 0.0.78. Es handelt sich um ein synthetisches Beispiel aus den öffentlichen Regelwerken der Zahlungssysteme: keine reale Partei, kein reales Konto und keine Bankrichtlinie dahinter.
+Eine Zahlungsinitiierungsdatei (**Vereinigte Staaten**, Schiene **ach-debit**), ausgeliefert in `pain.008.001.02`, `pain.008.001.08`, erzeugt und geprüft von pain001 0.0.82. Es handelt sich um ein synthetisches Beispiel aus den öffentlichen Regelwerken der Zahlungssysteme: keine reale Partei, kein reales Konto und keine Bankrichtlinie dahinter.
 
 ## Dateien
 
@@ -113,7 +113,7 @@ Konfidenz **abgeleitet**: aus dem öffentlichen Regelwerk oder Implementierungsl
 ## Woher der Inhalt stammt
 
 - Nacha Operating Rules and Guidelines, debit entries and authorisation (gelesen am 2026-09-10)
-- Citi and Bank of America pain.008 ACH debit formatting notes (gelesen am 2026-09-10)
+- Two US banks' public pain.008 ACH debit formatting notes (gelesen am 2026-09-10)
 
 Der SHA-256-Wert jeder Datei steht in ihrem Provenienzdatensatz. Die eigene Nutzungsrichtlinie Ihrer Bank ist hier nicht abgebildet: [Wenden Sie sie privat an](/example-corpus/#your-bank-s-guideline) mit dem Overlay-Werkzeug der Bibliothek.
 

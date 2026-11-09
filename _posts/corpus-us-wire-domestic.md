@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-07T08:00:00+00:00"
+date: "2026-11-09T08:00:00+00:00"
 description: "Fedwire domestic funds transfer, urgent. A validated pain.001 sample for United States on the priority-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Fedwire domestic funds transfer, urgent. A validated pain.001 sample for United States on the priority-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
 item_guid: "https://pain001.com/corpus-us-wire-domestic/"
 item_link: "https://pain001.com/corpus-us-wire-domestic/"
-item_pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+item_pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 item_title: "us.wire.domestic: ISO 20022 pain.001 example for United States (priority-payment)"
-last_build_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+last_build_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -90,7 +90,7 @@ last_reviewed: "2026-07-26"
 
 Fedwire domestic funds transfer, urgent.
 
-A payment initiation file for **United States** on the **priority-payment** rail, shipped in `pain.001.001.03`, `pain.001.001.09`, generated and checked by pain001 0.0.78. It is a synthetic example built from the public scheme rulebooks: no real party, account or bank guideline behind it.
+A payment initiation file for **United States** on the **priority-payment** rail, shipped in `pain.001.001.03`, `pain.001.001.09`, generated and checked by pain001 0.0.82. It is a synthetic example built from the public scheme rulebooks: no real party, account or bank guideline behind it.
 
 ## Files
 
@@ -124,7 +124,7 @@ Confidence **derived**: built from the public rulebook or implementation guide; 
 ## Where the content comes from
 
 - Federal Reserve Fedwire Funds Service ISO 20022 quick reference (read 2026-09-10)
-- Citi ISO 20022 FAQs (Feb 2026); Cross River pain.001.001.03 wire input specification (read 2026-09-10)
+- Two US banks' public ISO 20022 FAQs (Feb 2026) and pain.001.001.03 wire input specification (read 2026-09-10)
 
 SHA-256 of each file is in its provenance record. Your bank's own usage guideline is not represented here: [apply it privately](/example-corpus/#your-bank-s-guideline) with the library's overlay tooling.
 

@@ -1,5 +1,5 @@
 {
- "pain001": "0.0.78",
+ "pain001": "0.0.82",
  "catalog": "https://pain001.com/example-corpus/",
  "license": "Apache-2.0 OR MIT",
  "scenarios": [
@@ -928,7 +928,7 @@
      "message_type": "pain.001.001.03",
      "xml": "https://pain001.com/corpus/market/se/bankgiro-credit/se.bankgiro.supplier.pain.001.001.03.xml",
      "provenance": "https://pain001.com/corpus/market/se/bankgiro-credit/se.bankgiro.supplier.pain.001.001.03.provenance.yaml",
-     "sha256": "fce8407811f3bd61276f6e1b609d5d2e75e4268503f55bf270304fcd7da98a67",
+     "sha256": "cfcf90c18a68873cde75c04b13c952a462936a106fee3239816b435aa284bea7",
      "twin": "https://pain001.com/corpus/market/se/bankgiro-credit/se.bankgiro.supplier.pain.001.001.03.iso.json",
      "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
     },
@@ -936,7 +936,7 @@
      "message_type": "pain.001.001.09",
      "xml": "https://pain001.com/corpus/market/se/bankgiro-credit/se.bankgiro.supplier.pain.001.001.09.xml",
      "provenance": "https://pain001.com/corpus/market/se/bankgiro-credit/se.bankgiro.supplier.pain.001.001.09.provenance.yaml",
-     "sha256": "f84edaa519cda1dc82c789eb0591ce7debf830f2f0e076d76301b25d7e80e856",
+     "sha256": "27658dd0a4e1587135b5941092ff7758f66dacc7e1fb15fab9a1502344ad818a",
      "twin": "https://pain001.com/corpus/market/se/bankgiro-credit/se.bankgiro.supplier.pain.001.001.09.iso.json",
      "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
     }
@@ -958,7 +958,7 @@
      "message_type": "pain.001.001.03",
      "xml": "https://pain001.com/corpus/market/se/plusgiro-credit/se.plusgiro.supplier.pain.001.001.03.xml",
      "provenance": "https://pain001.com/corpus/market/se/plusgiro-credit/se.plusgiro.supplier.pain.001.001.03.provenance.yaml",
-     "sha256": "7d54f6f985c30ace794c224b44ad2a8bafdbf0f44eee22e37fa0b1102c904191",
+     "sha256": "814d021f9262bca33fc562a2f679c26745cf07eed39faef67f8a3aa2c4b96b77",
      "twin": "https://pain001.com/corpus/market/se/plusgiro-credit/se.plusgiro.supplier.pain.001.001.03.iso.json",
      "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.03.schema.json"
     },
@@ -966,7 +966,7 @@
      "message_type": "pain.001.001.09",
      "xml": "https://pain001.com/corpus/market/se/plusgiro-credit/se.plusgiro.supplier.pain.001.001.09.xml",
      "provenance": "https://pain001.com/corpus/market/se/plusgiro-credit/se.plusgiro.supplier.pain.001.001.09.provenance.yaml",
-     "sha256": "535b0be71df984bd36e61779b82df3450217199088e4f38256086bf6b30a1dc9",
+     "sha256": "e6329593df4cc983e390f39364c1109f3d00f326d02fca9acb6dcc801aebecc8",
      "twin": "https://pain001.com/corpus/market/se/plusgiro-credit/se.plusgiro.supplier.pain.001.001.09.iso.json",
      "twin_schema": "https://pain001.com/corpus/schemas/pain.001.001.09.schema.json"
     }

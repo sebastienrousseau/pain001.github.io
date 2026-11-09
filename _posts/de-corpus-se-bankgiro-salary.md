@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-07T08:00:00+00:00"
+date: "2026-11-09T08:00:00+00:00"
 description: "Swedish salary batch (Bankgirot Löner), SALA, one debit. Eine validierte pain.001-Beispieldatei (Schweden, Schiene salary), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Swedish salary batch (Bankgirot Löner), SALA, one debit. Eine validierte pain.001-Beispieldatei (Schweden, Schiene salary), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
 item_guid: "https://pain001.com/de/corpus-se-bankgiro-salary/"
 item_link: "https://pain001.com/de/corpus-se-bankgiro-salary/"
-item_pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+item_pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 item_title: "ISO-20022-pain.001-Beispiel se.bankgiro.salary: Schweden (salary)"
-last_build_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+last_build_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Szenariobeschreibung, zitiert aus dem Provenienzdatensatz (englischer Originalte
 
 > Swedish salary batch (Bankgirot Löner), SALA, one debit.
 
-Eine Zahlungsinitiierungsdatei (**Schweden**, Schiene **salary**), ausgeliefert in `pain.001.001.03`, `pain.001.001.09`, erzeugt und geprüft von pain001 0.0.78. Es handelt sich um ein synthetisches Beispiel aus den öffentlichen Regelwerken der Zahlungssysteme: keine reale Partei, kein reales Konto und keine Bankrichtlinie dahinter.
+Eine Zahlungsinitiierungsdatei (**Schweden**, Schiene **salary**), ausgeliefert in `pain.001.001.03`, `pain.001.001.09`, erzeugt und geprüft von pain001 0.0.82. Es handelt sich um ein synthetisches Beispiel aus den öffentlichen Regelwerken der Zahlungssysteme: keine reale Partei, kein reales Konto und keine Bankrichtlinie dahinter.
 
 ## Dateien
 
@@ -126,7 +126,7 @@ Konfidenz **abgeleitet**: aus dem öffentlichen Regelwerk oder Implementierungsl
 
 ## Woher der Inhalt stammt
 
-- Bankgirot, Bankgirot Löner (salary) service description; Nordea Corporate Access salary examples (Jun 2026) (gelesen am 2026-09-10)
+- Bankgirot, Bankgirot Löner (salary) service description; a Swedish bank's public pain.001 salary examples (Jun 2026) (gelesen am 2026-09-10)
 
 Der SHA-256-Wert jeder Datei steht in ihrem Provenienzdatensatz. Die eigene Nutzungsrichtlinie Ihrer Bank ist hier nicht abgebildet: [Wenden Sie sie privat an](/example-corpus/#your-bank-s-guideline) mit dem Overlay-Werkzeug der Bibliothek.
 

@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-07T08:00:00+00:00"
+date: "2026-11-09T08:00:00+00:00"
 description: "Swedish Plusgiro supplier payment with an invoice message. Een gevalideerd pain.001-voorbeeld (Zweden, rail plusgiro-credit), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Swedish Plusgiro supplier payment with an invoice message. Een gevalideerd pain.001-voorbeeld (Zweden, rail plusgiro-credit), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
 item_guid: "https://pain001.com/nl/corpus-se-plusgiro-supplier/"
 item_link: "https://pain001.com/nl/corpus-se-plusgiro-supplier/"
-item_pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+item_pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 item_title: "ISO 20022 pain.001-voorbeeld se.plusgiro.supplier: Zweden (plusgiro-credit)"
-last_build_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+last_build_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Scenariobeschrijving, geciteerd uit het herkomstrecord (oorspronkelijke Engelse 
 
 > Swedish Plusgiro supplier payment with an invoice message.
 
-Een betaalinitiatiebestand (**Zweden**, rail **plusgiro-credit**), geleverd in `pain.001.001.03`, `pain.001.001.09`, gegenereerd en gecontroleerd door pain001 0.0.78. Het is een synthetisch voorbeeld, opgebouwd uit de openbare rulebooks van de betaalschema's: geen echte partij, geen echte rekening en geen bankrichtlijn erachter.
+Een betaalinitiatiebestand (**Zweden**, rail **plusgiro-credit**), geleverd in `pain.001.001.03`, `pain.001.001.09`, gegenereerd en gecontroleerd door pain001 0.0.82. Het is een synthetisch voorbeeld, opgebouwd uit de openbare rulebooks van de betaalschema's: geen echte partij, geen echte rekening en geen bankrichtlijn erachter.
 
 ## Bestanden
 
@@ -111,7 +111,7 @@ De platte records waaruit de bibliotheek het opnieuw opbouwt (de kolomnamen van 
 
 ```csv
 id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,remittance_information,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,debtor_account_currency,creditor_postal_code,creditor_town_name,creditor_country_code,creditor_account_number,creditor_account_scheme_proprietary,payment_currency
-NTA-20260921-02,2026-09-21T07:50:00,1,7125.50,Norrland Trävaror AB,NTA-PG-20260921,TRF,true,NURG,2026-09-22,Norrland Trävaror AB,SE4407238474849977370614,MNWHSEA0,SLEV,NTA-2026-0921-003,7125.50,SEK,NDEASESS,Fjällmaskin Service AB,Faktura 2026-0512,903 26,Umeå,SE,Storgatan 22,903 26,Umeå,SE,Storgatan 22,SEK,831 30,Östersund,SE,123455,PGNR,SEK
+NTA-20260921-02,2026-09-21T07:50:00,1,7125.50,Norrland Trävaror AB,NTA-PG-20260921,TRF,true,NURG,2026-09-22,Norrland Trävaror AB,SE2161468030701442852382,EJWZSEW0,SLEV,NTA-2026-0921-003,7125.50,SEK,OCFGSEQ0,Fjällmaskin Service AB,Faktura 2026-0512,903 26,Umeå,SE,Storgatan 22,903 26,Umeå,SE,Storgatan 22,SEK,831 30,Östersund,SE,123455,PGNR,SEK
 ```
 
 ## Hoe de bibliotheek het heeft gecontroleerd
@@ -125,7 +125,7 @@ Betrouwbaarheid **afgeleid**: opgebouwd uit het openbare rulebook of de implemen
 
 ## Waar de inhoud vandaan komt
 
-- Nordea, pain.001 examples and Corporate Access implementation guide (Jun 2026): Plusgiro payment (gelezen op 2026-09-10)
+- A Swedish bank's public pain.001 examples and implementation guide (Jun 2026): Plusgiro payment (gelezen op 2026-09-10)
 
 De SHA-256 van elk bestand staat in zijn herkomstrecord. De eigen gebruiksrichtlijn van uw bank is hier niet weergegeven: [pas die privé toe](/example-corpus/#your-bank-s-guideline) met de overlay-tooling van de bibliotheek.
 

@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-07T08:00:00+00:00"
+date: "2026-11-09T08:00:00+00:00"
 description: "Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. A validated pain.001 sample for SG on the instant-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. A validated pain.001 sample for SG on the instant-payment rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
 item_guid: "https://pain001.com/corpus-sg-fast-single/"
 item_link: "https://pain001.com/corpus-sg-fast-single/"
-item_pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+item_pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 item_title: "sg.fast.single: ISO 20022 pain.001 example for SG (instant-payment)"
-last_build_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+last_build_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -90,7 +90,7 @@ last_reviewed: "2026-07-26"
 
 Singapore FAST credit in SGD, bank and branch codes, addresses on both parties.
 
-A payment initiation file for **SG** on the **instant-payment** rail, shipped in `pain.001.001.03`, `pain.001.001.09`, generated and checked by pain001 0.0.78. It is a synthetic example built from the public scheme rulebooks: no real party, account or bank guideline behind it.
+A payment initiation file for **SG** on the **instant-payment** rail, shipped in `pain.001.001.03`, `pain.001.001.09`, generated and checked by pain001 0.0.82. It is a synthetic example built from the public scheme rulebooks: no real party, account or bank guideline behind it.
 
 ## Files
 
@@ -124,7 +124,7 @@ Confidence **assumed**: one detail rests on an assumption the record names; trea
 ## Where the content comes from
 
 - Association of Banks in Singapore, FAST service description (S$200,000 per transaction) (read 2026-09-11)
-- UOB, OCBC and DBS ISO 20022 pain.001 pages (public) (read 2026-09-11)
+- Three Singapore banks' public ISO 20022 pain.001 pages (read 2026-09-11)
 
 SHA-256 of each file is in its provenance record. Your bank's own usage guideline is not represented here: [apply it privately](/example-corpus/#your-bank-s-guideline) with the library's overlay tooling.
 

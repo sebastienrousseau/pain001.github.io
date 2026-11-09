@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-07T08:00:00+00:00"
+date: "2026-11-09T08:00:00+00:00"
 description: "Foreign payment in USD from a German account, DK order type AXZ. Una muestra pain.001 validada (Alemania, raíl cross-border), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Foreign payment in USD from a German account, DK order type AXZ. Una muestra pain.001 validada (Alemania, raíl cross-border), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
 item_guid: "https://pain001.com/es/corpus-de-axz-foreign/"
 item_link: "https://pain001.com/es/corpus-de-axz-foreign/"
-item_pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+item_pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 item_title: "Ejemplo pain.001 ISO 20022 de.axz.foreign: Alemania (cross-border)"
-last_build_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+last_build_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Descripción del escenario, citada del registro de procedencia (texto original e
 
 > Foreign payment in USD from a German account, DK order type AXZ.
 
-Un archivo de iniciación de pagos (**Alemania**, raíl **cross-border**), entregado en `pain.001.001.03`, `pain.001.001.09`, generado y comprobado por pain001 0.0.78. Es un ejemplo sintético construido a partir de los reglamentos públicos de los esquemas de pago: no hay detrás ninguna parte real, ninguna cuenta real ni ninguna guía bancaria.
+Un archivo de iniciación de pagos (**Alemania**, raíl **cross-border**), entregado en `pain.001.001.03`, `pain.001.001.09`, generado y comprobado por pain001 0.0.82. Es un ejemplo sintético construido a partir de los reglamentos públicos de los esquemas de pago: no hay detrás ninguna parte real, ninguna cuenta real ni ninguna guía bancaria.
 
 ## Archivos
 
@@ -115,7 +115,7 @@ Confianza **supuesto**: un detalle se apoya en una suposición que el registro n
 ## De dónde procede el contenido
 
 - DK DFUE-Abkommen Anlage 3 V3.8, order type AXZ (leído el 2026-09-10)
-- DZ BANK, AXZ product description (AWV reporting) (leído el 2026-09-10)
+- A German bank's public AXZ product description (AWV reporting) (leído el 2026-09-10)
 
 El SHA-256 de cada archivo está en su registro de procedencia. La guía de uso propia de su banco no está representada aquí: [aplíquela en privado](/example-corpus/#your-bank-s-guideline) con la herramienta de overlays de la biblioteca.
 

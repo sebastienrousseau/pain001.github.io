@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-07T08:00:00+00:00"
+date: "2026-11-09T08:00:00+00:00"
 description: "Swedish Bankgiro supplier payment with an OCR reference. Eine validierte pain.001-Beispieldatei (Schweden, Schiene bankgiro-credit), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.72)"
 item_description: "Swedish Bankgiro supplier payment with an OCR reference. Eine validierte pain.001-Beispieldatei (Schweden, Schiene bankgiro-credit), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
 item_guid: "https://pain001.com/de/corpus-se-bankgiro-supplier/"
 item_link: "https://pain001.com/de/corpus-se-bankgiro-supplier/"
-item_pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+item_pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 item_title: "ISO-20022-pain.001-Beispiel se.bankgiro.supplier: Schweden (bankgiro-credit)"
-last_build_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+last_build_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Szenariobeschreibung, zitiert aus dem Provenienzdatensatz (englischer Originalte
 
 > Swedish Bankgiro supplier payment with an OCR reference.
 
-Eine Zahlungsinitiierungsdatei (**Schweden**, Schiene **bankgiro-credit**), ausgeliefert in `pain.001.001.03`, `pain.001.001.09`, erzeugt und geprüft von pain001 0.0.78. Es handelt sich um ein synthetisches Beispiel aus den öffentlichen Regelwerken der Zahlungssysteme: keine reale Partei, kein reales Konto und keine Bankrichtlinie dahinter.
+Eine Zahlungsinitiierungsdatei (**Schweden**, Schiene **bankgiro-credit**), ausgeliefert in `pain.001.001.03`, `pain.001.001.09`, erzeugt und geprüft von pain001 0.0.82. Es handelt sich um ein synthetisches Beispiel aus den öffentlichen Regelwerken der Zahlungssysteme: keine reale Partei, kein reales Konto und keine Bankrichtlinie dahinter.
 
 ## Dateien
 
@@ -111,8 +111,8 @@ Die flachen Datensätze, aus denen die Bibliothek die Datei neu aufbaut (die Spa
 
 ```csv
 id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,initiator_id,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,debtor_id,debtor_account_currency,creditor_postal_code,creditor_town_name,creditor_country_code,creditor_account_number,creditor_reference,creditor_reference_type,initiator_id_scheme_proprietary,debtor_id_scheme_proprietary,creditor_account_scheme_proprietary,payment_currency
-NTA-20260921-01,2026-09-21T07:45:00,2,21440.00,Norrland Trävaror AB,NTA-BG-20260921,TRF,true,NURG,2026-09-22,Norrland Trävaror AB,SE4256065723789397612318,FURLSEN0,SLEV,NTA-2026-0921-001,18450.00,SEK,BGABSESS,Sågverk Öster AB,903 26,Umeå,SE,Storgatan 22,5561234567,903 26,Umeå,SE,Storgatan 22,5561234567,SEK,891 33,Örnsköldsvik,SE,50501055,20260911000000316,SCOR,ORGNR,ORGNR,BGNR,SEK
-NTA-20260921-01,2026-09-21T07:45:00,2,21440.00,Norrland Trävaror AB,NTA-BG-20260921,TRF,true,NURG,2026-09-22,Norrland Trävaror AB,SE4256065723789397612318,FURLSEN0,SLEV,NTA-2026-0921-002,2990.00,SEK,BGABSESS,Kontorsservice Nord,903 26,Umeå,SE,Storgatan 22,5561234567,903 26,Umeå,SE,Storgatan 22,5561234567,SEK,972 32,Luleå,SE,50501055,123456782,SCOR,ORGNR,ORGNR,BGNR,SEK
+NTA-20260921-01,2026-09-21T07:45:00,2,21440.00,Norrland Trävaror AB,NTA-BG-20260921,TRF,true,NURG,2026-09-22,Norrland Trävaror AB,SE5875997987360500338084,ZSWOSEF0,SLEV,NTA-2026-0921-001,18450.00,SEK,KXQISEF0,Sågverk Öster AB,903 26,Umeå,SE,Storgatan 22,5561234567,903 26,Umeå,SE,Storgatan 22,5561234567,SEK,891 33,Örnsköldsvik,SE,50501055,20260911000000316,SCOR,ORGNR,ORGNR,BGNR,SEK
+NTA-20260921-01,2026-09-21T07:45:00,2,21440.00,Norrland Trävaror AB,NTA-BG-20260921,TRF,true,NURG,2026-09-22,Norrland Trävaror AB,SE5875997987360500338084,ZSWOSEF0,SLEV,NTA-2026-0921-002,2990.00,SEK,FURLSEN0,Kontorsservice Nord,903 26,Umeå,SE,Storgatan 22,5561234567,903 26,Umeå,SE,Storgatan 22,5561234567,SEK,972 32,Luleå,SE,50501055,123456782,SCOR,ORGNR,ORGNR,BGNR,SEK
 ```
 
 ## Wie die Bibliothek die Datei geprüft hat
@@ -126,8 +126,8 @@ Konfidenz **abgeleitet**: aus dem öffentlichen Regelwerk oder Implementierungsl
 
 ## Woher der Inhalt stammt
 
-- Nordea, pain.001 examples and Corporate Access implementation guide (Jun 2026): Bankgiro payment with OCR (gelesen am 2026-09-10)
-- Swedbank, Message Implementation Guide pain.001 v2.0; Bankgirot OCR reference rules (gelesen am 2026-09-10)
+- A Swedish bank's public pain.001 examples and implementation guide (Jun 2026): Bankgiro payment with OCR (gelesen am 2026-09-10)
+- Bankgirot OCR reference rules; a second Swedish bank's public pain.001 message implementation guide v2.0 (gelesen am 2026-09-10)
 
 Der SHA-256-Wert jeder Datei steht in ihrem Provenienzdatensatz. Die eigene Nutzungsrichtlinie Ihrer Bank ist hier nicht abgebildet: [Wenden Sie sie privat an](/example-corpus/#your-bank-s-guideline) mit dem Overlay-Werkzeug der Bibliothek.
 
