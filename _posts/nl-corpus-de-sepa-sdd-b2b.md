@@ -92,7 +92,7 @@ Scenariobeschrijving, geciteerd uit het herkomstrecord (oorspronkelijke Engelse 
 
 > SEPA B2B direct debit, first collection.
 
-Een betaalinitiatiebestand (**Duitsland**, rail **sepa-direct-debit**), geleverd in `pain.008.001.02`, `pain.008.001.08`, gegenereerd en gecontroleerd door pain001 0.0.82. Het is een synthetisch voorbeeld, opgebouwd uit de openbare rulebooks van de betaalschema's: geen echte partij, geen echte rekening en geen bankrichtlijn erachter.
+Een betaalinitiatiebestand (**Duitsland**, rail **sepa-direct-debit**), geleverd in `pain.008.001.02`, `pain.008.001.08`, gegenereerd en gecontroleerd door pain001 0.0.83. Het is een synthetisch voorbeeld, opgebouwd uit de openbare rulebooks van de betaalschema's: geen echte partij, geen echte rekening en geen bankrichtlijn erachter.
 
 ## Bestanden
 

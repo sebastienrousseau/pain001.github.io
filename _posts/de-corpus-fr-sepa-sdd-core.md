@@ -92,7 +92,7 @@ Szenariobeschreibung, zitiert aus dem Provenienzdatensatz (englischer Originalte
 
 > SEPA Core direct debit, recurring collection on an amended mandate.
 
-Eine Zahlungsinitiierungsdatei (**Frankreich**, Schiene **sepa-direct-debit**), ausgeliefert in `pain.008.001.02`, `pain.008.001.08`, erzeugt und geprüft von pain001 0.0.82. Es handelt sich um ein synthetisches Beispiel aus den öffentlichen Regelwerken der Zahlungssysteme: keine reale Partei, kein reales Konto und keine Bankrichtlinie dahinter.
+Eine Zahlungsinitiierungsdatei (**Frankreich**, Schiene **sepa-direct-debit**), ausgeliefert in `pain.008.001.02`, `pain.008.001.08`, erzeugt und geprüft von pain001 0.0.83. Es handelt sich um ein synthetisches Beispiel aus den öffentlichen Regelwerken der Zahlungssysteme: keine reale Partei, kein reales Konto und keine Bankrichtlinie dahinter.
 
 ## Dateien
 

@@ -92,7 +92,7 @@ Description du scénario, citée depuis la fiche de provenance (texte original e
 
 > Swiss domestic credit transfer with an ISO 11649 creditor reference (SCOR).
 
-Un fichier d'initiation de paiement (**Suisse**, rail **domestic-credit-transfer**), livré en `pain.001.001.03`, `pain.001.001.09`, généré et vérifié par pain001 0.0.82. C'est un exemple synthétique construit à partir des règles publiques des schémas de paiement : aucune partie réelle, aucun compte réel, aucune directive bancaire derrière lui.
+Un fichier d'initiation de paiement (**Suisse**, rail **domestic-credit-transfer**), livré en `pain.001.001.03`, `pain.001.001.09`, généré et vérifié par pain001 0.0.83. C'est un exemple synthétique construit à partir des règles publiques des schémas de paiement : aucune partie réelle, aucun compte réel, aucune directive bancaire derrière lui.
 
 ## Fichiers
 

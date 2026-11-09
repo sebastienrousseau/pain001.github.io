@@ -105,7 +105,7 @@ Pain001 runs on **Python 3.11+** (each version tested in CI) on macOS, Linux, an
 | SFTP delivery (`pain001 upload`) | `pip install "pain001[upload]"` |
 | Private CEL policy rules (`--rules`) | `pip install "pain001[rules]"` |
 | Faster XSD validation (lxml) | `pip install "pain001[fast]"` |
-| XML signing (`--xml-sign-key`) | `pip install pain001 cryptography` |
+| XML signing and verification (`--xml-sign-key`, `verify-signature`) | `pip install "pain001[sign]"` |
 
 Companion packages install separately and ship in lockstep with the core: each release of a companion carries the same version number as the core it requires.
 

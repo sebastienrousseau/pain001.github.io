@@ -92,7 +92,7 @@ Descrizione dello scenario, citata dal record di provenienza (testo originale in
 
 > SEPA Core direct debit, recurring, Belgian creditor identifier.
 
-Un file di disposizione di pagamento (**Belgio**, circuito **sepa-direct-debit**), fornito in `pain.008.001.02`, `pain.008.001.08`, generato e verificato da pain001 0.0.82. È un esempio sintetico costruito dai regolamenti pubblici degli schemi di pagamento: nessuna parte reale, nessun conto reale, nessuna linea guida bancaria dietro di esso.
+Un file di disposizione di pagamento (**Belgio**, circuito **sepa-direct-debit**), fornito in `pain.008.001.02`, `pain.008.001.08`, generato e verificato da pain001 0.0.83. È un esempio sintetico costruito dai regolamenti pubblici degli schemi di pagamento: nessuna parte reale, nessun conto reale, nessuna linea guida bancaria dietro di esso.
 
 ## File
 

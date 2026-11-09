@@ -92,7 +92,7 @@ Descrizione dello scenario, citata dal record di provenienza (testo originale in
 
 > Swedish Bankgiro supplier payment with an OCR reference.
 
-Un file di disposizione di pagamento (**Svezia**, circuito **bankgiro-credit**), fornito in `pain.001.001.03`, `pain.001.001.09`, generato e verificato da pain001 0.0.82. È un esempio sintetico costruito dai regolamenti pubblici degli schemi di pagamento: nessuna parte reale, nessun conto reale, nessuna linea guida bancaria dietro di esso.
+Un file di disposizione di pagamento (**Svezia**, circuito **bankgiro-credit**), fornito in `pain.001.001.03`, `pain.001.001.09`, generato e verificato da pain001 0.0.83. È un esempio sintetico costruito dai regolamenti pubblici degli schemi di pagamento: nessuna parte reale, nessun conto reale, nessuna linea guida bancaria dietro di esso.
 
 ## File
 

@@ -88,7 +88,7 @@ last_reviewed: "2026-11-07"
 
 ---
 
-Everything on this page is verified against the shipped code of **pain001 v0.0.82** and its companions, held to the same discipline as the [technical reference](/documentation/). If a cell says no, that is a statement, not an omission.
+Everything on this page is verified against the shipped code of **pain001 v0.0.83** and its companions, held to the same discipline as the [technical reference](/documentation/). If a cell says no, that is a statement, not an omission.
 
 ## 01. Message definitions
 
@@ -125,7 +125,7 @@ SEPA (`sepa-sct`, `sepa-inst`, `sepa-sdd`, `sepa-b2b`), Swift CBPR+ (`cbpr-cross
 | Output | Support | Notes |
 | :--- | :--- | :--- |
 | Business Application Header envelope | `--envelop-bah` | `head.001.001.03` header with `head.003.001.01` `BizData` |
-| XML Digital Signature | `--xml-sign-key` | RSA-SHA256 XML-DSig; needs the `cryptography` package |
+| XML Digital Signature | `--xml-sign-key`, `pain001 verify-signature` | RSA-SHA256, RSA-PSS and ECDSA (P-256, P-384) XML-DSig; verified against the signer's certificate; `pain001[sign]` extra |
 | Faces (JSON projections) | `pain001 face` | UK Open Banking v4.0.1 domestic payment, Berlin Group NextGenPSD2 v1.3.16, ISO 20022 element names; refuses rather than invents a missing required element |
 | SFTP delivery | `pain001 upload` | `pain001[upload]` extra; host key trusted explicitly, atomic rename on the server |
 | Schematron business rules | `--schematron` | `sepa`, `fednow` and `cbpr` presets, or your own `.sch` file |

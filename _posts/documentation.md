@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Complete reference for pain001 v0.0.82: CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture."
+description: "Complete reference for pain001 v0.0.83: CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
@@ -36,7 +36,7 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "Every flag, endpoint, and behaviour of pain001 v0.0.82, taken from the shipped code, not from aspiration."
+subtitle: "Every flag, endpoint, and behaviour of pain001 v0.0.83, taken from the shipped code, not from aspiration."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
 title: "Pain001 Technical Reference: CLI, Python API and REST"
@@ -46,7 +46,7 @@ atom_link: "https://pain001.com/documentation/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.75)"
-item_description: "Complete reference for pain001 v0.0.82: CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture."
+item_description: "Complete reference for pain001 v0.0.83: CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture."
 item_guid: "https://pain001.com/documentation/rss.xml"
 item_link: "https://pain001.com/documentation/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -67,7 +67,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Complete reference for pain001 v0.0.82: CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture."
+twitter_description: "Complete reference for pain001 v0.0.83: CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
@@ -87,7 +87,7 @@ last_reviewed: "2026-11-07"
 
 ---
 
-This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for **pain001 v0.0.82**. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.
+This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for **pain001 v0.0.83**. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.
 
 Pain001 supports **13 ISO 20022 message definitions**: `pain.001.001.03` through `pain.001.001.13` (Customer Credit Transfer Initiation, eleven versions) and `pain.008.001.02` / `pain.008.001.08` (Customer Direct Debit Initiation).
 
@@ -101,6 +101,8 @@ The `pain001` executable groups its functionality into subcommands. Running it w
 | :--- | :--- |
 | `generate` | Convert a data file into schema-validated ISO 20022 XML (default command). |
 | `validate` | Validate input data without writing XML. |
+| `check <file>... [--scheme] [--format]` | Check pain.001 or pain.008 files you already have: the XSD of the message type each file declares, the message definition's cross-element rules, and any scheme profiles, policy or Schematron rulebook you name. |
+| `verify-signature <file>... --cert <PEM>` | Verify the XML-DSig signature on each file against the signer's certificate or public key; `--trust-embedded-cert` checks integrity only (requires the `sign` extra). |
 | `versions [--json]` | List all 13 supported message definitions. |
 | `inspect <type> [--json]` | Show the bundled template, schema, example data and accepted input formats for a message type. |
 | `init <type> [-o FILE]` | Scaffold a starter CSV template for a message type. |
@@ -131,14 +133,19 @@ The `pain001` executable groups its functionality into subcommands. Running it w
 | `--bah-sender <BIC/ID>` | Sender financial institution BIC or organisation identifier for BAH `<Fr>`. |
 | `--bah-receiver <BIC/ID>` | Receiver financial institution BIC or organisation identifier for BAH `<To>`. |
 | `--bah-msg-id <ID>` | Business Message Identifier for BAH `<BizMsgIdr>` (defaults to generated UUID). |
-| `--xml-sign-key <FILE>` | PEM RSA private key for W3C XML Digital Signature (XML-DSig RSA-SHA256). |
+| `--xml-sign-key <FILE>` | PEM private key (RSA, or EC P-256/P-384) for a W3C XML Digital Signature (XML-DSig); the algorithm follows the key. |
 | `--xml-sign-cert <FILE>` | Optional PEM X.509 certificate to embed in XML-DSig `<ds:KeyInfo>`. |
-| `--xml-sign-passphrase-env <VAR>` | Environment variable holding passphrase to decrypt the RSA private key. |
+| `--xml-sign-alg <ALG>` | `rsa-sha256`, `rsa-pss-sha256`, `ecdsa-sha256` or `ecdsa-sha384`; by default an RSA key signs `rsa-sha256`. |
+| `--xml-sign-passphrase-env <VAR>` | Environment variable holding the passphrase for `--xml-sign-key`. |
 | `--list-templates` / `--show-template <TYPE>` | List the bundled templates, or show one template's metadata, and exit. |
 
 Exit codes are CI-friendly: `0` success, `1` validation failure, `2` usage error.
 
-XML signing imports the `cryptography` package when it runs; install it beside pain001 (`pip install cryptography`) before using `--xml-sign-key`.
+XML signing and `verify-signature` need the `sign` extra (`pip install "pain001[sign]"`, which installs `cryptography` and `lxml`).
+
+### Signatures: `pain001 verify-signature`
+
+`pain001 verify-signature` checks the signature on files you received or wrote. Pass the signer's certificate or public key with `--cert`; that is the trust anchor. `--trust-embedded-cert` verifies with each file's own certificate instead, which proves the file is unchanged since it was signed but not who signed it. It exits `0` when every file verifies, `1` when any does not, and `2` when it cannot run; `--format json` prints one report per file. Verification uses exclusive C14N 1.0 and accepts only RSA-SHA256, RSA-PSS and ECDSA signatures with SHA-256 to SHA-512 digests over the whole document; the certificate's chain and validity dates are not checked.
 
 ### Faces: `pain001 face`
 
@@ -175,7 +182,7 @@ Monetary amounts are handled as `decimal.Decimal` during XML generation and sche
 
 Beyond pain.001 generation, the core library also ships a **pain.002 status-report parser and generator** (so you can read the bank's accept/reject response) and a **camt.053 statement parser and generator** for end-of-day reconciliation, plus a `VersionMapper` that migrates records between message versions.
 
-`pain001.faces.project_face` is the Python entry point for faces, and `sign_xml_document` / `verify_xml_signature` sign and verify a document with XML-DSig (they need the `cryptography` package).
+`pain001.faces.project_face` is the Python entry point for faces. `sign_xml_document` signs a document with XML-DSig, and `verify_signature(signed_xml, trust_anchor=cert_pem)` verifies one and returns a `SignatureReport` (`valid`, `trust`, `algorithm`, `signer`, `reason`); both need the `sign` extra. `verify_xml_signature` without a key or certificate still trusts the certificate inside the document, with a `DeprecationWarning`; pain001 0.0.84 refuses it.
 
 Runnable, self-checking scripts for the public API and the CLI live in the library's [`examples/`](https://github.com/sebastienrousseau/pain001/tree/main/examples) directory.
 

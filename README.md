@@ -125,7 +125,7 @@ make deps      # audit npm advisories against the documented exceptions
 
 ## The Pain001 ecosystem
 
-This website joins the pain001 suite at 0.0.82. The core, companions,
+This website joined the pain001 suite at 0.0.82. The core, companions,
 scaffold, native extension and website share one release version. The
 package reference is in [`docs/ECOSYSTEM.md`](docs/ECOSYSTEM.md).
 
