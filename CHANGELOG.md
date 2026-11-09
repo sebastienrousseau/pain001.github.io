@@ -21,6 +21,12 @@ All notable changes to this website are documented here. The format follows
   right: the sixth tile is the example corpus, not a package.
 - The homepage and the 34 locale homepages declare `og:type` `website`;
   ssg wrote `article` on every page whatever the front matter said.
+- The homepage's structured data names Pain001 as free software
+  (`SoftwareApplication`, version from the release the site is built
+  from, price 0) published by an `Organization` founded by the
+  maintainer's Person entity on sebastienrousseau.com.
+  `scripts/validate_jsonld.py` checks every JSON-LD block on the site
+  parses and that the homepage graph stays current.
 
 ## [0.0.83] - 2026-11-09
 

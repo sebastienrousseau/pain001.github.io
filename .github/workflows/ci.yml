@@ -127,6 +127,9 @@ jobs:
       - name: Sitemap lists only canonical, indexable pages
         run: python3 scripts/validate_sitemap.py
 
+      - name: JSON-LD parses on every page; homepage states the software
+        run: python3 scripts/validate_jsonld.py
+
       - name: Link integrity (internal links, anchors, locale consistency)
         run: python3 scripts/validate_links.py site
 

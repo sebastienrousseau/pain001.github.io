@@ -1595,6 +1595,97 @@ def stamp_home_package_count(site: Path) -> None:
         page.write_text(stamp_package_count(html), encoding="utf-8")
 
 
+_LD_BLOCK_RE = re.compile(r'(<script type="application/ld\+json">)(.*?)(</script>)', re.S)
+PERSON_ID = "https://sebastienrousseau.com/#person"
+ORG_ID = BASE_URL + "/#org"
+SOFTWARE_ID = BASE_URL + "/#software"
+
+
+def software_graph(version: str) -> list[dict]:
+    """The SoftwareApplication and Organization nodes for the homepage.
+
+    Search engines and answer engines need three facts stated as data:
+    Pain001 is software, it is free, and who maintains it. The person
+    is the @id sebastienrousseau.com publishes, so both sites describe
+    one entity. No aggregateRating: there are no on-page reviews.
+    """
+    return [
+        {
+            "@type": "SoftwareApplication",
+            "@id": SOFTWARE_ID,
+            "name": "Pain001",
+            "applicationCategory": "FinanceApplication",
+            "applicationSubCategory": "ISO 20022 payment file generator and validator",
+            "operatingSystem": "Linux, macOS, Windows",
+            "softwareVersion": version,
+            "license": "https://www.apache.org/licenses/LICENSE-2.0",
+            "isAccessibleForFree": True,
+            "offers": {"@type": "Offer", "price": "0", "priceCurrency": "GBP"},
+            "downloadUrl": "https://pypi.org/project/pain001/",
+            "codeRepository": "https://github.com/sebastienrousseau/pain001",
+            "featureList": [
+                "pain.001 generation",
+                "pain.008 generation",
+                "XSD validation",
+                "Scheme rules for SEPA, CBPR+, CHAPS, Bacs, FPS, FedNow and ACH",
+                "CSV, Excel, SQLite, JSON, Parquet and MT101 input",
+            ],
+            "author": {"@id": PERSON_ID},
+            "publisher": {"@id": ORG_ID},
+        },
+        {
+            "@type": "Organization",
+            "@id": ORG_ID,
+            "name": "Pain001",
+            "url": BASE_URL + "/",
+            "logo": BASE_URL + "/img/pain001.svg",
+            "founder": {"@id": PERSON_ID},
+            "sameAs": [
+                "https://github.com/sebastienrousseau/pain001",
+                "https://pypi.org/project/pain001/",
+            ],
+        },
+    ]
+
+
+def enrich_home_ld(html: str, version: str) -> str:
+    """Add the software graph to the homepage's ssg-written JSON-LD.
+
+    ssg writes one block with WebSite and WebPage. The nodes are merged
+    into that graph rather than a second block, and the WebSite and
+    WebPage name the organization as publisher and the software as what
+    the page is about.
+    """
+    match = _LD_BLOCK_RE.search(html)
+    if not match or not version:
+        return html
+    data = json.loads(match.group(2))
+    graph = data.get("@graph")
+    if not isinstance(graph, list) or any(n.get("@id") == SOFTWARE_ID for n in graph):
+        return html
+    for node in graph:
+        if node.get("@type") == "WebSite":
+            node["publisher"] = {"@id": ORG_ID}
+        elif node.get("@type") == "WebPage":
+            node["about"] = {"@id": SOFTWARE_ID}
+    graph.extend(software_graph(version))
+    block = match.group(1) + json.dumps(data, ensure_ascii=False) + match.group(3)
+    return html[: match.start()] + block + html[match.end():]
+
+
+def add_home_software_ld(site: Path) -> None:
+    """Apply enrich_home_ld to the built homepage, with the suite version
+    the corpus index records (the release the site is built from)."""
+    page = site / "index.html"
+    index = Path(__file__).resolve().parent.parent / "static" / "corpus" / "index.json"
+    if not page.is_file() or not index.is_file():
+        return
+    version = json.loads(index.read_text(encoding="utf-8")).get("pain001", "")
+    html = page.read_text(encoding="utf-8")
+    page.write_text(enrich_home_ld(html, version), encoding="utf-8")
+    print(f"[postbuild] homepage JSON-LD: SoftwareApplication {version} + Organization")
+
+
 def write_llms(site: Path) -> None:
     """Write llms.txt and llms-full.txt for agents that read the site.
 
@@ -2040,6 +2131,7 @@ def main() -> None:
     inject_dataset_ld(site)
     inject_article_ld(site, "pain-001")
     write_llms(site)
+    add_home_software_ld(site)
     stamp_suite_version(site)
     mark_noindex_pages(site)  # before the sitemap, which skips the same pages
     regen_sitemap(site)
