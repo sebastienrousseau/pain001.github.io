@@ -1541,6 +1541,37 @@ def inject_dataset_ld(site: Path) -> None:
         page.write_text(html.replace("</head>", block + "</head>", 1), encoding="utf-8")
 
 
+_NUMBER_WORDS = ("Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven",
+                 "Eight", "Nine", "Ten", "Eleven", "Twelve")
+_PACKAGE_TILE_RE = re.compile(r'<article\b[^>]*\bdata-package="([^"]+)"')
+_PACKAGE_COUNT_RE = re.compile(r"(<span data-package-count>)[^<]*(</span>)")
+
+
+def stamp_package_count(html: str) -> str:
+    """Write the number of package tiles into the suite heading.
+
+    The homepage heading said "Five focused packages" by hand above six
+    tiles, one of which (the example corpus) is not a package, and an
+    audit read it as a miscount. The heading now counts the tiles marked
+    ``data-package`` instead, so adding or removing a package tile moves
+    it, and the corpus tile is never counted.
+    """
+    if "data-package-count" not in html:
+        return html
+    count = len(set(_PACKAGE_TILE_RE.findall(html)))
+    if not 0 < count < len(_NUMBER_WORDS):
+        raise ValueError(f"package tile count {count} has no number word")
+    return _PACKAGE_COUNT_RE.sub(rf"\g<1>{_NUMBER_WORDS[count]}\g<2>", html)
+
+
+def stamp_home_package_count(site: Path) -> None:
+    """Apply stamp_package_count to the built homepage."""
+    page = site / "index.html"
+    if page.is_file():
+        html = page.read_text(encoding="utf-8")
+        page.write_text(stamp_package_count(html), encoding="utf-8")
+
+
 def write_llms(site: Path) -> None:
     """Write llms.txt and llms-full.txt for agents that read the site.
 
@@ -1999,6 +2030,7 @@ def main() -> None:
     retitle_tag_pages(site)
     defer_ssg_search(site)
     ensure_social_metadata(site)
+    stamp_home_package_count(site)
     remove_stray_per_page_files(site)
 
 

@@ -202,10 +202,10 @@
   <div class="container">
     <div class="section-head section-head-centred">
       <p class="eyebrow">The Pain001 suite</p>
-      <h2 id="suite-title">Five focused packages. <span class="h-muted">One validation model.</span></h2>
+      <h2 id="suite-title"><span data-package-count>Five</span> focused packages. <span class="h-muted">One validation model.</span></h2>
     </div>
     <div class="bento">
-      <article class="tile tile-core" data-reveal>
+      <article class="tile tile-core" data-reveal data-package="pain001">
         <div class="tile-core-copy">
           <p class="tile-eyebrow">Core</p>
           <h3>Pain001</h3>
@@ -224,10 +224,10 @@ result = validate_scheme(rows, profile="sepa-sct")
           <p class="code-card-out"><span>Output</span> <code>1 SEPA-CDTR-IBAN creditor_account_IBAN must be a valid IBAN (ISO 13616 / mod-97)</code></p>
         </figure>
       </article>
-      <article class="tile tile-half" data-reveal><p class="tile-eyebrow">AI agents</p><h3>pain001-mcp</h3><p>Local Model Context Protocol tools for validation, generation and conversion, with human review kept in the loop.</p><a class="text-link" href="/pain001-mcp/">MCP tools</a></article>
-      <article class="tile tile-half" data-reveal><p class="tile-eyebrow">Editors</p><h3>pain001-lsp</h3><p>Diagnostics and payment-rule feedback while a human is still editing the source data.</p><a class="text-link" href="/pain001-lsp/">Editor support</a></article>
-      <article class="tile tile-third" data-reveal><p class="tile-eyebrow">Legacy migration</p><h3>MT101 loader</h3><p>Move SWIFT request-for-transfer workflows to pain.001.001.09 with explicit conversion findings.</p><a class="text-link" href="/pain001-loader-mt101/">MT101 migration</a></article>
-      <article class="tile tile-third" data-reveal><p class="tile-eyebrow">Treasury teams</p><h3>Excel loader</h3><p>Turn governed payment workbooks into validated records without copy-and-paste operations.</p><a class="text-link" href="/pain001-loader-xlsx/">Excel loader</a></article>
+      <article class="tile tile-half" data-reveal data-package="pain001-mcp"><p class="tile-eyebrow">AI agents</p><h3>pain001-mcp</h3><p>Local Model Context Protocol tools for validation, generation and conversion, with human review kept in the loop.</p><a class="text-link" href="/pain001-mcp/">MCP tools</a></article>
+      <article class="tile tile-half" data-reveal data-package="pain001-lsp"><p class="tile-eyebrow">Editors</p><h3>pain001-lsp</h3><p>Diagnostics and payment-rule feedback while a human is still editing the source data.</p><a class="text-link" href="/pain001-lsp/">Editor support</a></article>
+      <article class="tile tile-third" data-reveal data-package="pain001-loader-mt101"><p class="tile-eyebrow">Legacy migration</p><h3>MT101 loader</h3><p>Move SWIFT request-for-transfer workflows to pain.001.001.09 with explicit conversion findings.</p><a class="text-link" href="/pain001-loader-mt101/">MT101 migration</a></article>
+      <article class="tile tile-third" data-reveal data-package="pain001-loader-xlsx"><p class="tile-eyebrow">Treasury teams</p><h3>Excel loader</h3><p>Turn governed payment workbooks into validated records without copy-and-paste operations.</p><a class="text-link" href="/pain001-loader-xlsx/">Excel loader</a></article>
       <article class="tile tile-third" data-reveal><p class="tile-eyebrow">Evidence</p><h3>Example corpus</h3><p>Reproducible payment scenarios across schemes, countries, currencies, and message editions.</p><a class="text-link" href="/example-corpus/">Browse the corpus</a></article>
     </div>
   </div>
