@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-07T08:00:00+00:00"
+date: "2026-11-09T08:00:00+00:00"
 description: "SEPA credit transfer with a Dutch payment reference (CUR). Una muestra pain.001 validada (Países Bajos, raíl sepa-credit-transfer), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "SEPA credit transfer with a Dutch payment reference (CUR). Una muestra pain.001 validada (Países Bajos, raíl sepa-credit-transfer), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
 item_guid: "https://pain001.com/es/corpus-nl-sepa-sct-supplier/"
 item_link: "https://pain001.com/es/corpus-nl-sepa-sct-supplier/"
-item_pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+item_pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 item_title: "Ejemplo pain.001 ISO 20022 nl.sepa.sct-supplier: Países Bajos (sepa-credit-transfer)"
-last_build_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+last_build_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -77,13 +77,13 @@ author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
-site_last_updated: 2026-07-26
+site_last_updated: 2026-11-07
 site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Atom, JSON-LD"
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Corpus de ejemplos"
 excerpt: "SEPA credit transfer with a Dutch payment reference (CUR). Una muestra pain.001 validada (Países Bajos, raíl sepa-credit-transfer), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
-last_reviewed: "2026-07-26"
+last_reviewed: "2026-11-07"
 
 
 ---
@@ -92,7 +92,7 @@ Descripción del escenario, citada del registro de procedencia (texto original e
 
 > SEPA credit transfer with a Dutch payment reference (CUR).
 
-Un archivo de iniciación de pagos (**Países Bajos**, raíl **sepa-credit-transfer**), entregado en `pain.001.001.03`, `pain.001.001.09`, generado y comprobado por pain001 0.0.78. Es un ejemplo sintético construido a partir de los reglamentos públicos de los esquemas de pago: no hay detrás ninguna parte real, ninguna cuenta real ni ninguna guía bancaria.
+Un archivo de iniciación de pagos (**Países Bajos**, raíl **sepa-credit-transfer**), entregado en `pain.001.001.03`, `pain.001.001.09`, generado y comprobado por pain001 0.0.82. Es un ejemplo sintético construido a partir de los reglamentos públicos de los esquemas de pago: no hay detrás ninguna parte real, ninguna cuenta real ni ninguna guía bancaria.
 
 ## Archivos
 

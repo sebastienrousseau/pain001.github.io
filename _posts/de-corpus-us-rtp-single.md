@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-07T08:00:00+00:00"
+date: "2026-11-09T08:00:00+00:00"
 description: "RTP real-time payment, single. Eine validierte pain.001-Beispieldatei (Vereinigte Staaten, Schiene instant-payment), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "RTP real-time payment, single. Eine validierte pain.001-Beispieldatei (Vereinigte Staaten, Schiene instant-payment), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
 item_guid: "https://pain001.com/de/corpus-us-rtp-single/"
 item_link: "https://pain001.com/de/corpus-us-rtp-single/"
-item_pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+item_pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 item_title: "ISO-20022-pain.001-Beispiel us.rtp.single: Vereinigte Staaten (instant-payment)"
-last_build_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+last_build_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -77,13 +77,13 @@ author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
-site_last_updated: 2026-07-26
+site_last_updated: 2026-11-07
 site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Atom, JSON-LD"
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Beispielkorpus"
 excerpt: "RTP real-time payment, single. Eine validierte pain.001-Beispieldatei (Vereinigte Staaten, Schiene instant-payment), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
-last_reviewed: "2026-07-26"
+last_reviewed: "2026-11-07"
 
 
 ---
@@ -92,7 +92,7 @@ Szenariobeschreibung, zitiert aus dem Provenienzdatensatz (englischer Originalte
 
 > RTP real-time payment, single.
 
-Eine Zahlungsinitiierungsdatei (**Vereinigte Staaten**, Schiene **instant-payment**), ausgeliefert in `pain.001.001.03`, `pain.001.001.09`, erzeugt und geprüft von pain001 0.0.78. Es handelt sich um ein synthetisches Beispiel aus den öffentlichen Regelwerken der Zahlungssysteme: keine reale Partei, kein reales Konto und keine Bankrichtlinie dahinter.
+Eine Zahlungsinitiierungsdatei (**Vereinigte Staaten**, Schiene **instant-payment**), ausgeliefert in `pain.001.001.03`, `pain.001.001.09`, erzeugt und geprüft von pain001 0.0.82. Es handelt sich um ein synthetisches Beispiel aus den öffentlichen Regelwerken der Zahlungssysteme: keine reale Partei, kein reales Konto und keine Bankrichtlinie dahinter.
 
 ## Dateien
 
@@ -126,7 +126,7 @@ Konfidenz **abgeleitet**: aus dem öffentlichen Regelwerk oder Implementierungsl
 ## Woher der Inhalt stammt
 
 - The Clearing House RTP network rules (per-item limit) (gelesen am 2026-09-10)
-- Cross River RTP pain.001 input specification (local instrument rtp) (gelesen am 2026-09-10)
+- A US bank's public RTP pain.001 input specification (local instrument rtp) (gelesen am 2026-09-10)
 
 Der SHA-256-Wert jeder Datei steht in ihrem Provenienzdatensatz. Die eigene Nutzungsrichtlinie Ihrer Bank ist hier nicht abgebildet: [Wenden Sie sie privat an](/example-corpus/#your-bank-s-guideline) mit dem Overlay-Werkzeug der Bibliothek.
 

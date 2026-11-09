@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-07T08:00:00+00:00"
+date: "2026-11-09T08:00:00+00:00"
 description: "Swedish Bankgiro supplier payment with an OCR reference. Un campione pain.001 validato (Svezia, circuito bankgiro-credit), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Swedish Bankgiro supplier payment with an OCR reference. Un campione pain.001 validato (Svezia, circuito bankgiro-credit), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser."
 item_guid: "https://pain001.com/it/corpus-se-bankgiro-supplier/"
 item_link: "https://pain001.com/it/corpus-se-bankgiro-supplier/"
-item_pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+item_pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 item_title: "Esempio pain.001 ISO 20022 se.bankgiro.supplier: Svezia (bankgiro-credit)"
-last_build_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+last_build_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -77,13 +77,13 @@ author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
-site_last_updated: 2026-07-26
+site_last_updated: 2026-11-07
 site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Atom, JSON-LD"
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Corpus di esempi"
 excerpt: "Swedish Bankgiro supplier payment with an OCR reference. Un campione pain.001 validato (Svezia, circuito bankgiro-credit), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser."
-last_reviewed: "2026-07-26"
+last_reviewed: "2026-11-07"
 
 
 ---
@@ -92,7 +92,7 @@ Descrizione dello scenario, citata dal record di provenienza (testo originale in
 
 > Swedish Bankgiro supplier payment with an OCR reference.
 
-Un file di disposizione di pagamento (**Svezia**, circuito **bankgiro-credit**), fornito in `pain.001.001.03`, `pain.001.001.09`, generato e verificato da pain001 0.0.78. È un esempio sintetico costruito dai regolamenti pubblici degli schemi di pagamento: nessuna parte reale, nessun conto reale, nessuna linea guida bancaria dietro di esso.
+Un file di disposizione di pagamento (**Svezia**, circuito **bankgiro-credit**), fornito in `pain.001.001.03`, `pain.001.001.09`, generato e verificato da pain001 0.0.82. È un esempio sintetico costruito dai regolamenti pubblici degli schemi di pagamento: nessuna parte reale, nessun conto reale, nessuna linea guida bancaria dietro di esso.
 
 ## File
 
@@ -111,8 +111,8 @@ I record piatti da cui la libreria lo ricostruisce (i nomi di colonna della pipe
 
 ```csv
 id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,initiator_id,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,debtor_id,debtor_account_currency,creditor_postal_code,creditor_town_name,creditor_country_code,creditor_account_number,creditor_reference,creditor_reference_type,initiator_id_scheme_proprietary,debtor_id_scheme_proprietary,creditor_account_scheme_proprietary,payment_currency
-NTA-20260921-01,2026-09-21T07:45:00,2,21440.00,Norrland Trävaror AB,NTA-BG-20260921,TRF,true,NURG,2026-09-22,Norrland Trävaror AB,SE4256065723789397612318,FURLSEN0,SLEV,NTA-2026-0921-001,18450.00,SEK,BGABSESS,Sågverk Öster AB,903 26,Umeå,SE,Storgatan 22,5561234567,903 26,Umeå,SE,Storgatan 22,5561234567,SEK,891 33,Örnsköldsvik,SE,50501055,20260911000000316,SCOR,ORGNR,ORGNR,BGNR,SEK
-NTA-20260921-01,2026-09-21T07:45:00,2,21440.00,Norrland Trävaror AB,NTA-BG-20260921,TRF,true,NURG,2026-09-22,Norrland Trävaror AB,SE4256065723789397612318,FURLSEN0,SLEV,NTA-2026-0921-002,2990.00,SEK,BGABSESS,Kontorsservice Nord,903 26,Umeå,SE,Storgatan 22,5561234567,903 26,Umeå,SE,Storgatan 22,5561234567,SEK,972 32,Luleå,SE,50501055,123456782,SCOR,ORGNR,ORGNR,BGNR,SEK
+NTA-20260921-01,2026-09-21T07:45:00,2,21440.00,Norrland Trävaror AB,NTA-BG-20260921,TRF,true,NURG,2026-09-22,Norrland Trävaror AB,SE5875997987360500338084,ZSWOSEF0,SLEV,NTA-2026-0921-001,18450.00,SEK,KXQISEF0,Sågverk Öster AB,903 26,Umeå,SE,Storgatan 22,5561234567,903 26,Umeå,SE,Storgatan 22,5561234567,SEK,891 33,Örnsköldsvik,SE,50501055,20260911000000316,SCOR,ORGNR,ORGNR,BGNR,SEK
+NTA-20260921-01,2026-09-21T07:45:00,2,21440.00,Norrland Trävaror AB,NTA-BG-20260921,TRF,true,NURG,2026-09-22,Norrland Trävaror AB,SE5875997987360500338084,ZSWOSEF0,SLEV,NTA-2026-0921-002,2990.00,SEK,FURLSEN0,Kontorsservice Nord,903 26,Umeå,SE,Storgatan 22,5561234567,903 26,Umeå,SE,Storgatan 22,5561234567,SEK,972 32,Luleå,SE,50501055,123456782,SCOR,ORGNR,ORGNR,BGNR,SEK
 ```
 
 ## Come la libreria lo ha verificato
@@ -126,8 +126,8 @@ Confidenza **derivato**: costruito dal regolamento pubblico o dalla guida di imp
 
 ## Da dove proviene il contenuto
 
-- Nordea, pain.001 examples and Corporate Access implementation guide (Jun 2026): Bankgiro payment with OCR (letto il 2026-09-10)
-- Swedbank, Message Implementation Guide pain.001 v2.0; Bankgirot OCR reference rules (letto il 2026-09-10)
+- A Swedish bank's public pain.001 examples and implementation guide (Jun 2026): Bankgiro payment with OCR (letto il 2026-09-10)
+- Bankgirot OCR reference rules; a second Swedish bank's public pain.001 message implementation guide v2.0 (letto il 2026-09-10)
 
 Lo SHA-256 di ogni file è nel suo record di provenienza. La linea guida d'uso della tua banca non è rappresentata qui: [applicala in privato](/example-corpus/#your-bank-s-guideline) con lo strumento di overlay della libreria.
 

@@ -9,6 +9,8 @@
 - Preserve WCAG 2.2 AAA, zero accessibility findings, and 100 Lighthouse
   scores on mobile and desktop.
 - Run `make verify` before proposing a commit.
-- Use a `feat/vX.Y.Z` branch with patch-only increments.
+- The website ships the pain001 suite version in lockstep. The maintainer
+  authorized joining at 0.0.82; subsequent releases advance one patch together.
+- Use the suite release branch `feat/vX.Y.Z`. Preserve published tags.
 - Sign and DCO-sign off every commit (`git commit -S -s`).
 - Do not publish, tag, release, or merge unless all required checks are green.

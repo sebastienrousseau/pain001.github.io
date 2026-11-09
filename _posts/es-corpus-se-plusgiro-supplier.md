@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-07T08:00:00+00:00"
+date: "2026-11-09T08:00:00+00:00"
 description: "Swedish Plusgiro supplier payment with an invoice message. Una muestra pain.001 validada (Suecia, raíl plusgiro-credit), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Swedish Plusgiro supplier payment with an invoice message. Una muestra pain.001 validada (Suecia, raíl plusgiro-credit), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
 item_guid: "https://pain001.com/es/corpus-se-plusgiro-supplier/"
 item_link: "https://pain001.com/es/corpus-se-plusgiro-supplier/"
-item_pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+item_pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 item_title: "Ejemplo pain.001 ISO 20022 se.plusgiro.supplier: Suecia (plusgiro-credit)"
-last_build_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+last_build_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -77,13 +77,13 @@ author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
-site_last_updated: 2026-07-26
+site_last_updated: 2026-11-07
 site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Atom, JSON-LD"
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Corpus de ejemplos"
 excerpt: "Swedish Plusgiro supplier payment with an invoice message. Una muestra pain.001 validada (Suecia, raíl plusgiro-credit), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
-last_reviewed: "2026-07-26"
+last_reviewed: "2026-11-07"
 
 
 ---
@@ -92,7 +92,7 @@ Descripción del escenario, citada del registro de procedencia (texto original e
 
 > Swedish Plusgiro supplier payment with an invoice message.
 
-Un archivo de iniciación de pagos (**Suecia**, raíl **plusgiro-credit**), entregado en `pain.001.001.03`, `pain.001.001.09`, generado y comprobado por pain001 0.0.78. Es un ejemplo sintético construido a partir de los reglamentos públicos de los esquemas de pago: no hay detrás ninguna parte real, ninguna cuenta real ni ninguna guía bancaria.
+Un archivo de iniciación de pagos (**Suecia**, raíl **plusgiro-credit**), entregado en `pain.001.001.03`, `pain.001.001.09`, generado y comprobado por pain001 0.0.82. Es un ejemplo sintético construido a partir de los reglamentos públicos de los esquemas de pago: no hay detrás ninguna parte real, ninguna cuenta real ni ninguna guía bancaria.
 
 ## Archivos
 
@@ -111,7 +111,7 @@ Los registros planos a partir de los cuales la biblioteca lo reconstruye (los no
 
 ```csv
 id,date,nb_of_txs,ctrl_sum,initiator_name,payment_information_id,payment_method,batch_booking,service_level_code,requested_execution_date,debtor_name,debtor_account_IBAN,debtor_agent_BIC,charge_bearer,payment_id,payment_amount,currency,creditor_agent_BIC,creditor_name,remittance_information,initiator_postal_code,initiator_town_name,initiator_country_code,initiator_address_line,debtor_postal_code,debtor_town_name,debtor_country_code,debtor_address_line,debtor_account_currency,creditor_postal_code,creditor_town_name,creditor_country_code,creditor_account_number,creditor_account_scheme_proprietary,payment_currency
-NTA-20260921-02,2026-09-21T07:50:00,1,7125.50,Norrland Trävaror AB,NTA-PG-20260921,TRF,true,NURG,2026-09-22,Norrland Trävaror AB,SE4407238474849977370614,MNWHSEA0,SLEV,NTA-2026-0921-003,7125.50,SEK,NDEASESS,Fjällmaskin Service AB,Faktura 2026-0512,903 26,Umeå,SE,Storgatan 22,903 26,Umeå,SE,Storgatan 22,SEK,831 30,Östersund,SE,123455,PGNR,SEK
+NTA-20260921-02,2026-09-21T07:50:00,1,7125.50,Norrland Trävaror AB,NTA-PG-20260921,TRF,true,NURG,2026-09-22,Norrland Trävaror AB,SE2161468030701442852382,EJWZSEW0,SLEV,NTA-2026-0921-003,7125.50,SEK,OCFGSEQ0,Fjällmaskin Service AB,Faktura 2026-0512,903 26,Umeå,SE,Storgatan 22,903 26,Umeå,SE,Storgatan 22,SEK,831 30,Östersund,SE,123455,PGNR,SEK
 ```
 
 ## Cómo lo comprobó la biblioteca
@@ -125,7 +125,7 @@ Confianza **derivado**: construido a partir del reglamento público o de la guí
 
 ## De dónde procede el contenido
 
-- Nordea, pain.001 examples and Corporate Access implementation guide (Jun 2026): Plusgiro payment (leído el 2026-09-10)
+- A Swedish bank's public pain.001 examples and implementation guide (Jun 2026): Plusgiro payment (leído el 2026-09-10)
 
 El SHA-256 de cada archivo está en su registro de procedencia. La guía de uso propia de su banco no está representada aquí: [aplíquela en privado](/example-corpus/#your-bank-s-guideline) con la herramienta de overlays de la biblioteca.
 

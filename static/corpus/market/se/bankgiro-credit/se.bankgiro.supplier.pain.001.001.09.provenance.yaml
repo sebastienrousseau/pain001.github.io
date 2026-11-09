@@ -3,7 +3,7 @@ family: bankgiro-credit
 country: SE
 message_type: pain.001.001.09
 description: Swedish Bankgiro supplier payment with an OCR reference.
-sha256: f84edaa519cda1dc82c789eb0591ce7debf830f2f0e076d76301b25d7e80e856
+sha256: 27658dd0a4e1587135b5941092ff7758f66dacc7e1fb15fab9a1502344ad818a
 build:
   renamed: []
   wrapped:
@@ -30,7 +30,7 @@ validation:
   overlays: {}
 twins:
   iso_json:
-    sha256: b8fda61bc4b4e622dcbf3683b1b97e8c3c0b784902477736cc6466a1acfd7369
+    sha256: 904c48c539c5e9ff430af5918574fc5d343bd135d7ada9c0ddaaa02054867e12
     schema_findings: []
   records:
     rows: 2
@@ -38,11 +38,11 @@ twins:
     missing_required: []
 provenance:
   sources:
-  - title: 'Nordea, pain.001 examples and Corporate Access implementation guide (Jun
+  - title: 'A Swedish bank''s public pain.001 examples and implementation guide (Jun
       2026): Bankgiro payment with OCR'
     read: '2026-09-10'
-  - title: Swedbank, Message Implementation Guide pain.001 v2.0; Bankgirot OCR reference
-      rules
+  - title: Bankgirot OCR reference rules; a second Swedish bank's public pain.001
+      message implementation guide v2.0
     read: '2026-09-10'
   confidence: derived
   evidence: []

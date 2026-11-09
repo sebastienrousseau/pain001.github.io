@@ -218,7 +218,7 @@ jobs:
 
       - name: Documentation lint
         run: |
-          npx --yes markdownlint-cli2@0.23.2
+          npx --no-install markdownlint-cli2
           python -m pip install --quiet --require-hashes -r requirements/lint.txt
           codespell
 

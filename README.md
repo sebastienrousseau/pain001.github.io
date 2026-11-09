@@ -60,7 +60,7 @@ gate; the built tree is never committed. Cloudflare fronts the domain.
 
 **The Pain001 ecosystem**
 
-- [The Pain001 ecosystem](#the-pain001-ecosystem) — the five packages this site documents
+- [The Pain001 ecosystem](#the-pain001-ecosystem) — the nine repositories in the lockstep suite
 
 **Reference**
 
@@ -125,16 +125,21 @@ make deps      # audit npm advisories against the documented exceptions
 
 ## The Pain001 ecosystem
 
-This site documents five packages, each with its own repository and release
-cadence. The full map is in [`docs/ECOSYSTEM.md`](docs/ECOSYSTEM.md).
+This website joins the pain001 suite at 0.0.82. The core, companions,
+scaffold, native extension and website share one release version. The
+package reference is in [`docs/ECOSYSTEM.md`](docs/ECOSYSTEM.md).
 
-| Package | Role |
+| Component | Role |
 | :--- | :--- |
 | `pain001` | Core library, CLI and REST API; the validation pipeline everything else calls |
 | `pain001-mcp` | MCP server exposing the pipeline as tools for AI agents |
 | `pain001-lsp` | Language server: diagnostics on payment files as you type |
 | `pain001-loader-mt101` | SWIFT MT101 bridge onto the ISO 20022 pipeline |
 | `pain001-loader-xlsx` | Excel on-ramp with the spreadsheet hazards handled |
+| `pain001-mockbank` | Synthetic SFTP bank replies for integration tests; container distribution |
+| `pain001-plugin-template` | Cookiecutter source scaffold for an external loader |
+| `pain001-fast` | Experimental native validation helpers; source and wheels on GitHub |
+| `pain001.com` | This website, documentation and browser demo |
 
 ## Capabilities at a glance
 
@@ -142,7 +147,7 @@ Measured on the current build.
 
 | Surface | Detail |
 | :--- | :--- |
-| Pages | 668 built pages; 661 URLs in the sitemap (utility pages such as the 404, offline and form-confirmation pages are noindexed and left out) |
+| Pages | 711 built pages; 493 URLs in the sitemap (utility pages such as the 404, offline and form-confirmation pages are noindexed and left out) |
 | Locales | 34, with an hreflang cluster per localised page and RTL handling for 3 |
 | Browser demo | `/try/` runs the `pain001` library itself in WebAssembly, same-origin, offline-capable; payment data never leaves the browser |
 | Example corpus | 42 scenarios, each on an English page and five translated pages (252 in all), with schema.org `Dataset` markup, downloadable inputs and expected output |

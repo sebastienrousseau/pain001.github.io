@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-07T08:00:00+00:00"
+date: "2026-11-09T08:00:00+00:00"
 description: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Een gevalideerd pain.001-voorbeeld (HK, rail instant-payment), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Een gevalideerd pain.001-voorbeeld (HK, rail instant-payment), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
 item_guid: "https://pain001.com/nl/corpus-hk-fps-single/"
 item_link: "https://pain001.com/nl/corpus-hk-fps-single/"
-item_pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+item_pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 item_title: "ISO 20022 pain.001-voorbeeld hk.fps.single: HK (instant-payment)"
-last_build_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+last_build_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -77,13 +77,13 @@ author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
-site_last_updated: 2026-07-26
+site_last_updated: 2026-11-07
 site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Atom, JSON-LD"
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Voorbeeldcorpus"
 excerpt: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Een gevalideerd pain.001-voorbeeld (HK, rail instant-payment), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
-last_reviewed: "2026-07-26"
+last_reviewed: "2026-11-07"
 
 
 ---
@@ -92,7 +92,7 @@ Scenariobeschrijving, geciteerd uit het herkomstrecord (oorspronkelijke Engelse 
 
 > Hong Kong FPS credit in HKD, clearing codes and account numbers.
 
-Een betaalinitiatiebestand (**HK**, rail **instant-payment**), geleverd in `pain.001.001.03`, `pain.001.001.09`, gegenereerd en gecontroleerd door pain001 0.0.78. Het is een synthetisch voorbeeld, opgebouwd uit de openbare rulebooks van de betaalschema's: geen echte partij, geen echte rekening en geen bankrichtlijn erachter.
+Een betaalinitiatiebestand (**HK**, rail **instant-payment**), geleverd in `pain.001.001.03`, `pain.001.001.09`, gegenereerd en gecontroleerd door pain001 0.0.82. Het is een synthetisch voorbeeld, opgebouwd uit de openbare rulebooks van de betaalschema's: geen echte partij, geen echte rekening en geen bankrichtlijn erachter.
 
 ## Bestanden
 
@@ -127,7 +127,7 @@ Betrouwbaarheid **aangenomen**: één detail berust op een aanname die het recor
 ## Waar de inhoud vandaan komt
 
 - Hong Kong Interbank Clearing Limited, Faster Payment System rules and clearing-code list (gelezen op 2026-09-11)
-- East West Bank HK, ISO 20022 FPS file specification (public) (gelezen op 2026-09-11)
+- A Hong Kong bank's public ISO 20022 FPS file specification (gelezen op 2026-09-11)
 
 De SHA-256 van elk bestand staat in zijn herkomstrecord. De eigen gebruiksrichtlijn van uw bank is hier niet weergegeven: [pas die privé toe](/example-corpus/#your-bank-s-guideline) met de overlay-tooling van de bibliotheek.
 
