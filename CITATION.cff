@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "If you use the Pain001 documentation website, please cite it as below."
 title: "pain001.com: ISO 20022 payment initiation documentation"
 type: software
-version: 0.0.82
-date-released: 2026-11-07
+version: 0.0.83
+date-released: 2026-11-09
 authors:
   - family-names: Rousseau
     given-names: Sebastien

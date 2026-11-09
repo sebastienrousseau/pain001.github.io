@@ -92,7 +92,7 @@ Szenariobeschreibung, zitiert aus dem Provenienzdatensatz (englischer Originalte
 
 > USD cross-border payment from a UK account to a US supplier.
 
-Eine Zahlungsinitiierungsdatei (**Vereinigtes Königreich**, Schiene **priority-payment**), ausgeliefert in `pain.001.001.03`, `pain.001.001.09`, erzeugt und geprüft von pain001 0.0.82. Es handelt sich um ein synthetisches Beispiel aus den öffentlichen Regelwerken der Zahlungssysteme: keine reale Partei, kein reales Konto und keine Bankrichtlinie dahinter.
+Eine Zahlungsinitiierungsdatei (**Vereinigtes Königreich**, Schiene **priority-payment**), ausgeliefert in `pain.001.001.03`, `pain.001.001.09`, erzeugt und geprüft von pain001 0.0.83. Es handelt sich um ein synthetisches Beispiel aus den öffentlichen Regelwerken der Zahlungssysteme: keine reale Partei, kein reales Konto und keine Bankrichtlinie dahinter.
 
 ## Dateien
 
