@@ -40,6 +40,14 @@ All notable changes to this website are documented here. The format follows
   30); it links the MCP page instead of a hand-typed count.
 - `/try/#sample=sepa-sct` (and any built-in sample key) opens that
   sample and validates it; only corpus scenarios could be linked before.
+- The homepage hero leads with the sandbox: "Catch pain.001 errors
+  before your bank does", a "Validate a sample file for free" button
+  that opens the SEPA sample already validated, "No sign-up · runs in
+  your browser · nothing is uploaded", a copyable `pip install
+  pain001`, and "Evaluating for a bank? Book a briefing" as a text
+  link. The documentation link leaves the hero (it stays in the
+  navigation), and the demo section's link reads "Try it with your own
+  CSV".
 
 ## [0.0.83] - 2026-11-09
 
