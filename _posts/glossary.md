@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/glossary/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, hybrid addresses, and control sums: the payments vocabulary defined for treasurers and operations teams, not just developers."
 item_guid: "https://pain001.com/glossary/rss.xml"
 item_link: "https://pain001.com/glossary/rss.xml"
@@ -141,7 +141,7 @@ Plain-English definitions of the terms that appear across this site and in your 
 
 **XSD validation.** Checking XML against the official ISO 20022 schema definition. Pain001 treats it as a hard gate before any file is written.
 
-**MCP: Model Context Protocol.** The open standard through which AI assistants call external tools. [`pain001-mcp`](/pain001-mcp/) exposes 17 payment tools to any MCP client, locally over stdio.
+**MCP: Model Context Protocol.** The open standard through which AI assistants call external tools. [`pain001-mcp`](/pain001-mcp/) exposes the Pain001 pipeline as tools to any MCP client, locally over stdio by default.
 
 **LSP: Language Server Protocol.** The editor-integration standard behind IDE diagnostics. [`pain001-lsp`](/pain001-lsp/) uses it to validate payment files as you type.
 

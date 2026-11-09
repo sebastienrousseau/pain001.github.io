@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/excel-to-pain001/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Read payment batches straight from .xlsx and .xlsm workbooks with pain001-loader-xlsx: no Save As CSV, numeric-IBAN corruption caught at load, one command to a schema-validated pain.001 file."
 item_guid: "https://pain001.com/excel-to-pain001/"
 item_link: "https://pain001.com/excel-to-pain001/"

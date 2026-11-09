@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/mt101-migration/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "SWIFT ended MT and MX coexistence in November 2025. Keep the MT101 your systems already emit, parse it into validated records with pain001-loader-mt101, and produce pain.001 XML proven clean before submission."
 item_guid: "https://pain001.com/mt101-migration/"
 item_link: "https://pain001.com/mt101-migration/"
@@ -112,7 +112,7 @@ Because conversion without validation is how malformed files reach banks. A conv
 
 ## The migration in three steps
 
-1. **Install both packages** (Python 3.10 or later, no other dependency):
+1. **Install both packages** (Python 3.11 or later):
 
    ```bash
    pip install pain001 pain001-loader-mt101

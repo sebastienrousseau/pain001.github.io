@@ -9,8 +9,8 @@ done looks like.
 
 1. Open an issue for substantial behavioural or information-architecture
    changes.
-2. Branch from `main` using `feat/vX.Y.Z`, where the version is exactly one
-   patch after the latest release.
+2. Branch from `main` using `feat/vX.Y.Z`, using the shared pain001 suite version. The maintainer authorized the
+   website to join at 0.0.82; subsequent releases advance one patch together.
 3. Follow [DEVELOPMENT.md](DEVELOPMENT.md), run `make verify`, and update the
    changelog for user-visible work.
 4. Add tests with every new or changed behaviour: unit or property tests

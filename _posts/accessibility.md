@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/accessibility/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "pain001.com targets WCAG 2.2 AAA, enforced as a build gate: measured 7:1 contrast in both themes, every page scanned with axe at AAA, keyboard-first interaction, and an open channel for reports."
 item_guid: "https://pain001.com/accessibility/rss.xml"
 item_link: "https://pain001.com/accessibility/rss.xml"

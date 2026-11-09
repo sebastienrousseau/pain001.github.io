@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/he/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "צרו ואמתו קובצי XML מסוג pain.001 ו-pain.008 מול ה-XSD הרשמי של ISO 20022. חינם, בקוד פתוח, ורץ על המחשב שלכם."
 item_guid: "https://pain001.com/he/rss.xml"
 item_link: "https://pain001.com/he/rss.xml"

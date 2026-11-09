@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/message-specs/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Complete element references for every supported ISO 20022 payment-initiation version: paths, cardinality, types, constraints and code lists, generated from the official schemas."
 item_guid: "https://pain001.com/message-specs/"
 item_link: "https://pain001.com/message-specs/"
@@ -107,7 +107,8 @@ Complete, generated specifications for every ISO 20022 payment-initiation messag
 | `pain.001.001.11` | 735 | 141 | 99 | 19 | 2021 Feb 16 | [ISO 20022 archive](https://www.iso20022.org/catalogue-messages/iso-20022-messages-archive?search=pain.001.001.11) | [Element reference](/message-spec-pain.001.001.11/) |
 | `pain.001.001.12` | 770 | 141 | 97 | 17 | 2024 Feb 29 | [ISO 20022 archive](https://www.iso20022.org/catalogue-messages/iso-20022-messages-archive?search=pain.001.001.12) | [Element reference](/message-spec-pain.001.001.12/) |
 | `pain.001.001.13` | 771 | 142 | 100 | 17 | 2026 Mar 02 | [ISO 20022 catalogue](https://www.iso20022.org/iso-20022-message-definitions?search=pain.001.001.13) | [Element reference](/message-spec-pain.001.001.13/) |
-| `pain.008.001.02` | 488 | 90 | 63 | 15 | 2009 Jan 08 | [ISO 20022 catalogue](https://www.iso20022.org/iso-20022-message-definitions?search=pain.008.001.02) | [Element reference](/message-spec-pain.008.001.02/) |
+| `pain.008.001.02` | 488 | 90 | 63 | 15 | 2009 Jan 08 | [ISO 20022 archive](https://www.iso20022.org/catalogue-messages/iso-20022-messages-archive?search=pain.008.001.02) | [Element reference](/message-spec-pain.008.001.02/) |
+| `pain.008.001.08` | 660 | 114 | 88 | 15 | 2019 Feb 14 | [ISO 20022 catalogue](https://www.iso20022.org/iso-20022-message-definitions?search=pain.008.001.08) | [Element reference](/message-spec-pain.008.001.08/) |
 
 **On the dates.** *Schema generated* is the timestamp inside the shipped XSD, written by ISO's Standards Editor when the schema was produced. It is not the same as ISO's publication date and should not be read as one. pain.001.001.13 was generated on 2 March 2026 and published later that month. Four of the files shipped with Pain001 carry no header at all; those rows say so rather than showing a date that cannot be evidenced. Every row links to ISO's own page so the version can be checked at source.
 

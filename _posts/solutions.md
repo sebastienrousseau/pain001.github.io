@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/solutions/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Treasury, CFO and board, payment operations, engineering and AI: the problem in your vocabulary, what Pain001 changes, and your next click, in 150 words per role."
 item_guid: "https://pain001.com/solutions/rss.xml"
 item_link: "https://pain001.com/solutions/rss.xml"
@@ -102,4 +102,4 @@ You live in the response files. Pain001 closes the loop end to end: `--dry-run` 
 
 ## Engineering & AI
 
-A typed Python API, a CLI with meaningful exit codes, a REST microservice, and plugin points for loaders, validators, schemes, and writers. [The technical reference](/documentation/) covers every flag and endpoint, and the code carries 100% line-and-branch coverage as a hard CI gate. If you are building with agents: [pain001-mcp](/pain001-mcp/) is the category's only Model Context Protocol server, with seventeen read-only tools your agents call locally, with editor diagnostics from [pain001-lsp](/pain001-lsp/) while humans stay in the loop.
+A typed Python API, a CLI with meaningful exit codes, a REST microservice, and plugin points for loaders, validators, schemes, and writers. [The technical reference](/documentation/) covers every flag and endpoint, and the code carries 100% line-and-branch coverage as a hard CI gate. If you are building with agents: [pain001-mcp](/pain001-mcp/) is the category's only Model Context Protocol server, with validation, generation and inspection tools your agents call locally, with editor diagnostics from [pain001-lsp](/pain001-lsp/) while humans stay in the loop.

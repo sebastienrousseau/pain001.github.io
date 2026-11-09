@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/trust/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Everything a vendor-risk, security, or audit reviewer needs in one place: security posture, supply-chain evidence, data flows, accessibility conformance, governance, and release policy, with each claim linked to its artefact."
 item_guid: "https://pain001.com/trust/rss.xml"
 item_link: "https://pain001.com/trust/rss.xml"
@@ -92,7 +92,7 @@ This page exists so that a security, vendor-risk, or audit reviewer can answer s
 
 ## 01. Security
 
-- **Zero-trust XML processing**: all parsing routes through `defusedxml` (XXE and entity-expansion defence); no `lxml` in the dependency tree; path-traversal validation on file inputs; non-root containers. Full detail with code-level references: [Architecture & security](/architecture-and-patents/).
+- **Zero-trust XML processing**: all parsing routes through `defusedxml` (XXE and entity-expansion defence); the optional `lxml` fast path runs with entity resolution, DTD loading and network access switched off; path-traversal validation on file inputs; non-root containers. Full detail with code-level references: [Architecture & security](/architecture-and-patents/).
 - **Responsible disclosure**: private vulnerability reporting via [GitHub Security](https://github.com/sebastienrousseau/pain001/security); machine-readable policy at [/security.txt](/security.txt). Reports are acknowledged and credited.
 - **Static analysis in CI**: CodeQL, Bandit, and pip-audit run on every change to the core.
 
@@ -108,7 +108,7 @@ This page exists so that a security, vendor-risk, or audit reviewer can answer s
 
 ## 03. Data and privacy
 
-- **Product data flows**: every component (CLI, library, REST service, MCP server, LSP server) executes on your infrastructure. There is no telemetry, no SaaS callback, no network dependency for generation or validation. [Privacy position](/privacy/).
+- **Product data flows**: every component (CLI, library, REST service, MCP server, LSP server) executes on your infrastructure. There is no telemetry, no SaaS callback, no network dependency for generation or validation; a file leaves your infrastructure only when you deliver it, for example with `pain001 upload` to an SFTP server you have trusted. [Privacy position](/privacy/).
 - **Website**: no cookies and no identifiers: every asset is served from this origin, and every script is served from this origin, and the one third-party request is the Cloudflare Web Analytics beacon's cookieless page-view count, which records without an IP address, fingerprint or identifier (see the [privacy page](/privacy/)). The demo page carries no beacon at all. The [browser demo](/try/) reads files locally via the FileReader API; the "Verify it yourself" panel on that page shows how to falsify this with DevTools open.
 - **Demo boundary**: the browser demo runs the pain001 library itself inside a Python runtime compiled to WebAssembly, served from this origin and cached by a service worker: records, generated XML and verdicts never leave the page, and after first load the demo works offline, which is the strongest proof no data leaves your machine.
 

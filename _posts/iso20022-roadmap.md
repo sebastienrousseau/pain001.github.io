@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/iso20022-roadmap/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "The living schedule of ISO 20022 mandates: the deferred structured-address and MT101 changes, June 2027 investigations, November 2027 CHAPS purpose codes, 2028 statements and direct debits, each primary-sourced and dated."
 item_guid: "https://pain001.com/iso20022-roadmap/rss.xml"
 item_link: "https://pain001.com/iso20022-roadmap/rss.xml"
@@ -140,7 +140,7 @@ Pain001 ships both requirements today: structured and hybrid address elements in
 
 ## 05. No date, steady pressure
 
-- **pain.001 v10–v12 adoption**: market infrastructures standardised on v9; later versions arrive channel by channel. Pain001 [generates all ten versions](/documentation/) and migrates records between them, so a version switch is a parameter, not a project.
+- **pain.001 v10–v12 adoption**: market infrastructures standardised on v9; later versions arrive channel by channel. Pain001 [generates every version from .03 to .13](/documentation/) and migrates records between them, so a version switch is a parameter, not a project.
 - **LEIs in payments**: 3 million+ active LEIs; already mandatory in scoped CHAPS payments, recommended in CBPR+ party identification.
 - **Agentic payments**: Mastercard, Visa, Google (AP2), and the Linux Foundation's x402 are building agent-authorisation rails; the payment-*file* layer they ultimately need is the one [pain001-mcp](/pain001-mcp/) already serves.
 

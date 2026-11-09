@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/compliance-toolkit/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "A practical ISO 20022 compliance hub with current standards sources, regional guidance, validation examples, checklists, migration paths, and audit evidence."
 item_guid: "https://pain001.com/compliance-toolkit/rss.xml"
 item_link: "https://pain001.com/compliance-toolkit/rss.xml"
@@ -110,7 +110,7 @@ Use the [browser validator and message builder](/try/) for a same-origin,
 local demonstration, or install the CLI for repeatable pipeline gates:
 
 ```sh
-pip install pain001==0.0.78
+pip install pain001==0.0.82
 pain001 -t pain.001.001.09 -d payments.csv --scheme sepa-sct --dry-run
 ```
 
@@ -152,7 +152,7 @@ rulebook checks; only the bank can prove its profile, channel, and entitlement.
 | Excel | [Excel migration](/excel-to-pain001/) and [loader reference](/pain001-loader-xlsx/) | typed records before XML generation |
 | CSV, JSON, SQLite, Parquet | [Payment pipelines](/payments/) | the same shared validation pipeline |
 | Application API | [REST and Python reference](/documentation/) | synchronous validation or asynchronous job result |
-| AI workflow | [MCP tools](/pain001-mcp/) | local, read-only generation and validation tools |
+| AI workflow | [MCP tools](/pain001-mcp/) | local generation and validation tools |
 | Editor workflow | [LSP integration](/pain001-lsp/) | diagnostics and completion before runtime |
 
 Run load and latency tests with production-shaped, non-sensitive batches. The
@@ -168,7 +168,7 @@ For each controlled run, retain a manifest similar to this:
 ```json
 {
   "tool": "pain001",
-  "tool_version": "0.0.78",
+  "tool_version": "0.0.82",
   "message": "pain.001.001.09",
   "scheme": "sepa-sct",
   "input_sha256": "<sha256>",
@@ -186,8 +186,8 @@ SBOM, security policy, accessibility statement, and architecture evidence.
 
 ## Find help and contribute evidence
 
-Use [GitHub Discussions](https://github.com/sebastienrousseau/pain001.github.io/discussions)
-for implementation questions, [the issue tracker](https://github.com/sebastienrousseau/pain001.github.io/issues)
+Use [the library's issue tracker](https://github.com/sebastienrousseau/pain001/issues)
+for implementation questions, [the website's issue tracker](https://github.com/sebastienrousseau/pain001.github.io/issues)
 for website defects, and [contact](/contact/) for direct feedback. Case-study
 and adopter-story submissions are welcome through a new issue; remove all real
 payment data first. Watch GitHub releases or the [RSS feed](/rss.xml) for

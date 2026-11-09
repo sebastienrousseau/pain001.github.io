@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/pain.001.001.07/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "pain.001.001.07, a maintenance release: official XSD, element reference, XSD-valid example files, and how to generate and validate it with pain001."
 item_guid: "https://pain001.com/pain.001.001.07/rss.xml"
 item_link: "https://pain001.com/pain.001.001.07/rss.xml"
@@ -94,7 +94,7 @@ New to the format? [What is pain.001?](/pain-001/) explains the message, its str
 ## What to know about this version
 
 - Useful when a bank's implementation guide pins this exact schema.
-- `pain001 inspect pain.001.001.07` lists every required and optional field.
+- `pain001 inspect pain.001.001.07` shows the bundled template, schema, example data and accepted input formats.
 
 ## Element structure (all versions share this skeleton)
 
@@ -111,8 +111,8 @@ New to the format? [What is pain.001?](/pain-001/) explains the message, its str
 ## Generate and inspect
 
 ```bash
-pain001 init pain.001.001.07 -o work/         # scaffold a starter CSV
-pain001 inspect pain.001.001.07               # list required + optional fields
+pain001 init pain.001.001.07 -o payments.csv  # write a starter CSV
+pain001 inspect pain.001.001.07               # template, schema, input formats
 pain001 -t pain.001.001.07 -d payments.csv -o out/ --dry-run
 ```
 

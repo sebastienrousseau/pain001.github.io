@@ -90,7 +90,7 @@
     <dl class="proof-grid" data-proof>
       <div class="proof-item" data-reveal><dt><strong>Bank scenarios</strong> <span>Each passing the official ISO 20022 XSD</span></dt><dd data-proof-key="scenarios">42</dd></div>
       <div class="proof-item" data-reveal><dt><strong>Countries</strong> <span>Covered by those scenarios</span></dt><dd data-proof-key="countries">17</dd></div>
-      <div class="proof-item" data-reveal><dt><strong>Message editions</strong> <span>Specified field by field</span></dt><dd data-proof-key="editions">12</dd></div>
+      <div class="proof-item" data-reveal><dt><strong>Message editions</strong> <span>Specified field by field</span></dt><dd data-proof-key="editions">13</dd></div>
       <div class="proof-item" data-reveal><dt><strong>Languages</strong> <span>This site is translated into</span></dt><dd data-proof-key="languages">34</dd></div>
     </dl>
   </div>
@@ -224,7 +224,7 @@ result = validate_scheme(rows, profile="sepa-sct")
           <p class="code-card-out"><span>Output</span> <code>1 SEPA-CDTR-IBAN creditor_account_IBAN must be a valid IBAN (ISO 13616 / mod-97)</code></p>
         </figure>
       </article>
-      <article class="tile tile-half" data-reveal><p class="tile-eyebrow">AI agents</p><h3>pain001-mcp</h3><p>Seventeen local, read-only Model Context Protocol tools with human review kept in the loop.</p><a class="text-link" href="/pain001-mcp/">MCP tools</a></article>
+      <article class="tile tile-half" data-reveal><p class="tile-eyebrow">AI agents</p><h3>pain001-mcp</h3><p>Local Model Context Protocol tools for validation, generation and conversion, with human review kept in the loop.</p><a class="text-link" href="/pain001-mcp/">MCP tools</a></article>
       <article class="tile tile-half" data-reveal><p class="tile-eyebrow">Editors</p><h3>pain001-lsp</h3><p>Diagnostics and payment-rule feedback while a human is still editing the source data.</p><a class="text-link" href="/pain001-lsp/">Editor support</a></article>
       <article class="tile tile-third" data-reveal><p class="tile-eyebrow">Legacy migration</p><h3>MT101 loader</h3><p>Move SWIFT request-for-transfer workflows to pain.001.001.09 with explicit conversion findings.</p><a class="text-link" href="/pain001-loader-mt101/">MT101 migration</a></article>
       <article class="tile tile-third" data-reveal><p class="tile-eyebrow">Treasury teams</p><h3>Excel loader</h3><p>Turn governed payment workbooks into validated records without copy-and-paste operations.</p><a class="text-link" href="/pain001-loader-xlsx/">Excel loader</a></article>
@@ -239,7 +239,7 @@ result = validate_scheme(rows, profile="sepa-sct")
       <p class="eyebrow">For engineering teams</p>
       <h2 id="dev-heading">Install, validate and generate. <span class="h-muted">In a few explicit lines.</span></h2>
       <p class="lead dev-lead">The CLI and Python API run the same checks. Exit codes are meaningful, findings identify their rule, and payment data stays on your machine.</p>
-      <p class="spec-line">Python 3.10+ · CLI · REST · MCP · LSP</p>
+      <p class="spec-line">Python 3.11+ · CLI · REST · MCP · LSP</p>
       <div class="cta-row"><a class="btn btn-secondary" href="/installation/">Install Pain001</a></div>
     </div>
     <figure class="code-window" data-copy-group>

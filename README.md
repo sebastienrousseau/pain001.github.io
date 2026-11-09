@@ -18,7 +18,7 @@
   <a href="https://pain001.com/documentation/"><img src="https://img.shields.io/badge/API-reference-07172b" alt="Docs" /></a>
   <a href="https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/pain001.github.io"><img src="https://img.shields.io/ossf-scorecard/github.com/sebastienrousseau/pain001.github.io?label=OpenSSF%20Scorecard&logo=openssf" alt="OpenSSF Scorecard" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0%20OR%20MIT-blue.svg" alt="License: Apache-2.0 OR MIT" /></a>
-  <a href="https://static-site-generator.com/"><img src="https://img.shields.io/badge/SSG-0.0.74-8f341f" alt="Toolchain: SSG 0.0.74" /></a>
+  <a href="https://static-site-generator.com/"><img src="https://img.shields.io/badge/SSG-0.0.75-8f341f" alt="Toolchain: SSG 0.0.75" /></a>
 </p>
 
 <!-- markdownlint-enable MD033 MD041 -->
@@ -32,7 +32,7 @@ and the MT101 / Excel loaders. Its job is to convert a treasury engineer, an
 integrator or an AI agent into an installed user, and to hand a regulated
 buyer the evidence they need.
 
-Built with the latest [Static Site Generator (ssg)][00] release, **0.0.74**,
+Built with the latest [Static Site Generator (ssg)][00] release, **0.0.75**,
 and deployed to GitHub Pages by `ci.yml` from the same run that passed every
 gate; the built tree is never committed. Cloudflare fronts the domain.
 
@@ -60,7 +60,7 @@ gate; the built tree is never committed. Cloudflare fronts the domain.
 
 **The Pain001 ecosystem**
 
-- [The Pain001 ecosystem](#the-pain001-ecosystem) — the five packages this site documents
+- [The Pain001 ecosystem](#the-pain001-ecosystem) — the nine repositories in the lockstep suite
 
 **Reference**
 
@@ -92,7 +92,7 @@ There is intentionally no system-wide `make install` for a Pages site.
 ```shell
 git clone https://github.com/sebastienrousseau/pain001.github.io.git
 cd pain001.github.io
-cargo install ssg --locked --version 0.0.74
+cargo install ssg --locked --version 0.0.75
 npm ci
 ```
 
@@ -104,7 +104,7 @@ for review or static hosting.
 
 | Component | Floor | Enforced by |
 | :--- | :--- | :--- |
-| Static Site Generator (ssg) | 0.0.74, the latest release | `SSG_VERSION` in `ci.yml`; the pin is the cache key |
+| Static Site Generator (ssg) | 0.0.75, the latest release | `SSG_VERSION` in `ci.yml`; the pin is the cache key |
 | Node.js | 22 (24 also tested) | `engines` in `package.json`; the `node-matrix` job runs the unit tests on both |
 | Python | 3.12 | `python-version` in `ci.yml`; generators, post-build passes and validators |
 | Chrome or Chromium | any current | layout, print, accessibility and Lighthouse gates |
@@ -125,16 +125,21 @@ make deps      # audit npm advisories against the documented exceptions
 
 ## The Pain001 ecosystem
 
-This site documents five packages, each with its own repository and release
-cadence. The full map is in [`docs/ECOSYSTEM.md`](docs/ECOSYSTEM.md).
+This website joins the pain001 suite at 0.0.82. The core, companions,
+scaffold, native extension and website share one release version. The
+package reference is in [`docs/ECOSYSTEM.md`](docs/ECOSYSTEM.md).
 
-| Package | Role |
+| Component | Role |
 | :--- | :--- |
 | `pain001` | Core library, CLI and REST API; the validation pipeline everything else calls |
 | `pain001-mcp` | MCP server exposing the pipeline as tools for AI agents |
 | `pain001-lsp` | Language server: diagnostics on payment files as you type |
 | `pain001-loader-mt101` | SWIFT MT101 bridge onto the ISO 20022 pipeline |
 | `pain001-loader-xlsx` | Excel on-ramp with the spreadsheet hazards handled |
+| `pain001-mockbank` | Synthetic SFTP bank replies for integration tests; container distribution |
+| `pain001-plugin-template` | Cookiecutter source scaffold for an external loader |
+| `pain001-fast` | Experimental native validation helpers; source and wheels on GitHub |
+| `pain001.com` | This website, documentation and browser demo |
 
 ## Capabilities at a glance
 
@@ -142,7 +147,7 @@ Measured on the current build.
 
 | Surface | Detail |
 | :--- | :--- |
-| Pages | 668 built pages; 661 URLs in the sitemap (utility pages such as the 404, offline and form-confirmation pages are noindexed and left out) |
+| Pages | 711 built pages; 493 URLs in the sitemap (utility pages such as the 404, offline and form-confirmation pages are noindexed and left out) |
 | Locales | 34, with an hreflang cluster per localised page and RTL handling for 3 |
 | Browser demo | `/try/` runs the `pain001` library itself in WebAssembly, same-origin, offline-capable; payment data never leaves the browser |
 | Example corpus | 42 scenarios, each on an English page and five translated pages (252 in all), with schema.org `Dataset` markup, downloadable inputs and expected output |
@@ -227,7 +232,7 @@ going live.
 
 ### Build
 
-Prerequisites: the Rust toolchain with `cargo install ssg --locked --version 0.0.74`,
+Prerequisites: the Rust toolchain with `cargo install ssg --locked --version 0.0.75`,
 Node 22+, Python 3.12 with the `pain001` library installed for the generators
 and the snippet gate, and Chrome for the browser gates.
 

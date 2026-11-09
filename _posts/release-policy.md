@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/release-policy/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "How Pain001 versions, what 'supported' means before 1.0, how security fixes ship, how releases are signed and attested, and how to roll back safely."
 item_guid: "https://pain001.com/release-policy/rss.xml"
 item_link: "https://pain001.com/release-policy/rss.xml"
@@ -90,11 +90,11 @@ last_reviewed: "2026-07-26"
 
 ## Versioning
 
-Pain001 is **pre-1.0** (`0.0.x`). Within that range, releases are frequent and may include breaking changes; every breaking change is documented in the [release notes](https://github.com/sebastienrousseau/pain001/releases). Companion packages (`pain001-mcp`, `pain001-lsp`, the loaders) version independently and declare their compatible core range in their dependency metadata. The resolver, not the version number, is the compatibility contract.
+Pain001 is **pre-1.0** (`0.0.x`). Within that range, releases are frequent and may include breaking changes; every breaking change is documented in the [release notes](https://github.com/sebastienrousseau/pain001/releases). Companion packages (`pain001-mcp`, `pain001-lsp`, the loaders) ship in lockstep with the core: each companion release carries the core's version number and requires that core release or later in its dependency metadata.
 
 ## What "supported" means
 
-The honest pre-1.0 statement: **the latest release is the supported release.** Bug and security fixes ship as new releases rather than backports. If you need a frozen version, pin it (`pain001==0.0.78`). Pinned installs keep working because releases are never deleted or mutated on PyPI.
+The honest pre-1.0 statement: **the latest release is the supported release.** Bug and security fixes ship as new releases rather than backports. If you need a frozen version, pin it (`pain001==0.0.82`). Pinned installs keep working because releases are never deleted or mutated on PyPI.
 
 Security reports against older versions are still triaged: if the flaw exists in the latest release, it is fixed there with an advisory noting affected versions.
 

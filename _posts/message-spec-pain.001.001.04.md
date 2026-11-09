@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/message-spec-pain.001.001.04/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Every element of ISO 20022 pain.001.001.04: XML path, cardinality, data type, length and pattern constraints, and code lists, generated from the official XSD."
 item_guid: "https://pain001.com/message-spec-pain.001.001.04/"
 item_link: "https://pain001.com/message-spec-pain.001.001.04/"

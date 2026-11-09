@@ -46,7 +46,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/pain.001.001.09/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "pain.001.001.09, the CBPR+ cross-border version: official XSD, element reference, XSD-valid example files and a free in-browser validator."
 item_guid: "https://pain001.com/pain.001.001.09/rss.xml"
 item_link: "https://pain001.com/pain.001.001.09/rss.xml"
@@ -115,8 +115,8 @@ New to the format? [What is pain.001?](/pain-001/) explains the message, its str
 ## Generate and inspect
 
 ```bash
-pain001 init pain.001.001.09 -o work/         # scaffold a starter CSV
-pain001 inspect pain.001.001.09               # list required + optional fields
+pain001 init pain.001.001.09 -o payments.csv  # write a starter CSV
+pain001 inspect pain.001.001.09               # template, schema, input formats
 pain001 -t pain.001.001.09 -d payments.csv -o out/ --dry-run
 ```
 

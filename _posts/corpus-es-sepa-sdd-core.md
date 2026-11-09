@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-07T08:00:00+00:00"
+date: "2026-11-09T08:00:00+00:00"
 description: "SEPA Core direct debit, recurring, Spanish creditor identifier. A validated pain.001 sample for Spain on the sepa-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -45,15 +45,15 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/corpus-es-sepa-sdd-core/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "SEPA Core direct debit, recurring, Spanish creditor identifier. A validated pain.001 sample for Spain on the sepa-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
 item_guid: "https://pain001.com/corpus-es-sepa-sdd-core/"
 item_link: "https://pain001.com/corpus-es-sepa-sdd-core/"
-item_pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+item_pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 item_title: "es.sepa.sdd-core: ISO 20022 pain.001 example for Spain (sepa-direct-debit)"
-last_build_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+last_build_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -77,20 +77,20 @@ author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
-site_last_updated: 2026-07-26
+site_last_updated: 2026-11-07
 site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Atom, JSON-LD"
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Example corpus"
 excerpt: "SEPA Core direct debit, recurring, Spanish creditor identifier. A validated pain.001 sample for Spain on the sepa-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
-last_reviewed: "2026-07-26"
+last_reviewed: "2026-11-07"
 
 
 ---
 
 SEPA Core direct debit, recurring, Spanish creditor identifier.
 
-A payment initiation file for **Spain** on the **sepa-direct-debit** rail, shipped in `pain.008.001.02`, `pain.008.001.08`, generated and checked by pain001 0.0.78. It is a synthetic example built from the public scheme rulebooks: no real party, account or bank guideline behind it.
+A payment initiation file for **Spain** on the **sepa-direct-debit** rail, shipped in `pain.008.001.02`, `pain.008.001.08`, generated and checked by pain001 0.0.82. It is a synthetic example built from the public scheme rulebooks: no real party, account or bank guideline behind it.
 
 ## Files
 

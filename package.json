@@ -1,6 +1,6 @@
 {
   "name": "pain001-website",
-  "version": "0.0.14",
+  "version": "0.0.82",
   "private": true,
   "description": "Build and quality gates for pain001.com, the website of the Pain001 ISO 20022 payment initiation suite.",
   "license": "Apache-2.0 OR MIT",
@@ -23,10 +23,15 @@
     "fast-check": "4.10.2",
     "globals": "17.12.0",
     "jsdom": "30.1.1",
+    "markdownlint-cli2": "0.23.3",
     "pyodide": "0.27.2"
   },
-  "//overrides": "GHSA-g3hv-75wg-m249: minimatch < 11.0.1 is vulnerable, and eslint (through @eslint/config-array) still asks for ^10. The override keeps every affected minimatch from resolving.",
+  "//overrides": "Advisory floors prevent affected minimatch, markdown-it, smol-toml, katex and js-yaml releases from resolving in the development toolchain. See the locked dependency audit.",
   "overrides": {
-    "minimatch": "^11.0.1"
+    "minimatch": "^11.0.1",
+    "markdown-it": ">=14.3.3 <15",
+    "smol-toml": ">=1.9.1 <2",
+    "katex": ">=0.18.2 <0.19",
+    "js-yaml": ">=5.4.3 <6"
   }
 }

@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/pain001-loader-mt101/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Parse legacy SWIFT MT101 messages into records that pass pain.001.001.09 validation, with a full field-mapping table and strict error handling, ready for the move from MT101 to pain.001 between banks."
 item_guid: "https://pain001.com/pain001-loader-mt101/rss.xml"
 item_link: "https://pain001.com/pain001-loader-mt101/rss.xml"
@@ -87,7 +87,7 @@ last_reviewed: "2026-07-26"
 
 ---
 
-**`pain001-loader-mt101` v0.0.78** parses legacy SWIFT MT101 (Request for Transfer) messages into flat records that pass `pain.001.001.09` validation. One function, zero third-party dependencies, 100% branch-covered.
+**`pain001-loader-mt101` v0.0.82** parses legacy SWIFT MT101 (Request for Transfer) messages into flat records that pass `pain.001.001.09` validation. One function, no dependency beyond the pain001 core, 100% branch-covered.
 
 Swift ended MT payment instructions (MT103, MT202) for cross-border payments in November 2025, and plans to move interbank MT101 to `pain.001` too, a change it deferred in August 2026. Treasury systems, however, still hold years of MT101 templates, archives, and file-based bank integrations. This loader is the bridge: parse the MT, regenerate as MX, validate against the official XSD, move on.
 

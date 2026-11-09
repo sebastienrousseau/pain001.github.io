@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/payments/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "From ERP export to pain.002 acknowledgement to camt.053 reconciliation: designing batch, streaming, and API payment pipelines around validation gates that stop rejections."
 item_guid: "https://pain001.com/payments/rss.xml"
 item_link: "https://pain001.com/payments/rss.xml"
@@ -95,7 +95,7 @@ Where Pain001 sits in a corporate payment flow, and how to design the pipeline a
 
 1. **Origination.** Accounts payable, payroll, or treasury produces a batch (usually an ERP export, a spreadsheet, or rows in a database).
 2. **Generation.** Pain001 ingests the batch (CSV, Excel, SQLite, JSON, JSONL, Parquet, or MT101), normalises fields, validates every record, and renders `pain.001` XML that passes the official XSD.
-3. **Submission.** The file goes to the bank over your existing channel: host-to-host SFTP, EBICS, SWIFT FileAct, or a bank portal. Pain001 deliberately stops at the file boundary; connectivity is your bank relationship, not your toolchain.
+3. **Submission.** The file goes to the bank over your existing channel: host-to-host SFTP, EBICS, SWIFT FileAct, or a bank portal. For host-to-host SFTP, `pain001 upload` delivers the file atomically to a server whose host key you have trusted; for every other channel, Pain001 stops at the file. The channel itself, its credentials and its contract remain your bank relationship.
 4. **Acknowledgement.** The bank answers with `pain.002` status reports (decoded code-by-code in the [reason-code reference](/pain002-reason-codes/)), which mark the file as accepted, partially accepted, or rejected with reason codes. Pain001's built-in **pain.002 parser** turns those into structured data your systems can route.
 5. **Reconciliation.** End-of-day `camt.053` statements confirm what actually settled. Pain001 parses those too, closing the loop from instruction to statement.
 
@@ -106,7 +106,7 @@ Initiate, acknowledge, reconcile. One toolchain covers all three message legs.
 - **Scheduled batch**: the classic AP run. Cron or CI invokes the CLI, `--dry-run` first, then generation; exit codes gate the pipeline.
 - **Large-volume streaming**: `--streaming --chunk-size N` processes memory-bounded chunks, each emitted as an independently valid XML file with recomputed `NbOfTxs`/`CtrlSum`. Payroll-scale batches run in constant memory.
 - **Service integration**: `pain001 serve` exposes the same pipeline as REST: synchronous `POST /api/v1/generate` for interactive flows, `POST /api/v1/generate/async` with job polling for heavy ones, Prometheus metrics for your observability stack.
-- **Agent-assisted operations**: the [MCP server](/pain001-mcp/) lets an AI assistant run pre-flight checks, explain scheme failures, or convert legacy files, with every tool read-only and local.
+- **Agent-assisted operations**: the [MCP server](/pain001-mcp/) lets an AI assistant run pre-flight checks, explain scheme failures, or convert legacy files, locally.
 
 ## 03. Designing for rejection so it never happens
 
@@ -117,10 +117,10 @@ Build the four bank-side rejection classes into your pipeline as pre-submission 
 | Schema violation (wrong element/version/namespace) | XSD validation against the official schema, before write |
 | Invalid identifiers (IBAN checksum, malformed BIC) | ISO 13616 mod-97 and ISO 9362 structure checks per record |
 | Control-total mismatch | `NbOfTxs` / `CtrlSum` recomputed from validated records |
-| Scheme-rule breach (SEPA field rules, currency, charge bearer) | `--scheme sepa-sct` / `sepa-inst` / `sepa-sdd` / `sepa-b2b` / `xborder-ct` with `--explain` |
+| Scheme-rule breach (SEPA field rules, currency, charge bearer) | `--scheme` with the rail's rulebook (`sepa-sct`, `uk-chaps`, `us-ach` and the rest; `pain001 plugins list` names them) and `--explain` |
 
 A file that passes all four gates can still be rejected for business reasons, such as insufficient funds, sanctions screening, or a closed account. Those belong to the bank. Format-class rejections belong to you, and they are the ones this pipeline eliminates.
 
 ## 04. Which version should you generate?
 
-Your bank's channel documentation decides, but the pattern in 2026 is this: `pain.001.001.03` remains the SEPA and CGI workhorse; **`pain.001.001.09`** is the CBPR+ version and the MT101-relay successor, making it the default for anything cross-border; later versions add structured-data refinements banks adopt gradually. Pain001 generates all ten versions and migrates records between them (`migrate_records`, `VersionMapper`), so a version switch is a parameter change, not a project. See the [version reference pages](/pain.001.001.09/) for element-level detail.
+Your bank's channel documentation decides, but the pattern in 2026 is this: `pain.001.001.03` remains the SEPA and CGI workhorse; **`pain.001.001.09`** is the CBPR+ version and the MT101-relay successor, making it the default for anything cross-border; later versions add structured-data refinements banks adopt gradually. Pain001 generates every version from `pain.001.001.03` to `pain.001.001.13` and migrates records between them (`migrate_records`, `VersionMapper`), so a version switch is a parameter change, not a project. See the [version reference pages](/pain.001.001.09/) for element-level detail.

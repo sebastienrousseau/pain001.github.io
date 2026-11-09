@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-07T08:00:00+00:00"
+date: "2026-11-09T08:00:00+00:00"
 description: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Un exemple pain.001 validé (HK, rail instant-payment), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -45,15 +45,15 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/fr/corpus-hk-fps-single/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Un exemple pain.001 validé (HK, rail instant-payment), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur."
 item_guid: "https://pain001.com/fr/corpus-hk-fps-single/"
 item_link: "https://pain001.com/fr/corpus-hk-fps-single/"
-item_pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+item_pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 item_title: "Exemple pain.001 ISO 20022 hk.fps.single : HK (instant-payment)"
-last_build_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+last_build_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -77,13 +77,13 @@ author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
-site_last_updated: 2026-07-26
+site_last_updated: 2026-11-07
 site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Atom, JSON-LD"
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Corpus d'exemples"
 excerpt: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Un exemple pain.001 validé (HK, rail instant-payment), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur."
-last_reviewed: "2026-07-26"
+last_reviewed: "2026-11-07"
 
 
 ---
@@ -92,7 +92,7 @@ Description du scénario, citée depuis la fiche de provenance (texte original e
 
 > Hong Kong FPS credit in HKD, clearing codes and account numbers.
 
-Un fichier d'initiation de paiement (**HK**, rail **instant-payment**), livré en `pain.001.001.03`, `pain.001.001.09`, généré et vérifié par pain001 0.0.78. C'est un exemple synthétique construit à partir des règles publiques des schémas de paiement : aucune partie réelle, aucun compte réel, aucune directive bancaire derrière lui.
+Un fichier d'initiation de paiement (**HK**, rail **instant-payment**), livré en `pain.001.001.03`, `pain.001.001.09`, généré et vérifié par pain001 0.0.82. C'est un exemple synthétique construit à partir des règles publiques des schémas de paiement : aucune partie réelle, aucun compte réel, aucune directive bancaire derrière lui.
 
 ## Fichiers
 
@@ -127,7 +127,7 @@ Confiance **supposé** : un détail repose sur une hypothèse que la fiche nomme
 ## D'où vient le contenu
 
 - Hong Kong Interbank Clearing Limited, Faster Payment System rules and clearing-code list (lu le 2026-09-11)
-- East West Bank HK, ISO 20022 FPS file specification (public) (lu le 2026-09-11)
+- A Hong Kong bank's public ISO 20022 FPS file specification (lu le 2026-09-11)
 
 Le SHA-256 de chaque fichier figure dans sa fiche de provenance. La directive d'utilisation propre à votre banque n'est pas représentée ici : [appliquez-la en privé](/example-corpus/#your-bank-s-guideline) avec l'outil d'overlay de la bibliothèque.
 

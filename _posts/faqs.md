@@ -45,7 +45,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/faqs/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Why banks reject payment files, pain.001 vs pain.008, the structured-address requirement, streaming large batches, security posture, and audit reproducibility, all answered plainly."
 item_guid: "https://pain001.com/faqs/rss.xml"
 item_link: "https://pain001.com/faqs/rss.xml"
@@ -77,13 +77,13 @@ author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
-site_last_updated: 2026-07-26
+site_last_updated: 2026-11-07
 site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Atom, JSON-LD"
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Questions"
 excerpt: "Why banks reject payment files and how Pain001 prevents it; the difference between pain.001 and pain.008; what the structured-address requirement really asks for; streaming half-million-row batches; the security posture; audit reproducibility; and what any of it costs. Sixteen questions, answered plainly, grouped by the person asking."
-last_reviewed: "2026-07-26"
+last_reviewed: "2026-11-07"
 
 ---
 
@@ -99,7 +99,7 @@ Straight answers for treasurers, payment operations, engineers, and auditors. Qu
 
 **What is the difference between pain.001 and pain.008?**
 
-Direction of the pull. `pain.001` initiates credit transfers: you push money out. `pain.008` initiates direct debits: you collect money owed to you under a mandate. Pain001 generates both: ten versions of `pain.001` (`.001.03` through `.001.12`) and `pain.008.001.02`.
+Direction of the pull. `pain.001` initiates credit transfers: you push money out. `pain.008` initiates direct debits: you collect money owed to you under a mandate. Pain001 generates both: `pain.001.001.03` through `pain.001.001.13`, and `pain.008.001.02` and `pain.008.001.08`.
 
 **We still send MT101 files. How urgent is migration?**
 
@@ -111,7 +111,7 @@ Swift planned to stop accepting fully unstructured postal addresses in CBPR+ cro
 
 **What does Pain001 cost?**
 
-Nothing. The core is dual-licensed Apache-2.0 / MIT; companion packages are Apache-2.0. Commercial use, modification, and redistribution are all permitted. For scale reference, SWIFT's translation SDK alone lists at €10,000–30,000 per year.
+Nothing. The core is dual-licensed Apache-2.0 / MIT; companion packages are Apache-2.0 / MIT. Commercial use, modification, and redistribution are all permitted. For scale reference, SWIFT's translation SDK alone lists at €10,000–30,000 per year.
 
 ---
 
@@ -127,7 +127,7 @@ Yes. Use `pain001 --dry-run` (or the `validate` subcommand, or `POST /api/v1/val
 
 **Which SEPA rulebooks are covered?**
 
-Five scheme rulebooks ship built-in: SEPA Credit Transfer (`sepa-sct`), SEPA Instant (`sepa-inst`), SEPA Direct Debit Core (`sepa-sdd`), SEPA B2B (`sepa-b2b`), and cross-border credit transfer (`xborder-ct`). Use `--scheme <name> --explain` to see every rule that passed or failed.
+The SEPA rulebooks ship built-in: SEPA Credit Transfer (`sepa-sct`), SEPA Instant (`sepa-inst`), SEPA Direct Debit Core (`sepa-sdd`) and SEPA B2B (`sepa-b2b`). Other rails have their own, from UK Faster Payments, CHAPS and Bacs to US ACH and Swift CBPR+; `pain001 plugins list` names them all. Use `--scheme <name> --explain` for a remediation hint on each violation.
 
 **Our data lives in Excel. What is the catch?**
 
@@ -151,11 +151,11 @@ Amounts are `decimal.Decimal` end-to-end in generation and scheme validation. Th
 
 **What is the security posture?**
 
-All XML parsing routes through `defusedxml` (blocking XXE and entity-expansion attacks); there is no `lxml` in the dependency tree. Inputs pass a path-traversal validator. The Docker image runs non-root. A CycloneDX SBOM is generated for core releases, and third-party plugin discovery can be disabled outright with `PAIN001_DISABLE_PLUGINS=1`.
+All XML parsing routes through `defusedxml` (blocking XXE and entity-expansion attacks); the optional `fast` extra adds `lxml` for faster XSD checks, with entity resolution, DTD loading and network access switched off. Inputs pass a path-traversal validator. The Docker image runs non-root. A CycloneDX SBOM is generated for core releases, and third-party plugin discovery can be disabled outright with `PAIN001_DISABLE_PLUGINS=1`.
 
 **How is quality enforced?**
 
-100% line and branch coverage as a hard CI gate on the core (verifiably: 3,828 lines, 926 branches at 100%), strict mypy, 100% docstring coverage, Bandit and pip-audit security linting, and CodeQL scanning. The companion packages carry the same 100% coverage discipline.
+100% line and branch coverage as a hard CI gate on the core, strict mypy, 100% docstring coverage, Bandit and pip-audit security linting, and CodeQL scanning. The companion packages carry the same 100% coverage discipline.
 
 **Can we extend it for a proprietary format?**
 
@@ -171,7 +171,7 @@ Yes. Pin the package version, replay the same input, and the output is determini
 
 **Does payment data leave our environment?**
 
-No. Every component (CLI, library, REST API, MCP server, LSP) executes locally. There is no telemetry, no SaaS callback, no external validation service. The MCP server speaks stdio only and all 17 of its tools are annotated read-only and idempotent.
+Not unless you send it. Every component (CLI, library, REST API, MCP server, LSP) executes locally. There is no telemetry, no SaaS callback, no external validation service. A file leaves the host only when you deliver it, for example with `pain001 upload` to an SFTP server you have trusted. The MCP server speaks stdio unless you start it on HTTP.
 
 **Who maintains Pain001?**
 

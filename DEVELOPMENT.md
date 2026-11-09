@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- Rust and the latest `ssg` (0.0.74): `cargo install ssg --locked --version 0.0.74`
+- Rust and the latest `ssg` (0.0.75): `cargo install ssg --locked --version 0.0.75`
 - Node.js 22 or later
 - Python 3.10 or later
 - Chrome or Chromium for browser, accessibility, and performance gates
@@ -97,7 +97,7 @@ Credentials that can read the property, for example from
 
 ## Commit policy
 
-Create a `feat/vX.Y.Z` branch, increment only the patch component, sign the
+Create a `feat/vX.Y.Z` branch, use the shared pain001 suite version, sign the
 commit cryptographically, and add a DCO trailer with `git commit -S -s`.
 Pull requests must pass every required check before merge.
 

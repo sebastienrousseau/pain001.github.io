@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Complete reference for pain001 v0.0.78: CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture."
+description: "Complete reference for pain001 v0.0.82: CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
@@ -36,7 +36,7 @@ referrer: no-referrer
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: pain001
-subtitle: "Every flag, endpoint, and behaviour of pain001 v0.0.78, taken from the shipped code, not from aspiration."
+subtitle: "Every flag, endpoint, and behaviour of pain001 v0.0.82, taken from the shipped code, not from aspiration."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
 title: "Pain001 Technical Reference: CLI, Python API and REST"
@@ -45,8 +45,8 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/documentation/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
-item_description: "Complete reference for pain001 v0.0.78: CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture."
+generator: "Static Site Generator (SSG) (version 0.0.75)"
+item_description: "Complete reference for pain001 v0.0.82: CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture."
 item_guid: "https://pain001.com/documentation/rss.xml"
 item_link: "https://pain001.com/documentation/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -67,7 +67,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Complete reference for pain001 v0.0.78: CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture."
+twitter_description: "Complete reference for pain001 v0.0.82: CLI subcommands and flags, Python API, REST endpoints under /api/v1, scheme rulebooks, input normalisation, and plugin architecture."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
@@ -77,19 +77,19 @@ author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
-site_last_updated: 2026-07-26
+site_last_updated: 2026-11-07
 site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Atom, JSON-LD"
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Reference"
 excerpt: "The complete technical reference for the Pain001 core: CLI subcommands and generate flags, the Python API and its three-layer validation pipeline, REST endpoints under /api/v1 including async jobs and Prometheus metrics, input normalisation rules, the plugin architecture, and the quality gates the project holds itself to."
-last_reviewed: "2026-07-26"
+last_reviewed: "2026-11-07"
 
 ---
 
-This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for **pain001 v0.0.78**. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.
+This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for **pain001 v0.0.82**. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.
 
-Pain001 supports **12 ISO 20022 message definitions**: `pain.001.001.03` through `pain.001.001.13` (Customer Credit Transfer Initiation, eleven versions) and `pain.008.001.02` (Customer Direct Debit Initiation).
+Pain001 supports **13 ISO 20022 message definitions**: `pain.001.001.03` through `pain.001.001.13` (Customer Credit Transfer Initiation, eleven versions) and `pain.008.001.02` / `pain.008.001.08` (Customer Direct Debit Initiation).
 
 ---
 
@@ -102,11 +102,13 @@ The `pain001` executable groups its functionality into subcommands. Running it w
 | `generate` | Convert a data file into schema-validated ISO 20022 XML (default command). |
 | `validate` | Validate input data without writing XML. |
 | `versions [--json]` | List all 13 supported message definitions. |
-| `inspect <type> [--json]` | Show the required and optional fields for a message type. |
-| `init <type> [-o DIR]` | Scaffold a starter CSV template for a message type. |
+| `inspect <type> [--json]` | Show the bundled template, schema, example data and accepted input formats for a message type. |
+| `init <type> [-o FILE]` | Scaffold a starter CSV template for a message type. |
 | `serve [--host] [--port] [--reload]` | Launch the FastAPI REST microservice (requires the `api` extra). |
-| `mcp` | Launch the in-tree Model Context Protocol server (5 tools; the full 22-tool server ships as [`pain001-mcp`](/pain001-mcp/)). |
-| `plugins list / show / disable` | Inspect and manage discovered loader, validator, scheme, and writer plugins. |
+| `mcp` | Launch the core library's built-in Model Context Protocol server over stdio (requires the `mcp` extra); the full server ships as [`pain001-mcp`](/pain001-mcp/). |
+| `plugins list / show / disable` | List the discovered loader, validator, scheme and writer plugins, show one, or print how to disable third-party discovery. |
+| `face <file> [--face] [--bindings] [-o] [--loss-report]` | Project a pain.001 XML file into another standard's JSON shape, with a report of every element not carried. |
+| `upload [<file>] --sftp <url>` | Deliver a file atomically to an SFTP server you trust explicitly (requires the `upload` extra). |
 
 ### `generate` options
 
@@ -118,21 +120,13 @@ The `pain001` executable groups its functionality into subcommands. Running it w
 | `-m, --template <FILE>` / `-s, --schema <FILE>` | Override the bundled Jinja2 template or XSD schema. |
 | `-c, --config <FILE>` | Load defaults from a configuration profile (`--profile`, `--show-config`). |
 | `--dry-run` (alias `--validate-only`) | Validate input against the JSON Schema, XSD, and scheme rulebook without writing output. |
-| `--scheme <NAME>` | Enforce a scheme rulebook: `sepa-sct`, `sepa-inst`, `sepa-sdd`, `sepa-b2b`, or `xborder-ct`. |
-| `--explain --scheme-format {text,json}` | Report each scheme rule that passed or failed, human- or machine-readable. |
+| `--scheme <NAME[,NAME]>` | Enforce one or more scheme rulebooks, comma-separated. `pain001 plugins list` names every installed rulebook. |
+| `--explain --scheme-format {text,json}` | With `--scheme`, print a remediation hint for each violation, as text or JSON. |
+| `--rules <FILE>` | Enforce a private YAML CEL policy before generation (requires the `rules` extra). |
+| `--schematron <PRESET or FILE>` | Apply Schematron business rules: the `sepa`, `fednow` or `cbpr` preset, or your own `.sch` file. |
+| `--decrypt-key <FILE>` / `--decrypt-passphrase-env <VAR>` | Import a GPG private key, and name the variable that holds its passphrase, for `.gpg` / `.asc` input (requires the `gpg` extra). |
 | `--streaming` / `--chunk-size <N>` | Memory-bounded chunked processing for large batches (default 1,000 transactions per chunk; each chunk becomes its own XML file with recomputed `NbOfTxs` and `CtrlSum`). |
 | `--emit-metrics` | Emit machine-readable run metrics for observability pipelines. |
-
-Exit codes are CI-friendly: `0` success, `1` validation failure, `2` usage error.
-
-### In the next release
-
-These features are in development for the next pain001 release. They
-are **not in pain001 0.0.78**, the version this reference documents, and
-their names may change before they ship.
-
-| Flag | Description |
-| :--- | :--- |
 | `--envelop-bah` | Wrap generated payment XML into an ISO 20022 Business Application Header (`head.001.001.03`) and `BizData` (`head.003.001.01`) envelope. |
 | `--bah-sender <BIC/ID>` | Sender financial institution BIC or organisation identifier for BAH `<Fr>`. |
 | `--bah-receiver <BIC/ID>` | Receiver financial institution BIC or organisation identifier for BAH `<To>`. |
@@ -140,14 +134,19 @@ their names may change before they ship.
 | `--xml-sign-key <FILE>` | PEM RSA private key for W3C XML Digital Signature (XML-DSig RSA-SHA256). |
 | `--xml-sign-cert <FILE>` | Optional PEM X.509 certificate to embed in XML-DSig `<ds:KeyInfo>`. |
 | `--xml-sign-passphrase-env <VAR>` | Environment variable holding passphrase to decrypt the RSA private key. |
+| `--list-templates` / `--show-template <TYPE>` | List the bundled templates, or show one template's metadata, and exit. |
 
-The Python API gains the matching `process_files` parameters:
-`envelop_bah`, `xml_sign_key` and `xml_sign_cert`.
+Exit codes are CI-friendly: `0` success, `1` validation failure, `2` usage error.
 
-Input normalisation gains **formula injection shielding**: cells starting
-with a formula trigger (`=`, `+`, `-`, `@`, tab, carriage return or line
-feed) are escaped with a leading single quote, preventing CSV injection
-(CWE-1236) when a file is opened in a spreadsheet.
+XML signing imports the `cryptography` package when it runs; install it beside pain001 (`pip install cryptography`) before using `--xml-sign-key`.
+
+### Faces: `pain001 face`
+
+A face projects a validated pain.001 document into another standard's JSON request body. `--face uk_open_banking` targets the Open Banking Read/Write API v4.0.1 domestic payment, `--face berlin_group` targets NextGenPSD2 v1.3.16 payment initiation, and `--face iso_2018` renames every element to its ISO 20022 name in snake_case. A face refuses a document that lacks an element its target requires instead of inventing a value; `--loss-report` lists every source element it did not carry. Faces are outbound only.
+
+### Delivery: `pain001 upload`
+
+`pain001 upload` sends a finished file to an SFTP server you name, and only after you have trusted its host key: from a `known_hosts` file (`--known-hosts`) or an OpenSSH SHA256 fingerprint you verified independently (`--accept-host-key`). `--print-host-key` shows the server's fingerprint without logging in. It logs in with a private key (`--identity-file`, with `--passphrase-env`), a password read from an environment variable (`--password-env`), or your SSH agent. The file is written under a temporary name and renamed on the server, so the receiving side never sees a partial file.
 
 ---
 
@@ -162,19 +161,23 @@ process_files(
     xml_template_file_path="template.xml",
     xsd_schema_file_path="schema.xsd",
     data_file_path="payments.csv",
-    output_dir="out",
+    output_path="out/payments.xml",
 )
 ```
 
 Every generated document passes three layers before it is written:
 
 1. **Input validation**: each record is checked against the message type's JSON Schema, with field-alias normalisation and IBAN/BIC syntax checks.
-2. **Scheme rulebook** (optional): SEPA SCT, SEPA Instant, SEPA SDD Core, SEPA B2B, or cross-border credit transfer rules.
-3. **XSD validation**: the rendered XML is validated against the official ISO 20022 schema via `xmlschema` before a single byte is written to disk.
+2. **Scheme rulebook** (optional): the rules of the rail you name, from SEPA (SCT, Instant, SDD Core, B2B) to national rails such as UK Faster Payments, CHAPS and Bacs, US ACH and wires, and Swift CBPR+; `pain001 plugins list` names them all.
+3. **XSD validation**: the rendered XML is validated against the official ISO 20022 schema via `xmlschema` before a single byte is written to disk. With the optional `fast` extra (lxml) installed, libxml2 accepts valid documents faster; a document it rejects is checked again by `xmlschema`, whose verdict is final.
 
 Monetary amounts are handled as `decimal.Decimal` during XML generation and scheme validation (never IEEE 754 floats), and `NbOfTxs` / `CtrlSum` control totals are recomputed from the validated records rather than trusted from input.
 
 Beyond pain.001 generation, the core library also ships a **pain.002 status-report parser and generator** (so you can read the bank's accept/reject response) and a **camt.053 statement parser and generator** for end-of-day reconciliation, plus a `VersionMapper` that migrates records between message versions.
+
+`pain001.faces.project_face` is the Python entry point for faces, and `sign_xml_document` / `verify_xml_signature` sign and verify a document with XML-DSig (they need the `cryptography` package).
+
+Runnable, self-checking scripts for the public API and the CLI live in the library's [`examples/`](https://github.com/sebastienrousseau/pain001/tree/main/examples) directory.
 
 ---
 
@@ -196,9 +199,13 @@ All endpoints are mounted under `/api/v1` (with an unversioned `/api` alias):
 | `GET /api/v1/status/{job_id}` | Poll an async job. |
 | `GET /api/v1/download/{job_id}` | Download the finished XML. |
 | `DELETE /api/v1/jobs/{job_id}` | Clean up a completed job. |
+| `GET /api/v1/faces` | List the faces and the binding keys each accepts. |
+| `POST /api/v1/faces/{face}` | Project a pain.001 document sent as XML text; returns the payload and the loss report, or `422` with the reason the face refused it. |
 | `GET /metrics` | Prometheus metrics. |
 
 Interactive documentation is served at `/api/docs` (Swagger UI), `/api/redoc`, and `/api/reference` (Scalar), with the OpenAPI document at `/openapi.json`.
+
+When the `PAIN001_API_KEY` environment variable is set, every endpoint except `/health` and `/metrics` requires it as a bearer token; when it is unset, the API is open. `pain001 serve` binds to `127.0.0.1` unless you pass `--host`.
 
 ---
 
@@ -211,6 +218,7 @@ Pain001 coerces real-world exports into valid records before validation:
 - **Dates**: ISO 8601 `YYYY-MM-DD` parsing for execution dates.
 - **Amounts**: routed through `decimal.Decimal`; malformed amounts fail validation instead of silently rounding.
 - **Character set**: transliteration helpers reduce content to the ISO 20022 Latin character set accepted by SWIFT and SEPA.
+- **Formula cells**: CSV cells that start with `=`, `+`, `-` or `@` are kept as supplied by default, so phone numbers and references survive; `load_csv_data(path, sanitize_formula=True)` escapes them with a leading quote instead.
 
 ---
 

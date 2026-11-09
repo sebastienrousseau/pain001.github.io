@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-07T08:00:00+00:00"
+date: "2026-11-09T08:00:00+00:00"
 description: "Swedish salary batch (Bankgirot Löner), SALA, one debit. Un campione pain.001 validato (Svezia, circuito salary), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -45,15 +45,15 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/it/corpus-se-bankgiro-salary/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Swedish salary batch (Bankgirot Löner), SALA, one debit. Un campione pain.001 validato (Svezia, circuito salary), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser."
 item_guid: "https://pain001.com/it/corpus-se-bankgiro-salary/"
 item_link: "https://pain001.com/it/corpus-se-bankgiro-salary/"
-item_pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+item_pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 item_title: "Esempio pain.001 ISO 20022 se.bankgiro.salary: Svezia (salary)"
-last_build_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+last_build_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -77,13 +77,13 @@ author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
-site_last_updated: 2026-07-26
+site_last_updated: 2026-11-07
 site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Atom, JSON-LD"
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Corpus di esempi"
 excerpt: "Swedish salary batch (Bankgirot Löner), SALA, one debit. Un campione pain.001 validato (Svezia, circuito salary), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser."
-last_reviewed: "2026-07-26"
+last_reviewed: "2026-11-07"
 
 
 ---
@@ -92,7 +92,7 @@ Descrizione dello scenario, citata dal record di provenienza (testo originale in
 
 > Swedish salary batch (Bankgirot Löner), SALA, one debit.
 
-Un file di disposizione di pagamento (**Svezia**, circuito **salary**), fornito in `pain.001.001.03`, `pain.001.001.09`, generato e verificato da pain001 0.0.78. È un esempio sintetico costruito dai regolamenti pubblici degli schemi di pagamento: nessuna parte reale, nessun conto reale, nessuna linea guida bancaria dietro di esso.
+Un file di disposizione di pagamento (**Svezia**, circuito **salary**), fornito in `pain.001.001.03`, `pain.001.001.09`, generato e verificato da pain001 0.0.82. È un esempio sintetico costruito dai regolamenti pubblici degli schemi di pagamento: nessuna parte reale, nessun conto reale, nessuna linea guida bancaria dietro di esso.
 
 ## File
 
@@ -126,7 +126,7 @@ Confidenza **derivato**: costruito dal regolamento pubblico o dalla guida di imp
 
 ## Da dove proviene il contenuto
 
-- Bankgirot, Bankgirot Löner (salary) service description; Nordea Corporate Access salary examples (Jun 2026) (letto il 2026-09-10)
+- Bankgirot, Bankgirot Löner (salary) service description; a Swedish bank's public pain.001 salary examples (Jun 2026) (letto il 2026-09-10)
 
 Lo SHA-256 di ogni file è nel suo record di provenienza. La linea guida d'uso della tua banca non è rappresentata qui: [applicala in privato](/example-corpus/#your-bank-s-guideline) con lo strumento di overlay della libreria.
 

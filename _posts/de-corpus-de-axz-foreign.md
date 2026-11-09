@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-07T08:00:00+00:00"
+date: "2026-11-09T08:00:00+00:00"
 description: "Foreign payment in USD from a German account, DK order type AXZ. Eine validierte pain.001-Beispieldatei (Deutschland, Schiene cross-border), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -45,15 +45,15 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/de/corpus-de-axz-foreign/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Foreign payment in USD from a German account, DK order type AXZ. Eine validierte pain.001-Beispieldatei (Deutschland, Schiene cross-border), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
 item_guid: "https://pain001.com/de/corpus-de-axz-foreign/"
 item_link: "https://pain001.com/de/corpus-de-axz-foreign/"
-item_pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+item_pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 item_title: "ISO-20022-pain.001-Beispiel de.axz.foreign: Deutschland (cross-border)"
-last_build_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+last_build_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -77,13 +77,13 @@ author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
-site_last_updated: 2026-07-26
+site_last_updated: 2026-11-07
 site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Atom, JSON-LD"
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Beispielkorpus"
 excerpt: "Foreign payment in USD from a German account, DK order type AXZ. Eine validierte pain.001-Beispieldatei (Deutschland, Schiene cross-border), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
-last_reviewed: "2026-07-26"
+last_reviewed: "2026-11-07"
 
 
 ---
@@ -92,7 +92,7 @@ Szenariobeschreibung, zitiert aus dem Provenienzdatensatz (englischer Originalte
 
 > Foreign payment in USD from a German account, DK order type AXZ.
 
-Eine Zahlungsinitiierungsdatei (**Deutschland**, Schiene **cross-border**), ausgeliefert in `pain.001.001.03`, `pain.001.001.09`, erzeugt und geprüft von pain001 0.0.78. Es handelt sich um ein synthetisches Beispiel aus den öffentlichen Regelwerken der Zahlungssysteme: keine reale Partei, kein reales Konto und keine Bankrichtlinie dahinter.
+Eine Zahlungsinitiierungsdatei (**Deutschland**, Schiene **cross-border**), ausgeliefert in `pain.001.001.03`, `pain.001.001.09`, erzeugt und geprüft von pain001 0.0.82. Es handelt sich um ein synthetisches Beispiel aus den öffentlichen Regelwerken der Zahlungssysteme: keine reale Partei, kein reales Konto und keine Bankrichtlinie dahinter.
 
 ## Dateien
 
@@ -115,7 +115,7 @@ Konfidenz **angenommen**: ein Detail beruht auf einer Annahme, die der Datensatz
 ## Woher der Inhalt stammt
 
 - DK DFUE-Abkommen Anlage 3 V3.8, order type AXZ (gelesen am 2026-09-10)
-- DZ BANK, AXZ product description (AWV reporting) (gelesen am 2026-09-10)
+- A German bank's public AXZ product description (AWV reporting) (gelesen am 2026-09-10)
 
 Der SHA-256-Wert jeder Datei steht in ihrem Provenienzdatensatz. Die eigene Nutzungsrichtlinie Ihrer Bank ist hier nicht abgebildet: [Wenden Sie sie privat an](/example-corpus/#your-bank-s-guideline) mit dem Overlay-Werkzeug der Bibliothek.
 

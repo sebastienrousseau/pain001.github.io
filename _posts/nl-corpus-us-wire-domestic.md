@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-07T08:00:00+00:00"
+date: "2026-11-09T08:00:00+00:00"
 description: "Fedwire domestic funds transfer, urgent. Een gevalideerd pain.001-voorbeeld (Verenigde Staten, rail priority-payment), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -45,15 +45,15 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/nl/corpus-us-wire-domestic/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Static Site Generator (SSG) (version 0.0.72)"
+generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Fedwire domestic funds transfer, urgent. Een gevalideerd pain.001-voorbeeld (Verenigde Staten, rail priority-payment), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
 item_guid: "https://pain001.com/nl/corpus-us-wire-domestic/"
 item_link: "https://pain001.com/nl/corpus-us-wire-domestic/"
-item_pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+item_pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 item_title: "ISO 20022 pain.001-voorbeeld us.wire.domestic: Verenigde Staten (priority-payment)"
-last_build_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+last_build_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 07 Nov 2026 08:00:00 +0000"
+pub_date: "Mon, 09 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -77,13 +77,13 @@ author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thank you for using Pain001 Suite!"
-site_last_updated: 2026-07-26
+site_last_updated: 2026-11-07
 site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Atom, JSON-LD"
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Voorbeeldcorpus"
 excerpt: "Fedwire domestic funds transfer, urgent. Een gevalideerd pain.001-voorbeeld (Verenigde Staten, rail priority-payment), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
-last_reviewed: "2026-07-26"
+last_reviewed: "2026-11-07"
 
 
 ---
@@ -92,7 +92,7 @@ Scenariobeschrijving, geciteerd uit het herkomstrecord (oorspronkelijke Engelse 
 
 > Fedwire domestic funds transfer, urgent.
 
-Een betaalinitiatiebestand (**Verenigde Staten**, rail **priority-payment**), geleverd in `pain.001.001.03`, `pain.001.001.09`, gegenereerd en gecontroleerd door pain001 0.0.78. Het is een synthetisch voorbeeld, opgebouwd uit de openbare rulebooks van de betaalschema's: geen echte partij, geen echte rekening en geen bankrichtlijn erachter.
+Een betaalinitiatiebestand (**Verenigde Staten**, rail **priority-payment**), geleverd in `pain.001.001.03`, `pain.001.001.09`, gegenereerd en gecontroleerd door pain001 0.0.82. Het is een synthetisch voorbeeld, opgebouwd uit de openbare rulebooks van de betaalschema's: geen echte partij, geen echte rekening en geen bankrichtlijn erachter.
 
 ## Bestanden
 
@@ -126,7 +126,7 @@ Betrouwbaarheid **afgeleid**: opgebouwd uit het openbare rulebook of de implemen
 ## Waar de inhoud vandaan komt
 
 - Federal Reserve Fedwire Funds Service ISO 20022 quick reference (gelezen op 2026-09-10)
-- Citi ISO 20022 FAQs (Feb 2026); Cross River pain.001.001.03 wire input specification (gelezen op 2026-09-10)
+- Two US banks' public ISO 20022 FAQs (Feb 2026) and pain.001.001.03 wire input specification (gelezen op 2026-09-10)
 
 De SHA-256 van elk bestand staat in zijn herkomstrecord. De eigen gebruiksrichtlijn van uw bank is hier niet weergegeven: [pas die privé toe](/example-corpus/#your-bank-s-guideline) met de overlay-tooling van de bibliotheek.
 
