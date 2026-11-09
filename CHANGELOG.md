@@ -38,6 +38,8 @@ All notable changes to this website are documented here. The format follows
   dot-directories also matched the homepage's own path, `.`.
 - `llms.txt` no longer says the MCP server has 21 tools (0.0.83 ships
   30); it links the MCP page instead of a hand-typed count.
+- `/try/#sample=sepa-sct` (and any built-in sample key) opens that
+  sample and validates it; only corpus scenarios could be linked before.
 
 ## [0.0.83] - 2026-11-09
 

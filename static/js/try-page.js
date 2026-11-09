@@ -407,6 +407,14 @@ for (const [key, scenario] of Object.entries(SCENARIOS)) {
 
 const CORPUS = new Map();
 
+/* The sample a link asks for: /try/#sample=<key>. The fragment is what
+ * the site links to (a query string made every sample a separate URL for
+ * crawlers); the query form still works for links already out there. */
+function linkedSample() {
+  return new URLSearchParams(location.hash.replace(/^#/, "")).get("sample")
+    || new URLSearchParams(location.search).get("sample");
+}
+
 async function loadCorpusSamples() {
   try {
     const data = await fetch("/corpus/try-samples.json").then((r) => (r.ok ? r.json() : null));
@@ -422,11 +430,8 @@ async function loadCorpusSamples() {
     }
     els.sampleSelect.appendChild(group);
     // /try/#sample=corpus:<scenario id> opens a scenario page's example
-    // directly. The fragment is what the corpus pages link to (a query
-    // string made every scenario a separate URL for crawlers); the query
-    // form still works for links already out there.
-    const wanted = new URLSearchParams(location.hash.replace(/^#/, "")).get("sample")
-      || new URLSearchParams(location.search).get("sample");
+    // directly (built-in keys are handled at start-up, below).
+    const wanted = linkedSample();
     if (wanted && CORPUS.has(wanted)) {
       els.sampleSelect.value = wanted;
       els.sampleSelect.dispatchEvent(new Event("change"));
@@ -458,6 +463,16 @@ els.scenarioSelect.addEventListener("change", () => {
   }
   els.scenarioSelect.value = "";
 });
+
+// /try/#sample=sepa-sct (the homepage's primary button) opens a built-in
+// sample and validates it, so the visitor lands on a result.
+{
+  const linked = linkedSample();
+  if (linked && Object.hasOwn(SAMPLES, linked)) {
+    els.sampleSelect.value = linked;
+    els.sampleSelect.dispatchEvent(new Event("change"));
+  }
+}
 
 els.fixBtn.addEventListener("click", () => {
   if (state.pristine) loadData(state.pristine);
