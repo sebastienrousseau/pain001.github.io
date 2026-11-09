@@ -6,6 +6,8 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.0.84] - 2026-11-09
+
 ### Added
 
 - Audit all nine pain001 repositories and their publication channels daily, after release workflows and after the main deployment completes. Use the shared read-only checker pinned to a core commit and retain its JSON evidence.
@@ -16,6 +18,10 @@ All notable changes to this website are documented here. The format follows
 - A manual run of CI on `main` now deploys to GitHub Pages, as a push
   does. On 2026-11-09 GitHub's Actions outage dropped the deploy job
   from the 0.0.83 merge run, which then could not be retried.
+
+### Changed
+
+- Release the website with pain001 0.0.84. Pin the browser runtime to the published core wheel and regenerate the corpus pages, versioned downloads, demo samples and translations from the merged core release.
 
 ## [0.0.83] - 2026-11-09
 

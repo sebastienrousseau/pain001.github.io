@@ -87,7 +87,7 @@ last_reviewed: "2026-11-07"
 
 ---
 
-**`pain001-mcp` v0.0.83** exposes the Pain001 suite to AI agents as **Model Context Protocol tools**. Claude Desktop, Claude Code, Cursor, and any MCP-compatible orchestrator can validate IBANs, migrate message versions, convert SWIFT MT101, and generate schema-validated `pain.001` XML inside a conversation, on your own machine.
+**`pain001-mcp` v0.0.84** exposes the Pain001 suite to AI agents as **Model Context Protocol tools**. Claude Desktop, Claude Code, Cursor, and any MCP-compatible orchestrator can validate IBANs, migrate message versions, convert SWIFT MT101, and generate schema-validated `pain.001` XML inside a conversation, on your own machine.
 
 Card networks and PSPs have built agentic *checkout* rails. The corporate payment-file layer, where credit transfers are actually initiated, had no agent interface. This server fills that gap. Payment data stays on your machine: the default transport is stdio, and the tools that only read or compute are annotated read-only and idempotent, so an agent can explore without side effects.
 

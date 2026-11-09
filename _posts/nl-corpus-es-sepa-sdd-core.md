@@ -92,7 +92,7 @@ Scenariobeschrijving, geciteerd uit het herkomstrecord (oorspronkelijke Engelse 
 
 > SEPA Core direct debit, recurring, Spanish creditor identifier.
 
-Een betaalinitiatiebestand (**Spanje**, rail **sepa-direct-debit**), geleverd in `pain.008.001.02`, `pain.008.001.08`, gegenereerd en gecontroleerd door pain001 0.0.83. Het is een synthetisch voorbeeld, opgebouwd uit de openbare rulebooks van de betaalschema's: geen echte partij, geen echte rekening en geen bankrichtlijn erachter.
+Een betaalinitiatiebestand (**Spanje**, rail **sepa-direct-debit**), geleverd in `pain.008.001.02`, `pain.008.001.08`, gegenereerd en gecontroleerd door pain001 0.0.84. Het is een synthetisch voorbeeld, opgebouwd uit de openbare rulebooks van de betaalschema's: geen echte partij, geen echte rekening en geen bankrichtlijn erachter.
 
 ## Bestanden
 

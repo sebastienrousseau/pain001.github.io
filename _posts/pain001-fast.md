@@ -63,7 +63,7 @@ apple_mobile_web_app_orientations: portrait
 
 `pain001-fast` is an optional, high-throughput native acceleration core written in Rust with PyO3 bindings. Designed for corporate treasury backbones, high-frequency clearing hubs, and payment service providers, it offloads CPU-intensive validation loops from the Python Global Interpreter Lock (GIL) to parallel multi-core hardware.
 
-**Status: experimental.** Version 0.0.83 joins the pain001 suite in lockstep. Source and native wheels are distributed through [GitHub Releases](https://github.com/sebastienrousseau/pain001-fast/releases/tag/v0.0.83); the package is not published on PyPI or crates.io.
+**Status: experimental.** Version 0.0.84 joins the pain001 suite in lockstep. Source and native wheels are distributed through [GitHub Releases](https://github.com/sebastienrousseau/pain001-fast/releases/tag/v0.0.84); the package is not published on PyPI or crates.io.
 
 When the `pain001_fast` module is importable, `pain001` core uses it for IBAN, BIC, and character set validation without any configuration or API changes; when it is not, `pain001` uses its own Python routines.
 
