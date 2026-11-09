@@ -1,0 +1,42 @@
+# SPDX-FileCopyrightText: 2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
+# Generated from the core's docs/ecosystem.json by render_ecosystem_workflows.py.
+name: Suite Consistency
+on:
+  schedule:
+    - cron: "59 6 * * *"
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Explicit suite version; empty checks the latest published family"
+        type: string
+        default: ""
+  workflow_run:
+    workflows: ["Release", "CI"]
+    types: [completed]
+permissions:
+  contents: read
+concurrency:
+  group: suite-consistency
+  cancel-in-progress: true
+jobs:
+  consistency:
+    name: All nine publications agree
+    if: >-
+      github.event_name != 'workflow_run' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.event == 'push' &&
+       (startsWith(github.event.workflow_run.head_branch, 'v0.') || (github.event.workflow_run.head_branch == 'main' && github.event.workflow_run.name == 'CI')))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: sebastienrousseau/pain001/.github/actions/check-ecosystem@871cee71a3fbd443593c7e821bf8809a30073052
+        with:
+          version: ${{ inputs.version }}
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: always()
+        with:
+          name: ecosystem-publication-report
+          path: ecosystem-publication.json
+          if-no-files-found: error
+          retention-days: 14

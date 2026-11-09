@@ -4,6 +4,12 @@ All notable changes to this website are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- Audit all nine pain001 repositories and their publication channels daily, after release workflows and after the main deployment completes. Use the shared read-only checker pinned to a core commit and retain its JSON evidence.
+
 ## [0.0.83] - 2026-11-09
 
 ### Changed
