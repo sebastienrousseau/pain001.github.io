@@ -30,6 +30,10 @@ All notable changes to this website are documented here. The format follows
 - `robots.txt` allows every public page and names the AI crawlers
   (GPTBot, ClaudeBot, PerplexityBot, Google-Extended and others)
   explicitly, with the sitemap link kept.
+- Each sitemap URL's `lastmod` is the last commit to the page's
+  sources (its post, layout and locale table) instead of the build
+  date stamped on all 493 URLs at every deploy. CI's build job now
+  checks out full history for it.
 
 ## [0.0.83] - 2026-11-09
 

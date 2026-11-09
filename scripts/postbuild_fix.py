@@ -1315,8 +1315,74 @@ def mark_noindex_pages(site: Path) -> None:
     print(f"[postbuild] noindex on {marked} utility page(s); /404.html published")
 
 
+I18N_TABLE_DIRS = ("pages_i18n", "docs_i18n", "try_i18n")
+_LAYOUT_RE = re.compile(r'^layout:\s*"?([\w-]+)"?\s*$', re.M)
+
+
+def source_dates(root: Path) -> dict[str, str] | None:
+    """Each tracked file's last commit date (YYYY-MM-DD), from one pass
+    over the history; None when the history is shallow or git is absent,
+    since a one-commit clone would date every file to that commit."""
+    import subprocess
+    try:
+        shallow = subprocess.run(
+            ["git", "rev-parse", "--is-shallow-repository"], cwd=root,
+            capture_output=True, text=True, check=True).stdout.strip()
+        if shallow != "false":
+            return None
+        log = subprocess.run(
+            ["git", "log", "--format=@%cs", "--name-only", "--no-renames", "HEAD"],
+            cwd=root, capture_output=True, text=True, check=True).stdout
+    except (OSError, subprocess.CalledProcessError):
+        return None
+    dates: dict[str, str] = {}
+    current = ""
+    for line in log.splitlines():
+        if line.startswith("@"):
+            current = line[1:]
+        elif line and line not in dates:
+            dates[line] = current
+    return dates
+
+
+def page_sources(root: Path, rel: str) -> list[str]:
+    """The source files a built page is made from: its post, the post's
+    layout and, for a locale copy of an English page, that locale's
+    translation table."""
+    parts = rel.split("/")
+    locale, slug = (parts[0], "/".join(parts[1:])) if parts[0] in LOCALES and len(parts) > 1 else ("", rel)
+    candidates = ["_posts/index.md"] if slug == "." else [f"_posts/{slug}.md", f"_posts/{slug.replace('/', '-')}.md"]
+    if locale and slug.startswith("corpus-"):
+        candidates.insert(0, f"_posts/{locale}-{slug}.md")
+    sources = [c for c in candidates if (root / c).is_file()][:1]
+    if sources:
+        layout = _LAYOUT_RE.search((root / sources[0]).read_text(encoding="utf-8"))
+        if layout and (root / "_layouts" / f"{layout.group(1)}.html").is_file():
+            sources.append(f"_layouts/{layout.group(1)}.html")
+    if locale:
+        for table_dir in I18N_TABLE_DIRS:
+            table = root / "scripts" / table_dir / f"{LOCALES[locale].lower()}.json"
+            table = table if table.is_file() else root / "scripts" / table_dir / f"{locale}.json"
+            if table.is_file():
+                sources.append(table.relative_to(root).as_posix())
+    return sources
+
+
+def page_lastmod(root: Path, rel: str, dates: dict[str, str] | None, fallback: str) -> str:
+    """The latest commit date among a page's sources, else the build date."""
+    if dates is None:
+        return fallback
+    found = [dates[src] for src in page_sources(root, rel) if src in dates]
+    return max(found) if found else fallback
+
+
 def regen_sitemap(site: Path) -> None:
+    """Write sitemap.xml with each page's lastmod taken from the last
+    commit to its sources. It used to stamp the build date on every URL,
+    which tells crawlers all 493 pages changed on every deploy."""
+    root = Path(__file__).resolve().parent.parent
     today = date.today().isoformat()
+    dates = source_dates(root)
     urls = []
     for page in sorted(site.rglob("index.html")):
         rel = page.parent.relative_to(site).as_posix()
@@ -1326,7 +1392,7 @@ def regen_sitemap(site: Path) -> None:
         urls.append(
             "<url>\n"
             f"  <loc>{loc}</loc>\n"
-            f"  <lastmod>{today}</lastmod>\n"
+            f"  <lastmod>{page_lastmod(root, rel, dates, today)}</lastmod>\n"
             "  <changefreq>weekly</changefreq>\n"
             "</url>"
         )
@@ -1337,7 +1403,8 @@ def regen_sitemap(site: Path) -> None:
         + "\n</urlset>\n"
     )
     (site / "sitemap.xml").write_text(body, encoding="utf-8")
-    print(f"[postbuild] sitemap.xml regenerated with {len(urls)} URLs")
+    source = "commit dates" if dates is not None else "the build date (shallow history)"
+    print(f"[postbuild] sitemap.xml regenerated with {len(urls)} URLs, lastmod from {source}")
 
 
 # Corpus scenario pages exist in English and in the five locales whose
