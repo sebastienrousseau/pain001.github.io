@@ -19,6 +19,8 @@ All notable changes to this website are documented here. The format follows
 - The homepage's "Five focused packages" heading is counted from the
   package tiles at build time, so it cannot drift from them. Five is
   right: the sixth tile is the example corpus, not a package.
+- The homepage and the 34 locale homepages declare `og:type` `website`;
+  ssg wrote `article` on every page whatever the front matter said.
 
 ## [0.0.83] - 2026-11-09
 

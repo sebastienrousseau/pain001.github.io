@@ -1564,6 +1564,29 @@ def stamp_package_count(html: str) -> str:
     return _PACKAGE_COUNT_RE.sub(rf"\g<1>{_NUMBER_WORDS[count]}\g<2>", html)
 
 
+# Home pages describe a site, not an article: ssg writes og:type
+# "article" on every page whatever the front matter's `type` says.
+_OG_TYPE_RE = re.compile(r'(<meta\s+property=["\']og:type["\']\s+content=["\'])article(["\'])')
+
+
+def home_page_paths(site: Path) -> list[Path]:
+    """The English homepage and every locale's homepage."""
+    pages = [site / "index.html"] + [site / slug / "index.html" for slug in LOCALES]
+    return [page for page in pages if page.is_file()]
+
+
+def fix_home_og_type(site: Path) -> None:
+    """og:type ``website`` on the home pages; articles keep ``article``."""
+    changed = 0
+    for page in home_page_paths(site):
+        html = page.read_text(encoding="utf-8")
+        fixed = _OG_TYPE_RE.sub(r"\g<1>website\g<2>", html)
+        if fixed != html:
+            page.write_text(fixed, encoding="utf-8")
+            changed += 1
+    print(f"[postbuild] og:type website on {changed} home page(s)")
+
+
 def stamp_home_package_count(site: Path) -> None:
     """Apply stamp_package_count to the built homepage."""
     page = site / "index.html"
@@ -2030,6 +2053,7 @@ def main() -> None:
     retitle_tag_pages(site)
     defer_ssg_search(site)
     ensure_social_metadata(site)
+    fix_home_og_type(site)
     stamp_home_package_count(site)
     remove_stray_per_page_files(site)
 
