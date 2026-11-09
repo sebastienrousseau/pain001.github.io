@@ -27,6 +27,9 @@ All notable changes to this website are documented here. The format follows
   maintainer's Person entity on sebastienrousseau.com.
   `scripts/validate_jsonld.py` checks every JSON-LD block on the site
   parses and that the homepage graph stays current.
+- `robots.txt` allows every public page and names the AI crawlers
+  (GPTBot, ClaudeBot, PerplexityBot, Google-Extended and others)
+  explicitly, with the sitemap link kept.
 
 ## [0.0.83] - 2026-11-09
 
