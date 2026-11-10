@@ -127,7 +127,7 @@ Figures refreshed at each site build from public sources (PyPI download statisti
 | GitHub stars | 49 | GitHub |
 | GitHub forks | 17 | GitHub |
 
-Refreshed 2026-11-09. Page views are counted by Cloudflare Web Analytics, cookieless and without identifiers ([privacy](/privacy/)); the browser demo is not measured, by design.
+Refreshed 2026-11-09. Page views are counted by Cloudflare Web Analytics, cookieless and without identifiers, and a few anonymous events by the site's own Worker ([privacy](/privacy/)).
 <!-- traction:end -->
 
 ## Trademark

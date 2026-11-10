@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "A privacy statement page for pain001.com, a static site that collects nothing, documenting software that processes everything locally."
+banner_alt: "A privacy statement page for pain001.com, a static site that counts page views and a few anonymous events without identifying anyone, documenting software that processes everything locally."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -10,13 +10,13 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "No cookies, no tracking, no identifiers. The website stores only your theme choice locally, counts page views through Cloudflare Web Analytics without identifying you, and the Pain001 software processes all payment data on your own infrastructure."
+description: "No cookies, no tracking, no identifiers. The website stores only your theme choice locally, counts page views through Cloudflare Web Analytics and a few anonymous events through its own Worker without identifying you, and the Pain001 software processes all payment data on your own infrastructure."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/privacy/"
-image_alt: "A privacy statement page for pain001.com, a static site that collects nothing, documenting software that processes everything locally."
+image_alt: "A privacy statement page for pain001.com, a static site that counts page views and a few anonymous events without identifying anyone, documenting software that processes everything locally."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -39,18 +39,18 @@ short_name: pain001
 subtitle: "No cookies, no tracking, no identifiers. Your theme choice stays in your browser; your payment data stays on your machines; page views are counted without identifying you."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Privacy: This Site Collects Nothing"
+title: "Privacy: Counted, Never Identified"
 url: "https://pain001.com/privacy/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/privacy/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.75)"
-item_description: "No cookies, no tracking, no identifiers. The website stores only your theme choice locally, counts page views through Cloudflare Web Analytics without identifying you, and the Pain001 software processes all payment data on your own infrastructure."
+item_description: "No cookies, no tracking, no identifiers. The website stores only your theme choice locally, counts page views through Cloudflare Web Analytics and a few anonymous events through its own Worker without identifying you, and the Pain001 software processes all payment data on your own infrastructure."
 item_guid: "https://pain001.com/privacy/rss.xml"
 item_link: "https://pain001.com/privacy/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
-item_title: "Privacy: This Site Collects Nothing"
+item_title: "Privacy: Counted, Never Identified"
 last_build_date: "Sun, 26 Jul 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Privacy: This Site Collects Nothing"
+apple-mobile-web-app-title: "Privacy: Counted, Never Identified"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "No cookies, no tracking, no identifiers. The website stores only your theme choice locally, counts page views through Cloudflare Web Analytics without identifying you, and the Pain001 software processes all payment data on your own infrastructure."
+twitter_description: "No cookies, no tracking, no identifiers. The website stores only your theme choice locally, counts page views through Cloudflare Web Analytics and a few anonymous events through its own Worker without identifying you, and the Pain001 software processes all payment data on your own infrastructure."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Privacy: This Site Collects Nothing"
+twitter_title: "Privacy: Counted, Never Identified"
 twitter_url: "https://pain001.com/privacy/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -82,19 +82,20 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Legal"
-excerpt: "The privacy position of pain001.com and the Pain001 software, in full: the website sets no cookies and counts page views without identifiers; GitHub Pages serves the static files; the software processes every payment record locally with no telemetry, no SaaS callback, and no data transmission of any kind."
+excerpt: "The privacy position of pain001.com and the Pain001 software, in full: the website sets no cookies and counts page views and a few anonymous events without identifiers; GitHub Pages serves the static files; the software processes every payment record locally with no telemetry, no SaaS callback, and no data transmission of any kind."
 last_reviewed: "2026-07-26"
 
 ---
 
-The short version: this site collects nothing, and the software processes everything locally.
+The short version: this site counts page views and a few anonymous events, identifies nobody, and the software processes everything locally.
 
 ## This website
 
-- **Page views are counted, nobody is identified.** Every page except the [browser demo](/try/) loads [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/), a cookieless beacon operated by Cloudflare, Inc., which already fronts this domain, under [Cloudflare's privacy policy](https://www.cloudflare.com/privacypolicy/). It records the page path, the referring site, your country, your browser family and Core Web Vitals timings; it sets no cookie, stores no IP address, builds no fingerprint and assigns no identifier, so two visits by the same person cannot be joined. The beacon script itself is served from this origin (a vendored copy, so no third-party code is fetched); its one request goes to Cloudflare. It is absent from the demo page, whose "Verify it yourself" panel invites you to confirm that with DevTools open.
+- **Page views are counted, nobody is identified.** Every page, including the [browser demo](/try/), loads [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/), a cookieless beacon operated by Cloudflare, Inc., which already fronts this domain, under [Cloudflare's privacy policy](https://www.cloudflare.com/privacypolicy/). It records the page path, the referring site, your country, your browser family and Core Web Vitals timings; it sets no cookie, stores no IP address, builds no fingerprint and assigns no identifier, so two visits by the same person cannot be joined. The beacon script itself is served from this origin (a vendored copy, so no third-party code is fetched); its one request goes to Cloudflare.
+- **A few events are counted, also without identifying anyone.** Clicking the main buttons, starting the demo, running its schema check, copying or downloading its XML, copying the install command, following a link to GitHub, GitHub Discussions or PyPI, downloading the evidence pack and opening the bank-profile guide each send one short message to this site's own address: the event's name, the page path and at most a short label. A Cloudflare Worker writes it to Workers Analytics Engine, where it is kept for 3 months. It carries no cookie, no identifier and nothing you type or load into the demo; no IP address is stored and no payment data is ever involved. If your browser sends Do Not Track or Global Privacy Control, no event is sent. Nothing is counted on a local copy of the site.
 - **No tracking pixels, no advertising or session-replay scripts.** The only state stored in your browser is your light/dark theme choice, kept in `localStorage` and never transmitted.
 - **Hosting.** The site is served as static files by GitHub Pages, which may log standard request metadata (IP address, user agent) under [GitHub's privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement).
-- **Assets.** Every asset (logo, fonts, styles, scripts, the demo's WebAssembly runtime and schemas) is served from this origin. Apart from the beacon's one request to Cloudflare named above, the site makes **no third-party requests at all**; on the demo page it makes none.
+- **Assets.** Every asset (logo, fonts, styles, scripts, the demo's WebAssembly runtime and schemas) is served from this origin. Apart from the beacon's one request to Cloudflare named above, the site makes **no third-party requests at all**; the event counts go to this site's own address.
 
 ## The Pain001 software
 

@@ -45,8 +45,8 @@ def render(month: int, week: int, stars: int, forks: int, day: str) -> str:
         f"| GitHub stars | {stars:,} | GitHub |\n"
         f"| GitHub forks | {forks:,} | GitHub |\n\n"
         f"Refreshed {day}. Page views are counted by Cloudflare Web Analytics, "
-        "cookieless and without identifiers ([privacy](/privacy/)); the browser "
-        "demo is not measured, by design.\n"
+        "cookieless and without identifiers, and a few anonymous events by the "
+        "site's own Worker ([privacy](/privacy/)).\n"
         "<!-- traction:end -->"
     )
 

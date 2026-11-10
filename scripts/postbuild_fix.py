@@ -2153,7 +2153,7 @@ def main() -> None:
         bundle_stylesheets(site)
         # Our hand-written scripts ship without their block comments: the
         # translated /try/ pages sit close to ssg's 50 KB script budget.
-        for name in ("prism.js", "pain001-prism.js", "home.js", "prism-theme-init.js"):
+        for name in STRIPPED_SCRIPTS:
             js = site / "js" / name
             if js.is_file():
                 js.write_text(strip_js_comments(js.read_text(encoding="utf-8")), encoding="utf-8")
@@ -2319,6 +2319,17 @@ def relocate_nested_routes(site: Path) -> None:
             rewritten += 1
     print(f"[postbuild] {len(NESTED_ROUTES)} page(s) moved to nested routes, "
           f"{rewritten} file(s) relinked")
+
+
+# Our hand-written scripts whose block comments the --optimise-assets pass
+# removes. The translated /try/ pages sit close to ssg's 50 KB script
+# budget, and the event script (decision D1) pushed them over it.
+# tests/python/test_stripped_scripts.py checks each one still parses after
+# stripping, since the stripper does not understand regex literals.
+STRIPPED_SCRIPTS = (
+    "prism.js", "pain001-prism.js", "home.js", "prism-theme-init.js",
+    "pain001-analytics.js", "pain001-events.js", "try-page.js",
+)
 
 
 def stamp_redirect_map(site: Path) -> None:

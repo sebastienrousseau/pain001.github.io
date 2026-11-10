@@ -11,12 +11,15 @@ All notable changes to this website are documented here. The format follows
 - Replace the enterprise page with `/for-banks/`, a self-service evidence page for bank reviewers: the evidence pack, the published maintenance policy, a guide to building a bank profile in-house, open integration recipes, and the three questions a review asks. There is no paid tier, no briefing and no enquiry form; `/enterprise/` and `/thanks/` become redirect stubs (decision D2).
 - Navigation is Try it, Developers, Docs, For banks and Insights, with a "Try it free" button; the footer states that Pain001 is an independent project maintained in a personal capacity and links the governance page (decisions D0 and D3).
 - The homepage leads bank reviewers to the evidence pack, adds the two paths (building an integration, evaluating for an organisation), and points the bank-profile layer at the new guide (decision D3).
+- The privacy page, `METRICS.md` and the demo's "Verify it yourself" panel (in all 34 locales) describe the page-view and event counts. The demo said it ran no analytics script while the layout already loaded the page-view beacon there; it now names every request it makes.
+- The demo and event scripts lose their block comments at build, keeping the translated `/try/` pages inside the 50 KB script budget.
 - Remove every remaining paid offer from the why, executive-brief, Excel, MT101, governance and comparison pages (and the why and executive-brief translations in all 34 locales), from llms.txt, and an employer's name from a stylesheet comment (decision D0).
 
 ### Added
 
 - The governance page states how decisions are made (pull requests, ADRs, DCO), the release process, how to become a maintainer, and a bus-factor plan whose key, domain and ownership items the maintainer still has to fill in (decision D6).
 - `/developers/`, `/developers/ci/` (the GitHub Action) and `/docs/bank-profiles/`; nested routes are moved into place after the ssg build.
+- First-party, cookie-free event counts (`static/js/pain001-events.js`) for the twelve events of decision D1, sent to `/e` on this origin with the event name, page path and at most a short label; nothing is sent locally or under Do Not Track or Global Privacy Control. ADR 0002 records that Cloudflare Web Analytics plus Workers Analytics Engine supersede Umami.
 - `scripts/validate_no_commercial.py`, run in `make test` and CI: the build fails on a retired paid phrase, a funding-platform link, a link to `/enterprise/` or `/thanks/`, or an employer's name.
 
 ## [0.0.84] - 2026-11-09
