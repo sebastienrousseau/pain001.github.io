@@ -3,24 +3,31 @@
 
 # Maintainer handover: decisions of 10 November 2026
 
-The site changes for decisions D0 to D6 are on `feat/v0.0.85`. These items
-need the maintainer: an account, a number, or a fact only the maintainer
-holds. Nothing here is done by the build.
+The site changes for decisions D0 to D6 shipped in pain001.com 0.0.85.
+These items needed the maintainer: an account, a number, or a fact only the
+maintainer holds. Nothing here is done by the build; each section says what
+was set up outside the repository and what is still open.
 
 ## Cloudflare: a real 301 for `/enterprise/`
 
 GitHub Pages cannot send a redirect status, so `/enterprise/` and `/thanks/`
 are noindex stubs that redirect with a same-origin script and name the new
-page as canonical. For a server-side 301, add a Single Redirect rule in the
-Cloudflare dashboard (pain001.com, Rules, Redirect Rules):
+page as canonical. On 10 November 2026 a Single Redirect rule, "Redirect
+enterprise to for-banks", was added in the Cloudflare dashboard (pain001.com,
+Rules, Redirect Rules), after the zone's two existing redirect rules:
 
 - When incoming requests match: custom filter expression
   `(http.request.uri.path eq "/enterprise" or starts_with(http.request.uri.path, "/enterprise/"))`
 - Then: static URL redirect to `https://pain001.com/for-banks/`, status code
   `301`, query string not preserved.
 
-A fragment such as `#ask` never reaches the server, so the rule covers
-`/enterprise/#ask` too. `/thanks/` can get the same rule pointing at
+Checked the same day with `curl -sI`: `/enterprise`, `/enterprise/`,
+`/enterprise/foo` and `/enterprise/?x=1` return 301 to `/for-banks/`, and
+`/enterprises/` still returns 404. The stub stays in the build for anyone
+who reaches the Pages origin directly. A fragment such as `#ask` never
+reaches the server, so the rule covers `/enterprise/#ask` too.
+
+Still open: `/thanks/` has no rule. It can get the same one pointing at
 `https://pain001.com/contact/`.
 
 ## Cloudflare: the events Worker

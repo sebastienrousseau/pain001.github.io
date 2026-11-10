@@ -6,6 +6,11 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+### Fixed
+
+- Validate documentation snippets against the released core 0.0.85 instead of 0.0.70. The release version gate now rejects runtime or snippet input/lock pins that differ from `VERSION`.
+- Record in the maintainer handover note that the Cloudflare 301 from `/enterprise/` to `/for-banks/` is live and how it was checked; `/thanks/` still has no rule.
+
 ## [0.0.85] - 2026-11-10
 
 ### Fixed
