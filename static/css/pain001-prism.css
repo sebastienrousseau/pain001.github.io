@@ -755,3 +755,10 @@ html.no-js .motion-toggle { display: none; }
 }
 .section-tight { padding-block: 1.5rem; }
 .section-tight .spec-line { text-align: center; }
+
+/* A long action label (the homepage hero, /for-banks/) is wider than a
+   320px or 375px phone. Buttons keep one line where they fit and wrap,
+   centred, where they do not, instead of widening the page. */
+@media (max-width: 30rem) {
+  .btn { white-space: normal; text-align: center; line-height: 1.25; padding-block: 0.5rem; max-width: 100%; }
+}
