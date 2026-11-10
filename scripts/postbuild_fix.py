@@ -2094,6 +2094,12 @@ def add_page_photos(site: Path) -> None:
         widths = (640, 768, 960, 1280, 1600)
         def srcset(ext: str, base: str = base, widths: tuple[int, ...] = widths) -> str:
             return ", ".join(f"{base}-{w}.{ext} {w}w" for w in widths)
+        # Discover the LCP image before blocking CSS and the long header.
+        # Matching the picture's candidates avoids a duplicate image fetch.
+        preload = (f'<link rel="preload" as="image" type="image/avif" '
+                   f'href="{base}-960.avif" imagesrcset="{srcset("avif")}" '
+                   f'imagesizes="{sizes}" fetchpriority="high" />')
+        html = html.replace("<head>", "<head>\n" + preload, 1)
         img = (f'<picture class="page-photo-frame">'
                f'<source type="image/avif" srcset="{srcset("avif")}" sizes="{sizes}" />'
                f'<img class="page-photo" src="{base}-960.webp" srcset="{srcset("webp")}" '

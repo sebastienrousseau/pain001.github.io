@@ -22,8 +22,10 @@ import argparse
 import json
 import re
 import sys
+import time
 import urllib.request
 from pathlib import Path
+from urllib.error import HTTPError, URLError
 
 ROOT = Path(__file__).resolve().parent.parent
 POSTS = ROOT / "_posts"
@@ -35,9 +37,24 @@ PYPI = "https://pypi.org/pypi/pain001/json"
 
 
 def released_version() -> str:
-    """The newest pain001 version on PyPI."""
-    with urllib.request.urlopen(PYPI, timeout=30) as response:  # nosec B310
-        return str(json.load(response)["info"]["version"])
+    """Read PyPI, allowing two bounded retries for transient transport errors."""
+    attempt = 0
+    while True:
+        try:
+            with urllib.request.urlopen(PYPI, timeout=30) as response:  # nosec B310
+                return str(json.load(response)["info"]["version"])
+        except URLError as error:
+            permanent = isinstance(error, HTTPError) and error.code not in {
+                429,
+                500,
+                502,
+                503,
+                504,
+            }
+            if permanent or attempt == 2:
+                raise
+            attempt += 1
+            time.sleep(attempt)
 
 
 def stale_lines(current: int) -> list[str]:

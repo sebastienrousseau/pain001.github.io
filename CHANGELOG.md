@@ -6,6 +6,13 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.0.85] - 2026-11-10
+
+### Fixed
+
+- Preload each responsive hero image from the photo map, and encode the oversized tablet demo hero within its existing byte budget.
+- Retry transient PyPI connection resets twice with bounded delays; permanent errors and exhausted retries still fail the version-currency gate.
+
 ### Changed
 
 - Replace the enterprise page with `/for-banks/`, a self-service evidence page for bank reviewers: the evidence pack, the published maintenance policy, a guide to building a bank profile in-house, open integration recipes, and the three questions a review asks. There is no paid tier, no briefing and no enquiry form; `/enterprise/` and `/thanks/` become redirect stubs (decision D2).

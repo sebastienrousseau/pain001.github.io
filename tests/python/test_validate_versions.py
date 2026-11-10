@@ -9,10 +9,11 @@ historical compatibility.
 
 from __future__ import annotations
 
+from io import BytesIO
 from pathlib import Path
+from urllib.error import HTTPError, URLError
 
 import pytest
-
 import validate_versions as gate
 
 
@@ -71,3 +72,54 @@ def test_dotted_quad_not_mistaken_for_version(posts_dir, capsys):
     )
     assert gate.main(["--current", "0.0.72"]) == 0
     assert "every page is at or above pain001 0.0.72" in capsys.readouterr().out
+
+
+def test_released_version_survives_connection_reset(monkeypatch):
+    """A transient TLS reset must not discard a later valid PyPI response."""
+    import time
+
+    calls = []
+    waits = []
+
+    def response(url, timeout):
+        calls.append((url, timeout))
+        if len(calls) < 3:
+            raise URLError(ConnectionResetError("connection reset by peer"))
+        return BytesIO(b'{"info":{"version":"0.0.84"}}')
+
+    monkeypatch.setattr(gate.urllib.request, "urlopen", response)
+    monkeypatch.setattr(time, "sleep", waits.append)
+    assert gate.released_version() == "0.0.84"
+    assert calls == [(gate.PYPI, 30)] * 3
+    assert waits == [1, 2]
+
+
+def test_released_version_fails_closed_after_bounded_attempts(monkeypatch):
+    """An unavailable registry must fail rather than silently use stale data."""
+    import time
+
+    calls = []
+
+    def response(url, timeout):
+        calls.append(url)
+        raise URLError(ConnectionResetError("connection reset by peer"))
+
+    monkeypatch.setattr(gate.urllib.request, "urlopen", response)
+    monkeypatch.setattr(time, "sleep", lambda delay: None)
+    with pytest.raises(URLError):
+        gate.released_version()
+    assert calls == [gate.PYPI] * 3
+
+
+def test_released_version_does_not_retry_access_denied(monkeypatch):
+    """Permanent HTTP errors remain immediate failures."""
+    calls = []
+
+    def response(url, timeout):
+        calls.append(url)
+        raise HTTPError(url, 403, "Forbidden", {}, None)
+
+    monkeypatch.setattr(gate.urllib.request, "urlopen", response)
+    with pytest.raises(HTTPError):
+        gate.released_version()
+    assert calls == [gate.PYPI]
