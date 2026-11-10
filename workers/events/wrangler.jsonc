@@ -1,0 +1,26 @@
+// SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+// SPDX-License-Identifier: Apache-2.0 OR MIT
+//
+// pain001.com events Worker (decision D1). Deployed by the maintainer
+// with `npx wrangler deploy` from this directory; see README.md.
+{
+  "name": "pain001-events",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-10",
+  // Served only on the site's own origin, so the pages' CSP
+  // `connect-src 'self'` covers it; no workers.dev or preview URL.
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "pain001.com/e", "zone_name": "pain001.com" }],
+  "analytics_engine_datasets": [
+    { "binding": "EVENTS", "dataset": "pain001_events" }
+  ],
+  // Minimal on purpose: the Worker's own structured error lines only.
+  // Invocation logs are off because they record request metadata this
+  // Worker promises not to keep; traces stay off for the same reason.
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1,
+    "logs": { "invocation_logs": false }
+  }
+}

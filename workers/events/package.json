@@ -1,0 +1,15 @@
+{
+  "name": "pain001-events",
+  "version": "0.0.0",
+  "private": true,
+  "description": "First-party, cookie-free event counts for pain001.com, written to Workers Analytics Engine.",
+  "license": "Apache-2.0 OR MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "coverage": "node --experimental-test-coverage --test-coverage-include='src/**' --test-coverage-lines=100 --test-coverage-branches=100 --test-coverage-functions=100 --test test/*.test.mjs"
+  }
+}

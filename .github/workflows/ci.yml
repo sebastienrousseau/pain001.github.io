@@ -277,6 +277,12 @@ jobs:
       - name: Unit tests
         run: npm test
 
+      - name: Events Worker tests (100% line, branch and function coverage)
+        # workers/events has no dependencies; its tests run on node:test
+        # with a fake Analytics Engine binding.
+        working-directory: workers/events
+        run: npm run coverage
+
   node-matrix-all:
     # Branch protection requires this check by name. It stands for every
     # leg of the node-matrix matrix, so adding or dropping a version never
