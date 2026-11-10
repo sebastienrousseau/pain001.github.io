@@ -753,6 +753,9 @@ html.no-js .motion-toggle { display: none; }
   padding: 0;
   list-style: none;
 }
+/* Each figure's link is a 24px-tall target (WCAG 2.5.8), so Lighthouse's
+   target-size audit passes when the strip sits on one line at 4K and 8K. */
+.proof-strip a { display: inline-flex; align-items: center; min-height: 1.5rem; }
 .section-tight { padding-block: 1.5rem; }
 .section-tight .spec-line { text-align: center; }
 
