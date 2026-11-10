@@ -29,7 +29,11 @@ const allBudgets = [
   { route: "/corpus-gb-fps-single/", bytesKiB: 300 },
   { route: "/tags/iso-20022/", bytesKiB: 300 },
   { route: "/fr/", bytesKiB: 300 },
-  { route: "/ar/", bytesKiB: 300 },
+  /* /ar/ stays for right-to-left layout coverage. It is noindex by
+     decision D4 (validate_locale_index.py checks that policy), so
+     Lighthouse's is-crawlable audit is skipped there and only there;
+     every other SEO audit still counts. */
+  { route: "/ar/", bytesKiB: 300, skipAudits: ["is-crawlable"] },
 ];
 /* Large screens use Lighthouse's desktop settings (throttling, form
    factor) with the emulated screen overridden. 4K and 8K are at a device
@@ -65,6 +69,7 @@ function measure(profile, budget, attempt) {
     `--output-path=${out}`,
   ];
   if (profile === "desktop") args.push("--preset=desktop");
+  if (budget.skipAudits) args.push(`--skip-audits=${budget.skipAudits.join(",")}`);
   if (screens[profile]) args.push(...screens[profile]);
   execFileSync(command, args, { stdio: "ignore", env: process.env });
   const report = JSON.parse(readFileSync(out, "utf8"));
