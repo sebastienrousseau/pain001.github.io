@@ -63,7 +63,7 @@ CSP_META = (
     "style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; "
     "script-src 'self' 'sha256-%s' 'wasm-unsafe-eval'; "
     "connect-src 'self' https://cloudflareinsights.com; font-src 'self'; "
-    "form-action 'self' https://formspree.io\" "
+    "form-action 'self'\" "
     "http-equiv=Content-Security-Policy>"
 )
 # The theme script must run before first paint, and as a separate file it
@@ -2197,6 +2197,7 @@ def main() -> None:
     gen_try_locales(site)
     gen_journey_locales(site)
     relocate_corpus_locales(site)  # before the Dataset markup, which is keyed by final path
+    relocate_nested_routes(site)
     inject_dataset_ld(site)
     inject_article_ld(site, "pain-001")
     write_llms(site)
@@ -2275,7 +2276,49 @@ LEGACY_REDIRECTS = {
     "executive-brief-es": "/es/executive-brief/",
     # Renamed in v0.0.7: the generator is the Static Site Generator (ssg).
     "made-with-shokunin": "/made-with-ssg/",
+    # 0.0.85: the paid offer and its enquiry form are gone; the page is a
+    # self-service evidence page for bank reviewers (decision D2).
+    "enterprise": "/for-banks/",
+    "thanks": "/contact/",
 }
+
+
+# ssg names every page after its post file and has no nested routes, so a
+# page meant to live at /docs/bank-profiles/ is written as
+# /docs-bank-profiles/ and moved here. ssg also derives the canonical,
+# og:url and feed entries from the file name, so every "/<flat>/" in the
+# built text files becomes "/<nested>/" as well; the slugs are unique
+# strings, so nothing else matches.
+NESTED_ROUTES = {
+    "docs-bank-profiles": "docs/bank-profiles",
+    "developers-ci": "developers/ci",
+}
+
+
+def relocate_nested_routes(site: Path) -> None:
+    """Move each flat page in NESTED_ROUTES to its nested path."""
+    for flat, nested in NESTED_ROUTES.items():
+        src = site / flat
+        if not (src / "index.html").is_file():
+            raise SystemExit(f"[postbuild] nested route source /{flat}/ was not built")
+        dest = site / nested
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        if dest.exists():
+            shutil.rmtree(dest)
+        shutil.move(str(src), str(dest))
+    rewritten = 0
+    for path in site.rglob("*"):
+        if path.suffix not in (".html", ".xml", ".json", ".txt") or not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8", errors="strict")
+        new = text
+        for flat, nested in NESTED_ROUTES.items():
+            new = new.replace("/%s/" % flat, "/%s/" % nested)
+        if new != text:
+            path.write_text(new, encoding="utf-8")
+            rewritten += 1
+    print(f"[postbuild] {len(NESTED_ROUTES)} page(s) moved to nested routes, "
+          f"{rewritten} file(s) relinked")
 
 
 def stamp_redirect_map(site: Path) -> None:

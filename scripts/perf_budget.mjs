@@ -23,7 +23,7 @@ const allBudgets = [
   { route: "/example-corpus/", bytesKiB: 300 },
   { route: "/try/", bytesKiB: 400 },
   { route: "/why/", bytesKiB: 300 },
-  { route: "/enterprise/", bytesKiB: 300 },
+  { route: "/for-banks/", bytesKiB: 300 },
   { route: "/competitors-comparison/", bytesKiB: 300 },
   { route: "/message-spec-pain.001.001.09/", bytesKiB: 400 },
   { route: "/corpus-gb-fps-single/", bytesKiB: 300 },

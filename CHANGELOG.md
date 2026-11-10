@@ -6,6 +6,16 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+### Changed
+
+- Replace the enterprise page with `/for-banks/`, a self-service evidence page for bank reviewers: the evidence pack, the published maintenance policy, a guide to building a bank profile in-house, open integration recipes, and the three questions a review asks. There is no paid tier, no briefing and no enquiry form; `/enterprise/` and `/thanks/` become redirect stubs (decision D2).
+- Navigation is Try it, Developers, Docs, For banks and Insights, with a "Try it free" button; the footer states that Pain001 is an independent project maintained in a personal capacity and links the governance page (decisions D0 and D3).
+- The homepage leads bank reviewers to the evidence pack, adds the two paths (building an integration, evaluating for an organisation), and points the bank-profile layer at the new guide (decision D3).
+
+### Added
+
+- `/developers/`, `/developers/ci/` (the GitHub Action) and `/docs/bank-profiles/`; nested routes are moved into place after the ssg build.
+
 ## [0.0.84] - 2026-11-09
 
 ### Added
