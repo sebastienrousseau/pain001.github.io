@@ -15,8 +15,6 @@ Each ``<dd data-proof-key="...">`` in site/index.html is recomputed:
              record "Official XSD: passed" (the label claims it)
   countries  distinct country codes among those scenarios
   editions   message-specification pages, one per pain.* edition
-  languages  translated landing pages in the built site (html lang is
-             not English)
 
 Run after a build. Fix a failure by changing the figure, never the
 source.
@@ -36,7 +34,6 @@ CORPUS = re.compile(r"^corpus-([a-z]{2})-[a-z0-9-]+\.md$")
 EDITION = re.compile(r"^message-spec-pain\.\d{3}\.\d{3}\.\d{2}\.md$")
 XSD_PASSED = "- **Official XSD**: passed."
 FIGURE = re.compile(r'data-proof-key="([a-z]+)">([^<]+)<')
-HTML_LANG = re.compile(r'<html[^>]*\blang="([^"]+)"')
 
 
 def sources() -> tuple[dict[str, int], list[str]]:
@@ -47,18 +44,12 @@ def sources() -> tuple[dict[str, int], list[str]]:
             problems.append(f"{page.name}: no '{XSD_PASSED}' line")
     countries = {CORPUS.match(p.name).group(1) for p in scenarios}
     editions = [p for p in POSTS.iterdir() if EDITION.match(p.name)]
-    languages = 0
-    for d in SITE.iterdir():
-        index = d / "index.html"
-        if d.is_dir() and index.exists():
-            m = HTML_LANG.search(index.read_text(encoding="utf-8", errors="ignore")[:2000])
-            if m and not m.group(1).lower().startswith("en"):
-                languages += 1
+    # The fourth figure, PyPI downloads a month, comes from the claims
+    # register and is checked by validate_claims.py (decision D5).
     return {
         "scenarios": len(scenarios),
         "countries": len(countries),
         "editions": len(editions),
-        "languages": languages,
     }, problems
 
 

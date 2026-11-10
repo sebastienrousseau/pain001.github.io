@@ -2203,6 +2203,7 @@ def main() -> None:
     write_llms(site)
     add_home_software_ld(site)
     stamp_suite_version(site)
+    fill_claims(site)
     mark_noindex_pages(site)  # before the sitemap, which skips the same pages
     regen_sitemap(site)
     gen_legacy_redirects(site)  # after sitemap so stubs stay unindexed
@@ -2330,6 +2331,23 @@ STRIPPED_SCRIPTS = (
     "prism.js", "pain001-prism.js", "home.js", "prism-theme-init.js",
     "pain001-analytics.js", "pain001-events.js", "try-page.js",
 )
+
+
+def fill_claims(site: Path) -> None:
+    """Write the claims register's figures into data-claim elements (D5)."""
+    from claims import fill, load  # sibling module; scripts/ is on sys.path
+
+    register = load()
+    n = 0
+    for page in site.rglob("*.html"):
+        html = page.read_text(encoding="utf-8")
+        if "data-claim=" not in html:
+            continue
+        filled = fill(html, register)
+        if filled != html:
+            page.write_text(filled, encoding="utf-8")
+            n += 1
+    print(f"[postbuild] claims register figures written into {n} page(s)")
 
 
 def stamp_redirect_map(site: Path) -> None:

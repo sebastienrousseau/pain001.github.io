@@ -144,6 +144,9 @@ jobs:
       - name: Nothing for sale, no employer named (decision D0)
         run: python3 scripts/validate_no_commercial.py site
 
+      - name: Every figure comes from the claims register (decision D5)
+        run: python3 scripts/validate_claims.py site
+
       - name: Documentation snippets reference real API
         run: |
           python3 -m pip install --quiet --require-hashes -r requirements/snippets.txt
