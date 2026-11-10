@@ -436,13 +436,19 @@ LOCALES = {
 }
 RTL_LANGS = {"ar", "fa", "he"}
 
-# Decision D4 (10 November 2026): index English (also x-default) and these
-# locales, plus any locale with at least 100 Search Console impressions in
-# the last 90 days; the maintainer supplies those numbers, and adding a
-# locale is one entry here. Every other locale stays live for readers but
-# is noindex, follow, out of the sitemap and out of every hreflang cluster
-# (apply_locale_index_policy). Review in February 2027.
-INDEXED_LOCALES = ("fr", "de", "nl", "es", "it")
+# Decision D4 (10 November 2026): index English (also x-default), French,
+# German, Dutch, Spanish and Italian, plus any locale with at least 100
+# Search Console impressions in the last 90 days. The second group comes
+# from Search Console on 10 November 2026 (last 3 months, web search,
+# impressions summed over each locale's pages), largest first; uk, bn, hi,
+# ro, ha, ta, te, mr and fil were under 100. Every other locale stays live
+# for readers but is noindex, follow, out of the sitemap and out of every
+# hreflang cluster (apply_locale_index_policy). Review in February 2027.
+INDEXED_LOCALES = (
+    "fr", "de", "nl", "es", "it",
+    "pl", "sv", "ja", "ru", "ko", "zh-hant", "yo", "ms", "cs", "tr",
+    "pt-br", "fa", "zh-hans", "ar", "th", "hu", "vi", "id", "he", "el",
+)
 
 _HTML_TAG_RE = re.compile(r"<html\b([^>]*)>")
 

@@ -29,11 +29,9 @@ const allBudgets = [
   { route: "/corpus-gb-fps-single/", bytesKiB: 300 },
   { route: "/tags/iso-20022/", bytesKiB: 300 },
   { route: "/fr/", bytesKiB: 300 },
-  /* /ar/ stays for right-to-left layout coverage. It is noindex by
-     decision D4 (validate_locale_index.py checks that policy), so
-     Lighthouse's is-crawlable audit is skipped there and only there;
-     every other SEO audit still counts. */
-  { route: "/ar/", bytesKiB: 300, skipAudits: ["is-crawlable"] },
+  /* /ar/ stays for right-to-left layout coverage; it is indexed under
+     decision D4, so every SEO audit counts there. */
+  { route: "/ar/", bytesKiB: 300 },
 ];
 /* Large screens use Lighthouse's desktop settings (throttling, form
    factor) with the emulated screen overridden. 4K and 8K are at a device

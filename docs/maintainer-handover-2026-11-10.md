@@ -25,18 +25,26 @@ A fragment such as `#ask` never reaches the server, so the rule covers
 
 ## Cloudflare: the events Worker
 
-`static/js/pain001-events.js` sends events to `/e` on this origin. The Worker
-that receives them (route `pain001.com/e`, writing to a Workers Analytics
-Engine dataset kept 3 months, storing no IP address) is deployed by the
-maintainer. Until then the beacons reach GitHub Pages and are discarded.
+Deployed on 10 November 2026 from `workers/events/src/index.js` (byte
+for byte) as `pain001-events` in the account that holds the pain001.com
+zone: route `pain001.com/e`, Analytics Engine binding `EVENTS` to dataset
+`pain001_events`, invocation logs off, workers.dev and preview URLs off.
+The zone's custom rule "Block Exploit Scanners and Unsafe HTTP Methods"
+blocked every POST, so it now exempts exactly `POST /e`; every other
+non-GET request is still blocked. A later `npx wrangler deploy` from
+`workers/events/` applies the same settings.
 
-## Search Console: locales beyond the six
+## Search Console: the indexed locales
 
 D4 indexes English, French, German, Dutch, Spanish and Italian, plus any
 locale with at least 100 Search Console impressions in the last 90 days.
-Those numbers have not been pulled. To add a locale, add it to
-`INDEXED_LOCALES` in `scripts/postbuild_fix.py`; the build and
-`scripts/validate_locale_index.py` follow. Review in February 2027.
+On 10 November 2026 (last 3 months, web search, summed over each
+locale's pages) twenty more qualified: pl 1541, sv 1068, ja 1005, ru 648,
+ko 366, zh-hant 335, yo 322, ms 321, cs 298, tr 288, pt-br 251, fa 246,
+zh-hans 238, ar 215, th 198, hu 195, vi 173, id 166, he 111, el 108.
+Under 100: uk 69, bn 62, hi 55, ro 46, ha 31, ta 17, te 12, mr 9, fil 0.
+They are in `INDEXED_LOCALES` in `scripts/postbuild_fix.py`. Review in
+February 2027.
 
 The indexed locales also need a person to review the translated hero and
 FAQ, as D4 asks.
