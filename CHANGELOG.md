@@ -15,6 +15,7 @@ All notable changes to this website are documented here. The format follows
 
 ### Added
 
+- The governance page states how decisions are made (pull requests, ADRs, DCO), the release process, how to become a maintainer, and a bus-factor plan whose key, domain and ownership items the maintainer still has to fill in (decision D6).
 - `/developers/`, `/developers/ci/` (the GitHub Action) and `/docs/bank-profiles/`; nested routes are moved into place after the ssg build.
 - `scripts/validate_no_commercial.py`, run in `make test` and CI: the build fails on a retired paid phrase, a funding-platform link, a link to `/enterprise/` or `/thanks/`, or an employer's name.
 

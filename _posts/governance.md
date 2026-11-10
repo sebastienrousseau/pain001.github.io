@@ -101,7 +101,15 @@ Pain001 is created and maintained by [Sebastien Rousseau](https://sebastienrouss
 
 ## Decision-making
 
-Feature and design decisions are made by the maintainer, in public, with rationale recorded in commits, pull requests, and changelogs. Breaking changes are documented in release notes. There is no formal steering committee; if sustained organisational adoption creates demand for one, an advisory structure is the stated path.
+Decisions are made in public. Day-to-day changes go through a pull request and merge by lazy consensus once CI is green; significant changes (new public APIs, breaking changes, new dependencies, new message types or scheme profiles) start as an issue or discussion and need a maintainer's explicit approval. A decision that will be questioned later is recorded as an architecture decision record in the core's [docs/adr](https://github.com/sebastienrousseau/pain001/tree/main/docs/adr). Every commit carries a Developer Certificate of Origin sign-off, checked in CI. The full rules are in the core's [GOVERNANCE.md](https://github.com/sebastienrousseau/pain001/blob/main/GOVERNANCE.md).
+
+## Release process
+
+Releases follow the core's [RELEASING.md](https://github.com/sebastienrousseau/pain001/blob/main/RELEASING.md): an automated preflight, a signed annotated tag, PyPI publication through a trusted publisher, and build provenance and an SBOM attached to the release. The nine repositories of the suite release together at one version. Release authority (the PyPI trusted publisher and the tag-signing key) rests with the lead maintainer today.
+
+## Becoming a maintainer
+
+More maintainers is the single biggest thing that would de-risk the project. Contribute a few reviewed pull requests in one area (a scheme profile, an input loader, the documentation), help triage issues and review others' pull requests, then say you are interested in [GitHub Discussions](https://github.com/sebastienrousseau/pain001/discussions). A maintainer proposes you, and with no objection from the existing maintainers within a week you are added to [MAINTAINERS.md](https://github.com/sebastienrousseau/pain001/blob/main/MAINTAINERS.md).
 
 ## Funding and conflicts of interest
 
@@ -135,3 +143,13 @@ Every research page carries a "last reviewed" date, and regulatory claims cite p
 - Releases remain on [PyPI](https://pypi.org/project/pain001/) and GitHub independent of any infrastructure this project operates.
 - The website's full source, build pipeline, and content are [public](https://github.com/sebastienrousseau/pain001.github.io) and rebuildable with two open-source tools.
 - If the project is ever discontinued, the repositories will be archived in place (readable, forkable, and installable) rather than deleted.
+
+## Bus-factor plan
+
+The goal is a second maintainer with release rights by mid-2027. Until then, what happens if the maintainer is unavailable is written down here, one item at a time:
+
+- **Release keys.** TODO (maintainer): where the tag-signing key and the PyPI trusted-publisher configuration are held, and how release authority passes to a second maintainer.
+- **Domain.** TODO (maintainer): who holds the pain001.com registration and DNS, and how they transfer.
+- **PyPI and GitHub ownership.** TODO (maintainer): the PyPI project owners and the GitHub repository administrators, and the transfer procedure.
+
+Everything else a successor needs is already public: the source, the release process, the build pipeline and this site.
