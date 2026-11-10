@@ -12,6 +12,7 @@ All notable changes to this website are documented here. The format follows
 
 - Preload each responsive hero image from the photo map, and encode the oversized tablet demo hero within its existing byte budget.
 - Retry transient PyPI connection resets twice with bounded delays; permanent errors and exhausted retries still fail the version-currency gate.
+- Stop tracking a `node_modules` symlink that the 0.0.85 regeneration committed by mistake; it made the REUSE check fail. `.gitignore` now ignores `node_modules` as a link too, and a test rejects any tracked symlink.
 
 ### Changed
 

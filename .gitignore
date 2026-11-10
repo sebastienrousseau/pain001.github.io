@@ -21,8 +21,9 @@ static/pyodide/*.whl
 static/pyodide/*.wasm
 static/pyodide/python_stdlib.zip
 
-# Installed from package-lock.json by `npm ci`; never committed.
-node_modules/
+# Installed from package-lock.json by `npm ci`; never committed. No
+# trailing slash, so a symlinked node_modules is ignored too.
+node_modules
 
 # Release archive, SBOM copy and checksums, built by release.yml and by anyone
 # reproducing it locally. Published as release assets, never committed.
