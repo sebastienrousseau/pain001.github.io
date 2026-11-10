@@ -22,7 +22,6 @@ export const EVENTS = new Set([
   "outbound_pypi",
   "evidence_pack_download",
   "profile_guide_view",
-  "discussion_click",
   "adoption_form_submit",
 ]);
 

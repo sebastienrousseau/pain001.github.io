@@ -54,15 +54,14 @@ test("events: a label is cut to 64 characters and an unlabelled event has none",
   assert.deepEqual(b, { endpoint: "/e", event: "xml_copy", page: "/try/" });
 });
 
-test("events: links are counted by host: GitHub, Discussions and PyPI", async () => {
+test("events: links are counted by host: GitHub and PyPI", async () => {
   const { doc, sent } = page(`
     <a id="gh" href="https://github.com/sebastienrousseau/pain001">GitHub</a>
-    <a id="disc" href="https://github.com/sebastienrousseau/pain001/discussions">Discuss</a>
     <a id="pypi" href="https://pypi.org/project/pain001/"><span id="inner">PyPI</span></a>
     <a id="other" href="https://example.com/">Elsewhere</a>
     <a id="local" href="/documentation/">Docs</a>`);
-  for (const id of ["#gh", "#disc", "#inner", "#other", "#local"]) click(doc, id);
-  assert.deepEqual((await payloads(sent)).map((p) => p.event), ["outbound_github", "discussion_click", "outbound_pypi"]);
+  for (const id of ["#gh", "#inner", "#other", "#local"]) click(doc, id);
+  assert.deepEqual((await payloads(sent)).map((p) => p.event), ["outbound_github", "outbound_pypi"]);
 });
 
 test("events: an unknown name, a link that cannot be parsed, or a non-element target sends nothing", () => {

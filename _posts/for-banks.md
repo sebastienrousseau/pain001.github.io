@@ -111,13 +111,13 @@ One ZIP, rebuilt with every release, with no form in front of it:
 
 | Resource | What it gives you |
 | :--- | :--- |
-| [Maintenance policy](#maintenance-policy) | One long-term-support line a year, supported for 18 months, with security fixes backported on a best-effort basis. |
+| [Maintenance policy](#maintenance-policy) | Fixes, including security fixes, ship in the next release. There is no long-term-support line at present. |
 | [Build your own bank profile](/docs/bank-profiles/) | A step-by-step guide and tooling (template, validator, examples), so your team turns the bank's usage guideline into a validated profile in-house, with the data never leaving your network. Public, non-confidential profiles may be contributed to the repository. |
 | [Open integration recipes](/documentation/) | ERP or TMS CSV export to `pain.001` mapping, batch and API pipeline patterns, `pain.002` handling, and camt.052, camt.053 and camt.054 reconciliation through `pain001[camt]`. Contributions welcome. |
 
 ## Maintenance policy
 
-- One long-term-support line a year, supported for 18 months, with security fixes backported on a best-effort basis.
+- Fixes, including security fixes, ship in the next release and arrive by upgrading. There is no long-term-support line at present.
 - Security reports are acknowledged within 5 working days as a goal, not a guarantee.
 - There is no SLA and no out-of-hours cover.
 
@@ -131,7 +131,7 @@ Pain001's licence lets any firm support it commercially. The project has no comm
 
 ## Contact
 
-Report a vulnerability through [security.txt](/.well-known/security.txt). Ask everything else in [GitHub Discussions](https://github.com/sebastienrousseau/pain001/discussions). The address contact@pain001.com is for confidential security matters only.
+Report a vulnerability through [security.txt](/.well-known/security.txt). Ask everything else in [GitHub issues](https://github.com/sebastienrousseau/pain001/issues). The address contact@pain001.com is for confidential security matters only.
 
 ## Questions a review asks
 

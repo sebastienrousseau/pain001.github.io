@@ -23,7 +23,7 @@ One data point per accepted event:
 Allowed events: `hero_cta_click`, `sandbox_start`, `sandbox_xsd_run`,
 `xml_copy`, `xml_download`, `install_copy`, `outbound_github`,
 `outbound_pypi`, `evidence_pack_download`, `profile_guide_view`,
-`discussion_click`, `adoption_form_submit`. Any other event, field or
+`adoption_form_submit`. Any other event, field or
 value is refused with `400` and nothing is written.
 
 ## What it does not collect

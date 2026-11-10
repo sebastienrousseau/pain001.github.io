@@ -65,7 +65,7 @@ test("every allow-listed event is accepted", async () => {
     assert.equal(env.points.length, 1, event);
     assert.equal(env.points[0].blobs[2], "", event);
   }
-  assert.equal(EVENTS.size, 12);
+  assert.equal(EVENTS.size, 11);
 });
 
 test("nothing identifying is written", async () => {

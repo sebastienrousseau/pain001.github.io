@@ -13,15 +13,14 @@
  * Control), or when sendBeacon is missing; a failed send is ignored.
  *
  * Elements opt in with data-event="<name>" (and data-event-label); links
- * to GitHub, GitHub Discussions and PyPI are counted by their host, and
+ * to GitHub and PyPI are counted by their host, and
  * the first interaction with the demo (data-event-start) counts once, and
  * opening the bank-profile guide counts as profile_guide_view. */
 (() => {
   const EVENTS = new Set([
     "hero_cta_click", "sandbox_start", "sandbox_xsd_run", "xml_copy",
     "xml_download", "install_copy", "outbound_github", "outbound_pypi",
-    "evidence_pack_download", "profile_guide_view", "discussion_click",
-    "adoption_form_submit",
+    "evidence_pack_download", "profile_guide_view", "adoption_form_submit",
   ]);
   const LOCAL = new Set(["localhost", "127.0.0.1", "[::1]"]);
   const nav = window.navigator;
@@ -46,7 +45,6 @@
     } catch {
       return null;
     }
-    if (url.hostname === "github.com" && url.pathname.includes("/discussions")) return "discussion_click";
     if (url.hostname === "github.com") return "outbound_github";
     if (url.hostname === "pypi.org") return "outbound_pypi";
     return null;

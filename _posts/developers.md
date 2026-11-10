@@ -111,4 +111,4 @@ The core repository is also a GitHub Action: [check payment files on every pull 
 
 ## Source and contributions
 
-The source, issues and releases are on [GitHub](https://github.com/sebastienrousseau/pain001). Questions and ideas go to [GitHub Discussions](https://github.com/sebastienrousseau/pain001/discussions).
+The source, issues and releases are on [GitHub](https://github.com/sebastienrousseau/pain001). Questions and ideas go to [GitHub issues](https://github.com/sebastienrousseau/pain001/issues).

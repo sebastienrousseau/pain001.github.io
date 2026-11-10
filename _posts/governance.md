@@ -109,7 +109,7 @@ Releases follow the core's [RELEASING.md](https://github.com/sebastienrousseau/p
 
 ## Becoming a maintainer
 
-More maintainers is the single biggest thing that would de-risk the project. Contribute a few reviewed pull requests in one area (a scheme profile, an input loader, the documentation), help triage issues and review others' pull requests, then say you are interested in [GitHub Discussions](https://github.com/sebastienrousseau/pain001/discussions). A maintainer proposes you, and with no objection from the existing maintainers within a week you are added to [MAINTAINERS.md](https://github.com/sebastienrousseau/pain001/blob/main/MAINTAINERS.md).
+More maintainers is the single biggest thing that would de-risk the project. Contribute a few reviewed pull requests in one area (a scheme profile, an input loader, the documentation), help triage issues and review others' pull requests, then say you are interested in a [GitHub issue](https://github.com/sebastienrousseau/pain001/issues). A maintainer proposes you, and with no objection from the existing maintainers within a week you are added to [MAINTAINERS.md](https://github.com/sebastienrousseau/pain001/blob/main/MAINTAINERS.md).
 
 ## Funding and conflicts of interest
 
@@ -148,8 +148,8 @@ Every research page carries a "last reviewed" date, and regulatory claims cite p
 
 The goal is a second maintainer with release rights by mid-2027. Until then, what happens if the maintainer is unavailable is written down here, one item at a time:
 
-- **Release keys.** TODO (maintainer): where the tag-signing key and the PyPI trusted-publisher configuration are held, and how release authority passes to a second maintainer.
-- **Domain.** TODO (maintainer): who holds the pain001.com registration and DNS, and how they transfer.
-- **PyPI and GitHub ownership.** TODO (maintainer): the PyPI project owners and the GitHub repository administrators, and the transfer procedure.
+- **Release keys.** Not yet arranged: release authority (the tag-signing key and the PyPI trusted publisher) rests with the lead maintainer, and no hand-over to a second maintainer is set up.
+- **Domain.** Not yet arranged: the pain001.com registration and DNS are held by the lead maintainer, with no transfer procedure written down.
+- **PyPI and GitHub ownership.** Not yet arranged: there is no second PyPI owner or GitHub administrator yet.
 
 Everything else a successor needs is already public: the source, the release process, the build pipeline and this site.

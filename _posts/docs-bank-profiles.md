@@ -102,4 +102,4 @@ The guide, with a template, a validator and worked examples, lives in the core r
 
 Your bank's guideline and the profile derived from it stay in your environment; nothing in the tooling sends them anywhere. A profile built only from public, non-confidential material, such as a scheme's published rulebook, may be contributed to the repository as a pull request.
 
-Questions go to [GitHub Discussions](https://github.com/sebastienrousseau/pain001/discussions).
+Questions go to [GitHub issues](https://github.com/sebastienrousseau/pain001/issues).

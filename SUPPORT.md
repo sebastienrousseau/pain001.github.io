@@ -1,7 +1,7 @@
 # Support
 
 - Usage and documentation questions: open a
-  [GitHub discussion](https://github.com/sebastienrousseau/pain001.github.io/discussions).
+  [GitHub issue](https://github.com/sebastienrousseau/pain001.github.io/issues).
 - Reproducible website defects: open a
   [GitHub issue](https://github.com/sebastienrousseau/pain001.github.io/issues).
 - Core library defects: use the

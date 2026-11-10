@@ -30,15 +30,6 @@ that receives them (route `pain001.com/e`, writing to a Workers Analytics
 Engine dataset kept 3 months, storing no IP address) is deployed by the
 maintainer. Until then the beacons reach GitHub Pages and are discarded.
 
-## GitHub Discussions on the core repository
-
-`/for-banks/`, `/docs/bank-profiles/`, `/developers/` and the homepage send
-questions and "Tell us how you use it" to
-<https://github.com/sebastienrousseau/pain001/discussions>. Discussions are
-switched off on that repository today, so those links fail until they are
-switched on. The D5 discussion "How are you using pain001?" also needs
-opening there.
-
 ## Search Console: locales beyond the six
 
 D4 indexes English, French, German, Dutch, Spanish and Italian, plus any
@@ -52,6 +43,7 @@ FAQ, as D4 asks.
 
 ## Governance: the bus-factor plan
 
-The governance page marks three items `TODO (maintainer)`: custody and
+The governance page marks three items "Not yet arranged": custody and
 hand-over of the release keys, the domain registration and DNS, and the PyPI
-and GitHub ownership transfer.
+and GitHub ownership transfer. The maintainer decided on 10 November 2026 not
+to arrange them yet, and that there is no long-term-support line at present.
