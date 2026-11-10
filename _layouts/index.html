@@ -9,12 +9,18 @@
   <div class="container hero-banner-inner">
     <div class="hero-card">
       <p class="eyebrow">ISO 20022 pre-flight validation</p>
-      <h1 id="hero-heading">Deterministic ISO&nbsp;20022 validation. <span class="h-muted">Inside your perimeter.</span></h1>
+      <h1 id="hero-heading">Catch pain.001 errors <span class="h-muted">before your bank does.</span></h1>
       <p class="lead hero-lead">Every pain.001 and pain.008 file checked against the official schema and the scheme rulebooks on infrastructure you control, before your bank sees it.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="/enterprise/#ask">Book an architecture briefing</a>
-        <a class="text-link" href="/documentation/">Read the documentation</a>
+        <a class="btn btn-primary" href="/try/#sample=sepa-sct" data-event="hero_cta_click" data-event-label="validate-sample">Validate a sample file for free</a>
       </div>
+      <p class="spec-line">No sign-up · runs in your browser · nothing is uploaded</p>
+      <div class="hero-install" data-copy-group>
+        <code id="hero-install-cmd">pip install pain001</code>
+        <button class="copy-btn" type="button" data-copy="hero-install-cmd" data-event="install_copy" aria-label="Copy the install command">Copy</button>
+        <p class="visually-hidden" aria-live="polite" data-copy-status></p>
+      </div>
+      <a class="text-link" href="/for-banks/">Reviewing it for a bank? Get the evidence pack &rarr;</a>
     </div>
   </div>
 </section>
@@ -77,7 +83,32 @@
   <div class="container hero-notes">
     <p class="egress"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="11" width="14" height="10" rx="2" /><path d="M8 11V8a4 4 0 0 1 8 0v3" /></svg><span><strong>Zero data egress.</strong> Validation makes no network calls, keeps no copy of your files and sends no telemetry.</span></p>
     <p class="spec-line"><a href="/pain-001/">pain.001</a> · pain.008 · SEPA · CBPR+ · CHAPS · Bacs · FPS · FedNow · ACH · MT101 migration</p>
-    <a class="text-link" href="/try/">Try the browser sandbox</a>
+    <a class="text-link" href="/try/">Try it with your own CSV</a>
+  </div>
+</section>
+
+<section class="section section-tight" aria-labelledby="facts-heading">
+  <h2 class="visually-hidden" id="facts-heading">Project facts</h2>
+  <div class="container">
+    <ul class="spec-line proof-strip">
+      <li><a href="https://github.com/sebastienrousseau/pain001"><span data-claim="github_stars"></span> GitHub stars</a></li>
+      <li><a href="https://pypistats.org/packages/pain001"><span data-claim="pypi_downloads_month"></span> PyPI downloads a month</a></li>
+      <li><a href="https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/pain001">OpenSSF Scorecard <span data-claim="openssf_scorecard"></span>/10</a></li>
+      <li><a href="https://github.com/sebastienrousseau/pain001/releases"><span data-claim="releases_since_2023"></span> releases since 2023</a></li>
+      <li><span data-claim="branch_coverage"></span> branch coverage</li>
+      <li><a href="https://github.com/sebastienrousseau/pain001/attestations"><span data-claim="signed_provenance"></span></a></li>
+    </ul>
+    <p class="spec-line">Using it? <a href="https://github.com/sebastienrousseau/pain001/issues/new?template=adoption.yml" data-event="adoption_form_submit">Tell us how you use it</a>.</p>
+  </div>
+</section>
+
+<section class="section" id="paths" aria-labelledby="paths-heading">
+  <div class="container">
+    <h2 class="visually-hidden" id="paths-heading">Choose your path</h2>
+    <div class="tiles tiles-3">
+      <article class="tile tile-half"><p class="tile-eyebrow">Developers</p><h3>I&rsquo;m building an integration</h3><p>Install it, call it as a library, CLI, REST API, MCP or language server, and check files in CI.</p><a class="text-link" href="/developers/">For developers</a></article>
+      <article class="tile tile-half"><p class="tile-eyebrow">Banks and corporates</p><h3>I&rsquo;m evaluating it for my organisation</h3><p>The SBOM, provenance, data handling, maintenance policy and a security questionnaire, without a sales call.</p><a class="text-link" href="/for-banks/">For banks</a></article>
+    </div>
   </div>
 </section>
 
@@ -91,7 +122,7 @@
       <div class="proof-item" data-reveal><dt><strong>Bank scenarios</strong> <span>Each passing the official ISO 20022 XSD</span></dt><dd data-proof-key="scenarios">42</dd></div>
       <div class="proof-item" data-reveal><dt><strong>Countries</strong> <span>Covered by those scenarios</span></dt><dd data-proof-key="countries">17</dd></div>
       <div class="proof-item" data-reveal><dt><strong>Message editions</strong> <span>Specified field by field</span></dt><dd data-proof-key="editions">13</dd></div>
-      <div class="proof-item" data-reveal><dt><strong>Languages</strong> <span>This site is translated into</span></dt><dd data-proof-key="languages">34</dd></div>
+      <div class="proof-item" data-reveal><dt><strong>PyPI downloads</strong> <span>In the last month</span></dt><dd data-claim="pypi_downloads_month"></dd></div>
     </dl>
   </div>
 </section>
@@ -120,7 +151,7 @@
         <picture><source type="image/avif" srcset="/img/photos/columns-480.avif 480w, /img/photos/columns-800.avif 800w, /img/photos/columns-1200.avif 1200w" sizes="(min-width: 64rem) 24rem, (min-width: 40rem) 45vw, 92vw" /><img class="tile-photo" src="/img/photos/columns-800.webp" srcset="/img/photos/columns-480.webp 480w, /img/photos/columns-800.webp 800w, /img/photos/columns-1200.webp 1200w" sizes="(min-width: 64rem) 24rem, (min-width: 40rem) 45vw, 92vw" width="1200" height="800" alt="" loading="lazy" decoding="async" /></picture>
         <h3>Auditable</h3>
         <p>Open source under Apache-2.0 or MIT, with signed releases, a published SBOM and build provenance. Your reviewers read the code, not a brochure.</p>
-        <a class="text-link" href="/enterprise/">Evidence for reviewers</a>
+        <a class="text-link" href="/for-banks/">Evidence for reviewers</a>
       </article>
     </div>
   </div>
@@ -136,7 +167,7 @@
       <ol class="gates">
         <li class="gate is-checked" data-step="1"><span class="gate-mark" aria-hidden="true"></span><span class="layer"><span class="layer-num">01</span> ISO 20022 schema</span><p><span class="layer-verdict is-pass">Checked.</span> The official XSD for the message edition accepts the document, or it does not.</p></li>
         <li class="gate is-checked" data-step="2"><span class="gate-mark" aria-hidden="true"></span><span class="layer"><span class="layer-num">02</span> Scheme rulebook</span><p><span class="layer-verdict is-pass">Checked.</span> SEPA, CBPR+, CHAPS, Bacs, Faster Payments, FedNow, ACH and more, each finding named by its rule.</p></li>
-        <li class="gate is-yours" data-step="3"><span class="gate-mark" aria-hidden="true"></span><span class="layer"><span class="layer-num">03</span> Bank profile</span><p><span class="layer-verdict">Yours to confirm.</span> Pain001 ships no bank profiles; your bank&rsquo;s implementation guide still applies.</p></li>
+        <li class="gate is-yours" data-step="3"><span class="gate-mark" aria-hidden="true"></span><span class="layer"><span class="layer-num">03</span> Bank profile</span><p><span class="layer-verdict">Yours to confirm.</span> Pain001 ships no bank profiles; your bank&rsquo;s implementation guide still applies. Your bank&rsquo;s own rules: <a href="/docs/bank-profiles/">build a private profile with our guide &rarr;</a></p></li>
         <li class="gate is-yours" data-step="4"><span class="gate-mark" aria-hidden="true"></span><span class="layer"><span class="layer-num">04</span> Channel</span><p><span class="layer-verdict">Yours to confirm.</span> Whether the file can be sent is decided by your bank, not by the file.</p></li>
       </ol>
     </div>
@@ -202,10 +233,10 @@
   <div class="container">
     <div class="section-head section-head-centred">
       <p class="eyebrow">The Pain001 suite</p>
-      <h2 id="suite-title">Five focused packages. <span class="h-muted">One validation model.</span></h2>
+      <h2 id="suite-title"><span data-package-count>Five</span> focused packages. <span class="h-muted">One validation model.</span></h2>
     </div>
     <div class="bento">
-      <article class="tile tile-core" data-reveal>
+      <article class="tile tile-core" data-reveal data-package="pain001">
         <div class="tile-core-copy">
           <p class="tile-eyebrow">Core</p>
           <h3>Pain001</h3>
@@ -224,10 +255,10 @@ result = validate_scheme(rows, profile="sepa-sct")
           <p class="code-card-out"><span>Output</span> <code>1 SEPA-CDTR-IBAN creditor_account_IBAN must be a valid IBAN (ISO 13616 / mod-97)</code></p>
         </figure>
       </article>
-      <article class="tile tile-half" data-reveal><p class="tile-eyebrow">AI agents</p><h3>pain001-mcp</h3><p>Local Model Context Protocol tools for validation, generation and conversion, with human review kept in the loop.</p><a class="text-link" href="/pain001-mcp/">MCP tools</a></article>
-      <article class="tile tile-half" data-reveal><p class="tile-eyebrow">Editors</p><h3>pain001-lsp</h3><p>Diagnostics and payment-rule feedback while a human is still editing the source data.</p><a class="text-link" href="/pain001-lsp/">Editor support</a></article>
-      <article class="tile tile-third" data-reveal><p class="tile-eyebrow">Legacy migration</p><h3>MT101 loader</h3><p>Move SWIFT request-for-transfer workflows to pain.001.001.09 with explicit conversion findings.</p><a class="text-link" href="/pain001-loader-mt101/">MT101 migration</a></article>
-      <article class="tile tile-third" data-reveal><p class="tile-eyebrow">Treasury teams</p><h3>Excel loader</h3><p>Turn governed payment workbooks into validated records without copy-and-paste operations.</p><a class="text-link" href="/pain001-loader-xlsx/">Excel loader</a></article>
+      <article class="tile tile-half" data-reveal data-package="pain001-mcp"><p class="tile-eyebrow">AI agents</p><h3>pain001-mcp</h3><p>Local Model Context Protocol tools for validation, generation and conversion, with human review kept in the loop.</p><a class="text-link" href="/pain001-mcp/">MCP tools</a></article>
+      <article class="tile tile-half" data-reveal data-package="pain001-lsp"><p class="tile-eyebrow">Editors</p><h3>pain001-lsp</h3><p>Diagnostics and payment-rule feedback while a human is still editing the source data.</p><a class="text-link" href="/pain001-lsp/">Editor support</a></article>
+      <article class="tile tile-third" data-reveal data-package="pain001-loader-mt101"><p class="tile-eyebrow">Legacy migration</p><h3>MT101 loader</h3><p>Move SWIFT request-for-transfer workflows to pain.001.001.09 with explicit conversion findings.</p><a class="text-link" href="/pain001-loader-mt101/">MT101 migration</a></article>
+      <article class="tile tile-third" data-reveal data-package="pain001-loader-xlsx"><p class="tile-eyebrow">Treasury teams</p><h3>Excel loader</h3><p>Turn governed payment workbooks into validated records without copy-and-paste operations.</p><a class="text-link" href="/pain001-loader-xlsx/">Excel loader</a></article>
       <article class="tile tile-third" data-reveal><p class="tile-eyebrow">Evidence</p><h3>Example corpus</h3><p>Reproducible payment scenarios across schemes, countries, currencies, and message editions.</p><a class="text-link" href="/example-corpus/">Browse the corpus</a></article>
     </div>
   </div>
@@ -273,8 +304,8 @@ result = validate_scheme(rows, profile="sepa-sct")
     <div class="feature-split">
       <div class="section-head">
         <p class="eyebrow">For regulated teams</p>
-        <h2 id="governance-heading">Free at any scale. <span class="h-muted">A named party with obligations when you need one.</span></h2>
-        <p class="lead">The software stays Apache-2.0 or MIT, with no feature held back. Add a supported release line, private bank profiles derived under NDA, and integration recipes for your ERP or TMS.</p>
+        <h2 id="governance-heading">Free at any scale. <span class="h-muted">Evidence without a sales call.</span></h2>
+        <p class="lead">The software stays Apache-2.0 or MIT, with no feature held back and no paid tier. A reviewer gets the evidence pack, a published maintenance policy, and a guide for building the bank&rsquo;s own profile in-house.</p>
       </div>
       <picture><source type="image/avif" srcset="/img/photos/bank-of-england-480.avif 480w, /img/photos/bank-of-england-800.avif 800w, /img/photos/bank-of-england-1200.avif 1200w" sizes="(min-width: 64rem) 36rem, 92vw" /><img class="feature-photo" src="/img/photos/bank-of-england-800.webp" srcset="/img/photos/bank-of-england-480.webp 480w, /img/photos/bank-of-england-800.webp 800w, /img/photos/bank-of-england-1200.webp 1200w" sizes="(min-width: 64rem) 36rem, 92vw" width="1200" height="900" alt="" loading="lazy" decoding="async" /></picture>
     </div>
@@ -285,8 +316,8 @@ result = validate_scheme(rows, profile="sepa-sct")
       <div><dt>Core licence</dt><dd>Apache-2.0 / MIT</dd></div>
     </dl>
     <div class="cta-row cta-centred">
-      <a class="btn btn-primary" href="/enterprise/#ask">Book an architecture briefing</a>
-      <a class="text-link" href="/enterprise/">What is offered</a>
+      <a class="btn btn-primary" href="/for-banks/">Get the evidence pack</a>
+      <a class="text-link" href="/docs/bank-profiles/">Build a private profile</a>
     </div>
   </div>
 </section>
@@ -304,7 +335,7 @@ result = validate_scheme(rows, profile="sepa-sct")
         <p class="milestone-date"><span class="milestone-flag" hidden>Next</span> <time datetime="2025-01-17">17 Jan 2025</time></p>
         <h3>DORA applies across the EU</h3>
         <p>ICT risk reviews now reach the software in the payment chain.</p>
-        <p class="milestone-answer">SBOM, signed releases and build provenance, verifiable without asking us. <a href="/enterprise/">Review evidence</a></p>
+        <p class="milestone-answer">SBOM, signed releases and build provenance, verifiable without asking us. <a href="/for-banks/">Review evidence</a></p>
       </li>
       <li class="milestone">
         <span class="milestone-dot" aria-hidden="true"></span>
@@ -337,7 +368,7 @@ result = validate_scheme(rows, profile="sepa-sct")
       <div class="briefing-body">
         <p class="eyebrow" id="briefing-heading">Executive briefing</p>
         <div class="prose">{{!content}}</div>
-        <div class="cta-row"><a class="btn btn-primary" href="/enterprise/#ask">Book an architecture briefing</a><a class="text-link" href="/documentation/">Read the documentation</a></div>
+        <div class="cta-row"><a class="btn btn-primary" href="/try/">Validate your first file in 30 seconds</a><a class="text-link" href="/for-banks/">Get the evidence pack</a></div>
       </div>
       <div class="briefing-side">
         <picture><source type="image/avif" srcset="/img/photos/city-blue-hour-480.avif 480w, /img/photos/city-blue-hour-800.avif 800w, /img/photos/city-blue-hour-1200.avif 1200w" sizes="(min-width: 64rem) 28rem, 92vw" /><img class="briefing-photo" src="/img/photos/city-blue-hour-800.webp" srcset="/img/photos/city-blue-hour-480.webp 480w, /img/photos/city-blue-hour-800.webp 800w, /img/photos/city-blue-hour-1200.webp 1200w" sizes="(min-width: 64rem) 28rem, 92vw" width="1200" height="675" alt="" loading="lazy" decoding="async" /></picture>

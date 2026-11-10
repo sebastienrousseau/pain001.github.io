@@ -57,16 +57,26 @@ def test_sitemap_url_must_be_built_indexable_and_self_canonical(tmp_path):
 
 def test_noindex_page_must_not_name_itself_canonical(tmp_path):
     # The shape Search Console flagged on /es/corpus-cz-sepa-sct/.
+    _page(tmp_path, "", _canon(f"{BASE}/"))
     _page(tmp_path, "es/corpus-cz", NOINDEX + _canon(f"{BASE}/es/corpus-cz/"))
-    _sitemap(tmp_path)
+    _sitemap(tmp_path, f"{BASE}/")
     assert gate.problems(tmp_path) == [f"{BASE}/es/corpus-cz/: noindex yet canonical to itself"]
 
 
 def test_main_reports_exit_status(tmp_path, monkeypatch, capsys):
+    _page(tmp_path, "", _canon(f"{BASE}/"))
     _page(tmp_path, "x", NOINDEX + _canon(f"{BASE}/x/"))
-    _sitemap(tmp_path)
+    _sitemap(tmp_path, f"{BASE}/")
     monkeypatch.setattr(gate, "SITE", tmp_path)
     assert gate.main() == 1
     assert "1 problem(s)" in capsys.readouterr().out
     (tmp_path / "x" / "index.html").write_text(f"<head>{NOINDEX}</head>", encoding="utf-8")
     assert gate.main() == 0
+
+
+def test_the_homepage_must_be_listed(tmp_path):
+    # regen_sitemap's "." prefix filter dropped the homepage itself.
+    _page(tmp_path, "", _canon(f"{BASE}/"))
+    _page(tmp_path, "why", _canon(f"{BASE}/why/"))
+    _sitemap(tmp_path, f"{BASE}/why/")
+    assert gate.problems(tmp_path) == [f"{BASE}/: the homepage is not in the sitemap"]

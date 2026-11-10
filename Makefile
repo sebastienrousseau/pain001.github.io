@@ -23,8 +23,12 @@ test: build pytest
 	python3 scripts/validate_proof.py
 	python3 scripts/validate_security_txt.py
 	python3 scripts/validate_sitemap.py
+	python3 scripts/validate_jsonld.py
 	python3 scripts/validate_links.py site
 	python3 scripts/validate_versions.py
+	python3 scripts/validate_no_commercial.py
+	python3 scripts/validate_claims.py
+	python3 scripts/validate_locale_index.py
 
 # Regression tests for the build and release scripts. They run in their own
 # virtualenv, built once from the hash-pinned requirements/test.txt.

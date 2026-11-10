@@ -117,6 +117,6 @@ The [browser demo](/try/#sample=corpus:de.sepa.sct-salary) runs the real `pain00
 
 ## What comes next
 
-When the workbook is the source of truth, the next step is usually to stop retyping it: the same command runs from a scheduler, a [REST API](/documentation/) or an [AI agent](/pain001-mcp/), and the [LSP server](/pain001-lsp/) checks a batch inside the editor before anyone runs anything. If your bank's own guideline needs to be applied on top of the public rulebook, that is [private profile work](/enterprise/), done around the free software rather than inside it.
+When the workbook is the source of truth, the next step is usually to stop retyping it: the same command runs from a scheduler, a [REST API](/documentation/) or an [AI agent](/pain001-mcp/), and the [LSP server](/pain001-lsp/) checks a batch inside the editor before anyone runs anything. If your bank's own guideline needs to be applied on top of the public rulebook, your team can [build a private bank profile](/docs/bank-profiles/) with the same free tooling, inside your own environment.
 
 [Loader reference](/pain001-loader-xlsx/) · [Technical reference](/documentation/) · [Example corpus](/example-corpus/)

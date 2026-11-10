@@ -13,8 +13,8 @@
     <p class="lead hero-lead">{{subtitle}}</p>
 
     <div class="hero-actions">
-      <a class="btn btn-primary" href="#ask">Book an architecture briefing</a>
-      <a class="btn btn-secondary" href="/compliance-toolkit/">Compliance toolkit</a>
+      <a class="btn btn-primary" href="#evidence" data-evidence-pack data-event="evidence_pack_download">Download the evidence pack</a>
+      <a class="btn btn-secondary" href="/architecture-and-patents/">Read the architecture and data-handling notes</a>
     </div>
 
     <div class="article-meta">Last reviewed <time datetime="{{last_reviewed}}">{{last_reviewed}}</time></div>
@@ -83,7 +83,7 @@
         <p class="eyebrow">For risk and procurement</p>
         <h2 id="review-heading">What a risk review asks. <span class="h-muted">Where the answer is.</span></h2>
       </div>
-      <p class="lead">Each answer describes how the software works or what is offered on this page. None of it is a certification, and none of it replaces your own assessment.</p>
+      <p class="lead">Each answer describes how the software works and where its evidence is. None of it is a certification, and none of it replaces your own assessment.</p>
     </div>
     <div class="review-table-wrap">
       <table class="review-table">
@@ -91,13 +91,13 @@
         <tbody>
           <tr><th scope="row">Where does payment data go?</th><td>Nowhere. Validation runs inside your infrastructure and makes no network calls; there is no hosted service holding your files.</td><td><a href="/privacy/">Data handling</a></td></tr>
           <tr><th scope="row">Can we assess the software supply chain? (DORA ICT third-party risk)</th><td>A CycloneDX SBOM, signed release tags with checksums, and build provenance attested through Sigstore, all verifiable without contacting us.</td><td><a href="#evidence">Evidence above</a></td></tr>
-          <tr><th scope="row">What if the maintainer stops?</th><td>The source is Apache-2.0 or MIT: you can build, run and fork it indefinitely. A designated long-term-support line is available under the supported channel.</td><td><a href="#01-supported-release-channel">Supported channel</a></td></tr>
-          <tr><th scope="row">How are defects and vulnerabilities handled?</th><td>Private vulnerability reporting and a published security.txt for everyone; written response targets under the supported channel.</td><td><a href="/.well-known/security.txt">security.txt</a></td></tr>
-          <tr><th scope="row">Does it know our bank&rsquo;s rules?</th><td>Not out of the box. A private profile can be derived from your bank&rsquo;s guideline under NDA, without the guideline leaving your control.</td><td><a href="#02-private-profile-derivation">Private profiles</a></td></tr>
+          <tr><th scope="row">What if the maintainer stops?</th><td>The source is Apache-2.0 or MIT: you can build, run and fork it indefinitely. The governance page sets out how decisions are made, how releases are cut, and the plan for a second maintainer.</td><td><a href="/governance/">Governance</a></td></tr>
+          <tr><th scope="row">How are defects and vulnerabilities handled?</th><td>Private vulnerability reporting and a published security.txt. Security reports are acknowledged within 5 working days as a goal, not a guarantee.</td><td><a href="#maintenance-policy">Maintenance policy</a></td></tr>
+          <tr><th scope="row">Does it know our bank&rsquo;s rules?</th><td>Not out of the box. Your own team can turn the bank&rsquo;s usage guideline into a validated profile with the published guide and tooling, without the guideline leaving your network.</td><td><a href="/docs/bank-profiles/">Build a bank profile</a></td></tr>
         </tbody>
       </table>
     </div>
-    <div class="cta-row review-cta"><a class="btn btn-primary" href="#ask">Book an architecture briefing</a><a class="text-link" href="/architecture-and-patents/">Architecture &amp; security</a></div>
+    <div class="cta-row review-cta"><a class="btn btn-primary" href="#evidence" data-evidence-pack data-event="evidence_pack_download">Download the evidence pack</a><a class="text-link" href="/architecture-and-patents/">Architecture &amp; security</a></div>
   </div>
 </section>
 

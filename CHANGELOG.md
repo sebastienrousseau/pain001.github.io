@@ -6,6 +6,34 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.0.85] - 2026-11-10
+
+### Fixed
+
+- Preload each responsive hero image from the photo map, and encode the oversized tablet demo hero within its existing byte budget.
+- Retry transient PyPI connection resets twice with bounded delays; permanent errors and exhausted retries still fail the version-currency gate.
+- Stop tracking a `node_modules` symlink that the 0.0.85 regeneration committed by mistake; it made the REUSE check fail. `.gitignore` now ignores `node_modules` as a link too, and a test rejects any tracked symlink.
+
+### Changed
+
+- Release the website with pain001 0.0.85. Pin the browser runtime to the published core wheel, regenerate the corpus pages, versioned downloads, demo samples and translations from the `v0.0.85` tag, and pin the ecosystem check to the 0.0.85 release commit.
+- Replace the enterprise page with `/for-banks/`, a self-service evidence page for bank reviewers: the evidence pack, the published maintenance policy, a guide to building a bank profile in-house, open integration recipes, and the three questions a review asks. There is no paid tier, no briefing and no enquiry form; `/enterprise/` and `/thanks/` become redirect stubs (decision D2).
+- Navigation is Try it, Developers, Docs, For banks and Insights, with a "Try it free" button; the footer states that Pain001 is an independent project maintained in a personal capacity and links the governance page (decisions D0 and D3).
+- The homepage leads bank reviewers to the evidence pack, adds the two paths (building an integration, evaluating for an organisation), and points the bank-profile layer at the new guide (decision D3).
+- The privacy page, `METRICS.md` and the demo's "Verify it yourself" panel (in all 34 locales) describe the page-view and event counts. The demo said it ran no analytics script while the layout already loaded the page-view beacon there; it now names every request it makes.
+- The demo and event scripts lose their block comments at build, keeping the translated `/try/` pages inside the 50 KB script budget.
+- Questions and the maintainer route point to GitHub issues instead of GitHub Discussions, which are not enabled, and `/for-banks/` states that there is no long-term-support line at present (fixes ship in the next release).
+- Remove every remaining paid offer from the why, executive-brief, Excel, MT101, governance and comparison pages (and the why and executive-brief translations in all 34 locales), from llms.txt, and an employer's name from a stylesheet comment (decision D0).
+
+### Added
+
+- The governance page states how decisions are made (pull requests, ADRs, DCO), the release process, how to become a maintainer, and a bus-factor plan that marks the key, domain and ownership items as not yet arranged (decision D6).
+- `/developers/`, `/developers/ci/` (the GitHub Action) and `/docs/bank-profiles/`; nested routes are moved into place after the ssg build.
+- First-party, cookie-free event counts (`static/js/pain001-events.js`) for the eleven events of decision D1 (a Discussions click is not counted, since Discussions are off), sent to `/e` on this origin with the event name, page path and at most a short label; nothing is sent locally or under Do Not Track or Global Privacy Control. ADR 0002 records that Cloudflare Web Analytics plus Workers Analytics Engine supersede Umami.
+- A claims register, `data/claims.yml` (decision D5): each figure the homepage shows has its evidence URL and the release it was verified for. `scripts/claims.py` refreshes the live figures before the build, postbuild writes them into the page, and `scripts/validate_claims.py` fails the build when a shown figure differs from the register or an entry was not verified for the current release. The homepage gains a proof strip (GitHub stars, PyPI downloads a month, OpenSSF Scorecard, releases since 2023, branch coverage, signed releases with provenance) and a "Tell us how you use it" link to the core's adoption issue form; the "34 languages" figure becomes PyPI downloads a month. No testimonial or name is shown.
+- Twenty-six indexed languages (decision D4): English (also x-default), French, German, Dutch, Spanish and Italian, plus the twenty locales with at least 100 Search Console impressions in the last 3 months on 10 November 2026 (Polish, Swedish, Japanese, Russian, Korean, Traditional and Simplified Chinese, Yoruba, Malay, Czech, Turkish, Brazilian Portuguese, Persian, Arabic, Thai, Hungarian, Vietnamese, Indonesian, Hebrew and Greek). The other 9 locales (Ukrainian, Bengali, Hindi, Romanian, Hausa, Tamil, Telugu, Marathi, and Filipino with none) stay live but are noindex, follow, with no hreflang or canonical link, out of the sitemap and off the tag pages; the language menu lists the first six and "More languages". `INDEXED_LOCALES` in `scripts/postbuild_fix.py` is the one list to extend. `scripts/validate_locale_index.py` fails the build when an indexed page links to, or lists as an alternate, an unindexed locale (except `/languages/`). `/ar/` is indexed, so the Lighthouse SEO budget no longer skips its is-crawlable audit.
+- `scripts/validate_no_commercial.py`, run in `make test` and CI: the build fails on a retired paid phrase, a funding-platform link, a link to `/enterprise/` or `/thanks/`, or an employer's name.
+
 ## [0.0.84] - 2026-11-09
 
 ### Added
@@ -18,6 +46,38 @@ All notable changes to this website are documented here. The format follows
 - A manual run of CI on `main` now deploys to GitHub Pages, as a push
   does. On 2026-11-09 GitHub's Actions outage dropped the deploy job
   from the 0.0.83 merge run, which then could not be retried.
+- The homepage's "Five focused packages" heading is counted from the
+  package tiles at build time, so it cannot drift from them. Five is
+  right: the sixth tile is the example corpus, not a package.
+- The homepage and the 34 locale homepages declare `og:type` `website`;
+  ssg wrote `article` on every page whatever the front matter said.
+- The homepage's structured data names Pain001 as free software
+  (`SoftwareApplication`, version from the release the site is built
+  from, price 0) published by an `Organization` founded by the
+  maintainer's Person entity on sebastienrousseau.com.
+  `scripts/validate_jsonld.py` checks every JSON-LD block on the site
+  parses and that the homepage graph stays current.
+- `robots.txt` allows every public page and names the AI crawlers
+  (GPTBot, ClaudeBot, PerplexityBot, Google-Extended and others)
+  explicitly, with the sitemap link kept.
+- Each sitemap URL's `lastmod` is the last commit to the page's
+  sources (its post, layout and locale table) instead of the build
+  date stamped on all 493 URLs at every deploy. CI's build job now
+  checks out full history for it.
+- The sitemap lists the homepage. It never had: the filter that skips
+  dot-directories also matched the homepage's own path, `.`.
+- `llms.txt` no longer says the MCP server has 21 tools (0.0.83 ships
+  30); it links the MCP page instead of a hand-typed count.
+- `/try/#sample=sepa-sct` (and any built-in sample key) opens that
+  sample and validates it; only corpus scenarios could be linked before.
+- The homepage hero leads with the sandbox: "Catch pain.001 errors
+  before your bank does", a "Validate a sample file for free" button
+  that opens the SEPA sample already validated, "No sign-up · runs in
+  your browser · nothing is uploaded", a copyable `pip install
+  pain001`, and "Evaluating for a bank? Book a briefing" as a text
+  link. The documentation link leaves the hero (it stays in the
+  navigation), and the demo section's link reads "Try it with your own
+  CSV".
 
 ### Changed
 

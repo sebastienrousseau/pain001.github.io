@@ -742,3 +742,26 @@ html.no-js .motion-toggle { display: none; }
 /* ssg's named, focusable table region is the element that should scroll;
    left visible, an unnamed wrapper around it did the scrolling instead. */
 .content-body .ssg-table-scroll { overflow-x: auto; max-inline-size: 100%; }
+
+/* The homepage proof strip (decision D5): figures from data/claims.yml,
+   one line that wraps, centred, without list bullets. */
+.proof-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+/* Each figure's link is a 24px-tall target (WCAG 2.5.8), so Lighthouse's
+   target-size audit passes when the strip sits on one line at 4K and 8K. */
+.proof-strip a { display: inline-flex; align-items: center; min-height: 1.5rem; }
+.section-tight { padding-block: 1.5rem; }
+.section-tight .spec-line { text-align: center; }
+
+/* A long action label (the homepage hero, /for-banks/) is wider than a
+   320px or 375px phone. Buttons keep one line where they fit and wrap,
+   centred, where they do not, instead of widening the page. */
+@media (max-width: 30rem) {
+  .btn { white-space: normal; text-align: center; line-height: 1.25; padding-block: 0.5rem; max-width: 100%; }
+}

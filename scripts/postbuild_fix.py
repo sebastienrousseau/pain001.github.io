@@ -63,7 +63,7 @@ CSP_META = (
     "style-src 'self'  'unsafe-hashes' 'sha256-+naa4DVyLB6dFJG6pe9ePhWQvc+IemcuXsxc1C9yQdg='; "
     "script-src 'self' 'sha256-%s' 'wasm-unsafe-eval'; "
     "connect-src 'self' https://cloudflareinsights.com; font-src 'self'; "
-    "form-action 'self' https://formspree.io\" "
+    "form-action 'self'\" "
     "http-equiv=Content-Security-Policy>"
 )
 # The theme script must run before first paint, and as a separate file it
@@ -435,6 +435,20 @@ LOCALES = {
     "zh-hant": "zh-Hant",
 }
 RTL_LANGS = {"ar", "fa", "he"}
+
+# Decision D4 (10 November 2026): index English (also x-default), French,
+# German, Dutch, Spanish and Italian, plus any locale with at least 100
+# Search Console impressions in the last 90 days. The second group comes
+# from Search Console on 10 November 2026 (last 3 months, web search,
+# impressions summed over each locale's pages), largest first; uk, bn, hi,
+# ro, ha, ta, te, mr and fil were under 100. Every other locale stays live
+# for readers but is noindex, follow, out of the sitemap and out of every
+# hreflang cluster (apply_locale_index_policy). Review in February 2027.
+INDEXED_LOCALES = (
+    "fr", "de", "nl", "es", "it",
+    "pl", "sv", "ja", "ru", "ko", "zh-hant", "yo", "ms", "cs", "tr",
+    "pt-br", "fa", "zh-hans", "ar", "th", "hu", "vi", "id", "he", "el",
+)
 
 _HTML_TAG_RE = re.compile(r"<html\b([^>]*)>")
 
@@ -1315,18 +1329,87 @@ def mark_noindex_pages(site: Path) -> None:
     print(f"[postbuild] noindex on {marked} utility page(s); /404.html published")
 
 
+I18N_TABLE_DIRS = ("pages_i18n", "docs_i18n", "try_i18n")
+_LAYOUT_RE = re.compile(r'^layout:\s*"?([\w-]+)"?\s*$', re.M)
+
+
+def source_dates(root: Path) -> dict[str, str] | None:
+    """Each tracked file's last commit date (YYYY-MM-DD), from one pass
+    over the history; None when the history is shallow or git is absent,
+    since a one-commit clone would date every file to that commit."""
+    import subprocess
+    try:
+        shallow = subprocess.run(
+            ["git", "rev-parse", "--is-shallow-repository"], cwd=root,
+            capture_output=True, text=True, check=True).stdout.strip()
+        if shallow != "false":
+            return None
+        log = subprocess.run(
+            ["git", "log", "--format=@%cs", "--name-only", "--no-renames", "HEAD"],
+            cwd=root, capture_output=True, text=True, check=True).stdout
+    except (OSError, subprocess.CalledProcessError):
+        return None
+    dates: dict[str, str] = {}
+    current = ""
+    for line in log.splitlines():
+        if line.startswith("@"):
+            current = line[1:]
+        elif line and line not in dates:
+            dates[line] = current
+    return dates
+
+
+def page_sources(root: Path, rel: str) -> list[str]:
+    """The source files a built page is made from: its post, the post's
+    layout and, for a locale copy of an English page, that locale's
+    translation table."""
+    parts = rel.split("/")
+    locale, slug = (parts[0], "/".join(parts[1:])) if parts[0] in LOCALES and len(parts) > 1 else ("", rel)
+    candidates = ["_posts/index.md"] if slug == "." else [f"_posts/{slug}.md", f"_posts/{slug.replace('/', '-')}.md"]
+    if locale and slug.startswith("corpus-"):
+        candidates.insert(0, f"_posts/{locale}-{slug}.md")
+    sources = [c for c in candidates if (root / c).is_file()][:1]
+    if sources:
+        layout = _LAYOUT_RE.search((root / sources[0]).read_text(encoding="utf-8"))
+        if layout and (root / "_layouts" / f"{layout.group(1)}.html").is_file():
+            sources.append(f"_layouts/{layout.group(1)}.html")
+    if locale:
+        for table_dir in I18N_TABLE_DIRS:
+            table = root / "scripts" / table_dir / f"{LOCALES[locale].lower()}.json"
+            table = table if table.is_file() else root / "scripts" / table_dir / f"{locale}.json"
+            if table.is_file():
+                sources.append(table.relative_to(root).as_posix())
+    return sources
+
+
+def page_lastmod(root: Path, rel: str, dates: dict[str, str] | None, fallback: str) -> str:
+    """The latest commit date among a page's sources, else the build date."""
+    if dates is None:
+        return fallback
+    found = [dates[src] for src in page_sources(root, rel) if src in dates]
+    return max(found) if found else fallback
+
+
 def regen_sitemap(site: Path) -> None:
+    """Write sitemap.xml with each page's lastmod taken from the last
+    commit to its sources. It used to stamp the build date on every URL,
+    which tells crawlers all 493 pages changed on every deploy."""
+    root = Path(__file__).resolve().parent.parent
     today = date.today().isoformat()
+    dates = source_dates(root)
     urls = []
     for page in sorted(site.rglob("index.html")):
         rel = page.parent.relative_to(site).as_posix()
-        if rel.startswith(("api/", "_csp", ".")) or rel in NOINDEX_PAGES or is_translated_corpus(rel):
+        # "." is the homepage itself; only dot-directories are skipped.
+        if rel.startswith(("api/", "_csp")) or (rel != "." and rel.startswith(".")) \
+                or rel in NOINDEX_PAGES or is_translated_corpus(rel) \
+                or is_noindexed_locale(rel):
             continue
         loc = BASE_URL + "/" if rel == "." else f"{BASE_URL}/{rel}/"
         urls.append(
             "<url>\n"
             f"  <loc>{loc}</loc>\n"
-            f"  <lastmod>{today}</lastmod>\n"
+            f"  <lastmod>{page_lastmod(root, rel, dates, today)}</lastmod>\n"
             "  <changefreq>weekly</changefreq>\n"
             "</url>"
         )
@@ -1337,7 +1420,8 @@ def regen_sitemap(site: Path) -> None:
         + "\n</urlset>\n"
     )
     (site / "sitemap.xml").write_text(body, encoding="utf-8")
-    print(f"[postbuild] sitemap.xml regenerated with {len(urls)} URLs")
+    source = "commit dates" if dates is not None else "the build date (shallow history)"
+    print(f"[postbuild] sitemap.xml regenerated with {len(urls)} URLs, lastmod from {source}")
 
 
 # Corpus scenario pages exist in English and in the five locales whose
@@ -1541,6 +1625,151 @@ def inject_dataset_ld(site: Path) -> None:
         page.write_text(html.replace("</head>", block + "</head>", 1), encoding="utf-8")
 
 
+_NUMBER_WORDS = ("Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven",
+                 "Eight", "Nine", "Ten", "Eleven", "Twelve")
+_PACKAGE_TILE_RE = re.compile(r'<article\b[^>]*\bdata-package="([^"]+)"')
+_PACKAGE_COUNT_RE = re.compile(r"(<span data-package-count>)[^<]*(</span>)")
+
+
+def stamp_package_count(html: str) -> str:
+    """Write the number of package tiles into the suite heading.
+
+    The homepage heading said "Five focused packages" by hand above six
+    tiles, one of which (the example corpus) is not a package, and an
+    audit read it as a miscount. The heading now counts the tiles marked
+    ``data-package`` instead, so adding or removing a package tile moves
+    it, and the corpus tile is never counted.
+    """
+    if "data-package-count" not in html:
+        return html
+    count = len(set(_PACKAGE_TILE_RE.findall(html)))
+    if not 0 < count < len(_NUMBER_WORDS):
+        raise ValueError(f"package tile count {count} has no number word")
+    return _PACKAGE_COUNT_RE.sub(rf"\g<1>{_NUMBER_WORDS[count]}\g<2>", html)
+
+
+# Home pages describe a site, not an article: ssg writes og:type
+# "article" on every page whatever the front matter's `type` says.
+_OG_TYPE_RE = re.compile(r'(<meta\s+property=["\']og:type["\']\s+content=["\'])article(["\'])')
+
+
+def home_page_paths(site: Path) -> list[Path]:
+    """The English homepage and every locale's homepage."""
+    pages = [site / "index.html"] + [site / slug / "index.html" for slug in LOCALES]
+    return [page for page in pages if page.is_file()]
+
+
+def fix_home_og_type(site: Path) -> None:
+    """og:type ``website`` on the home pages; articles keep ``article``."""
+    changed = 0
+    for page in home_page_paths(site):
+        html = page.read_text(encoding="utf-8")
+        fixed = _OG_TYPE_RE.sub(r"\g<1>website\g<2>", html)
+        if fixed != html:
+            page.write_text(fixed, encoding="utf-8")
+            changed += 1
+    print(f"[postbuild] og:type website on {changed} home page(s)")
+
+
+def stamp_home_package_count(site: Path) -> None:
+    """Apply stamp_package_count to the built homepage."""
+    page = site / "index.html"
+    if page.is_file():
+        html = page.read_text(encoding="utf-8")
+        page.write_text(stamp_package_count(html), encoding="utf-8")
+
+
+_LD_BLOCK_RE = re.compile(r'(<script type="application/ld\+json">)(.*?)(</script>)', re.S)
+PERSON_ID = "https://sebastienrousseau.com/#person"
+ORG_ID = BASE_URL + "/#org"
+SOFTWARE_ID = BASE_URL + "/#software"
+
+
+def software_graph(version: str) -> list[dict]:
+    """The SoftwareApplication and Organization nodes for the homepage.
+
+    Search engines and answer engines need three facts stated as data:
+    Pain001 is software, it is free, and who maintains it. The person
+    is the @id sebastienrousseau.com publishes, so both sites describe
+    one entity. No aggregateRating: there are no on-page reviews.
+    """
+    return [
+        {
+            "@type": "SoftwareApplication",
+            "@id": SOFTWARE_ID,
+            "name": "Pain001",
+            "applicationCategory": "FinanceApplication",
+            "applicationSubCategory": "ISO 20022 payment file generator and validator",
+            "operatingSystem": "Linux, macOS, Windows",
+            "softwareVersion": version,
+            "license": "https://www.apache.org/licenses/LICENSE-2.0",
+            "isAccessibleForFree": True,
+            "offers": {"@type": "Offer", "price": "0", "priceCurrency": "GBP"},
+            "downloadUrl": "https://pypi.org/project/pain001/",
+            "codeRepository": "https://github.com/sebastienrousseau/pain001",
+            "featureList": [
+                "pain.001 generation",
+                "pain.008 generation",
+                "XSD validation",
+                "Scheme rules for SEPA, CBPR+, CHAPS, Bacs, FPS, FedNow and ACH",
+                "CSV, Excel, SQLite, JSON, Parquet and MT101 input",
+            ],
+            "author": {"@id": PERSON_ID},
+            "publisher": {"@id": ORG_ID},
+        },
+        {
+            "@type": "Organization",
+            "@id": ORG_ID,
+            "name": "Pain001",
+            "url": BASE_URL + "/",
+            "logo": BASE_URL + "/img/pain001.svg",
+            "founder": {"@id": PERSON_ID},
+            "sameAs": [
+                "https://github.com/sebastienrousseau/pain001",
+                "https://pypi.org/project/pain001/",
+            ],
+        },
+    ]
+
+
+def enrich_home_ld(html: str, version: str) -> str:
+    """Add the software graph to the homepage's ssg-written JSON-LD.
+
+    ssg writes one block with WebSite and WebPage. The nodes are merged
+    into that graph rather than a second block, and the WebSite and
+    WebPage name the organization as publisher and the software as what
+    the page is about.
+    """
+    match = _LD_BLOCK_RE.search(html)
+    if not match or not version:
+        return html
+    data = json.loads(match.group(2))
+    graph = data.get("@graph")
+    if not isinstance(graph, list) or any(n.get("@id") == SOFTWARE_ID for n in graph):
+        return html
+    for node in graph:
+        if node.get("@type") == "WebSite":
+            node["publisher"] = {"@id": ORG_ID}
+        elif node.get("@type") == "WebPage":
+            node["about"] = {"@id": SOFTWARE_ID}
+    graph.extend(software_graph(version))
+    block = match.group(1) + json.dumps(data, ensure_ascii=False) + match.group(3)
+    return html[: match.start()] + block + html[match.end():]
+
+
+def add_home_software_ld(site: Path) -> None:
+    """Apply enrich_home_ld to the built homepage, with the suite version
+    the corpus index records (the release the site is built from)."""
+    page = site / "index.html"
+    index = Path(__file__).resolve().parent.parent / "static" / "corpus" / "index.json"
+    if not page.is_file() or not index.is_file():
+        return
+    version = json.loads(index.read_text(encoding="utf-8")).get("pain001", "")
+    html = page.read_text(encoding="utf-8")
+    page.write_text(enrich_home_ld(html, version), encoding="utf-8")
+    print(f"[postbuild] homepage JSON-LD: SoftwareApplication {version} + Organization")
+
+
 def write_llms(site: Path) -> None:
     """Write llms.txt and llms-full.txt for agents that read the site.
 
@@ -1564,7 +1793,7 @@ def write_llms(site: Path) -> None:
         "",
         "## Install",
         "",
-        "- `pip install pain001` (library and CLI); `pip install pain001-mcp` (MCP server, 21 tools); "
+        "- `pip install pain001` (library and CLI); `pip install pain001-mcp` (MCP server; its tools are listed at https://pain001.com/pain001-mcp/); "
         + "`pip install pain001-lsp` (language server)",
         "- MCP, Claude Code: `claude mcp add pain001 -- pain001-mcp`; other clients: command `pain001-mcp` over stdio "
         + "(configuration blocks at https://pain001.com/pain001-mcp/)",
@@ -1588,7 +1817,7 @@ def write_llms(site: Path) -> None:
         "- MCP registry entry: io.github.sebastienrousseau/pain001-mcp ; Glama listing: https://glama.ai/mcp/servers/sebastienrousseau/pain001-mcp ; image: ghcr.io/sebastienrousseau/pain001-mcp",
         "- MT101 to pain.001 migration path: https://pain001.com/mt101-migration/ ; Excel workbooks as input: https://pain001.com/excel-to-pain001/",
         "- Trust centre, privacy, governance: https://pain001.com/trust/ https://pain001.com/privacy/ https://pain001.com/governance/",
-        "- Supported channel, private profile derivation, integration help (the software stays free): https://pain001.com/enterprise/",
+        "- For bank reviewers, free and self-service: evidence pack, maintenance policy, bank-profile guide: https://pain001.com/for-banks/",
         "",
         "## Rules of use",
         "",
@@ -1871,6 +2100,12 @@ def add_page_photos(site: Path) -> None:
         widths = (640, 768, 960, 1280, 1600)
         def srcset(ext: str, base: str = base, widths: tuple[int, ...] = widths) -> str:
             return ", ".join(f"{base}-{w}.{ext} {w}w" for w in widths)
+        # Discover the LCP image before blocking CSS and the long header.
+        # Matching the picture's candidates avoids a duplicate image fetch.
+        preload = (f'<link rel="preload" as="image" type="image/avif" '
+                   f'href="{base}-960.avif" imagesrcset="{srcset("avif")}" '
+                   f'imagesizes="{sizes}" fetchpriority="high" />')
+        html = html.replace("<head>", "<head>\n" + preload, 1)
         img = (f'<picture class="page-photo-frame">'
                f'<source type="image/avif" srcset="{srcset("avif")}" sizes="{sizes}" />'
                f'<img class="page-photo" src="{base}-960.webp" srcset="{srcset("webp")}" '
@@ -1939,7 +2174,7 @@ def main() -> None:
         bundle_stylesheets(site)
         # Our hand-written scripts ship without their block comments: the
         # translated /try/ pages sit close to ssg's 50 KB script budget.
-        for name in ("prism.js", "pain001-prism.js", "home.js", "prism-theme-init.js"):
+        for name in STRIPPED_SCRIPTS:
             js = site / "js" / name
             if js.is_file():
                 js.write_text(strip_js_comments(js.read_text(encoding="utf-8")), encoding="utf-8")
@@ -1983,11 +2218,15 @@ def main() -> None:
     gen_try_locales(site)
     gen_journey_locales(site)
     relocate_corpus_locales(site)  # before the Dataset markup, which is keyed by final path
+    relocate_nested_routes(site)
     inject_dataset_ld(site)
     inject_article_ld(site, "pain-001")
     write_llms(site)
+    add_home_software_ld(site)
     stamp_suite_version(site)
+    fill_claims(site)
     mark_noindex_pages(site)  # before the sitemap, which skips the same pages
+    apply_locale_index_policy(site)  # before the sitemap, which skips them too
     regen_sitemap(site)
     gen_legacy_redirects(site)  # after sitemap so stubs stay unindexed
     normalise_site_shell(site)  # includes taxonomy and redirect pages
@@ -1999,6 +2238,8 @@ def main() -> None:
     retitle_tag_pages(site)
     defer_ssg_search(site)
     ensure_social_metadata(site)
+    fix_home_og_type(site)
+    stamp_home_package_count(site)
     remove_stray_per_page_files(site)
 
 
@@ -2043,9 +2284,13 @@ def remove_stray_per_page_files(site: Path) -> int:
         page_404.write_text(html, encoding="utf-8")
     # Tag archives listed the noindex utility pages as tagged articles.
     listed = re.compile(r'<li><a href="/(?:%s)/">[^<]*</a></li>\s*' % "|".join(map(re.escape, NOINDEX_PAGES)))
+    # They also listed every locale's homepage; the unindexed ones go, so an
+    # indexed tag page sends no crawler into a noindex locale (decision D4).
+    unindexed = re.compile(r'<li><a href="/(?:%s)/"[^>]*>[^<]*</a></li>\s*'
+                           % "|".join(re.escape(s) for s in LOCALES if s not in INDEXED_LOCALES))
     for tag_page in site.glob("tags/*/index.html"):
         html = tag_page.read_text(encoding="utf-8")
-        fixed = listed.sub("", html)
+        fixed = unindexed.sub("", listed.sub("", html))
         if fixed != html:
             tag_page.write_text(fixed, encoding="utf-8")
     print(f"[postbuild] removed {removed} stray per-page file(s) and the /404/ copy")
@@ -2058,7 +2303,120 @@ LEGACY_REDIRECTS = {
     "executive-brief-es": "/es/executive-brief/",
     # Renamed in v0.0.7: the generator is the Static Site Generator (ssg).
     "made-with-shokunin": "/made-with-ssg/",
+    # 0.0.85: the paid offer and its enquiry form are gone; the page is a
+    # self-service evidence page for bank reviewers (decision D2).
+    "enterprise": "/for-banks/",
+    "thanks": "/contact/",
 }
+
+
+# ssg names every page after its post file and has no nested routes, so a
+# page meant to live at /docs/bank-profiles/ is written as
+# /docs-bank-profiles/ and moved here. ssg also derives the canonical,
+# og:url and feed entries from the file name, so every "/<flat>/" in the
+# built text files becomes "/<nested>/" as well; the slugs are unique
+# strings, so nothing else matches.
+NESTED_ROUTES = {
+    "docs-bank-profiles": "docs/bank-profiles",
+    "developers-ci": "developers/ci",
+}
+
+
+def relocate_nested_routes(site: Path) -> None:
+    """Move each flat page in NESTED_ROUTES to its nested path."""
+    for flat, nested in NESTED_ROUTES.items():
+        src = site / flat
+        if not (src / "index.html").is_file():
+            raise SystemExit(f"[postbuild] nested route source /{flat}/ was not built")
+        dest = site / nested
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        if dest.exists():
+            shutil.rmtree(dest)
+        shutil.move(str(src), str(dest))
+    rewritten = 0
+    for path in site.rglob("*"):
+        if path.suffix not in (".html", ".xml", ".json", ".txt") or not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8", errors="strict")
+        new = text
+        for flat, nested in NESTED_ROUTES.items():
+            new = new.replace("/%s/" % flat, "/%s/" % nested)
+        if new != text:
+            path.write_text(new, encoding="utf-8")
+            rewritten += 1
+    print(f"[postbuild] {len(NESTED_ROUTES)} page(s) moved to nested routes, "
+          f"{rewritten} file(s) relinked")
+
+
+# Our hand-written scripts whose block comments the --optimise-assets pass
+# removes. The translated /try/ pages sit close to ssg's 50 KB script
+# budget, and the event script (decision D1) pushed them over it.
+# tests/python/test_stripped_scripts.py checks each one still parses after
+# stripping, since the stripper does not understand regex literals.
+STRIPPED_SCRIPTS = (
+    "prism.js", "pain001-prism.js", "home.js", "prism-theme-init.js",
+    "pain001-analytics.js", "pain001-events.js", "try-page.js",
+)
+
+
+def fill_claims(site: Path) -> None:
+    """Write the claims register's figures into data-claim elements (D5)."""
+    from claims import fill, load  # sibling module; scripts/ is on sys.path
+
+    register = load()
+    n = 0
+    for page in site.rglob("*.html"):
+        html = page.read_text(encoding="utf-8")
+        if "data-claim=" not in html:
+            continue
+        filled = fill(html, register)
+        if filled != html:
+            page.write_text(filled, encoding="utf-8")
+            n += 1
+    print(f"[postbuild] claims register figures written into {n} page(s)")
+
+
+def is_noindexed_locale(rel: str) -> bool:
+    """True for a site-relative path under a locale that is not indexed."""
+    first = rel.split("/", 1)[0]
+    return first in LOCALES and first not in INDEXED_LOCALES
+
+
+_NOINDEXED_CODES = None
+
+
+def _strip_noindexed_alternates(html: str) -> str:
+    """Drop hreflang alternates that point at a locale that is not indexed."""
+    global _NOINDEXED_CODES
+    if _NOINDEXED_CODES is None:
+        _NOINDEXED_CODES = {code for slug, code in LOCALES.items() if slug not in INDEXED_LOCALES}
+
+    def keep(m: re.Match) -> str:
+        code = re.search(r'hreflang="([^"]*)"', m.group(0)).group(1)
+        return "" if code in _NOINDEXED_CODES else m.group(0)
+
+    return _HREFLANG_LINK_RE.sub(keep, html)
+
+
+def apply_locale_index_policy(site: Path) -> None:
+    """Decision D4: every page under a locale outside INDEXED_LOCALES is
+    noindex, follow, with no hreflang or canonical link (the same treatment
+    as the translated corpus pages, for the same reason); every other page
+    drops hreflang alternates that point at such a locale."""
+    noindexed = indexed = 0
+    for page in site.rglob("*.html"):
+        rel = page.relative_to(site).as_posix()
+        html = page.read_text(encoding="utf-8")
+        if is_noindexed_locale(rel):
+            new = noindex_translated_corpus(html)
+            noindexed += 1
+        else:
+            new = _strip_noindexed_alternates(html)
+            indexed += new != html
+        if new != html:
+            page.write_text(new, encoding="utf-8")
+    print(f"[postbuild] locale policy: {noindexed} page(s) noindex, "
+          f"{indexed} page(s) lost alternates to unindexed locales")
 
 
 def stamp_redirect_map(site: Path) -> None:

@@ -38,6 +38,16 @@ export default [
     languageOptions: { sourceType: "commonjs", globals: { ...globals.node, ...globals.browser } },
   },
   {
+    // The pain001.com events Worker (workers/events): an ES module in the
+    // Workers runtime, which has the service-worker globals.
+    files: ["workers/**/src/**/*.js"],
+    languageOptions: { sourceType: "module", globals: { ...globals.serviceworker } },
+  },
+  {
+    files: ["workers/**/test/**/*.mjs"],
+    languageOptions: { sourceType: "module", globals: { ...globals.node } },
+  },
+  {
     files: ["tests/**/*.mjs"],
     languageOptions: { sourceType: "module", globals: { ...globals.node } },
   },

@@ -46,6 +46,8 @@ clean_staging
 python3 scripts/fetch_runtime.py
 
 python3 scripts/traction.py
+# The claims register's live figures (decision D5; see scripts/claims.py).
+python3 scripts/claims.py refresh
 ssg build -f ssg.toml
 
 # GitHub Pages custom-domain file must contain exactly the apex domain.

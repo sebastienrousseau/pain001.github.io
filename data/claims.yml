@@ -1,0 +1,79 @@
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
+{
+  "_comment": "Claims register (decision D5). YAML whose body is JSON, so the build reads it with the standard library. scripts/claims.py refreshes the live values before each build; scripts/validate_claims.py fails the build when a figure on the site differs from its entry here, or when an entry was not verified for the current release (VERSION). Manual entries are re-verified by hand at each release: check the evidence, then set verified_in.",
+  "claims": [
+    {
+      "id": "github_stars",
+      "claim": "GitHub stars on the core repository",
+      "value": 49,
+      "format": "count",
+      "source": "live",
+      "pages": [
+        "/"
+      ],
+      "evidence_url": "https://github.com/sebastienrousseau/pain001",
+      "verified_in": "0.0.85"
+    },
+    {
+      "id": "pypi_downloads_month",
+      "claim": "pain001 downloads from PyPI in the last month",
+      "value": 3517,
+      "format": "count",
+      "source": "live",
+      "pages": [
+        "/"
+      ],
+      "evidence_url": "https://pypistats.org/packages/pain001",
+      "verified_in": "0.0.85"
+    },
+    {
+      "id": "openssf_scorecard",
+      "claim": "OpenSSF Scorecard score of the core repository, out of 10",
+      "value": 8.4,
+      "format": "score",
+      "source": "live",
+      "pages": [
+        "/"
+      ],
+      "evidence_url": "https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/pain001",
+      "verified_in": "0.0.85"
+    },
+    {
+      "id": "releases_since_2023",
+      "claim": "Published releases of the core since the first in 2023",
+      "value": 77,
+      "format": "count",
+      "source": "live",
+      "pages": [
+        "/"
+      ],
+      "evidence_url": "https://github.com/sebastienrousseau/pain001/releases",
+      "verified_in": "0.0.85"
+    },
+    {
+      "id": "branch_coverage",
+      "claim": "Core line and branch test coverage, enforced in CI",
+      "value": "100%",
+      "format": "text",
+      "source": "manual",
+      "pages": [
+        "/"
+      ],
+      "evidence_url": "https://github.com/sebastienrousseau/pain001/blob/main/pyproject.toml",
+      "verified_in": "0.0.85"
+    },
+    {
+      "id": "signed_provenance",
+      "claim": "Releases are signed tags with build provenance attested through Sigstore",
+      "value": "Signed releases with provenance",
+      "format": "text",
+      "source": "manual",
+      "pages": [
+        "/"
+      ],
+      "evidence_url": "https://github.com/sebastienrousseau/pain001/attestations",
+      "verified_in": "0.0.85"
+    }
+  ]
+}

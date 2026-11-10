@@ -72,7 +72,9 @@ AVIF_QUALITY = 45
 BAND_AVIF_BUDGET = {640: 12_000, 768: 15_000, 960: 20_000, 1280: 22_000, 1600: 28_000}
 # The homepage banner is its LCP too (the other homepage photos are lazy).
 HOME_AVIF_BUDGET = {"hero-city": {800: 16_000, 1200: 24_000, 1600: 32_000, 2400: 64_000}}
-AVIF_LADDER = (45, 40, 36, 32, 28, 25)
+# High-detail bands can still exceed 28 KB at 25; the final rung keeps
+# their existing byte budget while simple photographs keep higher quality.
+AVIF_LADDER = (45, 40, 36, 32, 28, 25, 20)
 MIN_SOURCE_ASPECT = 1.4
 # Vertical focus for a band crop (0 top, 1 bottom) where the automatic
 # placement is wrong.

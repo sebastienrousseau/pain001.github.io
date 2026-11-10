@@ -23,12 +23,14 @@ const allBudgets = [
   { route: "/example-corpus/", bytesKiB: 300 },
   { route: "/try/", bytesKiB: 400 },
   { route: "/why/", bytesKiB: 300 },
-  { route: "/enterprise/", bytesKiB: 300 },
+  { route: "/for-banks/", bytesKiB: 300 },
   { route: "/competitors-comparison/", bytesKiB: 300 },
   { route: "/message-spec-pain.001.001.09/", bytesKiB: 400 },
   { route: "/corpus-gb-fps-single/", bytesKiB: 300 },
   { route: "/tags/iso-20022/", bytesKiB: 300 },
   { route: "/fr/", bytesKiB: 300 },
+  /* /ar/ stays for right-to-left layout coverage; it is indexed under
+     decision D4, so every SEO audit counts there. */
   { route: "/ar/", bytesKiB: 300 },
 ];
 /* Large screens use Lighthouse's desktop settings (throttling, form
@@ -65,6 +67,7 @@ function measure(profile, budget, attempt) {
     `--output-path=${out}`,
   ];
   if (profile === "desktop") args.push("--preset=desktop");
+  if (budget.skipAudits) args.push(`--skip-audits=${budget.skipAudits.join(",")}`);
   if (screens[profile]) args.push(...screens[profile]);
   execFileSync(command, args, { stdio: "ignore", env: process.env });
   const report = JSON.parse(readFileSync(out, "utf8"));

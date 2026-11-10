@@ -101,11 +101,19 @@ Pain001 is created and maintained by [Sebastien Rousseau](https://sebastienrouss
 
 ## Decision-making
 
-Feature and design decisions are made by the maintainer, in public, with rationale recorded in commits, pull requests, and changelogs. Breaking changes are documented in release notes. There is no formal steering committee; if sustained organisational adoption creates demand for one, an advisory structure is the stated path.
+Decisions are made in public. Day-to-day changes go through a pull request and merge by lazy consensus once CI is green; significant changes (new public APIs, breaking changes, new dependencies, new message types or scheme profiles) start as an issue or discussion and need a maintainer's explicit approval. A decision that will be questioned later is recorded as an architecture decision record in the core's [docs/adr](https://github.com/sebastienrousseau/pain001/tree/main/docs/adr). Every commit carries a Developer Certificate of Origin sign-off, checked in CI. The full rules are in the core's [GOVERNANCE.md](https://github.com/sebastienrousseau/pain001/blob/main/GOVERNANCE.md).
+
+## Release process
+
+Releases follow the core's [RELEASING.md](https://github.com/sebastienrousseau/pain001/blob/main/RELEASING.md): an automated preflight, a signed annotated tag, PyPI publication through a trusted publisher, and build provenance and an SBOM attached to the release. The nine repositories of the suite release together at one version. Release authority (the PyPI trusted publisher and the tag-signing key) rests with the lead maintainer today.
+
+## Becoming a maintainer
+
+More maintainers is the single biggest thing that would de-risk the project. Contribute a few reviewed pull requests in one area (a scheme profile, an input loader, the documentation), help triage issues and review others' pull requests, then say you are interested in a [GitHub issue](https://github.com/sebastienrousseau/pain001/issues). A maintainer proposes you, and with no objection from the existing maintainers within a week you are added to [MAINTAINERS.md](https://github.com/sebastienrousseau/pain001/blob/main/MAINTAINERS.md).
 
 ## Funding and conflicts of interest
 
-Development is **self-funded**. The core has no commercial edition and no revenue relationship with any bank, vendor, or standards body mentioned on this site; the [comparison page](/competitors-comparison/) names commercial competitors' genuine advantages precisely because no commercial interest prevents it. What is offered, and disclosed here, is work *around* the free software: a supported release channel, private derivation of a bank's usage guideline into a validated profile, and integration help, described on the [enterprise page](/enterprise/). Any such engagement is disclosed on that page; none changes the licences, holds a feature back, or brings bank material into the public project.
+Development is **self-funded**. The core has no commercial edition and no revenue relationship with any bank, vendor, or standards body mentioned on this site; the [comparison page](/competitors-comparison/) names commercial competitors' genuine advantages precisely because no commercial interest prevents it. There is no paid tier and nothing for sale: no support contracts, services, sponsorships, donations or referral fees under any name. The [maintenance policy](/for-banks/#maintenance-policy), the [evidence pack](/for-banks/) and the [bank-profile guide](/docs/bank-profiles/) are free. The licence lets any firm support Pain001 commercially; the project has no commercial partners and takes no fees or referrals.
 
 ## Traction, stated plainly
 
@@ -115,11 +123,11 @@ Figures refreshed at each site build from public sources (PyPI download statisti
 | Measure | Value | Source |
 | :--- | ---: | :--- |
 | pain001 downloads, last 30 days | 3,517 | PyPI |
-| pain001 downloads, last 7 days | 2,534 | PyPI |
+| pain001 downloads, last 7 days | 3,432 | PyPI |
 | GitHub stars | 49 | GitHub |
 | GitHub forks | 17 | GitHub |
 
-Refreshed 2026-11-09. Page views are counted by Cloudflare Web Analytics, cookieless and without identifiers ([privacy](/privacy/)); the browser demo is not measured, by design.
+Refreshed 2026-11-10. Page views are counted by Cloudflare Web Analytics, cookieless and without identifiers, and a few anonymous events by the site's own Worker ([privacy](/privacy/)).
 <!-- traction:end -->
 
 ## Trademark
@@ -135,3 +143,13 @@ Every research page carries a "last reviewed" date, and regulatory claims cite p
 - Releases remain on [PyPI](https://pypi.org/project/pain001/) and GitHub independent of any infrastructure this project operates.
 - The website's full source, build pipeline, and content are [public](https://github.com/sebastienrousseau/pain001.github.io) and rebuildable with two open-source tools.
 - If the project is ever discontinued, the repositories will be archived in place (readable, forkable, and installable) rather than deleted.
+
+## Bus-factor plan
+
+The goal is a second maintainer with release rights by mid-2027. Until then, what happens if the maintainer is unavailable is written down here, one item at a time:
+
+- **Release keys.** Not yet arranged: release authority (the tag-signing key and the PyPI trusted publisher) rests with the lead maintainer, and no hand-over to a second maintainer is set up.
+- **Domain.** Not yet arranged: the pain001.com registration and DNS are held by the lead maintainer, with no transfer procedure written down.
+- **PyPI and GitHub ownership.** Not yet arranged: there is no second PyPI owner or GitHub administrator yet.
+
+Everything else a successor needs is already public: the source, the release process, the build pipeline and this site.

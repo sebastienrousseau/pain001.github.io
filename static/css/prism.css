@@ -410,7 +410,7 @@
  * Google Fonts link would be blocked with no visible error.
  *
  * Inter carries every voice. The institutions a treasury buyer already
- * trusts -- HSBC, Swift, J.P. Morgan, the Bank of England -- set their
+ * trusts, from payment networks to central banks, set their
  * headlines in a grotesque; a text serif read as an editorial
  * publication beside a monospaced product panel. It is instanced to
  * wght 400..600, the three weights the theme sets, with the optical-size
@@ -3485,6 +3485,19 @@ picture:has(> .tile-photo, > .feature-photo, > .briefing-photo, > .hero-banner-p
   box-shadow: var(--lift);
 }
 .hero-card h1 { font-size: clamp(2.375rem, 1.6rem + 2.8vw, 4rem); letter-spacing: -0.04em; line-height: 1.03; }
+/* The hero's install command: one line with the shared copy button. */
+.hero-install {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-block-size: 3.25rem;
+  padding: var(--space-2) 6rem var(--space-2) var(--space-4);
+  border: 1px solid var(--edge);
+  border-radius: 999px;
+  background: var(--code-bar);
+}
+.hero-install code { background: none; padding: 0; color: var(--code-plain); font-size: 0.9375rem; }
+.hero-install .copy-btn { inset-block-start: 50%; inset-inline-end: var(--space-1); transform: translateY(-50%); }
 .hero-banner + .hero-centred { padding-block-start: var(--space-12); }
 .hero-banner + .hero-centred h2 { font-size: var(--t-section); }
 
