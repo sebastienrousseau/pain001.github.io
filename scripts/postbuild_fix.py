@@ -436,6 +436,14 @@ LOCALES = {
 }
 RTL_LANGS = {"ar", "fa", "he"}
 
+# Decision D4 (10 November 2026): index English (also x-default) and these
+# locales, plus any locale with at least 100 Search Console impressions in
+# the last 90 days; the maintainer supplies those numbers, and adding a
+# locale is one entry here. Every other locale stays live for readers but
+# is noindex, follow, out of the sitemap and out of every hreflang cluster
+# (apply_locale_index_policy). Review in February 2027.
+INDEXED_LOCALES = ("fr", "de", "nl", "es", "it")
+
 _HTML_TAG_RE = re.compile(r"<html\b([^>]*)>")
 
 
@@ -1388,7 +1396,8 @@ def regen_sitemap(site: Path) -> None:
         rel = page.parent.relative_to(site).as_posix()
         # "." is the homepage itself; only dot-directories are skipped.
         if rel.startswith(("api/", "_csp")) or (rel != "." and rel.startswith(".")) \
-                or rel in NOINDEX_PAGES or is_translated_corpus(rel):
+                or rel in NOINDEX_PAGES or is_translated_corpus(rel) \
+                or is_noindexed_locale(rel):
             continue
         loc = BASE_URL + "/" if rel == "." else f"{BASE_URL}/{rel}/"
         urls.append(
@@ -2205,6 +2214,7 @@ def main() -> None:
     stamp_suite_version(site)
     fill_claims(site)
     mark_noindex_pages(site)  # before the sitemap, which skips the same pages
+    apply_locale_index_policy(site)  # before the sitemap, which skips them too
     regen_sitemap(site)
     gen_legacy_redirects(site)  # after sitemap so stubs stay unindexed
     normalise_site_shell(site)  # includes taxonomy and redirect pages
@@ -2262,9 +2272,13 @@ def remove_stray_per_page_files(site: Path) -> int:
         page_404.write_text(html, encoding="utf-8")
     # Tag archives listed the noindex utility pages as tagged articles.
     listed = re.compile(r'<li><a href="/(?:%s)/">[^<]*</a></li>\s*' % "|".join(map(re.escape, NOINDEX_PAGES)))
+    # They also listed every locale's homepage; the unindexed ones go, so an
+    # indexed tag page sends no crawler into a noindex locale (decision D4).
+    unindexed = re.compile(r'<li><a href="/(?:%s)/"[^>]*>[^<]*</a></li>\s*'
+                           % "|".join(re.escape(s) for s in LOCALES if s not in INDEXED_LOCALES))
     for tag_page in site.glob("tags/*/index.html"):
         html = tag_page.read_text(encoding="utf-8")
-        fixed = listed.sub("", html)
+        fixed = unindexed.sub("", listed.sub("", html))
         if fixed != html:
             tag_page.write_text(fixed, encoding="utf-8")
     print(f"[postbuild] removed {removed} stray per-page file(s) and the /404/ copy")
@@ -2348,6 +2362,49 @@ def fill_claims(site: Path) -> None:
             page.write_text(filled, encoding="utf-8")
             n += 1
     print(f"[postbuild] claims register figures written into {n} page(s)")
+
+
+def is_noindexed_locale(rel: str) -> bool:
+    """True for a site-relative path under a locale that is not indexed."""
+    first = rel.split("/", 1)[0]
+    return first in LOCALES and first not in INDEXED_LOCALES
+
+
+_NOINDEXED_CODES = None
+
+
+def _strip_noindexed_alternates(html: str) -> str:
+    """Drop hreflang alternates that point at a locale that is not indexed."""
+    global _NOINDEXED_CODES
+    if _NOINDEXED_CODES is None:
+        _NOINDEXED_CODES = {code for slug, code in LOCALES.items() if slug not in INDEXED_LOCALES}
+
+    def keep(m: re.Match) -> str:
+        code = re.search(r'hreflang="([^"]*)"', m.group(0)).group(1)
+        return "" if code in _NOINDEXED_CODES else m.group(0)
+
+    return _HREFLANG_LINK_RE.sub(keep, html)
+
+
+def apply_locale_index_policy(site: Path) -> None:
+    """Decision D4: every page under a locale outside INDEXED_LOCALES is
+    noindex, follow, with no hreflang or canonical link (the same treatment
+    as the translated corpus pages, for the same reason); every other page
+    drops hreflang alternates that point at such a locale."""
+    noindexed = indexed = 0
+    for page in site.rglob("*.html"):
+        rel = page.relative_to(site).as_posix()
+        html = page.read_text(encoding="utf-8")
+        if is_noindexed_locale(rel):
+            new = noindex_translated_corpus(html)
+            noindexed += 1
+        else:
+            new = _strip_noindexed_alternates(html)
+            indexed += new != html
+        if new != html:
+            page.write_text(new, encoding="utf-8")
+    print(f"[postbuild] locale policy: {noindexed} page(s) noindex, "
+          f"{indexed} page(s) lost alternates to unindexed locales")
 
 
 def stamp_redirect_map(site: Path) -> None:

@@ -147,6 +147,9 @@ jobs:
       - name: Every figure comes from the claims register (decision D5)
         run: python3 scripts/validate_claims.py site
 
+      - name: Indexed pages never lead into an unindexed locale (decision D4)
+        run: python3 scripts/validate_locale_index.py site
+
       - name: Documentation snippets reference real API
         run: |
           python3 -m pip install --quiet --require-hashes -r requirements/snippets.txt
