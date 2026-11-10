@@ -42,7 +42,7 @@
     {
       "id": "releases_since_2023",
       "claim": "Published releases of the core since the first in 2023",
-      "value": 76,
+      "value": 77,
       "format": "count",
       "source": "live",
       "pages": [
