@@ -18,6 +18,38 @@ All notable changes to this website are documented here. The format follows
 - A manual run of CI on `main` now deploys to GitHub Pages, as a push
   does. On 2026-11-09 GitHub's Actions outage dropped the deploy job
   from the 0.0.83 merge run, which then could not be retried.
+- The homepage's "Five focused packages" heading is counted from the
+  package tiles at build time, so it cannot drift from them. Five is
+  right: the sixth tile is the example corpus, not a package.
+- The homepage and the 34 locale homepages declare `og:type` `website`;
+  ssg wrote `article` on every page whatever the front matter said.
+- The homepage's structured data names Pain001 as free software
+  (`SoftwareApplication`, version from the release the site is built
+  from, price 0) published by an `Organization` founded by the
+  maintainer's Person entity on sebastienrousseau.com.
+  `scripts/validate_jsonld.py` checks every JSON-LD block on the site
+  parses and that the homepage graph stays current.
+- `robots.txt` allows every public page and names the AI crawlers
+  (GPTBot, ClaudeBot, PerplexityBot, Google-Extended and others)
+  explicitly, with the sitemap link kept.
+- Each sitemap URL's `lastmod` is the last commit to the page's
+  sources (its post, layout and locale table) instead of the build
+  date stamped on all 493 URLs at every deploy. CI's build job now
+  checks out full history for it.
+- The sitemap lists the homepage. It never had: the filter that skips
+  dot-directories also matched the homepage's own path, `.`.
+- `llms.txt` no longer says the MCP server has 21 tools (0.0.83 ships
+  30); it links the MCP page instead of a hand-typed count.
+- `/try/#sample=sepa-sct` (and any built-in sample key) opens that
+  sample and validates it; only corpus scenarios could be linked before.
+- The homepage hero leads with the sandbox: "Catch pain.001 errors
+  before your bank does", a "Validate a sample file for free" button
+  that opens the SEPA sample already validated, "No sign-up · runs in
+  your browser · nothing is uploaded", a copyable `pip install
+  pain001`, and "Evaluating for a bank? Book a briefing" as a text
+  link. The documentation link leaves the hero (it stays in the
+  navigation), and the demo section's link reads "Try it with your own
+  CSV".
 
 ### Changed
 

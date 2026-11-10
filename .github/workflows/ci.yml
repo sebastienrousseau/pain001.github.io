@@ -36,7 +36,12 @@ jobs:
     # not a target; at 30 the last step was cancelled mid-scan.
     timeout-minutes: 45
     steps:
+      # Full history: the sitemap dates each page by the last commit to
+      # its sources (postbuild_fix.regen_sitemap); a one-commit clone
+      # would date every page to that commit.
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
 
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@6bed0761d98439e5a578e2877258200ad565ba87 # stable
@@ -126,6 +131,9 @@ jobs:
 
       - name: Sitemap lists only canonical, indexable pages
         run: python3 scripts/validate_sitemap.py
+
+      - name: JSON-LD parses on every page; homepage states the software
+        run: python3 scripts/validate_jsonld.py
 
       - name: Link integrity (internal links, anchors, locale consistency)
         run: python3 scripts/validate_links.py site
