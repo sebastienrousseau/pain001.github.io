@@ -23,4 +23,6 @@ if [[ "${GITHUB_REF_TYPE:-}" == "tag" ]]; then
   }
 fi
 
+python3 scripts/validate_release_pins.py
+
 echo "release version is consistent: v$version"
