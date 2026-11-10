@@ -105,7 +105,7 @@ Feature and design decisions are made by the maintainer, in public, with rationa
 
 ## Funding and conflicts of interest
 
-Development is **self-funded**. The core has no commercial edition and no revenue relationship with any bank, vendor, or standards body mentioned on this site; the [comparison page](/competitors-comparison/) names commercial competitors' genuine advantages precisely because no commercial interest prevents it. What is offered, and disclosed here, is work *around* the free software: a supported release channel, private derivation of a bank's usage guideline into a validated profile, and integration help, described on the [enterprise page](/enterprise/). Any such engagement is disclosed on that page; none changes the licences, holds a feature back, or brings bank material into the public project.
+Development is **self-funded**. The core has no commercial edition and no revenue relationship with any bank, vendor, or standards body mentioned on this site; the [comparison page](/competitors-comparison/) names commercial competitors' genuine advantages precisely because no commercial interest prevents it. There is no paid tier and nothing for sale: no support contracts, services, sponsorships, donations or referral fees under any name. The [maintenance policy](/for-banks/#maintenance-policy), the [evidence pack](/for-banks/) and the [bank-profile guide](/docs/bank-profiles/) are free. The licence lets any firm support Pain001 commercially; the project has no commercial partners and takes no fees or referrals.
 
 ## Traction, stated plainly
 

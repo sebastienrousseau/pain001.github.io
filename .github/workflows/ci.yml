@@ -141,6 +141,9 @@ jobs:
       - name: Suite version currency (no page cites an older pain001)
         run: python3 scripts/validate_versions.py
 
+      - name: Nothing for sale, no employer named (decision D0)
+        run: python3 scripts/validate_no_commercial.py site
+
       - name: Documentation snippets reference real API
         run: |
           python3 -m pip install --quiet --require-hashes -r requirements/snippets.txt

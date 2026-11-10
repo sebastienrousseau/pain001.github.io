@@ -1802,7 +1802,7 @@ def write_llms(site: Path) -> None:
         "- MCP registry entry: io.github.sebastienrousseau/pain001-mcp ; Glama listing: https://glama.ai/mcp/servers/sebastienrousseau/pain001-mcp ; image: ghcr.io/sebastienrousseau/pain001-mcp",
         "- MT101 to pain.001 migration path: https://pain001.com/mt101-migration/ ; Excel workbooks as input: https://pain001.com/excel-to-pain001/",
         "- Trust centre, privacy, governance: https://pain001.com/trust/ https://pain001.com/privacy/ https://pain001.com/governance/",
-        "- Supported channel, private profile derivation, integration help (the software stays free): https://pain001.com/enterprise/",
+        "- For bank reviewers, free and self-service: evidence pack, maintenance policy, bank-profile guide: https://pain001.com/for-banks/",
         "",
         "## Rules of use",
         "",

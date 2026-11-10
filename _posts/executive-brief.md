@@ -108,7 +108,7 @@ An open-source suite that converts existing data (spreadsheets, ERP exports, leg
 
 Nothing, at any scale, under open licences (Apache-2.0 / MIT). Commercial reference point: SWIFT's translation SDK is publicly listed at €10,000–30,000 per year.
 
-Support, an LTS line and private profile work for your bank's guideline are offered separately, without changing the licences: [enterprise page](/enterprise/).
+There is no paid tier. The [evidence pack, maintenance policy and bank-profile guide](/for-banks/) are free.
 
 ## The evidence
 

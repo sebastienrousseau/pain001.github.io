@@ -124,6 +124,6 @@ Because conversion without validation is how malformed files reach banks. A conv
 
 ## When to ask for help
 
-The loader covers the public MT101 grammar. Your bank's usage guideline for `pain.001`, the elements it insists on and the ones it rejects, is a private document, and it is applied privately with the library's overlay tooling. If you want that derivation done for you, or a supported release channel while the migration runs, the [enterprise page](/enterprise/) describes both. The software stays free either way.
+The loader covers the public MT101 grammar. Your bank's usage guideline for `pain.001`, the elements it insists on and the ones it rejects, is a private document, and it is applied privately with the library's overlay tooling. The [bank-profile guide](/docs/bank-profiles/) walks your team through that derivation, and the [maintenance policy](/for-banks/#maintenance-policy) says what to expect while the migration runs. The software is free and has no paid tier.
 
 [Loader reference](/pain001-loader-mt101/) · [Technical reference](/documentation/) · [Example corpus](/example-corpus/)
