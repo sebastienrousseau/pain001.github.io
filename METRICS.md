@@ -13,14 +13,14 @@ Two things, both without identifying anyone (decision D1, 10 November 2026; see
   Core Web Vitals, through Cloudflare Web Analytics.
 - **Events**, first-party and cookie-free, through `static/js/pain001-events.js`: `hero_cta_click`,
   `sandbox_start`, `sandbox_xsd_run`, `xml_copy`, `xml_download`, `install_copy`, `outbound_github`,
-  `outbound_pypi`, `evidence_pack_download`, `profile_guide_view`, `discussion_click` and
+  `outbound_pypi`, `evidence_pack_download`, `profile_guide_view` and
   `adoption_form_submit`. Each is one `navigator.sendBeacon` to `/e` on this origin carrying the event
   name, the page path and at most a 64-character label: no cookie, no identifier, nothing typed or
   loaded into the demo. A Cloudflare Worker routed at `pain001.com/e` writes it to Workers Analytics
   Engine, which keeps it for 3 months and stores no IP address. No payment data is ever involved.
   Nothing is sent from localhost, when the browser sends Do Not Track or Global Privacy Control, or
-  when `sendBeacon` is unavailable; a failed send is ignored. Until the Worker is deployed, the
-  beacons reach GitHub Pages and are discarded.
+  when `sendBeacon` is unavailable; a failed send is ignored. The Worker's source and tests are in
+  `workers/events/`.
 
 The demo's "Verify it yourself" panel names both requests. PyPI download figures come from PyPI itself
 (`scripts/traction.py`).

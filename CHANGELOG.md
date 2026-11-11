@@ -12,6 +12,7 @@ All notable changes to this website are documented here. The format follows
   accepts the five pain001 SDK repositories as known members not yet
   released. From the 0.0.86 release until this change every scheduled
   run failed on them as undeclared repositories.
+- `docs/assurance-case.md` and `docs/ARCHITECTURE.md` described the site as having no server-side code, though the `pain001-events` Cloudflare Worker serves `pain001.com/e`. Both now describe what it receives, how it validates and caps input, what it stores in Workers Analytics Engine and for how long, and how it is tested and deployed. `docs/ARCHITECTURE.md` also no longer says Cloudflare measurement is excluded from the demo, and `METRICS.md` drops `discussion_click`, an event neither the site nor the Worker accepts, and the note that the Worker was not yet deployed.
 
 ## [0.0.86] - 2026-11-11
 
