@@ -55,7 +55,8 @@ def findings(report: dict, floor: str) -> list[tuple[str, str, str, str]]:
             if not isinstance(via, dict):
                 continue  # a string 'via' is an indirect path, not an advisory
             match = GHSA.search(via.get("url", "") or "")
-            advisory = match.group(0).upper() if match else f"npm:{via.get('source')}"
+            # Upper-cased like the exception ids, so either form matches.
+            advisory = (match.group(0) if match else f"npm:{via.get('source')}").upper()
             out.append((advisory, package, severity, via.get("title", "")))
     return out
 
