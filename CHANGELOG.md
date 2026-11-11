@@ -6,6 +6,13 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+### Fixed
+
+- Suite Consistency pins the core's ecosystem check at `febcd0a`, which
+  accepts the five pain001 SDK repositories as known members not yet
+  released. From the 0.0.86 release until this change every scheduled
+  run failed on them as undeclared repositories.
+
 ## [0.0.86] - 2026-11-11
 
 ### Fixed
