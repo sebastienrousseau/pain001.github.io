@@ -261,6 +261,12 @@ jobs:
           python -m pip install --quiet --require-hashes -r requirements/test.txt
           python -m pytest tests/python -q -p no:cacheprovider --cov=scripts --cov-report=term
 
+      # Existing offenders are recorded in complexity-baseline.json; the
+      # gate fails on a new one, on one that got worse, and on a stale
+      # entry, so the baseline only shrinks.
+      - name: Complexity ceilings against the baseline
+        run: python scripts/check_complexity.py
+
       - name: Dependency advisories (npm audit, documented exceptions only)
         run: python3 scripts/audit_deps.py
 

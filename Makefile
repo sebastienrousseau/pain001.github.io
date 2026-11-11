@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
 # SPDX-License-Identifier: Apache-2.0 OR MIT
-.PHONY: all build test pytest audit lint deps verify serve clean
+.PHONY: all build test pytest complexity audit lint deps verify serve clean
 
 all: verify
 
@@ -59,7 +59,13 @@ lint:
 deps:
 	python3 scripts/audit_deps.py
 
-verify: lint test audit
+# Per-function ceilings (cyclomatic 10, cognitive 15, Halstead 30, 60
+# lines; 500 lines per file) against complexity-baseline.json, which may
+# only shrink. See scripts/check_complexity.py.
+complexity: .venv-test/.installed
+	.venv-test/bin/python scripts/check_complexity.py
+
+verify: lint complexity test audit
 
 serve: build
 	cd site && python3 -m http.server 8099 --bind 127.0.0.1

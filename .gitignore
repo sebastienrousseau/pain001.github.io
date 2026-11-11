@@ -44,3 +44,4 @@ __pycache__/
 # Python coverage data from make pytest
 .coverage
 .coverage.*
+.complexipy_cache/

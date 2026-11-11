@@ -1,0 +1,179 @@
+{
+  "scripts/audit_deps.py::main": {
+    "cognitive": 19,
+    "cyclomatic": 15
+  },
+  "scripts/carry_forward_assets.py::main": {
+    "cyclomatic": 13
+  },
+  "scripts/check_dated_claims.py::main": {
+    "cyclomatic": 12
+  },
+  "scripts/css_minify.py::minify_css": {
+    "cognitive": 16
+  },
+  "scripts/css_minify.py::strip_js_comments": {
+    "cognitive": 17
+  },
+  "scripts/extract_message_specs.py::main": {
+    "cognitive": 32,
+    "cyclomatic": 24,
+    "lines": 93
+  },
+  "scripts/extract_message_specs.py::parse_schema": {
+    "cognitive": 25,
+    "cyclomatic": 14
+  },
+  "scripts/generate_corpus_page.py": {
+    "file_lines": 858
+  },
+  "scripts/generate_corpus_page.py::main": {
+    "lines": 61
+  },
+  "scripts/generate_corpus_page.py::render": {
+    "cognitive": 19,
+    "cyclomatic": 18,
+    "lines": 166
+  },
+  "scripts/generate_corpus_page.py::scenario_page": {
+    "cognitive": 30,
+    "cyclomatic": 28,
+    "lines": 96
+  },
+  "scripts/generate_corpus_page.py::worked_example": {
+    "cyclomatic": 12
+  },
+  "scripts/generate_corpus_page.py::write_index": {
+    "cyclomatic": 11
+  },
+  "scripts/generate_message_specs.py": {
+    "file_lines": 601
+  },
+  "scripts/generate_message_specs.py::load_frontmatter": {
+    "cognitive": 22
+  },
+  "scripts/generate_message_specs.py::render_changes": {
+    "cognitive": 17
+  },
+  "scripts/generate_message_specs.py::render_hub": {
+    "lines": 97
+  },
+  "scripts/generate_message_specs.py::render_types_chunked": {
+    "cognitive": 24,
+    "cyclomatic": 16
+  },
+  "scripts/generate_message_specs.py::render_version": {
+    "cognitive": 30,
+    "cyclomatic": 22,
+    "lines": 113
+  },
+  "scripts/import_photos.py::main": {
+    "cognitive": 23,
+    "cyclomatic": 18
+  },
+  "scripts/postbuild_fix.py": {
+    "file_lines": 2573
+  },
+  "scripts/postbuild_fix.py::_gen_localized_pages": {
+    "cognitive": 44,
+    "cyclomatic": 23,
+    "lines": 83
+  },
+  "scripts/postbuild_fix.py::add_version_requirements": {
+    "cognitive": 16
+  },
+  "scripts/postbuild_fix.py::bundle_stylesheets": {
+    "cognitive": 26,
+    "cyclomatic": 17
+  },
+  "scripts/postbuild_fix.py::fix_tag_pages": {
+    "cognitive": 16
+  },
+  "scripts/postbuild_fix.py::gen_try_locales": {
+    "cognitive": 25,
+    "cyclomatic": 18,
+    "lines": 87
+  },
+  "scripts/postbuild_fix.py::localise_pages": {
+    "cognitive": 18,
+    "cyclomatic": 13
+  },
+  "scripts/postbuild_fix.py::main": {
+    "lines": 83
+  },
+  "scripts/postbuild_fix.py::name_table_regions": {
+    "cognitive": 19
+  },
+  "scripts/postbuild_fix.py::normalise_site_shell": {
+    "cognitive": 47,
+    "cyclomatic": 29,
+    "lines": 69
+  },
+  "scripts/postbuild_fix.py::page_sources": {
+    "cognitive": 18,
+    "cyclomatic": 15
+  },
+  "scripts/postbuild_fix.py::relocate_corpus_locales": {
+    "cognitive": 24,
+    "cyclomatic": 16
+  },
+  "scripts/postbuild_fix.py::taxonomy_language_and_index": {
+    "cognitive": 37,
+    "cyclomatic": 11,
+    "lines": 65
+  },
+  "scripts/postbuild_fix.py::write_llms": {
+    "lines": 61
+  },
+  "scripts/validate_claims.py::problems": {
+    "cognitive": 21,
+    "cyclomatic": 11
+  },
+  "scripts/validate_content_integrity.py::main": {
+    "cognitive": 23,
+    "cyclomatic": 16
+  },
+  "scripts/validate_contrast.py::main": {
+    "cognitive": 26,
+    "cyclomatic": 16
+  },
+  "scripts/validate_fonts.py::main": {
+    "cognitive": 45,
+    "cyclomatic": 26,
+    "lines": 88
+  },
+  "scripts/validate_headings.py::main": {
+    "cognitive": 18,
+    "cyclomatic": 14
+  },
+  "scripts/validate_i18n_keys_live.py::check_table": {
+    "cognitive": 23,
+    "cyclomatic": 16
+  },
+  "scripts/validate_jsonld.py::home_problems": {
+    "cyclomatic": 15
+  },
+  "scripts/validate_locale_index.py::problems": {
+    "cognitive": 32,
+    "cyclomatic": 18
+  },
+  "scripts/validate_no_commercial.py::main": {
+    "cyclomatic": 11
+  },
+  "scripts/validate_readme.py::validate": {
+    "cognitive": 21,
+    "cyclomatic": 14
+  },
+  "scripts/validate_security_txt.py::main": {
+    "cognitive": 25,
+    "cyclomatic": 17
+  },
+  "scripts/validate_snippets.py::main": {
+    "cognitive": 102,
+    "cyclomatic": 38,
+    "lines": 96
+  },
+  "tests/python/test_page_photo_preload.py::test_responsive_hero_preload_matches_picture": {
+    "cyclomatic": 16
+  }
+}
