@@ -7,7 +7,6 @@ appear in the built page; translators replace only the values.
 """
 import json
 import re
-import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -78,7 +77,6 @@ chrome_aria = [
 # build once; the landing pages are translated in place afterwards, so
 # no existence filter is possible on later runs.
 chrome = {s: s for s in chrome_text}
-missing = []
 c_aria = {s: s for s in chrome_aria}
 
 out = {
@@ -94,5 +92,3 @@ dest.mkdir(exist_ok=True)
     json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
 print(f"text={len(text)} aria={len(aria)} chrome={len(chrome)} "
       f"chrome_aria={len(c_aria)}")
-if missing:
-    print("chrome strings NOT found on /fr/ (check exact form):", missing, file=sys.stderr)

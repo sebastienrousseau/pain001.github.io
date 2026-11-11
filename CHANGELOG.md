@@ -13,6 +13,10 @@ All notable changes to this website are documented here. The format follows
 - Validate documentation snippets against the released core 0.0.85 instead of 0.0.70. The release version gate now rejects runtime or snippet input/lock pins that differ from `VERSION`.
 - Record in the maintainer handover note that the Cloudflare 301 from `/enterprise/` to `/for-banks/` is live and how it was checked; `/thanks/` still has no rule.
 
+### Changed
+
+- Remove three branches no input can reach: the empty-phase return in the demo's layer summary, an always-empty `missing` list in `extract_try_i18n.py`, and an always-true duplicate check in `generate_corpus_page.py`. Output is unchanged.
+
 ## [0.0.85] - 2026-11-10
 
 ### Fixed
