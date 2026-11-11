@@ -67,6 +67,16 @@ or Global Privacy Control, or when `sendBeacon` is missing.
   elsewhere. Analytics Engine keeps data points for three months.
 - **Logs:** invocation logs and traces are off; a failed write logs one
   error line without request data, and the visitor still gets `204`.
+- **CSP reports:** `POST /e/csp` (a second route) takes Content
+  Security Policy violation reports, which the browser sends itself, so
+  no `Origin` check applies. The body may be 4,096 bytes, in the
+  `report-uri` form or as a Reporting API list (first ten entries). A
+  report is kept only when its document is a page on `pain001.com`, as
+  one data point: `csp_violation`, the cleaned path, the effective
+  directive, the country and the blocked item reduced to a keyword, a
+  scheme or an origin. `DNT` and `Sec-GPC` reports are dropped; a
+  malformed body gets `400`, every other outcome `204`. Source:
+  `workers/events/src/csp.js`.
 
 Its tests (`workers/events/test/index.test.mjs`, on `node:test` with a fake
 Analytics Engine binding) run in CI with a 100% line, branch and function

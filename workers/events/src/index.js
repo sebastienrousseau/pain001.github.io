@@ -31,6 +31,8 @@ export const ORIGIN = "https://pain001.com";
 /** A request body larger than this is refused unread. */
 export const MAX_BODY_BYTES = 1024;
 
+import { MAX_CSP_BODY_BYTES, recordViolations, violations } from "./csp.js";
+
 const PAGE_MAX = 200;
 const PAGE_CHARS = /^\/[A-Za-z0-9._~\-/]*$/;
 const LABEL_CHARS = /^[A-Za-z0-9 ._:-]{1,64}$/;
@@ -96,9 +98,9 @@ export function sameSite(headers) {
  * The body is streamed and abandoned at the cap rather than buffered
  * whole, so an oversized post costs no more than the cap.
  */
-export async function readCapped(request) {
+export async function readCapped(request, limit = MAX_BODY_BYTES) {
   const declared = Number(request.headers.get("Content-Length"));
-  if (Number.isFinite(declared) && declared > MAX_BODY_BYTES) return null;
+  if (Number.isFinite(declared) && declared > limit) return null;
   if (request.body === null) return "";
   const reader = request.body.getReader();
   const chunks = [];
@@ -107,7 +109,7 @@ export async function readCapped(request) {
     const { done, value } = await reader.read();
     if (done) break;
     size += value.byteLength;
-    if (size > MAX_BODY_BYTES) {
+    if (size > limit) {
       await reader.cancel();
       return null;
     }
@@ -137,6 +139,7 @@ export function countryOf(request) {
  */
 export async function handle(request, env) {
   const url = new URL(request.url);
+  if (url.pathname === "/e/csp") return handleCsp(request, env);
   if (url.pathname !== "/e") {
     return new Response(null, { status: 404 });
   }
@@ -169,6 +172,31 @@ export async function handle(request, env) {
       JSON.stringify({ message: "events write failed", error: String(error) }),
     );
   }
+  return noContent();
+}
+
+/**
+ * Handle one CSP violation report posted to /e/csp.
+ *
+ * Browsers send these themselves, so no Origin check applies; a report
+ * is only kept when its document is a page on this site. Opted-out
+ * visitors are dropped as on /e. Every outcome but a malformed body is
+ * 204, so a report can never learn what was stored.
+ */
+export async function handleCsp(request, env) {
+  if (request.method !== "POST") {
+    return new Response(null, { status: 405, headers: { Allow: "POST" } });
+  }
+  if (optedOut(request.headers)) return noContent();
+  const text = await readCapped(request, MAX_CSP_BODY_BYTES);
+  if (text === null) return badRequest();
+  let decoded;
+  try {
+    decoded = JSON.parse(text);
+  } catch {
+    return badRequest();
+  }
+  recordViolations(violations(decoded), request, env);
   return noContent();
 }
 

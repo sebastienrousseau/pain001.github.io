@@ -11,7 +11,10 @@
   // `connect-src 'self'` covers it; no workers.dev or preview URL.
   "workers_dev": false,
   "preview_urls": false,
-  "routes": [{ "pattern": "pain001.com/e", "zone_name": "pain001.com" }],
+  "routes": [
+    { "pattern": "pain001.com/e", "zone_name": "pain001.com" },
+    { "pattern": "pain001.com/e/csp", "zone_name": "pain001.com" }
+  ],
   "analytics_engine_datasets": [
     { "binding": "EVENTS", "dataset": "pain001_events" }
   ],

@@ -6,6 +6,15 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+### Added
+
+- The events Worker takes Content Security Policy violation reports at
+  `pain001.com/e/csp` (`workers/events/src/csp.js`), so the policy can
+  run as `Content-Security-Policy-Report-Only` for a week before it is
+  enforced. Each report keeps only the directive, the page path, the
+  blocked item's origin and the country; the privacy page and
+  `docs/ARCHITECTURE.md` say so.
+
 ### Changed
 
 - The site rebuilds and redeploys from main every Monday (CI `schedule`),
