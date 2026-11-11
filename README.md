@@ -52,30 +52,30 @@ gate; the built tree is never committed. Cloudflare fronts the domain.
 
 **Getting started**
 
-- [Install](#install) — clone and pin the generator; there is no installable artifact
-- [Requirements](#requirements) — toolchain floor, platforms
-- [Quick Start](#quick-start) — build the site and serve it locally
+- [Install](#install): clone and pin the generator; there is no installable artifact
+- [Requirements](#requirements): toolchain floor, platforms
+- [Quick Start](#quick-start): build the site and serve it locally
 
 **The Pain001 ecosystem**
 
-- [The Pain001 ecosystem](#the-pain001-ecosystem) — the nine repositories in the lockstep suite
+- [The Pain001 ecosystem](#the-pain001-ecosystem): the nine repositories in the lockstep suite
 
 **Library reference**
 
-- [Capabilities at a glance](#capabilities-at-a-glance) — what the built site contains
-- [Ecosystem comparison](#ecosystem-comparison) — why the comparison lives in the library
-- [Benchmarks](#benchmarks) — the performance budgets CI enforces
-- [Features](#features) — repository layout and what each directory owns
-- [Configuration](#configuration) — `ssg.toml`, the generator pin, the compliance declaration
-- [Examples](#examples) — regenerating the site from a library release
+- [Capabilities at a glance](#capabilities-at-a-glance): what the built site contains
+- [Ecosystem comparison](#ecosystem-comparison): why the comparison lives in the library
+- [Benchmarks](#benchmarks): the performance budgets CI enforces
+- [Features](#features): repository layout and what each directory owns
+- [Configuration](#configuration): `ssg.toml`, the generator pin, the compliance declaration
+- [Examples](#examples): regenerating the site from a library release
 
 **Operational**
 
-- [When not to use Pain001](#when-not-to-use-pain001) — limitations
-- [Development](#development) — build, post-build passes, gates, content editing
-- [Security](#security) — reporting, hardening, supply chain
-- [Documentation](#documentation) — all reference docs
-- [Stability guarantees](#stability-guarantees) — SemVer axis, URL durability, toolchain discipline
+- [When not to use Pain001](#when-not-to-use-pain001): limitations
+- [Development](#development): build, post-build passes, gates, content editing
+- [Security](#security): reporting, hardening, supply chain
+- [Documentation](#documentation): all reference docs
+- [Stability guarantees](#stability-guarantees): SemVer axis, URL durability, toolchain discipline
 - [License](#license)
 
 <!-- markdownlint-enable MD036 -->
