@@ -15,6 +15,7 @@ All notable changes to this website are documented here. The format follows
 
 ### Changed
 
+- Raise the coverage floors to 100%: lines, branches and functions of the shipped JavaScript (was 90% of lines and 80% of branches), and lines and branches of every Python script in `scripts/` (was unmeasured, at 31%). `make test` and CI enforce both; `.coveragerc` holds the Python floor.
 - Remove three branches no input can reach: the empty-phase return in the demo's layer summary, an always-empty `missing` list in `extract_try_i18n.py`, and an always-true duplicate check in `generate_corpus_page.py`. Output is unchanged.
 
 ## [0.0.85] - 2026-11-10

@@ -40,3 +40,7 @@ dist/
 # pull request carries scripts/__pycache__/*.pyc.
 __pycache__/
 *.py[cod]
+
+# Python coverage data from make pytest
+.coverage
+.coverage.*

@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
+# SPDX-License-Identifier: Apache-2.0 OR MIT
+#
+# Coverage of the build, validation and release scripts by tests/python.
+# The floor is 100% of lines and branches: every script runs in CI or in
+# the release path, and a script without tests has shipped wrong output
+# before. The one exclusion is the `if __name__ == "__main__":` guard,
+# which only hands control to main(); the tests call main() directly.
+[run]
+branch = True
+source = scripts
+
+[report]
+fail_under = 100
+show_missing = True
+skip_covered = True
+exclude_also =
+    if __name__ == .__main__.:

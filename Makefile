@@ -8,7 +8,7 @@ build:
 	./build.sh
 
 test: build pytest
-	npm test
+	npm run coverage
 	python3 scripts/css_minify.py
 	python3 scripts/validate_try_i18n.py
 	python3 scripts/validate_pages_i18n.py pages_i18n
@@ -37,8 +37,9 @@ test: build pytest
 	.venv-test/bin/python -m pip install --quiet --require-hashes -r requirements/test.txt
 	touch $@
 
+# Fails below 100% line and branch coverage of scripts/ (see .coveragerc).
 pytest: .venv-test/.installed
-	.venv-test/bin/python -m pytest tests/python -q -p no:cacheprovider
+	.venv-test/bin/python -m pytest tests/python -q -p no:cacheprovider --cov=scripts --cov-report=term
 
 audit: build
 	ssg audit -f ssg.toml -o site --severity warn --fail-on warn

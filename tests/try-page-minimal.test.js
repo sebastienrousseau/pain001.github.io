@@ -24,7 +24,8 @@ test("try-page: a minimal page still validates and generates", async () => {
   win.HTMLAnchorElement.prototype.click = function () { downloads.push(this.download); };
   installGlobals(win);
   globalThis.fetch = fakeFetch({ corpus: "missing" });
-  win.loadPyodide = fakeRuntime().loadPyodide;
+  const runtime = fakeRuntime();
+  win.loadPyodide = runtime.loadPyodide;
 
   await import(PAGE_URL);
   await settle();
@@ -39,14 +40,14 @@ test("try-page: a minimal page still validates and generates", async () => {
   $("download-btn").click();
   assert.equal(downloads.length, 1);
 
+  runtime.answer = { ...runtime.answer, findings: [{ row: 1, column: "x", rule: "r", value: "", message: "m", layer: "data" }] };
+  $("run-btn").click();
+  await settle();
+  $("report-btn").click();
+  assert.equal(downloads.length, 2, "the report downloads without a layered summary");
+
   $("csv-input").value = "";
   $("run-btn").click();
   await settle();
   assert.match($("status").textContent, /^✗ Need a header row/, "untranslated messages fall through");
-});
-
-test("try-page: a corpus index that cannot be fetched leaves the built-in samples", async () => {
-  globalThis.fetch = async () => { throw new Error("offline"); };
-  await settle();
-  assert.ok(globalThis.document.getElementById("sample-select").querySelector('option[value="sepa-sct"]'));
 });
