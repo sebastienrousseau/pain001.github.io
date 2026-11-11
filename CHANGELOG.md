@@ -6,6 +6,14 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+### Changed
+
+- The site rebuilds and redeploys from main every Monday (CI `schedule`),
+  so the traction figures on the governance page, fetched at build time,
+  are never more than a week old; the page says so. IndexNow is not
+  pinged for the weekly run. ADR 0002 gains an amendments note: the
+  events Worker is deployed and `discussion_click` was dropped.
+
 ### Fixed
 
 - Suite Consistency pins the core's ecosystem check at `febcd0a`, which

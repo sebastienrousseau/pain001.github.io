@@ -37,8 +37,9 @@ def render(month: int, week: int, stars: int, forks: int, day: str) -> str:
     """The table between the markers."""
     return (
         "<!-- traction:start -->\n"
-        "Figures refreshed at each site build from public sources (PyPI download "
-        "statistics and the GitHub API); the date is the build date.\n\n"
+        "Figures refreshed at each site build, and at least weekly, from "
+        "public sources (PyPI download statistics and the GitHub API); the "
+        "date is the build date.\n\n"
         "| Measure | Value | Source |\n| :--- | ---: | :--- |\n"
         f"| pain001 downloads, last 30 days | {month:,} | PyPI |\n"
         f"| pain001 downloads, last 7 days | {week:,} | PyPI |\n"
