@@ -18,6 +18,7 @@ All notable changes to this website are documented here. The format follows
 - Raise the coverage floors to 100%: lines, branches and functions of the shipped JavaScript (was 90% of lines and 80% of branches), and lines and branches of every Python script in `scripts/` (was unmeasured, at 31%). `make test` and CI enforce both; `.coveragerc` holds the Python floor.
 - Remove three branches no input can reach: the empty-phase return in the demo's layer summary, an always-empty `missing` list in `extract_try_i18n.py`, and an always-true duplicate check in `generate_corpus_page.py`. Output is unchanged.
 - Hold every Python function in `scripts/` and `tests/python/` to the workspace complexity ceilings with `scripts/check_complexity.py` (radon and complexipy, hash-pinned in `requirements/test.txt`), run by `make check` and CI. The 44 functions and 3 files already over a ceiling are recorded in `complexity-baseline.json`, which may only shrink. `promote_bold_questions` is split into two helpers and is no longer an offender.
+- Add `make check` as the workspace name for the full local gate; the dev container now installs the Node toolchain and the linters and boots to a working `make check`. `DEVELOPMENT.md` documents the test layout, every CI gate's local command and the release model.
 
 ## [0.0.85] - 2026-11-10
 

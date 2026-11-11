@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
 # SPDX-License-Identifier: Apache-2.0 OR MIT
-.PHONY: all build test pytest complexity audit lint deps verify serve clean
+.PHONY: all build test pytest complexity audit lint deps verify check serve clean
 
 all: verify
 
@@ -66,6 +66,9 @@ complexity: .venv-test/.installed
 	.venv-test/bin/python scripts/check_complexity.py
 
 verify: lint complexity test audit
+
+# The workspace name for the full local gate.
+check: verify
 
 serve: build
 	cd site && python3 -m http.server 8099 --bind 127.0.0.1
