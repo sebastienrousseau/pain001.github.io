@@ -5,7 +5,8 @@
     "ghcr.io/devcontainers/features/node:1": { "version": "22" },
     "ghcr.io/devcontainers/features/python:1": { "version": "3.12" }
   },
-  "postCreateCommand": "cargo install ssg --locked --version 0.0.75",
+  "postCreateCommand": "cargo install ssg --locked --version 0.0.75 && npm ci && python3 -m pip install --require-hashes -r requirements/lint.txt",
+  "postAttachCommand": "echo Run make check for the full local gate.",
   "customizations": {
     "vscode": {
       "extensions": ["DavidAnson.vscode-markdownlint"]

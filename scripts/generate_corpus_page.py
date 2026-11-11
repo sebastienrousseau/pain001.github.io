@@ -581,8 +581,7 @@ def render(files: list[dict], editions: list[dict], sizes: dict[str, int],
         scenarios[record["scenario"]].append(record)
     by_country: dict[str, list[str]] = defaultdict(list)
     for sid, recs in scenarios.items():
-        if sid not in by_country[recs[0]["country"]]:
-            by_country[recs[0]["country"]].append(sid)
+        by_country[recs[0]["country"]].append(sid)
     coverage_files = sum(len(e["_files"]) for e in editions)
     full_zip = next(n for n in sizes if n.startswith("pain001-example-corpus-"))
 

@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: 2023-2026 Sebastien Rousseau
 # SPDX-License-Identifier: Apache-2.0 OR MIT
-.PHONY: all build test pytest audit lint deps verify serve clean
+.PHONY: all build test pytest complexity audit lint deps verify check serve clean
 
 all: verify
 
@@ -8,7 +8,7 @@ build:
 	./build.sh
 
 test: build pytest
-	npm test
+	npm run coverage
 	python3 scripts/css_minify.py
 	python3 scripts/validate_try_i18n.py
 	python3 scripts/validate_pages_i18n.py pages_i18n
@@ -37,8 +37,9 @@ test: build pytest
 	.venv-test/bin/python -m pip install --quiet --require-hashes -r requirements/test.txt
 	touch $@
 
+# Fails below 100% line and branch coverage of scripts/ (see .coveragerc).
 pytest: .venv-test/.installed
-	.venv-test/bin/python -m pytest tests/python -q -p no:cacheprovider
+	.venv-test/bin/python -m pytest tests/python -q -p no:cacheprovider --cov=scripts --cov-report=term
 
 audit: build
 	ssg audit -f ssg.toml -o site --severity warn --fail-on warn
@@ -58,7 +59,16 @@ lint:
 deps:
 	python3 scripts/audit_deps.py
 
-verify: lint test audit
+# Per-function ceilings (cyclomatic 10, cognitive 15, Halstead 30, 60
+# lines; 500 lines per file) against complexity-baseline.json, which may
+# only shrink. See scripts/check_complexity.py.
+complexity: .venv-test/.installed
+	.venv-test/bin/python scripts/check_complexity.py
+
+verify: lint complexity test audit
+
+# The workspace name for the full local gate.
+check: verify
 
 serve: build
 	cd site && python3 -m http.server 8099 --bind 127.0.0.1

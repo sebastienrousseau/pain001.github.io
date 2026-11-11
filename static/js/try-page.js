@@ -128,9 +128,9 @@ function setLayerState(el, kind, text) {
 
 function updateLayerSummary(findings) {
   if (!els.layerSummary) return;
-  const shown = state.phase !== "empty";
-  els.layerSummary.hidden = !shown;
-  if (!shown) return;
+  /* Called only after a validation has run, so the phase has left
+     "empty" and the summary always has something to show. */
+  els.layerSummary.hidden = false;
 
   const count = (layer) => findings.filter((f) => f.layer === layer).length;
   const isoIssues = count("iso") + count("input");
