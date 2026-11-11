@@ -19,6 +19,12 @@ All notable changes to this website are documented here. The format follows
 - Remove three branches no input can reach: the empty-phase return in the demo's layer summary, an always-empty `missing` list in `extract_try_i18n.py`, and an always-true duplicate check in `generate_corpus_page.py`. Output is unchanged.
 - Hold every Python function in `scripts/` and `tests/python/` to the workspace complexity ceilings with `scripts/check_complexity.py` (radon and complexipy, hash-pinned in `requirements/test.txt`), run by `make check` and CI. The 44 functions and 3 files already over a ceiling are recorded in `complexity-baseline.json`, which may only shrink. `promote_bold_questions` is split into two helpers and is no longer an offender.
 - Add `make check` as the workspace name for the full local gate; the dev container now installs the Node toolchain and the linters and boots to a working `make check`. `DEVELOPMENT.md` documents the test layout, every CI gate's local command and the release model.
+- Bring `README.md` closer to the workspace template: badge style, the screenshot in the demo position, section separators, the ecosystem, capability and benchmark tables in the template's columns, and the Development and Security closings.
+
+### Documentation
+
+- Add `docs/cloudflare-audit.md`, a read-only audit of the pain001.com zone against the workspace Cloudflare standard from public checks, with six deviations and their evidence. No Cloudflare setting was changed.
+- Correct the README's Security section: no response carries a `Content-Security-Policy` header and HTML is not cached at the edge, contrary to what it said.
 
 ## [0.0.85] - 2026-11-10
 

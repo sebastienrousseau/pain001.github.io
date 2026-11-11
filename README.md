@@ -13,13 +13,18 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/sebastienrousseau/pain001.github.io/actions/workflows/ci.yml"><img src="https://github.com/sebastienrousseau/pain001.github.io/actions/workflows/ci.yml/badge.svg" alt="Build" /></a>
-  <a href="https://github.com/sebastienrousseau/pain001.github.io/releases"><img src="https://img.shields.io/github/v/release/sebastienrousseau/pain001.github.io" alt="Release" /></a>
-  <a href="https://pain001.com/documentation/"><img src="https://img.shields.io/badge/API-reference-07172b" alt="Docs" /></a>
-  <a href="https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/pain001.github.io"><img src="https://img.shields.io/ossf-scorecard/github.com/sebastienrousseau/pain001.github.io?label=OpenSSF%20Scorecard&logo=openssf" alt="OpenSSF Scorecard" /></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0%20OR%20MIT-blue.svg" alt="License: Apache-2.0 OR MIT" /></a>
-  <a href="https://static-site-generator.com/"><img src="https://img.shields.io/badge/SSG-0.0.75-8f341f" alt="Toolchain: SSG 0.0.75" /></a>
+  <a href="https://github.com/sebastienrousseau/pain001.github.io/actions"><img src="https://img.shields.io/github/actions/workflow/status/sebastienrousseau/pain001.github.io/ci.yml?style=for-the-badge&logo=github" alt="Build" height="28" /></a>
+  <a href="https://github.com/sebastienrousseau/pain001.github.io/releases"><img src="https://img.shields.io/github/v/release/sebastienrousseau/pain001.github.io?style=for-the-badge&color=fc8d62&logo=github" alt="Registry" height="28" /></a>
+  <a href="https://pain001.com/documentation/"><img src="https://img.shields.io/badge/docs-pain001.com-07172b?style=for-the-badge&labelColor=555555&logo=readthedocs" alt="Docs" height="28" /></a>
+  <a href="https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/pain001.github.io"><img src="https://img.shields.io/ossf-scorecard/github.com/sebastienrousseau/pain001.github.io?style=for-the-badge&label=OpenSSF%20Scorecard&logo=openssf" alt="OpenSSF Scorecard" height="28" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0%20OR%20MIT-blue.svg?style=for-the-badge" alt="License: Apache-2.0 OR MIT" height="28" /></a>
+  <a href="DEVELOPMENT.md"><img src="https://img.shields.io/badge/ssg-0.0.75-93450a.svg?style=for-the-badge&logo=rust" alt="Toolchain: ssg 0.0.75" height="28" /></a>
 </p>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://pain001.com/img/readme/pain001-home-dark.webp" />
+  <img src="https://pain001.com/img/readme/pain001-home-light.webp" alt="The pain001.com homepage: the deferred-deadline ribbon, a photograph of the City of London, and the headline 'Deterministic ISO 20022 validation. Inside your perimeter.'" width="100%" />
+</picture>
 
 <!-- markdownlint-enable MD033 MD041 -->
 
@@ -35,13 +40,6 @@ buyer the evidence they need.
 Built with the latest [Static Site Generator (ssg)][00] release, **0.0.75**,
 and deployed to GitHub Pages by `ci.yml` from the same run that passed every
 gate; the built tree is never committed. Cloudflare fronts the domain.
-
-<!-- markdownlint-disable MD033 -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://pain001.com/img/readme/pain001-home-dark.webp" />
-  <img src="https://pain001.com/img/readme/pain001-home-light.webp" alt="The pain001.com homepage: the deferred-deadline ribbon, a photograph of the City of London, and the headline 'Deterministic ISO 20022 validation. Inside your perimeter.'" />
-</picture>
-<!-- markdownlint-enable MD033 -->
 
 ---
 
@@ -62,7 +60,7 @@ gate; the built tree is never committed. Cloudflare fronts the domain.
 
 - [The Pain001 ecosystem](#the-pain001-ecosystem) — the nine repositories in the lockstep suite
 
-**Reference**
+**Library reference**
 
 - [Capabilities at a glance](#capabilities-at-a-glance) — what the built site contains
 - [Ecosystem comparison](#ecosystem-comparison) — why the comparison lives in the library
@@ -86,8 +84,13 @@ gate; the built tree is never committed. Cloudflare fronts the domain.
 
 ## Install
 
-This repository produces a website, not an installable binary or library.
-There is intentionally no system-wide `make install` for a Pages site.
+### As a library
+
+Not applicable: this repository produces a website, not an installable
+binary or library, and there is intentionally no system-wide
+`make install` for a Pages site. To install the payment library, see
+[pain001](https://github.com/sebastienrousseau/pain001). To build the
+site, clone it and pin the generator:
 
 ```shell
 git clone https://github.com/sebastienrousseau/pain001.github.io.git
@@ -99,6 +102,8 @@ npm ci
 Release archives of the built site are available from
 [GitHub Releases](https://github.com/sebastienrousseau/pain001.github.io/releases)
 for review or static hosting.
+
+---
 
 ## Requirements
 
@@ -114,6 +119,8 @@ correctness fix, or a required generator feature demands it; the reason must
 appear in `CHANGELOG.md` and a migration guide. No distro LTS compatibility is
 claimed beyond those explicit floors.
 
+---
+
 ## Quick Start
 
 ```shell
@@ -123,36 +130,42 @@ make verify    # reproduce the non-network CI gates
 make deps      # audit npm advisories against the documented exceptions
 ```
 
+---
+
 ## The Pain001 ecosystem
 
 This website joined the pain001 suite at 0.0.82. The core, companions,
 scaffold, native extension and website share one release version. The
 package reference is in [`docs/ECOSYSTEM.md`](docs/ECOSYSTEM.md).
 
-| Component | Role |
-| :--- | :--- |
-| `pain001` | Core library, CLI and REST API; the validation pipeline everything else calls |
-| `pain001-mcp` | MCP server exposing the pipeline as tools for AI agents |
-| `pain001-lsp` | Language server: diagnostics on payment files as you type |
-| `pain001-loader-mt101` | SWIFT MT101 bridge onto the ISO 20022 pipeline |
-| `pain001-loader-xlsx` | Excel on-ramp with the spreadsheet hazards handled |
-| `pain001-mockbank` | Synthetic SFTP bank replies for integration tests; container distribution |
-| `pain001-plugin-template` | Cookiecutter source scaffold for an external loader |
-| `pain001-fast` | Experimental native validation helpers; source and wheels on GitHub |
-| `pain001.com` | This website, documentation and browser demo |
+| Component | Purpose | Use case |
+| :--- | :--- | :--- |
+| `pain001` | Core library, CLI and REST API; the validation pipeline everything else calls | Generate and validate pain.001 files in code or from the shell |
+| `pain001-mcp` | MCP server exposing the pipeline as tools for AI agents | Let an AI agent validate and build payment files |
+| `pain001-lsp` | Language server: diagnostics on payment files as you type | Editor feedback on CSV, JSON and XML payment inputs |
+| `pain001-loader-mt101` | SWIFT MT101 bridge onto the ISO 20022 pipeline | Migrate MT101 batches to pain.001 |
+| `pain001-loader-xlsx` | Excel on-ramp with the spreadsheet hazards handled | Turn treasury spreadsheets into pain.001 |
+| `pain001-mockbank` | Synthetic SFTP bank replies for integration tests; container distribution | Test a payment flow end to end without a bank |
+| `pain001-plugin-template` | Cookiecutter source scaffold for an external loader | Start a new input-format loader |
+| `pain001-fast` | Experimental native validation helpers; source and wheels on GitHub | Try faster validation paths |
+| `pain001.com` | This website, documentation and browser demo | Evaluate the suite and try it in the browser |
+
+---
 
 ## Capabilities at a glance
 
 Measured on the current build.
 
-| Surface | Detail |
-| :--- | :--- |
-| Pages | 711 built pages; 493 URLs in the sitemap (utility pages such as the 404, offline and form-confirmation pages are noindexed and left out) |
-| Locales | 34, with an hreflang cluster per localised page and RTL handling for 3 |
-| Browser demo | `/try/` runs the `pain001` library itself in WebAssembly, same-origin, offline-capable; payment data never leaves the browser |
-| Example corpus | 42 scenarios, each on an English page and five translated pages (252 in all), with schema.org `Dataset` markup, downloadable inputs and expected output |
-| Agent discovery | `llms.txt`, `llms-full.txt` and a JSON search index |
-| Structured data | JSON-LD on every page: `WebSite` and `WebPage`; the corpus scenario pages add `Dataset`, `DataCatalog`, `DataDownload` and `Organization` |
+| Area | Capability | Status |
+| :--- | :--- | :--- |
+| Pages | 711 built pages; 493 URLs in the sitemap (utility pages such as the 404, offline and form-confirmation pages are noindexed and left out) | Shipped |
+| Locales | 34, with an hreflang cluster per localised page and RTL handling for 3 | Shipped |
+| Browser demo | `/try/` runs the `pain001` library itself in WebAssembly, same-origin, offline-capable; payment data never leaves the browser | Shipped |
+| Example corpus | 42 scenarios, each on an English page and five translated pages (252 in all), with schema.org `Dataset` markup, downloadable inputs and expected output | Shipped |
+| Agent discovery | `llms.txt`, `llms-full.txt` and a JSON search index | Shipped |
+| Structured data | JSON-LD on every page: `WebSite` and `WebPage`; the corpus scenario pages add `Dataset`, `DataCatalog`, `DataDownload` and `Organization` | Shipped |
+
+---
 
 ## Ecosystem comparison
 
@@ -161,6 +174,8 @@ tooling is a claim about the library, not about its website, so it is
 maintained with the library and published at
 <https://pain001.com/competitors-comparison/>. Reproducing it here would
 create a second copy to drift.
+
+---
 
 ## Benchmarks
 
@@ -173,10 +188,13 @@ index), so they are gated through it. A performance-only 99 is measured once
 more and the second sample counts, because a shared CI runner makes single
 samples noisy; a real regression fails both.
 
-| Routes | Byte budget |
-| :--- | ---: |
-| `/`, `/documentation/`, `/compliance-toolkit/`, `/example-corpus/`, `/why/`, `/enterprise/`, `/competitors-comparison/`, `/corpus-gb-fps-single/`, `/tags/iso-20022/`, `/fr/`, `/ar/` | 300 KiB |
-| `/try/` (before the WebAssembly runtime, which loads on intent), `/message-spec-pain.001.001.09/` | 400 KiB |
+| Scenario | Result | Environment |
+| :--- | ---: | :--- |
+| Byte budget: `/`, `/documentation/`, `/compliance-toolkit/`, `/example-corpus/`, `/why/`, `/enterprise/`, `/competitors-comparison/`, `/corpus-gb-fps-single/`, `/tags/iso-20022/`, `/fr/`, `/ar/` | 300 KiB | Lighthouse in CI, `ubuntu-24.04` runner |
+| Byte budget: `/try/` (before the WebAssembly runtime, which loads on intent), `/message-spec-pain.001.001.09/` | 400 KiB | Lighthouse in CI, `ubuntu-24.04` runner |
+| Lighthouse categories, five profiles | 100 | Lighthouse in CI, `ubuntu-24.04` runner |
+
+---
 
 ## Features
 
@@ -190,6 +208,8 @@ samples noisy; a real regression fails both.
 | `site/` | The built site, produced by `build.sh`; ignored by git and uploaded by CI as the Pages artifact |
 | `.github/workflows/` | `ci.yml` (build, every gate, and on `main` the Pages deploy), `release.yml` (signed-tag release: archive, SBOM, attestations), `release-backfill.yml` (completes the release of an existing tag: archive, SBOM, attestations), `regenerate.yml` (library-release regeneration, exports a source patch), `dated-claims.yml` (weekly check of dated regulatory claims), `codeql.yml`, `scorecard.yml`, `dco.yml` |
 
+---
+
 ## Configuration
 
 | File | What it controls |
@@ -198,6 +218,8 @@ samples noisy; a real regression fails both.
 | `SSG_VERSION` in `.github/workflows/ci.yml` | The generator pin, single-sourced: it is both the install version and the binary cache key |
 | `.compliance.yml` | Declared compliance tier, criticality and owner, per the workspace standard |
 | `scripts/perf_budget.mjs` | Routes, Lighthouse profiles and byte budgets |
+
+---
 
 ## Examples
 
@@ -220,6 +242,8 @@ send a `repository_dispatch` (`suite-release`) using its configured dispatch
 token, or a maintainer can request a version manually. Every invocation
 produces review artifacts; the legacy `dry_run` input remains accepted.
 
+---
+
 ## When not to use Pain001
 
 Do not use this website as a bank connectivity service, legal or regulatory
@@ -229,7 +253,20 @@ local validation aid and never submits payments. Use the separate Pain001
 library for production automation, and complete bank certification before
 going live.
 
+---
+
 ## Development
+
+```bash
+make build     # build the site into site/
+make test      # Python and JavaScript tests with their 100% coverage floors, then the validators
+make lint      # README, release notes, ruff, ESLint, markdownlint, codespell, REUSE
+make verify    # lint, test and the ssg audit: the local gate
+```
+
+[DEVELOPMENT.md](DEVELOPMENT.md) is the single developer entry point:
+toolchain setup, every CI gate reproduced locally, test layout and the
+release model.
 
 ### Build
 
@@ -339,6 +376,8 @@ this origin; the demo page carries none. What is counted, where the tag lives
 and how to switch it off is in [`METRICS.md`](METRICS.md). The privacy and
 trust pages state the same facts publicly.
 
+---
+
 ## Security
 
 Report vulnerabilities privately as described in [SECURITY.md](SECURITY.md),
@@ -359,24 +398,30 @@ here with fast-check property tests on every push, alongside browser
 integration and fixed regression cases. The browser demo refuses input files
 larger than 2 MB.
 
-**Framing.** The policy is delivered as a `<meta http-equiv>` element, where
-browsers ignore `frame-ancestors`, and GitHub Pages cannot set response
-headers. Cloudflare adds them at the edge: every response carries
-`Content-Security-Policy: frame-ancestors 'none'` and `X-Frame-Options: DENY`.
-That rule lives in the Cloudflare dashboard, not in this repository, so the
-headers are the thing to check after any change there. Three more settings
-live there: Always Use
-HTTPS (SSL/TLS, Edge Certificates); a redirect rule that sends any
+**Framing and edge headers.** The Content-Security-Policy is delivered as a
+`<meta http-equiv>` element, where browsers ignore `frame-ancestors`, and
+GitHub Pages cannot set response headers. Cloudflare adds the security
+headers at the edge: every response observed on 2026-11-11 carries
+`X-Frame-Options: DENY`, HSTS with preload, `nosniff`, `Referrer-Policy`,
+`Permissions-Policy` and the two cross-origin isolation headers. No response
+carried a `Content-Security-Policy` header that day, so framing is refused
+by `X-Frame-Options` alone. Those rules live in the Cloudflare dashboard, not
+in this repository, so the headers are the thing to check after any change
+there. Also there: Always Use HTTPS; a redirect rule that sends any
 `/index.html` URL to its directory URL with a 301, because GitHub Pages serves
 both with a 200 and Search Console then lists one as an alternative of the
-other; and a page rule on `pain001.com/*` that caches everything at the edge
-with a two-minute browser TTL and no edge TTL override, so the edge follows
-the origin's ten-minute `max-age`. Until 23 September 2026 that rule pinned
-the edge TTL to seven days, which kept every deploy invisible for up to a
-week; a deploy that does not appear within ten minutes means the rule has
-regained an edge TTL. GitHub Pages itself redirects `www` to the apex and
-slash-less paths to the trailing slash. The site holds no credentials, session
-state or authenticated actions.
+other; and a cache rule that gives static assets a seven-day browser TTL.
+HTML is served uncached at the edge (`cf-cache-status: DYNAMIC`) with the
+origin's ten-minute `max-age`, so a deploy is visible within ten minutes.
+The full read-only audit of the zone against the workspace Cloudflare
+standard, with every deviation and its evidence, is
+[docs/cloudflare-audit.md](docs/cloudflare-audit.md). GitHub Pages itself
+redirects slash-less paths to the trailing slash. The site holds no
+credentials, session state or authenticated actions.
+
+Report vulnerabilities according to [`SECURITY.md`](SECURITY.md).
+
+---
 
 ## Documentation
 
@@ -388,6 +433,9 @@ state or authenticated actions.
 - [Release process](docs/RELEASES.md)
 - [Architecture decision records](docs/adr/)
 - [Migration guides](docs/migrations/)
+- [Cloudflare audit](docs/cloudflare-audit.md)
+
+---
 
 ## Stability guarantees
 
@@ -398,6 +446,8 @@ the validator's interpreted input or generated output is treated as breaking
 and belongs to the library's own version contract. Deprecated website URLs
 remain redirected for at least two patch releases. Tags and release assets
 are immutable.
+
+---
 
 ## License
 
