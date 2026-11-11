@@ -17,7 +17,7 @@ All notable changes to this website are documented here. The format follows
 
 ### Changed
 
-- Release 0.0.86 in lockstep with the pain001 suite.
+- Release 0.0.86 in lockstep with the pain001 suite. Pin the browser runtime and the documentation snippet environment to the published core 0.0.86 wheel, regenerate the corpus pages, versioned downloads, demo samples and translations from the `v0.0.86` tag, and pin the ecosystem check to the 0.0.86 release commit.
 - Raise the coverage floors to 100%: lines, branches and functions of the shipped JavaScript (was 90% of lines and 80% of branches), and lines and branches of every Python script in `scripts/` (was unmeasured, at 31%). `make test` and CI enforce both; `.coveragerc` holds the Python floor.
 - Remove three branches no input can reach: the empty-phase return in the demo's layer summary, an always-empty `missing` list in `extract_try_i18n.py`, and an always-true duplicate check in `generate_corpus_page.py`. Output is unchanged.
 - Hold every Python function in `scripts/` and `tests/python/` to the workspace complexity ceilings with `scripts/check_complexity.py` (radon and complexipy, hash-pinned in `requirements/test.txt`), run by `make check` and CI. The 44 functions and 3 files already over a ceiling are recorded in `complexity-baseline.json`, which may only shrink. `promote_bold_questions` is split into two helpers and is no longer an offender.

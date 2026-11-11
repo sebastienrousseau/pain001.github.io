@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-10T08:00:00+00:00"
+date: "2026-11-11T08:00:00+00:00"
 description: "Cross-border USD payment from Switzerland (SPS payment type X). A validated pain.001 sample for Switzerland on the cross-border rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Cross-border USD payment from Switzerland (SPS payment type X). A validated pain.001 sample for Switzerland on the cross-border rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
 item_guid: "https://pain001.com/corpus-ch-international-usd/"
 item_link: "https://pain001.com/corpus-ch-international-usd/"
-item_pub_date: "Tue, 10 Nov 2026 08:00:00 +0000"
+item_pub_date: "Wed, 11 Nov 2026 08:00:00 +0000"
 item_title: "ch.international.usd: ISO 20022 pain.001 example for Switzerland (cross-border)"
-last_build_date: "Tue, 10 Nov 2026 08:00:00 +0000"
+last_build_date: "Wed, 11 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Tue, 10 Nov 2026 08:00:00 +0000"
+pub_date: "Wed, 11 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -90,7 +90,7 @@ last_reviewed: "2026-11-07"
 
 Cross-border USD payment from Switzerland (SPS payment type X).
 
-A payment initiation file for **Switzerland** on the **cross-border** rail, shipped in `pain.001.001.03`, `pain.001.001.09`, generated and checked by pain001 0.0.85. It is a synthetic example built from the public scheme rulebooks: no real party, account or bank guideline behind it.
+A payment initiation file for **Switzerland** on the **cross-border** rail, shipped in `pain.001.001.03`, `pain.001.001.09`, generated and checked by pain001 0.0.86. It is a synthetic example built from the public scheme rulebooks: no real party, account or bank guideline behind it.
 
 ## Files
 
