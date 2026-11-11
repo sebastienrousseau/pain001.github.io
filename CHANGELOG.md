@@ -9,6 +9,7 @@ All notable changes to this website are documented here. The format follows
 ### Fixed
 
 - `make deps` can now except an npm advisory that has no GHSA id. Exception ids were upper-cased and finding ids (`npm:<source>`) were not, so such an exception never matched and was reported as stale.
+- A bold-only paragraph promoted to a heading now takes its level from the nearest authored heading. A short authored heading directly before an already promoted one was mistaken for a promoted heading, because the check read 40 characters past its start, and the new heading came out a level too high.
 - Validate documentation snippets against the released core 0.0.85 instead of 0.0.70. The release version gate now rejects runtime or snippet input/lock pins that differ from `VERSION`.
 - Record in the maintainer handover note that the Cloudflare 301 from `/enterprise/` to `/for-banks/` is live and how it was checked; `/thanks/` still has no rule.
 

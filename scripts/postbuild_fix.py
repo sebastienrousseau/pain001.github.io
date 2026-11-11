@@ -1989,6 +1989,34 @@ _BOLD_PARA_RE = re.compile(r"<p>\s*<(strong|b)>([^<]{1,200})</\1>\s*</p>")
 _ANY_HEADING_RE = re.compile(r"<h([1-6])\b")
 
 
+def _authored_level(body: str, end: int) -> int:
+    """Level of the nearest heading before ``end`` that this pass did not
+    create (promoted headings carry the class on their own opening tag),
+    or 1 when there is none."""
+    prior = [int(h.group(1)) for h in _ANY_HEADING_RE.finditer(body, 0, end)
+             if 'class="promoted"' not in body[h.start():body.find(">", h.start())]]
+    return prior[-1] if prior else 1
+
+
+def _promote_in(body: str) -> tuple[str, int]:
+    """Return ``body`` with its bold-only paragraphs promoted, and how many."""
+    out, pos, n = [], 0, 0
+    for m in _BOLD_PARA_RE.finditer(body):
+        text = m.group(2).strip()
+        if not text or text.endswith((".", ",", ";")) and len(text) >= 50:
+            continue
+        level = min(_authored_level(body, m.start()) + 1, 6)
+        out.append(body[pos:m.start()])
+        # The <strong> stays inside the heading: translation keys for
+        # these questions are written with it, and matching them is how
+        # every locale gets its translation.
+        out.append(f'<h{level} class="promoted"><{m.group(1)}>{text}</{m.group(1)}></h{level}>')
+        pos = m.end()
+        n += 1
+    out.append(body[pos:])
+    return "".join(out), n
+
+
 def promote_bold_questions(site: Path) -> None:
     """A paragraph that is nothing but bold text is a heading written as
     formatting ("**What does Pain001 cost?**" in FAQ-style sections, and
@@ -2002,28 +2030,9 @@ def promote_bold_questions(site: Path) -> None:
         start, end = html.find("<main"), html.find("</main>")
         if start == -1 or end == -1 or "<strong>" not in html[start:end]:
             continue
-        body = html[start:end]
-        out, pos, n = [], 0, 0
-        for m in _BOLD_PARA_RE.finditer(body):
-            text = m.group(2).strip()
-            if not text or text.endswith((".", ",", ";")) and len(text) >= 50:
-                continue
-            authored = [int(h.group(1)) for h in _ANY_HEADING_RE.finditer(body, 0, m.start())]
-            # Skip the headings this pass created (marked with the class).
-            prior = [lvl for lvl, h in zip(authored, _ANY_HEADING_RE.finditer(body, 0, m.start()), strict=False)
-                     if 'class="promoted"' not in body[h.start():h.start() + 40]]
-            level = min((prior[-1] if prior else 1) + 1, 6)
-            out.append(body[pos:m.start()])
-            # The <strong> stays inside the heading: translation keys for
-            # these questions are written with it, and matching them is how
-            # every locale gets its translation.
-            out.append(f'<h{level} class="promoted"><{m.group(1)}>{text}</{m.group(1)}></h{level}>')
-            pos = m.end()
-            n += 1
+        body, n = _promote_in(html[start:end])
         if n:
-            out.append(body[pos:])
-            html = html[:start] + "".join(out) + html[end:]
-            page.write_text(html, encoding="utf-8")
+            page.write_text(html[:start] + body + html[end:], encoding="utf-8")
             promoted += n
     print(f"[postbuild] promoted {promoted} bold paragraph(s) to headings")
 
