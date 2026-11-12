@@ -17,6 +17,11 @@ All notable changes to this website are documented here. The format follows
 
 ### Changed
 
+- Suite Consistency no longer runs on another workflow's completion
+  (`workflow_run`). It audits the family daily and on dispatch, as the
+  core's does, since that trigger runs with the default branch's trust
+  whatever started it. Regenerated from pain001's
+  `scripts/render_ecosystem_workflows.py`.
 - The site rebuilds and redeploys from main every Monday (CI `schedule`),
   so the traction figures on the governance page, fetched at build time,
   are never more than a week old; the page says so. IndexNow is not

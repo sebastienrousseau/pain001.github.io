@@ -11,9 +11,6 @@ on:
         description: "Explicit suite version; empty checks the latest published family"
         type: string
         default: ""
-  workflow_run:
-    workflows: ["Release", "CI"]
-    types: [completed]
 permissions:
   contents: read
 concurrency:
@@ -22,11 +19,6 @@ concurrency:
 jobs:
   consistency:
     name: All nine publications agree
-    if: >-
-      github.event_name != 'workflow_run' ||
-      (github.event.workflow_run.conclusion == 'success' &&
-       github.event.workflow_run.event == 'push' &&
-       (startsWith(github.event.workflow_run.head_branch, 'v0.') || (github.event.workflow_run.head_branch == 'main' && github.event.workflow_run.name == 'CI')))
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
