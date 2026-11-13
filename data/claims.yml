@@ -18,7 +18,7 @@
     {
       "id": "pypi_downloads_month",
       "claim": "pain001 downloads from PyPI in the last month",
-      "value": 3517,
+      "value": 8252,
       "format": "count",
       "source": "live",
       "pages": [
@@ -42,7 +42,7 @@
     {
       "id": "releases_since_2023",
       "claim": "Published releases of the core since the first in 2023",
-      "value": 78,
+      "value": 79,
       "format": "count",
       "source": "live",
       "pages": [
