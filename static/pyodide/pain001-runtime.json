@@ -1,6 +1,6 @@
 {
- "pain001": "0.0.86",
- "pain001_source": "pypi:pain001==0.0.86 (sha256 verified against PyPI at vendoring)",
+ "pain001": "0.0.87",
+ "pain001_source": "pypi:pain001==0.0.87 (sha256 verified against PyPI at vendoring)",
  "pyodide": "0.27.2",
  "runtime": [
   {
@@ -120,11 +120,11 @@
    "url": "https://files.pythonhosted.org/packages/py3/x/xmlschema/xmlschema-4.3.2-py3-none-any.whl"
   },
   {
-   "file": "pain001-0.0.86-py3-none-any.whl",
-   "bytes": 1281249,
-   "sha256": "8d285cf4b22b3f35b4dfacf9046cb9806ac73d1d39afea513d459504d9e953b3",
-   "url": "https://files.pythonhosted.org/packages/py3/p/pain001/pain001-0.0.86-py3-none-any.whl"
+   "file": "pain001-0.0.87-py3-none-any.whl",
+   "bytes": 1332085,
+   "sha256": "cec18acbd6efb0e226e2e2905a6a90c2e278031fbf55ab28ba271738c97cc7e1",
+   "url": "https://files.pythonhosted.org/packages/py3/p/pain001/pain001-0.0.87-py3-none-any.whl"
   }
  ],
- "total_bytes": 18609780
+ "total_bytes": 18660616
 }

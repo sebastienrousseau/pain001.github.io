@@ -118,16 +118,16 @@ Development is **self-funded**. The core has no commercial edition and no revenu
 ## Traction, stated plainly
 
 <!-- traction:start -->
-Figures refreshed at each site build from public sources (PyPI download statistics and the GitHub API); the date is the build date.
+Figures refreshed at each site build, and at least weekly, from public sources (PyPI download statistics and the GitHub API); the date is the build date.
 
 | Measure | Value | Source |
 | :--- | ---: | :--- |
-| pain001 downloads, last 30 days | 3,517 | PyPI |
-| pain001 downloads, last 7 days | 3,432 | PyPI |
+| pain001 downloads, last 30 days | 8,252 | PyPI |
+| pain001 downloads, last 7 days | 5,450 | PyPI |
 | GitHub stars | 49 | GitHub |
 | GitHub forks | 17 | GitHub |
 
-Refreshed 2026-11-10. Page views are counted by Cloudflare Web Analytics, cookieless and without identifiers, and a few anonymous events by the site's own Worker ([privacy](/privacy/)).
+Refreshed 2026-11-13. Page views are counted by Cloudflare Web Analytics, cookieless and without identifiers, and a few anonymous events by the site's own Worker ([privacy](/privacy/)).
 <!-- traction:end -->
 
 ## Trademark

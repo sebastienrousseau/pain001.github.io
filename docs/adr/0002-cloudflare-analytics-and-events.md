@@ -34,3 +34,10 @@ Decision D1 (10 November 2026), final:
   page-view beacon there; the panel now names every request it makes.
 - The Worker and its Analytics Engine dataset are deployed by the maintainer. Until then the event
   beacons reach GitHub Pages and are discarded.
+
+## Amendments
+
+- 2026-11-10: the events Worker and its Analytics Engine dataset are deployed at
+  `pain001.com/e`, so event beacons are now counted rather than discarded.
+- 2026-11-10: `discussion_click` was dropped when the repository turned GitHub Discussions off
+  and pointed questions to issues (commit 11701d62). The Worker accepts the other eleven names.
