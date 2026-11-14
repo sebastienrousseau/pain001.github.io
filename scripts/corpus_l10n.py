@@ -28,10 +28,11 @@ CORPUS_LOCALES: dict[str, tuple[str, str]] = {
 STRINGS: dict[str, dict] = {
     "en": {
         "eyebrow": "Example corpus",
-        "title": "{sid}: ISO 20022 pain.001 example for {country} ({family})",
-        "meta_desc": "{desc} A validated pain.001 sample for {country} on the {family} rail, "
-                     "with its ISO 20022 JSON twin and provenance record; run it in the browser.",
-        "keywords": "pain.001 example {country}, {family} sample XML, ISO 20022 {country} payment file, "
+        "title": "{msg} example: {sid} ({country})",
+        "meta_desc": "{desc} Validated {msg} sample for {country} ({family}){files}.",
+        "files_twin": ", with its ISO 20022 JSON twin and provenance record",
+        "files_prov": ", with its provenance record",
+        "keywords": "{msg} example {country}, {family} sample XML, ISO 20022 {country} payment file, "
                     "{sid}, pain001 corpus",
         "desc_label": "",
         "intro": "A payment initiation file for **{country}** on the **{family}** rail, shipped in "
@@ -76,14 +77,16 @@ STRINGS: dict[str, dict] = {
             "FR": "France", "GB": "United Kingdom", "IT": "Italy",
             "LU": "Luxembourg", "NL": "Netherlands", "SE": "Sweden",
             "US": "United States",
+            "AE": "United Arab Emirates", "CZ": "Czechia", "HK": "Hong Kong", "MY": "Malaysia", "QA": "Qatar", "SG": "Singapore",
         },
     },
     "de": {
         "eyebrow": "Beispielkorpus",
-        "title": "ISO-20022-pain.001-Beispiel {sid}: {country} ({family})",
-        "meta_desc": "{desc} Eine validierte pain.001-Beispieldatei ({country}, Schiene {family}), "
-                     "mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar.",
-        "keywords": "pain.001 Beispiel {country}, {family} Beispiel-XML, ISO 20022 {country} Zahlungsdatei, "
+        "title": "{msg}-Beispiel: {sid} ({country})",
+        "meta_desc": "{desc} Validierte {msg}-Beispieldatei ({country}, Schiene {family}){files}.",
+        "files_twin": ", mit ISO-20022-JSON-Zwilling und Provenienzdatensatz",
+        "files_prov": ", mit Provenienzdatensatz",
+        "keywords": "{msg} Beispiel {country}, {family} Beispiel-XML, ISO 20022 {country} Zahlungsdatei, "
                     "{sid}, pain001 Korpus",
         "desc_label": "Szenariobeschreibung, zitiert aus dem Provenienzdatensatz (englischer Originaltext):",
         "intro": "Eine Zahlungsinitiierungsdatei (**{country}**, Schiene **{family}**), ausgeliefert "
@@ -131,14 +134,16 @@ STRINGS: dict[str, dict] = {
             "FR": "Frankreich", "GB": "Vereinigtes Königreich", "IT": "Italien",
             "LU": "Luxemburg", "NL": "Niederlande", "SE": "Schweden",
             "US": "Vereinigte Staaten",
+            "AE": "Vereinigte Arabische Emirate", "CZ": "Tschechien", "HK": "Hongkong", "MY": "Malaysia", "QA": "Katar", "SG": "Singapur",
         },
     },
     "fr": {
         "eyebrow": "Corpus d'exemples",
-        "title": "Exemple pain.001 ISO 20022 {sid} : {country} ({family})",
-        "meta_desc": "{desc} Un exemple pain.001 validé ({country}, rail {family}), avec son jumeau JSON "
-                     "ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur.",
-        "keywords": "exemple pain.001 {country}, XML exemple {family}, fichier de paiement ISO 20022 {country}, "
+        "title": "Exemple {msg} : {sid} ({country})",
+        "meta_desc": "{desc} Exemple {msg} validé ({country}, rail {family}){files}.",
+        "files_twin": ", avec son jumeau JSON ISO 20022 et sa fiche de provenance",
+        "files_prov": ", avec sa fiche de provenance",
+        "keywords": "exemple {msg} {country}, XML exemple {family}, fichier de paiement ISO 20022 {country}, "
                     "{sid}, corpus pain001",
         "desc_label": "Description du scénario, citée depuis la fiche de provenance (texte original en anglais) :",
         "intro": "Un fichier d'initiation de paiement (**{country}**, rail **{family}**), livré en {editions}, "
@@ -186,14 +191,16 @@ STRINGS: dict[str, dict] = {
             "FR": "France", "GB": "Royaume-Uni", "IT": "Italie",
             "LU": "Luxembourg", "NL": "Pays-Bas", "SE": "Suède",
             "US": "États-Unis",
+            "AE": "Émirats arabes unis", "CZ": "Tchéquie", "HK": "Hong Kong", "MY": "Malaisie", "QA": "Qatar", "SG": "Singapour",
         },
     },
     "es": {
         "eyebrow": "Corpus de ejemplos",
-        "title": "Ejemplo pain.001 ISO 20022 {sid}: {country} ({family})",
-        "meta_desc": "{desc} Una muestra pain.001 validada ({country}, raíl {family}), con su gemelo JSON "
-                     "ISO 20022 y su registro de procedencia; ejecútela en el navegador.",
-        "keywords": "ejemplo pain.001 {country}, XML de muestra {family}, archivo de pago ISO 20022 {country}, "
+        "title": "Ejemplo {msg}: {sid} ({country})",
+        "meta_desc": "{desc} Muestra {msg} validada ({country}, raíl {family}){files}.",
+        "files_twin": ", con su gemelo JSON ISO 20022 y su registro de procedencia",
+        "files_prov": ", con su registro de procedencia",
+        "keywords": "ejemplo {msg} {country}, XML de muestra {family}, archivo de pago ISO 20022 {country}, "
                     "{sid}, corpus pain001",
         "desc_label": "Descripción del escenario, citada del registro de procedencia (texto original en inglés):",
         "intro": "Un archivo de iniciación de pagos (**{country}**, raíl **{family}**), entregado en {editions}, "
@@ -241,14 +248,16 @@ STRINGS: dict[str, dict] = {
             "FR": "Francia", "GB": "Reino Unido", "IT": "Italia",
             "LU": "Luxemburgo", "NL": "Países Bajos", "SE": "Suecia",
             "US": "Estados Unidos",
+            "AE": "Emiratos Árabes Unidos", "CZ": "Chequia", "HK": "Hong Kong", "MY": "Malasia", "QA": "Catar", "SG": "Singapur",
         },
     },
     "it": {
         "eyebrow": "Corpus di esempi",
-        "title": "Esempio pain.001 ISO 20022 {sid}: {country} ({family})",
-        "meta_desc": "{desc} Un campione pain.001 validato ({country}, circuito {family}), con il suo gemello "
-                     "JSON ISO 20022 e il record di provenienza; eseguibile nel browser.",
-        "keywords": "esempio pain.001 {country}, XML di esempio {family}, file di pagamento ISO 20022 {country}, "
+        "title": "Esempio {msg}: {sid} ({country})",
+        "meta_desc": "{desc} Campione {msg} validato ({country}, circuito {family}){files}.",
+        "files_twin": ", con il suo gemello JSON ISO 20022 e il record di provenienza",
+        "files_prov": ", con il record di provenienza",
+        "keywords": "esempio {msg} {country}, XML di esempio {family}, file di pagamento ISO 20022 {country}, "
                     "{sid}, corpus pain001",
         "desc_label": "Descrizione dello scenario, citata dal record di provenienza (testo originale in inglese):",
         "intro": "Un file di disposizione di pagamento (**{country}**, circuito **{family}**), fornito in "
@@ -295,14 +304,16 @@ STRINGS: dict[str, dict] = {
             "FR": "Francia", "GB": "Regno Unito", "IT": "Italia",
             "LU": "Lussemburgo", "NL": "Paesi Bassi", "SE": "Svezia",
             "US": "Stati Uniti",
+            "AE": "Emirati Arabi Uniti", "CZ": "Cechia", "HK": "Hong Kong", "MY": "Malaysia", "QA": "Qatar", "SG": "Singapore",
         },
     },
     "nl": {
         "eyebrow": "Voorbeeldcorpus",
-        "title": "ISO 20022 pain.001-voorbeeld {sid}: {country} ({family})",
-        "meta_desc": "{desc} Een gevalideerd pain.001-voorbeeld ({country}, rail {family}), met zijn ISO 20022 "
-                     "JSON-tweeling en herkomstrecord; uitvoerbaar in de browser.",
-        "keywords": "pain.001 voorbeeld {country}, {family} voorbeeld-XML, ISO 20022 {country} betaalbestand, "
+        "title": "{msg}-voorbeeld: {sid} ({country})",
+        "meta_desc": "{desc} Gevalideerd {msg}-voorbeeld ({country}, rail {family}){files}.",
+        "files_twin": ", met zijn ISO 20022 JSON-tweeling en herkomstrecord",
+        "files_prov": ", met zijn herkomstrecord",
+        "keywords": "{msg} voorbeeld {country}, {family} voorbeeld-XML, ISO 20022 {country} betaalbestand, "
                     "{sid}, pain001 corpus",
         "desc_label": "Scenariobeschrijving, geciteerd uit het herkomstrecord (oorspronkelijke Engelse tekst):",
         "intro": "Een betaalinitiatiebestand (**{country}**, rail **{family}**), geleverd in {editions}, "
@@ -350,6 +361,7 @@ STRINGS: dict[str, dict] = {
             "FR": "Frankrijk", "GB": "Verenigd Koninkrijk", "IT": "Italië",
             "LU": "Luxemburg", "NL": "Nederland", "SE": "Zweden",
             "US": "Verenigde Staten",
+            "AE": "Verenigde Arabische Emiraten", "CZ": "Tsjechië", "HK": "Hongkong", "MY": "Maleisië", "QA": "Qatar", "SG": "Singapore",
         },
     },
 }

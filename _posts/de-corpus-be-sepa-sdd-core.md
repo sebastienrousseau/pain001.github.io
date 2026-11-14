@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "SEPA Core direct debit, recurring, Belgian creditor identifier. Eine validierte pain.001-Beispieldatei (Belgien, Schiene sepa-direct-debit), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
+banner_alt: "SEPA Core direct debit, recurring, Belgian creditor identifier. Validierte pain.008-Beispieldatei (Belgien, Schiene sepa-direct-debit), mit Provenienzdatensatz."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -9,18 +9,18 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-13T08:00:00+00:00"
-description: "SEPA Core direct debit, recurring, Belgian creditor identifier. Eine validierte pain.001-Beispieldatei (Belgien, Schiene sepa-direct-debit), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
+date: "2026-11-14T08:00:00+00:00"
+description: "SEPA Core direct debit, recurring, Belgian creditor identifier. Validierte pain.008-Beispieldatei (Belgien, Schiene sepa-direct-debit), mit Provenienzdatensatz."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "de"
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/de/corpus-be-sepa-sdd-core/"
-image_alt: "SEPA Core direct debit, recurring, Belgian creditor identifier. Eine validierte pain.001-Beispieldatei (Belgien, Schiene sepa-direct-debit), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
+image_alt: "SEPA Core direct debit, recurring, Belgian creditor identifier. Validierte pain.008-Beispieldatei (Belgien, Schiene sepa-direct-debit), mit Provenienzdatensatz."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
-keywords: "pain.001 Beispiel Belgien, sepa-direct-debit Beispiel-XML, ISO 20022 Belgien Zahlungsdatei, be.sepa.sdd-core, pain001 Korpus"
+keywords: "pain.008 Beispiel Belgien, sepa-direct-debit Beispiel-XML, ISO 20022 Belgien Zahlungsdatei, be.sepa.sdd-core, pain001 Korpus"
 language: "de"
 layout: "page"
 locale: "de_DE"
@@ -39,21 +39,21 @@ short_name: pain001
 subtitle: "SEPA Core direct debit, recurring, Belgian creditor identifier."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "ISO-20022-pain.001-Beispiel be.sepa.sdd-core: Belgien (sepa-direct-debit)"
+title: "pain.008-Beispiel: be.sepa.sdd-core (Belgien)"
 url: "https://pain001.com/de/corpus-be-sepa-sdd-core/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/de/corpus-be-sepa-sdd-core/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.75)"
-item_description: "SEPA Core direct debit, recurring, Belgian creditor identifier. Eine validierte pain.001-Beispieldatei (Belgien, Schiene sepa-direct-debit), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
+item_description: "SEPA Core direct debit, recurring, Belgian creditor identifier. Validierte pain.008-Beispieldatei (Belgien, Schiene sepa-direct-debit), mit Provenienzdatensatz."
 item_guid: "https://pain001.com/de/corpus-be-sepa-sdd-core/"
 item_link: "https://pain001.com/de/corpus-be-sepa-sdd-core/"
-item_pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
-item_title: "ISO-20022-pain.001-Beispiel be.sepa.sdd-core: Belgien (sepa-direct-debit)"
-last_build_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+item_pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
+item_title: "pain.008-Beispiel: be.sepa.sdd-core (Belgien)"
+last_build_date: "Sat, 14 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "ISO-20022-pain.001-Beispiel be.sepa.sdd-core: Belgien (sepa-direct-debit)"
+apple-mobile-web-app-title: "pain.008-Beispiel: be.sepa.sdd-core (Belgien)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "SEPA Core direct debit, recurring, Belgian creditor identifier. Eine validierte pain.001-Beispieldatei (Belgien, Schiene sepa-direct-debit), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
+twitter_description: "SEPA Core direct debit, recurring, Belgian creditor identifier. Validierte pain.008-Beispieldatei (Belgien, Schiene sepa-direct-debit), mit Provenienzdatensatz."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "ISO-20022-pain.001-Beispiel be.sepa.sdd-core: Belgien (sepa-direct-debit)"
+twitter_title: "pain.008-Beispiel: be.sepa.sdd-core (Belgien)"
 twitter_url: "https://pain001.com/de/corpus-be-sepa-sdd-core/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -82,7 +82,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Beispielkorpus"
-excerpt: "SEPA Core direct debit, recurring, Belgian creditor identifier. Eine validierte pain.001-Beispieldatei (Belgien, Schiene sepa-direct-debit), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
+excerpt: "SEPA Core direct debit, recurring, Belgian creditor identifier. Validierte pain.008-Beispieldatei (Belgien, Schiene sepa-direct-debit), mit Provenienzdatensatz."
 last_reviewed: "2026-11-07"
 
 

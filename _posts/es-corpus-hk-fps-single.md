@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Una muestra pain.001 validada (HK, raíl instant-payment), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
+banner_alt: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Muestra pain.001 validada (Hong Kong, raíl instant-payment)."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -9,18 +9,18 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-13T08:00:00+00:00"
-description: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Una muestra pain.001 validada (HK, raíl instant-payment), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
+date: "2026-11-14T08:00:00+00:00"
+description: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Muestra pain.001 validada (Hong Kong, raíl instant-payment)."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "es"
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/es/corpus-hk-fps-single/"
-image_alt: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Una muestra pain.001 validada (HK, raíl instant-payment), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
+image_alt: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Muestra pain.001 validada (Hong Kong, raíl instant-payment)."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
-keywords: "ejemplo pain.001 HK, XML de muestra instant-payment, archivo de pago ISO 20022 HK, hk.fps.single, corpus pain001"
+keywords: "ejemplo pain.001 Hong Kong, XML de muestra instant-payment, archivo de pago ISO 20022 Hong Kong, hk.fps.single, corpus pain001"
 language: "es"
 layout: "page"
 locale: "es_ES"
@@ -39,21 +39,21 @@ short_name: pain001
 subtitle: "Hong Kong FPS credit in HKD, clearing codes and account numbers."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Ejemplo pain.001 ISO 20022 hk.fps.single: HK (instant-payment)"
+title: "Ejemplo pain.001: hk.fps.single (Hong Kong)"
 url: "https://pain001.com/es/corpus-hk-fps-single/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/es/corpus-hk-fps-single/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.75)"
-item_description: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Una muestra pain.001 validada (HK, raíl instant-payment), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
+item_description: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Muestra pain.001 validada (Hong Kong, raíl instant-payment)."
 item_guid: "https://pain001.com/es/corpus-hk-fps-single/"
 item_link: "https://pain001.com/es/corpus-hk-fps-single/"
-item_pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
-item_title: "Ejemplo pain.001 ISO 20022 hk.fps.single: HK (instant-payment)"
-last_build_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+item_pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
+item_title: "Ejemplo pain.001: hk.fps.single (Hong Kong)"
+last_build_date: "Sat, 14 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Ejemplo pain.001 ISO 20022 hk.fps.single: HK (instant-payment)"
+apple-mobile-web-app-title: "Ejemplo pain.001: hk.fps.single (Hong Kong)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Una muestra pain.001 validada (HK, raíl instant-payment), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
+twitter_description: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Muestra pain.001 validada (Hong Kong, raíl instant-payment)."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Ejemplo pain.001 ISO 20022 hk.fps.single: HK (instant-payment)"
+twitter_title: "Ejemplo pain.001: hk.fps.single (Hong Kong)"
 twitter_url: "https://pain001.com/es/corpus-hk-fps-single/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -82,7 +82,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Corpus de ejemplos"
-excerpt: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Una muestra pain.001 validada (HK, raíl instant-payment), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
+excerpt: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Muestra pain.001 validada (Hong Kong, raíl instant-payment)."
 last_reviewed: "2026-11-07"
 
 
@@ -92,7 +92,7 @@ Descripción del escenario, citada del registro de procedencia (texto original e
 
 > Hong Kong FPS credit in HKD, clearing codes and account numbers.
 
-Un archivo de iniciación de pagos (**HK**, raíl **instant-payment**), entregado en `pain.001.001.03`, `pain.001.001.09`, generado y comprobado por pain001 0.0.87. Es un ejemplo sintético construido a partir de los reglamentos públicos de los esquemas de pago: no hay detrás ninguna parte real, ninguna cuenta real ni ninguna guía bancaria.
+Un archivo de iniciación de pagos (**Hong Kong**, raíl **instant-payment**), entregado en `pain.001.001.03`, `pain.001.001.09`, generado y comprobado por pain001 0.0.87. Es un ejemplo sintético construido a partir de los reglamentos públicos de los esquemas de pago: no hay detrás ninguna parte real, ninguna cuenta real ni ninguna guía bancaria.
 
 ## Archivos
 

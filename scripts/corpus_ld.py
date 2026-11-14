@@ -49,3 +49,20 @@ def dataset_description(recs: list[dict], country: str) -> str:
             f"built from the public scheme rulebooks and checked by pain001, in {editions}; "
             f"each file comes with {sidecars}.")
     return text.strip()[:DESCRIPTION_MAX]
+
+
+META_MAX = 160
+
+
+def page_description(t: dict, recs: list[dict], desc: str, country: str) -> str:
+    """A scenario page's meta description in the strings ``t`` of its locale.
+
+    It names the message the files carry and, only when every edition has
+    one, the JSON twin. Search results cut a description near 160
+    characters, so when the summary is long the sidecar clause goes first."""
+    fields = {"desc": desc, "msg": message_name(recs), "country": country,
+              "family": recs[0].get("family", "")}
+    text = t["meta_desc"].format(files=t["files_twin"] if has_twins(recs) else t["files_prov"], **fields)
+    if len(text) > META_MAX:
+        text = t["meta_desc"].format(files="", **fields)
+    return " ".join(text.split())

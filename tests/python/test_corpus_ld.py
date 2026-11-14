@@ -11,8 +11,10 @@ shortest possible record.
 """
 
 import json
+import re
 from pathlib import Path
 
+import corpus_l10n
 import corpus_ld
 
 TABLE = Path(corpus_ld.__file__).resolve().parent / "corpus_pages.json"
@@ -67,4 +69,33 @@ def test_every_shipped_dataset_names_its_catalogue_in_included_in_data_catalog()
     table = json.loads(TABLE.read_text(encoding="utf-8"))
     wrong = [slug for slug, ld in table.items()
              if ld.get("includedInDataCatalog") != corpus_ld.CATALOG or "isPartOf" in ld]
+    assert wrong == []
+
+
+def test_the_page_description_names_the_message_and_only_real_twins(tmp_path):
+    en = corpus_l10n.STRINGS["en"]
+    twin = [_rec(tmp_path, "f")]
+    plain = [_rec(tmp_path, "g", "pain.008.001.08", twin=False)]
+    assert corpus_ld.page_description(en, twin, "Single payment.", "United States") == (
+        "Single payment. Validated pain.001 sample for United States (instant-payment), "
+        "with its ISO 20022 JSON twin and provenance record.")
+    assert corpus_ld.page_description(en, plain, "Collection.", "United States") == (
+        "Collection. Validated pain.008 sample for United States (instant-payment), with its provenance record.")
+
+
+def test_a_long_summary_drops_the_sidecar_clause_to_stay_under_160(tmp_path):
+    en = corpus_l10n.STRINGS["en"]
+    text = corpus_ld.page_description(en, [_rec(tmp_path, "h")], "x" * 80, "United States")
+    assert text == "x" * 80 + " Validated pain.001 sample for United States (instant-payment)."
+
+
+def test_every_english_scenario_page_fits_a_search_result():
+    posts = Path(corpus_ld.__file__).resolve().parent.parent / "_posts"
+    wrong = []
+    for post in sorted(posts.glob("corpus-*.md")):
+        text = post.read_text(encoding="utf-8")
+        title = re.search(r'^title: "(.*)"$', text, re.M).group(1)
+        description = re.search(r'^description: "(.*)"$', text, re.M).group(1)
+        if len(title) > 65 or not 50 <= len(description) <= corpus_ld.META_MAX:
+            wrong.append(post.name)
     assert wrong == []

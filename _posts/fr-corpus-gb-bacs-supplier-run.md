@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "Bacs Direct Credit supplier run, two payments, SUN in the debtor id. Un exemple pain.001 validé (Royaume-Uni, rail bacs-direct-credit), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur."
+banner_alt: "Bacs Direct Credit supplier run, two payments, SUN in the debtor id. Exemple pain.001 validé (Royaume-Uni, rail bacs-direct-credit)."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -9,14 +9,14 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-13T08:00:00+00:00"
-description: "Bacs Direct Credit supplier run, two payments, SUN in the debtor id. Un exemple pain.001 validé (Royaume-Uni, rail bacs-direct-credit), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur."
+date: "2026-11-14T08:00:00+00:00"
+description: "Bacs Direct Credit supplier run, two payments, SUN in the debtor id. Exemple pain.001 validé (Royaume-Uni, rail bacs-direct-credit)."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "fr"
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/fr/corpus-gb-bacs-supplier-run/"
-image_alt: "Bacs Direct Credit supplier run, two payments, SUN in the debtor id. Un exemple pain.001 validé (Royaume-Uni, rail bacs-direct-credit), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur."
+image_alt: "Bacs Direct Credit supplier run, two payments, SUN in the debtor id. Exemple pain.001 validé (Royaume-Uni, rail bacs-direct-credit)."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -39,21 +39,21 @@ short_name: pain001
 subtitle: "Bacs Direct Credit supplier run, two payments, SUN in the debtor id."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Exemple pain.001 ISO 20022 gb.bacs.supplier-run : Royaume-Uni (bacs-direct-credit)"
+title: "Exemple pain.001 : gb.bacs.supplier-run (Royaume-Uni)"
 url: "https://pain001.com/fr/corpus-gb-bacs-supplier-run/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/fr/corpus-gb-bacs-supplier-run/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.75)"
-item_description: "Bacs Direct Credit supplier run, two payments, SUN in the debtor id. Un exemple pain.001 validé (Royaume-Uni, rail bacs-direct-credit), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur."
+item_description: "Bacs Direct Credit supplier run, two payments, SUN in the debtor id. Exemple pain.001 validé (Royaume-Uni, rail bacs-direct-credit)."
 item_guid: "https://pain001.com/fr/corpus-gb-bacs-supplier-run/"
 item_link: "https://pain001.com/fr/corpus-gb-bacs-supplier-run/"
-item_pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
-item_title: "Exemple pain.001 ISO 20022 gb.bacs.supplier-run : Royaume-Uni (bacs-direct-credit)"
-last_build_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+item_pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
+item_title: "Exemple pain.001 : gb.bacs.supplier-run (Royaume-Uni)"
+last_build_date: "Sat, 14 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Exemple pain.001 ISO 20022 gb.bacs.supplier-run : Royaume-Uni (bacs-direct-credit)"
+apple-mobile-web-app-title: "Exemple pain.001 : gb.bacs.supplier-run (Royaume-Uni)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Bacs Direct Credit supplier run, two payments, SUN in the debtor id. Un exemple pain.001 validé (Royaume-Uni, rail bacs-direct-credit), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur."
+twitter_description: "Bacs Direct Credit supplier run, two payments, SUN in the debtor id. Exemple pain.001 validé (Royaume-Uni, rail bacs-direct-credit)."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Exemple pain.001 ISO 20022 gb.bacs.supplier-run : Royaume-Uni (bacs-direct-credit)"
+twitter_title: "Exemple pain.001 : gb.bacs.supplier-run (Royaume-Uni)"
 twitter_url: "https://pain001.com/fr/corpus-gb-bacs-supplier-run/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -82,7 +82,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Corpus d'exemples"
-excerpt: "Bacs Direct Credit supplier run, two payments, SUN in the debtor id. Un exemple pain.001 validé (Royaume-Uni, rail bacs-direct-credit), avec son jumeau JSON ISO 20022 et sa fiche de provenance ; exécutable dans le navigateur."
+excerpt: "Bacs Direct Credit supplier run, two payments, SUN in the debtor id. Exemple pain.001 validé (Royaume-Uni, rail bacs-direct-credit)."
 last_reviewed: "2026-11-07"
 
 
