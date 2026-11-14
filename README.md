@@ -169,7 +169,7 @@ Measured on the current build.
 | Browser demo | `/try/` runs the `pain001` library itself in WebAssembly, same-origin, offline-capable; payment data never leaves the browser | Shipped |
 | Example corpus | 42 scenarios, each on an English page and five translated pages (252 in all), with schema.org `Dataset` markup, downloadable inputs and expected output | Shipped |
 | Agent discovery | `llms.txt`, `llms-full.txt` and a JSON search index | Shipped |
-| Structured data | JSON-LD on every page: `WebSite` and `WebPage`; the corpus scenario pages add `Dataset`, `DataCatalog`, `DataDownload` and `Organization` | Shipped |
+| Structured data | JSON-LD on every page: `WebSite` and `WebPage`, plus `BreadcrumbList` wherever a breadcrumb trail shows; the corpus scenario pages add `Dataset`, `DataCatalog`, `DataDownload` and `Organization` | Shipped |
 
 ---
 
@@ -341,6 +341,7 @@ CI fails on any of these; run them locally before opening a PR.
 | Translation keys still match the built pages | `scripts/validate_i18n_keys_live.py` |
 | Content integrity (no eaten markup, no double encoding) | `scripts/validate_content_integrity.py` |
 | Link integrity | `scripts/validate_links.py site` |
+| Search titles at most 65 characters, descriptions 50 to 160, on every indexable page | `scripts/validate_seo_meta.py site` |
 | Suite version currency | `scripts/validate_versions.py` |
 | Documentation snippets reference the real API | `scripts/validate_snippets.py` (with `pain001` installed) |
 | Layout and print integrity, real Chrome | `node scripts/layout_audit.cjs`, `node scripts/print_audit.cjs` |

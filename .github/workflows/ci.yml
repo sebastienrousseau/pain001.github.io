@@ -142,6 +142,9 @@ jobs:
       - name: JSON-LD parses on every page; homepage states the software
         run: python3 scripts/validate_jsonld.py
 
+      - name: Search titles (65) and descriptions (50 to 160) on indexable pages
+        run: python3 scripts/validate_seo_meta.py site
+
       - name: Link integrity (internal links, anchors, locale consistency)
         run: python3 scripts/validate_links.py site
 

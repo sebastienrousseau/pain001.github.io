@@ -8,6 +8,7 @@ All notable changes to this website are documented here. The format follows
 
 ### Added
 
+- `scripts/validate_seo_meta.py`, run by `make test` and CI on the built site, fails any indexable page whose title is over 65 characters or whose meta description is outside 50 to 160, so the lengths fixed in this release cannot drift back.
 - List the five SDKs (Go, Java, Rust, .NET and C++) in "The Pain001 suite" on the homepage, as one tile linking each SDK's manual, and in the README component table. The suite heading counts every package a tile names, so it now reads "Ten focused packages".
 
 ### Changed
