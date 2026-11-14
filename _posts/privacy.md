@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "No cookies, no tracking, no identifiers. The website stores only your theme choice locally, counts page views through Cloudflare Web Analytics and a few anonymous events through its own Worker without identifying you, and the Pain001 software processes all payment data on your own infrastructure."
+description: "No cookies, no tracking, no identifiers: only your theme choice is stored, visits and a few events are counted anonymously, and payment data stays with you."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
@@ -46,7 +46,7 @@ atom_link: "https://pain001.com/privacy/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.75)"
-item_description: "No cookies, no tracking, no identifiers. The website stores only your theme choice locally, counts page views through Cloudflare Web Analytics and a few anonymous events through its own Worker without identifying you, and the Pain001 software processes all payment data on your own infrastructure."
+item_description: "No cookies, no tracking, no identifiers: only your theme choice is stored, visits and a few events are counted anonymously, and payment data stays with you."
 item_guid: "https://pain001.com/privacy/rss.xml"
 item_link: "https://pain001.com/privacy/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -67,7 +67,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "No cookies, no tracking, no identifiers. The website stores only your theme choice locally, counts page views through Cloudflare Web Analytics and a few anonymous events through its own Worker without identifying you, and the Pain001 software processes all payment data on your own infrastructure."
+twitter_description: "No cookies, no tracking, no identifiers: only your theme choice is stored, visits and a few events are counted anonymously, and payment data stays with you."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"

@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Every pain.002 status code (RJCT, ACWC, PART…) and the ISO reason codes behind rejections (AC01, AM10, FF01, DU01, RR01), with the typical cause and the practical fix for each."
+description: "Every pain.002 status code (RJCT, ACWC, PART…) and the ISO reason codes behind rejections (AC01, AM10, FF01, RR01), with the usual cause and the fix for each."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
@@ -47,7 +47,7 @@ atom_link: "https://pain001.com/pain002-reason-codes/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.75)"
-item_description: "Every pain.002 status code (RJCT, ACWC, PART…) and the ISO reason codes behind rejections (AC01, AM10, FF01, DU01, RR01), with the typical cause and the practical fix for each."
+item_description: "Every pain.002 status code (RJCT, ACWC, PART…) and the ISO reason codes behind rejections (AC01, AM10, FF01, RR01), with the usual cause and the fix for each."
 item_guid: "https://pain001.com/pain002-reason-codes/rss.xml"
 item_link: "https://pain001.com/pain002-reason-codes/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -68,7 +68,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Every pain.002 status code (RJCT, ACWC, PART…) and the ISO reason codes behind rejections (AC01, AM10, FF01, DU01, RR01), with the typical cause and the practical fix for each."
+twitter_description: "Every pain.002 status code (RJCT, ACWC, PART…) and the ISO reason codes behind rejections (AC01, AM10, FF01, RR01), with the usual cause and the fix for each."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"

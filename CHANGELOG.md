@@ -20,6 +20,7 @@ All notable changes to this website are documented here. The format follows
 - Corpus scenario pages have search-result-sized titles and descriptions: `pain.001 example: <scenario> (<country>)` (at most 61 characters, was up to 92) and a description of at most 160. The direct-debit scenarios now say `pain.008`, the message their files carry, and claim a JSON twin only where one exists. The UAE, Czechia, Hong Kong, Malaysia, Qatar and Singapore scenarios are named by country instead of by code in all six corpus locales. The example-corpus and coverage pages' title and description are shortened in the generator.
 - The generated message-spec pages' descriptions fit in 160 characters (30 type-reference pages and the hub ran to 161 to 195): `scripts/spec_text.py` uses the shorter sentence when a page's span of type names is long.
 - The nine tag pages have a description a search result can use. ssg writes "393 page(s) under Tags: SEPA." (29 to 38 characters); `scripts/tag_descriptions.py`, run from `build.sh`, replaces it with what the pages hold.
+- Thirty English pages had a meta description over 160 characters (up to 297 on `/privacy/`); each is rewritten to fit, keeping its key terms, and `/for-banks/` has a 63-character title (was 69). The English tables in `scripts/pages_i18n` and `scripts/docs_i18n` follow, so the locale pages still swap them.
 
 ## [0.0.87] - 2026-11-12
 

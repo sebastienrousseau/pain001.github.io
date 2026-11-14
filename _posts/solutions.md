@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Treasury, CFO and board, payment operations, engineering and AI: the problem in your vocabulary, what Pain001 changes, and your next click, in 150 words per role."
+description: "Treasury, CFO and board, payment operations, engineering and AI: the problem in your terms, what Pain001 changes, and your next step, in 150 words per role."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "en"
@@ -46,7 +46,7 @@ atom_link: "https://pain001.com/solutions/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.75)"
-item_description: "Treasury, CFO and board, payment operations, engineering and AI: the problem in your vocabulary, what Pain001 changes, and your next click, in 150 words per role."
+item_description: "Treasury, CFO and board, payment operations, engineering and AI: the problem in your terms, what Pain001 changes, and your next step, in 150 words per role."
 item_guid: "https://pain001.com/solutions/rss.xml"
 item_link: "https://pain001.com/solutions/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -67,7 +67,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Treasury, CFO and board, payment operations, engineering and AI: the problem in your vocabulary, what Pain001 changes, and your next click, in 150 words per role."
+twitter_description: "Treasury, CFO and board, payment operations, engineering and AI: the problem in your terms, what Pain001 changes, and your next step, in 150 words per role."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
