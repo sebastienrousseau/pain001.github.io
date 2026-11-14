@@ -61,3 +61,10 @@ def test_an_overlong_summary_is_capped_at_the_ceiling(tmp_path):
 def test_the_message_name_follows_the_files():
     assert corpus_ld.message_name([{"message_type": "pain.008.001.02"}]) == "pain.008"
     assert corpus_ld.message_name([{}]) == "pain.001"
+
+
+def test_every_shipped_dataset_names_its_catalogue_in_included_in_data_catalog():
+    table = json.loads(TABLE.read_text(encoding="utf-8"))
+    wrong = [slug for slug, ld in table.items()
+             if ld.get("includedInDataCatalog") != corpus_ld.CATALOG or "isPartOf" in ld]
+    assert wrong == []

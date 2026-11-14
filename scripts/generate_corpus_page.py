@@ -40,7 +40,7 @@ ROOT = HERE.parent
 sys.path.insert(0, str(HERE))
 from generate_message_specs import load_frontmatter, write_post  # noqa: E402
 from corpus_l10n import CORPUS_LOCALES, STRINGS as L10N  # noqa: E402
-from corpus_ld import dataset_description, message_name  # noqa: E402
+from corpus_ld import CATALOG, dataset_description, message_name  # noqa: E402
 import datetime as _dt  # noqa: E402
 
 
@@ -365,7 +365,7 @@ def dataset_ld(sid: str, recs: list[dict], version: str, stamp: str,
         "isAccessibleForFree": True,
         "keywords": [k for k in ["ISO 20022", message_name(recs), first.get("country", "").upper(), first.get("family", "")] + profiles if k],
         "creator": {"@type": "Organization", "name": "Pain001", "url": "https://pain001.com/"},
-        "isPartOf": {"@type": "DataCatalog", "name": "pain001 example corpus", "url": "https://pain001.com/example-corpus/"},
+        "includedInDataCatalog": dict(CATALOG),
         "distribution": distribution,
     }
 

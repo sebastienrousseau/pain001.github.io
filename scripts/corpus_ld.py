@@ -10,7 +10,9 @@ provenance records; nothing is typed in by hand.
 
 Google's Dataset rich result rejects a description shorter than 50 or
 longer than 5000 characters; Search Console reported the scenarios
-whose one-line summary fell short.
+whose one-line summary fell short. It reads the catalogue a dataset
+belongs to from ``includedInDataCatalog``: ``isPartOf`` expects a
+CreativeWork, so the DataCatalog there was an invalid object type.
 """
 from __future__ import annotations
 

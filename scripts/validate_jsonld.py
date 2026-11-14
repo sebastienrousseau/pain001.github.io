@@ -13,7 +13,8 @@ Checks, against the built site/:
      softwareVersion is the suite version in static/corpus/index.json,
      offered at price 0, linked to the Organization and the Person;
   4. every Dataset description is 50 to 5000 characters, the range
-     Google's Dataset rich result accepts.
+     Google's Dataset rich result accepts, and its catalogue is an
+     includedInDataCatalog DataCatalog (isPartOf takes a CreativeWork).
 """
 
 from __future__ import annotations
@@ -53,6 +54,10 @@ def dataset_problems(rel: str, data) -> list[str]:
         length = len(str(node.get("description", "")))
         if not low <= length <= high:
             problems.append(f"{rel}: Dataset description is {length} characters, not {low} to {high}")
+        if (node.get("includedInDataCatalog") or {}).get("@type") != "DataCatalog":
+            problems.append(f"{rel}: Dataset has no includedInDataCatalog DataCatalog")
+        if (node.get("isPartOf") or {}).get("@type") == "DataCatalog":
+            problems.append(f"{rel}: Dataset isPartOf is a DataCatalog, not a CreativeWork")
     return problems
 
 
