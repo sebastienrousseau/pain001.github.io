@@ -14,6 +14,7 @@ All notable changes to this website are documented here. The format follows
 
 - Build with ssg 0.0.76, the latest release, in CI, regeneration and both release workflows.
 - `docs/ECOSYSTEM.md` lists every family repository: mockbank, plugin-template and fast were missing, and the five SDKs join them.
+- Every corpus scenario's schema.org `Dataset` description is now 50 to 5000 characters, the range Google accepts: the one-line summary is followed by the message, country, rail and editions from the scenario's own records. Search Console reported "Invalid string length in field 'description'" on `/corpus-it-sepa-sct-single/`, and six other scenarios were as short. The direct-debit scenarios' `Dataset` name and keywords say `pain.008`, the message their files carry, instead of `pain.001`. `scripts/validate_jsonld.py` fails a build with a `Dataset` description outside that range.
 
 ## [0.0.87] - 2026-11-12
 

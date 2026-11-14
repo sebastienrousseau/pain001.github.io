@@ -11,7 +11,9 @@ Checks, against the built site/:
      on-page reviews to back one;
   3. the homepage graph has one SoftwareApplication whose
      softwareVersion is the suite version in static/corpus/index.json,
-     offered at price 0, linked to the Organization and the Person.
+     offered at price 0, linked to the Organization and the Person;
+  4. every Dataset description is 50 to 5000 characters, the range
+     Google's Dataset rich result accepts.
 """
 
 from __future__ import annotations
@@ -25,6 +27,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "site"
 BLOCK_RE = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re.S)
 PERSON_ID = "https://sebastienrousseau.com/#person"
+DATASET_DESCRIPTION = (50, 5000)
 
 
 def blocks(html: str) -> list[str]:
@@ -40,6 +43,19 @@ def nodes(data) -> list[dict]:
     return []
 
 
+def dataset_problems(rel: str, data) -> list[str]:
+    """Search Console's Dataset report rejects these as critical errors."""
+    low, high = DATASET_DESCRIPTION
+    problems = []
+    for node in nodes(data):
+        if node.get("@type") != "Dataset":
+            continue
+        length = len(str(node.get("description", "")))
+        if not low <= length <= high:
+            problems.append(f"{rel}: Dataset description is {length} characters, not {low} to {high}")
+    return problems
+
+
 def page_problems(rel: str, html: str) -> list[str]:
     problems = []
     for text in blocks(html):
@@ -53,6 +69,7 @@ def page_problems(rel: str, html: str) -> list[str]:
             problems.append(f"{rel}: JSON-LD @context is {context!r}")
         if re.search(r'"(aggregateRating|review)"', text):
             problems.append(f"{rel}: JSON-LD claims a rating or review")
+        problems += dataset_problems(rel, data)
     return problems
 
 

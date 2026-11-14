@@ -40,6 +40,7 @@ ROOT = HERE.parent
 sys.path.insert(0, str(HERE))
 from generate_message_specs import load_frontmatter, write_post  # noqa: E402
 from corpus_l10n import CORPUS_LOCALES, STRINGS as L10N  # noqa: E402
+from corpus_ld import dataset_description, message_name  # noqa: E402
 import datetime as _dt  # noqa: E402
 
 
@@ -344,8 +345,7 @@ def dataset_ld(sid: str, recs: list[dict], version: str, stamp: str,
         distribution.append({"@type": "DataDownload", "encodingFormat": "application/xml",
                              "name": f"{r['message_type']} XML", "contentUrl": base})
         if r["_xml"].with_name(r["_xml"].name.replace(".xml", ".iso.json")).exists():
-            distribution.append({"@type": "DataDownload", "encodingFormat": "application/json",
-                                 "name": f"{r['message_type']} ISO 20022 JSON twin",
+            distribution.append({"@type": "DataDownload", "encodingFormat": "application/json", "name": f"{r['message_type']} ISO 20022 JSON twin",
                                  "contentUrl": base.replace(".xml", ".iso.json")})
         distribution.append({"@type": "DataDownload", "encodingFormat": "application/yaml",
                              "name": f"{r['message_type']} provenance record",
@@ -354,8 +354,8 @@ def dataset_ld(sid: str, recs: list[dict], version: str, stamp: str,
     return {
         "@context": "https://schema.org",
         "@type": "Dataset",
-        "name": f"{sid}: ISO 20022 pain.001 example ({first.get('country', '').upper()})",
-        "description": str(first.get("description", "")).strip(),
+        "name": f"{sid}: ISO 20022 {message_name(recs)} example ({first.get('country', '').upper()})",
+        "description": dataset_description(recs, L10N["en"]["countries"].get(first.get("country", ""), first.get("country", "").upper())),
         "url": page_url or f"https://pain001.com/{scenario_slug(sid)}/",
         "identifier": sid,
         "inLanguage": lang,
@@ -363,7 +363,7 @@ def dataset_ld(sid: str, recs: list[dict], version: str, stamp: str,
         "dateModified": stamp,
         "license": "https://spdx.org/licenses/Apache-2.0.html",
         "isAccessibleForFree": True,
-        "keywords": [k for k in ["ISO 20022", "pain.001", first.get("country", "").upper(), first.get("family", "")] + profiles if k],
+        "keywords": [k for k in ["ISO 20022", message_name(recs), first.get("country", "").upper(), first.get("family", "")] + profiles if k],
         "creator": {"@type": "Organization", "name": "Pain001", "url": "https://pain001.com/"},
         "isPartOf": {"@type": "DataCatalog", "name": "pain001 example corpus", "url": "https://pain001.com/example-corpus/"},
         "distribution": distribution,

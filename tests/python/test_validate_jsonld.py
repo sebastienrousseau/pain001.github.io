@@ -70,3 +70,16 @@ def test_main_reports_problems_on_stderr(tmp_path, monkeypatch, capsys):
     captured = capsys.readouterr()
     assert captured.out == ""
     assert captured.err == "index.html: JSON-LD claims a rating or review\n"
+
+
+def _dataset(description: str) -> str:
+    return _script({"@context": "https://schema.org", "@type": "Dataset", "description": description})
+
+
+def test_a_dataset_description_outside_50_to_5000_characters_is_reported():
+    assert v.page_problems("a.html", _dataset("x" * 49)) == [
+        "a.html: Dataset description is 49 characters, not 50 to 5000"]
+    assert v.page_problems("b.html", _dataset("x" * 5001)) == [
+        "b.html: Dataset description is 5001 characters, not 50 to 5000"]
+    assert v.page_problems("c.html", _dataset("x" * 50)) == []
+    assert v.page_problems("d.html", _dataset("x" * 5000)) == []
