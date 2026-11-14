@@ -2,7 +2,7 @@
  "documentation": {
   "meta": {
    "title": "Pain001 – dokumentacja techniczna: CLI, API Python i REST",
-   "description": "Kompletny opis pain001 v0.0.87: podkomendy i flagi CLI, API Python, endpointy REST pod /api/v1, reguły schematów, normalizacja danych wejściowych i architektura wtyczek.",
+   "description": "Opis pain001 v0.0.87: podkomendy i flagi CLI, API Python, endpointy REST pod /api/v1, reguły schematów, normalizacja danych wejściowych i wtyczki.",
    "eyebrow": "Dokumentacja",
    "deck": "Każda flaga, endpoint i zachowanie pain001 v0.0.87, opisane na podstawie dostarczonego kodu, nie deklaracji."
   },
@@ -91,7 +91,7 @@
  "faqs": {
   "meta": {
    "title": "Pain001 – FAQ dla skarbowości, operacji, IT i audytu",
-   "description": "Dlaczego banki odrzucają pliki płatności, pain.001 vs pain.008, wymaganie adresów ustrukturyzowanych, strumieniowanie dużych partii, bezpieczeństwo i odtwarzalność audytu, wszystko wyjaśnione wprost.",
+   "description": "Dlaczego banki odrzucają pliki płatności, pain.001 vs pain.008, adresy ustrukturyzowane, duże partie, bezpieczeństwo i odtwarzalność audytu, wprost.",
    "eyebrow": "Pytania",
    "deck": "Konkretne odpowiedzi dla skarbników, operacji płatniczych, inżynierów i audytorów, sformułowane tak, jak ludzie naprawdę pytają."
   },
@@ -205,7 +205,7 @@
  "glossary": {
   "meta": {
    "title": "Słownik płatności ISO 20022 prostym językiem",
-   "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, adresy hybrydowe, sumy kontrolne: słownik płatności dla skarbników i zespołów operacyjnych, nie tylko programistów.",
+   "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, adresy hybrydowe, sumy kontrolne: słownik płatności dla skarbników i zespołów operacyjnych.",
    "eyebrow": "Słownik",
    "deck": "Słownictwo płatności prostym językiem, dla osób, które zatwierdzają pliki, nie tylko tych, które je generują."
   },

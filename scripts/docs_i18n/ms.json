@@ -91,7 +91,7 @@
   "faqs": {
     "meta": {
       "title": "Soalan Lazim Pain001: Perbendaharaan, Operasi dan Audit",
-      "description": "Sebab bank menolak fail pembayaran, pain.001 lwn pain.008, keperluan alamat berstruktur, penstriman kelompok besar, postur keselamatan dan kebolehulangan audit, dijawab dengan jelas.",
+      "description": "Sebab bank menolak fail pembayaran, pain.001 lwn pain.008, alamat berstruktur, kelompok besar, keselamatan dan kebolehulangan audit, dijawab dengan jelas.",
       "eyebrow": "Soalan",
       "deck": "Jawapan yang jelas untuk pegawai perbendaharaan, operasi pembayaran, jurutera dan juruaudit, dirangka sebagaimana orang benar-benar bertanya."
     },
@@ -205,7 +205,7 @@
   "glossary": {
     "meta": {
       "title": "Glosari Pembayaran ISO 20022 dalam Bahasa Mudah",
-      "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, alamat hibrid, jumlah kawalan: kosa kata pembayaran untuk pasukan perbendaharaan dan operasi, bukan hanya pembangun.",
+      "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, alamat hibrid, jumlah kawalan: kosa kata pembayaran untuk pasukan perbendaharaan dan operasi.",
       "eyebrow": "Glosari",
       "deck": "Kosa kata pembayaran dalam bahasa mudah, untuk mereka yang meluluskan failnya, bukan hanya mereka yang menjananya."
     },

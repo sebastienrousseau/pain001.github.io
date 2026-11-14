@@ -2,7 +2,7 @@
   "why": {
     "meta": {
       "title": "Dlaczego Pain001: argumenty biznesowe w 5 pytaniach",
-      "description": "Ile kosztuje odrzucony plik płatności, dlaczego ustrukturyzowane dane płatnicze nadal mają znaczenie teraz, gdy Swift odroczył swój termin, co z tym robi Pain001, ile kosztuje (nic) i czy jest bezpieczny, a każda odpowiedź prowadzi do dowodu.",
+      "description": "Ile kosztuje odrzucony plik płatności, czemu dane ustrukturyzowane liczą się po odroczeniu Swift, co robi Pain001, ile kosztuje (nic), czy jest bezpieczny.",
       "eyebrow": "Argumenty biznesowe",
       "deck": "Pięć pytań, które naprawdę zadaje CFO. Odpowiedzi wprost, każde twierdzenie powiązane z dowodem."
     },
@@ -77,7 +77,7 @@
   "executive-brief": {
     "meta": {
       "title": "Streszczenie dla zarządu Pain001",
-      "description": "Jedna strona dla decydentów: problem odrzucanych plików, wymaganie adresów ustrukturyzowanych i jego nowy harmonogram, co robi Pain001, ile kosztuje, dowody bezpieczeństwa i jedna prośba. Gotowa do druku.",
+      "description": "Jedna strona dla decydentów: odrzucane pliki, wymaganie adresów ustrukturyzowanych i jego termin, co robi Pain001, ile kosztuje, dowody bezpieczeństwa.",
       "eyebrow": "Streszczenie dla zarządu",
       "deck": "Jedna strona. Pięć faktów. Jedna prośba. Dostępny także po francusku, niemiecku i hiszpańsku. Można go wydrukować z przeglądarki."
     },
@@ -121,7 +121,7 @@
   "pain-001": {
     "meta": {
       "title": "Czym jest pain.001? Inicjowanie przelewów w ISO 20022",
-      "description": "pain.001 to komunikat XML ISO 20022, którym firma zleca bankowi przelewy. Jego struktura, wersje od .03 do .13, zweryfikowany przykład oraz różnice względem pain.002, pain.008, pacs.008 i MT101.",
+      "description": "pain.001 to komunikat XML ISO 20022, którym firma zleca bankowi przelewy: struktura, wersje od .03 do .13, zweryfikowany przykład oraz pain.002.",
       "eyebrow": "ISO 20022 wyjaśnione",
       "deck": "Komunikat ISO 20022, którym firma zleca bankowi przelewy: czym jest, jak jest zbudowany, której wersji użyć, oraz pełny przykład zgodny z oficjalnym schematem."
     },

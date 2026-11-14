@@ -91,7 +91,7 @@
   "faqs": {
     "meta": {
       "title": "Pain001 FAQ für Treasury, Betrieb, Engineering und Audit",
-      "description": "Warum Banken Zahlungsdateien ablehnen, pain.001 vs. pain.008, die Anforderung strukturierter Adressen, Streaming großer Stapel, Sicherheit und Audit-Reproduzierbarkeit, klar beantwortet.",
+      "description": "Warum Banken Zahlungsdateien ablehnen, pain.001 vs. pain.008, strukturierte Adressen, große Stapel, Sicherheit und Audit-Reproduzierbarkeit, klar erklärt.",
       "eyebrow": "Fragen",
       "deck": "Klare Antworten für Treasurer, Zahlungsverkehrsbetrieb, Ingenieure und Prüfer, formuliert so, wie die Fragen tatsächlich gestellt werden."
     },
@@ -157,7 +157,7 @@
   "installation": {
     "meta": {
       "title": "Pain001 installieren: pip, Docker und erste valide Datei",
-      "description": "Installieren Sie die Pain001-Suite auf Python 3.11+ per pip oder Docker, ergänzen Sie Excel- und MT101-Loader und erzeugen Sie in drei Befehlen eine bankfertige pain.001-Datei.",
+      "description": "Pain001-Suite auf Python 3.11+ per pip oder Docker installieren, Excel- und MT101-Loader ergänzen, in drei Befehlen eine bankfertige pain.001 erzeugen.",
       "eyebrow": "Erste Schritte",
       "deck": "Python 3.11+, pip oder Docker, und eine validierte Zahlungsdatei in drei Befehlen."
     },
@@ -205,7 +205,7 @@
   "glossary": {
     "meta": {
       "title": "ISO 20022-Zahlungsverkehrsglossar in klarem Deutsch",
-      "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, hybride Adressen, Kontrollsummen: das Zahlungsverkehrsvokabular, definiert für Treasurer und Betriebsteams, nicht nur für Entwickler.",
+      "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, hybride Adressen und Kontrollsummen: das Zahlungsverkehrsvokabular für Treasury- und Betriebsteams.",
       "eyebrow": "Glossar",
       "deck": "Das Zahlungsverkehrsvokabular in klarem Deutsch, für die Menschen, die Dateien freigeben, nicht nur für die, die sie erzeugen."
     },

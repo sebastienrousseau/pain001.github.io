@@ -2,7 +2,7 @@
   "why": {
     "meta": {
       "title": "Bakit Pain001: Ang Business Case sa Limang Tanong",
-      "description": "Ang gastos ng tinanggihang payment file, bakit mahalaga pa rin ang structured na payment data ngayong ipinagpaliban ng Swift ang deadline nito, ang ginagawa ng Pain001, ang halaga nito (wala), at kung ligtas ito. Bawat sagot ay nakaugnay sa patunay.",
+      "description": "Gastos ng tinanggihang payment file, bakit mahalaga ang structured data kahit ipinagpaliban ng Swift, ginagawa ng Pain001, halaga (wala) at kaligtasan.",
       "eyebrow": "Ang business case",
       "deck": "Ang limang tanong na talagang itinatanong ng isang CFO, sinagot sa malinaw na wika, at bawat pahayag ay nakaugnay sa ebidensiya nito."
     },
@@ -44,7 +44,7 @@
   "solutions": {
     "meta": {
       "title": "Para Kanino ang Pain001",
-      "description": "Treasury, CFO at board, payment operations, engineering at AI: ang problema sa inyong bokabularyo, ang binabago ng Pain001, at ang susunod ninyong i-click, sa 150 salita bawat tungkulin.",
+      "description": "Treasury, CFO at board, payment operations, engineering at AI: ang problema, ang binabago ng Pain001 at susunod na hakbang, 150 salita bawat tungkulin.",
       "eyebrow": "Para kanino ito",
       "deck": "Apat na tungkulin, apat na bokabularyo, isang pipeline. Hanapin ang inyong problema, pagkatapos ang susunod na i-click."
     },
@@ -77,7 +77,7 @@
   "executive-brief": {
     "meta": {
       "title": "Buod para sa pamunuan ng Pain001",
-      "description": "Isang pahina para sa mga tagapagdesisyon, handa nang i-print: ang problema ng tinanggihang file, ang requirement sa structured address at ang bagong iskedyul nito, ang ginagawa ng Pain001, ang halaga nito, ang ebidensiya sa kaligtasan, at ang isang hiling.",
+      "description": "Isang pahina para sa tagapagdesisyon: tinanggihang file, ang structured address at iskedyul nito, ginagawa at halaga ng Pain001, ebidensiya sa kaligtasan.",
       "eyebrow": "Buod para sa pamunuan",
       "deck": "Isang pahina. Limang katotohanan. Isang hiling. Makukuha rin sa Pranses, Aleman, at Espanyol, at handa nang i-print mula sa inyong browser."
     },
@@ -121,7 +121,7 @@
   "pain-001": {
     "meta": {
       "title": "Ano ang pain.001? Ang ISO 20022 credit transfer",
-      "description": "Ang pain.001 ay ang ISO 20022 XML na mensaheng ipinapadala ng kumpanya sa bangko nito para mag-utos ng credit transfer. Ang istruktura, mga bersyong .03 hanggang .13, isang validated na halimbawa, at ang pagkakaiba nito sa pain.002, pain.008, pacs.008 at MT101.",
+      "description": "Ang pain.001 ay ISO 20022 XML na mensahe ng kumpanya sa bangko para sa credit transfer: istruktura, bersyong .03 hanggang .13, halimbawa at pain.002.",
       "eyebrow": "Ipinaliwanag ang ISO 20022",
       "deck": "Ang ISO 20022 na mensaheng ipinapadala ng kumpanya sa bangko nito para mag-utos ng credit transfer: kung ano ito, paano ito binubuo, aling bersyon ang gagamitin, at isang kumpletong halimbawang pumapasa sa opisyal na schema."
     },

@@ -2,7 +2,7 @@
  "documentation": {
   "meta": {
    "title": "Pain001 Teknik Referans: CLI, Python API ve REST",
-   "description": "pain001 v0.0.87 için tam referans: CLI alt komutları ve bayrakları, Python API, /api/v1 altındaki REST uç noktaları, şema kural kitapları, girdi normalizasyonu ve eklenti mimarisi.",
+   "description": "pain001 v0.0.87 referansı: CLI alt komutları ve bayrakları, Python API, /api/v1 REST uç noktaları, şema kural kitapları, girdi normalizasyonu, eklentiler.",
    "eyebrow": "Referans",
    "deck": "pain001 v0.0.87'nın her bayrağı, uç noktası ve davranışı; hedeflerden değil, yayımlanan koddan alınmıştır."
   },
@@ -91,7 +91,7 @@
  "faqs": {
   "meta": {
    "title": "Pain001 SSS: Hazine, Operasyon, Mühendislik ve Denetim",
-   "description": "Bankalar ödeme dosyalarını neden reddeder, pain.001 ile pain.008, yapılandırılmış adres gerekliliği, büyük partilerin akışla işlenmesi, güvenlik ve denetim tekrarlanabilirliği: net yanıtlar.",
+   "description": "Bankalar ödeme dosyalarını neden reddeder, pain.001 ile pain.008, yapılandırılmış adres, büyük partiler, güvenlik, denetim tekrarlanabilirliği: net yanıt.",
    "eyebrow": "Sorular",
    "deck": "Hazine yöneticileri, ödeme operasyonları, mühendisler ve denetçiler için net yanıtlar, insanların gerçekten sorduğu biçimde."
   },
@@ -157,7 +157,7 @@
  "installation": {
   "meta": {
    "title": "Pain001 kurulumu: pip, Docker ve ilk doğrulanmış dosya",
-   "description": "Pain001 paketini Python 3.11+ üzerinde pip veya Docker ile kurun, Excel ve MT101 yükleyicilerini ekleyin ve üç komutla bankaya hazır ilk pain.001 dosyanızı üretin.",
+   "description": "Pain001 paketini Python 3.11+ üzerinde pip veya Docker ile kurun, Excel ve MT101 yükleyicilerini ekleyin, üç komutla bankaya hazır pain.001 dosyası üretin.",
    "eyebrow": "Başlarken",
    "deck": "Python 3.11+, pip veya Docker ve üç komutla doğrulanmış bir ödeme dosyası."
   },
@@ -205,7 +205,7 @@
  "glossary": {
   "meta": {
    "title": "ISO 20022 ödeme terimleri sözlüğü: sade anlatım",
-   "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, hibrit adresler, kontrol toplamları: ödeme terminolojisi yalnızca geliştiriciler için değil, hazine ve operasyon ekipleri için tanımlandı.",
+   "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, hibrit adresler, kontrol toplamları: hazine ve operasyon ekipleri için tanımlanmış ödeme terminolojisi.",
    "eyebrow": "Sözlük",
    "deck": "Ödeme terminolojisi sade bir dille; yalnızca dosyaları üretenler için değil, onları onaylayanlar için de."
   },

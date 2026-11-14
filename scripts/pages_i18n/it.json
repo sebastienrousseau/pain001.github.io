@@ -2,7 +2,7 @@
   "why": {
     "meta": {
       "title": "Perché Pain001: il business case in cinque domande",
-      "description": "Quanto costa un file di pagamento respinto, perché i dati di pagamento strutturati contano ancora ora che Swift ha rinviato la scadenza, cosa fa Pain001, quanto costa (nulla) e se è sicuro. Ogni risposta con la sua prova.",
+      "description": "Quanto costa un file di pagamento respinto, perché i dati strutturati contano dopo il rinvio di Swift, cosa fa Pain001, quanto costa (nulla) e se è sicuro.",
       "eyebrow": "Il business case",
       "deck": "Le cinque domande che un CFO pone davvero: risposte chiare, ogni affermazione collegata alla sua evidenza."
     },
@@ -44,7 +44,7 @@
   "solutions": {
     "meta": {
       "title": "A chi si rivolge Pain001",
-      "description": "Tesoreria, CFO e consiglio, operazioni di pagamento, ingegneria e IA: il problema nel vostro vocabolario, cosa cambia Pain001, il prossimo clic. 150 parole per ruolo.",
+      "description": "Tesoreria, CFO e consiglio, operazioni di pagamento, ingegneria e IA: il problema nel vostro vocabolario, cosa cambia Pain001, il passo successivo.",
       "eyebrow": "A chi si rivolge",
       "deck": "Quattro ruoli, quattro vocabolari, una sola pipeline. Trovate il vostro problema, poi il vostro prossimo clic."
     },
@@ -77,7 +77,7 @@
   "executive-brief": {
     "meta": {
       "title": "Sintesi per la direzione di Pain001",
-      "description": "Una pagina per chi decide: il problema dei file respinti, il requisito degli indirizzi strutturati e la sua nuova tempistica, cosa fa Pain001, quanto costa, le evidenze di sicurezza e l'unica richiesta. Pronta per la stampa.",
+      "description": "Una pagina per chi decide: i file respinti, gli indirizzi strutturati e la loro tempistica, cosa fa Pain001, quanto costa, le evidenze di sicurezza.",
       "eyebrow": "Sintesi per la direzione",
       "deck": "Una pagina. Cinque fatti. Una richiesta. Disponibile anche in francese, tedesco e spagnolo, stampabile dal vostro browser."
     },
@@ -121,7 +121,7 @@
   "pain-001": {
     "meta": {
       "title": "Che cos'è pain.001? Il messaggio ISO 20022 di bonifico",
-      "description": "pain.001 è il messaggio XML ISO 20022 che un'azienda invia alla propria banca per disporre bonifici. Struttura, versioni da .03 a .13, un esempio validato e le differenze con pain.002, pain.008, pacs.008 e MT101.",
+      "description": "pain.001 è il messaggio XML ISO 20022 con cui un'azienda dispone bonifici alla sua banca: struttura, versioni da .03 a .13, esempio validato e pain.002.",
       "eyebrow": "ISO 20022 spiegato",
       "deck": "Il messaggio ISO 20022 che un’azienda invia alla propria banca per disporre bonifici: che cos’è, com’è strutturato, quale versione usare e un esempio completo che supera la validazione con lo schema ufficiale."
     },

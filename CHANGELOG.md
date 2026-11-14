@@ -21,6 +21,7 @@ All notable changes to this website are documented here. The format follows
 - The generated message-spec pages' descriptions fit in 160 characters (30 type-reference pages and the hub ran to 161 to 195): `scripts/spec_text.py` uses the shorter sentence when a page's span of type names is long.
 - The nine tag pages have a description a search result can use. ssg writes "393 page(s) under Tags: SEPA." (29 to 38 characters); `scripts/tag_descriptions.py`, run from `build.sh`, replaces it with what the pages hold.
 - Thirty English pages had a meta description over 160 characters (up to 297 on `/privacy/`); each is rewritten to fit, keeping its key terms, and `/for-banks/` has a 63-character title (was 69). The English tables in `scripts/pages_i18n` and `scripts/docs_i18n` follow, so the locale pages still swap them.
+- 175 translated meta descriptions in 30 locales (the why, solutions, executive-brief, pain-001, documentation, FAQ, glossary and installation pages) are rewritten in their own language to fit in 160 characters and follow the shortened English. Hausa, Yoruba, Tamil and Telugu would benefit most from a native speaker's read.
 
 ## [0.0.87] - 2026-11-12
 

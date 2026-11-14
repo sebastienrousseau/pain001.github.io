@@ -2,7 +2,7 @@
   "why": {
     "meta": {
       "title": "Mengapa Pain001: Alasan Bisnis dalam Lima Pertanyaan",
-      "description": "Biaya file pembayaran yang ditolak, mengapa data pembayaran terstruktur tetap penting setelah Swift menunda tenggatnya, peran Pain001, biayanya (nol), dan keamanannya. Setiap jawaban tertaut ke buktinya.",
+      "description": "Biaya file pembayaran yang ditolak, mengapa data terstruktur tetap penting setelah Swift menunda tenggat, peran Pain001, biayanya (nol), dan keamanannya.",
       "eyebrow": "Alasan bisnis",
       "deck": "Lima pertanyaan yang benar-benar diajukan seorang CFO, dijawab dalam bahasa yang jelas, setiap klaim tertaut ke buktinya."
     },
@@ -44,7 +44,7 @@
   "solutions": {
     "meta": {
       "title": "Untuk Siapa Pain001",
-      "description": "Tresuri, CFO dan direksi, operasi pembayaran, rekayasa dan AI: masalah dalam kosakata Anda, apa yang diubah Pain001, dan klik berikutnya, dalam 150 kata per peran.",
+      "description": "Tresuri, CFO dan direksi, operasi pembayaran, rekayasa, AI: masalah dalam kosakata Anda, apa yang diubah Pain001, langkah berikutnya, 150 kata per peran.",
       "eyebrow": "Untuk siapa",
       "deck": "Empat peran, empat kosakata, satu alur. Temukan masalah Anda, lalu klik berikutnya."
     },
@@ -77,7 +77,7 @@
   "executive-brief": {
     "meta": {
       "title": "Ringkasan Eksekutif Pain001",
-      "description": "Satu halaman untuk pengambil keputusan: masalah file yang ditolak, persyaratan alamat terstruktur dan jadwal barunya, peran Pain001, biayanya, bukti keamanan, dan satu permintaan. Siap cetak.",
+      "description": "Satu halaman untuk pengambil keputusan: masalah file yang ditolak, aturan alamat terstruktur dan jadwalnya, peran Pain001, biayanya, dan bukti keamanan.",
       "eyebrow": "Ringkasan eksekutif",
       "deck": "Satu halaman. Lima fakta. Satu permintaan. Tersedia juga dalam bahasa Prancis, Jerman, dan Spanyol, siap cetak dari peramban Anda."
     },
@@ -121,7 +121,7 @@
   "pain-001": {
     "meta": {
       "title": "Apa itu pain.001? Inisiasi Transfer Kredit ISO 20022",
-      "description": "pain.001 adalah pesan XML ISO 20022 yang dikirim perusahaan ke banknya untuk memerintahkan transfer kredit. Struktur, versi .03 hingga .13, contoh yang tervalidasi, dan perbedaannya dengan pain.002, pain.008, pacs.008, dan MT101.",
+      "description": "pain.001 adalah pesan XML ISO 20022 dari perusahaan ke banknya untuk transfer kredit: struktur, versi .03 hingga .13, contoh tervalidasi, dan pain.002.",
       "eyebrow": "ISO 20022 dijelaskan",
       "deck": "Pesan ISO 20022 yang dikirim perusahaan ke banknya untuk memerintahkan transfer kredit: apa itu, bagaimana strukturnya, versi mana yang digunakan, dan contoh lengkap yang lolos validasi skema resmi."
     },
