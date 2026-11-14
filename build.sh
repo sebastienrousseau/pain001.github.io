@@ -71,6 +71,10 @@ python3 scripts/postbuild_fix.py Pain001
 # locale passes above have translated it. See the script for the why.
 python3 scripts/breadcrumb_ld.py Pain001
 
+# ssg's tag pages say only "<n> page(s) under Tags: <term>.": too short
+# to serve as a search description. See the script.
+python3 scripts/tag_descriptions.py Pain001
+
 # Static assets that mirror the site root: the self-hosted WASM engine
 # for /try/ (Pyodide + xmlschema + official XSD, same-origin so the CSP
 # needs no third-party carve-outs), the demo's ES module (/js/), and the

@@ -19,6 +19,7 @@ All notable changes to this website are documented here. The format follows
 - Pages that show a breadcrumb trail carry a schema.org `BreadcrumbList` again (699 pages, every locale). The layouts before the PRISM theme had one; the PRISM layouts kept the visible trail and dropped the markup, and Search Console's Breadcrumbs report fell to zero. `scripts/breadcrumb_ld.py` writes it from the trail each page shows, after translation, and `scripts/validate_jsonld.py` fails a page whose trail and list disagree.
 - Corpus scenario pages have search-result-sized titles and descriptions: `pain.001 example: <scenario> (<country>)` (at most 61 characters, was up to 92) and a description of at most 160. The direct-debit scenarios now say `pain.008`, the message their files carry, and claim a JSON twin only where one exists. The UAE, Czechia, Hong Kong, Malaysia, Qatar and Singapore scenarios are named by country instead of by code in all six corpus locales. The example-corpus and coverage pages' title and description are shortened in the generator.
 - The generated message-spec pages' descriptions fit in 160 characters (30 type-reference pages and the hub ran to 161 to 195): `scripts/spec_text.py` uses the shorter sentence when a page's span of type names is long.
+- The nine tag pages have a description a search result can use. ssg writes "393 page(s) under Tags: SEPA." (29 to 38 characters); `scripts/tag_descriptions.py`, run from `build.sh`, replaces it with what the pages hold.
 
 ## [0.0.87] - 2026-11-12
 
