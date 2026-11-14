@@ -6,6 +6,24 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+### Added
+
+- `scripts/validate_seo_meta.py`, run by `make test` and CI on the built site, fails any indexable page whose title is over 65 characters or whose meta description is outside 50 to 160, so the lengths fixed in this release cannot drift back.
+- List the five SDKs (Go, Java, Rust, .NET and C++) in "The Pain001 suite" on the homepage, as one tile linking each SDK's manual, and in the README component table. The suite heading counts every package a tile names, so it now reads "Ten focused packages".
+
+### Changed
+
+- Build with ssg 0.0.76, the latest release, in CI, regeneration and both release workflows.
+- `docs/ECOSYSTEM.md` lists every family repository: mockbank, plugin-template and fast were missing, and the five SDKs join them.
+- Every corpus scenario's schema.org `Dataset` description is now 50 to 5000 characters, the range Google accepts: the one-line summary is followed by the message, country, rail and editions from the scenario's own records. Search Console reported "Invalid string length in field 'description'" on `/corpus-it-sepa-sct-single/`, and six other scenarios were as short. The direct-debit scenarios' `Dataset` name and keywords say `pain.008`, the message their files carry, instead of `pain.001`. `scripts/validate_jsonld.py` fails a build with a `Dataset` description outside that range.
+- The corpus scenario pages name their catalogue in `includedInDataCatalog`, where schema.org and Google read a `Dataset`'s `DataCatalog`. It sat in `isPartOf`, which takes a `CreativeWork`, and Search Console warned "Invalid object type for field 'isPartOf'" on seven pages. `scripts/validate_jsonld.py` checks both.
+- Pages that show a breadcrumb trail carry a schema.org `BreadcrumbList` again (699 pages, every locale). The layouts before the PRISM theme had one; the PRISM layouts kept the visible trail and dropped the markup, and Search Console's Breadcrumbs report fell to zero. `scripts/breadcrumb_ld.py` writes it from the trail each page shows, after translation, and `scripts/validate_jsonld.py` fails a page whose trail and list disagree.
+- Corpus scenario pages have search-result-sized titles and descriptions: `pain.001 example: <scenario> (<country>)` (at most 61 characters, was up to 92) and a description of at most 160. The direct-debit scenarios now say `pain.008`, the message their files carry, and claim a JSON twin only where one exists. The UAE, Czechia, Hong Kong, Malaysia, Qatar and Singapore scenarios are named by country instead of by code in all six corpus locales. The example-corpus and coverage pages' title and description are shortened in the generator.
+- The generated message-spec pages' descriptions fit in 160 characters (30 type-reference pages and the hub ran to 161 to 195): `scripts/spec_text.py` uses the shorter sentence when a page's span of type names is long.
+- The nine tag pages have a description a search result can use. ssg writes "393 page(s) under Tags: SEPA." (29 to 38 characters); `scripts/tag_descriptions.py`, run from `build.sh`, replaces it with what the pages hold.
+- Thirty English pages had a meta description over 160 characters (up to 297 on `/privacy/`); each is rewritten to fit, keeping its key terms, and `/for-banks/` has a 63-character title (was 69). The English tables in `scripts/pages_i18n` and `scripts/docs_i18n` follow, so the locale pages still swap them.
+- 175 translated meta descriptions in 30 locales (the why, solutions, executive-brief, pain-001, documentation, FAQ, glossary and installation pages) are rewritten in their own language to fit in 160 characters and follow the shortened English. Hausa, Yoruba, Tamil and Telugu would benefit most from a native speaker's read.
+
 ## [0.0.87] - 2026-11-12
 
 ### Added

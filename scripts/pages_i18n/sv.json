@@ -2,7 +2,7 @@
   "why": {
     "meta": {
       "title": "Varför Pain001: affärscaset i fem frågor",
-      "description": "Vad en avvisad betalfil kostar, varför strukturerade betalningsdata fortfarande spelar roll nu när Swift har skjutit upp sin tidsgräns, vad Pain001 gör åt det, vad det kostar (ingenting) och om det är säkert, med varje svar länkat till sitt belägg.",
+      "description": "Vad en avvisad betalfil kostar, varför strukturerade data spelar roll trots Swifts uppskov, vad Pain001 gör, vad det kostar (inget) och om det är säkert.",
       "eyebrow": "Affärscaset",
       "deck": "De fem frågor en CFO faktiskt ställer, besvarade på klarspråk, varje påstående länkat till sitt bevis."
     },
@@ -77,7 +77,7 @@
   "executive-brief": {
     "meta": {
       "title": "Pain001: sammanfattning för ledningen",
-      "description": "En sida för beslutsfattare: problemet med avvisade filer, kravet på strukturerade adresser och dess nya tidsplan, vad Pain001 gör, vad det kostar, säkerhetsbeläggen och den enda begäran. Utskriftsklar.",
+      "description": "En sida för beslutsfattare: avvisade filer, kravet på strukturerade adresser och dess tidsplan, vad Pain001 gör och kostar, samt säkerhetsbeläggen.",
       "eyebrow": "Sammanfattning för ledningen",
       "deck": "En sida. Fem fakta. En uppmaning. Finns även på franska, tyska och spanska, utskriftsklar direkt från din webbläsare."
     },
@@ -121,7 +121,7 @@
   "pain-001": {
     "meta": {
       "title": "Vad är pain.001? Initiering av överföringar i ISO 20022",
-      "description": "pain.001 är ISO 20022-XML-meddelandet som ett företag skickar till sin bank för att beordra överföringar. Struktur, versionerna .03 till .13, ett validerat exempel och skillnaderna mot pain.002, pain.008, pacs.008 och MT101.",
+      "description": "pain.001 är ISO 20022-XML-meddelandet som ett företag skickar till banken för att beordra överföringar: struktur, versioner .03–.13, exempel, pain.002.",
       "eyebrow": "ISO 20022 förklarat",
       "deck": "ISO 20022-meddelandet som ett företag skickar till sin bank för att beordra överföringar: vad det är, hur det är uppbyggt, vilken version du ska använda och ett komplett exempel som validerar mot det officiella schemat."
     },

@@ -70,3 +70,28 @@ def test_main_reports_problems_on_stderr(tmp_path, monkeypatch, capsys):
     captured = capsys.readouterr()
     assert captured.out == ""
     assert captured.err == "index.html: JSON-LD claims a rating or review\n"
+
+
+CATALOG = {"@type": "DataCatalog", "name": "c"}
+
+
+def _dataset(description: str, **extra) -> str:
+    return _script({"@context": "https://schema.org", "@type": "Dataset", "description": description,
+                    "includedInDataCatalog": CATALOG, **extra})
+
+
+def test_a_dataset_description_outside_50_to_5000_characters_is_reported():
+    assert v.page_problems("a.html", _dataset("x" * 49)) == [
+        "a.html: Dataset description is 49 characters, not 50 to 5000"]
+    assert v.page_problems("b.html", _dataset("x" * 5001)) == [
+        "b.html: Dataset description is 5001 characters, not 50 to 5000"]
+    assert v.page_problems("c.html", _dataset("x" * 50)) == []
+    assert v.page_problems("d.html", _dataset("x" * 5000)) == []
+
+
+def test_a_dataset_catalogue_belongs_in_included_in_data_catalog():
+    text = "x" * 60
+    assert v.page_problems("a.html", _dataset(text, includedInDataCatalog=None, isPartOf=CATALOG)) == [
+        "a.html: Dataset has no includedInDataCatalog DataCatalog",
+        "a.html: Dataset isPartOf is a DataCatalog, not a CreativeWork"]
+    assert v.page_problems("b.html", _dataset(text, isPartOf={"@type": "WebSite"})) == []

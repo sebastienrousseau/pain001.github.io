@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "Malaysia DuitNow credit in MYR with a BNM purpose code. Un campione pain.001 validato (MY, circuito instant-payment), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser."
+banner_alt: "Malaysia DuitNow credit in MYR with a BNM purpose code. Campione pain.001 validato (Malaysia, circuito instant-payment)."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -9,18 +9,18 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-13T08:00:00+00:00"
-description: "Malaysia DuitNow credit in MYR with a BNM purpose code. Un campione pain.001 validato (MY, circuito instant-payment), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser."
+date: "2026-11-14T08:00:00+00:00"
+description: "Malaysia DuitNow credit in MYR with a BNM purpose code. Campione pain.001 validato (Malaysia, circuito instant-payment)."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "it"
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/it/corpus-my-duitnow-single/"
-image_alt: "Malaysia DuitNow credit in MYR with a BNM purpose code. Un campione pain.001 validato (MY, circuito instant-payment), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser."
+image_alt: "Malaysia DuitNow credit in MYR with a BNM purpose code. Campione pain.001 validato (Malaysia, circuito instant-payment)."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
-keywords: "esempio pain.001 MY, XML di esempio instant-payment, file di pagamento ISO 20022 MY, my.duitnow.single, corpus pain001"
+keywords: "esempio pain.001 Malaysia, XML di esempio instant-payment, file di pagamento ISO 20022 Malaysia, my.duitnow.single, corpus pain001"
 language: "it"
 layout: "page"
 locale: "it_IT"
@@ -39,21 +39,21 @@ short_name: pain001
 subtitle: "Malaysia DuitNow credit in MYR with a BNM purpose code."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Esempio pain.001 ISO 20022 my.duitnow.single: MY (instant-payment)"
+title: "Esempio pain.001: my.duitnow.single (Malaysia)"
 url: "https://pain001.com/it/corpus-my-duitnow-single/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/it/corpus-my-duitnow-single/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.75)"
-item_description: "Malaysia DuitNow credit in MYR with a BNM purpose code. Un campione pain.001 validato (MY, circuito instant-payment), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser."
+item_description: "Malaysia DuitNow credit in MYR with a BNM purpose code. Campione pain.001 validato (Malaysia, circuito instant-payment)."
 item_guid: "https://pain001.com/it/corpus-my-duitnow-single/"
 item_link: "https://pain001.com/it/corpus-my-duitnow-single/"
-item_pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
-item_title: "Esempio pain.001 ISO 20022 my.duitnow.single: MY (instant-payment)"
-last_build_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+item_pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
+item_title: "Esempio pain.001: my.duitnow.single (Malaysia)"
+last_build_date: "Sat, 14 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Esempio pain.001 ISO 20022 my.duitnow.single: MY (instant-payment)"
+apple-mobile-web-app-title: "Esempio pain.001: my.duitnow.single (Malaysia)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Malaysia DuitNow credit in MYR with a BNM purpose code. Un campione pain.001 validato (MY, circuito instant-payment), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser."
+twitter_description: "Malaysia DuitNow credit in MYR with a BNM purpose code. Campione pain.001 validato (Malaysia, circuito instant-payment)."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Esempio pain.001 ISO 20022 my.duitnow.single: MY (instant-payment)"
+twitter_title: "Esempio pain.001: my.duitnow.single (Malaysia)"
 twitter_url: "https://pain001.com/it/corpus-my-duitnow-single/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -82,7 +82,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Corpus di esempi"
-excerpt: "Malaysia DuitNow credit in MYR with a BNM purpose code. Un campione pain.001 validato (MY, circuito instant-payment), con il suo gemello JSON ISO 20022 e il record di provenienza; eseguibile nel browser."
+excerpt: "Malaysia DuitNow credit in MYR with a BNM purpose code. Campione pain.001 validato (Malaysia, circuito instant-payment)."
 last_reviewed: "2026-11-07"
 
 
@@ -92,7 +92,7 @@ Descrizione dello scenario, citata dal record di provenienza (testo originale in
 
 > Malaysia DuitNow credit in MYR with a BNM purpose code.
 
-Un file di disposizione di pagamento (**MY**, circuito **instant-payment**), fornito in `pain.001.001.03`, `pain.001.001.09`, generato e verificato da pain001 0.0.87. È un esempio sintetico costruito dai regolamenti pubblici degli schemi di pagamento: nessuna parte reale, nessun conto reale, nessuna linea guida bancaria dietro di esso.
+Un file di disposizione di pagamento (**Malaysia**, circuito **instant-payment**), fornito in `pain.001.001.03`, `pain.001.001.09`, generato e verificato da pain001 0.0.87. È un esempio sintetico costruito dai regolamenti pubblici degli schemi di pagamento: nessuna parte reale, nessun conto reale, nessuna linea guida bancaria dietro di esso.
 
 ## File
 

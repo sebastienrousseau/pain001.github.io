@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Een gevalideerd pain.001-voorbeeld (HK, rail instant-payment), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
+banner_alt: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Gevalideerd pain.001-voorbeeld (Hongkong, rail instant-payment)."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -9,18 +9,18 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-13T08:00:00+00:00"
-description: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Een gevalideerd pain.001-voorbeeld (HK, rail instant-payment), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
+date: "2026-11-14T08:00:00+00:00"
+description: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Gevalideerd pain.001-voorbeeld (Hongkong, rail instant-payment)."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "nl"
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/nl/corpus-hk-fps-single/"
-image_alt: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Een gevalideerd pain.001-voorbeeld (HK, rail instant-payment), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
+image_alt: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Gevalideerd pain.001-voorbeeld (Hongkong, rail instant-payment)."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
-keywords: "pain.001 voorbeeld HK, instant-payment voorbeeld-XML, ISO 20022 HK betaalbestand, hk.fps.single, pain001 corpus"
+keywords: "pain.001 voorbeeld Hongkong, instant-payment voorbeeld-XML, ISO 20022 Hongkong betaalbestand, hk.fps.single, pain001 corpus"
 language: "nl"
 layout: "page"
 locale: "nl_NL"
@@ -39,21 +39,21 @@ short_name: pain001
 subtitle: "Hong Kong FPS credit in HKD, clearing codes and account numbers."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "ISO 20022 pain.001-voorbeeld hk.fps.single: HK (instant-payment)"
+title: "pain.001-voorbeeld: hk.fps.single (Hongkong)"
 url: "https://pain001.com/nl/corpus-hk-fps-single/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/nl/corpus-hk-fps-single/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.75)"
-item_description: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Een gevalideerd pain.001-voorbeeld (HK, rail instant-payment), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
+item_description: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Gevalideerd pain.001-voorbeeld (Hongkong, rail instant-payment)."
 item_guid: "https://pain001.com/nl/corpus-hk-fps-single/"
 item_link: "https://pain001.com/nl/corpus-hk-fps-single/"
-item_pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
-item_title: "ISO 20022 pain.001-voorbeeld hk.fps.single: HK (instant-payment)"
-last_build_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+item_pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
+item_title: "pain.001-voorbeeld: hk.fps.single (Hongkong)"
+last_build_date: "Sat, 14 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "ISO 20022 pain.001-voorbeeld hk.fps.single: HK (instant-payment)"
+apple-mobile-web-app-title: "pain.001-voorbeeld: hk.fps.single (Hongkong)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Een gevalideerd pain.001-voorbeeld (HK, rail instant-payment), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
+twitter_description: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Gevalideerd pain.001-voorbeeld (Hongkong, rail instant-payment)."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "ISO 20022 pain.001-voorbeeld hk.fps.single: HK (instant-payment)"
+twitter_title: "pain.001-voorbeeld: hk.fps.single (Hongkong)"
 twitter_url: "https://pain001.com/nl/corpus-hk-fps-single/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -82,7 +82,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Voorbeeldcorpus"
-excerpt: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Een gevalideerd pain.001-voorbeeld (HK, rail instant-payment), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
+excerpt: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Gevalideerd pain.001-voorbeeld (Hongkong, rail instant-payment)."
 last_reviewed: "2026-11-07"
 
 
@@ -92,7 +92,7 @@ Scenariobeschrijving, geciteerd uit het herkomstrecord (oorspronkelijke Engelse 
 
 > Hong Kong FPS credit in HKD, clearing codes and account numbers.
 
-Een betaalinitiatiebestand (**HK**, rail **instant-payment**), geleverd in `pain.001.001.03`, `pain.001.001.09`, gegenereerd en gecontroleerd door pain001 0.0.87. Het is een synthetisch voorbeeld, opgebouwd uit de openbare rulebooks van de betaalschema's: geen echte partij, geen echte rekening en geen bankrichtlijn erachter.
+Een betaalinitiatiebestand (**Hongkong**, rail **instant-payment**), geleverd in `pain.001.001.03`, `pain.001.001.09`, gegenereerd en gecontroleerd door pain001 0.0.87. Het is een synthetisch voorbeeld, opgebouwd uit de openbare rulebooks van de betaalschema's: geen echte partij, geen echte rekening en geen bankrichtlijn erachter.
 
 ## Bestanden
 

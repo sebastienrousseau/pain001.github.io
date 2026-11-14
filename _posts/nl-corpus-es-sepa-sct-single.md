@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "SEPA credit transfer, single, initiating party identified by NIF. Een gevalideerd pain.001-voorbeeld (Spanje, rail sepa-credit-transfer), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
+banner_alt: "SEPA credit transfer, single, initiating party identified by NIF. Gevalideerd pain.001-voorbeeld (Spanje, rail sepa-credit-transfer)."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -9,14 +9,14 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-13T08:00:00+00:00"
-description: "SEPA credit transfer, single, initiating party identified by NIF. Een gevalideerd pain.001-voorbeeld (Spanje, rail sepa-credit-transfer), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
+date: "2026-11-14T08:00:00+00:00"
+description: "SEPA credit transfer, single, initiating party identified by NIF. Gevalideerd pain.001-voorbeeld (Spanje, rail sepa-credit-transfer)."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "nl"
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/nl/corpus-es-sepa-sct-single/"
-image_alt: "SEPA credit transfer, single, initiating party identified by NIF. Een gevalideerd pain.001-voorbeeld (Spanje, rail sepa-credit-transfer), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
+image_alt: "SEPA credit transfer, single, initiating party identified by NIF. Gevalideerd pain.001-voorbeeld (Spanje, rail sepa-credit-transfer)."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -39,21 +39,21 @@ short_name: pain001
 subtitle: "SEPA credit transfer, single, initiating party identified by NIF."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "ISO 20022 pain.001-voorbeeld es.sepa.sct-single: Spanje (sepa-credit-transfer)"
+title: "pain.001-voorbeeld: es.sepa.sct-single (Spanje)"
 url: "https://pain001.com/nl/corpus-es-sepa-sct-single/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/nl/corpus-es-sepa-sct-single/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.75)"
-item_description: "SEPA credit transfer, single, initiating party identified by NIF. Een gevalideerd pain.001-voorbeeld (Spanje, rail sepa-credit-transfer), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
+item_description: "SEPA credit transfer, single, initiating party identified by NIF. Gevalideerd pain.001-voorbeeld (Spanje, rail sepa-credit-transfer)."
 item_guid: "https://pain001.com/nl/corpus-es-sepa-sct-single/"
 item_link: "https://pain001.com/nl/corpus-es-sepa-sct-single/"
-item_pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
-item_title: "ISO 20022 pain.001-voorbeeld es.sepa.sct-single: Spanje (sepa-credit-transfer)"
-last_build_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+item_pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
+item_title: "pain.001-voorbeeld: es.sepa.sct-single (Spanje)"
+last_build_date: "Sat, 14 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "ISO 20022 pain.001-voorbeeld es.sepa.sct-single: Spanje (sepa-credit-transfer)"
+apple-mobile-web-app-title: "pain.001-voorbeeld: es.sepa.sct-single (Spanje)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "SEPA credit transfer, single, initiating party identified by NIF. Een gevalideerd pain.001-voorbeeld (Spanje, rail sepa-credit-transfer), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
+twitter_description: "SEPA credit transfer, single, initiating party identified by NIF. Gevalideerd pain.001-voorbeeld (Spanje, rail sepa-credit-transfer)."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "ISO 20022 pain.001-voorbeeld es.sepa.sct-single: Spanje (sepa-credit-transfer)"
+twitter_title: "pain.001-voorbeeld: es.sepa.sct-single (Spanje)"
 twitter_url: "https://pain001.com/nl/corpus-es-sepa-sct-single/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -82,7 +82,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Voorbeeldcorpus"
-excerpt: "SEPA credit transfer, single, initiating party identified by NIF. Een gevalideerd pain.001-voorbeeld (Spanje, rail sepa-credit-transfer), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
+excerpt: "SEPA credit transfer, single, initiating party identified by NIF. Gevalideerd pain.001-voorbeeld (Spanje, rail sepa-credit-transfer)."
 last_reviewed: "2026-11-07"
 
 

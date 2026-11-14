@@ -2,7 +2,7 @@
   "why": {
     "meta": {
       "title": "Pourquoi Pain001 : l'argumentaire en cinq questions",
-      "description": "Coût d'un fichier de paiement rejeté, pourquoi des données de paiement structurées comptent toujours maintenant que Swift a reporté son échéance, ce que fait Pain001, son coût (nul) et sa sûreté. Chaque réponse est liée à sa preuve.",
+      "description": "Coût d'un fichier de paiement rejeté, pourquoi les données structurées comptent malgré le report de Swift, ce que fait Pain001, son coût (nul), sa sûreté.",
       "eyebrow": "L'argumentaire",
       "deck": "Les cinq questions qu'un directeur financier pose réellement : des réponses claires, chaque affirmation liée à sa preuve."
     },
@@ -44,7 +44,7 @@
   "solutions": {
     "meta": {
       "title": "À qui s'adresse Pain001",
-      "description": "Trésorerie, CFO et conseil, opérations de paiement, ingénierie et IA : le problème dans votre vocabulaire, ce que change Pain001 et votre prochain clic, par rôle.",
+      "description": "Trésorerie, CFO et conseil, opérations de paiement, ingénierie et IA : votre problème, ce que change Pain001 et votre prochaine étape, 150 mots par rôle.",
       "eyebrow": "À qui il s&#x27;adresse",
       "deck": "Quatre rôles, quatre vocabulaires, un seul pipeline. Trouvez votre problème, puis votre prochain clic."
     },
@@ -77,7 +77,7 @@
   "executive-brief": {
     "meta": {
       "title": "Brief de direction Pain001",
-      "description": "Une page pour les décideurs : le problème des fichiers rejetés, l'exigence d'adresses structurées et son nouveau calendrier, ce que fait Pain001, son coût, les preuves de sûreté et la demande. Prêt à imprimer.",
+      "description": "Une page pour les décideurs : fichiers rejetés, l'exigence d'adresses structurées et son calendrier, ce que fait et coûte Pain001, preuves de sûreté.",
       "eyebrow": "Brief de direction",
       "deck": "Une page. Cinq faits. Une demande. Aussi disponible en français, en allemand et en espagnol, imprimable depuis votre navigateur."
     },
@@ -121,7 +121,7 @@
   "pain-001": {
     "meta": {
       "title": "Qu'est-ce que pain.001 ? Le virement ISO 20022 expliqué",
-      "description": "pain.001 est le message XML ISO 20022 qu'une entreprise envoie à sa banque pour ordonner des virements. Sa structure, les versions .03 à .13, un exemple validé et ses différences avec pain.002, pain.008, pacs.008 et MT101.",
+      "description": "pain.001 est le message XML ISO 20022 par lequel une entreprise ordonne des virements à sa banque : structure, versions .03 à .13, exemple, pain.002.",
       "eyebrow": "ISO 20022 expliqué",
       "deck": "Le message ISO 20022 qu'une entreprise envoie à sa banque pour ordonner des virements : ce qu'il est, comment il est construit, quelle version utiliser, et un exemple complet validé par le schéma officiel."
     },

@@ -2,7 +2,7 @@
   "why": {
     "meta": {
       "title": "Miért a Pain001: az üzleti érv öt kérdésben",
-      "description": "Mennyibe kerül egy visszadobott fizetési fájl, miért számítanak továbbra is a strukturált fizetési adatok, miután a Swift elhalasztotta a határidejét, mit tesz a Pain001, mennyibe kerül (semmibe), és biztonságos-e. Minden válasz a bizonyítékára hivatkozik.",
+      "description": "Mibe kerül egy visszadobott fizetési fájl, miért fontosak a strukturált adatok a Swift halasztása után is, mit tesz a Pain001, ára (semmi) és biztonsága.",
       "eyebrow": "Az üzleti érv",
       "deck": "Az öt kérdés, amelyet egy pénzügyi vezető valóban feltesz, közérthető válaszokkal; minden állítás a bizonyítékára hivatkozik."
     },
@@ -44,7 +44,7 @@
   "solutions": {
     "meta": {
       "title": "Kinek szól a Pain001",
-      "description": "Treasury, CFO és igazgatóság, fizetési műveletek, fejlesztés és AI: a probléma az Ön nyelvén, amit a Pain001 változtat, és a következő kattintás, szerepenként 150 szóban.",
+      "description": "Treasury, CFO és igazgatóság, fizetési műveletek, fejlesztés, AI: a probléma az Ön nyelvén, mit változtat a Pain001, a következő lépés, 150 szóban.",
       "eyebrow": "Kinek szól",
       "deck": "Négy szerep, négy szókincs, egy folyamat. Találja meg a saját problémáját, majd a következő kattintást."
     },
@@ -77,7 +77,7 @@
   "executive-brief": {
     "meta": {
       "title": "Pain001 vezetői összefoglaló",
-      "description": "Egy oldal döntéshozóknak: a visszadobott fájlok problémája, a strukturált címekre vonatkozó követelmény és új ütemezése, mit tesz a Pain001, mennyibe kerül, a biztonsági bizonyítékok és az egy kérés. Nyomtatható.",
+      "description": "Egy oldal döntéshozóknak: a visszadobott fájlok, a strukturált cím szabálya és ütemezése, mit tesz a Pain001, mennyibe kerül, biztonsági bizonyítékok.",
       "eyebrow": "Vezetői összefoglaló",
       "deck": "Egy oldal. Öt tény. Egy kérés. Elérhető francia, német és spanyol nyelven is, böngészőből nyomtatható."
     },
@@ -121,7 +121,7 @@
   "pain-001": {
     "meta": {
       "title": "Mi az a pain.001? Az ISO 20022 átutalás-kezdeményezés",
-      "description": "A pain.001 az az ISO 20022 XML-üzenet, amellyel egy vállalat átutalásokat ad meg a bankjának. Felépítése, a .03–.13 verziók, egy validált példa, és miben különbözik a pain.002, pain.008, pacs.008 és MT101 üzenettől.",
+      "description": "A pain.001 az az ISO 20022 XML-üzenet, amellyel egy vállalat átutalásokat ad meg a bankjának: felépítés, .03–.13 verziók, validált példa és pain.002.",
       "eyebrow": "Az ISO 20022 érthetően",
       "deck": "Az az ISO 20022 üzenet, amellyel egy vállalat átutalásokat rendel el a bankjánál: mi ez, hogyan épül fel, melyik verziót használja, és egy teljes példa, amely megfelel a hivatalos sémának."
     },

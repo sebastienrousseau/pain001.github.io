@@ -2,7 +2,7 @@
  "documentation": {
   "meta": {
    "title": "Pain001 teknisk referens: CLI, Python-API och REST",
-   "description": "Komplett referens för pain001 v0.0.87: CLI-kommandon och flaggor, Python-API, REST-endpoints under /api/v1, regelverk, normalisering av indata och pluginarkitektur.",
+   "description": "Referens för pain001 v0.0.87: CLI-kommandon och flaggor, Python-API, REST-endpoints under /api/v1, regelverk, normalisering av indata och plugins.",
    "eyebrow": "Referens",
    "deck": "Varje flagga, endpoint och beteende i pain001 v0.0.87, hämtat från den levererade koden, inte från ambitioner."
   },
@@ -91,7 +91,7 @@
  "faqs": {
   "meta": {
    "title": "Pain001 FAQ för treasury, drift, teknik och revision",
-   "description": "Varför banker avvisar betalfiler, pain.001 vs pain.008, kravet på strukturerade adresser, strömning av stora batcher, säkerhetsläge och reproducerbarhet vid revision, allt besvarat rakt på sak.",
+   "description": "Varför banker avvisar betalfiler, pain.001 vs pain.008, strukturerade adresser, stora batcher, säkerhet och reproducerbarhet vid revision, rakt på sak.",
    "eyebrow": "Frågor",
    "deck": "Raka svar för treasurers, betalningsdrift, ingenjörer och revisorer, formulerade som folk faktiskt frågar."
   },
@@ -157,7 +157,7 @@
  "installation": {
   "meta": {
    "title": "Installera Pain001: pip, Docker och första filen",
-   "description": "Installera Pain001-sviten på Python 3.11+ via pip eller Docker, lägg till Excel- och MT101-inläsare och skapa din första bankklara pain.001-fil med tre kommandon.",
+   "description": "Installera Pain001-sviten på Python 3.11+ via pip eller Docker, lägg till Excel- och MT101-inläsare och skapa en bankklar pain.001-fil med tre kommandon.",
    "eyebrow": "Kom igång",
    "deck": "Python 3.11+, pip eller Docker och en validerad betalfil med tre kommandon."
   },
@@ -205,7 +205,7 @@
  "glossary": {
   "meta": {
    "title": "ISO 20022-ordlista för betalningar på klarspråk",
-   "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, hybridadresser, kontrollsummor: betalningsvokabulären definierad för treasurers och driftteam, inte bara utvecklare.",
+   "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, hybridadresser, kontrollsummor: betalningsvokabulären definierad för treasury- och driftteam.",
    "eyebrow": "Ordlista",
    "deck": "Betalningsvokabulären på klarspråk, för dem som godkänner filerna, inte bara dem som genererar dem."
   },

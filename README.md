@@ -135,7 +135,8 @@ make deps      # audit npm advisories against the documented exceptions
 ## The Pain001 ecosystem
 
 This website joined the pain001 suite at 0.0.82. The core, companions,
-scaffold, native extension and website share one release version. The
+scaffold, native extension, website and the five SDKs (Go, Java, Rust,
+.NET and C++) share one release version. The
 package reference is in [`docs/ECOSYSTEM.md`](docs/ECOSYSTEM.md).
 
 | Component | Purpose | Use case |
@@ -149,6 +150,11 @@ package reference is in [`docs/ECOSYSTEM.md`](docs/ECOSYSTEM.md).
 | `pain001-plugin-template` | Cookiecutter source scaffold for an external loader | Start a new input-format loader |
 | `pain001-fast` | Experimental native validation helpers; source and wheels on GitHub | Try faster validation paths |
 | `pain001.com` | This website, documentation and browser demo | Evaluate the suite and try it in the browser |
+| `pain001-sdk-go` | Go client for the REST API, tested against the core's conformance kit in CI | Call a `pain001 serve` instance from Go |
+| `pain001-sdk-java` | Java client for the REST API, tested against the core's conformance kit in CI | Call a `pain001 serve` instance from Java |
+| `pain001-sdk-rust` | Rust client for the REST API, tested against the core's conformance kit in CI | Call a `pain001 serve` instance from Rust |
+| `pain001-sdk-dotnet` | .NET client for the REST API, tested against the core's conformance kit in CI | Call a `pain001 serve` instance from .NET |
+| `pain001-sdk-cpp` | C++ client for the REST API, tested against the core's conformance kit in CI | Call a `pain001 serve` instance from C++ |
 
 ---
 
@@ -163,7 +169,7 @@ Measured on the current build.
 | Browser demo | `/try/` runs the `pain001` library itself in WebAssembly, same-origin, offline-capable; payment data never leaves the browser | Shipped |
 | Example corpus | 42 scenarios, each on an English page and five translated pages (252 in all), with schema.org `Dataset` markup, downloadable inputs and expected output | Shipped |
 | Agent discovery | `llms.txt`, `llms-full.txt` and a JSON search index | Shipped |
-| Structured data | JSON-LD on every page: `WebSite` and `WebPage`; the corpus scenario pages add `Dataset`, `DataCatalog`, `DataDownload` and `Organization` | Shipped |
+| Structured data | JSON-LD on every page: `WebSite` and `WebPage`, plus `BreadcrumbList` wherever a breadcrumb trail shows; the corpus scenario pages add `Dataset`, `DataCatalog`, `DataDownload` and `Organization` | Shipped |
 
 ---
 
@@ -282,7 +288,9 @@ and the snippet gate, and Chrome for the browser gates.
 `build.sh` takes a lock, then runs, in order: `scripts/traction.py` (PyPI and
 GitHub figures into the governance page), `ssg build`, `scripts/sbom_serial.py`
 (a deterministic `serialNumber` for the SBOM), `scripts/postbuild_fix.py` (the
-passes below), the `static/` copy, `postbuild_fix.py --optimise-assets` (one
+passes below), `scripts/breadcrumb_ld.py` (schema.org `BreadcrumbList` from
+each page's visible, translated breadcrumb trail), the `static/` copy,
+`postbuild_fix.py --optimise-assets` (one
 SRI-protected stylesheet bundle per layout, comments stripped from the site's
 own scripts), sample CSV generation, `postbuild_fix.py --stamp-sw`, and
 `scripts/carry_forward_assets.py`, then publishes the result to `site/`.
@@ -333,6 +341,7 @@ CI fails on any of these; run them locally before opening a PR.
 | Translation keys still match the built pages | `scripts/validate_i18n_keys_live.py` |
 | Content integrity (no eaten markup, no double encoding) | `scripts/validate_content_integrity.py` |
 | Link integrity | `scripts/validate_links.py site` |
+| Search titles at most 65 characters, descriptions 50 to 160, on every indexable page | `scripts/validate_seo_meta.py site` |
 | Suite version currency | `scripts/validate_versions.py` |
 | Documentation snippets reference the real API | `scripts/validate_snippets.py` (with `pain001` installed) |
 | Layout and print integrity, real Chrome | `node scripts/layout_audit.cjs`, `node scripts/print_audit.cjs` |

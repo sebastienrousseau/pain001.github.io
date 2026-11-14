@@ -91,7 +91,7 @@
  "faqs": {
   "meta": {
    "title": "Pain001 – časté dotazy pro treasury, provoz a audit",
-   "description": "Proč banky odmítají platební soubory, pain.001 vs pain.008, požadavek na strukturované adresy, streamování velkých dávek, bezpečnostní postoj a reprodukovatelnost auditu, vše vysvětleno přímo.",
+   "description": "Proč banky odmítají platební soubory, pain.001 vs pain.008, strukturované adresy, velké dávky, bezpečnost a reprodukovatelnost auditu, vysvětleno přímo.",
    "eyebrow": "Otázky",
    "deck": "Přímé odpovědi pro treasury, platební provoz, inženýry a auditory, formulované tak, jak se lidé skutečně ptají."
   },

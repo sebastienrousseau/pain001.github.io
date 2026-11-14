@@ -2,7 +2,7 @@
   "why": {
     "meta": {
       "title": "Por que Pain001: o business case em cinco perguntas",
-      "description": "Quanto custa um arquivo de pagamento rejeitado, por que dados de pagamento estruturados continuam importando agora que a Swift adiou o prazo, o que o Pain001 faz a respeito, quanto custa (nada) e se é seguro, cada resposta com sua prova.",
+      "description": "Quanto custa um arquivo de pagamento rejeitado, por que dados estruturados contam após o adiamento da Swift, o que o Pain001 faz, custo (zero), segurança.",
       "eyebrow": "O business case",
       "deck": "As cinco perguntas que um CFO realmente faz, respondidas com clareza, cada afirmação vinculada à sua evidência."
     },
@@ -44,7 +44,7 @@
   "solutions": {
     "meta": {
       "title": "Para quem é o Pain001",
-      "description": "Tesouraria, CFO e conselho, operações de pagamento, engenharia e IA: o problema no seu vocabulário, o que o Pain001 muda e o próximo clique, em 150 palavras por papel.",
+      "description": "Tesouraria, CFO e conselho, operações de pagamento, engenharia e IA: o problema no seu vocabulário, o que o Pain001 muda e o próximo passo, por papel.",
       "eyebrow": "Para quem é",
       "deck": "Quatro papéis, quatro vocabulários, um só pipeline. Encontre seu problema e, depois, seu próximo clique."
     },
@@ -77,7 +77,7 @@
   "executive-brief": {
     "meta": {
       "title": "Resumo executivo do Pain001",
-      "description": "Uma página para decisores: o problema dos arquivos rejeitados, a exigência de endereços estruturados e seu novo cronograma, o que o Pain001 faz, quanto custa, as evidências de segurança e o pedido. Pronta para impressão.",
+      "description": "Uma página para decisores: arquivos rejeitados, a exigência de endereços estruturados e seu cronograma, o que o Pain001 faz e custa, e provas de segurança.",
       "eyebrow": "Resumo executivo",
       "deck": "Uma página. Cinco fatos. Um pedido. Disponível também em francês, alemão e espanhol, pronta para imprimir no navegador."
     },
@@ -121,7 +121,7 @@
   "pain-001": {
     "meta": {
       "title": "O que é pain.001? Iniciação de transferências no ISO 20022",
-      "description": "pain.001 é a mensagem XML ISO 20022 que uma empresa envia ao banco para ordenar transferências. Estrutura, versões .03 a .13, um exemplo validado e as diferenças em relação a pain.002, pain.008, pacs.008 e MT101.",
+      "description": "pain.001 é a mensagem XML ISO 20022 que uma empresa envia ao banco para ordenar transferências: estrutura, versões .03 a .13, exemplo validado e pain.002.",
       "eyebrow": "ISO 20022 explicado",
       "deck": "A mensagem ISO 20022 que uma empresa envia ao banco para ordenar transferências: o que é, como é montada, qual versão usar e um exemplo completo que valida contra o esquema oficial."
     },

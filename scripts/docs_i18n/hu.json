@@ -91,7 +91,7 @@
  "faqs": {
   "meta": {
    "title": "Pain001 GYIK: treasury, működés, mérnökök, audit",
-   "description": "Miért utasítják el a bankok a fizetési fájlokat, pain.001 és pain.008, a strukturált címekre vonatkozó követelmény, nagy kötegek streamelése, biztonság és auditálható reprodukálhatóság, közérthetően.",
+   "description": "Miért utasítják el a bankok a fizetési fájlokat, pain.001 és pain.008, strukturált címek, nagy kötegek, biztonság és auditálhatóság, közérthetően.",
    "eyebrow": "Kérdések",
    "deck": "Egyenes válaszok treasury-, fizetési működési, mérnöki és auditcsapatoknak, úgy megfogalmazva, ahogyan a kérdéseket valójában felteszik."
   },
@@ -205,7 +205,7 @@
  "glossary": {
   "meta": {
    "title": "ISO 20022 fizetési szakszótár közérthetően",
-   "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, hibrid címek, ellenőrző összegek: a fizetési szakszókincs treasury- és működési csapatoknak, nem csak fejlesztőknek.",
+   "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, hibrid címek, ellenőrző összegek: a fizetési szakszókincs treasury- és működési csapatoknak.",
    "eyebrow": "Szakszótár",
    "deck": "A fizetési szakszókincs közérthetően, azoknak, akik jóváhagyják a fájlokat, nem csak azoknak, akik előállítják őket."
   },

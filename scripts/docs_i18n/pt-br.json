@@ -2,7 +2,7 @@
   "documentation": {
     "meta": {
       "title": "Referência técnica do Pain001: CLI, API Python e REST",
-      "description": "Referência completa do pain001 v0.0.87: subcomandos e flags da CLI, API Python, endpoints REST em /api/v1, rulebooks de esquema, normalização de entrada e arquitetura de plugins.",
+      "description": "Referência do pain001 v0.0.87: subcomandos e flags da CLI, API Python, endpoints REST em /api/v1, rulebooks de esquema, normalização de entrada e plugins.",
       "eyebrow": "Referência",
       "deck": "Cada flag, endpoint e comportamento do pain001 v0.0.87, extraídos do código entregue, não de aspirações."
     },
@@ -91,7 +91,7 @@
   "faqs": {
     "meta": {
       "title": "FAQs do Pain001 para tesouraria, operações e auditoria",
-      "description": "Por que bancos rejeitam arquivos de pagamento, pain.001 vs pain.008, a exigência de endereços estruturados, streaming de lotes grandes, postura de segurança e reprodutibilidade de auditoria, com respostas diretas.",
+      "description": "Por que bancos rejeitam arquivos de pagamento, pain.001 vs pain.008, endereços estruturados, lotes grandes, segurança e auditoria reproduzível, direto.",
       "eyebrow": "Perguntas",
       "deck": "Respostas diretas para tesoureiros, operações de pagamento, engenheiros e auditores, formuladas do jeito que as pessoas realmente perguntam."
     },
@@ -157,7 +157,7 @@
   "installation": {
     "meta": {
       "title": "Instale o Pain001: pip, Docker e primeiro arquivo válido",
-      "description": "Instale a suíte Pain001 no Python 3.11+ via pip ou Docker, adicione os loaders de Excel e MT101 e produza seu primeiro arquivo pain.001 pronto para o banco em três comandos.",
+      "description": "Instale a suíte Pain001 no Python 3.11+ via pip ou Docker, adicione os loaders de Excel e MT101 e gere seu primeiro arquivo pain.001 em três comandos.",
       "eyebrow": "Primeiros passos",
       "deck": "Python 3.11+, pip ou Docker, e um arquivo de pagamento validado em três comandos."
     },
@@ -205,7 +205,7 @@
   "glossary": {
     "meta": {
       "title": "Glossário de pagamentos ISO 20022 em linguagem clara",
-      "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, endereços híbridos, somas de controle: o vocabulário de pagamentos para tesoureiros e equipes de operações, não só desenvolvedores.",
+      "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, endereços híbridos, somas de controle: o vocabulário de pagamentos para tesoureiros e equipes de operações.",
       "eyebrow": "Glossário",
       "deck": "O vocabulário de pagamentos em linguagem clara, para quem aprova os arquivos, não só para quem os gera."
     },

@@ -2,7 +2,7 @@
   "documentation": {
     "meta": {
       "title": "Pain001 Teknikal na Sanggunian: CLI, Python API at REST",
-      "description": "Kumpletong sanggunian para sa pain001 v0.0.87: mga CLI subcommand at flag, Python API, REST endpoint sa ilalim ng /api/v1, mga scheme rulebook, normalisasyon ng input, at plugin architecture.",
+      "description": "Sanggunian sa pain001 v0.0.87: CLI subcommand at flag, Python API, REST endpoint sa /api/v1, scheme rulebook, normalisasyon ng input at plugin.",
       "eyebrow": "Sanggunian",
       "deck": "Bawat flag, endpoint, at gawi ng pain001 v0.0.87, na kinuha mula sa inilabas na code at hindi mula sa hangarin."
     },
@@ -91,7 +91,7 @@
   "faqs": {
     "meta": {
       "title": "Pain001 FAQs para sa Treasury, Ops, Engineering at Audit",
-      "description": "Bakit tinatanggihan ng mga bangko ang mga payment file, pain.001 vs pain.008, ang requirement sa structured address, streaming ng malalaking batch, security posture, at reproducibility ng audit: sinagot nang malinaw.",
+      "description": "Bakit tinatanggihan ng bangko ang payment file, pain.001 vs pain.008, structured address, malalaking batch, security at reproducibility ng audit.",
       "eyebrow": "Mga Tanong",
       "deck": "Tuwirang mga sagot para sa mga treasurer, payment operations, inhinyero, at auditor, ayon sa aktwal na pagtatanong ng mga tao."
     },
@@ -157,7 +157,7 @@
   "installation": {
     "meta": {
       "title": "I-install ang Pain001: pip, Docker at Unang Validated na File",
-      "description": "I-install ang Pain001 suite sa Python 3.11+ sa pamamagitan ng pip o Docker, idagdag ang Excel at MT101 loader, at bumuo ng unang bank-ready na pain.001 file sa tatlong command.",
+      "description": "I-install ang Pain001 suite sa Python 3.11+ sa pip o Docker, idagdag ang Excel at MT101 loader, at bumuo ng bank-ready na pain.001 sa tatlong command.",
       "eyebrow": "Magsimula",
       "deck": "Python 3.11+, pip o Docker, at isang validated na payment file sa tatlong command."
     },
@@ -205,7 +205,7 @@
   "glossary": {
     "meta": {
       "title": "Glossary ng ISO 20022 na Pagbabayad sa Simpleng Wika",
-      "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, hybrid na address, control sum: ang bokabularyo ng pagbabayad na tinukoy para sa mga treasurer at operations team, hindi lamang sa mga developer.",
+      "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, hybrid na address at control sum: ang bokabularyo ng pagbabayad para sa mga treasury at operations team.",
       "eyebrow": "Glosaryo",
       "deck": "Ang bokabularyo ng pagbabayad sa simpleng wika, para sa mga taong pumipirma sa mga file at hindi lamang sa mga bumubuo ng mga ito."
     },

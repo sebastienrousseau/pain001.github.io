@@ -2,7 +2,7 @@
  "documentation": {
   "meta": {
    "title": "Pain001 : référence technique CLI, API Python et REST",
-   "description": "Référence complète de pain001 v0.0.87 : sous-commandes et options CLI, API Python, points d'accès REST sous /api/v1, recueils de règles, normalisation des entrées et plugins.",
+   "description": "Référence de pain001 v0.0.87 : sous-commandes et options CLI, API Python, points d'accès REST sous /api/v1, recueils de règles, normalisation et plugins.",
    "eyebrow": "Référence",
    "deck": "Chaque option, point d'accès et comportement de pain001 v0.0.87, tirés du code livré et non d'aspirations."
   },
@@ -91,7 +91,7 @@
  "faqs": {
   "meta": {
    "title": "FAQ Pain001 : trésorerie, opérations, ingénierie, audit",
-   "description": "Pourquoi les banques rejettent des fichiers, pain.001 vs pain.008, l'exigence d'adresses structurées, le streaming des gros lots, la sécurité et la reproductibilité des audits, sans détour.",
+   "description": "Pourquoi les banques rejettent des fichiers, pain.001 vs pain.008, adresses structurées, gros lots, sécurité et reproductibilité des audits, sans détour.",
    "eyebrow": "Questions",
    "deck": "Des réponses directes pour les trésoriers, les opérations de paiement, les ingénieurs et les auditeurs, formulées comme les gens posent réellement leurs questions."
   },
@@ -157,7 +157,7 @@
  "installation": {
   "meta": {
    "title": "Installer Pain001 : pip, Docker et premier fichier validé",
-   "description": "Installez la suite Pain001 sur Python 3.11+ via pip ou Docker, ajoutez les loaders Excel et MT101 et produisez un premier fichier pain.001 validé en trois commandes.",
+   "description": "Installez Pain001 sur Python 3.11+ via pip ou Docker, ajoutez les loaders Excel et MT101, produisez un pain.001 prêt pour la banque en trois commandes.",
    "eyebrow": "Premiers pas",
    "deck": "Python 3.11+, pip ou Docker, et un fichier de paiement validé en trois commandes."
   },
@@ -205,7 +205,7 @@
  "glossary": {
   "meta": {
    "title": "Glossaire ISO 20022 des paiements, en français clair",
-   "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, adresses hybrides : le vocabulaire des paiements défini pour les trésoriers et les équipes d'exploitation, pas seulement les développeurs.",
+   "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, adresses hybrides, sommes de contrôle : le vocabulaire des paiements pour la trésorerie et l'exploitation.",
    "eyebrow": "Glossaire",
    "deck": "Le vocabulaire des paiements en français clair, pour celles et ceux qui signent les fichiers, pas seulement pour ceux qui les génèrent."
   },

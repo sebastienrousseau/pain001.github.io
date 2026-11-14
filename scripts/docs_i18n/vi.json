@@ -2,7 +2,7 @@
  "documentation": {
   "meta": {
    "title": "Tài liệu kỹ thuật Pain001: CLI, Python API và REST",
-   "description": "Tài liệu tham khảo đầy đủ về pain001 v0.0.87: lệnh con và cờ CLI, Python API, điểm cuối REST dưới /api/v1, bộ quy tắc scheme, chuẩn hoá đầu vào và kiến trúc plugin.",
+   "description": "Tài liệu tham khảo pain001 v0.0.87: lệnh con và cờ CLI, Python API, điểm cuối REST dưới /api/v1, bộ quy tắc scheme, chuẩn hoá đầu vào và plugin.",
    "eyebrow": "Tài liệu tham khảo",
    "deck": "Mọi cờ lệnh, điểm cuối và hành vi của pain001 v0.0.87, lấy từ mã nguồn đã phát hành, không phải từ kỳ vọng."
   },
@@ -91,7 +91,7 @@
  "faqs": {
   "meta": {
    "title": "Hỏi đáp Pain001: ngân quỹ, vận hành, kỹ thuật, kiểm toán",
-   "description": "Vì sao ngân hàng từ chối tệp thanh toán, pain.001 so với pain.008, yêu cầu địa chỉ có cấu trúc, xử lý lô lớn theo luồng, bảo mật và tái lập kiểm toán: câu trả lời thẳng thắn.",
+   "description": "Vì sao ngân hàng từ chối tệp thanh toán, pain.001 so với pain.008, địa chỉ có cấu trúc, lô lớn, bảo mật và tái lập kiểm toán: câu trả lời thẳng thắn.",
    "eyebrow": "Câu hỏi",
    "deck": "Câu trả lời thẳng thắn cho thủ quỹ, vận hành thanh toán, kỹ sư và kiểm toán viên, diễn đạt đúng theo cách mọi người thường hỏi."
   },
@@ -205,7 +205,7 @@
  "glossary": {
   "meta": {
    "title": "Bảng thuật ngữ thanh toán ISO 20022 bằng lời dễ hiểu",
-   "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, địa chỉ lai, tổng kiểm soát: từ vựng thanh toán được định nghĩa cho thủ quỹ và đội vận hành, không chỉ cho lập trình viên.",
+   "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, địa chỉ lai, tổng kiểm soát: từ vựng thanh toán được định nghĩa cho đội ngân quỹ và vận hành.",
    "eyebrow": "Thuật ngữ",
    "deck": "Từ vựng thanh toán bằng ngôn ngữ dễ hiểu, dành cho những người ký duyệt tệp, không chỉ những người tạo ra chúng."
   },

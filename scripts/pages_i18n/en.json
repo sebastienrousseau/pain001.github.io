@@ -2,7 +2,7 @@
  "why": {
   "meta": {
    "title": "Why Pain001: the Business Case in Five Questions",
-   "description": "What a rejected payment file costs, why structured payment data still matters now that Swift has deferred its deadline, what Pain001 does about it, what it costs (nothing), and whether it is safe, with each answer linked to its proof.",
+   "description": "What a rejected payment file costs, why structured data still matters after Swift's deferral, what Pain001 does, what it costs (nothing) and whether it is safe.",
    "eyebrow": "The business case",
    "deck": "The five questions a CFO actually asks, answered in plain English with every claim linked to its evidence."
   },
@@ -44,7 +44,7 @@
  "solutions": {
   "meta": {
    "title": "Who Pain001 Is For",
-   "description": "Treasury, CFO and board, payment operations, engineering and AI: the problem in your vocabulary, what Pain001 changes, and your next click, in 150 words per role.",
+   "description": "Treasury, CFO and board, payment operations, engineering and AI: the problem in your terms, what Pain001 changes, and your next step, in 150 words per role.",
    "eyebrow": "Who it&#x27;s for",
    "deck": "Four roles, four vocabularies, one pipeline. Find your problem, then your next click."
   },
@@ -77,7 +77,7 @@
  "executive-brief": {
   "meta": {
    "title": "Pain001 Executive Brief",
-   "description": "One page for decision-makers: the rejected-file problem, the structured-address requirement and its new timing, what Pain001 does, what it costs, the safety evidence, and the one ask. Print-ready.",
+   "description": "One page for decision-makers: the rejected-file problem, the structured-address rule and its timing, what Pain001 does and costs, and the safety evidence.",
    "eyebrow": "Executive brief",
    "deck": "One page. Five facts. One ask. Also available in French, German, and Spanish, and print-ready from your browser."
   },

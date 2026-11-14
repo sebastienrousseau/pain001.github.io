@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. Una muestra pain.001 validada (SG, raíl instant-payment), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
+banner_alt: "Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. Muestra pain.001 validada (Singapur, raíl instant-payment)."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -9,18 +9,18 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-13T08:00:00+00:00"
-description: "Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. Una muestra pain.001 validada (SG, raíl instant-payment), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
+date: "2026-11-14T08:00:00+00:00"
+description: "Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. Muestra pain.001 validada (Singapur, raíl instant-payment)."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "es"
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/es/corpus-sg-fast-single/"
-image_alt: "Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. Una muestra pain.001 validada (SG, raíl instant-payment), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
+image_alt: "Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. Muestra pain.001 validada (Singapur, raíl instant-payment)."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
-keywords: "ejemplo pain.001 SG, XML de muestra instant-payment, archivo de pago ISO 20022 SG, sg.fast.single, corpus pain001"
+keywords: "ejemplo pain.001 Singapur, XML de muestra instant-payment, archivo de pago ISO 20022 Singapur, sg.fast.single, corpus pain001"
 language: "es"
 layout: "page"
 locale: "es_ES"
@@ -39,21 +39,21 @@ short_name: pain001
 subtitle: "Singapore FAST credit in SGD, bank and branch codes, addresses on both parties."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Ejemplo pain.001 ISO 20022 sg.fast.single: SG (instant-payment)"
+title: "Ejemplo pain.001: sg.fast.single (Singapur)"
 url: "https://pain001.com/es/corpus-sg-fast-single/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/es/corpus-sg-fast-single/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.75)"
-item_description: "Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. Una muestra pain.001 validada (SG, raíl instant-payment), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
+item_description: "Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. Muestra pain.001 validada (Singapur, raíl instant-payment)."
 item_guid: "https://pain001.com/es/corpus-sg-fast-single/"
 item_link: "https://pain001.com/es/corpus-sg-fast-single/"
-item_pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
-item_title: "Ejemplo pain.001 ISO 20022 sg.fast.single: SG (instant-payment)"
-last_build_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+item_pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
+item_title: "Ejemplo pain.001: sg.fast.single (Singapur)"
+last_build_date: "Sat, 14 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Ejemplo pain.001 ISO 20022 sg.fast.single: SG (instant-payment)"
+apple-mobile-web-app-title: "Ejemplo pain.001: sg.fast.single (Singapur)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. Una muestra pain.001 validada (SG, raíl instant-payment), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
+twitter_description: "Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. Muestra pain.001 validada (Singapur, raíl instant-payment)."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Ejemplo pain.001 ISO 20022 sg.fast.single: SG (instant-payment)"
+twitter_title: "Ejemplo pain.001: sg.fast.single (Singapur)"
 twitter_url: "https://pain001.com/es/corpus-sg-fast-single/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -82,7 +82,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Corpus de ejemplos"
-excerpt: "Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. Una muestra pain.001 validada (SG, raíl instant-payment), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
+excerpt: "Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. Muestra pain.001 validada (Singapur, raíl instant-payment)."
 last_reviewed: "2026-11-07"
 
 
@@ -92,7 +92,7 @@ Descripción del escenario, citada del registro de procedencia (texto original e
 
 > Singapore FAST credit in SGD, bank and branch codes, addresses on both parties.
 
-Un archivo de iniciación de pagos (**SG**, raíl **instant-payment**), entregado en `pain.001.001.03`, `pain.001.001.09`, generado y comprobado por pain001 0.0.87. Es un ejemplo sintético construido a partir de los reglamentos públicos de los esquemas de pago: no hay detrás ninguna parte real, ninguna cuenta real ni ninguna guía bancaria.
+Un archivo de iniciación de pagos (**Singapur**, raíl **instant-payment**), entregado en `pain.001.001.03`, `pain.001.001.09`, generado y comprobado por pain001 0.0.87. Es un ejemplo sintético construido a partir de los reglamentos públicos de los esquemas de pago: no hay detrás ninguna parte real, ninguna cuenta real ni ninguna guía bancaria.
 
 ## Archivos
 

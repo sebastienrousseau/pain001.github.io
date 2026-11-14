@@ -91,7 +91,7 @@
  "faqs": {
   "meta": {
    "title": "Pain001: întrebări frecvente pentru trezorerie și audit",
-   "description": "De ce resping băncile fișierele de plată, pain.001 vs pain.008, cerința privind adresele structurate, procesarea în flux a loturilor mari, postura de securitate și reproductibilitatea auditului, toate explicate direct.",
+   "description": "De ce resping băncile fișierele de plată, pain.001 vs pain.008, adrese structurate, loturi mari, securitate și reproductibilitatea auditului, pe scurt.",
    "eyebrow": "Întrebări",
    "deck": "Răspunsuri directe pentru trezorieri, operațiuni de plăți, ingineri și auditori, formulate așa cum se pun întrebările în realitate."
   },
@@ -157,7 +157,7 @@
  "installation": {
   "meta": {
    "title": "Instalare Pain001: pip, Docker și primul fișier validat",
-   "description": "Instalați suita Pain001 pe Python 3.11+ cu pip sau Docker, adăugați loaderele Excel și MT101 și generați primul fișier pain.001 acceptat de bancă în trei comenzi.",
+   "description": "Instalați suita Pain001 pe Python 3.11+ cu pip sau Docker, adăugați loaderele Excel și MT101 și generați un fișier pain.001 pentru bancă în trei comenzi.",
    "eyebrow": "Primii pași",
    "deck": "Python 3.11+, pip sau Docker și un fișier de plată validat în trei comenzi."
   },

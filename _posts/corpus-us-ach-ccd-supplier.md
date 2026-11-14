@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "ACH CCD credit to a supplier with an addenda remittance line. A validated pain.001 sample for United States on the ach-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
+banner_alt: "ACH CCD credit to a supplier with an addenda remittance line. Validated pain.001 sample for United States (ach-credit)."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -9,14 +9,14 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-13T08:00:00+00:00"
-description: "ACH CCD credit to a supplier with an addenda remittance line. A validated pain.001 sample for United States on the ach-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
+date: "2026-11-14T08:00:00+00:00"
+description: "ACH CCD credit to a supplier with an addenda remittance line. Validated pain.001 sample for United States (ach-credit)."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/corpus-us-ach-ccd-supplier/"
-image_alt: "ACH CCD credit to a supplier with an addenda remittance line. A validated pain.001 sample for United States on the ach-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
+image_alt: "ACH CCD credit to a supplier with an addenda remittance line. Validated pain.001 sample for United States (ach-credit)."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -39,21 +39,21 @@ short_name: pain001
 subtitle: "ACH CCD credit to a supplier with an addenda remittance line."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "us.ach.ccd-supplier: ISO 20022 pain.001 example for United States (ach-credit)"
+title: "pain.001 example: us.ach.ccd-supplier (United States)"
 url: "https://pain001.com/corpus-us-ach-ccd-supplier/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/corpus-us-ach-ccd-supplier/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.75)"
-item_description: "ACH CCD credit to a supplier with an addenda remittance line. A validated pain.001 sample for United States on the ach-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
+item_description: "ACH CCD credit to a supplier with an addenda remittance line. Validated pain.001 sample for United States (ach-credit)."
 item_guid: "https://pain001.com/corpus-us-ach-ccd-supplier/"
 item_link: "https://pain001.com/corpus-us-ach-ccd-supplier/"
-item_pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
-item_title: "us.ach.ccd-supplier: ISO 20022 pain.001 example for United States (ach-credit)"
-last_build_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+item_pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
+item_title: "pain.001 example: us.ach.ccd-supplier (United States)"
+last_build_date: "Sat, 14 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "us.ach.ccd-supplier: ISO 20022 pain.001 example for United States (ach-credit)"
+apple-mobile-web-app-title: "pain.001 example: us.ach.ccd-supplier (United States)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "ACH CCD credit to a supplier with an addenda remittance line. A validated pain.001 sample for United States on the ach-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
+twitter_description: "ACH CCD credit to a supplier with an addenda remittance line. Validated pain.001 sample for United States (ach-credit)."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "us.ach.ccd-supplier: ISO 20022 pain.001 example for United States (ach-credit)"
+twitter_title: "pain.001 example: us.ach.ccd-supplier (United States)"
 twitter_url: "https://pain001.com/corpus-us-ach-ccd-supplier/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -82,7 +82,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Example corpus"
-excerpt: "ACH CCD credit to a supplier with an addenda remittance line. A validated pain.001 sample for United States on the ach-credit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
+excerpt: "ACH CCD credit to a supplier with an addenda remittance line. Validated pain.001 sample for United States (ach-credit)."
 last_reviewed: "2026-11-07"
 
 

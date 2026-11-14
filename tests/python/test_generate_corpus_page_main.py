@@ -195,8 +195,8 @@ def test_main_writes_english_scenario_pages_and_titles(ran):
     assert 'hreflang: "en"' in en_fm and "language:" not in en_fm
     assert en_body.startswith("House purchase | completion\n")
     assert "](/try/#sample=corpus:gb.chaps.property-purchase)" in en_body
-    assert 'title: "ISO-20022-pain.001-Beispiel de.sepa.sct: Deutschland (sepa)"' in ran.posts["de-corpus-de-sepa-sct"][0]
-    assert 'title: "zz.misc.one: ISO 20022 pain.001 example for ZZ (misc)"' in ran.posts["corpus-zz-misc-one"][0]
+    assert 'title: "pain.001-Beispiel: de.sepa.sct (Deutschland)"' in ran.posts["de-corpus-de-sepa-sct"][0]
+    assert 'title: "pain.008 example: zz.misc.one (ZZ)"' in ran.posts["corpus-zz-misc-one"][0]
 
 
 def test_main_renders_the_catalogue_page(ran):

@@ -2,7 +2,7 @@
  "documentation": {
   "meta": {
    "title": "Pain001 Technische Referentie: CLI, Python-API en REST",
-   "description": "Volledige referentie voor pain001 v0.0.87: CLI-subcommando's, Python-API, REST-endpoints onder /api/v1, scheme-rulebooks, invoernormalisatie en plugin-architectuur.",
+   "description": "Referentie voor pain001 v0.0.87: CLI-subcommando's en flags, Python-API, REST-endpoints onder /api/v1, scheme-rulebooks, invoernormalisatie en plugins.",
    "eyebrow": "Referentie",
    "deck": "Elke vlag, elk endpoint en elk gedrag van pain001 v0.0.87, ontleend aan de uitgeleverde code en niet aan wensdenken."
   },
@@ -91,7 +91,7 @@
  "faqs": {
   "meta": {
    "title": "Pain001 FAQ voor treasury, ops, engineering en audit",
-   "description": "Waarom banken betaalbestanden afwijzen, pain.001 versus pain.008, de eis van gestructureerde adressen, streaming van grote batches, security en reproduceerbare audits, helder beantwoord.",
+   "description": "Waarom banken betaalbestanden afwijzen, pain.001 versus pain.008, gestructureerde adressen, grote batches, security en reproduceerbare audits, helder.",
    "eyebrow": "Vragen",
    "deck": "Heldere antwoorden voor treasurers, betalingsoperaties, engineers en auditors, geformuleerd zoals mensen het echt vragen."
   },

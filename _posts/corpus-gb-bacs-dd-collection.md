@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "Bacs Direct Debit collection, first and recurring, SUN as creditor id. A validated pain.001 sample for United Kingdom on the bacs-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
+banner_alt: "Bacs Direct Debit collection, first and recurring, SUN as creditor id. Validated pain.008 sample for United Kingdom (bacs-direct-debit)."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -9,18 +9,18 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-13T08:00:00+00:00"
-description: "Bacs Direct Debit collection, first and recurring, SUN as creditor id. A validated pain.001 sample for United Kingdom on the bacs-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
+date: "2026-11-14T08:00:00+00:00"
+description: "Bacs Direct Debit collection, first and recurring, SUN as creditor id. Validated pain.008 sample for United Kingdom (bacs-direct-debit)."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/corpus-gb-bacs-dd-collection/"
-image_alt: "Bacs Direct Debit collection, first and recurring, SUN as creditor id. A validated pain.001 sample for United Kingdom on the bacs-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
+image_alt: "Bacs Direct Debit collection, first and recurring, SUN as creditor id. Validated pain.008 sample for United Kingdom (bacs-direct-debit)."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
-keywords: "pain.001 example United Kingdom, bacs-direct-debit sample XML, ISO 20022 United Kingdom payment file, gb.bacs-dd.collection, pain001 corpus"
+keywords: "pain.008 example United Kingdom, bacs-direct-debit sample XML, ISO 20022 United Kingdom payment file, gb.bacs-dd.collection, pain001 corpus"
 language: en-GB
 layout: "page"
 locale: en_GB
@@ -39,21 +39,21 @@ short_name: pain001
 subtitle: "Bacs Direct Debit collection, first and recurring, SUN as creditor id."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "gb.bacs-dd.collection: ISO 20022 pain.001 example for United Kingdom (bacs-direct-debit)"
+title: "pain.008 example: gb.bacs-dd.collection (United Kingdom)"
 url: "https://pain001.com/corpus-gb-bacs-dd-collection/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/corpus-gb-bacs-dd-collection/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.75)"
-item_description: "Bacs Direct Debit collection, first and recurring, SUN as creditor id. A validated pain.001 sample for United Kingdom on the bacs-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
+item_description: "Bacs Direct Debit collection, first and recurring, SUN as creditor id. Validated pain.008 sample for United Kingdom (bacs-direct-debit)."
 item_guid: "https://pain001.com/corpus-gb-bacs-dd-collection/"
 item_link: "https://pain001.com/corpus-gb-bacs-dd-collection/"
-item_pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
-item_title: "gb.bacs-dd.collection: ISO 20022 pain.001 example for United Kingdom (bacs-direct-debit)"
-last_build_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+item_pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
+item_title: "pain.008 example: gb.bacs-dd.collection (United Kingdom)"
+last_build_date: "Sat, 14 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "gb.bacs-dd.collection: ISO 20022 pain.001 example for United Kingdom (bacs-direct-debit)"
+apple-mobile-web-app-title: "pain.008 example: gb.bacs-dd.collection (United Kingdom)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Bacs Direct Debit collection, first and recurring, SUN as creditor id. A validated pain.001 sample for United Kingdom on the bacs-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
+twitter_description: "Bacs Direct Debit collection, first and recurring, SUN as creditor id. Validated pain.008 sample for United Kingdom (bacs-direct-debit)."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "gb.bacs-dd.collection: ISO 20022 pain.001 example for United Kingdom (bacs-direct-debit)"
+twitter_title: "pain.008 example: gb.bacs-dd.collection (United Kingdom)"
 twitter_url: "https://pain001.com/corpus-gb-bacs-dd-collection/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -82,7 +82,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Example corpus"
-excerpt: "Bacs Direct Debit collection, first and recurring, SUN as creditor id. A validated pain.001 sample for United Kingdom on the bacs-direct-debit rail, with its ISO 20022 JSON twin and provenance record; run it in the browser."
+excerpt: "Bacs Direct Debit collection, first and recurring, SUN as creditor id. Validated pain.008 sample for United Kingdom (bacs-direct-debit)."
 last_reviewed: "2026-11-07"
 
 

@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "USD cross-border payment from a UK account to a US supplier. Eine validierte pain.001-Beispieldatei (Vereinigtes Königreich, Schiene priority-payment), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
+banner_alt: "USD cross-border payment from a UK account to a US supplier. Validierte pain.001-Beispieldatei (Vereinigtes Königreich, Schiene priority-payment)."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -9,14 +9,14 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-13T08:00:00+00:00"
-description: "USD cross-border payment from a UK account to a US supplier. Eine validierte pain.001-Beispieldatei (Vereinigtes Königreich, Schiene priority-payment), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
+date: "2026-11-14T08:00:00+00:00"
+description: "USD cross-border payment from a UK account to a US supplier. Validierte pain.001-Beispieldatei (Vereinigtes Königreich, Schiene priority-payment)."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "de"
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/de/corpus-gb-international-usd/"
-image_alt: "USD cross-border payment from a UK account to a US supplier. Eine validierte pain.001-Beispieldatei (Vereinigtes Königreich, Schiene priority-payment), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
+image_alt: "USD cross-border payment from a UK account to a US supplier. Validierte pain.001-Beispieldatei (Vereinigtes Königreich, Schiene priority-payment)."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -39,21 +39,21 @@ short_name: pain001
 subtitle: "USD cross-border payment from a UK account to a US supplier."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "ISO-20022-pain.001-Beispiel gb.international.usd: Vereinigtes Königreich (priority-payment)"
+title: "pain.001-Beispiel: gb.international.usd (Vereinigtes Königreich)"
 url: "https://pain001.com/de/corpus-gb-international-usd/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/de/corpus-gb-international-usd/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.75)"
-item_description: "USD cross-border payment from a UK account to a US supplier. Eine validierte pain.001-Beispieldatei (Vereinigtes Königreich, Schiene priority-payment), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
+item_description: "USD cross-border payment from a UK account to a US supplier. Validierte pain.001-Beispieldatei (Vereinigtes Königreich, Schiene priority-payment)."
 item_guid: "https://pain001.com/de/corpus-gb-international-usd/"
 item_link: "https://pain001.com/de/corpus-gb-international-usd/"
-item_pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
-item_title: "ISO-20022-pain.001-Beispiel gb.international.usd: Vereinigtes Königreich (priority-payment)"
-last_build_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+item_pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
+item_title: "pain.001-Beispiel: gb.international.usd (Vereinigtes Königreich)"
+last_build_date: "Sat, 14 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "ISO-20022-pain.001-Beispiel gb.international.usd: Vereinigtes Königreich (priority-payment)"
+apple-mobile-web-app-title: "pain.001-Beispiel: gb.international.usd (Vereinigtes Königreich)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "USD cross-border payment from a UK account to a US supplier. Eine validierte pain.001-Beispieldatei (Vereinigtes Königreich, Schiene priority-payment), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
+twitter_description: "USD cross-border payment from a UK account to a US supplier. Validierte pain.001-Beispieldatei (Vereinigtes Königreich, Schiene priority-payment)."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "ISO-20022-pain.001-Beispiel gb.international.usd: Vereinigtes Königreich (priority-payment)"
+twitter_title: "pain.001-Beispiel: gb.international.usd (Vereinigtes Königreich)"
 twitter_url: "https://pain001.com/de/corpus-gb-international-usd/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -82,7 +82,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Beispielkorpus"
-excerpt: "USD cross-border payment from a UK account to a US supplier. Eine validierte pain.001-Beispieldatei (Vereinigtes Königreich, Schiene priority-payment), mit ISO-20022-JSON-Zwilling und Provenienzdatensatz; im Browser ausführbar."
+excerpt: "USD cross-border payment from a UK account to a US supplier. Validierte pain.001-Beispieldatei (Vereinigtes Königreich, Schiene priority-payment)."
 last_reviewed: "2026-11-07"
 
 

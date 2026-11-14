@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-09-21T08:00:00+00:00"
-description: "A practical ISO 20022 compliance hub: current pain.001 guidance, regional rulebooks, schemas, validated examples, audit evidence, migration paths, integrations, and community support."
+description: "An ISO 20022 compliance hub: current pain.001 guidance, regional rulebooks, schemas, validated examples, audit evidence, migration paths and integrations."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en

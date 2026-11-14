@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "Qatar QATCH credit in QAR with the QCB purpose of payment. Een gevalideerd pain.001-voorbeeld (QA, rail domestic-credit-transfer), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
+banner_alt: "Qatar QATCH credit in QAR with the QCB purpose of payment. Gevalideerd pain.001-voorbeeld (Qatar, rail domestic-credit-transfer)."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -9,18 +9,18 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-13T08:00:00+00:00"
-description: "Qatar QATCH credit in QAR with the QCB purpose of payment. Een gevalideerd pain.001-voorbeeld (QA, rail domestic-credit-transfer), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
+date: "2026-11-14T08:00:00+00:00"
+description: "Qatar QATCH credit in QAR with the QCB purpose of payment. Gevalideerd pain.001-voorbeeld (Qatar, rail domestic-credit-transfer)."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "nl"
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/nl/corpus-qa-qatch-single/"
-image_alt: "Qatar QATCH credit in QAR with the QCB purpose of payment. Een gevalideerd pain.001-voorbeeld (QA, rail domestic-credit-transfer), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
+image_alt: "Qatar QATCH credit in QAR with the QCB purpose of payment. Gevalideerd pain.001-voorbeeld (Qatar, rail domestic-credit-transfer)."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
-keywords: "pain.001 voorbeeld QA, domestic-credit-transfer voorbeeld-XML, ISO 20022 QA betaalbestand, qa.qatch.single, pain001 corpus"
+keywords: "pain.001 voorbeeld Qatar, domestic-credit-transfer voorbeeld-XML, ISO 20022 Qatar betaalbestand, qa.qatch.single, pain001 corpus"
 language: "nl"
 layout: "page"
 locale: "nl_NL"
@@ -39,21 +39,21 @@ short_name: pain001
 subtitle: "Qatar QATCH credit in QAR with the QCB purpose of payment."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "ISO 20022 pain.001-voorbeeld qa.qatch.single: QA (domestic-credit-transfer)"
+title: "pain.001-voorbeeld: qa.qatch.single (Qatar)"
 url: "https://pain001.com/nl/corpus-qa-qatch-single/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/nl/corpus-qa-qatch-single/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.75)"
-item_description: "Qatar QATCH credit in QAR with the QCB purpose of payment. Een gevalideerd pain.001-voorbeeld (QA, rail domestic-credit-transfer), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
+item_description: "Qatar QATCH credit in QAR with the QCB purpose of payment. Gevalideerd pain.001-voorbeeld (Qatar, rail domestic-credit-transfer)."
 item_guid: "https://pain001.com/nl/corpus-qa-qatch-single/"
 item_link: "https://pain001.com/nl/corpus-qa-qatch-single/"
-item_pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
-item_title: "ISO 20022 pain.001-voorbeeld qa.qatch.single: QA (domestic-credit-transfer)"
-last_build_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+item_pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
+item_title: "pain.001-voorbeeld: qa.qatch.single (Qatar)"
+last_build_date: "Sat, 14 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "ISO 20022 pain.001-voorbeeld qa.qatch.single: QA (domestic-credit-transfer)"
+apple-mobile-web-app-title: "pain.001-voorbeeld: qa.qatch.single (Qatar)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Qatar QATCH credit in QAR with the QCB purpose of payment. Een gevalideerd pain.001-voorbeeld (QA, rail domestic-credit-transfer), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
+twitter_description: "Qatar QATCH credit in QAR with the QCB purpose of payment. Gevalideerd pain.001-voorbeeld (Qatar, rail domestic-credit-transfer)."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "ISO 20022 pain.001-voorbeeld qa.qatch.single: QA (domestic-credit-transfer)"
+twitter_title: "pain.001-voorbeeld: qa.qatch.single (Qatar)"
 twitter_url: "https://pain001.com/nl/corpus-qa-qatch-single/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -82,7 +82,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Voorbeeldcorpus"
-excerpt: "Qatar QATCH credit in QAR with the QCB purpose of payment. Een gevalideerd pain.001-voorbeeld (QA, rail domestic-credit-transfer), met zijn ISO 20022 JSON-tweeling en herkomstrecord; uitvoerbaar in de browser."
+excerpt: "Qatar QATCH credit in QAR with the QCB purpose of payment. Gevalideerd pain.001-voorbeeld (Qatar, rail domestic-credit-transfer)."
 last_reviewed: "2026-11-07"
 
 
@@ -92,7 +92,7 @@ Scenariobeschrijving, geciteerd uit het herkomstrecord (oorspronkelijke Engelse 
 
 > Qatar QATCH credit in QAR with the QCB purpose of payment.
 
-Een betaalinitiatiebestand (**QA**, rail **domestic-credit-transfer**), geleverd in `pain.001.001.03`, `pain.001.001.09`, gegenereerd en gecontroleerd door pain001 0.0.87. Het is een synthetisch voorbeeld, opgebouwd uit de openbare rulebooks van de betaalschema's: geen echte partij, geen echte rekening en geen bankrichtlijn erachter.
+Een betaalinitiatiebestand (**Qatar**, rail **domestic-credit-transfer**), geleverd in `pain.001.001.03`, `pain.001.001.09`, gegenereerd en gecontroleerd door pain001 0.0.87. Het is een synthetisch voorbeeld, opgebouwd uit de openbare rulebooks van de betaalschema's: geen echte partij, geen echte rekening en geen bankrichtlijn erachter.
 
 ## Bestanden
 

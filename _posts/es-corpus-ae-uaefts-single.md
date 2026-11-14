@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code. Una muestra pain.001 validada (AE, raíl priority-payment), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
+banner_alt: "UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code. Muestra pain.001 validada (Emiratos Árabes Unidos, raíl priority-payment)."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -9,18 +9,18 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-13T08:00:00+00:00"
-description: "UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code. Una muestra pain.001 validada (AE, raíl priority-payment), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
+date: "2026-11-14T08:00:00+00:00"
+description: "UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code. Muestra pain.001 validada (Emiratos Árabes Unidos, raíl priority-payment)."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: "es"
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/es/corpus-ae-uaefts-single/"
-image_alt: "UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code. Una muestra pain.001 validada (AE, raíl priority-payment), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
+image_alt: "UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code. Muestra pain.001 validada (Emiratos Árabes Unidos, raíl priority-payment)."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
-keywords: "ejemplo pain.001 AE, XML de muestra priority-payment, archivo de pago ISO 20022 AE, ae.uaefts.single, corpus pain001"
+keywords: "ejemplo pain.001 Emiratos Árabes Unidos, XML de muestra priority-payment, archivo de pago ISO 20022 Emiratos Árabes Unidos, ae.uaefts.single, corpus pain001"
 language: "es"
 layout: "page"
 locale: "es_ES"
@@ -39,21 +39,21 @@ short_name: pain001
 subtitle: "UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Ejemplo pain.001 ISO 20022 ae.uaefts.single: AE (priority-payment)"
+title: "Ejemplo pain.001: ae.uaefts.single (Emiratos Árabes Unidos)"
 url: "https://pain001.com/es/corpus-ae-uaefts-single/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/es/corpus-ae-uaefts-single/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.75)"
-item_description: "UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code. Una muestra pain.001 validada (AE, raíl priority-payment), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
+item_description: "UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code. Muestra pain.001 validada (Emiratos Árabes Unidos, raíl priority-payment)."
 item_guid: "https://pain001.com/es/corpus-ae-uaefts-single/"
 item_link: "https://pain001.com/es/corpus-ae-uaefts-single/"
-item_pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
-item_title: "Ejemplo pain.001 ISO 20022 ae.uaefts.single: AE (priority-payment)"
-last_build_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+item_pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
+item_title: "Ejemplo pain.001: ae.uaefts.single (Emiratos Árabes Unidos)"
+last_build_date: "Sat, 14 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -62,16 +62,16 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Ejemplo pain.001 ISO 20022 ae.uaefts.single: AE (priority-payment)"
+apple-mobile-web-app-title: "Ejemplo pain.001: ae.uaefts.single (Emiratos Árabes Unidos)"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code. Una muestra pain.001 validada (AE, raíl priority-payment), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
+twitter_description: "UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code. Muestra pain.001 validada (Emiratos Árabes Unidos, raíl priority-payment)."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Ejemplo pain.001 ISO 20022 ae.uaefts.single: AE (priority-payment)"
+twitter_title: "Ejemplo pain.001: ae.uaefts.single (Emiratos Árabes Unidos)"
 twitter_url: "https://pain001.com/es/corpus-ae-uaefts-single/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"
@@ -82,7 +82,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Corpus de ejemplos"
-excerpt: "UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code. Una muestra pain.001 validada (AE, raíl priority-payment), con su gemelo JSON ISO 20022 y su registro de procedencia; ejecútela en el navegador."
+excerpt: "UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code. Muestra pain.001 validada (Emiratos Árabes Unidos, raíl priority-payment)."
 last_reviewed: "2026-11-07"
 
 
@@ -92,7 +92,7 @@ Descripción del escenario, citada del registro de procedencia (texto original e
 
 > UAE domestic AED transfer through UAEFTS with the CBUAE regulatory reporting code.
 
-Un archivo de iniciación de pagos (**AE**, raíl **priority-payment**), entregado en `pain.001.001.03`, `pain.001.001.09`, generado y comprobado por pain001 0.0.87. Es un ejemplo sintético construido a partir de los reglamentos públicos de los esquemas de pago: no hay detrás ninguna parte real, ninguna cuenta real ni ninguna guía bancaria.
+Un archivo de iniciación de pagos (**Emiratos Árabes Unidos**, raíl **priority-payment**), entregado en `pain.001.001.03`, `pain.001.001.09`, generado y comprobado por pain001 0.0.87. Es un ejemplo sintético construido a partir de los reglamentos públicos de los esquemas de pago: no hay detrás ninguna parte real, ninguna cuenta real ni ninguna guía bancaria.
 
 ## Archivos
 

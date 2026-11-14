@@ -2,7 +2,7 @@
   "why": {
     "meta": {
       "title": "Warum Pain001: der Business Case in fünf Fragen",
-      "description": "Was eine abgelehnte Zahlungsdatei kostet, warum strukturierte Zahlungsdaten auch nach der Verschiebung durch Swift zählen, was Pain001 dagegen tut, was es kostet (nichts) und ob es sicher ist. Jede Antwort mit Beleg.",
+      "description": "Kosten einer abgelehnten Zahlungsdatei, warum strukturierte Daten trotz Swifts Aufschub zählen, was Pain001 tut, was es kostet (nichts), ob es sicher ist.",
       "eyebrow": "Der Business Case",
       "deck": "Die fünf Fragen, die ein CFO wirklich stellt, klar beantwortet, jede Aussage mit ihrem Beleg verknüpft."
     },
@@ -44,7 +44,7 @@
   "solutions": {
     "meta": {
       "title": "Für wen Pain001 gedacht ist",
-      "description": "Treasury, CFO und Vorstand, Zahlungsbetrieb, Engineering und KI: das Problem in Ihrem Vokabular, was Pain001 ändert und Ihr nächster Klick, in 150 Wörtern pro Rolle.",
+      "description": "Treasury, CFO und Vorstand, Zahlungsbetrieb, Engineering und KI: Ihr Problem, was Pain001 ändert und Ihr nächster Schritt, in 150 Wörtern pro Rolle.",
       "eyebrow": "Für wen es ist",
       "deck": "Vier Rollen, vier Vokabulare, eine Pipeline. Finden Sie Ihr Problem, dann Ihren nächsten Klick."
     },
@@ -77,7 +77,7 @@
   "executive-brief": {
     "meta": {
       "title": "Pain001 Kurzfassung für Entscheider",
-      "description": "Eine Seite für Entscheider: das Problem abgelehnter Dateien, die Anforderung strukturierter Adressen und ihr neuer Zeitplan, was Pain001 tut, was es kostet, die Sicherheitsbelege und die eine Bitte. Druckfertig.",
+      "description": "Eine Seite für Entscheider: abgelehnte Dateien, die Pflicht zu strukturierten Adressen und ihr Zeitplan, was Pain001 tut und kostet, Sicherheitsbelege.",
       "eyebrow": "Kurzfassung für Entscheider",
       "deck": "Eine Seite. Fünf Fakten. Eine Bitte. Auch auf Französisch, Deutsch und Spanisch verfügbar, druckfertig aus Ihrem Browser."
     },
@@ -121,7 +121,7 @@
   "pain-001": {
     "meta": {
       "title": "Was ist pain.001? Die ISO-20022-Überweisung erklärt",
-      "description": "pain.001 ist die ISO-20022-XML-Nachricht, mit der ein Unternehmen seine Bank mit Überweisungen beauftragt. Aufbau, Versionen .03 bis .13, ein validiertes Beispiel und der Unterschied zu pain.002, pain.008, pacs.008 und MT101.",
+      "description": "pain.001 ist die ISO-20022-XML-Nachricht, mit der Unternehmen ihre Bank mit Überweisungen beauftragen: Aufbau, Versionen .03 bis .13, Beispiel, pain.002.",
       "eyebrow": "ISO 20022 erklärt",
       "deck": "Die ISO-20022-Nachricht, mit der ein Unternehmen seine Bank mit Überweisungen beauftragt: was sie ist, wie sie aufgebaut ist, welche Version Sie verwenden, und ein vollständiges Beispiel, das gegen das offizielle Schema validiert."
     },
