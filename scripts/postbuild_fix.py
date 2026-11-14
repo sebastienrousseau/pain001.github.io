@@ -1638,11 +1638,11 @@ def stamp_package_count(html: str) -> str:
     tiles, one of which (the example corpus) is not a package, and an
     audit read it as a miscount. The heading now counts the tiles marked
     ``data-package`` instead, so adding or removing a package tile moves
-    it, and the corpus tile is never counted.
+    it; the corpus tile never counts, and a tile may name several packages.
     """
     if "data-package-count" not in html:
         return html
-    count = len(set(_PACKAGE_TILE_RE.findall(html)))
+    count = len({name for names in _PACKAGE_TILE_RE.findall(html) for name in names.split()})
     if not 0 < count < len(_NUMBER_WORDS):
         raise ValueError(f"package tile count {count} has no number word")
     return _PACKAGE_COUNT_RE.sub(rf"\g<1>{_NUMBER_WORDS[count]}\g<2>", html)

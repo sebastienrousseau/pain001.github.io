@@ -6,6 +6,15 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+### Added
+
+- List the five SDKs (Go, Java, Rust, .NET and C++) in "The Pain001 suite" on the homepage, as one tile linking each SDK's manual, and in the README component table. The suite heading counts every package a tile names, so it now reads "Ten focused packages".
+
+### Changed
+
+- Build with ssg 0.0.76, the latest release, in CI, regeneration and both release workflows.
+- `docs/ECOSYSTEM.md` lists every family repository: mockbank, plugin-template and fast were missing, and the five SDKs join them.
+
 ## [0.0.87] - 2026-11-12
 
 ### Added

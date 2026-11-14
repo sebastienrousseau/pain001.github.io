@@ -135,7 +135,8 @@ make deps      # audit npm advisories against the documented exceptions
 ## The Pain001 ecosystem
 
 This website joined the pain001 suite at 0.0.82. The core, companions,
-scaffold, native extension and website share one release version. The
+scaffold, native extension, website and the five SDKs (Go, Java, Rust,
+.NET and C++) share one release version. The
 package reference is in [`docs/ECOSYSTEM.md`](docs/ECOSYSTEM.md).
 
 | Component | Purpose | Use case |
@@ -149,6 +150,11 @@ package reference is in [`docs/ECOSYSTEM.md`](docs/ECOSYSTEM.md).
 | `pain001-plugin-template` | Cookiecutter source scaffold for an external loader | Start a new input-format loader |
 | `pain001-fast` | Experimental native validation helpers; source and wheels on GitHub | Try faster validation paths |
 | `pain001.com` | This website, documentation and browser demo | Evaluate the suite and try it in the browser |
+| `pain001-sdk-go` | Go client for the REST API, tested against the core's conformance kit in CI | Call a `pain001 serve` instance from Go |
+| `pain001-sdk-java` | Java client for the REST API, tested against the core's conformance kit in CI | Call a `pain001 serve` instance from Java |
+| `pain001-sdk-rust` | Rust client for the REST API, tested against the core's conformance kit in CI | Call a `pain001 serve` instance from Rust |
+| `pain001-sdk-dotnet` | .NET client for the REST API, tested against the core's conformance kit in CI | Call a `pain001 serve` instance from .NET |
+| `pain001-sdk-cpp` | C++ client for the REST API, tested against the core's conformance kit in CI | Call a `pain001 serve` instance from C++ |
 
 ---
 
