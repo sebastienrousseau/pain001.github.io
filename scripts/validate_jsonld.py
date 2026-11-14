@@ -14,7 +14,9 @@ Checks, against the built site/:
      offered at price 0, linked to the Organization and the Person;
   4. every Dataset description is 50 to 5000 characters, the range
      Google's Dataset rich result accepts, and its catalogue is an
-     includedInDataCatalog DataCatalog (isPartOf takes a CreativeWork).
+     includedInDataCatalog DataCatalog (isPartOf takes a CreativeWork);
+  5. a page that shows a breadcrumb trail of two or more items carries a
+     BreadcrumbList with one ListItem per item (scripts/breadcrumb_ld.py).
 """
 
 from __future__ import annotations
@@ -29,6 +31,7 @@ SITE = ROOT / "site"
 BLOCK_RE = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re.S)
 PERSON_ID = "https://sebastienrousseau.com/#person"
 DATASET_DESCRIPTION = (50, 5000)
+TRAIL_RE = re.compile(r'<nav class="breadcrumb"[^>]*>(.*?)</nav>', re.S)
 
 
 def blocks(html: str) -> list[str]:
@@ -59,6 +62,21 @@ def dataset_problems(rel: str, data) -> list[str]:
         if (node.get("isPartOf") or {}).get("@type") == "DataCatalog":
             problems.append(f"{rel}: Dataset isPartOf is a DataCatalog, not a CreativeWork")
     return problems
+
+
+def breadcrumb_problems(rel: str, html: str) -> list[str]:
+    """The visible trail and its BreadcrumbList agree on the item count."""
+    trail = TRAIL_RE.search(html)
+    shown = len(re.findall(r"<li\b", trail.group(1))) if trail else 0
+    if shown < 2:
+        return []
+    lists = [n for text in blocks(html) for n in nodes(json.loads(text)) if n.get("@type") == "BreadcrumbList"]
+    if len(lists) != 1:
+        return [f"{rel}: shows a breadcrumb trail but has {len(lists)} BreadcrumbList blocks, not 1"]
+    listed = len(lists[0].get("itemListElement") or [])
+    if listed != shown:
+        return [f"{rel}: BreadcrumbList has {listed} items, the trail shows {shown}"]
+    return []
 
 
 def page_problems(rel: str, html: str) -> list[str]:
@@ -104,7 +122,9 @@ def main() -> int:
     for page in pages:
         html = page.read_text(encoding="utf-8")
         count += len(blocks(html))
-        problems += page_problems(page.relative_to(SITE).as_posix(), html)
+        rel = page.relative_to(SITE).as_posix()
+        # A block that does not parse is reported once, not read again.
+        problems += page_problems(rel, html) or breadcrumb_problems(rel, html)
     problems += home_problems((SITE / "index.html").read_text(encoding="utf-8"), version)
     for problem in problems:
         print(problem, file=sys.stderr)

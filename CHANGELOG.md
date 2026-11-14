@@ -16,6 +16,7 @@ All notable changes to this website are documented here. The format follows
 - `docs/ECOSYSTEM.md` lists every family repository: mockbank, plugin-template and fast were missing, and the five SDKs join them.
 - Every corpus scenario's schema.org `Dataset` description is now 50 to 5000 characters, the range Google accepts: the one-line summary is followed by the message, country, rail and editions from the scenario's own records. Search Console reported "Invalid string length in field 'description'" on `/corpus-it-sepa-sct-single/`, and six other scenarios were as short. The direct-debit scenarios' `Dataset` name and keywords say `pain.008`, the message their files carry, instead of `pain.001`. `scripts/validate_jsonld.py` fails a build with a `Dataset` description outside that range.
 - The corpus scenario pages name their catalogue in `includedInDataCatalog`, where schema.org and Google read a `Dataset`'s `DataCatalog`. It sat in `isPartOf`, which takes a `CreativeWork`, and Search Console warned "Invalid object type for field 'isPartOf'" on seven pages. `scripts/validate_jsonld.py` checks both.
+- Pages that show a breadcrumb trail carry a schema.org `BreadcrumbList` again (699 pages, every locale). The layouts before the PRISM theme had one; the PRISM layouts kept the visible trail and dropped the markup, and Search Console's Breadcrumbs report fell to zero. `scripts/breadcrumb_ld.py` writes it from the trail each page shows, after translation, and `scripts/validate_jsonld.py` fails a page whose trail and list disagree.
 
 ## [0.0.87] - 2026-11-12
 

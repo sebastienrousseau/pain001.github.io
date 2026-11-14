@@ -288,7 +288,9 @@ and the snippet gate, and Chrome for the browser gates.
 `build.sh` takes a lock, then runs, in order: `scripts/traction.py` (PyPI and
 GitHub figures into the governance page), `ssg build`, `scripts/sbom_serial.py`
 (a deterministic `serialNumber` for the SBOM), `scripts/postbuild_fix.py` (the
-passes below), the `static/` copy, `postbuild_fix.py --optimise-assets` (one
+passes below), `scripts/breadcrumb_ld.py` (schema.org `BreadcrumbList` from
+each page's visible, translated breadcrumb trail), the `static/` copy,
+`postbuild_fix.py --optimise-assets` (one
 SRI-protected stylesheet bundle per layout, comments stripped from the site's
 own scripts), sample CSV generation, `postbuild_fix.py --stamp-sw`, and
 `scripts/carry_forward_assets.py`, then publishes the result to `site/`.
