@@ -6,6 +6,8 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.0.89] - Unreleased
+
 ## [0.0.88] - 2026-11-14
 
 ### Added
