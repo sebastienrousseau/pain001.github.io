@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-14T08:00:00+00:00"
+date: "2026-11-15T08:00:00+00:00"
 description: "Bacs Direct Debit collection, first and recurring, SUN as creditor id. Muestra pain.008 validada (Reino Unido, raíl bacs-direct-debit)."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Bacs Direct Debit collection, first and recurring, SUN as creditor id. Muestra pain.008 validada (Reino Unido, raíl bacs-direct-debit)."
 item_guid: "https://pain001.com/es/corpus-gb-bacs-dd-collection/"
 item_link: "https://pain001.com/es/corpus-gb-bacs-dd-collection/"
-item_pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
+item_pub_date: "Sun, 15 Nov 2026 08:00:00 +0000"
 item_title: "Ejemplo pain.008: gb.bacs-dd.collection (Reino Unido)"
-last_build_date: "Sat, 14 Nov 2026 08:00:00 +0000"
+last_build_date: "Sun, 15 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
+pub_date: "Sun, 15 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Descripción del escenario, citada del registro de procedencia (texto original e
 
 > Bacs Direct Debit collection, first and recurring, SUN as creditor id.
 
-Un archivo de iniciación de pagos (**Reino Unido**, raíl **bacs-direct-debit**), entregado en `pain.008.001.02`, `pain.008.001.08`, generado y comprobado por pain001 0.0.87. Es un ejemplo sintético construido a partir de los reglamentos públicos de los esquemas de pago: no hay detrás ninguna parte real, ninguna cuenta real ni ninguna guía bancaria.
+Un archivo de iniciación de pagos (**Reino Unido**, raíl **bacs-direct-debit**), entregado en `pain.008.001.02`, `pain.008.001.08`, generado y comprobado por pain001 0.0.88. Es un ejemplo sintético construido a partir de los reglamentos públicos de los esquemas de pago: no hay detrás ninguna parte real, ninguna cuenta real ni ninguna guía bancaria.
 
 ## Archivos
 

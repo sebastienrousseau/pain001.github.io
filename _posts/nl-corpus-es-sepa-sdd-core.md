@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-14T08:00:00+00:00"
+date: "2026-11-15T08:00:00+00:00"
 description: "SEPA Core direct debit, recurring, Spanish creditor identifier. Gevalideerd pain.008-voorbeeld (Spanje, rail sepa-direct-debit), met zijn herkomstrecord."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "SEPA Core direct debit, recurring, Spanish creditor identifier. Gevalideerd pain.008-voorbeeld (Spanje, rail sepa-direct-debit), met zijn herkomstrecord."
 item_guid: "https://pain001.com/nl/corpus-es-sepa-sdd-core/"
 item_link: "https://pain001.com/nl/corpus-es-sepa-sdd-core/"
-item_pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
+item_pub_date: "Sun, 15 Nov 2026 08:00:00 +0000"
 item_title: "pain.008-voorbeeld: es.sepa.sdd-core (Spanje)"
-last_build_date: "Sat, 14 Nov 2026 08:00:00 +0000"
+last_build_date: "Sun, 15 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
+pub_date: "Sun, 15 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Scenariobeschrijving, geciteerd uit het herkomstrecord (oorspronkelijke Engelse 
 
 > SEPA Core direct debit, recurring, Spanish creditor identifier.
 
-Een betaalinitiatiebestand (**Spanje**, rail **sepa-direct-debit**), geleverd in `pain.008.001.02`, `pain.008.001.08`, gegenereerd en gecontroleerd door pain001 0.0.87. Het is een synthetisch voorbeeld, opgebouwd uit de openbare rulebooks van de betaalschema's: geen echte partij, geen echte rekening en geen bankrichtlijn erachter.
+Een betaalinitiatiebestand (**Spanje**, rail **sepa-direct-debit**), geleverd in `pain.008.001.02`, `pain.008.001.08`, gegenereerd en gecontroleerd door pain001 0.0.88. Het is een synthetisch voorbeeld, opgebouwd uit de openbare rulebooks van de betaalschema's: geen echte partij, geen echte rekening en geen bankrichtlijn erachter.
 
 ## Bestanden
 

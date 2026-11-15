@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-14T08:00:00+00:00"
+date: "2026-11-15T08:00:00+00:00"
 description: "Bacs Direct Debit collection, first and recurring, SUN as creditor id. Exemple pain.008 validé (Royaume-Uni, rail bacs-direct-debit)."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Bacs Direct Debit collection, first and recurring, SUN as creditor id. Exemple pain.008 validé (Royaume-Uni, rail bacs-direct-debit)."
 item_guid: "https://pain001.com/fr/corpus-gb-bacs-dd-collection/"
 item_link: "https://pain001.com/fr/corpus-gb-bacs-dd-collection/"
-item_pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
+item_pub_date: "Sun, 15 Nov 2026 08:00:00 +0000"
 item_title: "Exemple pain.008 : gb.bacs-dd.collection (Royaume-Uni)"
-last_build_date: "Sat, 14 Nov 2026 08:00:00 +0000"
+last_build_date: "Sun, 15 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
+pub_date: "Sun, 15 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Description du scénario, citée depuis la fiche de provenance (texte original e
 
 > Bacs Direct Debit collection, first and recurring, SUN as creditor id.
 
-Un fichier d'initiation de paiement (**Royaume-Uni**, rail **bacs-direct-debit**), livré en `pain.008.001.02`, `pain.008.001.08`, généré et vérifié par pain001 0.0.87. C'est un exemple synthétique construit à partir des règles publiques des schémas de paiement : aucune partie réelle, aucun compte réel, aucune directive bancaire derrière lui.
+Un fichier d'initiation de paiement (**Royaume-Uni**, rail **bacs-direct-debit**), livré en `pain.008.001.02`, `pain.008.001.08`, généré et vérifié par pain001 0.0.88. C'est un exemple synthétique construit à partir des règles publiques des schémas de paiement : aucune partie réelle, aucun compte réel, aucune directive bancaire derrière lui.
 
 ## Fichiers
 

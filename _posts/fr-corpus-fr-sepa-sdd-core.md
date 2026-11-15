@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-14T08:00:00+00:00"
+date: "2026-11-15T08:00:00+00:00"
 description: "SEPA Core direct debit, recurring collection on an amended mandate. Exemple pain.008 validé (France, rail sepa-direct-debit), avec sa fiche de provenance."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "SEPA Core direct debit, recurring collection on an amended mandate. Exemple pain.008 validé (France, rail sepa-direct-debit), avec sa fiche de provenance."
 item_guid: "https://pain001.com/fr/corpus-fr-sepa-sdd-core/"
 item_link: "https://pain001.com/fr/corpus-fr-sepa-sdd-core/"
-item_pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
+item_pub_date: "Sun, 15 Nov 2026 08:00:00 +0000"
 item_title: "Exemple pain.008 : fr.sepa.sdd-core (France)"
-last_build_date: "Sat, 14 Nov 2026 08:00:00 +0000"
+last_build_date: "Sun, 15 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sat, 14 Nov 2026 08:00:00 +0000"
+pub_date: "Sun, 15 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Description du scénario, citée depuis la fiche de provenance (texte original e
 
 > SEPA Core direct debit, recurring collection on an amended mandate.
 
-Un fichier d'initiation de paiement (**France**, rail **sepa-direct-debit**), livré en `pain.008.001.02`, `pain.008.001.08`, généré et vérifié par pain001 0.0.87. C'est un exemple synthétique construit à partir des règles publiques des schémas de paiement : aucune partie réelle, aucun compte réel, aucune directive bancaire derrière lui.
+Un fichier d'initiation de paiement (**France**, rail **sepa-direct-debit**), livré en `pain.008.001.02`, `pain.008.001.08`, généré et vérifié par pain001 0.0.88. C'est un exemple synthétique construit à partir des règles publiques des schémas de paiement : aucune partie réelle, aucun compte réel, aucune directive bancaire derrière lui.
 
 ## Fichiers
 
