@@ -2,9 +2,9 @@
   "documentation": {
     "meta": {
       "title": "Pain001 Teknikal na Sanggunian: CLI, Python API at REST",
-      "description": "Kumpletong sanggunian para sa pain001 v0.0.87: mga CLI subcommand at flag, Python API, REST endpoint sa ilalim ng /api/v1, mga scheme rulebook, normalisasyon ng input, at plugin architecture.",
+      "description": "Sanggunian sa pain001 v0.0.88: CLI subcommand at flag, Python API, REST endpoint sa /api/v1, scheme rulebook, normalisasyon ng input at plugin.",
       "eyebrow": "Sanggunian",
-      "deck": "Bawat flag, endpoint, at gawi ng pain001 v0.0.87, na kinuha mula sa inilabas na code at hindi mula sa hangarin."
+      "deck": "Bawat flag, endpoint, at gawi ng pain001 v0.0.88, na kinuha mula sa inilabas na code at hindi mula sa hangarin."
     },
     "text": {
       "<a href=\"/\">Home</a>": "<a href=\"/\">Tahanan</a>",
@@ -16,7 +16,7 @@
       "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">Normalisasyon ng Input</a>",
       "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>",
       "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">Mga Quality Gate</a>",
-      "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.87</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Idinodokumento ng sanggunian na ito ang command-line interface, Python API, REST microservice, at validation pipeline para sa <strong>pain001 v0.0.87</strong>. Bawat flag, endpoint, at gawing nakalista rito ay kinuha mula sa inilabas na code, hindi mula sa hangarin.",
+      "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.88</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Idinodokumento ng sanggunian na ito ang command-line interface, Python API, REST microservice, at validation pipeline para sa <strong>pain001 v0.0.88</strong>. Bawat flag, endpoint, at gawing nakalista rito ay kinuha mula sa inilabas na code, hindi mula sa hangarin.",
       "Pain001 supports <strong>13 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> / <code>pain.008.001.08</code> (Customer Direct Debit Initiation).": "Sinusuportahan ng Pain001 ang <strong>13 ISO 20022 message definition</strong>: <code>pain.001.001.03</code> hanggang <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, labing-isang bersyon) at <code>pain.008.001.02</code> / <code>pain.008.001.08</code> (Customer Direct Debit Initiation).",
       "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
       "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "Pinapangkat ng <code>pain001</code> executable ang mga kakayahan nito sa mga subcommand. Kapag pinatakbo ito nang may mga generation flag lamang, tinatawag nito nang implicit ang <code>generate</code>, kaya patuloy na gumagana ang umiiral na automation.",
@@ -91,7 +91,7 @@
   "faqs": {
     "meta": {
       "title": "Pain001 FAQs para sa Treasury, Ops, Engineering at Audit",
-      "description": "Bakit tinatanggihan ng mga bangko ang mga payment file, pain.001 vs pain.008, ang requirement sa structured address, streaming ng malalaking batch, security posture, at reproducibility ng audit: sinagot nang malinaw.",
+      "description": "Bakit tinatanggihan ng bangko ang payment file, pain.001 vs pain.008, structured address, malalaking batch, security at reproducibility ng audit.",
       "eyebrow": "Mga Tanong",
       "deck": "Tuwirang mga sagot para sa mga treasurer, payment operations, inhinyero, at auditor, ayon sa aktwal na pagtatanong ng mga tao."
     },
@@ -157,7 +157,7 @@
   "installation": {
     "meta": {
       "title": "I-install ang Pain001: pip, Docker at Unang Validated na File",
-      "description": "I-install ang Pain001 suite sa Python 3.11+ sa pamamagitan ng pip o Docker, idagdag ang Excel at MT101 loader, at bumuo ng unang bank-ready na pain.001 file sa tatlong command.",
+      "description": "I-install ang Pain001 suite sa Python 3.11+ sa pip o Docker, idagdag ang Excel at MT101 loader, at bumuo ng bank-ready na pain.001 sa tatlong command.",
       "eyebrow": "Magsimula",
       "deck": "Python 3.11+, pip o Docker, at isang validated na payment file sa tatlong command."
     },
@@ -205,7 +205,7 @@
   "glossary": {
     "meta": {
       "title": "Glossary ng ISO 20022 na Pagbabayad sa Simpleng Wika",
-      "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, hybrid na address, control sum: ang bokabularyo ng pagbabayad na tinukoy para sa mga treasurer at operations team, hindi lamang sa mga developer.",
+      "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, hybrid na address at control sum: ang bokabularyo ng pagbabayad para sa mga treasury at operations team.",
       "eyebrow": "Glosaryo",
       "deck": "Ang bokabularyo ng pagbabayad sa simpleng wika, para sa mga taong pumipirma sa mga file at hindi lamang sa mga bumubuo ng mga ito."
     },

@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "Everything a developer needs to run pain001: install it from PyPI, call it as a library, CLI, REST API, MCP server or language server, and check payment files in CI."
+banner_alt: "Everything a developer needs to run pain001: install from PyPI, use it as a library, CLI, REST API, MCP or language server, and check payment files in CI."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -10,13 +10,13 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-11-10T08:00:00+00:00"
-description: "Everything a developer needs to run pain001: install it from PyPI, call it as a library, CLI, REST API, MCP server or language server, and check payment files in CI."
+description: "Everything a developer needs to run pain001: install from PyPI, use it as a library, CLI, REST API, MCP or language server, and check payment files in CI."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/developers/"
-image_alt: "Everything a developer needs to run pain001: install it from PyPI, call it as a library, CLI, REST API, MCP server or language server, and check payment files in CI."
+image_alt: "Everything a developer needs to run pain001: install from PyPI, use it as a library, CLI, REST API, MCP or language server, and check payment files in CI."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -46,7 +46,7 @@ atom_link: "https://pain001.com/developers/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.75)"
-item_description: "Everything a developer needs to run pain001: install it from PyPI, call it as a library, CLI, REST API, MCP server or language server, and check payment files in CI."
+item_description: "Everything a developer needs to run pain001: install from PyPI, use it as a library, CLI, REST API, MCP or language server, and check payment files in CI."
 item_guid: "https://pain001.com/developers/rss.xml"
 item_link: "https://pain001.com/developers/rss.xml"
 item_pub_date: "Tue, 10 Nov 2026 08:00:00 +0000"
@@ -67,7 +67,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Everything a developer needs to run pain001: install it from PyPI, call it as a library, CLI, REST API, MCP server or language server, and check payment files in CI."
+twitter_description: "Everything a developer needs to run pain001: install from PyPI, use it as a library, CLI, REST API, MCP or language server, and check payment files in CI."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
@@ -82,7 +82,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Developers"
-excerpt: "Everything a developer needs to run pain001: install it from PyPI, call it as a library, CLI, REST API, MCP server or language server, and check payment files in CI."
+excerpt: "Everything a developer needs to run pain001: install from PyPI, use it as a library, CLI, REST API, MCP or language server, and check payment files in CI."
 last_reviewed: "2026-11-10"
 
 ---

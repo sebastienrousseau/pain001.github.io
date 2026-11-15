@@ -2,9 +2,9 @@
  "documentation": {
   "meta": {
    "title": "Pain001: технический справочник CLI, Python API и REST",
-   "description": "Полный справочник pain001 v0.0.87: подкоманды и флаги CLI, Python API, REST-эндпоинты под /api/v1, своды правил схем, нормализация входных данных и архитектура плагинов.",
+   "description": "Справочник pain001 v0.0.88: подкоманды и флаги CLI, Python API, REST-эндпоинты под /api/v1, своды правил схем, нормализация входных данных и плагины.",
    "eyebrow": "Справочник",
-   "deck": "Каждый флаг, эндпоинт и поведение pain001 v0.0.87 взяты из выпущенного кода, а не из планов."
+   "deck": "Каждый флаг, эндпоинт и поведение pain001 v0.0.88 взяты из выпущенного кода, а не из планов."
   },
   "text": {
    "<a href=\"/\">Home</a>": "<a href=\"/\">Главная</a>",
@@ -16,7 +16,7 @@
    "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">Нормализация входных данных</a>",
    "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">Архитектура плагинов</a>",
    "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">Контроль качества</a>",
-   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.87</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Этот справочник описывает интерфейс командной строки, Python API, REST-микросервис и конвейер валидации для <strong>pain001 v0.0.87</strong>. Каждый флаг, эндпоинт и поведение, перечисленные здесь, взяты из выпущенного кода, а не из планов.",
+   "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.88</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Этот справочник описывает интерфейс командной строки, Python API, REST-микросервис и конвейер валидации для <strong>pain001 v0.0.88</strong>. Каждый флаг, эндпоинт и поведение, перечисленные здесь, взяты из выпущенного кода, а не из планов.",
    "Pain001 supports <strong>13 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> / <code>pain.008.001.08</code> (Customer Direct Debit Initiation).": "Pain001 поддерживает <strong>13 определений сообщений ISO 20022</strong>: от <code>pain.001.001.03</code> до <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, одиннадцать версий) и <code>pain.008.001.02</code> / <code>pain.008.001.08</code> (Customer Direct Debit Initiation).",
    "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. Интерфейс командной строки<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
    "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "Исполняемый файл <code>pain001</code> группирует функциональность по подкомандам. Запуск только с флагами генерации неявно вызывает <code>generate</code>, поэтому существующая автоматизация продолжает работать.",
@@ -91,7 +91,7 @@
  "faqs": {
   "meta": {
    "title": "Pain001: вопросы казначейства, операций и аудита",
-   "description": "Почему банки отклоняют платёжные файлы, pain.001 против pain.008, требование о структурированных адресах, потоковая обработка крупных пакетов, безопасность и воспроизводимость для аудита: простые ответы.",
+   "description": "Почему банки отклоняют платёжные файлы, pain.001 против pain.008, структурированные адреса, крупные пакеты, безопасность и аудит: простые ответы.",
    "eyebrow": "Вопросы",
    "deck": "Прямые ответы для казначеев, платёжных операций, инженеров и аудиторов, сформулированные так, как их действительно задают."
   },
@@ -157,7 +157,7 @@
  "installation": {
   "meta": {
    "title": "Установка Pain001: pip, Docker и первый файл",
-   "description": "Установите набор Pain001 на Python 3.11+ через pip или Docker, добавьте загрузчики Excel и MT101 и получите первый готовый для банка файл pain.001 за три команды.",
+   "description": "Установите набор Pain001 на Python 3.11+ через pip или Docker, добавьте загрузчики Excel и MT101 и получите первый файл pain.001 для банка за три команды.",
    "eyebrow": "Начало работы",
    "deck": "Python 3.11+, pip или Docker, и проверенный платёжный файл за три команды."
   },
@@ -205,7 +205,7 @@
  "glossary": {
   "meta": {
    "title": "Глоссарий платежей ISO 20022 простым языком",
-   "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, гибридные адреса, контрольные суммы: платёжная лексика для казначеев и операционных команд, а не только разработчиков.",
+   "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, гибридные адреса, контрольные суммы: платёжная лексика для казначейских и операционных команд.",
    "eyebrow": "Глоссарий",
    "deck": "Платёжная лексика простым языком для тех, кто подписывает файлы, а не только для тех, кто их генерирует."
   },

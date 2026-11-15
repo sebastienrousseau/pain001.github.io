@@ -2,7 +2,7 @@
   "why": {
     "meta": {
       "title": "Por qué Pain001: el caso de negocio en cinco preguntas",
-      "description": "Qué cuesta un fichero de pago rechazado, por qué los datos de pago estructurados siguen importando ahora que Swift ha aplazado su plazo, qué hace Pain001 al respecto, qué cuesta (nada) y si es seguro. Cada respuesta, con su prueba.",
+      "description": "El coste de un fichero rechazado, por qué los datos estructurados importan pese al aplazamiento de Swift, qué hace Pain001, su coste (nada) y su seguridad.",
       "eyebrow": "El caso de negocio",
       "deck": "Las cinco preguntas que un CFO hace de verdad, respondidas con claridad, cada afirmación enlazada a su evidencia."
     },
@@ -77,7 +77,7 @@
   "executive-brief": {
     "meta": {
       "title": "Resumen ejecutivo de Pain001",
-      "description": "Una página para decisores: el problema de los ficheros rechazados, el requisito de direcciones estructuradas y su nuevo calendario, qué hace Pain001, su coste, la evidencia de seguridad y la única petición. Lista para imprimir.",
+      "description": "Una página para decisores: ficheros rechazados, el requisito de direcciones estructuradas y su calendario, qué hace y cuesta Pain001, pruebas de seguridad.",
       "eyebrow": "Resumen ejecutivo",
       "deck": "Una página. Cinco hechos. Una petición. Disponible también en francés, alemán y español, lista para imprimir desde su navegador."
     },
@@ -121,7 +121,7 @@
   "pain-001": {
     "meta": {
       "title": "Qué es pain.001: iniciación de transferencias ISO 20022",
-      "description": "pain.001 es el mensaje XML ISO 20022 que una empresa envía a su banco para ordenar transferencias. Estructura, versiones .03 a .13, un ejemplo validado y sus diferencias con pain.002, pain.008, pacs.008 y MT101.",
+      "description": "pain.001 es el mensaje XML ISO 20022 con el que una empresa ordena transferencias a su banco: estructura, versiones .03 a .13, ejemplo validado y pain.002.",
       "eyebrow": "ISO 20022, explicado",
       "deck": "El mensaje ISO 20022 que una empresa envía a su banco para ordenar transferencias: qué es, cómo se estructura, qué versión usar y un ejemplo completo que valida contra el esquema oficial."
     },

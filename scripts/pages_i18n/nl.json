@@ -2,7 +2,7 @@
   "why": {
     "meta": {
       "title": "Waarom Pain001: de businesscase in vijf vragen",
-      "description": "Wat een geweigerd betaalbestand kost, waarom gestructureerde betaalgegevens er nog steeds toe doen nu Swift zijn deadline heeft uitgesteld, wat Pain001 eraan doet, wat het kost (niets) en of het veilig is. Elk antwoord met bewijs.",
+      "description": "Wat een geweigerd betaalbestand kost, waarom gestructureerde data na Swifts uitstel tellen, wat Pain001 doet, wat het kost (niets) en of het veilig is.",
       "eyebrow": "De businesscase",
       "deck": "De vijf vragen die een CFO werkelijk stelt, beantwoord in klare taal, elke claim gekoppeld aan het bewijs."
     },
@@ -77,7 +77,7 @@
   "executive-brief": {
     "meta": {
       "title": "Pain001 managementsamenvatting",
-      "description": "Eén pagina voor beslissers: het probleem van geweigerde bestanden, de eis van gestructureerde adressen en de nieuwe planning daarvan, wat Pain001 doet en kost, het veiligheidsbewijs en de ene vraag. Printklaar.",
+      "description": "Eén pagina voor beslissers: geweigerde bestanden, de eis van gestructureerde adressen en de planning, wat Pain001 doet en kost, en het veiligheidsbewijs.",
       "eyebrow": "Managementsamenvatting",
       "deck": "Eén pagina. Vijf feiten. Eén vraag. Ook beschikbaar in het Frans, Duits en Spaans, printklaar vanuit uw browser."
     },
@@ -121,7 +121,7 @@
   "pain-001": {
     "meta": {
       "title": "Wat is pain.001? ISO 20022-initiatie van overboekingen",
-      "description": "pain.001 is het ISO 20022-XML-bericht waarmee een bedrijf zijn bank opdracht geeft tot overboekingen. De structuur, versies .03 tot .13, een gevalideerd voorbeeld en het verschil met pain.002, pain.008, pacs.008 en MT101.",
+      "description": "pain.001 is het ISO 20022-XML-bericht waarmee een bedrijf zijn bank overboekingen opdraagt: structuur, versies .03 tot .13, een voorbeeld en pain.002.",
       "eyebrow": "ISO 20022 uitgelegd",
       "deck": "Het ISO 20022-bericht waarmee een bedrijf zijn bank opdracht geeft tot overboekingen: wat het is, hoe het is opgebouwd, welke versie u gebruikt en een volledig voorbeeld dat valideert tegen het officiële schema."
     },

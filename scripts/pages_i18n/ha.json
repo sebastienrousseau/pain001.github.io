@@ -2,7 +2,7 @@
   "why": {
     "meta": {
       "title": "Dalilin Pain001: Hujjar Kasuwanci cikin Tambayoyi Biyar",
-      "description": "Abin da fayil ɗin biyan kuɗi da aka ƙi ke kashewa, dalilin da ya sa bayanan biyan kuɗi masu tsari ke da muhimmanci har yanzu bayan Swift ta ɗage wa'adinta, abin da Pain001 ke yi, kuɗinsa (babu), da ko yana da aminci. Kowace amsa na da hujjarta.",
+      "description": "Kuɗin fayil ɗin biya da aka ƙi, dalilin da bayanai masu tsari ke da muhimmanci duk da Swift ta ɗage wa'adinta, aikin Pain001, kuɗinsa (babu), amincinsa.",
       "eyebrow": "Hujjar kasuwanci",
       "deck": "Tambayoyi biyar da CFO ke yi na gaske, an amsa su cikin sauƙaƙƙen harshe, kuma kowace magana na da hanyar haɗi zuwa shaidarta."
     },
@@ -44,7 +44,7 @@
   "solutions": {
     "meta": {
       "title": "Waɗanda Pain001 Ya Dace Da Su",
-      "description": "Baitulmali, CFO da kwamitin gudanarwa, ayyukan biyan kuɗi, injiniyanci da AI: matsalar cikin kalmominku, abin da Pain001 ke canzawa, da matakinku na gaba, cikin kalmomi 150 ga kowane matsayi.",
+      "description": "Baitulmali, CFO da kwamiti, ayyukan biyan kuɗi, injiniyanci da AI: matsalarku, abin da Pain001 ke canzawa, matakinku na gaba, kalmomi 150 ga kowane aiki.",
       "eyebrow": "Waɗanda ya dace da su",
       "deck": "Matsayi huɗu, kalmomi huɗu, bututun aiki ɗaya. Ku nemo matsalarku, sannan matakinku na gaba."
     },
@@ -77,7 +77,7 @@
   "executive-brief": {
     "meta": {
       "title": "Taƙaitaccen Bayanin Pain001 ga Shugabanni",
-      "description": "Shafi ɗaya ga masu yanke shawara: matsalar fayil da aka ƙi, buƙatar adireshi mai tsari da sabon lokacinta, abin da Pain001 ke yi, kuɗinsa, shaidar aminci, da roƙo guda. Shirye don bugawa.",
+      "description": "Shafi ɗaya ga masu yanke shawara: matsalar fayil da aka ƙi, buƙatar adireshi mai tsari da lokacinta, abin da Pain001 ke yi da kuɗinsa, da shaidar aminci.",
       "eyebrow": "Bayani ga shugabanni",
       "deck": "Shafi ɗaya. Gaskiya biyar. Roƙo guda. Akwai kuma cikin Faransanci, Jamusanci, da Sifaniyanci, shirye don bugawa daga burauzarku."
     },
@@ -121,7 +121,7 @@
   "pain-001": {
     "meta": {
       "title": "Mene ne pain.001? Saƙon ISO 20022 na fara canja wurin kuɗi",
-      "description": "pain.001 shi ne saƙon XML na ISO 20022 da kamfani ke aika wa bankinsa don ba da umarnin canja wurin kuɗi. Tsarinsa, sigogi daga .03 zuwa .13, misali da aka tabbatar, da bambancinsa da pain.002, pain.008, pacs.008 da MT101.",
+      "description": "pain.001 saƙon XML na ISO 20022 ne da kamfani ke aika wa bankinsa don canja wurin kuɗi: tsarinsa, sigogi .03 zuwa .13, misali da aka tabbatar, da pain.002.",
       "eyebrow": "An bayyana ISO 20022",
       "deck": "Saƙon ISO 20022 da kamfani ke aika wa bankinsa don ba da umarnin canja wurin kuɗi: menene shi, yadda aka gina shi, wace siga za a yi amfani da ita, da cikakken misali da ya wuce ingancin tsarin hukuma."
     },

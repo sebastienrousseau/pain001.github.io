@@ -2,7 +2,7 @@
   "why": {
     "meta": {
       "title": "Proč Pain001: obchodní případ v pěti otázkách",
-      "description": "Kolik stojí odmítnutý platební soubor, proč na strukturovaných platebních datech záleží i poté, co Swift odložil svůj termín, co s tím dělá Pain001, kolik stojí (nic) a zda je bezpečný, přičemž každá odpověď odkazuje na svůj důkaz.",
+      "description": "Kolik stojí odmítnutý platební soubor, proč na strukturovaných datech záleží i po odkladu Swiftu, co dělá Pain001, kolik stojí (nic) a zda je bezpečný.",
       "eyebrow": "Obchodní případ",
       "deck": "Pět otázek, které si CFO skutečně klade, zodpovězeno srozumitelně, každé tvrzení propojeno s důkazem."
     },
@@ -77,7 +77,7 @@
   "executive-brief": {
     "meta": {
       "title": "Shrnutí pro vedení Pain001",
-      "description": "Jedna stránka pro rozhodovatele: problém odmítnutých souborů, požadavek na strukturované adresy a jeho nový harmonogram, co Pain001 dělá, kolik stojí, důkazy o bezpečnosti a jedna prosba. Připraveno k tisku.",
+      "description": "Jedna stránka pro rozhodovatele: odmítnuté soubory, požadavek na strukturované adresy a jeho termín, co Pain001 dělá a stojí, důkazy o bezpečnosti.",
       "eyebrow": "Shrnutí pro vedení",
       "deck": "Jedna strana. Pět faktů. Jedna žádost. K dispozici také ve francouzštině, němčině a španělštině, k tisku přímo z prohlížeče."
     },
@@ -121,7 +121,7 @@
   "pain-001": {
     "meta": {
       "title": "Co je pain.001? Převodní příkaz ISO 20022 vysvětlen",
-      "description": "pain.001 je XML zpráva ISO 20022, kterou firma posílá své bance k zadání převodů. Struktura, verze .03 až .13, ověřený příklad a rozdíl oproti pain.002, pain.008, pacs.008 a MT101.",
+      "description": "pain.001 je XML zpráva ISO 20022, kterou firma posílá své bance k zadání převodů: struktura, verze .03 až .13, ověřený příklad a pain.002.",
       "eyebrow": "ISO 20022 vysvětleno",
       "deck": "Zpráva ISO 20022, kterou firma posílá své bance k zadání převodů: co to je, jak je sestavena, kterou verzi použít a úplný příklad, který projde validací proti oficiálnímu schématu."
     },

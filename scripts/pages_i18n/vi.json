@@ -2,7 +2,7 @@
   "why": {
     "meta": {
       "title": "Vì sao chọn Pain001: luận cứ kinh doanh qua 5 câu hỏi",
-      "description": "Một tệp thanh toán bị từ chối tốn kém bao nhiêu, vì sao dữ liệu thanh toán có cấu trúc vẫn quan trọng khi Swift đã hoãn hạn chót, Pain001 làm gì, chi phí (bằng không) và độ an toàn. Mỗi câu trả lời đều kèm bằng chứng.",
+      "description": "Tệp thanh toán bị từ chối tốn bao nhiêu, vì sao dữ liệu có cấu trúc vẫn quan trọng khi Swift đã hoãn hạn, Pain001 làm gì, chi phí (bằng không), độ an toàn.",
       "eyebrow": "Luận cứ kinh doanh",
       "deck": "Năm câu hỏi mà một CFO thực sự đặt ra, được trả lời bằng ngôn ngữ dễ hiểu, mỗi khẳng định đều kèm liên kết tới bằng chứng."
     },
@@ -44,7 +44,7 @@
   "solutions": {
     "meta": {
       "title": "Pain001 dành cho ai",
-      "description": "Ngân quỹ, CFO và hội đồng quản trị, vận hành thanh toán, kỹ thuật và AI: vấn đề bằng ngôn ngữ của bạn, Pain001 thay đổi gì, và cú nhấp tiếp theo, trong 150 từ mỗi vai trò.",
+      "description": "Ngân quỹ, CFO và hội đồng quản trị, vận hành thanh toán, kỹ thuật và AI: vấn đề theo cách của bạn, Pain001 thay đổi gì, bước tiếp theo, 150 từ mỗi vai trò.",
       "eyebrow": "Dành cho ai",
       "deck": "Bốn vai trò, bốn bộ từ vựng, một quy trình. Hãy tìm vấn đề của bạn, rồi đến cú nhấp tiếp theo."
     },
@@ -77,7 +77,7 @@
   "executive-brief": {
     "meta": {
       "title": "Bản tóm tắt điều hành Pain001",
-      "description": "Một trang cho người ra quyết định: vấn đề tệp bị từ chối, yêu cầu địa chỉ có cấu trúc và thời hạn mới của nó, Pain001 làm gì, chi phí, bằng chứng an toàn và một đề nghị duy nhất, sẵn sàng in.",
+      "description": "Một trang cho người ra quyết định: tệp bị từ chối, yêu cầu địa chỉ có cấu trúc và thời hạn, Pain001 làm gì và chi phí bao nhiêu, cùng bằng chứng an toàn.",
       "eyebrow": "Tóm tắt điều hành",
       "deck": "Một trang. Năm sự thật. Một đề nghị. Có bản tiếng Pháp, tiếng Đức và tiếng Tây Ban Nha, sẵn sàng in từ trình duyệt của bạn."
     },
@@ -121,7 +121,7 @@
   "pain-001": {
     "meta": {
       "title": "pain.001 là gì? Thông điệp khởi tạo chuyển khoản ISO 20022",
-      "description": "pain.001 là thông điệp XML ISO 20022 mà doanh nghiệp gửi ngân hàng để ra lệnh chuyển khoản. Cấu trúc, các phiên bản từ .03 đến .13, một ví dụ đã được kiểm định và điểm khác biệt với pain.002, pain.008, pacs.008 và MT101.",
+      "description": "pain.001 là thông điệp XML ISO 20022 doanh nghiệp gửi ngân hàng để ra lệnh chuyển khoản: cấu trúc, phiên bản .03 đến .13, ví dụ đã kiểm định và pain.002.",
       "eyebrow": "Giải thích ISO 20022",
       "deck": "Thông điệp ISO 20022 mà doanh nghiệp gửi ngân hàng để ra lệnh chuyển khoản: nó là gì, được cấu trúc ra sao, nên dùng phiên bản nào, và một ví dụ đầy đủ hợp lệ theo lược đồ chính thức."
     },

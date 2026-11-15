@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-09-21T08:00:00+00:00"
-description: "A practical ISO 20022 compliance hub: current pain.001 guidance, regional rulebooks, schemas, validated examples, audit evidence, migration paths, integrations, and community support."
+description: "An ISO 20022 compliance hub: current pain.001 guidance, regional rulebooks, schemas, validated examples, audit evidence, migration paths and integrations."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
@@ -110,7 +110,7 @@ Use the [browser validator and message builder](/try/) for a same-origin,
 local demonstration, or install the CLI for repeatable pipeline gates:
 
 ```sh
-pip install pain001==0.0.87
+pip install pain001==0.0.88
 pain001 -t pain.001.001.09 -d payments.csv --scheme sepa-sct --dry-run
 ```
 
@@ -168,7 +168,7 @@ For each controlled run, retain a manifest similar to this:
 ```json
 {
   "tool": "pain001",
-  "tool_version": "0.0.87",
+  "tool_version": "0.0.88",
   "message": "pain.001.001.09",
   "scheme": "sepa-sct",
   "input_sha256": "<sha256>",

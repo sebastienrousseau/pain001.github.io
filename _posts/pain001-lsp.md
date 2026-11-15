@@ -10,7 +10,7 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Language Server Protocol support for payment JSON: live schema validation, IBAN/BIC diagnostics, completion, hover docs, and quick fixes in VS Code, Neovim, Helix, Emacs."
+description: "Language server for payment JSON: live schema validation, IBAN and BIC diagnostics, completion, hover docs and quick fixes in VS Code, Neovim, Helix and Emacs."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
@@ -46,7 +46,7 @@ atom_link: "https://pain001.com/pain001-lsp/rss.xml"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.75)"
-item_description: "Language Server Protocol support for payment JSON: live schema validation, IBAN/BIC diagnostics, completion, hover docs, and quick fixes in VS Code, Neovim, Helix, Emacs."
+item_description: "Language server for payment JSON: live schema validation, IBAN and BIC diagnostics, completion, hover docs and quick fixes in VS Code, Neovim, Helix and Emacs."
 item_guid: "https://pain001.com/pain001-lsp/rss.xml"
 item_link: "https://pain001.com/pain001-lsp/rss.xml"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -67,7 +67,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Language Server Protocol support for payment JSON: live schema validation, IBAN/BIC diagnostics, completion, hover docs, and quick fixes in VS Code, Neovim, Helix, Emacs."
+twitter_description: "Language server for payment JSON: live schema validation, IBAN and BIC diagnostics, completion, hover docs and quick fixes in VS Code, Neovim, Helix and Emacs."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
@@ -87,7 +87,7 @@ last_reviewed: "2026-11-07"
 
 ---
 
-**`pain001-lsp` v0.0.87** is a Language Server Protocol implementation for payment-data authoring. It validates payment JSON against ISO 20022 message schemas as you type in VS Code, Neovim, Helix, Emacs, or any LSP-compliant editor.
+**`pain001-lsp` v0.0.88** is a Language Server Protocol implementation for payment-data authoring. It validates payment JSON against ISO 20022 message schemas as you type in VS Code, Neovim, Helix, Emacs, or any LSP-compliant editor.
 
 A malformed batch discovered at the bank gateway costs a repair cycle, a cut-off time, and sometimes a settlement day. The same error discovered as a red squiggle while typing costs nothing. That is the entire premise.
 

@@ -20,6 +20,7 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
+from spec_text import types_description  # sibling module; scripts/ is on sys.path
 
 HERE = Path(__file__).resolve().parent
 DATA = HERE / "message_specs"
@@ -370,8 +371,7 @@ def render_types_chunked(payload: dict) -> list[str]:
             # The span of type names stays in the subtitle and description;
             # in the title it made a 120-character H1 that wrapped three lines.
             f"{v} type reference{part}",
-            f"Complex types {span} in ISO 20022 {v}, with elements, "
-            f"cardinality and constraints, generated from the official XSD.",
+            types_description(span, v),
             "Message specification",
             f"Types {span} in {v}, defined once each. This is the view to use "
             "for field mapping.",
@@ -560,9 +560,9 @@ def render_hub(specs: dict, index: dict) -> None:
     fm = load_frontmatter(
         "message-specs",
         "pain.001 and pain.008 XSD Element Reference, All Versions",
-        "Complete element references for every supported ISO 20022 "
+        "Element references for every supported ISO 20022 "
         "payment-initiation version: paths, cardinality, types, constraints "
-        "and code lists, generated from the official schemas.",
+        "and code lists from the official schemas.",
         "Message specification",
         "Element paths, cardinality, data types and code lists for every "
         "supported pain.001 and pain.008 version, generated rather than "

@@ -2,9 +2,9 @@
   "documentation": {
     "meta": {
       "title": "Referência técnica do Pain001: CLI, API Python e REST",
-      "description": "Referência completa do pain001 v0.0.87: subcomandos e flags da CLI, API Python, endpoints REST em /api/v1, rulebooks de esquema, normalização de entrada e arquitetura de plugins.",
+      "description": "Referência do pain001 v0.0.88: subcomandos e flags da CLI, API Python, endpoints REST em /api/v1, rulebooks de esquema, normalização de entrada e plugins.",
       "eyebrow": "Referência",
-      "deck": "Cada flag, endpoint e comportamento do pain001 v0.0.87, extraídos do código entregue, não de aspirações."
+      "deck": "Cada flag, endpoint e comportamento do pain001 v0.0.88, extraídos do código entregue, não de aspirações."
     },
     "text": {
       "<a href=\"/\">Home</a>": "<a href=\"/\">Início</a>",
@@ -16,7 +16,7 @@
       "<a href=\"#4-input-normalisation\">Input Normalisation</a>": "<a href=\"#4-input-normalisation\">Normalização de entrada</a>",
       "<a href=\"#5-plugin-architecture\">Plugin Architecture</a>": "<a href=\"#5-plugin-architecture\">Arquitetura de plugins</a>",
       "<a href=\"#6-quality-gates\">Quality Gates</a>": "<a href=\"#6-quality-gates\">Portões de qualidade</a>",
-      "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.87</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Esta referência documenta a interface de linha de comando, a API Python, o microsserviço REST e o pipeline de validação do <strong>pain001 v0.0.87</strong>. Cada flag, endpoint e comportamento listado aqui foi extraído do código entregue, não de aspirações.",
+      "This reference documents the command-line interface, Python API, REST microservice, and validation pipeline for <strong>pain001 v0.0.88</strong>. Every flag, endpoint, and behaviour listed here is taken from the shipped code, not from aspiration.": "Esta referência documenta a interface de linha de comando, a API Python, o microsserviço REST e o pipeline de validação do <strong>pain001 v0.0.88</strong>. Cada flag, endpoint e comportamento listado aqui foi extraído do código entregue, não de aspirações.",
       "Pain001 supports <strong>13 ISO 20022 message definitions</strong>: <code>pain.001.001.03</code> through <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, eleven versions) and <code>pain.008.001.02</code> / <code>pain.008.001.08</code> (Customer Direct Debit Initiation).": "O Pain001 suporta <strong>13 definições de mensagem ISO 20022</strong>: de <code>pain.001.001.03</code> a <code>pain.001.001.13</code> (Customer Credit Transfer Initiation, onze versões) e <code>pain.008.001.02</code> / <code>pain.008.001.08</code> (Customer Direct Debit Initiation).",
       "1. Command-Line Interface<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>": "1. Interface de linha de comando<a class=\"heading-anchor\" href=\"#1-command-line-interface\" aria-label=\"Link to section: 1. Command-Line Interface\">#</a>",
       "The <code>pain001</code> executable groups its functionality into subcommands. Running it with only generation flags invokes <code>generate</code> implicitly, so existing automation keeps working.": "O executável <code>pain001</code> agrupa suas funcionalidades em subcomandos. Executá-lo apenas com flags de geração invoca <code>generate</code> implicitamente, de modo que a automação existente continua funcionando.",
@@ -91,7 +91,7 @@
   "faqs": {
     "meta": {
       "title": "FAQs do Pain001 para tesouraria, operações e auditoria",
-      "description": "Por que bancos rejeitam arquivos de pagamento, pain.001 vs pain.008, a exigência de endereços estruturados, streaming de lotes grandes, postura de segurança e reprodutibilidade de auditoria, com respostas diretas.",
+      "description": "Por que bancos rejeitam arquivos de pagamento, pain.001 vs pain.008, endereços estruturados, lotes grandes, segurança e auditoria reproduzível, direto.",
       "eyebrow": "Perguntas",
       "deck": "Respostas diretas para tesoureiros, operações de pagamento, engenheiros e auditores, formuladas do jeito que as pessoas realmente perguntam."
     },
@@ -157,7 +157,7 @@
   "installation": {
     "meta": {
       "title": "Instale o Pain001: pip, Docker e primeiro arquivo válido",
-      "description": "Instale a suíte Pain001 no Python 3.11+ via pip ou Docker, adicione os loaders de Excel e MT101 e produza seu primeiro arquivo pain.001 pronto para o banco em três comandos.",
+      "description": "Instale a suíte Pain001 no Python 3.11+ via pip ou Docker, adicione os loaders de Excel e MT101 e gere seu primeiro arquivo pain.001 em três comandos.",
       "eyebrow": "Primeiros passos",
       "deck": "Python 3.11+, pip ou Docker, e um arquivo de pagamento validado em três comandos."
     },
@@ -205,7 +205,7 @@
   "glossary": {
     "meta": {
       "title": "Glossário de pagamentos ISO 20022 em linguagem clara",
-      "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, endereços híbridos, somas de controle: o vocabulário de pagamentos para tesoureiros e equipes de operações, não só desenvolvedores.",
+      "description": "pain.001, pacs.008, camt.053, CBPR+, VoP, UETR, endereços híbridos, somas de controle: o vocabulário de pagamentos para tesoureiros e equipes de operações.",
       "eyebrow": "Glossário",
       "deck": "O vocabulário de pagamentos em linguagem clara, para quem aprova os arquivos, não só para quem os gera."
     },

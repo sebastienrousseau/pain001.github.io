@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "Generated pain.001 and pain.008 files that between them use every element path and choice branch of each supported schema edition, each named after what it adds, with a zip per edition."
+banner_alt: "Generated pain.001 and pain.008 files that together use every element path and choice branch of each supported schema edition, with a zip per edition."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -9,14 +9,14 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-13T08:00:00+00:00"
-description: "Generated pain.001 and pain.008 files that between them use every element path and choice branch of each supported schema edition, each named after what it adds, with a zip per edition."
+date: "2026-11-15T08:00:00+00:00"
+description: "Generated pain.001 and pain.008 files that together use every element path and choice branch of each supported schema edition, with a zip per edition."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/example-corpus-coverage/"
-image_alt: "Generated pain.001 and pain.008 files that between them use every element path and choice branch of each supported schema edition, each named after what it adds, with a zip per edition."
+image_alt: "Generated pain.001 and pain.008 files that together use every element path and choice branch of each supported schema edition, with a zip per edition."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -46,14 +46,14 @@ atom_link: "https://pain001.com/example-corpus-coverage/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.75)"
-item_description: "Generated pain.001 and pain.008 files that between them use every element path and choice branch of each supported schema edition, each named after what it adds, with a zip per edition."
+item_description: "Generated pain.001 and pain.008 files that together use every element path and choice branch of each supported schema edition, with a zip per edition."
 item_guid: "https://pain001.com/example-corpus-coverage/"
 item_link: "https://pain001.com/example-corpus-coverage/"
-item_pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+item_pub_date: "Sun, 15 Nov 2026 08:00:00 +0000"
 item_title: "ISO 20022 schema coverage files: every element of every edition"
-last_build_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+last_build_date: "Sun, 15 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Fri, 13 Nov 2026 08:00:00 +0000"
+pub_date: "Sun, 15 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -67,7 +67,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Generated pain.001 and pain.008 files that between them use every element path and choice branch of each supported schema edition, each named after what it adds, with a zip per edition."
+twitter_description: "Generated pain.001 and pain.008 files that together use every element path and choice branch of each supported schema edition, with a zip per edition."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
@@ -82,7 +82,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Example corpus"
-excerpt: "Generated pain.001 and pain.008 files that between them use every element path and choice branch of each supported schema edition, each named after what it adds, with a zip per edition."
+excerpt: "Generated pain.001 and pain.008 files that together use every element path and choice branch of each supported schema edition, with a zip per edition."
 last_reviewed: "2026-11-07"
 
 
@@ -98,7 +98,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.001.001.03
 
-10 files. [Download the set](/corpus/pain001-coverage-pain.001.001.03-0.0.87.zip) (10 KB).
+10 files. [Download the set](/corpus/pain001-coverage-pain.001.001.03-0.0.88.zip) (10 KB).
 
 | File | What it is for |
 | :--- | :--- |
@@ -115,7 +115,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.001.001.04
 
-10 files. [Download the set](/corpus/pain001-coverage-pain.001.001.04-0.0.87.zip) (10 KB).
+10 files. [Download the set](/corpus/pain001-coverage-pain.001.001.04-0.0.88.zip) (10 KB).
 
 | File | What it is for |
 | :--- | :--- |
@@ -132,7 +132,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.001.001.05
 
-10 files. [Download the set](/corpus/pain001-coverage-pain.001.001.05-0.0.87.zip) (10 KB).
+10 files. [Download the set](/corpus/pain001-coverage-pain.001.001.05-0.0.88.zip) (10 KB).
 
 | File | What it is for |
 | :--- | :--- |
@@ -149,7 +149,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.001.001.06
 
-10 files. [Download the set](/corpus/pain001-coverage-pain.001.001.06-0.0.87.zip) (11 KB).
+10 files. [Download the set](/corpus/pain001-coverage-pain.001.001.06-0.0.88.zip) (11 KB).
 
 | File | What it is for |
 | :--- | :--- |
@@ -166,7 +166,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.001.001.07
 
-10 files. [Download the set](/corpus/pain001-coverage-pain.001.001.07-0.0.87.zip) (11 KB).
+10 files. [Download the set](/corpus/pain001-coverage-pain.001.001.07-0.0.88.zip) (11 KB).
 
 | File | What it is for |
 | :--- | :--- |
@@ -183,7 +183,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.001.001.08
 
-10 files. [Download the set](/corpus/pain001-coverage-pain.001.001.08-0.0.87.zip) (11 KB).
+10 files. [Download the set](/corpus/pain001-coverage-pain.001.001.08-0.0.88.zip) (11 KB).
 
 | File | What it is for |
 | :--- | :--- |
@@ -200,7 +200,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.001.001.09
 
-11 files. [Download the set](/corpus/pain001-coverage-pain.001.001.09-0.0.87.zip) (13 KB).
+11 files. [Download the set](/corpus/pain001-coverage-pain.001.001.09-0.0.88.zip) (13 KB).
 
 | File | What it is for |
 | :--- | :--- |
@@ -218,7 +218,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.001.001.10
 
-11 files. [Download the set](/corpus/pain001-coverage-pain.001.001.10-0.0.87.zip) (13 KB).
+11 files. [Download the set](/corpus/pain001-coverage-pain.001.001.10-0.0.88.zip) (13 KB).
 
 | File | What it is for |
 | :--- | :--- |
@@ -236,7 +236,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.001.001.11
 
-11 files. [Download the set](/corpus/pain001-coverage-pain.001.001.11-0.0.87.zip) (13 KB).
+11 files. [Download the set](/corpus/pain001-coverage-pain.001.001.11-0.0.88.zip) (13 KB).
 
 | File | What it is for |
 | :--- | :--- |
@@ -254,7 +254,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.001.001.12
 
-11 files. [Download the set](/corpus/pain001-coverage-pain.001.001.12-0.0.87.zip) (13 KB).
+11 files. [Download the set](/corpus/pain001-coverage-pain.001.001.12-0.0.88.zip) (13 KB).
 
 | File | What it is for |
 | :--- | :--- |
@@ -272,7 +272,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.001.001.13
 
-11 files. [Download the set](/corpus/pain001-coverage-pain.001.001.13-0.0.87.zip) (14 KB).
+11 files. [Download the set](/corpus/pain001-coverage-pain.001.001.13-0.0.88.zip) (14 KB).
 
 | File | What it is for |
 | :--- | :--- |
@@ -290,7 +290,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.008.001.02
 
-8 files. [Download the set](/corpus/pain001-coverage-pain.008.001.02-0.0.87.zip) (10 KB).
+8 files. [Download the set](/corpus/pain001-coverage-pain.008.001.02-0.0.88.zip) (10 KB).
 
 | File | What it is for |
 | :--- | :--- |
@@ -305,7 +305,7 @@ The [example corpus](/example-corpus/) page has the realistic payment files and 
 
 ## pain.008.001.08
 
-8 files. [Download the set](/corpus/pain001-coverage-pain.008.001.08-0.0.87.zip) (12 KB).
+8 files. [Download the set](/corpus/pain001-coverage-pain.008.001.08-0.0.88.zip) (12 KB).
 
 | File | What it is for |
 | :--- | :--- |

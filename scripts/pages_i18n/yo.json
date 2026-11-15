@@ -2,7 +2,7 @@
   "why": {
     "meta": {
       "title": "Ìdí Pain001: Ẹ̀rí Ìṣòwò nínú Ìbéèrè Márùn-ún",
-      "description": "Ohun tí fáìlì ìsanwó tí a kọ̀ ń ná, ìdí tí dátà ìsanwó onígbékalẹ̀ ṣì fi ṣe pàtàkì nísinsìnyí tí Swift ti sún ọjọ́ gbèdéke rẹ̀ síwájú, ohun tí Pain001 ń ṣe, iye tí ó ń ná (òfo), àti bóyá ó ní ààbò. Ìdáhùn kọ̀ọ̀kan ní ẹ̀rí rẹ̀.",
+      "description": "Ohun tí fáìlì ìsanwó tí a kọ̀ ń ná, ìdí tí dátà onígbékalẹ̀ ṣì fi ṣe pàtàkì lẹ́yìn tí Swift sún un síwájú, ohun tí Pain001 ń ṣe, iye (òfo) àti ààbò rẹ̀.",
       "eyebrow": "Ẹ̀rí ìṣòwò",
       "deck": "Ìbéèrè márùn-ún tí CFO ń béèrè ní tòótọ́, tí a dáhùn wọ́n ní èdè tí ó yé ni, gbogbo ọ̀rọ̀ ní ìsopọ̀ sí ẹ̀rí rẹ̀."
     },
@@ -44,7 +44,7 @@
   "solutions": {
     "meta": {
       "title": "Àwọn Tí Pain001 Wà Fún",
-      "description": "Ìṣúra, CFO àti ìgbìmọ̀, iṣẹ́ ìsanwó, iṣẹ́ ẹ̀rọ àti AI: ìṣòro náà ní èdè yín, ohun tí Pain001 ń yí padà, àti ìgbésẹ̀ yín tí ó kàn, nínú ọ̀rọ̀ 150 fún ipò kọ̀ọ̀kan.",
+      "description": "Ìṣúra, CFO àti ìgbìmọ̀, iṣẹ́ ìsanwó, iṣẹ́ ẹ̀rọ àti AI: ìṣòro náà ní èdè yín, ohun tí Pain001 ń yí padà, àti ìgbésẹ̀ tí ó kàn, ọ̀rọ̀ 150 fún ipò kọ̀ọ̀kan.",
       "eyebrow": "Àwọn tí ó wà fún",
       "deck": "Ipò mẹ́rin, èdè mẹ́rin, ọ̀nà iṣẹ́ kan ṣoṣo. Ẹ wá ìṣòro yín, kí ẹ sì wá ìgbésẹ̀ yín tí ó kàn."
     },
@@ -77,7 +77,7 @@
   "executive-brief": {
     "meta": {
       "title": "Ìsọfúnni Aláṣẹ Pain001",
-      "description": "Ojúewé kan fún àwọn olùpinnu: ìṣòro fáìlì tí a kọ̀, ohun tí a béèrè fún àdírẹ́sì onígbékalẹ̀ àti àkókò tuntun rẹ̀, ohun tí Pain001 ń ṣe, iye rẹ̀, ẹ̀rí ààbò, àti ìbéèrè kan ṣoṣo. Ó ṣe tán fún títẹ̀.",
+      "description": "Ojúewé kan fún àwọn olùpinnu: fáìlì tí a kọ̀, òfin àdírẹ́sì onígbékalẹ̀ àti àkókò rẹ̀, ohun tí Pain001 ń ṣe, iye rẹ̀, àti ẹ̀rí ààbò.",
       "eyebrow": "Ìsọfúnni aláṣẹ",
       "deck": "Ojúewé kan. Òtítọ́ márùn-ún. Ìbéèrè kan. Ó tún wà ní Faransé, Jámánì, àti Sípáníìṣì, ó sì ṣe tán fún títẹ̀ láti inú aṣàwákiri yín."
     },
@@ -121,7 +121,7 @@
   "pain-001": {
     "meta": {
       "title": "Kí ni pain.001? Ìránṣẹ́ ìbẹ̀rẹ̀ ìfiránṣẹ́ owó ISO 20022",
-      "description": "pain.001 ni ìránṣẹ́ XML ISO 20022 tí ilé-iṣẹ́ kan ń fi ránṣẹ́ sí báńkì rẹ̀ láti pàṣẹ ìfiránṣẹ́ owó. Ìgbékalẹ̀ rẹ̀, àwọn ẹ̀yà .03 sí .13, àpẹẹrẹ tí a ti fọwọ́sí, àti bí ó ṣe yàtọ̀ sí pain.002, pain.008, pacs.008 àti MT101.",
+      "description": "pain.001 ni ìránṣẹ́ XML ISO 20022 tí ilé-iṣẹ́ ń fi ránṣẹ́ sí báńkì láti pàṣẹ ìfiránṣẹ́ owó: ìgbékalẹ̀, ẹ̀yà .03 sí .13, àpẹẹrẹ tí a fọwọ́sí àti pain.002.",
       "eyebrow": "ISO 20022 explained",
       "deck": "The ISO 20022 message a company sends its bank to order credit transfers: what it is, how it is built, which version to use, and a complete example that validates against the official schema."
     },

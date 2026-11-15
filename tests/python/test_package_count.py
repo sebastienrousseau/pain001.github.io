@@ -30,6 +30,12 @@ def test_the_heading_counts_package_tiles_only():
     assert "<span data-package-count>Six</span>" in html
 
 
+def test_one_tile_can_name_several_packages():
+    """The SDK tile names five packages; each counts once, repeats do not."""
+    html = pb.stamp_package_count(_home(["a", "b c d", "b"]))
+    assert "<span data-package-count>Four</span>" in html
+
+
 def test_a_page_without_the_heading_is_untouched():
     assert pb.stamp_package_count("<p>no heading</p>") == "<p>no heading</p>"
 
@@ -41,11 +47,17 @@ def test_no_package_tiles_is_an_error():
 
 def test_the_layout_marks_exactly_the_published_packages():
     layout = (ROOT / "_layouts" / "index.html").read_text(encoding="utf-8")
-    assert sorted(pb._PACKAGE_TILE_RE.findall(layout)) == [
+    names = [n for tile in pb._PACKAGE_TILE_RE.findall(layout) for n in tile.split()]
+    assert sorted(names) == [
         "pain001",
         "pain001-loader-mt101",
         "pain001-loader-xlsx",
         "pain001-lsp",
         "pain001-mcp",
+        "pain001-sdk-cpp",
+        "pain001-sdk-dotnet",
+        "pain001-sdk-go",
+        "pain001-sdk-java",
+        "pain001-sdk-rust",
     ]
     assert "data-package-count" in layout

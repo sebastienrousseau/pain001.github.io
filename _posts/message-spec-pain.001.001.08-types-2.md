@@ -1,6 +1,6 @@
 ---
 author: "contact@pain001.com (Sebastien Rousseau)"
-banner_alt: "Complex types Garnishment1 – StructuredRegulatoryReporting3 in ISO 20022 pain.001.001.08, with elements, cardinality and constraints, generated from the official XSD."
+banner_alt: "Complex types Garnishment1 – StructuredRegulatoryReporting3 in ISO 20022 pain.001.001.08: elements, cardinality and constraints from the official XSD."
 banner_height: 500
 banner_width: 1200
 banner: "https://pain001.com/og/pain001-card.jpg"
@@ -10,13 +10,13 @@ charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
 date: "2026-07-26T08:00:00+00:00"
-description: "Complex types Garnishment1 – StructuredRegulatoryReporting3 in ISO 20022 pain.001.001.08, with elements, cardinality and constraints, generated from the official XSD."
+description: "Complex types Garnishment1 – StructuredRegulatoryReporting3 in ISO 20022 pain.001.001.08: elements, cardinality and constraints from the official XSD."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
 hreflang: en
 icon: "https://pain001.com/img/pain001.svg"
 id: "https://pain001.com/message-spec-pain.001.001.08-types-2/"
-image_alt: "Complex types Garnishment1 – StructuredRegulatoryReporting3 in ISO 20022 pain.001.001.08, with elements, cardinality and constraints, generated from the official XSD."
+image_alt: "Complex types Garnishment1 – StructuredRegulatoryReporting3 in ISO 20022 pain.001.001.08: elements, cardinality and constraints from the official XSD."
 image_height: 120
 image_width: 120
 image: "https://pain001.com/img/pain001.svg"
@@ -46,7 +46,7 @@ atom_link: "https://pain001.com/message-spec-pain.001.001.08-types-2/"
 category: Technology
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Static Site Generator (SSG) (version 0.0.75)"
-item_description: "Complex types Garnishment1 – StructuredRegulatoryReporting3 in ISO 20022 pain.001.001.08, with elements, cardinality and constraints, generated from the official XSD."
+item_description: "Complex types Garnishment1 – StructuredRegulatoryReporting3 in ISO 20022 pain.001.001.08: elements, cardinality and constraints from the official XSD."
 item_guid: "https://pain001.com/message-spec-pain.001.001.08-types-2/"
 item_link: "https://pain001.com/message-spec-pain.001.001.08-types-2/"
 item_pub_date: "Sun, 26 Jul 2026 08:00:00 +0000"
@@ -67,7 +67,7 @@ apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
 twitter_creator: "@wwdseb"
-twitter_description: "Complex types Garnishment1 – StructuredRegulatoryReporting3 in ISO 20022 pain.001.001.08, with elements, cardinality and constraints, generated from the official XSD."
+twitter_description: "Complex types Garnishment1 – StructuredRegulatoryReporting3 in ISO 20022 pain.001.001.08: elements, cardinality and constraints from the official XSD."
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
@@ -82,7 +82,7 @@ site_standards: "ISO 20022, WCAG 2.2 AAA, SWIFT CBPR+, W3C HTML5, CSS3, RSS, Ato
 site_components: "Pain001 Core, pain001-mcp, pain001-lsp, loader-mt101, loader-xlsx"
 site_software: "Static Site Generator (SSG), Python 3.12, Rust, FastMCP, PyGLS"
 eyebrow: "Message specification"
-excerpt: "Complex types Garnishment1 – StructuredRegulatoryReporting3 in ISO 20022 pain.001.001.08, with elements, cardinality and constraints, generated from the official XSD."
+excerpt: "Complex types Garnishment1 – StructuredRegulatoryReporting3 in ISO 20022 pain.001.001.08: elements, cardinality and constraints from the official XSD."
 last_reviewed: "2026-07-26"
 
 

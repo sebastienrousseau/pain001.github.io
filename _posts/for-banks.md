@@ -40,7 +40,7 @@ short_name: pain001
 subtitle: "Free, open source and run entirely on your own infrastructure. The evidence your risk, security and procurement teams ask for, in one download."
 tags: "ISO 20022, pain001, payments, python, banking, CBPR+, SEPA"
 theme_color: "#0b0e14"
-title: "Pain001 for banks: everything your review needs, without a sales call"
+title: "Pain001 for banks: what your review needs, without a sales call"
 url: "https://pain001.com/for-banks/"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://pain001.com/for-banks/"
@@ -51,7 +51,7 @@ item_description: "Free, open source and run entirely on your own infrastructure
 item_guid: "https://pain001.com/for-banks/"
 item_link: "https://pain001.com/for-banks/"
 item_pub_date: "Tue, 10 Nov 2026 08:00:00 +0000"
-item_title: "Pain001 for banks: everything your review needs, without a sales call"
+item_title: "Pain001 for banks: what your review needs, without a sales call"
 last_build_date: "Tue, 10 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
 pub_date: "Tue, 10 Nov 2026 08:00:00 +0000"
@@ -63,7 +63,7 @@ apple_touch_icon_sizes: 192x192
 apple-mobile-web-app-capable: yes
 apple-mobile-web-app-status-bar-inset: black
 apple-mobile-web-app-status-bar-style: black-translucent
-apple-mobile-web-app-title: "Pain001 for banks: everything your review needs, without a sales call"
+apple-mobile-web-app-title: "Pain001 for banks: what your review needs, without a sales call"
 apple-touch-fullscreen: yes
 msapplication-navbutton-color: "rgb(2, 132, 199)"
 twitter_card: summary_large_image
@@ -72,7 +72,7 @@ twitter_description: "Free, open source and run entirely on your own infrastruct
 twitter_image: "https://pain001.com/og/pain001-card.jpg"
 twitter_image_alt: "Pain001 Logo"
 twitter_site: "@wwdseb"
-twitter_title: "Pain001 for banks: everything your review needs, without a sales call"
+twitter_title: "Pain001 for banks: what your review needs, without a sales call"
 twitter_url: "https://pain001.com/for-banks/"
 author_website: "https://sebastienrousseau.com"
 author_twitter: "@wwdseb"

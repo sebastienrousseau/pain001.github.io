@@ -2,7 +2,7 @@
   "why": {
     "meta": {
       "title": "De ce Pain001: argumentul de business în 5 întrebări",
-      "description": "Cât costă un fișier de plată respins, de ce datele de plată structurate contează în continuare acum că Swift și-a amânat termenul, ce face Pain001 în această privință, cât costă (nimic) și dacă este sigur, fiecare răspuns cu dovada sa.",
+      "description": "Cât costă un fișier de plată respins, de ce datele structurate contează după amânarea Swift, ce face Pain001, cât costă (nimic) și dacă este sigur.",
       "eyebrow": "Argumentul de business",
       "deck": "Cele cinci întrebări pe care un CFO le pune cu adevărat, cu răspunsuri clare și fiecare afirmație legată de dovada ei."
     },
@@ -77,7 +77,7 @@
   "executive-brief": {
     "meta": {
       "title": "Rezumat executiv Pain001",
-      "description": "O pagină pentru factorii de decizie: problema fișierelor respinse, cerința privind adresele structurate și noul ei calendar, ce face Pain001, cât costă, dovezile de siguranță și singura solicitare. Gata de tipărit.",
+      "description": "O pagină pentru decidenți: fișierele respinse, cerința privind adresele structurate și calendarul ei, ce face Pain001, cât costă, dovezi de siguranță.",
       "eyebrow": "Rezumat executiv",
       "deck": "O pagină. Cinci fapte. O cerere. Disponibil și în franceză, germană și spaniolă. Se poate tipări direct din browserul dumneavoastră."
     },
@@ -121,7 +121,7 @@
   "pain-001": {
     "meta": {
       "title": "Ce este pain.001? Inițierea transferurilor în ISO 20022",
-      "description": "pain.001 este mesajul XML ISO 20022 prin care o companie dispune băncii transferuri de credit. Structura, versiunile .03–.13, un exemplu validat și diferențele față de pain.002, pain.008, pacs.008 și MT101.",
+      "description": "pain.001 este mesajul XML ISO 20022 prin care o companie dispune băncii transferuri de credit: structura, versiunile .03–.13, exemplu validat și pain.002.",
       "eyebrow": "ISO 20022 pe înțeles",
       "deck": "Mesajul ISO 20022 prin care o companie dispune băncii transferuri de credit: ce este, cum este construit, ce versiune să folosești și un exemplu complet care se validează față de schema oficială."
     },

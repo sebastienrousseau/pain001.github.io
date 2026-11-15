@@ -2,7 +2,7 @@
   "why": {
     "meta": {
       "title": "Neden Pain001: Beş Soruda Ticari Gerekçe",
-      "description": "Reddedilen bir ödeme dosyasının maliyeti, Swift son tarihini ertelemişken yapılandırılmış ödeme verisinin neden hâlâ önemli olduğu, Pain001’in ne yaptığı, maliyeti (sıfır) ve güvenli olup olmadığı. Her yanıt kanıtına bağlı.",
+      "description": "Reddedilen ödeme dosyasının maliyeti, Swift ertelemesine rağmen yapılandırılmış verinin önemi, Pain001’in ne yaptığı, maliyeti (sıfır) ve güvenliği.",
       "eyebrow": "İş gerekçesi",
       "deck": "Bir CFO’nun gerçekten sorduğu beş soru, sade bir dille yanıtlanmış, her iddia kanıtına bağlanmış."
     },
@@ -44,7 +44,7 @@
   "solutions": {
     "meta": {
       "title": "Pain001 kimin için?",
-      "description": "Hazine, CFO ve yönetim kurulu, ödeme operasyonları, mühendislik ve AI: sorun sizin dilinizle, Pain001’in değiştirdikleri ve sonraki tıklamanız; rol başına 150 kelime.",
+      "description": "Hazine, CFO ve yönetim kurulu, ödeme operasyonları, mühendislik, AI: sorununuz, Pain001’in değiştirdikleri, sonraki adım, rol başına 150 kelime.",
       "eyebrow": "Kimin için",
       "deck": "Dört rol, dört dil, tek hat. Önce sorununuzu, sonra bir sonraki tıklamanızı bulun."
     },
@@ -77,7 +77,7 @@
   "executive-brief": {
     "meta": {
       "title": "Pain001 Yönetici Özeti",
-      "description": "Karar vericiler için tek sayfa: reddedilen dosya sorunu, yapılandırılmış adres gerekliliği ve yeni takvimi, Pain001’in yaptıkları, maliyeti, güvenlik kanıtları ve tek talep. Yazdırmaya hazır.",
+      "description": "Karar vericiler için tek sayfa: reddedilen dosyalar, yapılandırılmış adres gerekliliği ve takvimi, Pain001’in yaptıkları, maliyeti ve güvenlik kanıtları.",
       "eyebrow": "Yönetici özeti",
       "deck": "Tek sayfa. Beş gerçek. Tek talep. Fransızca, Almanca ve İspanyolca olarak da mevcut ve tarayıcınızdan yazdırmaya hazır."
     },
@@ -121,7 +121,7 @@
   "pain-001": {
     "meta": {
       "title": "pain.001 nedir? ISO 20022 kredi transferi başlatma mesajı",
-      "description": "pain.001, bir şirketin kredi transferi talimatı vermek için bankasına gönderdiği ISO 20022 XML mesajıdır. Yapısı, .03 ile .13 arası sürümleri, doğrulanmış bir örnek ve pain.002, pain.008, pacs.008 ve MT101'den farkları.",
+      "description": "pain.001, şirketin kredi transferi talimatı için bankaya gönderdiği ISO 20022 XML mesajıdır: yapısı, .03–.13 sürümleri, doğrulanmış örnek, pain.002.",
       "eyebrow": "ISO 20022 açıklaması",
       "deck": "Bir şirketin kredi transferi talimatı vermek için bankasına gönderdiği ISO 20022 mesajı: nedir, nasıl yapılandırılır, hangi sürüm kullanılır ve resmi şemaya göre doğrulanan eksiksiz bir örnek."
     },
