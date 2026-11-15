@@ -123,7 +123,7 @@ The `pain001` executable groups its functionality into subcommands. Running it w
 | `-c, --config <FILE>` | Load defaults from a configuration profile (`--profile`, `--show-config`). |
 | `--dry-run` (alias `--validate-only`) | Validate input against the JSON Schema, XSD, and scheme rulebook without writing output. |
 | `--scheme <NAME[,NAME]>` | Enforce one or more scheme rulebooks, comma-separated. `pain001 plugins list` names every installed rulebook. |
-| `--explain --scheme-format {text,json}` | With `--scheme`, print a remediation hint for each violation, as text or JSON. |
+| `--explain` / `--format json` | With `--scheme`, print a remediation hint for each violation, as text or JSON. |
 | `--rules <FILE>` | Enforce a private YAML CEL policy before generation (requires the `rules` extra). |
 | `--schematron <PRESET or FILE>` | Apply Schematron business rules: the `sepa`, `fednow` or `cbpr` preset, or your own `.sch` file. |
 | `--decrypt-key <FILE>` / `--decrypt-passphrase-env <VAR>` | Import a GPG private key, and name the variable that holds its passphrase, for `.gpg` / `.asc` input (requires the `gpg` extra). |

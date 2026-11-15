@@ -8,6 +8,14 @@ All notable changes to this website are documented here. The format follows
 
 ## [0.0.89] - Unreleased
 
+### Changed
+
+- The CLI reference lists `--explain` / `--format json` instead of
+  `--explain --scheme-format {text,json}`: pain001 0.0.89 removes the
+  deprecated `--scheme-format` flag, and with `--format json` each
+  violation's remediation hint is in the JSON. The row's description is
+  unchanged, so its 34 translations still apply.
+
 ## [0.0.88] - 2026-11-14
 
 ### Added
