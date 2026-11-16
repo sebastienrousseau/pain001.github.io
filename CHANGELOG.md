@@ -15,6 +15,10 @@ All notable changes to this website are documented here. The format follows
   deprecated `--scheme-format` flag, and with `--format json` each
   violation's remediation hint is in the JSON. The row's description is
   unchanged, so its 34 translations still apply.
+- The CLI reference lists `versions [--format json]` and
+  `inspect <type> [--format json]`: pain001 0.0.89 removes `--json` on
+  `versions`, `inspect` and `plugins list`, and passing it exits 2 with
+  "No such option".
 
 ## [0.0.88] - 2026-11-14
 

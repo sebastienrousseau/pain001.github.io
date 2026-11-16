@@ -103,8 +103,8 @@ The `pain001` executable groups its functionality into subcommands. Running it w
 | `validate` | Validate input data without writing XML. |
 | `check <file>... [--scheme] [--format]` | Check pain.001 or pain.008 files you already have: the XSD of the message type each file declares, the message definition's cross-element rules, and any scheme profiles, policy or Schematron rulebook you name. |
 | `verify-signature <file>... --cert <PEM>` | Verify the XML-DSig signature on each file against the signer's certificate or public key; `--trust-embedded-cert` checks integrity only (requires the `sign` extra). |
-| `versions [--json]` | List all 13 supported message definitions. |
-| `inspect <type> [--json]` | Show the bundled template, schema, example data and accepted input formats for a message type. |
+| `versions [--format json]` | List all 13 supported message definitions. |
+| `inspect <type> [--format json]` | Show the bundled template, schema, example data and accepted input formats for a message type. |
 | `init <type> [-o FILE]` | Scaffold a starter CSV template for a message type. |
 | `serve [--host] [--port] [--reload]` | Launch the FastAPI REST microservice (requires the `api` extra). |
 | `mcp` | Launch the core library's built-in Model Context Protocol server over stdio (requires the `mcp` extra); the full server ships as [`pain001-mcp`](/pain001-mcp/). |
