@@ -88,13 +88,17 @@ last_reviewed: "2026-11-10"
 ---
 The core repository is a GitHub Action. It installs pain001 from the tag you pin, checks the files, uploads the findings to code scanning as SARIF, and fails the job when a file does not pass.
 
+<!-- action:start -->
+The action is named **ISO 20022 Payment File Check (pain001)**, and its `action.yml` describes it as: Validate ISO 20022 pain.001 and pain.008 payment XML (SEPA, CBPR+, FedNow) against XSD, rules and scheme profiles. SARIF.
+<!-- action:end -->
+
 ```yaml
 permissions:
   contents: read
   security-events: write   # for the SARIF upload
 steps:
   - uses: actions/checkout@<sha>
-  - uses: sebastienrousseau/pain001@v0.0.89
+  - uses: sebastienrousseau/pain001@v0.0.90
     with:
       files: "payments/**/*.xml"
       scheme: sepa-sct
