@@ -92,7 +92,7 @@ Descrizione dello scenario, citata dal record di provenienza (testo originale in
 
 > SEPA Core direct debit, recurring, Spanish creditor identifier.
 
-Un file di disposizione di pagamento (**Spagna**, circuito **sepa-direct-debit**), fornito in `pain.008.001.02`, `pain.008.001.08`, generato e verificato da pain001 0.0.89. È un esempio sintetico costruito dai regolamenti pubblici degli schemi di pagamento: nessuna parte reale, nessun conto reale, nessuna linea guida bancaria dietro di esso.
+Un file di disposizione di pagamento (**Spagna**, circuito **sepa-direct-debit**), fornito in `pain.008.001.02`, `pain.008.001.08`, generato e verificato da pain001 0.0.90. È un esempio sintetico costruito dai regolamenti pubblici degli schemi di pagamento: nessuna parte reale, nessun conto reale, nessuna linea guida bancaria dietro di esso.
 
 ## File
 
