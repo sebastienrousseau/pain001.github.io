@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-15T08:00:00+00:00"
+date: "2026-11-16T08:00:00+00:00"
 description: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Gevalideerd pain.001-voorbeeld (Hongkong, rail instant-payment)."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Hong Kong FPS credit in HKD, clearing codes and account numbers. Gevalideerd pain.001-voorbeeld (Hongkong, rail instant-payment)."
 item_guid: "https://pain001.com/nl/corpus-hk-fps-single/"
 item_link: "https://pain001.com/nl/corpus-hk-fps-single/"
-item_pub_date: "Sun, 15 Nov 2026 08:00:00 +0000"
+item_pub_date: "Mon, 16 Nov 2026 08:00:00 +0000"
 item_title: "pain.001-voorbeeld: hk.fps.single (Hongkong)"
-last_build_date: "Sun, 15 Nov 2026 08:00:00 +0000"
+last_build_date: "Mon, 16 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sun, 15 Nov 2026 08:00:00 +0000"
+pub_date: "Mon, 16 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Scenariobeschrijving, geciteerd uit het herkomstrecord (oorspronkelijke Engelse 
 
 > Hong Kong FPS credit in HKD, clearing codes and account numbers.
 
-Een betaalinitiatiebestand (**Hongkong**, rail **instant-payment**), geleverd in `pain.001.001.03`, `pain.001.001.09`, gegenereerd en gecontroleerd door pain001 0.0.88. Het is een synthetisch voorbeeld, opgebouwd uit de openbare rulebooks van de betaalschema's: geen echte partij, geen echte rekening en geen bankrichtlijn erachter.
+Een betaalinitiatiebestand (**Hongkong**, rail **instant-payment**), geleverd in `pain.001.001.03`, `pain.001.001.09`, gegenereerd en gecontroleerd door pain001 0.0.89. Het is een synthetisch voorbeeld, opgebouwd uit de openbare rulebooks van de betaalschema's: geen echte partij, geen echte rekening en geen bankrichtlijn erachter.
 
 ## Bestanden
 

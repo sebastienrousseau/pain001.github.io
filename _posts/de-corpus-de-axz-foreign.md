@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-15T08:00:00+00:00"
+date: "2026-11-16T08:00:00+00:00"
 description: "Foreign payment in USD from a German account, DK order type AXZ. Validierte pain.001-Beispieldatei (Deutschland, Schiene cross-border)."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Foreign payment in USD from a German account, DK order type AXZ. Validierte pain.001-Beispieldatei (Deutschland, Schiene cross-border)."
 item_guid: "https://pain001.com/de/corpus-de-axz-foreign/"
 item_link: "https://pain001.com/de/corpus-de-axz-foreign/"
-item_pub_date: "Sun, 15 Nov 2026 08:00:00 +0000"
+item_pub_date: "Mon, 16 Nov 2026 08:00:00 +0000"
 item_title: "pain.001-Beispiel: de.axz.foreign (Deutschland)"
-last_build_date: "Sun, 15 Nov 2026 08:00:00 +0000"
+last_build_date: "Mon, 16 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sun, 15 Nov 2026 08:00:00 +0000"
+pub_date: "Mon, 16 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Szenariobeschreibung, zitiert aus dem Provenienzdatensatz (englischer Originalte
 
 > Foreign payment in USD from a German account, DK order type AXZ.
 
-Eine Zahlungsinitiierungsdatei (**Deutschland**, Schiene **cross-border**), ausgeliefert in `pain.001.001.03`, `pain.001.001.09`, erzeugt und geprüft von pain001 0.0.88. Es handelt sich um ein synthetisches Beispiel aus den öffentlichen Regelwerken der Zahlungssysteme: keine reale Partei, kein reales Konto und keine Bankrichtlinie dahinter.
+Eine Zahlungsinitiierungsdatei (**Deutschland**, Schiene **cross-border**), ausgeliefert in `pain.001.001.03`, `pain.001.001.09`, erzeugt und geprüft von pain001 0.0.89. Es handelt sich um ein synthetisches Beispiel aus den öffentlichen Regelwerken der Zahlungssysteme: keine reale Partei, kein reales Konto und keine Bankrichtlinie dahinter.
 
 ## Dateien
 

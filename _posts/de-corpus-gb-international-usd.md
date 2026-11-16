@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-15T08:00:00+00:00"
+date: "2026-11-16T08:00:00+00:00"
 description: "USD cross-border payment from a UK account to a US supplier. Validierte pain.001-Beispieldatei (Vereinigtes Königreich, Schiene priority-payment)."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "USD cross-border payment from a UK account to a US supplier. Validierte pain.001-Beispieldatei (Vereinigtes Königreich, Schiene priority-payment)."
 item_guid: "https://pain001.com/de/corpus-gb-international-usd/"
 item_link: "https://pain001.com/de/corpus-gb-international-usd/"
-item_pub_date: "Sun, 15 Nov 2026 08:00:00 +0000"
+item_pub_date: "Mon, 16 Nov 2026 08:00:00 +0000"
 item_title: "pain.001-Beispiel: gb.international.usd (Vereinigtes Königreich)"
-last_build_date: "Sun, 15 Nov 2026 08:00:00 +0000"
+last_build_date: "Mon, 16 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sun, 15 Nov 2026 08:00:00 +0000"
+pub_date: "Mon, 16 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Szenariobeschreibung, zitiert aus dem Provenienzdatensatz (englischer Originalte
 
 > USD cross-border payment from a UK account to a US supplier.
 
-Eine Zahlungsinitiierungsdatei (**Vereinigtes Königreich**, Schiene **priority-payment**), ausgeliefert in `pain.001.001.03`, `pain.001.001.09`, erzeugt und geprüft von pain001 0.0.88. Es handelt sich um ein synthetisches Beispiel aus den öffentlichen Regelwerken der Zahlungssysteme: keine reale Partei, kein reales Konto und keine Bankrichtlinie dahinter.
+Eine Zahlungsinitiierungsdatei (**Vereinigtes Königreich**, Schiene **priority-payment**), ausgeliefert in `pain.001.001.03`, `pain.001.001.09`, erzeugt und geprüft von pain001 0.0.89. Es handelt sich um ein synthetisches Beispiel aus den öffentlichen Regelwerken der Zahlungssysteme: keine reale Partei, kein reales Konto und keine Bankrichtlinie dahinter.
 
 ## Dateien
 
