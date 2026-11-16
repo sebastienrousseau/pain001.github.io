@@ -6,6 +6,15 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+### Changed
+
+- The CI page (`/developers/ci/`) states the GitHub Action's name and
+  description, "ISO 20022 Payment File Check (pain001)" as of pain001
+  0.0.90. `scripts/action_meta.py` copies both from the core's
+  `action.yml` at the release tag, and the regenerate workflow runs it
+  with the other regeneration steps, so the page follows each release's
+  `action.yml` instead of a hand-kept copy.
+
 ## [0.0.89] - 2026-11-16
 
 ### Changed

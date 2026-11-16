@@ -139,6 +139,7 @@ jobs:
         run: |
           python3 scripts/generate_try_samples.py
           python3 scripts/generate_corpus_page.py "$PWD/.pain001"
+          python3 scripts/action_meta.py "$PWD/.pain001"
           python3 scripts/stamp_version.py "${VERSION}"
           python3 scripts/library_release.py pin "${VERSION}"
 
