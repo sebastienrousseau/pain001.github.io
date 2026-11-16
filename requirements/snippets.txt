@@ -6,9 +6,9 @@ attrs==26.1.0 \
     # via
     #   jsonschema
     #   referencing
-click==8.5.0 \
-    --hash=sha256:255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360 \
-    --hash=sha256:ba0d2089de75ea0310e2dde03160e6ca10009947fb95a182f9b54021bb272e34
+click==8.5.1 \
+    --hash=sha256:8bb5376d2006950386f8c6427613334a2acadc5f559cb80e638d00b4df957e37 \
+    --hash=sha256:9bbfada76703fd1d784b83eea012e3e8c6a001a876543ef104fa56aaaeb072b4
     # via pain001
 defusedxml==0.7.1 \
     --hash=sha256:1bb3032db185915b62d7c6209c5a8792be6a32ab2fedacc84e01b52c51aa3e69 \
@@ -129,9 +129,9 @@ mdurl==0.1.2 \
     --hash=sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8 \
     --hash=sha256:bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba
     # via markdown-it-py
-pain001==0.0.88 \
-    --hash=sha256:72f8007ca74c4047053d70d81f2e41176f774aa8463ccfcc2cbd182944bfb0ff \
-    --hash=sha256:d9bf3088539365a71941a66ff78627fc47f1f0090199f9cda8346e8949574b5f
+pain001==0.0.89 \
+    --hash=sha256:1e1912b9df1aa3ec1729daf19e8b683786c5dfd587b62dabc7d2036e5ac93479 \
+    --hash=sha256:eab5b53466e8637bf4684ea1ee3e9f7f26c5755a3b34578a808fcc0b555604df
     # via -r requirements/snippets.in
 pygments==2.21.0 \
     --hash=sha256:2363c69b61c4a97c838da3b130dcd6468f4848992b21a82f2a63ec34377137d9 \

@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-15T08:00:00+00:00"
+date: "2026-11-16T08:00:00+00:00"
 description: "SEPA Core direct debit, recurring collection on an amended mandate. Validierte pain.008-Beispieldatei (Frankreich, Schiene sepa-direct-debit)."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "SEPA Core direct debit, recurring collection on an amended mandate. Validierte pain.008-Beispieldatei (Frankreich, Schiene sepa-direct-debit)."
 item_guid: "https://pain001.com/de/corpus-fr-sepa-sdd-core/"
 item_link: "https://pain001.com/de/corpus-fr-sepa-sdd-core/"
-item_pub_date: "Sun, 15 Nov 2026 08:00:00 +0000"
+item_pub_date: "Mon, 16 Nov 2026 08:00:00 +0000"
 item_title: "pain.008-Beispiel: fr.sepa.sdd-core (Frankreich)"
-last_build_date: "Sun, 15 Nov 2026 08:00:00 +0000"
+last_build_date: "Mon, 16 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sun, 15 Nov 2026 08:00:00 +0000"
+pub_date: "Mon, 16 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Szenariobeschreibung, zitiert aus dem Provenienzdatensatz (englischer Originalte
 
 > SEPA Core direct debit, recurring collection on an amended mandate.
 
-Eine Zahlungsinitiierungsdatei (**Frankreich**, Schiene **sepa-direct-debit**), ausgeliefert in `pain.008.001.02`, `pain.008.001.08`, erzeugt und geprüft von pain001 0.0.88. Es handelt sich um ein synthetisches Beispiel aus den öffentlichen Regelwerken der Zahlungssysteme: keine reale Partei, kein reales Konto und keine Bankrichtlinie dahinter.
+Eine Zahlungsinitiierungsdatei (**Frankreich**, Schiene **sepa-direct-debit**), ausgeliefert in `pain.008.001.02`, `pain.008.001.08`, erzeugt und geprüft von pain001 0.0.89. Es handelt sich um ein synthetisches Beispiel aus den öffentlichen Regelwerken der Zahlungssysteme: keine reale Partei, kein reales Konto und keine Bankrichtlinie dahinter.
 
 ## Dateien
 

@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-15T08:00:00+00:00"
+date: "2026-11-16T08:00:00+00:00"
 description: "Foreign payment in USD from a German account, DK order type AXZ. Validated pain.001 sample for Germany (cross-border)."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Foreign payment in USD from a German account, DK order type AXZ. Validated pain.001 sample for Germany (cross-border)."
 item_guid: "https://pain001.com/corpus-de-axz-foreign/"
 item_link: "https://pain001.com/corpus-de-axz-foreign/"
-item_pub_date: "Sun, 15 Nov 2026 08:00:00 +0000"
+item_pub_date: "Mon, 16 Nov 2026 08:00:00 +0000"
 item_title: "pain.001 example: de.axz.foreign (Germany)"
-last_build_date: "Sun, 15 Nov 2026 08:00:00 +0000"
+last_build_date: "Mon, 16 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sun, 15 Nov 2026 08:00:00 +0000"
+pub_date: "Mon, 16 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -90,7 +90,7 @@ last_reviewed: "2026-11-07"
 
 Foreign payment in USD from a German account, DK order type AXZ.
 
-A payment initiation file for **Germany** on the **cross-border** rail, shipped in `pain.001.001.03`, `pain.001.001.09`, generated and checked by pain001 0.0.88. It is a synthetic example built from the public scheme rulebooks: no real party, account or bank guideline behind it.
+A payment initiation file for **Germany** on the **cross-border** rail, shipped in `pain.001.001.03`, `pain.001.001.09`, generated and checked by pain001 0.0.89. It is a synthetic example built from the public scheme rulebooks: no real party, account or bank guideline behind it.
 
 ## Files
 

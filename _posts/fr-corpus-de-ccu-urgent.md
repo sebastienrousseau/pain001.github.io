@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-15T08:00:00+00:00"
+date: "2026-11-16T08:00:00+00:00"
 description: "Urgent euro payment (TARGET) from a German account, DK order type CCU. Exemple pain.001 validé (Allemagne, rail urgent-euro)."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Urgent euro payment (TARGET) from a German account, DK order type CCU. Exemple pain.001 validé (Allemagne, rail urgent-euro)."
 item_guid: "https://pain001.com/fr/corpus-de-ccu-urgent/"
 item_link: "https://pain001.com/fr/corpus-de-ccu-urgent/"
-item_pub_date: "Sun, 15 Nov 2026 08:00:00 +0000"
+item_pub_date: "Mon, 16 Nov 2026 08:00:00 +0000"
 item_title: "Exemple pain.001 : de.ccu.urgent (Allemagne)"
-last_build_date: "Sun, 15 Nov 2026 08:00:00 +0000"
+last_build_date: "Mon, 16 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Sun, 15 Nov 2026 08:00:00 +0000"
+pub_date: "Mon, 16 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Description du scénario, citée depuis la fiche de provenance (texte original e
 
 > Urgent euro payment (TARGET) from a German account, DK order type CCU.
 
-Un fichier d'initiation de paiement (**Allemagne**, rail **urgent-euro**), livré en `pain.001.001.03`, `pain.001.001.09`, généré et vérifié par pain001 0.0.88. C'est un exemple synthétique construit à partir des règles publiques des schémas de paiement : aucune partie réelle, aucun compte réel, aucune directive bancaire derrière lui.
+Un fichier d'initiation de paiement (**Allemagne**, rail **urgent-euro**), livré en `pain.001.001.03`, `pain.001.001.09`, généré et vérifié par pain001 0.0.89. C'est un exemple synthétique construit à partir des règles publiques des schémas de paiement : aucune partie réelle, aucun compte réel, aucune directive bancaire derrière lui.
 
 ## Fichiers
 
