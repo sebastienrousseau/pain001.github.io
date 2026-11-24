@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
-      - uses: sebastienrousseau/pain001/.github/actions/check-ecosystem@404ebb90f25147bafc4bdbe02331e8de6db2cb71
+      - uses: sebastienrousseau/pain001/.github/actions/check-ecosystem@328605988244fd3cca309f66d8a3badd76e98049
         with:
           version: ${{ inputs.version }}
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
