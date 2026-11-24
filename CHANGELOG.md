@@ -6,6 +6,14 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.0.91] - Unreleased
+
+### Changed
+
+- CI: dependency-review-action 5.0.1, OpenSSF Scorecard action 2.6.0,
+  and the Suite Consistency workflow pins the core's ecosystem check
+  at its 0.0.90 tag (Dependabot #106).
+
 ## [0.0.90] - 2026-11-16
 
 ### Changed
