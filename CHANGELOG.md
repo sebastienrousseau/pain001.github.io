@@ -15,6 +15,14 @@ All notable changes to this website are documented here. The format follows
   and the Suite Consistency workflow pins the core's ecosystem check
   at its 0.0.90 tag (Dependabot #106).
 
+### Fixed
+
+- The home page's "by the numbers" figures are sized by their own
+  column, so the monthly download count (now five digits, 10,043)
+  stays inside its tile. It had spilled past the tile at every width
+  and, at 320px, widened the page by 3px, which CI's layout audit
+  caught.
+
 ## [0.0.90] - 2026-11-16
 
 ### Changed
