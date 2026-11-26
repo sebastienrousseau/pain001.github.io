@@ -6,6 +6,12 @@ All notable changes to this website are documented here. The format follows
 
 ## [Unreleased]
 
+### Fixed
+
+- The not-found page (`/404.html`) carries one robots tag, `noindex`.
+  It also kept the site-wide `max-snippet` robots tag, so it had two;
+  every utility page now has its other robots tags removed.
+
 ## [0.0.91] - 2026-11-24
 
 ### Changed

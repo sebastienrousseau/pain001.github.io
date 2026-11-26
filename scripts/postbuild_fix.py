@@ -1319,10 +1319,10 @@ def mark_noindex_pages(site: Path) -> None:
         page = site / rel / "index.html"
         if not page.is_file():
             continue
-        html = _CANONICAL_LINK_RE.sub("", page.read_text(encoding="utf-8"))
-        if _ROBOTS_NOINDEX not in html:
-            html = html.replace("</head>", _ROBOTS_NOINDEX + "</head>", 1)
-            marked += 1
+        before = _CANONICAL_LINK_RE.sub("", page.read_text(encoding="utf-8"))
+        html = _ROBOTS_META_RE.sub("", before)  # exactly one robots tag
+        html = html.replace("</head>", _ROBOTS_NOINDEX + "</head>", 1)
+        marked += html != before
         page.write_text(html, encoding="utf-8")
         if rel == "404":
             (site / "404.html").write_text(html, encoding="utf-8")
