@@ -70,7 +70,8 @@ def flaky_import(monkeypatch):
 PAGE = (
     '<html lang="en-GB"><head><title>Try Pain001</title>'
     '<meta name="description" content="Run it">'
-    '<link rel="canonical" href="https://pain001.com/try/"></head><body>'
+    '<link rel="canonical" href="https://pain001.com/try/">'
+    '<link rel="alternate" href="https://pain001.com/try/" hreflang="en" /></head><body>'
     '<script type="application/ld+json">{"inLanguage": "en-GB"}</script>'
     '<div lang="en"><h1>Try it now</h1><p>It\'s fast</p><p>Tom & Jerry</p>'
     '<button aria-label="Run">x</button><a href="/try/">Try</a><a href="/why/">Why</a>'
@@ -122,7 +123,10 @@ def test_gen_try_locales(env, capsys):
 def test_gen_try_locales_translates_the_french_page(env):
     fr = read(build_try(env) / "fr" / "try" / "index.html")
     assert missing(fr, FR_TRY) == []
-    assert 'hreflang="fr"' not in fr
+    # base.html's self alternate names the copy's language, once, and the
+    # cluster adds no second link for it
+    assert fr.count('hreflang="fr"') == 1
+    assert '<link rel="alternate" href="https://pain001.com/fr/try/" hreflang="fr" />' in fr
 
 
 def test_gen_try_locales_sets_rtl_and_skips_locales_without_a_table(env):
@@ -147,7 +151,8 @@ def test_gen_try_locales_without_source_or_english_table(env, flaky_import, caps
 FR_WHY = ("<title>Pourquoi</title>", 'content="Run it"', 'href="https://pain001.com/fr/why/"',
           ">Essayez<", "C'est rapide", "Tom & Jerome", 'aria-label="Lancer"', ">Guide FR<",
           'href="/fr/why/">Why', 'href="/fr/executive-brief/"', '<div lang="fr">',
-          'class="ap-lang-current">FR<', '<html lang="fr">')
+          'class="ap-lang-current">FR<', '<html lang="fr">',
+          '<link rel="alternate" href="https://pain001.com/fr/why/" hreflang="fr" />')
 
 
 def build_journey(env):
