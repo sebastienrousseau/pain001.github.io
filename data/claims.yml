@@ -6,26 +6,26 @@
     {
       "id": "github_stars",
       "claim": "GitHub stars on the core repository",
-      "value": 49,
+      "value": 50,
       "format": "count",
       "source": "live",
       "pages": [
         "/"
       ],
       "evidence_url": "https://github.com/sebastienrousseau/pain001",
-      "verified_in": "0.0.90"
+      "verified_in": "0.0.91"
     },
     {
       "id": "pypi_downloads_month",
       "claim": "pain001 downloads from PyPI in the last month",
-      "value": 9344,
+      "value": 10043,
       "format": "count",
       "source": "live",
       "pages": [
         "/"
       ],
       "evidence_url": "https://pypistats.org/packages/pain001",
-      "verified_in": "0.0.90"
+      "verified_in": "0.0.91"
     },
     {
       "id": "openssf_scorecard",
@@ -37,19 +37,19 @@
         "/"
       ],
       "evidence_url": "https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/pain001",
-      "verified_in": "0.0.90"
+      "verified_in": "0.0.91"
     },
     {
       "id": "releases_since_2023",
       "claim": "Published releases of the core since the first in 2023",
-      "value": 82,
+      "value": 83,
       "format": "count",
       "source": "live",
       "pages": [
         "/"
       ],
       "evidence_url": "https://github.com/sebastienrousseau/pain001/releases",
-      "verified_in": "0.0.90"
+      "verified_in": "0.0.91"
     },
     {
       "id": "branch_coverage",
@@ -61,7 +61,7 @@
         "/"
       ],
       "evidence_url": "https://github.com/sebastienrousseau/pain001/blob/main/pyproject.toml",
-      "verified_in": "0.0.90"
+      "verified_in": "0.0.91"
     },
     {
       "id": "signed_provenance",
@@ -73,7 +73,7 @@
         "/"
       ],
       "evidence_url": "https://github.com/sebastienrousseau/pain001/attestations",
-      "verified_in": "0.0.90"
+      "verified_in": "0.0.91"
     }
   ]
 }

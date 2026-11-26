@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-16T08:00:00+00:00"
+date: "2026-11-26T08:00:00+00:00"
 description: "Swedish salary batch (Bankgirot Löner), SALA, one debit. Gevalideerd pain.001-voorbeeld (Zweden, rail salary)."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Swedish salary batch (Bankgirot Löner), SALA, one debit. Gevalideerd pain.001-voorbeeld (Zweden, rail salary)."
 item_guid: "https://pain001.com/nl/corpus-se-bankgiro-salary/"
 item_link: "https://pain001.com/nl/corpus-se-bankgiro-salary/"
-item_pub_date: "Mon, 16 Nov 2026 08:00:00 +0000"
+item_pub_date: "Thu, 26 Nov 2026 08:00:00 +0000"
 item_title: "pain.001-voorbeeld: se.bankgiro.salary (Zweden)"
-last_build_date: "Mon, 16 Nov 2026 08:00:00 +0000"
+last_build_date: "Thu, 26 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Mon, 16 Nov 2026 08:00:00 +0000"
+pub_date: "Thu, 26 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Scenariobeschrijving, geciteerd uit het herkomstrecord (oorspronkelijke Engelse 
 
 > Swedish salary batch (Bankgirot Löner), SALA, one debit.
 
-Een betaalinitiatiebestand (**Zweden**, rail **salary**), geleverd in `pain.001.001.03`, `pain.001.001.09`, gegenereerd en gecontroleerd door pain001 0.0.90. Het is een synthetisch voorbeeld, opgebouwd uit de openbare rulebooks van de betaalschema's: geen echte partij, geen echte rekening en geen bankrichtlijn erachter.
+Een betaalinitiatiebestand (**Zweden**, rail **salary**), geleverd in `pain.001.001.03`, `pain.001.001.09`, gegenereerd en gecontroleerd door pain001 0.0.91. Het is een synthetisch voorbeeld, opgebouwd uit de openbare rulebooks van de betaalschema's: geen echte partij, geen echte rekening en geen bankrichtlijn erachter.
 
 ## Bestanden
 

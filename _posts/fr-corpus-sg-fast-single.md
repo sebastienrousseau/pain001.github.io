@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-16T08:00:00+00:00"
+date: "2026-11-26T08:00:00+00:00"
 description: "Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. Exemple pain.001 validé (Singapour, rail instant-payment)."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Singapore FAST credit in SGD, bank and branch codes, addresses on both parties. Exemple pain.001 validé (Singapour, rail instant-payment)."
 item_guid: "https://pain001.com/fr/corpus-sg-fast-single/"
 item_link: "https://pain001.com/fr/corpus-sg-fast-single/"
-item_pub_date: "Mon, 16 Nov 2026 08:00:00 +0000"
+item_pub_date: "Thu, 26 Nov 2026 08:00:00 +0000"
 item_title: "Exemple pain.001 : sg.fast.single (Singapour)"
-last_build_date: "Mon, 16 Nov 2026 08:00:00 +0000"
+last_build_date: "Thu, 26 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Mon, 16 Nov 2026 08:00:00 +0000"
+pub_date: "Thu, 26 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Description du scénario, citée depuis la fiche de provenance (texte original e
 
 > Singapore FAST credit in SGD, bank and branch codes, addresses on both parties.
 
-Un fichier d'initiation de paiement (**Singapour**, rail **instant-payment**), livré en `pain.001.001.03`, `pain.001.001.09`, généré et vérifié par pain001 0.0.90. C'est un exemple synthétique construit à partir des règles publiques des schémas de paiement : aucune partie réelle, aucun compte réel, aucune directive bancaire derrière lui.
+Un fichier d'initiation de paiement (**Singapour**, rail **instant-payment**), livré en `pain.001.001.03`, `pain.001.001.09`, généré et vérifié par pain001 0.0.91. C'est un exemple synthétique construit à partir des règles publiques des schémas de paiement : aucune partie réelle, aucun compte réel, aucune directive bancaire derrière lui.
 
 ## Fichiers
 

@@ -3243,8 +3243,11 @@ html.no-js .segmented { display: none; }
 /* ---- by the numbers ---- */
 .proof { border-block-end: 0; }
 .proof .proof-grid { margin-block-start: clamp(var(--space-8), 4vw, var(--space-12)); text-align: center; }
-.proof .proof-item { align-items: center; padding-inline: var(--space-4); }
-.proof .proof-item dd { font-size: var(--t-stat); font-weight: 600; letter-spacing: -0.045em; }
+/* Each figure is sized by its own column (30cqi fits six characters,
+   such as "10,043"), so a live count that gains a digit stays inside
+   its tile instead of spilling over the column and the viewport. */
+.proof .proof-item { align-items: center; padding-inline: var(--space-4); container-type: inline-size; }
+.proof .proof-item dd { font-size: min(var(--t-stat), 30cqi); font-weight: 600; letter-spacing: -0.045em; }
 .proof .proof-item dt { align-items: center; max-width: 18ch; }
 .fn-ref { font-size: 0.45em; line-height: 0; vertical-align: super; letter-spacing: 0; }
 .fn-ref a { display: inline-flex; align-items: center; justify-content: center; min-inline-size: 2.75rem; min-block-size: 2.75rem; color: var(--accent); text-decoration: underline; text-underline-offset: 0.15em; }

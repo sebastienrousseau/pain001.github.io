@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-16T08:00:00+00:00"
+date: "2026-11-26T08:00:00+00:00"
 description: "Bacs Direct Debit collection, first and recurring, SUN as creditor id. Campione pain.008 validato (Regno Unito, circuito bacs-direct-debit)."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "Bacs Direct Debit collection, first and recurring, SUN as creditor id. Campione pain.008 validato (Regno Unito, circuito bacs-direct-debit)."
 item_guid: "https://pain001.com/it/corpus-gb-bacs-dd-collection/"
 item_link: "https://pain001.com/it/corpus-gb-bacs-dd-collection/"
-item_pub_date: "Mon, 16 Nov 2026 08:00:00 +0000"
+item_pub_date: "Thu, 26 Nov 2026 08:00:00 +0000"
 item_title: "Esempio pain.008: gb.bacs-dd.collection (Regno Unito)"
-last_build_date: "Mon, 16 Nov 2026 08:00:00 +0000"
+last_build_date: "Thu, 26 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Mon, 16 Nov 2026 08:00:00 +0000"
+pub_date: "Thu, 26 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Descrizione dello scenario, citata dal record di provenienza (testo originale in
 
 > Bacs Direct Debit collection, first and recurring, SUN as creditor id.
 
-Un file di disposizione di pagamento (**Regno Unito**, circuito **bacs-direct-debit**), fornito in `pain.008.001.02`, `pain.008.001.08`, generato e verificato da pain001 0.0.90. È un esempio sintetico costruito dai regolamenti pubblici degli schemi di pagamento: nessuna parte reale, nessun conto reale, nessuna linea guida bancaria dietro di esso.
+Un file di disposizione di pagamento (**Regno Unito**, circuito **bacs-direct-debit**), fornito in `pain.008.001.02`, `pain.008.001.08`, generato e verificato da pain001 0.0.91. È un esempio sintetico costruito dai regolamenti pubblici degli schemi di pagamento: nessuna parte reale, nessun conto reale, nessuna linea guida bancaria dietro di esso.
 
 ## File
 
