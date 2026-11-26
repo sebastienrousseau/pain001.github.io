@@ -660,11 +660,11 @@ def retag_html_lang(html: str, code: str, rtl: bool = False) -> str:
     `<html lang="en-GB">` replacement no longer matched localized copies.
     """
     direction = ' dir="rtl"' if rtl else ""
-    return re.sub(
-        r'<html\b([^>]*?)\blang="en-GB"([^>]*)>',
-        lambda m: '<html' + m.group(1) + 'lang="%s"' % code
-        + m.group(2) + direction + '>',
-        html, count=1)
+    html = re.sub(r'<html\b([^>]*?)\blang="en-GB"([^>]*)>', lambda m: '<html' + m.group(1)
+                  + 'lang="%s"' % code + m.group(2) + direction + '>', html, count=1)
+    # base.html's self alternate still says hreflang="en" on the copy; the cluster omits self.
+    return re.sub(r'(<link rel="alternate" href="[^"]*" hreflang=")en(" />)',
+                  r"\g<1>%s\2" % code, html, count=1)
 
 
 def translate_status_strip(html: str, s: list) -> str:

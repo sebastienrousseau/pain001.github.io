@@ -10,6 +10,9 @@ longer title. This gate fails the build on any indexable page (no
 robots noindex, not a redirect stub) whose <title> is over 65 characters
 or whose meta description is outside 50..160, counted in characters
 after entity decoding, so a translated page is held to the same limits.
+It also fails a page whose alternate links name one hreflang twice: every
+translated page once kept the template's self link as hreflang="en" beside
+the cluster's real English alternate, which Search Console cannot resolve.
 
     python3 scripts/validate_seo_meta.py [site]
 """
@@ -25,12 +28,13 @@ DESCRIPTION_RANGE = (50, 160)
 
 
 class Head(HTMLParser):
-    """The title, description, robots and refresh of one page."""
+    """The title, description, robots, refresh and hreflang links of one page."""
 
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
         self.title: str | None = None
         self.meta: dict[str, str] = {}
+        self.hreflangs: list[str] = []
         self._in_title = False
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
@@ -38,9 +42,18 @@ class Head(HTMLParser):
         if tag == "title" and self.title is None:
             self._in_title, self.title = True, ""
         elif tag == "meta":
-            key = (a.get("name") or a.get("http-equiv") or "").lower()
-            if key and key not in self.meta:
-                self.meta[key] = a.get("content", "")
+            self._meta(a)
+        elif tag == "link":
+            self._link(a)
+
+    def _meta(self, a: dict[str, str]) -> None:
+        key = (a.get("name") or a.get("http-equiv") or "").lower()
+        if key and key not in self.meta:
+            self.meta[key] = a.get("content", "")
+
+    def _link(self, a: dict[str, str]) -> None:
+        if a.get("rel") == "alternate" and a.get("hreflang"):
+            self.hreflangs.append(a["hreflang"].lower())
 
     def handle_endtag(self, tag: str) -> None:
         if tag == "title":
@@ -73,6 +86,8 @@ def page_problems(rel: str, html: str) -> list[str]:
     low, high = DESCRIPTION_RANGE
     if not low <= len(description) <= high:
         problems.append(f"{rel}: description is {len(description)} characters, not {low} to {high}")
+    for lang in sorted({x for x in h.hreflangs if h.hreflangs.count(x) > 1}):
+        problems.append(f"{rel}: hreflang {lang} is named by {h.hreflangs.count(lang)} alternate links")
     return problems
 
 

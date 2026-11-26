@@ -11,6 +11,11 @@ All notable changes to this website are documented here. The format follows
 - The not-found page (`/404.html`) carries one robots tag, `noindex`.
   It also kept the site-wide `max-snippet` robots tag, so it had two;
   every utility page now has its other robots tags removed.
+- Translated pages name their own language in hreflang. The 225
+  translated `/try/`, journey and documentation pages kept the
+  template's self link as `hreflang="en"` beside the real English
+  alternate, so each cluster named English twice. The SEO meta gate
+  now fails any page that names one hreflang twice.
 
 ## [0.0.91] - 2026-11-24
 

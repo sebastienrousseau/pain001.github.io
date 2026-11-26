@@ -50,6 +50,18 @@ def test_noindex_pages_and_redirect_stubs_are_skipped():
     assert v.page_problems("b.html", page(description="", extra=refresh)) == []
 
 
+def test_a_language_named_twice_in_the_hreflang_cluster_is_reported():
+    # Every translated page once kept base.html's self link as
+    # hreflang="en" beside the cluster's real English alternate.
+    fr = ('<link rel="alternate" href="https://pain001.com/fr/why/" hreflang="en" />'
+          '<link rel="alternate" hreflang="en" href="https://pain001.com/why/" />')
+    assert v.page_problems("fr/why/index.html", page(extra=fr)) == [
+        "fr/why/index.html: hreflang en is named by 2 alternate links"]
+    fixed = fr.replace('hreflang="en" />', 'hreflang="fr" />', 1)
+    assert v.page_problems("fr/why/index.html", page(extra=fixed)) == []
+    feed = '<link rel="alternate" type="application/rss+xml" href="/rss.xml" />'
+    assert v.page_problems("a.html", page(extra=feed * 2)) == []
+
 def test_main_reports_on_stderr_and_skips_fingerprinted_assets(tmp_path, capsys, monkeypatch):
     (tmp_path / "_csp").mkdir()
     (tmp_path / "_csp" / "x.html").write_text(page(title="t" * 99), encoding="utf-8")
