@@ -77,3 +77,31 @@ curl "https://api.cloudflare.com/client/v4/zones/$ZONE_ID/rulesets/phases/http_r
 Keep the site's own `/enterprise/` page as a plain link to
 `/for-banks/` until the rule is live, so nobody lands on a 404 in
 between.
+
+## doc.pain001.com to docs.pain001.com
+
+The old `doc.` host answers `301` to the manual's home. The rule is
+named `Redirect doc to canonical docs`:
+
+```text
+ssl and (http.host eq "doc.pain001.com")
+```
+
+Then: Static redirect to `https://docs.pain001.com/`, status code
+`301`, preserve query string off.
+
+Keep `pain001.com/documentation/` out of this rule. The site builds a
+real Technical Reference page there and lists it in the sitemap, so a
+redirect leaves the sitemap pointing at a `301`, which Search Console
+reports as "Page with redirect". Until 2026-11-26 the rule also matched
+`http.host eq "pain001.com" and starts_with(http.request.uri.path,
+"/documentation")`; that clause was removed. Check:
+
+```sh
+curl -q -sI https://pain001.com/documentation/ | head -1   # HTTP/2 200
+curl -q -sI https://doc.pain001.com/ | grep -i -E '^(HTTP|location)'
+# HTTP/2 301
+# location: https://docs.pain001.com/
+```
+
+`-q` keeps a `~/.curlrc` that follows redirects from hiding the `301`.
