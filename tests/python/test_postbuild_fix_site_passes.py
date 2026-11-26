@@ -210,3 +210,14 @@ def test_mark_noindex_pages(tmp_path, capsys):
     assert read(tmp_path / "offline" / "index.html") == expected
     assert not (tmp_path / "thanks").exists()
     assert "noindex on 1 utility page(s)" in capsys.readouterr().out
+
+
+def test_mark_noindex_pages_replaces_an_existing_robots_tag(tmp_path):
+    # /404.html carried the site-wide max-snippet robots tag and a second
+    # one saying noindex; a utility page gets exactly one, the noindex.
+    snippet = '<meta name="robots" content="max-snippet:-1, max-image-preview:large">'
+    put(tmp_path / "404" / "index.html", "<head>" + snippet + "</head>")
+    pb.mark_noindex_pages(tmp_path)
+    expected = "<head>" + pb._ROBOTS_NOINDEX + "</head>"
+    assert read(tmp_path / "404" / "index.html") == expected
+    assert read(tmp_path / "404.html") == expected
