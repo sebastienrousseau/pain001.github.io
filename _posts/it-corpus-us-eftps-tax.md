@@ -9,7 +9,7 @@ changefreq: "monthly"
 charset: utf-8
 cname: pain001.com
 copyright: "© 2023 - 2026 Sebastien Rousseau. Dual Apache-2.0 / MIT."
-date: "2026-11-16T08:00:00+00:00"
+date: "2026-11-26T08:00:00+00:00"
 description: "IRS EFTPS federal tax deposit, CCD with the TXP addenda string. Campione pain.001 validato (Stati Uniti, circuito ach-credit)."
 download: "https://pypi.org/project/pain001/"
 format-detection: telephone=no
@@ -49,11 +49,11 @@ generator: "Static Site Generator (SSG) (version 0.0.75)"
 item_description: "IRS EFTPS federal tax deposit, CCD with the TXP addenda string. Campione pain.001 validato (Stati Uniti, circuito ach-credit)."
 item_guid: "https://pain001.com/it/corpus-us-eftps-tax/"
 item_link: "https://pain001.com/it/corpus-us-eftps-tax/"
-item_pub_date: "Mon, 16 Nov 2026 08:00:00 +0000"
+item_pub_date: "Thu, 26 Nov 2026 08:00:00 +0000"
 item_title: "Esempio pain.001: us.eftps.tax (Stati Uniti)"
-last_build_date: "Mon, 16 Nov 2026 08:00:00 +0000"
+last_build_date: "Thu, 26 Nov 2026 08:00:00 +0000"
 managing_editor: "contact@pain001.com (Sebastien Rousseau)"
-pub_date: "Mon, 16 Nov 2026 08:00:00 +0000"
+pub_date: "Thu, 26 Nov 2026 08:00:00 +0000"
 ttl: 60
 type: website
 webmaster: contact@pain001.com
@@ -92,7 +92,7 @@ Descrizione dello scenario, citata dal record di provenienza (testo originale in
 
 > IRS EFTPS federal tax deposit, CCD with the TXP addenda string.
 
-Un file di disposizione di pagamento (**Stati Uniti**, circuito **ach-credit**), fornito in `pain.001.001.03`, `pain.001.001.09`, generato e verificato da pain001 0.0.90. È un esempio sintetico costruito dai regolamenti pubblici degli schemi di pagamento: nessuna parte reale, nessun conto reale, nessuna linea guida bancaria dietro di esso.
+Un file di disposizione di pagamento (**Stati Uniti**, circuito **ach-credit**), fornito in `pain.001.001.03`, `pain.001.001.09`, generato e verificato da pain001 0.0.91. È un esempio sintetico costruito dai regolamenti pubblici degli schemi di pagamento: nessuna parte reale, nessun conto reale, nessuna linea guida bancaria dietro di esso.
 
 ## File
 

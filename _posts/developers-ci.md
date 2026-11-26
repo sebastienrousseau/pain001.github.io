@@ -98,7 +98,7 @@ permissions:
   security-events: write   # for the SARIF upload
 steps:
   - uses: actions/checkout@<sha>
-  - uses: sebastienrousseau/pain001@v0.0.90
+  - uses: sebastienrousseau/pain001@v0.0.91
     with:
       files: "payments/**/*.xml"
       scheme: sepa-sct
